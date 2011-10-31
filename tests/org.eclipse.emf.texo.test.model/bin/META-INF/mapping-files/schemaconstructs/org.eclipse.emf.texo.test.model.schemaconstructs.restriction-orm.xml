@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.restriction.Member" name="Member">
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.restriction.XMLDeviant" name="XMLDeviant">
+    <orm:attributes>
+      <orm:basic name="numPosts" optional="true"/>
+      <orm:basic name="signature" optional="false"/>
+      <orm:basic name="email" optional="true"/>
+      <orm:basic name="firstSubscribed" optional="true">
+        <orm:temporal>DATE</orm:temporal>
+      </orm:basic>
+      <orm:basic name="mailReader" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

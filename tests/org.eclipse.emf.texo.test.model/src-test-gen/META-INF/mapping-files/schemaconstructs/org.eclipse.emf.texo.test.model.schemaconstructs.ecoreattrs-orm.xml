@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.ElementNameMapFeatureGroup" name="Element_nameMap">
+    <orm:attributes>
+      <orm:many-to-one name="names" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.NameList">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.Element" name="Element">
+    <orm:attributes>
+      <orm:one-to-many name="nameMap" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.ElementNameMapFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.NameList" name="NameList">
+    <orm:attributes>
+      <orm:basic name="firstName" optional="false"/>
+      <orm:basic name="middleName" optional="false"/>
+      <orm:basic name="lastName" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.FeatureAMapFeatureGroup" name="Feature_aMap">
+    <orm:attributes>
+      <orm:basic name="name" optional="false"/>
+      <orm:basic name="value_" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.Feature" name="Feature">
+    <orm:attributes>
+      <orm:one-to-many name="aMap" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.FeatureAMapFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.MixedMixedFeatureGroup" name="Mixed_mixed">
+    <orm:attributes>
+      <orm:basic name="name" optional="false"/>
+      <orm:basic name="value_" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.Mixed" name="Mixed">
+    <orm:attributes>
+      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.MixedMixedFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

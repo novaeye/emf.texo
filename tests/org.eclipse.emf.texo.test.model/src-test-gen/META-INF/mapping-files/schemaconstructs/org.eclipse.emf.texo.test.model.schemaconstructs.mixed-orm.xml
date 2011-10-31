@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
+    <orm:attributes>
+      <orm:many-to-one name="letterBody" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.DocumentRoot" name="DocumentRoot">
+    <orm:attributes>
+      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.DocumentRootMixedFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:element-collection name="xMLNSPrefixMap">
+        <orm:collection-table name="DocumentRoot_xMLNSPrefixMap"/>
+      </orm:element-collection>
+      <orm:element-collection name="xSISchemaLocation">
+        <orm:collection-table name="DocumentRoot_xSISchemaLocation"/>
+      </orm:element-collection>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup" name="LetterBodyType_mixed">
+    <orm:attributes>
+      <orm:basic name="quantity" optional="false"/>
+      <orm:basic name="productName" optional="false"/>
+      <orm:basic name="shipDate" optional="true">
+        <orm:temporal>DATE</orm:temporal>
+      </orm:basic>
+      <orm:many-to-one name="salutation" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationType">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType" name="LetterBodyType">
+    <orm:attributes>
+      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup" name="SalutationType_mixed">
+    <orm:attributes>
+      <orm:basic name="name" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationType" name="SalutationType">
+    <orm:attributes>
+      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz352285.Abstract" name="Abstract">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

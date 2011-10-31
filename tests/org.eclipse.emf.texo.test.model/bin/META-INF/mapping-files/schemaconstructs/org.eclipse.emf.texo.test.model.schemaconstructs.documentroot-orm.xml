@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.ComplexType" name="ComplexType">
+    <orm:attributes>
+      <orm:basic name="test" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
+    <orm:attributes>
+      <orm:basic name="otherTest" optional="true"/>
+      <orm:basic name="test" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.DocumentRoot" name="DocumentRoot">
+    <orm:attributes>
+      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.DocumentRootMixedFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:element-collection name="xMLNSPrefixMap">
+        <orm:collection-table name="DocumentRoot_xMLNSPrefixMap"/>
+      </orm:element-collection>
+      <orm:element-collection name="xSISchemaLocation">
+        <orm:collection-table name="DocumentRoot_xSISchemaLocation"/>
+      </orm:element-collection>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

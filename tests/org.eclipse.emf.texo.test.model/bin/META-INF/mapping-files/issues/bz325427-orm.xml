@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325427.EClassB" name="EClassB">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325427.EClassA" name="EClassA">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

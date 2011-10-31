@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleList" name="SimpleList">
+    <orm:attributes>
+      <orm:basic name="code" optional="false"/>
+      <orm:basic name="intArray" optional="false"/>
+      <orm:basic name="doubleArray" optional="false"/>
+      <orm:basic name="stringArray" optional="false"/>
+      <orm:basic name="byteArray" optional="false">
+        <orm:lob/>
+      </orm:basic>
+      <orm:element-collection name="boo">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_boo"/>
+      </orm:element-collection>
+      <orm:element-collection name="byt">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_byt"/>
+      </orm:element-collection>
+      <orm:element-collection name="doubl">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_doubl"/>
+      </orm:element-collection>
+      <orm:element-collection name="floa">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_floa"/>
+      </orm:element-collection>
+      <orm:element-collection name="inte">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_inte"/>
+      </orm:element-collection>
+      <orm:element-collection name="long_">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_long"/>
+      </orm:element-collection>
+      <orm:element-collection name="shor">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_shor"/>
+      </orm:element-collection>
+      <orm:element-collection name="enu">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_enu"/>
+      </orm:element-collection>
+      <orm:element-collection name="dat">
+        <orm:order-column/>
+        <orm:temporal>DATE</orm:temporal>
+        <orm:collection-table name="SimpleList_dat"/>
+      </orm:element-collection>
+      <orm:element-collection name="limitedstring">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_limitedstring"/>
+      </orm:element-collection>
+      <orm:element-collection name="stri">
+        <orm:order-column/>
+        <orm:collection-table name="SimpleList_stri"/>
+      </orm:element-collection>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleType" name="SimpleType">
+    <orm:attributes>
+      <orm:basic name="code" optional="false"/>
+      <orm:basic name="boo" optional="false"/>
+      <orm:basic name="byt" optional="false"/>
+      <orm:basic name="doubl" optional="false"/>
+      <orm:basic name="float_" optional="false"/>
+      <orm:basic name="inte" optional="false"/>
+      <orm:basic name="lon" optional="false"/>
+      <orm:basic name="shor" optional="false"/>
+      <orm:basic name="enu" optional="false"/>
+      <orm:basic name="dat" optional="false">
+        <orm:temporal>DATE</orm:temporal>
+      </orm:basic>
+      <orm:basic name="limitedstring" optional="false"/>
+      <orm:basic name="limitedDecimal" optional="false"/>
+      <orm:basic name="extraLimitedString" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleTypeObject" name="SimpleTypeObject">
+    <orm:attributes>
+      <orm:basic name="code" optional="false"/>
+      <orm:basic name="boo" optional="false"/>
+      <orm:basic name="byt" optional="false"/>
+      <orm:basic name="doubl" optional="false"/>
+      <orm:basic name="float_" optional="false"/>
+      <orm:basic name="inte" optional="false"/>
+      <orm:basic name="lon" optional="false"/>
+      <orm:basic name="shor" optional="false"/>
+      <orm:basic name="enu" optional="false"/>
+      <orm:basic name="dat" optional="false">
+        <orm:temporal>DATE</orm:temporal>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

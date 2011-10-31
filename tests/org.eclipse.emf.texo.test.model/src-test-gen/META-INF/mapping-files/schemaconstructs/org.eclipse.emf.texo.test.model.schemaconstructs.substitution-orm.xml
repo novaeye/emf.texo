@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber" name="ComplexNumber">
+    <orm:attributes>
+      <orm:basic name="value" optional="false"/>
+      <orm:basic name="unit" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
+    <orm:attributes>
+      <orm:basic name="even" optional="true"/>
+      <orm:basic name="mySimpleAbstract" optional="true"/>
+      <orm:basic name="odd" optional="true"/>
+      <orm:many-to-one name="evenComplexNumber" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.EvenComplexNumberType">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="myComplexAbstract" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="multiNumber" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberType">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="number" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberType">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="oddComplexNumber" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.OddComplexNumberType">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.DocumentRoot" name="DocumentRoot">
+    <orm:attributes>
+      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.DocumentRootMixedFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:element-collection name="xMLNSPrefixMap">
+        <orm:collection-table name="DocumentRoot_xMLNSPrefixMap"/>
+      </orm:element-collection>
+      <orm:element-collection name="xSISchemaLocation">
+        <orm:collection-table name="DocumentRoot_xSISchemaLocation"/>
+      </orm:element-collection>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.EvenComplexNumberType" name="EvenComplexNumberType">
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup" name="MultiNumberType_myComplexAbstractGroup">
+    <orm:attributes>
+      <orm:many-to-one name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberType" name="MultiNumberType">
+    <orm:attributes>
+      <orm:basic name="name" optional="false"/>
+      <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup" name="NumberType_mySimpleAbstractGroup">
+    <orm:attributes>
+      <orm:basic name="mySimpleAbstract" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMyComplexAbstractGroupFeatureGroup" name="NumberType_myComplexAbstractGroup">
+    <orm:attributes>
+      <orm:many-to-one name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberType" name="NumberType">
+    <orm:attributes>
+      <orm:basic name="name" optional="false"/>
+      <orm:one-to-many name="mySimpleAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMyComplexAbstractGroupFeatureGroup">
+        <orm:join-table/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.OddComplexNumberType" name="OddComplexNumberType">
+    <orm:attributes/>
+  </orm:entity>
+</orm:entity-mappings>

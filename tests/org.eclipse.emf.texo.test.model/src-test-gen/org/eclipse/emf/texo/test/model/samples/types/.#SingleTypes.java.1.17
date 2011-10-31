@@ -1,0 +1,681 @@
+package org.eclipse.emf.texo.test.model.samples.types;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import org.eclipse.emf.ecore.EcoreFactory;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+
+/** 
+ * A representation of the model object '<em><b>SingleTypes</b></em>'.
+ * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * @generated 
+ */
+@Entity(name = "SingleTypes")
+public class SingleTypes extends Identifiable {
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private String string = "test\"test";
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private int integer = 100;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private Integer integerObject = new Integer((int) 100);
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private long long_ = 200;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private Long longObject = new Long((long) 100);
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private double double_ = 100.0;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private Double doubleObject = new Double((double) 100.0);
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private float float_ = 0.0f;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private Float floatObject = new Float(10.0f);
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  private Class clazz = null;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private char char_ = 'z';
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private Character charObject = new Character('z');
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private byte byte_ = 5;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private Byte byteObject = new Byte((byte) 5);
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  @Lob()
+  private byte[] byteArray = new byte[] {};
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private BigDecimal bigDecimal = new BigDecimal("5");
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private BigInteger bigInteger = new BigInteger("5");
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private TestEnum enum_ = TestEnum.ENUM0;
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Temporal(TemporalType.DATE)
+  private Date date = (Date) EcoreFactory.eINSTANCE.createFromString(EcorePackage.eINSTANCE.getEDate(), null);
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generatedNOT
+   */
+  private String[] stringArray = (String[]) TypesModelPackage.MODELFACTORY.createFromString(
+      TypesModelPackage.INSTANCE.getStringArrayEDataType(), "abc::def");
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private long[] longArray = (long[]) TypesModelPackage.MODELFACTORY.createFromString(
+      TypesModelPackage.INSTANCE.getLongArrayEDataType(), null);
+
+  /** 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @generated 
+   */
+  @Basic(optional = true)
+  private TestNextEnum nextEnum = TestNextEnum.ENUM2;
+
+  /**
+   * Returns the value of '<em><b>string</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>string</b></em>' feature
+   * @generated
+   */
+  public String getString() {
+    return string;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getString() <em>string</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getString() string}' feature.
+   * @generated
+   */
+  public void setString(String newString) {
+    string = newString;
+  }
+
+  /**
+   * Returns the value of '<em><b>integer</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>integer</b></em>' feature
+   * @generated
+   */
+  public int getInteger() {
+    return integer;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getInteger() <em>integer</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getInteger() integer}' feature.
+   * @generated
+   */
+  public void setInteger(int newInteger) {
+    integer = newInteger;
+  }
+
+  /**
+   * Returns the value of '<em><b>integerObject</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>integerObject</b></em>' feature
+   * @generated
+   */
+  public Integer getIntegerObject() {
+    return integerObject;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getIntegerObject() <em>integerObject</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getIntegerObject() integerObject}' feature.
+   * @generated
+   */
+  public void setIntegerObject(Integer newIntegerObject) {
+    integerObject = newIntegerObject;
+  }
+
+  /**
+   * Returns the value of '<em><b>long</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>long</b></em>' feature
+   * @generated
+   */
+  public long getLong() {
+    return long_;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getLong() <em>long</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getLong() long}' feature.
+   * @generated
+   */
+  public void setLong(long newLong_) {
+    long_ = newLong_;
+  }
+
+  /**
+   * Returns the value of '<em><b>longObject</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>longObject</b></em>' feature
+   * @generated
+   */
+  public Long getLongObject() {
+    return longObject;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getLongObject() <em>longObject</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getLongObject() longObject}' feature.
+   * @generated
+   */
+  public void setLongObject(Long newLongObject) {
+    longObject = newLongObject;
+  }
+
+  /**
+   * Returns the value of '<em><b>double</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>double</b></em>' feature
+   * @generated
+   */
+  public double getDouble() {
+    return double_;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getDouble() <em>double</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getDouble() double}' feature.
+   * @generated
+   */
+  public void setDouble(double newDouble_) {
+    double_ = newDouble_;
+  }
+
+  /**
+   * Returns the value of '<em><b>doubleObject</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>doubleObject</b></em>' feature
+   * @generated
+   */
+  public Double getDoubleObject() {
+    return doubleObject;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getDoubleObject() <em>doubleObject</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getDoubleObject() doubleObject}' feature.
+   * @generated
+   */
+  public void setDoubleObject(Double newDoubleObject) {
+    doubleObject = newDoubleObject;
+  }
+
+  /**
+   * Returns the value of '<em><b>float</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>float</b></em>' feature
+   * @generated
+   */
+  public float getFloat() {
+    return float_;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getFloat() <em>float</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getFloat() float}' feature.
+   * @generated
+   */
+  public void setFloat(float newFloat_) {
+    float_ = newFloat_;
+  }
+
+  /**
+   * Returns the value of '<em><b>floatObject</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>floatObject</b></em>' feature
+   * @generated
+   */
+  public Float getFloatObject() {
+    return floatObject;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getFloatObject() <em>floatObject</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getFloatObject() floatObject}' feature.
+   * @generated
+   */
+  public void setFloatObject(Float newFloatObject) {
+    floatObject = newFloatObject;
+  }
+
+  /**
+   * Returns the value of '<em><b>clazz</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>clazz</b></em>' feature
+   * @generated
+   */
+  public Class getClazz() {
+    return clazz;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getClazz() <em>clazz</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getClazz() clazz}' feature.
+   * @generated
+   */
+  public void setClazz(Class newClazz) {
+    clazz = newClazz;
+  }
+
+  /**
+   * Returns the value of '<em><b>char</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>char</b></em>' feature
+   * @generated
+   */
+  public char getChar() {
+    return char_;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getChar() <em>char</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getChar() char}' feature.
+   * @generated
+   */
+  public void setChar(char newChar_) {
+    char_ = newChar_;
+  }
+
+  /**
+   * Returns the value of '<em><b>charObject</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>charObject</b></em>' feature
+   * @generated
+   */
+  public Character getCharObject() {
+    return charObject;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getCharObject() <em>charObject</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getCharObject() charObject}' feature.
+   * @generated
+   */
+  public void setCharObject(Character newCharObject) {
+    charObject = newCharObject;
+  }
+
+  /**
+   * Returns the value of '<em><b>byte</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>byte</b></em>' feature
+   * @generated
+   */
+  public byte getByte() {
+    return byte_;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getByte() <em>byte</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getByte() byte}' feature.
+   * @generated
+   */
+  public void setByte(byte newByte_) {
+    byte_ = newByte_;
+  }
+
+  /**
+   * Returns the value of '<em><b>byteObject</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>byteObject</b></em>' feature
+   * @generated
+   */
+  public Byte getByteObject() {
+    return byteObject;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getByteObject() <em>byteObject</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getByteObject() byteObject}' feature.
+   * @generated
+   */
+  public void setByteObject(Byte newByteObject) {
+    byteObject = newByteObject;
+  }
+
+  /**
+   * Returns the value of '<em><b>byteArray</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>byteArray</b></em>' feature
+   * @generated
+   */
+  public byte[] getByteArray() {
+    return byteArray;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getByteArray() <em>byteArray</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getByteArray() byteArray}' feature.
+   * @generated
+   */
+  public void setByteArray(byte[] newByteArray) {
+    byteArray = newByteArray;
+  }
+
+  /**
+   * Returns the value of '<em><b>bigDecimal</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>bigDecimal</b></em>' feature
+   * @generated
+   */
+  public BigDecimal getBigDecimal() {
+    return bigDecimal;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getBigDecimal() <em>bigDecimal</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getBigDecimal() bigDecimal}' feature.
+   * @generated
+   */
+  public void setBigDecimal(BigDecimal newBigDecimal) {
+    bigDecimal = newBigDecimal;
+  }
+
+  /**
+   * Returns the value of '<em><b>bigInteger</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>bigInteger</b></em>' feature
+   * @generated
+   */
+  public BigInteger getBigInteger() {
+    return bigInteger;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getBigInteger() <em>bigInteger</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getBigInteger() bigInteger}' feature.
+   * @generated
+   */
+  public void setBigInteger(BigInteger newBigInteger) {
+    bigInteger = newBigInteger;
+  }
+
+  /**
+   * Returns the value of '<em><b>enum</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>enum</b></em>' feature
+   * @generated
+   */
+  public TestEnum getEnum() {
+    return enum_;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getEnum() <em>enum</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getEnum() enum}' feature.
+   * @generated
+   */
+  public void setEnum(TestEnum newEnum_) {
+    enum_ = newEnum_;
+  }
+
+  /**
+   * Returns the value of '<em><b>date</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>date</b></em>' feature
+   * @generated
+   */
+  public Date getDate() {
+    return date;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getDate() <em>date</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getDate() date}' feature.
+   * @generated
+   */
+  public void setDate(Date newDate) {
+    date = newDate;
+  }
+
+  /**
+   * Returns the value of '<em><b>stringArray</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>stringArray</b></em>' feature
+   * @generated
+   */
+  public String[] getStringArray() {
+    return stringArray;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getStringArray() <em>stringArray</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getStringArray() stringArray}' feature.
+   * @generated
+   */
+  public void setStringArray(String[] newStringArray) {
+    stringArray = newStringArray;
+  }
+
+  /**
+   * Returns the value of '<em><b>longArray</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>longArray</b></em>' feature
+   * @generated
+   */
+  public long[] getLongArray() {
+    return longArray;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getLongArray() <em>longArray</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getLongArray() longArray}' feature.
+   * @generated
+   */
+  public void setLongArray(long[] newLongArray) {
+    longArray = newLongArray;
+  }
+
+  /**
+   * Returns the value of '<em><b>nextEnum</b></em>' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @return the value of '<em><b>nextEnum</b></em>' feature
+   * @generated
+   */
+  public TestNextEnum getNextEnum() {
+    return nextEnum;
+  }
+
+  /**
+   * Sets the '{@link SingleTypes#getNextEnum() <em>nextEnum</em>}' feature.
+   *
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param the new value of the '{@link SingleTypes#getNextEnum() nextEnum}' feature.
+   * @generated
+   */
+  public void setNextEnum(TestNextEnum newNextEnum) {
+    nextEnum = newNextEnum;
+  }
+
+  /**
+   * A toString method which prints the values of all EAttributes of this instance.
+   * <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString() {
+    return "SingleTypes " + " [string: " + getString() + "]" + " [integer: " + getInteger() + "]" + " [integerObject: "
+        + getIntegerObject() + "]" + " [long: " + getLong() + "]" + " [longObject: " + getLongObject() + "]"
+        + " [double: " + getDouble() + "]" + " [doubleObject: " + getDoubleObject() + "]" + " [float: " + getFloat()
+        + "]" + " [floatObject: " + getFloatObject() + "]" + " [clazz: " + getClazz() + "]" + " [char: " + getChar()
+        + "]" + " [charObject: " + getCharObject() + "]" + " [byte: " + getByte() + "]" + " [byteObject: "
+        + getByteObject() + "]" + " [byteArray: " + getByteArray() + "]" + " [bigDecimal: " + getBigDecimal() + "]"
+        + " [bigInteger: " + getBigInteger() + "]" + " [enum: " + getEnum() + "]" + " [date: " + getDate() + "]"
+        + " [stringArray: " + getStringArray() + "]" + " [longArray: " + getLongArray() + "]" + " [nextEnum: "
+        + getNextEnum() + "]";
+  }
+}

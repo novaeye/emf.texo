@@ -1,0 +1,471 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  SIGSEGV (0xb) at pc=0xb70a6b10, pid=24021, tid=2265414512
+#
+# Java VM: Java HotSpot(TM) Server VM (1.5.0_15-b04 mixed mode)
+# Problematic frame:
+# V  [libjvm.so+0x47ab10]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x09634d88):  GCTaskThread [id=24028]
+
+siginfo:si_signo=11, si_errno=0, si_code=1, si_addr=0x0000000c
+
+Registers:
+EAX=0x00000000, EBX=0xb71f1090, ECX=0xb71f1090, EDX=0x00000008
+ESP=0x87076eb0, EBP=0x87076f28, ESI=0x86dabf44, EDI=0x00000000
+EIP=0xb70a6b10, CR2=0x0000000c, EFLAGS=0x00010293
+
+Top of Stack: (sp=0x87076eb0)
+0x87076eb0:   096a5424 85636d40 00001000 b70a5d01
+0x87076ec0:   0000000c 00000000 00000001 b7048c5d
+0x87076ed0:   09629ffc 00000001 00004000 b70a6af0
+0x87076ee0:   09629ffc 00000000 005c4ef4 00000000
+0x87076ef0:   096a5424 b71db560 87076f88 b70a6db7
+0x87076f00:   09629ff0 0000502a b71db560 b70a6af0
+0x87076f10:   0000000e 00000000 00000001 b71f1090
+0x87076f20:   86dabf44 00000000 87076f58 b70a8e99 
+
+Instructions: (pc=0xb70a6b10)
+0xb70a6b00:   8b 4d 0c c7 45 bc 00 00 00 00 8b 41 04 8d 50 08
+0xb70a6b10:   8b 4a 04 89 4d b8 85 c9 0f 8e f2 04 00 00 8b 45 
+
+Stack: [0x86ff7000,0x87078000),  sp=0x87076eb0,  free space=511k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x47ab10]
+V  [libjvm.so+0x47ce99]
+V  [libjvm.so+0x3b3121]
+V  [libjvm.so+0x51a7f1]
+V  [libjvm.so+0x51b4d1]
+V  [libjvm.so+0x47cb33]
+V  [libjvm.so+0x20cecf]
+V  [libjvm.so+0x4386b8]
+C  [libpthread.so.0+0x596e]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x853bf0c8 JavaThread "Java indexing" daemon [_thread_blocked, id=24065]
+  0x84017d98 JavaThread "Worker-1" [_thread_blocked, id=24063]
+  0x82a93920 JavaThread "Worker-0" [_thread_blocked, id=24062]
+  0x8309ed40 JavaThread "ReaderThread" [_thread_in_native, id=24061]
+  0x82918c50 JavaThread "Worker-JM" [_thread_blocked, id=24059]
+  0x098b5cf0 JavaThread "[ThreadPool Manager] - Idle Thread" daemon [_thread_blocked, id=24057]
+  0x82900778 JavaThread "[Timer] - Main Queue Handler" daemon [_thread_blocked, id=24056]
+  0x846fab98 JavaThread "Bundle File Closer" daemon [_thread_blocked, id=24052]
+  0x865c0fe8 JavaThread "Start Level Event Dispatcher" daemon [_thread_blocked, id=24051]
+  0x865c0548 JavaThread "Framework Event Dispatcher" daemon [_thread_blocked, id=24049]
+  0x86599568 JavaThread "State Saver" [_thread_blocked, id=24048]
+  0x096db548 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=24046]
+  0x096d9fe8 JavaThread "CompilerThread1" daemon [_thread_in_native, id=24045]
+  0x096d8ee8 JavaThread "CompilerThread0" daemon [_thread_in_native, id=24044]
+  0x096d7f38 JavaThread "AdapterThread" daemon [_thread_blocked, id=24043]
+  0x096d7170 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=24042]
+  0x096d3c00 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=24037]
+  0x096d2bd0 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=24036]
+  0x096d1160 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=24034]
+  0x096c0a38 JavaThread "Finalizer" daemon [_thread_blocked, id=24032]
+  0x096c04d8 JavaThread "Reference Handler" daemon [_thread_blocked, id=24031]
+  0x0961a338 JavaThread "main" [_thread_blocked, id=24021]
+
+Other Threads:
+  0x096bdfc0 VMThread [id=24030]
+  0x86801128 WatcherThread [id=24047]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x09619788/0x096197b0] Threads_lock - owner thread: 0x096bdfc0
+[0x09619bd8/0x09619bf0] Heap_lock - owner thread: 0x82a93920
+
+Heap
+ PSYoungGen      total 54848K, used 47334K [0xac850000, 0xb0af0000, 0xb0af0000)
+  eden space 47360K, 99% used [0xac850000,0xaf689a78,0xaf690000)
+  from space 7488K, 0% used [0xb03a0000,0xb03a0000,0xb0af0000)
+  to   space 10432K, 2% used [0xaf690000,0xaf6d8b28,0xb00c0000)
+ PSOldGen        total 82112K, used 28498K [0x8b2f0000, 0x90320000, 0xac850000)
+  object space 82112K, 34% used [0x8b2f0000,0x8cec4928,0x90320000)
+ PSPermGen       total 40960K, used 20658K [0x872f0000, 0x89af0000, 0x8b2f0000)
+  object space 40960K, 50% used [0x872f0000,0x8871cbd0,0x89af0000)
+
+Dynamic libraries:
+08048000-08057000 r-xp 00000000 08:02 8896589    /home/mtaal/myapps/java/jdk1.5.0_15/bin/java
+08057000-08059000 rwxp 0000e000 08:02 8896589    /home/mtaal/myapps/java/jdk1.5.0_15/bin/java
+09615000-0d836000 rwxp 00000000 00:00 0          [heap]
+7efe5000-7f60d000 r-xs 00000000 08:02 2943083    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/com.ibm.icu_4.2.1.v20100412.jar
+7fc00000-7fcfd000 rwxp 00000000 00:00 0 
+7fcfd000-7fd00000 ---p 00000000 00:00 0 
+7fde7000-8000e000 r-xs 00000000 08:02 2943185    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.swt.gtk.linux.x86_3.6.2.v3659b.jar
+8000e000-80400000 r-xs 00000000 08:02 2943096    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.ui.workbench_3.6.2.M20110210-1200.jar
+80400000-80600000 rwxp 00000000 00:00 0 
+80600000-80800000 rwxp 00000000 00:00 0 
+80800000-808fa000 rwxp 00000000 00:00 0 
+808fa000-80900000 ---p 00000000 00:00 0 
+80900000-80a00000 rwxp 00000000 00:00 0 
+80a00000-80bfa000 rwxp 00000000 00:00 0 
+80bfa000-80c00000 ---p 00000000 00:00 0 
+80c00000-80cfe000 rwxp 00000000 00:00 0 
+80cfe000-80d00000 ---p 00000000 00:00 0 
+80dd6000-81224000 r-xs 00000000 08:02 2943259    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.jdt.core_3.6.2.v_A76_R36x.jar
+81500000-815fb000 rwxp 00000000 00:00 0 
+815fb000-81600000 ---p 00000000 00:00 0 
+81600000-81700000 rwxp 00000000 00:00 0 
+81700000-817fb000 rwxp 00000000 00:00 0 
+817fb000-81800000 ---p 00000000 00:00 0 
+81800000-81829000 rwxp 00000000 00:00 0 
+81829000-81900000 ---p 00000000 00:00 0 
+81900000-819ff000 rwxp 00000000 00:00 0 
+819ff000-81a00000 ---p 00000000 00:00 0 
+81c00000-81c39000 rwxp 00000000 00:00 0 
+81c39000-81d00000 ---p 00000000 00:00 0 
+81e00000-81f00000 rwxp 00000000 00:00 0 
+81fe4000-820ea000 r-xs 00000000 08:02 2943326    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.jface_3.6.2.M20110210-1200.jar
+8251c000-82600000 rwxp 00000000 00:00 0 
+82600000-827fb000 rwxp 00000000 00:00 0 
+827fb000-82800000 ---p 00000000 00:00 0 
+8287f000-82882000 rwxp 00000000 00:00 0 
+82882000-82900000 rwxp 00000000 00:00 0 
+82900000-829fa000 rwxp 00000000 00:00 0 
+829fa000-82a00000 ---p 00000000 00:00 0 
+82a00000-82b00000 rwxp 00000000 00:00 0 
+82b00000-82d00000 rwxp 00000000 00:00 0 
+82d00000-82dec000 rwxp 00000000 00:00 0 
+82dec000-82e00000 ---p 00000000 00:00 0 
+82e7f000-82e82000 ---p 00000000 00:00 0 
+82e82000-82f00000 rwxp 00000000 00:00 0 
+82f00000-82ffd000 rwxp 00000000 00:00 0 
+82ffd000-83000000 ---p 00000000 00:00 0 
+83000000-830e3000 rwxp 00000000 00:00 0 
+830e3000-83100000 ---p 00000000 00:00 0 
+83100000-831f9000 rwxp 00000000 00:00 0 
+831f9000-83200000 ---p 00000000 00:00 0 
+83200000-832fa000 rwxp 00000000 00:00 0 
+832fa000-83300000 ---p 00000000 00:00 0 
+83300000-834fe000 rwxp 00000000 00:00 0 
+834fe000-83500000 ---p 00000000 00:00 0 
+83500000-835ff000 rwxp 00000000 00:00 0 
+835ff000-83600000 ---p 00000000 00:00 0 
+83600000-836fb000 rwxp 00000000 00:00 0 
+836fb000-83700000 ---p 00000000 00:00 0 
+83700000-837e8000 rwxp 00000000 00:00 0 
+837e8000-83800000 ---p 00000000 00:00 0 
+83800000-838f7000 rwxp 00000000 00:00 0 
+838f7000-83900000 ---p 00000000 00:00 0 
+83900000-839f4000 rwxp 00000000 00:00 0 
+839f4000-83a00000 ---p 00000000 00:00 0 
+83a24000-83b00000 r-xs 00000000 08:02 6972527    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.mozilla.javascript_1.7.2.v201005080400.jar
+83b00000-83bf0000 rwxp 00000000 00:00 0 
+83bf0000-83c00000 ---p 00000000 00:00 0 
+83c77000-83d00000 r-xs 00000000 08:02 2943276    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.mortbay.jetty.server_6.1.23.v201004211559.jar
+83d00000-83dfb000 rwxp 00000000 00:00 0 
+83dfb000-83e00000 ---p 00000000 00:00 0 
+83e00000-83eff000 rwxp 00000000 00:00 0 
+83eff000-83f00000 ---p 00000000 00:00 0 
+83f72000-84000000 r-xs 00000000 08:02 2943315    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.team.cvs.core_3.3.301.R36x_v20110119-0815.jar
+84000000-840fd000 rwxp 00000000 00:00 0 
+840fd000-84100000 ---p 00000000 00:00 0 
+84186000-842ac000 rwxp 00000000 00:00 0 
+842ac000-84300000 r-xs 00000000 08:02 2943061    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.debug.core_3.6.0.v20100519.jar
+84300000-844fa000 rwxp 00000000 00:00 0 
+844fa000-84500000 ---p 00000000 00:00 0 
+84500000-84600000 rwxp 00000000 00:00 0 
+84600000-846fb000 rwxp 00000000 00:00 0 
+846fb000-84700000 ---p 00000000 00:00 0 
+84727000-84764000 r-xs 00000000 08:02 2943198    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.text_3.5.0.v20100601-1300.jar
+84764000-84822000 r-xs 00000000 08:02 2942983    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.resources_3.6.1.R36x_v20110131-1630.jar
+84822000-8494f000 r-xs 00000000 08:02 6973145    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.emf.ecore_2.6.1.v20100914-1218.jar
+8494f000-84a00000 r-xs 00000000 08:02 6973544    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.hsqldb_1.8.1.201011142003.jar
+84a00000-84afc000 rwxp 00000000 00:00 0 
+84afc000-84b00000 ---p 00000000 00:00 0 
+84b08000-84b38000 r-xs 00000000 08:02 2943020    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.sat4j.core_2.2.0.v20100429.jar
+84b38000-84b71000 r-xs 00000000 08:02 2943247    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.objectweb.asm_3.2.0.v200909071300.jar
+84b71000-84b74000 ---p 00000000 00:00 0 
+84b74000-84bf2000 rwxp 00000000 00:00 0 
+84c1f000-84c27000 r-xs 00000000 08:02 3990533    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/javax.transaction_1.1.1.v201004190952.jar
+84c27000-84c2a000 ---p 00000000 00:00 0 
+84c2a000-84ca8000 rwxp 00000000 00:00 0 
+84cb2000-84e03000 r-xs 00000000 08:02 6973515    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.xbase_1.0.2.v201102150722.jar
+84e03000-84ec1000 r-xs 00000000 08:02 6973504    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.ui_1.0.2.v201102150722.jar
+84ec1000-85053000 r-xs 00000000 08:02 6973483    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext_1.0.2.v201102150722.jar
+85053000-850d2000 r-xs 00000000 08:02 6973276    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend_1.0.1.v201008251147.jar
+850d2000-851c5000 r-xs 00000000 08:02 6973257    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd_2.6.0.v20100914-1218.jar
+851d8000-85220000 r-xs 00000000 08:02 2943317    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.jdt.launching_3.5.200.v20110105_r362.jar
+85220000-85223000 ---p 00000000 00:00 0 
+85223000-852a1000 rwxp 00000000 00:00 0 
+852a1000-85300000 r-xs 00000000 08:02 2943241    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.team.core_3.5.101.R36x_v20110203-1036.jar
+85300000-853fe000 rwxp 00000000 00:00 0 
+853fe000-85400000 ---p 00000000 00:00 0 
+85421000-85464000 r-xs 00000000 08:02 6973281    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.shared.ui_1.0.1.v201008251147.jar
+85464000-8549b000 r-xs 00000000 08:02 6973262    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.edit_2.6.0.v20100914-1218.jar
+8549e000-854a1000 ---p 00000000 00:00 0 
+854a1000-8551f000 rwxp 00000000 00:00 0 
+8551f000-85536000 r-xs 00000000 08:02 2943244    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.contenttype_3.4.100.v20100505-1235.jar
+85536000-8554d000 r-xs 00000000 08:02 2943160    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.jobs_3.5.1.R36x_v20100824.jar
+8554d000-85581000 r-xs 00000000 08:02 6973130    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.emf.common_2.6.0.v20100914-1218.jar
+85581000-855b7000 r-xs 00000000 08:02 4975647    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.junit_4.8.1.v4_8_1_v20100427-1100/junit.jar
+855b7000-855ba000 ---p 00000000 00:00 0 
+855ba000-85638000 rwxp 00000000 00:00 0 
+85638000-8564f000 r-xs 00000000 08:02 2943284    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.runtime.compatibility_3.2.100.v20100505.jar
+8564f000-8567f000 r-xs 00000000 08:02 6973107    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.uddi4j_2.0.5.v200805270300.jar
+8567f000-85682000 ---p 00000000 00:00 0 
+85682000-85700000 rwxp 00000000 00:00 0 
+85700000-857fa000 rwxp 00000000 00:00 0 
+857fa000-85800000 ---p 00000000 00:00 0 
+8580f000-8582b000 r-xs 00000000 08:02 2943295    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.preferences_3.3.0.v20100503.jar
+8582b000-8589b000 r-xs 00000000 08:02 6973497    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.generator_1.0.2.v201102150722.jar
+8589b000-858ce000 r-xs 00000000 08:02 6973490    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.common.types.ui_1.0.2.v201102150722.jar
+858ce000-85900000 r-xs 00000000 08:02 6973488    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.common.types_1.0.2.v201102150722.jar
+85900000-859f8000 rwxp 00000000 00:00 0 
+859f8000-85a00000 ---p 00000000 00:00 0 
+85a00000-85af8000 rwxp 00000000 00:00 0 
+85af8000-85b00000 ---p 00000000 00:00 0 
+85b41000-85b64000 r-xs 00000000 08:02 6973486    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.builder_1.0.2.v201102150722.jar
+85b64000-85b74000 r-xs 00000000 08:02 6973298    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.util.stdlib_1.0.1.v201008251147.jar
+85b74000-85b83000 r-xs 00000000 08:02 6973284    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.typesystem.emf_1.0.1.v201008251147.jar
+85b83000-85bb0000 r-xs 00000000 08:02 2943280    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.registry_3.5.0.v20100503.jar
+85bb4000-85bc2000 r-xs 00000000 08:02 6973296    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.ui_1.0.1.v201008251147.jar
+85be2000-85c00000 r-xs 00000000 08:02 2943089    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.sat4j.pb_2.2.0.v20100429.jar
+85c00000-85cf8000 rwxp 00000000 00:00 0 
+85cf8000-85d00000 ---p 00000000 00:00 0 
+85d0a000-85d22000 r-xs 00000000 08:02 6973265    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.editor_2.6.0.v20100914-1218.jar
+85d31000-85d54000 r-xs 00000000 08:02 6973292    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.typesystem.xsd_1.0.1.v201008251147.jar
+85d54000-85d5f000 r-xs 00000000 08:02 6973288    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.typesystem.uml2_1.0.1.v201008251147.jar
+85d89000-85da4000 r-xs 00000000 08:02 2943238    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.commands_3.6.0.I20100512-1500.jar
+85da4000-85dca000 r-xs 00000000 08:02 2943308    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.ui_3.6.2.M20110203-1100.jar
+85dca000-85e00000 r-xs 00000000 08:02 6972331    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.emf.ecore.xmi_2.5.0.v20100521-1846.jar
+85e00000-85efc000 rwxp 00000000 00:00 0 
+85efc000-85f00000 ---p 00000000 00:00 0 
+85f00000-85f0f000 r-xs 00000000 08:02 6973279    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.profiler_1.0.1.v201008251147.jar
+85f1a000-85f26000 r-xs 00000000 08:02 2943210    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.ui.net_1.2.100.I20100505-1245.jar
+85f26000-85f40000 r-xs 00000000 08:02 2943302    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.security_1.0.200.v20100503.jar
+85f40000-85f51000 r-xs 00000000 08:02 6973268    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.example.installer_1.1.0.v20100824-1607.jar
+85f5b000-85f64000 r-xs 00000000 08:02 2943067    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.net.linux.x86_1.1.100.R36x_v20100825-0800.jar
+85f64000-85f9c000 r-xs 00000000 08:02 2943232    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/com.jcraft.jsch_0.1.41.v200903070017.jar
+85f9c000-85fa9000 r-xs 00000000 08:02 2943166    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.filesystem_1.3.1.R36x_v20100727-0745.jar
+85fa9000-85fae000 r-xs 00000000 08:02 2943183    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.jdt.junit4.runtime_1.1.100.v20100526-0800.jar
+85fae000-85fbb000 r-xs 00000000 08:02 2942974    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.jdt.junit.runtime_3.4.200.v20100526-0800.jar
+85fbb000-85fc0000 r-xs 00000000 08:02 2943219    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.pde.junit.runtime_3.4.100.v20100601.jar
+85fc0000-85fd2000 r-xs 00000000 08:02 2943154    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.runtime_3.6.0.v20100505.jar
+85fd2000-85fe7000 r-xs 00000000 08:02 2943065    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.app_1.3.1.R36x_v20100803.jar
+85fe7000-86000000 r-xs 00000000 08:02 2942965    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.common_3.6.0.v20100503.jar
+86000000-86016000 r-xs 00000000 08:02 6973111    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.w3c.dom.svg_1.1.0.v200806040011.jar
+86016000-8601b000 r-xs 00000000 08:02 6973110    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.w3c.dom.smil_1.0.1.v200903091627.jar
+8601b000-8601f000 r-xs 00000000 08:02 6973109    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.w3c.dom.events_3.0.0.draft20060413_v200905140418.jar
+8601f000-86027000 r-xs 00000000 08:02 6973108    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.w3c.css.sac_1.3.0.v200805290154.jar
+86027000-8602c000 r-xs 00000000 08:02 6972880    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.slf4j.log4j_1.5.11.v20100419-1106.jar
+8602c000-8605c000 r-xs 00000000 08:02 2943159    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.mortbay.jetty.util_6.1.23.v201004211559.jar
+8605c000-86083000 r-xs 00000000 08:02 6972526    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.jdom_1.0.0.v201005080400.jar
+86083000-8608a000 r-xs 00000000 08:02 2943197    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar
+8608a000-860c4000 r-xs 00000000 08:02 6973521    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.xtext.ui_1.0.2.v201102150722.jar
+860c4000-860ee000 r-xs 00000000 08:02 6973517    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.xbase.ui_1.0.2.v201102150722.jar
+860ee000-860f5000 r-xs 00000000 08:02 6973509    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.ui.shared_1.0.2.v201102150722.jar
+860f5000-860fa000 r-xs 00000000 08:02 6973507    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.ui.junit_1.0.2.v201102150722.jar
+860fa000-860fe000 r-xs 00000000 08:02 6973505    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.ui.ecore_1.0.2.v201102150722.jar
+860fe000-86101000 ---p 00000000 00:00 0 
+86101000-8617f000 rwxp 00000000 00:00 0 
+8617f000-86182000 ---p 00000000 00:00 0 
+86182000-86200000 rwxp 00000000 00:00 0 
+86200000-862fa000 rwxp 00000000 00:00 0 
+862fa000-86300000 ---p 00000000 00:00 0 
+86300000-86313000 r-xs 00000000 08:02 6973513    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.util_1.0.2.v201102150722.jar
+86313000-8631d000 r-xs 00000000 08:02 6973277    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.check.ui_1.0.1.v201008251147.jar
+8631d000-86323000 r-xs 00000000 08:02 6973439    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.persistence.jpa.equinox.weaving_2.1.2.v20101206-r8635.jar
+86324000-86329000 r-xs 00000000 08:02 6973294    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.typesystem.xsd.ui_1.0.1.v201008251147.jar
+8632a000-8632d000 r-xs 00000000 08:02 6972869    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.slf4j.jul_1.5.11.v20100419-1106.jar
+8632d000-86333000 r-xs 00000000 08:02 6972867    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.slf4j.jcl_1.5.11.v20100419-1106.jar
+86333000-86338000 r-xs 00000000 08:02 6973290    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.typesystem.uml2.ui_1.0.1.v201008251147.jar
+86338000-86341000 r-xs 00000000 08:02 6973286    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtend.typesystem.emf.ui_1.0.1.v201008251147.jar
+86341000-86344000 r-xs 00000000 08:02 6973270    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.mapping.editor_2.6.0.v20100914-1218.jar
+86344000-86347000 r-xs 00000000 08:02 6973269    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.mapping_2.6.0.v20100914-1218.jar
+86347000-8634e000 r-xs 00000000 08:02 6972522    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.ecore.importer_2.6.0.v20100521-1855.jar
+86355000-86366000 r-xs 00000000 08:02 2942966    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.net_1.2.100.I20100511-0800.jar
+86366000-86369000 ---p 00000000 00:00 0 
+86369000-863e7000 rwxp 00000000 00:00 0 
+863e7000-86500000 r-xs 00000000 08:02 2943028    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.osgi_3.6.2.R36x_v20110210.jar
+86500000-865f9000 rwxp 00000000 00:00 0 
+865f9000-86600000 ---p 00000000 00:00 0 
+86601000-86609000 r-xs 00000000 08:02 6972528    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.slf4j.api_1.5.11.v20100519-1910.jar
+86609000-8660d000 r-xs 00000000 08:02 6973519    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.xtend_1.0.2.v201102150722.jar
+8660d000-86610000 r-xs 00000000 08:02 6972524    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.logging_1.2.15.jar
+86610000-8661b000 r-xs 00000000 08:02 6973499    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.junit_1.0.2.v201102150722.jar
+8661b000-8661f000 r-xs 00000000 08:02 6973494    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.ecore_1.0.2.v201102150722.jar
+8661f000-86624000 r-xs 00000000 08:02 6972520    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xsd.ecore.exporter_2.5.0.v20100521-1855.jar
+86636000-8663f000 r-xs 00000000 08:02 2943263    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.jsch.core_1.1.200.I20100505-1245.jar
+8663f000-86642000 r-xs 00000000 08:02 6972285    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.datatools.enablement.sybase.ase.dbdefinition_1.0.0.v200906161800.jar
+86642000-86645000 r-xs 00000000 08:02 6972258    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.datatools.enablement.sybase.asa.dbdefinition_1.0.0.v200906161800.jar
+86645000-86647000 r-xp 00000000 08:02 2531639    /home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/pde-junit/org.eclipse.osgi/bundles/132/1/.cp/os/linux/x86/libunixfile_1_0_0.so
+86647000-86648000 rwxp 00001000 08:02 2531639    /home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/pde-junit/org.eclipse.osgi/bundles/132/1/.cp/os/linux/x86/libunixfile_1_0_0.so
+86648000-8664b000 ---p 00000000 00:00 0 
+8664b000-866c9000 rwxp 00000000 00:00 0 
+866c9000-866db000 r-xp 00000000 08:02 8889411    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libnet.so
+866db000-866dc000 rwxp 00011000 08:02 8889411    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libnet.so
+866dc000-866e8000 r-xs 00000000 08:02 2943107    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.launcher_1.1.1.R36x_v20101122_1400.jar
+866e8000-86713000 r-xs 00000000 08:02 8889446    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/ext/sunpkcs11.jar
+86713000-867d9000 r-xs 00000000 08:02 8890031    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/ext/localedata.jar
+867d9000-86800000 r-xs 00000000 08:02 8889445    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/ext/sunjce_provider.jar
+86800000-868fe000 rwxp 00000000 00:00 0 
+868fe000-86900000 ---p 00000000 00:00 0 
+86905000-86911000 r-xp 00000000 08:02 7170768    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.2.R36x_v20101019_1345/eclipse_1310.so
+86911000-86912000 rwxp 0000c000 08:02 7170768    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_1.1.2.R36x_v20101019_1345/eclipse_1310.so
+86914000-86919000 r-xs 00000000 08:02 2943162    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.swt_3.6.2.v3659c.jar
+86919000-8691c000 r-xs 00000000 08:02 7162150    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.ui.workbench.compatibility_3.2.100.I20100511-0800/compatibility.jar
+8691c000-86923000 r-xp 00000000 08:02 8889412    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libnio.so
+86923000-86924000 rwxp 00006000 08:02 8889412    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libnio.so
+86924000-86925000 ---p 00000000 00:00 0 
+86925000-869a5000 rwxp 00000000 00:00 0 
+869a5000-869a8000 ---p 00000000 00:00 0 
+869a8000-86a26000 rwxp 00000000 00:00 0 
+86a26000-86a29000 ---p 00000000 00:00 0 
+86a29000-86aa7000 rwxp 00000000 00:00 0 
+86aa7000-86aaa000 ---p 00000000 00:00 0 
+86aaa000-86b28000 rwxp 00000000 00:00 0 
+86b28000-86b2b000 ---p 00000000 00:00 0 
+86b2b000-86ba9000 rwxp 00000000 00:00 0 
+86ba9000-86bac000 ---p 00000000 00:00 0 
+86bac000-86c2a000 rwxp 00000000 00:00 0 
+86c2a000-86c2d000 ---p 00000000 00:00 0 
+86c2d000-86cab000 rwxp 00000000 00:00 0 
+86cab000-86cae000 ---p 00000000 00:00 0 
+86cae000-86d2c000 rwxp 00000000 00:00 0 
+86d2c000-86d2f000 ---p 00000000 00:00 0 
+86d2f000-86dad000 rwxp 00000000 00:00 0 
+86dad000-86db4000 r-xs 00000000 08:01 1062401    /usr/lib/gconv/gconv-modules.cache
+86db4000-86df3000 r-xp 00000000 08:01 1056427    /usr/lib/locale/en_US.utf8/LC_CTYPE
+86df3000-86df6000 ---p 00000000 00:00 0 
+86df6000-86e74000 rwxp 00000000 00:00 0 
+86e74000-86e77000 ---p 00000000 00:00 0 
+86e77000-86ef5000 rwxp 00000000 00:00 0 
+86ef5000-86ef6000 ---p 00000000 00:00 0 
+86ef6000-86f76000 rwxp 00000000 00:00 0 
+86f76000-86f77000 ---p 00000000 00:00 0 
+86f77000-86ff7000 rwxp 00000000 00:00 0 
+86ff7000-86ff8000 ---p 00000000 00:00 0 
+86ff8000-8708c000 rwxp 00000000 00:00 0 
+8708c000-87098000 rwxp 00000000 00:00 0 
+87098000-870c1000 rwxp 00000000 00:00 0 
+870c1000-871a3000 rwxp 00000000 00:00 0 
+871a3000-871b7000 rwxp 00000000 00:00 0 
+871b7000-871c3000 rwxp 00000000 00:00 0 
+871c3000-871ec000 rwxp 00000000 00:00 0 
+871ec000-872cd000 rwxp 00000000 00:00 0 
+872cd000-872ef000 rwxp 00000000 00:00 0 
+872ef000-89af0000 rwxp 00000000 00:00 0 
+89af0000-8b2f0000 rwxp 00000000 00:00 0 
+8b2f0000-90320000 rwxp 00000000 00:00 0 
+90320000-ac850000 rwxp 00000000 00:00 0 
+ac850000-b0af0000 rwxp 00000000 00:00 0 
+b0af1000-b0af4000 r-xs 00000000 08:02 2943095    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.filesystem.linux.x86_1.4.0.v20100505-1235.jar
+b0af4000-b0af7000 r-xs 00000000 08:02 7128158    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.core.runtime.compatibility.registry_3.3.0.v20100520/runtime_registry_compatibility.jar
+b0af7000-b0b08000 rwxp 00000000 00:00 0 
+b0b08000-b0bb7000 rwxp 00000000 00:00 0 
+b0bb7000-b0fc7000 rwxp 00000000 00:00 0 
+b0fc7000-b3bb7000 rwxp 00000000 00:00 0 
+b3bb7000-b4426000 r-xs 00000000 08:02 8890030    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/charsets.jar
+b4426000-b443b000 r-xs 00000000 08:02 8889449    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/jce.jar
+b443b000-b44c0000 r-xs 00000000 08:02 8890027    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/jsse.jar
+b44c0000-b4529000 rwxp 00000000 00:00 0 
+b4529000-b6b51000 r-xs 00000000 08:02 8890032    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/rt.jar
+b6b51000-b6b60000 r-xp 00000000 08:02 8889408    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libzip.so
+b6b60000-b6b62000 rwxp 0000e000 08:02 8889408    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libzip.so
+b6b62000-b6b83000 r-xp 00000000 08:02 8889406    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libjava.so
+b6b83000-b6b85000 rwxp 00020000 08:02 8889406    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libjava.so
+b6b85000-b6b90000 r-xp 00000000 08:02 8889405    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libverify.so
+b6b90000-b6b91000 rwxp 0000b000 08:02 8889405    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libverify.so
+b6b91000-b6b9b000 r-xp 00000000 08:01 524965     /lib/tls/i686/cmov/libnss_files-2.11.1.so
+b6b9b000-b6b9c000 r-xp 00009000 08:01 524965     /lib/tls/i686/cmov/libnss_files-2.11.1.so
+b6b9c000-b6b9d000 rwxp 0000a000 08:01 524965     /lib/tls/i686/cmov/libnss_files-2.11.1.so
+b6b9d000-b6ba5000 r-xp 00000000 08:01 525058     /lib/tls/i686/cmov/libnss_nis-2.11.1.so
+b6ba5000-b6ba6000 r-xp 00007000 08:01 525058     /lib/tls/i686/cmov/libnss_nis-2.11.1.so
+b6ba6000-b6ba7000 rwxp 00008000 08:01 525058     /lib/tls/i686/cmov/libnss_nis-2.11.1.so
+b6ba7000-b6bd9000 r-xp 00000000 08:02 8889437    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libjdwp.so
+b6bd9000-b6bda000 rwxp 00032000 08:02 8889437    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libjdwp.so
+b6bda000-b6bdd000 rwxp 00000000 00:00 0 
+b6bdd000-b6bf0000 r-xp 00000000 08:01 524817     /lib/tls/i686/cmov/libnsl-2.11.1.so
+b6bf0000-b6bf1000 r-xp 00012000 08:01 524817     /lib/tls/i686/cmov/libnsl-2.11.1.so
+b6bf1000-b6bf2000 rwxp 00013000 08:01 524817     /lib/tls/i686/cmov/libnsl-2.11.1.so
+b6bf2000-b6bf4000 rwxp 00000000 00:00 0 
+b6bf4000-b6bf6000 r-xs 00000000 08:02 6973484    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.xtext.activities_1.0.2.v201102150722.jar
+b6bf6000-b6bf9000 r-xs 00000000 08:02 8889447    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/ext/dnsns.jar
+b6bf9000-b6bfd000 r-xp 00000000 08:02 8889438    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libdt_socket.so
+b6bfd000-b6bfe000 rwxp 00003000 08:02 8889438    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/libdt_socket.so
+b6bfe000-b6c06000 rwxs 00000000 08:01 550519     /tmp/hsperfdata_mtaal/24021
+b6c06000-b6c2a000 r-xp 00000000 08:01 524815     /lib/tls/i686/cmov/libm-2.11.1.so
+b6c2a000-b6c2b000 r-xp 00023000 08:01 524815     /lib/tls/i686/cmov/libm-2.11.1.so
+b6c2b000-b6c2c000 rwxp 00024000 08:01 524815     /lib/tls/i686/cmov/libm-2.11.1.so
+b6c2c000-b7192000 r-xp 00000000 08:02 8889395    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/server/libjvm.so
+b7192000-b71f5000 rwxp 00566000 08:02 8889395    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/server/libjvm.so
+b71f5000-b760d000 rwxp 00000000 00:00 0 
+b760d000-b7760000 r-xp 00000000 08:01 524810     /lib/tls/i686/cmov/libc-2.11.1.so
+b7760000-b7761000 ---p 00153000 08:01 524810     /lib/tls/i686/cmov/libc-2.11.1.so
+b7761000-b7763000 r-xp 00153000 08:01 524810     /lib/tls/i686/cmov/libc-2.11.1.so
+b7763000-b7764000 rwxp 00155000 08:01 524810     /lib/tls/i686/cmov/libc-2.11.1.so
+b7764000-b7767000 rwxp 00000000 00:00 0 
+b7767000-b7769000 r-xp 00000000 08:01 524814     /lib/tls/i686/cmov/libdl-2.11.1.so
+b7769000-b776a000 r-xp 00001000 08:01 524814     /lib/tls/i686/cmov/libdl-2.11.1.so
+b776a000-b776b000 rwxp 00002000 08:01 524814     /lib/tls/i686/cmov/libdl-2.11.1.so
+b776b000-b776c000 rwxp 00000000 00:00 0 
+b776c000-b7781000 r-xp 00000000 08:01 525061     /lib/tls/i686/cmov/libpthread-2.11.1.so
+b7781000-b7782000 r-xp 00014000 08:01 525061     /lib/tls/i686/cmov/libpthread-2.11.1.so
+b7782000-b7783000 rwxp 00015000 08:01 525061     /lib/tls/i686/cmov/libpthread-2.11.1.so
+b7783000-b7785000 rwxp 00000000 00:00 0 
+b7785000-b7786000 r-xs 00000000 08:02 1908844    /home/mtaal/myapps/eclipse/eclipse3.6.2/plugins/org.eclipse.wb.jdt.fragment_0.9.0.r36x201103301742.jar
+b7786000-b778c000 r-xp 00000000 08:01 524819     /lib/tls/i686/cmov/libnss_compat-2.11.1.so
+b778c000-b778d000 r-xp 00006000 08:01 524819     /lib/tls/i686/cmov/libnss_compat-2.11.1.so
+b778d000-b778e000 rwxp 00007000 08:01 524819     /lib/tls/i686/cmov/libnss_compat-2.11.1.so
+b778e000-b7794000 r-xp 00000000 08:02 8889393    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/native_threads/libhpi.so
+b7794000-b7795000 rwxp 00006000 08:02 8889393    /home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/native_threads/libhpi.so
+b7795000-b7796000 rwxp 00000000 00:00 0 
+b7796000-b7797000 ---p 00000000 00:00 0 
+b7797000-b7799000 rwxp 00000000 00:00 0 
+b7799000-b779a000 r-xp 00000000 00:00 0          [vdso]
+b779a000-b77b5000 r-xp 00000000 08:01 524784     /lib/ld-2.11.1.so
+b77b5000-b77b6000 r-xp 0001a000 08:01 524784     /lib/ld-2.11.1.so
+b77b6000-b77b7000 rwxp 0001b000 08:01 524784     /lib/ld-2.11.1.so
+bf949000-bf94c000 ---p 00000000 00:00 0 
+bf94d000-bfb49000 rwxp 00000000 00:00 0          [stack]
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:54466 -Xms40m -Xmx600m -Declipse.pde.launch=true -Declipse.p2.data.area=@config.dir/p2 -Dfile.encoding=UTF-8
+java_command: org.eclipse.equinox.launcher.Main -os linux -ws gtk -arch x86 -nl en_US -consoleLog -version 3 -port 52052 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -classNames org.eclipse.emf.texo.modelgenerator.test.EclipseModelGeneratorSingleModelTest -application org.eclipse.pde.junit.runtime.coretestapplication -data /home/mtaal/mydata/dev/workspaces/texo/../texo-gen-workspace -configuration file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/pde-junit/ -dev file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/pde-junit/dev.properties -os linux -ws gtk -arch x86 -nl en_US -consoleLog -testpluginname org.eclipse.emf.texo.modelgenerator.test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/mtaal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+USERNAME=mtaal
+LD_LIBRARY_PATH=/home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386/server:/home/mtaal/myapps/java/jdk1.5.0_15/jre/lib/i386:/home/mtaal/myapps/java/jdk1.5.0_15/jre/../lib/i386:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/i386/client:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/i386:
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x5136d0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x5136d0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x436ae0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x436ae0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x436ae0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x438f30], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x438960], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x438960], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x438960], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x438960], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:squeeze/sid
+
+uname:Linux 2.6.32-31-generic-pae #61-Ubuntu SMP Fri Apr 8 20:00:13 UTC 2011 i686
+libc:glibc 2.11.1 NPTL 2.11.1 
+rlimit: STACK 8192k, CORE 0k, NPROC infinity, NOFILE 1024, AS infinity
+load average:2.49 1.64 1.29
+
+CPU:total 2 (cores per cpu 2, threads per core 1) family 6 model 7 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 4123568k(161884k free), swap 237k(228k free)
+
+vm_info: Java HotSpot(TM) Server VM (1.5.0_15-b04) for linux-x86, built on Feb  9 2008 00:50:54 by java_re with gcc 3.2.1-7a (J2SE release)
+

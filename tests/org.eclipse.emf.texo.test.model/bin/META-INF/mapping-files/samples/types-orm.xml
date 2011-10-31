@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.ManyTypes" name="ManyTypes">
+    <orm:attributes>
+      <orm:element-collection name="string">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_string"/>
+      </orm:element-collection>
+      <orm:element-collection name="integerObject">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_integerObject"/>
+      </orm:element-collection>
+      <orm:element-collection name="long_">
+        <orm:collection-table name="ManyTypes_long"/>
+      </orm:element-collection>
+      <orm:element-collection name="doubleObject">
+        <orm:collection-table name="ManyTypes_doubleObject"/>
+      </orm:element-collection>
+      <orm:element-collection name="floatObject">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_floatObject"/>
+      </orm:element-collection>
+      <orm:element-collection name="charObject">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_charObject"/>
+      </orm:element-collection>
+      <orm:element-collection name="byteObject">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_byteObject"/>
+      </orm:element-collection>
+      <orm:element-collection name="byteArray">
+        <orm:order-column/>
+        <orm:lob/>
+        <orm:collection-table name="ManyTypes_byteArray"/>
+      </orm:element-collection>
+      <orm:element-collection name="bigDecimal">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_bigDecimal"/>
+      </orm:element-collection>
+      <orm:element-collection name="bigInteger">
+        <orm:collection-table name="ManyTypes_bigInteger"/>
+      </orm:element-collection>
+      <orm:element-collection name="enum_">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_enum"/>
+      </orm:element-collection>
+      <orm:element-collection name="date">
+        <orm:temporal>DATE</orm:temporal>
+        <orm:collection-table name="ManyTypes_date"/>
+      </orm:element-collection>
+      <orm:element-collection name="stringArray">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_stringArray"/>
+      </orm:element-collection>
+      <orm:element-collection name="longArray">
+        <orm:order-column/>
+        <orm:collection-table name="ManyTypes_longArray"/>
+      </orm:element-collection>
+      <orm:transient name="clazz"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.SingleTypes" name="SingleTypes">
+    <orm:attributes>
+      <orm:basic name="string" optional="true"/>
+      <orm:basic name="integer" optional="true"/>
+      <orm:basic name="integerObject" optional="true"/>
+      <orm:basic name="long_" optional="true"/>
+      <orm:basic name="longObject" optional="true"/>
+      <orm:basic name="double_" optional="true"/>
+      <orm:basic name="doubleObject" optional="true"/>
+      <orm:basic name="float_" optional="true"/>
+      <orm:basic name="floatObject" optional="true"/>
+      <orm:basic name="char_" optional="true"/>
+      <orm:basic name="charObject" optional="true"/>
+      <orm:basic name="byte_" optional="true"/>
+      <orm:basic name="byteObject" optional="true"/>
+      <orm:basic name="byteArray" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="bigDecimal" optional="true"/>
+      <orm:basic name="bigInteger" optional="true"/>
+      <orm:basic name="enum_" optional="true"/>
+      <orm:basic name="date" optional="true">
+        <orm:temporal>DATE</orm:temporal>
+      </orm:basic>
+      <orm:basic name="stringArray" optional="true"/>
+      <orm:basic name="longArray" optional="true"/>
+      <orm:basic name="nextEnum" optional="true"/>
+      <orm:transient name="clazz"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>
