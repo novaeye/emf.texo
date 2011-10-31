@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	(c) 2010
+	Martin Taal
+	The code, documentation and other materials contained herein have been
+	licensed under the Eclipse Public License - v 1.0 by the individual
+	copyright holders listed above, as Initial Contributors under such license.
+	The text of such license is available at www.eclipse.org.
+-->
+<rmap xmlns="http://www.eclipse.org/buckminster/RMap-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mp="http://www.eclipse.org/buckminster/MavenProvider-1.0"
+	xmlns:pmp="http://www.eclipse.org/buckminster/PDEMapProvider-1.0"
+	xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0">
+
+ 	<property key="build.type" mutable="true" value="N"/>
+ 	
+  	<searchPath name="texo.platform">
+    	<provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      		<uri format="file:{0}">
+				<bc:propertyRef key="buildSitePath" />
+      		</uri>
+    	</provider>
+	</searchPath>
+	
+	<searchPath name="texo.test.plugins">
+		<provider componentTypes="osgi.bundle" readerType="cvs" source="true">
+			<uri format="{1},org.eclipse.emf/org.eclipse.emf.texo/tests/{0}">
+				<bc:propertyRef key="buckminster.component" />
+				<bc:propertyRef key="cvs.repository"/>
+			</uri>
+		</provider>
+	</searchPath>
+	
+	<searchPath name="texo.features">
+    	<provider componentTypes="eclipse.feature" readerType="cvs" source="true" mutable="false">
+	      	<uri format="{1},org.eclipse.emf/org.eclipse.emf.texo/features/{0}-feature">
+		        <bc:propertyRef key="buckminster.component"/>
+				<bc:propertyRef key="cvs.repository"/>
+	    	</uri>
+   		</provider>
+  	</searchPath>
+	
+	<searchPath name="texo.releng">
+    	<provider componentTypes="buckminster" readerType="cvs" source="true" mutable="false">
+	      	<uri format="{1},org.eclipse.emf/org.eclipse.emf.texo/releng/{0}">
+		        <bc:propertyRef key="buckminster.component"/>
+				<bc:propertyRef key="cvs.repository"/>
+	    	</uri>
+   		</provider>
+  	</searchPath>
+
+  	<searchPath name="updates.platform">
+    	<provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      		<uri format="http://download.eclipse.org/eclipse/updates/3.7"/>
+    	</provider>
+  	</searchPath>
+
+  	<searchPath name="target.platform">
+    	<provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      		<uri format="http://download.eclipse.org/releases/indigo"/>
+    	</provider>
+    	<provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      		<uri format="http://www.elver.org/eclipse/update"/>
+    	</provider>
+		<provider readerType="p2" componentTypes="osgi.bundle" mutable="false" source="false">
+			<uri format="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository"/>
+		</provider>
+  	</searchPath>
+
+	<locator searchPathRef="texo.platform" pattern="^org\.eclipse\.emf\.texo(\..+)?" failOnError="false"/>
+	<locator searchPathRef="texo.releng" pattern="^org\.eclipse\.emf\.texo(\..+)?" failOnError="false"/>
+	<locator searchPathRef="texo.features" pattern="^org\.eclipse\.emf\.texo([\.\-].+)?" failOnError="false"/>
+	<locator searchPathRef="texo.test.plugins" pattern="^org\.eclipse\.emf\.texo(\..+)?" failOnError="false"/>
+  	<locator searchPathRef="updates.platform" failOnError="false"/>
+  	<locator searchPathRef="target.platform"/>
+	
+</rmap>
