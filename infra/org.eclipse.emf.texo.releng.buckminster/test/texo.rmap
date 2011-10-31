@@ -22,22 +22,45 @@
     	</provider>
 	</searchPath>
 	
-	<searchPath name="texo.test.plugins">
-		<provider componentTypes="osgi.bundle" readerType="cvs" source="true">
-			<uri format="{1},org.eclipse.emf/org.eclipse.emf.texo/tests/{0}">
-				<bc:propertyRef key="buckminster.component" />
-				<bc:propertyRef key="cvs.repository"/>
-			</uri>
-		</provider>
+	<searchPath name="texo.plugins">
+		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<rm:uri format="{0},core/{1}">
+				<bc:propertyRef key="git.clone"/>
+				<bc:propertyRef key="buckminster.component"/>
+			</rm:uri>
+		</rm:provider>
+		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<rm:uri format="{0},runtime/{1}">
+				<bc:propertyRef key="git.clone"/>
+				<bc:propertyRef key="buckminster.component"/>
+			</rm:uri>
+		</rm:provider>
+		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<rm:uri format="{0},tests/{1}">
+				<bc:propertyRef key="git.clone"/>
+				<bc:propertyRef key="buckminster.component"/>
+			</rm:uri>
+		</rm:provider>
+		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<rm:uri format="{0},generator/{1}">
+				<bc:propertyRef key="git.clone"/>
+				<bc:propertyRef key="buckminster.component"/>
+			</rm:uri>
+		</rm:provider>
 	</searchPath>
 	
 	<searchPath name="texo.features">
-    	<provider componentTypes="eclipse.feature" readerType="cvs" source="true" mutable="false">
-	      	<uri format="{1},org.eclipse.emf/org.eclipse.emf.texo/features/{0}-feature">
-		        <bc:propertyRef key="buckminster.component"/>
-				<bc:propertyRef key="cvs.repository"/>
-	    	</uri>
-   		</provider>
+		<rm:provider componentTypes="eclipse.feature" readerType="git" source="true" mutable="false">
+			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<rm:uri format="{0},features/{1}-feature">
+				<bc:propertyRef key="git.clone"/>
+				<bc:propertyRef key="buckminster.component"/>
+			</rm:uri>
+		</rm:provider>
   	</searchPath>
 	
 	<searchPath name="texo.releng">
