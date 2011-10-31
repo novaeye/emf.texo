@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotationsmodel:AnnotatedModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:annotationsmodel="http://www.eclipse.org/emf/texo/annotations/model" xmlns:modelannotations="http://www.eclipse.org/emf/texo/modelgenerator/modelannotations">
+  <annotatedEPackages>
+    <ePackage href="file:/home/mtaal/mydata/dev/workspaces/texo/org.eclipse.emf.texo.test.model/models/samples/accounting.ecore#/"/>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
+      <eClass href="file:/home/mtaal/mydata/dev/workspaces/texo/org.eclipse.emf.texo.test.model/models/samples/accounting.ecore#//Report"/>
+      <eClassAnnotations xsi:type="modelannotations:EClassModelGenAnnotation" description="" documentation="" name="" serializable="true"/>
+      <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEReference">
+        <eReference href="file:/home/mtaal/mydata/dev/workspaces/texo/org.eclipse.emf.texo.test.model/models/samples/accounting.ecore#//Report/creditReportGroup"/>
+        <eReferenceAnnotations xsi:type="modelannotations:EReferenceModelGenAnnotation" getter="getMyCreditReportGroupGetter" setter="setMyCreditReportGroup" validJavaMemberName="myCreditReportGroup"/>
+      </annotatedEStructuralFeatures>
+      <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEAttribute">
+        <eAttribute href="file:/home/mtaal/mydata/dev/workspaces/texo/org.eclipse.emf.texo.test.model/models/samples/accounting.ecore#//Report/name"/>
+        <eAttributeAnnotations xsi:type="modelannotations:EAttributeModelGenAnnotation"/>
+      </annotatedEStructuralFeatures>
+    </annotatedEClassifiers>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass"/>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEDataType">
+      <eDataType href="file:/home/mtaal/mydata/dev/workspaces/texo/org.eclipse.emf.texo.test.model/models/samples/accounting.ecore#//Date"/>
+    </annotatedEClassifiers>
+  </annotatedEPackages>
+</annotationsmodel:AnnotatedModel>
