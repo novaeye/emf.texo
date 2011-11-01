@@ -152,12 +152,12 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 		</buckminster>
 			
 		<echo message="Delete some to-be generated files"/>
-		<delete dir="${workspacePath}/git/tests/org.eclipse.emf.texo.test.model/src-test-gen/org/eclipse/emf/texo/test/model/samples/capa"/>
-		<delete dir="${workspacePath}/git/tests/org.eclipse.emf.texo.test.model/src-test-gen/org/eclipse/emf/texo/test/model/samples/employee"/>
-		<delete dir="${workspacePath}/git/tests/org.eclipse.emf.texo.test.model/src-test-gen/org/eclipse/emf/texo/test/model/samples/extendedpo2"/>
+		<delete dir="${gitPath}/tests/org.eclipse.emf.texo.test.model/src-test-gen/org/eclipse/emf/texo/test/model/samples/capa"/>
+		<delete dir="${gitPath}/tests/org.eclipse.emf.texo.test.model/src-test-gen/org/eclipse/emf/texo/test/model/samples/employee"/>
+		<delete dir="${gitPath}/tests/org.eclipse.emf.texo.test.model/src-test-gen/org/eclipse/emf/texo/test/model/samples/extendedpo2"/>
 		<echo message="Copy from src-merge-test to src-test-gen, to test merging during generation"/>
-	    <copy todir="${workspacePath}/git/tests/org.eclipse.emf.texo.test.model/src-test-gen" flatten="false">
-	    	<fileset dir="${workspacePath}/git/tests/org.eclipse.emf.texo.test.model/src-merge-testing">
+	    <copy todir="${gitPath}/tests/org.eclipse.emf.texo.test.model/src-test-gen" flatten="false">
+	    	<fileset dir="${gitPath}/tests/org.eclipse.emf.texo.test.model/src-merge-testing">
 				<include name="**/*"/>
 			</fileset>
 	    </copy>

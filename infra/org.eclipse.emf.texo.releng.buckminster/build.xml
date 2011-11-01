@@ -28,8 +28,6 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 		<isset property="env.WORKSPACE" />
 	</condition>
 
-	<property name="git.clone" location="${hudsonWorkSpacePath}/git" />
-
 	<condition property="texo.update.site.type" value="${env.TEXO_UPDATE_SITE_TYPE}" else="interim">
 		<isset property="env.TEXO_UPDATE_SITE_TYPE" />
 	</condition>
@@ -64,6 +62,7 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	</condition>
 
 	<property name="buildsPath" location="${hudsonWorkSpacePath}/build" />
+	<property name="gitPath" location="${hudsonWorkSpacePath}/git" />
 
 	<!--property name="rootPath" location="${buildsPath}/${build.type}${buildTimestamp}"/-->
 	<property name="rootPath" location="${buildsPath}" />
@@ -110,6 +109,7 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 
 	<target name="init">
 		<echo message="Removing old build" />
+		<delete dir="${gitPath}" quiet="true" />
 		<delete dir="${testPath}" quiet="true" />
 		<delete dir="${buildPath}" quiet="true" />
 		<delete dir="${generatePath}" quiet="true" />
