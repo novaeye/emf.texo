@@ -57,7 +57,6 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 				<args>
 					<jvmarg value="-Xmx1024m" />
 					<jvmarg value="-Dbugfix.288796=true" />
-					<jvmarg value="-Dgit.clone=${gitPath}" />
 					<arg value="-data" />
 					<arg value="@{workspace}" />
 					<arg value="--loglevel" />
