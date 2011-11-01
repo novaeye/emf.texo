@@ -24,7 +24,7 @@
     	</provider>
 	</searchPath>
 	
-	<searchPath name="texo.plugins">
+	<searchPath name="texo.test.plugins">
 		<provider componentTypes="osgi.bundle" readerType="git" source="true">
 			<property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
 			<uri format="{0},core/{1}">
