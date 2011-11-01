@@ -64,15 +64,6 @@
 			</uri>
 		</provider>
   	</searchPath>
-	
-	<searchPath name="texo.releng">
-    	<provider componentTypes="buckminster" readerType="cvs" source="true" mutable="false">
-	      	<uri format="{1},org.eclipse.emf/org.eclipse.emf.texo/releng/{0}">
-		        <bc:propertyRef key="buckminster.component"/>
-				<bc:propertyRef key="cvs.repository"/>
-	    	</uri>
-   		</provider>
-  	</searchPath>
 
   	<searchPath name="updates.platform">
     	<provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
@@ -93,7 +84,6 @@
   	</searchPath>
 
 	<locator searchPathRef="texo.platform" pattern="^org\.eclipse\.emf\.texo(\..+)?" failOnError="false"/>
-	<locator searchPathRef="texo.releng" pattern="^org\.eclipse\.emf\.texo(\..+)?" failOnError="false"/>
 	<locator searchPathRef="texo.features" pattern="^org\.eclipse\.emf\.texo([\.\-].+)?" failOnError="false"/>
 	<locator searchPathRef="texo.test.plugins" pattern="^org\.eclipse\.emf\.texo(\..+)?" failOnError="false"/>
   	<locator searchPathRef="updates.platform" failOnError="false"/>
