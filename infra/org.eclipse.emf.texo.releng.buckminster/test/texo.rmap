@@ -23,44 +23,44 @@
 	</searchPath>
 	
 	<searchPath name="texo.plugins">
-		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
-			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
-			<rm:uri format="{0},core/{1}">
+		<provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<uri format="{0},core/{1}">
 				<bc:propertyRef key="git.clone"/>
 				<bc:propertyRef key="buckminster.component"/>
-			</rm:uri>
-		</rm:provider>
-		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
-			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
-			<rm:uri format="{0},runtime/{1}">
+			</uri>
+		</provider>
+		<provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<uri format="{0},runtime/{1}">
 				<bc:propertyRef key="git.clone"/>
 				<bc:propertyRef key="buckminster.component"/>
-			</rm:uri>
-		</rm:provider>
-		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
-			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
-			<rm:uri format="{0},tests/{1}">
+			</uri>
+		</provider>
+		<provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<uri format="{0},tests/{1}">
 				<bc:propertyRef key="git.clone"/>
 				<bc:propertyRef key="buckminster.component"/>
-			</rm:uri>
-		</rm:provider>
-		<rm:provider componentTypes="osgi.bundle" readerType="git" source="true">
-			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
-			<rm:uri format="{0},generator/{1}">
+			</uri>
+		</provider>
+		<provider componentTypes="osgi.bundle" readerType="git" source="true">
+			<property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<uri format="{0},generator/{1}">
 				<bc:propertyRef key="git.clone"/>
 				<bc:propertyRef key="buckminster.component"/>
-			</rm:uri>
-		</rm:provider>
+			</uri>
+		</provider>
 	</searchPath>
 	
 	<searchPath name="texo.features">
-		<rm:provider componentTypes="eclipse.feature" readerType="git" source="true" mutable="false">
-			<rm:property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
-			<rm:uri format="{0},features/{1}-feature">
+		<provider componentTypes="eclipse.feature" readerType="git" source="true" mutable="false">
+			<property key="git.remote.uri" value="git://git.eclipse.org/gitroot/texo/org.eclipse.emf.texo.git"/>
+			<uri format="{0},features/{1}-feature">
 				<bc:propertyRef key="git.clone"/>
 				<bc:propertyRef key="buckminster.component"/>
-			</rm:uri>
-		</rm:provider>
+			</uri>
+		</provider>
   	</searchPath>
 	
 	<searchPath name="texo.releng">
