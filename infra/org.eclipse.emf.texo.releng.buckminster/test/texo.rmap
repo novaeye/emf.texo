@@ -12,8 +12,6 @@
 	xmlns:pmp="http://www.eclipse.org/buckminster/PDEMapProvider-1.0"
 	xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0">
 
-	<property key="git.clone" mutable="true" value="${user.home}/git/texo"/>
-
  	<property key="build.type" mutable="true" value="N"/>
  	
   	<searchPath name="texo.platform">
