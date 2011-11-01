@@ -62,7 +62,7 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	</condition>
 
 	<property name="buildsPath" location="${hudsonWorkSpacePath}/build" />
-	<property name="gitPath" location="${hudsonWorkSpacePath}/git" />
+	<property name="gitPath" location="${hudsonWorkSpacePath}" />
 
 	<!--property name="rootPath" location="${buildsPath}/${build.type}${buildTimestamp}"/-->
 	<property name="rootPath" location="${buildsPath}" />
@@ -109,7 +109,6 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 
 	<target name="init">
 		<echo message="Removing old build" />
-		<delete dir="${gitPath}" quiet="true" />
 		<delete dir="${testPath}" quiet="true" />
 		<delete dir="${buildPath}" quiet="true" />
 		<delete dir="${generatePath}" quiet="true" />
