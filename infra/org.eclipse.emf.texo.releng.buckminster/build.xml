@@ -18,13 +18,6 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<!-- load properties and set timestamp for the build -->
 	<property environment="env" />
 
-	<taskdef resource="net/sf/antcontrib/antlib.xml">
-		<classpath>
-			<pathelement location="/develop/bin/ant-contrib/ant-contrib-1.0b3.jar" />
-			<pathelement location="${ant.contrib}" />
-		</classpath>
-	</taskdef>
-
 	<tstamp>
 		<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
 	</tstamp>
@@ -86,20 +79,12 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<property name="buckminster.output.root" location="${rootPath}/output" />
 	<property name="buckminster.temp.root" location="${rootPath}/temp" />
 
-
 	<condition property="site.signing" value="${env.SITE_SIGNING}" else="false">
 		<isset property="env.SITE_SIGNING" />
 	</condition>
 	<echo message="site.signing = ${site.signing}" />
-
-	<if>
-		<equals arg1="${site.signing}" arg2="true" />
-		<then>
-			<property name="eclipse.staging.area"
-			          value="/shared/download-staging.priv/modeling/emf/texo/${hudson.JOB_NAME}" />
-			<echo message="eclipse.staging.area = ${eclipse.staging.area}" />
-		</then>
-	</if>
+	<property name="eclipse.staging.area"
+	          value="/shared/download-staging.priv/modeling/emf/texo/${hudson.JOB_NAME}" />
 
 	<import file="ant_common.xml" />
 
