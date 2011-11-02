@@ -36,10 +36,6 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 		<isset property="env.SITE_PACK200" />
 	</condition>
 
-	<condition property="site.signing" value="${env.SITE_SIGNING}" else="false">
-		<isset property="env.SITE_SIGNING" />
-	</condition>
-
 	<condition property="buckminster.loglevel" value="${env.BUCKMINSTER_LOGLEVEL}" else="info">
 		<isset property="env.BUCKMINSTER_LOGLEVEL" />
 	</condition>
@@ -83,11 +79,9 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<property name="buckminster.output.root" location="${rootPath}/output" />
 	<property name="buckminster.temp.root" location="${rootPath}/temp" />
 
-	<condition property="site.signing" value="true" else="false">
-		<and>
-			<equals arg1="${env.SITE_SIGNING}" arg2="true" />
-			<equals arg1="${hudson.HUDSON_URL}" arg2="https://hudson.eclipse.org/hudson/" />
-		</and>
+
+	<condition property="site.signing" value="${env.SITE_SIGNING}" else="false">
+		<isset property="env.SITE_SIGNING" />
 	</condition>
 	<echo message="site.signing = ${site.signing}" />
 
