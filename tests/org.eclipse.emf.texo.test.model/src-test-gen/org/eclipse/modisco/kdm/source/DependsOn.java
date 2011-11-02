@@ -18,7 +18,7 @@ public class DependsOn extends AbstractInventoryRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractInventoryElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractInventoryElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractInventoryElement to = null;
 
@@ -26,7 +26,7 @@ public class DependsOn extends AbstractInventoryRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractInventoryElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractInventoryElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractInventoryElement from = null;
 

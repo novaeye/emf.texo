@@ -21,7 +21,7 @@ public class DeployedComponent extends AbstractPlatformElement {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Module.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Module.class)
   @JoinTable(name = "DeployedComponent_groupedCode")
   private Set<Module> groupedCode = new HashSet<Module>();
 

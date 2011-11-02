@@ -24,7 +24,7 @@ public class BalanceAccount extends Account {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ReportGroup.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ReportGroup.class)
   @OrderColumn()
   @JoinTable(name = "BalanceAccount_report")
   private List<ReportGroup> report = new ArrayList<ReportGroup>();

@@ -55,7 +55,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractCodeElement.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractCodeElement.class)
   @JoinTable(name = "AbstractEventElement_implementation")
   private Set<AbstractCodeElement> implementation = new HashSet<AbstractCodeElement>();
 

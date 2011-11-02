@@ -4,6 +4,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.MapKeyClass;
@@ -46,6 +48,8 @@ public class BookStore extends Identifiable {
    * <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @CollectionTable(name = "BookStore_keyWords")
   private Map<String, String> keyWords = new LinkedHashMap<String, String>();
 
   /** 
@@ -53,6 +57,8 @@ public class BookStore extends Identifiable {
    * <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @CollectionTable(name = "BookStore_namesByWriter")
   private Map<Writer, String> namesByWriter = new LinkedHashMap<Writer, String>();
 
   /**

@@ -27,7 +27,7 @@ public class PaymentInfo {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Tariff.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Tariff.class)
   @JoinColumns({ @JoinColumn() })
   private Tariff tariff = null;
 
@@ -36,7 +36,7 @@ public class PaymentInfo {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PaymentItem.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PaymentItem.class)
   @OrderColumn()
   @JoinTable(name = "PaymentInfo_factPayments")
   private List<PaymentItem> factPayments = new ArrayList<PaymentItem>();

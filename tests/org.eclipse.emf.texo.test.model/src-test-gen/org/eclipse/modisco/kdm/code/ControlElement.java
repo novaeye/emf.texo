@@ -22,7 +22,7 @@ public class ControlElement extends ComputationalObject {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Datatype.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Datatype.class)
   @JoinColumns({ @JoinColumn() })
   private Datatype type = null;
 

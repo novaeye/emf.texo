@@ -18,7 +18,7 @@ public class KeyRelation extends AbstractDataRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UniqueKey.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UniqueKey.class)
   @JoinColumns({ @JoinColumn() })
   private UniqueKey to = null;
 
@@ -26,7 +26,7 @@ public class KeyRelation extends AbstractDataRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ReferenceKey.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ReferenceKey.class)
   @JoinColumns({ @JoinColumn() })
   private ReferenceKey from = null;
 

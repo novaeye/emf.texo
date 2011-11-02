@@ -35,7 +35,7 @@ public class CatalogType {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CatalogType.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CatalogType.class)
   @OrderColumn()
   @JoinTable(name = "CatalogType_subCatalog")
   private List<CatalogType> subCatalog = new ArrayList<CatalogType>();
@@ -46,7 +46,7 @@ public class CatalogType {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ProductType.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ProductType.class)
   @OrderColumn()
   @JoinTable(name = "CatalogType_product")
   private List<ProductType> product = new ArrayList<ProductType>();

@@ -45,7 +45,7 @@ public class JournalStatement extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
   @JoinColumns({ @JoinColumn() })
   private Account debitAccount = null;
 
@@ -53,7 +53,7 @@ public class JournalStatement extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
   @JoinColumns({ @JoinColumn() })
   private Account creditAccount = null;
 
@@ -61,7 +61,7 @@ public class JournalStatement extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Vat.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Vat.class)
   @JoinColumns({ @JoinColumn() })
   private Vat vat = null;
 

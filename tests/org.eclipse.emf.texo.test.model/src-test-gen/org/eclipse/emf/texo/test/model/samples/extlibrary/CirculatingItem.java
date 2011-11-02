@@ -25,7 +25,7 @@ public abstract class CirculatingItem extends Item implements Lendable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "borrowed", targetEntity = Borrower.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "borrowed", targetEntity = Borrower.class)
   private Set<Borrower> borrowers = new HashSet<Borrower>();
 
   /**

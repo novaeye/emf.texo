@@ -20,7 +20,7 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = DeployedComponent.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = DeployedComponent.class)
   @JoinTable(name = "DeployedSoftwareSystem_groupedComponent")
   private Set<DeployedComponent> groupedComponent = new HashSet<DeployedComponent>();
 

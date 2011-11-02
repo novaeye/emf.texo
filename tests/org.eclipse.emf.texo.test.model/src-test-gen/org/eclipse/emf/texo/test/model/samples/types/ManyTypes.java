@@ -7,7 +7,14 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.OrderColumn;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /** 
@@ -22,90 +29,129 @@ public class ManyTypes extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_string")
   private List<String> string = new ArrayList<String>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_integerObject")
   private List<Integer> integerObject = new ArrayList<Integer>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @CollectionTable(name = "ManyTypes_long")
   private Set<Long> long_ = new HashSet<Long>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @CollectionTable(name = "ManyTypes_doubleObject")
   private Set<Double> doubleObject = new HashSet<Double>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_floatObject")
   private List<Float> floatObject = new ArrayList<Float>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @Transient()
   private Set<Class<Object>> clazz = new HashSet<Class<Object>>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_charObject")
   private List<Character> charObject = new ArrayList<Character>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_byteObject")
   private List<Byte> byteObject = new ArrayList<Byte>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @Lob()
+  @CollectionTable(name = "ManyTypes_byteArray")
   private List<byte[]> byteArray = new ArrayList<byte[]>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_bigDecimal")
   private List<BigDecimal> bigDecimal = new ArrayList<BigDecimal>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @CollectionTable(name = "ManyTypes_bigInteger")
   private Set<BigInteger> bigInteger = new HashSet<BigInteger>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_enum")
   private List<TestEnum> enum_ = new ArrayList<TestEnum>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @Temporal(TemporalType.DATE)
   private Set<Date> date = new HashSet<Date>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_stringArray")
   private List<String[]> stringArray = new ArrayList<String[]>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "ManyTypes_longArray")
   private List<long[]> longArray = new ArrayList<long[]>();
 
   /**

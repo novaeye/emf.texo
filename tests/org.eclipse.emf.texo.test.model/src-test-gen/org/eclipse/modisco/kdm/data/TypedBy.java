@@ -18,7 +18,7 @@ public class TypedBy extends AbstractDataRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ComplexContentType.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ComplexContentType.class)
   @JoinColumns({ @JoinColumn() })
   private ComplexContentType to = null;
 
@@ -26,7 +26,7 @@ public class TypedBy extends AbstractDataRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ContentItem.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ContentItem.class)
   @JoinColumns({ @JoinColumn() })
   private ContentItem from = null;
 

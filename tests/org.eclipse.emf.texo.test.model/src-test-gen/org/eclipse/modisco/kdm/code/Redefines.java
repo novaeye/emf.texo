@@ -18,7 +18,7 @@ public class Redefines extends AbstractCodeRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = MacroUnit.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = MacroUnit.class)
   @JoinColumns({ @JoinColumn() })
   private MacroUnit to = null;
 
@@ -26,7 +26,7 @@ public class Redefines extends AbstractCodeRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PreprocessorDirective.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PreprocessorDirective.class)
   @JoinColumns({ @JoinColumn() })
   private PreprocessorDirective from = null;
 

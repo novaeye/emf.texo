@@ -31,7 +31,7 @@ public class AggregatedRelationship extends ModelElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
   @JoinColumns({ @JoinColumn() })
   private KDMEntity from = null;
 
@@ -42,7 +42,7 @@ public class AggregatedRelationship extends ModelElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
   @JoinColumns({ @JoinColumn() })
   private KDMEntity to = null;
 
@@ -52,7 +52,7 @@ public class AggregatedRelationship extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
   @JoinTable(name = "AggregatedRelationship_relation")
   private Set<KDMRelationship> relation = new HashSet<KDMRelationship>();
 

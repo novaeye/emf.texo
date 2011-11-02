@@ -40,7 +40,7 @@ public class PType extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PType.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PType.class)
   @JoinTable(name = "PType_base")
   private PType base = null;
 
@@ -48,14 +48,14 @@ public class PType extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "base", targetEntity = PType.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "base", targetEntity = PType.class)
   private Set<PType> subTypes = new HashSet<PType>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PType.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PType.class)
   @JoinTable(name = "PType_subNOTypes")
   private Set<PType> subNOTypes = new HashSet<PType>();
 
@@ -63,7 +63,7 @@ public class PType extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PDeclaration.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PDeclaration.class)
   @OrderColumn()
   @JoinTable(name = "PType_infoReferences")
   private List<PDeclaration> infoReferences = new ArrayList<PDeclaration>();

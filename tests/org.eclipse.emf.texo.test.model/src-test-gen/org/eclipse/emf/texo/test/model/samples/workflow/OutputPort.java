@@ -23,7 +23,7 @@ public class OutputPort extends Port {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = WorkflowNode.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = WorkflowNode.class)
   @JoinColumns({ @JoinColumn() })
   private WorkflowNode node = null;
 
@@ -31,7 +31,7 @@ public class OutputPort extends Port {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Edge.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Edge.class)
   @OrderColumn()
   @JoinTable(name = "OutputPort_edges")
   private List<Edge> edges = new ArrayList<Edge>();

@@ -18,7 +18,7 @@ public class UILayout extends AbstractUIRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UIResource.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UIResource.class)
   @JoinColumns({ @JoinColumn() })
   private UIResource to = null;
 
@@ -26,7 +26,7 @@ public class UILayout extends AbstractUIRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UIResource.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UIResource.class)
   @JoinColumns({ @JoinColumn() })
   private UIResource from = null;
 

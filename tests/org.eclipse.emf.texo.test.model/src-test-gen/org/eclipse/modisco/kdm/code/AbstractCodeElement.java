@@ -53,7 +53,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = EntryFlow.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = EntryFlow.class)
   @OrderColumn()
   @JoinTable(name = "AbstractCodeElement_entryFlow")
   private List<EntryFlow> entryFlow = new ArrayList<EntryFlow>();

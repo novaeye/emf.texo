@@ -28,7 +28,7 @@ public class Event {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Message.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Message.class)
   @JoinColumns({ @JoinColumn() })
   private Message message = null;
 
@@ -36,7 +36,7 @@ public class Event {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Coordinates.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Coordinates.class)
   @JoinColumns({ @JoinColumn() })
   private Coordinates coordinates = null;
 

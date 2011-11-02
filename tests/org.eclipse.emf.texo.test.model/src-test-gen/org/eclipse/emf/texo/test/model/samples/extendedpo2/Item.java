@@ -23,7 +23,7 @@ public class Item extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PurchaseOrder.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder order = null;
 

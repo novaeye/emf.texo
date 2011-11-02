@@ -40,7 +40,7 @@ public class Message {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
   @JoinColumns({ @JoinColumn() })
   private SimCard from = null;
 
@@ -49,7 +49,7 @@ public class Message {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
   @JoinColumns({ @JoinColumn() })
   private SimCard to = null;
 

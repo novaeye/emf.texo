@@ -36,7 +36,7 @@ public class Contract {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
   @JoinColumns({ @JoinColumn() })
   private SimCard simCard = null;
 
@@ -44,7 +44,7 @@ public class Contract {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PaymentInfo.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PaymentInfo.class)
   @JoinColumns({ @JoinColumn() })
   private PaymentInfo paymentInfo = null;
 
@@ -53,7 +53,7 @@ public class Contract {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Car.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Car.class)
   @JoinColumns({ @JoinColumn() })
   private Car car = null;
 
@@ -62,7 +62,7 @@ public class Contract {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = SecretQuestion.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = SecretQuestion.class)
   @OrderColumn()
   @JoinTable(name = "Contract_secretQuestions")
   private List<SecretQuestion> secretQuestions = new ArrayList<SecretQuestion>();

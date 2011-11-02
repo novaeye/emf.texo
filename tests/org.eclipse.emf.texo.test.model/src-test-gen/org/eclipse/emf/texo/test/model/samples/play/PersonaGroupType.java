@@ -3,7 +3,10 @@ package org.eclipse.emf.texo.test.model.samples.play;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>PersonaGroupType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -18,6 +21,9 @@ public class PersonaGroupType {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "PersonaGroupType_persona")
   private List<String> persona = new ArrayList<String>();
 
   /** 

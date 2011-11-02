@@ -3,7 +3,10 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.duration;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 import javax.xml.datatype.Duration;
 
 /** 
@@ -32,6 +35,9 @@ public class DurationTest {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "DurationTest_durations")
   private List<Duration> durations = new ArrayList<Duration>();
 
   /**

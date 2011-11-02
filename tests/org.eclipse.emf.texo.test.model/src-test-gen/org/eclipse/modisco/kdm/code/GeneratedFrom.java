@@ -18,7 +18,7 @@ public class GeneratedFrom extends AbstractCodeRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PreprocessorDirective.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PreprocessorDirective.class)
   @JoinColumns({ @JoinColumn() })
   private PreprocessorDirective to = null;
 
@@ -26,7 +26,7 @@ public class GeneratedFrom extends AbstractCodeRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractCodeElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractCodeElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractCodeElement from = null;
 

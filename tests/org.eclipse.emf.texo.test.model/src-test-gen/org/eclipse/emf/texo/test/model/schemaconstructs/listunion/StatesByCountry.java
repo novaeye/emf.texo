@@ -3,7 +3,10 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.listunion;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 
 /** 
  * A representation of the model object '<em><b>statesByCountry</b></em>'.
@@ -45,6 +48,9 @@ public class StatesByCountry {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "statesByCountry_zipUnions")
   private List<String> zipUnions = new ArrayList<String>();
 
   /** 
@@ -58,6 +64,9 @@ public class StatesByCountry {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "statesByCountry_simpleUnions")
   private List<Object> simpleUnions = new ArrayList<Object>();
 
   /** 
@@ -71,6 +80,9 @@ public class StatesByCountry {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "statesByCountry_simpleStringUnions")
   private List<String> simpleStringUnions = new ArrayList<String>();
 
   /**

@@ -32,7 +32,7 @@ public abstract class ModelElement extends Element {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Stereotype.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Stereotype.class)
   @JoinTable(name = "ModelElement_stereotype")
   private Set<Stereotype> stereotype = new HashSet<Stereotype>();
 

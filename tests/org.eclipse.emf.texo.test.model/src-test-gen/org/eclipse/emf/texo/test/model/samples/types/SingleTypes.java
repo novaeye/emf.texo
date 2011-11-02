@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -87,6 +88,7 @@ public class SingleTypes extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @Transient()
   private Class clazz = null;
 
   /** 

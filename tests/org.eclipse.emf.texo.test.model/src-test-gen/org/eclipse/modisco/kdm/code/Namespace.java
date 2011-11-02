@@ -19,7 +19,7 @@ public class Namespace extends CodeItem {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CodeItem.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CodeItem.class)
   @JoinTable(name = "Namespace_groupedCode")
   private Set<CodeItem> groupedCode = new HashSet<CodeItem>();
 

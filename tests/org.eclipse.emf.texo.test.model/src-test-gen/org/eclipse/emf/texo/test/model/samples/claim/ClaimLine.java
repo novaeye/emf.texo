@@ -23,7 +23,7 @@ public class ClaimLine {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Claim.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Claim.class)
   @JoinColumns({ @JoinColumn() })
   private Claim claim = null;
 

@@ -39,7 +39,7 @@ public class SimTariff implements Tariff {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = VolumePayment.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = VolumePayment.class)
   @OrderColumn()
   @JoinTable(name = "Tariff_volumePayments")
   private List<VolumePayment> volumePayments = new ArrayList<VolumePayment>();
@@ -49,7 +49,7 @@ public class SimTariff implements Tariff {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PeriodicalPayment.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PeriodicalPayment.class)
   @OrderColumn()
   @JoinTable(name = "Tariff_periodicalPayments")
   private List<PeriodicalPayment> periodicalPayments = new ArrayList<PeriodicalPayment>();
@@ -60,7 +60,7 @@ public class SimTariff implements Tariff {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = OneTimePayment.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = OneTimePayment.class)
   @OrderColumn()
   @JoinTable(name = "Tariff_initialPayment")
   private List<OneTimePayment> initialPayment = new ArrayList<OneTimePayment>();
@@ -70,7 +70,7 @@ public class SimTariff implements Tariff {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Service.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Service.class)
   @OrderColumn()
   @JoinTable(name = "Tariff_services")
   private List<Service> services = new ArrayList<Service>();

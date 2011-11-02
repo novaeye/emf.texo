@@ -23,7 +23,7 @@ public class BuildResource extends AbstractBuildElement {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @JoinTable(name = "BuildResource_implementation")
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
@@ -31,7 +31,7 @@ public class BuildResource extends AbstractBuildElement {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractBuildElement.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractBuildElement.class)
   @JoinTable(name = "BuildResource_groupedBuild")
   private Set<AbstractBuildElement> groupedBuild = new HashSet<AbstractBuildElement>();
 

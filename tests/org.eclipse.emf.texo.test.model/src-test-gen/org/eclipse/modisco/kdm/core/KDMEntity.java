@@ -44,7 +44,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = KDMModel.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = KDMModel.class)
   @JoinColumns({ @JoinColumn() })
   private KDMModel model = null;
 
@@ -58,7 +58,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = KDMEntity.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = KDMEntity.class)
   @JoinColumns({ @JoinColumn() })
   private KDMEntity owner = null;
 
@@ -79,7 +79,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
   @OrderColumn()
   @JoinTable(name = "KDMEntity_outbound")
   private List<KDMRelationship> outbound = new ArrayList<KDMRelationship>();
@@ -90,7 +90,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
   @OrderColumn()
   @JoinTable(name = "KDMEntity_inbound")
   private List<KDMRelationship> inbound = new ArrayList<KDMRelationship>();
@@ -116,7 +116,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @OrderColumn()
   @JoinTable(name = "KDMEntity_group")
   private List<KDMEntity> group = new ArrayList<KDMEntity>();
@@ -127,7 +127,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @OrderColumn()
   @JoinTable(name = "KDMEntity_groupedElement")
   private List<KDMEntity> groupedElement = new ArrayList<KDMEntity>();
@@ -138,7 +138,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AggregatedRelationship.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AggregatedRelationship.class)
   @OrderColumn()
   @JoinTable(name = "KDMEntity_inAggregated")
   private List<AggregatedRelationship> inAggregated = new ArrayList<AggregatedRelationship>();
@@ -149,7 +149,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AggregatedRelationship.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AggregatedRelationship.class)
   @OrderColumn()
   @JoinTable(name = "KDMEntity_outAggregated")
   private List<AggregatedRelationship> outAggregated = new ArrayList<AggregatedRelationship>();

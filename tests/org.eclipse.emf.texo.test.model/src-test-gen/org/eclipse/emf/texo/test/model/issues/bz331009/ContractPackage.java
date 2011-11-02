@@ -26,7 +26,7 @@ public class ContractPackage {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Person.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Person.class)
   @JoinColumns({ @JoinColumn() })
   private Person client = null;
 
@@ -34,7 +34,7 @@ public class ContractPackage {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = User.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = User.class)
   @JoinColumns({ @JoinColumn() })
   private User user = null;
 
@@ -43,7 +43,7 @@ public class ContractPackage {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Contract.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Contract.class)
   @OrderColumn()
   @JoinTable(name = "ContractPackage_contracts")
   private List<Contract> contracts = new ArrayList<Contract>();

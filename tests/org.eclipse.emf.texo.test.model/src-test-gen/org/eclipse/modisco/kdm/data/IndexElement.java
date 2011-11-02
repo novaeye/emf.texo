@@ -20,7 +20,7 @@ public class IndexElement extends DataResource {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ItemUnit.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ItemUnit.class)
   @JoinTable(name = "IndexElement_implementation")
   private Set<ItemUnit> implementation = new HashSet<ItemUnit>();
 

@@ -25,7 +25,7 @@ public abstract class KDMModel extends KDMFramework {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @OrderColumn()
   @JoinTable(name = "KDMModel_ownedElement")
   private List<KDMEntity> ownedElement = new ArrayList<KDMEntity>();

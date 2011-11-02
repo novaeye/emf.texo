@@ -60,7 +60,7 @@ public class Person {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Address.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Address.class)
   @JoinColumns({ @JoinColumn() })
   private Address registrationAddress = null;
 
@@ -70,7 +70,7 @@ public class Person {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Address.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Address.class)
   @JoinColumns({ @JoinColumn() })
   private Address factAddress = null;
 
@@ -79,7 +79,7 @@ public class Person {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Passport.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Passport.class)
   @JoinColumns({ @JoinColumn() })
   private Passport passport = null;
 
@@ -87,7 +87,7 @@ public class Person {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = DrivingLicense.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = DrivingLicense.class)
   @JoinColumns({ @JoinColumn() })
   private DrivingLicense drivingLicense = null;
 
@@ -96,7 +96,7 @@ public class Person {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Phone.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Phone.class)
   @OrderColumn()
   @JoinTable(name = "Person_phones")
   private List<Phone> phones = new ArrayList<Phone>();

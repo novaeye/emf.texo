@@ -20,7 +20,7 @@ public class Car {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarModel.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarModel.class)
   @JoinColumns({ @JoinColumn() })
   private CarModel model = null;
 
@@ -30,7 +30,7 @@ public class Car {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarRegInfo.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarRegInfo.class)
   @JoinColumns({ @JoinColumn() })
   private CarRegInfo regInfo = null;
 
@@ -41,7 +41,7 @@ public class Car {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarPassport.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarPassport.class)
   @JoinColumns({ @JoinColumn() })
   private CarPassport carPassport = null;
 

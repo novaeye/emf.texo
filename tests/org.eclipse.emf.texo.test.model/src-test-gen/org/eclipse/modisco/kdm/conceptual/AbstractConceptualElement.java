@@ -34,7 +34,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @JoinTable(name = "AbstractConceptualElement_implementation")
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 

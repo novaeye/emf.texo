@@ -73,7 +73,7 @@ public class PurchaseOrder extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Customer.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Customer.class)
   @JoinColumns({ @JoinColumn() })
   private Customer customer = null;
 
@@ -81,7 +81,7 @@ public class PurchaseOrder extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder previousOrder = null;
 

@@ -26,7 +26,7 @@ public class RentalBicycle extends RentalUnit {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalCar.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalCar.class)
   @JoinColumns({ @JoinColumn() })
   private RentalCar rentalCar = null;
 

@@ -37,7 +37,7 @@ public class Service {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = OneTimePayment.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = OneTimePayment.class)
   @JoinColumns({ @JoinColumn() })
   private OneTimePayment initialPayment = null;
 
@@ -46,7 +46,7 @@ public class Service {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PeriodicalPayment.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PeriodicalPayment.class)
   @JoinColumns({ @JoinColumn() })
   private PeriodicalPayment periodicalPayment = null;
 
@@ -55,7 +55,7 @@ public class Service {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = VolumePayment.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = VolumePayment.class)
   @JoinColumns({ @JoinColumn() })
   private VolumePayment volumePayment = null;
 

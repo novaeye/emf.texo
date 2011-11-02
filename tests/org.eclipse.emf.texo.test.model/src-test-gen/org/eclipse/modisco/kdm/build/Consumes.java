@@ -18,7 +18,7 @@ public class Consumes extends AbstractBuildRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractBuildElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractBuildElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractBuildElement to = null;
 
@@ -26,7 +26,7 @@ public class Consumes extends AbstractBuildRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = BuildStep.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = BuildStep.class)
   @JoinColumns({ @JoinColumn() })
   private BuildStep from = null;
 

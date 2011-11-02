@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
+import javax.persistence.OrderColumn;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /** 
  * A representation of the model object '<em><b>SimpleList</b></em>'.
@@ -26,66 +31,97 @@ public class SimpleList {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_boo")
   private List<Boolean> boo = new ArrayList<Boolean>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_byt")
   private List<Byte> byt = new ArrayList<Byte>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_doubl")
   private List<Double> doubl = new ArrayList<Double>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_floa")
   private List<Float> floa = new ArrayList<Float>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_inte")
   private List<Integer> inte = new ArrayList<Integer>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_long")
   private List<Long> long_ = new ArrayList<Long>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_shor")
   private List<Short> shor = new ArrayList<Short>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_enu")
   private List<SimpleEnum> enu = new ArrayList<SimpleEnum>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @Temporal(TemporalType.DATE)
   private List<Date> dat = new ArrayList<Date>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_limitedstring")
   private List<String> limitedstring = new ArrayList<String>();
 
   /** 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "SimpleList_stri")
   private List<String> stri = new ArrayList<String>();
 
   /** 

@@ -38,7 +38,7 @@ public class Topic {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Member.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Member.class)
   @JoinColumns({ @JoinColumn() })
   private Member creator = null;
 
@@ -46,7 +46,7 @@ public class Topic {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Post.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Post.class)
   @OrderColumn()
   @JoinTable(name = "Topic_posts")
   private List<Post> posts = new ArrayList<Post>();

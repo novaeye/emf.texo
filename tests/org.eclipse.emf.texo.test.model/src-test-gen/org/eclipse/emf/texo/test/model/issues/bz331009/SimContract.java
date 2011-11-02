@@ -48,7 +48,7 @@ public class SimContract {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PaymentInfo.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PaymentInfo.class)
   @JoinColumns({ @JoinColumn() })
   private PaymentInfo paymentInfo = null;
 

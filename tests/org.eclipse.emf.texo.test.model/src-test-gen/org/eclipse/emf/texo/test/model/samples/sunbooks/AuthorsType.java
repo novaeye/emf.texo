@@ -2,7 +2,10 @@ package org.eclipse.emf.texo.test.model.samples.sunbooks;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 
 /** 
  * A representation of the model object '<em><b>AuthorsType</b></em>'.
@@ -16,6 +19,9 @@ public class AuthorsType {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "AuthorsType_authorName")
   private List<String> authorName = new ArrayList<String>();
 
   /**

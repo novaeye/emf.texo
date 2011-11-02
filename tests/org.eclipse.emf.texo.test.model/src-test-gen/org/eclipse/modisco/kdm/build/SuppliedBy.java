@@ -18,7 +18,7 @@ public class SuppliedBy extends AbstractBuildRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Supplier.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Supplier.class)
   @JoinColumns({ @JoinColumn() })
   private Supplier to = null;
 
@@ -26,7 +26,7 @@ public class SuppliedBy extends AbstractBuildRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractBuildElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractBuildElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractBuildElement from = null;
 

@@ -19,7 +19,7 @@ public class TaggedRef extends ExtendedValue {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ModelElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ModelElement.class)
   @JoinColumns({ @JoinColumn() })
   private ModelElement ref = null;
 

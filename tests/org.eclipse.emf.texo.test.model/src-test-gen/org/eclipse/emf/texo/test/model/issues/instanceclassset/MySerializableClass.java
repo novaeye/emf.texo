@@ -39,7 +39,7 @@ public class MySerializableClass implements Serializable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = NonEMF.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = NonEMF.class)
   @JoinColumns({ @JoinColumn() })
   private NonEMF nonEMF = null;
 
@@ -47,7 +47,7 @@ public class MySerializableClass implements Serializable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = NonEMF.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = NonEMF.class)
   @OrderColumn()
   @JoinTable(name = "MySerializableClass_nonEMFs")
   private List<NonEMF> nonEMFs = new ArrayList<NonEMF>();

@@ -2,7 +2,10 @@ package org.eclipse.emf.texo.test.model.samples.play;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 
 /** 
  * A representation of the model object '<em><b>FmType</b></em>'.
@@ -16,6 +19,9 @@ public class FmType {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
+  @ElementCollection()
+  @OrderColumn()
+  @CollectionTable(name = "FmType_p")
   private List<String> p = new ArrayList<String>();
 
   /**

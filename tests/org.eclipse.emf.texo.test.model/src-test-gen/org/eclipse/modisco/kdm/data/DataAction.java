@@ -31,7 +31,7 @@ public class DataAction extends AbstractDataElement {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ActionElement.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ActionElement.class)
   @JoinTable(name = "DataAction_implementation")
   private Set<ActionElement> implementation = new HashSet<ActionElement>();
 

@@ -21,7 +21,7 @@ public class CarModel {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarProducer.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = CarProducer.class)
   @JoinColumns({ @JoinColumn() })
   private CarProducer producer = null;
 

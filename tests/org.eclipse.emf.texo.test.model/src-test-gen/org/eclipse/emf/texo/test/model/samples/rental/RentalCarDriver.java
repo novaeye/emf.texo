@@ -25,7 +25,7 @@ public class RentalCarDriver extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "currentDriver", optional = true, targetEntity = RentalCar.class)
+  @OneToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "currentDriver", optional = true, targetEntity = RentalCar.class)
   private RentalCar currentRentalCar = null;
 
   /**

@@ -21,7 +21,7 @@ public class SimpleContentType extends ComplexContentType {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ComplexContentType.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ComplexContentType.class)
   @JoinTable(name = "SimpleContentType_type")
   private Set<ComplexContentType> type = new HashSet<ComplexContentType>();
 

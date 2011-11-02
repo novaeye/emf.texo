@@ -20,7 +20,7 @@ public class Borrower extends Person {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Lendable.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Lendable.class)
   @OrderColumn()
   @JoinTable(name = "Borrower_borrowed")
   private List<Lendable> borrowed = new ArrayList<Lendable>();

@@ -43,7 +43,7 @@ public class Library extends Identifiable implements Addressable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Book.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Book.class)
   @JoinTable(name = "Library_books")
   private Set<Book> books = new HashSet<Book>();
 
@@ -60,7 +60,7 @@ public class Library extends Identifiable implements Addressable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Library.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Library.class)
   @JoinColumns({ @JoinColumn() })
   private Library parentBranch = null;
 

@@ -29,7 +29,7 @@ public class Customer extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PurchaseOrder.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PurchaseOrder.class)
   @OrderColumn()
   @JoinTable(name = "Customer_orders")
   private List<PurchaseOrder> orders = new ArrayList<PurchaseOrder>();

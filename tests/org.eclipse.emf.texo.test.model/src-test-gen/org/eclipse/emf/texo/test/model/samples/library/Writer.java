@@ -39,7 +39,7 @@ public class Writer extends Identifiable {
    * <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Book.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Book.class)
   @OrderColumn(name = "ind")
   @JoinTable(joinColumns = { @JoinColumn(name = "Writer_id") }, inverseJoinColumns = { @JoinColumn(name = "Book_id") }, name = "Writer_books")
   private List<Book> books = new ArrayList<Book>();

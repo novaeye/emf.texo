@@ -103,7 +103,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder preferredOrders;
 
@@ -111,7 +111,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder standardOrders;
 

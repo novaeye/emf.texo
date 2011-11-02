@@ -18,7 +18,7 @@ public class UIFlow extends AbstractUIRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractUIElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractUIElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractUIElement to = null;
 
@@ -26,7 +26,7 @@ public class UIFlow extends AbstractUIRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractUIElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractUIElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractUIElement from = null;
 

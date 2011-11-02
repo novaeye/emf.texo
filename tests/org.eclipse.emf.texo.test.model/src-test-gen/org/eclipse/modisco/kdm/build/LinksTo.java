@@ -18,7 +18,7 @@ public class LinksTo extends AbstractBuildRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractBuildElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractBuildElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractBuildElement to = null;
 
@@ -26,7 +26,7 @@ public class LinksTo extends AbstractBuildRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = SymbolicLink.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = SymbolicLink.class)
   @JoinColumns({ @JoinColumn() })
   private SymbolicLink from = null;
 

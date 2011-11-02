@@ -28,7 +28,7 @@ public class Member {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Post.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Post.class)
   @OrderColumn()
   @JoinTable(name = "Member_posts")
   private List<Post> posts = new ArrayList<Post>();
@@ -37,7 +37,7 @@ public class Member {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @OneToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Topic.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Topic.class)
   @OrderColumn()
   @JoinTable(name = "Member_created")
   private List<Topic> created = new ArrayList<Topic>();

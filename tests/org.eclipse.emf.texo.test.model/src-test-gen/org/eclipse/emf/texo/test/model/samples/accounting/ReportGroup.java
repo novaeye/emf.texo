@@ -41,7 +41,7 @@ public class ReportGroup extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = BalanceAccount.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = BalanceAccount.class)
   @OrderColumn()
   @JoinTable(name = "ReportGroup_account")
   private List<BalanceAccount> account = new ArrayList<BalanceAccount>();

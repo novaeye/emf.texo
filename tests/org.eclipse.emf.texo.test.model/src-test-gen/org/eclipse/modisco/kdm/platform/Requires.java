@@ -18,7 +18,7 @@ public class Requires extends AbstractPlatformRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractPlatformElement.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractPlatformElement.class)
   @JoinColumns({ @JoinColumn() })
   private AbstractPlatformElement to = null;
 
@@ -26,7 +26,7 @@ public class Requires extends AbstractPlatformRelationship {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToOne(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = DeployedComponent.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = DeployedComponent.class)
   @JoinColumns({ @JoinColumn() })
   private DeployedComponent from = null;
 

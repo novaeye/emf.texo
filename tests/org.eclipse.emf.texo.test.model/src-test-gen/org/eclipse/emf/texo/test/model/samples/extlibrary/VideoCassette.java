@@ -20,7 +20,7 @@ public class VideoCassette extends AudioVisualItem {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * @generated 
    */
-  @ManyToMany(cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Person.class)
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Person.class)
   @OrderColumn()
   @JoinTable(name = "VideoCassette_cast")
   private List<Person> cast = new ArrayList<Person>();
