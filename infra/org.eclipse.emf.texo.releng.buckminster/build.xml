@@ -83,6 +83,20 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<property name="buckminster.output.root" location="${rootPath}/output" />
 	<property name="buckminster.temp.root" location="${rootPath}/temp" />
 
+	<condition property="site.signing" value="true" else="false">
+		<equals arg1="${hudson.HUDSON_URL}" arg2="https://hudson.eclipse.org/hudson/" />
+	</condition>
+	<echo message="site.signing = ${site.signing}" />
+
+	<if>
+		<equals arg1="${site.signing}" arg2="true" />
+		<then>
+			<property name="eclipse.staging.area"
+			          value="/shared/download-staging.priv/modeling/emf/texo/${hudson.JOB_NAME}" />
+			<echo message="eclipse.staging.area = ${eclipse.staging.area}" />
+		</then>
+	</if>
+
 	<import file="ant_common.xml" />
 
 	<target name="build.and.test" depends="init, init.checks, install.buckminster">
