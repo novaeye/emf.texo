@@ -84,7 +84,10 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<property name="buckminster.temp.root" location="${rootPath}/temp" />
 
 	<condition property="site.signing" value="true" else="false">
-		<equals arg1="${hudson.HUDSON_URL}" arg2="https://hudson.eclipse.org/hudson/" />
+		<and>
+			<equals arg1="${env.SITE_SIGNING}" arg2="true" />
+			<equals arg1="${hudson.HUDSON_URL}" arg2="https://hudson.eclipse.org/hudson/" />
+		</and>
 	</condition>
 	<echo message="site.signing = ${site.signing}" />
 
