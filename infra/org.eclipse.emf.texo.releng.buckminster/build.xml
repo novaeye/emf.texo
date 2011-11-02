@@ -18,6 +18,13 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<!-- load properties and set timestamp for the build -->
 	<property environment="env" />
 
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="/develop/bin/ant-contrib/ant-contrib-1.0b3.jar" />
+			<pathelement location="${ant.contrib}" />
+		</classpath>
+	</taskdef>
+
 	<tstamp>
 		<format property="buildTimestamp" pattern="yyyyMMddHHmm" />
 	</tstamp>
