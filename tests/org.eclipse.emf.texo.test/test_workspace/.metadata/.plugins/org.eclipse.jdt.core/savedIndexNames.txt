@@ -1,3 +1,2 @@
 INDEX VERSION 1.126+/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/.metadata/.plugins/org.eclipse.jdt.core
-3381929070.index
 1894270257.index

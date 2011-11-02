@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
-<window height="875" width="1455" x="145" y="0">
+<window height="875" width="1455" x="143" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -41,25 +41,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookDao.java" partName="BookDao.java" path="/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java" title="BookDao.java" tooltip="Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="library.annotationsmodel" partName="library.annotationsmodel" path="/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/Rental Test/model/library.annotationsmodel" title="library.annotationsmodel" tooltip="Rental Test/model/library.annotationsmodel" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Rental Test/model/library.annotationsmodel"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" name="library.annotationsmodel" partName="library.annotationsmodel" path="/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/Rental Test/model/library.annotationsmodel" title="library.annotationsmodel" tooltip="Rental Test/model/library.annotationsmodel" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Rental Test/model/library.annotationsmodel"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -84,8 +69,8 @@
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
 <child filterId="org.eclipse.emf.mint.ui.filters.GeneratedFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
 <child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNotFilter" isEnabled="false"/>
@@ -101,8 +86,8 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
 <child filterId="com.google.gdt.eclipse.managedapis.ui.ManagedApiContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
@@ -150,7 +135,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.ui.views.PropertySheet" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
@@ -375,108 +360,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecore.presentation.EcoreEditorID" path="/test/src-gen/m1/_1/m1.ecore"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecore.presentation.EcoreEditorID" path="/test/bz331009.ecore"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecore.presentation.EcoreEditorID" path="/test/bz330893.ecore"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test/src-gen/ru/sss/set/Class1.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test/src-gen/ru/satseqsys/model/CarPassport.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/test/src-gen/ru/satseqsys/model/Document.java"/>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Rental Test/model/accounting.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/org.eclipse.emf.texo.modelgenerator.test/src/org/eclipse/emf/texo/modelgenerator/test/models/samples/library.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Rental Test/model/library.annotationsmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/library.annotationsmodel"/>
-</editors>
-<item historyLabel="My Studio" index="0"/>
-<item historyLabel="rental-orm.annotationsmodel" index="1"/>
-<item historyLabel="My Studio" index="0"/>
-<item historyLabel="rental-orm.annotationsmodel" index="2"/>
-<item historyLabel="My Studio" index="0"/>
-<item historyLabel="rental-orm.annotationsmodel" index="3"/>
-<item historyLabel="My Studio" index="0"/>
-<item historyLabel="rental-orm.annotationsmodel" index="4"/>
-<item historyLabel="My Studio" index="0"/>
-<item historyLabel="rental-orm.annotationsmodel" index="5"/>
-<item historyLabel="My Studio" index="6"/>
-<item historyLabel="rental-orm.annotationsmodel" index="7"/>
-<item historyLabel="My Studio" index="8"/>
-<item historyLabel="rental-orm.annotationsmodel" index="9"/>
-<item historyLabel="My Studio" index="8"/>
-<item historyLabel="rental-orm.annotationsmodel" index="10"/>
-<item historyLabel="My Studio" index="8"/>
-<item historyLabel="rental-orm.annotationsmodel" index="11"/>
-<item historyLabel="My Studio" index="8"/>
-<item historyLabel="rental-orm.annotationsmodel" index="11"/>
-<item historyLabel="My Studio" index="12"/>
-<item historyLabel="m1.ecore" index="13"/>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="bz330893.ecore" index="15"/>
-<item historyLabel="Class1.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="bz330893.ecore" index="15"/>
-<item historyLabel="CarPassport.java" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="Document.java" index="18">
-<position/>
-</item>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="CarPassport.java" index="17">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Document.java" index="18">
-<position/>
-</item>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="Document.java" index="18">
-<position info="not_deleted" x="260" y="0"/>
-</item>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="Document.java" index="18">
-<position info="not_deleted" x="238" y="0"/>
-</item>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="Document.java" index="18">
-<position info="not_deleted" x="267" y="0"/>
-</item>
-<item historyLabel="bz330893.ecore" index="15"/>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="Document.java" index="18">
-<position info="not_deleted" x="472" y="0"/>
-</item>
-<item historyLabel="bz331009.ecore" index="14"/>
-<item historyLabel="My Studio" index="19"/>
-<item historyLabel="accounting.annotationsmodel" index="20">
-<position info="not_deleted" x="644" y="0"/>
-</item>
-<item historyLabel="My Studio" index="19"/>
-<item historyLabel="library.annotationsmodel" index="21"/>
-<item historyLabel="BookDao.java" index="22">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="library.annotationsmodel" index="23">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="library.annotationsmodel" index="24"/>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>

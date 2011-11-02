@@ -84,7 +84,7 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	</condition>
 	<echo message="site.signing = ${site.signing}" />
 	<property name="eclipse.staging.area"
-	          value="/shared/download-staging.priv/modeling/emf/texo/${hudson.JOB_NAME}" />
+	          value="/shared/download-staging.priv/modeling/emf/texo/emft-texo-nightly" />
 
 	<import file="ant_common.xml" />
 
