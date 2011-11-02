@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="25" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
-<window height="894" width="1453" x="225" y="98">
+<window height="875" width="1455" x="145" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
-<coolbarLayout locked="0">
+<coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="com.google.gdt.eclipse.suite.GDTPulldownToolbar" itemType="typeToolBarContribution" x="48" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="162" y="30"/>
+<coolItem id="com.aptana.ide.editors.XMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="94" y="28"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
+<coolItem id="org.eclipse.emf.ecore.presentation.EcoreEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID" itemType="typeToolBarContribution" x="1085" y="28"/>
+<coolItem id="org.eclipse.emf.examples.extlibrary.presentation.EXTLibraryEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsModelEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
+<coolItem id="org.eclipse.pde.ui.manifestEditor" itemType="typeToolBarContribution" x="38" y="28"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="225" y="28"/>
 <coolItem id="s.com.aptana.ide.core.ui.actionSet.ShowAptanaView" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.aptana.ide.editors.XMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="225" y="28"/>
-<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="94" y="28"/>
-<coolItem id="org.eclipse.emf.ecore.presentation.EcoreEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID" itemType="typeToolBarContribution" x="1085" y="28"/>
-<coolItem id="org.eclipse.pde.ui.manifestEditor" itemType="typeToolBarContribution" x="38" y="28"/>
-<coolItem id="org.eclipse.emf.examples.extlibrary.presentation.EXTLibraryEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsModelEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -42,10 +43,23 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookDao.java" partName="BookDao.java" path="/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java" title="BookDao.java" tooltip="Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="library.annotationsmodel" partName="library.annotationsmodel" path="/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/Rental Test/model/library.annotationsmodel" title="library.annotationsmodel" tooltip="Rental Test/model/library.annotationsmodel" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Rental Test/model/library.annotationsmodel"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" name="library.annotationsmodel" partName="library.annotationsmodel" path="/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/Rental Test/model/library.annotationsmodel" title="library.annotationsmodel" tooltip="Rental Test/model/library.annotationsmodel" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Rental Test/model/library.annotationsmodel"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -57,10 +71,7 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -79,7 +90,6 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
 <child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNotFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
-<child filterId="jdt.external.source.project.filter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
 <child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
@@ -91,16 +101,17 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jet.javafilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="com.google.gdt.eclipse.managedapis.ui.ManagedApiContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles" isEnabled="true"/>
 <child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNoneFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
@@ -139,7 +150,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="com.aptana.ide.server.portal.ui.MyAptanaEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.views.PropertySheet" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
@@ -246,23 +257,9 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
-<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
-<alwaysOnActionSet id="org.hibernate.eclipse.launch.actionset"/>
-<alwaysOnActionSet id="org.eclipse.buckminster.ui.project"/>
-<alwaysOnActionSet id="com.aptana.ide.core.ui.actionSet.aptanamenu"/>
-<alwaysOnActionSet id="s.com.aptana.ide.core.ui.actionSet.ShowAptanaView"/>
-<alwaysOnActionSet id="com.aptana.ide.desktop.integration.protocolhandler.actionSet"/>
-<alwaysOnActionSet id="com.aptana.ide.core.ui.actionSet.documentation"/>
-<alwaysOnActionSet id="com.aptana.ide.installer.actionSet"/>
-<alwaysOnActionSet id="com.aptana.ide.intro.menuActionSet"/>
-<alwaysOnActionSet id="com.aptana.ide.pathtools.actionSet"/>
-<alwaysOnActionSet id="com.aptana.ide.update.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.acceleo.ide.ui.editors.template.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.m2m.qvt.oml.runtime.actions"/>
-<alwaysOnActionSet id="a.com.aptana.ide.core.ui.actionSet.myaptana"/>
-<alwaysOnActionSet id="x.com.aptana.ide.core.ui.actionSet.myaptana"/>
-<alwaysOnActionSet id="eclipsemonkeyAction.actionSet"/>
-<alwaysOnActionSet id="org.jboss.tools.common.model.ui.actionSet"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.core.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -293,6 +290,12 @@
 <new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
 <new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
 <new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<new_wizard_action id="com.google.gdt.eclipse.suite.wizards.newProjectWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newModuleWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newHostPageWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newEntryPointWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newClientBundleWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newUiBinderWizard"/>
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
@@ -374,9 +377,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
 <editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/rental-orm.annotationsmodel"/>
@@ -399,78 +399,83 @@
 <editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Rental Test/model/accounting.annotationsmodel"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/org.eclipse.emf.texo.modelgenerator.test/src/org/eclipse/emf/texo/modelgenerator/test/models/samples/library.annotationsmodel"/>
-<editor factoryID="com.aptana.ide.server.portal.ui.MyAptanaElementFactory" id="com.aptana.ide.server.portal.ui.MyAptanaEditor"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Rental Test/model/library.annotationsmodel"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" path="/Rental Test/model/library.annotationsmodel"/>
 </editors>
-<item historyLabel="rental-orm.annotationsmodel" index="0"/>
-<item historyLabel="My Studio" index="1"/>
+<item historyLabel="My Studio" index="0"/>
+<item historyLabel="rental-orm.annotationsmodel" index="1"/>
+<item historyLabel="My Studio" index="0"/>
 <item historyLabel="rental-orm.annotationsmodel" index="2"/>
-<item historyLabel="My Studio" index="3"/>
+<item historyLabel="My Studio" index="0"/>
+<item historyLabel="rental-orm.annotationsmodel" index="3"/>
+<item historyLabel="My Studio" index="0"/>
 <item historyLabel="rental-orm.annotationsmodel" index="4"/>
-<item historyLabel="My Studio" index="3"/>
+<item historyLabel="My Studio" index="0"/>
 <item historyLabel="rental-orm.annotationsmodel" index="5"/>
-<item historyLabel="My Studio" index="3"/>
-<item historyLabel="rental-orm.annotationsmodel" index="6"/>
-<item historyLabel="My Studio" index="3"/>
+<item historyLabel="My Studio" index="6"/>
 <item historyLabel="rental-orm.annotationsmodel" index="7"/>
-<item historyLabel="My Studio" index="3"/>
-<item historyLabel="rental-orm.annotationsmodel" index="8"/>
-<item historyLabel="My Studio" index="9"/>
+<item historyLabel="My Studio" index="8"/>
+<item historyLabel="rental-orm.annotationsmodel" index="9"/>
+<item historyLabel="My Studio" index="8"/>
 <item historyLabel="rental-orm.annotationsmodel" index="10"/>
-<item historyLabel="My Studio" index="11"/>
-<item historyLabel="rental-orm.annotationsmodel" index="12"/>
-<item historyLabel="My Studio" index="11"/>
-<item historyLabel="rental-orm.annotationsmodel" index="13"/>
-<item historyLabel="My Studio" index="11"/>
-<item historyLabel="rental-orm.annotationsmodel" index="14"/>
-<item historyLabel="My Studio" index="11"/>
-<item historyLabel="rental-orm.annotationsmodel" index="14"/>
-<item historyLabel="My Studio" index="15"/>
-<item historyLabel="m1.ecore" index="16"/>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="bz330893.ecore" index="18"/>
-<item historyLabel="Class1.java" index="19">
+<item historyLabel="My Studio" index="8"/>
+<item historyLabel="rental-orm.annotationsmodel" index="11"/>
+<item historyLabel="My Studio" index="8"/>
+<item historyLabel="rental-orm.annotationsmodel" index="11"/>
+<item historyLabel="My Studio" index="12"/>
+<item historyLabel="m1.ecore" index="13"/>
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="bz330893.ecore" index="15"/>
+<item historyLabel="Class1.java" index="16">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="bz330893.ecore" index="18"/>
-<item historyLabel="CarPassport.java" index="20">
+<item historyLabel="bz330893.ecore" index="15"/>
+<item historyLabel="CarPassport.java" index="17">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="Document.java" index="21">
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="Document.java" index="18">
 <position/>
 </item>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="CarPassport.java" index="20">
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="CarPassport.java" index="17">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Document.java" index="21">
+<item historyLabel="Document.java" index="18">
 <position/>
 </item>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="Document.java" index="21">
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="Document.java" index="18">
 <position info="not_deleted" x="260" y="0"/>
 </item>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="Document.java" index="21">
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="Document.java" index="18">
 <position info="not_deleted" x="238" y="0"/>
 </item>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="Document.java" index="21">
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="Document.java" index="18">
 <position info="not_deleted" x="267" y="0"/>
 </item>
-<item historyLabel="bz330893.ecore" index="18"/>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="Document.java" index="21">
+<item historyLabel="bz330893.ecore" index="15"/>
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="Document.java" index="18">
 <position info="not_deleted" x="472" y="0"/>
 </item>
-<item historyLabel="bz331009.ecore" index="17"/>
-<item historyLabel="My Studio" index="22"/>
-<item historyLabel="accounting.annotationsmodel" index="23">
+<item historyLabel="bz331009.ecore" index="14"/>
+<item historyLabel="My Studio" index="19"/>
+<item historyLabel="accounting.annotationsmodel" index="20">
 <position info="not_deleted" x="644" y="0"/>
 </item>
-<item historyLabel="My Studio" index="22"/>
-<item historyLabel="library.annotationsmodel" index="24"/>
-<item active="true" historyLabel="My Studio" index="25"/>
+<item historyLabel="My Studio" index="19"/>
+<item historyLabel="library.annotationsmodel" index="21"/>
+<item historyLabel="BookDao.java" index="22">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="library.annotationsmodel" index="23">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="library.annotationsmodel" index="24"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -478,17 +483,24 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="com.google.gdt.eclipse.login.status.trim"/>
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="com.aptana.ide.intro.StartPageAction"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" name="library.annotationsmodel" tooltip="Rental Test/model/library.annotationsmodel">
+<persistable path="/Rental Test/model/library.annotationsmodel"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookDao.java" tooltip="Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java">
+<persistable path="/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/library/dao/BookDao.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.texo.annotations.annotationsmodel.presentation.AnnotationsmodelEditorID" name="library.annotationsmodel" tooltip="org.eclipse.emf.texo.modelgenerator.test/src/org/eclipse/emf/texo/modelgenerator/test/models/samples/library.annotationsmodel">
 <persistable path="/org.eclipse.emf.texo.modelgenerator.test/src/org/eclipse/emf/texo/modelgenerator/test/models/samples/library.annotationsmodel"/>
 </file>
@@ -527,9 +539,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecore.presentation.EcoreEditorID" name="rental.ecore" tooltip="Rental Test/model/rental.ecore">
 <persistable path="/Rental Test/model/rental.ecore"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RentalContract.java" tooltip="Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/rental/RentalContract.java">
-<persistable path="/Rental Test/src-gen/org/eclipse/emf/texo/test/model/samples/rental/RentalContract.java"/>
 </file>
 </mruList>
 </workbench>
