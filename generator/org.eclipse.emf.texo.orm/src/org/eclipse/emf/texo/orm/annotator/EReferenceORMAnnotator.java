@@ -196,8 +196,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
         .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
 
     // set the order column, is always set on this side
-    if (!ModelUtils.isEMap(eReference.getEReferenceType()) && eReferenceModelGenAnnotation.isUseList()
-        && oneToMany.getOrderColumn() == null) {
+    if (!ModelUtils.isEMap(eReference.getEReferenceType()) && oneToMany.getOrderBy() == null
+        && eReferenceModelGenAnnotation.isUseList() && oneToMany.getOrderColumn() == null) {
       final OrderColumn orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
       if (namingStrategy.isGenerateAllDBSchemaNames()) {
         orderColumn.setName(namingStrategy.getIndexColumnName(eReference));
