@@ -499,7 +499,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
           final JoinTable joinTable = OrmFactory.eINSTANCE.createJoinTable();
           manyToMany.setJoinTable(joinTable);
         }
-        if (manyToMany.getOrderColumn() == null) {
+        if (manyToMany.getOrderColumn() == null && manyToMany.getOrderBy() == null) {
           final OrderColumn orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
           if (namingStrategy.isGenerateAllDBSchemaNames()) {
             orderColumn.setName(namingStrategy.getIndexColumnName(eReference));
@@ -526,7 +526,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
         final JoinTable joinTable = OrmFactory.eINSTANCE.createJoinTable();
         manyToMany.setJoinTable(joinTable);
       }
-      if (eReferenceModelGenAnnotation.isUseList() && manyToMany.getOrderColumn() == null) {
+      if (eReferenceModelGenAnnotation.isUseList() && manyToMany.getOrderBy() == null
+          && manyToMany.getOrderColumn() == null) {
         final OrderColumn orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
         if (namingStrategy.isGenerateAllDBSchemaNames()) {
           orderColumn.setName(namingStrategy.getIndexColumnName(eReference));
