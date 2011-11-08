@@ -200,7 +200,8 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       final EAttributeModelGenAnnotation eAttributeModelGenAnnotation = (EAttributeModelGenAnnotation) getAnnotationManager()
           .getAnnotation(eAttribute, ModelcodegeneratorPackage.eINSTANCE.getEAttributeModelGenAnnotation());
       OrderColumn orderColumn = elementCollection.getOrderColumn();
-      if (eAttributeModelGenAnnotation.isUseList() && elementCollection.getOrderColumn() == null) {
+      if (eAttributeModelGenAnnotation.isUseList() && elementCollection.getOrderBy() == null
+          && elementCollection.getOrderColumn() == null) {
         orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
         elementCollection.setOrderColumn(orderColumn);
       }
