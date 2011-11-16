@@ -104,8 +104,8 @@ public class JournalGroup extends Identifiable {
    * @generated
    */
   public void clearJournalGroups() {
-    for (JournalGroup journalGroupsElement : journalGroups) {
-      removeFromJournalGroups(journalGroupsElement);
+    while (!journalGroups.isEmpty()) {
+      removeFromJournalGroups(journalGroups.get(0));
     }
   }
 
@@ -158,8 +158,8 @@ public class JournalGroup extends Identifiable {
    * @generated
    */
   public void clearJournalStatements() {
-    for (JournalStatement journalStatementsElement : journalStatements) {
-      removeFromJournalStatements(journalStatementsElement);
+    while (!journalStatements.isEmpty()) {
+      removeFromJournalStatements(journalStatements.get(0));
     }
   }
 

@@ -133,8 +133,8 @@ public class CatalogType {
    * @generated
    */
   public void clearSubCatalog() {
-    for (CatalogType subCatalogElement : subCatalog) {
-      removeFromSubCatalog(subCatalogElement);
+    while (!subCatalog.isEmpty()) {
+      removeFromSubCatalog(subCatalog.get(0));
     }
   }
 
@@ -191,8 +191,8 @@ public class CatalogType {
    * @generated
    */
   public void clearProduct() {
-    for (ProductType productElement : product) {
-      removeFromProduct(productElement);
+    while (!product.isEmpty()) {
+      removeFromProduct(product.get(0));
     }
   }
 

@@ -94,8 +94,8 @@ public class Customer extends Identifiable {
    * @generated
    */
   public void clearOrders() {
-    for (PurchaseOrder ordersElement : orders) {
-      removeFromOrders(ordersElement);
+    while (!orders.isEmpty()) {
+      removeFromOrders(orders.get(0));
     }
   }
 

@@ -63,8 +63,8 @@ public class Borrower extends Person {
    * @generated
    */
   public void clearBorrowed() {
-    for (Lendable borrowedElement : borrowed) {
-      removeFromBorrowed(borrowedElement);
+    while (!borrowed.isEmpty()) {
+      removeFromBorrowed(borrowed.get(0));
     }
   }
 

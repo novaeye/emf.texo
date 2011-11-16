@@ -134,8 +134,8 @@ public class MySerializableClass implements Serializable {
    * @generated
    */
   public void clearNonEMFs() {
-    for (NonEMF nonEMFsElement : nonEMFs) {
-      removeFromNonEMFs(nonEMFsElement);
+    while (!nonEMFs.isEmpty()) {
+      removeFromNonEMFs(nonEMFs.get(0));
     }
   }
 

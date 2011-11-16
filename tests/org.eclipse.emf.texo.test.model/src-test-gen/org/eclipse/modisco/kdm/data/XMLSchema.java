@@ -62,8 +62,8 @@ public class XMLSchema extends AbstractDataElement {
    * @generated
    */
   public void clearContentElement() {
-    for (AbstractContentElement contentElementElement : contentElement) {
-      removeFromContentElement(contentElementElement);
+    while (!contentElement.isEmpty()) {
+      removeFromContentElement(contentElement.get(0));
     }
   }
 

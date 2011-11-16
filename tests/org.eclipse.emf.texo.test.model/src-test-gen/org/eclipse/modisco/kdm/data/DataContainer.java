@@ -62,8 +62,8 @@ public class DataContainer extends DataResource {
    * @generated
    */
   public void clearDataElement() {
-    for (DataResource dataElementElement : dataElement) {
-      removeFromDataElement(dataElementElement);
+    while (!dataElement.isEmpty()) {
+      removeFromDataElement(dataElement.get(0));
     }
   }
 

@@ -123,8 +123,8 @@ public class PurchaseOrder extends Identifiable {
    * @generated
    */
   public void clearItems() {
-    for (Item itemsElement : items) {
-      removeFromItems(itemsElement);
+    while (!items.isEmpty()) {
+      removeFromItems(items.get(0));
     }
   }
 

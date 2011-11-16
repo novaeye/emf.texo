@@ -165,8 +165,8 @@ public class AggregatedRelationship extends ModelElement {
    * @generated
    */
   public void clearRelation() {
-    for (KDMRelationship relationElement : relation) {
-      removeFromRelation(relationElement);
+    while (!relation.isEmpty()) {
+      removeFromRelation(relation.get(0));
     }
   }
 

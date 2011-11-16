@@ -72,8 +72,8 @@ public class WorkWeek {
    * @generated
    */
   public void clearDays() {
-    for (WorkDay daysElement : days) {
-      removeFromDays(daysElement);
+    while (!days.isEmpty()) {
+      removeFromDays(days.get(0));
     }
   }
 

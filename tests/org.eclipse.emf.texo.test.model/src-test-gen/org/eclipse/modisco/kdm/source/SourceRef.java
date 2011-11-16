@@ -80,8 +80,8 @@ public class SourceRef extends Element {
    * @generated
    */
   public void clearRegion() {
-    for (SourceRegion regionElement : region) {
-      removeFromRegion(regionElement);
+    while (!region.isEmpty()) {
+      removeFromRegion(region.get(0));
     }
   }
 

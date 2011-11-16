@@ -202,8 +202,8 @@ public class Claim {
    * @generated
    */
   public void clearClaimLine() {
-    for (ClaimLine claimLineElement : claimLine) {
-      removeFromClaimLine(claimLineElement);
+    while (!claimLine.isEmpty()) {
+      removeFromClaimLine(claimLine.get(0));
     }
   }
 

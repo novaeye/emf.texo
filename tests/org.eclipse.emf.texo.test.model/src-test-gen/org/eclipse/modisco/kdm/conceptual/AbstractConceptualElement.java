@@ -92,8 +92,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * @generated
    */
   public void clearSource() {
-    for (SourceRef sourceElement : source) {
-      removeFromSource(sourceElement);
+    while (!source.isEmpty()) {
+      removeFromSource(source.get(0));
     }
   }
 
@@ -146,8 +146,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * @generated
    */
   public void clearImplementation() {
-    for (KDMEntity implementationElement : implementation) {
-      removeFromImplementation(implementationElement);
+    while (!implementation.isEmpty()) {
+      removeFromImplementation(implementation.get(0));
     }
   }
 
@@ -200,8 +200,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * @generated
    */
   public void clearConceptualRelation() {
-    for (AbstractConceptualRelationship conceptualRelationElement : conceptualRelation) {
-      removeFromConceptualRelation(conceptualRelationElement);
+    while (!conceptualRelation.isEmpty()) {
+      removeFromConceptualRelation(conceptualRelation.get(0));
     }
   }
 
@@ -254,8 +254,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * @generated
    */
   public void clearAbstraction() {
-    for (ActionElement abstractionElement : abstraction) {
-      removeFromAbstraction(abstractionElement);
+    while (!abstraction.isEmpty()) {
+      removeFromAbstraction(abstraction.get(0));
     }
   }
 

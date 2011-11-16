@@ -82,8 +82,8 @@ public abstract class Element {
    * @generated
    */
   public void clearAttribute() {
-    for (Attribute attributeElement : attribute) {
-      removeFromAttribute(attributeElement);
+    while (!attribute.isEmpty()) {
+      removeFromAttribute(attribute.get(0));
     }
   }
 
@@ -143,8 +143,8 @@ public abstract class Element {
    * @generated
    */
   public void clearAnnotation() {
-    for (Annotation annotationElement : annotation) {
-      removeFromAnnotation(annotationElement);
+    while (!annotation.isEmpty()) {
+      removeFromAnnotation(annotation.get(0));
     }
   }
 

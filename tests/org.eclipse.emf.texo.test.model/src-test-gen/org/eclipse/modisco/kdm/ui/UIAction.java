@@ -92,8 +92,8 @@ public class UIAction extends AbstractUIElement {
    * @generated
    */
   public void clearUIElement() {
-    for (UIEvent uIElementElement : uIElement) {
-      removeFromUIElement(uIElementElement);
+    while (!uIElement.isEmpty()) {
+      removeFromUIElement(uIElement.get(0));
     }
   }
 

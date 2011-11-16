@@ -135,8 +135,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   public void clearAccountGroup() {
-    for (AccountGroup accountGroupElement : accountGroup) {
-      removeFromAccountGroup(accountGroupElement);
+    while (!accountGroup.isEmpty()) {
+      removeFromAccountGroup(accountGroup.get(0));
     }
   }
 
@@ -189,8 +189,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   public void clearVat() {
-    for (Vat vatElement : vat) {
-      removeFromVat(vatElement);
+    while (!vat.isEmpty()) {
+      removeFromVat(vat.get(0));
     }
   }
 
@@ -287,8 +287,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   public void clearJournalGroup() {
-    for (JournalGroup journalGroupElement : journalGroup) {
-      removeFromJournalGroup(journalGroupElement);
+    while (!journalGroup.isEmpty()) {
+      removeFromJournalGroup(journalGroup.get(0));
     }
   }
 

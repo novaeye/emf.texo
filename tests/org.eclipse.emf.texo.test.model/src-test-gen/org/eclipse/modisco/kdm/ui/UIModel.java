@@ -63,8 +63,8 @@ public class UIModel extends KDMModel {
    * @generated
    */
   public void clearUIElement() {
-    for (AbstractUIElement uIElementElement : uIElement) {
-      removeFromUIElement(uIElementElement);
+    while (!uIElement.isEmpty()) {
+      removeFromUIElement(uIElement.get(0));
     }
   }
 

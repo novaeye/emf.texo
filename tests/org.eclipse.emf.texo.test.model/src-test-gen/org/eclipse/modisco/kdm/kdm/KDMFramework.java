@@ -79,8 +79,8 @@ public abstract class KDMFramework extends ModelElement {
    * @generated
    */
   public void clearAudit() {
-    for (Audit auditElement : audit) {
-      removeFromAudit(auditElement);
+    while (!audit.isEmpty()) {
+      removeFromAudit(audit.get(0));
     }
   }
 
@@ -133,8 +133,8 @@ public abstract class KDMFramework extends ModelElement {
    * @generated
    */
   public void clearExtension() {
-    for (ExtensionFamily extensionElement : extension) {
-      removeFromExtension(extensionElement);
+    while (!extension.isEmpty()) {
+      removeFromExtension(extension.get(0));
     }
   }
 

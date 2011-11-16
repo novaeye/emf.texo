@@ -71,8 +71,8 @@ public class ExtensionFamily extends Element {
    * @generated
    */
   public void clearStereotype() {
-    for (Stereotype stereotypeElement : stereotype) {
-      removeFromStereotype(stereotypeElement);
+    while (!stereotype.isEmpty()) {
+      removeFromStereotype(stereotype.get(0));
     }
   }
 

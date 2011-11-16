@@ -106,8 +106,8 @@ public class ReportGroup extends Identifiable {
    * @generated
    */
   public void clearReportGroup() {
-    for (ReportGroup reportGroupElement : reportGroup) {
-      removeFromReportGroup(reportGroupElement);
+    while (!reportGroup.isEmpty()) {
+      removeFromReportGroup(reportGroup.get(0));
     }
   }
 
@@ -160,8 +160,8 @@ public class ReportGroup extends Identifiable {
    * @generated
    */
   public void clearAccount() {
-    for (BalanceAccount accountElement : account) {
-      removeFromAccount(accountElement);
+    while (!account.isEmpty()) {
+      removeFromAccount(account.get(0));
     }
   }
 

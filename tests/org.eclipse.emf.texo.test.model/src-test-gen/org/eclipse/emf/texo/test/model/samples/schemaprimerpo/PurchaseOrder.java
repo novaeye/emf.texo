@@ -165,8 +165,8 @@ public class PurchaseOrder {
    * @generated
    */
   public void clearItems() {
-    for (Item itemsElement : items) {
-      removeFromItems(itemsElement);
+    while (!items.isEmpty()) {
+      removeFromItems(items.get(0));
     }
   }
 

@@ -74,8 +74,8 @@ public class InventoryModel extends KDMModel {
    * @generated
    */
   public void clearInventoryElement() {
-    for (AbstractInventoryElement inventoryElementElement : inventoryElement) {
-      removeFromInventoryElement(inventoryElementElement);
+    while (!inventoryElement.isEmpty()) {
+      removeFromInventoryElement(inventoryElement.get(0));
     }
   }
 

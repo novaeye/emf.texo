@@ -92,8 +92,8 @@ public class PlatformAction extends AbstractPlatformElement {
    * @generated
    */
   public void clearPlatformElement() {
-    for (PlatformEvent platformElementElement : platformElement) {
-      removeFromPlatformElement(platformElementElement);
+    while (!platformElement.isEmpty()) {
+      removeFromPlatformElement(platformElement.get(0));
     }
   }
 

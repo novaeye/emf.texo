@@ -142,8 +142,8 @@ public class ProductType {
    * @generated
    */
   public void clearRemark() {
-    for (StringType remarkElement : remark) {
-      removeFromRemark(remarkElement);
+    while (!remark.isEmpty()) {
+      removeFromRemark(remark.get(0));
     }
   }
 

@@ -26,6 +26,7 @@ import org.eclipse.emf.texo.orm.test.AllJPATests;
 import org.eclipse.emf.texo.test.TestDirectJavaAnnotations;
 import org.eclipse.emf.texo.test.TestMerge;
 import org.eclipse.emf.texo.test.TestModelAccess;
+import org.eclipse.emf.texo.test.TestSubpackage;
 import org.eclipse.emf.texo.test.TestTemplateOverride;
 import org.eclipse.emf.texo.xml.test.EMFConversionTest;
 import org.junit.runner.RunWith;
@@ -47,6 +48,7 @@ public class CombinedTestSuite {
     suite.addTestSuite(TestModelAccess.class);
     suite.addTestSuite(TestTemplateOverride.class);
     suite.addTestSuite(TestDirectJavaAnnotations.class);
+    suite.addTestSuite(TestSubpackage.class);
 
     // org.eclipse.emf.texo.datagenerator.test
     suite.addTestSuite(DataGenTest.class);

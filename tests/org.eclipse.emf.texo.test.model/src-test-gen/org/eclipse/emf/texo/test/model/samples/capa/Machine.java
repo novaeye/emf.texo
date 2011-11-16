@@ -124,8 +124,8 @@ public class Machine {
    * @generated
    */
   public void clearTasks() {
-    for (Task tasksElement : tasks) {
-      removeFromTasks(tasksElement);
+    while (!tasks.isEmpty()) {
+      removeFromTasks(tasks.get(0));
     }
   }
 

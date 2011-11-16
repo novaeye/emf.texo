@@ -102,8 +102,8 @@ public class Department {
    * @generated
    */
   public void clearEmployees() {
-    for (Employee employeesElement : employees) {
-      removeFromEmployees(employeesElement);
+    while (!employees.isEmpty()) {
+      removeFromEmployees(employees.get(0));
     }
   }
 

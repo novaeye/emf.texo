@@ -184,8 +184,8 @@ public class ResponseType {
    * @generated
    */
   public void clearData() {
-    for (Object dataElement : data) {
-      removeFromData(dataElement);
+    while (!data.isEmpty()) {
+      removeFromData(data.get(0));
     }
   }
 

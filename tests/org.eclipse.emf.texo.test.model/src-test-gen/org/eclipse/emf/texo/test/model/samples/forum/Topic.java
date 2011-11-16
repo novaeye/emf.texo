@@ -155,8 +155,8 @@ public class Topic {
    * @generated
    */
   public void clearPosts() {
-    for (Post postsElement : posts) {
-      removeFromPosts(postsElement);
+    while (!posts.isEmpty()) {
+      removeFromPosts(posts.get(0));
     }
   }
 

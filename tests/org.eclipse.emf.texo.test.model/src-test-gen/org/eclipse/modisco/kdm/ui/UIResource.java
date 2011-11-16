@@ -62,8 +62,8 @@ public class UIResource extends AbstractUIElement {
    * @generated
    */
   public void clearUIElement() {
-    for (AbstractUIElement uIElementElement : uIElement) {
-      removeFromUIElement(uIElementElement);
+    while (!uIElement.isEmpty()) {
+      removeFromUIElement(uIElement.get(0));
     }
   }
 

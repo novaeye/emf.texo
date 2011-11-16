@@ -64,8 +64,8 @@ public class BooksType {
    * @generated
    */
   public void clearBook() {
-    for (BookType bookElement : book) {
-      removeFromBook(bookElement);
+    while (!book.isEmpty()) {
+      removeFromBook(book.get(0));
     }
   }
 

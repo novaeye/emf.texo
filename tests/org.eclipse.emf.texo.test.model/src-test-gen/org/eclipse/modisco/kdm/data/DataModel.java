@@ -63,8 +63,8 @@ public class DataModel extends KDMModel {
    * @generated
    */
   public void clearDataElement() {
-    for (AbstractDataElement dataElementElement : dataElement) {
-      removeFromDataElement(dataElementElement);
+    while (!dataElement.isEmpty()) {
+      removeFromDataElement(dataElement.get(0));
     }
   }
 

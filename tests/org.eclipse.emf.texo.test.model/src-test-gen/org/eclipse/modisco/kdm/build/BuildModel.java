@@ -63,8 +63,8 @@ public class BuildModel extends KDMModel {
    * @generated
    */
   public void clearBuildElement() {
-    for (AbstractBuildElement buildElementElement : buildElement) {
-      removeFromBuildElement(buildElementElement);
+    while (!buildElement.isEmpty()) {
+      removeFromBuildElement(buildElement.get(0));
     }
   }
 

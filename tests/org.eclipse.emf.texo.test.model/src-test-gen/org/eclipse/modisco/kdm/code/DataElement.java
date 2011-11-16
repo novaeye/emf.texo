@@ -152,8 +152,8 @@ public class DataElement extends ComputationalObject {
    * @generated
    */
   public void clearCodeElement() {
-    for (Datatype codeElementElement : codeElement) {
-      removeFromCodeElement(codeElementElement);
+    while (!codeElement.isEmpty()) {
+      removeFromCodeElement(codeElement.get(0));
     }
   }
 

@@ -63,8 +63,8 @@ public class DeployedResource extends AbstractPlatformElement {
    * @generated
    */
   public void clearPlatformElement() {
-    for (ResourceType platformElementElement : platformElement) {
-      removeFromPlatformElement(platformElementElement);
+    while (!platformElement.isEmpty()) {
+      removeFromPlatformElement(platformElement.get(0));
     }
   }
 

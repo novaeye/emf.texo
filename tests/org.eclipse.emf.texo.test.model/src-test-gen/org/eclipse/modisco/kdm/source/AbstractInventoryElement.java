@@ -64,8 +64,8 @@ public abstract class AbstractInventoryElement extends KDMEntity {
    * @generated
    */
   public void clearInventoryRelationship() {
-    for (AbstractInventoryRelationship inventoryRelationshipElement : inventoryRelationship) {
-      removeFromInventoryRelationship(inventoryRelationshipElement);
+    while (!inventoryRelationship.isEmpty()) {
+      removeFromInventoryRelationship(inventoryRelationship.get(0));
     }
   }
 

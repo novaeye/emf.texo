@@ -61,8 +61,8 @@ public class Namespace extends CodeItem {
    * @generated
    */
   public void clearGroupedCode() {
-    for (CodeItem groupedCodeElement : groupedCode) {
-      removeFromGroupedCode(groupedCodeElement);
+    while (!groupedCode.isEmpty()) {
+      removeFromGroupedCode(groupedCode.get(0));
     }
   }
 

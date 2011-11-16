@@ -96,8 +96,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * @generated
    */
   public void clearSource() {
-    for (SourceRef sourceElement : source) {
-      removeFromSource(sourceElement);
+    while (!source.isEmpty()) {
+      removeFromSource(source.get(0));
     }
   }
 
@@ -150,8 +150,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * @generated
    */
   public void clearComment() {
-    for (CommentUnit commentElement : comment) {
-      removeFromComment(commentElement);
+    while (!comment.isEmpty()) {
+      removeFromComment(comment.get(0));
     }
   }
 
@@ -204,8 +204,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * @generated
    */
   public void clearCodeRelation() {
-    for (AbstractCodeRelationship codeRelationElement : codeRelation) {
-      removeFromCodeRelation(codeRelationElement);
+    while (!codeRelation.isEmpty()) {
+      removeFromCodeRelation(codeRelation.get(0));
     }
   }
 
@@ -258,8 +258,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * @generated
    */
   public void clearEntryFlow() {
-    for (EntryFlow entryFlowElement : entryFlow) {
-      removeFromEntryFlow(entryFlowElement);
+    while (!entryFlow.isEmpty()) {
+      removeFromEntryFlow(entryFlow.get(0));
     }
   }
 

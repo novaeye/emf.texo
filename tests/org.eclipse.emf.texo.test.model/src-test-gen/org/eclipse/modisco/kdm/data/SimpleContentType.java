@@ -70,8 +70,8 @@ public class SimpleContentType extends ComplexContentType {
    * @generated
    */
   public void clearType() {
-    for (ComplexContentType typeElement : type) {
-      removeFromType(typeElement);
+    while (!type.isEmpty()) {
+      removeFromType(type.get(0));
     }
   }
 

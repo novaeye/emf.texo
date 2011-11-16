@@ -103,8 +103,8 @@ public class Forum {
    * @generated
    */
   public void clearMembers() {
-    for (Member membersElement : members) {
-      removeFromMembers(membersElement);
+    while (!members.isEmpty()) {
+      removeFromMembers(members.get(0));
     }
   }
 
@@ -157,8 +157,8 @@ public class Forum {
    * @generated
    */
   public void clearTopics() {
-    for (Topic topicsElement : topics) {
-      removeFromTopics(topicsElement);
+    while (!topics.isEmpty()) {
+      removeFromTopics(topics.get(0));
     }
   }
 

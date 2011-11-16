@@ -64,8 +64,8 @@ public class ValueList extends ValueElement {
    * @generated
    */
   public void clearValueElement() {
-    for (ValueElement valueElementElement : valueElement) {
-      removeFromValueElement(valueElementElement);
+    while (!valueElement.isEmpty()) {
+      removeFromValueElement(valueElement.get(0));
     }
   }
 

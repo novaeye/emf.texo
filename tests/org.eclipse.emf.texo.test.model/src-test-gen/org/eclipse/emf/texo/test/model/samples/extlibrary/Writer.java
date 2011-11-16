@@ -91,8 +91,8 @@ public class Writer extends Person {
    * @generated
    */
   public void clearBooks() {
-    for (Book booksElement : books) {
-      removeFromBooks(booksElement);
+    while (!books.isEmpty()) {
+      removeFromBooks(books.get(0));
     }
   }
 

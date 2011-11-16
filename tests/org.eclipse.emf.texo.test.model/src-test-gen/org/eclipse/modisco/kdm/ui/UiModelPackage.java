@@ -351,12 +351,12 @@ public class UiModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    ActionModelPackage.initialize();
+    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     SourceModelPackage.initialize();
-    CodeModelPackage.initialize();
-    ActionModelPackage.initialize();
+    CoreModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractUIElement.class,

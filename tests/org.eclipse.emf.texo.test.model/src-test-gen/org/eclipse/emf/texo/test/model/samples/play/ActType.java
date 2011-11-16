@@ -79,8 +79,8 @@ public class ActType {
    * @generated
    */
   public void clearScene() {
-    for (SceneType sceneElement : scene) {
-      removeFromScene(sceneElement);
+    while (!scene.isEmpty()) {
+      removeFromScene(scene.get(0));
     }
   }
 

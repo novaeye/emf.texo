@@ -83,8 +83,8 @@ public class ResultType {
    * @generated
    */
   public void clearUpdated() {
-    for (Object updatedElement : updated) {
-      removeFromUpdated(updatedElement);
+    while (!updated.isEmpty()) {
+      removeFromUpdated(updated.get(0));
     }
   }
 
@@ -138,8 +138,8 @@ public class ResultType {
    * @generated
    */
   public void clearInserted() {
-    for (Object insertedElement : inserted) {
-      removeFromInserted(insertedElement);
+    while (!inserted.isEmpty()) {
+      removeFromInserted(inserted.get(0));
     }
   }
 
@@ -193,8 +193,8 @@ public class ResultType {
    * @generated
    */
   public void clearDeleted() {
-    for (Object deletedElement : deleted) {
-      removeFromDeleted(deletedElement);
+    while (!deleted.isEmpty()) {
+      removeFromDeleted(deleted.get(0));
     }
   }
 

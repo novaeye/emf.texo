@@ -95,8 +95,8 @@ public class AccountGroup extends Identifiable {
    * @generated
    */
   public void clearAccount() {
-    for (Account accountElement : account) {
-      removeFromAccount(accountElement);
+    while (!account.isEmpty()) {
+      removeFromAccount(account.get(0));
     }
   }
 

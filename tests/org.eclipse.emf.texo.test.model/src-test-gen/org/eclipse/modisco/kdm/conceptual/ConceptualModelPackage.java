@@ -223,11 +223,11 @@ public class ConceptualModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     SourceModelPackage.initialize();
-    ActionModelPackage.initialize();
+    CoreModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(ConceptualModel.class,

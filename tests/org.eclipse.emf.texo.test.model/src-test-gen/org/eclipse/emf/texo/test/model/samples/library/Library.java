@@ -117,8 +117,8 @@ public class Library extends Identifiable {
    * @generated
    */
   public void clearWriters() {
-    for (Writer writersElement : writers) {
-      removeFromWriters(writersElement);
+    while (!writers.isEmpty()) {
+      removeFromWriters(writers.get(0));
     }
   }
 
@@ -173,8 +173,8 @@ public class Library extends Identifiable {
    * @generated
    */
   public void clearBooks() {
-    for (Book booksElement : books) {
-      removeFromBooks(booksElement);
+    while (!books.isEmpty()) {
+      removeFromBooks(books.get(0));
     }
   }
 

@@ -96,8 +96,8 @@ public class InputPort extends Port {
    * @generated
    */
   public void clearEdges() {
-    for (Edge edgesElement : edges) {
-      removeFromEdges(edgesElement);
+    while (!edges.isEmpty()) {
+      removeFromEdges(edges.get(0));
     }
   }
 

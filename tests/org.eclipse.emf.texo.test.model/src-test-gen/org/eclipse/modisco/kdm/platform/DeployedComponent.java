@@ -63,8 +63,8 @@ public class DeployedComponent extends AbstractPlatformElement {
    * @generated
    */
   public void clearGroupedCode() {
-    for (Module groupedCodeElement : groupedCode) {
-      removeFromGroupedCode(groupedCodeElement);
+    while (!groupedCode.isEmpty()) {
+      removeFromGroupedCode(groupedCode.get(0));
     }
   }
 

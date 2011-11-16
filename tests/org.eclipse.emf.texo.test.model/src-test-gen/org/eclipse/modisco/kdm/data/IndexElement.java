@@ -62,8 +62,8 @@ public class IndexElement extends DataResource {
    * @generated
    */
   public void clearImplementation() {
-    for (ItemUnit implementationElement : implementation) {
-      removeFromImplementation(implementationElement);
+    while (!implementation.isEmpty()) {
+      removeFromImplementation(implementation.get(0));
     }
   }
 

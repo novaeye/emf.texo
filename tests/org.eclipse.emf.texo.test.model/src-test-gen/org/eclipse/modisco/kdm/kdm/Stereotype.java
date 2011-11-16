@@ -78,8 +78,8 @@ public class Stereotype extends Element {
    * @generated
    */
   public void clearTag() {
-    for (TagDefinition tagElement : tag) {
-      removeFromTag(tagElement);
+    while (!tag.isEmpty()) {
+      removeFromTag(tag.get(0));
     }
   }
 

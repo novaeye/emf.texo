@@ -63,8 +63,8 @@ public class ConceptualContainer extends AbstractConceptualElement {
    * @generated
    */
   public void clearConceptualElement() {
-    for (AbstractConceptualElement conceptualElementElement : conceptualElement) {
-      removeFromConceptualElement(conceptualElementElement);
+    while (!conceptualElement.isEmpty()) {
+      removeFromConceptualElement(conceptualElement.get(0));
     }
   }
 

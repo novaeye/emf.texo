@@ -62,8 +62,8 @@ public class ResourceType extends AbstractPlatformElement {
    * @generated
    */
   public void clearPlatformElement() {
-    for (AbstractPlatformElement platformElementElement : platformElement) {
-      removeFromPlatformElement(platformElementElement);
+    while (!platformElement.isEmpty()) {
+      removeFromPlatformElement(platformElement.get(0));
     }
   }
 

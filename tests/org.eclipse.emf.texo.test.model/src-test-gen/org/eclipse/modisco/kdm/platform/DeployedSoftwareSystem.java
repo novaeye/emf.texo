@@ -62,8 +62,8 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
    * @generated
    */
   public void clearGroupedComponent() {
-    for (DeployedComponent groupedComponentElement : groupedComponent) {
-      removeFromGroupedComponent(groupedComponentElement);
+    while (!groupedComponent.isEmpty()) {
+      removeFromGroupedComponent(groupedComponent.get(0));
     }
   }
 

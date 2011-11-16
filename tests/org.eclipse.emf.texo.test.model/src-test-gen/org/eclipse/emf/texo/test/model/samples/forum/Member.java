@@ -102,8 +102,8 @@ public class Member {
    * @generated
    */
   public void clearPosts() {
-    for (Post postsElement : posts) {
-      removeFromPosts(postsElement);
+    while (!posts.isEmpty()) {
+      removeFromPosts(posts.get(0));
     }
   }
 
@@ -156,8 +156,8 @@ public class Member {
    * @generated
    */
   public void clearCreated() {
-    for (Topic createdElement : created) {
-      removeFromCreated(createdElement);
+    while (!created.isEmpty()) {
+      removeFromCreated(created.get(0));
     }
   }
 

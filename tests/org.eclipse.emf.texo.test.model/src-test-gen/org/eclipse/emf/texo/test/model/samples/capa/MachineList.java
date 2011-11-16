@@ -64,8 +64,8 @@ public class MachineList {
    * @generated
    */
   public void clearMachines() {
-    for (Machine machinesElement : machines) {
-      removeFromMachines(machinesElement);
+    while (!machines.isEmpty()) {
+      removeFromMachines(machines.get(0));
     }
   }
 

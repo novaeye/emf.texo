@@ -119,8 +119,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   public void clearOutputs() {
-    for (OutputPort outputsElement : outputs) {
-      removeFromOutputs(outputsElement);
+    while (!outputs.isEmpty()) {
+      removeFromOutputs(outputs.get(0));
     }
   }
 
@@ -173,8 +173,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   public void clearInputs() {
-    for (InputPort inputsElement : inputs) {
-      removeFromInputs(inputsElement);
+    while (!inputs.isEmpty()) {
+      removeFromInputs(inputs.get(0));
     }
   }
 

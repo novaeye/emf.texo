@@ -97,8 +97,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * @generated
    */
   public void clearSource() {
-    for (SourceRef sourceElement : source) {
-      removeFromSource(sourceElement);
+    while (!source.isEmpty()) {
+      removeFromSource(source.get(0));
     }
   }
 
@@ -151,8 +151,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * @generated
    */
   public void clearPlatformRelation() {
-    for (AbstractPlatformRelationship platformRelationElement : platformRelation) {
-      removeFromPlatformRelation(platformRelationElement);
+    while (!platformRelation.isEmpty()) {
+      removeFromPlatformRelation(platformRelation.get(0));
     }
   }
 
@@ -205,8 +205,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * @generated
    */
   public void clearAbstraction() {
-    for (ActionElement abstractionElement : abstraction) {
-      removeFromAbstraction(abstractionElement);
+    while (!abstraction.isEmpty()) {
+      removeFromAbstraction(abstraction.get(0));
     }
   }
 
@@ -259,8 +259,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * @generated
    */
   public void clearImplementation() {
-    for (AbstractCodeElement implementationElement : implementation) {
-      removeFromImplementation(implementationElement);
+    while (!implementation.isEmpty()) {
+      removeFromImplementation(implementation.get(0));
     }
   }
 

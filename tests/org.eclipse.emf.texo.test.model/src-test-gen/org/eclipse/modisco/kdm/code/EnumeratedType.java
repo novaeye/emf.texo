@@ -73,8 +73,8 @@ public class EnumeratedType extends Datatype {
    * @generated
    */
   public void clearValue() {
-    for (Value valueElement : value) {
-      removeFromValue(valueElement);
+    while (!value.isEmpty()) {
+      removeFromValue(value.get(0));
     }
   }
 
@@ -127,8 +127,8 @@ public class EnumeratedType extends Datatype {
    * @generated
    */
   public void clearCodeElement() {
-    for (CodeItem codeElementElement : codeElement) {
-      removeFromCodeElement(codeElementElement);
+    while (!codeElement.isEmpty()) {
+      removeFromCodeElement(codeElement.get(0));
     }
   }
 

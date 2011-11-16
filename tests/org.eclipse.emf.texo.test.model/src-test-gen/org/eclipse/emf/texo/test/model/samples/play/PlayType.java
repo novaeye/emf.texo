@@ -213,8 +213,8 @@ public class PlayType {
    * @generated
    */
   public void clearAct() {
-    for (ActType actElement : act) {
-      removeFromAct(actElement);
+    while (!act.isEmpty()) {
+      removeFromAct(act.get(0));
     }
   }
 

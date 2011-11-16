@@ -63,8 +63,8 @@ public class EventModel extends KDMModel {
    * @generated
    */
   public void clearEventElement() {
-    for (AbstractEventElement eventElementElement : eventElement) {
-      removeFromEventElement(eventElementElement);
+    while (!eventElement.isEmpty()) {
+      removeFromEventElement(eventElement.get(0));
     }
   }
 

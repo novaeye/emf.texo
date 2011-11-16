@@ -208,8 +208,8 @@ public class Library extends Identifiable implements Addressable {
    * @generated
    */
   public void clearStock() {
-    for (Item stockElement : stock) {
-      removeFromStock(stockElement);
+    while (!stock.isEmpty()) {
+      removeFromStock(stock.get(0));
     }
   }
 
@@ -262,8 +262,8 @@ public class Library extends Identifiable implements Addressable {
    * @generated
    */
   public void clearBooks() {
-    for (Book booksElement : books) {
-      removeFromBooks(booksElement);
+    while (!books.isEmpty()) {
+      removeFromBooks(books.get(0));
     }
   }
 
@@ -316,8 +316,8 @@ public class Library extends Identifiable implements Addressable {
    * @generated
    */
   public void clearBranches() {
-    for (Library branchesElement : branches) {
-      removeFromBranches(branchesElement);
+    while (!branches.isEmpty()) {
+      removeFromBranches(branches.get(0));
     }
   }
 

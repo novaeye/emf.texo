@@ -63,8 +63,8 @@ public class ConceptualModel extends KDMModel {
    * @generated
    */
   public void clearConceptualElement() {
-    for (AbstractConceptualElement conceptualElementElement : conceptualElement) {
-      removeFromConceptualElement(conceptualElementElement);
+    while (!conceptualElement.isEmpty()) {
+      removeFromConceptualElement(conceptualElement.get(0));
     }
   }
 

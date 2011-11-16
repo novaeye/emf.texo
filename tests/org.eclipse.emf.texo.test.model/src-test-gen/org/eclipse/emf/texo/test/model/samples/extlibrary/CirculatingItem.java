@@ -88,8 +88,8 @@ public abstract class CirculatingItem extends Item implements Lendable {
    * @generated
    */
   public void clearBorrowers() {
-    for (Borrower borrowersElement : borrowers) {
-      removeFromBorrowers(borrowersElement);
+    while (!borrowers.isEmpty()) {
+      removeFromBorrowers(borrowers.get(0));
     }
   }
 

@@ -63,8 +63,8 @@ public class StructureModel extends KDMModel {
    * @generated
    */
   public void clearStructureElement() {
-    for (AbstractStructureElement structureElementElement : structureElement) {
-      removeFromStructureElement(structureElementElement);
+    while (!structureElement.isEmpty()) {
+      removeFromStructureElement(structureElement.get(0));
     }
   }
 

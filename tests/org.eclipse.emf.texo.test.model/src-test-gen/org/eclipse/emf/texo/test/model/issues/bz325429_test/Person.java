@@ -155,8 +155,8 @@ public class Person {
    * @generated
    */
   public void clearContacts() {
-    for (Contact contactsElement : contacts) {
-      removeFromContacts(contactsElement);
+    while (!contacts.isEmpty()) {
+      removeFromContacts(contacts.get(0));
     }
   }
 

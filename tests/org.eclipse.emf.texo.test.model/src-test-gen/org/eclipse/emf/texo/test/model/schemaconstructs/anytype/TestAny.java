@@ -145,8 +145,8 @@ public class TestAny {
    * @generated
    */
   public void clearMultiAnyType() {
-    for (Object multiAnyTypeElement : multiAnyType) {
-      removeFromMultiAnyType(multiAnyTypeElement);
+    while (!multiAnyType.isEmpty()) {
+      removeFromMultiAnyType(multiAnyType.get(0));
     }
   }
 

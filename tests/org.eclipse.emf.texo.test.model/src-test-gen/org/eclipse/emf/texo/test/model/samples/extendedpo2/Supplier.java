@@ -104,8 +104,8 @@ public class Supplier extends Identifiable {
    * @generated
    */
   public void clearCustomers() {
-    for (Customer customersElement : customers) {
-      removeFromCustomers(customersElement);
+    while (!customers.isEmpty()) {
+      removeFromCustomers(customers.get(0));
     }
   }
 
@@ -158,8 +158,8 @@ public class Supplier extends Identifiable {
    * @generated
    */
   public void clearOrders() {
-    for (PurchaseOrder ordersElement : orders) {
-      removeFromOrders(ordersElement);
+    while (!orders.isEmpty()) {
+      removeFromOrders(orders.get(0));
     }
   }
 

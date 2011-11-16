@@ -92,8 +92,8 @@ public class EventAction extends AbstractEventElement {
    * @generated
    */
   public void clearEventElement() {
-    for (Event eventElementElement : eventElement) {
-      removeFromEventElement(eventElementElement);
+    while (!eventElement.isEmpty()) {
+      removeFromEventElement(eventElement.get(0));
     }
   }
 

@@ -81,8 +81,8 @@ public class BuildResource extends AbstractBuildElement {
    * @generated
    */
   public void clearImplementation() {
-    for (KDMEntity implementationElement : implementation) {
-      removeFromImplementation(implementationElement);
+    while (!implementation.isEmpty()) {
+      removeFromImplementation(implementation.get(0));
     }
   }
 
@@ -135,8 +135,8 @@ public class BuildResource extends AbstractBuildElement {
    * @generated
    */
   public void clearGroupedBuild() {
-    for (AbstractBuildElement groupedBuildElement : groupedBuild) {
-      removeFromGroupedBuild(groupedBuildElement);
+    while (!groupedBuild.isEmpty()) {
+      removeFromGroupedBuild(groupedBuild.get(0));
     }
   }
 
@@ -189,8 +189,8 @@ public class BuildResource extends AbstractBuildElement {
    * @generated
    */
   public void clearBuildElement() {
-    for (AbstractBuildElement buildElementElement : buildElement) {
-      removeFromBuildElement(buildElementElement);
+    while (!buildElement.isEmpty()) {
+      removeFromBuildElement(buildElement.get(0));
     }
   }
 
