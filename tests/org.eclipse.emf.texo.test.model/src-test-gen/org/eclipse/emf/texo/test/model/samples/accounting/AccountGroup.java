@@ -96,7 +96,7 @@ public class AccountGroup extends Identifiable {
    */
   public void clearAccount() {
     while (!account.isEmpty()) {
-      removeFromAccount(account.get(0));
+      removeFromAccount(account.iterator().next());
     }
   }
 

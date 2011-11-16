@@ -83,7 +83,7 @@ public abstract class Element {
    */
   public void clearAttribute() {
     while (!attribute.isEmpty()) {
-      removeFromAttribute(attribute.get(0));
+      removeFromAttribute(attribute.iterator().next());
     }
   }
 
@@ -144,7 +144,7 @@ public abstract class Element {
    */
   public void clearAnnotation() {
     while (!annotation.isEmpty()) {
-      removeFromAnnotation(annotation.get(0));
+      removeFromAnnotation(annotation.iterator().next());
     }
   }
 

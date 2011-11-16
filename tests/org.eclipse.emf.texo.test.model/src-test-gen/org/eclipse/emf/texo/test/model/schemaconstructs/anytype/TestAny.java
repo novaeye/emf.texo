@@ -146,7 +146,7 @@ public class TestAny {
    */
   public void clearMultiAnyType() {
     while (!multiAnyType.isEmpty()) {
-      removeFromMultiAnyType(multiAnyType.get(0));
+      removeFromMultiAnyType(multiAnyType.iterator().next());
     }
   }
 

@@ -64,7 +64,7 @@ public class Borrower extends Person {
    */
   public void clearBorrowed() {
     while (!borrowed.isEmpty()) {
-      removeFromBorrowed(borrowed.get(0));
+      removeFromBorrowed(borrowed.iterator().next());
     }
   }
 

@@ -63,7 +63,7 @@ public class DataContainer extends DataResource {
    */
   public void clearDataElement() {
     while (!dataElement.isEmpty()) {
-      removeFromDataElement(dataElement.get(0));
+      removeFromDataElement(dataElement.iterator().next());
     }
   }
 

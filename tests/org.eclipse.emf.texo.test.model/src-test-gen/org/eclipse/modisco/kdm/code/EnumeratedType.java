@@ -74,7 +74,7 @@ public class EnumeratedType extends Datatype {
    */
   public void clearValue() {
     while (!value.isEmpty()) {
-      removeFromValue(value.get(0));
+      removeFromValue(value.iterator().next());
     }
   }
 
@@ -128,7 +128,7 @@ public class EnumeratedType extends Datatype {
    */
   public void clearCodeElement() {
     while (!codeElement.isEmpty()) {
-      removeFromCodeElement(codeElement.get(0));
+      removeFromCodeElement(codeElement.iterator().next());
     }
   }
 

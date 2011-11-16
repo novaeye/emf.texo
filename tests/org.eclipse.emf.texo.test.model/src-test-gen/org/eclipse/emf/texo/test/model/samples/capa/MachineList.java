@@ -65,7 +65,7 @@ public class MachineList {
    */
   public void clearMachines() {
     while (!machines.isEmpty()) {
-      removeFromMachines(machines.get(0));
+      removeFromMachines(machines.iterator().next());
     }
   }
 

@@ -92,7 +92,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void clearAggregated() {
     while (!aggregated.isEmpty()) {
-      removeFromAggregated(aggregated.get(0));
+      removeFromAggregated(aggregated.iterator().next());
     }
   }
 
@@ -146,7 +146,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void clearImplementation() {
     while (!implementation.isEmpty()) {
-      removeFromImplementation(implementation.get(0));
+      removeFromImplementation(implementation.iterator().next());
     }
   }
 
@@ -200,7 +200,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void clearStructureElement() {
     while (!structureElement.isEmpty()) {
-      removeFromStructureElement(structureElement.get(0));
+      removeFromStructureElement(structureElement.iterator().next());
     }
   }
 
@@ -254,7 +254,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void clearStructureRelationship() {
     while (!structureRelationship.isEmpty()) {
-      removeFromStructureRelationship(structureRelationship.get(0));
+      removeFromStructureRelationship(structureRelationship.iterator().next());
     }
   }
 

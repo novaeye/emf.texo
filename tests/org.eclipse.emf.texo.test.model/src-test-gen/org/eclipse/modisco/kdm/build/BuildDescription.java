@@ -73,7 +73,7 @@ public class BuildDescription extends BuildResource {
    */
   public void clearSource() {
     while (!source.isEmpty()) {
-      removeFromSource(source.get(0));
+      removeFromSource(source.iterator().next());
     }
   }
 

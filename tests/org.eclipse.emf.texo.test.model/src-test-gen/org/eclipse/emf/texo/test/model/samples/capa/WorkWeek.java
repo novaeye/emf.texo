@@ -73,7 +73,7 @@ public class WorkWeek {
    */
   public void clearDays() {
     while (!days.isEmpty()) {
-      removeFromDays(days.get(0));
+      removeFromDays(days.iterator().next());
     }
   }
 

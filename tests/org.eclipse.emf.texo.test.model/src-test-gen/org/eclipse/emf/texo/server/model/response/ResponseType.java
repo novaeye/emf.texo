@@ -185,7 +185,7 @@ public class ResponseType {
    */
   public void clearData() {
     while (!data.isEmpty()) {
-      removeFromData(data.get(0));
+      removeFromData(data.iterator().next());
     }
   }
 

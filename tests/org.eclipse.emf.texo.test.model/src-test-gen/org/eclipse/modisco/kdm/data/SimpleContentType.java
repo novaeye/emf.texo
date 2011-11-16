@@ -71,7 +71,7 @@ public class SimpleContentType extends ComplexContentType {
    */
   public void clearType() {
     while (!type.isEmpty()) {
-      removeFromType(type.get(0));
+      removeFromType(type.iterator().next());
     }
   }
 

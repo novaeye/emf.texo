@@ -320,12 +320,12 @@ public class EventModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    ActionModelPackage.initialize();
-    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
     CoreModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    ActionModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EventModel.class, modelPackage.getEventModelEClass(),

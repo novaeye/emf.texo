@@ -64,7 +64,7 @@ public class ConceptualContainer extends AbstractConceptualElement {
    */
   public void clearConceptualElement() {
     while (!conceptualElement.isEmpty()) {
-      removeFromConceptualElement(conceptualElement.get(0));
+      removeFromConceptualElement(conceptualElement.iterator().next());
     }
   }
 

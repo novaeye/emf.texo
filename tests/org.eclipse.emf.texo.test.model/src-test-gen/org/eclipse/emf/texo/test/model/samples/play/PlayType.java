@@ -214,7 +214,7 @@ public class PlayType {
    */
   public void clearAct() {
     while (!act.isEmpty()) {
-      removeFromAct(act.get(0));
+      removeFromAct(act.iterator().next());
     }
   }
 

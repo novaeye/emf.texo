@@ -63,7 +63,7 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
    */
   public void clearGroupedComponent() {
     while (!groupedComponent.isEmpty()) {
-      removeFromGroupedComponent(groupedComponent.get(0));
+      removeFromGroupedComponent(groupedComponent.iterator().next());
     }
   }
 

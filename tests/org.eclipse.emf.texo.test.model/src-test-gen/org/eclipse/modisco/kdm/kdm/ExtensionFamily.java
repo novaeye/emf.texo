@@ -72,7 +72,7 @@ public class ExtensionFamily extends Element {
    */
   public void clearStereotype() {
     while (!stereotype.isEmpty()) {
-      removeFromStereotype(stereotype.get(0));
+      removeFromStereotype(stereotype.iterator().next());
     }
   }
 

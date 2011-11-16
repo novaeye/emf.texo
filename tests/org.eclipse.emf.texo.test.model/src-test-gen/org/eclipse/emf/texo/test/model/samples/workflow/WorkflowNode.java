@@ -120,7 +120,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    */
   public void clearOutputs() {
     while (!outputs.isEmpty()) {
-      removeFromOutputs(outputs.get(0));
+      removeFromOutputs(outputs.iterator().next());
     }
   }
 
@@ -174,7 +174,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    */
   public void clearInputs() {
     while (!inputs.isEmpty()) {
-      removeFromInputs(inputs.get(0));
+      removeFromInputs(inputs.iterator().next());
     }
   }
 

@@ -64,7 +64,7 @@ public class BuildModel extends KDMModel {
    */
   public void clearBuildElement() {
     while (!buildElement.isEmpty()) {
-      removeFromBuildElement(buildElement.get(0));
+      removeFromBuildElement(buildElement.iterator().next());
     }
   }
 

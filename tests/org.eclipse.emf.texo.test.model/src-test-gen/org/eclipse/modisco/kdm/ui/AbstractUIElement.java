@@ -98,7 +98,7 @@ public abstract class AbstractUIElement extends KDMEntity {
    */
   public void clearSource() {
     while (!source.isEmpty()) {
-      removeFromSource(source.get(0));
+      removeFromSource(source.iterator().next());
     }
   }
 
@@ -152,7 +152,7 @@ public abstract class AbstractUIElement extends KDMEntity {
    */
   public void clearUIRelation() {
     while (!uIRelation.isEmpty()) {
-      removeFromUIRelation(uIRelation.get(0));
+      removeFromUIRelation(uIRelation.iterator().next());
     }
   }
 
@@ -206,7 +206,7 @@ public abstract class AbstractUIElement extends KDMEntity {
    */
   public void clearImplementation() {
     while (!implementation.isEmpty()) {
-      removeFromImplementation(implementation.get(0));
+      removeFromImplementation(implementation.iterator().next());
     }
   }
 
@@ -260,7 +260,7 @@ public abstract class AbstractUIElement extends KDMEntity {
    */
   public void clearAbstraction() {
     while (!abstraction.isEmpty()) {
-      removeFromAbstraction(abstraction.get(0));
+      removeFromAbstraction(abstraction.iterator().next());
     }
   }
 

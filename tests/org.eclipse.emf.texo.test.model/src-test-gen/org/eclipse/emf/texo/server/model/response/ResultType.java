@@ -84,7 +84,7 @@ public class ResultType {
    */
   public void clearUpdated() {
     while (!updated.isEmpty()) {
-      removeFromUpdated(updated.get(0));
+      removeFromUpdated(updated.iterator().next());
     }
   }
 
@@ -139,7 +139,7 @@ public class ResultType {
    */
   public void clearInserted() {
     while (!inserted.isEmpty()) {
-      removeFromInserted(inserted.get(0));
+      removeFromInserted(inserted.iterator().next());
     }
   }
 
@@ -194,7 +194,7 @@ public class ResultType {
    */
   public void clearDeleted() {
     while (!deleted.isEmpty()) {
-      removeFromDeleted(deleted.get(0));
+      removeFromDeleted(deleted.iterator().next());
     }
   }
 

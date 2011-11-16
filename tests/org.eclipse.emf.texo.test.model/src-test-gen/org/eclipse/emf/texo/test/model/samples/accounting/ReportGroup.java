@@ -107,7 +107,7 @@ public class ReportGroup extends Identifiable {
    */
   public void clearReportGroup() {
     while (!reportGroup.isEmpty()) {
-      removeFromReportGroup(reportGroup.get(0));
+      removeFromReportGroup(reportGroup.iterator().next());
     }
   }
 
@@ -161,7 +161,7 @@ public class ReportGroup extends Identifiable {
    */
   public void clearAccount() {
     while (!account.isEmpty()) {
-      removeFromAccount(account.get(0));
+      removeFromAccount(account.iterator().next());
     }
   }
 

@@ -62,7 +62,7 @@ public class Namespace extends CodeItem {
    */
   public void clearGroupedCode() {
     while (!groupedCode.isEmpty()) {
-      removeFromGroupedCode(groupedCode.get(0));
+      removeFromGroupedCode(groupedCode.iterator().next());
     }
   }
 

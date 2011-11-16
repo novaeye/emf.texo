@@ -134,7 +134,7 @@ public class CatalogType {
    */
   public void clearSubCatalog() {
     while (!subCatalog.isEmpty()) {
-      removeFromSubCatalog(subCatalog.get(0));
+      removeFromSubCatalog(subCatalog.iterator().next());
     }
   }
 
@@ -192,7 +192,7 @@ public class CatalogType {
    */
   public void clearProduct() {
     while (!product.isEmpty()) {
-      removeFromProduct(product.get(0));
+      removeFromProduct(product.iterator().next());
     }
   }
 

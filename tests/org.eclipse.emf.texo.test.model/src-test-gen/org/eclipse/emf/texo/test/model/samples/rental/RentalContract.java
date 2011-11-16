@@ -186,7 +186,7 @@ public class RentalContract extends Identifiable {
    */
   public void clearRentalContractLines() {
     while (!rentalContractLines.isEmpty()) {
-      removeFromRentalContractLines(rentalContractLines.get(0));
+      removeFromRentalContractLines(rentalContractLines.iterator().next());
     }
   }
 

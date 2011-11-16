@@ -65,7 +65,7 @@ public class CompositeType extends Datatype {
    */
   public void clearItemUnit() {
     while (!itemUnit.isEmpty()) {
-      removeFromItemUnit(itemUnit.get(0));
+      removeFromItemUnit(itemUnit.iterator().next());
     }
   }
 

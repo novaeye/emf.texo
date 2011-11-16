@@ -93,7 +93,7 @@ public class PlatformAction extends AbstractPlatformElement {
    */
   public void clearPlatformElement() {
     while (!platformElement.isEmpty()) {
-      removeFromPlatformElement(platformElement.get(0));
+      removeFromPlatformElement(platformElement.iterator().next());
     }
   }
 

@@ -240,7 +240,7 @@ public class Album extends Identifiable {
    */
   public void clearGenres() {
     while (!genres.isEmpty()) {
-      removeFromGenres(genres.get(0));
+      removeFromGenres(genres.iterator().next());
     }
   }
 
@@ -294,7 +294,7 @@ public class Album extends Identifiable {
    */
   public void clearSongs() {
     while (!songs.isEmpty()) {
-      removeFromSongs(songs.get(0));
+      removeFromSongs(songs.iterator().next());
     }
   }
 

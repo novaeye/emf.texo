@@ -156,7 +156,7 @@ public class Person {
    */
   public void clearContacts() {
     while (!contacts.isEmpty()) {
-      removeFromContacts(contacts.get(0));
+      removeFromContacts(contacts.iterator().next());
     }
   }
 

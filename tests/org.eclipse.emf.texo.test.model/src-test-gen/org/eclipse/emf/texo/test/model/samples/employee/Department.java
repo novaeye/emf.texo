@@ -103,7 +103,7 @@ public class Department {
    */
   public void clearEmployees() {
     while (!employees.isEmpty()) {
-      removeFromEmployees(employees.get(0));
+      removeFromEmployees(employees.iterator().next());
     }
   }
 

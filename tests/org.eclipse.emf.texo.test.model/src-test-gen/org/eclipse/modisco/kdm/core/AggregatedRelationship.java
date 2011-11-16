@@ -166,7 +166,7 @@ public class AggregatedRelationship extends ModelElement {
    */
   public void clearRelation() {
     while (!relation.isEmpty()) {
-      removeFromRelation(relation.get(0));
+      removeFromRelation(relation.iterator().next());
     }
   }
 

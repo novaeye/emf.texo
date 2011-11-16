@@ -203,7 +203,7 @@ public class Claim {
    */
   public void clearClaimLine() {
     while (!claimLine.isEmpty()) {
-      removeFromClaimLine(claimLine.get(0));
+      removeFromClaimLine(claimLine.iterator().next());
     }
   }
 

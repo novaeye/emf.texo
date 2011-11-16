@@ -429,11 +429,11 @@ public class ActionModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
     CoreModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EntryFlow.class, modelPackage.getEntryFlowEClass(),

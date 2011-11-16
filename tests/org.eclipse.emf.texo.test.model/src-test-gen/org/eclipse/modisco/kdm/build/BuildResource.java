@@ -82,7 +82,7 @@ public class BuildResource extends AbstractBuildElement {
    */
   public void clearImplementation() {
     while (!implementation.isEmpty()) {
-      removeFromImplementation(implementation.get(0));
+      removeFromImplementation(implementation.iterator().next());
     }
   }
 
@@ -136,7 +136,7 @@ public class BuildResource extends AbstractBuildElement {
    */
   public void clearGroupedBuild() {
     while (!groupedBuild.isEmpty()) {
-      removeFromGroupedBuild(groupedBuild.get(0));
+      removeFromGroupedBuild(groupedBuild.iterator().next());
     }
   }
 
@@ -190,7 +190,7 @@ public class BuildResource extends AbstractBuildElement {
    */
   public void clearBuildElement() {
     while (!buildElement.isEmpty()) {
-      removeFromBuildElement(buildElement.get(0));
+      removeFromBuildElement(buildElement.iterator().next());
     }
   }
 

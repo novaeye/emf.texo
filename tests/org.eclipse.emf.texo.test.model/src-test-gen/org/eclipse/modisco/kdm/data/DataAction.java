@@ -104,7 +104,7 @@ public class DataAction extends AbstractDataElement {
    */
   public void clearImplementation() {
     while (!implementation.isEmpty()) {
-      removeFromImplementation(implementation.get(0));
+      removeFromImplementation(implementation.iterator().next());
     }
   }
 
@@ -158,7 +158,7 @@ public class DataAction extends AbstractDataElement {
    */
   public void clearDataElement() {
     while (!dataElement.isEmpty()) {
-      removeFromDataElement(dataElement.get(0));
+      removeFromDataElement(dataElement.iterator().next());
     }
   }
 

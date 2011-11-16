@@ -108,7 +108,7 @@ public class Writer extends Identifiable {
    */
   public void clearBooks() {
     while (!books.isEmpty()) {
-      removeFromBooks(books.get(0));
+      removeFromBooks(books.iterator().next());
     }
   }
 

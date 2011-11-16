@@ -63,7 +63,7 @@ public class IndexElement extends DataResource {
    */
   public void clearImplementation() {
     while (!implementation.isEmpty()) {
-      removeFromImplementation(implementation.get(0));
+      removeFromImplementation(implementation.iterator().next());
     }
   }
 

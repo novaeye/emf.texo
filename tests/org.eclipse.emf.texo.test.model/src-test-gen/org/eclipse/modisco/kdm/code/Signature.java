@@ -65,7 +65,7 @@ public class Signature extends Datatype {
    */
   public void clearParameterUnit() {
     while (!parameterUnit.isEmpty()) {
-      removeFromParameterUnit(parameterUnit.get(0));
+      removeFromParameterUnit(parameterUnit.iterator().next());
     }
   }
 

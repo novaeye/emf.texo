@@ -65,7 +65,7 @@ public class InterfaceUnit extends Datatype {
    */
   public void clearCodeElement() {
     while (!codeElement.isEmpty()) {
-      removeFromCodeElement(codeElement.get(0));
+      removeFromCodeElement(codeElement.iterator().next());
     }
   }
 

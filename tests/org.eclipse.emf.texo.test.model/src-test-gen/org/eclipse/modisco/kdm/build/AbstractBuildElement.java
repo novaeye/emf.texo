@@ -65,7 +65,7 @@ public abstract class AbstractBuildElement extends KDMEntity {
    */
   public void clearBuildRelation() {
     while (!buildRelation.isEmpty()) {
-      removeFromBuildRelation(buildRelation.get(0));
+      removeFromBuildRelation(buildRelation.iterator().next());
     }
   }
 

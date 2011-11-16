@@ -80,7 +80,7 @@ public class ActType {
    */
   public void clearScene() {
     while (!scene.isEmpty()) {
-      removeFromScene(scene.get(0));
+      removeFromScene(scene.iterator().next());
     }
   }
 

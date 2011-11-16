@@ -81,7 +81,7 @@ public class SourceRef extends Element {
    */
   public void clearRegion() {
     while (!region.isEmpty()) {
-      removeFromRegion(region.get(0));
+      removeFromRegion(region.iterator().next());
     }
   }
 

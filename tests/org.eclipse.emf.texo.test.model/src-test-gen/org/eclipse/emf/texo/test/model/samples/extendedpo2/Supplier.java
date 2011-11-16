@@ -105,7 +105,7 @@ public class Supplier extends Identifiable {
    */
   public void clearCustomers() {
     while (!customers.isEmpty()) {
-      removeFromCustomers(customers.get(0));
+      removeFromCustomers(customers.iterator().next());
     }
   }
 
@@ -159,7 +159,7 @@ public class Supplier extends Identifiable {
    */
   public void clearOrders() {
     while (!orders.isEmpty()) {
-      removeFromOrders(orders.get(0));
+      removeFromOrders(orders.iterator().next());
     }
   }
 

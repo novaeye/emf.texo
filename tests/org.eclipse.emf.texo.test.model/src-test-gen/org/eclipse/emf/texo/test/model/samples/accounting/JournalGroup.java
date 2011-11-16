@@ -105,7 +105,7 @@ public class JournalGroup extends Identifiable {
    */
   public void clearJournalGroups() {
     while (!journalGroups.isEmpty()) {
-      removeFromJournalGroups(journalGroups.get(0));
+      removeFromJournalGroups(journalGroups.iterator().next());
     }
   }
 
@@ -159,7 +159,7 @@ public class JournalGroup extends Identifiable {
    */
   public void clearJournalStatements() {
     while (!journalStatements.isEmpty()) {
-      removeFromJournalStatements(journalStatements.get(0));
+      removeFromJournalStatements(journalStatements.iterator().next());
     }
   }
 

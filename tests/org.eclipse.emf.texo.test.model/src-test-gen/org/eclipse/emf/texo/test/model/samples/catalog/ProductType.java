@@ -143,7 +143,7 @@ public class ProductType {
    */
   public void clearRemark() {
     while (!remark.isEmpty()) {
-      removeFromRemark(remark.get(0));
+      removeFromRemark(remark.iterator().next());
     }
   }
 

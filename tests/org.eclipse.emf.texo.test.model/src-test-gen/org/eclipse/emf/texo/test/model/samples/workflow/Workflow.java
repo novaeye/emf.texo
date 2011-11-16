@@ -83,7 +83,7 @@ public class Workflow extends WorkflowElement {
    */
   public void clearNodes() {
     while (!nodes.isEmpty()) {
-      removeFromNodes(nodes.get(0));
+      removeFromNodes(nodes.iterator().next());
     }
   }
 
@@ -137,7 +137,7 @@ public class Workflow extends WorkflowElement {
    */
   public void clearEdges() {
     while (!edges.isEmpty()) {
-      removeFromEdges(edges.get(0));
+      removeFromEdges(edges.iterator().next());
     }
   }
 
@@ -191,7 +191,7 @@ public class Workflow extends WorkflowElement {
    */
   public void clearComments() {
     while (!comments.isEmpty()) {
-      removeFromComments(comments.get(0));
+      removeFromComments(comments.iterator().next());
     }
   }
 

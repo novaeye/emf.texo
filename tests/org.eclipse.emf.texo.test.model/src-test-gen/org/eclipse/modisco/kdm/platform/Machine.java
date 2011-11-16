@@ -71,7 +71,7 @@ public class Machine extends AbstractPlatformElement {
    */
   public void clearDeployedComponent() {
     while (!deployedComponent.isEmpty()) {
-      removeFromDeployedComponent(deployedComponent.get(0));
+      removeFromDeployedComponent(deployedComponent.iterator().next());
     }
   }
 
@@ -125,7 +125,7 @@ public class Machine extends AbstractPlatformElement {
    */
   public void clearDeployedResource() {
     while (!deployedResource.isEmpty()) {
-      removeFromDeployedResource(deployedResource.get(0));
+      removeFromDeployedResource(deployedResource.iterator().next());
     }
   }
 

@@ -103,7 +103,7 @@ public class Member {
    */
   public void clearPosts() {
     while (!posts.isEmpty()) {
-      removeFromPosts(posts.get(0));
+      removeFromPosts(posts.iterator().next());
     }
   }
 
@@ -157,7 +157,7 @@ public class Member {
    */
   public void clearCreated() {
     while (!created.isEmpty()) {
-      removeFromCreated(created.get(0));
+      removeFromCreated(created.iterator().next());
     }
   }
 

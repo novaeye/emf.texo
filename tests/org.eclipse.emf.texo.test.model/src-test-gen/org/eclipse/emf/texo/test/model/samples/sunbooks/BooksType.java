@@ -65,7 +65,7 @@ public class BooksType {
    */
   public void clearBook() {
     while (!book.isEmpty()) {
-      removeFromBook(book.get(0));
+      removeFromBook(book.iterator().next());
     }
   }
 

@@ -89,7 +89,7 @@ public abstract class CirculatingItem extends Item implements Lendable {
    */
   public void clearBorrowers() {
     while (!borrowers.isEmpty()) {
-      removeFromBorrowers(borrowers.get(0));
+      removeFromBorrowers(borrowers.iterator().next());
     }
   }
 

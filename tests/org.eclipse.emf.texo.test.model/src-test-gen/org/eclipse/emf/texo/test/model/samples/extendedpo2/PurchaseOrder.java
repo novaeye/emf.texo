@@ -124,7 +124,7 @@ public class PurchaseOrder extends Identifiable {
    */
   public void clearItems() {
     while (!items.isEmpty()) {
-      removeFromItems(items.get(0));
+      removeFromItems(items.iterator().next());
     }
   }
 

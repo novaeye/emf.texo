@@ -171,7 +171,7 @@ public class PType extends Identifiable {
    */
   public void clearSubTypes() {
     while (!subTypes.isEmpty()) {
-      removeFromSubTypes(subTypes.get(0));
+      removeFromSubTypes(subTypes.iterator().next());
     }
   }
 
@@ -223,7 +223,7 @@ public class PType extends Identifiable {
    */
   public void clearSubNOTypes() {
     while (!subNOTypes.isEmpty()) {
-      removeFromSubNOTypes(subNOTypes.get(0));
+      removeFromSubNOTypes(subNOTypes.iterator().next());
     }
   }
 
@@ -275,7 +275,7 @@ public class PType extends Identifiable {
    */
   public void clearInfoReferences() {
     while (!infoReferences.isEmpty()) {
-      removeFromInfoReferences(infoReferences.get(0));
+      removeFromInfoReferences(infoReferences.iterator().next());
     }
   }
 

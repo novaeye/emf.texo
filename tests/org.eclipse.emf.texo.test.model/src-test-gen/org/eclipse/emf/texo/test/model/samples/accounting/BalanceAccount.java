@@ -68,7 +68,7 @@ public class BalanceAccount extends Account {
    */
   public void clearReport() {
     while (!report.isEmpty()) {
-      removeFromReport(report.get(0));
+      removeFromReport(report.iterator().next());
     }
   }
 

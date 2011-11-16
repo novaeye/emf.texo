@@ -71,7 +71,7 @@ public class Segment extends KDMFramework {
    */
   public void clearSegment() {
     while (!segment.isEmpty()) {
-      removeFromSegment(segment.get(0));
+      removeFromSegment(segment.iterator().next());
     }
   }
 
@@ -125,7 +125,7 @@ public class Segment extends KDMFramework {
    */
   public void clearModel() {
     while (!model.isEmpty()) {
-      removeFromModel(model.get(0));
+      removeFromModel(model.iterator().next());
     }
   }
 

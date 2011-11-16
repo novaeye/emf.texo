@@ -66,7 +66,7 @@ public class ColumnSet extends DataContainer {
    */
   public void clearItemUnit() {
     while (!itemUnit.isEmpty()) {
-      removeFromItemUnit(itemUnit.get(0));
+      removeFromItemUnit(itemUnit.iterator().next());
     }
   }
 

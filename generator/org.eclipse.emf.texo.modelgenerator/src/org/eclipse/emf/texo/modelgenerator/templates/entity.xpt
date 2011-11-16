@@ -176,7 +176,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 			public void clear«toFirstUpper(featureAnnotation.validJavaMemberName)»() {
 				«IF !featureAnnotation.EStructuralFeature.volatile-»
 				while (!«featureAnnotation.validJavaMemberName».isEmpty()) {
-					removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.validJavaMemberName».get(0));
+					removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.validJavaMemberName».iterator().next());
 				}
 				«ELSE-»
 		    	// Volatile feature

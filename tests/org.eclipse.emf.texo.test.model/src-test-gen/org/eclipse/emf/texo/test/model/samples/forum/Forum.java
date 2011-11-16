@@ -104,7 +104,7 @@ public class Forum {
    */
   public void clearMembers() {
     while (!members.isEmpty()) {
-      removeFromMembers(members.get(0));
+      removeFromMembers(members.iterator().next());
     }
   }
 
@@ -158,7 +158,7 @@ public class Forum {
    */
   public void clearTopics() {
     while (!topics.isEmpty()) {
-      removeFromTopics(topics.get(0));
+      removeFromTopics(topics.iterator().next());
     }
   }
 

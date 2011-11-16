@@ -65,7 +65,7 @@ public class Module extends CodeItem {
    */
   public void clearCodeElement() {
     while (!codeElement.isEmpty()) {
-      removeFromCodeElement(codeElement.get(0));
+      removeFromCodeElement(codeElement.iterator().next());
     }
   }
 

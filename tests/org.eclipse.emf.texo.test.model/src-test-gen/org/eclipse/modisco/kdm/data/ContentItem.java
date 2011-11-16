@@ -94,7 +94,7 @@ public class ContentItem extends AbstractContentElement {
    */
   public void clearContentElement() {
     while (!contentElement.isEmpty()) {
-      removeFromContentElement(contentElement.get(0));
+      removeFromContentElement(contentElement.iterator().next());
     }
   }
 

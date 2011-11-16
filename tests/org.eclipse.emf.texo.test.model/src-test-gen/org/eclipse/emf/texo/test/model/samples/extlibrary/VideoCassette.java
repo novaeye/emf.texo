@@ -64,7 +64,7 @@ public class VideoCassette extends AudioVisualItem {
    */
   public void clearCast() {
     while (!cast.isEmpty()) {
-      removeFromCast(cast.get(0));
+      removeFromCast(cast.iterator().next());
     }
   }
 

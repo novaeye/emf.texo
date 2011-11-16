@@ -92,7 +92,7 @@ public class Writer extends Person {
    */
   public void clearBooks() {
     while (!books.isEmpty()) {
-      removeFromBooks(books.get(0));
+      removeFromBooks(books.iterator().next());
     }
   }
 

@@ -156,7 +156,7 @@ public class Topic {
    */
   public void clearPosts() {
     while (!posts.isEmpty()) {
-      removeFromPosts(posts.get(0));
+      removeFromPosts(posts.iterator().next());
     }
   }
 

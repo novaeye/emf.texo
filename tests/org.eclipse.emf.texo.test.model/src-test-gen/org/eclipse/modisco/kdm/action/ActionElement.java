@@ -106,7 +106,7 @@ public class ActionElement extends AbstractCodeElement {
    */
   public void clearCodeElement() {
     while (!codeElement.isEmpty()) {
-      removeFromCodeElement(codeElement.get(0));
+      removeFromCodeElement(codeElement.iterator().next());
     }
   }
 
@@ -160,7 +160,7 @@ public class ActionElement extends AbstractCodeElement {
    */
   public void clearActionRelation() {
     while (!actionRelation.isEmpty()) {
-      removeFromActionRelation(actionRelation.get(0));
+      removeFromActionRelation(actionRelation.iterator().next());
     }
   }
 

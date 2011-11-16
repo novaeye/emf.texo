@@ -87,7 +87,7 @@ public abstract class AbstractDataElement extends KDMEntity {
    */
   public void clearSource() {
     while (!source.isEmpty()) {
-      removeFromSource(source.get(0));
+      removeFromSource(source.iterator().next());
     }
   }
 
@@ -141,7 +141,7 @@ public abstract class AbstractDataElement extends KDMEntity {
    */
   public void clearDataRelation() {
     while (!dataRelation.isEmpty()) {
-      removeFromDataRelation(dataRelation.get(0));
+      removeFromDataRelation(dataRelation.iterator().next());
     }
   }
 
@@ -195,7 +195,7 @@ public abstract class AbstractDataElement extends KDMEntity {
    */
   public void clearAbstraction() {
     while (!abstraction.isEmpty()) {
-      removeFromAbstraction(abstraction.get(0));
+      removeFromAbstraction(abstraction.iterator().next());
     }
   }
 

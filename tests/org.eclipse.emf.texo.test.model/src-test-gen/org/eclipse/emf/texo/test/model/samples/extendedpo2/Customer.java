@@ -95,7 +95,7 @@ public class Customer extends Identifiable {
    */
   public void clearOrders() {
     while (!orders.isEmpty()) {
-      removeFromOrders(orders.get(0));
+      removeFromOrders(orders.iterator().next());
     }
   }
 

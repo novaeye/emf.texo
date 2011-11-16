@@ -209,7 +209,7 @@ public class Library extends Identifiable implements Addressable {
    */
   public void clearStock() {
     while (!stock.isEmpty()) {
-      removeFromStock(stock.get(0));
+      removeFromStock(stock.iterator().next());
     }
   }
 
@@ -263,7 +263,7 @@ public class Library extends Identifiable implements Addressable {
    */
   public void clearBooks() {
     while (!books.isEmpty()) {
-      removeFromBooks(books.get(0));
+      removeFromBooks(books.iterator().next());
     }
   }
 
@@ -317,7 +317,7 @@ public class Library extends Identifiable implements Addressable {
    */
   public void clearBranches() {
     while (!branches.isEmpty()) {
-      removeFromBranches(branches.get(0));
+      removeFromBranches(branches.iterator().next());
     }
   }
 

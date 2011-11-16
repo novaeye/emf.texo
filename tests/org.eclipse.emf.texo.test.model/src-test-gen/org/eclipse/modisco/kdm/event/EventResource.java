@@ -63,7 +63,7 @@ public class EventResource extends AbstractEventElement {
    */
   public void clearEventElement() {
     while (!eventElement.isEmpty()) {
-      removeFromEventElement(eventElement.get(0));
+      removeFromEventElement(eventElement.iterator().next());
     }
   }
 

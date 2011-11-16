@@ -125,7 +125,7 @@ public class Machine {
    */
   public void clearTasks() {
     while (!tasks.isEmpty()) {
-      removeFromTasks(tasks.get(0));
+      removeFromTasks(tasks.iterator().next());
     }
   }
 

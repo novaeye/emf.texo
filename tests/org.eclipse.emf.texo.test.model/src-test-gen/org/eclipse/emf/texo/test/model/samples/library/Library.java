@@ -118,7 +118,7 @@ public class Library extends Identifiable {
    */
   public void clearWriters() {
     while (!writers.isEmpty()) {
-      removeFromWriters(writers.get(0));
+      removeFromWriters(writers.iterator().next());
     }
   }
 
@@ -174,7 +174,7 @@ public class Library extends Identifiable {
    */
   public void clearBooks() {
     while (!books.isEmpty()) {
-      removeFromBooks(books.get(0));
+      removeFromBooks(books.iterator().next());
     }
   }
 

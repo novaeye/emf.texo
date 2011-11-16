@@ -89,7 +89,7 @@ public abstract class ModelElement extends Element {
    */
   public void clearStereotype() {
     while (!stereotype.isEmpty()) {
-      removeFromStereotype(stereotype.get(0));
+      removeFromStereotype(stereotype.iterator().next());
     }
   }
 
@@ -150,7 +150,7 @@ public abstract class ModelElement extends Element {
    */
   public void clearTaggedValue() {
     while (!taggedValue.isEmpty()) {
-      removeFromTaggedValue(taggedValue.get(0));
+      removeFromTaggedValue(taggedValue.iterator().next());
     }
   }
 

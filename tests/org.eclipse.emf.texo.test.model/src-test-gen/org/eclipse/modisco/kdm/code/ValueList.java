@@ -65,7 +65,7 @@ public class ValueList extends ValueElement {
    */
   public void clearValueElement() {
     while (!valueElement.isEmpty()) {
-      removeFromValueElement(valueElement.get(0));
+      removeFromValueElement(valueElement.iterator().next());
     }
   }
 

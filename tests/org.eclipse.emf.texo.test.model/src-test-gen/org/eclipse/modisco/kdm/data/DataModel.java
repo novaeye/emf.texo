@@ -64,7 +64,7 @@ public class DataModel extends KDMModel {
    */
   public void clearDataElement() {
     while (!dataElement.isEmpty()) {
-      removeFromDataElement(dataElement.get(0));
+      removeFromDataElement(dataElement.iterator().next());
     }
   }
 
