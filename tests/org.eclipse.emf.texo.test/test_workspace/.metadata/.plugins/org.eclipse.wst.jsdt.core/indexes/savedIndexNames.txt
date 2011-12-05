@@ -1,0 +1,5 @@
+INDEX VERSION 1.122+/home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1879411141.index
+1090603078.index
+4118241950.index
+3531802823.index

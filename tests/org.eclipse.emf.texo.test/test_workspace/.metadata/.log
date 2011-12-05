@@ -1208,3 +1208,236 @@ Binding(CTRL+DEL,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-11-28 15:44:19.444 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide -osgi.os linux -osgi.ws gtk -osgi.arch x86_64
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace -dev file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/Texo Workspace Test/dev.properties -osgi.os linux -osgi.ws gtk -osgi.arch x86_64 -clean
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-28 15:44:29.505
+!MESSAGE org.mortbay.jetty: failed SocketConnector@0.0.0.0:50313: java.net.BindException: Address already in use
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-28 15:44:29.509
+!MESSAGE org.mortbay.jetty: failed Server@13edd1f0: java.net.BindException: Address already in use
+
+!ENTRY org.eclipse.jface 2 0 2011-11-28 15:44:30.006
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-28 15:44:30.006
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2011-11-28 15:44:35.250
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 3030 milliseconds.
+!SESSION 2011-11-28 15:54:16.975 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide -osgi.os linux -osgi.ws gtk -osgi.arch x86_64
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace -dev file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/Texo Workspace Test/dev.properties -osgi.os linux -osgi.ws gtk -osgi.arch x86_64 -clean
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-11-28 15:54:22.206
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-28 15:54:26.150
+!MESSAGE org.mortbay.jetty: failed SocketConnector@0.0.0.0:50313: java.net.BindException: Address already in use
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-28 15:54:26.152
+!MESSAGE org.mortbay.jetty: failed Server@597f13c5: java.net.BindException: Address already in use
+
+!ENTRY org.eclipse.jface 2 0 2011-11-28 15:54:26.567
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-28 15:54:26.567
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-28 16:08:05.666
+!MESSAGE An internal error occurred during: "Requesting Java AST from selection".
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.parser.Scanner.getCurrentIdentifierSource(Scanner.java:442)
+	at org.eclipse.jdt.internal.compiler.parser.AbstractCommentParser.pushIdentifier(AbstractCommentParser.java:1382)
+	at org.eclipse.jdt.internal.compiler.parser.AbstractCommentParser.parseQualifiedName(AbstractCommentParser.java:1035)
+	at org.eclipse.jdt.internal.compiler.parser.AbstractCommentParser.parseReference(AbstractCommentParser.java:1236)
+	at org.eclipse.jdt.core.dom.DocCommentParser.parseTag(DocCommentParser.java:483)
+	at org.eclipse.jdt.internal.compiler.parser.AbstractCommentParser.commentParse(AbstractCommentParser.java:241)
+	at org.eclipse.jdt.core.dom.DocCommentParser.parse(DocCommentParser.java:74)
+	at org.eclipse.jdt.core.dom.DocCommentParser.parse(DocCommentParser.java:60)
+	at org.eclipse.jdt.core.dom.ASTConverter.createComment(ASTConverter.java:3379)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildCommentsTable(ASTConverter.java:346)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1192)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:289)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1207)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:807)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2011-11-28 16:08:33.958 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide -osgi.os linux -osgi.ws gtk -osgi.arch x86_64
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace -dev file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/Texo Workspace Test/dev.properties -osgi.os linux -osgi.ws gtk -osgi.arch x86_64 -clean
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-11-28 16:08:39.940
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-28 16:08:43.361
+!MESSAGE org.mortbay.jetty: failed SocketConnector@0.0.0.0:50313: java.net.BindException: Address already in use
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-28 16:08:43.364
+!MESSAGE org.mortbay.jetty: failed Server@387dcf98: java.net.BindException: Address already in use
+
+!ENTRY org.eclipse.jface 2 0 2011-11-28 16:08:43.833
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-28 16:08:43.833
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2011-11-30 15:14:50.521 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide -osgi.os linux -osgi.ws gtk -osgi.arch x86_64
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace -dev file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/Texo Workspace Test/dev.properties -osgi.os linux -osgi.ws gtk -osgi.arch x86_64 -clean
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-30 15:14:59.952
+!MESSAGE org.mortbay.jetty: failed SocketConnector@0.0.0.0:50313: java.net.BindException: Address already in use
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-11-30 15:14:59.955
+!MESSAGE org.mortbay.jetty: failed Server@6a472d86: java.net.BindException: Address already in use
+
+!ENTRY org.eclipse.jface 2 0 2011-11-30 15:15:00.582
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-11-30 15:15:00.582
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.xtend.typesystem.emf.ui 4 0 2011-11-30 15:16:34.821
+!MESSAGE Resource '/.org.eclipse.jdt.core.external.folders/.link4' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/.org.eclipse.jdt.core.external.folders/.link4' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:54)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:104)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:88)
+	at org.eclipse.xtend.typesystem.emf.ui.ProjectAnalyzer.loadMetamodelsForProject(ProjectAnalyzer.java:128)
+	at org.eclipse.xtend.typesystem.emf.ui.ProjectAnalyzer.run(ProjectAnalyzer.java:90)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2011-11-30 15:16:34.821
+!MESSAGE Resource '/.org.eclipse.jdt.core.external.folders/.link4' does not exist.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2011-11-30 15:26:22.925
+!MESSAGE Server Tomcat v7.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2011-11-30 15:28:08.153
+!MESSAGE Server Tomcat v7.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+!ENTRY com.google.gdt.eclipse.managedapis 1 0 2011-11-30 17:31:55.341
+!MESSAGE Failed to load icon cache
+!SESSION 2011-12-05 21:46:13.822 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_25
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide -osgi.os linux -osgi.ws gtk -osgi.arch x86_64
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/mtaal/mydata/dev/git/org.eclipse.emf.texo/tests/org.eclipse.emf.texo.test/test_workspace -dev file:/home/mtaal/mydata/dev/workspaces/texo/.metadata/.plugins/org.eclipse.pde.core/Texo Workspace Test/dev.properties -osgi.os linux -osgi.ws gtk -osgi.arch x86_64 -clean
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-12-05 21:46:25.567
+!MESSAGE org.mortbay.jetty: failed SocketConnector@0.0.0.0:50313: java.net.BindException: Address already in use
+
+!ENTRY com.google.gdt.eclipse.platform.shared 2 0 2011-12-05 21:46:25.571
+!MESSAGE org.mortbay.jetty: failed Server@15e8d410: java.net.BindException: Address already in use
+
+!ENTRY org.eclipse.jface 2 0 2011-12-05 21:46:26.280
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2011-12-05 21:46:26.280
+!MESSAGE A conflict occurred for CTRL+DEL:
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeInstance,Remove Result,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2011-12-05 21:46:31.664
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 2860 milliseconds.
