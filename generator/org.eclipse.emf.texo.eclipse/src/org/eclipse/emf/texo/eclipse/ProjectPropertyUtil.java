@@ -121,7 +121,12 @@ public class ProjectPropertyUtil {
   }
 
   private static File getPropertiesFile(IProject project) {
-    final IPath iPath = project.getLocation().append(".settings").append("org.eclipse.emf.texo.prefs"); //$NON-NLS-1$ //$NON-NLS-2$
+    final IPath settingsPath = project.getLocation().append(".settings");
+    final File settingsDir = settingsPath.toFile();
+    if (!settingsDir.exists()) {
+      settingsDir.mkdir();
+    }
+    final IPath iPath = settingsPath.append("org.eclipse.emf.texo.prefs"); //$NON-NLS-1$ 
     return iPath.toFile();
   }
 
