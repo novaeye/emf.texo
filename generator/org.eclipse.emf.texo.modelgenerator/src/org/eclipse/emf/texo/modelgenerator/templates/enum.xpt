@@ -30,7 +30,6 @@ public enum «this.simpleClassName»
 
 «EXPAND org::eclipse::emf::texo::modelgenerator::templates::enum_addition::root(modelController) FOR this»
 
-
 «FOREACH eEnum.ELiterals AS e SEPARATOR ","-»
 	«LET ((EEnumLiteral)e) AS el-»
 	 	/**
@@ -53,7 +52,6 @@ public enum «this.simpleClassName»
 	}
 	«ENDLET-»
 «ENDFOREACH-»;
-
 
 	/**
 	 * An array of all the '<em><b>«this.name»</b></em>' enumerators.
