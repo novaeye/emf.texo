@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Rental_Test
-Bundle-SymbolicName: Rental_Test
-Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: org.eclipse.emf.texo;bundle-version="0.1.0",
- org.eclipse.emf.ecore;bundle-version="2.5.0"
