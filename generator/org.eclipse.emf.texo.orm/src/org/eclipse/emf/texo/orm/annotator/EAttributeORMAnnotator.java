@@ -43,6 +43,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Temporal;
+import org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotation;
@@ -161,6 +162,7 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       } else {
         elementCollection = annotation.getElementCollection();
       }
+
       if (isLob) {
         final Lob lob = OrmFactory.eINSTANCE.createLob();
         elementCollection.setLob(lob);
@@ -194,6 +196,14 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
           elementCollection.getCollectionTable().getJoinColumn().add(OrmFactory.eINSTANCE.createJoinColumn());
           elementCollection.getCollectionTable().getJoinColumn().get(0)
               .setName(namingStrategy.getJoinColumnName(eAttribute));
+          if (eAttribute.isUnique()) {
+            elementCollection.getCollectionTable().getJoinColumn().get(0).setUnique(true);
+          }
+        }
+        if (eAttribute.isUnique()) {
+          final UniqueConstraint uniqueConstraint = OrmFactory.eINSTANCE.createUniqueConstraint();
+          uniqueConstraint.getColumnName().add(elementCollection.getColumn().getName());
+          uniqueConstraint.getColumnName().add(elementCollection.getCollectionTable().getJoinColumn().get(0).getName());
         }
       }
 
@@ -248,6 +258,9 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       final Column column = basic.getColumn();
       if (column.getName() == null) {
         column.setName(namingStrategy.getColumnName(annotation.getEStructuralFeature()));
+      }
+      if (eAttribute.isUnique()) {
+        column.setUnique(true);
       }
     }
   }

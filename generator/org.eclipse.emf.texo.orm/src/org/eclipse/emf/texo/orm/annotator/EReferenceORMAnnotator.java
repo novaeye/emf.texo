@@ -40,6 +40,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
+import org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage;
@@ -435,6 +436,11 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       manyToOne.getJoinColumn().get(0).setName(namingStrategy.getForeignKeyColumnName(eReference));
     }
 
+    if (eReference.isUnique()) {
+      for (JoinColumn joinColumn : manyToOne.getJoinColumn()) {
+        joinColumn.setUnique(true);
+      }
+    }
   }
 
   protected void annotateManyToMany(EReferenceORMAnnotation annotation) {
@@ -562,6 +568,15 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     if (joinTable.getInverseJoinColumn().isEmpty()) {
       joinTable.getInverseJoinColumn().add(OrmFactory.eINSTANCE.createJoinColumn());
       joinTable.getInverseJoinColumn().get(0).setName(namingStrategy.getInverseJoinColumnName(eReference));
+    }
+    if (eReference.isUnique()) {
+      final UniqueConstraint uniqueConstraint = OrmFactory.eINSTANCE.createUniqueConstraint();
+      for (JoinColumn joinColumn : joinTable.getJoinColumn()) {
+        uniqueConstraint.getColumnName().add(joinColumn.getName());
+      }
+      for (JoinColumn joinColumn : joinTable.getInverseJoinColumn()) {
+        uniqueConstraint.getColumnName().add(joinColumn.getName());
+      }
     }
   }
 
