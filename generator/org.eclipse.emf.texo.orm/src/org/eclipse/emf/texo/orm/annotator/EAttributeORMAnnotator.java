@@ -196,9 +196,6 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
           elementCollection.getCollectionTable().getJoinColumn().add(OrmFactory.eINSTANCE.createJoinColumn());
           elementCollection.getCollectionTable().getJoinColumn().get(0)
               .setName(namingStrategy.getJoinColumnName(eAttribute));
-          if (eAttribute.isUnique()) {
-            elementCollection.getCollectionTable().getJoinColumn().get(0).setUnique(true);
-          }
         }
         if (eAttribute.isUnique()) {
           final UniqueConstraint uniqueConstraint = OrmFactory.eINSTANCE.createUniqueConstraint();
@@ -258,9 +255,6 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       final Column column = basic.getColumn();
       if (column.getName() == null) {
         column.setName(namingStrategy.getColumnName(annotation.getEStructuralFeature()));
-      }
-      if (eAttribute.isUnique()) {
-        column.setUnique(true);
       }
     }
   }

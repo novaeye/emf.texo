@@ -435,12 +435,6 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     if (!manyToOne.getJoinColumn().isEmpty() && namingStrategy.isGenerateAllDBSchemaNames()) {
       manyToOne.getJoinColumn().get(0).setName(namingStrategy.getForeignKeyColumnName(eReference));
     }
-
-    if (eReference.isUnique()) {
-      for (JoinColumn joinColumn : manyToOne.getJoinColumn()) {
-        joinColumn.setUnique(true);
-      }
-    }
   }
 
   protected void annotateManyToMany(EReferenceORMAnnotation annotation) {
