@@ -150,8 +150,8 @@ public class EclipseGeneratorUtils {
     String localContents = contents;
     if (codeFormatter instanceof CodeFormatter) {
       final IDocument doc = new Document(contents);
-      final TextEdit edit = ((CodeFormatter) codeFormatter).format(CodeFormatter.K_COMPILATION_UNIT, doc.get(), 0, doc
-          .get().length(), 0, null);
+      final TextEdit edit = ((CodeFormatter) codeFormatter).format(CodeFormatter.K_COMPILATION_UNIT
+          | CodeFormatter.F_INCLUDE_COMMENTS, doc.get(), 0, doc.get().length(), 0, null);
 
       if (edit != null) {
         edit.apply(doc);
