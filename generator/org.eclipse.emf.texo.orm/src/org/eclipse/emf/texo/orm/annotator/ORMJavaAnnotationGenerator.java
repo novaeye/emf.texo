@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 
 /**
@@ -239,7 +240,9 @@ public class ORMJavaAnnotationGenerator {
 
   private String generateJavaAnnotation(EStructuralFeature eFeature, Enumerator enumerator) {
     String valueType = enumerator.getClass().getSimpleName();
-    if (!valueType.endsWith("Type")) { //$NON-NLS-1$
+    if (enumerator instanceof Enumerated) {
+      valueType = "EnumType";
+    } else if (!valueType.endsWith("Type")) { //$NON-NLS-1$
       valueType += "Type"; //$NON-NLS-1$
     }
 
