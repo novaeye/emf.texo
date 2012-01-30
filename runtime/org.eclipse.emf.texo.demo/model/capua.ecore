@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capua"
+    nsURI="http://capua/1.0" nsPrefix="fi.fun.metamodel">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributedObject" abstract="true" eSuperTypes="#//NamedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inLinks" upperBound="-1"
+        eType="#//Link" eOpposite="#//Link/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outLinks" upperBound="-1"
+        eType="#//Link" eOpposite="#//Link/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participatedAssociations"
+        upperBound="-1" eType="#//Association" eOpposite="#//Association/associatedObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeInstances" upperBound="-1"
+        eType="#//AttributeInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collections" upperBound="-1"
+        eType="#//ObjectCollection" eOpposite="#//ObjectCollection/objects"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//AttributedObject" containment="true" eOpposite="#//AttributedObject/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//AttributedObject"
+        eOpposite="#//AttributedObject/children"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//AttributedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//AttributedObject"
+        eOpposite="#//AttributedObject/inLinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//AttributedObject"
+        eOpposite="#//AttributedObject/outLinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associations" upperBound="-1"
+        eType="#//Association" eOpposite="#//Association/link"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//Link #//AttributedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" eType="#//Link" eOpposite="#//Link/associations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedObject" eType="#//AttributedObject"
+        eOpposite="#//AttributedObject/participatedAssociations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementAndElementLink" eSuperTypes="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementAndCollectionLink" eSuperTypes="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionAndCollectionLink" eSuperTypes="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkAndLinkAssociation" eSuperTypes="#//Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkAndElementAssociation" eSuperTypes="#//Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkAndCollectionAssociation" eSuperTypes="#//Association"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementCollection" abstract="true" eSuperTypes="#//ObjectCollection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Element" eOpposite="#//Element/ownerCollection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true" eSuperTypes="#//AttributedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownerCollection" eType="#//ElementCollection"
+        eOpposite="#//ElementCollection/elements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instantiates" lowerBound="1"
+        eType="#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//NamedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//AttributeType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" eType="#//ObjectCollection"
+        eOpposite="#//ObjectCollection/attributes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeType" eSuperTypes="#//NamedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" eType="#//ObjectCollection"
+        eOpposite="#//ObjectCollection/types"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="definition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectCollection" abstract="true" eSuperTypes="#//AttributedObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objects" upperBound="-1"
+        eType="#//AttributedObject" eOpposite="#//AttributedObject/collections"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="root" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true" eOpposite="#//Attribute/owner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
+        eType="#//AttributeType" containment="true" eOpposite="#//AttributeType/owner"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssociationCollection" eSuperTypes="#//ObjectCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkCollection" eSuperTypes="#//ObjectCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BackgroundInfo" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Evidence" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Priority" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rationale" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Measurement" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Definition" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Stakeholder" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Requirement" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalRequirement" eSuperTypes="#//Requirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QualityRequirement" eSuperTypes="#//Requirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintRequirement" eSuperTypes="#//Requirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Document" abstract="true" eSuperTypes="#//ElementCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading" eSuperTypes="#//ElementCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraph" eSuperTypes="#//ElementCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sentence" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConfigurationItem" eSuperTypes="#//ElementCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario" eSuperTypes="#//ElementCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioStep" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeCollection" eSuperTypes="#//ObjectCollection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelInfo" eSuperTypes="#//NamedObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notes" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Audio" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequirementsDocument" eSuperTypes="#//Document"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EvidenceDocument" eSuperTypes="#//Document"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PlainDocument" eSuperTypes="#//Document"/>
+</ecore:EPackage>
