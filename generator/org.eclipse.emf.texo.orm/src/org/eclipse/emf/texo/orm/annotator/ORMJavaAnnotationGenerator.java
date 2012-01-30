@@ -20,7 +20,9 @@ package org.eclipse.emf.texo.orm.annotator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EAttribute;
@@ -53,6 +55,7 @@ public class ORMJavaAnnotationGenerator {
 
   private List<EClassifier> eclipseLinkEClassifiers = new ArrayList<EClassifier>();
   private List<String> classFeatureNames = new ArrayList<String>();
+  private Map<Class<?>, String> enumTypeNames = new HashMap<Class<?>, String>();
 
   public ORMJavaAnnotationGenerator() {
     // the list of eclasses coming from eclipselink
@@ -97,6 +100,8 @@ public class ORMJavaAnnotationGenerator {
     classFeatureNames.add("entityClass"); //$NON-NLS-1$
     classFeatureNames.add("targetEntity"); //$NON-NLS-1$
     classFeatureNames.add("targetClass"); //$NON-NLS-1$
+
+    enumTypeNames.put(Enumerated.class, "EnumType");
   }
 
   /**
@@ -240,8 +245,8 @@ public class ORMJavaAnnotationGenerator {
 
   private String generateJavaAnnotation(EStructuralFeature eFeature, Enumerator enumerator) {
     String valueType = enumerator.getClass().getSimpleName();
-    if (enumerator instanceof Enumerated) {
-      valueType = "EnumType";
+    if (enumTypeNames.containsKey(enumerator.getClass())) {
+      valueType = enumTypeNames.get(enumerator.getClass());
     } else if (!valueType.endsWith("Type")) { //$NON-NLS-1$
       valueType += "Type"; //$NON-NLS-1$
     }
