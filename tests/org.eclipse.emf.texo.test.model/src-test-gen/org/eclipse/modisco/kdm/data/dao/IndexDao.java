@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 import org.eclipse.modisco.kdm.data.Index;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Index</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class IndexDao extends BaseDao<Index> {
 

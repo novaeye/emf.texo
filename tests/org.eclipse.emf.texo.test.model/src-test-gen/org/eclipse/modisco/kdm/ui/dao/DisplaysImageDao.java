@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.ui.DisplaysImage;
 import org.eclipse.modisco.kdm.ui.UiModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>DisplaysImage</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DisplaysImageDao extends BaseDao<DisplaysImage> {
 

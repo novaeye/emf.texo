@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResultType;
 import org.eclipse.emf.texo.server.store.BaseDao;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ResultType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ResultTypeDao extends BaseDao<ResultType> {
 

@@ -32,17 +32,19 @@ public class Contract {
   @Temporal(TemporalType.DATE)
   private Date signDate = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SimCard.class)
   @JoinColumns({ @JoinColumn() })
   private SimCard simCard = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PaymentInfo.class)
   @JoinColumns({ @JoinColumn() })
@@ -102,8 +104,9 @@ public class Contract {
 
   /**
    * Returns the value of '<em><b>simCard</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simCard</b></em>' feature
    * @generated
    */
@@ -113,9 +116,11 @@ public class Contract {
 
   /**
    * Sets the '{@link Contract#getSimCard() <em>simCard</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Contract#getSimCard() simCard}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Contract#getSimCard() simCard}' feature.
    * @generated
    */
   public void setSimCard(SimCard newSimCard) {
@@ -124,8 +129,9 @@ public class Contract {
 
   /**
    * Returns the value of '<em><b>paymentInfo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>paymentInfo</b></em>' feature
    * @generated
    */
@@ -135,9 +141,11 @@ public class Contract {
 
   /**
    * Sets the '{@link Contract#getPaymentInfo() <em>paymentInfo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Contract#getPaymentInfo() paymentInfo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Contract#getPaymentInfo() paymentInfo}' feature.
    * @generated
    */
   public void setPaymentInfo(PaymentInfo newPaymentInfo) {
@@ -209,9 +217,9 @@ public class Contract {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

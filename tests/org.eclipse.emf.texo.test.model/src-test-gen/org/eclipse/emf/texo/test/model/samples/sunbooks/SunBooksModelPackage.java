@@ -20,10 +20,11 @@ import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.PromotionTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>sunBooks</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>sunBooks</b></em>'. It contains initialization code and access to the
+ * Factory to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SunBooksModelPackage extends ModelPackage {
@@ -36,197 +37,225 @@ public class SunBooksModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/samples/sun_books";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final SunBooksModelFactory MODELFACTORY = new SunBooksModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKCATEGORYTYPE_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKCATEGORYTYPE1_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKCATEGORYTYPEOBJECT_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKCATEGORYTYPEOBJECT1_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int AUTHORSTYPE_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int AUTHORSTYPE_AUTHORNAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKSTYPE_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKSTYPE_BOOK_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_ISBN_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_PRICE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_AUTHORS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_DESCRIPTION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_PROMOTION_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_PUBLICATIONDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_BOOKCATEGORY_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKTYPE_ITEMID_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COLLECTIONTYPE_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COLLECTIONTYPE_BOOKS_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_COLLECTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PROMOTIONTYPE_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PROMOTIONTYPE_DISCOUNT_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PROMOTIONTYPE_NONE_FEATURE_ID = 1;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final SunBooksModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static SunBooksModelPackage initialize() {
@@ -279,8 +308,7 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link SunBooksModelFactory} instance.
    * @generated
@@ -290,12 +318,11 @@ public class SunBooksModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -316,9 +343,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AuthorsType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AuthorsType</b></em>' 
+   * Returns the {@link EClass} '<em><b>AuthorsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AuthorsType</b></em>'
    * @generated
    */
   public EClass getAuthorsTypeEClass() {
@@ -326,9 +353,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AuthorsType.authorName</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>AuthorsType.authorName</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AuthorsType.authorName</b></em>'.
    * @generated
    */
@@ -337,9 +364,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BooksType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BooksType</b></em>' 
+   * Returns the {@link EClass} '<em><b>BooksType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BooksType</b></em>'
    * @generated
    */
   public EClass getBooksTypeEClass() {
@@ -358,9 +385,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BookType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BookType</b></em>' 
+   * Returns the {@link EClass} '<em><b>BookType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BookType</b></em>'
    * @generated
    */
   public EClass getBookTypeEClass() {
@@ -401,9 +428,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookType.authors</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>BookType.authors</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BookType.authors</b></em>'.
    * @generated
    */
@@ -412,9 +439,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookType.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>BookType.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BookType.description</b></em>'.
    * @generated
    */
@@ -423,9 +450,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookType.promotion</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>BookType.promotion</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BookType.promotion</b></em>'.
    * @generated
    */
@@ -434,9 +461,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookType.publicationDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>BookType.publicationDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BookType.publicationDate</b></em>'.
    * @generated
    */
@@ -445,9 +472,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookType.bookCategory</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>BookType.bookCategory</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BookType.bookCategory</b></em>'.
    * @generated
    */
@@ -467,9 +494,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CollectionType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CollectionType</b></em>' 
+   * Returns the {@link EClass} '<em><b>CollectionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CollectionType</b></em>'
    * @generated
    */
   public EClass getCollectionTypeEClass() {
@@ -477,9 +504,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CollectionType.books</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CollectionType.books</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CollectionType.books</b></em>'.
    * @generated
    */
@@ -488,9 +515,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DocumentRoot</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DocumentRoot</b></em>' 
+   * Returns the {@link EClass} '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DocumentRoot</b></em>'
    * @generated
    */
   public EClass getDocumentRootEClass() {
@@ -498,9 +525,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.mixed</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.mixed</b></em>'.
    * @generated
    */
@@ -509,9 +536,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'.
    * @generated
    */
@@ -520,9 +547,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xSISchemaLocation</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xSISchemaLocation</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.xSISchemaLocation</b></em>'.
    * @generated
    */
@@ -532,9 +559,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.collection</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.collection</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.collection</b></em>'.
    * @generated
    */
@@ -543,9 +570,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PromotionType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PromotionType</b></em>' 
+   * Returns the {@link EClass} '<em><b>PromotionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PromotionType</b></em>'
    * @generated
    */
   public EClass getPromotionTypeEClass() {
@@ -553,9 +580,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.discount</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.discount</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PromotionType.discount</b></em>'.
    * @generated
    */
@@ -564,9 +591,9 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.none</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.none</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PromotionType.none</b></em>'.
    * @generated
    */
@@ -575,8 +602,8 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>BookCategoryType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>BookCategoryType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>BookCategoryType</b></em>'
    * @generated
    */
@@ -585,8 +612,8 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>BookCategoryType1</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>BookCategoryType1</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>BookCategoryType1</b></em>'
    * @generated
    */
@@ -618,8 +645,9 @@ public class SunBooksModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

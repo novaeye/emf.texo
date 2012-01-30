@@ -5,24 +5,26 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>Feature</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Feature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Feature")
 public class Feature {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<FeatureAMapFeatureGroup> aMap = new ArrayList<FeatureAMapFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>aMap</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>aMap</b></em>' feature
    * @generated
    */
@@ -32,9 +34,11 @@ public class Feature {
 
   /**
    * Sets the '{@link Feature#getAMap() <em>aMap</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Feature#getAMap() aMap}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Feature#getAMap() aMap}' feature.
    * @generated
    */
   public void setAMap(List<FeatureAMapFeatureGroup> newAMap) {
@@ -43,8 +47,9 @@ public class Feature {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -54,9 +59,11 @@ public class Feature {
 
   /**
    * Sets the '{@link Feature#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Feature#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Feature#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -66,8 +73,9 @@ public class Feature {
 
   /**
    * Returns the value of '<em><b>value</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>value</b></em>' feature
    * @generated
    */
@@ -77,9 +85,11 @@ public class Feature {
 
   /**
    * Sets the '{@link Feature#getValue_() <em>value</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Feature#getValue_() value}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Feature#getValue_() value}' feature.
    * @generated
    */
   public void setValue_(double newValue_) {
@@ -88,9 +98,9 @@ public class Feature {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

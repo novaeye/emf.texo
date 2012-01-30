@@ -25,10 +25,11 @@ import org.eclipse.emf.texo.test.model.samples.accounting.dao.VatDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>accounting</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>accounting</b></em>'. It contains initialization code and access to the
+ * Factory to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class AccountingModelPackage extends ModelPackage {
@@ -41,263 +42,302 @@ public class AccountingModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/samples/accounting";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final AccountingModelFactory MODELFACTORY = new AccountingModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNT_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNT_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTGROUP_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTGROUP_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTGROUP_ACCOUNT_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_ACCOUNTGROUP_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_VAT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_VATACCOUNT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_REPORT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACCOUNTING_JOURNALGROUP_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BALANCEACCOUNT_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BALANCEACCOUNT_REPORT_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATE_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALGROUP_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALGROUP_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALGROUP_JOURNALGROUPS_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_DESCRIPTION_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_DATE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_AMOUNT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_DEBITACCOUNT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_CREDITACCOUNT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int JOURNALSTATEMENT_VAT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLACCOUNT_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORT_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORT_DEBITREPORTGROUP_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORT_CREDITREPORTGROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORTGROUP_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORTGROUP_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORTGROUP_REPORTGROUP_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REPORTGROUP_ACCOUNT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VAT_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VAT_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VAT_RATE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERIALIZABLE_CLASSIFIER_ID = 10;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final AccountingModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static AccountingModelPackage initialize() {
@@ -360,8 +400,7 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link AccountingModelFactory} instance.
    * @generated
@@ -371,12 +410,11 @@ public class AccountingModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -397,9 +435,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Account</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Account</b></em>' 
+   * Returns the {@link EClass} '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Account</b></em>'
    * @generated
    */
   public EClass getAccountEClass() {
@@ -418,9 +456,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AccountGroup</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AccountGroup</b></em>' 
+   * Returns the {@link EClass} '<em><b>AccountGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AccountGroup</b></em>'
    * @generated
    */
   public EClass getAccountGroupEClass() {
@@ -428,9 +466,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AccountGroup.name</b></em>'.
    * @generated
    */
@@ -439,9 +477,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.account</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.account</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AccountGroup.account</b></em>'.
    * @generated
    */
@@ -450,9 +488,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Accounting</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Accounting</b></em>' 
+   * Returns the {@link EClass} '<em><b>Accounting</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Accounting</b></em>'
    * @generated
    */
   public EClass getAccountingEClass() {
@@ -471,9 +509,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Accounting.accountGroup</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Accounting.accountGroup</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Accounting.accountGroup</b></em>'.
    * @generated
    */
@@ -493,9 +531,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Accounting.vatAccount</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Accounting.vatAccount</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Accounting.vatAccount</b></em>'.
    * @generated
    */
@@ -504,9 +542,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Accounting.report</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Accounting.report</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Accounting.report</b></em>'.
    * @generated
    */
@@ -515,9 +553,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Accounting.journalGroup</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Accounting.journalGroup</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Accounting.journalGroup</b></em>'.
    * @generated
    */
@@ -526,9 +564,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BalanceAccount</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BalanceAccount</b></em>' 
+   * Returns the {@link EClass} '<em><b>BalanceAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BalanceAccount</b></em>'
    * @generated
    */
   public EClass getBalanceAccountEClass() {
@@ -536,9 +574,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BalanceAccount.report</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>BalanceAccount.report</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BalanceAccount.report</b></em>'.
    * @generated
    */
@@ -547,8 +585,8 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>Date</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
    * @generated
    */
@@ -557,9 +595,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>JournalGroup</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>JournalGroup</b></em>' 
+   * Returns the {@link EClass} '<em><b>JournalGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>JournalGroup</b></em>'
    * @generated
    */
   public EClass getJournalGroupEClass() {
@@ -567,9 +605,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalGroup.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>JournalGroup.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalGroup.name</b></em>'.
    * @generated
    */
@@ -578,9 +616,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalGroup.journalGroups</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>JournalGroup.journalGroups</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalGroup.journalGroups</b></em>'.
    * @generated
    */
@@ -589,9 +627,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalGroup.journalStatements</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>JournalGroup.journalStatements</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalGroup.journalStatements</b></em>'.
    * @generated
    */
@@ -601,9 +639,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>JournalStatement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>JournalStatement</b></em>' 
+   * Returns the {@link EClass} '<em><b>JournalStatement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>JournalStatement</b></em>'
    * @generated
    */
   public EClass getJournalStatementEClass() {
@@ -611,9 +649,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalStatement.description</b></em>'.
    * @generated
    */
@@ -623,9 +661,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.date</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.date</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalStatement.date</b></em>'.
    * @generated
    */
@@ -634,9 +672,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.amount</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.amount</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalStatement.amount</b></em>'.
    * @generated
    */
@@ -645,9 +683,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.debitAccount</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.debitAccount</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalStatement.debitAccount</b></em>'.
    * @generated
    */
@@ -657,9 +695,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.creditAccount</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.creditAccount</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalStatement.creditAccount</b></em>'.
    * @generated
    */
@@ -669,9 +707,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.vat</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>JournalStatement.vat</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>JournalStatement.vat</b></em>'.
    * @generated
    */
@@ -680,9 +718,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PLAccount</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PLAccount</b></em>' 
+   * Returns the {@link EClass} '<em><b>PLAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PLAccount</b></em>'
    * @generated
    */
   public EClass getPLAccountEClass() {
@@ -690,9 +728,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Report</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Report</b></em>' 
+   * Returns the {@link EClass} '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Report</b></em>'
    * @generated
    */
   public EClass getReportEClass() {
@@ -700,8 +738,8 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Report.name</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Report.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.name</b></em>'.
    * @generated
    */
@@ -710,9 +748,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Report.debitReportGroup</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Report.debitReportGroup</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.debitReportGroup</b></em>'.
    * @generated
    */
@@ -721,9 +759,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Report.creditReportGroup</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Report.creditReportGroup</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.creditReportGroup</b></em>'.
    * @generated
    */
@@ -732,9 +770,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ReportGroup</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ReportGroup</b></em>' 
+   * Returns the {@link EClass} '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ReportGroup</b></em>'
    * @generated
    */
   public EClass getReportGroupEClass() {
@@ -742,9 +780,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.name</b></em>'.
    * @generated
    */
@@ -753,9 +791,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.reportGroup</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.reportGroup</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.reportGroup</b></em>'.
    * @generated
    */
@@ -764,9 +802,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.account</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.account</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.account</b></em>'.
    * @generated
    */
@@ -775,9 +813,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Vat</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Vat</b></em>' 
+   * Returns the {@link EClass} '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Vat</b></em>'
    * @generated
    */
   public EClass getVatEClass() {
@@ -785,8 +823,8 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Vat.name</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Vat.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Vat.name</b></em>'.
    * @generated
    */
@@ -795,8 +833,8 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Vat.rate</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Vat.rate</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Vat.rate</b></em>'.
    * @generated
    */
@@ -805,9 +843,9 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Serializable</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Serializable</b></em>' 
+   * Returns the {@link EClass} '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Serializable</b></em>'
    * @generated
    */
   public EClass getSerializableEClass() {
@@ -816,8 +854,9 @@ public class AccountingModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

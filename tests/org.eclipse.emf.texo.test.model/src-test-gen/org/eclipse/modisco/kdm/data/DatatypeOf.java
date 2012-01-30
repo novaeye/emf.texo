@@ -7,25 +7,27 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.modisco.kdm.code.Datatype;
 
-/** 
- * A representation of the model object '<em><b>DatatypeOf</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DatatypeOf</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "DatatypeOf")
 public class DatatypeOf extends AbstractDataRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Datatype.class)
   @JoinColumns({ @JoinColumn() })
   private Datatype to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ComplexContentType.class)
   @JoinColumns({ @JoinColumn() })
@@ -33,8 +35,9 @@ public class DatatypeOf extends AbstractDataRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -44,9 +47,11 @@ public class DatatypeOf extends AbstractDataRelationship {
 
   /**
    * Sets the '{@link DatatypeOf#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DatatypeOf#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DatatypeOf#getTo() to}' feature.
    * @generated
    */
   public void setTo(Datatype newTo) {
@@ -55,8 +60,9 @@ public class DatatypeOf extends AbstractDataRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -66,9 +72,11 @@ public class DatatypeOf extends AbstractDataRelationship {
 
   /**
    * Sets the '{@link DatatypeOf#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DatatypeOf#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DatatypeOf#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ComplexContentType newFrom) {
@@ -76,9 +84,9 @@ public class DatatypeOf extends AbstractDataRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

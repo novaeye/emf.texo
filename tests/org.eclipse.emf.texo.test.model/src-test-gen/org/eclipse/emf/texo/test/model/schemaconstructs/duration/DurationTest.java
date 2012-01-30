@@ -9,31 +9,34 @@ import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
 import javax.xml.datatype.Duration;
 
-/** 
- * A representation of the model object '<em><b>DurationTest</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DurationTest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "DurationTest")
 public class DurationTest {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Duration duration = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
@@ -42,8 +45,9 @@ public class DurationTest {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -53,9 +57,11 @@ public class DurationTest {
 
   /**
    * Sets the '{@link DurationTest#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DurationTest#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DurationTest#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -64,8 +70,9 @@ public class DurationTest {
 
   /**
    * Returns the value of '<em><b>duration</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>duration</b></em>' feature
    * @generated
    */
@@ -75,9 +82,11 @@ public class DurationTest {
 
   /**
    * Sets the '{@link DurationTest#getDuration() <em>duration</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DurationTest#getDuration() duration}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DurationTest#getDuration() duration}' feature.
    * @generated
    */
   public void setDuration(Duration newDuration) {
@@ -86,8 +95,9 @@ public class DurationTest {
 
   /**
    * Returns the value of '<em><b>durations</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>durations</b></em>' feature
    * @generated
    */
@@ -97,9 +107,11 @@ public class DurationTest {
 
   /**
    * Sets the '{@link DurationTest#getDurations() <em>durations</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DurationTest#getDurations() durations}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DurationTest#getDurations() durations}' feature.
    * @generated
    */
   public void setDurations(List<Duration> newDurations) {
@@ -107,9 +119,9 @@ public class DurationTest {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

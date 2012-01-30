@@ -12,42 +12,46 @@ import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.AggregatedRelationship;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
-/** 
- * A representation of the model object '<em><b>AbstractStructureElement</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>AbstractStructureElement</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "AbstractStructureElement")
 public abstract class AbstractStructureElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AggregatedRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AggregatedRelationship> aggregated = new HashSet<AggregatedRelationship>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @JoinTable(name = "AbstractStructureElement_implementation")
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractStructureElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractStructureElement> structureElement = new HashSet<AbstractStructureElement>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractStructureRelationship.class)
   @JoinColumns({ @JoinColumn() })
@@ -55,8 +59,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>aggregated</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>aggregated</b></em>' feature
    * @generated
    */
@@ -66,6 +71,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Adds to the <em>aggregated</em> feature.
+   * 
    * @generated
    */
   public void addToAggregated(AggregatedRelationship aggregatedValue) {
@@ -76,8 +82,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>aggregated</em> feature.
+   * 
    * @generated
    */
   public void removeFromAggregated(AggregatedRelationship aggregatedValue) {
@@ -86,8 +93,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>aggregated</em> feature.
+   * 
    * @generated
    */
   public void clearAggregated() {
@@ -98,9 +106,11 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractStructureElement#getAggregated() <em>aggregated</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractStructureElement#getAggregated() aggregated}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractStructureElement#getAggregated() aggregated}' feature.
    * @generated
    */
   public void setAggregated(Set<AggregatedRelationship> newAggregated) {
@@ -109,8 +119,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>implementation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>implementation</b></em>' feature
    * @generated
    */
@@ -120,6 +131,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Adds to the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void addToImplementation(KDMEntity implementationValue) {
@@ -130,8 +142,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void removeFromImplementation(KDMEntity implementationValue) {
@@ -140,8 +153,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void clearImplementation() {
@@ -152,9 +166,11 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractStructureElement#getImplementation() <em>implementation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractStructureElement#getImplementation() implementation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractStructureElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<KDMEntity> newImplementation) {
@@ -163,8 +179,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>structureElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>structureElement</b></em>' feature
    * @generated
    */
@@ -174,6 +191,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Adds to the <em>structureElement</em> feature.
+   * 
    * @generated
    */
   public void addToStructureElement(AbstractStructureElement structureElementValue) {
@@ -184,8 +202,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>structureElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromStructureElement(AbstractStructureElement structureElementValue) {
@@ -194,8 +213,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>structureElement</em> feature.
+   * 
    * @generated
    */
   public void clearStructureElement() {
@@ -206,9 +226,11 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractStructureElement#getStructureElement() <em>structureElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractStructureElement#getStructureElement() structureElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractStructureElement#getStructureElement() structureElement}' feature.
    * @generated
    */
   public void setStructureElement(Set<AbstractStructureElement> newStructureElement) {
@@ -217,8 +239,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>structureRelationship</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>structureRelationship</b></em>' feature
    * @generated
    */
@@ -228,6 +251,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Adds to the <em>structureRelationship</em> feature.
+   * 
    * @generated
    */
   public void addToStructureRelationship(AbstractStructureRelationship structureRelationshipValue) {
@@ -238,8 +262,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>structureRelationship</em> feature.
+   * 
    * @generated
    */
   public void removeFromStructureRelationship(AbstractStructureRelationship structureRelationshipValue) {
@@ -248,8 +273,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>structureRelationship</em> feature.
+   * 
    * @generated
    */
   public void clearStructureRelationship() {
@@ -260,9 +286,12 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractStructureElement#getStructureRelationship() <em>structureRelationship</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractStructureElement#getStructureRelationship() structureRelationship}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractStructureElement#getStructureRelationship() structureRelationship}'
+   *          feature.
    * @generated
    */
   public void setStructureRelationship(Set<AbstractStructureRelationship> newStructureRelationship) {
@@ -270,9 +299,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

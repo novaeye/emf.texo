@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.DataAction;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>DataAction</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DataActionDao extends BaseDao<DataAction> {
 

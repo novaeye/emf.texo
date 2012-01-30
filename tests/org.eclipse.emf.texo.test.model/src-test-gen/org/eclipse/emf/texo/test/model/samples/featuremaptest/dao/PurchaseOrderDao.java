@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.featuremaptest.FeaturemaptestModelPackage;
 import org.eclipse.emf.texo.test.model.samples.featuremaptest.PurchaseOrder;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>PurchaseOrder</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class PurchaseOrderDao extends BaseDao<PurchaseOrder> {
 

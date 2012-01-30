@@ -40,107 +40,120 @@ public class LibraryModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/samples/library";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final LibraryModelFactory MODELFACTORY = new LibraryModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOKCATEGORY_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOK_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOK_TITLE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOK_PAGES_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOK_CATEGORY_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOK_AUTHOR_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITER_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITER_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITER_BOOKS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LIBRARY_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LIBRARY_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LIBRARY_WRITERS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LIBRARY_BOOKS_FEATURE_ID = 4;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final LibraryModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static LibraryModelPackage initialize() {
@@ -180,8 +193,7 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link LibraryModelFactory} instance.
    * @generated
@@ -191,12 +203,11 @@ public class LibraryModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -217,9 +228,9 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Book</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Book</b></em>' 
+   * Returns the {@link EClass} '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Book</b></em>'
    * @generated
    */
   public EClass getBookEClass() {
@@ -227,8 +238,8 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Book.title</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Book.title</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Book.title</b></em>'.
    * @generated
    */
@@ -237,8 +248,8 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Book.pages</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Book.pages</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Book.pages</b></em>'.
    * @generated
    */
@@ -258,8 +269,8 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Book.author</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Book.author</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Book.author</b></em>'.
    * @generated
    */
@@ -268,9 +279,9 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Writer</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Writer</b></em>' 
+   * Returns the {@link EClass} '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Writer</b></em>'
    * @generated
    */
   public EClass getWriterEClass() {
@@ -278,8 +289,8 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writer.name</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Writer.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.name</b></em>'.
    * @generated
    */
@@ -299,9 +310,9 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Library</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Library</b></em>' 
+   * Returns the {@link EClass} '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Library</b></em>'
    * @generated
    */
   public EClass getLibraryEClass() {
@@ -342,8 +353,8 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>BookCategory</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>BookCategory</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>BookCategory</b></em>'
    * @generated
    */
@@ -353,8 +364,9 @@ public class LibraryModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.kdm.Annotation;
 import org.eclipse.modisco.kdm.kdm.KdmModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Annotation</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AnnotationDao extends BaseDao<Annotation> {
 

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.Address;
 import org.eclipse.emf.texo.test.model.issues.bz331009.ModelModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Address</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AddressDao extends BaseDao<Address> {
 

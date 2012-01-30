@@ -10,34 +10,37 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>WorkWeek</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "WorkWeek")
 public class WorkWeek {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = WorkDay.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<WorkDay> days = new ArrayList<WorkDay>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String workWeekId = null;
 
   /**
    * Returns the value of '<em><b>days</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>days</b></em>' feature
    * @generated
    */
@@ -47,6 +50,7 @@ public class WorkWeek {
 
   /**
    * Adds to the <em>days</em> feature.
+   * 
    * @generated
    */
   public void addToDays(WorkDay daysValue) {
@@ -57,8 +61,9 @@ public class WorkWeek {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>days</em> feature.
+   * 
    * @generated
    */
   public void removeFromDays(WorkDay daysValue) {
@@ -67,8 +72,9 @@ public class WorkWeek {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>days</em> feature.
+   * 
    * @generated
    */
   public void clearDays() {
@@ -79,9 +85,11 @@ public class WorkWeek {
 
   /**
    * Sets the '{@link WorkWeek#getDays() <em>days</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkWeek#getDays() days}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkWeek#getDays() days}' feature.
    * @generated
    */
   public void setDays(List<WorkDay> newDays) {
@@ -90,8 +98,9 @@ public class WorkWeek {
 
   /**
    * Returns the value of '<em><b>workWeekId</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>workWeekId</b></em>' feature
    * @generated
    */
@@ -101,9 +110,11 @@ public class WorkWeek {
 
   /**
    * Sets the '{@link WorkWeek#getWorkWeekId() <em>workWeekId</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkWeek#getWorkWeekId() workWeekId}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkWeek#getWorkWeekId() workWeekId}' feature.
    * @generated
    */
   public void setWorkWeekId(String newWorkWeekId) {
@@ -111,9 +122,9 @@ public class WorkWeek {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

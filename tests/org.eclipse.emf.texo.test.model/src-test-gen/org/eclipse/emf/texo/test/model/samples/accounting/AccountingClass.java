@@ -13,10 +13,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Accounting</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Accounting</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Accounting")
 public class AccountingClass extends Identifiable implements Serializable {
@@ -25,50 +25,56 @@ public class AccountingClass extends Identifiable implements Serializable {
    */
   private static final long serialVersionUID = 1L;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AccountGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<AccountGroup> accountGroup = new ArrayList<AccountGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Vat.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Vat> vat = new ArrayList<Vat>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = BalanceAccount.class)
   @JoinColumns({ @JoinColumn() })
   private BalanceAccount vatAccount = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Report.class)
   @JoinColumns({ @JoinColumn() })
   private Report report = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = JournalGroup.class)
   @OrderColumn()
@@ -77,8 +83,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -88,9 +95,11 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link AccountingClass#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountingClass#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountingClass#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -99,8 +108,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Returns the value of '<em><b>accountGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>accountGroup</b></em>' feature
    * @generated
    */
@@ -110,6 +120,7 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Adds to the <em>accountGroup</em> feature.
+   * 
    * @generated
    */
   public void addToAccountGroup(AccountGroup accountGroupValue) {
@@ -120,8 +131,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>accountGroup</em> feature.
+   * 
    * @generated
    */
   public void removeFromAccountGroup(AccountGroup accountGroupValue) {
@@ -130,8 +142,9 @@ public class AccountingClass extends Identifiable implements Serializable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>accountGroup</em> feature.
+   * 
    * @generated
    */
   public void clearAccountGroup() {
@@ -142,9 +155,11 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link AccountingClass#getAccountGroup() <em>accountGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountingClass#getAccountGroup() accountGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountingClass#getAccountGroup() accountGroup}' feature.
    * @generated
    */
   public void setAccountGroup(List<AccountGroup> newAccountGroup) {
@@ -153,8 +168,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Returns the value of '<em><b>vat</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>vat</b></em>' feature
    * @generated
    */
@@ -164,6 +180,7 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Adds to the <em>vat</em> feature.
+   * 
    * @generated
    */
   public void addToVat(Vat vatValue) {
@@ -174,8 +191,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>vat</em> feature.
+   * 
    * @generated
    */
   public void removeFromVat(Vat vatValue) {
@@ -184,8 +202,9 @@ public class AccountingClass extends Identifiable implements Serializable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>vat</em> feature.
+   * 
    * @generated
    */
   public void clearVat() {
@@ -196,9 +215,11 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link AccountingClass#getVat() <em>vat</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountingClass#getVat() vat}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountingClass#getVat() vat}' feature.
    * @generated
    */
   public void setVat(List<Vat> newVat) {
@@ -207,8 +228,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Returns the value of '<em><b>vatAccount</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>vatAccount</b></em>' feature
    * @generated
    */
@@ -218,9 +240,11 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link AccountingClass#getVatAccount() <em>vatAccount</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountingClass#getVatAccount() vatAccount}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountingClass#getVatAccount() vatAccount}' feature.
    * @generated
    */
   public void setVatAccount(BalanceAccount newVatAccount) {
@@ -229,8 +253,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Returns the value of '<em><b>report</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>report</b></em>' feature
    * @generated
    */
@@ -240,9 +265,11 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link AccountingClass#getReport() <em>report</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountingClass#getReport() report}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountingClass#getReport() report}' feature.
    * @generated
    */
   public void setReport(Report newReport) {
@@ -251,8 +278,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Returns the value of '<em><b>journalGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>journalGroup</b></em>' feature
    * @generated
    */
@@ -262,6 +290,7 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Adds to the <em>journalGroup</em> feature.
+   * 
    * @generated
    */
   public void addToJournalGroup(JournalGroup journalGroupValue) {
@@ -272,8 +301,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>journalGroup</em> feature.
+   * 
    * @generated
    */
   public void removeFromJournalGroup(JournalGroup journalGroupValue) {
@@ -282,8 +312,9 @@ public class AccountingClass extends Identifiable implements Serializable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>journalGroup</em> feature.
+   * 
    * @generated
    */
   public void clearJournalGroup() {
@@ -294,9 +325,11 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link AccountingClass#getJournalGroup() <em>journalGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountingClass#getJournalGroup() journalGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountingClass#getJournalGroup() journalGroup}' feature.
    * @generated
    */
   public void setJournalGroup(List<JournalGroup> newJournalGroup) {
@@ -304,9 +337,9 @@ public class AccountingClass extends Identifiable implements Serializable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

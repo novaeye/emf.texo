@@ -20,46 +20,52 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 @Entity(name = "JournalStatement")
 public class JournalStatement extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String description = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date date = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private float amount = 0.0f;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
   @JoinColumns({ @JoinColumn() })
   private Account debitAccount = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
   @JoinColumns({ @JoinColumn() })
   private Account creditAccount = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Vat.class)
   @JoinColumns({ @JoinColumn() })
@@ -67,8 +73,9 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>description</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>description</b></em>' feature
    * @generated
    */
@@ -78,9 +85,11 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Sets the '{@link JournalStatement#getDescription() <em>description</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalStatement#getDescription() description}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalStatement#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -89,8 +98,9 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>date</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>date</b></em>' feature
    * @generated
    */
@@ -100,9 +110,11 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Sets the '{@link JournalStatement#getDate() <em>date</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalStatement#getDate() date}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalStatement#getDate() date}' feature.
    * @generated
    */
   public void setDate(Date newDate) {
@@ -111,8 +123,9 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>amount</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>amount</b></em>' feature
    * @generated
    */
@@ -122,9 +135,11 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Sets the '{@link JournalStatement#getAmount() <em>amount</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalStatement#getAmount() amount}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalStatement#getAmount() amount}' feature.
    * @generated
    */
   public void setAmount(float newAmount) {
@@ -133,8 +148,9 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>debitAccount</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>debitAccount</b></em>' feature
    * @generated
    */
@@ -144,9 +160,11 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Sets the '{@link JournalStatement#getDebitAccount() <em>debitAccount</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalStatement#getDebitAccount() debitAccount}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalStatement#getDebitAccount() debitAccount}' feature.
    * @generated
    */
   public void setDebitAccount(Account newDebitAccount) {
@@ -155,8 +173,9 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>creditAccount</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>creditAccount</b></em>' feature
    * @generated
    */
@@ -166,9 +185,11 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Sets the '{@link JournalStatement#getCreditAccount() <em>creditAccount</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalStatement#getCreditAccount() creditAccount}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalStatement#getCreditAccount() creditAccount}' feature.
    * @generated
    */
   public void setCreditAccount(Account newCreditAccount) {
@@ -177,8 +198,9 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>vat</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>vat</b></em>' feature
    * @generated
    */
@@ -188,9 +210,11 @@ public class JournalStatement extends Identifiable {
 
   /**
    * Sets the '{@link JournalStatement#getVat() <em>vat</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalStatement#getVat() vat}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalStatement#getVat() vat}' feature.
    * @generated
    */
   public void setVat(Vat newVat) {
@@ -198,9 +222,9 @@ public class JournalStatement extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

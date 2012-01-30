@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.action.CatchUnit;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CatchUnit</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CatchUnitDao extends BaseDao<CatchUnit> {
 

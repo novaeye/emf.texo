@@ -24,9 +24,10 @@ import org.eclipse.emf.texo.model.ModelPackage;
 public class GroupallModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -49,13 +50,12 @@ public class GroupallModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -114,8 +114,8 @@ public class GroupallModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -151,6 +151,7 @@ public class GroupallModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass AddressGroupType
    * @generated
    */
@@ -160,6 +161,7 @@ public class GroupallModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass AddressList
    * @generated
    */
@@ -169,6 +171,7 @@ public class GroupallModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass AddressType
    * @generated
    */
@@ -178,6 +181,7 @@ public class GroupallModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DocumentRoot
    * @generated
    */
@@ -187,6 +191,7 @@ public class GroupallModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimpleAllMapType
    * @generated
    */
@@ -196,6 +201,7 @@ public class GroupallModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimpleAllType
    * @generated
    */
@@ -204,10 +210,12 @@ public class GroupallModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -217,10 +225,12 @@ public class GroupallModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -317,10 +327,10 @@ public class GroupallModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AddressList</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AddressList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class AddressListModelObject<E extends AddressList> extends AbstractModelObject<E> {
     /**
@@ -419,10 +429,10 @@ public class GroupallModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AddressType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class AddressTypeModelObject<E extends AddressType> extends AbstractModelObject<E> {
     /**
@@ -502,10 +512,10 @@ public class GroupallModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
     /**
@@ -937,10 +947,10 @@ public class GroupallModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SimpleAllType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimpleAllType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SimpleAllTypeModelObject<E extends SimpleAllType> extends AbstractModelObject<E> {
     /**

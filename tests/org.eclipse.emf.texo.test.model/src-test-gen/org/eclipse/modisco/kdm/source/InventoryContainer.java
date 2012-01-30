@@ -17,9 +17,10 @@ import javax.persistence.OneToMany;
 @Entity(name = "InventoryContainer")
 public class InventoryContainer extends AbstractInventoryElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractInventoryElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class InventoryContainer extends AbstractInventoryElement {
 
   /**
    * Returns the value of '<em><b>inventoryElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>inventoryElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class InventoryContainer extends AbstractInventoryElement {
 
   /**
    * Adds to the <em>inventoryElement</em> feature.
+   * 
    * @generated
    */
   public void addToInventoryElement(AbstractInventoryElement inventoryElementValue) {
@@ -48,8 +51,9 @@ public class InventoryContainer extends AbstractInventoryElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>inventoryElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromInventoryElement(AbstractInventoryElement inventoryElementValue) {
@@ -58,8 +62,9 @@ public class InventoryContainer extends AbstractInventoryElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>inventoryElement</em> feature.
+   * 
    * @generated
    */
   public void clearInventoryElement() {
@@ -70,9 +75,11 @@ public class InventoryContainer extends AbstractInventoryElement {
 
   /**
    * Sets the '{@link InventoryContainer#getInventoryElement() <em>inventoryElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link InventoryContainer#getInventoryElement() inventoryElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link InventoryContainer#getInventoryElement() inventoryElement}' feature.
    * @generated
    */
   public void setInventoryElement(Set<AbstractInventoryElement> newInventoryElement) {
@@ -80,9 +87,9 @@ public class InventoryContainer extends AbstractInventoryElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

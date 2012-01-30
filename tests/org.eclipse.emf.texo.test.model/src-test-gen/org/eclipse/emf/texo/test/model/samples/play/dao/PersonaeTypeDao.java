@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.play.PersonaeType;
 import org.eclipse.emf.texo.test.model.samples.play.PlayModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>PersonaeType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class PersonaeTypeDao extends BaseDao<PersonaeType> {
 

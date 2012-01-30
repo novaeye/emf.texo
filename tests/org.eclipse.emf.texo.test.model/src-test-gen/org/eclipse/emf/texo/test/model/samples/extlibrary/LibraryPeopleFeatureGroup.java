@@ -94,29 +94,33 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Writer.class)
   @JoinColumns({ @JoinColumn() })
   private Writer writers;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Employee.class)
   @JoinColumns({ @JoinColumn() })
   private Employee employees;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Borrower.class)
   @JoinColumns({ @JoinColumn() })
@@ -138,8 +142,9 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>writers</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>writers</b></em>' feature
    * @generated
    */
@@ -149,9 +154,11 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Library#getWriters() <em>writers</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Library#getWriters() writers}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Library#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(Writer newWriters) {
@@ -161,8 +168,9 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>employees</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>employees</b></em>' feature
    * @generated
    */
@@ -172,9 +180,11 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Library#getEmployees() <em>employees</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Library#getEmployees() employees}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Library#getEmployees() employees}' feature.
    * @generated
    */
   public void setEmployees(Employee newEmployees) {
@@ -184,8 +194,9 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>borrowers</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>borrowers</b></em>' feature
    * @generated
    */
@@ -195,9 +206,11 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Library#getBorrowers() <em>borrowers</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Library#getBorrowers() borrowers}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Library#getBorrowers() borrowers}' feature.
    * @generated
    */
   public void setBorrowers(Borrower newBorrowers) {
@@ -207,9 +220,10 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -226,10 +240,13 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

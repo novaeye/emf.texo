@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.claim.ClaimCompositeKey;
 import org.eclipse.emf.texo.test.model.samples.claim.ClaimModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ClaimCompositeKey</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ClaimCompositeKeyDao extends BaseDao<ClaimCompositeKey> {
 

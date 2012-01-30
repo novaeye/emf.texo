@@ -15,71 +15,79 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>PurchaseOrder</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PurchaseOrder")
 public class PurchaseOrder extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Item.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Item> items = new ArrayList<Item>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = Address.class)
   @JoinColumns({ @JoinColumn() })
   private Address billTo = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Address.class)
   @JoinColumns({ @JoinColumn() })
   private Address shipTo = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String comment = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date orderDate = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private OrderStatus status = OrderStatus.PENDING;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Customer.class)
   @JoinColumns({ @JoinColumn() })
   private Customer customer = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
@@ -87,8 +95,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>items</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>items</b></em>' feature
    * @generated
    */
@@ -98,6 +107,7 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Adds to the <em>items</em> feature.
+   * 
    * @generated
    */
   public void addToItems(Item itemsValue) {
@@ -108,8 +118,9 @@ public class PurchaseOrder extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>items</em> feature.
+   * 
    * @generated
    */
   public void removeFromItems(Item itemsValue) {
@@ -118,8 +129,9 @@ public class PurchaseOrder extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>items</em> feature.
+   * 
    * @generated
    */
   public void clearItems() {
@@ -130,9 +142,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getItems() <em>items</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getItems() items}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getItems() items}' feature.
    * @generated
    */
   public void setItems(List<Item> newItems) {
@@ -141,8 +155,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>billTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>billTo</b></em>' feature
    * @generated
    */
@@ -152,9 +167,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getBillTo() <em>billTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(Address newBillTo) {
@@ -163,8 +180,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>shipTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipTo</b></em>' feature
    * @generated
    */
@@ -174,9 +192,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getShipTo() <em>shipTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(Address newShipTo) {
@@ -185,8 +205,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -196,9 +217,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -207,8 +230,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>orderDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>orderDate</b></em>' feature
    * @generated
    */
@@ -218,9 +242,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getOrderDate() <em>orderDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
    * @generated
    */
   public void setOrderDate(Date newOrderDate) {
@@ -229,8 +255,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>status</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>status</b></em>' feature
    * @generated
    */
@@ -240,9 +267,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getStatus() <em>status</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getStatus() status}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getStatus() status}' feature.
    * @generated
    */
   public void setStatus(OrderStatus newStatus) {
@@ -263,8 +292,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>customer</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>customer</b></em>' feature
    * @generated
    */
@@ -274,9 +304,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getCustomer() <em>customer</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getCustomer() customer}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getCustomer() customer}' feature.
    * @generated
    */
   public void setCustomer(Customer newCustomer) {
@@ -285,8 +317,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Returns the value of '<em><b>previousOrder</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>previousOrder</b></em>' feature
    * @generated
    */
@@ -296,9 +329,11 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Sets the '{@link PurchaseOrder#getPreviousOrder() <em>previousOrder</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getPreviousOrder() previousOrder}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getPreviousOrder() previousOrder}' feature.
    * @generated
    */
   public void setPreviousOrder(PurchaseOrder newPreviousOrder) {
@@ -306,9 +341,9 @@ public class PurchaseOrder extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

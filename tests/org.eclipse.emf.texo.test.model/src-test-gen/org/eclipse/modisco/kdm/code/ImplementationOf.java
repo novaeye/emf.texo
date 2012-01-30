@@ -15,17 +15,19 @@ import javax.persistence.ManyToOne;
 @Entity(name = "ImplementationOf")
 public class ImplementationOf extends AbstractCodeRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = CodeItem.class)
   @JoinColumns({ @JoinColumn() })
   private CodeItem to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = CodeItem.class)
   @JoinColumns({ @JoinColumn() })
@@ -33,8 +35,9 @@ public class ImplementationOf extends AbstractCodeRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -44,9 +47,11 @@ public class ImplementationOf extends AbstractCodeRelationship {
 
   /**
    * Sets the '{@link ImplementationOf#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ImplementationOf#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ImplementationOf#getTo() to}' feature.
    * @generated
    */
   public void setTo(CodeItem newTo) {
@@ -55,8 +60,9 @@ public class ImplementationOf extends AbstractCodeRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -66,9 +72,11 @@ public class ImplementationOf extends AbstractCodeRelationship {
 
   /**
    * Sets the '{@link ImplementationOf#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ImplementationOf#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ImplementationOf#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(CodeItem newFrom) {
@@ -76,9 +84,9 @@ public class ImplementationOf extends AbstractCodeRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

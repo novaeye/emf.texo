@@ -12,32 +12,35 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.action.ActionElement;
 
-/** 
- * A representation of the model object '<em><b>DataAction</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DataAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "DataAction")
 public class DataAction extends AbstractDataElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ActionElement.class)
   @JoinTable(name = "DataAction_implementation")
   private Set<ActionElement> implementation = new HashSet<ActionElement>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DataEvent.class)
   @JoinColumns({ @JoinColumn() })
@@ -45,8 +48,9 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -56,9 +60,11 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Sets the '{@link DataAction#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DataAction#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DataAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -67,8 +73,9 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Returns the value of '<em><b>implementation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>implementation</b></em>' feature
    * @generated
    */
@@ -78,6 +85,7 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Adds to the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void addToImplementation(ActionElement implementationValue) {
@@ -88,8 +96,9 @@ public class DataAction extends AbstractDataElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void removeFromImplementation(ActionElement implementationValue) {
@@ -98,8 +107,9 @@ public class DataAction extends AbstractDataElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void clearImplementation() {
@@ -110,9 +120,11 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Sets the '{@link DataAction#getImplementation() <em>implementation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DataAction#getImplementation() implementation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DataAction#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<ActionElement> newImplementation) {
@@ -121,8 +133,9 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Returns the value of '<em><b>dataElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>dataElement</b></em>' feature
    * @generated
    */
@@ -132,6 +145,7 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Adds to the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void addToDataElement(DataEvent dataElementValue) {
@@ -142,8 +156,9 @@ public class DataAction extends AbstractDataElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromDataElement(DataEvent dataElementValue) {
@@ -152,8 +167,9 @@ public class DataAction extends AbstractDataElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void clearDataElement() {
@@ -164,9 +180,11 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Sets the '{@link DataAction#getDataElement() <em>dataElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DataAction#getDataElement() dataElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DataAction#getDataElement() dataElement}' feature.
    * @generated
    */
   public void setDataElement(Set<DataEvent> newDataElement) {
@@ -174,9 +192,9 @@ public class DataAction extends AbstractDataElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

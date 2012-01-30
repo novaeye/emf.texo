@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.action.Flow;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Flow</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class FlowDao extends BaseDao<Flow> {
 

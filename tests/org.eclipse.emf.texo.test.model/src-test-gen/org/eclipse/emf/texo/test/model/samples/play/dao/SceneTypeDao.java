@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.play.PlayModelPackage;
 import org.eclipse.emf.texo.test.model.samples.play.SceneType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SceneType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SceneTypeDao extends BaseDao<SceneType> {
 

@@ -13,32 +13,35 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 
-/** 
- * A representation of the model object '<em><b>ActionElement</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ActionElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ActionElement")
 public class ActionElement extends AbstractCodeElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractCodeElement> codeElement = new HashSet<AbstractCodeElement>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractActionRelationship.class)
   @OrderColumn()
@@ -47,8 +50,9 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -58,9 +62,11 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Sets the '{@link ActionElement#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ActionElement#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ActionElement#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -69,8 +75,9 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -80,6 +87,7 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -90,8 +98,9 @@ public class ActionElement extends AbstractCodeElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(AbstractCodeElement codeElementValue) {
@@ -100,8 +109,9 @@ public class ActionElement extends AbstractCodeElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -112,9 +122,11 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Sets the '{@link ActionElement#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ActionElement#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ActionElement#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<AbstractCodeElement> newCodeElement) {
@@ -123,8 +135,9 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Returns the value of '<em><b>actionRelation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>actionRelation</b></em>' feature
    * @generated
    */
@@ -134,6 +147,7 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Adds to the <em>actionRelation</em> feature.
+   * 
    * @generated
    */
   public void addToActionRelation(AbstractActionRelationship actionRelationValue) {
@@ -144,8 +158,9 @@ public class ActionElement extends AbstractCodeElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>actionRelation</em> feature.
+   * 
    * @generated
    */
   public void removeFromActionRelation(AbstractActionRelationship actionRelationValue) {
@@ -154,8 +169,9 @@ public class ActionElement extends AbstractCodeElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>actionRelation</em> feature.
+   * 
    * @generated
    */
   public void clearActionRelation() {
@@ -166,9 +182,11 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Sets the '{@link ActionElement#getActionRelation() <em>actionRelation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ActionElement#getActionRelation() actionRelation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ActionElement#getActionRelation() actionRelation}' feature.
    * @generated
    */
   public void setActionRelation(List<AbstractActionRelationship> newActionRelation) {
@@ -176,9 +194,9 @@ public class ActionElement extends AbstractCodeElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

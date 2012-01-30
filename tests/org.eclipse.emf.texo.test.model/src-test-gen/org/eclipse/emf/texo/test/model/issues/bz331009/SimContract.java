@@ -7,13 +7,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>SimContract</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * Информация о контракте с оператором сотовой связи
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SimContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> Информация о контракте с оператором сотовой связи <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SimContract")
 public class SimContract {
@@ -155,9 +153,9 @@ public class SimContract {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

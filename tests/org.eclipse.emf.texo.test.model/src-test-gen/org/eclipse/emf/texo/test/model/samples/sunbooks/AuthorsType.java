@@ -7,17 +7,18 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>AuthorsType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>AuthorsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "AuthorsType")
 public class AuthorsType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
@@ -26,8 +27,9 @@ public class AuthorsType {
 
   /**
    * Returns the value of '<em><b>authorName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>authorName</b></em>' feature
    * @generated
    */
@@ -37,9 +39,11 @@ public class AuthorsType {
 
   /**
    * Sets the '{@link AuthorsType#getAuthorName() <em>authorName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AuthorsType#getAuthorName() authorName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AuthorsType#getAuthorName() authorName}' feature.
    * @generated
    */
   public void setAuthorName(List<String> newAuthorName) {
@@ -47,9 +51,9 @@ public class AuthorsType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

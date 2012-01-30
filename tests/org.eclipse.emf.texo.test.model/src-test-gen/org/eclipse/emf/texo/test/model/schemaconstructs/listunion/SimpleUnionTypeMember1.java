@@ -5,15 +5,15 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>SimpleUnionTypeMember1</b></em>'.
- * <!-- begin-user-doc -->
+ * A representation of the literals of the enumeration '<em><b>SimpleUnionTypeMember1</b></em>'. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public enum SimpleUnionTypeMember1 {
   /**
-   * The enum: NA
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: NA <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   NA(0, "NA", "N/A") {
@@ -37,17 +37,17 @@ public enum SimpleUnionTypeMember1 {
   private static final SimpleUnionTypeMember1[] VALUES_ARRAY = new SimpleUnionTypeMember1[] { NA };
 
   /**
-   * A public read-only list of all the '<em><b>SimpleUnionTypeMember1</b></em>' enumerators.
-   * <!-- begin-user-doc -->
+   * A public read-only list of all the '<em><b>SimpleUnionTypeMember1</b></em>' enumerators. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final List<SimpleUnionTypeMember1> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc
+   * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified literal value. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static SimpleUnionTypeMember1 get(String literal) {
@@ -61,9 +61,9 @@ public enum SimpleUnionTypeMember1 {
   }
 
   /**
-   * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static SimpleUnionTypeMember1 getByName(String name) {
@@ -77,9 +77,9 @@ public enum SimpleUnionTypeMember1 {
   }
 
   /**
-   * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc
+   * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified integer value. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static SimpleUnionTypeMember1 get(int value) {
@@ -93,25 +93,28 @@ public enum SimpleUnionTypeMember1 {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private SimpleUnionTypeMember1(int value, String name, String literal) {
@@ -122,6 +125,7 @@ public enum SimpleUnionTypeMember1 {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -131,6 +135,7 @@ public enum SimpleUnionTypeMember1 {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -139,6 +144,7 @@ public enum SimpleUnionTypeMember1 {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -147,6 +153,7 @@ public enum SimpleUnionTypeMember1 {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -155,6 +162,7 @@ public enum SimpleUnionTypeMember1 {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

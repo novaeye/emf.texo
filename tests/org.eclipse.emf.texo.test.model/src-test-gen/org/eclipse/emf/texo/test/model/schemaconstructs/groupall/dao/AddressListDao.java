@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressList;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.GroupallModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>AddressList</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AddressListDao extends BaseDao<AddressList> {
 

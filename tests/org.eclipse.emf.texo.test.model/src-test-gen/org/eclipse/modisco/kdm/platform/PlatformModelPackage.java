@@ -47,10 +47,11 @@ import org.eclipse.modisco.kdm.platform.dao.WritesResourceDao;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
 /**
- * The <b>Package</b> for the model '<em><b>platform</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>platform</b></em>'. It contains initialization code and access to the
+ * Factory to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class PlatformModelPackage extends ModelPackage {
@@ -63,413 +64,477 @@ public class PlatformModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/MoDisco/kdm/platform";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final PlatformModelFactory MODELFACTORY = new PlatformModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMMODEL_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMMODEL_PLATFORMELEMENT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTPLATFORMELEMENT_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTPLATFORMELEMENT_SOURCE_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTPLATFORMELEMENT_PLATFORMRELATION_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTPLATFORMELEMENT_ABSTRACTION_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTPLATFORMELEMENT_IMPLEMENTATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTPLATFORMRELATIONSHIP_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RESOURCETYPE_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RESOURCETYPE_PLATFORMELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int NAMINGRESOURCE_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MARSHALLEDRESOURCE_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGINGRESOURCE_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int FILERESOURCE_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXECUTIONRESOURCE_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LOCKRESOURCE_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STREAMRESOURCE_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATAMANAGER_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMEVENT_CLASSIFIER_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMEVENT_KIND_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMACTION_CLASSIFIER_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMACTION_KIND_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMACTION_PLATFORMELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXTERNALACTOR_CLASSIFIER_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BINDSTO_CLASSIFIER_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BINDSTO_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BINDSTO_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REQUIRES_CLASSIFIER_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REQUIRES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REQUIRES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPLOYEDCOMPONENT_CLASSIFIER_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPLOYEDCOMPONENT_GROUPEDCODE_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MANAGESRESOURCE_CLASSIFIER_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MANAGESRESOURCE_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MANAGESRESOURCE_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int READSRESOURCE_CLASSIFIER_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int READSRESOURCE_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int READSRESOURCE_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITESRESOURCE_CLASSIFIER_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITESRESOURCE_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITESRESOURCE_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEFINEDBY_CLASSIFIER_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEFINEDBY_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEFINEDBY_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPLOYEDSOFTWARESYSTEM_CLASSIFIER_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPLOYEDSOFTWARESYSTEM_GROUPEDCOMPONENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACHINE_CLASSIFIER_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACHINE_DEPLOYEDCOMPONENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACHINE_DEPLOYEDRESOURCE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPLOYEDRESOURCE_CLASSIFIER_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPLOYEDRESOURCE_PLATFORMELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RUNTIMERESOURCE_CLASSIFIER_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PROCESS_CLASSIFIER_ID = 26;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int THREAD_CLASSIFIER_ID = 27;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LOADS_CLASSIFIER_ID = 28;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LOADS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LOADS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SPAWNS_CLASSIFIER_ID = 29;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SPAWNS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SPAWNS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMELEMENT_CLASSIFIER_ID = 30;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMRELATIONSHIP_CLASSIFIER_ID = 31;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMRELATIONSHIP_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PLATFORMRELATIONSHIP_FROM_FEATURE_ID = 5;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final PlatformModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static PlatformModelPackage initialize() {
@@ -484,12 +549,12 @@ public class PlatformModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    ActionModelPackage.initialize();
+    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
     CodeModelPackage.initialize();
     SourceModelPackage.initialize();
-    CoreModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
-    ActionModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(PlatformModel.class, modelPackage.getPlatformModelEClass(),
@@ -616,8 +681,7 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link PlatformModelFactory} instance.
    * @generated
@@ -627,12 +691,11 @@ public class PlatformModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -653,9 +716,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PlatformModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PlatformModel</b></em>' 
+   * Returns the {@link EClass} '<em><b>PlatformModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PlatformModel</b></em>'
    * @generated
    */
   public EClass getPlatformModelEClass() {
@@ -663,9 +726,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PlatformModel.platformElement</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>PlatformModel.platformElement</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PlatformModel.platformElement</b></em>'.
    * @generated
    */
@@ -675,9 +738,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AbstractPlatformElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AbstractPlatformElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>AbstractPlatformElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AbstractPlatformElement</b></em>'
    * @generated
    */
   public EClass getAbstractPlatformElementEClass() {
@@ -685,9 +748,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractPlatformElement.source</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractPlatformElement.source</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractPlatformElement.source</b></em>'.
    * @generated
    */
@@ -709,9 +772,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractPlatformElement.abstraction</b></em>'.
-   * <!-- begin-user-doc
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractPlatformElement.abstraction</b></em>'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractPlatformElement.abstraction</b></em>'.
    * @generated
    */
@@ -733,10 +796,10 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AbstractPlatformRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EClass} '<em><b>AbstractPlatformRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AbstractPlatformRelationship</b></em>' 
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AbstractPlatformRelationship</b></em>'
    * @generated
    */
   public EClass getAbstractPlatformRelationshipEClass() {
@@ -744,9 +807,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ResourceType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ResourceType</b></em>' 
+   * Returns the {@link EClass} '<em><b>ResourceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ResourceType</b></em>'
    * @generated
    */
   public EClass getResourceTypeEClass() {
@@ -754,9 +817,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ResourceType.platformElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ResourceType.platformElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ResourceType.platformElement</b></em>'.
    * @generated
    */
@@ -766,9 +829,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>NamingResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>NamingResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>NamingResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>NamingResource</b></em>'
    * @generated
    */
   public EClass getNamingResourceEClass() {
@@ -776,9 +839,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>MarshalledResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>MarshalledResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>MarshalledResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>MarshalledResource</b></em>'
    * @generated
    */
   public EClass getMarshalledResourceEClass() {
@@ -786,9 +849,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>MessagingResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>MessagingResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>MessagingResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>MessagingResource</b></em>'
    * @generated
    */
   public EClass getMessagingResourceEClass() {
@@ -796,9 +859,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>FileResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>FileResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>FileResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>FileResource</b></em>'
    * @generated
    */
   public EClass getFileResourceEClass() {
@@ -806,9 +869,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ExecutionResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ExecutionResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>ExecutionResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ExecutionResource</b></em>'
    * @generated
    */
   public EClass getExecutionResourceEClass() {
@@ -816,9 +879,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>LockResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>LockResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>LockResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>LockResource</b></em>'
    * @generated
    */
   public EClass getLockResourceEClass() {
@@ -826,9 +889,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>StreamResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>StreamResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>StreamResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>StreamResource</b></em>'
    * @generated
    */
   public EClass getStreamResourceEClass() {
@@ -836,9 +899,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DataManager</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DataManager</b></em>' 
+   * Returns the {@link EClass} '<em><b>DataManager</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DataManager</b></em>'
    * @generated
    */
   public EClass getDataManagerEClass() {
@@ -846,9 +909,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PlatformEvent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PlatformEvent</b></em>' 
+   * Returns the {@link EClass} '<em><b>PlatformEvent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PlatformEvent</b></em>'
    * @generated
    */
   public EClass getPlatformEventEClass() {
@@ -856,9 +919,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PlatformEvent.kind</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PlatformEvent.kind</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PlatformEvent.kind</b></em>'.
    * @generated
    */
@@ -867,9 +930,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PlatformAction</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PlatformAction</b></em>' 
+   * Returns the {@link EClass} '<em><b>PlatformAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PlatformAction</b></em>'
    * @generated
    */
   public EClass getPlatformActionEClass() {
@@ -877,9 +940,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PlatformAction.kind</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PlatformAction.kind</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PlatformAction.kind</b></em>'.
    * @generated
    */
@@ -888,9 +951,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PlatformAction.platformElement</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>PlatformAction.platformElement</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PlatformAction.platformElement</b></em>'.
    * @generated
    */
@@ -900,9 +963,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ExternalActor</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ExternalActor</b></em>' 
+   * Returns the {@link EClass} '<em><b>ExternalActor</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ExternalActor</b></em>'
    * @generated
    */
   public EClass getExternalActorEClass() {
@@ -910,9 +973,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BindsTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BindsTo</b></em>' 
+   * Returns the {@link EClass} '<em><b>BindsTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BindsTo</b></em>'
    * @generated
    */
   public EClass getBindsToEClass() {
@@ -920,8 +983,8 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>BindsTo.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>BindsTo.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>BindsTo.to</b></em>'.
    * @generated
    */
@@ -941,9 +1004,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Requires</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Requires</b></em>' 
+   * Returns the {@link EClass} '<em><b>Requires</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Requires</b></em>'
    * @generated
    */
   public EClass getRequiresEClass() {
@@ -951,8 +1014,8 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Requires.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Requires.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Requires.to</b></em>'.
    * @generated
    */
@@ -972,9 +1035,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DeployedComponent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DeployedComponent</b></em>' 
+   * Returns the {@link EClass} '<em><b>DeployedComponent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DeployedComponent</b></em>'
    * @generated
    */
   public EClass getDeployedComponentEClass() {
@@ -982,9 +1045,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DeployedComponent.groupedCode</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DeployedComponent.groupedCode</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DeployedComponent.groupedCode</b></em>'.
    * @generated
    */
@@ -994,9 +1057,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ManagesResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ManagesResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>ManagesResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ManagesResource</b></em>'
    * @generated
    */
   public EClass getManagesResourceEClass() {
@@ -1004,9 +1067,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManagesResource.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ManagesResource.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ManagesResource.to</b></em>'.
    * @generated
    */
@@ -1015,9 +1078,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManagesResource.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ManagesResource.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ManagesResource.from</b></em>'.
    * @generated
    */
@@ -1026,9 +1089,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ReadsResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ReadsResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>ReadsResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ReadsResource</b></em>'
    * @generated
    */
   public EClass getReadsResourceEClass() {
@@ -1036,9 +1099,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReadsResource.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ReadsResource.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ReadsResource.to</b></em>'.
    * @generated
    */
@@ -1047,9 +1110,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReadsResource.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ReadsResource.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ReadsResource.from</b></em>'.
    * @generated
    */
@@ -1058,9 +1121,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>WritesResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>WritesResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>WritesResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>WritesResource</b></em>'
    * @generated
    */
   public EClass getWritesResourceEClass() {
@@ -1068,9 +1131,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>WritesResource.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>WritesResource.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>WritesResource.to</b></em>'.
    * @generated
    */
@@ -1079,9 +1142,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>WritesResource.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>WritesResource.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>WritesResource.from</b></em>'.
    * @generated
    */
@@ -1090,9 +1153,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DefinedBy</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DefinedBy</b></em>' 
+   * Returns the {@link EClass} '<em><b>DefinedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DefinedBy</b></em>'
    * @generated
    */
   public EClass getDefinedByEClass() {
@@ -1122,9 +1185,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DeployedSoftwareSystem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DeployedSoftwareSystem</b></em>' 
+   * Returns the {@link EClass} '<em><b>DeployedSoftwareSystem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DeployedSoftwareSystem</b></em>'
    * @generated
    */
   public EClass getDeployedSoftwareSystemEClass() {
@@ -1144,9 +1207,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Machine</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Machine</b></em>' 
+   * Returns the {@link EClass} '<em><b>Machine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Machine</b></em>'
    * @generated
    */
   public EClass getMachineEClass() {
@@ -1154,9 +1217,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Machine.deployedComponent</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Machine.deployedComponent</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Machine.deployedComponent</b></em>'.
    * @generated
    */
@@ -1165,9 +1228,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Machine.deployedResource</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Machine.deployedResource</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Machine.deployedResource</b></em>'.
    * @generated
    */
@@ -1176,9 +1239,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DeployedResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DeployedResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>DeployedResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DeployedResource</b></em>'
    * @generated
    */
   public EClass getDeployedResourceEClass() {
@@ -1186,9 +1249,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DeployedResource.platformElement</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DeployedResource.platformElement</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DeployedResource.platformElement</b></em>'.
    * @generated
    */
@@ -1198,9 +1261,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RuntimeResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RuntimeResource</b></em>' 
+   * Returns the {@link EClass} '<em><b>RuntimeResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RuntimeResource</b></em>'
    * @generated
    */
   public EClass getRuntimeResourceEClass() {
@@ -1208,9 +1271,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Process</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Process</b></em>' 
+   * Returns the {@link EClass} '<em><b>Process</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Process</b></em>'
    * @generated
    */
   public EClass getProcessEClass() {
@@ -1218,9 +1281,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Thread</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Thread</b></em>' 
+   * Returns the {@link EClass} '<em><b>Thread</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Thread</b></em>'
    * @generated
    */
   public EClass getThreadEClass() {
@@ -1228,9 +1291,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Loads</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Loads</b></em>' 
+   * Returns the {@link EClass} '<em><b>Loads</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Loads</b></em>'
    * @generated
    */
   public EClass getLoadsEClass() {
@@ -1238,8 +1301,8 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Loads.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Loads.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Loads.to</b></em>'.
    * @generated
    */
@@ -1248,8 +1311,8 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Loads.from</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Loads.from</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Loads.from</b></em>'.
    * @generated
    */
@@ -1258,9 +1321,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Spawns</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Spawns</b></em>' 
+   * Returns the {@link EClass} '<em><b>Spawns</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Spawns</b></em>'
    * @generated
    */
   public EClass getSpawnsEClass() {
@@ -1268,8 +1331,8 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Spawns.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Spawns.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Spawns.to</b></em>'.
    * @generated
    */
@@ -1278,8 +1341,8 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Spawns.from</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Spawns.from</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Spawns.from</b></em>'.
    * @generated
    */
@@ -1288,9 +1351,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PlatformElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PlatformElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>PlatformElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PlatformElement</b></em>'
    * @generated
    */
   public EClass getPlatformElementEClass() {
@@ -1298,9 +1361,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PlatformRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PlatformRelationship</b></em>' 
+   * Returns the {@link EClass} '<em><b>PlatformRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PlatformRelationship</b></em>'
    * @generated
    */
   public EClass getPlatformRelationshipEClass() {
@@ -1308,9 +1371,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PlatformRelationship.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PlatformRelationship.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PlatformRelationship.to</b></em>'.
    * @generated
    */
@@ -1320,9 +1383,9 @@ public class PlatformModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PlatformRelationship.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PlatformRelationship.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PlatformRelationship.from</b></em>'.
    * @generated
    */
@@ -1333,8 +1396,9 @@ public class PlatformModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

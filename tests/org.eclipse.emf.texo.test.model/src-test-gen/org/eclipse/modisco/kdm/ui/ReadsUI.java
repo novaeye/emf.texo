@@ -8,25 +8,27 @@ import javax.persistence.ManyToOne;
 import org.eclipse.modisco.kdm.action.AbstractActionRelationship;
 import org.eclipse.modisco.kdm.action.ActionElement;
 
-/** 
- * A representation of the model object '<em><b>ReadsUI</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ReadsUI</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ReadsUI")
 public class ReadsUI extends AbstractActionRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UIResource.class)
   @JoinColumns({ @JoinColumn() })
   private UIResource to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ActionElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class ReadsUI extends AbstractActionRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -45,9 +48,11 @@ public class ReadsUI extends AbstractActionRelationship {
 
   /**
    * Sets the '{@link ReadsUI#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ReadsUI#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ReadsUI#getTo() to}' feature.
    * @generated
    */
   public void setTo(UIResource newTo) {
@@ -56,8 +61,9 @@ public class ReadsUI extends AbstractActionRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -67,9 +73,11 @@ public class ReadsUI extends AbstractActionRelationship {
 
   /**
    * Sets the '{@link ReadsUI#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ReadsUI#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ReadsUI#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {
@@ -77,9 +85,9 @@ public class ReadsUI extends AbstractActionRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

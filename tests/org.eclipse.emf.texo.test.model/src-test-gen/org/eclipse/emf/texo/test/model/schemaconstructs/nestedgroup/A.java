@@ -5,31 +5,34 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>A</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>A</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "A")
 public class A {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<AGroupFeatureGroup> group = new ArrayList<AGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -39,9 +42,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -50,8 +55,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>group</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>group</b></em>' feature
    * @generated
    */
@@ -61,9 +67,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getGroup() <em>group</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getGroup() group}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<AGroupFeatureGroup> newGroup) {
@@ -72,8 +80,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>b</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>b</b></em>' feature
    * @generated
    */
@@ -83,9 +92,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getB() <em>b</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getB() b}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getB() b}' feature.
    * @generated
    */
   public void setB(List<String> newB) {
@@ -94,8 +105,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>c</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>c</b></em>' feature
    * @generated
    */
@@ -105,9 +117,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getC() <em>c</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getC() c}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getC() c}' feature.
    * @generated
    */
   public void setC(List<CType> newC) {
@@ -115,9 +129,9 @@ public class A {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

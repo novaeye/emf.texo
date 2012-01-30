@@ -8,10 +8,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation for the Feature Group '<em><b>Element.true</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation for the Feature Group '<em><b>Element.true</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 public class ElementTrueFeatureGroup {
 
@@ -92,13 +92,15 @@ public class ElementTrueFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = CType.class)
   @JoinColumns({ @JoinColumn() })
@@ -120,8 +122,9 @@ public class ElementTrueFeatureGroup {
 
   /**
    * Returns the value of '<em><b>c</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>c</b></em>' feature
    * @generated
    */
@@ -131,9 +134,11 @@ public class ElementTrueFeatureGroup {
 
   /**
    * Sets the '{@link Element#getC() <em>c</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Element#getC() c}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Element#getC() c}' feature.
    * @generated
    */
   public void setC(CType newC) {
@@ -143,9 +148,10 @@ public class ElementTrueFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -158,10 +164,13 @@ public class ElementTrueFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

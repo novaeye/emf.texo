@@ -3,32 +3,35 @@ package org.eclipse.modisco.kdm.code;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>MethodUnit</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>MethodUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "MethodUnit")
 public class MethodUnit extends ControlElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private MethodKind kind = MethodKind.METHOD;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private ExportKind export = ExportKind.PUBLIC;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -38,9 +41,11 @@ public class MethodUnit extends ControlElement {
 
   /**
    * Sets the '{@link MethodUnit#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link MethodUnit#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link MethodUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(MethodKind newKind) {
@@ -49,8 +54,9 @@ public class MethodUnit extends ControlElement {
 
   /**
    * Returns the value of '<em><b>export</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>export</b></em>' feature
    * @generated
    */
@@ -60,9 +66,11 @@ public class MethodUnit extends ControlElement {
 
   /**
    * Sets the '{@link MethodUnit#getExport() <em>export</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link MethodUnit#getExport() export}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link MethodUnit#getExport() export}' feature.
    * @generated
    */
   public void setExport(ExportKind newExport) {
@@ -70,9 +78,9 @@ public class MethodUnit extends ControlElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

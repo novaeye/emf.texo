@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.ModelModelPackage;
 import org.eclipse.emf.texo.test.model.issues.bz331009.SecretQuestion;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SecretQuestion</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SecretQuestionDao extends BaseDao<SecretQuestion> {
 

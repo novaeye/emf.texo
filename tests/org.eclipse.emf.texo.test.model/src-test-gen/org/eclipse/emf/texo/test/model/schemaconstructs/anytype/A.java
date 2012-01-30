@@ -7,38 +7,42 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>A</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>A</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "A")
 public class A {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private double doub = 0.0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private long lon = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = B.class)
   @JoinColumns({ @JoinColumn() })
@@ -46,8 +50,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -57,9 +62,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -68,8 +75,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>doub</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>doub</b></em>' feature
    * @generated
    */
@@ -79,9 +87,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getDoub() <em>doub</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getDoub() doub}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getDoub() doub}' feature.
    * @generated
    */
   public void setDoub(double newDoub) {
@@ -90,8 +100,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>lon</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>lon</b></em>' feature
    * @generated
    */
@@ -101,9 +112,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getLon() <em>lon</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getLon() lon}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getLon() lon}' feature.
    * @generated
    */
   public void setLon(long newLon) {
@@ -112,8 +125,9 @@ public class A {
 
   /**
    * Returns the value of '<em><b>myB</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myB</b></em>' feature
    * @generated
    */
@@ -123,9 +137,11 @@ public class A {
 
   /**
    * Sets the '{@link A#getMyB() <em>myB</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getMyB() myB}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getMyB() myB}' feature.
    * @generated
    */
   public void setMyB(B newMyB) {
@@ -133,9 +149,9 @@ public class A {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

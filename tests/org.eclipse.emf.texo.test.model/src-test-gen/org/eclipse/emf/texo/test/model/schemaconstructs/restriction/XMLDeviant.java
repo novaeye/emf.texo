@@ -7,53 +7,59 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>XMLDeviant</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>XMLDeviant</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "XMLDeviant")
 public class XMLDeviant {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private BigInteger numPosts = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String signature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String email = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date firstSubscribed = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String mailReader = null;
 
   /**
    * Returns the value of '<em><b>numPosts</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>numPosts</b></em>' feature
    * @generated
    */
@@ -63,9 +69,11 @@ public class XMLDeviant {
 
   /**
    * Sets the '{@link XMLDeviant#getNumPosts() <em>numPosts</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link XMLDeviant#getNumPosts() numPosts}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link XMLDeviant#getNumPosts() numPosts}' feature.
    * @generated
    */
   public void setNumPosts(BigInteger newNumPosts) {
@@ -74,8 +82,9 @@ public class XMLDeviant {
 
   /**
    * Returns the value of '<em><b>signature</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>signature</b></em>' feature
    * @generated
    */
@@ -85,9 +94,11 @@ public class XMLDeviant {
 
   /**
    * Sets the '{@link XMLDeviant#getSignature() <em>signature</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link XMLDeviant#getSignature() signature}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link XMLDeviant#getSignature() signature}' feature.
    * @generated
    */
   public void setSignature(String newSignature) {
@@ -96,8 +107,9 @@ public class XMLDeviant {
 
   /**
    * Returns the value of '<em><b>email</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>email</b></em>' feature
    * @generated
    */
@@ -107,9 +119,11 @@ public class XMLDeviant {
 
   /**
    * Sets the '{@link XMLDeviant#getEmail() <em>email</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link XMLDeviant#getEmail() email}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link XMLDeviant#getEmail() email}' feature.
    * @generated
    */
   public void setEmail(String newEmail) {
@@ -118,8 +132,9 @@ public class XMLDeviant {
 
   /**
    * Returns the value of '<em><b>firstSubscribed</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>firstSubscribed</b></em>' feature
    * @generated
    */
@@ -129,9 +144,11 @@ public class XMLDeviant {
 
   /**
    * Sets the '{@link XMLDeviant#getFirstSubscribed() <em>firstSubscribed</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link XMLDeviant#getFirstSubscribed() firstSubscribed}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link XMLDeviant#getFirstSubscribed() firstSubscribed}' feature.
    * @generated
    */
   public void setFirstSubscribed(Date newFirstSubscribed) {
@@ -140,8 +157,9 @@ public class XMLDeviant {
 
   /**
    * Returns the value of '<em><b>mailReader</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mailReader</b></em>' feature
    * @generated
    */
@@ -151,9 +169,11 @@ public class XMLDeviant {
 
   /**
    * Sets the '{@link XMLDeviant#getMailReader() <em>mailReader</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link XMLDeviant#getMailReader() mailReader}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link XMLDeviant#getMailReader() mailReader}' feature.
    * @generated
    */
   public void setMailReader(String newMailReader) {
@@ -161,9 +181,9 @@ public class XMLDeviant {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -7,32 +7,35 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Supplier</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Supplier")
 @Table(name = "SUP_TABLE")
 public class Supplier extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<SupplierOrdersFeatureGroup> orders = new ArrayList<SupplierOrdersFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -42,9 +45,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -53,8 +58,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>orders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>orders</b></em>' feature
    * @generated
    */
@@ -64,9 +70,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getOrders() <em>orders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getOrders() orders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getOrders() orders}' feature.
    * @generated
    */
   public void setOrders(List<SupplierOrdersFeatureGroup> newOrders) {
@@ -75,8 +83,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>preferredOrders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>preferredOrders</b></em>' feature
    * @generated
    */
@@ -87,9 +96,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
    * @generated
    */
   public void setPreferredOrders(List<PurchaseOrder> newPreferredOrders) {
@@ -99,8 +110,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>standardOrders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>standardOrders</b></em>' feature
    * @generated
    */
@@ -111,9 +123,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
    * @generated
    */
   public void setStandardOrders(List<PurchaseOrder> newStandardOrders) {
@@ -123,8 +137,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>hardCopyOrderReference</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>hardCopyOrderReference</b></em>' feature
    * @generated
    */
@@ -135,9 +150,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getHardCopyOrderReference() <em>hardCopyOrderReference</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
    * @generated
    */
   public void setHardCopyOrderReference(List<String> newHardCopyOrderReference) {
@@ -147,8 +164,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>hardCopyOrderNumber</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>hardCopyOrderNumber</b></em>' feature
    * @generated
    */
@@ -159,9 +177,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getHardCopyOrderNumber() <em>hardCopyOrderNumber</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
    * @generated
    */
   public void setHardCopyOrderNumber(List<Long> newHardCopyOrderNumber) {
@@ -170,9 +190,9 @@ public class Supplier extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

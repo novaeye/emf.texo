@@ -14,16 +14,18 @@ import javax.persistence.Entity;
 @Entity(name = "SimpleAllMapType")
 public class SimpleAllMapType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<SimpleAllMapTypeAllMapFeatureGroup> allMap = new ArrayList<SimpleAllMapTypeAllMapFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>allMap</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>allMap</b></em>' feature
    * @generated
    */
@@ -33,9 +35,11 @@ public class SimpleAllMapType {
 
   /**
    * Sets the '{@link SimpleAllMapType#getAllMap() <em>allMap</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getAllMap() allMap}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getAllMap() allMap}' feature.
    * @generated
    */
   public void setAllMap(List<SimpleAllMapTypeAllMapFeatureGroup> newAllMap) {
@@ -44,8 +48,9 @@ public class SimpleAllMapType {
 
   /**
    * Returns the value of '<em><b>aaa</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>aaa</b></em>' feature
    * @generated
    */
@@ -56,9 +61,11 @@ public class SimpleAllMapType {
 
   /**
    * Sets the '{@link SimpleAllMapType#getAaa() <em>aaa</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
    * @generated
    */
   public void setAaa(String newAaa) {
@@ -68,8 +75,9 @@ public class SimpleAllMapType {
 
   /**
    * Returns the value of '<em><b>bbb</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>bbb</b></em>' feature
    * @generated
    */
@@ -80,9 +88,11 @@ public class SimpleAllMapType {
 
   /**
    * Sets the '{@link SimpleAllMapType#getBbb() <em>bbb</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
    * @generated
    */
   public void setBbb(String newBbb) {
@@ -92,8 +102,9 @@ public class SimpleAllMapType {
 
   /**
    * Returns the value of '<em><b>ccc</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>ccc</b></em>' feature
    * @generated
    */
@@ -104,9 +115,11 @@ public class SimpleAllMapType {
 
   /**
    * Sets the '{@link SimpleAllMapType#getCcc() <em>ccc</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
    * @generated
    */
   public void setCcc(String newCcc) {
@@ -115,9 +128,9 @@ public class SimpleAllMapType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

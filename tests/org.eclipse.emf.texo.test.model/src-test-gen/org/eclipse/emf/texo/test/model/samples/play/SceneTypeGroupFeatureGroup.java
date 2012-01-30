@@ -94,20 +94,23 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String stageDirections;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SpeechType.class)
   @JoinColumns({ @JoinColumn() })
@@ -129,8 +132,9 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>stageDirections</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stageDirections</b></em>' feature
    * @generated
    */
@@ -140,9 +144,11 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link SceneType#getStageDirections() <em>stageDirections</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
@@ -152,8 +158,9 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>speech</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>speech</b></em>' feature
    * @generated
    */
@@ -163,9 +170,11 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link SceneType#getSpeech() <em>speech</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getSpeech() speech}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getSpeech() speech}' feature.
    * @generated
    */
   public void setSpeech(SpeechType newSpeech) {
@@ -175,9 +184,10 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -192,10 +202,13 @@ public class SceneTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

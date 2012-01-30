@@ -7,35 +7,39 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>Book</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Book")
 public class Book extends CirculatingItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String title = null;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int pages = 100;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private BookCategory category = BookCategory.MYSTERY;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Writer.class)
   @JoinColumns({ @JoinColumn() })
@@ -43,8 +47,9 @@ public class Book extends CirculatingItem {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -54,9 +59,11 @@ public class Book extends CirculatingItem {
 
   /**
    * Sets the '{@link Book#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -65,8 +72,9 @@ public class Book extends CirculatingItem {
 
   /**
    * Returns the value of '<em><b>pages</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>pages</b></em>' feature
    * @generated
    */
@@ -76,9 +84,11 @@ public class Book extends CirculatingItem {
 
   /**
    * Sets the '{@link Book#getPages() <em>pages</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getPages() pages}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getPages() pages}' feature.
    * @generated
    */
   public void setPages(int newPages) {
@@ -87,8 +97,9 @@ public class Book extends CirculatingItem {
 
   /**
    * Returns the value of '<em><b>category</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>category</b></em>' feature
    * @generated
    */
@@ -98,9 +109,11 @@ public class Book extends CirculatingItem {
 
   /**
    * Sets the '{@link Book#getCategory() <em>category</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getCategory() category}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getCategory() category}' feature.
    * @generated
    */
   public void setCategory(BookCategory newCategory) {
@@ -109,8 +122,9 @@ public class Book extends CirculatingItem {
 
   /**
    * Returns the value of '<em><b>author</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>author</b></em>' feature
    * @generated
    */
@@ -120,9 +134,11 @@ public class Book extends CirculatingItem {
 
   /**
    * Sets the '{@link Book#getAuthor() <em>author</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getAuthor() author}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(Writer newAuthor) {
@@ -130,9 +146,9 @@ public class Book extends CirculatingItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

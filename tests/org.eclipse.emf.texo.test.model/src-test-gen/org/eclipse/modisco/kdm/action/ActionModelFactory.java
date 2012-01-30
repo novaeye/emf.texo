@@ -21,17 +21,19 @@ import org.eclipse.modisco.kdm.core.CoreModelFactory;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: action.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model: action. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class ActionModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -90,13 +92,12 @@ public class ActionModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -200,8 +201,8 @@ public class ActionModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -217,6 +218,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass EntryFlow
    * @generated
    */
@@ -226,6 +228,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ActionElement
    * @generated
    */
@@ -235,6 +238,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BlockUnit
    * @generated
    */
@@ -244,6 +248,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ControlFlow
    * @generated
    */
@@ -253,6 +258,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Flow
    * @generated
    */
@@ -262,6 +268,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TrueFlow
    * @generated
    */
@@ -271,6 +278,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass FalseFlow
    * @generated
    */
@@ -280,6 +288,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass GuardedFlow
    * @generated
    */
@@ -289,6 +298,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Calls
    * @generated
    */
@@ -298,6 +308,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Dispatches
    * @generated
    */
@@ -307,6 +318,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Reads
    * @generated
    */
@@ -316,6 +328,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Writes
    * @generated
    */
@@ -325,6 +338,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Addresses
    * @generated
    */
@@ -334,6 +348,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Creates
    * @generated
    */
@@ -343,6 +358,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExceptionUnit
    * @generated
    */
@@ -352,6 +368,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TryUnit
    * @generated
    */
@@ -361,6 +378,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CatchUnit
    * @generated
    */
@@ -370,6 +388,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass FinallyUnit
    * @generated
    */
@@ -379,6 +398,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExitFlow
    * @generated
    */
@@ -388,6 +408,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExceptionFlow
    * @generated
    */
@@ -397,6 +418,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Throws
    * @generated
    */
@@ -406,6 +428,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CompliesTo
    * @generated
    */
@@ -415,6 +438,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass UsesType
    * @generated
    */
@@ -424,6 +448,7 @@ public class ActionModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ActionRelationship
    * @generated
    */
@@ -432,10 +457,12 @@ public class ActionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -445,10 +472,12 @@ public class ActionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -457,10 +486,10 @@ public class ActionModelFactory implements ModelFactory {
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>EntryFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>EntryFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class EntryFlowModelObject<E extends EntryFlow> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -536,11 +565,11 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractActionRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractActionRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractActionRelationshipModelObject<E extends AbstractActionRelationship> extends
       CoreModelFactory.KDMRelationshipModelObject<E> {
@@ -605,10 +634,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ActionElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ActionElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ActionElementModelObject<E extends ActionElement> extends
       CodeModelFactory.AbstractCodeElementModelObject<E> {
@@ -705,10 +734,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BlockUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BlockUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BlockUnitModelObject<E extends BlockUnit> extends ActionElementModelObject<E> {
     /**
@@ -772,10 +801,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ControlFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ControlFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ControlFlowModelObject<E extends ControlFlow> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -851,10 +880,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Flow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Flow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class FlowModelObject<E extends Flow> extends ControlFlowModelObject<E> {
     /**
@@ -918,10 +947,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TrueFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TrueFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TrueFlowModelObject<E extends TrueFlow> extends ControlFlowModelObject<E> {
     /**
@@ -985,10 +1014,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>FalseFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>FalseFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class FalseFlowModelObject<E extends FalseFlow> extends ControlFlowModelObject<E> {
     /**
@@ -1052,10 +1081,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>GuardedFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>GuardedFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class GuardedFlowModelObject<E extends GuardedFlow> extends ControlFlowModelObject<E> {
     /**
@@ -1119,10 +1148,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Calls</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Calls</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CallsModelObject<E extends Calls> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1198,10 +1227,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Dispatches</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Dispatches</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DispatchesModelObject<E extends Dispatches> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1277,10 +1306,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Reads</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Reads</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ReadsModelObject<E extends Reads> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1356,10 +1385,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Writes</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Writes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class WritesModelObject<E extends Writes> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1435,10 +1464,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Addresses</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Addresses</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class AddressesModelObject<E extends Addresses> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1514,10 +1543,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Creates</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Creates</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CreatesModelObject<E extends Creates> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1593,10 +1622,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ExceptionUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ExceptionUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExceptionUnitModelObject<E extends ExceptionUnit> extends BlockUnitModelObject<E> {
     /**
@@ -1660,10 +1689,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TryUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TryUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TryUnitModelObject<E extends TryUnit> extends ExceptionUnitModelObject<E> {
     /**
@@ -1727,10 +1756,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CatchUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CatchUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CatchUnitModelObject<E extends CatchUnit> extends ExceptionUnitModelObject<E> {
     /**
@@ -1794,10 +1823,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>FinallyUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>FinallyUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class FinallyUnitModelObject<E extends FinallyUnit> extends ExceptionUnitModelObject<E> {
     /**
@@ -1861,10 +1890,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ExitFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ExitFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExitFlowModelObject<E extends ExitFlow> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -1940,10 +1969,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ExceptionFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ExceptionFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExceptionFlowModelObject<E extends ExceptionFlow> extends
       AbstractActionRelationshipModelObject<E> {
@@ -2020,10 +2049,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Throws</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Throws</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ThrowsModelObject<E extends Throws> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -2099,10 +2128,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CompliesTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CompliesTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CompliesToModelObject<E extends CompliesTo> extends AbstractActionRelationshipModelObject<E> {
     /**
@@ -2178,10 +2207,10 @@ public class ActionModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>UsesType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>UsesType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class UsesTypeModelObject<E extends UsesType> extends AbstractActionRelationshipModelObject<E> {
     /**

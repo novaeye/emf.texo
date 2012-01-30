@@ -16,9 +16,10 @@ import javax.persistence.ManyToOne;
 @Entity(name = "Event")
 public class Event {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private EventType eventType = EventType.COORDINATES;
@@ -32,9 +33,10 @@ public class Event {
   @JoinColumns({ @JoinColumn() })
   private Message message = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Coordinates.class)
   @JoinColumns({ @JoinColumn() })
@@ -42,8 +44,9 @@ public class Event {
 
   /**
    * Returns the value of '<em><b>eventType</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>eventType</b></em>' feature
    * @generated
    */
@@ -53,9 +56,11 @@ public class Event {
 
   /**
    * Sets the '{@link Event#getEventType() <em>eventType</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Event#getEventType() eventType}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Event#getEventType() eventType}' feature.
    * @generated
    */
   public void setEventType(EventType newEventType) {
@@ -89,8 +94,9 @@ public class Event {
 
   /**
    * Returns the value of '<em><b>coordinates</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>coordinates</b></em>' feature
    * @generated
    */
@@ -100,9 +106,11 @@ public class Event {
 
   /**
    * Sets the '{@link Event#getCoordinates() <em>coordinates</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Event#getCoordinates() coordinates}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Event#getCoordinates() coordinates}' feature.
    * @generated
    */
   public void setCoordinates(Coordinates newCoordinates) {
@@ -110,9 +118,9 @@ public class Event {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

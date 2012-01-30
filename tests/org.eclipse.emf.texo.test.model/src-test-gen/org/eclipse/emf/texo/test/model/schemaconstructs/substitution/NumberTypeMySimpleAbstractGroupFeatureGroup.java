@@ -6,11 +6,11 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
 
-/** 
- * A representation for the Feature Group '<em><b>NumberType.mySimpleAbstractGroup</b></em>'.
- * <!-- begin-user-doc -->
+/**
+ * A representation for the Feature Group '<em><b>NumberType.mySimpleAbstractGroup</b></em>'. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class NumberTypeMySimpleAbstractGroupFeatureGroup {
 
@@ -92,13 +92,15 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BigInteger mySimpleAbstract;
@@ -119,8 +121,9 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>mySimpleAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mySimpleAbstract</b></em>' feature
    * @generated
    */
@@ -130,9 +133,11 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup {
 
   /**
    * Sets the '{@link NumberType#getMySimpleAbstract() <em>mySimpleAbstract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link NumberType#getMySimpleAbstract() mySimpleAbstract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link NumberType#getMySimpleAbstract() mySimpleAbstract}' feature.
    * @generated
    */
   public void setMySimpleAbstract(BigInteger newMySimpleAbstract) {
@@ -142,9 +147,10 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -157,10 +163,13 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

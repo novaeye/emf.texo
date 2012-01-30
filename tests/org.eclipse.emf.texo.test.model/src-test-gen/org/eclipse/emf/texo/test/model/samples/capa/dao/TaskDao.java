@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.capa.CapaModelPackage;
 import org.eclipse.emf.texo.test.model.samples.capa.Task;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Task</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class TaskDao extends BaseDao<Task> {
 

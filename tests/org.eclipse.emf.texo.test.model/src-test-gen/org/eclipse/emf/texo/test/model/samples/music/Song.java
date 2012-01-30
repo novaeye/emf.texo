@@ -4,46 +4,51 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Song</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Song</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Song")
 public class Song extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long id = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Long version = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int track = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
   /**
    * Returns the value of '<em><b>id</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>id</b></em>' feature
    * @generated
    */
@@ -53,9 +58,11 @@ public class Song extends Identifiable {
 
   /**
    * Sets the '{@link Song#getId() <em>id</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Song#getId() id}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Song#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -64,8 +71,9 @@ public class Song extends Identifiable {
 
   /**
    * Returns the value of '<em><b>version</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>version</b></em>' feature
    * @generated
    */
@@ -75,9 +83,11 @@ public class Song extends Identifiable {
 
   /**
    * Sets the '{@link Song#getVersion() <em>version</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Song#getVersion() version}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Song#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -86,8 +96,9 @@ public class Song extends Identifiable {
 
   /**
    * Returns the value of '<em><b>track</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>track</b></em>' feature
    * @generated
    */
@@ -97,9 +108,11 @@ public class Song extends Identifiable {
 
   /**
    * Sets the '{@link Song#getTrack() <em>track</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Song#getTrack() track}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Song#getTrack() track}' feature.
    * @generated
    */
   public void setTrack(int newTrack) {
@@ -108,8 +121,9 @@ public class Song extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -119,9 +133,11 @@ public class Song extends Identifiable {
 
   /**
    * Sets the '{@link Song#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Song#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Song#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -129,9 +145,9 @@ public class Song extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

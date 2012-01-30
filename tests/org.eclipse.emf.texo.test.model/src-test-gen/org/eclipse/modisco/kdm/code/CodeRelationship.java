@@ -16,17 +16,19 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
 @Entity(name = "CodeRelationship")
 public class CodeRelationship extends AbstractCodeRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
   @JoinColumns({ @JoinColumn() })
   private KDMEntity to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = CodeItem.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class CodeRelationship extends AbstractCodeRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -45,9 +48,11 @@ public class CodeRelationship extends AbstractCodeRelationship {
 
   /**
    * Sets the '{@link CodeRelationship#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CodeRelationship#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CodeRelationship#getTo() to}' feature.
    * @generated
    */
   public void setTo(KDMEntity newTo) {
@@ -56,8 +61,9 @@ public class CodeRelationship extends AbstractCodeRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -67,9 +73,11 @@ public class CodeRelationship extends AbstractCodeRelationship {
 
   /**
    * Sets the '{@link CodeRelationship#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CodeRelationship#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CodeRelationship#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(CodeItem newFrom) {
@@ -77,9 +85,9 @@ public class CodeRelationship extends AbstractCodeRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

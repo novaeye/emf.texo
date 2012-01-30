@@ -16,9 +16,10 @@ import javax.persistence.TemporalType;
 @Entity(name = "PeriodicalPayment")
 public class PeriodicalPayment implements PaymentItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Periodicity periodicity = Periodicity.DAILY;
@@ -31,9 +32,10 @@ public class PeriodicalPayment implements PaymentItem {
   @Basic(optional = true)
   private BigDecimal sum = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Currency currency = Currency.ROUBLES;
@@ -64,8 +66,9 @@ public class PeriodicalPayment implements PaymentItem {
 
   /**
    * Returns the value of '<em><b>periodicity</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>periodicity</b></em>' feature
    * @generated
    */
@@ -75,9 +78,11 @@ public class PeriodicalPayment implements PaymentItem {
 
   /**
    * Sets the '{@link PeriodicalPayment#getPeriodicity() <em>periodicity</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PeriodicalPayment#getPeriodicity() periodicity}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PeriodicalPayment#getPeriodicity() periodicity}' feature.
    * @generated
    */
   public void setPeriodicity(Periodicity newPeriodicity) {
@@ -111,8 +116,9 @@ public class PeriodicalPayment implements PaymentItem {
 
   /**
    * Returns the value of '<em><b>currency</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>currency</b></em>' feature
    * @generated
    */
@@ -122,9 +128,11 @@ public class PeriodicalPayment implements PaymentItem {
 
   /**
    * Sets the '{@link PeriodicalPayment#getCurrency() <em>currency</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PeriodicalPayment#getCurrency() currency}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PeriodicalPayment#getCurrency() currency}' feature.
    * @generated
    */
   public void setCurrency(Currency newCurrency) {
@@ -207,9 +215,9 @@ public class PeriodicalPayment implements PaymentItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

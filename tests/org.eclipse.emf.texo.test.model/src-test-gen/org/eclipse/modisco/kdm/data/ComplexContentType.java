@@ -18,9 +18,10 @@ import javax.persistence.OrderColumn;
 @Entity(name = "ComplexContentType")
 public class ComplexContentType extends AbstractContentElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractContentElement.class)
   @OrderColumn()
@@ -29,8 +30,9 @@ public class ComplexContentType extends AbstractContentElement {
 
   /**
    * Returns the value of '<em><b>contentElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>contentElement</b></em>' feature
    * @generated
    */
@@ -40,6 +42,7 @@ public class ComplexContentType extends AbstractContentElement {
 
   /**
    * Adds to the <em>contentElement</em> feature.
+   * 
    * @generated
    */
   public void addToContentElement(AbstractContentElement contentElementValue) {
@@ -50,8 +53,9 @@ public class ComplexContentType extends AbstractContentElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>contentElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromContentElement(AbstractContentElement contentElementValue) {
@@ -60,8 +64,9 @@ public class ComplexContentType extends AbstractContentElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>contentElement</em> feature.
+   * 
    * @generated
    */
   public void clearContentElement() {
@@ -72,9 +77,11 @@ public class ComplexContentType extends AbstractContentElement {
 
   /**
    * Sets the '{@link ComplexContentType#getContentElement() <em>contentElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ComplexContentType#getContentElement() contentElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ComplexContentType#getContentElement() contentElement}' feature.
    * @generated
    */
   public void setContentElement(List<AbstractContentElement> newContentElement) {
@@ -82,9 +89,9 @@ public class ComplexContentType extends AbstractContentElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

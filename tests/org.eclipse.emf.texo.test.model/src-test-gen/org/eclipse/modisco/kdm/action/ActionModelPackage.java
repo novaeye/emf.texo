@@ -40,10 +40,11 @@ import org.eclipse.modisco.kdm.core.CoreModelPackage;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
 /**
- * The <b>Package</b> for the model '<em><b>action</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>action</b></em>'. It contains initialization code and access to the Factory
+ * to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class ActionModelPackage extends ModelPackage {
@@ -56,365 +57,421 @@ public class ActionModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/MoDisco/kdm/action";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final ActionModelFactory MODELFACTORY = new ActionModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ENTRYFLOW_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ENTRYFLOW_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ENTRYFLOW_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTACTIONRELATIONSHIP_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONELEMENT_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONELEMENT_KIND_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONELEMENT_CODEELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONELEMENT_ACTIONRELATION_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BLOCKUNIT_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTROLFLOW_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTROLFLOW_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTROLFLOW_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int FLOW_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TRUEFLOW_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int FALSEFLOW_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int GUARDEDFLOW_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CALLS_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CALLS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CALLS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DISPATCHES_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DISPATCHES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DISPATCHES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int READS_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int READS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int READS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITES_CLASSIFIER_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int WRITES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESSES_CLASSIFIER_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESSES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESSES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CREATES_CLASSIFIER_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CREATES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CREATES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXCEPTIONUNIT_CLASSIFIER_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TRYUNIT_CLASSIFIER_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CATCHUNIT_CLASSIFIER_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int FINALLYUNIT_CLASSIFIER_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXITFLOW_CLASSIFIER_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXITFLOW_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXITFLOW_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXCEPTIONFLOW_CLASSIFIER_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXCEPTIONFLOW_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXCEPTIONFLOW_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int THROWS_CLASSIFIER_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int THROWS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int THROWS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLIESTO_CLASSIFIER_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLIESTO_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLIESTO_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USESTYPE_CLASSIFIER_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USESTYPE_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USESTYPE_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONRELATIONSHIP_CLASSIFIER_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONRELATIONSHIP_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ACTIONRELATIONSHIP_FROM_FEATURE_ID = 5;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final ActionModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static ActionModelPackage initialize() {
@@ -429,10 +486,10 @@ public class ActionModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
     CodeModelPackage.initialize();
     SourceModelPackage.initialize();
-    CoreModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
@@ -533,8 +590,7 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link ActionModelFactory} instance.
    * @generated
@@ -544,12 +600,11 @@ public class ActionModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -570,9 +625,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>EntryFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>EntryFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>EntryFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>EntryFlow</b></em>'
    * @generated
    */
   public EClass getEntryFlowEClass() {
@@ -613,9 +668,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ActionElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ActionElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>ActionElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ActionElement</b></em>'
    * @generated
    */
   public EClass getActionElementEClass() {
@@ -623,9 +678,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ActionElement.kind</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ActionElement.kind</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ActionElement.kind</b></em>'.
    * @generated
    */
@@ -634,9 +689,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ActionElement.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ActionElement.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ActionElement.codeElement</b></em>'.
    * @generated
    */
@@ -645,9 +700,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ActionElement.actionRelation</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ActionElement.actionRelation</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ActionElement.actionRelation</b></em>'.
    * @generated
    */
@@ -657,9 +712,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BlockUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BlockUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>BlockUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BlockUnit</b></em>'
    * @generated
    */
   public EClass getBlockUnitEClass() {
@@ -667,9 +722,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ControlFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ControlFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>ControlFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ControlFlow</b></em>'
    * @generated
    */
   public EClass getControlFlowEClass() {
@@ -688,9 +743,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ControlFlow.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ControlFlow.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ControlFlow.from</b></em>'.
    * @generated
    */
@@ -699,9 +754,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Flow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Flow</b></em>' 
+   * Returns the {@link EClass} '<em><b>Flow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Flow</b></em>'
    * @generated
    */
   public EClass getFlowEClass() {
@@ -709,9 +764,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TrueFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TrueFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>TrueFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TrueFlow</b></em>'
    * @generated
    */
   public EClass getTrueFlowEClass() {
@@ -719,9 +774,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>FalseFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>FalseFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>FalseFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>FalseFlow</b></em>'
    * @generated
    */
   public EClass getFalseFlowEClass() {
@@ -729,9 +784,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>GuardedFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>GuardedFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>GuardedFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>GuardedFlow</b></em>'
    * @generated
    */
   public EClass getGuardedFlowEClass() {
@@ -739,9 +794,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Calls</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Calls</b></em>' 
+   * Returns the {@link EClass} '<em><b>Calls</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Calls</b></em>'
    * @generated
    */
   public EClass getCallsEClass() {
@@ -749,8 +804,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Calls.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Calls.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Calls.to</b></em>'.
    * @generated
    */
@@ -759,8 +814,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Calls.from</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Calls.from</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Calls.from</b></em>'.
    * @generated
    */
@@ -769,9 +824,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Dispatches</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Dispatches</b></em>' 
+   * Returns the {@link EClass} '<em><b>Dispatches</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Dispatches</b></em>'
    * @generated
    */
   public EClass getDispatchesEClass() {
@@ -801,9 +856,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Reads</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Reads</b></em>' 
+   * Returns the {@link EClass} '<em><b>Reads</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Reads</b></em>'
    * @generated
    */
   public EClass getReadsEClass() {
@@ -811,8 +866,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Reads.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Reads.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Reads.to</b></em>'.
    * @generated
    */
@@ -821,8 +876,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Reads.from</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Reads.from</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Reads.from</b></em>'.
    * @generated
    */
@@ -831,9 +886,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Writes</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Writes</b></em>' 
+   * Returns the {@link EClass} '<em><b>Writes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Writes</b></em>'
    * @generated
    */
   public EClass getWritesEClass() {
@@ -841,8 +896,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writes.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Writes.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Writes.to</b></em>'.
    * @generated
    */
@@ -851,8 +906,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writes.from</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Writes.from</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Writes.from</b></em>'.
    * @generated
    */
@@ -861,9 +916,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Addresses</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Addresses</b></em>' 
+   * Returns the {@link EClass} '<em><b>Addresses</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Addresses</b></em>'
    * @generated
    */
   public EClass getAddressesEClass() {
@@ -893,9 +948,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Creates</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Creates</b></em>' 
+   * Returns the {@link EClass} '<em><b>Creates</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Creates</b></em>'
    * @generated
    */
   public EClass getCreatesEClass() {
@@ -903,8 +958,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Creates.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Creates.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Creates.to</b></em>'.
    * @generated
    */
@@ -924,9 +979,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ExceptionUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ExceptionUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>ExceptionUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ExceptionUnit</b></em>'
    * @generated
    */
   public EClass getExceptionUnitEClass() {
@@ -934,9 +989,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TryUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TryUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>TryUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TryUnit</b></em>'
    * @generated
    */
   public EClass getTryUnitEClass() {
@@ -944,9 +999,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CatchUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CatchUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>CatchUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CatchUnit</b></em>'
    * @generated
    */
   public EClass getCatchUnitEClass() {
@@ -954,9 +1009,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>FinallyUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>FinallyUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>FinallyUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>FinallyUnit</b></em>'
    * @generated
    */
   public EClass getFinallyUnitEClass() {
@@ -964,9 +1019,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ExitFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ExitFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>ExitFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ExitFlow</b></em>'
    * @generated
    */
   public EClass getExitFlowEClass() {
@@ -974,8 +1029,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ExitFlow.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>ExitFlow.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ExitFlow.to</b></em>'.
    * @generated
    */
@@ -995,9 +1050,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ExceptionFlow</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ExceptionFlow</b></em>' 
+   * Returns the {@link EClass} '<em><b>ExceptionFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ExceptionFlow</b></em>'
    * @generated
    */
   public EClass getExceptionFlowEClass() {
@@ -1005,9 +1060,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ExceptionFlow.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ExceptionFlow.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ExceptionFlow.to</b></em>'.
    * @generated
    */
@@ -1016,9 +1071,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ExceptionFlow.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ExceptionFlow.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ExceptionFlow.from</b></em>'.
    * @generated
    */
@@ -1027,9 +1082,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Throws</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Throws</b></em>' 
+   * Returns the {@link EClass} '<em><b>Throws</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Throws</b></em>'
    * @generated
    */
   public EClass getThrowsEClass() {
@@ -1037,8 +1092,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Throws.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Throws.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Throws.to</b></em>'.
    * @generated
    */
@@ -1047,8 +1102,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Throws.from</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Throws.from</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Throws.from</b></em>'.
    * @generated
    */
@@ -1057,9 +1112,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CompliesTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CompliesTo</b></em>' 
+   * Returns the {@link EClass} '<em><b>CompliesTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CompliesTo</b></em>'
    * @generated
    */
   public EClass getCompliesToEClass() {
@@ -1089,9 +1144,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>UsesType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>UsesType</b></em>' 
+   * Returns the {@link EClass} '<em><b>UsesType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>UsesType</b></em>'
    * @generated
    */
   public EClass getUsesTypeEClass() {
@@ -1099,8 +1154,8 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>UsesType.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>UsesType.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>UsesType.to</b></em>'.
    * @generated
    */
@@ -1120,9 +1175,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ActionRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ActionRelationship</b></em>' 
+   * Returns the {@link EClass} '<em><b>ActionRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ActionRelationship</b></em>'
    * @generated
    */
   public EClass getActionRelationshipEClass() {
@@ -1130,9 +1185,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ActionRelationship.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ActionRelationship.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ActionRelationship.to</b></em>'.
    * @generated
    */
@@ -1141,9 +1196,9 @@ public class ActionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ActionRelationship.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ActionRelationship.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ActionRelationship.from</b></em>'.
    * @generated
    */
@@ -1154,8 +1209,9 @@ public class ActionModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

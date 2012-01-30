@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.SharedUnit;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SharedUnit</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SharedUnitDao extends BaseDao<SharedUnit> {
 

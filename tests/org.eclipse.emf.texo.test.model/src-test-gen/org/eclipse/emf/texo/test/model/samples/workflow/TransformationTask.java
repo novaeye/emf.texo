@@ -12,17 +12,19 @@ import javax.persistence.Entity;
 @Entity(name = "TransformationTask")
 public class TransformationTask extends WorkflowNode {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String transformExpression = null;
 
   /**
    * Returns the value of '<em><b>transformExpression</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>transformExpression</b></em>' feature
    * @generated
    */
@@ -32,9 +34,11 @@ public class TransformationTask extends WorkflowNode {
 
   /**
    * Sets the '{@link TransformationTask#getTransformExpression() <em>transformExpression</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TransformationTask#getTransformExpression() transformExpression}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TransformationTask#getTransformExpression() transformExpression}' feature.
    * @generated
    */
   public void setTransformExpression(String newTransformExpression) {
@@ -42,9 +46,9 @@ public class TransformationTask extends WorkflowNode {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

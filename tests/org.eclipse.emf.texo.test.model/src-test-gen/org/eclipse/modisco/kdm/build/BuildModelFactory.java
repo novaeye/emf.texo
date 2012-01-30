@@ -15,17 +15,19 @@ import org.eclipse.modisco.kdm.kdm.KdmModelFactory;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: build.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model: build. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class BuildModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -72,13 +74,12 @@ public class BuildModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -167,8 +168,8 @@ public class BuildModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -184,6 +185,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildResource
    * @generated
    */
@@ -193,6 +195,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildDescription
    * @generated
    */
@@ -202,6 +205,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SymbolicLink
    * @generated
    */
@@ -211,6 +215,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass LinksTo
    * @generated
    */
@@ -220,6 +225,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Consumes
    * @generated
    */
@@ -229,6 +235,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildStep
    * @generated
    */
@@ -238,6 +245,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildModel
    * @generated
    */
@@ -247,6 +255,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildComponent
    * @generated
    */
@@ -256,6 +265,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Supplier
    * @generated
    */
@@ -265,6 +275,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Tool
    * @generated
    */
@@ -274,6 +285,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildElement
    * @generated
    */
@@ -283,6 +295,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildRelationship
    * @generated
    */
@@ -292,6 +305,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SuppliedBy
    * @generated
    */
@@ -301,6 +315,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Library
    * @generated
    */
@@ -310,6 +325,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Produces
    * @generated
    */
@@ -319,6 +335,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SupportedBy
    * @generated
    */
@@ -328,6 +345,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BuildProduct
    * @generated
    */
@@ -337,6 +355,7 @@ public class BuildModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DescribedBy
    * @generated
    */
@@ -345,10 +364,12 @@ public class BuildModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -358,10 +379,12 @@ public class BuildModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -370,11 +393,11 @@ public class BuildModelFactory implements ModelFactory {
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractBuildElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractBuildElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractBuildElementModelObject<E extends AbstractBuildElement> extends
       CoreModelFactory.KDMEntityModelObject<E> {
@@ -453,11 +476,11 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractBuildRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractBuildRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractBuildRelationshipModelObject<E extends AbstractBuildRelationship> extends
       CoreModelFactory.KDMRelationshipModelObject<E> {
@@ -522,10 +545,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BuildResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BuildResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BuildResourceModelObject<E extends BuildResource> extends AbstractBuildElementModelObject<E> {
     /**
@@ -718,10 +741,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SymbolicLink</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SymbolicLink</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SymbolicLinkModelObject<E extends SymbolicLink> extends AbstractBuildElementModelObject<E> {
     /**
@@ -785,10 +808,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>LinksTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>LinksTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class LinksToModelObject<E extends LinksTo> extends AbstractBuildRelationshipModelObject<E> {
     /**
@@ -864,10 +887,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Consumes</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Consumes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ConsumesModelObject<E extends Consumes> extends AbstractBuildRelationshipModelObject<E> {
     /**
@@ -943,10 +966,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BuildStep</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BuildStep</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BuildStepModelObject<E extends BuildStep> extends BuildResourceModelObject<E> {
     /**
@@ -1010,10 +1033,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BuildModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BuildModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BuildModelModelObject<E extends BuildModel> extends KdmModelFactory.KDMModelModelObject<E> {
     /**
@@ -1091,10 +1114,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BuildComponent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BuildComponent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BuildComponentModelObject<E extends BuildComponent> extends BuildResourceModelObject<E> {
     /**
@@ -1158,10 +1181,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SupplierModelObject<E extends Supplier> extends AbstractBuildElementModelObject<E> {
     /**
@@ -1225,10 +1248,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Tool</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Tool</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ToolModelObject<E extends Tool> extends AbstractBuildElementModelObject<E> {
     /**
@@ -1292,10 +1315,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BuildElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BuildElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BuildElementModelObject<E extends BuildElement> extends AbstractBuildElementModelObject<E> {
     /**
@@ -1440,10 +1463,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SuppliedBy</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SuppliedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SuppliedByModelObject<E extends SuppliedBy> extends AbstractBuildRelationshipModelObject<E> {
     /**
@@ -1519,10 +1542,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Library</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class LibraryModelObject<E extends Library> extends BuildResourceModelObject<E> {
     /**
@@ -1586,10 +1609,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Produces</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Produces</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ProducesModelObject<E extends Produces> extends AbstractBuildRelationshipModelObject<E> {
     /**
@@ -1665,10 +1688,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SupportedBy</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SupportedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SupportedByModelObject<E extends SupportedBy> extends AbstractBuildRelationshipModelObject<E> {
     /**
@@ -1744,10 +1767,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BuildProduct</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BuildProduct</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BuildProductModelObject<E extends BuildProduct> extends BuildResourceModelObject<E> {
     /**
@@ -1811,10 +1834,10 @@ public class BuildModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DescribedBy</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DescribedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DescribedByModelObject<E extends DescribedBy> extends AbstractBuildRelationshipModelObject<E> {
     /**

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.kdm.TaggedRef;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>TaggedRef</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class TaggedRefDao extends BaseDao<TaggedRef> {
 

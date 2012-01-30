@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 import org.eclipse.modisco.kdm.data.XMLSchema;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>XMLSchema</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class XMLSchemaDao extends BaseDao<XMLSchema> {
 

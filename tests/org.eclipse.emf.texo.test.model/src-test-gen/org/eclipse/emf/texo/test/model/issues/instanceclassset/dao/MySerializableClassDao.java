@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.instanceclassset.Bz306546ModelPackage;
 import org.eclipse.emf.texo.test.model.issues.instanceclassset.MySerializableClass;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>MySerializableClass</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class MySerializableClassDao extends BaseDao<MySerializableClass> {
 

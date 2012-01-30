@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.structure.StructureModelPackage;
 import org.eclipse.modisco.kdm.structure.Subsystem;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Subsystem</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SubsystemDao extends BaseDao<Subsystem> {
 

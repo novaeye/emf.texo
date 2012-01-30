@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.anytype.AnytypeModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.anytype.B;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>B</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class BDao extends BaseDao<B> {
 

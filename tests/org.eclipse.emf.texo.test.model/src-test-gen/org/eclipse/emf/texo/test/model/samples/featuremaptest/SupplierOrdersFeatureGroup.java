@@ -95,36 +95,41 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder preferredOrders;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder standardOrders;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String hardCopyOrderReference;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Long hardCopyOrderNumber;
@@ -145,8 +150,9 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>preferredOrders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>preferredOrders</b></em>' feature
    * @generated
    */
@@ -156,9 +162,11 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
    * @generated
    */
   public void setPreferredOrders(PurchaseOrder newPreferredOrders) {
@@ -168,8 +176,9 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>standardOrders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>standardOrders</b></em>' feature
    * @generated
    */
@@ -179,9 +188,11 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
    * @generated
    */
   public void setStandardOrders(PurchaseOrder newStandardOrders) {
@@ -191,8 +202,9 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>hardCopyOrderReference</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>hardCopyOrderReference</b></em>' feature
    * @generated
    */
@@ -202,9 +214,11 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getHardCopyOrderReference() <em>hardCopyOrderReference</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
    * @generated
    */
   public void setHardCopyOrderReference(String newHardCopyOrderReference) {
@@ -214,8 +228,9 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>hardCopyOrderNumber</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>hardCopyOrderNumber</b></em>' feature
    * @generated
    */
@@ -225,9 +240,11 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getHardCopyOrderNumber() <em>hardCopyOrderNumber</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
    * @generated
    */
   public void setHardCopyOrderNumber(Long newHardCopyOrderNumber) {
@@ -237,9 +254,10 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -258,10 +276,13 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

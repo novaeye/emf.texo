@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>MethodKind</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>MethodKind</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum MethodKind {
 
   /**
-   * The enum: METHOD
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: METHOD <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   METHOD(0, "method", "method") {
@@ -29,8 +29,8 @@ public enum MethodKind {
     }
   },
   /**
-   * The enum: CONSTRUCTOR
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: CONSTRUCTOR <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   CONSTRUCTOR(1, "constructor", "constructor") {
@@ -45,8 +45,8 @@ public enum MethodKind {
     }
   },
   /**
-   * The enum: DESTRUCTOR
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: DESTRUCTOR <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   DESTRUCTOR(2, "destructor", "destructor") {
@@ -61,8 +61,8 @@ public enum MethodKind {
     }
   },
   /**
-   * The enum: OPERATOR
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: OPERATOR <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   OPERATOR(3, "operator", "operator") {
@@ -77,8 +77,8 @@ public enum MethodKind {
     }
   },
   /**
-   * The enum: VIRTUAL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: VIRTUAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   VIRTUAL(4, "virtual", "virtual") {
@@ -93,8 +93,8 @@ public enum MethodKind {
     }
   },
   /**
-   * The enum: ABSTRACT
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ABSTRACT <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   ABSTRACT(5, "abstract", "abstract") {
@@ -109,8 +109,8 @@ public enum MethodKind {
     }
   },
   /**
-   * The enum: UNKNOWN
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: UNKNOWN <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   UNKNOWN(6, "unknown", "unknown") {
@@ -126,25 +126,25 @@ public enum MethodKind {
   };
 
   /**
-   * An array of all the '<em><b>MethodKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>MethodKind</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final MethodKind[] VALUES_ARRAY = new MethodKind[] { METHOD, CONSTRUCTOR, DESTRUCTOR, OPERATOR,
       VIRTUAL, ABSTRACT, UNKNOWN };
 
   /**
-   * A public read-only list of all the '<em><b>MethodKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>MethodKind</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<MethodKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>MethodKind</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MethodKind</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MethodKind get(String literal) {
@@ -174,9 +174,9 @@ public enum MethodKind {
   }
 
   /**
-   * Returns the '<em><b>MethodKind</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MethodKind</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MethodKind get(int value) {
@@ -190,25 +190,28 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private MethodKind(int value, String name, String literal) {
@@ -219,6 +222,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -228,6 +232,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -237,6 +242,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -246,6 +252,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -255,6 +262,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -264,6 +272,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -273,6 +282,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -282,6 +292,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -290,6 +301,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -298,6 +310,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -306,6 +319,7 @@ public enum MethodKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

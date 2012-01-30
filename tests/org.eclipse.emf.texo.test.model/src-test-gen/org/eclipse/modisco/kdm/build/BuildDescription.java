@@ -19,25 +19,28 @@ import org.eclipse.modisco.kdm.source.SourceRef;
 @Entity(name = "BuildDescription")
 public class BuildDescription extends BuildResource {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String text = null;
 
   /**
    * Returns the value of '<em><b>source</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>source</b></em>' feature
    * @generated
    */
@@ -47,6 +50,7 @@ public class BuildDescription extends BuildResource {
 
   /**
    * Adds to the <em>source</em> feature.
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -57,8 +61,9 @@ public class BuildDescription extends BuildResource {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>source</em> feature.
+   * 
    * @generated
    */
   public void removeFromSource(SourceRef sourceValue) {
@@ -67,8 +72,9 @@ public class BuildDescription extends BuildResource {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>source</em> feature.
+   * 
    * @generated
    */
   public void clearSource() {
@@ -79,9 +85,11 @@ public class BuildDescription extends BuildResource {
 
   /**
    * Sets the '{@link BuildDescription#getSource() <em>source</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BuildDescription#getSource() source}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BuildDescription#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -90,8 +98,9 @@ public class BuildDescription extends BuildResource {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -101,9 +110,11 @@ public class BuildDescription extends BuildResource {
 
   /**
    * Sets the '{@link BuildDescription#getText() <em>text</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BuildDescription#getText() text}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BuildDescription#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -111,9 +122,9 @@ public class BuildDescription extends BuildResource {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

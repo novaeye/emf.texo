@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.Datatype;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Datatype</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DatatypeDao extends BaseDao<Datatype> {
 

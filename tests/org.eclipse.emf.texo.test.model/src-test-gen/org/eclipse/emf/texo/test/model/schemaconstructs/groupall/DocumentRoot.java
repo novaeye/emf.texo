@@ -11,62 +11,69 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>DocumentRoot</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 public class DocumentRoot {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<DocumentRootMixedFeatureGroup> mixed = new ArrayList<DocumentRootMixedFeatureGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = AddressType.class)
   @JoinColumns({ @JoinColumn() })
   private AddressType address = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = AddressGroupType.class)
   @JoinColumns({ @JoinColumn() })
   private AddressGroupType addressGroup = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SimpleAllType.class)
   @JoinColumns({ @JoinColumn() })
   private SimpleAllType simpleAll = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SimpleAllMapType.class)
   @JoinColumns({ @JoinColumn() })
@@ -74,8 +81,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mixed</b></em>' feature
    * @generated
    */
@@ -85,9 +93,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getMixed() <em>mixed</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -96,8 +106,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>xMLNSPrefixMap</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>xMLNSPrefixMap</b></em>' feature
    * @generated
    */
@@ -107,9 +118,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getXMLNSPrefixMap() <em>xMLNSPrefixMap</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -118,8 +131,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>xSISchemaLocation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>xSISchemaLocation</b></em>' feature
    * @generated
    */
@@ -129,9 +143,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getXSISchemaLocation() <em>xSISchemaLocation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -140,8 +156,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>address</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>address</b></em>' feature
    * @generated
    */
@@ -151,9 +168,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getAddress() <em>address</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getAddress() address}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(AddressType newAddress) {
@@ -162,8 +181,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>addressGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>addressGroup</b></em>' feature
    * @generated
    */
@@ -173,9 +193,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getAddressGroup() <em>addressGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getAddressGroup() addressGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getAddressGroup() addressGroup}' feature.
    * @generated
    */
   public void setAddressGroup(AddressGroupType newAddressGroup) {
@@ -184,8 +206,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>simpleAll</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simpleAll</b></em>' feature
    * @generated
    */
@@ -195,9 +218,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getSimpleAll() <em>simpleAll</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getSimpleAll() simpleAll}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getSimpleAll() simpleAll}' feature.
    * @generated
    */
   public void setSimpleAll(SimpleAllType newSimpleAll) {
@@ -206,8 +231,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>simpleAllMap</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simpleAllMap</b></em>' feature
    * @generated
    */
@@ -217,9 +243,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getSimpleAllMap() <em>simpleAllMap</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getSimpleAllMap() simpleAllMap}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getSimpleAllMap() simpleAllMap}' feature.
    * @generated
    */
   public void setSimpleAllMap(SimpleAllMapType newSimpleAllMap) {
@@ -227,9 +255,9 @@ public class DocumentRoot {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

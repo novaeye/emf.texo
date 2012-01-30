@@ -12,17 +12,20 @@ import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model:
+ * org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SimplechoiceModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -35,13 +38,12 @@ public class SimplechoiceModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -76,8 +78,8 @@ public class SimplechoiceModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -98,6 +100,7 @@ public class SimplechoiceModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Person
    * @generated
    */
@@ -106,10 +109,12 @@ public class SimplechoiceModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -119,10 +124,12 @@ public class SimplechoiceModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -131,10 +138,10 @@ public class SimplechoiceModelFactory implements ModelFactory {
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Person</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PersonModelObject<E extends Person> extends AbstractModelObject<E> {
     /**

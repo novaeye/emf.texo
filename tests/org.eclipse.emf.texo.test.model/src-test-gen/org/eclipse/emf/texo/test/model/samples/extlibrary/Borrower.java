@@ -8,17 +8,18 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Borrower</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Borrower")
 public class Borrower extends Person {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Lendable.class)
   @OrderColumn()
@@ -27,8 +28,9 @@ public class Borrower extends Person {
 
   /**
    * Returns the value of '<em><b>borrowed</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>borrowed</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class Borrower extends Person {
 
   /**
    * Adds to the <em>borrowed</em> feature.
+   * 
    * @generated
    */
   public void addToBorrowed(Lendable borrowedValue) {
@@ -48,8 +51,9 @@ public class Borrower extends Person {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>borrowed</em> feature.
+   * 
    * @generated
    */
   public void removeFromBorrowed(Lendable borrowedValue) {
@@ -58,8 +62,9 @@ public class Borrower extends Person {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>borrowed</em> feature.
+   * 
    * @generated
    */
   public void clearBorrowed() {
@@ -70,9 +75,11 @@ public class Borrower extends Person {
 
   /**
    * Sets the '{@link Borrower#getBorrowed() <em>borrowed</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Borrower#getBorrowed() borrowed}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Borrower#getBorrowed() borrowed}' feature.
    * @generated
    */
   public void setBorrowed(List<Lendable> newBorrowed) {
@@ -80,9 +87,9 @@ public class Borrower extends Person {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

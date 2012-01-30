@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.Epo2ModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.Item;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Item</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ItemDao extends BaseDao<Item> {
 

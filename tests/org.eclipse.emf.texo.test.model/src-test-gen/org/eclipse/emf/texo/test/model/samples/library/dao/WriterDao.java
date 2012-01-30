@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.test.model.samples.library.GenericLibraryDao;
 import org.eclipse.emf.texo.test.model.samples.library.Writer;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Writer</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WriterDao extends GenericLibraryDao<Writer> {
 

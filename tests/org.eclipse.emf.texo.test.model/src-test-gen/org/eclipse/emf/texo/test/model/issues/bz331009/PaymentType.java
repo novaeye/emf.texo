@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>PaymentType</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>PaymentType</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum PaymentType {
 
   /**
-   * The enum: REQUIRED
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: REQUIRED <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   REQUIRED(0, "required", "required") {
@@ -29,8 +29,8 @@ public enum PaymentType {
     }
   },
   /**
-   * The enum: FACT
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: FACT <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   FACT(1, "fact", "fact") {
@@ -46,24 +46,24 @@ public enum PaymentType {
   };
 
   /**
-   * An array of all the '<em><b>PaymentType</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>PaymentType</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final PaymentType[] VALUES_ARRAY = new PaymentType[] { REQUIRED, FACT };
 
   /**
-   * A public read-only list of all the '<em><b>PaymentType</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>PaymentType</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<PaymentType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>PaymentType</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>PaymentType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static PaymentType get(String literal) {
@@ -77,9 +77,9 @@ public enum PaymentType {
   }
 
   /**
-   * Returns the '<em><b>PaymentType</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>PaymentType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static PaymentType getByName(String name) {
@@ -93,9 +93,9 @@ public enum PaymentType {
   }
 
   /**
-   * Returns the '<em><b>PaymentType</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>PaymentType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static PaymentType get(int value) {
@@ -109,25 +109,28 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private PaymentType(int value, String name, String literal) {
@@ -138,6 +141,7 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -147,6 +151,7 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -156,6 +161,7 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -164,6 +170,7 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -172,6 +179,7 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -180,6 +188,7 @@ public enum PaymentType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

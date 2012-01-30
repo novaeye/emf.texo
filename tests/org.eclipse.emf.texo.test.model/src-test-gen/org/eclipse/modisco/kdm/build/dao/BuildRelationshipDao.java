@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.build.BuildModelPackage;
 import org.eclipse.modisco.kdm.build.BuildRelationship;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>BuildRelationship</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class BuildRelationshipDao extends BaseDao<BuildRelationship> {
 

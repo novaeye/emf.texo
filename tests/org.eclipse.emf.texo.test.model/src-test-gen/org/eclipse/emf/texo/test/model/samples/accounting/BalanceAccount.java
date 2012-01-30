@@ -8,10 +8,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>BalanceAccount</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BalanceAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BalanceAccount")
 public class BalanceAccount extends Account {
@@ -20,9 +20,10 @@ public class BalanceAccount extends Account {
    * @generated
    */
   private static final long serialVersionUID = 1L;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ReportGroup.class)
   @OrderColumn()
@@ -31,8 +32,9 @@ public class BalanceAccount extends Account {
 
   /**
    * Returns the value of '<em><b>report</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>report</b></em>' feature
    * @generated
    */
@@ -42,6 +44,7 @@ public class BalanceAccount extends Account {
 
   /**
    * Adds to the <em>report</em> feature.
+   * 
    * @generated
    */
   public void addToReport(ReportGroup reportValue) {
@@ -52,8 +55,9 @@ public class BalanceAccount extends Account {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>report</em> feature.
+   * 
    * @generated
    */
   public void removeFromReport(ReportGroup reportValue) {
@@ -62,8 +66,9 @@ public class BalanceAccount extends Account {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>report</em> feature.
+   * 
    * @generated
    */
   public void clearReport() {
@@ -74,9 +79,11 @@ public class BalanceAccount extends Account {
 
   /**
    * Sets the '{@link BalanceAccount#getReport() <em>report</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BalanceAccount#getReport() report}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BalanceAccount#getReport() report}' feature.
    * @generated
    */
   public void setReport(List<ReportGroup> newReport) {
@@ -84,9 +91,9 @@ public class BalanceAccount extends Account {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

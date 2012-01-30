@@ -28,9 +28,10 @@ import org.eclipse.modisco.kdm.kdm.Stereotype;
 public class CoreModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -43,13 +44,12 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -93,8 +93,8 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -110,6 +110,7 @@ public class CoreModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass AggregatedRelationship
    * @generated
    */
@@ -118,10 +119,12 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -137,10 +140,12 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -156,9 +161,10 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: String to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: String to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -170,9 +176,10 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: String from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: String from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -184,9 +191,10 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: Integer to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: Integer to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -198,9 +206,10 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: Integer from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: Integer from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -212,9 +221,10 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: Boolean to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: Boolean to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -226,9 +236,10 @@ public class CoreModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: Boolean from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: Boolean from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -239,10 +250,10 @@ public class CoreModelFactory implements ModelFactory {
     return new Boolean(value);
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Element</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Element</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ElementModelObject<E extends Element> extends AbstractModelObject<E> {
     /**
@@ -331,10 +342,10 @@ public class CoreModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ModelElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ModelElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ModelElementModelObject<E extends ModelElement> extends ElementModelObject<E> {
     /**
@@ -425,10 +436,10 @@ public class CoreModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>KDMEntity</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>KDMEntity</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class KDMEntityModelObject<E extends KDMEntity> extends ModelElementModelObject<E> {
     /**
@@ -519,10 +530,10 @@ public class CoreModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>KDMRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>KDMRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class KDMRelationshipModelObject<E extends KDMRelationship> extends ModelElementModelObject<E> {
     /**
@@ -586,11 +597,11 @@ public class CoreModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AggregatedRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AggregatedRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AggregatedRelationshipModelObject<E extends AggregatedRelationship> extends
       ModelElementModelObject<E> {

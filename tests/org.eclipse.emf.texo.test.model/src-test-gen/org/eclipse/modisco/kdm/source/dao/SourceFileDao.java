@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.source.SourceFile;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SourceFile</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SourceFileDao extends BaseDao<SourceFile> {
 

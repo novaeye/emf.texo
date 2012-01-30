@@ -8,60 +8,67 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>Item</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Item")
 public class Item {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String productName = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BigInteger quantity = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BigDecimal uSPrice = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String comment = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date shipDate = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String partNum = null;
 
   /**
    * Returns the value of '<em><b>productName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>productName</b></em>' feature
    * @generated
    */
@@ -71,9 +78,11 @@ public class Item {
 
   /**
    * Sets the '{@link Item#getProductName() <em>productName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getProductName() productName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -82,8 +91,9 @@ public class Item {
 
   /**
    * Returns the value of '<em><b>quantity</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>quantity</b></em>' feature
    * @generated
    */
@@ -93,9 +103,11 @@ public class Item {
 
   /**
    * Sets the '{@link Item#getQuantity() <em>quantity</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getQuantity() quantity}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
@@ -104,8 +116,9 @@ public class Item {
 
   /**
    * Returns the value of '<em><b>uSPrice</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>uSPrice</b></em>' feature
    * @generated
    */
@@ -115,9 +128,11 @@ public class Item {
 
   /**
    * Sets the '{@link Item#getUSPrice() <em>uSPrice</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getUSPrice() uSPrice}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getUSPrice() uSPrice}' feature.
    * @generated
    */
   public void setUSPrice(BigDecimal newUSPrice) {
@@ -126,8 +141,9 @@ public class Item {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -137,9 +153,11 @@ public class Item {
 
   /**
    * Sets the '{@link Item#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -148,8 +166,9 @@ public class Item {
 
   /**
    * Returns the value of '<em><b>shipDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipDate</b></em>' feature
    * @generated
    */
@@ -159,9 +178,11 @@ public class Item {
 
   /**
    * Sets the '{@link Item#getShipDate() <em>shipDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getShipDate() shipDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {
@@ -170,8 +191,9 @@ public class Item {
 
   /**
    * Returns the value of '<em><b>partNum</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>partNum</b></em>' feature
    * @generated
    */
@@ -181,9 +203,11 @@ public class Item {
 
   /**
    * Sets the '{@link Item#getPartNum() <em>partNum</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getPartNum() partNum}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getPartNum() partNum}' feature.
    * @generated
    */
   public void setPartNum(String newPartNum) {
@@ -191,9 +215,9 @@ public class Item {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

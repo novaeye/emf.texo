@@ -12,61 +12,68 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.ecore.EObject;
 
-/** 
- * A representation of the model object '<em><b>TestAny</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>TestAny</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "TestAny")
 public class TestAny {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = EObject.class)
   @JoinColumns({ @JoinColumn() })
   private Object singleAnyType = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = EObject.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Object> multiAnyType = new ArrayList<Object>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String a = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<TestAnyMyAnyFeatureGroup> myAny = new ArrayList<TestAnyMyAnyFeatureGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<TestAnyAnyFeatureGroup> any = new ArrayList<TestAnyAnyFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -76,9 +83,11 @@ public class TestAny {
 
   /**
    * Sets the '{@link TestAny#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TestAny#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TestAny#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -87,8 +96,9 @@ public class TestAny {
 
   /**
    * Returns the value of '<em><b>singleAnyType</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>singleAnyType</b></em>' feature
    * @generated
    */
@@ -98,9 +108,11 @@ public class TestAny {
 
   /**
    * Sets the '{@link TestAny#getSingleAnyType() <em>singleAnyType</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TestAny#getSingleAnyType() singleAnyType}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TestAny#getSingleAnyType() singleAnyType}' feature.
    * @generated
    */
   public void setSingleAnyType(Object newSingleAnyType) {
@@ -109,8 +121,9 @@ public class TestAny {
 
   /**
    * Returns the value of '<em><b>multiAnyType</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>multiAnyType</b></em>' feature
    * @generated
    */
@@ -120,6 +133,7 @@ public class TestAny {
 
   /**
    * Adds to the <em>multiAnyType</em> feature.
+   * 
    * @generated
    */
   public void addToMultiAnyType(Object multiAnyTypeValue) {
@@ -130,8 +144,9 @@ public class TestAny {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>multiAnyType</em> feature.
+   * 
    * @generated
    */
   public void removeFromMultiAnyType(Object multiAnyTypeValue) {
@@ -140,8 +155,9 @@ public class TestAny {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>multiAnyType</em> feature.
+   * 
    * @generated
    */
   public void clearMultiAnyType() {
@@ -152,9 +168,11 @@ public class TestAny {
 
   /**
    * Sets the '{@link TestAny#getMultiAnyType() <em>multiAnyType</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TestAny#getMultiAnyType() multiAnyType}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TestAny#getMultiAnyType() multiAnyType}' feature.
    * @generated
    */
   public void setMultiAnyType(List<Object> newMultiAnyType) {
@@ -163,8 +181,9 @@ public class TestAny {
 
   /**
    * Returns the value of '<em><b>a</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>a</b></em>' feature
    * @generated
    */
@@ -174,9 +193,11 @@ public class TestAny {
 
   /**
    * Sets the '{@link TestAny#getA() <em>a</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TestAny#getA() a}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TestAny#getA() a}' feature.
    * @generated
    */
   public void setA(String newA) {
@@ -185,8 +206,9 @@ public class TestAny {
 
   /**
    * Returns the value of '<em><b>myAny</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myAny</b></em>' feature
    * @generated
    */
@@ -196,9 +218,11 @@ public class TestAny {
 
   /**
    * Sets the '{@link TestAny#getMyAny() <em>myAny</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TestAny#getMyAny() myAny}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TestAny#getMyAny() myAny}' feature.
    * @generated
    */
   public void setMyAny(List<TestAnyMyAnyFeatureGroup> newMyAny) {
@@ -207,8 +231,9 @@ public class TestAny {
 
   /**
    * Returns the value of '<em><b>any</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>any</b></em>' feature
    * @generated
    */
@@ -218,9 +243,11 @@ public class TestAny {
 
   /**
    * Sets the '{@link TestAny#getAny() <em>any</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link TestAny#getAny() any}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link TestAny#getAny() any}' feature.
    * @generated
    */
   public void setAny(List<TestAnyAnyFeatureGroup> newAny) {
@@ -228,9 +255,9 @@ public class TestAny {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

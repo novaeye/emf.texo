@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>Periodicity</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>Periodicity</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum Periodicity {
 
   /**
-   * The enum: DAILY
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: DAILY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   DAILY(0, "daily", "daily") {
@@ -29,8 +29,8 @@ public enum Periodicity {
     }
   },
   /**
-   * The enum: WEAKLY
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: WEAKLY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   WEAKLY(1, "weakly", "weakly") {
@@ -45,8 +45,8 @@ public enum Periodicity {
     }
   },
   /**
-   * The enum: MONTHLY
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: MONTHLY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   MONTHLY(2, "monthly", "monthly") {
@@ -61,8 +61,8 @@ public enum Periodicity {
     }
   },
   /**
-   * The enum: ANNUAL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ANNUAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   ANNUAL(3, "annual", "annual") {
@@ -78,24 +78,24 @@ public enum Periodicity {
   };
 
   /**
-   * An array of all the '<em><b>Periodicity</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Periodicity</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final Periodicity[] VALUES_ARRAY = new Periodicity[] { DAILY, WEAKLY, MONTHLY, ANNUAL };
 
   /**
-   * A public read-only list of all the '<em><b>Periodicity</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Periodicity</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<Periodicity> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Periodicity</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Periodicity</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static Periodicity get(String literal) {
@@ -109,9 +109,9 @@ public enum Periodicity {
   }
 
   /**
-   * Returns the '<em><b>Periodicity</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Periodicity</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static Periodicity getByName(String name) {
@@ -125,9 +125,9 @@ public enum Periodicity {
   }
 
   /**
-   * Returns the '<em><b>Periodicity</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Periodicity</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static Periodicity get(int value) {
@@ -141,25 +141,28 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private Periodicity(int value, String name, String literal) {
@@ -170,6 +173,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -179,6 +183,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -188,6 +193,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -197,6 +203,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -206,6 +213,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -214,6 +222,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -222,6 +231,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -230,6 +240,7 @@ public enum Periodicity {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

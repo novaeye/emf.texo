@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.ColumnSet;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ColumnSet</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ColumnSetDao extends BaseDao<ColumnSet> {
 

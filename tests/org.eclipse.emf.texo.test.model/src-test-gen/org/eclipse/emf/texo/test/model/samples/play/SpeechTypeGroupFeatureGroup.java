@@ -90,27 +90,31 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String speaker;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String line;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String stageDirections;
@@ -131,8 +135,9 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>speaker</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>speaker</b></em>' feature
    * @generated
    */
@@ -142,9 +147,11 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link SpeechType#getSpeaker() <em>speaker</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
    * @generated
    */
   public void setSpeaker(String newSpeaker) {
@@ -154,8 +161,9 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>line</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>line</b></em>' feature
    * @generated
    */
@@ -165,9 +173,11 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link SpeechType#getLine() <em>line</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getLine() line}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getLine() line}' feature.
    * @generated
    */
   public void setLine(String newLine) {
@@ -177,8 +187,9 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>stageDirections</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stageDirections</b></em>' feature
    * @generated
    */
@@ -188,9 +199,11 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link SpeechType#getStageDirections() <em>stageDirections</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
@@ -200,9 +213,10 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -219,10 +233,13 @@ public class SpeechTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

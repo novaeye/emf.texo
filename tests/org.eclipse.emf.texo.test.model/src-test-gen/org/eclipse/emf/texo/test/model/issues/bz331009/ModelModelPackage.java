@@ -44,10 +44,11 @@ import org.eclipse.emf.texo.test.model.issues.bz331009.dao.VolumePaymentDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>model</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>model</b></em>'. It contains initialization code and access to the Factory
+ * to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class ModelModelPackage extends ModelPackage {
@@ -60,1097 +61,1275 @@ public class ModelModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/issues/bz331009";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final ModelModelFactory MODELFACTORY = new ModelModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CURRENCY_CLASSIFIER_ID = 34;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTTYPE_CLASSIFIER_ID = 33;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICITY_CLASSIFIER_ID = 35;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PHONETYPE_CLASSIFIER_ID = 36;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTIONTYPE_CLASSIFIER_ID = 37;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGETYPE_CLASSIFIER_ID = 39;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENTTYPE_CLASSIFIER_ID = 40;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGEIOTYPES_CLASSIFIER_ID = 38;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCARD_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCARD_PHONENUMBER_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCARD_NUMBER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCONTRACT_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCONTRACT_CONTRACTNUMBER_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCONTRACT_NAME_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCONTRACT_DESCRITPION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCONTRACT_PAYMENTINFO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTINFO_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTINFO_TARIFF_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTINFO_FACTPAYMENTS_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCARDXSIMCONTRACT_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCARDXSIMCONTRACT_SIMCARD_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMCARDXSIMCONTRACT_SIMCONTRACT_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_ACTIVE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_VOLUMEPAYMENTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_PERIODICALPAYMENTS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_INITIALPAYMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIMTARIFF_SERVICES_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_ACTIVE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_VOLUMEPAYMENTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_PERIODICALPAYMENTS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_INITIALPAYMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TARIFF_SERVICES_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTITEM_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTITEM_SUM_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTITEM_CURRENCY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTITEM_DATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTITEM_DESCRIPTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PAYMENTITEM_PAYMENTTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_VOLUME_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_UNIT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_PRICE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_SUM_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_CURRENCY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_DATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_DESCRIPTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOLUMEPAYMENT_PAYMENTTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_PERIODICITY_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_SUM_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_CURRENCY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_DATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_DESCRIPTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERIODICALPAYMENT_PAYMENTTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ONETIMEPAYMENT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ONETIMEPAYMENT_SUM_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ONETIMEPAYMENT_CURRENCY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ONETIMEPAYMENT_DATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ONETIMEPAYMENT_DESCRIPTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ONETIMEPAYMENT_PAYMENTTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERVICE_CLASSIFIER_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERVICE_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERVICE_ACTIVE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERVICE_INITIALPAYMENT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERVICE_PERIODICALPAYMENT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SERVICE_VOLUMEPAYMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int UNITS_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int UNITS_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PRICE_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPRODUCER_CLASSIFIER_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPRODUCER_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARMODEL_CLASSIFIER_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARMODEL_PRODUCER_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARMODEL_NAME_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_CLASSIFIER_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_OWNER_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_REGNUMBER_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_VIN_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_RELEASEYEAR_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_ENGINENUMBER_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_CHASSISNUMBER_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_BODYNUMBER_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_COLOR_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_SERIES_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_NUMBER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_ISSUEDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARREGINFO_ISSUED_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENT_CLASSIFIER_ID = 27;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENT_SERIES_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENT_NUMBER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENT_ISSUEDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENT_ISSUED_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_CLASSIFIER_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_SURNAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_NAME_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_PATRONIMIC_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_BIRTHDAY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_REGISTRATIONADDRESS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_FACTADDRESS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_PASSPORT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_DRIVINGLICENSE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PERSON_PHONES_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CAR_CLASSIFIER_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CAR_MODEL_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CAR_REGINFO_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CAR_CARPASSPORT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPASSPORT_CLASSIFIER_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPASSPORT_SERIES_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPASSPORT_NUMBER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPASSPORT_ISSUEDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CARPASSPORT_ISSUED_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PHONE_CLASSIFIER_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PHONE_NUMBER_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PHONE_DESCRIPTION_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_CLASSIFIER_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_ZIPCODE_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_COUNTRY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_REGION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_CITY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_STREET_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_BUILDING_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ADDRESS_FLAT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PASSPORT_CLASSIFIER_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PASSPORT_SERIES_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PASSPORT_NUMBER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PASSPORT_ISSUEDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PASSPORT_ISSUED_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DRIVINGLICENSE_CLASSIFIER_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DRIVINGLICENSE_SERIES_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DRIVINGLICENSE_NUMBER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DRIVINGLICENSE_ISSUEDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DRIVINGLICENSE_ISSUED_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_CLASSIFIER_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_SIGNDATE_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_SIMCARD_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_PAYMENTINFO_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_CAR_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_SECRETQUESTIONS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACT_NUMBER_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTION_CLASSIFIER_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTION_QUESTION_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTION_CORRECTANSWER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTION_ALARMANSWER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTION_ACTIVE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SECRETQUESTION_TYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_CLASSIFIER_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_ACTIVE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_VOLUMEPAYMENTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_PERIODICALPAYMENTS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_INITIALPAYMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLIENTTARIFF_SERVICES_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACTPACKAGE_CLASSIFIER_ID = 26;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACTPACKAGE_CLIENT_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACTPACKAGE_USER_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTRACTPACKAGE_CONTRACTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USER_CLASSIFIER_ID = 28;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USER_LOGIN_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USER_PASSWORD_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USER_GROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int USERGROUP_CLASSIFIER_ID = 29;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGE_CLASSIFIER_ID = 30;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGE_TEXT_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGE_TYPE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGE_FROM_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGE_TO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MESSAGE_DATETIME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENT_CLASSIFIER_ID = 31;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENT_EVENTTYPE_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENT_MESSAGE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENT_COORDINATES_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COORDINATES_CLASSIFIER_ID = 32;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COORDINATES_X_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COORDINATES_Y_FEATURE_ID = 1;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final ModelModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static ModelModelPackage initialize() {
@@ -1307,8 +1486,7 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link ModelModelFactory} instance.
    * @generated
@@ -1318,12 +1496,11 @@ public class ModelModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -1344,9 +1521,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SimCard</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SimCard</b></em>' 
+   * Returns the {@link EClass} '<em><b>SimCard</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SimCard</b></em>'
    * @generated
    */
   public EClass getSimCardEClass() {
@@ -1354,9 +1531,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimCard.phoneNumber</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimCard.phoneNumber</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimCard.phoneNumber</b></em>'.
    * @generated
    */
@@ -1376,9 +1553,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SimContract</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SimContract</b></em>' 
+   * Returns the {@link EClass} '<em><b>SimContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SimContract</b></em>'
    * @generated
    */
   public EClass getSimContractEClass() {
@@ -1386,9 +1563,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimContract.contractNumber</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimContract.contractNumber</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimContract.contractNumber</b></em>'.
    * @generated
    */
@@ -1397,9 +1574,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimContract.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimContract.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimContract.name</b></em>'.
    * @generated
    */
@@ -1408,9 +1585,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimContract.descritpion</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimContract.descritpion</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimContract.descritpion</b></em>'.
    * @generated
    */
@@ -1419,9 +1596,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimContract.paymentInfo</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimContract.paymentInfo</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimContract.paymentInfo</b></em>'.
    * @generated
    */
@@ -1430,9 +1607,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PaymentInfo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PaymentInfo</b></em>' 
+   * Returns the {@link EClass} '<em><b>PaymentInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PaymentInfo</b></em>'
    * @generated
    */
   public EClass getPaymentInfoEClass() {
@@ -1440,9 +1617,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PaymentInfo.tariff</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PaymentInfo.tariff</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PaymentInfo.tariff</b></em>'.
    * @generated
    */
@@ -1451,9 +1628,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PaymentInfo.factPayments</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PaymentInfo.factPayments</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PaymentInfo.factPayments</b></em>'.
    * @generated
    */
@@ -1462,9 +1639,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SimCardXSimContract</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SimCardXSimContract</b></em>' 
+   * Returns the {@link EClass} '<em><b>SimCardXSimContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SimCardXSimContract</b></em>'
    * @generated
    */
   public EClass getSimCardXSimContractEClass() {
@@ -1472,9 +1649,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimCardXSimContract.simCard</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimCardXSimContract.simCard</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimCardXSimContract.simCard</b></em>'.
    * @generated
    */
@@ -1484,9 +1661,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimCardXSimContract.simContract</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>SimCardXSimContract.simContract</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimCardXSimContract.simContract</b></em>'.
    * @generated
    */
@@ -1496,9 +1673,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SimTariff</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SimTariff</b></em>' 
+   * Returns the {@link EClass} '<em><b>SimTariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SimTariff</b></em>'
    * @generated
    */
   public EClass getSimTariffEClass() {
@@ -1517,9 +1694,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.active</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.active</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.active</b></em>'.
    * @generated
    */
@@ -1528,9 +1705,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.volumePayments</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.volumePayments</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.volumePayments</b></em>'.
    * @generated
    */
@@ -1539,9 +1716,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.periodicalPayments</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.periodicalPayments</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.periodicalPayments</b></em>'.
    * @generated
    */
@@ -1550,9 +1727,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.initialPayment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.initialPayment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.initialPayment</b></em>'.
    * @generated
    */
@@ -1561,9 +1738,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.services</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.services</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.services</b></em>'.
    * @generated
    */
@@ -1572,9 +1749,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Tariff</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Tariff</b></em>' 
+   * Returns the {@link EClass} '<em><b>Tariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Tariff</b></em>'
    * @generated
    */
   public EClass getTariffEClass() {
@@ -1582,8 +1759,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Tariff.name</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Tariff.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Tariff.name</b></em>'.
    * @generated
    */
@@ -1603,9 +1780,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Tariff.volumePayments</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Tariff.volumePayments</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Tariff.volumePayments</b></em>'.
    * @generated
    */
@@ -1614,9 +1791,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Tariff.periodicalPayments</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Tariff.periodicalPayments</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Tariff.periodicalPayments</b></em>'.
    * @generated
    */
@@ -1625,9 +1802,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Tariff.initialPayment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Tariff.initialPayment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Tariff.initialPayment</b></em>'.
    * @generated
    */
@@ -1647,9 +1824,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PaymentItem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PaymentItem</b></em>' 
+   * Returns the {@link EClass} '<em><b>PaymentItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PaymentItem</b></em>'
    * @generated
    */
   public EClass getPaymentItemEClass() {
@@ -1668,9 +1845,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.currency</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.currency</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PaymentItem.currency</b></em>'.
    * @generated
    */
@@ -1679,9 +1856,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.date</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.date</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PaymentItem.date</b></em>'.
    * @generated
    */
@@ -1690,9 +1867,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PaymentItem.description</b></em>'.
    * @generated
    */
@@ -1701,9 +1878,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.paymentType</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PaymentItem.paymentType</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PaymentItem.paymentType</b></em>'.
    * @generated
    */
@@ -1712,9 +1889,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>VolumePayment</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>VolumePayment</b></em>' 
+   * Returns the {@link EClass} '<em><b>VolumePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>VolumePayment</b></em>'
    * @generated
    */
   public EClass getVolumePaymentEClass() {
@@ -1722,9 +1899,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.volume</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.volume</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.volume</b></em>'.
    * @generated
    */
@@ -1733,9 +1910,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.unit</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.unit</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.unit</b></em>'.
    * @generated
    */
@@ -1744,9 +1921,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.price</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.price</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.price</b></em>'.
    * @generated
    */
@@ -1755,9 +1932,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.sum</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.sum</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.sum</b></em>'.
    * @generated
    */
@@ -1766,9 +1943,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.currency</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.currency</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.currency</b></em>'.
    * @generated
    */
@@ -1777,9 +1954,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.date</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.date</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.date</b></em>'.
    * @generated
    */
@@ -1788,9 +1965,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.description</b></em>'.
    * @generated
    */
@@ -1799,9 +1976,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.paymentType</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.paymentType</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.paymentType</b></em>'.
    * @generated
    */
@@ -1810,9 +1987,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PeriodicalPayment</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PeriodicalPayment</b></em>' 
+   * Returns the {@link EClass} '<em><b>PeriodicalPayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PeriodicalPayment</b></em>'
    * @generated
    */
   public EClass getPeriodicalPaymentEClass() {
@@ -1820,9 +1997,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.periodicity</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.periodicity</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.periodicity</b></em>'.
    * @generated
    */
@@ -1832,9 +2009,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.sum</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.sum</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.sum</b></em>'.
    * @generated
    */
@@ -1843,9 +2020,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.currency</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.currency</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.currency</b></em>'.
    * @generated
    */
@@ -1855,9 +2032,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.date</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.date</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.date</b></em>'.
    * @generated
    */
@@ -1866,9 +2043,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.description</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.description</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.description</b></em>'.
    * @generated
    */
@@ -1878,9 +2055,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.paymentType</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.paymentType</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.paymentType</b></em>'.
    * @generated
    */
@@ -1890,9 +2067,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>OneTimePayment</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>OneTimePayment</b></em>' 
+   * Returns the {@link EClass} '<em><b>OneTimePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>OneTimePayment</b></em>'
    * @generated
    */
   public EClass getOneTimePaymentEClass() {
@@ -1900,9 +2077,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.sum</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.sum</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.sum</b></em>'.
    * @generated
    */
@@ -1911,9 +2088,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.currency</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.currency</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.currency</b></em>'.
    * @generated
    */
@@ -1922,9 +2099,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.date</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.date</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.date</b></em>'.
    * @generated
    */
@@ -1933,9 +2110,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.description</b></em>'.
    * @generated
    */
@@ -1945,9 +2122,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.paymentType</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.paymentType</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.paymentType</b></em>'.
    * @generated
    */
@@ -1957,9 +2134,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Service</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Service</b></em>' 
+   * Returns the {@link EClass} '<em><b>Service</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Service</b></em>'
    * @generated
    */
   public EClass getServiceEClass() {
@@ -1989,9 +2166,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Service.initialPayment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Service.initialPayment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Service.initialPayment</b></em>'.
    * @generated
    */
@@ -2000,9 +2177,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Service.periodicalPayment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Service.periodicalPayment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Service.periodicalPayment</b></em>'.
    * @generated
    */
@@ -2011,9 +2188,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Service.volumePayment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Service.volumePayment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Service.volumePayment</b></em>'.
    * @generated
    */
@@ -2022,9 +2199,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Units</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Units</b></em>' 
+   * Returns the {@link EClass} '<em><b>Units</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Units</b></em>'
    * @generated
    */
   public EClass getUnitsEClass() {
@@ -2032,8 +2209,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Units.name</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Units.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Units.name</b></em>'.
    * @generated
    */
@@ -2042,9 +2219,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Price</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Price</b></em>' 
+   * Returns the {@link EClass} '<em><b>Price</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Price</b></em>'
    * @generated
    */
   public EClass getPriceEClass() {
@@ -2052,9 +2229,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CarProducer</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CarProducer</b></em>' 
+   * Returns the {@link EClass} '<em><b>CarProducer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CarProducer</b></em>'
    * @generated
    */
   public EClass getCarProducerEClass() {
@@ -2062,9 +2239,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarProducer.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarProducer.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarProducer.name</b></em>'.
    * @generated
    */
@@ -2073,9 +2250,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CarModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CarModel</b></em>' 
+   * Returns the {@link EClass} '<em><b>CarModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CarModel</b></em>'
    * @generated
    */
   public EClass getCarModelEClass() {
@@ -2083,9 +2260,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarModel.producer</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarModel.producer</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarModel.producer</b></em>'.
    * @generated
    */
@@ -2105,9 +2282,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CarRegInfo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CarRegInfo</b></em>' 
+   * Returns the {@link EClass} '<em><b>CarRegInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CarRegInfo</b></em>'
    * @generated
    */
   public EClass getCarRegInfoEClass() {
@@ -2115,9 +2292,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.owner</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.owner</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.owner</b></em>'.
    * @generated
    */
@@ -2126,9 +2303,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.regNumber</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.regNumber</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.regNumber</b></em>'.
    * @generated
    */
@@ -2148,9 +2325,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.releaseYear</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.releaseYear</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.releaseYear</b></em>'.
    * @generated
    */
@@ -2159,9 +2336,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.engineNumber</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.engineNumber</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.engineNumber</b></em>'.
    * @generated
    */
@@ -2170,9 +2347,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.chassisNumber</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.chassisNumber</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.chassisNumber</b></em>'.
    * @generated
    */
@@ -2181,9 +2358,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.bodyNumber</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.bodyNumber</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.bodyNumber</b></em>'.
    * @generated
    */
@@ -2192,9 +2369,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.color</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.color</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.color</b></em>'.
    * @generated
    */
@@ -2203,9 +2380,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.series</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.series</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.series</b></em>'.
    * @generated
    */
@@ -2214,9 +2391,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.number</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.number</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.number</b></em>'.
    * @generated
    */
@@ -2225,9 +2402,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.issueDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.issueDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.issueDate</b></em>'.
    * @generated
    */
@@ -2236,9 +2413,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.issued</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarRegInfo.issued</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarRegInfo.issued</b></em>'.
    * @generated
    */
@@ -2247,9 +2424,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Document</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Document</b></em>' 
+   * Returns the {@link EClass} '<em><b>Document</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Document</b></em>'
    * @generated
    */
   public EClass getDocumentEClass() {
@@ -2279,9 +2456,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Document.issueDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Document.issueDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Document.issueDate</b></em>'.
    * @generated
    */
@@ -2301,9 +2478,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Person</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Person</b></em>' 
+   * Returns the {@link EClass} '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Person</b></em>'
    * @generated
    */
   public EClass getPersonEClass() {
@@ -2322,8 +2499,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.name</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Person.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.name</b></em>'.
    * @generated
    */
@@ -2332,9 +2509,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.patronimic</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Person.patronimic</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.patronimic</b></em>'.
    * @generated
    */
@@ -2354,9 +2531,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.registrationAddress</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Person.registrationAddress</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.registrationAddress</b></em>'.
    * @generated
    */
@@ -2365,9 +2542,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.factAddress</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Person.factAddress</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.factAddress</b></em>'.
    * @generated
    */
@@ -2387,9 +2564,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.drivingLicense</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Person.drivingLicense</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.drivingLicense</b></em>'.
    * @generated
    */
@@ -2409,9 +2586,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Car</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Car</b></em>' 
+   * Returns the {@link EClass} '<em><b>Car</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Car</b></em>'
    * @generated
    */
   public EClass getCarEClass() {
@@ -2419,8 +2596,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Car.model</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Car.model</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Car.model</b></em>'.
    * @generated
    */
@@ -2429,8 +2606,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Car.regInfo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Car.regInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Car.regInfo</b></em>'.
    * @generated
    */
@@ -2450,9 +2627,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CarPassport</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CarPassport</b></em>' 
+   * Returns the {@link EClass} '<em><b>CarPassport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CarPassport</b></em>'
    * @generated
    */
   public EClass getCarPassportEClass() {
@@ -2460,9 +2637,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.series</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.series</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarPassport.series</b></em>'.
    * @generated
    */
@@ -2471,9 +2648,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.number</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.number</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarPassport.number</b></em>'.
    * @generated
    */
@@ -2482,9 +2659,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.issueDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.issueDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarPassport.issueDate</b></em>'.
    * @generated
    */
@@ -2493,9 +2670,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.issued</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CarPassport.issued</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CarPassport.issued</b></em>'.
    * @generated
    */
@@ -2504,9 +2681,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Phone</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Phone</b></em>' 
+   * Returns the {@link EClass} '<em><b>Phone</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Phone</b></em>'
    * @generated
    */
   public EClass getPhoneEClass() {
@@ -2525,9 +2702,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Phone.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Phone.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Phone.description</b></em>'.
    * @generated
    */
@@ -2536,9 +2713,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Address</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Address</b></em>' 
+   * Returns the {@link EClass} '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Address</b></em>'
    * @generated
    */
   public EClass getAddressEClass() {
@@ -2601,9 +2778,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Address.building</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Address.building</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Address.building</b></em>'.
    * @generated
    */
@@ -2623,9 +2800,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Passport</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Passport</b></em>' 
+   * Returns the {@link EClass} '<em><b>Passport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Passport</b></em>'
    * @generated
    */
   public EClass getPassportEClass() {
@@ -2655,9 +2832,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Passport.issueDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Passport.issueDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Passport.issueDate</b></em>'.
    * @generated
    */
@@ -2677,9 +2854,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DrivingLicense</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DrivingLicense</b></em>' 
+   * Returns the {@link EClass} '<em><b>DrivingLicense</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DrivingLicense</b></em>'
    * @generated
    */
   public EClass getDrivingLicenseEClass() {
@@ -2687,9 +2864,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.series</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.series</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DrivingLicense.series</b></em>'.
    * @generated
    */
@@ -2698,9 +2875,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.number</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.number</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DrivingLicense.number</b></em>'.
    * @generated
    */
@@ -2709,9 +2886,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.issueDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.issueDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DrivingLicense.issueDate</b></em>'.
    * @generated
    */
@@ -2720,9 +2897,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.issued</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DrivingLicense.issued</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DrivingLicense.issued</b></em>'.
    * @generated
    */
@@ -2731,9 +2908,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Contract</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Contract</b></em>' 
+   * Returns the {@link EClass} '<em><b>Contract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Contract</b></em>'
    * @generated
    */
   public EClass getContractEClass() {
@@ -2741,9 +2918,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Contract.signDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Contract.signDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Contract.signDate</b></em>'.
    * @generated
    */
@@ -2752,9 +2929,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Contract.simCard</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Contract.simCard</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Contract.simCard</b></em>'.
    * @generated
    */
@@ -2763,9 +2940,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Contract.paymentInfo</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Contract.paymentInfo</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Contract.paymentInfo</b></em>'.
    * @generated
    */
@@ -2785,9 +2962,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Contract.secretQuestions</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Contract.secretQuestions</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Contract.secretQuestions</b></em>'.
    * @generated
    */
@@ -2807,9 +2984,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SecretQuestion</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SecretQuestion</b></em>' 
+   * Returns the {@link EClass} '<em><b>SecretQuestion</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SecretQuestion</b></em>'
    * @generated
    */
   public EClass getSecretQuestionEClass() {
@@ -2817,9 +2994,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.question</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.question</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SecretQuestion.question</b></em>'.
    * @generated
    */
@@ -2828,9 +3005,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.correctAnswer</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.correctAnswer</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SecretQuestion.correctAnswer</b></em>'.
    * @generated
    */
@@ -2840,9 +3017,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.alarmAnswer</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.alarmAnswer</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SecretQuestion.alarmAnswer</b></em>'.
    * @generated
    */
@@ -2852,9 +3029,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.active</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.active</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SecretQuestion.active</b></em>'.
    * @generated
    */
@@ -2863,9 +3040,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.type</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SecretQuestion.type</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SecretQuestion.type</b></em>'.
    * @generated
    */
@@ -2874,9 +3051,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ClientTariff</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ClientTariff</b></em>' 
+   * Returns the {@link EClass} '<em><b>ClientTariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ClientTariff</b></em>'
    * @generated
    */
   public EClass getClientTariffEClass() {
@@ -2884,9 +3061,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.name</b></em>'.
    * @generated
    */
@@ -2895,9 +3072,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.active</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.active</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.active</b></em>'.
    * @generated
    */
@@ -2906,9 +3083,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.volumePayments</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.volumePayments</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.volumePayments</b></em>'.
    * @generated
    */
@@ -2917,9 +3094,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.periodicalPayments</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.periodicalPayments</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.periodicalPayments</b></em>'.
    * @generated
    */
@@ -2929,9 +3106,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.initialPayment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.initialPayment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.initialPayment</b></em>'.
    * @generated
    */
@@ -2940,9 +3117,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.services</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.services</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.services</b></em>'.
    * @generated
    */
@@ -2951,9 +3128,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ContractPackage</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ContractPackage</b></em>' 
+   * Returns the {@link EClass} '<em><b>ContractPackage</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ContractPackage</b></em>'
    * @generated
    */
   public EClass getContractPackageEClass() {
@@ -2961,9 +3138,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ContractPackage.client</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ContractPackage.client</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ContractPackage.client</b></em>'.
    * @generated
    */
@@ -2972,9 +3149,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ContractPackage.user</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ContractPackage.user</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ContractPackage.user</b></em>'.
    * @generated
    */
@@ -2983,9 +3160,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ContractPackage.contracts</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ContractPackage.contracts</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ContractPackage.contracts</b></em>'.
    * @generated
    */
@@ -2995,9 +3172,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>User</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>User</b></em>' 
+   * Returns the {@link EClass} '<em><b>User</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>User</b></em>'
    * @generated
    */
   public EClass getUserEClass() {
@@ -3005,8 +3182,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>User.login</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>User.login</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>User.login</b></em>'.
    * @generated
    */
@@ -3026,8 +3203,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>User.group</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>User.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>User.group</b></em>'.
    * @generated
    */
@@ -3036,9 +3213,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>UserGroup</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>UserGroup</b></em>' 
+   * Returns the {@link EClass} '<em><b>UserGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>UserGroup</b></em>'
    * @generated
    */
   public EClass getUserGroupEClass() {
@@ -3046,9 +3223,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Message</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Message</b></em>' 
+   * Returns the {@link EClass} '<em><b>Message</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Message</b></em>'
    * @generated
    */
   public EClass getMessageEClass() {
@@ -3089,8 +3266,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Message.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Message.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Message.to</b></em>'.
    * @generated
    */
@@ -3099,9 +3276,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Message.dateTime</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Message.dateTime</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Message.dateTime</b></em>'.
    * @generated
    */
@@ -3110,9 +3287,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Event</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Event</b></em>' 
+   * Returns the {@link EClass} '<em><b>Event</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Event</b></em>'
    * @generated
    */
   public EClass getEventEClass() {
@@ -3142,9 +3319,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Event.coordinates</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Event.coordinates</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Event.coordinates</b></em>'.
    * @generated
    */
@@ -3153,9 +3330,9 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Coordinates</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Coordinates</b></em>' 
+   * Returns the {@link EClass} '<em><b>Coordinates</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Coordinates</b></em>'
    * @generated
    */
   public EClass getCoordinatesEClass() {
@@ -3185,8 +3362,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>Currency</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>Currency</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>Currency</b></em>'
    * @generated
    */
@@ -3195,8 +3372,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>PaymentType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>PaymentType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>PaymentType</b></em>'
    * @generated
    */
@@ -3205,8 +3382,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>Periodicity</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>Periodicity</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>Periodicity</b></em>'
    * @generated
    */
@@ -3215,8 +3392,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>PhoneType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>PhoneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>PhoneType</b></em>'
    * @generated
    */
@@ -3225,8 +3402,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>SecretQuestionType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>SecretQuestionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>SecretQuestionType</b></em>'
    * @generated
    */
@@ -3235,8 +3412,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>MessageType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>MessageType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>MessageType</b></em>'
    * @generated
    */
@@ -3245,8 +3422,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>EventType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>EventType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>EventType</b></em>'
    * @generated
    */
@@ -3255,8 +3432,8 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>MessageIOTypes</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>MessageIOTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>MessageIOTypes</b></em>'
    * @generated
    */
@@ -3266,8 +3443,9 @@ public class ModelModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

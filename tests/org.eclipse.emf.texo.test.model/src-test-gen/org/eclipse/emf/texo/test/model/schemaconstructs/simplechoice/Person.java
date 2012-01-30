@@ -5,31 +5,34 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>Person</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Person")
 public class Person {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<PersonGroupFeatureGroup> group = new ArrayList<PersonGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -39,9 +42,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -50,8 +55,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>group</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>group</b></em>' feature
    * @generated
    */
@@ -61,9 +67,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getGroup() <em>group</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getGroup() group}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<PersonGroupFeatureGroup> newGroup) {
@@ -72,8 +80,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>age</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>age</b></em>' feature
    * @generated
    */
@@ -83,9 +92,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getAge() <em>age</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getAge() age}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getAge() age}' feature.
    * @generated
    */
   public void setAge(List<Integer> newAge) {
@@ -94,8 +105,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>length</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>length</b></em>' feature
    * @generated
    */
@@ -105,9 +117,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getLength() <em>length</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getLength() length}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getLength() length}' feature.
    * @generated
    */
   public void setLength(List<Integer> newLength) {
@@ -115,9 +129,9 @@ public class Person {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

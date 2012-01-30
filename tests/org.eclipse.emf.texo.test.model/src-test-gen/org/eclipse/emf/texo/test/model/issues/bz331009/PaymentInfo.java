@@ -11,13 +11,11 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>PaymentInfo</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * Платежная информация
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PaymentInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> Платежная информация <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PaymentInfo")
 public class PaymentInfo {
@@ -81,9 +79,9 @@ public class PaymentInfo {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

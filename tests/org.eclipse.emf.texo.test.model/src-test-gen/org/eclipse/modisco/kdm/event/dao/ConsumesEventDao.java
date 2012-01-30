@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.event.ConsumesEvent;
 import org.eclipse.modisco.kdm.event.EventModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ConsumesEvent</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ConsumesEventDao extends BaseDao<ConsumesEvent> {
 

@@ -4,18 +4,19 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>ConditionalOutputPort</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>ConditionalOutputPort</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "ConditionalOutputPort")
 public class ConditionalOutputPort extends OutputPort {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   @Column(name = "COND")
@@ -23,8 +24,9 @@ public class ConditionalOutputPort extends OutputPort {
 
   /**
    * Returns the value of '<em><b>condition</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>condition</b></em>' feature
    * @generated
    */
@@ -34,9 +36,11 @@ public class ConditionalOutputPort extends OutputPort {
 
   /**
    * Sets the '{@link ConditionalOutputPort#getCondition() <em>condition</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ConditionalOutputPort#getCondition() condition}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ConditionalOutputPort#getCondition() condition}' feature.
    * @generated
    */
   public void setCondition(String newCondition) {
@@ -44,9 +48,9 @@ public class ConditionalOutputPort extends OutputPort {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

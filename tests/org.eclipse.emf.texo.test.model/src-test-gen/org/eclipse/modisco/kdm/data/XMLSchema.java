@@ -8,17 +8,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>XMLSchema</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>XMLSchema</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "XMLSchema")
 public class XMLSchema extends AbstractDataElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractContentElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -26,8 +27,9 @@ public class XMLSchema extends AbstractDataElement {
 
   /**
    * Returns the value of '<em><b>contentElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>contentElement</b></em>' feature
    * @generated
    */
@@ -37,6 +39,7 @@ public class XMLSchema extends AbstractDataElement {
 
   /**
    * Adds to the <em>contentElement</em> feature.
+   * 
    * @generated
    */
   public void addToContentElement(AbstractContentElement contentElementValue) {
@@ -47,8 +50,9 @@ public class XMLSchema extends AbstractDataElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>contentElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromContentElement(AbstractContentElement contentElementValue) {
@@ -57,8 +61,9 @@ public class XMLSchema extends AbstractDataElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>contentElement</em> feature.
+   * 
    * @generated
    */
   public void clearContentElement() {
@@ -69,9 +74,11 @@ public class XMLSchema extends AbstractDataElement {
 
   /**
    * Sets the '{@link XMLSchema#getContentElement() <em>contentElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link XMLSchema#getContentElement() contentElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link XMLSchema#getContentElement() contentElement}' feature.
    * @generated
    */
   public void setContentElement(Set<AbstractContentElement> newContentElement) {
@@ -79,9 +86,9 @@ public class XMLSchema extends AbstractDataElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

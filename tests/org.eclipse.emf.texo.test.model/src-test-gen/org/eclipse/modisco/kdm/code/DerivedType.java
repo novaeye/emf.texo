@@ -6,17 +6,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>DerivedType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DerivedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "DerivedType")
 public class DerivedType extends Datatype {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ItemUnit.class)
   @JoinColumns({ @JoinColumn() })
@@ -24,8 +25,9 @@ public class DerivedType extends Datatype {
 
   /**
    * Returns the value of '<em><b>itemUnit</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>itemUnit</b></em>' feature
    * @generated
    */
@@ -35,9 +37,11 @@ public class DerivedType extends Datatype {
 
   /**
    * Sets the '{@link DerivedType#getItemUnit() <em>itemUnit</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DerivedType#getItemUnit() itemUnit}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DerivedType#getItemUnit() itemUnit}' feature.
    * @generated
    */
   public void setItemUnit(ItemUnit newItemUnit) {
@@ -45,9 +49,9 @@ public class DerivedType extends Datatype {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

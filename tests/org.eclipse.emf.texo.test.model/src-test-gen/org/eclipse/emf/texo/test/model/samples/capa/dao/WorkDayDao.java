@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.capa.CapaModelPackage;
 import org.eclipse.emf.texo.test.model.samples.capa.WorkDay;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>WorkDay</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WorkDayDao extends BaseDao<WorkDay> {
 

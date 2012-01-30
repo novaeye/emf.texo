@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.source.Directory;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Directory</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DirectoryDao extends BaseDao<Directory> {
 

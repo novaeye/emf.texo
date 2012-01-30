@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>CompositeType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>CompositeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "CompositeType")
 public class CompositeType extends Datatype {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ItemUnit.class)
   @OrderColumn()
@@ -28,8 +29,9 @@ public class CompositeType extends Datatype {
 
   /**
    * Returns the value of '<em><b>itemUnit</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>itemUnit</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public class CompositeType extends Datatype {
 
   /**
    * Adds to the <em>itemUnit</em> feature.
+   * 
    * @generated
    */
   public void addToItemUnit(ItemUnit itemUnitValue) {
@@ -49,8 +52,9 @@ public class CompositeType extends Datatype {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>itemUnit</em> feature.
+   * 
    * @generated
    */
   public void removeFromItemUnit(ItemUnit itemUnitValue) {
@@ -59,8 +63,9 @@ public class CompositeType extends Datatype {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>itemUnit</em> feature.
+   * 
    * @generated
    */
   public void clearItemUnit() {
@@ -71,9 +76,11 @@ public class CompositeType extends Datatype {
 
   /**
    * Sets the '{@link CompositeType#getItemUnit() <em>itemUnit</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CompositeType#getItemUnit() itemUnit}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CompositeType#getItemUnit() itemUnit}' feature.
    * @generated
    */
   public void setItemUnit(List<ItemUnit> newItemUnit) {
@@ -81,9 +88,9 @@ public class CompositeType extends Datatype {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

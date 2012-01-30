@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.CarModel;
 import org.eclipse.emf.texo.test.model.issues.bz331009.ModelModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CarModel</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CarModelDao extends BaseDao<CarModel> {
 

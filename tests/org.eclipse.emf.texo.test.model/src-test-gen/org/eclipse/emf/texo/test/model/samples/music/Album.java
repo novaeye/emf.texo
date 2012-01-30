@@ -19,72 +19,79 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Album</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Album</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Album")
 public class Album extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long id = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Long version = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Artist.class)
   @JoinColumns({ @JoinColumn() })
   private Artist artist = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date releaseDate = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Genre.class)
   @OrderColumn()
   @JoinTable(name = "Album_genres")
   private List<Genre> genres = new ArrayList<Genre>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Song.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Song> songs = new ArrayList<Song>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
@@ -93,8 +100,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>id</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>id</b></em>' feature
    * @generated
    */
@@ -104,9 +112,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getId() <em>id</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getId() id}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -115,8 +125,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>version</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>version</b></em>' feature
    * @generated
    */
@@ -126,9 +137,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getVersion() <em>version</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getVersion() version}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -137,8 +150,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -148,9 +162,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -159,8 +175,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>artist</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>artist</b></em>' feature
    * @generated
    */
@@ -170,9 +187,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getArtist() <em>artist</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getArtist() artist}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getArtist() artist}' feature.
    * @generated
    */
   public void setArtist(Artist newArtist) {
@@ -181,8 +200,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>releaseDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>releaseDate</b></em>' feature
    * @generated
    */
@@ -192,9 +212,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getReleaseDate() <em>releaseDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getReleaseDate() releaseDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getReleaseDate() releaseDate}' feature.
    * @generated
    */
   public void setReleaseDate(Date newReleaseDate) {
@@ -203,8 +225,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>genres</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>genres</b></em>' feature
    * @generated
    */
@@ -214,6 +237,7 @@ public class Album extends Identifiable {
 
   /**
    * Adds to the <em>genres</em> feature.
+   * 
    * @generated
    */
   public void addToGenres(Genre genresValue) {
@@ -224,8 +248,9 @@ public class Album extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>genres</em> feature.
+   * 
    * @generated
    */
   public void removeFromGenres(Genre genresValue) {
@@ -234,8 +259,9 @@ public class Album extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>genres</em> feature.
+   * 
    * @generated
    */
   public void clearGenres() {
@@ -246,9 +272,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getGenres() <em>genres</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getGenres() genres}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getGenres() genres}' feature.
    * @generated
    */
   public void setGenres(List<Genre> newGenres) {
@@ -257,8 +285,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>songs</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>songs</b></em>' feature
    * @generated
    */
@@ -268,6 +297,7 @@ public class Album extends Identifiable {
 
   /**
    * Adds to the <em>songs</em> feature.
+   * 
    * @generated
    */
   public void addToSongs(Song songsValue) {
@@ -278,8 +308,9 @@ public class Album extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>songs</em> feature.
+   * 
    * @generated
    */
   public void removeFromSongs(Song songsValue) {
@@ -288,8 +319,9 @@ public class Album extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>songs</em> feature.
+   * 
    * @generated
    */
   public void clearSongs() {
@@ -300,9 +332,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getSongs() <em>songs</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getSongs() songs}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Album#getSongs() songs}' feature.
    * @generated
    */
   public void setSongs(List<Song> newSongs) {
@@ -311,9 +345,9 @@ public class Album extends Identifiable {
 
   /**
    * Returns the value of '<em><b>ratings</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>ratings</b></em>' feature
    * @generated
    */
@@ -323,10 +357,11 @@ public class Album extends Identifiable {
 
   /**
    * Sets the '{@link Album#getRatings() <em>ratings</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Album#getRatings() ratings}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Album#getRatings() ratings}' feature.
    * @generated
    */
   public void setRatings(List<Rating> newRatings) {
@@ -334,9 +369,9 @@ public class Album extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

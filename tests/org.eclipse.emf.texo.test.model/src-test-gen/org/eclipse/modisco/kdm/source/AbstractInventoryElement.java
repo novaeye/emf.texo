@@ -9,18 +9,19 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
-/** 
- * A representation of the model object '<em><b>AbstractInventoryElement</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>AbstractInventoryElement</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "AbstractInventoryElement")
 public abstract class AbstractInventoryElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractInventoryRelationship.class)
   @JoinColumns({ @JoinColumn() })
@@ -28,8 +29,9 @@ public abstract class AbstractInventoryElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>inventoryRelationship</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>inventoryRelationship</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public abstract class AbstractInventoryElement extends KDMEntity {
 
   /**
    * Adds to the <em>inventoryRelationship</em> feature.
+   * 
    * @generated
    */
   public void addToInventoryRelationship(AbstractInventoryRelationship inventoryRelationshipValue) {
@@ -49,8 +52,9 @@ public abstract class AbstractInventoryElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>inventoryRelationship</em> feature.
+   * 
    * @generated
    */
   public void removeFromInventoryRelationship(AbstractInventoryRelationship inventoryRelationshipValue) {
@@ -59,8 +63,9 @@ public abstract class AbstractInventoryElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>inventoryRelationship</em> feature.
+   * 
    * @generated
    */
   public void clearInventoryRelationship() {
@@ -71,9 +76,12 @@ public abstract class AbstractInventoryElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractInventoryElement#getInventoryRelationship() <em>inventoryRelationship</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractInventoryElement#getInventoryRelationship() inventoryRelationship}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractInventoryElement#getInventoryRelationship() inventoryRelationship}'
+   *          feature.
    * @generated
    */
   public void setInventoryRelationship(Set<AbstractInventoryRelationship> newInventoryRelationship) {
@@ -81,9 +89,9 @@ public abstract class AbstractInventoryElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

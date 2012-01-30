@@ -17,9 +17,10 @@ import javax.persistence.OneToMany;
 @Entity(name = "DeployedResource")
 public class DeployedResource extends AbstractPlatformElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ResourceType.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class DeployedResource extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>platformElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>platformElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class DeployedResource extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void addToPlatformElement(ResourceType platformElementValue) {
@@ -48,8 +51,9 @@ public class DeployedResource extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromPlatformElement(ResourceType platformElementValue) {
@@ -58,8 +62,9 @@ public class DeployedResource extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void clearPlatformElement() {
@@ -70,9 +75,11 @@ public class DeployedResource extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link DeployedResource#getPlatformElement() <em>platformElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DeployedResource#getPlatformElement() platformElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DeployedResource#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<ResourceType> newPlatformElement) {
@@ -80,9 +87,9 @@ public class DeployedResource extends AbstractPlatformElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

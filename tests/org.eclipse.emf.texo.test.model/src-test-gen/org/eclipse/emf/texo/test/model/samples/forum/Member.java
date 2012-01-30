@@ -9,33 +9,36 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Member</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Member</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Member")
 public class Member {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String nickname = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Post.class)
   @OrderColumn()
   @JoinTable(name = "Member_posts")
   private List<Post> posts = new ArrayList<Post>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Topic.class)
   @OrderColumn()
@@ -44,8 +47,9 @@ public class Member {
 
   /**
    * Returns the value of '<em><b>nickname</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>nickname</b></em>' feature
    * @generated
    */
@@ -55,9 +59,11 @@ public class Member {
 
   /**
    * Sets the '{@link Member#getNickname() <em>nickname</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Member#getNickname() nickname}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Member#getNickname() nickname}' feature.
    * @generated
    */
   public void setNickname(String newNickname) {
@@ -66,8 +72,9 @@ public class Member {
 
   /**
    * Returns the value of '<em><b>posts</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>posts</b></em>' feature
    * @generated
    */
@@ -77,6 +84,7 @@ public class Member {
 
   /**
    * Adds to the <em>posts</em> feature.
+   * 
    * @generated
    */
   public void addToPosts(Post postsValue) {
@@ -87,8 +95,9 @@ public class Member {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>posts</em> feature.
+   * 
    * @generated
    */
   public void removeFromPosts(Post postsValue) {
@@ -97,8 +106,9 @@ public class Member {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>posts</em> feature.
+   * 
    * @generated
    */
   public void clearPosts() {
@@ -109,9 +119,11 @@ public class Member {
 
   /**
    * Sets the '{@link Member#getPosts() <em>posts</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Member#getPosts() posts}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Member#getPosts() posts}' feature.
    * @generated
    */
   public void setPosts(List<Post> newPosts) {
@@ -120,8 +132,9 @@ public class Member {
 
   /**
    * Returns the value of '<em><b>created</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>created</b></em>' feature
    * @generated
    */
@@ -131,6 +144,7 @@ public class Member {
 
   /**
    * Adds to the <em>created</em> feature.
+   * 
    * @generated
    */
   public void addToCreated(Topic createdValue) {
@@ -141,8 +155,9 @@ public class Member {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>created</em> feature.
+   * 
    * @generated
    */
   public void removeFromCreated(Topic createdValue) {
@@ -151,8 +166,9 @@ public class Member {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>created</em> feature.
+   * 
    * @generated
    */
   public void clearCreated() {
@@ -163,9 +179,11 @@ public class Member {
 
   /**
    * Sets the '{@link Member#getCreated() <em>created</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Member#getCreated() created}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Member#getCreated() created}' feature.
    * @generated
    */
   public void setCreated(List<Topic> newCreated) {
@@ -173,9 +191,9 @@ public class Member {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

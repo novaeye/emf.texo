@@ -6,16 +6,16 @@ import java.util.List;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
 /**
- * A representation of the literals of the enumeration '<em><b>BookCategory</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>BookCategory</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 @TestAnnotationOne("enum")
 public enum BookCategory {
   /**
-   * The enum: MYSTERY
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: MYSTERY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   MYSTERY(0, "Mystery", "Mystery") {
@@ -30,8 +30,8 @@ public enum BookCategory {
     }
   },
   /**
-   * The enum: SCIENCEFICTION
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: SCIENCEFICTION <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   SCIENCEFICTION(1, "ScienceFiction", "ScienceFiction") {
@@ -46,8 +46,8 @@ public enum BookCategory {
     }
   },
   /**
-   * The enum: BIOGRAPHY
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: BIOGRAPHY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   BIOGRAPHY(2, "Biography", "Biography") {
@@ -63,24 +63,24 @@ public enum BookCategory {
   };
 
   /**
-   * An array of all the '<em><b>BookCategory</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>BookCategory</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final BookCategory[] VALUES_ARRAY = new BookCategory[] { MYSTERY, SCIENCEFICTION, BIOGRAPHY };
 
   /**
-   * A public read-only list of all the '<em><b>BookCategory</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>BookCategory</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<BookCategory> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>BookCategory</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>BookCategory</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static BookCategory get(String literal) {
@@ -94,9 +94,9 @@ public enum BookCategory {
   }
 
   /**
-   * Returns the '<em><b>BookCategory</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>BookCategory</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static BookCategory getByName(String name) {
@@ -110,9 +110,9 @@ public enum BookCategory {
   }
 
   /**
-   * Returns the '<em><b>BookCategory</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>BookCategory</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static BookCategory get(int value) {
@@ -126,25 +126,28 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private BookCategory(int value, String name, String literal) {
@@ -155,6 +158,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -164,6 +168,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -173,6 +178,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -182,6 +188,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -190,6 +197,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -198,6 +206,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -206,6 +215,7 @@ public enum BookCategory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

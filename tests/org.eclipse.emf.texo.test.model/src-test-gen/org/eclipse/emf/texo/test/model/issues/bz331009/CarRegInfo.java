@@ -19,9 +19,10 @@ import javax.persistence.TemporalType;
 @Entity(name = "CarRegInfo")
 public class CarRegInfo implements Document {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Person.class)
   @JoinColumns({ @JoinColumn() })
@@ -118,8 +119,9 @@ public class CarRegInfo implements Document {
 
   /**
    * Returns the value of '<em><b>owner</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>owner</b></em>' feature
    * @generated
    */
@@ -129,9 +131,11 @@ public class CarRegInfo implements Document {
 
   /**
    * Sets the '{@link CarRegInfo#getOwner() <em>owner</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CarRegInfo#getOwner() owner}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CarRegInfo#getOwner() owner}' feature.
    * @generated
    */
   public void setOwner(Person newOwner) {
@@ -416,9 +420,9 @@ public class CarRegInfo implements Document {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

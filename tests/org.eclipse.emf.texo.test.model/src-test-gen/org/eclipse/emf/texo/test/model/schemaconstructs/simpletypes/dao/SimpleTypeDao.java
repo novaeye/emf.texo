@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleType;
 import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpletypesModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SimpleType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SimpleTypeDao extends BaseDao<SimpleType> {
 

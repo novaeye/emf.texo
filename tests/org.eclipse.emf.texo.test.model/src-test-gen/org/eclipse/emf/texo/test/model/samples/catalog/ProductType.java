@@ -11,20 +11,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>ProductType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * My producttype documentation
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ProductType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> My producttype documentation <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ProductType")
 public class ProductType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String code = null;
@@ -38,18 +37,20 @@ public class ProductType {
   @Basic(optional = false)
   private String description = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = StringType.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<StringType> remark = new ArrayList<StringType>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = PriceType.class)
   @JoinColumns({ @JoinColumn() })
@@ -57,8 +58,9 @@ public class ProductType {
 
   /**
    * Returns the value of '<em><b>code</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>code</b></em>' feature
    * @generated
    */
@@ -68,9 +70,11 @@ public class ProductType {
 
   /**
    * Sets the '{@link ProductType#getCode() <em>code</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ProductType#getCode() code}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ProductType#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -106,8 +110,9 @@ public class ProductType {
 
   /**
    * Returns the value of '<em><b>remark</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>remark</b></em>' feature
    * @generated
    */
@@ -117,6 +122,7 @@ public class ProductType {
 
   /**
    * Adds to the <em>remark</em> feature.
+   * 
    * @generated
    */
   public void addToRemark(StringType remarkValue) {
@@ -127,8 +133,9 @@ public class ProductType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>remark</em> feature.
+   * 
    * @generated
    */
   public void removeFromRemark(StringType remarkValue) {
@@ -137,8 +144,9 @@ public class ProductType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>remark</em> feature.
+   * 
    * @generated
    */
   public void clearRemark() {
@@ -149,9 +157,11 @@ public class ProductType {
 
   /**
    * Sets the '{@link ProductType#getRemark() <em>remark</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ProductType#getRemark() remark}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ProductType#getRemark() remark}' feature.
    * @generated
    */
   public void setRemark(List<StringType> newRemark) {
@@ -160,8 +170,9 @@ public class ProductType {
 
   /**
    * Returns the value of '<em><b>price</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>price</b></em>' feature
    * @generated
    */
@@ -171,9 +182,11 @@ public class ProductType {
 
   /**
    * Sets the '{@link ProductType#getPrice() <em>price</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ProductType#getPrice() price}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ProductType#getPrice() price}' feature.
    * @generated
    */
   public void setPrice(PriceType newPrice) {
@@ -181,9 +194,9 @@ public class ProductType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

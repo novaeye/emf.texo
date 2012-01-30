@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>StorableKind</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>StorableKind</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum StorableKind {
 
   /**
-   * The enum: GLOBAL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: GLOBAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   GLOBAL(0, "global", "global") {
@@ -29,8 +29,8 @@ public enum StorableKind {
     }
   },
   /**
-   * The enum: LOCAL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: LOCAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   LOCAL(1, "local", "local") {
@@ -45,8 +45,8 @@ public enum StorableKind {
     }
   },
   /**
-   * The enum: STATIC
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: STATIC <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   STATIC(2, "static", "static") {
@@ -61,8 +61,8 @@ public enum StorableKind {
     }
   },
   /**
-   * The enum: EXTERNAL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EXTERNAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   EXTERNAL(3, "external", "external") {
@@ -77,8 +77,8 @@ public enum StorableKind {
     }
   },
   /**
-   * The enum: REGISTER
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: REGISTER <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   REGISTER(4, "register", "register") {
@@ -93,8 +93,8 @@ public enum StorableKind {
     }
   },
   /**
-   * The enum: UNKNOWN
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: UNKNOWN <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   UNKNOWN(5, "unknown", "unknown") {
@@ -110,25 +110,25 @@ public enum StorableKind {
   };
 
   /**
-   * An array of all the '<em><b>StorableKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>StorableKind</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final StorableKind[] VALUES_ARRAY = new StorableKind[] { GLOBAL, LOCAL, STATIC, EXTERNAL, REGISTER,
       UNKNOWN };
 
   /**
-   * A public read-only list of all the '<em><b>StorableKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>StorableKind</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<StorableKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>StorableKind</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>StorableKind</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static StorableKind get(String literal) {
@@ -142,9 +142,9 @@ public enum StorableKind {
   }
 
   /**
-   * Returns the '<em><b>StorableKind</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>StorableKind</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static StorableKind getByName(String name) {
@@ -158,9 +158,9 @@ public enum StorableKind {
   }
 
   /**
-   * Returns the '<em><b>StorableKind</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>StorableKind</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static StorableKind get(int value) {
@@ -174,25 +174,28 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private StorableKind(int value, String name, String literal) {
@@ -203,6 +206,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -212,6 +216,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -221,6 +226,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -230,6 +236,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -239,6 +246,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -248,6 +256,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -257,6 +266,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -265,6 +275,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -273,6 +284,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -281,6 +293,7 @@ public enum StorableKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

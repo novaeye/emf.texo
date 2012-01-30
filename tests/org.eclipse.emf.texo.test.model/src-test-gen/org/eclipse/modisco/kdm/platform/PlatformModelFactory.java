@@ -21,17 +21,19 @@ import org.eclipse.modisco.kdm.kdm.KdmModelFactory;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: platform.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model: platform. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class PlatformModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -102,13 +104,12 @@ public class PlatformModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -233,8 +234,8 @@ public class PlatformModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -250,6 +251,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PlatformModel
    * @generated
    */
@@ -259,6 +261,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ResourceType
    * @generated
    */
@@ -268,6 +271,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass NamingResource
    * @generated
    */
@@ -277,6 +281,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MarshalledResource
    * @generated
    */
@@ -286,6 +291,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MessagingResource
    * @generated
    */
@@ -295,6 +301,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass FileResource
    * @generated
    */
@@ -304,6 +311,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExecutionResource
    * @generated
    */
@@ -313,6 +321,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass LockResource
    * @generated
    */
@@ -322,6 +331,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass StreamResource
    * @generated
    */
@@ -331,6 +341,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataManager
    * @generated
    */
@@ -340,6 +351,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PlatformEvent
    * @generated
    */
@@ -349,6 +361,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PlatformAction
    * @generated
    */
@@ -358,6 +371,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExternalActor
    * @generated
    */
@@ -367,6 +381,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BindsTo
    * @generated
    */
@@ -376,6 +391,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Requires
    * @generated
    */
@@ -385,6 +401,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DeployedComponent
    * @generated
    */
@@ -394,6 +411,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ManagesResource
    * @generated
    */
@@ -403,6 +421,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ReadsResource
    * @generated
    */
@@ -412,6 +431,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass WritesResource
    * @generated
    */
@@ -421,6 +441,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DefinedBy
    * @generated
    */
@@ -430,6 +451,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DeployedSoftwareSystem
    * @generated
    */
@@ -439,6 +461,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Machine
    * @generated
    */
@@ -448,6 +471,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DeployedResource
    * @generated
    */
@@ -457,6 +481,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RuntimeResource
    * @generated
    */
@@ -466,6 +491,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Process
    * @generated
    */
@@ -475,6 +501,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Thread
    * @generated
    */
@@ -484,6 +511,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Loads
    * @generated
    */
@@ -493,6 +521,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Spawns
    * @generated
    */
@@ -502,6 +531,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PlatformElement
    * @generated
    */
@@ -511,6 +541,7 @@ public class PlatformModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PlatformRelationship
    * @generated
    */
@@ -519,10 +550,12 @@ public class PlatformModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -532,10 +565,12 @@ public class PlatformModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -544,10 +579,10 @@ public class PlatformModelFactory implements ModelFactory {
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PlatformModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PlatformModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PlatformModelModelObject<E extends PlatformModel> extends KdmModelFactory.KDMModelModelObject<E> {
     /**
@@ -625,11 +660,11 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractPlatformElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractPlatformElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractPlatformElementModelObject<E extends AbstractPlatformElement> extends
       CoreModelFactory.KDMEntityModelObject<E> {
@@ -747,11 +782,11 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractPlatformRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractPlatformRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractPlatformRelationshipModelObject<E extends AbstractPlatformRelationship> extends
       CoreModelFactory.KDMRelationshipModelObject<E> {
@@ -816,10 +851,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ResourceType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ResourceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ResourceTypeModelObject<E extends ResourceType> extends AbstractPlatformElementModelObject<E> {
     /**
@@ -897,10 +932,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>NamingResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>NamingResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class NamingResourceModelObject<E extends NamingResource> extends ResourceTypeModelObject<E> {
     /**
@@ -1100,10 +1135,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>FileResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>FileResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class FileResourceModelObject<E extends FileResource> extends ResourceTypeModelObject<E> {
     /**
@@ -1235,10 +1270,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>LockResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>LockResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class LockResourceModelObject<E extends LockResource> extends ResourceTypeModelObject<E> {
     /**
@@ -1302,10 +1337,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>StreamResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>StreamResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class StreamResourceModelObject<E extends StreamResource> extends ResourceTypeModelObject<E> {
     /**
@@ -1369,10 +1404,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataManager</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataManager</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataManagerModelObject<E extends DataManager> extends ResourceTypeModelObject<E> {
     /**
@@ -1436,10 +1471,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PlatformEvent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PlatformEvent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PlatformEventModelObject<E extends PlatformEvent> extends ResourceTypeModelObject<E> {
     /**
@@ -1510,10 +1545,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PlatformAction</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PlatformAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PlatformActionModelObject<E extends PlatformAction> extends AbstractPlatformElementModelObject<E> {
     /**
@@ -1596,10 +1631,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ExternalActor</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ExternalActor</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExternalActorModelObject<E extends ExternalActor> extends PlatformActionModelObject<E> {
     /**
@@ -1663,10 +1698,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BindsTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BindsTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BindsToModelObject<E extends BindsTo> extends AbstractPlatformRelationshipModelObject<E> {
     /**
@@ -1742,10 +1777,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Requires</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Requires</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RequiresModelObject<E extends Requires> extends AbstractPlatformRelationshipModelObject<E> {
     /**
@@ -1904,10 +1939,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ManagesResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ManagesResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ManagesResourceModelObject<E extends ManagesResource> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -1984,10 +2019,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ReadsResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ReadsResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ReadsResourceModelObject<E extends ReadsResource> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -2064,10 +2099,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>WritesResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>WritesResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class WritesResourceModelObject<E extends WritesResource> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -2144,10 +2179,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DefinedBy</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DefinedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DefinedByModelObject<E extends DefinedBy> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -2224,11 +2259,11 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DeployedSoftwareSystem</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DeployedSoftwareSystem</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class DeployedSoftwareSystemModelObject<E extends DeployedSoftwareSystem> extends
       AbstractPlatformElementModelObject<E> {
@@ -2307,10 +2342,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Machine</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Machine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MachineModelObject<E extends Machine> extends AbstractPlatformElementModelObject<E> {
     /**
@@ -2484,10 +2519,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RuntimeResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RuntimeResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RuntimeResourceModelObject<E extends RuntimeResource> extends ResourceTypeModelObject<E> {
     /**
@@ -2551,10 +2586,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Process</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Process</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ProcessModelObject<E extends Process> extends RuntimeResourceModelObject<E> {
     /**
@@ -2618,10 +2653,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Thread</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Thread</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ThreadModelObject<E extends Thread> extends RuntimeResourceModelObject<E> {
     /**
@@ -2685,10 +2720,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Loads</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Loads</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class LoadsModelObject<E extends Loads> extends AbstractPlatformRelationshipModelObject<E> {
     /**
@@ -2764,10 +2799,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Spawns</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Spawns</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SpawnsModelObject<E extends Spawns> extends AbstractPlatformRelationshipModelObject<E> {
     /**
@@ -2843,10 +2878,10 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PlatformElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PlatformElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PlatformElementModelObject<E extends PlatformElement> extends
       AbstractPlatformElementModelObject<E> {
@@ -2911,11 +2946,11 @@ public class PlatformModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PlatformRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PlatformRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class PlatformRelationshipModelObject<E extends PlatformRelationship> extends
       AbstractPlatformRelationshipModelObject<E> {

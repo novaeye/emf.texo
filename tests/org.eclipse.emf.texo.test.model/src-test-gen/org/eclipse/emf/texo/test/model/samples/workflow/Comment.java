@@ -6,17 +6,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>Comment</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Comment")
 public class Comment extends WorkflowElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Workflow.class)
   @JoinColumns({ @JoinColumn() })
@@ -24,8 +25,9 @@ public class Comment extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>workflow</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>workflow</b></em>' feature
    * @generated
    */
@@ -35,9 +37,11 @@ public class Comment extends WorkflowElement {
 
   /**
    * Sets the '{@link Comment#getWorkflow() <em>workflow</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Comment#getWorkflow() workflow}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Comment#getWorkflow() workflow}' feature.
    * @generated
    */
   public void setWorkflow(Workflow newWorkflow) {
@@ -45,9 +49,9 @@ public class Comment extends WorkflowElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

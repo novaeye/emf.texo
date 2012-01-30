@@ -11,24 +11,26 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>AccountGroup</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>AccountGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "AccountGroup")
 public class AccountGroup extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Account.class)
   @OrderColumn()
@@ -37,8 +39,9 @@ public class AccountGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -48,9 +51,11 @@ public class AccountGroup extends Identifiable {
 
   /**
    * Sets the '{@link AccountGroup#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountGroup#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountGroup#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -59,8 +64,9 @@ public class AccountGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>account</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>account</b></em>' feature
    * @generated
    */
@@ -70,6 +76,7 @@ public class AccountGroup extends Identifiable {
 
   /**
    * Adds to the <em>account</em> feature.
+   * 
    * @generated
    */
   public void addToAccount(Account accountValue) {
@@ -80,8 +87,9 @@ public class AccountGroup extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>account</em> feature.
+   * 
    * @generated
    */
   public void removeFromAccount(Account accountValue) {
@@ -90,8 +98,9 @@ public class AccountGroup extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>account</em> feature.
+   * 
    * @generated
    */
   public void clearAccount() {
@@ -102,9 +111,11 @@ public class AccountGroup extends Identifiable {
 
   /**
    * Sets the '{@link AccountGroup#getAccount() <em>account</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AccountGroup#getAccount() account}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AccountGroup#getAccount() account}' feature.
    * @generated
    */
   public void setAccount(List<Account> newAccount) {
@@ -112,9 +123,9 @@ public class AccountGroup extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

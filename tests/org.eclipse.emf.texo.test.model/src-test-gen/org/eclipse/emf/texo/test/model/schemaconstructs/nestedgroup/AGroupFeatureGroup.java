@@ -9,10 +9,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation for the Feature Group '<em><b>A.group</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation for the Feature Group '<em><b>A.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 public class AGroupFeatureGroup {
 
@@ -92,20 +92,23 @@ public class AGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String b;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = CType.class)
   @JoinColumns({ @JoinColumn() })
@@ -127,8 +130,9 @@ public class AGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>b</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>b</b></em>' feature
    * @generated
    */
@@ -138,9 +142,11 @@ public class AGroupFeatureGroup {
 
   /**
    * Sets the '{@link A#getB() <em>b</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getB() b}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getB() b}' feature.
    * @generated
    */
   public void setB(String newB) {
@@ -150,8 +156,9 @@ public class AGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>c</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>c</b></em>' feature
    * @generated
    */
@@ -161,9 +168,11 @@ public class AGroupFeatureGroup {
 
   /**
    * Sets the '{@link A#getC() <em>c</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link A#getC() c}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link A#getC() c}' feature.
    * @generated
    */
   public void setC(CType newC) {
@@ -173,9 +182,10 @@ public class AGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -190,10 +200,13 @@ public class AGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

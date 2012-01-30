@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.MixedModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SalutationType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SalutationTypeDao extends BaseDao<SalutationType> {
 

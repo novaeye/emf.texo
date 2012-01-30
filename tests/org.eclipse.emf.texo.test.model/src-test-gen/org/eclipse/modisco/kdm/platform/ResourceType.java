@@ -8,17 +8,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>ResourceType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ResourceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ResourceType")
 public class ResourceType extends AbstractPlatformElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractPlatformElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -26,8 +27,9 @@ public class ResourceType extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>platformElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>platformElement</b></em>' feature
    * @generated
    */
@@ -37,6 +39,7 @@ public class ResourceType extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void addToPlatformElement(AbstractPlatformElement platformElementValue) {
@@ -47,8 +50,9 @@ public class ResourceType extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromPlatformElement(AbstractPlatformElement platformElementValue) {
@@ -57,8 +61,9 @@ public class ResourceType extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void clearPlatformElement() {
@@ -69,9 +74,11 @@ public class ResourceType extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link ResourceType#getPlatformElement() <em>platformElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ResourceType#getPlatformElement() platformElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ResourceType#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<AbstractPlatformElement> newPlatformElement) {
@@ -79,9 +86,9 @@ public class ResourceType extends AbstractPlatformElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -9,31 +9,34 @@ import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
 import javax.xml.namespace.QName;
 
-/** 
- * A representation of the model object '<em><b>Mytest</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Mytest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Mytest")
 public class Mytest {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String description = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private QName name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
@@ -42,8 +45,9 @@ public class Mytest {
 
   /**
    * Returns the value of '<em><b>description</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>description</b></em>' feature
    * @generated
    */
@@ -53,9 +57,11 @@ public class Mytest {
 
   /**
    * Sets the '{@link Mytest#getDescription() <em>description</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Mytest#getDescription() description}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Mytest#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -64,8 +70,9 @@ public class Mytest {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -75,9 +82,11 @@ public class Mytest {
 
   /**
    * Sets the '{@link Mytest#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Mytest#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Mytest#getName() name}' feature.
    * @generated
    */
   public void setName(QName newName) {
@@ -86,8 +95,9 @@ public class Mytest {
 
   /**
    * Returns the value of '<em><b>names</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>names</b></em>' feature
    * @generated
    */
@@ -97,9 +107,11 @@ public class Mytest {
 
   /**
    * Sets the '{@link Mytest#getNames() <em>names</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Mytest#getNames() names}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Mytest#getNames() names}' feature.
    * @generated
    */
   public void setNames(List<QName> newNames) {
@@ -107,9 +119,9 @@ public class Mytest {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

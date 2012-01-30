@@ -5,30 +5,33 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>RootType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>RootType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "RootType")
 public class RootType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<RootTypeMyAbstractGroupFeatureGroup> myAbstractGroup = new ArrayList<RootTypeMyAbstractGroupFeatureGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<RootTypeMyComplexAbstractGroupFeatureGroup> myComplexAbstractGroup = new ArrayList<RootTypeMyComplexAbstractGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>myAbstractGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myAbstractGroup</b></em>' feature
    * @generated
    */
@@ -38,9 +41,11 @@ public class RootType {
 
   /**
    * Sets the '{@link RootType#getMyAbstractGroup() <em>myAbstractGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RootType#getMyAbstractGroup() myAbstractGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RootType#getMyAbstractGroup() myAbstractGroup}' feature.
    * @generated
    */
   public void setMyAbstractGroup(List<RootTypeMyAbstractGroupFeatureGroup> newMyAbstractGroup) {
@@ -49,8 +54,9 @@ public class RootType {
 
   /**
    * Returns the value of '<em><b>myAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myAbstract</b></em>' feature
    * @generated
    */
@@ -61,8 +67,9 @@ public class RootType {
 
   /**
    * Returns the value of '<em><b>myComplexAbstractGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myComplexAbstractGroup</b></em>' feature
    * @generated
    */
@@ -72,9 +79,11 @@ public class RootType {
 
   /**
    * Sets the '{@link RootType#getMyComplexAbstractGroup() <em>myComplexAbstractGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RootType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RootType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
    * @generated
    */
   public void setMyComplexAbstractGroup(List<RootTypeMyComplexAbstractGroupFeatureGroup> newMyComplexAbstractGroup) {
@@ -83,8 +92,9 @@ public class RootType {
 
   /**
    * Returns the value of '<em><b>myComplexAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myComplexAbstract</b></em>' feature
    * @generated
    */
@@ -94,9 +104,9 @@ public class RootType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

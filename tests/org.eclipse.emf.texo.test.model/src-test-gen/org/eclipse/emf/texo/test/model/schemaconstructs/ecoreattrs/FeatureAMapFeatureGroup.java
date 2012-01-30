@@ -5,10 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
 
-/** 
- * A representation for the Feature Group '<em><b>Feature.aMap</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation for the Feature Group '<em><b>Feature.aMap</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 public class FeatureAMapFeatureGroup {
 
@@ -89,20 +89,23 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Double value_;
@@ -123,8 +126,9 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -134,9 +138,11 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * Sets the '{@link Feature#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Feature#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Feature#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -146,8 +152,9 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * Returns the value of '<em><b>value</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>value</b></em>' feature
    * @generated
    */
@@ -157,9 +164,11 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * Sets the '{@link Feature#getValue_() <em>value</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Feature#getValue_() value}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Feature#getValue_() value}' feature.
    * @generated
    */
   public void setValue_(Double newValue_) {
@@ -169,9 +178,10 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -186,10 +196,13 @@ public class FeatureAMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

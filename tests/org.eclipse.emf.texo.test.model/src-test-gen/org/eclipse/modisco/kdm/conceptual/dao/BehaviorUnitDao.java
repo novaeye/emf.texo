@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.conceptual.BehaviorUnit;
 import org.eclipse.modisco.kdm.conceptual.ConceptualModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>BehaviorUnit</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class BehaviorUnitDao extends BaseDao<BehaviorUnit> {
 

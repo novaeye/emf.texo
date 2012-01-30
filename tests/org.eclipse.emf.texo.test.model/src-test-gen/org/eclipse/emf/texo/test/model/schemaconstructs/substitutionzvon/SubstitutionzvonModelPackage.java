@@ -20,10 +20,11 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.Roo
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>substitutionzvon</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>substitutionzvon</b></em>'. It contains initialization code and access to
+ * the Factory to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SubstitutionzvonModelPackage extends ModelPackage {
@@ -36,179 +37,204 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/schemaconstructs/substitutionzvon";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final SubstitutionzvonModelFactory MODELFACTORY = new SubstitutionzvonModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int AAA_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENTYPE_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EVENTYPEOBJECT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ODDTYPE_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ODDTYPEOBJECT_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLEXAAA_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLEXAAA_VALUE_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLEXEVENTYPE_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPLEXODDTYPE_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_COMPLEXEVEN_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_MYCOMPLEXABSTRACT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_COMPLEXODD_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_EVEN_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_MYABSTRACT_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_ODD_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_ROOT_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ROOTTYPE_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ROOTTYPE_MYABSTRACTGROUP_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ROOTTYPE_MYABSTRACT_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ROOTTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ROOTTYPE_MYCOMPLEXABSTRACT_FEATURE_ID = 3;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final SubstitutionzvonModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static SubstitutionzvonModelPackage initialize() {
@@ -256,8 +282,7 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link SubstitutionzvonModelFactory} instance.
    * @generated
@@ -267,12 +292,11 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -293,9 +317,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ComplexAAA</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ComplexAAA</b></em>' 
+   * Returns the {@link EClass} '<em><b>ComplexAAA</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ComplexAAA</b></em>'
    * @generated
    */
   public EClass getComplexAAAEClass() {
@@ -303,9 +327,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ComplexAAA.value</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ComplexAAA.value</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ComplexAAA.value</b></em>'.
    * @generated
    */
@@ -314,9 +338,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ComplexEvenType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ComplexEvenType</b></em>' 
+   * Returns the {@link EClass} '<em><b>ComplexEvenType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ComplexEvenType</b></em>'
    * @generated
    */
   public EClass getComplexEvenTypeEClass() {
@@ -324,9 +348,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ComplexOddType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ComplexOddType</b></em>' 
+   * Returns the {@link EClass} '<em><b>ComplexOddType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ComplexOddType</b></em>'
    * @generated
    */
   public EClass getComplexOddTypeEClass() {
@@ -334,9 +358,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DocumentRoot</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DocumentRoot</b></em>' 
+   * Returns the {@link EClass} '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DocumentRoot</b></em>'
    * @generated
    */
   public EClass getDocumentRootEClass() {
@@ -344,9 +368,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.mixed</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.mixed</b></em>'.
    * @generated
    */
@@ -355,9 +379,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'.
    * @generated
    */
@@ -366,9 +390,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xSISchemaLocation</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xSISchemaLocation</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.xSISchemaLocation</b></em>'.
    * @generated
    */
@@ -378,9 +402,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.complexEven</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.complexEven</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.complexEven</b></em>'.
    * @generated
    */
@@ -389,9 +413,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.myComplexAbstract</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.myComplexAbstract</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.myComplexAbstract</b></em>'.
    * @generated
    */
@@ -401,9 +425,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.complexOdd</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.complexOdd</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.complexOdd</b></em>'.
    * @generated
    */
@@ -412,9 +436,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.even</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.even</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.even</b></em>'.
    * @generated
    */
@@ -423,9 +447,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.myAbstract</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.myAbstract</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.myAbstract</b></em>'.
    * @generated
    */
@@ -434,9 +458,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.odd</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.odd</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.odd</b></em>'.
    * @generated
    */
@@ -445,9 +469,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.root</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.root</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.root</b></em>'.
    * @generated
    */
@@ -456,9 +480,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RootType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RootType</b></em>' 
+   * Returns the {@link EClass} '<em><b>RootType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RootType</b></em>'
    * @generated
    */
   public EClass getRootTypeEClass() {
@@ -466,9 +490,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RootType.myAbstractGroup</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RootType.myAbstractGroup</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RootType.myAbstractGroup</b></em>'.
    * @generated
    */
@@ -477,9 +501,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RootType.myAbstract</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RootType.myAbstract</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RootType.myAbstract</b></em>'.
    * @generated
    */
@@ -488,9 +512,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RootType.myComplexAbstractGroup</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>RootType.myComplexAbstractGroup</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RootType.myComplexAbstractGroup</b></em>'.
    * @generated
    */
@@ -499,9 +523,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RootType.myComplexAbstract</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RootType.myComplexAbstract</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RootType.myComplexAbstract</b></em>'.
    * @generated
    */
@@ -510,8 +534,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>AAA</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>AAA</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EDataType} representing '<em><b>AAA</b></em>'
    * @generated
    */
@@ -520,8 +544,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>EvenType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>EvenType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>EvenType</b></em>'
    * @generated
    */
@@ -530,8 +554,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>EvenTypeObject</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>EvenTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EDataType} representing '<em><b>EvenTypeObject</b></em>'
    * @generated
    */
@@ -540,8 +564,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>OddType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>OddType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>OddType</b></em>'
    * @generated
    */
@@ -550,8 +574,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>OddTypeObject</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>OddTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EDataType} representing '<em><b>OddTypeObject</b></em>'
    * @generated
    */
@@ -561,8 +585,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

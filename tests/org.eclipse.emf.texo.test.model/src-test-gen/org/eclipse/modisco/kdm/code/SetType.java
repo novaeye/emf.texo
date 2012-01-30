@@ -3,25 +3,27 @@ package org.eclipse.modisco.kdm.code;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>SetType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SetType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SetType")
 public class SetType extends DerivedType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Integer size = null;
 
   /**
    * Returns the value of '<em><b>size</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>size</b></em>' feature
    * @generated
    */
@@ -31,9 +33,11 @@ public class SetType extends DerivedType {
 
   /**
    * Sets the '{@link SetType#getSize() <em>size</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SetType#getSize() size}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SetType#getSize() size}' feature.
    * @generated
    */
   public void setSize(Integer newSize) {
@@ -41,9 +45,9 @@ public class SetType extends DerivedType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

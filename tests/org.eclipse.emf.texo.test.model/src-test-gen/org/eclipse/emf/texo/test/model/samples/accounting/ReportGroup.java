@@ -13,33 +13,36 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>ReportGroup</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ReportGroup")
 public class ReportGroup extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ReportGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ReportGroup> reportGroup = new ArrayList<ReportGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = BalanceAccount.class)
   @OrderColumn()
@@ -48,8 +51,9 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -59,9 +63,11 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Sets the '{@link ReportGroup#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ReportGroup#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ReportGroup#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -70,8 +76,9 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>reportGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>reportGroup</b></em>' feature
    * @generated
    */
@@ -81,6 +88,7 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Adds to the <em>reportGroup</em> feature.
+   * 
    * @generated
    */
   public void addToReportGroup(ReportGroup reportGroupValue) {
@@ -91,8 +99,9 @@ public class ReportGroup extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>reportGroup</em> feature.
+   * 
    * @generated
    */
   public void removeFromReportGroup(ReportGroup reportGroupValue) {
@@ -101,8 +110,9 @@ public class ReportGroup extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>reportGroup</em> feature.
+   * 
    * @generated
    */
   public void clearReportGroup() {
@@ -113,9 +123,11 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Sets the '{@link ReportGroup#getReportGroup() <em>reportGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ReportGroup#getReportGroup() reportGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ReportGroup#getReportGroup() reportGroup}' feature.
    * @generated
    */
   public void setReportGroup(List<ReportGroup> newReportGroup) {
@@ -124,8 +136,9 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>account</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>account</b></em>' feature
    * @generated
    */
@@ -135,6 +148,7 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Adds to the <em>account</em> feature.
+   * 
    * @generated
    */
   public void addToAccount(BalanceAccount accountValue) {
@@ -145,8 +159,9 @@ public class ReportGroup extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>account</em> feature.
+   * 
    * @generated
    */
   public void removeFromAccount(BalanceAccount accountValue) {
@@ -155,8 +170,9 @@ public class ReportGroup extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>account</em> feature.
+   * 
    * @generated
    */
   public void clearAccount() {
@@ -167,9 +183,11 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Sets the '{@link ReportGroup#getAccount() <em>account</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ReportGroup#getAccount() account}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ReportGroup#getAccount() account}' feature.
    * @generated
    */
   public void setAccount(List<BalanceAccount> newAccount) {
@@ -177,9 +195,9 @@ public class ReportGroup extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

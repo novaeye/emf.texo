@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.datetime.DatetimeModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.datetime.TestDate;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>TestDate</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class TestDateDao extends BaseDao<TestDate> {
 

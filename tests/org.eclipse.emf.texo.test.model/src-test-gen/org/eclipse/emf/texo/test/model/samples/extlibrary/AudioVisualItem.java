@@ -3,37 +3,41 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>AudioVisualItem</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>AudioVisualItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "AudioVisualItem")
 public abstract class AudioVisualItem extends CirculatingItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String title = null;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private int minutesLength = 0;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private boolean damaged = false;
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -43,9 +47,11 @@ public abstract class AudioVisualItem extends CirculatingItem {
 
   /**
    * Sets the '{@link AudioVisualItem#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AudioVisualItem#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AudioVisualItem#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -54,8 +60,9 @@ public abstract class AudioVisualItem extends CirculatingItem {
 
   /**
    * Returns the value of '<em><b>minutesLength</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>minutesLength</b></em>' feature
    * @generated
    */
@@ -65,9 +72,11 @@ public abstract class AudioVisualItem extends CirculatingItem {
 
   /**
    * Sets the '{@link AudioVisualItem#getMinutesLength() <em>minutesLength</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AudioVisualItem#getMinutesLength() minutesLength}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AudioVisualItem#getMinutesLength() minutesLength}' feature.
    * @generated
    */
   public void setMinutesLength(int newMinutesLength) {
@@ -76,8 +85,9 @@ public abstract class AudioVisualItem extends CirculatingItem {
 
   /**
    * Returns the value of '<em><b>damaged</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>damaged</b></em>' feature
    * @generated
    */
@@ -87,9 +97,11 @@ public abstract class AudioVisualItem extends CirculatingItem {
 
   /**
    * Sets the '{@link AudioVisualItem#isDamaged() <em>damaged</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AudioVisualItem#isDamaged() damaged}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AudioVisualItem#isDamaged() damaged}' feature.
    * @generated
    */
   public void setDamaged(boolean newDamaged) {
@@ -97,9 +109,9 @@ public abstract class AudioVisualItem extends CirculatingItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

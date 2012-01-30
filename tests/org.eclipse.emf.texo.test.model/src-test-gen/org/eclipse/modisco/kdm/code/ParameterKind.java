@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>ParameterKind</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>ParameterKind</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum ParameterKind {
 
   /**
-   * The enum: BYVALUE
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: BYVALUE <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   BYVALUE(0, "byValue", "byValue") {
@@ -29,8 +29,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: BYNAME
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: BYNAME <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   BYNAME(1, "byName", "byName") {
@@ -45,8 +45,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: BYREFERENCE
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: BYREFERENCE <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   BYREFERENCE(2, "byReference", "byReference") {
@@ -61,8 +61,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: VARIADIC
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: VARIADIC <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   VARIADIC(3, "variadic", "variadic") {
@@ -77,8 +77,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: RETURN
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: RETURN <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   RETURN(4, "return", "return") {
@@ -93,8 +93,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: THROWS
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: THROWS <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   THROWS(5, "throws", "throws") {
@@ -109,8 +109,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: EXCEPTION
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EXCEPTION <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   EXCEPTION(6, "exception", "exception") {
@@ -125,8 +125,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: CATCHALL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: CATCHALL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   CATCHALL(7, "catchall", "catchall") {
@@ -141,8 +141,8 @@ public enum ParameterKind {
     }
   },
   /**
-   * The enum: UNKNOWN
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: UNKNOWN <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   UNKNOWN(8, "unknown", "unknown") {
@@ -158,25 +158,25 @@ public enum ParameterKind {
   };
 
   /**
-   * An array of all the '<em><b>ParameterKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>ParameterKind</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final ParameterKind[] VALUES_ARRAY = new ParameterKind[] { BYVALUE, BYNAME, BYREFERENCE, VARIADIC,
       RETURN, THROWS, EXCEPTION, CATCHALL, UNKNOWN };
 
   /**
-   * A public read-only list of all the '<em><b>ParameterKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>ParameterKind</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<ParameterKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>ParameterKind</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>ParameterKind</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static ParameterKind get(String literal) {
@@ -190,9 +190,9 @@ public enum ParameterKind {
   }
 
   /**
-   * Returns the '<em><b>ParameterKind</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>ParameterKind</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static ParameterKind getByName(String name) {
@@ -206,9 +206,9 @@ public enum ParameterKind {
   }
 
   /**
-   * Returns the '<em><b>ParameterKind</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>ParameterKind</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static ParameterKind get(int value) {
@@ -222,25 +222,28 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private ParameterKind(int value, String name, String literal) {
@@ -251,6 +254,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -260,6 +264,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -269,6 +274,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -278,6 +284,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -287,6 +294,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -296,6 +304,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -305,6 +314,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -314,6 +324,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -323,6 +334,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -332,6 +344,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -340,6 +353,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -348,6 +362,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -356,6 +371,7 @@ public enum ParameterKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

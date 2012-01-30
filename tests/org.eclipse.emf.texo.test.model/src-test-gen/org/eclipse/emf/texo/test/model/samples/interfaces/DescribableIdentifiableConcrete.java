@@ -4,39 +4,43 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>DescribableIdentifiableConcrete</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>DescribableIdentifiableConcrete</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "DescribableIdentifiableConcrete")
 public class DescribableIdentifiableConcrete extends Identifiable implements Describable, IdentifiedType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = "";
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String description = "";
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String identifier = "";
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -46,9 +50,11 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
 
   /**
    * Sets the '{@link DescribableIdentifiableConcrete#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DescribableIdentifiableConcrete#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DescribableIdentifiableConcrete#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -57,8 +63,9 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
 
   /**
    * Returns the value of '<em><b>description</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>description</b></em>' feature
    * @generated
    */
@@ -68,9 +75,11 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
 
   /**
    * Sets the '{@link DescribableIdentifiableConcrete#getDescription() <em>description</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DescribableIdentifiableConcrete#getDescription() description}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DescribableIdentifiableConcrete#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -79,8 +88,9 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
 
   /**
    * Returns the value of '<em><b>identifier</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>identifier</b></em>' feature
    * @generated
    */
@@ -90,9 +100,11 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
 
   /**
    * Sets the '{@link DescribableIdentifiableConcrete#getIdentifier() <em>identifier</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DescribableIdentifiableConcrete#getIdentifier() identifier}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DescribableIdentifiableConcrete#getIdentifier() identifier}' feature.
    * @generated
    */
   public void setIdentifier(String newIdentifier) {
@@ -100,9 +112,9 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

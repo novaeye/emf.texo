@@ -7,13 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>OneTimePayment</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * Разовый платеж
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>OneTimePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> Разовый платеж <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "OneTimePayment")
 public class OneTimePayment implements PaymentItem {
@@ -26,9 +24,10 @@ public class OneTimePayment implements PaymentItem {
   @Basic(optional = true)
   private BigDecimal sum = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Currency currency = Currency.ROUBLES;
@@ -84,8 +83,9 @@ public class OneTimePayment implements PaymentItem {
 
   /**
    * Returns the value of '<em><b>currency</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>currency</b></em>' feature
    * @generated
    */
@@ -95,9 +95,11 @@ public class OneTimePayment implements PaymentItem {
 
   /**
    * Sets the '{@link OneTimePayment#getCurrency() <em>currency</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link OneTimePayment#getCurrency() currency}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link OneTimePayment#getCurrency() currency}' feature.
    * @generated
    */
   public void setCurrency(Currency newCurrency) {
@@ -180,9 +182,9 @@ public class OneTimePayment implements PaymentItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

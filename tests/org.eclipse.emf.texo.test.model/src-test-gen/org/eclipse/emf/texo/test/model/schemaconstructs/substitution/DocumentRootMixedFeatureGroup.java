@@ -11,11 +11,11 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
-/** 
- * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class DocumentRootMixedFeatureGroup {
 
@@ -96,84 +96,96 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String text;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String cDATA;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String comment;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private EvenType even;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private BigInteger mySimpleAbstract;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = EvenComplexNumberType.class)
   @JoinColumns({ @JoinColumn() })
   private EvenComplexNumberType evenComplexNumber;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ComplexNumber.class)
   @JoinColumns({ @JoinColumn() })
   private ComplexNumber myComplexAbstract;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = MultiNumberType.class)
   @JoinColumns({ @JoinColumn() })
   private MultiNumberType multiNumber;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = NumberType.class)
   @JoinColumns({ @JoinColumn() })
   private NumberType number;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private OddType odd;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = OddComplexNumberType.class)
   @JoinColumns({ @JoinColumn() })
@@ -195,8 +207,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -206,9 +219,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -218,8 +233,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>cDATA</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cDATA</b></em>' feature
    * @generated
    */
@@ -229,9 +245,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -241,8 +259,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -252,9 +271,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -264,8 +285,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>even</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>even</b></em>' feature
    * @generated
    */
@@ -275,9 +297,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getEven() <em>even</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getEven() even}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getEven() even}' feature.
    * @generated
    */
   public void setEven(EvenType newEven) {
@@ -287,8 +311,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>mySimpleAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mySimpleAbstract</b></em>' feature
    * @generated
    */
@@ -298,9 +323,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getMySimpleAbstract() <em>mySimpleAbstract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getMySimpleAbstract() mySimpleAbstract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getMySimpleAbstract() mySimpleAbstract}' feature.
    * @generated
    */
   public void setMySimpleAbstract(BigInteger newMySimpleAbstract) {
@@ -310,8 +337,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>evenComplexNumber</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>evenComplexNumber</b></em>' feature
    * @generated
    */
@@ -321,9 +349,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getEvenComplexNumber() <em>evenComplexNumber</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getEvenComplexNumber() evenComplexNumber}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getEvenComplexNumber() evenComplexNumber}' feature.
    * @generated
    */
   public void setEvenComplexNumber(EvenComplexNumberType newEvenComplexNumber) {
@@ -333,8 +363,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>myComplexAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myComplexAbstract</b></em>' feature
    * @generated
    */
@@ -344,9 +375,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
    */
   public void setMyComplexAbstract(ComplexNumber newMyComplexAbstract) {
@@ -356,8 +389,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>multiNumber</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>multiNumber</b></em>' feature
    * @generated
    */
@@ -367,9 +401,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getMultiNumber() <em>multiNumber</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getMultiNumber() multiNumber}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getMultiNumber() multiNumber}' feature.
    * @generated
    */
   public void setMultiNumber(MultiNumberType newMultiNumber) {
@@ -379,8 +415,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>number</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>number</b></em>' feature
    * @generated
    */
@@ -390,9 +427,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getNumber() <em>number</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getNumber() number}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(NumberType newNumber) {
@@ -402,8 +441,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>odd</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>odd</b></em>' feature
    * @generated
    */
@@ -413,9 +453,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getOdd() <em>odd</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getOdd() odd}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getOdd() odd}' feature.
    * @generated
    */
   public void setOdd(OddType newOdd) {
@@ -425,8 +467,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>oddComplexNumber</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>oddComplexNumber</b></em>' feature
    * @generated
    */
@@ -436,9 +479,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getOddComplexNumber() <em>oddComplexNumber</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getOddComplexNumber() oddComplexNumber}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getOddComplexNumber() oddComplexNumber}' feature.
    * @generated
    */
   public void setOddComplexNumber(OddComplexNumberType newOddComplexNumber) {
@@ -448,9 +493,10 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -483,10 +529,13 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

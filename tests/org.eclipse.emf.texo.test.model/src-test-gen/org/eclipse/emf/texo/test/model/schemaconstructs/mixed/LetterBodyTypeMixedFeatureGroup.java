@@ -13,11 +13,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation for the Feature Group '<em><b>LetterBodyType.mixed</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>LetterBodyType.mixed</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class LetterBodyTypeMixedFeatureGroup {
 
@@ -99,53 +99,61 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String text;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String cDATA;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String comment;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = SalutationType.class)
   @JoinColumns({ @JoinColumn() })
   private SalutationType salutation;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BigInteger quantity;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String productName;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date shipDate;
@@ -166,8 +174,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -177,9 +186,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -189,8 +200,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>cDATA</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cDATA</b></em>' feature
    * @generated
    */
@@ -200,9 +212,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -212,8 +226,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -223,9 +238,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -235,8 +252,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>salutation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>salutation</b></em>' feature
    * @generated
    */
@@ -246,9 +264,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getSalutation() <em>salutation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
    * @generated
    */
   public void setSalutation(SalutationType newSalutation) {
@@ -258,8 +278,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>quantity</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>quantity</b></em>' feature
    * @generated
    */
@@ -269,9 +290,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getQuantity() <em>quantity</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
@@ -281,8 +304,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>productName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>productName</b></em>' feature
    * @generated
    */
@@ -292,9 +316,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getProductName() <em>productName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getProductName() productName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -304,8 +330,9 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>shipDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipDate</b></em>' feature
    * @generated
    */
@@ -315,9 +342,11 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getShipDate() <em>shipDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {
@@ -327,9 +356,10 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -354,10 +384,13 @@ public class LetterBodyTypeMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

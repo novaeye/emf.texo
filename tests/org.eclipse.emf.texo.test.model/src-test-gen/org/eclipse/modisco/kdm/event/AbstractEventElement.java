@@ -17,43 +17,47 @@ import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
-/** 
- * A representation of the model object '<em><b>AbstractEventElement</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>AbstractEventElement</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "AbstractEventElement")
 public abstract class AbstractEventElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractEventRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractEventRelationship> eventRelation = new HashSet<AbstractEventRelationship>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ActionElement> abstraction = new ArrayList<ActionElement>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractCodeElement.class)
   @JoinTable(name = "AbstractEventElement_implementation")
@@ -61,8 +65,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>source</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>source</b></em>' feature
    * @generated
    */
@@ -72,6 +77,7 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Adds to the <em>source</em> feature.
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -82,8 +88,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>source</em> feature.
+   * 
    * @generated
    */
   public void removeFromSource(SourceRef sourceValue) {
@@ -92,8 +99,9 @@ public abstract class AbstractEventElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>source</em> feature.
+   * 
    * @generated
    */
   public void clearSource() {
@@ -104,9 +112,11 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractEventElement#getSource() <em>source</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractEventElement#getSource() source}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractEventElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -115,8 +125,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>eventRelation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>eventRelation</b></em>' feature
    * @generated
    */
@@ -126,6 +137,7 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Adds to the <em>eventRelation</em> feature.
+   * 
    * @generated
    */
   public void addToEventRelation(AbstractEventRelationship eventRelationValue) {
@@ -136,8 +148,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>eventRelation</em> feature.
+   * 
    * @generated
    */
   public void removeFromEventRelation(AbstractEventRelationship eventRelationValue) {
@@ -146,8 +159,9 @@ public abstract class AbstractEventElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>eventRelation</em> feature.
+   * 
    * @generated
    */
   public void clearEventRelation() {
@@ -158,9 +172,11 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractEventElement#getEventRelation() <em>eventRelation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractEventElement#getEventRelation() eventRelation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractEventElement#getEventRelation() eventRelation}' feature.
    * @generated
    */
   public void setEventRelation(Set<AbstractEventRelationship> newEventRelation) {
@@ -169,8 +185,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>abstraction</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>abstraction</b></em>' feature
    * @generated
    */
@@ -180,6 +197,7 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Adds to the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void addToAbstraction(ActionElement abstractionValue) {
@@ -190,8 +208,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void removeFromAbstraction(ActionElement abstractionValue) {
@@ -200,8 +219,9 @@ public abstract class AbstractEventElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void clearAbstraction() {
@@ -212,9 +232,11 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractEventElement#getAbstraction() <em>abstraction</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractEventElement#getAbstraction() abstraction}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractEventElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(List<ActionElement> newAbstraction) {
@@ -223,8 +245,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>implementation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>implementation</b></em>' feature
    * @generated
    */
@@ -234,6 +257,7 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Adds to the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void addToImplementation(AbstractCodeElement implementationValue) {
@@ -244,8 +268,9 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void removeFromImplementation(AbstractCodeElement implementationValue) {
@@ -254,8 +279,9 @@ public abstract class AbstractEventElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void clearImplementation() {
@@ -266,9 +292,11 @@ public abstract class AbstractEventElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractEventElement#getImplementation() <em>implementation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractEventElement#getImplementation() implementation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractEventElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<AbstractCodeElement> newImplementation) {
@@ -276,9 +304,9 @@ public abstract class AbstractEventElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

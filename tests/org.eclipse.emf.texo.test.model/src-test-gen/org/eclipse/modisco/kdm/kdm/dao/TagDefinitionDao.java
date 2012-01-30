@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.kdm.TagDefinition;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>TagDefinition</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class TagDefinitionDao extends BaseDao<TagDefinition> {
 

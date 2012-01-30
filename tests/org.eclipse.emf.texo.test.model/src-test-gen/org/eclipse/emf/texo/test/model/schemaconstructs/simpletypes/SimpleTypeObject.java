@@ -15,80 +15,91 @@ import javax.persistence.TemporalType;
 @Entity(name = "SimpleTypeObject")
 public class SimpleTypeObject {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String code = "c1";
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Boolean boo = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Byte byt = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Double doubl = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Float float_ = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Integer inte = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Long lon = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Short shor = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private SimpleEnum enu = SimpleEnum.ENUM1;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date dat = null;
 
   /**
    * Returns the value of '<em><b>code</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>code</b></em>' feature
    * @generated
    */
@@ -98,9 +109,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getCode() <em>code</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getCode() code}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -109,8 +122,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>boo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>boo</b></em>' feature
    * @generated
    */
@@ -120,9 +134,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getBoo() <em>boo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getBoo() boo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getBoo() boo}' feature.
    * @generated
    */
   public void setBoo(Boolean newBoo) {
@@ -131,8 +147,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>byt</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>byt</b></em>' feature
    * @generated
    */
@@ -142,9 +159,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getByt() <em>byt</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getByt() byt}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getByt() byt}' feature.
    * @generated
    */
   public void setByt(Byte newByt) {
@@ -153,8 +172,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>doubl</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>doubl</b></em>' feature
    * @generated
    */
@@ -164,9 +184,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getDoubl() <em>doubl</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getDoubl() doubl}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getDoubl() doubl}' feature.
    * @generated
    */
   public void setDoubl(Double newDoubl) {
@@ -175,8 +197,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>float</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>float</b></em>' feature
    * @generated
    */
@@ -186,9 +209,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getFloat() <em>float</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getFloat() float}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getFloat() float}' feature.
    * @generated
    */
   public void setFloat(Float newFloat_) {
@@ -197,8 +222,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>inte</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>inte</b></em>' feature
    * @generated
    */
@@ -208,9 +234,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getInte() <em>inte</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getInte() inte}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getInte() inte}' feature.
    * @generated
    */
   public void setInte(Integer newInte) {
@@ -219,8 +247,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>lon</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>lon</b></em>' feature
    * @generated
    */
@@ -230,9 +259,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getLon() <em>lon</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getLon() lon}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getLon() lon}' feature.
    * @generated
    */
   public void setLon(Long newLon) {
@@ -241,8 +272,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>shor</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shor</b></em>' feature
    * @generated
    */
@@ -252,9 +284,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getShor() <em>shor</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getShor() shor}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getShor() shor}' feature.
    * @generated
    */
   public void setShor(Short newShor) {
@@ -263,8 +297,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>enu</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>enu</b></em>' feature
    * @generated
    */
@@ -274,9 +309,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getEnu() <em>enu</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getEnu() enu}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getEnu() enu}' feature.
    * @generated
    */
   public void setEnu(SimpleEnum newEnu) {
@@ -285,8 +322,9 @@ public class SimpleTypeObject {
 
   /**
    * Returns the value of '<em><b>dat</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>dat</b></em>' feature
    * @generated
    */
@@ -296,9 +334,11 @@ public class SimpleTypeObject {
 
   /**
    * Sets the '{@link SimpleTypeObject#getDat() <em>dat</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleTypeObject#getDat() dat}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleTypeObject#getDat() dat}' feature.
    * @generated
    */
   public void setDat(Date newDat) {
@@ -306,9 +346,9 @@ public class SimpleTypeObject {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

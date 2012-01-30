@@ -10,24 +10,26 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>ClassUnit</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ClassUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ClassUnit")
 public class ClassUnit extends Datatype {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Boolean isAbstract = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CodeItem.class)
   @OrderColumn()
@@ -36,8 +38,9 @@ public class ClassUnit extends Datatype {
 
   /**
    * Returns the value of '<em><b>isAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>isAbstract</b></em>' feature
    * @generated
    */
@@ -47,9 +50,11 @@ public class ClassUnit extends Datatype {
 
   /**
    * Sets the '{@link ClassUnit#getIsAbstract() <em>isAbstract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ClassUnit#getIsAbstract() isAbstract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ClassUnit#getIsAbstract() isAbstract}' feature.
    * @generated
    */
   public void setIsAbstract(Boolean newIsAbstract) {
@@ -58,8 +63,9 @@ public class ClassUnit extends Datatype {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -69,6 +75,7 @@ public class ClassUnit extends Datatype {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(CodeItem codeElementValue) {
@@ -79,8 +86,9 @@ public class ClassUnit extends Datatype {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(CodeItem codeElementValue) {
@@ -89,8 +97,9 @@ public class ClassUnit extends Datatype {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -101,9 +110,11 @@ public class ClassUnit extends Datatype {
 
   /**
    * Sets the '{@link ClassUnit#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ClassUnit#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ClassUnit#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<CodeItem> newCodeElement) {
@@ -111,9 +122,9 @@ public class ClassUnit extends Datatype {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

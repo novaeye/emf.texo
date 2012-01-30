@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>InterfaceUnit</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>InterfaceUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "InterfaceUnit")
 public class InterfaceUnit extends Datatype {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CodeItem.class)
   @OrderColumn()
@@ -28,8 +29,9 @@ public class InterfaceUnit extends Datatype {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public class InterfaceUnit extends Datatype {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(CodeItem codeElementValue) {
@@ -49,8 +52,9 @@ public class InterfaceUnit extends Datatype {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(CodeItem codeElementValue) {
@@ -59,8 +63,9 @@ public class InterfaceUnit extends Datatype {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -71,9 +76,11 @@ public class InterfaceUnit extends Datatype {
 
   /**
    * Sets the '{@link InterfaceUnit#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link InterfaceUnit#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link InterfaceUnit#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<CodeItem> newCodeElement) {
@@ -81,9 +88,9 @@ public class InterfaceUnit extends Datatype {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

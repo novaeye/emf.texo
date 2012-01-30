@@ -93,21 +93,24 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = AddressType.class)
   @JoinColumns({ @JoinColumn() })
   private AddressType shipTo;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = AddressType.class)
   @JoinColumns({ @JoinColumn() })
@@ -129,8 +132,9 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * Returns the value of '<em><b>shipTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipTo</b></em>' feature
    * @generated
    */
@@ -140,9 +144,11 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * Sets the '{@link AddressList#getShipTo() <em>shipTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressList#getShipTo() shipTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressList#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(AddressType newShipTo) {
@@ -152,8 +158,9 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * Returns the value of '<em><b>billTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>billTo</b></em>' feature
    * @generated
    */
@@ -163,9 +170,11 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * Sets the '{@link AddressList#getBillTo() <em>billTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressList#getBillTo() billTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressList#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(AddressType newBillTo) {
@@ -175,9 +184,10 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -192,10 +202,13 @@ public class AddressListAddrsFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

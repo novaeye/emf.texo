@@ -10,33 +10,36 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.Element;
 
-/** 
- * A representation of the model object '<em><b>ExtensionFamily</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ExtensionFamily</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ExtensionFamily")
 public class ExtensionFamily extends Element {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Stereotype.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Stereotype> stereotype = new HashSet<Stereotype>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
   /**
    * Returns the value of '<em><b>stereotype</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stereotype</b></em>' feature
    * @generated
    */
@@ -46,6 +49,7 @@ public class ExtensionFamily extends Element {
 
   /**
    * Adds to the <em>stereotype</em> feature.
+   * 
    * @generated
    */
   public void addToStereotype(Stereotype stereotypeValue) {
@@ -56,8 +60,9 @@ public class ExtensionFamily extends Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>stereotype</em> feature.
+   * 
    * @generated
    */
   public void removeFromStereotype(Stereotype stereotypeValue) {
@@ -66,8 +71,9 @@ public class ExtensionFamily extends Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>stereotype</em> feature.
+   * 
    * @generated
    */
   public void clearStereotype() {
@@ -78,9 +84,11 @@ public class ExtensionFamily extends Element {
 
   /**
    * Sets the '{@link ExtensionFamily#getStereotype() <em>stereotype</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ExtensionFamily#getStereotype() stereotype}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ExtensionFamily#getStereotype() stereotype}' feature.
    * @generated
    */
   public void setStereotype(Set<Stereotype> newStereotype) {
@@ -89,8 +97,9 @@ public class ExtensionFamily extends Element {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -100,9 +109,11 @@ public class ExtensionFamily extends Element {
 
   /**
    * Sets the '{@link ExtensionFamily#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ExtensionFamily#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ExtensionFamily#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -110,9 +121,9 @@ public class ExtensionFamily extends Element {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

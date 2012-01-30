@@ -7,17 +7,18 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-/** 
- * A representation of the model object '<em><b>Namespace</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Namespace</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Namespace")
 public class Namespace extends CodeItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CodeItem.class)
   @JoinTable(name = "Namespace_groupedCode")
@@ -25,8 +26,9 @@ public class Namespace extends CodeItem {
 
   /**
    * Returns the value of '<em><b>groupedCode</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupedCode</b></em>' feature
    * @generated
    */
@@ -36,6 +38,7 @@ public class Namespace extends CodeItem {
 
   /**
    * Adds to the <em>groupedCode</em> feature.
+   * 
    * @generated
    */
   public void addToGroupedCode(CodeItem groupedCodeValue) {
@@ -46,8 +49,9 @@ public class Namespace extends CodeItem {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>groupedCode</em> feature.
+   * 
    * @generated
    */
   public void removeFromGroupedCode(CodeItem groupedCodeValue) {
@@ -56,8 +60,9 @@ public class Namespace extends CodeItem {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>groupedCode</em> feature.
+   * 
    * @generated
    */
   public void clearGroupedCode() {
@@ -68,9 +73,11 @@ public class Namespace extends CodeItem {
 
   /**
    * Sets the '{@link Namespace#getGroupedCode() <em>groupedCode</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Namespace#getGroupedCode() groupedCode}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Namespace#getGroupedCode() groupedCode}' feature.
    * @generated
    */
   public void setGroupedCode(Set<CodeItem> newGroupedCode) {
@@ -78,9 +85,9 @@ public class Namespace extends CodeItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoolLibrary;
 import org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoollibraryModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SchoolLibrary</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SchoolLibraryDao extends BaseDao<SchoolLibrary> {
 

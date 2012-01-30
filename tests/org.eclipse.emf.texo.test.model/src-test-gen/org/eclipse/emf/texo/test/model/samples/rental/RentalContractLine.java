@@ -17,24 +17,27 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 @Entity(name = "RentalContractLine")
 public class RentalContractLine extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalContract.class)
   @JoinColumns({ @JoinColumn() })
   private RentalContract rentalContract = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long number = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalUnit.class)
   @JoinColumns({ @JoinColumn() })
@@ -42,8 +45,9 @@ public class RentalContractLine extends Identifiable {
 
   /**
    * Returns the value of '<em><b>rentalContract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>rentalContract</b></em>' feature
    * @generated
    */
@@ -53,9 +57,11 @@ public class RentalContractLine extends Identifiable {
 
   /**
    * Sets the '{@link RentalContractLine#getRentalContract() <em>rentalContract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RentalContractLine#getRentalContract() rentalContract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RentalContractLine#getRentalContract() rentalContract}' feature.
    * @generated
    */
   public void setRentalContract(RentalContract newRentalContract) {
@@ -64,8 +70,9 @@ public class RentalContractLine extends Identifiable {
 
   /**
    * Returns the value of '<em><b>number</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>number</b></em>' feature
    * @generated
    */
@@ -75,9 +82,11 @@ public class RentalContractLine extends Identifiable {
 
   /**
    * Sets the '{@link RentalContractLine#getNumber() <em>number</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RentalContractLine#getNumber() number}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RentalContractLine#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(long newNumber) {
@@ -86,8 +95,9 @@ public class RentalContractLine extends Identifiable {
 
   /**
    * Returns the value of '<em><b>rentalUnit</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>rentalUnit</b></em>' feature
    * @generated
    */
@@ -97,9 +107,11 @@ public class RentalContractLine extends Identifiable {
 
   /**
    * Sets the '{@link RentalContractLine#getRentalUnit() <em>rentalUnit</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RentalContractLine#getRentalUnit() rentalUnit}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RentalContractLine#getRentalUnit() rentalUnit}' feature.
    * @generated
    */
   public void setRentalUnit(RentalUnit newRentalUnit) {
@@ -107,9 +119,9 @@ public class RentalContractLine extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

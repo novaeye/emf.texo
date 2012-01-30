@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.inventory.InvModelPackage;
 import org.eclipse.emf.texo.test.model.samples.inventory.PDeclaration;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>PDeclaration</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class PDeclarationDao extends BaseDao<PDeclaration> {
 

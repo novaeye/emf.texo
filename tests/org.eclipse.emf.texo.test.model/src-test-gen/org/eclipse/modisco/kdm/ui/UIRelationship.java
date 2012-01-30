@@ -7,25 +7,27 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
-/** 
- * A representation of the model object '<em><b>UIRelationship</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>UIRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "UIRelationship")
 public class UIRelationship extends AbstractUIRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
   @JoinColumns({ @JoinColumn() })
   private KDMEntity to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractUIElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -33,8 +35,9 @@ public class UIRelationship extends AbstractUIRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -44,9 +47,11 @@ public class UIRelationship extends AbstractUIRelationship {
 
   /**
    * Sets the '{@link UIRelationship#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link UIRelationship#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link UIRelationship#getTo() to}' feature.
    * @generated
    */
   public void setTo(KDMEntity newTo) {
@@ -55,8 +60,9 @@ public class UIRelationship extends AbstractUIRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -66,9 +72,11 @@ public class UIRelationship extends AbstractUIRelationship {
 
   /**
    * Sets the '{@link UIRelationship#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link UIRelationship#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link UIRelationship#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(AbstractUIElement newFrom) {
@@ -76,9 +84,9 @@ public class UIRelationship extends AbstractUIRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

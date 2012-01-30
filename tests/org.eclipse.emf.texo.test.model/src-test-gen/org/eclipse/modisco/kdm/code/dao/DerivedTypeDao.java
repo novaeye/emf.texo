@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.DerivedType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>DerivedType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DerivedTypeDao extends BaseDao<DerivedType> {
 

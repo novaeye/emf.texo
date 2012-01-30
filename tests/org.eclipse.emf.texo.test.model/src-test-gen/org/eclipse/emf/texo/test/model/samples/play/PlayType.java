@@ -11,54 +11,60 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>PlayType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PlayType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PlayType")
 public class PlayType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String title = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = FmType.class)
   @JoinColumns({ @JoinColumn() })
   private FmType fm = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = PersonaeType.class)
   @JoinColumns({ @JoinColumn() })
   private PersonaeType personae = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String sceneDescription = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String playSubTitle = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActType.class)
   @OrderColumn()
@@ -67,8 +73,9 @@ public class PlayType {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -78,9 +85,11 @@ public class PlayType {
 
   /**
    * Sets the '{@link PlayType#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlayType#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlayType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -89,8 +98,9 @@ public class PlayType {
 
   /**
    * Returns the value of '<em><b>fm</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>fm</b></em>' feature
    * @generated
    */
@@ -100,9 +110,11 @@ public class PlayType {
 
   /**
    * Sets the '{@link PlayType#getFm() <em>fm</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlayType#getFm() fm}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlayType#getFm() fm}' feature.
    * @generated
    */
   public void setFm(FmType newFm) {
@@ -111,8 +123,9 @@ public class PlayType {
 
   /**
    * Returns the value of '<em><b>personae</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>personae</b></em>' feature
    * @generated
    */
@@ -122,9 +135,11 @@ public class PlayType {
 
   /**
    * Sets the '{@link PlayType#getPersonae() <em>personae</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlayType#getPersonae() personae}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlayType#getPersonae() personae}' feature.
    * @generated
    */
   public void setPersonae(PersonaeType newPersonae) {
@@ -133,8 +148,9 @@ public class PlayType {
 
   /**
    * Returns the value of '<em><b>sceneDescription</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>sceneDescription</b></em>' feature
    * @generated
    */
@@ -144,9 +160,11 @@ public class PlayType {
 
   /**
    * Sets the '{@link PlayType#getSceneDescription() <em>sceneDescription</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlayType#getSceneDescription() sceneDescription}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlayType#getSceneDescription() sceneDescription}' feature.
    * @generated
    */
   public void setSceneDescription(String newSceneDescription) {
@@ -155,8 +173,9 @@ public class PlayType {
 
   /**
    * Returns the value of '<em><b>playSubTitle</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>playSubTitle</b></em>' feature
    * @generated
    */
@@ -166,9 +185,11 @@ public class PlayType {
 
   /**
    * Sets the '{@link PlayType#getPlaySubTitle() <em>playSubTitle</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlayType#getPlaySubTitle() playSubTitle}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlayType#getPlaySubTitle() playSubTitle}' feature.
    * @generated
    */
   public void setPlaySubTitle(String newPlaySubTitle) {
@@ -177,8 +198,9 @@ public class PlayType {
 
   /**
    * Returns the value of '<em><b>act</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>act</b></em>' feature
    * @generated
    */
@@ -188,6 +210,7 @@ public class PlayType {
 
   /**
    * Adds to the <em>act</em> feature.
+   * 
    * @generated
    */
   public void addToAct(ActType actValue) {
@@ -198,8 +221,9 @@ public class PlayType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>act</em> feature.
+   * 
    * @generated
    */
   public void removeFromAct(ActType actValue) {
@@ -208,8 +232,9 @@ public class PlayType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>act</em> feature.
+   * 
    * @generated
    */
   public void clearAct() {
@@ -220,9 +245,11 @@ public class PlayType {
 
   /**
    * Sets the '{@link PlayType#getAct() <em>act</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlayType#getAct() act}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlayType#getAct() act}' feature.
    * @generated
    */
   public void setAct(List<ActType> newAct) {
@@ -230,9 +257,9 @@ public class PlayType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

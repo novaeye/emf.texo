@@ -10,17 +10,18 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.code.ItemUnit;
 
-/** 
- * A representation of the model object '<em><b>ColumnSet</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ColumnSet</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ColumnSet")
 public class ColumnSet extends DataContainer {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ItemUnit.class)
   @OrderColumn()
@@ -29,8 +30,9 @@ public class ColumnSet extends DataContainer {
 
   /**
    * Returns the value of '<em><b>itemUnit</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>itemUnit</b></em>' feature
    * @generated
    */
@@ -40,6 +42,7 @@ public class ColumnSet extends DataContainer {
 
   /**
    * Adds to the <em>itemUnit</em> feature.
+   * 
    * @generated
    */
   public void addToItemUnit(ItemUnit itemUnitValue) {
@@ -50,8 +53,9 @@ public class ColumnSet extends DataContainer {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>itemUnit</em> feature.
+   * 
    * @generated
    */
   public void removeFromItemUnit(ItemUnit itemUnitValue) {
@@ -60,8 +64,9 @@ public class ColumnSet extends DataContainer {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>itemUnit</em> feature.
+   * 
    * @generated
    */
   public void clearItemUnit() {
@@ -72,9 +77,11 @@ public class ColumnSet extends DataContainer {
 
   /**
    * Sets the '{@link ColumnSet#getItemUnit() <em>itemUnit</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ColumnSet#getItemUnit() itemUnit}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ColumnSet#getItemUnit() itemUnit}' feature.
    * @generated
    */
   public void setItemUnit(List<ItemUnit> newItemUnit) {
@@ -82,9 +89,9 @@ public class ColumnSet extends DataContainer {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

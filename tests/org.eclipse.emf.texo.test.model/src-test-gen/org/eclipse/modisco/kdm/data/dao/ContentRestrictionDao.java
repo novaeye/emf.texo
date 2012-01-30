@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.ContentRestriction;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ContentRestriction</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ContentRestrictionDao extends BaseDao<ContentRestriction> {
 

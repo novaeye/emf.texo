@@ -10,24 +10,26 @@ import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>BookStore</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BookStore</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BookStore")
 public class BookStore {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
   @MapKeyClass(Writer.class)
@@ -37,8 +39,9 @@ public class BookStore {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -48,9 +51,11 @@ public class BookStore {
 
   /**
    * Sets the '{@link BookStore#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookStore#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookStore#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -59,8 +64,9 @@ public class BookStore {
 
   /**
    * Returns the value of '<em><b>writersByBook</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>writersByBook</b></em>' feature
    * @generated
    */
@@ -70,9 +76,11 @@ public class BookStore {
 
   /**
    * Sets the '{@link BookStore#getWritersByBook() <em>writersByBook</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookStore#getWritersByBook() writersByBook}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookStore#getWritersByBook() writersByBook}' feature.
    * @generated
    */
   public void setWritersByBook(Map<Writer, Book> newWritersByBook) {
@@ -80,9 +88,9 @@ public class BookStore {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

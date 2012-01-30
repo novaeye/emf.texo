@@ -8,17 +8,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>EventResource</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>EventResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "EventResource")
 public class EventResource extends AbstractEventElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractEventElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -26,8 +27,9 @@ public class EventResource extends AbstractEventElement {
 
   /**
    * Returns the value of '<em><b>eventElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>eventElement</b></em>' feature
    * @generated
    */
@@ -37,6 +39,7 @@ public class EventResource extends AbstractEventElement {
 
   /**
    * Adds to the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void addToEventElement(AbstractEventElement eventElementValue) {
@@ -47,8 +50,9 @@ public class EventResource extends AbstractEventElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromEventElement(AbstractEventElement eventElementValue) {
@@ -57,8 +61,9 @@ public class EventResource extends AbstractEventElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void clearEventElement() {
@@ -69,9 +74,11 @@ public class EventResource extends AbstractEventElement {
 
   /**
    * Sets the '{@link EventResource#getEventElement() <em>eventElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link EventResource#getEventElement() eventElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link EventResource#getEventElement() eventElement}' feature.
    * @generated
    */
   public void setEventElement(Set<AbstractEventElement> newEventElement) {
@@ -79,9 +86,9 @@ public class EventResource extends AbstractEventElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

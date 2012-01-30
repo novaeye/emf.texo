@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.emap.Book;
 import org.eclipse.emf.texo.test.model.schemaconstructs.emap.EmapModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Book</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class BookDao extends BaseDao<Book> {
 

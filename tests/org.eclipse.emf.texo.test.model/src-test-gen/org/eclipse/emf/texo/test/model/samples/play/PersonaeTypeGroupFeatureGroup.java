@@ -9,11 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation for the Feature Group '<em><b>PersonaeType.group</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>PersonaeType.group</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class PersonaeTypeGroupFeatureGroup {
 
@@ -94,27 +94,31 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String title;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String persona;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaGroupType.class)
   @JoinColumns({ @JoinColumn() })
@@ -136,8 +140,9 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -147,9 +152,11 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link PersonaeType#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -159,8 +166,9 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>persona</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>persona</b></em>' feature
    * @generated
    */
@@ -170,9 +178,11 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link PersonaeType#getPersona() <em>persona</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getPersona() persona}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(String newPersona) {
@@ -182,8 +192,9 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>personaGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>personaGroup</b></em>' feature
    * @generated
    */
@@ -193,9 +204,11 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link PersonaeType#getPersonaGroup() <em>personaGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
    * @generated
    */
   public void setPersonaGroup(PersonaGroupType newPersonaGroup) {
@@ -205,9 +218,10 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -224,10 +238,13 @@ public class PersonaeTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

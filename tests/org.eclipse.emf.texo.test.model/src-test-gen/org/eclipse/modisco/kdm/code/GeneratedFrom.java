@@ -6,25 +6,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>GeneratedFrom</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>GeneratedFrom</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "GeneratedFrom")
 public class GeneratedFrom extends AbstractCodeRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PreprocessorDirective.class)
   @JoinColumns({ @JoinColumn() })
   private PreprocessorDirective to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractCodeElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -32,8 +34,9 @@ public class GeneratedFrom extends AbstractCodeRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -43,9 +46,11 @@ public class GeneratedFrom extends AbstractCodeRelationship {
 
   /**
    * Sets the '{@link GeneratedFrom#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link GeneratedFrom#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link GeneratedFrom#getTo() to}' feature.
    * @generated
    */
   public void setTo(PreprocessorDirective newTo) {
@@ -54,8 +59,9 @@ public class GeneratedFrom extends AbstractCodeRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -65,9 +71,11 @@ public class GeneratedFrom extends AbstractCodeRelationship {
 
   /**
    * Sets the '{@link GeneratedFrom#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link GeneratedFrom#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link GeneratedFrom#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(AbstractCodeElement newFrom) {
@@ -75,9 +83,9 @@ public class GeneratedFrom extends AbstractCodeRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -9,24 +9,26 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>EventAction</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>EventAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "EventAction")
 public class EventAction extends AbstractEventElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Event.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class EventAction extends AbstractEventElement {
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -45,9 +48,11 @@ public class EventAction extends AbstractEventElement {
 
   /**
    * Sets the '{@link EventAction#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link EventAction#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link EventAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -56,8 +61,9 @@ public class EventAction extends AbstractEventElement {
 
   /**
    * Returns the value of '<em><b>eventElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>eventElement</b></em>' feature
    * @generated
    */
@@ -67,6 +73,7 @@ public class EventAction extends AbstractEventElement {
 
   /**
    * Adds to the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void addToEventElement(Event eventElementValue) {
@@ -77,8 +84,9 @@ public class EventAction extends AbstractEventElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromEventElement(Event eventElementValue) {
@@ -87,8 +95,9 @@ public class EventAction extends AbstractEventElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void clearEventElement() {
@@ -99,9 +108,11 @@ public class EventAction extends AbstractEventElement {
 
   /**
    * Sets the '{@link EventAction#getEventElement() <em>eventElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link EventAction#getEventElement() eventElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link EventAction#getEventElement() eventElement}' feature.
    * @generated
    */
   public void setEventElement(Set<Event> newEventElement) {
@@ -109,9 +120,9 @@ public class EventAction extends AbstractEventElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

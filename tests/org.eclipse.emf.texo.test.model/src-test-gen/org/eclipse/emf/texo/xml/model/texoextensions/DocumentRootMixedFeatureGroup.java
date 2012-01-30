@@ -4,34 +4,34 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/** 
- * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
+ * end-user-doc -->
+ * 
+ * @generated
  */
 public class DocumentRootMixedFeatureGroup {
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * Is used to identify which feature is set in this feature group.
-   * @generated 
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
+   * 
+   * @generated
    */
   public static enum Feature {
     TEXT, CDATA, COMMENT
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * Returns only the values from the feature group which have the feature equal to the parameter. 
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Returns only the values from the feature group which have the feature
+   * equal to the parameter.
    * 
-   * @param featureGroup the featureGroup List to filter
-   * @param filterByFeature filters by this enum
+   * @param featureGroup
+   *          the featureGroup List to filter
+   * @param filterByFeature
+   *          filters by this enum
    * @return a list with instances corresponding to the feature kind
    * @see Collections#unmodifiableList(List)
-   * @generated 
+   * @generated
    */
   @SuppressWarnings("unchecked")
   public static <T> List<T> createUnmodifiableValueList(List<DocumentRootMixedFeatureGroup> featureGroup,
@@ -46,15 +46,15 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * Returns a single value from the feature group which has the feature equal to the parameter.
-   * The first found value is returned. If no value can be found then null is returned. 
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Returns a single value from the feature group which has the feature
+   * equal to the parameter. The first found value is returned. If no value can be found then null is returned.
    * 
-   * @param featureGroup the featureGroup List to filter
-   * @param filterByFeature filters by this enum
+   * @param featureGroup
+   *          the featureGroup List to filter
+   * @param filterByFeature
+   *          filters by this enum
    * @return an instance corresponding to the feature kind or null if not found.
-   * @generated 
+   * @generated
    */
   @SuppressWarnings("unchecked")
   public static <T> T getSingleFeatureMapValue(List<DocumentRootMixedFeatureGroup> featureGroup, Feature filterByFeature) {
@@ -67,14 +67,15 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * Creates a list of group instances set with the passed feature and values. 
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
+   * values.
    * 
-   * @param feature the feature to set
-   * @param values the values to set as value of each group instance in the result.
+   * @param feature
+   *          the feature to set
+   * @param values
+   *          the values to set as value of each group instance in the result.
    * @return a list with instances of this class, set with the Feature and values
-   * @generated 
+   * @generated
    */
   public static List<DocumentRootMixedFeatureGroup> createFeatureGroupList(Feature feature, List<?> values) {
     final List<DocumentRootMixedFeatureGroup> result = new ArrayList<DocumentRootMixedFeatureGroup>();
@@ -87,42 +88,42 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   private String text;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   private String cDATA;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   private String comment;
 
   /**
-   * @generated 
+   * @generated
    */
   public void setFeature(Feature feature) {
     this.feature = feature;
   }
 
   /**
-   * @generated 
+   * @generated
    */
   public Feature getFeature() {
     return feature;
@@ -130,9 +131,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -142,10 +143,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -155,9 +157,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>cDATA</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cDATA</b></em>' feature
    * @generated
    */
@@ -167,10 +169,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -180,9 +183,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -192,10 +195,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -204,11 +208,11 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -224,12 +228,14 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

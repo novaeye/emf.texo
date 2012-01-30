@@ -20,9 +20,10 @@ import javax.persistence.OrderColumn;
 @Entity(name = "Claim")
 public class Claim {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ClaimCompositeKey.class)
   @JoinColumns({ @JoinColumn() })
@@ -54,9 +55,10 @@ public class Claim {
   @Basic(optional = false)
   private String claimStatus = "";
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ClaimLine.class)
   @OrderColumn()
@@ -65,8 +67,9 @@ public class Claim {
 
   /**
    * Returns the value of '<em><b>claimCompositeKey</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>claimCompositeKey</b></em>' feature
    * @generated
    */
@@ -76,9 +79,11 @@ public class Claim {
 
   /**
    * Sets the '{@link Claim#getClaimCompositeKey() <em>claimCompositeKey</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Claim#getClaimCompositeKey() claimCompositeKey}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Claim#getClaimCompositeKey() claimCompositeKey}' feature.
    * @generated
    */
   public void setClaimCompositeKey(ClaimCompositeKey newClaimCompositeKey) {
@@ -166,8 +171,9 @@ public class Claim {
 
   /**
    * Returns the value of '<em><b>claimLine</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>claimLine</b></em>' feature
    * @generated
    */
@@ -177,6 +183,7 @@ public class Claim {
 
   /**
    * Adds to the <em>claimLine</em> feature.
+   * 
    * @generated
    */
   public void addToClaimLine(ClaimLine claimLineValue) {
@@ -187,8 +194,9 @@ public class Claim {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>claimLine</em> feature.
+   * 
    * @generated
    */
   public void removeFromClaimLine(ClaimLine claimLineValue) {
@@ -197,8 +205,9 @@ public class Claim {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>claimLine</em> feature.
+   * 
    * @generated
    */
   public void clearClaimLine() {
@@ -209,9 +218,11 @@ public class Claim {
 
   /**
    * Sets the '{@link Claim#getClaimLine() <em>claimLine</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Claim#getClaimLine() claimLine}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Claim#getClaimLine() claimLine}' feature.
    * @generated
    */
   public void setClaimLine(List<ClaimLine> newClaimLine) {
@@ -219,9 +230,9 @@ public class Claim {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

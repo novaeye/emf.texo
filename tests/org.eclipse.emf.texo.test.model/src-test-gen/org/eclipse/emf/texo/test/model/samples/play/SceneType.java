@@ -5,38 +5,42 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>SceneType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SceneType")
 public class SceneType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<SceneTypeGroupFeatureGroup> group = new ArrayList<SceneTypeGroupFeatureGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private PindexType pindex = PindexType._1;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String title = null;
 
   /**
    * Returns the value of '<em><b>group</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>group</b></em>' feature
    * @generated
    */
@@ -46,9 +50,11 @@ public class SceneType {
 
   /**
    * Sets the '{@link SceneType#getGroup() <em>group</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getGroup() group}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<SceneTypeGroupFeatureGroup> newGroup) {
@@ -57,8 +63,9 @@ public class SceneType {
 
   /**
    * Returns the value of '<em><b>stageDirections</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stageDirections</b></em>' feature
    * @generated
    */
@@ -69,9 +76,11 @@ public class SceneType {
 
   /**
    * Sets the '{@link SceneType#getStageDirections() <em>stageDirections</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(List<String> newStageDirections) {
@@ -81,8 +90,9 @@ public class SceneType {
 
   /**
    * Returns the value of '<em><b>speech</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>speech</b></em>' feature
    * @generated
    */
@@ -93,9 +103,11 @@ public class SceneType {
 
   /**
    * Sets the '{@link SceneType#getSpeech() <em>speech</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getSpeech() speech}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getSpeech() speech}' feature.
    * @generated
    */
   public void setSpeech(List<SpeechType> newSpeech) {
@@ -104,8 +116,9 @@ public class SceneType {
 
   /**
    * Returns the value of '<em><b>pindex</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>pindex</b></em>' feature
    * @generated
    */
@@ -115,9 +128,11 @@ public class SceneType {
 
   /**
    * Sets the '{@link SceneType#getPindex() <em>pindex</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getPindex() pindex}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getPindex() pindex}' feature.
    * @generated
    */
   public void setPindex(PindexType newPindex) {
@@ -126,8 +141,9 @@ public class SceneType {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -137,9 +153,11 @@ public class SceneType {
 
   /**
    * Sets the '{@link SceneType#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SceneType#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SceneType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -147,9 +165,9 @@ public class SceneType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

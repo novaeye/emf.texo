@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>BooksType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BooksType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BooksType")
 public class BooksType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = BookType.class)
   @OrderColumn()
@@ -28,8 +29,9 @@ public class BooksType {
 
   /**
    * Returns the value of '<em><b>book</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>book</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public class BooksType {
 
   /**
    * Adds to the <em>book</em> feature.
+   * 
    * @generated
    */
   public void addToBook(BookType bookValue) {
@@ -49,8 +52,9 @@ public class BooksType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>book</em> feature.
+   * 
    * @generated
    */
   public void removeFromBook(BookType bookValue) {
@@ -59,8 +63,9 @@ public class BooksType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>book</em> feature.
+   * 
    * @generated
    */
   public void clearBook() {
@@ -71,9 +76,11 @@ public class BooksType {
 
   /**
    * Sets the '{@link BooksType#getBook() <em>book</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BooksType#getBook() book}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BooksType#getBook() book}' feature.
    * @generated
    */
   public void setBook(List<BookType> newBook) {
@@ -81,9 +88,9 @@ public class BooksType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

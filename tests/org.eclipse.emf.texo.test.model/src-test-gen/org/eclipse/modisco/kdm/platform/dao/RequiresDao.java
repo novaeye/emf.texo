@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.platform.PlatformModelPackage;
 import org.eclipse.modisco.kdm.platform.Requires;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Requires</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class RequiresDao extends BaseDao<Requires> {
 

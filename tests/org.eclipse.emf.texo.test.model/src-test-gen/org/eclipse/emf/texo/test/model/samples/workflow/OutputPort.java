@@ -11,25 +11,27 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>OutputPort</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>OutputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "OutputPort")
 public class OutputPort extends Port {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = WorkflowNode.class)
   @JoinColumns({ @JoinColumn() })
   private WorkflowNode node = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Edge.class)
   @OrderColumn()
@@ -38,8 +40,9 @@ public class OutputPort extends Port {
 
   /**
    * Returns the value of '<em><b>node</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>node</b></em>' feature
    * @generated
    */
@@ -49,9 +52,11 @@ public class OutputPort extends Port {
 
   /**
    * Sets the '{@link OutputPort#getNode() <em>node</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link OutputPort#getNode() node}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link OutputPort#getNode() node}' feature.
    * @generated
    */
   public void setNode(WorkflowNode newNode) {
@@ -60,8 +65,9 @@ public class OutputPort extends Port {
 
   /**
    * Returns the value of '<em><b>edges</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>edges</b></em>' feature
    * @generated
    */
@@ -71,6 +77,7 @@ public class OutputPort extends Port {
 
   /**
    * Adds to the <em>edges</em> feature.
+   * 
    * @generated
    */
   public void addToEdges(Edge edgesValue) {
@@ -81,8 +88,9 @@ public class OutputPort extends Port {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>edges</em> feature.
+   * 
    * @generated
    */
   public void removeFromEdges(Edge edgesValue) {
@@ -91,8 +99,9 @@ public class OutputPort extends Port {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>edges</em> feature.
+   * 
    * @generated
    */
   public void clearEdges() {
@@ -103,9 +112,11 @@ public class OutputPort extends Port {
 
   /**
    * Sets the '{@link OutputPort#getEdges() <em>edges</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link OutputPort#getEdges() edges}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link OutputPort#getEdges() edges}' feature.
    * @generated
    */
   public void setEdges(List<Edge> newEdges) {
@@ -113,9 +124,9 @@ public class OutputPort extends Port {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

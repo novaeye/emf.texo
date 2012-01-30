@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.action.ActionElement;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ActionElement</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ActionElementDao extends BaseDao<ActionElement> {
 

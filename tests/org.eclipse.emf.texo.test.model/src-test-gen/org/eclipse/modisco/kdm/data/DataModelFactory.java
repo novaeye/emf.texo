@@ -21,17 +21,19 @@ import org.eclipse.modisco.kdm.kdm.KdmModelFactory;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: data.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model: data. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class DataModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -126,13 +128,12 @@ public class DataModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -296,8 +297,8 @@ public class DataModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -313,6 +314,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataModel
    * @generated
    */
@@ -322,6 +324,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataResource
    * @generated
    */
@@ -331,6 +334,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass IndexElement
    * @generated
    */
@@ -340,6 +344,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass UniqueKey
    * @generated
    */
@@ -349,6 +354,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Index
    * @generated
    */
@@ -358,6 +364,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass KeyRelation
    * @generated
    */
@@ -367,6 +374,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ReferenceKey
    * @generated
    */
@@ -376,6 +384,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataContainer
    * @generated
    */
@@ -385,6 +394,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Catalog
    * @generated
    */
@@ -394,6 +404,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RelationalSchema
    * @generated
    */
@@ -403,6 +414,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ColumnSet
    * @generated
    */
@@ -412,6 +424,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RelationalTable
    * @generated
    */
@@ -421,6 +434,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RelationalView
    * @generated
    */
@@ -430,6 +444,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RecordFile
    * @generated
    */
@@ -439,6 +454,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataEvent
    * @generated
    */
@@ -448,6 +464,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass XMLSchema
    * @generated
    */
@@ -457,6 +474,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ComplexContentType
    * @generated
    */
@@ -466,6 +484,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass AllContent
    * @generated
    */
@@ -475,6 +494,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SeqContent
    * @generated
    */
@@ -484,6 +504,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ChoiceContent
    * @generated
    */
@@ -493,6 +514,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ContentItem
    * @generated
    */
@@ -502,6 +524,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass GroupContent
    * @generated
    */
@@ -511,6 +534,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ContentRestriction
    * @generated
    */
@@ -520,6 +544,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimpleContentType
    * @generated
    */
@@ -529,6 +554,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExtendedDataElement
    * @generated
    */
@@ -538,6 +564,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataRelationship
    * @generated
    */
@@ -547,6 +574,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MixedContent
    * @generated
    */
@@ -556,6 +584,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ContentReference
    * @generated
    */
@@ -565,6 +594,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataAction
    * @generated
    */
@@ -574,6 +604,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ReadsColumnSet
    * @generated
    */
@@ -583,6 +614,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ContentAttribute
    * @generated
    */
@@ -592,6 +624,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TypedBy
    * @generated
    */
@@ -601,6 +634,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ReferenceTo
    * @generated
    */
@@ -610,6 +644,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RestrictionOf
    * @generated
    */
@@ -619,6 +654,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ExtensionTo
    * @generated
    */
@@ -628,6 +664,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DatatypeOf
    * @generated
    */
@@ -637,6 +674,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass HasContent
    * @generated
    */
@@ -646,6 +684,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass WritesColumnSet
    * @generated
    */
@@ -655,6 +694,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ProducesDataEvent
    * @generated
    */
@@ -664,6 +704,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataSegment
    * @generated
    */
@@ -673,6 +714,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ContentElement
    * @generated
    */
@@ -682,6 +724,7 @@ public class DataModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ManagesData
    * @generated
    */
@@ -690,10 +733,12 @@ public class DataModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -703,10 +748,12 @@ public class DataModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -715,10 +762,10 @@ public class DataModelFactory implements ModelFactory {
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataModelModelObject<E extends DataModel> extends KdmModelFactory.KDMModelModelObject<E> {
     /**
@@ -905,11 +952,11 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractDataRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractDataRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractDataRelationshipModelObject<E extends AbstractDataRelationship> extends
       CoreModelFactory.KDMRelationshipModelObject<E> {
@@ -974,10 +1021,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataResource</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataResourceModelObject<E extends DataResource> extends AbstractDataElementModelObject<E> {
     /**
@@ -1041,10 +1088,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>IndexElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>IndexElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class IndexElementModelObject<E extends IndexElement> extends DataResourceModelObject<E> {
     /**
@@ -1122,10 +1169,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>UniqueKey</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>UniqueKey</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class UniqueKeyModelObject<E extends UniqueKey> extends IndexElementModelObject<E> {
     /**
@@ -1189,10 +1236,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Index</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Index</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class IndexModelObject<E extends Index> extends IndexElementModelObject<E> {
     /**
@@ -1256,10 +1303,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>KeyRelation</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>KeyRelation</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class KeyRelationModelObject<E extends KeyRelation> extends AbstractDataRelationshipModelObject<E> {
     /**
@@ -1335,10 +1382,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ReferenceKey</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ReferenceKey</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ReferenceKeyModelObject<E extends ReferenceKey> extends IndexElementModelObject<E> {
     /**
@@ -1402,10 +1449,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataContainer</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataContainer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataContainerModelObject<E extends DataContainer> extends DataResourceModelObject<E> {
     /**
@@ -1483,10 +1530,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Catalog</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Catalog</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CatalogModelObject<E extends Catalog> extends DataContainerModelObject<E> {
     /**
@@ -1632,10 +1679,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ColumnSet</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ColumnSet</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ColumnSetModelObject<E extends ColumnSet> extends DataContainerModelObject<E> {
     /**
@@ -1713,10 +1760,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RelationalTable</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RelationalTable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RelationalTableModelObject<E extends RelationalTable> extends ColumnSetModelObject<E> {
     /**
@@ -1780,10 +1827,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RelationalView</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RelationalView</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RelationalViewModelObject<E extends RelationalView> extends ColumnSetModelObject<E> {
     /**
@@ -1847,10 +1894,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RecordFile</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RecordFile</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RecordFileModelObject<E extends RecordFile> extends ColumnSetModelObject<E> {
     /**
@@ -1914,10 +1961,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataEvent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataEvent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataEventModelObject<E extends DataEvent> extends DataResourceModelObject<E> {
     /**
@@ -1988,10 +2035,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>XMLSchema</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>XMLSchema</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class XMLSchemaModelObject<E extends XMLSchema> extends AbstractDataElementModelObject<E> {
     /**
@@ -2069,11 +2116,11 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractContentElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractContentElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractContentElementModelObject<E extends AbstractContentElement> extends
       AbstractDataElementModelObject<E> {
@@ -2221,10 +2268,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AllContent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AllContent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class AllContentModelObject<E extends AllContent> extends ComplexContentTypeModelObject<E> {
     /**
@@ -2288,10 +2335,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SeqContent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SeqContent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SeqContentModelObject<E extends SeqContent> extends ComplexContentTypeModelObject<E> {
     /**
@@ -2355,10 +2402,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ChoiceContent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ChoiceContent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ChoiceContentModelObject<E extends ChoiceContent> extends ComplexContentTypeModelObject<E> {
     /**
@@ -2422,10 +2469,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ContentItem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ContentItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ContentItemModelObject<E extends ContentItem> extends AbstractContentElementModelObject<E> {
     /**
@@ -2508,10 +2555,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>GroupContent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>GroupContent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class GroupContentModelObject<E extends GroupContent> extends ContentItemModelObject<E> {
     /**
@@ -2896,10 +2943,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>MixedContent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>MixedContent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MixedContentModelObject<E extends MixedContent> extends ComplexContentTypeModelObject<E> {
     /**
@@ -3031,10 +3078,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataAction</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataActionModelObject<E extends DataAction> extends AbstractDataElementModelObject<E> {
     /**
@@ -3130,10 +3177,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ReadsColumnSet</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ReadsColumnSet</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ReadsColumnSetModelObject<E extends ReadsColumnSet> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -3278,10 +3325,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TypedBy</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TypedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TypedByModelObject<E extends TypedBy> extends AbstractDataRelationshipModelObject<E> {
     /**
@@ -3357,10 +3404,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ReferenceTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ReferenceTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ReferenceToModelObject<E extends ReferenceTo> extends AbstractDataRelationshipModelObject<E> {
     /**
@@ -3436,10 +3483,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RestrictionOf</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RestrictionOf</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RestrictionOfModelObject<E extends RestrictionOf> extends AbstractDataRelationshipModelObject<E> {
     /**
@@ -3515,10 +3562,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ExtensionTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ExtensionTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExtensionToModelObject<E extends ExtensionTo> extends AbstractDataRelationshipModelObject<E> {
     /**
@@ -3594,10 +3641,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DatatypeOf</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DatatypeOf</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DatatypeOfModelObject<E extends DatatypeOf> extends AbstractDataRelationshipModelObject<E> {
     /**
@@ -3673,10 +3720,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>HasContent</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>HasContent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class HasContentModelObject<E extends HasContent> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -3753,10 +3800,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>WritesColumnSet</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>WritesColumnSet</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class WritesColumnSetModelObject<E extends WritesColumnSet> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {
@@ -3914,10 +3961,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataSegment</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataSegment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataSegmentModelObject<E extends DataSegment> extends ColumnSetModelObject<E> {
     /**
@@ -3981,10 +4028,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ContentElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ContentElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ContentElementModelObject<E extends ContentElement> extends ContentItemModelObject<E> {
     /**
@@ -4048,10 +4095,10 @@ public class DataModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ManagesData</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ManagesData</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ManagesDataModelObject<E extends ManagesData> extends
       ActionModelFactory.AbstractActionRelationshipModelObject<E> {

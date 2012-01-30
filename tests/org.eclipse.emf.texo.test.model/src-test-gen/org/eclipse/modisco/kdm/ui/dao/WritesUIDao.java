@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.ui.UiModelPackage;
 import org.eclipse.modisco.kdm.ui.WritesUI;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>WritesUI</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WritesUIDao extends BaseDao<WritesUI> {
 

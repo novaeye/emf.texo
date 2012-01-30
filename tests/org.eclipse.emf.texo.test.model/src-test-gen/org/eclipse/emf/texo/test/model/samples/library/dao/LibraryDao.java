@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.test.model.samples.library.GenericLibraryDao;
 import org.eclipse.emf.texo.test.model.samples.library.Library;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Library</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class LibraryDao extends GenericLibraryDao<Library> {
 

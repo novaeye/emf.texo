@@ -11,63 +11,70 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Machine</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Machine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Machine")
 public class Machine {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = WorkWeek.class)
   @JoinColumns({ @JoinColumn() })
   private WorkWeek workWeek = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Task.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Task> tasks = new ArrayList<Task>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String machineId = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String machineSearchString = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int multiplicity = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String taskSearchString = null;
 
   /**
    * Returns the value of '<em><b>workWeek</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>workWeek</b></em>' feature
    * @generated
    */
@@ -77,9 +84,11 @@ public class Machine {
 
   /**
    * Sets the '{@link Machine#getWorkWeek() <em>workWeek</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getWorkWeek() workWeek}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getWorkWeek() workWeek}' feature.
    * @generated
    */
   public void setWorkWeek(WorkWeek newWorkWeek) {
@@ -88,8 +97,9 @@ public class Machine {
 
   /**
    * Returns the value of '<em><b>tasks</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>tasks</b></em>' feature
    * @generated
    */
@@ -99,6 +109,7 @@ public class Machine {
 
   /**
    * Adds to the <em>tasks</em> feature.
+   * 
    * @generated
    */
   public void addToTasks(Task tasksValue) {
@@ -109,8 +120,9 @@ public class Machine {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>tasks</em> feature.
+   * 
    * @generated
    */
   public void removeFromTasks(Task tasksValue) {
@@ -119,8 +131,9 @@ public class Machine {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>tasks</em> feature.
+   * 
    * @generated
    */
   public void clearTasks() {
@@ -131,9 +144,11 @@ public class Machine {
 
   /**
    * Sets the '{@link Machine#getTasks() <em>tasks</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getTasks() tasks}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getTasks() tasks}' feature.
    * @generated
    */
   public void setTasks(List<Task> newTasks) {
@@ -142,8 +157,9 @@ public class Machine {
 
   /**
    * Returns the value of '<em><b>machineId</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>machineId</b></em>' feature
    * @generated
    */
@@ -153,9 +169,11 @@ public class Machine {
 
   /**
    * Sets the '{@link Machine#getMachineId() <em>machineId</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getMachineId() machineId}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getMachineId() machineId}' feature.
    * @generated
    */
   public void setMachineId(String newMachineId) {
@@ -164,8 +182,9 @@ public class Machine {
 
   /**
    * Returns the value of '<em><b>machineSearchString</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>machineSearchString</b></em>' feature
    * @generated
    */
@@ -175,9 +194,11 @@ public class Machine {
 
   /**
    * Sets the '{@link Machine#getMachineSearchString() <em>machineSearchString</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getMachineSearchString() machineSearchString}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getMachineSearchString() machineSearchString}' feature.
    * @generated
    */
   public void setMachineSearchString(String newMachineSearchString) {
@@ -186,8 +207,9 @@ public class Machine {
 
   /**
    * Returns the value of '<em><b>multiplicity</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>multiplicity</b></em>' feature
    * @generated
    */
@@ -197,9 +219,11 @@ public class Machine {
 
   /**
    * Sets the '{@link Machine#getMultiplicity() <em>multiplicity</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getMultiplicity() multiplicity}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getMultiplicity() multiplicity}' feature.
    * @generated
    */
   public void setMultiplicity(int newMultiplicity) {
@@ -208,8 +232,9 @@ public class Machine {
 
   /**
    * Returns the value of '<em><b>taskSearchString</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>taskSearchString</b></em>' feature
    * @generated
    */
@@ -219,9 +244,11 @@ public class Machine {
 
   /**
    * Sets the '{@link Machine#getTaskSearchString() <em>taskSearchString</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getTaskSearchString() taskSearchString}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getTaskSearchString() taskSearchString}' feature.
    * @generated
    */
   public void setTaskSearchString(String newTaskSearchString) {
@@ -229,9 +256,9 @@ public class Machine {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

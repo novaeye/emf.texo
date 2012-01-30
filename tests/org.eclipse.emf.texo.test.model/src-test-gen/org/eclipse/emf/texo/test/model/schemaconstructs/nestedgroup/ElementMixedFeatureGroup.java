@@ -10,10 +10,10 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
-/** 
- * A representation for the Feature Group '<em><b>Element.mixed</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation for the Feature Group '<em><b>Element.mixed</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 public class ElementMixedFeatureGroup {
 
@@ -94,44 +94,51 @@ public class ElementMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String text;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String cDATA;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String comment;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private ElementTrueFeatureGroup true_;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = Element.class)
   @JoinColumns({ @JoinColumn() })
@@ -153,8 +160,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -164,9 +172,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -176,8 +186,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>cDATA</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cDATA</b></em>' feature
    * @generated
    */
@@ -187,9 +198,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -199,8 +212,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -210,9 +224,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -222,8 +238,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -233,9 +250,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link Element#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Element#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Element#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -245,8 +264,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>true</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>true</b></em>' feature
    * @generated
    */
@@ -256,9 +276,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link Element#getTrue() <em>true</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Element#getTrue() true}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Element#getTrue() true}' feature.
    * @generated
    */
   public void setTrue(ElementTrueFeatureGroup newTrue) {
@@ -268,8 +290,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>c</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>c</b></em>' feature
    * @generated
    */
@@ -282,9 +305,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link Element#getC() <em>c</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Element#getC() c}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Element#getC() c}' feature.
    * @generated
    */
   public void setC(CType newC) {
@@ -296,8 +321,9 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>recursive</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>recursive</b></em>' feature
    * @generated
    */
@@ -307,9 +333,11 @@ public class ElementMixedFeatureGroup {
 
   /**
    * Sets the '{@link Element#getRecursive() <em>recursive</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Element#getRecursive() recursive}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Element#getRecursive() recursive}' feature.
    * @generated
    */
   public void setRecursive(Element newRecursive) {
@@ -319,9 +347,10 @@ public class ElementMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -346,10 +375,13 @@ public class ElementMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

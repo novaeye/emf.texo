@@ -13,8 +13,8 @@ import java.util.List;
 public enum Currency {
 
   /**
-   * The enum: ROUBLES
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ROUBLES <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   ROUBLES(0, "roubles", "roubles") {
@@ -29,8 +29,8 @@ public enum Currency {
     }
   },
   /**
-   * The enum: EUROS
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EUROS <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   EUROS(1, "euros", "euros") {
@@ -45,8 +45,8 @@ public enum Currency {
     }
   },
   /**
-   * The enum: DOLLARS
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: DOLLARS <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   DOLLARS(2, "dollars", "dollars") {
@@ -62,24 +62,24 @@ public enum Currency {
   };
 
   /**
-   * An array of all the '<em><b>Currency</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Currency</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final Currency[] VALUES_ARRAY = new Currency[] { ROUBLES, EUROS, DOLLARS };
 
   /**
-   * A public read-only list of all the '<em><b>Currency</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Currency</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<Currency> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Currency</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Currency</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static Currency get(String literal) {
@@ -109,9 +109,9 @@ public enum Currency {
   }
 
   /**
-   * Returns the '<em><b>Currency</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Currency</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static Currency get(int value) {
@@ -125,25 +125,28 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private Currency(int value, String name, String literal) {
@@ -154,6 +157,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -163,6 +167,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -172,6 +177,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -181,6 +187,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -189,6 +196,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -197,6 +205,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -205,6 +214,7 @@ public enum Currency {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

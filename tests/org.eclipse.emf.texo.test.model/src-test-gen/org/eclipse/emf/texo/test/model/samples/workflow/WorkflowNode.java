@@ -11,58 +11,64 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>WorkflowNode</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>WorkflowNode</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "WorkflowNode")
 public abstract class WorkflowNode extends WorkflowElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Workflow.class)
   @JoinColumns({ @JoinColumn() })
   private Workflow workflow = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = OutputPort.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<OutputPort> outputs = new ArrayList<OutputPort>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = InputPort.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<InputPort> inputs = new ArrayList<InputPort>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private boolean isStart = false;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private boolean isFinish = false;
 
   /**
    * Returns the value of '<em><b>workflow</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>workflow</b></em>' feature
    * @generated
    */
@@ -72,9 +78,11 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Sets the '{@link WorkflowNode#getWorkflow() <em>workflow</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowNode#getWorkflow() workflow}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowNode#getWorkflow() workflow}' feature.
    * @generated
    */
   public void setWorkflow(Workflow newWorkflow) {
@@ -83,8 +91,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>outputs</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>outputs</b></em>' feature
    * @generated
    */
@@ -94,6 +103,7 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Adds to the <em>outputs</em> feature.
+   * 
    * @generated
    */
   public void addToOutputs(OutputPort outputsValue) {
@@ -104,8 +114,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>outputs</em> feature.
+   * 
    * @generated
    */
   public void removeFromOutputs(OutputPort outputsValue) {
@@ -114,8 +125,9 @@ public abstract class WorkflowNode extends WorkflowElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>outputs</em> feature.
+   * 
    * @generated
    */
   public void clearOutputs() {
@@ -126,9 +138,11 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Sets the '{@link WorkflowNode#getOutputs() <em>outputs</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowNode#getOutputs() outputs}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowNode#getOutputs() outputs}' feature.
    * @generated
    */
   public void setOutputs(List<OutputPort> newOutputs) {
@@ -137,8 +151,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>inputs</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>inputs</b></em>' feature
    * @generated
    */
@@ -148,6 +163,7 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Adds to the <em>inputs</em> feature.
+   * 
    * @generated
    */
   public void addToInputs(InputPort inputsValue) {
@@ -158,8 +174,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>inputs</em> feature.
+   * 
    * @generated
    */
   public void removeFromInputs(InputPort inputsValue) {
@@ -168,8 +185,9 @@ public abstract class WorkflowNode extends WorkflowElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>inputs</em> feature.
+   * 
    * @generated
    */
   public void clearInputs() {
@@ -180,9 +198,11 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Sets the '{@link WorkflowNode#getInputs() <em>inputs</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowNode#getInputs() inputs}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowNode#getInputs() inputs}' feature.
    * @generated
    */
   public void setInputs(List<InputPort> newInputs) {
@@ -191,8 +211,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>isStart</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>isStart</b></em>' feature
    * @generated
    */
@@ -202,9 +223,11 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Sets the '{@link WorkflowNode#isIsStart() <em>isStart</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowNode#isIsStart() isStart}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowNode#isIsStart() isStart}' feature.
    * @generated
    */
   public void setIsStart(boolean newIsStart) {
@@ -213,8 +236,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>isFinish</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>isFinish</b></em>' feature
    * @generated
    */
@@ -224,9 +248,11 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Sets the '{@link WorkflowNode#isIsFinish() <em>isFinish</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowNode#isIsFinish() isFinish}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowNode#isIsFinish() isFinish}' feature.
    * @generated
    */
   public void setIsFinish(boolean newIsFinish) {
@@ -234,9 +260,9 @@ public abstract class WorkflowNode extends WorkflowElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

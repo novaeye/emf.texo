@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.kdm.Audit;
 import org.eclipse.modisco.kdm.kdm.KdmModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Audit</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AuditDao extends BaseDao<Audit> {
 

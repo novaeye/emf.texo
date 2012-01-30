@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.CarPassport;
 import org.eclipse.emf.texo.test.model.issues.bz331009.ModelModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CarPassport</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CarPassportDao extends BaseDao<CarPassport> {
 

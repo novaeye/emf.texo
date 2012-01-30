@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.source.Image;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Image</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ImageDao extends BaseDao<Image> {
 

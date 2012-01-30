@@ -23,10 +23,11 @@ import org.eclipse.emf.texo.test.model.samples.rental.dao.RentalContractLineDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>rental</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>rental</b></em>'. It contains initialization code and access to the Factory
+ * to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class RentalModelPackage extends ModelPackage {
@@ -39,197 +40,225 @@ public class RentalModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/samples/rental";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final RentalModelFactory MODELFACTORY = new RentalModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATE_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBICYCLE_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBICYCLE_TYPE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBICYCLE_RENTALCAR_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBICYCLETYPE_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBUSINESS_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALBUSINESS_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCARDRIVER_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCARDRIVER_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCARDRIVER_CURRENTRENTALCAR_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCAR_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCAR_SIZE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCAR_CURRENTDRIVER_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCARSIZE_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCARSIZEOBJECT_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACT_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACT_RENTTOBUSINESSPARTNER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACT_STARTDATE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACT_ENDDATE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACT_COST_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACT_RENTALCONTRACTLINES_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACTLINE_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACTLINE_RENTALCONTRACT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACTLINE_NUMBER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALCONTRACTLINE_RENTALUNIT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALUNIT_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RENTALUNIT_DESCRIPTION_FEATURE_ID = 2;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final RentalModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static RentalModelPackage initialize() {
@@ -288,8 +317,7 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link RentalModelFactory} instance.
    * @generated
@@ -299,12 +327,11 @@ public class RentalModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -325,8 +352,8 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>Date</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
    * @generated
    */
@@ -335,9 +362,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalBicycle</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalBicycle</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalBicycle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalBicycle</b></em>'
    * @generated
    */
   public EClass getRentalBicycleEClass() {
@@ -345,9 +372,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalBicycle.type</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalBicycle.type</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalBicycle.type</b></em>'.
    * @generated
    */
@@ -356,9 +383,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalBicycle.rentalCar</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalBicycle.rentalCar</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalBicycle.rentalCar</b></em>'.
    * @generated
    */
@@ -367,8 +394,8 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>RentalBicycleType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>RentalBicycleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>RentalBicycleType</b></em>'
    * @generated
    */
@@ -388,9 +415,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalBusiness</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalBusiness</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalBusiness</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalBusiness</b></em>'
    * @generated
    */
   public EClass getRentalBusinessEClass() {
@@ -398,9 +425,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalBusiness.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalBusiness.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalBusiness.name</b></em>'.
    * @generated
    */
@@ -409,9 +436,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalCarDriver</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalCarDriver</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalCarDriver</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalCarDriver</b></em>'
    * @generated
    */
   public EClass getRentalCarDriverEClass() {
@@ -419,9 +446,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalCarDriver.name</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalCarDriver.name</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCarDriver.name</b></em>'.
    * @generated
    */
@@ -430,9 +457,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalCarDriver.currentRentalCar</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>RentalCarDriver.currentRentalCar</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCarDriver.currentRentalCar</b></em>'.
    * @generated
    */
@@ -442,9 +469,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalCar</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalCar</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalCar</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalCar</b></em>'
    * @generated
    */
   public EClass getRentalCarEClass() {
@@ -463,9 +490,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalCar.currentDriver</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalCar.currentDriver</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCar.currentDriver</b></em>'.
    * @generated
    */
@@ -474,8 +501,8 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>RentalCarSize</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>RentalCarSize</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>RentalCarSize</b></em>'
    * @generated
    */
@@ -484,8 +511,8 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>RentalCarSizeObject</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>RentalCarSizeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EDataType} representing '<em><b>RentalCarSizeObject</b></em>'
    * @generated
    */
@@ -494,9 +521,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalContract</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalContract</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalContract</b></em>'
    * @generated
    */
   public EClass getRentalContractEClass() {
@@ -504,9 +531,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.rentToBusinessPartner</b></em>'.
-   * <!-- begin-user-doc
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.rentToBusinessPartner</b></em>'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContract.rentToBusinessPartner</b></em>'.
    * @generated
    */
@@ -516,9 +543,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.startDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.startDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContract.startDate</b></em>'.
    * @generated
    */
@@ -527,9 +554,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.endDate</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.endDate</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContract.endDate</b></em>'.
    * @generated
    */
@@ -538,9 +565,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.cost</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.cost</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContract.cost</b></em>'.
    * @generated
    */
@@ -549,9 +576,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.rentalContractLines</b></em>'.
-   * <!-- begin-user-doc
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContract.rentalContractLines</b></em>'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContract.rentalContractLines</b></em>'.
    * @generated
    */
@@ -561,9 +588,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalContractLine</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalContractLine</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalContractLine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalContractLine</b></em>'
    * @generated
    */
   public EClass getRentalContractLineEClass() {
@@ -571,9 +598,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContractLine.rentalContract</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContractLine.rentalContract</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContractLine.rentalContract</b></em>'.
    * @generated
    */
@@ -583,9 +610,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContractLine.number</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContractLine.number</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContractLine.number</b></em>'.
    * @generated
    */
@@ -595,9 +622,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalContractLine.rentalUnit</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>RentalContractLine.rentalUnit</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalContractLine.rentalUnit</b></em>'.
    * @generated
    */
@@ -607,9 +634,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RentalUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>RentalUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalUnit</b></em>'
    * @generated
    */
   public EClass getRentalUnitEClass() {
@@ -617,9 +644,9 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalUnit.description</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>RentalUnit.description</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalUnit.description</b></em>'.
    * @generated
    */
@@ -629,8 +656,9 @@ public class RentalModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

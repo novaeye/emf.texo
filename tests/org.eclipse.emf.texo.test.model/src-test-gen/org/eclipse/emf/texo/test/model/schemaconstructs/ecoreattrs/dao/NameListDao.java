@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.EcoreattrsModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.NameList;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>NameList</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class NameListDao extends BaseDao<NameList> {
 

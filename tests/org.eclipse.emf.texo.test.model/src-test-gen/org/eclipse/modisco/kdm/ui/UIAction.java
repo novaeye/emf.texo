@@ -9,24 +9,26 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>UIAction</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>UIAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "UIAction")
 public class UIAction extends AbstractUIElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = UIEvent.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class UIAction extends AbstractUIElement {
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -45,9 +48,11 @@ public class UIAction extends AbstractUIElement {
 
   /**
    * Sets the '{@link UIAction#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link UIAction#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link UIAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -56,8 +61,9 @@ public class UIAction extends AbstractUIElement {
 
   /**
    * Returns the value of '<em><b>UIElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>UIElement</b></em>' feature
    * @generated
    */
@@ -67,6 +73,7 @@ public class UIAction extends AbstractUIElement {
 
   /**
    * Adds to the <em>UIElement</em> feature.
+   * 
    * @generated
    */
   public void addToUIElement(UIEvent uIElementValue) {
@@ -77,8 +84,9 @@ public class UIAction extends AbstractUIElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>UIElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromUIElement(UIEvent uIElementValue) {
@@ -87,8 +95,9 @@ public class UIAction extends AbstractUIElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>UIElement</em> feature.
+   * 
    * @generated
    */
   public void clearUIElement() {
@@ -99,9 +108,11 @@ public class UIAction extends AbstractUIElement {
 
   /**
    * Sets the '{@link UIAction#getUIElement() <em>UIElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link UIAction#getUIElement() UIElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link UIAction#getUIElement() UIElement}' feature.
    * @generated
    */
   public void setUIElement(Set<UIEvent> newUIElement) {
@@ -109,9 +120,9 @@ public class UIAction extends AbstractUIElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

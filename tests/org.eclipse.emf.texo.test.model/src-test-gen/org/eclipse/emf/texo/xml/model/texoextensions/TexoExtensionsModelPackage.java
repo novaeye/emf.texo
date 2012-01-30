@@ -12,98 +12,95 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>texoExtensions</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>texoExtensions</b></em>'. It contains initialization code and access to the
+ * Factory to instantiate types of this package.
  * 
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class TexoExtensionsModelPackage extends ModelPackage {
 
   /**
    * Is set when the package has been initialized.
+   * 
    * @generated
    */
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/emf/texo/xml/model/texo_extensions";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final TexoExtensionsModelFactory MODELFACTORY = new TexoExtensionsModelFactory();
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_CLASSIFIER_ID = 0;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_ID_FEATURE_ID = 3;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_TITLE_FEATURE_ID = 4;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DOCUMENTROOT_TYPE_FEATURE_ID = 5;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final TexoExtensionsModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static TexoExtensionsModelPackage initialize() {
@@ -131,9 +128,7 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link TexoExtensionsModelFactory} instance.
    * @generated
@@ -143,12 +138,11 @@ public class TexoExtensionsModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -156,12 +150,11 @@ public class TexoExtensionsModelPackage extends ModelPackage {
     return NS_URI;
   }
 
-  /** 
-   * Returns the name of the ecore file containing the ecore model of the {@link EPackage} managed here.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+  /**
+   * Returns the name of the ecore file containing the ecore model of the {@link EPackage} managed here. <!--
+   * begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the name of the ecore file 
+   * @return the name of the ecore file
    * @generated
    */
   @Override
@@ -170,10 +163,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DocumentRoot</b></em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DocumentRoot</b></em>' 
+   * Returns the {@link EClass} '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DocumentRoot</b></em>'
    * @generated
    */
   public EClass getDocumentRootEClass() {
@@ -181,9 +173,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.mixed</b></em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.mixed</b></em>'.
    * @generated
    */
@@ -192,9 +184,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.xMLNSPrefixMap</b></em>'.
    * @generated
    */
@@ -203,9 +195,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xSISchemaLocation</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.xSISchemaLocation</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.xSISchemaLocation</b></em>'.
    * @generated
    */
@@ -215,9 +207,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.id</b></em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.id</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.id</b></em>'.
    * @generated
    */
@@ -226,9 +218,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.title</b></em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.title</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.title</b></em>'.
    * @generated
    */
@@ -237,9 +229,9 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.type</b></em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.type</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.type</b></em>'.
    * @generated
    */
@@ -248,10 +240,10 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   }
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

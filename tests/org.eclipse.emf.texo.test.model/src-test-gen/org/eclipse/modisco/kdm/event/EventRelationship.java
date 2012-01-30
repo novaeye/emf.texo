@@ -16,17 +16,19 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
 @Entity(name = "EventRelationship")
 public class EventRelationship extends AbstractEventRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
   @JoinColumns({ @JoinColumn() })
   private KDMEntity to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractEventElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class EventRelationship extends AbstractEventRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -45,9 +48,11 @@ public class EventRelationship extends AbstractEventRelationship {
 
   /**
    * Sets the '{@link EventRelationship#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link EventRelationship#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link EventRelationship#getTo() to}' feature.
    * @generated
    */
   public void setTo(KDMEntity newTo) {
@@ -56,8 +61,9 @@ public class EventRelationship extends AbstractEventRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -67,9 +73,11 @@ public class EventRelationship extends AbstractEventRelationship {
 
   /**
    * Sets the '{@link EventRelationship#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link EventRelationship#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link EventRelationship#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(AbstractEventElement newFrom) {
@@ -77,9 +85,9 @@ public class EventRelationship extends AbstractEventRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

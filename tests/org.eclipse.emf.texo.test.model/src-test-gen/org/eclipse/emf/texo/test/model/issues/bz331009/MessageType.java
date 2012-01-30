@@ -13,8 +13,8 @@ import java.util.List;
 public enum MessageType {
 
   /**
-   * The enum: SERVICE
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: SERVICE <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   SERVICE(0, "service", "service") {
@@ -29,8 +29,8 @@ public enum MessageType {
     }
   },
   /**
-   * The enum: EVENT
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EVENT <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   EVENT(1, "event", "event") {
@@ -45,8 +45,8 @@ public enum MessageType {
     }
   },
   /**
-   * The enum: COMMAND
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: COMMAND <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   COMMAND(2, "command", "command") {
@@ -62,24 +62,24 @@ public enum MessageType {
   };
 
   /**
-   * An array of all the '<em><b>MessageType</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>MessageType</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final MessageType[] VALUES_ARRAY = new MessageType[] { SERVICE, EVENT, COMMAND };
 
   /**
-   * A public read-only list of all the '<em><b>MessageType</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>MessageType</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<MessageType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>MessageType</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MessageType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MessageType get(String literal) {
@@ -93,9 +93,9 @@ public enum MessageType {
   }
 
   /**
-   * Returns the '<em><b>MessageType</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MessageType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MessageType getByName(String name) {
@@ -109,9 +109,9 @@ public enum MessageType {
   }
 
   /**
-   * Returns the '<em><b>MessageType</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MessageType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MessageType get(int value) {
@@ -125,25 +125,28 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private MessageType(int value, String name, String literal) {
@@ -154,6 +157,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -163,6 +167,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -172,6 +177,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -181,6 +187,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -189,6 +196,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -197,6 +205,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -205,6 +214,7 @@ public enum MessageType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

@@ -4,24 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>AddressType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "AddressType")
 public class AddressType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<AddressTypeGroupFeatureGroup> group = new ArrayList<AddressTypeGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>group</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>group</b></em>' feature
    * @generated
    */
@@ -31,9 +33,11 @@ public class AddressType {
 
   /**
    * Sets the '{@link AddressType#getGroup() <em>group</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressType#getGroup() group}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<AddressTypeGroupFeatureGroup> newGroup) {
@@ -42,8 +46,9 @@ public class AddressType {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -54,9 +59,11 @@ public class AddressType {
 
   /**
    * Sets the '{@link AddressType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressType#getName() name}' feature.
    * @generated
    */
   public void setName(List<String> newName) {
@@ -65,8 +72,9 @@ public class AddressType {
 
   /**
    * Returns the value of '<em><b>longName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>longName</b></em>' feature
    * @generated
    */
@@ -77,9 +85,11 @@ public class AddressType {
 
   /**
    * Sets the '{@link AddressType#getLongName() <em>longName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressType#getLongName() longName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressType#getLongName() longName}' feature.
    * @generated
    */
   public void setLongName(List<String> newLongName) {
@@ -88,9 +98,9 @@ public class AddressType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

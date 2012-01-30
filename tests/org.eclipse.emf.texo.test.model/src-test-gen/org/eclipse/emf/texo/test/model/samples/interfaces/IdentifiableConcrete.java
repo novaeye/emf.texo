@@ -4,33 +4,36 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>IdentifiableConcrete</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>IdentifiableConcrete</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "IdentifiableConcrete")
 public class IdentifiableConcrete extends Identifiable implements IdentifiedType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = "";
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String identifier = "";
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -40,9 +43,11 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
 
   /**
    * Sets the '{@link IdentifiableConcrete#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link IdentifiableConcrete#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link IdentifiableConcrete#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -51,8 +56,9 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
 
   /**
    * Returns the value of '<em><b>identifier</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>identifier</b></em>' feature
    * @generated
    */
@@ -62,9 +68,11 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
 
   /**
    * Sets the '{@link IdentifiableConcrete#getIdentifier() <em>identifier</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link IdentifiableConcrete#getIdentifier() identifier}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link IdentifiableConcrete#getIdentifier() identifier}' feature.
    * @generated
    */
   public void setIdentifier(String newIdentifier) {
@@ -72,9 +80,9 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

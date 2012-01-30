@@ -6,33 +6,36 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/** 
- * A representation of the model object '<em><b>Identifiable</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Identifiable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Access(AccessType.FIELD)
 public class Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Id()
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long db_Id = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Access(AccessType.FIELD)
   private Integer db_version = null;
 
   /**
    * Returns the value of '<em><b>db_Id</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>db_Id</b></em>' feature
    * @generated
    */
@@ -42,10 +45,11 @@ public class Identifiable {
 
   /**
    * Sets the '{@link Identifiable#getDb_Id() <em>db_Id</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Identifiable#getDb_Id() db_Id}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Identifiable#getDb_Id() db_Id}' feature.
    * @generated
    */
   public void setDb_Id(Long newDb_Id) {
@@ -54,8 +58,9 @@ public class Identifiable {
 
   /**
    * Returns the value of '<em><b>db_version</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>db_version</b></em>' feature
    * @generated
    */
@@ -65,10 +70,11 @@ public class Identifiable {
 
   /**
    * Sets the '{@link Identifiable#getDb_version() <em>db_version</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Identifiable#getDb_version() db_version}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Identifiable#getDb_version() db_version}' feature.
    * @generated
    */
   public void setDb_version(Integer newDb_version) {
@@ -76,9 +82,9 @@ public class Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

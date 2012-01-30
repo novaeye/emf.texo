@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
 
-/** 
- * A representation for the Feature Group '<em><b>SalutationType.mixed</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>SalutationType.mixed</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class SalutationTypeMixedFeatureGroup {
 
@@ -91,31 +91,36 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String text;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String cDATA;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String comment;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name;
@@ -136,8 +141,9 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -147,9 +153,11 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -159,8 +167,9 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>cDATA</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cDATA</b></em>' feature
    * @generated
    */
@@ -170,9 +179,11 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -182,8 +193,9 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -193,9 +205,11 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -205,8 +219,9 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -216,9 +231,11 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * Sets the '{@link SalutationType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SalutationType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SalutationType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -228,9 +245,10 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -249,10 +267,13 @@ public class SalutationTypeMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

@@ -8,17 +8,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>DataContainer</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DataContainer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "DataContainer")
 public class DataContainer extends DataResource {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DataResource.class)
   @JoinColumns({ @JoinColumn() })
@@ -26,8 +27,9 @@ public class DataContainer extends DataResource {
 
   /**
    * Returns the value of '<em><b>dataElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>dataElement</b></em>' feature
    * @generated
    */
@@ -37,6 +39,7 @@ public class DataContainer extends DataResource {
 
   /**
    * Adds to the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void addToDataElement(DataResource dataElementValue) {
@@ -47,8 +50,9 @@ public class DataContainer extends DataResource {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromDataElement(DataResource dataElementValue) {
@@ -57,8 +61,9 @@ public class DataContainer extends DataResource {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void clearDataElement() {
@@ -69,9 +74,11 @@ public class DataContainer extends DataResource {
 
   /**
    * Sets the '{@link DataContainer#getDataElement() <em>dataElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DataContainer#getDataElement() dataElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DataContainer#getDataElement() dataElement}' feature.
    * @generated
    */
   public void setDataElement(Set<DataResource> newDataElement) {
@@ -79,9 +86,9 @@ public class DataContainer extends DataResource {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

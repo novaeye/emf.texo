@@ -14,28 +14,27 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>BookStore</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BookStore</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BookStore")
 @Table(name = "EMAP_BOOKSTORE")
 public class BookStore extends Identifiable {
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
   @MapKeyClass(Writer.class)
@@ -43,19 +42,19 @@ public class BookStore extends Identifiable {
   @JoinTable(name = "BookStore_booksByWriter")
   private Map<Writer, Book> booksByWriter = new LinkedHashMap<Writer, Book>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @ElementCollection()
   @CollectionTable(name = "BookStore_keyWords")
   private Map<String, String> keyWords = new LinkedHashMap<String, String>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @ElementCollection()
   @CollectionTable(name = "BookStore_namesByWriter")
@@ -63,9 +62,9 @@ public class BookStore extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -75,10 +74,11 @@ public class BookStore extends Identifiable {
 
   /**
    * Sets the '{@link BookStore#getName() <em>name</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link BookStore#getName() name}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link BookStore#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -87,9 +87,9 @@ public class BookStore extends Identifiable {
 
   /**
    * Returns the value of '<em><b>booksByWriter</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>booksByWriter</b></em>' feature
    * @generated
    */
@@ -99,10 +99,11 @@ public class BookStore extends Identifiable {
 
   /**
    * Sets the '{@link BookStore#getBooksByWriter() <em>booksByWriter</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link BookStore#getBooksByWriter() booksByWriter}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link BookStore#getBooksByWriter() booksByWriter}' feature.
    * @generated
    */
   public void setBooksByWriter(Map<Writer, Book> newBooksByWriter) {
@@ -111,9 +112,9 @@ public class BookStore extends Identifiable {
 
   /**
    * Returns the value of '<em><b>keyWords</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>keyWords</b></em>' feature
    * @generated
    */
@@ -123,10 +124,11 @@ public class BookStore extends Identifiable {
 
   /**
    * Sets the '{@link BookStore#getKeyWords() <em>keyWords</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link BookStore#getKeyWords() keyWords}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link BookStore#getKeyWords() keyWords}' feature.
    * @generated
    */
   public void setKeyWords(Map<String, String> newKeyWords) {
@@ -135,9 +137,9 @@ public class BookStore extends Identifiable {
 
   /**
    * Returns the value of '<em><b>namesByWriter</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>namesByWriter</b></em>' feature
    * @generated
    */
@@ -147,10 +149,11 @@ public class BookStore extends Identifiable {
 
   /**
    * Sets the '{@link BookStore#getNamesByWriter() <em>namesByWriter</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link BookStore#getNamesByWriter() namesByWriter}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link BookStore#getNamesByWriter() namesByWriter}' feature.
    * @generated
    */
   public void setNamesByWriter(Map<Writer, String> newNamesByWriter) {
@@ -158,9 +161,9 @@ public class BookStore extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @generated
    */
   @Override

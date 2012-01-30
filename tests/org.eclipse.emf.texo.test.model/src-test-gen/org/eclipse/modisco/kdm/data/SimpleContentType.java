@@ -17,25 +17,28 @@ import javax.persistence.ManyToMany;
 @Entity(name = "SimpleContentType")
 public class SimpleContentType extends ComplexContentType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ComplexContentType.class)
   @JoinTable(name = "SimpleContentType_type")
   private Set<ComplexContentType> type = new HashSet<ComplexContentType>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
   /**
    * Returns the value of '<em><b>type</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>type</b></em>' feature
    * @generated
    */
@@ -45,6 +48,7 @@ public class SimpleContentType extends ComplexContentType {
 
   /**
    * Adds to the <em>type</em> feature.
+   * 
    * @generated
    */
   public void addToType(ComplexContentType typeValue) {
@@ -55,8 +59,9 @@ public class SimpleContentType extends ComplexContentType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>type</em> feature.
+   * 
    * @generated
    */
   public void removeFromType(ComplexContentType typeValue) {
@@ -65,8 +70,9 @@ public class SimpleContentType extends ComplexContentType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>type</em> feature.
+   * 
    * @generated
    */
   public void clearType() {
@@ -77,9 +83,11 @@ public class SimpleContentType extends ComplexContentType {
 
   /**
    * Sets the '{@link SimpleContentType#getType() <em>type</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleContentType#getType() type}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleContentType#getType() type}' feature.
    * @generated
    */
   public void setType(Set<ComplexContentType> newType) {
@@ -88,8 +96,9 @@ public class SimpleContentType extends ComplexContentType {
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -99,9 +108,11 @@ public class SimpleContentType extends ComplexContentType {
 
   /**
    * Sets the '{@link SimpleContentType#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleContentType#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleContentType#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -109,9 +120,9 @@ public class SimpleContentType extends ComplexContentType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

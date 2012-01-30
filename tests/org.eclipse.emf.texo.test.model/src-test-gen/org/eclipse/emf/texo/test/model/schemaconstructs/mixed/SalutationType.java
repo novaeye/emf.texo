@@ -5,24 +5,26 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>SalutationType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SalutationType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SalutationType")
 public class SalutationType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<SalutationTypeMixedFeatureGroup> mixed = new ArrayList<SalutationTypeMixedFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mixed</b></em>' feature
    * @generated
    */
@@ -32,9 +34,11 @@ public class SalutationType {
 
   /**
    * Sets the '{@link SalutationType#getMixed() <em>mixed</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SalutationType#getMixed() mixed}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SalutationType#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<SalutationTypeMixedFeatureGroup> newMixed) {
@@ -43,8 +47,9 @@ public class SalutationType {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -55,9 +60,11 @@ public class SalutationType {
 
   /**
    * Sets the '{@link SalutationType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SalutationType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SalutationType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -66,9 +73,9 @@ public class SalutationType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

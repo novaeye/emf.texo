@@ -27,9 +27,10 @@ public class ClaimLine {
   @JoinColumns({ @JoinColumn() })
   private Claim claim = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ClaimLineCompositeKey.class)
   @JoinColumns({ @JoinColumn() })
@@ -100,8 +101,9 @@ public class ClaimLine {
 
   /**
    * Returns the value of '<em><b>claimLineCompositeKey</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>claimLineCompositeKey</b></em>' feature
    * @generated
    */
@@ -111,9 +113,11 @@ public class ClaimLine {
 
   /**
    * Sets the '{@link ClaimLine#getClaimLineCompositeKey() <em>claimLineCompositeKey</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ClaimLine#getClaimLineCompositeKey() claimLineCompositeKey}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ClaimLine#getClaimLineCompositeKey() claimLineCompositeKey}' feature.
    * @generated
    */
   public void setClaimLineCompositeKey(ClaimLineCompositeKey newClaimLineCompositeKey) {
@@ -216,9 +220,9 @@ public class ClaimLine {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

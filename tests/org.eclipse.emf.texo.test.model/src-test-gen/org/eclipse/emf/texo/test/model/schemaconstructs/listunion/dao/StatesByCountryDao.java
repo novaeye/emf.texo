@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.listunion.ListunionModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.listunion.StatesByCountry;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>statesByCountry</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class StatesByCountryDao extends BaseDao<StatesByCountry> {
 

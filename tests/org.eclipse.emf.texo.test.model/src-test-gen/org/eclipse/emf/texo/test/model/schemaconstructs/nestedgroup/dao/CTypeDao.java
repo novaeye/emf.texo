@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType;
 import org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.NestedgroupModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CTypeDao extends BaseDao<CType> {
 

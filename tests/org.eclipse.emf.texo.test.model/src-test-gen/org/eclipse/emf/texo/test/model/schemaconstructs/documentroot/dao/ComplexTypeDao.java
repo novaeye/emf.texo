@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.ComplexType;
 import org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.DocumentrootModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ComplexType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ComplexTypeDao extends BaseDao<ComplexType> {
 

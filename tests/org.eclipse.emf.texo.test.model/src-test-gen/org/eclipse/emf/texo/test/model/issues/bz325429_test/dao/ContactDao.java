@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.bz325429_test.Contact;
 import org.eclipse.emf.texo.test.model.issues.bz325429_test.TestModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Contact</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ContactDao extends BaseDao<Contact> {
 

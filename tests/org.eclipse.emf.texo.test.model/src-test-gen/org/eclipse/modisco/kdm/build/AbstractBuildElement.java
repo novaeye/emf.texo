@@ -9,18 +9,19 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
-/** 
- * A representation of the model object '<em><b>AbstractBuildElement</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>AbstractBuildElement</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "AbstractBuildElement")
 public abstract class AbstractBuildElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractBuildRelationship.class)
   @JoinColumns({ @JoinColumn() })
@@ -28,8 +29,9 @@ public abstract class AbstractBuildElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>buildRelation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>buildRelation</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public abstract class AbstractBuildElement extends KDMEntity {
 
   /**
    * Adds to the <em>buildRelation</em> feature.
+   * 
    * @generated
    */
   public void addToBuildRelation(AbstractBuildRelationship buildRelationValue) {
@@ -49,8 +52,9 @@ public abstract class AbstractBuildElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>buildRelation</em> feature.
+   * 
    * @generated
    */
   public void removeFromBuildRelation(AbstractBuildRelationship buildRelationValue) {
@@ -59,8 +63,9 @@ public abstract class AbstractBuildElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>buildRelation</em> feature.
+   * 
    * @generated
    */
   public void clearBuildRelation() {
@@ -71,9 +76,11 @@ public abstract class AbstractBuildElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractBuildElement#getBuildRelation() <em>buildRelation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractBuildElement#getBuildRelation() buildRelation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractBuildElement#getBuildRelation() buildRelation}' feature.
    * @generated
    */
   public void setBuildRelation(Set<AbstractBuildRelationship> newBuildRelation) {
@@ -81,9 +88,9 @@ public abstract class AbstractBuildElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

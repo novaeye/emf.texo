@@ -9,31 +9,34 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>CatalogType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>CatalogType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "CatalogType")
 public class CatalogType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String description = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CatalogType.class)
   @OrderColumn()
@@ -53,8 +56,9 @@ public class CatalogType {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -64,9 +68,11 @@ public class CatalogType {
 
   /**
    * Sets the '{@link CatalogType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CatalogType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CatalogType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -75,8 +81,9 @@ public class CatalogType {
 
   /**
    * Returns the value of '<em><b>description</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>description</b></em>' feature
    * @generated
    */
@@ -86,9 +93,11 @@ public class CatalogType {
 
   /**
    * Sets the '{@link CatalogType#getDescription() <em>description</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CatalogType#getDescription() description}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CatalogType#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -97,8 +106,9 @@ public class CatalogType {
 
   /**
    * Returns the value of '<em><b>subCatalog</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>subCatalog</b></em>' feature
    * @generated
    */
@@ -108,6 +118,7 @@ public class CatalogType {
 
   /**
    * Adds to the <em>subCatalog</em> feature.
+   * 
    * @generated
    */
   public void addToSubCatalog(CatalogType subCatalogValue) {
@@ -118,8 +129,9 @@ public class CatalogType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>subCatalog</em> feature.
+   * 
    * @generated
    */
   public void removeFromSubCatalog(CatalogType subCatalogValue) {
@@ -128,8 +140,9 @@ public class CatalogType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>subCatalog</em> feature.
+   * 
    * @generated
    */
   public void clearSubCatalog() {
@@ -140,9 +153,11 @@ public class CatalogType {
 
   /**
    * Sets the '{@link CatalogType#getSubCatalog() <em>subCatalog</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CatalogType#getSubCatalog() subCatalog}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CatalogType#getSubCatalog() subCatalog}' feature.
    * @generated
    */
   public void setSubCatalog(List<CatalogType> newSubCatalog) {
@@ -166,6 +181,7 @@ public class CatalogType {
 
   /**
    * Adds to the <em>product</em> feature.
+   * 
    * @generated
    */
   public void addToProduct(ProductType productValue) {
@@ -176,8 +192,9 @@ public class CatalogType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>product</em> feature.
+   * 
    * @generated
    */
   public void removeFromProduct(ProductType productValue) {
@@ -186,8 +203,9 @@ public class CatalogType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>product</em> feature.
+   * 
    * @generated
    */
   public void clearProduct() {
@@ -211,9 +229,9 @@ public class CatalogType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

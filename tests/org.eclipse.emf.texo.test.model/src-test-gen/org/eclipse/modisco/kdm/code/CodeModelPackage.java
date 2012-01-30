@@ -95,10 +95,11 @@ import org.eclipse.modisco.kdm.core.CoreModelPackage;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
 /**
- * The <b>Package</b> for the model '<em><b>code</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>code</b></em>'. It contains initialization code and access to the Factory to
+ * instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class CodeModelPackage extends ModelPackage {
@@ -111,995 +112,1156 @@ public class CodeModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/MoDisco/kdm/code";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final CodeModelFactory MODELFACTORY = new CodeModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CALLABLEKIND_CLASSIFIER_ID = 83;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int METHODKIND_CLASSIFIER_ID = 84;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXPORTKIND_CLASSIFIER_ID = 85;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STORABLEKIND_CLASSIFIER_ID = 86;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERKIND_CLASSIFIER_ID = 87;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACROKIND_CLASSIFIER_ID = 88;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODEMODEL_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODEMODEL_CODEELEMENT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTCODEELEMENT_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTCODEELEMENT_SOURCE_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTCODEELEMENT_COMMENT_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTCODEELEMENT_CODERELATION_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTCODEELEMENT_ENTRYFLOW_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMMENTUNIT_CLASSIFIER_ID = 77;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMMENTUNIT_TEXT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTCODERELATIONSHIP_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODEITEM_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPUTATIONALOBJECT_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATATYPE_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MODULE_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MODULE_CODEELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPILATIONUNIT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SHAREDUNIT_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LANGUAGEUNIT_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODEASSEMBLY_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PACKAGE_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTROLELEMENT_CLASSIFIER_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTROLELEMENT_TYPE_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONTROLELEMENT_CODEELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CALLABLEUNIT_CLASSIFIER_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CALLABLEUNIT_KIND_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int METHODUNIT_CLASSIFIER_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int METHODUNIT_KIND_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int METHODUNIT_EXPORT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATAELEMENT_CLASSIFIER_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATAELEMENT_TYPE_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATAELEMENT_EXT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATAELEMENT_SIZE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATAELEMENT_CODEELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STORABLEUNIT_CLASSIFIER_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STORABLEUNIT_KIND_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ITEMUNIT_CLASSIFIER_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INDEXUNIT_CLASSIFIER_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MEMBERUNIT_CLASSIFIER_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MEMBERUNIT_EXPORT_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERUNIT_CLASSIFIER_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERUNIT_KIND_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERUNIT_POS_FEATURE_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VALUEELEMENT_CLASSIFIER_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VALUE_CLASSIFIER_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VALUELIST_CLASSIFIER_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VALUELIST_VALUEELEMENT_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PRIMITIVETYPE_CLASSIFIER_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BOOLEANTYPE_CLASSIFIER_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CHARTYPE_CLASSIFIER_ID = 26;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ORDINALTYPE_CLASSIFIER_ID = 27;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DATETYPE_CLASSIFIER_ID = 28;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TIMETYPE_CLASSIFIER_ID = 29;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INTEGERTYPE_CLASSIFIER_ID = 30;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DECIMALTYPE_CLASSIFIER_ID = 31;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SCALEDTYPE_CLASSIFIER_ID = 32;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int FLOATTYPE_CLASSIFIER_ID = 33;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VOIDTYPE_CLASSIFIER_ID = 34;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRINGTYPE_CLASSIFIER_ID = 35;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BITTYPE_CLASSIFIER_ID = 36;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BITSTRINGTYPE_CLASSIFIER_ID = 37;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int OCTETTYPE_CLASSIFIER_ID = 38;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int OCTETSTRINGTYPE_CLASSIFIER_ID = 39;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ENUMERATEDTYPE_CLASSIFIER_ID = 40;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ENUMERATEDTYPE_VALUE_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ENUMERATEDTYPE_CODEELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPOSITETYPE_CLASSIFIER_ID = 41;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPOSITETYPE_ITEMUNIT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CHOICETYPE_CLASSIFIER_ID = 42;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RECORDTYPE_CLASSIFIER_ID = 43;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DERIVEDTYPE_CLASSIFIER_ID = 44;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DERIVEDTYPE_ITEMUNIT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ARRAYTYPE_CLASSIFIER_ID = 45;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ARRAYTYPE_SIZE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ARRAYTYPE_INDEXUNIT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int POINTERTYPE_CLASSIFIER_ID = 46;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RANGETYPE_CLASSIFIER_ID = 47;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RANGETYPE_LOWER_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RANGETYPE_UPPER_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BAGTYPE_CLASSIFIER_ID = 48;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BAGTYPE_SIZE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SETTYPE_CLASSIFIER_ID = 49;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SETTYPE_SIZE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SEQUENCETYPE_CLASSIFIER_ID = 50;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SEQUENCETYPE_SIZE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIGNATURE_CLASSIFIER_ID = 51;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SIGNATURE_PARAMETERUNIT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEFINEDTYPE_CLASSIFIER_ID = 52;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEFINEDTYPE_TYPE_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEFINEDTYPE_CODEELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TYPEUNIT_CLASSIFIER_ID = 53;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SYNONYMUNIT_CLASSIFIER_ID = 54;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLASSUNIT_CLASSIFIER_ID = 55;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLASSUNIT_ISABSTRACT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CLASSUNIT_CODEELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INTERFACEUNIT_CLASSIFIER_ID = 56;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INTERFACEUNIT_CODEELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TEMPLATEUNIT_CLASSIFIER_ID = 57;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TEMPLATEUNIT_CODEELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TEMPLATEPARAMETER_CLASSIFIER_ID = 58;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int TEMPLATETYPE_CLASSIFIER_ID = 59;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INSTANCEOF_CLASSIFIER_ID = 60;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INSTANCEOF_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INSTANCEOF_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERTO_CLASSIFIER_ID = 61;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERTO_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PARAMETERTO_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPLEMENTS_CLASSIFIER_ID = 62;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPLEMENTS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPLEMENTS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPLEMENTATIONOF_CLASSIFIER_ID = 63;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPLEMENTATIONOF_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPLEMENTATIONOF_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int HASTYPE_CLASSIFIER_ID = 64;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int HASTYPE_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int HASTYPE_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int HASVALUE_CLASSIFIER_ID = 65;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int HASVALUE_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int HASVALUE_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXTENDS_CLASSIFIER_ID = 66;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXTENDS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXTENDS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PREPROCESSORDIRECTIVE_CLASSIFIER_ID = 67;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PREPROCESSORDIRECTIVE_CODEELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACROUNIT_CLASSIFIER_ID = 68;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACROUNIT_KIND_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int MACRODIRECTIVE_CLASSIFIER_ID = 69;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INCLUDEDIRECTIVE_CLASSIFIER_ID = 70;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONDITIONALDIRECTIVE_CLASSIFIER_ID = 71;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXPANDS_CLASSIFIER_ID = 72;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXPANDS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXPANDS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int GENERATEDFROM_CLASSIFIER_ID = 73;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int GENERATEDFROM_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int GENERATEDFROM_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INCLUDES_CLASSIFIER_ID = 74;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INCLUDES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INCLUDES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VARIANTTO_CLASSIFIER_ID = 75;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VARIANTTO_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VARIANTTO_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REDEFINES_CLASSIFIER_ID = 76;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REDEFINES_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int REDEFINES_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int NAMESPACE_CLASSIFIER_ID = 78;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int NAMESPACE_GROUPEDCODE_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VISIBLEIN_CLASSIFIER_ID = 79;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VISIBLEIN_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int VISIBLEIN_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPORTS_CLASSIFIER_ID = 80;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPORTS_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMPORTS_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODEELEMENT_CLASSIFIER_ID = 81;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODERELATIONSHIP_CLASSIFIER_ID = 82;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODERELATIONSHIP_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CODERELATIONSHIP_FROM_FEATURE_ID = 5;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final CodeModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static CodeModelPackage initialize() {
@@ -1114,11 +1276,11 @@ public class CodeModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    ActionModelPackage.initialize();
+    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
     SourceModelPackage.initialize();
-    CoreModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
-    ActionModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CodeModel.class, modelPackage.getCodeModelEClass(),
@@ -1452,8 +1614,7 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link CodeModelFactory} instance.
    * @generated
@@ -1463,12 +1624,11 @@ public class CodeModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -1489,9 +1649,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CodeModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CodeModel</b></em>' 
+   * Returns the {@link EClass} '<em><b>CodeModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CodeModel</b></em>'
    * @generated
    */
   public EClass getCodeModelEClass() {
@@ -1499,9 +1659,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CodeModel.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CodeModel.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CodeModel.codeElement</b></em>'.
    * @generated
    */
@@ -1510,9 +1670,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AbstractCodeElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AbstractCodeElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>AbstractCodeElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AbstractCodeElement</b></em>'
    * @generated
    */
   public EClass getAbstractCodeElementEClass() {
@@ -1520,9 +1680,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.source</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.source</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractCodeElement.source</b></em>'.
    * @generated
    */
@@ -1532,9 +1692,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.comment</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.comment</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractCodeElement.comment</b></em>'.
    * @generated
    */
@@ -1544,9 +1704,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.codeRelation</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.codeRelation</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractCodeElement.codeRelation</b></em>'.
    * @generated
    */
@@ -1556,9 +1716,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.entryFlow</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractCodeElement.entryFlow</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractCodeElement.entryFlow</b></em>'.
    * @generated
    */
@@ -1568,9 +1728,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CommentUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CommentUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>CommentUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CommentUnit</b></em>'
    * @generated
    */
   public EClass getCommentUnitEClass() {
@@ -1578,9 +1738,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CommentUnit.text</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CommentUnit.text</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CommentUnit.text</b></em>'.
    * @generated
    */
@@ -1600,9 +1760,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CodeItem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CodeItem</b></em>' 
+   * Returns the {@link EClass} '<em><b>CodeItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CodeItem</b></em>'
    * @generated
    */
   public EClass getCodeItemEClass() {
@@ -1610,9 +1770,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ComputationalObject</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ComputationalObject</b></em>' 
+   * Returns the {@link EClass} '<em><b>ComputationalObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ComputationalObject</b></em>'
    * @generated
    */
   public EClass getComputationalObjectEClass() {
@@ -1620,9 +1780,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Datatype</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Datatype</b></em>' 
+   * Returns the {@link EClass} '<em><b>Datatype</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Datatype</b></em>'
    * @generated
    */
   public EClass getDatatypeEClass() {
@@ -1630,9 +1790,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Module</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Module</b></em>' 
+   * Returns the {@link EClass} '<em><b>Module</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Module</b></em>'
    * @generated
    */
   public EClass getModuleEClass() {
@@ -1640,9 +1800,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Module.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Module.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Module.codeElement</b></em>'.
    * @generated
    */
@@ -1651,9 +1811,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CompilationUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CompilationUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>CompilationUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CompilationUnit</b></em>'
    * @generated
    */
   public EClass getCompilationUnitEClass() {
@@ -1661,9 +1821,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SharedUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SharedUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>SharedUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SharedUnit</b></em>'
    * @generated
    */
   public EClass getSharedUnitEClass() {
@@ -1671,9 +1831,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>LanguageUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>LanguageUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>LanguageUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>LanguageUnit</b></em>'
    * @generated
    */
   public EClass getLanguageUnitEClass() {
@@ -1681,9 +1841,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CodeAssembly</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CodeAssembly</b></em>' 
+   * Returns the {@link EClass} '<em><b>CodeAssembly</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CodeAssembly</b></em>'
    * @generated
    */
   public EClass getCodeAssemblyEClass() {
@@ -1691,9 +1851,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Package</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Package</b></em>' 
+   * Returns the {@link EClass} '<em><b>Package</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Package</b></em>'
    * @generated
    */
   public EClass getPackageEClass() {
@@ -1701,9 +1861,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ControlElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ControlElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>ControlElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ControlElement</b></em>'
    * @generated
    */
   public EClass getControlElementEClass() {
@@ -1711,9 +1871,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ControlElement.type</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ControlElement.type</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ControlElement.type</b></em>'.
    * @generated
    */
@@ -1722,9 +1882,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ControlElement.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ControlElement.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ControlElement.codeElement</b></em>'.
    * @generated
    */
@@ -1734,9 +1894,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CallableUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CallableUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>CallableUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CallableUnit</b></em>'
    * @generated
    */
   public EClass getCallableUnitEClass() {
@@ -1744,9 +1904,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CallableUnit.kind</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CallableUnit.kind</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CallableUnit.kind</b></em>'.
    * @generated
    */
@@ -1755,9 +1915,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>MethodUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>MethodUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>MethodUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>MethodUnit</b></em>'
    * @generated
    */
   public EClass getMethodUnitEClass() {
@@ -1776,9 +1936,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>MethodUnit.export</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>MethodUnit.export</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>MethodUnit.export</b></em>'.
    * @generated
    */
@@ -1787,9 +1947,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DataElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DataElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>DataElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DataElement</b></em>'
    * @generated
    */
   public EClass getDataElementEClass() {
@@ -1797,9 +1957,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DataElement.type</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DataElement.type</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DataElement.type</b></em>'.
    * @generated
    */
@@ -1819,9 +1979,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DataElement.size</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DataElement.size</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DataElement.size</b></em>'.
    * @generated
    */
@@ -1830,9 +1990,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DataElement.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DataElement.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DataElement.codeElement</b></em>'.
    * @generated
    */
@@ -1841,9 +2001,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>StorableUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>StorableUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>StorableUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>StorableUnit</b></em>'
    * @generated
    */
   public EClass getStorableUnitEClass() {
@@ -1851,9 +2011,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>StorableUnit.kind</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>StorableUnit.kind</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>StorableUnit.kind</b></em>'.
    * @generated
    */
@@ -1862,9 +2022,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ItemUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ItemUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>ItemUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ItemUnit</b></em>'
    * @generated
    */
   public EClass getItemUnitEClass() {
@@ -1872,9 +2032,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>IndexUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>IndexUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>IndexUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>IndexUnit</b></em>'
    * @generated
    */
   public EClass getIndexUnitEClass() {
@@ -1882,9 +2042,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>MemberUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>MemberUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>MemberUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>MemberUnit</b></em>'
    * @generated
    */
   public EClass getMemberUnitEClass() {
@@ -1892,9 +2052,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>MemberUnit.export</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>MemberUnit.export</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>MemberUnit.export</b></em>'.
    * @generated
    */
@@ -1903,9 +2063,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ParameterUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ParameterUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>ParameterUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ParameterUnit</b></em>'
    * @generated
    */
   public EClass getParameterUnitEClass() {
@@ -1913,9 +2073,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ParameterUnit.kind</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ParameterUnit.kind</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ParameterUnit.kind</b></em>'.
    * @generated
    */
@@ -1924,9 +2084,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ParameterUnit.pos</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ParameterUnit.pos</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ParameterUnit.pos</b></em>'.
    * @generated
    */
@@ -1935,9 +2095,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ValueElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ValueElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>ValueElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ValueElement</b></em>'
    * @generated
    */
   public EClass getValueElementEClass() {
@@ -1945,9 +2105,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Value</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Value</b></em>' 
+   * Returns the {@link EClass} '<em><b>Value</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Value</b></em>'
    * @generated
    */
   public EClass getValueEClass() {
@@ -1955,9 +2115,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ValueList</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ValueList</b></em>' 
+   * Returns the {@link EClass} '<em><b>ValueList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ValueList</b></em>'
    * @generated
    */
   public EClass getValueListEClass() {
@@ -1965,9 +2125,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ValueList.valueElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ValueList.valueElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ValueList.valueElement</b></em>'.
    * @generated
    */
@@ -1976,9 +2136,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PrimitiveType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PrimitiveType</b></em>' 
+   * Returns the {@link EClass} '<em><b>PrimitiveType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PrimitiveType</b></em>'
    * @generated
    */
   public EClass getPrimitiveTypeEClass() {
@@ -1986,9 +2146,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BooleanType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BooleanType</b></em>' 
+   * Returns the {@link EClass} '<em><b>BooleanType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BooleanType</b></em>'
    * @generated
    */
   public EClass getBooleanTypeEClass() {
@@ -1996,9 +2156,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CharType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CharType</b></em>' 
+   * Returns the {@link EClass} '<em><b>CharType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CharType</b></em>'
    * @generated
    */
   public EClass getCharTypeEClass() {
@@ -2006,9 +2166,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>OrdinalType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>OrdinalType</b></em>' 
+   * Returns the {@link EClass} '<em><b>OrdinalType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>OrdinalType</b></em>'
    * @generated
    */
   public EClass getOrdinalTypeEClass() {
@@ -2016,9 +2176,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DateType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DateType</b></em>' 
+   * Returns the {@link EClass} '<em><b>DateType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DateType</b></em>'
    * @generated
    */
   public EClass getDateTypeEClass() {
@@ -2026,9 +2186,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TimeType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TimeType</b></em>' 
+   * Returns the {@link EClass} '<em><b>TimeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TimeType</b></em>'
    * @generated
    */
   public EClass getTimeTypeEClass() {
@@ -2036,9 +2196,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>IntegerType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>IntegerType</b></em>' 
+   * Returns the {@link EClass} '<em><b>IntegerType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>IntegerType</b></em>'
    * @generated
    */
   public EClass getIntegerTypeEClass() {
@@ -2046,9 +2206,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DecimalType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DecimalType</b></em>' 
+   * Returns the {@link EClass} '<em><b>DecimalType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DecimalType</b></em>'
    * @generated
    */
   public EClass getDecimalTypeEClass() {
@@ -2056,9 +2216,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ScaledType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ScaledType</b></em>' 
+   * Returns the {@link EClass} '<em><b>ScaledType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ScaledType</b></em>'
    * @generated
    */
   public EClass getScaledTypeEClass() {
@@ -2066,9 +2226,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>FloatType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>FloatType</b></em>' 
+   * Returns the {@link EClass} '<em><b>FloatType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>FloatType</b></em>'
    * @generated
    */
   public EClass getFloatTypeEClass() {
@@ -2076,9 +2236,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>VoidType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>VoidType</b></em>' 
+   * Returns the {@link EClass} '<em><b>VoidType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>VoidType</b></em>'
    * @generated
    */
   public EClass getVoidTypeEClass() {
@@ -2086,9 +2246,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>StringType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>StringType</b></em>' 
+   * Returns the {@link EClass} '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>StringType</b></em>'
    * @generated
    */
   public EClass getStringTypeEClass() {
@@ -2096,9 +2256,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BitType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BitType</b></em>' 
+   * Returns the {@link EClass} '<em><b>BitType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BitType</b></em>'
    * @generated
    */
   public EClass getBitTypeEClass() {
@@ -2106,9 +2266,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BitstringType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BitstringType</b></em>' 
+   * Returns the {@link EClass} '<em><b>BitstringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BitstringType</b></em>'
    * @generated
    */
   public EClass getBitstringTypeEClass() {
@@ -2116,9 +2276,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>OctetType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>OctetType</b></em>' 
+   * Returns the {@link EClass} '<em><b>OctetType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>OctetType</b></em>'
    * @generated
    */
   public EClass getOctetTypeEClass() {
@@ -2126,9 +2286,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>OctetstringType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>OctetstringType</b></em>' 
+   * Returns the {@link EClass} '<em><b>OctetstringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>OctetstringType</b></em>'
    * @generated
    */
   public EClass getOctetstringTypeEClass() {
@@ -2136,9 +2296,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>EnumeratedType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>EnumeratedType</b></em>' 
+   * Returns the {@link EClass} '<em><b>EnumeratedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>EnumeratedType</b></em>'
    * @generated
    */
   public EClass getEnumeratedTypeEClass() {
@@ -2146,9 +2306,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>EnumeratedType.value</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>EnumeratedType.value</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>EnumeratedType.value</b></em>'.
    * @generated
    */
@@ -2157,9 +2317,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>EnumeratedType.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>EnumeratedType.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>EnumeratedType.codeElement</b></em>'.
    * @generated
    */
@@ -2169,9 +2329,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CompositeType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CompositeType</b></em>' 
+   * Returns the {@link EClass} '<em><b>CompositeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CompositeType</b></em>'
    * @generated
    */
   public EClass getCompositeTypeEClass() {
@@ -2179,9 +2339,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CompositeType.itemUnit</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CompositeType.itemUnit</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CompositeType.itemUnit</b></em>'.
    * @generated
    */
@@ -2190,9 +2350,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ChoiceType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ChoiceType</b></em>' 
+   * Returns the {@link EClass} '<em><b>ChoiceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ChoiceType</b></em>'
    * @generated
    */
   public EClass getChoiceTypeEClass() {
@@ -2200,9 +2360,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RecordType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RecordType</b></em>' 
+   * Returns the {@link EClass} '<em><b>RecordType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RecordType</b></em>'
    * @generated
    */
   public EClass getRecordTypeEClass() {
@@ -2210,9 +2370,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DerivedType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DerivedType</b></em>' 
+   * Returns the {@link EClass} '<em><b>DerivedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DerivedType</b></em>'
    * @generated
    */
   public EClass getDerivedTypeEClass() {
@@ -2220,9 +2380,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DerivedType.itemUnit</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DerivedType.itemUnit</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DerivedType.itemUnit</b></em>'.
    * @generated
    */
@@ -2231,9 +2391,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ArrayType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ArrayType</b></em>' 
+   * Returns the {@link EClass} '<em><b>ArrayType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ArrayType</b></em>'
    * @generated
    */
   public EClass getArrayTypeEClass() {
@@ -2252,9 +2412,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ArrayType.indexUnit</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ArrayType.indexUnit</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ArrayType.indexUnit</b></em>'.
    * @generated
    */
@@ -2263,9 +2423,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PointerType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PointerType</b></em>' 
+   * Returns the {@link EClass} '<em><b>PointerType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PointerType</b></em>'
    * @generated
    */
   public EClass getPointerTypeEClass() {
@@ -2273,9 +2433,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RangeType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>RangeType</b></em>' 
+   * Returns the {@link EClass} '<em><b>RangeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RangeType</b></em>'
    * @generated
    */
   public EClass getRangeTypeEClass() {
@@ -2305,9 +2465,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BagType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BagType</b></em>' 
+   * Returns the {@link EClass} '<em><b>BagType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BagType</b></em>'
    * @generated
    */
   public EClass getBagTypeEClass() {
@@ -2326,9 +2486,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SetType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SetType</b></em>' 
+   * Returns the {@link EClass} '<em><b>SetType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SetType</b></em>'
    * @generated
    */
   public EClass getSetTypeEClass() {
@@ -2347,9 +2507,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SequenceType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SequenceType</b></em>' 
+   * Returns the {@link EClass} '<em><b>SequenceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SequenceType</b></em>'
    * @generated
    */
   public EClass getSequenceTypeEClass() {
@@ -2357,9 +2517,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SequenceType.size</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SequenceType.size</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SequenceType.size</b></em>'.
    * @generated
    */
@@ -2368,9 +2528,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Signature</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Signature</b></em>' 
+   * Returns the {@link EClass} '<em><b>Signature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Signature</b></em>'
    * @generated
    */
   public EClass getSignatureEClass() {
@@ -2378,9 +2538,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Signature.parameterUnit</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Signature.parameterUnit</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Signature.parameterUnit</b></em>'.
    * @generated
    */
@@ -2389,9 +2549,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DefinedType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DefinedType</b></em>' 
+   * Returns the {@link EClass} '<em><b>DefinedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DefinedType</b></em>'
    * @generated
    */
   public EClass getDefinedTypeEClass() {
@@ -2399,9 +2559,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DefinedType.type</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DefinedType.type</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DefinedType.type</b></em>'.
    * @generated
    */
@@ -2410,9 +2570,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>DefinedType.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>DefinedType.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>DefinedType.codeElement</b></em>'.
    * @generated
    */
@@ -2421,9 +2581,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TypeUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TypeUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>TypeUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TypeUnit</b></em>'
    * @generated
    */
   public EClass getTypeUnitEClass() {
@@ -2431,9 +2591,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SynonymUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SynonymUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>SynonymUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SynonymUnit</b></em>'
    * @generated
    */
   public EClass getSynonymUnitEClass() {
@@ -2441,9 +2601,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ClassUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ClassUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>ClassUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ClassUnit</b></em>'
    * @generated
    */
   public EClass getClassUnitEClass() {
@@ -2451,9 +2611,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClassUnit.isAbstract</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClassUnit.isAbstract</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClassUnit.isAbstract</b></em>'.
    * @generated
    */
@@ -2462,9 +2622,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClassUnit.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ClassUnit.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ClassUnit.codeElement</b></em>'.
    * @generated
    */
@@ -2473,9 +2633,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InterfaceUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InterfaceUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>InterfaceUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InterfaceUnit</b></em>'
    * @generated
    */
   public EClass getInterfaceUnitEClass() {
@@ -2483,9 +2643,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InterfaceUnit.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>InterfaceUnit.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InterfaceUnit.codeElement</b></em>'.
    * @generated
    */
@@ -2494,9 +2654,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TemplateUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TemplateUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>TemplateUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TemplateUnit</b></em>'
    * @generated
    */
   public EClass getTemplateUnitEClass() {
@@ -2504,9 +2664,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>TemplateUnit.codeElement</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>TemplateUnit.codeElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>TemplateUnit.codeElement</b></em>'.
    * @generated
    */
@@ -2515,9 +2675,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TemplateParameter</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TemplateParameter</b></em>' 
+   * Returns the {@link EClass} '<em><b>TemplateParameter</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TemplateParameter</b></em>'
    * @generated
    */
   public EClass getTemplateParameterEClass() {
@@ -2525,9 +2685,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>TemplateType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>TemplateType</b></em>' 
+   * Returns the {@link EClass} '<em><b>TemplateType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>TemplateType</b></em>'
    * @generated
    */
   public EClass getTemplateTypeEClass() {
@@ -2535,9 +2695,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InstanceOf</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InstanceOf</b></em>' 
+   * Returns the {@link EClass} '<em><b>InstanceOf</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InstanceOf</b></em>'
    * @generated
    */
   public EClass getInstanceOfEClass() {
@@ -2567,9 +2727,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ParameterTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ParameterTo</b></em>' 
+   * Returns the {@link EClass} '<em><b>ParameterTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ParameterTo</b></em>'
    * @generated
    */
   public EClass getParameterToEClass() {
@@ -2588,9 +2748,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ParameterTo.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ParameterTo.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ParameterTo.from</b></em>'.
    * @generated
    */
@@ -2599,9 +2759,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Implements</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Implements</b></em>' 
+   * Returns the {@link EClass} '<em><b>Implements</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Implements</b></em>'
    * @generated
    */
   public EClass getImplementsEClass() {
@@ -2631,9 +2791,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ImplementationOf</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ImplementationOf</b></em>' 
+   * Returns the {@link EClass} '<em><b>ImplementationOf</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ImplementationOf</b></em>'
    * @generated
    */
   public EClass getImplementationOfEClass() {
@@ -2641,9 +2801,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ImplementationOf.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ImplementationOf.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ImplementationOf.to</b></em>'.
    * @generated
    */
@@ -2652,9 +2812,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ImplementationOf.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>ImplementationOf.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ImplementationOf.from</b></em>'.
    * @generated
    */
@@ -2663,9 +2823,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>HasType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>HasType</b></em>' 
+   * Returns the {@link EClass} '<em><b>HasType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>HasType</b></em>'
    * @generated
    */
   public EClass getHasTypeEClass() {
@@ -2673,8 +2833,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>HasType.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>HasType.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>HasType.to</b></em>'.
    * @generated
    */
@@ -2694,9 +2854,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>HasValue</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>HasValue</b></em>' 
+   * Returns the {@link EClass} '<em><b>HasValue</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>HasValue</b></em>'
    * @generated
    */
   public EClass getHasValueEClass() {
@@ -2704,8 +2864,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>HasValue.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>HasValue.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>HasValue.to</b></em>'.
    * @generated
    */
@@ -2725,9 +2885,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Extends</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Extends</b></em>' 
+   * Returns the {@link EClass} '<em><b>Extends</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Extends</b></em>'
    * @generated
    */
   public EClass getExtendsEClass() {
@@ -2735,8 +2895,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Extends.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Extends.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Extends.to</b></em>'.
    * @generated
    */
@@ -2756,9 +2916,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PreprocessorDirective</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>PreprocessorDirective</b></em>' 
+   * Returns the {@link EClass} '<em><b>PreprocessorDirective</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PreprocessorDirective</b></em>'
    * @generated
    */
   public EClass getPreprocessorDirectiveEClass() {
@@ -2766,9 +2926,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PreprocessorDirective.codeElement</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>PreprocessorDirective.codeElement</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>PreprocessorDirective.codeElement</b></em>'.
    * @generated
    */
@@ -2778,9 +2938,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>MacroUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>MacroUnit</b></em>' 
+   * Returns the {@link EClass} '<em><b>MacroUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>MacroUnit</b></em>'
    * @generated
    */
   public EClass getMacroUnitEClass() {
@@ -2799,9 +2959,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>MacroDirective</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>MacroDirective</b></em>' 
+   * Returns the {@link EClass} '<em><b>MacroDirective</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>MacroDirective</b></em>'
    * @generated
    */
   public EClass getMacroDirectiveEClass() {
@@ -2809,9 +2969,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>IncludeDirective</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>IncludeDirective</b></em>' 
+   * Returns the {@link EClass} '<em><b>IncludeDirective</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>IncludeDirective</b></em>'
    * @generated
    */
   public EClass getIncludeDirectiveEClass() {
@@ -2819,9 +2979,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ConditionalDirective</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ConditionalDirective</b></em>' 
+   * Returns the {@link EClass} '<em><b>ConditionalDirective</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ConditionalDirective</b></em>'
    * @generated
    */
   public EClass getConditionalDirectiveEClass() {
@@ -2829,9 +2989,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Expands</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Expands</b></em>' 
+   * Returns the {@link EClass} '<em><b>Expands</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Expands</b></em>'
    * @generated
    */
   public EClass getExpandsEClass() {
@@ -2839,8 +2999,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Expands.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Expands.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Expands.to</b></em>'.
    * @generated
    */
@@ -2860,9 +3020,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>GeneratedFrom</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>GeneratedFrom</b></em>' 
+   * Returns the {@link EClass} '<em><b>GeneratedFrom</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>GeneratedFrom</b></em>'
    * @generated
    */
   public EClass getGeneratedFromEClass() {
@@ -2870,9 +3030,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>GeneratedFrom.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>GeneratedFrom.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>GeneratedFrom.to</b></em>'.
    * @generated
    */
@@ -2881,9 +3041,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>GeneratedFrom.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>GeneratedFrom.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>GeneratedFrom.from</b></em>'.
    * @generated
    */
@@ -2892,9 +3052,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Includes</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Includes</b></em>' 
+   * Returns the {@link EClass} '<em><b>Includes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Includes</b></em>'
    * @generated
    */
   public EClass getIncludesEClass() {
@@ -2902,8 +3062,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Includes.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Includes.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Includes.to</b></em>'.
    * @generated
    */
@@ -2923,9 +3083,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>VariantTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>VariantTo</b></em>' 
+   * Returns the {@link EClass} '<em><b>VariantTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>VariantTo</b></em>'
    * @generated
    */
   public EClass getVariantToEClass() {
@@ -2955,9 +3115,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Redefines</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Redefines</b></em>' 
+   * Returns the {@link EClass} '<em><b>Redefines</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Redefines</b></em>'
    * @generated
    */
   public EClass getRedefinesEClass() {
@@ -2987,9 +3147,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Namespace</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Namespace</b></em>' 
+   * Returns the {@link EClass} '<em><b>Namespace</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Namespace</b></em>'
    * @generated
    */
   public EClass getNamespaceEClass() {
@@ -2997,9 +3157,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Namespace.groupedCode</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Namespace.groupedCode</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Namespace.groupedCode</b></em>'.
    * @generated
    */
@@ -3008,9 +3168,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>VisibleIn</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>VisibleIn</b></em>' 
+   * Returns the {@link EClass} '<em><b>VisibleIn</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>VisibleIn</b></em>'
    * @generated
    */
   public EClass getVisibleInEClass() {
@@ -3040,9 +3200,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Imports</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Imports</b></em>' 
+   * Returns the {@link EClass} '<em><b>Imports</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Imports</b></em>'
    * @generated
    */
   public EClass getImportsEClass() {
@@ -3050,8 +3210,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Imports.to</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Imports.to</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Imports.to</b></em>'.
    * @generated
    */
@@ -3071,9 +3231,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CodeElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CodeElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>CodeElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CodeElement</b></em>'
    * @generated
    */
   public EClass getCodeElementEClass() {
@@ -3081,9 +3241,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>CodeRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>CodeRelationship</b></em>' 
+   * Returns the {@link EClass} '<em><b>CodeRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CodeRelationship</b></em>'
    * @generated
    */
   public EClass getCodeRelationshipEClass() {
@@ -3091,9 +3251,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CodeRelationship.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CodeRelationship.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CodeRelationship.to</b></em>'.
    * @generated
    */
@@ -3102,9 +3262,9 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>CodeRelationship.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>CodeRelationship.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>CodeRelationship.from</b></em>'.
    * @generated
    */
@@ -3113,8 +3273,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>CallableKind</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>CallableKind</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>CallableKind</b></em>'
    * @generated
    */
@@ -3123,8 +3283,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>MethodKind</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>MethodKind</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>MethodKind</b></em>'
    * @generated
    */
@@ -3133,8 +3293,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>ExportKind</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>ExportKind</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>ExportKind</b></em>'
    * @generated
    */
@@ -3143,8 +3303,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>StorableKind</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>StorableKind</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>StorableKind</b></em>'
    * @generated
    */
@@ -3153,8 +3313,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>ParameterKind</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>ParameterKind</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>ParameterKind</b></em>'
    * @generated
    */
@@ -3163,8 +3323,8 @@ public class CodeModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>MacroKind</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>MacroKind</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the EEnum representing '<em><b>MacroKind</b></em>'
    * @generated
    */
@@ -3174,8 +3334,9 @@ public class CodeModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

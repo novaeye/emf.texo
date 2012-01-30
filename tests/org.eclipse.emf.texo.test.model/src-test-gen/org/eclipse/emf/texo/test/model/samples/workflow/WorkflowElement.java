@@ -4,60 +4,67 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>WorkflowElement</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>WorkflowElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "WorkflowElement")
 public abstract class WorkflowElement extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String comment = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int x = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int y = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int width = -1;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int height = -1;
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -67,9 +74,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -78,8 +87,9 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -89,9 +99,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -100,8 +112,9 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>x</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>x</b></em>' feature
    * @generated
    */
@@ -111,9 +124,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getX() <em>x</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getX() x}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getX() x}' feature.
    * @generated
    */
   public void setX(int newX) {
@@ -122,8 +137,9 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>y</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>y</b></em>' feature
    * @generated
    */
@@ -133,9 +149,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getY() <em>y</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getY() y}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getY() y}' feature.
    * @generated
    */
   public void setY(int newY) {
@@ -144,8 +162,9 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>width</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>width</b></em>' feature
    * @generated
    */
@@ -155,9 +174,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getWidth() <em>width</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getWidth() width}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getWidth() width}' feature.
    * @generated
    */
   public void setWidth(int newWidth) {
@@ -166,8 +187,9 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>height</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>height</b></em>' feature
    * @generated
    */
@@ -177,9 +199,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getHeight() <em>height</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getHeight() height}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getHeight() height}' feature.
    * @generated
    */
   public void setHeight(int newHeight) {
@@ -188,8 +212,9 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Returns the value of '<em><b>workFlowElementId</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>workFlowElementId</b></em>' feature
    * @generated
    */
@@ -202,9 +227,11 @@ public abstract class WorkflowElement extends Identifiable {
 
   /**
    * Sets the '{@link WorkflowElement#getWorkFlowElementId() <em>workFlowElementId</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link WorkflowElement#getWorkFlowElementId() workFlowElementId}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link WorkflowElement#getWorkFlowElementId() workFlowElementId}' feature.
    * @generated
    */
   public void setWorkFlowElementId(String newWorkFlowElementId) {
@@ -215,9 +242,9 @@ public abstract class WorkflowElement extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

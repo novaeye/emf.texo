@@ -57,6 +57,7 @@ public abstract class Element {
 
   /**
    * Adds to the <em>attribute</em> feature.
+   * 
    * @generated
    */
   public void addToAttribute(Attribute attributeValue) {
@@ -67,8 +68,9 @@ public abstract class Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>attribute</em> feature.
+   * 
    * @generated
    */
   public void removeFromAttribute(Attribute attributeValue) {
@@ -77,8 +79,9 @@ public abstract class Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>attribute</em> feature.
+   * 
    * @generated
    */
   public void clearAttribute() {
@@ -118,6 +121,7 @@ public abstract class Element {
 
   /**
    * Adds to the <em>annotation</em> feature.
+   * 
    * @generated
    */
   public void addToAnnotation(Annotation annotationValue) {
@@ -128,8 +132,9 @@ public abstract class Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>annotation</em> feature.
+   * 
    * @generated
    */
   public void removeFromAnnotation(Annotation annotationValue) {
@@ -138,8 +143,9 @@ public abstract class Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>annotation</em> feature.
+   * 
    * @generated
    */
   public void clearAnnotation() {
@@ -163,9 +169,9 @@ public abstract class Element {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

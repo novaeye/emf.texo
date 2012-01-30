@@ -10,24 +10,26 @@ import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>Book</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Book")
 public class Book {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String title = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
   @MapKeyClass(String.class)
@@ -37,8 +39,9 @@ public class Book {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -48,9 +51,11 @@ public class Book {
 
   /**
    * Sets the '{@link Book#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -59,8 +64,9 @@ public class Book {
 
   /**
    * Returns the value of '<em><b>writers</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>writers</b></em>' feature
    * @generated
    */
@@ -70,9 +76,11 @@ public class Book {
 
   /**
    * Sets the '{@link Book#getWriters() <em>writers</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getWriters() writers}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(Map<String, Writer> newWriters) {
@@ -80,9 +88,9 @@ public class Book {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

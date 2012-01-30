@@ -14,54 +14,60 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>PType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PType")
 public class PType extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long id = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PType.class)
   @JoinTable(name = "PType_base")
   private PType base = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "base", targetEntity = PType.class)
   private Set<PType> subTypes = new HashSet<PType>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PType.class)
   @JoinTable(name = "PType_subNOTypes")
   private Set<PType> subNOTypes = new HashSet<PType>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PDeclaration.class)
   @OrderColumn()
@@ -70,8 +76,9 @@ public class PType extends Identifiable {
 
   /**
    * Returns the value of '<em><b>id</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>id</b></em>' feature
    * @generated
    */
@@ -81,9 +88,11 @@ public class PType extends Identifiable {
 
   /**
    * Sets the '{@link PType#getId() <em>id</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PType#getId() id}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PType#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -92,8 +101,9 @@ public class PType extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -103,9 +113,11 @@ public class PType extends Identifiable {
 
   /**
    * Sets the '{@link PType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -114,8 +126,9 @@ public class PType extends Identifiable {
 
   /**
    * Returns the value of '<em><b>base</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>base</b></em>' feature
    * @generated
    */
@@ -125,9 +138,11 @@ public class PType extends Identifiable {
 
   /**
    * Sets the '{@link PType#getBase() <em>base</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PType#getBase() base}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PType#getBase() base}' feature.
    * @generated
    */
   public void setBase(PType newBase) {
@@ -136,8 +151,9 @@ public class PType extends Identifiable {
 
   /**
    * Returns the value of '<em><b>subTypes</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>subTypes</b></em>' feature
    * @generated
    */
@@ -147,6 +163,7 @@ public class PType extends Identifiable {
 
   /**
    * Adds to the <em>subTypes</em> feature.
+   * 
    * @generated
    */
   public void addToSubTypes(PType subTypesValue) {
@@ -155,8 +172,9 @@ public class PType extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>subTypes</em> feature.
+   * 
    * @generated
    */
   public void removeFromSubTypes(PType subTypesValue) {
@@ -165,8 +183,9 @@ public class PType extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>subTypes</em> feature.
+   * 
    * @generated
    */
   public void clearSubTypes() {
@@ -177,9 +196,11 @@ public class PType extends Identifiable {
 
   /**
    * Sets the '{@link PType#getSubTypes() <em>subTypes</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PType#getSubTypes() subTypes}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PType#getSubTypes() subTypes}' feature.
    * @generated
    */
   public void setSubTypes(Set<PType> newSubTypes) {
@@ -188,8 +209,9 @@ public class PType extends Identifiable {
 
   /**
    * Returns the value of '<em><b>subNOTypes</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>subNOTypes</b></em>' feature
    * @generated
    */
@@ -199,6 +221,7 @@ public class PType extends Identifiable {
 
   /**
    * Adds to the <em>subNOTypes</em> feature.
+   * 
    * @generated
    */
   public void addToSubNOTypes(PType subNOTypesValue) {
@@ -207,8 +230,9 @@ public class PType extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>subNOTypes</em> feature.
+   * 
    * @generated
    */
   public void removeFromSubNOTypes(PType subNOTypesValue) {
@@ -217,8 +241,9 @@ public class PType extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>subNOTypes</em> feature.
+   * 
    * @generated
    */
   public void clearSubNOTypes() {
@@ -229,9 +254,11 @@ public class PType extends Identifiable {
 
   /**
    * Sets the '{@link PType#getSubNOTypes() <em>subNOTypes</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PType#getSubNOTypes() subNOTypes}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PType#getSubNOTypes() subNOTypes}' feature.
    * @generated
    */
   public void setSubNOTypes(Set<PType> newSubNOTypes) {
@@ -240,8 +267,9 @@ public class PType extends Identifiable {
 
   /**
    * Returns the value of '<em><b>infoReferences</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>infoReferences</b></em>' feature
    * @generated
    */
@@ -251,6 +279,7 @@ public class PType extends Identifiable {
 
   /**
    * Adds to the <em>infoReferences</em> feature.
+   * 
    * @generated
    */
   public void addToInfoReferences(PDeclaration infoReferencesValue) {
@@ -259,8 +288,9 @@ public class PType extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>infoReferences</em> feature.
+   * 
    * @generated
    */
   public void removeFromInfoReferences(PDeclaration infoReferencesValue) {
@@ -269,8 +299,9 @@ public class PType extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>infoReferences</em> feature.
+   * 
    * @generated
    */
   public void clearInfoReferences() {
@@ -281,9 +312,11 @@ public class PType extends Identifiable {
 
   /**
    * Sets the '{@link PType#getInfoReferences() <em>infoReferences</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PType#getInfoReferences() infoReferences}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PType#getInfoReferences() infoReferences}' feature.
    * @generated
    */
   public void setInfoReferences(List<PDeclaration> newInfoReferences) {
@@ -291,9 +324,9 @@ public class PType extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

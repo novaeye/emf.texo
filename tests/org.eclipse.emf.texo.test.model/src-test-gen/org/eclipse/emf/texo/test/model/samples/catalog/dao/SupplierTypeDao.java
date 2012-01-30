@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.catalog.CatalogModelPackage;
 import org.eclipse.emf.texo.test.model.samples.catalog.SupplierType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SupplierType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SupplierTypeDao extends BaseDao<SupplierType> {
 

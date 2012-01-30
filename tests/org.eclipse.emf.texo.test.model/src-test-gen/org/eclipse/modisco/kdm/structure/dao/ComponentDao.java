@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.structure.Component;
 import org.eclipse.modisco.kdm.structure.StructureModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Component</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ComponentDao extends BaseDao<Component> {
 

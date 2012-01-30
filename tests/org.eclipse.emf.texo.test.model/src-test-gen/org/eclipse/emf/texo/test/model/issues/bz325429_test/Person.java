@@ -12,39 +12,43 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Person</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Person")
 public class Person {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String firstname = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String lastname = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Address.class)
   @JoinColumns({ @JoinColumn() })
   private Address address = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Contact.class)
   @OrderColumn()
@@ -53,8 +57,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>firstname</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>firstname</b></em>' feature
    * @generated
    */
@@ -64,9 +69,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getFirstname() <em>firstname</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getFirstname() firstname}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getFirstname() firstname}' feature.
    * @generated
    */
   public void setFirstname(String newFirstname) {
@@ -75,8 +82,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>lastname</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>lastname</b></em>' feature
    * @generated
    */
@@ -86,9 +94,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getLastname() <em>lastname</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getLastname() lastname}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getLastname() lastname}' feature.
    * @generated
    */
   public void setLastname(String newLastname) {
@@ -97,8 +107,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>address</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>address</b></em>' feature
    * @generated
    */
@@ -108,9 +119,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getAddress() <em>address</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getAddress() address}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(Address newAddress) {
@@ -119,8 +132,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>contacts</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>contacts</b></em>' feature
    * @generated
    */
@@ -130,6 +144,7 @@ public class Person {
 
   /**
    * Adds to the <em>contacts</em> feature.
+   * 
    * @generated
    */
   public void addToContacts(Contact contactsValue) {
@@ -140,8 +155,9 @@ public class Person {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>contacts</em> feature.
+   * 
    * @generated
    */
   public void removeFromContacts(Contact contactsValue) {
@@ -150,8 +166,9 @@ public class Person {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>contacts</em> feature.
+   * 
    * @generated
    */
   public void clearContacts() {
@@ -162,9 +179,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getContacts() <em>contacts</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getContacts() contacts}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getContacts() contacts}' feature.
    * @generated
    */
   public void setContacts(List<Contact> newContacts) {
@@ -172,9 +191,9 @@ public class Person {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

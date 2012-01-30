@@ -21,10 +21,11 @@ import org.eclipse.modisco.kdm.structure.dao.StructureRelationshipDao;
 import org.eclipse.modisco.kdm.structure.dao.SubsystemDao;
 
 /**
- * The <b>Package</b> for the model '<em><b>structure</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>structure</b></em>'. It contains initialization code and access to the
+ * Factory to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class StructureModelPackage extends ModelPackage {
@@ -37,131 +38,148 @@ public class StructureModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/MoDisco/kdm/structure";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final StructureModelFactory MODELFACTORY = new StructureModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTSTRUCTUREELEMENT_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTSTRUCTUREELEMENT_AGGREGATED_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTSTRUCTUREELEMENT_IMPLEMENTATION_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTSTRUCTUREELEMENT_STRUCTUREELEMENT_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTSTRUCTUREELEMENT_STRUCTURERELATIONSHIP_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTSTRUCTURERELATIONSHIP_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SUBSYSTEM_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int LAYER_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRUCTUREMODEL_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRUCTUREMODEL_STRUCTUREELEMENT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int COMPONENT_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOFTWARESYSTEM_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRUCTURERELATIONSHIP_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRUCTURERELATIONSHIP_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRUCTURERELATIONSHIP_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ARCHITECTUREVIEW_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int STRUCTUREELEMENT_CLASSIFIER_ID = 9;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final StructureModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static StructureModelPackage initialize() {
@@ -176,8 +194,8 @@ public class StructureModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
+    KdmModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
@@ -222,8 +240,7 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link StructureModelFactory} instance.
    * @generated
@@ -233,12 +250,11 @@ public class StructureModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -270,9 +286,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>AbstractStructureElement.aggregated</b></em>'.
-   * <!-- begin-user-doc
+   * Returns the {@link EStructuralFeature} '<em><b>AbstractStructureElement.aggregated</b></em>'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>AbstractStructureElement.aggregated</b></em>'.
    * @generated
    */
@@ -319,10 +335,10 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AbstractStructureRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EClass} '<em><b>AbstractStructureRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AbstractStructureRelationship</b></em>' 
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AbstractStructureRelationship</b></em>'
    * @generated
    */
   public EClass getAbstractStructureRelationshipEClass() {
@@ -330,9 +346,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Subsystem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Subsystem</b></em>' 
+   * Returns the {@link EClass} '<em><b>Subsystem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Subsystem</b></em>'
    * @generated
    */
   public EClass getSubsystemEClass() {
@@ -340,9 +356,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Layer</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Layer</b></em>' 
+   * Returns the {@link EClass} '<em><b>Layer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Layer</b></em>'
    * @generated
    */
   public EClass getLayerEClass() {
@@ -350,9 +366,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>StructureModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>StructureModel</b></em>' 
+   * Returns the {@link EClass} '<em><b>StructureModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>StructureModel</b></em>'
    * @generated
    */
   public EClass getStructureModelEClass() {
@@ -360,9 +376,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>StructureModel.structureElement</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>StructureModel.structureElement</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>StructureModel.structureElement</b></em>'.
    * @generated
    */
@@ -372,9 +388,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Component</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Component</b></em>' 
+   * Returns the {@link EClass} '<em><b>Component</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Component</b></em>'
    * @generated
    */
   public EClass getComponentEClass() {
@@ -382,9 +398,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SoftwareSystem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SoftwareSystem</b></em>' 
+   * Returns the {@link EClass} '<em><b>SoftwareSystem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SoftwareSystem</b></em>'
    * @generated
    */
   public EClass getSoftwareSystemEClass() {
@@ -392,9 +408,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>StructureRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>StructureRelationship</b></em>' 
+   * Returns the {@link EClass} '<em><b>StructureRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>StructureRelationship</b></em>'
    * @generated
    */
   public EClass getStructureRelationshipEClass() {
@@ -402,9 +418,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>StructureRelationship.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>StructureRelationship.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>StructureRelationship.to</b></em>'.
    * @generated
    */
@@ -414,9 +430,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>StructureRelationship.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>StructureRelationship.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>StructureRelationship.from</b></em>'.
    * @generated
    */
@@ -426,9 +442,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ArchitectureView</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ArchitectureView</b></em>' 
+   * Returns the {@link EClass} '<em><b>ArchitectureView</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ArchitectureView</b></em>'
    * @generated
    */
   public EClass getArchitectureViewEClass() {
@@ -436,9 +452,9 @@ public class StructureModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>StructureElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>StructureElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>StructureElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>StructureElement</b></em>'
    * @generated
    */
   public EClass getStructureElementEClass() {
@@ -447,8 +463,9 @@ public class StructureModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

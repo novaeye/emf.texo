@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>DataModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DataModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "DataModel")
 public class DataModel extends KDMModel {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractDataElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class DataModel extends KDMModel {
 
   /**
    * Returns the value of '<em><b>dataElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>dataElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class DataModel extends KDMModel {
 
   /**
    * Adds to the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void addToDataElement(AbstractDataElement dataElementValue) {
@@ -48,8 +51,9 @@ public class DataModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromDataElement(AbstractDataElement dataElementValue) {
@@ -58,8 +62,9 @@ public class DataModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>dataElement</em> feature.
+   * 
    * @generated
    */
   public void clearDataElement() {
@@ -70,9 +75,11 @@ public class DataModel extends KDMModel {
 
   /**
    * Sets the '{@link DataModel#getDataElement() <em>dataElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DataModel#getDataElement() dataElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DataModel#getDataElement() dataElement}' feature.
    * @generated
    */
   public void setDataElement(Set<AbstractDataElement> newDataElement) {
@@ -80,9 +87,9 @@ public class DataModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -3,13 +3,11 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>CarPassport</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * ПТС
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>CarPassport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> ПТС <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "CarPassport")
 public class CarPassport implements Document {
@@ -144,9 +142,9 @@ public class CarPassport implements Document {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

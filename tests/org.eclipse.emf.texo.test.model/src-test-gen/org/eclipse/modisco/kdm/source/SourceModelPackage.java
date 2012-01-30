@@ -30,10 +30,11 @@ import org.eclipse.modisco.kdm.source.dao.SourceRefDao;
 import org.eclipse.modisco.kdm.source.dao.SourceRegionDao;
 
 /**
- * The <b>Package</b> for the model '<em><b>source</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>source</b></em>'. It contains initialization code and access to the Factory
+ * to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SourceModelPackage extends ModelPackage {
@@ -46,269 +47,309 @@ public class SourceModelPackage extends ModelPackage {
   private static boolean isInitialized = false;
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final String NS_URI = "http://www.eclipse.org/MoDisco/kdm/source";
 
   /**
-   * The {@link ModelFactory} for this package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final SourceModelFactory MODELFACTORY = new SourceModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYMODEL_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYMODEL_INVENTORYELEMENT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTINVENTORYELEMENT_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTINVENTORYELEMENT_INVENTORYRELATIONSHIP_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int ABSTRACTINVENTORYRELATIONSHIP_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYITEM_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYITEM_VERSION_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYITEM_PATH_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEFILE_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEFILE_LANGUAGE_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEFILE_ENCODING_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int IMAGE_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int CONFIGURATION_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int RESOURCEDESCRIPTION_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int BINARYFILE_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int EXECUTABLEFILE_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYCONTAINER_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYCONTAINER_INVENTORYELEMENT_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DIRECTORY_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DIRECTORY_PATH_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int PROJECT_CLASSIFIER_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPENDSON_CLASSIFIER_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPENDSON_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int DEPENDSON_FROM_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREF_CLASSIFIER_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREF_REGION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREF_LANGUAGE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREF_SNIPPET_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_CLASSIFIER_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_FILE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_STARTLINE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_STARTPOSITION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_ENDLINE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_ENDPOSITION_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_LANGUAGE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int SOURCEREGION_PATH_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYELEMENT_CLASSIFIER_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYRELATIONSHIP_CLASSIFIER_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYRELATIONSHIP_TO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final int INVENTORYRELATIONSHIP_FROM_FEATURE_ID = 5;
 
   /**
-   * The static member with the instance of this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final SourceModelPackage INSTANCE = initialize();
 
   /**
-   * Initializes this {@link ModelPackage}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static SourceModelPackage initialize() {
@@ -323,8 +364,8 @@ public class SourceModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
+    KdmModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
@@ -400,8 +441,7 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link ModelFactory} of this ModelPackage.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the {@link SourceModelFactory} instance.
    * @generated
@@ -411,12 +451,11 @@ public class SourceModelPackage extends ModelPackage {
     return MODELFACTORY;
   }
 
-  /** 
-   * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * Returns the nsUri of the {@link EPackage} managed by this Package instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return the nsUri of the EPackage 
+   * @return the nsUri of the EPackage
    * @generated
    */
   @Override
@@ -437,9 +476,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InventoryModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InventoryModel</b></em>' 
+   * Returns the {@link EClass} '<em><b>InventoryModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InventoryModel</b></em>'
    * @generated
    */
   public EClass getInventoryModelEClass() {
@@ -447,9 +486,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InventoryModel.inventoryElement</b></em>'.
-   * <!-- begin-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>InventoryModel.inventoryElement</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InventoryModel.inventoryElement</b></em>'.
    * @generated
    */
@@ -483,10 +522,10 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>AbstractInventoryRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EClass} '<em><b>AbstractInventoryRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>AbstractInventoryRelationship</b></em>' 
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AbstractInventoryRelationship</b></em>'
    * @generated
    */
   public EClass getAbstractInventoryRelationshipEClass() {
@@ -494,9 +533,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InventoryItem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InventoryItem</b></em>' 
+   * Returns the {@link EClass} '<em><b>InventoryItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InventoryItem</b></em>'
    * @generated
    */
   public EClass getInventoryItemEClass() {
@@ -504,9 +543,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InventoryItem.version</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>InventoryItem.version</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InventoryItem.version</b></em>'.
    * @generated
    */
@@ -515,9 +554,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InventoryItem.path</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>InventoryItem.path</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InventoryItem.path</b></em>'.
    * @generated
    */
@@ -526,9 +565,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SourceFile</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SourceFile</b></em>' 
+   * Returns the {@link EClass} '<em><b>SourceFile</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SourceFile</b></em>'
    * @generated
    */
   public EClass getSourceFileEClass() {
@@ -536,9 +575,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceFile.language</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceFile.language</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceFile.language</b></em>'.
    * @generated
    */
@@ -547,9 +586,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceFile.encoding</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceFile.encoding</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceFile.encoding</b></em>'.
    * @generated
    */
@@ -558,9 +597,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Image</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Image</b></em>' 
+   * Returns the {@link EClass} '<em><b>Image</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Image</b></em>'
    * @generated
    */
   public EClass getImageEClass() {
@@ -568,9 +607,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Configuration</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Configuration</b></em>' 
+   * Returns the {@link EClass} '<em><b>Configuration</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Configuration</b></em>'
    * @generated
    */
   public EClass getConfigurationEClass() {
@@ -578,9 +617,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ResourceDescription</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ResourceDescription</b></em>' 
+   * Returns the {@link EClass} '<em><b>ResourceDescription</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ResourceDescription</b></em>'
    * @generated
    */
   public EClass getResourceDescriptionEClass() {
@@ -588,9 +627,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BinaryFile</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>BinaryFile</b></em>' 
+   * Returns the {@link EClass} '<em><b>BinaryFile</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BinaryFile</b></em>'
    * @generated
    */
   public EClass getBinaryFileEClass() {
@@ -598,9 +637,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ExecutableFile</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>ExecutableFile</b></em>' 
+   * Returns the {@link EClass} '<em><b>ExecutableFile</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ExecutableFile</b></em>'
    * @generated
    */
   public EClass getExecutableFileEClass() {
@@ -608,9 +647,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InventoryContainer</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InventoryContainer</b></em>' 
+   * Returns the {@link EClass} '<em><b>InventoryContainer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InventoryContainer</b></em>'
    * @generated
    */
   public EClass getInventoryContainerEClass() {
@@ -618,9 +657,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InventoryContainer.inventoryElement</b></em>'.
-   * <!-- begin-user-doc
+   * Returns the {@link EStructuralFeature} '<em><b>InventoryContainer.inventoryElement</b></em>'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InventoryContainer.inventoryElement</b></em>'.
    * @generated
    */
@@ -630,9 +669,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Directory</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Directory</b></em>' 
+   * Returns the {@link EClass} '<em><b>Directory</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Directory</b></em>'
    * @generated
    */
   public EClass getDirectoryEClass() {
@@ -651,9 +690,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Project</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>Project</b></em>' 
+   * Returns the {@link EClass} '<em><b>Project</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Project</b></em>'
    * @generated
    */
   public EClass getProjectEClass() {
@@ -661,9 +700,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>DependsOn</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>DependsOn</b></em>' 
+   * Returns the {@link EClass} '<em><b>DependsOn</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>DependsOn</b></em>'
    * @generated
    */
   public EClass getDependsOnEClass() {
@@ -693,9 +732,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SourceRef</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SourceRef</b></em>' 
+   * Returns the {@link EClass} '<em><b>SourceRef</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SourceRef</b></em>'
    * @generated
    */
   public EClass getSourceRefEClass() {
@@ -703,9 +742,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRef.region</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRef.region</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRef.region</b></em>'.
    * @generated
    */
@@ -714,9 +753,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRef.language</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRef.language</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRef.language</b></em>'.
    * @generated
    */
@@ -725,9 +764,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRef.snippet</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRef.snippet</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRef.snippet</b></em>'.
    * @generated
    */
@@ -736,9 +775,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SourceRegion</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>SourceRegion</b></em>' 
+   * Returns the {@link EClass} '<em><b>SourceRegion</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SourceRegion</b></em>'
    * @generated
    */
   public EClass getSourceRegionEClass() {
@@ -746,9 +785,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.file</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.file</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.file</b></em>'.
    * @generated
    */
@@ -757,9 +796,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.startLine</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.startLine</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.startLine</b></em>'.
    * @generated
    */
@@ -768,9 +807,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.startPosition</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.startPosition</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.startPosition</b></em>'.
    * @generated
    */
@@ -779,9 +818,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.endLine</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.endLine</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.endLine</b></em>'.
    * @generated
    */
@@ -790,9 +829,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.endPosition</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.endPosition</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.endPosition</b></em>'.
    * @generated
    */
@@ -801,9 +840,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.language</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.language</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.language</b></em>'.
    * @generated
    */
@@ -812,9 +851,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.path</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>SourceRegion.path</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SourceRegion.path</b></em>'.
    * @generated
    */
@@ -823,9 +862,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InventoryElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InventoryElement</b></em>' 
+   * Returns the {@link EClass} '<em><b>InventoryElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InventoryElement</b></em>'
    * @generated
    */
   public EClass getInventoryElementEClass() {
@@ -833,9 +872,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InventoryRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @return an instance of the {@link EClass} '<em><b>InventoryRelationship</b></em>' 
+   * Returns the {@link EClass} '<em><b>InventoryRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InventoryRelationship</b></em>'
    * @generated
    */
   public EClass getInventoryRelationshipEClass() {
@@ -843,9 +882,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InventoryRelationship.to</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>InventoryRelationship.to</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InventoryRelationship.to</b></em>'.
    * @generated
    */
@@ -855,9 +894,9 @@ public class SourceModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InventoryRelationship.from</b></em>'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>InventoryRelationship.from</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return an instance of the {@link EStructuralFeature}: '<em><b>InventoryRelationship.from</b></em>'.
    * @generated
    */
@@ -868,8 +907,9 @@ public class SourceModelPackage extends ModelPackage {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClassifier
-   *            the {@link EClassifier}
+   *          the {@link EClassifier}
    * @return the class implementing a specific {@link EClass}.
    * @generated
    */

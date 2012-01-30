@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>PlatformModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PlatformModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PlatformModel")
 public class PlatformModel extends KDMModel {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractPlatformElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class PlatformModel extends KDMModel {
 
   /**
    * Returns the value of '<em><b>platformElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>platformElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class PlatformModel extends KDMModel {
 
   /**
    * Adds to the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void addToPlatformElement(AbstractPlatformElement platformElementValue) {
@@ -48,8 +51,9 @@ public class PlatformModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromPlatformElement(AbstractPlatformElement platformElementValue) {
@@ -58,8 +62,9 @@ public class PlatformModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void clearPlatformElement() {
@@ -70,9 +75,11 @@ public class PlatformModel extends KDMModel {
 
   /**
    * Sets the '{@link PlatformModel#getPlatformElement() <em>platformElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlatformModel#getPlatformElement() platformElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlatformModel#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<AbstractPlatformElement> newPlatformElement) {
@@ -80,9 +87,9 @@ public class PlatformModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

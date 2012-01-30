@@ -8,18 +8,19 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>PreprocessorDirective</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>PreprocessorDirective</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "PreprocessorDirective")
 public class PreprocessorDirective extends AbstractCodeElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class PreprocessorDirective extends AbstractCodeElement {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class PreprocessorDirective extends AbstractCodeElement {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -48,8 +51,9 @@ public class PreprocessorDirective extends AbstractCodeElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(AbstractCodeElement codeElementValue) {
@@ -58,8 +62,9 @@ public class PreprocessorDirective extends AbstractCodeElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -70,9 +75,11 @@ public class PreprocessorDirective extends AbstractCodeElement {
 
   /**
    * Sets the '{@link PreprocessorDirective#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PreprocessorDirective#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PreprocessorDirective#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<AbstractCodeElement> newCodeElement) {
@@ -80,9 +87,9 @@ public class PreprocessorDirective extends AbstractCodeElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

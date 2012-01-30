@@ -3,46 +3,51 @@ package org.eclipse.emf.texo.test.model.samples.extendedpo2;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>USAddress</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "USAddress")
 public class USAddress extends Address {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String street = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String city = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String state = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int zip = 0;
 
   /**
    * Returns the value of '<em><b>street</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>street</b></em>' feature
    * @generated
    */
@@ -52,9 +57,11 @@ public class USAddress extends Address {
 
   /**
    * Sets the '{@link USAddress#getStreet() <em>street</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getStreet() street}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getStreet() street}' feature.
    * @generated
    */
   public void setStreet(String newStreet) {
@@ -63,8 +70,9 @@ public class USAddress extends Address {
 
   /**
    * Returns the value of '<em><b>city</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>city</b></em>' feature
    * @generated
    */
@@ -74,9 +82,11 @@ public class USAddress extends Address {
 
   /**
    * Sets the '{@link USAddress#getCity() <em>city</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getCity() city}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getCity() city}' feature.
    * @generated
    */
   public void setCity(String newCity) {
@@ -85,8 +95,9 @@ public class USAddress extends Address {
 
   /**
    * Returns the value of '<em><b>state</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>state</b></em>' feature
    * @generated
    */
@@ -96,9 +107,11 @@ public class USAddress extends Address {
 
   /**
    * Sets the '{@link USAddress#getState() <em>state</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getState() state}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getState() state}' feature.
    * @generated
    */
   public void setState(String newState) {
@@ -107,8 +120,9 @@ public class USAddress extends Address {
 
   /**
    * Returns the value of '<em><b>zip</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>zip</b></em>' feature
    * @generated
    */
@@ -118,9 +132,11 @@ public class USAddress extends Address {
 
   /**
    * Sets the '{@link USAddress#getZip() <em>zip</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getZip() zip}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getZip() zip}' feature.
    * @generated
    */
   public void setZip(int newZip) {
@@ -128,9 +144,9 @@ public class USAddress extends Address {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

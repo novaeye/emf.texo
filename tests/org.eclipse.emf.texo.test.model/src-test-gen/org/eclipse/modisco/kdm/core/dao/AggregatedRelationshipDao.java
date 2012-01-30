@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.core.AggregatedRelationship;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>AggregatedRelationship</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AggregatedRelationshipDao extends BaseDao<AggregatedRelationship> {
 

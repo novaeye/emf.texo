@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.Workflow;
 import org.eclipse.emf.texo.test.model.samples.workflow.WorkflowModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Workflow</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WorkflowDao extends BaseDao<Workflow> {
 

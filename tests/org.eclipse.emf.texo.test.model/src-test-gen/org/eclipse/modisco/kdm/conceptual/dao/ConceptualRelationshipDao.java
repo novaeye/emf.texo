@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.conceptual.ConceptualModelPackage;
 import org.eclipse.modisco.kdm.conceptual.ConceptualRelationship;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ConceptualRelationship</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ConceptualRelationshipDao extends BaseDao<ConceptualRelationship> {
 

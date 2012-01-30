@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.ui.UIAction;
 import org.eclipse.modisco.kdm.ui.UiModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>UIAction</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class UIActionDao extends BaseDao<UIAction> {
 

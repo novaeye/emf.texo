@@ -13,144 +13,163 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>SingleTypes</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SingleTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SingleTypes")
 public class SingleTypes extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String string = "test\"test";
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int integer = 100;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Integer integerObject = new Integer((int) 100);
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long long_ = 200;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Long longObject = new Long((long) 100);
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private double double_ = 100.0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Double doubleObject = new Double((double) 100.0);
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private float float_ = 0.0f;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Float floatObject = new Float(10.0f);
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Transient()
   private Class clazz = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private char char_ = 'z';
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Character charObject = new Character('z');
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private byte byte_ = 5;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Byte byteObject = new Byte((byte) 5);
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   @Lob()
   private byte[] byteArray = new byte[] {};
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private BigDecimal bigDecimal = new BigDecimal("5");
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private BigInteger bigInteger = new BigInteger("5");
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private TestEnum enum_ = TestEnum.ENUM0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date date = (Date) EcoreFactory.eINSTANCE.createFromString(EcorePackage.eINSTANCE.getEDate(), null);
@@ -163,25 +182,28 @@ public class SingleTypes extends Identifiable {
   private String[] stringArray = (String[]) TypesModelPackage.MODELFACTORY.createFromString(
       TypesModelPackage.INSTANCE.getStringArrayEDataType(), "abc::def");
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long[] longArray = (long[]) TypesModelPackage.MODELFACTORY.createFromString(
       TypesModelPackage.INSTANCE.getLongArrayEDataType(), null);
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private TestNextEnum nextEnum = TestNextEnum.ENUM2;
 
   /**
    * Returns the value of '<em><b>string</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>string</b></em>' feature
    * @generated
    */
@@ -191,9 +213,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getString() <em>string</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getString() string}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getString() string}' feature.
    * @generated
    */
   public void setString(String newString) {
@@ -202,8 +226,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>integer</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>integer</b></em>' feature
    * @generated
    */
@@ -213,9 +238,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getInteger() <em>integer</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getInteger() integer}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getInteger() integer}' feature.
    * @generated
    */
   public void setInteger(int newInteger) {
@@ -224,8 +251,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>integerObject</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>integerObject</b></em>' feature
    * @generated
    */
@@ -235,9 +263,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getIntegerObject() <em>integerObject</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getIntegerObject() integerObject}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getIntegerObject() integerObject}' feature.
    * @generated
    */
   public void setIntegerObject(Integer newIntegerObject) {
@@ -246,8 +276,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>long</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>long</b></em>' feature
    * @generated
    */
@@ -257,9 +288,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getLong() <em>long</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getLong() long}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getLong() long}' feature.
    * @generated
    */
   public void setLong(long newLong_) {
@@ -268,8 +301,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>longObject</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>longObject</b></em>' feature
    * @generated
    */
@@ -279,9 +313,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getLongObject() <em>longObject</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getLongObject() longObject}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getLongObject() longObject}' feature.
    * @generated
    */
   public void setLongObject(Long newLongObject) {
@@ -290,8 +326,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>double</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>double</b></em>' feature
    * @generated
    */
@@ -301,9 +338,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getDouble() <em>double</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getDouble() double}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getDouble() double}' feature.
    * @generated
    */
   public void setDouble(double newDouble_) {
@@ -312,8 +351,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>doubleObject</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>doubleObject</b></em>' feature
    * @generated
    */
@@ -323,9 +363,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getDoubleObject() <em>doubleObject</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getDoubleObject() doubleObject}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getDoubleObject() doubleObject}' feature.
    * @generated
    */
   public void setDoubleObject(Double newDoubleObject) {
@@ -334,8 +376,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>float</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>float</b></em>' feature
    * @generated
    */
@@ -345,9 +388,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getFloat() <em>float</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getFloat() float}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getFloat() float}' feature.
    * @generated
    */
   public void setFloat(float newFloat_) {
@@ -356,8 +401,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>floatObject</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>floatObject</b></em>' feature
    * @generated
    */
@@ -367,9 +413,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getFloatObject() <em>floatObject</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getFloatObject() floatObject}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getFloatObject() floatObject}' feature.
    * @generated
    */
   public void setFloatObject(Float newFloatObject) {
@@ -378,8 +426,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>clazz</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>clazz</b></em>' feature
    * @generated
    */
@@ -389,9 +438,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getClazz() <em>clazz</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getClazz() clazz}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getClazz() clazz}' feature.
    * @generated
    */
   public void setClazz(Class newClazz) {
@@ -400,8 +451,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>char</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>char</b></em>' feature
    * @generated
    */
@@ -411,9 +463,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getChar() <em>char</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getChar() char}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getChar() char}' feature.
    * @generated
    */
   public void setChar(char newChar_) {
@@ -422,8 +476,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>charObject</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>charObject</b></em>' feature
    * @generated
    */
@@ -433,9 +488,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getCharObject() <em>charObject</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getCharObject() charObject}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getCharObject() charObject}' feature.
    * @generated
    */
   public void setCharObject(Character newCharObject) {
@@ -444,8 +501,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>byte</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>byte</b></em>' feature
    * @generated
    */
@@ -455,9 +513,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getByte() <em>byte</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getByte() byte}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getByte() byte}' feature.
    * @generated
    */
   public void setByte(byte newByte_) {
@@ -466,8 +526,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>byteObject</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>byteObject</b></em>' feature
    * @generated
    */
@@ -477,9 +538,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getByteObject() <em>byteObject</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getByteObject() byteObject}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getByteObject() byteObject}' feature.
    * @generated
    */
   public void setByteObject(Byte newByteObject) {
@@ -488,8 +551,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>byteArray</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>byteArray</b></em>' feature
    * @generated
    */
@@ -499,9 +563,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getByteArray() <em>byteArray</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getByteArray() byteArray}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getByteArray() byteArray}' feature.
    * @generated
    */
   public void setByteArray(byte[] newByteArray) {
@@ -510,8 +576,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>bigDecimal</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>bigDecimal</b></em>' feature
    * @generated
    */
@@ -521,9 +588,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getBigDecimal() <em>bigDecimal</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getBigDecimal() bigDecimal}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getBigDecimal() bigDecimal}' feature.
    * @generated
    */
   public void setBigDecimal(BigDecimal newBigDecimal) {
@@ -532,8 +601,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>bigInteger</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>bigInteger</b></em>' feature
    * @generated
    */
@@ -543,9 +613,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getBigInteger() <em>bigInteger</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getBigInteger() bigInteger}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getBigInteger() bigInteger}' feature.
    * @generated
    */
   public void setBigInteger(BigInteger newBigInteger) {
@@ -554,8 +626,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>enum</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>enum</b></em>' feature
    * @generated
    */
@@ -565,9 +638,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getEnum() <em>enum</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getEnum() enum}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getEnum() enum}' feature.
    * @generated
    */
   public void setEnum(TestEnum newEnum_) {
@@ -576,8 +651,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>date</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>date</b></em>' feature
    * @generated
    */
@@ -587,9 +663,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getDate() <em>date</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getDate() date}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getDate() date}' feature.
    * @generated
    */
   public void setDate(Date newDate) {
@@ -598,8 +676,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>stringArray</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stringArray</b></em>' feature
    * @generated
    */
@@ -609,9 +688,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getStringArray() <em>stringArray</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getStringArray() stringArray}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getStringArray() stringArray}' feature.
    * @generated
    */
   public void setStringArray(String[] newStringArray) {
@@ -620,8 +701,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>longArray</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>longArray</b></em>' feature
    * @generated
    */
@@ -631,9 +713,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getLongArray() <em>longArray</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getLongArray() longArray}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getLongArray() longArray}' feature.
    * @generated
    */
   public void setLongArray(long[] newLongArray) {
@@ -642,8 +726,9 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Returns the value of '<em><b>nextEnum</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>nextEnum</b></em>' feature
    * @generated
    */
@@ -653,9 +738,11 @@ public class SingleTypes extends Identifiable {
 
   /**
    * Sets the '{@link SingleTypes#getNextEnum() <em>nextEnum</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SingleTypes#getNextEnum() nextEnum}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SingleTypes#getNextEnum() nextEnum}' feature.
    * @generated
    */
   public void setNextEnum(TestNextEnum newNextEnum) {
@@ -663,9 +750,9 @@ public class SingleTypes extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

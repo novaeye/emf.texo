@@ -11,41 +11,45 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.core.Element;
 
-/** 
- * A representation of the model object '<em><b>SourceRef</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SourceRef</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SourceRef")
 public class SourceRef extends Element {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRegion.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<SourceRegion> region = new ArrayList<SourceRegion>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String language = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String snippet = null;
 
   /**
    * Returns the value of '<em><b>region</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>region</b></em>' feature
    * @generated
    */
@@ -55,6 +59,7 @@ public class SourceRef extends Element {
 
   /**
    * Adds to the <em>region</em> feature.
+   * 
    * @generated
    */
   public void addToRegion(SourceRegion regionValue) {
@@ -65,8 +70,9 @@ public class SourceRef extends Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>region</em> feature.
+   * 
    * @generated
    */
   public void removeFromRegion(SourceRegion regionValue) {
@@ -75,8 +81,9 @@ public class SourceRef extends Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>region</em> feature.
+   * 
    * @generated
    */
   public void clearRegion() {
@@ -87,9 +94,11 @@ public class SourceRef extends Element {
 
   /**
    * Sets the '{@link SourceRef#getRegion() <em>region</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SourceRef#getRegion() region}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SourceRef#getRegion() region}' feature.
    * @generated
    */
   public void setRegion(List<SourceRegion> newRegion) {
@@ -98,8 +107,9 @@ public class SourceRef extends Element {
 
   /**
    * Returns the value of '<em><b>language</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>language</b></em>' feature
    * @generated
    */
@@ -109,9 +119,11 @@ public class SourceRef extends Element {
 
   /**
    * Sets the '{@link SourceRef#getLanguage() <em>language</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SourceRef#getLanguage() language}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SourceRef#getLanguage() language}' feature.
    * @generated
    */
   public void setLanguage(String newLanguage) {
@@ -120,8 +132,9 @@ public class SourceRef extends Element {
 
   /**
    * Returns the value of '<em><b>snippet</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>snippet</b></em>' feature
    * @generated
    */
@@ -131,9 +144,11 @@ public class SourceRef extends Element {
 
   /**
    * Sets the '{@link SourceRef#getSnippet() <em>snippet</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SourceRef#getSnippet() snippet}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SourceRef#getSnippet() snippet}' feature.
    * @generated
    */
   public void setSnippet(String newSnippet) {
@@ -141,9 +156,9 @@ public class SourceRef extends Element {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

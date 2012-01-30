@@ -7,31 +7,34 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
-/** 
- * A representation of the model object '<em><b>CirculatingItem</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "CirculatingItem")
 public abstract class CirculatingItem extends Item implements Lendable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private int copies = 0;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "borrowed", targetEntity = Borrower.class)
   private Set<Borrower> borrowers = new HashSet<Borrower>();
 
   /**
    * Returns the value of '<em><b>copies</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>copies</b></em>' feature
    * @generated
    */
@@ -41,9 +44,11 @@ public abstract class CirculatingItem extends Item implements Lendable {
 
   /**
    * Sets the '{@link CirculatingItem#getCopies() <em>copies</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CirculatingItem#getCopies() copies}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CirculatingItem#getCopies() copies}' feature.
    * @generated
    */
   public void setCopies(int newCopies) {
@@ -52,8 +57,9 @@ public abstract class CirculatingItem extends Item implements Lendable {
 
   /**
    * Returns the value of '<em><b>borrowers</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>borrowers</b></em>' feature
    * @generated
    */
@@ -63,6 +69,7 @@ public abstract class CirculatingItem extends Item implements Lendable {
 
   /**
    * Adds to the <em>borrowers</em> feature.
+   * 
    * @generated
    */
   public void addToBorrowers(Borrower borrowersValue) {
@@ -73,8 +80,9 @@ public abstract class CirculatingItem extends Item implements Lendable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>borrowers</em> feature.
+   * 
    * @generated
    */
   public void removeFromBorrowers(Borrower borrowersValue) {
@@ -83,8 +91,9 @@ public abstract class CirculatingItem extends Item implements Lendable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>borrowers</em> feature.
+   * 
    * @generated
    */
   public void clearBorrowers() {
@@ -95,9 +104,11 @@ public abstract class CirculatingItem extends Item implements Lendable {
 
   /**
    * Sets the '{@link CirculatingItem#getBorrowers() <em>borrowers</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CirculatingItem#getBorrowers() borrowers}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CirculatingItem#getBorrowers() borrowers}' feature.
    * @generated
    */
   public void setBorrowers(Set<Borrower> newBorrowers) {
@@ -105,9 +116,9 @@ public abstract class CirculatingItem extends Item implements Lendable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

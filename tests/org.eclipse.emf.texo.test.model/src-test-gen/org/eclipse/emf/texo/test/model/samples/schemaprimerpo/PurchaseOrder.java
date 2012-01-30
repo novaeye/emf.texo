@@ -14,57 +14,63 @@ import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>PurchaseOrder</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PurchaseOrder")
 public class PurchaseOrder {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = USAddress.class)
   @JoinColumns({ @JoinColumn() })
   private USAddress shipTo = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = USAddress.class)
   @JoinColumns({ @JoinColumn() })
   private USAddress billTo = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String comment = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Item.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Item> items = new ArrayList<Item>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date orderDate = null;
 
   /**
    * Returns the value of '<em><b>shipTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipTo</b></em>' feature
    * @generated
    */
@@ -74,9 +80,11 @@ public class PurchaseOrder {
 
   /**
    * Sets the '{@link PurchaseOrder#getShipTo() <em>shipTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(USAddress newShipTo) {
@@ -85,8 +93,9 @@ public class PurchaseOrder {
 
   /**
    * Returns the value of '<em><b>billTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>billTo</b></em>' feature
    * @generated
    */
@@ -96,9 +105,11 @@ public class PurchaseOrder {
 
   /**
    * Sets the '{@link PurchaseOrder#getBillTo() <em>billTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(USAddress newBillTo) {
@@ -107,8 +118,9 @@ public class PurchaseOrder {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -118,9 +130,11 @@ public class PurchaseOrder {
 
   /**
    * Sets the '{@link PurchaseOrder#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -129,8 +143,9 @@ public class PurchaseOrder {
 
   /**
    * Returns the value of '<em><b>items</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>items</b></em>' feature
    * @generated
    */
@@ -140,6 +155,7 @@ public class PurchaseOrder {
 
   /**
    * Adds to the <em>items</em> feature.
+   * 
    * @generated
    */
   public void addToItems(Item itemsValue) {
@@ -150,8 +166,9 @@ public class PurchaseOrder {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>items</em> feature.
+   * 
    * @generated
    */
   public void removeFromItems(Item itemsValue) {
@@ -160,8 +177,9 @@ public class PurchaseOrder {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>items</em> feature.
+   * 
    * @generated
    */
   public void clearItems() {
@@ -172,9 +190,11 @@ public class PurchaseOrder {
 
   /**
    * Sets the '{@link PurchaseOrder#getItems() <em>items</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getItems() items}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getItems() items}' feature.
    * @generated
    */
   public void setItems(List<Item> newItems) {
@@ -183,8 +203,9 @@ public class PurchaseOrder {
 
   /**
    * Returns the value of '<em><b>orderDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>orderDate</b></em>' feature
    * @generated
    */
@@ -194,9 +215,11 @@ public class PurchaseOrder {
 
   /**
    * Sets the '{@link PurchaseOrder#getOrderDate() <em>orderDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
    * @generated
    */
   public void setOrderDate(Date newOrderDate) {
@@ -204,9 +227,9 @@ public class PurchaseOrder {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

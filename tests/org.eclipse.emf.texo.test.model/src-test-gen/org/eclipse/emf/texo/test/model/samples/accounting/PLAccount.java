@@ -2,10 +2,10 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>PLAccount</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PLAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PLAccount")
 public class PLAccount extends Account {
@@ -16,9 +16,9 @@ public class PLAccount extends Account {
   private static final long serialVersionUID = 1L;
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.CommentUnit;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CommentUnit</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CommentUnitDao extends BaseDao<CommentUnit> {
 

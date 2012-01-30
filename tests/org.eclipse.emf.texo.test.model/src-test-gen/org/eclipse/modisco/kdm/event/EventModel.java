@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>EventModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>EventModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "EventModel")
 public class EventModel extends KDMModel {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractEventElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class EventModel extends KDMModel {
 
   /**
    * Returns the value of '<em><b>eventElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>eventElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class EventModel extends KDMModel {
 
   /**
    * Adds to the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void addToEventElement(AbstractEventElement eventElementValue) {
@@ -48,8 +51,9 @@ public class EventModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromEventElement(AbstractEventElement eventElementValue) {
@@ -58,8 +62,9 @@ public class EventModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>eventElement</em> feature.
+   * 
    * @generated
    */
   public void clearEventElement() {
@@ -70,9 +75,11 @@ public class EventModel extends KDMModel {
 
   /**
    * Sets the '{@link EventModel#getEventElement() <em>eventElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link EventModel#getEventElement() eventElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link EventModel#getEventElement() eventElement}' feature.
    * @generated
    */
   public void setEventElement(Set<AbstractEventElement> newEventElement) {
@@ -80,9 +87,9 @@ public class EventModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

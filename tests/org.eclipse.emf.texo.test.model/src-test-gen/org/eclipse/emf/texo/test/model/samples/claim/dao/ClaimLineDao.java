@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.claim.ClaimLine;
 import org.eclipse.emf.texo.test.model.samples.claim.ClaimModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ClaimLine</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ClaimLineDao extends BaseDao<ClaimLine> {
 

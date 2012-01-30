@@ -34,27 +34,30 @@ public class Book extends Identifiable {
   @Column(name = "title")
   private String title = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @TestAnnotationOne("test")
   @Basic(optional = true)
   @Column(name = "pages")
   private int pages = 100;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @TestAnnotationOne("test")
   @Basic(optional = true)
   @Column(name = "category")
   private BookCategory category = BookCategory.SCIENCEFICTION;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @TestAnnotationOne("test")
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Writer.class)
@@ -90,8 +93,9 @@ public class Book extends Identifiable {
 
   /**
    * Returns the value of '<em><b>pages</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>pages</b></em>' feature
    * @generated
    */
@@ -102,9 +106,11 @@ public class Book extends Identifiable {
 
   /**
    * Sets the '{@link Book#getPages() <em>pages</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getPages() pages}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getPages() pages}' feature.
    * @generated
    */
   @TestAnnotationOne("test")
@@ -114,8 +120,9 @@ public class Book extends Identifiable {
 
   /**
    * Returns the value of '<em><b>category</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>category</b></em>' feature
    * @generated
    */
@@ -126,9 +133,11 @@ public class Book extends Identifiable {
 
   /**
    * Sets the '{@link Book#getCategory() <em>category</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getCategory() category}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getCategory() category}' feature.
    * @generated
    */
   @TestAnnotationOne("test")
@@ -138,8 +147,9 @@ public class Book extends Identifiable {
 
   /**
    * Returns the value of '<em><b>author</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>author</b></em>' feature
    * @generated
    */
@@ -150,9 +160,11 @@ public class Book extends Identifiable {
 
   /**
    * Sets the '{@link Book#getAuthor() <em>author</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getAuthor() author}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Book#getAuthor() author}' feature.
    * @generated
    */
   @TestAnnotationOne("setter")
@@ -161,9 +173,9 @@ public class Book extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

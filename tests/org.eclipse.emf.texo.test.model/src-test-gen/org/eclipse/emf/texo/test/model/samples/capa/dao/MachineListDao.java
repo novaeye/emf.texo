@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.capa.CapaModelPackage;
 import org.eclipse.emf.texo.test.model.samples.capa.MachineList;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>MachineList</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class MachineListDao extends BaseDao<MachineList> {
 

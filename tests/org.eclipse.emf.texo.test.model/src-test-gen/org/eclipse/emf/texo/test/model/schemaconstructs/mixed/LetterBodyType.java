@@ -7,24 +7,26 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>LetterBodyType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>LetterBodyType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "LetterBodyType")
 public class LetterBodyType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<LetterBodyTypeMixedFeatureGroup> mixed = new ArrayList<LetterBodyTypeMixedFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mixed</b></em>' feature
    * @generated
    */
@@ -34,9 +36,11 @@ public class LetterBodyType {
 
   /**
    * Sets the '{@link LetterBodyType#getMixed() <em>mixed</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getMixed() mixed}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<LetterBodyTypeMixedFeatureGroup> newMixed) {
@@ -45,8 +49,9 @@ public class LetterBodyType {
 
   /**
    * Returns the value of '<em><b>salutation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>salutation</b></em>' feature
    * @generated
    */
@@ -57,9 +62,11 @@ public class LetterBodyType {
 
   /**
    * Sets the '{@link LetterBodyType#getSalutation() <em>salutation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
    * @generated
    */
   public void setSalutation(SalutationType newSalutation) {
@@ -69,8 +76,9 @@ public class LetterBodyType {
 
   /**
    * Returns the value of '<em><b>quantity</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>quantity</b></em>' feature
    * @generated
    */
@@ -81,9 +89,11 @@ public class LetterBodyType {
 
   /**
    * Sets the '{@link LetterBodyType#getQuantity() <em>quantity</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
@@ -93,8 +103,9 @@ public class LetterBodyType {
 
   /**
    * Returns the value of '<em><b>productName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>productName</b></em>' feature
    * @generated
    */
@@ -105,9 +116,11 @@ public class LetterBodyType {
 
   /**
    * Sets the '{@link LetterBodyType#getProductName() <em>productName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getProductName() productName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -117,8 +130,9 @@ public class LetterBodyType {
 
   /**
    * Returns the value of '<em><b>shipDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipDate</b></em>' feature
    * @generated
    */
@@ -129,9 +143,11 @@ public class LetterBodyType {
 
   /**
    * Sets the '{@link LetterBodyType#getShipDate() <em>shipDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {
@@ -140,9 +156,9 @@ public class LetterBodyType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

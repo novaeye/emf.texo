@@ -4,60 +4,67 @@ import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>USAddress</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "USAddress")
 public class USAddress {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String street = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String city = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String state = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BigDecimal zip = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String country = "US";
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -67,9 +74,11 @@ public class USAddress {
 
   /**
    * Sets the '{@link USAddress#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -78,8 +87,9 @@ public class USAddress {
 
   /**
    * Returns the value of '<em><b>street</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>street</b></em>' feature
    * @generated
    */
@@ -89,9 +99,11 @@ public class USAddress {
 
   /**
    * Sets the '{@link USAddress#getStreet() <em>street</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getStreet() street}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getStreet() street}' feature.
    * @generated
    */
   public void setStreet(String newStreet) {
@@ -100,8 +112,9 @@ public class USAddress {
 
   /**
    * Returns the value of '<em><b>city</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>city</b></em>' feature
    * @generated
    */
@@ -111,9 +124,11 @@ public class USAddress {
 
   /**
    * Sets the '{@link USAddress#getCity() <em>city</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getCity() city}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getCity() city}' feature.
    * @generated
    */
   public void setCity(String newCity) {
@@ -122,8 +137,9 @@ public class USAddress {
 
   /**
    * Returns the value of '<em><b>state</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>state</b></em>' feature
    * @generated
    */
@@ -133,9 +149,11 @@ public class USAddress {
 
   /**
    * Sets the '{@link USAddress#getState() <em>state</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getState() state}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getState() state}' feature.
    * @generated
    */
   public void setState(String newState) {
@@ -144,8 +162,9 @@ public class USAddress {
 
   /**
    * Returns the value of '<em><b>zip</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>zip</b></em>' feature
    * @generated
    */
@@ -155,9 +174,11 @@ public class USAddress {
 
   /**
    * Sets the '{@link USAddress#getZip() <em>zip</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getZip() zip}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getZip() zip}' feature.
    * @generated
    */
   public void setZip(BigDecimal newZip) {
@@ -166,8 +187,9 @@ public class USAddress {
 
   /**
    * Returns the value of '<em><b>country</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>country</b></em>' feature
    * @generated
    */
@@ -177,9 +199,11 @@ public class USAddress {
 
   /**
    * Sets the '{@link USAddress#getCountry() <em>country</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link USAddress#getCountry() country}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link USAddress#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(String newCountry) {
@@ -187,9 +211,9 @@ public class USAddress {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

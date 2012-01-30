@@ -7,25 +7,27 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.modisco.kdm.action.ActionElement;
 
-/** 
- * A representation of the model object '<em><b>Displays</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Displays</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Displays")
 public class Displays extends AbstractUIRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = UIResource.class)
   @JoinColumns({ @JoinColumn() })
   private UIResource to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ActionElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -33,8 +35,9 @@ public class Displays extends AbstractUIRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -44,9 +47,11 @@ public class Displays extends AbstractUIRelationship {
 
   /**
    * Sets the '{@link Displays#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Displays#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Displays#getTo() to}' feature.
    * @generated
    */
   public void setTo(UIResource newTo) {
@@ -55,8 +60,9 @@ public class Displays extends AbstractUIRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -66,9 +72,11 @@ public class Displays extends AbstractUIRelationship {
 
   /**
    * Sets the '{@link Displays#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Displays#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Displays#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {
@@ -76,9 +84,9 @@ public class Displays extends AbstractUIRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

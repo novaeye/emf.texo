@@ -8,11 +8,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation for the Feature Group '<em><b>RootType.myComplexAbstractGroup</b></em>'.
- * <!-- begin-user-doc -->
+/**
+ * A representation for the Feature Group '<em><b>RootType.myComplexAbstractGroup</b></em>'. <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class RootTypeMyComplexAbstractGroupFeatureGroup {
 
@@ -94,13 +94,15 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ComplexAAA.class)
   @JoinColumns({ @JoinColumn() })
@@ -122,8 +124,9 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>myComplexAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myComplexAbstract</b></em>' feature
    * @generated
    */
@@ -133,9 +136,11 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup {
 
   /**
    * Sets the '{@link RootType#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RootType#getMyComplexAbstract() myComplexAbstract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RootType#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
    */
   public void setMyComplexAbstract(ComplexAAA newMyComplexAbstract) {
@@ -145,9 +150,10 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -160,10 +166,13 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

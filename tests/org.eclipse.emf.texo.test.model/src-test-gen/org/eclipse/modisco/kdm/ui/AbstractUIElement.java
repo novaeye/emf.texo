@@ -26,33 +26,37 @@ import org.eclipse.modisco.kdm.source.SourceRef;
 @Entity(name = "AbstractUIElement")
 public abstract class AbstractUIElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractUIRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractUIRelationship> uIRelation = new HashSet<AbstractUIRelationship>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractCodeElement.class)
   @JoinTable(name = "AbstractUIElement_implementation")
   private Set<AbstractCodeElement> implementation = new HashSet<AbstractCodeElement>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
   @OrderColumn()
@@ -61,8 +65,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>source</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>source</b></em>' feature
    * @generated
    */
@@ -72,6 +77,7 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Adds to the <em>source</em> feature.
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -82,8 +88,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>source</em> feature.
+   * 
    * @generated
    */
   public void removeFromSource(SourceRef sourceValue) {
@@ -92,8 +99,9 @@ public abstract class AbstractUIElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>source</em> feature.
+   * 
    * @generated
    */
   public void clearSource() {
@@ -104,9 +112,11 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractUIElement#getSource() <em>source</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractUIElement#getSource() source}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractUIElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -115,8 +125,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>UIRelation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>UIRelation</b></em>' feature
    * @generated
    */
@@ -126,6 +137,7 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Adds to the <em>UIRelation</em> feature.
+   * 
    * @generated
    */
   public void addToUIRelation(AbstractUIRelationship uIRelationValue) {
@@ -136,8 +148,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>UIRelation</em> feature.
+   * 
    * @generated
    */
   public void removeFromUIRelation(AbstractUIRelationship uIRelationValue) {
@@ -146,8 +159,9 @@ public abstract class AbstractUIElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>UIRelation</em> feature.
+   * 
    * @generated
    */
   public void clearUIRelation() {
@@ -158,9 +172,11 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractUIElement#getUIRelation() <em>UIRelation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractUIElement#getUIRelation() UIRelation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractUIElement#getUIRelation() UIRelation}' feature.
    * @generated
    */
   public void setUIRelation(Set<AbstractUIRelationship> newUIRelation) {
@@ -169,8 +185,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>implementation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>implementation</b></em>' feature
    * @generated
    */
@@ -180,6 +197,7 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Adds to the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void addToImplementation(AbstractCodeElement implementationValue) {
@@ -190,8 +208,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void removeFromImplementation(AbstractCodeElement implementationValue) {
@@ -200,8 +219,9 @@ public abstract class AbstractUIElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void clearImplementation() {
@@ -212,9 +232,11 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractUIElement#getImplementation() <em>implementation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractUIElement#getImplementation() implementation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractUIElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<AbstractCodeElement> newImplementation) {
@@ -223,8 +245,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>abstraction</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>abstraction</b></em>' feature
    * @generated
    */
@@ -234,6 +257,7 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Adds to the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void addToAbstraction(ActionElement abstractionValue) {
@@ -244,8 +268,9 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void removeFromAbstraction(ActionElement abstractionValue) {
@@ -254,8 +279,9 @@ public abstract class AbstractUIElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void clearAbstraction() {
@@ -266,9 +292,11 @@ public abstract class AbstractUIElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractUIElement#getAbstraction() <em>abstraction</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractUIElement#getAbstraction() abstraction}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractUIElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(List<ActionElement> newAbstraction) {
@@ -276,9 +304,9 @@ public abstract class AbstractUIElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

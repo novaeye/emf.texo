@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.BooleanType;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>BooleanType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class BooleanTypeDao extends BaseDao<BooleanType> {
 

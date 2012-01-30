@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.source.DependsOn;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>DependsOn</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DependsOnDao extends BaseDao<DependsOn> {
 

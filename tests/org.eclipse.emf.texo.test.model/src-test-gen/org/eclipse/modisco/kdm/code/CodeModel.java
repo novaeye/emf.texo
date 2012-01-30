@@ -10,17 +10,18 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>CodeModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>CodeModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "CodeModel")
 public class CodeModel extends KDMModel {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
   @OrderColumn()
@@ -29,8 +30,9 @@ public class CodeModel extends KDMModel {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -40,6 +42,7 @@ public class CodeModel extends KDMModel {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -50,8 +53,9 @@ public class CodeModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(AbstractCodeElement codeElementValue) {
@@ -60,8 +64,9 @@ public class CodeModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -72,9 +77,11 @@ public class CodeModel extends KDMModel {
 
   /**
    * Sets the '{@link CodeModel#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CodeModel#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CodeModel#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<AbstractCodeElement> newCodeElement) {
@@ -82,9 +89,9 @@ public class CodeModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

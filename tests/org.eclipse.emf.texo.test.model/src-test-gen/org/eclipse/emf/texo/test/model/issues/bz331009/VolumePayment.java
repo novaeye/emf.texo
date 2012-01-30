@@ -11,20 +11,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>VolumePayment</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * Платеж за объем
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>VolumePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> Платеж за объем <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "VolumePayment")
 public class VolumePayment implements PaymentItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private BigDecimal volume = null;
@@ -54,9 +53,10 @@ public class VolumePayment implements PaymentItem {
   @Basic(optional = true)
   private BigDecimal sum = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Currency currency = Currency.ROUBLES;
@@ -87,8 +87,9 @@ public class VolumePayment implements PaymentItem {
 
   /**
    * Returns the value of '<em><b>volume</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>volume</b></em>' feature
    * @generated
    */
@@ -98,9 +99,11 @@ public class VolumePayment implements PaymentItem {
 
   /**
    * Sets the '{@link VolumePayment#getVolume() <em>volume</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link VolumePayment#getVolume() volume}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link VolumePayment#getVolume() volume}' feature.
    * @generated
    */
   public void setVolume(BigDecimal newVolume) {
@@ -184,8 +187,9 @@ public class VolumePayment implements PaymentItem {
 
   /**
    * Returns the value of '<em><b>currency</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>currency</b></em>' feature
    * @generated
    */
@@ -195,9 +199,11 @@ public class VolumePayment implements PaymentItem {
 
   /**
    * Sets the '{@link VolumePayment#getCurrency() <em>currency</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link VolumePayment#getCurrency() currency}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link VolumePayment#getCurrency() currency}' feature.
    * @generated
    */
   public void setCurrency(Currency newCurrency) {
@@ -280,9 +286,9 @@ public class VolumePayment implements PaymentItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

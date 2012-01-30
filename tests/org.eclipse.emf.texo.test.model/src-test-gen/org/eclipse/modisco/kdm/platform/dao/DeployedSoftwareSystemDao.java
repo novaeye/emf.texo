@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.platform.DeployedSoftwareSystem;
 import org.eclipse.modisco.kdm.platform.PlatformModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>DeployedSoftwareSystem</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DeployedSoftwareSystemDao extends BaseDao<DeployedSoftwareSystem> {
 

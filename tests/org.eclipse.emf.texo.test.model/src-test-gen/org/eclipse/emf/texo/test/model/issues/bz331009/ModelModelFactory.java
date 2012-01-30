@@ -13,17 +13,19 @@ import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: model.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model: model. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class ModelModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -94,13 +96,12 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -228,8 +229,8 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -245,6 +246,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimCard
    * @generated
    */
@@ -254,6 +256,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimContract
    * @generated
    */
@@ -263,6 +266,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PaymentInfo
    * @generated
    */
@@ -272,6 +276,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimCardXSimContract
    * @generated
    */
@@ -281,6 +286,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SimTariff
    * @generated
    */
@@ -290,6 +296,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass VolumePayment
    * @generated
    */
@@ -299,6 +306,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PeriodicalPayment
    * @generated
    */
@@ -308,6 +316,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass OneTimePayment
    * @generated
    */
@@ -317,6 +326,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Service
    * @generated
    */
@@ -326,6 +336,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Units
    * @generated
    */
@@ -335,6 +346,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Price
    * @generated
    */
@@ -344,6 +356,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CarProducer
    * @generated
    */
@@ -353,6 +366,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CarModel
    * @generated
    */
@@ -362,6 +376,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CarRegInfo
    * @generated
    */
@@ -371,6 +386,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Person
    * @generated
    */
@@ -380,6 +396,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Car
    * @generated
    */
@@ -389,6 +406,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CarPassport
    * @generated
    */
@@ -398,6 +416,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Phone
    * @generated
    */
@@ -407,6 +426,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Address
    * @generated
    */
@@ -416,6 +436,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Passport
    * @generated
    */
@@ -425,6 +446,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DrivingLicense
    * @generated
    */
@@ -434,6 +456,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Contract
    * @generated
    */
@@ -443,6 +466,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SecretQuestion
    * @generated
    */
@@ -452,6 +476,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ClientTariff
    * @generated
    */
@@ -461,6 +486,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ContractPackage
    * @generated
    */
@@ -470,6 +496,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass User
    * @generated
    */
@@ -479,6 +506,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass UserGroup
    * @generated
    */
@@ -488,6 +516,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Message
    * @generated
    */
@@ -497,6 +526,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Event
    * @generated
    */
@@ -506,6 +536,7 @@ public class ModelModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Coordinates
    * @generated
    */
@@ -514,10 +545,12 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -543,10 +576,12 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -572,9 +607,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: Currency to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: Currency to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -586,9 +622,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: Currency from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: Currency from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -600,9 +637,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: PaymentType to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: PaymentType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -614,9 +652,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: PaymentType from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: PaymentType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -628,9 +667,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: Periodicity to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: Periodicity to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -642,9 +682,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: Periodicity from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: Periodicity from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -656,9 +697,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: PhoneType to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: PhoneType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -670,9 +712,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: PhoneType from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: PhoneType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -684,9 +727,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: SecretQuestionType to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: SecretQuestionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -714,9 +758,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: MessageType to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: MessageType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -728,9 +773,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: MessageType from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: MessageType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -742,9 +788,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: EventType to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: EventType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -756,9 +803,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: EventType from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: EventType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -770,9 +818,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: MessageIOTypes to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: MessageIOTypes to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -784,9 +833,10 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: MessageIOTypes from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: MessageIOTypes from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -797,10 +847,10 @@ public class ModelModelFactory implements ModelFactory {
     return MessageIOTypes.get(value);
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SimCard</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimCard</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SimCardModelObject<E extends SimCard> extends AbstractModelObject<E> {
     /**
@@ -874,10 +924,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SimContract</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SimContractModelObject<E extends SimContract> extends AbstractModelObject<E> {
     /**
@@ -961,10 +1011,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PaymentInfo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PaymentInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PaymentInfoModelObject<E extends PaymentInfo> extends AbstractModelObject<E> {
     /**
@@ -1113,10 +1163,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SimTariff</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimTariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SimTariffModelObject<E extends SimTariff> extends AbstractModelObject<E> {
     /**
@@ -1198,10 +1248,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Tariff</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Tariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TariffModelObject<E extends Tariff> extends AbstractModelObject<E> {
     /**
@@ -1283,10 +1333,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PaymentItem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PaymentItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PaymentItemModelObject<E extends PaymentItem> extends AbstractModelObject<E> {
     /**
@@ -1375,10 +1425,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>VolumePayment</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>VolumePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class VolumePaymentModelObject<E extends VolumePayment> extends AbstractModelObject<E> {
     /**
@@ -1580,10 +1630,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>OneTimePayment</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>OneTimePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class OneTimePaymentModelObject<E extends OneTimePayment> extends AbstractModelObject<E> {
     /**
@@ -1672,10 +1722,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Service</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Service</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ServiceModelObject<E extends Service> extends AbstractModelObject<E> {
     /**
@@ -1764,10 +1814,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Units</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Units</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class UnitsModelObject<E extends Units> extends AbstractModelObject<E> {
     /**
@@ -1836,10 +1886,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Price</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Price</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PriceModelObject<E extends Price> extends AbstractModelObject<E> {
     /**
@@ -1901,10 +1951,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CarProducer</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CarProducer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CarProducerModelObject<E extends CarProducer> extends AbstractModelObject<E> {
     /**
@@ -1973,10 +2023,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CarModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CarModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CarModelModelObject<E extends CarModel> extends AbstractModelObject<E> {
     /**
@@ -2050,10 +2100,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CarRegInfo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CarRegInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CarRegInfoModelObject<E extends CarRegInfo> extends AbstractModelObject<E> {
     /**
@@ -2177,10 +2227,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Document</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Document</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DocumentModelObject<E extends Document> extends AbstractModelObject<E> {
     /**
@@ -2264,10 +2314,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Person</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PersonModelObject<E extends Person> extends AbstractModelObject<E> {
     /**
@@ -2373,10 +2423,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Car</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Car</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CarModelObject<E extends Car> extends AbstractModelObject<E> {
     /**
@@ -2455,10 +2505,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CarPassport</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CarPassport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CarPassportModelObject<E extends CarPassport> extends AbstractModelObject<E> {
     /**
@@ -2542,10 +2592,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Phone</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Phone</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PhoneModelObject<E extends Phone> extends AbstractModelObject<E> {
     /**
@@ -2619,10 +2669,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Address</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class AddressModelObject<E extends Address> extends AbstractModelObject<E> {
     /**
@@ -2721,10 +2771,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Passport</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Passport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PassportModelObject<E extends Passport> extends AbstractModelObject<E> {
     /**
@@ -2808,10 +2858,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DrivingLicense</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DrivingLicense</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DrivingLicenseModelObject<E extends DrivingLicense> extends AbstractModelObject<E> {
     /**
@@ -2895,10 +2945,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Contract</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Contract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ContractModelObject<E extends Contract> extends AbstractModelObject<E> {
     /**
@@ -2989,10 +3039,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SecretQuestion</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SecretQuestion</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SecretQuestionModelObject<E extends SecretQuestion> extends AbstractModelObject<E> {
     /**
@@ -3081,10 +3131,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ClientTariff</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ClientTariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ClientTariffModelObject<E extends ClientTariff> extends AbstractModelObject<E> {
     /**
@@ -3166,10 +3216,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ContractPackage</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ContractPackage</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ContractPackageModelObject<E extends ContractPackage> extends AbstractModelObject<E> {
     /**
@@ -3245,10 +3295,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>User</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>User</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class UserModelObject<E extends User> extends AbstractModelObject<E> {
     /**
@@ -3327,10 +3377,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>UserGroup</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>UserGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class UserGroupModelObject<E extends UserGroup> extends AbstractModelObject<E> {
     /**
@@ -3392,10 +3442,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Message</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Message</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MessageModelObject<E extends Message> extends AbstractModelObject<E> {
     /**
@@ -3484,10 +3534,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Event</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Event</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class EventModelObject<E extends Event> extends AbstractModelObject<E> {
     /**
@@ -3566,10 +3616,10 @@ public class ModelModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Coordinates</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Coordinates</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CoordinatesModelObject<E extends Coordinates> extends AbstractModelObject<E> {
     /**

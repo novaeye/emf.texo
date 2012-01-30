@@ -12,24 +12,27 @@ import javax.persistence.Entity;
 @Entity(name = "ContentRestriction")
 public class ContentRestriction extends AbstractContentElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String value = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -39,9 +42,11 @@ public class ContentRestriction extends AbstractContentElement {
 
   /**
    * Sets the '{@link ContentRestriction#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ContentRestriction#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ContentRestriction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -50,8 +55,9 @@ public class ContentRestriction extends AbstractContentElement {
 
   /**
    * Returns the value of '<em><b>value</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>value</b></em>' feature
    * @generated
    */
@@ -61,9 +67,11 @@ public class ContentRestriction extends AbstractContentElement {
 
   /**
    * Sets the '{@link ContentRestriction#getValue() <em>value</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ContentRestriction#getValue() value}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ContentRestriction#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {
@@ -71,9 +79,9 @@ public class ContentRestriction extends AbstractContentElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

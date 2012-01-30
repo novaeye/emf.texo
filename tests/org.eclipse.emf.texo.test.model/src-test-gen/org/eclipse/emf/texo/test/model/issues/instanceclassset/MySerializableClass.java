@@ -28,24 +28,27 @@ public class MySerializableClass implements Serializable {
    */
   private static final long serialVersionUID = 1L;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String somethingInteresting = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = NonEMF.class)
   @JoinColumns({ @JoinColumn() })
   private NonEMF nonEMF = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = NonEMF.class)
   @OrderColumn()
@@ -54,8 +57,9 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Returns the value of '<em><b>somethingInteresting</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>somethingInteresting</b></em>' feature
    * @generated
    */
@@ -65,9 +69,11 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Sets the '{@link MySerializableClass#getSomethingInteresting() <em>somethingInteresting</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link MySerializableClass#getSomethingInteresting() somethingInteresting}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link MySerializableClass#getSomethingInteresting() somethingInteresting}' feature.
    * @generated
    */
   public void setSomethingInteresting(String newSomethingInteresting) {
@@ -76,8 +82,9 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Returns the value of '<em><b>nonEMF</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>nonEMF</b></em>' feature
    * @generated
    */
@@ -87,9 +94,11 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Sets the '{@link MySerializableClass#getNonEMF() <em>nonEMF</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link MySerializableClass#getNonEMF() nonEMF}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link MySerializableClass#getNonEMF() nonEMF}' feature.
    * @generated
    */
   public void setNonEMF(NonEMF newNonEMF) {
@@ -98,8 +107,9 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Returns the value of '<em><b>nonEMFs</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>nonEMFs</b></em>' feature
    * @generated
    */
@@ -109,6 +119,7 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Adds to the <em>nonEMFs</em> feature.
+   * 
    * @generated
    */
   public void addToNonEMFs(NonEMF nonEMFsValue) {
@@ -119,8 +130,9 @@ public class MySerializableClass implements Serializable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>nonEMFs</em> feature.
+   * 
    * @generated
    */
   public void removeFromNonEMFs(NonEMF nonEMFsValue) {
@@ -129,8 +141,9 @@ public class MySerializableClass implements Serializable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>nonEMFs</em> feature.
+   * 
    * @generated
    */
   public void clearNonEMFs() {
@@ -141,9 +154,11 @@ public class MySerializableClass implements Serializable {
 
   /**
    * Sets the '{@link MySerializableClass#getNonEMFs() <em>nonEMFs</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link MySerializableClass#getNonEMFs() nonEMFs}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link MySerializableClass#getNonEMFs() nonEMFs}' feature.
    * @generated
    */
   public void setNonEMFs(List<NonEMF> newNonEMFs) {
@@ -151,9 +166,9 @@ public class MySerializableClass implements Serializable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

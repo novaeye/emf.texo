@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.OctetType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>OctetType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class OctetTypeDao extends BaseDao<OctetType> {
 

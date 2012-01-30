@@ -11,28 +11,28 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>ContractPackage</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * Пакет контрактов
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ContractPackage</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> Пакет контрактов <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ContractPackage")
 public class ContractPackage {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Person.class)
   @JoinColumns({ @JoinColumn() })
   private Person client = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = User.class)
   @JoinColumns({ @JoinColumn() })
@@ -50,8 +50,9 @@ public class ContractPackage {
 
   /**
    * Returns the value of '<em><b>client</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>client</b></em>' feature
    * @generated
    */
@@ -61,9 +62,11 @@ public class ContractPackage {
 
   /**
    * Sets the '{@link ContractPackage#getClient() <em>client</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ContractPackage#getClient() client}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ContractPackage#getClient() client}' feature.
    * @generated
    */
   public void setClient(Person newClient) {
@@ -72,8 +75,9 @@ public class ContractPackage {
 
   /**
    * Returns the value of '<em><b>user</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>user</b></em>' feature
    * @generated
    */
@@ -83,9 +87,11 @@ public class ContractPackage {
 
   /**
    * Sets the '{@link ContractPackage#getUser() <em>user</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ContractPackage#getUser() user}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ContractPackage#getUser() user}' feature.
    * @generated
    */
   public void setUser(User newUser) {
@@ -107,9 +113,9 @@ public class ContractPackage {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

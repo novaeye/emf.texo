@@ -9,24 +9,26 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>PlatformAction</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PlatformAction</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PlatformAction")
 public class PlatformAction extends AbstractPlatformElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String kind = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = PlatformEvent.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class PlatformAction extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -45,9 +48,11 @@ public class PlatformAction extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link PlatformAction#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlatformAction#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlatformAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -56,8 +61,9 @@ public class PlatformAction extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>platformElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>platformElement</b></em>' feature
    * @generated
    */
@@ -67,6 +73,7 @@ public class PlatformAction extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void addToPlatformElement(PlatformEvent platformElementValue) {
@@ -77,8 +84,9 @@ public class PlatformAction extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromPlatformElement(PlatformEvent platformElementValue) {
@@ -87,8 +95,9 @@ public class PlatformAction extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>platformElement</em> feature.
+   * 
    * @generated
    */
   public void clearPlatformElement() {
@@ -99,9 +108,11 @@ public class PlatformAction extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link PlatformAction#getPlatformElement() <em>platformElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PlatformAction#getPlatformElement() platformElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PlatformAction#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<PlatformEvent> newPlatformElement) {
@@ -109,9 +120,9 @@ public class PlatformAction extends AbstractPlatformElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

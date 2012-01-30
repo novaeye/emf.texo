@@ -14,40 +14,39 @@ import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
-/** 
- * A representation of the model object '<em><b>Library</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @TestAnnotationOne("type")
 @Entity(name = "Library")
 @Table(name = "Library")
 public class Library extends Identifiable {
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = true)
   @Column(name = "name")
   private String name = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Writer.class)
   @OrderColumn(name = "ind")
   @JoinColumns({ @JoinColumn() })
   private List<Writer> writers = new ArrayList<Writer>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Book.class)
   @OrderColumn(name = "ind")
@@ -56,9 +55,9 @@ public class Library extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -68,10 +67,11 @@ public class Library extends Identifiable {
 
   /**
    * Sets the '{@link Library#getName() <em>name</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Library#getName() name}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Library#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -80,9 +80,9 @@ public class Library extends Identifiable {
 
   /**
    * Returns the value of '<em><b>writers</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>writers</b></em>' feature
    * @generated
    */
@@ -92,6 +92,7 @@ public class Library extends Identifiable {
 
   /**
    * Adds to the <em>writers</em> feature.
+   * 
    * @generated
    */
   public void addToWriters(Writer writersValue) {
@@ -102,8 +103,9 @@ public class Library extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>writers</em> feature.
+   * 
    * @generated
    */
   public void removeFromWriters(Writer writersValue) {
@@ -112,8 +114,9 @@ public class Library extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>writers</em> feature.
+   * 
    * @generated
    */
   public void clearWriters() {
@@ -124,10 +127,11 @@ public class Library extends Identifiable {
 
   /**
    * Sets the '{@link Library#getWriters() <em>writers</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Library#getWriters() writers}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Library#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(List<Writer> newWriters) {
@@ -136,9 +140,9 @@ public class Library extends Identifiable {
 
   /**
    * Returns the value of '<em><b>books</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>books</b></em>' feature
    * @generated
    */
@@ -148,6 +152,7 @@ public class Library extends Identifiable {
 
   /**
    * Adds to the <em>books</em> feature.
+   * 
    * @generated
    */
   public void addToBooks(Book booksValue) {
@@ -158,8 +163,9 @@ public class Library extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>books</em> feature.
+   * 
    * @generated
    */
   public void removeFromBooks(Book booksValue) {
@@ -168,8 +174,9 @@ public class Library extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>books</em> feature.
+   * 
    * @generated
    */
   public void clearBooks() {
@@ -180,10 +187,11 @@ public class Library extends Identifiable {
 
   /**
    * Sets the '{@link Library#getBooks() <em>books</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Library#getBooks() books}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Library#getBooks() books}' feature.
    * @generated
    */
   public void setBooks(List<Book> newBooks) {
@@ -191,9 +199,9 @@ public class Library extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @generated
    */
   @Override

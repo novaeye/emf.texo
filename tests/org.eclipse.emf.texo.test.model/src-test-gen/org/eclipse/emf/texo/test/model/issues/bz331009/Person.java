@@ -15,10 +15,10 @@ import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>Person</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Person")
 public class Person {
@@ -83,9 +83,10 @@ public class Person {
   @JoinColumns({ @JoinColumn() })
   private Passport passport = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = DrivingLicense.class)
   @JoinColumns({ @JoinColumn() })
@@ -280,8 +281,9 @@ public class Person {
 
   /**
    * Returns the value of '<em><b>drivingLicense</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>drivingLicense</b></em>' feature
    * @generated
    */
@@ -291,9 +293,11 @@ public class Person {
 
   /**
    * Sets the '{@link Person#getDrivingLicense() <em>drivingLicense</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Person#getDrivingLicense() drivingLicense}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Person#getDrivingLicense() drivingLicense}' feature.
    * @generated
    */
   public void setDrivingLicense(DrivingLicense newDrivingLicense) {
@@ -315,9 +319,9 @@ public class Person {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -17,9 +17,10 @@ import org.eclipse.modisco.kdm.code.Module;
 @Entity(name = "DeployedComponent")
 public class DeployedComponent extends AbstractPlatformElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Module.class)
   @JoinTable(name = "DeployedComponent_groupedCode")
@@ -27,8 +28,9 @@ public class DeployedComponent extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>groupedCode</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupedCode</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class DeployedComponent extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>groupedCode</em> feature.
+   * 
    * @generated
    */
   public void addToGroupedCode(Module groupedCodeValue) {
@@ -48,8 +51,9 @@ public class DeployedComponent extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>groupedCode</em> feature.
+   * 
    * @generated
    */
   public void removeFromGroupedCode(Module groupedCodeValue) {
@@ -58,8 +62,9 @@ public class DeployedComponent extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>groupedCode</em> feature.
+   * 
    * @generated
    */
   public void clearGroupedCode() {
@@ -70,9 +75,11 @@ public class DeployedComponent extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link DeployedComponent#getGroupedCode() <em>groupedCode</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DeployedComponent#getGroupedCode() groupedCode}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DeployedComponent#getGroupedCode() groupedCode}' feature.
    * @generated
    */
   public void setGroupedCode(Set<Module> newGroupedCode) {
@@ -80,9 +87,9 @@ public class DeployedComponent extends AbstractPlatformElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

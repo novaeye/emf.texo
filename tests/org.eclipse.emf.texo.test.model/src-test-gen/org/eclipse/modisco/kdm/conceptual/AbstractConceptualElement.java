@@ -13,42 +13,46 @@ import org.eclipse.modisco.kdm.action.ActionElement;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
-/** 
- * A representation of the model object '<em><b>AbstractConceptualElement</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>AbstractConceptualElement</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "AbstractConceptualElement")
 public abstract class AbstractConceptualElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @JoinTable(name = "AbstractConceptualElement_implementation")
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractConceptualRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractConceptualRelationship> conceptualRelation = new HashSet<AbstractConceptualRelationship>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -56,8 +60,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>source</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>source</b></em>' feature
    * @generated
    */
@@ -67,6 +72,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Adds to the <em>source</em> feature.
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -77,8 +83,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>source</em> feature.
+   * 
    * @generated
    */
   public void removeFromSource(SourceRef sourceValue) {
@@ -87,8 +94,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>source</em> feature.
+   * 
    * @generated
    */
   public void clearSource() {
@@ -99,9 +107,11 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractConceptualElement#getSource() <em>source</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractConceptualElement#getSource() source}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractConceptualElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -110,8 +120,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>implementation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>implementation</b></em>' feature
    * @generated
    */
@@ -121,6 +132,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Adds to the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void addToImplementation(KDMEntity implementationValue) {
@@ -131,8 +143,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void removeFromImplementation(KDMEntity implementationValue) {
@@ -141,8 +154,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void clearImplementation() {
@@ -153,9 +167,11 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractConceptualElement#getImplementation() <em>implementation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractConceptualElement#getImplementation() implementation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractConceptualElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<KDMEntity> newImplementation) {
@@ -164,8 +180,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>conceptualRelation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>conceptualRelation</b></em>' feature
    * @generated
    */
@@ -175,6 +192,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Adds to the <em>conceptualRelation</em> feature.
+   * 
    * @generated
    */
   public void addToConceptualRelation(AbstractConceptualRelationship conceptualRelationValue) {
@@ -185,8 +203,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>conceptualRelation</em> feature.
+   * 
    * @generated
    */
   public void removeFromConceptualRelation(AbstractConceptualRelationship conceptualRelationValue) {
@@ -195,8 +214,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>conceptualRelation</em> feature.
+   * 
    * @generated
    */
   public void clearConceptualRelation() {
@@ -207,9 +227,11 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractConceptualElement#getConceptualRelation() <em>conceptualRelation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractConceptualElement#getConceptualRelation() conceptualRelation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractConceptualElement#getConceptualRelation() conceptualRelation}' feature.
    * @generated
    */
   public void setConceptualRelation(Set<AbstractConceptualRelationship> newConceptualRelation) {
@@ -218,8 +240,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>abstraction</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>abstraction</b></em>' feature
    * @generated
    */
@@ -229,6 +252,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Adds to the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void addToAbstraction(ActionElement abstractionValue) {
@@ -239,8 +263,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void removeFromAbstraction(ActionElement abstractionValue) {
@@ -249,8 +274,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>abstraction</em> feature.
+   * 
    * @generated
    */
   public void clearAbstraction() {
@@ -261,9 +287,11 @@ public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractConceptualElement#getAbstraction() <em>abstraction</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractConceptualElement#getAbstraction() abstraction}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractConceptualElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(Set<ActionElement> newAbstraction) {
@@ -271,9 +299,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.action.CompliesTo;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CompliesTo</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CompliesToDao extends BaseDao<CompliesTo> {
 

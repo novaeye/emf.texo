@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.action.Writes;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Writes</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WritesDao extends BaseDao<Writes> {
 

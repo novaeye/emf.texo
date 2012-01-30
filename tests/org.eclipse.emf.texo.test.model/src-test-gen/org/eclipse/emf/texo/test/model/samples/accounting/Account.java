@@ -5,10 +5,10 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Account</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Account")
 public abstract class Account extends Identifiable implements Serializable {
@@ -17,17 +17,19 @@ public abstract class Account extends Identifiable implements Serializable {
    * @generated
    */
   private static final long serialVersionUID = 1L;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -37,9 +39,11 @@ public abstract class Account extends Identifiable implements Serializable {
 
   /**
    * Sets the '{@link Account#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Account#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Account#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -47,9 +51,9 @@ public abstract class Account extends Identifiable implements Serializable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

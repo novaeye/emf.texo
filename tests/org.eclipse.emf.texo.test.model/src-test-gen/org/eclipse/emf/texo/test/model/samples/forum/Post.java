@@ -7,32 +7,35 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>Post</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Post")
 public class Post {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String comment = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Member.class)
   @JoinColumns({ @JoinColumn() })
   private Member author = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Topic.class)
   @JoinColumns({ @JoinColumn() })
@@ -40,8 +43,9 @@ public class Post {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -51,9 +55,11 @@ public class Post {
 
   /**
    * Sets the '{@link Post#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Post#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Post#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -62,8 +68,9 @@ public class Post {
 
   /**
    * Returns the value of '<em><b>author</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>author</b></em>' feature
    * @generated
    */
@@ -73,9 +80,11 @@ public class Post {
 
   /**
    * Sets the '{@link Post#getAuthor() <em>author</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Post#getAuthor() author}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Post#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(Member newAuthor) {
@@ -84,8 +93,9 @@ public class Post {
 
   /**
    * Returns the value of '<em><b>topic</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>topic</b></em>' feature
    * @generated
    */
@@ -95,9 +105,11 @@ public class Post {
 
   /**
    * Sets the '{@link Post#getTopic() <em>topic</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Post#getTopic() topic}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Post#getTopic() topic}' feature.
    * @generated
    */
   public void setTopic(Topic newTopic) {
@@ -105,9 +117,9 @@ public class Post {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

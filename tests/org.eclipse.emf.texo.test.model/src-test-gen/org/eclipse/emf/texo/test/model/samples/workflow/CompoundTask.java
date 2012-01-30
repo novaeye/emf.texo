@@ -6,17 +6,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>CompoundTask</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>CompoundTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "CompoundTask")
 public class CompoundTask extends WorkflowNode {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Workflow.class)
   @JoinColumns({ @JoinColumn() })
@@ -24,8 +25,9 @@ public class CompoundTask extends WorkflowNode {
 
   /**
    * Returns the value of '<em><b>subworkflow</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>subworkflow</b></em>' feature
    * @generated
    */
@@ -35,9 +37,11 @@ public class CompoundTask extends WorkflowNode {
 
   /**
    * Sets the '{@link CompoundTask#getSubworkflow() <em>subworkflow</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link CompoundTask#getSubworkflow() subworkflow}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link CompoundTask#getSubworkflow() subworkflow}' feature.
    * @generated
    */
   public void setSubworkflow(Workflow newSubworkflow) {
@@ -45,9 +49,9 @@ public class CompoundTask extends WorkflowNode {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

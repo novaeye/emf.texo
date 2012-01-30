@@ -8,77 +8,86 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>statesByCountry</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "statesByCountry")
 public class StatesByCountry {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String country = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private List<String> allStates = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private List<String> sixImportantStates = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String zipUnion = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
   @CollectionTable(name = "statesByCountry_zipUnions")
   private List<String> zipUnions = new ArrayList<String>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private Object simpleUnion = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
   @CollectionTable(name = "statesByCountry_simpleUnions")
   private List<Object> simpleUnions = new ArrayList<Object>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String simpleStringUnion = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
@@ -87,8 +96,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>country</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>country</b></em>' feature
    * @generated
    */
@@ -98,9 +108,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getCountry() <em>country</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getCountry() country}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(String newCountry) {
@@ -109,8 +121,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>allStates</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>allStates</b></em>' feature
    * @generated
    */
@@ -120,9 +133,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getAllStates() <em>allStates</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getAllStates() allStates}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getAllStates() allStates}' feature.
    * @generated
    */
   public void setAllStates(List<String> newAllStates) {
@@ -131,8 +146,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>sixImportantStates</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>sixImportantStates</b></em>' feature
    * @generated
    */
@@ -142,9 +158,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getSixImportantStates() <em>sixImportantStates</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getSixImportantStates() sixImportantStates}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getSixImportantStates() sixImportantStates}' feature.
    * @generated
    */
   public void setSixImportantStates(List<String> newSixImportantStates) {
@@ -153,8 +171,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>zipUnion</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>zipUnion</b></em>' feature
    * @generated
    */
@@ -164,9 +183,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getZipUnion() <em>zipUnion</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getZipUnion() zipUnion}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getZipUnion() zipUnion}' feature.
    * @generated
    */
   public void setZipUnion(String newZipUnion) {
@@ -175,8 +196,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>zipUnions</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>zipUnions</b></em>' feature
    * @generated
    */
@@ -186,9 +208,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getZipUnions() <em>zipUnions</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getZipUnions() zipUnions}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getZipUnions() zipUnions}' feature.
    * @generated
    */
   public void setZipUnions(List<String> newZipUnions) {
@@ -197,8 +221,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>simpleUnion</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simpleUnion</b></em>' feature
    * @generated
    */
@@ -208,9 +233,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getSimpleUnion() <em>simpleUnion</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getSimpleUnion() simpleUnion}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getSimpleUnion() simpleUnion}' feature.
    * @generated
    */
   public void setSimpleUnion(Object newSimpleUnion) {
@@ -219,8 +246,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>simpleUnions</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simpleUnions</b></em>' feature
    * @generated
    */
@@ -230,9 +258,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getSimpleUnions() <em>simpleUnions</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getSimpleUnions() simpleUnions}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getSimpleUnions() simpleUnions}' feature.
    * @generated
    */
   public void setSimpleUnions(List<Object> newSimpleUnions) {
@@ -241,8 +271,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>simpleStringUnion</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simpleStringUnion</b></em>' feature
    * @generated
    */
@@ -252,9 +283,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getSimpleStringUnion() <em>simpleStringUnion</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getSimpleStringUnion() simpleStringUnion}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getSimpleStringUnion() simpleStringUnion}' feature.
    * @generated
    */
   public void setSimpleStringUnion(String newSimpleStringUnion) {
@@ -263,8 +296,9 @@ public class StatesByCountry {
 
   /**
    * Returns the value of '<em><b>simpleStringUnions</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>simpleStringUnions</b></em>' feature
    * @generated
    */
@@ -274,9 +308,11 @@ public class StatesByCountry {
 
   /**
    * Sets the '{@link StatesByCountry#getSimpleStringUnions() <em>simpleStringUnions</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StatesByCountry#getSimpleStringUnions() simpleStringUnions}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StatesByCountry#getSimpleStringUnions() simpleStringUnions}' feature.
    * @generated
    */
   public void setSimpleStringUnions(List<String> newSimpleStringUnions) {
@@ -284,9 +320,9 @@ public class StatesByCountry {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

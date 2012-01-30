@@ -7,62 +7,69 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>Task</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Task")
 public class Task {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = CapacityEntry.class)
   @JoinColumns({ @JoinColumn() })
   private CapacityEntry capacityEntry = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = Production.class)
   @JoinColumns({ @JoinColumn() })
   private Production production = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String taskId = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private float timePerPice = 0.0f;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private float timePerPreperation = 0.0f;
 
   /**
    * Returns the value of '<em><b>capacityEntry</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>capacityEntry</b></em>' feature
    * @generated
    */
@@ -72,9 +79,11 @@ public class Task {
 
   /**
    * Sets the '{@link Task#getCapacityEntry() <em>capacityEntry</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Task#getCapacityEntry() capacityEntry}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Task#getCapacityEntry() capacityEntry}' feature.
    * @generated
    */
   public void setCapacityEntry(CapacityEntry newCapacityEntry) {
@@ -83,8 +92,9 @@ public class Task {
 
   /**
    * Returns the value of '<em><b>production</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>production</b></em>' feature
    * @generated
    */
@@ -94,9 +104,11 @@ public class Task {
 
   /**
    * Sets the '{@link Task#getProduction() <em>production</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Task#getProduction() production}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Task#getProduction() production}' feature.
    * @generated
    */
   public void setProduction(Production newProduction) {
@@ -105,8 +117,9 @@ public class Task {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -116,9 +129,11 @@ public class Task {
 
   /**
    * Sets the '{@link Task#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Task#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Task#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -127,8 +142,9 @@ public class Task {
 
   /**
    * Returns the value of '<em><b>taskId</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>taskId</b></em>' feature
    * @generated
    */
@@ -138,9 +154,11 @@ public class Task {
 
   /**
    * Sets the '{@link Task#getTaskId() <em>taskId</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Task#getTaskId() taskId}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Task#getTaskId() taskId}' feature.
    * @generated
    */
   public void setTaskId(String newTaskId) {
@@ -149,8 +167,9 @@ public class Task {
 
   /**
    * Returns the value of '<em><b>timePerPice</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>timePerPice</b></em>' feature
    * @generated
    */
@@ -160,9 +179,11 @@ public class Task {
 
   /**
    * Sets the '{@link Task#getTimePerPice() <em>timePerPice</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Task#getTimePerPice() timePerPice}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Task#getTimePerPice() timePerPice}' feature.
    * @generated
    */
   public void setTimePerPice(float newTimePerPice) {
@@ -171,8 +192,9 @@ public class Task {
 
   /**
    * Returns the value of '<em><b>timePerPreperation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>timePerPreperation</b></em>' feature
    * @generated
    */
@@ -182,9 +204,11 @@ public class Task {
 
   /**
    * Sets the '{@link Task#getTimePerPreperation() <em>timePerPreperation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Task#getTimePerPreperation() timePerPreperation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Task#getTimePerPreperation() timePerPreperation}' feature.
    * @generated
    */
   public void setTimePerPreperation(float newTimePerPreperation) {
@@ -192,9 +216,9 @@ public class Task {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

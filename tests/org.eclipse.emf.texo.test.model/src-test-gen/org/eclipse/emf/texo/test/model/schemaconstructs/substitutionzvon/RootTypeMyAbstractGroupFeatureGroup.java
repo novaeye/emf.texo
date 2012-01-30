@@ -6,11 +6,11 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
 
-/** 
- * A representation for the Feature Group '<em><b>RootType.myAbstractGroup</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>RootType.myAbstractGroup</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class RootTypeMyAbstractGroupFeatureGroup {
 
@@ -92,13 +92,15 @@ public class RootTypeMyAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BigInteger myAbstract;
@@ -119,8 +121,9 @@ public class RootTypeMyAbstractGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>myAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myAbstract</b></em>' feature
    * @generated
    */
@@ -130,9 +133,11 @@ public class RootTypeMyAbstractGroupFeatureGroup {
 
   /**
    * Sets the '{@link RootType#getMyAbstract() <em>myAbstract</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RootType#getMyAbstract() myAbstract}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RootType#getMyAbstract() myAbstract}' feature.
    * @generated
    */
   public void setMyAbstract(BigInteger newMyAbstract) {
@@ -142,9 +147,10 @@ public class RootTypeMyAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -157,10 +163,13 @@ public class RootTypeMyAbstractGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

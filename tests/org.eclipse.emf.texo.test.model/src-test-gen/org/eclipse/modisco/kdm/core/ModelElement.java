@@ -12,16 +12,14 @@ import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.ExtendedValue;
 import org.eclipse.modisco.kdm.kdm.Stereotype;
 
-/** 
- * A representation of the model object '<em><b>ModelElement</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * A model element is an element that represents some aspect of the existing system.
- In the meta-model, a ModelElement is the base for all meta-elements of KDM. All other meta-elements are either direct
- or indirect subclasses of ModelElement. ModelElement is an abstract meta-model element.
- A ModelElement can be extended through the lightweight extension mechanism.
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ModelElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> A model element is an element that represents some aspect of the existing system. In the
+ * meta-model, a ModelElement is the base for all meta-elements of KDM. All other meta-elements are either direct or
+ * indirect subclasses of ModelElement. ModelElement is an abstract meta-model element. A ModelElement can be extended
+ * through the lightweight extension mechanism. <!-- end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ModelElement")
 public abstract class ModelElement extends Element {
@@ -63,6 +61,7 @@ public abstract class ModelElement extends Element {
 
   /**
    * Adds to the <em>stereotype</em> feature.
+   * 
    * @generated
    */
   public void addToStereotype(Stereotype stereotypeValue) {
@@ -73,8 +72,9 @@ public abstract class ModelElement extends Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>stereotype</em> feature.
+   * 
    * @generated
    */
   public void removeFromStereotype(Stereotype stereotypeValue) {
@@ -83,8 +83,9 @@ public abstract class ModelElement extends Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>stereotype</em> feature.
+   * 
    * @generated
    */
   public void clearStereotype() {
@@ -124,6 +125,7 @@ public abstract class ModelElement extends Element {
 
   /**
    * Adds to the <em>taggedValue</em> feature.
+   * 
    * @generated
    */
   public void addToTaggedValue(ExtendedValue taggedValueValue) {
@@ -134,8 +136,9 @@ public abstract class ModelElement extends Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>taggedValue</em> feature.
+   * 
    * @generated
    */
   public void removeFromTaggedValue(ExtendedValue taggedValueValue) {
@@ -144,8 +147,9 @@ public abstract class ModelElement extends Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>taggedValue</em> feature.
+   * 
    * @generated
    */
   public void clearTaggedValue() {
@@ -169,9 +173,9 @@ public abstract class ModelElement extends Element {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

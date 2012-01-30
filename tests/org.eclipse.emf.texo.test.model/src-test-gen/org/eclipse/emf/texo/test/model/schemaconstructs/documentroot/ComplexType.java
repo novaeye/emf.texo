@@ -3,25 +3,27 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.documentroot;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>ComplexType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ComplexType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ComplexType")
 public class ComplexType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String test = null;
 
   /**
    * Returns the value of '<em><b>test</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>test</b></em>' feature
    * @generated
    */
@@ -31,9 +33,11 @@ public class ComplexType {
 
   /**
    * Sets the '{@link ComplexType#getTest() <em>test</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ComplexType#getTest() test}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ComplexType#getTest() test}' feature.
    * @generated
    */
   public void setTest(String newTest) {
@@ -41,9 +45,9 @@ public class ComplexType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -25,33 +25,37 @@ import org.eclipse.modisco.kdm.source.SourceRef;
 @Entity(name = "AbstractCodeElement")
 public abstract class AbstractCodeElement extends KDMEntity {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CommentUnit.class)
   @JoinColumns({ @JoinColumn() })
   private Set<CommentUnit> comment = new HashSet<CommentUnit>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractCodeRelationship> codeRelation = new HashSet<AbstractCodeRelationship>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = EntryFlow.class)
   @OrderColumn()
@@ -60,8 +64,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>source</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>source</b></em>' feature
    * @generated
    */
@@ -71,6 +76,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Adds to the <em>source</em> feature.
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -81,8 +87,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>source</em> feature.
+   * 
    * @generated
    */
   public void removeFromSource(SourceRef sourceValue) {
@@ -91,8 +98,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>source</em> feature.
+   * 
    * @generated
    */
   public void clearSource() {
@@ -103,9 +111,11 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractCodeElement#getSource() <em>source</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractCodeElement#getSource() source}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractCodeElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -114,8 +124,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -125,6 +136,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Adds to the <em>comment</em> feature.
+   * 
    * @generated
    */
   public void addToComment(CommentUnit commentValue) {
@@ -135,8 +147,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>comment</em> feature.
+   * 
    * @generated
    */
   public void removeFromComment(CommentUnit commentValue) {
@@ -145,8 +158,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>comment</em> feature.
+   * 
    * @generated
    */
   public void clearComment() {
@@ -157,9 +171,11 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractCodeElement#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractCodeElement#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractCodeElement#getComment() comment}' feature.
    * @generated
    */
   public void setComment(Set<CommentUnit> newComment) {
@@ -168,8 +184,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>codeRelation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeRelation</b></em>' feature
    * @generated
    */
@@ -179,6 +196,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Adds to the <em>codeRelation</em> feature.
+   * 
    * @generated
    */
   public void addToCodeRelation(AbstractCodeRelationship codeRelationValue) {
@@ -189,8 +207,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeRelation</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeRelation(AbstractCodeRelationship codeRelationValue) {
@@ -199,8 +218,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeRelation</em> feature.
+   * 
    * @generated
    */
   public void clearCodeRelation() {
@@ -211,9 +231,11 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractCodeElement#getCodeRelation() <em>codeRelation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractCodeElement#getCodeRelation() codeRelation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractCodeElement#getCodeRelation() codeRelation}' feature.
    * @generated
    */
   public void setCodeRelation(Set<AbstractCodeRelationship> newCodeRelation) {
@@ -222,8 +244,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Returns the value of '<em><b>entryFlow</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>entryFlow</b></em>' feature
    * @generated
    */
@@ -233,6 +256,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Adds to the <em>entryFlow</em> feature.
+   * 
    * @generated
    */
   public void addToEntryFlow(EntryFlow entryFlowValue) {
@@ -243,8 +267,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>entryFlow</em> feature.
+   * 
    * @generated
    */
   public void removeFromEntryFlow(EntryFlow entryFlowValue) {
@@ -253,8 +278,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>entryFlow</em> feature.
+   * 
    * @generated
    */
   public void clearEntryFlow() {
@@ -265,9 +291,11 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Sets the '{@link AbstractCodeElement#getEntryFlow() <em>entryFlow</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AbstractCodeElement#getEntryFlow() entryFlow}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AbstractCodeElement#getEntryFlow() entryFlow}' feature.
    * @generated
    */
   public void setEntryFlow(List<EntryFlow> newEntryFlow) {
@@ -275,9 +303,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

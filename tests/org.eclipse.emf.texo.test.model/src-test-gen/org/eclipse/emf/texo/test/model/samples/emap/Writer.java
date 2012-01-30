@@ -5,29 +5,28 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Writer</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Writer")
 @Table(name = "EMAP_WRITER")
 public class Writer extends Identifiable {
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -37,10 +36,11 @@ public class Writer extends Identifiable {
 
   /**
    * Sets the '{@link Writer#getName() <em>name</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Writer#getName() name}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Writer#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -48,9 +48,9 @@ public class Writer extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @generated
    */
   @Override

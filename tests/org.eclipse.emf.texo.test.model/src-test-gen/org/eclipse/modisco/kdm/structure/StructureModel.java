@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>StructureModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>StructureModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "StructureModel")
 public class StructureModel extends KDMModel {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractStructureElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class StructureModel extends KDMModel {
 
   /**
    * Returns the value of '<em><b>structureElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>structureElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class StructureModel extends KDMModel {
 
   /**
    * Adds to the <em>structureElement</em> feature.
+   * 
    * @generated
    */
   public void addToStructureElement(AbstractStructureElement structureElementValue) {
@@ -48,8 +51,9 @@ public class StructureModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>structureElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromStructureElement(AbstractStructureElement structureElementValue) {
@@ -58,8 +62,9 @@ public class StructureModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>structureElement</em> feature.
+   * 
    * @generated
    */
   public void clearStructureElement() {
@@ -70,9 +75,11 @@ public class StructureModel extends KDMModel {
 
   /**
    * Sets the '{@link StructureModel#getStructureElement() <em>structureElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link StructureModel#getStructureElement() structureElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link StructureModel#getStructureElement() structureElement}' feature.
    * @generated
    */
   public void setStructureElement(Set<AbstractStructureElement> newStructureElement) {
@@ -80,9 +87,9 @@ public class StructureModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.kdm.Segment;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Segment</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SegmentDao extends BaseDao<Segment> {
 

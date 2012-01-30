@@ -14,28 +14,27 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
 
-/** 
- * A representation of the model object '<em><b>Book</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Book")
 @Table(name = "EMAP_BOOK")
 public class Book implements IdentifiableInterface {
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String title = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
   @MapKeyClass(String.class)
@@ -43,27 +42,27 @@ public class Book implements IdentifiableInterface {
   @JoinTable(name = "Book_writers")
   private Map<String, Writer> writers = new LinkedHashMap<String, Writer>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Access(AccessType.PROPERTY)
   private Long db_Id = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Access(AccessType.PROPERTY)
   private Integer db_version = null;
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -73,10 +72,11 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Sets the '{@link Book#getTitle() <em>title</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getTitle() title}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -85,9 +85,9 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Returns the value of '<em><b>writers</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>writers</b></em>' feature
    * @generated
    */
@@ -97,10 +97,11 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Sets the '{@link Book#getWriters() <em>writers</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getWriters() writers}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Book#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(Map<String, Writer> newWriters) {
@@ -109,9 +110,9 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Returns the value of '<em><b>db_Id</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>db_Id</b></em>' feature
    * @generated
    */
@@ -121,10 +122,11 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Sets the '{@link Book#getDb_Id() <em>db_Id</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getDb_Id() db_Id}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Book#getDb_Id() db_Id}' feature.
    * @generated
    */
   public void setDb_Id(Long newDb_Id) {
@@ -133,9 +135,9 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Returns the value of '<em><b>db_version</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>db_version</b></em>' feature
    * @generated
    */
@@ -145,10 +147,11 @@ public class Book implements IdentifiableInterface {
 
   /**
    * Sets the '{@link Book#getDb_version() <em>db_version</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Book#getDb_version() db_version}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Book#getDb_version() db_version}' feature.
    * @generated
    */
   public void setDb_version(Integer newDb_version) {
@@ -156,9 +159,9 @@ public class Book implements IdentifiableInterface {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @generated
    */
   @Override

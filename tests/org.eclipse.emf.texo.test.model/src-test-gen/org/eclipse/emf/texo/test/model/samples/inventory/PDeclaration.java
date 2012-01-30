@@ -4,32 +4,35 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>PDeclaration</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PDeclaration</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PDeclaration")
 public class PDeclaration extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private long id = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
   /**
    * Returns the value of '<em><b>id</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>id</b></em>' feature
    * @generated
    */
@@ -39,9 +42,11 @@ public class PDeclaration extends Identifiable {
 
   /**
    * Sets the '{@link PDeclaration#getId() <em>id</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PDeclaration#getId() id}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PDeclaration#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -50,8 +55,9 @@ public class PDeclaration extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -61,9 +67,11 @@ public class PDeclaration extends Identifiable {
 
   /**
    * Sets the '{@link PDeclaration#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PDeclaration#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PDeclaration#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -71,9 +79,9 @@ public class PDeclaration extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.catalog.CatalogModelPackage;
 import org.eclipse.emf.texo.test.model.samples.catalog.StringType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>StringType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class StringTypeDao extends BaseDao<StringType> {
 

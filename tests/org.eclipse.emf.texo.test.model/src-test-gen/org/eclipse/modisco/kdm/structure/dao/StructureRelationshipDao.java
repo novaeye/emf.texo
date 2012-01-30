@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.structure.StructureModelPackage;
 import org.eclipse.modisco.kdm.structure.StructureRelationship;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>StructureRelationship</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class StructureRelationshipDao extends BaseDao<StructureRelationship> {
 

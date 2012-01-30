@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.types.SingleTypes;
 import org.eclipse.emf.texo.test.model.samples.types.TypesModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>SingleTypes</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class SingleTypesDao extends BaseDao<SingleTypes> {
 

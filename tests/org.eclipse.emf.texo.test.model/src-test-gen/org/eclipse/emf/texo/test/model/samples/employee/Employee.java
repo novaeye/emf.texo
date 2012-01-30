@@ -8,38 +8,42 @@ import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationTwo;
 
-/** 
- * A representation of the model object '<em><b>Employee</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Employee")
 public class Employee {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private int salary = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private int age = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date hireDate = null;
@@ -54,8 +58,9 @@ public class Employee {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -65,9 +70,11 @@ public class Employee {
 
   /**
    * Sets the '{@link Employee#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Employee#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Employee#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -76,8 +83,9 @@ public class Employee {
 
   /**
    * Returns the value of '<em><b>salary</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>salary</b></em>' feature
    * @generated
    */
@@ -87,9 +95,11 @@ public class Employee {
 
   /**
    * Sets the '{@link Employee#getSalary() <em>salary</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Employee#getSalary() salary}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Employee#getSalary() salary}' feature.
    * @generated
    */
   public void setSalary(int newSalary) {
@@ -98,8 +108,9 @@ public class Employee {
 
   /**
    * Returns the value of '<em><b>age</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>age</b></em>' feature
    * @generated
    */
@@ -109,9 +120,11 @@ public class Employee {
 
   /**
    * Sets the '{@link Employee#getAge() <em>age</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Employee#getAge() age}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Employee#getAge() age}' feature.
    * @generated
    */
   public void setAge(int newAge) {
@@ -134,9 +147,11 @@ public class Employee {
 
   /**
    * Sets the '{@link Employee#getHireDate() <em>hireDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Employee#getHireDate() hireDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Employee#getHireDate() hireDate}' feature.
    * @generated
    */
   public void setHireDate(Date newHireDate) {
@@ -144,9 +159,9 @@ public class Employee {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

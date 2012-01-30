@@ -10,33 +10,36 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Forum</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Forum</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Forum")
 public class Forum {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String title = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Member.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Member> members = new ArrayList<Member>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Topic.class)
   @OrderColumn()
@@ -45,8 +48,9 @@ public class Forum {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -56,9 +60,11 @@ public class Forum {
 
   /**
    * Sets the '{@link Forum#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Forum#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Forum#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -67,8 +73,9 @@ public class Forum {
 
   /**
    * Returns the value of '<em><b>members</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>members</b></em>' feature
    * @generated
    */
@@ -78,6 +85,7 @@ public class Forum {
 
   /**
    * Adds to the <em>members</em> feature.
+   * 
    * @generated
    */
   public void addToMembers(Member membersValue) {
@@ -88,8 +96,9 @@ public class Forum {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>members</em> feature.
+   * 
    * @generated
    */
   public void removeFromMembers(Member membersValue) {
@@ -98,8 +107,9 @@ public class Forum {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>members</em> feature.
+   * 
    * @generated
    */
   public void clearMembers() {
@@ -110,9 +120,11 @@ public class Forum {
 
   /**
    * Sets the '{@link Forum#getMembers() <em>members</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Forum#getMembers() members}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Forum#getMembers() members}' feature.
    * @generated
    */
   public void setMembers(List<Member> newMembers) {
@@ -121,8 +133,9 @@ public class Forum {
 
   /**
    * Returns the value of '<em><b>topics</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>topics</b></em>' feature
    * @generated
    */
@@ -132,6 +145,7 @@ public class Forum {
 
   /**
    * Adds to the <em>topics</em> feature.
+   * 
    * @generated
    */
   public void addToTopics(Topic topicsValue) {
@@ -142,8 +156,9 @@ public class Forum {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>topics</em> feature.
+   * 
    * @generated
    */
   public void removeFromTopics(Topic topicsValue) {
@@ -152,8 +167,9 @@ public class Forum {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>topics</em> feature.
+   * 
    * @generated
    */
   public void clearTopics() {
@@ -164,9 +180,11 @@ public class Forum {
 
   /**
    * Sets the '{@link Forum#getTopics() <em>topics</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Forum#getTopics() topics}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Forum#getTopics() topics}' feature.
    * @generated
    */
   public void setTopics(List<Topic> newTopics) {
@@ -174,9 +192,9 @@ public class Forum {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

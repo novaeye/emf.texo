@@ -10,40 +10,44 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.Element;
 
-/** 
- * A representation of the model object '<em><b>Stereotype</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Stereotype</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Stereotype")
 public class Stereotype extends Element {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = TagDefinition.class)
   @JoinColumns({ @JoinColumn() })
   private Set<TagDefinition> tag = new HashSet<TagDefinition>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String type = null;
 
   /**
    * Returns the value of '<em><b>tag</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>tag</b></em>' feature
    * @generated
    */
@@ -53,6 +57,7 @@ public class Stereotype extends Element {
 
   /**
    * Adds to the <em>tag</em> feature.
+   * 
    * @generated
    */
   public void addToTag(TagDefinition tagValue) {
@@ -63,8 +68,9 @@ public class Stereotype extends Element {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>tag</em> feature.
+   * 
    * @generated
    */
   public void removeFromTag(TagDefinition tagValue) {
@@ -73,8 +79,9 @@ public class Stereotype extends Element {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>tag</em> feature.
+   * 
    * @generated
    */
   public void clearTag() {
@@ -85,9 +92,11 @@ public class Stereotype extends Element {
 
   /**
    * Sets the '{@link Stereotype#getTag() <em>tag</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Stereotype#getTag() tag}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Stereotype#getTag() tag}' feature.
    * @generated
    */
   public void setTag(Set<TagDefinition> newTag) {
@@ -96,8 +105,9 @@ public class Stereotype extends Element {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -107,9 +117,11 @@ public class Stereotype extends Element {
 
   /**
    * Sets the '{@link Stereotype#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Stereotype#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Stereotype#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -118,8 +130,9 @@ public class Stereotype extends Element {
 
   /**
    * Returns the value of '<em><b>type</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>type</b></em>' feature
    * @generated
    */
@@ -129,9 +142,11 @@ public class Stereotype extends Element {
 
   /**
    * Sets the '{@link Stereotype#getType() <em>type</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Stereotype#getType() type}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Stereotype#getType() type}' feature.
    * @generated
    */
   public void setType(String newType) {
@@ -139,9 +154,9 @@ public class Stereotype extends Element {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

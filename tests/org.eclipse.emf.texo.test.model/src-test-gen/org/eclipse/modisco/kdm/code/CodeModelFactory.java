@@ -17,17 +17,19 @@ import org.eclipse.modisco.kdm.kdm.KdmModelFactory;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
 /**
- * The <b>{@link ModelFactory}</b> for the types of this model: code.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * The <b>{@link ModelFactory}</b> for the types of this model: code. It contains code to create instances
+ * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
+ * representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class CodeModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -194,13 +196,12 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -478,8 +479,8 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -495,6 +496,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CodeModel
    * @generated
    */
@@ -504,6 +506,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CommentUnit
    * @generated
    */
@@ -513,6 +516,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ComputationalObject
    * @generated
    */
@@ -522,6 +526,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Datatype
    * @generated
    */
@@ -531,6 +536,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Module
    * @generated
    */
@@ -540,6 +546,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CompilationUnit
    * @generated
    */
@@ -549,6 +556,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SharedUnit
    * @generated
    */
@@ -558,6 +566,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass LanguageUnit
    * @generated
    */
@@ -567,6 +576,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CodeAssembly
    * @generated
    */
@@ -576,6 +586,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Package
    * @generated
    */
@@ -585,6 +596,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ControlElement
    * @generated
    */
@@ -594,6 +606,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CallableUnit
    * @generated
    */
@@ -603,6 +616,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MethodUnit
    * @generated
    */
@@ -612,6 +626,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DataElement
    * @generated
    */
@@ -621,6 +636,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass StorableUnit
    * @generated
    */
@@ -630,6 +646,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ItemUnit
    * @generated
    */
@@ -639,6 +656,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass IndexUnit
    * @generated
    */
@@ -648,6 +666,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MemberUnit
    * @generated
    */
@@ -657,6 +676,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ParameterUnit
    * @generated
    */
@@ -666,6 +686,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Value
    * @generated
    */
@@ -675,6 +696,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ValueList
    * @generated
    */
@@ -684,6 +706,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PrimitiveType
    * @generated
    */
@@ -693,6 +716,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BooleanType
    * @generated
    */
@@ -702,6 +726,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CharType
    * @generated
    */
@@ -711,6 +736,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass OrdinalType
    * @generated
    */
@@ -720,6 +746,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DateType
    * @generated
    */
@@ -729,6 +756,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TimeType
    * @generated
    */
@@ -738,6 +766,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass IntegerType
    * @generated
    */
@@ -747,6 +776,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DecimalType
    * @generated
    */
@@ -756,6 +786,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ScaledType
    * @generated
    */
@@ -765,6 +796,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass FloatType
    * @generated
    */
@@ -774,6 +806,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass VoidType
    * @generated
    */
@@ -783,6 +816,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass StringType
    * @generated
    */
@@ -792,6 +826,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BitType
    * @generated
    */
@@ -801,6 +836,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BitstringType
    * @generated
    */
@@ -810,6 +846,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass OctetType
    * @generated
    */
@@ -819,6 +856,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass OctetstringType
    * @generated
    */
@@ -828,6 +866,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass EnumeratedType
    * @generated
    */
@@ -837,6 +876,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CompositeType
    * @generated
    */
@@ -846,6 +886,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ChoiceType
    * @generated
    */
@@ -855,6 +896,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RecordType
    * @generated
    */
@@ -864,6 +906,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DerivedType
    * @generated
    */
@@ -873,6 +916,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ArrayType
    * @generated
    */
@@ -882,6 +926,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PointerType
    * @generated
    */
@@ -891,6 +936,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RangeType
    * @generated
    */
@@ -900,6 +946,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass BagType
    * @generated
    */
@@ -909,6 +956,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SetType
    * @generated
    */
@@ -918,6 +966,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SequenceType
    * @generated
    */
@@ -927,6 +976,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Signature
    * @generated
    */
@@ -936,6 +986,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TypeUnit
    * @generated
    */
@@ -945,6 +996,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass SynonymUnit
    * @generated
    */
@@ -954,6 +1006,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ClassUnit
    * @generated
    */
@@ -963,6 +1016,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass InterfaceUnit
    * @generated
    */
@@ -972,6 +1026,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TemplateUnit
    * @generated
    */
@@ -981,6 +1036,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TemplateParameter
    * @generated
    */
@@ -990,6 +1046,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass TemplateType
    * @generated
    */
@@ -999,6 +1056,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass InstanceOf
    * @generated
    */
@@ -1008,6 +1066,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ParameterTo
    * @generated
    */
@@ -1017,6 +1076,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Implements
    * @generated
    */
@@ -1026,6 +1086,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ImplementationOf
    * @generated
    */
@@ -1035,6 +1096,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass HasType
    * @generated
    */
@@ -1044,6 +1106,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass HasValue
    * @generated
    */
@@ -1053,6 +1116,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Extends
    * @generated
    */
@@ -1062,6 +1126,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PreprocessorDirective
    * @generated
    */
@@ -1071,6 +1136,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MacroUnit
    * @generated
    */
@@ -1080,6 +1146,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MacroDirective
    * @generated
    */
@@ -1089,6 +1156,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass IncludeDirective
    * @generated
    */
@@ -1098,6 +1166,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass ConditionalDirective
    * @generated
    */
@@ -1107,6 +1176,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Expands
    * @generated
    */
@@ -1116,6 +1186,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass GeneratedFrom
    * @generated
    */
@@ -1125,6 +1196,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Includes
    * @generated
    */
@@ -1134,6 +1206,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass VariantTo
    * @generated
    */
@@ -1143,6 +1216,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Redefines
    * @generated
    */
@@ -1152,6 +1226,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Namespace
    * @generated
    */
@@ -1161,6 +1236,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass VisibleIn
    * @generated
    */
@@ -1170,6 +1246,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Imports
    * @generated
    */
@@ -1179,6 +1256,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CodeElement
    * @generated
    */
@@ -1188,6 +1266,7 @@ public class CodeModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CodeRelationship
    * @generated
    */
@@ -1196,10 +1275,12 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -1221,10 +1302,12 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -1246,9 +1329,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: CallableKind to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: CallableKind to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -1260,9 +1344,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: CallableKind from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: CallableKind from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -1274,9 +1359,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: MethodKind to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: MethodKind to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -1288,9 +1374,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: MethodKind from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: MethodKind from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -1302,9 +1389,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: ExportKind to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: ExportKind to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -1316,9 +1404,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: ExportKind from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: ExportKind from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -1330,9 +1419,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: StorableKind to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: StorableKind to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -1344,9 +1434,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: StorableKind from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: StorableKind from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -1358,9 +1449,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: ParameterKind to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: ParameterKind to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -1372,9 +1464,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: ParameterKind from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: ParameterKind from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -1386,9 +1479,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: MacroKind to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: MacroKind to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -1400,9 +1494,10 @@ public class CodeModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: MacroKind from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: MacroKind from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -1413,10 +1508,10 @@ public class CodeModelFactory implements ModelFactory {
     return MacroKind.get(value);
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CodeModel</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CodeModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CodeModelModelObject<E extends CodeModel> extends KdmModelFactory.KDMModelModelObject<E> {
     /**
@@ -1616,10 +1711,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CommentUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CommentUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CommentUnitModelObject<E extends CommentUnit> extends CoreModelFactory.ModelElementModelObject<E> {
     /**
@@ -1690,11 +1785,11 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>AbstractCodeRelationship</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>AbstractCodeRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class AbstractCodeRelationshipModelObject<E extends AbstractCodeRelationship> extends
       CoreModelFactory.KDMRelationshipModelObject<E> {
@@ -1759,10 +1854,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CodeItem</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CodeItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CodeItemModelObject<E extends CodeItem> extends AbstractCodeElementModelObject<E> {
     /**
@@ -1894,10 +1989,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Datatype</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Datatype</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DatatypeModelObject<E extends Datatype> extends CodeItemModelObject<E> {
     /**
@@ -1961,10 +2056,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Module</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Module</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ModuleModelObject<E extends Module> extends CodeItemModelObject<E> {
     /**
@@ -2042,10 +2137,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CompilationUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CompilationUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CompilationUnitModelObject<E extends CompilationUnit> extends ModuleModelObject<E> {
     /**
@@ -2109,10 +2204,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SharedUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SharedUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SharedUnitModelObject<E extends SharedUnit> extends CompilationUnitModelObject<E> {
     /**
@@ -2176,10 +2271,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>LanguageUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>LanguageUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class LanguageUnitModelObject<E extends LanguageUnit> extends ModuleModelObject<E> {
     /**
@@ -2243,10 +2338,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CodeAssembly</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CodeAssembly</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CodeAssemblyModelObject<E extends CodeAssembly> extends ModuleModelObject<E> {
     /**
@@ -2310,10 +2405,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Package</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Package</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PackageModelObject<E extends Package> extends ModuleModelObject<E> {
     /**
@@ -2377,10 +2472,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ControlElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ControlElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ControlElementModelObject<E extends ControlElement> extends ComputationalObjectModelObject<E> {
     /**
@@ -2463,10 +2558,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CallableUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CallableUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CallableUnitModelObject<E extends CallableUnit> extends ControlElementModelObject<E> {
     /**
@@ -2537,10 +2632,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>MethodUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>MethodUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MethodUnitModelObject<E extends MethodUnit> extends ControlElementModelObject<E> {
     /**
@@ -2616,10 +2711,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DataElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DataElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DataElementModelObject<E extends DataElement> extends ComputationalObjectModelObject<E> {
     /**
@@ -2712,10 +2807,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>StorableUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>StorableUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class StorableUnitModelObject<E extends StorableUnit> extends DataElementModelObject<E> {
     /**
@@ -2786,10 +2881,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ItemUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ItemUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ItemUnitModelObject<E extends ItemUnit> extends DataElementModelObject<E> {
     /**
@@ -2853,10 +2948,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>IndexUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>IndexUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class IndexUnitModelObject<E extends IndexUnit> extends DataElementModelObject<E> {
     /**
@@ -2920,10 +3015,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>MemberUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>MemberUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MemberUnitModelObject<E extends MemberUnit> extends DataElementModelObject<E> {
     /**
@@ -2994,10 +3089,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ParameterUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ParameterUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ParameterUnitModelObject<E extends ParameterUnit> extends DataElementModelObject<E> {
     /**
@@ -3073,10 +3168,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ValueElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ValueElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ValueElementModelObject<E extends ValueElement> extends DataElementModelObject<E> {
     /**
@@ -3140,10 +3235,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Value</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Value</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ValueModelObject<E extends Value> extends ValueElementModelObject<E> {
     /**
@@ -3207,10 +3302,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ValueList</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ValueList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ValueListModelObject<E extends ValueList> extends ValueElementModelObject<E> {
     /**
@@ -3288,10 +3383,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PrimitiveType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PrimitiveType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PrimitiveTypeModelObject<E extends PrimitiveType> extends DatatypeModelObject<E> {
     /**
@@ -3355,10 +3450,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BooleanType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BooleanType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BooleanTypeModelObject<E extends BooleanType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3422,10 +3517,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CharType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CharType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CharTypeModelObject<E extends CharType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3489,10 +3584,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>OrdinalType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>OrdinalType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class OrdinalTypeModelObject<E extends OrdinalType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3556,10 +3651,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DateType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DateType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DateTypeModelObject<E extends DateType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3623,10 +3718,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TimeType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TimeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TimeTypeModelObject<E extends TimeType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3690,10 +3785,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>IntegerType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>IntegerType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class IntegerTypeModelObject<E extends IntegerType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3757,10 +3852,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DecimalType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DecimalType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DecimalTypeModelObject<E extends DecimalType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3824,10 +3919,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ScaledType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ScaledType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ScaledTypeModelObject<E extends ScaledType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3891,10 +3986,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>FloatType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>FloatType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class FloatTypeModelObject<E extends FloatType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -3958,10 +4053,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>VoidType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>VoidType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class VoidTypeModelObject<E extends VoidType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -4025,10 +4120,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>StringType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class StringTypeModelObject<E extends StringType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -4092,10 +4187,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BitType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BitType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BitTypeModelObject<E extends BitType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -4159,10 +4254,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BitstringType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BitstringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BitstringTypeModelObject<E extends BitstringType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -4226,10 +4321,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>OctetType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>OctetType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class OctetTypeModelObject<E extends OctetType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -4293,10 +4388,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>OctetstringType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>OctetstringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class OctetstringTypeModelObject<E extends OctetstringType> extends PrimitiveTypeModelObject<E> {
     /**
@@ -4360,10 +4455,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>EnumeratedType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>EnumeratedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class EnumeratedTypeModelObject<E extends EnumeratedType> extends DatatypeModelObject<E> {
     /**
@@ -4454,10 +4549,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CompositeType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CompositeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CompositeTypeModelObject<E extends CompositeType> extends DatatypeModelObject<E> {
     /**
@@ -4535,10 +4630,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ChoiceType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ChoiceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ChoiceTypeModelObject<E extends ChoiceType> extends CompositeTypeModelObject<E> {
     /**
@@ -4602,10 +4697,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RecordType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RecordType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RecordTypeModelObject<E extends RecordType> extends CompositeTypeModelObject<E> {
     /**
@@ -4669,10 +4764,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DerivedType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DerivedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DerivedTypeModelObject<E extends DerivedType> extends DatatypeModelObject<E> {
     /**
@@ -4743,10 +4838,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ArrayType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ArrayType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ArrayTypeModelObject<E extends ArrayType> extends DerivedTypeModelObject<E> {
     /**
@@ -4822,10 +4917,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PointerType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PointerType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PointerTypeModelObject<E extends PointerType> extends DerivedTypeModelObject<E> {
     /**
@@ -4889,10 +4984,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>RangeType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>RangeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RangeTypeModelObject<E extends RangeType> extends DerivedTypeModelObject<E> {
     /**
@@ -4968,10 +5063,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>BagType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>BagType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class BagTypeModelObject<E extends BagType> extends DerivedTypeModelObject<E> {
     /**
@@ -5042,10 +5137,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SetType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SetType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SetTypeModelObject<E extends SetType> extends DerivedTypeModelObject<E> {
     /**
@@ -5116,10 +5211,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SequenceType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SequenceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SequenceTypeModelObject<E extends SequenceType> extends DerivedTypeModelObject<E> {
     /**
@@ -5190,10 +5285,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Signature</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Signature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SignatureModelObject<E extends Signature> extends DatatypeModelObject<E> {
     /**
@@ -5271,10 +5366,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DefinedType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DefinedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DefinedTypeModelObject<E extends DefinedType> extends DatatypeModelObject<E> {
     /**
@@ -5350,10 +5445,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TypeUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TypeUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TypeUnitModelObject<E extends TypeUnit> extends DefinedTypeModelObject<E> {
     /**
@@ -5417,10 +5512,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>SynonymUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SynonymUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class SynonymUnitModelObject<E extends SynonymUnit> extends DefinedTypeModelObject<E> {
     /**
@@ -5484,10 +5579,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ClassUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ClassUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ClassUnitModelObject<E extends ClassUnit> extends DatatypeModelObject<E> {
     /**
@@ -5570,10 +5665,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>InterfaceUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>InterfaceUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class InterfaceUnitModelObject<E extends InterfaceUnit> extends DatatypeModelObject<E> {
     /**
@@ -5651,10 +5746,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TemplateUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TemplateUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TemplateUnitModelObject<E extends TemplateUnit> extends DatatypeModelObject<E> {
     /**
@@ -5800,10 +5895,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>TemplateType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>TemplateType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class TemplateTypeModelObject<E extends TemplateType> extends DatatypeModelObject<E> {
     /**
@@ -5867,10 +5962,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>InstanceOf</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>InstanceOf</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class InstanceOfModelObject<E extends InstanceOf> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -5946,10 +6041,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ParameterTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ParameterTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ParameterToModelObject<E extends ParameterTo> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6025,10 +6120,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Implements</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Implements</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ImplementsModelObject<E extends Implements> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6185,10 +6280,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>HasType</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>HasType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class HasTypeModelObject<E extends HasType> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6264,10 +6359,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>HasValue</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>HasValue</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class HasValueModelObject<E extends HasValue> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6343,10 +6438,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Extends</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Extends</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExtendsModelObject<E extends Extends> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6422,11 +6517,11 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PreprocessorDirective</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PreprocessorDirective</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class PreprocessorDirectiveModelObject<E extends PreprocessorDirective> extends
       AbstractCodeElementModelObject<E> {
@@ -6505,10 +6600,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>MacroUnit</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>MacroUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MacroUnitModelObject<E extends MacroUnit> extends PreprocessorDirectiveModelObject<E> {
     /**
@@ -6579,10 +6674,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>MacroDirective</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>MacroDirective</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class MacroDirectiveModelObject<E extends MacroDirective> extends PreprocessorDirectiveModelObject<E> {
     /**
@@ -6715,11 +6810,11 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>ConditionalDirective</b></em>'.
-   * <!-- begin-user-doc --> <!--
+  /**
+   * The adapter/wrapper for the EClass '<em><b>ConditionalDirective</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   public static class ConditionalDirectiveModelObject<E extends ConditionalDirective> extends
       PreprocessorDirectiveModelObject<E> {
@@ -6784,10 +6879,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Expands</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Expands</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ExpandsModelObject<E extends Expands> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6863,10 +6958,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>GeneratedFrom</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>GeneratedFrom</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class GeneratedFromModelObject<E extends GeneratedFrom> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -6942,10 +7037,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Includes</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Includes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class IncludesModelObject<E extends Includes> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -7021,10 +7116,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>VariantTo</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>VariantTo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class VariantToModelObject<E extends VariantTo> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -7100,10 +7195,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Redefines</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Redefines</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class RedefinesModelObject<E extends Redefines> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -7179,10 +7274,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Namespace</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Namespace</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class NamespaceModelObject<E extends Namespace> extends CodeItemModelObject<E> {
     /**
@@ -7260,10 +7355,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>VisibleIn</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>VisibleIn</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class VisibleInModelObject<E extends VisibleIn> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -7339,10 +7434,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Imports</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Imports</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ImportsModelObject<E extends Imports> extends AbstractCodeRelationshipModelObject<E> {
     /**
@@ -7418,10 +7513,10 @@ public class CodeModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>CodeElement</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CodeElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class CodeElementModelObject<E extends CodeElement> extends CodeItemModelObject<E> {
     /**

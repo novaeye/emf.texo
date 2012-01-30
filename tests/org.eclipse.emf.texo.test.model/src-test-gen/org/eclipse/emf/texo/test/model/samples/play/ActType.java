@@ -10,41 +10,45 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>ActType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ActType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ActType")
 public class ActType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SceneType.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<SceneType> scene = new ArrayList<SceneType>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private byte pindex = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String title = null;
 
   /**
    * Returns the value of '<em><b>scene</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>scene</b></em>' feature
    * @generated
    */
@@ -54,6 +58,7 @@ public class ActType {
 
   /**
    * Adds to the <em>scene</em> feature.
+   * 
    * @generated
    */
   public void addToScene(SceneType sceneValue) {
@@ -64,8 +69,9 @@ public class ActType {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>scene</em> feature.
+   * 
    * @generated
    */
   public void removeFromScene(SceneType sceneValue) {
@@ -74,8 +80,9 @@ public class ActType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>scene</em> feature.
+   * 
    * @generated
    */
   public void clearScene() {
@@ -86,9 +93,11 @@ public class ActType {
 
   /**
    * Sets the '{@link ActType#getScene() <em>scene</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ActType#getScene() scene}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ActType#getScene() scene}' feature.
    * @generated
    */
   public void setScene(List<SceneType> newScene) {
@@ -97,8 +106,9 @@ public class ActType {
 
   /**
    * Returns the value of '<em><b>pindex</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>pindex</b></em>' feature
    * @generated
    */
@@ -108,9 +118,11 @@ public class ActType {
 
   /**
    * Sets the '{@link ActType#getPindex() <em>pindex</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ActType#getPindex() pindex}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ActType#getPindex() pindex}' feature.
    * @generated
    */
   public void setPindex(byte newPindex) {
@@ -119,8 +131,9 @@ public class ActType {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -130,9 +143,11 @@ public class ActType {
 
   /**
    * Sets the '{@link ActType#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ActType#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ActType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -140,9 +155,9 @@ public class ActType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

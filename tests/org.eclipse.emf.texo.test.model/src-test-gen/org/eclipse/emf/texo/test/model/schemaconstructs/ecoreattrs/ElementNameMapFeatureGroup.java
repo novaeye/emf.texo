@@ -93,13 +93,15 @@ public class ElementNameMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = NameList.class)
   @JoinColumns({ @JoinColumn() })
@@ -121,8 +123,9 @@ public class ElementNameMapFeatureGroup {
 
   /**
    * Returns the value of '<em><b>names</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>names</b></em>' feature
    * @generated
    */
@@ -132,9 +135,11 @@ public class ElementNameMapFeatureGroup {
 
   /**
    * Sets the '{@link Element#getNames() <em>names</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Element#getNames() names}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Element#getNames() names}' feature.
    * @generated
    */
   public void setNames(NameList newNames) {
@@ -144,9 +149,10 @@ public class ElementNameMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -159,10 +165,13 @@ public class ElementNameMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

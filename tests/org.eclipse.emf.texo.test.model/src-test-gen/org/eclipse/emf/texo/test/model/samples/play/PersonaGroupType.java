@@ -17,26 +17,29 @@ import javax.persistence.OrderColumn;
 @Entity(name = "PersonaGroupType")
 public class PersonaGroupType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ElementCollection()
   @OrderColumn()
   @CollectionTable(name = "PersonaGroupType_persona")
   private List<String> persona = new ArrayList<String>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String groupDescription = null;
 
   /**
    * Returns the value of '<em><b>persona</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>persona</b></em>' feature
    * @generated
    */
@@ -46,9 +49,11 @@ public class PersonaGroupType {
 
   /**
    * Sets the '{@link PersonaGroupType#getPersona() <em>persona</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaGroupType#getPersona() persona}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaGroupType#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(List<String> newPersona) {
@@ -57,8 +62,9 @@ public class PersonaGroupType {
 
   /**
    * Returns the value of '<em><b>groupDescription</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupDescription</b></em>' feature
    * @generated
    */
@@ -68,9 +74,11 @@ public class PersonaGroupType {
 
   /**
    * Sets the '{@link PersonaGroupType#getGroupDescription() <em>groupDescription</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaGroupType#getGroupDescription() groupDescription}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaGroupType#getGroupDescription() groupDescription}' feature.
    * @generated
    */
   public void setGroupDescription(String newGroupDescription) {
@@ -78,9 +86,9 @@ public class PersonaGroupType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

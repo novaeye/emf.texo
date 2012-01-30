@@ -6,17 +6,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>Employee</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Employee")
 public class Employee extends Person {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Employee.class)
   @JoinColumns({ @JoinColumn() })
@@ -24,8 +25,9 @@ public class Employee extends Person {
 
   /**
    * Returns the value of '<em><b>manager</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>manager</b></em>' feature
    * @generated
    */
@@ -35,9 +37,11 @@ public class Employee extends Person {
 
   /**
    * Sets the '{@link Employee#getManager() <em>manager</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Employee#getManager() manager}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Employee#getManager() manager}' feature.
    * @generated
    */
   public void setManager(Employee newManager) {
@@ -45,9 +49,9 @@ public class Employee extends Person {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

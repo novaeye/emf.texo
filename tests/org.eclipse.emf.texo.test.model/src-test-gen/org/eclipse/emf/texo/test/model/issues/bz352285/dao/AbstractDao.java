@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.issues.bz352285.Abstract;
 import org.eclipse.emf.texo.test.model.issues.bz352285.Bz352285ModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Abstract</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AbstractDao extends BaseDao<Abstract> {
 

@@ -6,24 +6,26 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
-/** 
- * A representation of the model object '<em><b>BookOnTape</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BookOnTape</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BookOnTape")
 public class BookOnTape extends AudioVisualItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Person.class)
   @JoinColumns({ @JoinColumn() })
   private Person reader = null;
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Writer.class)
   @JoinColumns({ @JoinColumn() })
@@ -31,8 +33,9 @@ public class BookOnTape extends AudioVisualItem {
 
   /**
    * Returns the value of '<em><b>reader</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>reader</b></em>' feature
    * @generated
    */
@@ -42,9 +45,11 @@ public class BookOnTape extends AudioVisualItem {
 
   /**
    * Sets the '{@link BookOnTape#getReader() <em>reader</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookOnTape#getReader() reader}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookOnTape#getReader() reader}' feature.
    * @generated
    */
   public void setReader(Person newReader) {
@@ -53,8 +58,9 @@ public class BookOnTape extends AudioVisualItem {
 
   /**
    * Returns the value of '<em><b>author</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>author</b></em>' feature
    * @generated
    */
@@ -64,9 +70,11 @@ public class BookOnTape extends AudioVisualItem {
 
   /**
    * Sets the '{@link BookOnTape#getAuthor() <em>author</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookOnTape#getAuthor() author}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookOnTape#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(Writer newAuthor) {
@@ -74,9 +82,9 @@ public class BookOnTape extends AudioVisualItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

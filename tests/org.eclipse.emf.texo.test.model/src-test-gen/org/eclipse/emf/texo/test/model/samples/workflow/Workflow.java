@@ -9,35 +9,38 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Workflow</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Workflow")
 public class Workflow extends WorkflowElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = WorkflowNode.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<WorkflowNode> nodes = new ArrayList<WorkflowNode>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Edge.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Edge> edges = new ArrayList<Edge>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Comment.class)
   @OrderColumn()
@@ -46,8 +49,9 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>nodes</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>nodes</b></em>' feature
    * @generated
    */
@@ -57,6 +61,7 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Adds to the <em>nodes</em> feature.
+   * 
    * @generated
    */
   public void addToNodes(WorkflowNode nodesValue) {
@@ -67,8 +72,9 @@ public class Workflow extends WorkflowElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>nodes</em> feature.
+   * 
    * @generated
    */
   public void removeFromNodes(WorkflowNode nodesValue) {
@@ -77,8 +83,9 @@ public class Workflow extends WorkflowElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>nodes</em> feature.
+   * 
    * @generated
    */
   public void clearNodes() {
@@ -89,9 +96,11 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Sets the '{@link Workflow#getNodes() <em>nodes</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Workflow#getNodes() nodes}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Workflow#getNodes() nodes}' feature.
    * @generated
    */
   public void setNodes(List<WorkflowNode> newNodes) {
@@ -100,8 +109,9 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>edges</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>edges</b></em>' feature
    * @generated
    */
@@ -111,6 +121,7 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Adds to the <em>edges</em> feature.
+   * 
    * @generated
    */
   public void addToEdges(Edge edgesValue) {
@@ -121,8 +132,9 @@ public class Workflow extends WorkflowElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>edges</em> feature.
+   * 
    * @generated
    */
   public void removeFromEdges(Edge edgesValue) {
@@ -131,8 +143,9 @@ public class Workflow extends WorkflowElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>edges</em> feature.
+   * 
    * @generated
    */
   public void clearEdges() {
@@ -143,9 +156,11 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Sets the '{@link Workflow#getEdges() <em>edges</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Workflow#getEdges() edges}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Workflow#getEdges() edges}' feature.
    * @generated
    */
   public void setEdges(List<Edge> newEdges) {
@@ -154,8 +169,9 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Returns the value of '<em><b>comments</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comments</b></em>' feature
    * @generated
    */
@@ -165,6 +181,7 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Adds to the <em>comments</em> feature.
+   * 
    * @generated
    */
   public void addToComments(Comment commentsValue) {
@@ -175,8 +192,9 @@ public class Workflow extends WorkflowElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>comments</em> feature.
+   * 
    * @generated
    */
   public void removeFromComments(Comment commentsValue) {
@@ -185,8 +203,9 @@ public class Workflow extends WorkflowElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>comments</em> feature.
+   * 
    * @generated
    */
   public void clearComments() {
@@ -197,9 +216,11 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Sets the '{@link Workflow#getComments() <em>comments</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Workflow#getComments() comments}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Workflow#getComments() comments}' feature.
    * @generated
    */
   public void setComments(List<Comment> newComments) {
@@ -207,9 +228,9 @@ public class Workflow extends WorkflowElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

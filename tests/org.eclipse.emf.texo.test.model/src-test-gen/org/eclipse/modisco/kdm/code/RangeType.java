@@ -3,32 +3,35 @@ package org.eclipse.modisco.kdm.code;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>RangeType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>RangeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "RangeType")
 public class RangeType extends DerivedType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Integer lower = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Integer upper = null;
 
   /**
    * Returns the value of '<em><b>lower</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>lower</b></em>' feature
    * @generated
    */
@@ -38,9 +41,11 @@ public class RangeType extends DerivedType {
 
   /**
    * Sets the '{@link RangeType#getLower() <em>lower</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RangeType#getLower() lower}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RangeType#getLower() lower}' feature.
    * @generated
    */
   public void setLower(Integer newLower) {
@@ -49,8 +54,9 @@ public class RangeType extends DerivedType {
 
   /**
    * Returns the value of '<em><b>upper</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>upper</b></em>' feature
    * @generated
    */
@@ -60,9 +66,11 @@ public class RangeType extends DerivedType {
 
   /**
    * Sets the '{@link RangeType#getUpper() <em>upper</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RangeType#getUpper() upper}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RangeType#getUpper() upper}' feature.
    * @generated
    */
   public void setUpper(Integer newUpper) {
@@ -70,9 +78,9 @@ public class RangeType extends DerivedType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

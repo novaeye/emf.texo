@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.OddComplexNumberType;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.SubstitutionModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>OddComplexNumberType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class OddComplexNumberTypeDao extends BaseDao<OddComplexNumberType> {
 

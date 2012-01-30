@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
 
-/** 
- * A representation for the Feature Group '<em><b>SimpleAllMapType.allMap</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>SimpleAllMapType.allMap</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class SimpleAllMapTypeAllMapFeatureGroup {
 
@@ -91,27 +91,31 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String aaa;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String bbb;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String ccc;
@@ -132,8 +136,9 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * Returns the value of '<em><b>aaa</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>aaa</b></em>' feature
    * @generated
    */
@@ -143,9 +148,11 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * Sets the '{@link SimpleAllMapType#getAaa() <em>aaa</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
    * @generated
    */
   public void setAaa(String newAaa) {
@@ -155,8 +162,9 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * Returns the value of '<em><b>bbb</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>bbb</b></em>' feature
    * @generated
    */
@@ -166,9 +174,11 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * Sets the '{@link SimpleAllMapType#getBbb() <em>bbb</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
    * @generated
    */
   public void setBbb(String newBbb) {
@@ -178,8 +188,9 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * Returns the value of '<em><b>ccc</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>ccc</b></em>' feature
    * @generated
    */
@@ -189,9 +200,11 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * Sets the '{@link SimpleAllMapType#getCcc() <em>ccc</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
    * @generated
    */
   public void setCcc(String newCcc) {
@@ -201,9 +214,10 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -220,10 +234,13 @@ public class SimpleAllMapTypeAllMapFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

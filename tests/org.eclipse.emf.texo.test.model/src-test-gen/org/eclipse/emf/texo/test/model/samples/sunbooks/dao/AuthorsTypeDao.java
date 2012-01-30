@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.sunbooks.AuthorsType;
 import org.eclipse.emf.texo.test.model.samples.sunbooks.SunBooksModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>AuthorsType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AuthorsTypeDao extends BaseDao<AuthorsType> {
 

@@ -4,24 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>SpeechType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>SpeechType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "SpeechType")
 public class SpeechType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<SpeechTypeGroupFeatureGroup> group = new ArrayList<SpeechTypeGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>group</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>group</b></em>' feature
    * @generated
    */
@@ -31,9 +33,11 @@ public class SpeechType {
 
   /**
    * Sets the '{@link SpeechType#getGroup() <em>group</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getGroup() group}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<SpeechTypeGroupFeatureGroup> newGroup) {
@@ -42,8 +46,9 @@ public class SpeechType {
 
   /**
    * Returns the value of '<em><b>speaker</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>speaker</b></em>' feature
    * @generated
    */
@@ -54,9 +59,11 @@ public class SpeechType {
 
   /**
    * Sets the '{@link SpeechType#getSpeaker() <em>speaker</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
    * @generated
    */
   public void setSpeaker(List<String> newSpeaker) {
@@ -66,8 +73,9 @@ public class SpeechType {
 
   /**
    * Returns the value of '<em><b>line</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>line</b></em>' feature
    * @generated
    */
@@ -78,9 +86,11 @@ public class SpeechType {
 
   /**
    * Sets the '{@link SpeechType#getLine() <em>line</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getLine() line}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getLine() line}' feature.
    * @generated
    */
   public void setLine(List<String> newLine) {
@@ -89,8 +99,9 @@ public class SpeechType {
 
   /**
    * Returns the value of '<em><b>stageDirections</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stageDirections</b></em>' feature
    * @generated
    */
@@ -101,9 +112,11 @@ public class SpeechType {
 
   /**
    * Sets the '{@link SpeechType#getStageDirections() <em>stageDirections</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(List<String> newStageDirections) {
@@ -112,9 +125,9 @@ public class SpeechType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -140,6 +140,7 @@ public class AggregatedRelationship extends ModelElement {
 
   /**
    * Adds to the <em>relation</em> feature.
+   * 
    * @generated
    */
   public void addToRelation(KDMRelationship relationValue) {
@@ -150,8 +151,9 @@ public class AggregatedRelationship extends ModelElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>relation</em> feature.
+   * 
    * @generated
    */
   public void removeFromRelation(KDMRelationship relationValue) {
@@ -160,8 +162,9 @@ public class AggregatedRelationship extends ModelElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>relation</em> feature.
+   * 
    * @generated
    */
   public void clearRelation() {
@@ -212,9 +215,9 @@ public class AggregatedRelationship extends ModelElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

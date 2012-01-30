@@ -6,37 +6,41 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>NumberType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>NumberType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "NumberType")
 public class NumberType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<NumberTypeMySimpleAbstractGroupFeatureGroup> mySimpleAbstractGroup = new ArrayList<NumberTypeMySimpleAbstractGroupFeatureGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<NumberTypeMyComplexAbstractGroupFeatureGroup> myComplexAbstractGroup = new ArrayList<NumberTypeMyComplexAbstractGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -46,9 +50,11 @@ public class NumberType {
 
   /**
    * Sets the '{@link NumberType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link NumberType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link NumberType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -57,8 +63,9 @@ public class NumberType {
 
   /**
    * Returns the value of '<em><b>mySimpleAbstractGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mySimpleAbstractGroup</b></em>' feature
    * @generated
    */
@@ -68,9 +75,11 @@ public class NumberType {
 
   /**
    * Sets the '{@link NumberType#getMySimpleAbstractGroup() <em>mySimpleAbstractGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link NumberType#getMySimpleAbstractGroup() mySimpleAbstractGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link NumberType#getMySimpleAbstractGroup() mySimpleAbstractGroup}' feature.
    * @generated
    */
   public void setMySimpleAbstractGroup(List<NumberTypeMySimpleAbstractGroupFeatureGroup> newMySimpleAbstractGroup) {
@@ -79,8 +88,9 @@ public class NumberType {
 
   /**
    * Returns the value of '<em><b>mySimpleAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mySimpleAbstract</b></em>' feature
    * @generated
    */
@@ -91,8 +101,9 @@ public class NumberType {
 
   /**
    * Returns the value of '<em><b>myComplexAbstractGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myComplexAbstractGroup</b></em>' feature
    * @generated
    */
@@ -102,9 +113,11 @@ public class NumberType {
 
   /**
    * Sets the '{@link NumberType#getMyComplexAbstractGroup() <em>myComplexAbstractGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link NumberType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link NumberType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
    * @generated
    */
   public void setMyComplexAbstractGroup(List<NumberTypeMyComplexAbstractGroupFeatureGroup> newMyComplexAbstractGroup) {
@@ -113,8 +126,9 @@ public class NumberType {
 
   /**
    * Returns the value of '<em><b>myComplexAbstract</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>myComplexAbstract</b></em>' feature
    * @generated
    */
@@ -124,9 +138,9 @@ public class NumberType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

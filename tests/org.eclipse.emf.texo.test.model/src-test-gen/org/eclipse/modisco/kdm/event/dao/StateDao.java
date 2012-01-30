@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.event.EventModelPackage;
 import org.eclipse.modisco.kdm.event.State;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>State</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class StateDao extends BaseDao<State> {
 

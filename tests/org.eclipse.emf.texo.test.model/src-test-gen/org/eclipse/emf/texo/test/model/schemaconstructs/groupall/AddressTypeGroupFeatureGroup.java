@@ -90,20 +90,23 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String longName;
@@ -124,8 +127,9 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -135,9 +139,11 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link AddressType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -147,8 +153,9 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * Returns the value of '<em><b>longName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>longName</b></em>' feature
    * @generated
    */
@@ -158,9 +165,11 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * Sets the '{@link AddressType#getLongName() <em>longName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressType#getLongName() longName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressType#getLongName() longName}' feature.
    * @generated
    */
   public void setLongName(String newLongName) {
@@ -170,9 +179,10 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -187,10 +197,13 @@ public class AddressTypeGroupFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

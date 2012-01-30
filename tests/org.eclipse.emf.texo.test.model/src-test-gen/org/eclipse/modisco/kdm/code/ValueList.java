@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>ValueList</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ValueList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ValueList")
 public class ValueList extends ValueElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ValueElement.class)
   @OrderColumn()
@@ -28,8 +29,9 @@ public class ValueList extends ValueElement {
 
   /**
    * Returns the value of '<em><b>valueElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>valueElement</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public class ValueList extends ValueElement {
 
   /**
    * Adds to the <em>valueElement</em> feature.
+   * 
    * @generated
    */
   public void addToValueElement(ValueElement valueElementValue) {
@@ -49,8 +52,9 @@ public class ValueList extends ValueElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>valueElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromValueElement(ValueElement valueElementValue) {
@@ -59,8 +63,9 @@ public class ValueList extends ValueElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>valueElement</em> feature.
+   * 
    * @generated
    */
   public void clearValueElement() {
@@ -71,9 +76,11 @@ public class ValueList extends ValueElement {
 
   /**
    * Sets the '{@link ValueList#getValueElement() <em>valueElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ValueList#getValueElement() valueElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ValueList#getValueElement() valueElement}' feature.
    * @generated
    */
   public void setValueElement(List<ValueElement> newValueElement) {
@@ -81,9 +88,9 @@ public class ValueList extends ValueElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

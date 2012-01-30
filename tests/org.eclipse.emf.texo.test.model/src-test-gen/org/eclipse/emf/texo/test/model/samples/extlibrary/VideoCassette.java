@@ -8,17 +8,18 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>VideoCassette</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>VideoCassette</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "VideoCassette")
 public class VideoCassette extends AudioVisualItem {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Person.class)
   @OrderColumn()
@@ -27,8 +28,9 @@ public class VideoCassette extends AudioVisualItem {
 
   /**
    * Returns the value of '<em><b>cast</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cast</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class VideoCassette extends AudioVisualItem {
 
   /**
    * Adds to the <em>cast</em> feature.
+   * 
    * @generated
    */
   public void addToCast(Person castValue) {
@@ -48,8 +51,9 @@ public class VideoCassette extends AudioVisualItem {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>cast</em> feature.
+   * 
    * @generated
    */
   public void removeFromCast(Person castValue) {
@@ -58,8 +62,9 @@ public class VideoCassette extends AudioVisualItem {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>cast</em> feature.
+   * 
    * @generated
    */
   public void clearCast() {
@@ -70,9 +75,11 @@ public class VideoCassette extends AudioVisualItem {
 
   /**
    * Sets the '{@link VideoCassette#getCast() <em>cast</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link VideoCassette#getCast() cast}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link VideoCassette#getCast() cast}' feature.
    * @generated
    */
   public void setCast(List<Person> newCast) {
@@ -80,9 +87,9 @@ public class VideoCassette extends AudioVisualItem {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

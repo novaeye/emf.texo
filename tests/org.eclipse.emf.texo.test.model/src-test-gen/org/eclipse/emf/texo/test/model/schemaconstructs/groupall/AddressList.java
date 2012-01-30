@@ -5,31 +5,34 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>AddressList</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>AddressList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "AddressList")
 public class AddressList {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String groupName = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<AddressListAddrsFeatureGroup> addrs = new ArrayList<AddressListAddrsFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>groupName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupName</b></em>' feature
    * @generated
    */
@@ -39,9 +42,11 @@ public class AddressList {
 
   /**
    * Sets the '{@link AddressList#getGroupName() <em>groupName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressList#getGroupName() groupName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressList#getGroupName() groupName}' feature.
    * @generated
    */
   public void setGroupName(String newGroupName) {
@@ -50,8 +55,9 @@ public class AddressList {
 
   /**
    * Returns the value of '<em><b>addrs</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>addrs</b></em>' feature
    * @generated
    */
@@ -61,9 +67,11 @@ public class AddressList {
 
   /**
    * Sets the '{@link AddressList#getAddrs() <em>addrs</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressList#getAddrs() addrs}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressList#getAddrs() addrs}' feature.
    * @generated
    */
   public void setAddrs(List<AddressListAddrsFeatureGroup> newAddrs) {
@@ -72,8 +80,9 @@ public class AddressList {
 
   /**
    * Returns the value of '<em><b>shipTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipTo</b></em>' feature
    * @generated
    */
@@ -84,9 +93,11 @@ public class AddressList {
 
   /**
    * Sets the '{@link AddressList#getShipTo() <em>shipTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressList#getShipTo() shipTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressList#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(List<AddressType> newShipTo) {
@@ -96,8 +107,9 @@ public class AddressList {
 
   /**
    * Returns the value of '<em><b>billTo</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>billTo</b></em>' feature
    * @generated
    */
@@ -108,9 +120,11 @@ public class AddressList {
 
   /**
    * Sets the '{@link AddressList#getBillTo() <em>billTo</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link AddressList#getBillTo() billTo}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link AddressList#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(List<AddressType> newBillTo) {
@@ -119,9 +133,9 @@ public class AddressList {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -11,68 +11,76 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Item</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Item")
 public class Item extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PurchaseOrder.class)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder order = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String productName = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int quantity = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int uSPrice = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String comment = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date shipDate = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String partNum = null;
 
   /**
    * Returns the value of '<em><b>order</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>order</b></em>' feature
    * @generated
    */
@@ -82,9 +90,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getOrder() <em>order</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getOrder() order}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getOrder() order}' feature.
    * @generated
    */
   public void setOrder(PurchaseOrder newOrder) {
@@ -93,8 +103,9 @@ public class Item extends Identifiable {
 
   /**
    * Returns the value of '<em><b>productName</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>productName</b></em>' feature
    * @generated
    */
@@ -104,9 +115,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getProductName() <em>productName</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getProductName() productName}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -115,8 +128,9 @@ public class Item extends Identifiable {
 
   /**
    * Returns the value of '<em><b>quantity</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>quantity</b></em>' feature
    * @generated
    */
@@ -126,9 +140,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getQuantity() <em>quantity</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getQuantity() quantity}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(int newQuantity) {
@@ -137,8 +153,9 @@ public class Item extends Identifiable {
 
   /**
    * Returns the value of '<em><b>USPrice</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>USPrice</b></em>' feature
    * @generated
    */
@@ -148,9 +165,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getUSPrice() <em>USPrice</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getUSPrice() USPrice}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getUSPrice() USPrice}' feature.
    * @generated
    */
   public void setUSPrice(int newUSPrice) {
@@ -159,8 +178,9 @@ public class Item extends Identifiable {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -170,9 +190,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -181,8 +203,9 @@ public class Item extends Identifiable {
 
   /**
    * Returns the value of '<em><b>shipDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shipDate</b></em>' feature
    * @generated
    */
@@ -192,9 +215,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getShipDate() <em>shipDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getShipDate() shipDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {
@@ -203,8 +228,9 @@ public class Item extends Identifiable {
 
   /**
    * Returns the value of '<em><b>partNum</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>partNum</b></em>' feature
    * @generated
    */
@@ -214,9 +240,11 @@ public class Item extends Identifiable {
 
   /**
    * Sets the '{@link Item#getPartNum() <em>partNum</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Item#getPartNum() partNum}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Item#getPartNum() partNum}' feature.
    * @generated
    */
   public void setPartNum(String newPartNum) {
@@ -224,9 +252,9 @@ public class Item extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

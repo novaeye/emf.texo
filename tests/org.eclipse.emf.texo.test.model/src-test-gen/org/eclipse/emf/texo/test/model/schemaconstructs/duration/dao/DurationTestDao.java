@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.duration.DurationModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.duration.DurationTest;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>DurationTest</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class DurationTestDao extends BaseDao<DurationTest> {
 

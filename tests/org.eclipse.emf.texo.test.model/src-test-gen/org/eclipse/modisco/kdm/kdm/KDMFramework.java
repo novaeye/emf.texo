@@ -10,41 +10,45 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.ModelElement;
 
-/** 
- * A representation of the model object '<em><b>KDMFramework</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>KDMFramework</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "KDMFramework")
 public abstract class KDMFramework extends ModelElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Audit.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Audit> audit = new HashSet<Audit>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ExtensionFamily.class)
   @JoinColumns({ @JoinColumn() })
   private Set<ExtensionFamily> extension = new HashSet<ExtensionFamily>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
   /**
    * Returns the value of '<em><b>audit</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>audit</b></em>' feature
    * @generated
    */
@@ -54,6 +58,7 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Adds to the <em>audit</em> feature.
+   * 
    * @generated
    */
   public void addToAudit(Audit auditValue) {
@@ -64,8 +69,9 @@ public abstract class KDMFramework extends ModelElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>audit</em> feature.
+   * 
    * @generated
    */
   public void removeFromAudit(Audit auditValue) {
@@ -74,8 +80,9 @@ public abstract class KDMFramework extends ModelElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>audit</em> feature.
+   * 
    * @generated
    */
   public void clearAudit() {
@@ -86,9 +93,11 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Sets the '{@link KDMFramework#getAudit() <em>audit</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link KDMFramework#getAudit() audit}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link KDMFramework#getAudit() audit}' feature.
    * @generated
    */
   public void setAudit(Set<Audit> newAudit) {
@@ -97,8 +106,9 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Returns the value of '<em><b>extension</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>extension</b></em>' feature
    * @generated
    */
@@ -108,6 +118,7 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Adds to the <em>extension</em> feature.
+   * 
    * @generated
    */
   public void addToExtension(ExtensionFamily extensionValue) {
@@ -118,8 +129,9 @@ public abstract class KDMFramework extends ModelElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>extension</em> feature.
+   * 
    * @generated
    */
   public void removeFromExtension(ExtensionFamily extensionValue) {
@@ -128,8 +140,9 @@ public abstract class KDMFramework extends ModelElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>extension</em> feature.
+   * 
    * @generated
    */
   public void clearExtension() {
@@ -140,9 +153,11 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Sets the '{@link KDMFramework#getExtension() <em>extension</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link KDMFramework#getExtension() extension}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link KDMFramework#getExtension() extension}' feature.
    * @generated
    */
   public void setExtension(Set<ExtensionFamily> newExtension) {
@@ -151,8 +166,9 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -162,9 +178,11 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Sets the '{@link KDMFramework#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link KDMFramework#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link KDMFramework#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -172,9 +190,9 @@ public abstract class KDMFramework extends ModelElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

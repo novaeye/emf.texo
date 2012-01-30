@@ -9,15 +9,14 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>InventoryModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * The InventoryModel is a specific KDM model which corresponds to the physical (engineering) view of the existing
- software system. InventoryModel is a container for the instances of InventoryItems. InventoryModel corresponds to the
- inventory of the physical artifacts of the existing software system.
- * <!-- end-model-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>InventoryModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * <!-- begin-model-doc --> The InventoryModel is a specific KDM model which corresponds to the physical (engineering)
+ * view of the existing software system. InventoryModel is a container for the instances of InventoryItems.
+ * InventoryModel corresponds to the inventory of the physical artifacts of the existing software system. <!--
+ * end-model-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "InventoryModel")
 public class InventoryModel extends KDMModel {
@@ -49,6 +48,7 @@ public class InventoryModel extends KDMModel {
 
   /**
    * Adds to the <em>inventoryElement</em> feature.
+   * 
    * @generated
    */
   public void addToInventoryElement(AbstractInventoryElement inventoryElementValue) {
@@ -59,8 +59,9 @@ public class InventoryModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>inventoryElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromInventoryElement(AbstractInventoryElement inventoryElementValue) {
@@ -69,8 +70,9 @@ public class InventoryModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>inventoryElement</em> feature.
+   * 
    * @generated
    */
   public void clearInventoryElement() {
@@ -94,9 +96,9 @@ public class InventoryModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

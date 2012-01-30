@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.ui.UIEvent;
 import org.eclipse.modisco.kdm.ui.UiModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>UIEvent</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class UIEventDao extends BaseDao<UIEvent> {
 

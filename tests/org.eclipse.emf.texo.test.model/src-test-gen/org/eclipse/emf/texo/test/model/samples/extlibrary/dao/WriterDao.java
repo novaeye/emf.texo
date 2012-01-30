@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.ExtlibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.Writer;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Writer</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WriterDao extends BaseDao<Writer> {
 

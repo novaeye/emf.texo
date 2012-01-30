@@ -11,33 +11,36 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Supplier</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Supplier")
 public class Supplier extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Customer.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Customer> customers = new ArrayList<Customer>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = PurchaseOrder.class)
   @OrderColumn()
@@ -46,8 +49,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -57,9 +61,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -68,8 +74,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>customers</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>customers</b></em>' feature
    * @generated
    */
@@ -79,6 +86,7 @@ public class Supplier extends Identifiable {
 
   /**
    * Adds to the <em>customers</em> feature.
+   * 
    * @generated
    */
   public void addToCustomers(Customer customersValue) {
@@ -89,8 +97,9 @@ public class Supplier extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>customers</em> feature.
+   * 
    * @generated
    */
   public void removeFromCustomers(Customer customersValue) {
@@ -99,8 +108,9 @@ public class Supplier extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>customers</em> feature.
+   * 
    * @generated
    */
   public void clearCustomers() {
@@ -111,9 +121,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getCustomers() <em>customers</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getCustomers() customers}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getCustomers() customers}' feature.
    * @generated
    */
   public void setCustomers(List<Customer> newCustomers) {
@@ -122,8 +134,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>orders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>orders</b></em>' feature
    * @generated
    */
@@ -133,6 +146,7 @@ public class Supplier extends Identifiable {
 
   /**
    * Adds to the <em>orders</em> feature.
+   * 
    * @generated
    */
   public void addToOrders(PurchaseOrder ordersValue) {
@@ -143,8 +157,9 @@ public class Supplier extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>orders</em> feature.
+   * 
    * @generated
    */
   public void removeFromOrders(PurchaseOrder ordersValue) {
@@ -153,8 +168,9 @@ public class Supplier extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>orders</em> feature.
+   * 
    * @generated
    */
   public void clearOrders() {
@@ -165,9 +181,11 @@ public class Supplier extends Identifiable {
 
   /**
    * Sets the '{@link Supplier#getOrders() <em>orders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Supplier#getOrders() orders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Supplier#getOrders() orders}' feature.
    * @generated
    */
   public void setOrders(List<PurchaseOrder> newOrders) {
@@ -176,8 +194,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>pendingOrders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>pendingOrders</b></em>' feature
    * @generated
    */
@@ -190,8 +209,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Returns the value of '<em><b>shippedOrders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>shippedOrders</b></em>' feature
    * @generated
    */
@@ -203,9 +223,9 @@ public class Supplier extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

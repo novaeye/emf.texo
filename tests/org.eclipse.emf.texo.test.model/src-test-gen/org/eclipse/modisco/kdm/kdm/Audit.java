@@ -4,39 +4,43 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.modisco.kdm.core.Element;
 
-/** 
- * A representation of the model object '<em><b>Audit</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Audit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Audit")
 public class Audit extends Element {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String description = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String author = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String date = null;
 
   /**
    * Returns the value of '<em><b>description</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>description</b></em>' feature
    * @generated
    */
@@ -46,9 +50,11 @@ public class Audit extends Element {
 
   /**
    * Sets the '{@link Audit#getDescription() <em>description</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Audit#getDescription() description}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Audit#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -57,8 +63,9 @@ public class Audit extends Element {
 
   /**
    * Returns the value of '<em><b>author</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>author</b></em>' feature
    * @generated
    */
@@ -68,9 +75,11 @@ public class Audit extends Element {
 
   /**
    * Sets the '{@link Audit#getAuthor() <em>author</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Audit#getAuthor() author}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Audit#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(String newAuthor) {
@@ -79,8 +88,9 @@ public class Audit extends Element {
 
   /**
    * Returns the value of '<em><b>date</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>date</b></em>' feature
    * @generated
    */
@@ -90,9 +100,11 @@ public class Audit extends Element {
 
   /**
    * Sets the '{@link Audit#getDate() <em>date</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Audit#getDate() date}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Audit#getDate() date}' feature.
    * @generated
    */
   public void setDate(String newDate) {
@@ -100,9 +112,9 @@ public class Audit extends Element {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

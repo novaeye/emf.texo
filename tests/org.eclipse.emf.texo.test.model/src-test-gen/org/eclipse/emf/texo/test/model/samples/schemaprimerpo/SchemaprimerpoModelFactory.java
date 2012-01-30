@@ -18,16 +18,18 @@ import org.eclipse.emf.texo.model.ModelPackage;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.schemaprimerpo.
- * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML) representation.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * It contains code to create instances {@link ModelObject} wrappers and instances for EClasses and convert objects back
+ * and forth from their String (XML) representation. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SchemaprimerpoModelFactory implements ModelFactory {
 
   /**
-   * Creates an instance for an {@link EClass}
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eClass creates a Object instance for this EClass
+   * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClass
+   *          creates a Object instance for this EClass
    * @return an object representing the eClass
    * @generated
    */
@@ -46,13 +48,12 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps an object in a {@link ModelObject}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   *
+   * Wraps an object in a {@link ModelObject}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @param eClass
-   *            the EClass of the object
+   *          the EClass of the object
    * @param adaptee
-   *            the object being wrapped/adapted
+   *          the object being wrapped/adapted
    * @return the wrapper {@link ModelObject}
    * @generated
    */
@@ -96,8 +97,8 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map
-   * entry is null then a new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
+   * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eStructuralFeature
    *          the feature map feature of the object
@@ -118,6 +119,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DocumentRoot
    * @generated
    */
@@ -127,6 +129,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Item
    * @generated
    */
@@ -136,6 +139,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PurchaseOrder
    * @generated
    */
@@ -145,6 +149,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass USAddress
    * @generated
    */
@@ -153,10 +158,12 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if the value is null then null is returned.
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if the value is null then null is returned.
    * @generated
    */
   public Object createFromString(EDataType eDataType, String value) {
@@ -170,10 +177,12 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts an instance of an {@link EDataType} to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param eDataType the {@link EDataType} defining the type
-   * @param value the object to convert, if value == null then null is returned
+   * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eDataType
+   *          the {@link EDataType} defining the type
+   * @param value
+   *          the object to convert, if value == null then null is returned
    * @generated
    */
   public String convertToString(EDataType eDataType, Object value) {
@@ -187,9 +196,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: QuantityType to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: QuantityType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -201,9 +211,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: QuantityType from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: QuantityType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -215,9 +226,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: SKU to a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the object to convert
+   * Converts the EDataType: SKU to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
@@ -229,9 +241,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: SKU from a String.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the string value to convert to an object
+   * Creates an instance of the EDataType: SKU from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
@@ -242,10 +255,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     return value;
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
     /**
@@ -349,10 +362,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>Item</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class ItemModelObject<E extends Item> extends AbstractModelObject<E> {
     /**
@@ -461,10 +474,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends AbstractModelObject<E> {
     /**
@@ -576,10 +589,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     }
   }
 
-  /** 
-   * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+  /**
+   * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   public static class USAddressModelObject<E extends USAddress> extends AbstractModelObject<E> {
     /**

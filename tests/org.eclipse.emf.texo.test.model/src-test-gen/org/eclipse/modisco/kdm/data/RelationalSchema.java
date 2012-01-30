@@ -18,9 +18,10 @@ import org.eclipse.modisco.kdm.code.CodeItem;
 @Entity(name = "RelationalSchema")
 public class RelationalSchema extends DataContainer {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CodeItem.class)
   @JoinColumns({ @JoinColumn() })
@@ -28,8 +29,9 @@ public class RelationalSchema extends DataContainer {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public class RelationalSchema extends DataContainer {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(CodeItem codeElementValue) {
@@ -49,8 +52,9 @@ public class RelationalSchema extends DataContainer {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(CodeItem codeElementValue) {
@@ -59,8 +63,9 @@ public class RelationalSchema extends DataContainer {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -71,9 +76,11 @@ public class RelationalSchema extends DataContainer {
 
   /**
    * Sets the '{@link RelationalSchema#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RelationalSchema#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RelationalSchema#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<CodeItem> newCodeElement) {
@@ -81,9 +88,9 @@ public class RelationalSchema extends DataContainer {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -6,32 +6,35 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>RentalCarDriver</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>RentalCarDriver</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "RentalCarDriver")
 public class RentalCarDriver extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "currentDriver", optional = true, targetEntity = RentalCar.class)
   private RentalCar currentRentalCar = null;
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -41,9 +44,11 @@ public class RentalCarDriver extends Identifiable {
 
   /**
    * Sets the '{@link RentalCarDriver#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RentalCarDriver#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RentalCarDriver#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -52,8 +57,9 @@ public class RentalCarDriver extends Identifiable {
 
   /**
    * Returns the value of '<em><b>currentRentalCar</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>currentRentalCar</b></em>' feature
    * @generated
    */
@@ -63,9 +69,11 @@ public class RentalCarDriver extends Identifiable {
 
   /**
    * Sets the '{@link RentalCarDriver#getCurrentRentalCar() <em>currentRentalCar</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link RentalCarDriver#getCurrentRentalCar() currentRentalCar}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link RentalCarDriver#getCurrentRentalCar() currentRentalCar}' feature.
    * @generated
    */
   public void setCurrentRentalCar(RentalCar newCurrentRentalCar) {
@@ -73,9 +81,9 @@ public class RentalCarDriver extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

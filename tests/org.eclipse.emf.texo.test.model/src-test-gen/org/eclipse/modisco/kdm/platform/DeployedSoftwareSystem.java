@@ -7,18 +7,19 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-/** 
- * A representation of the model object '<em><b>DeployedSoftwareSystem</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation of the model object '<em><b>DeployedSoftwareSystem</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 @Entity(name = "DeployedSoftwareSystem")
 public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = DeployedComponent.class)
   @JoinTable(name = "DeployedSoftwareSystem_groupedComponent")
@@ -26,8 +27,9 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>groupedComponent</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupedComponent</b></em>' feature
    * @generated
    */
@@ -37,6 +39,7 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>groupedComponent</em> feature.
+   * 
    * @generated
    */
   public void addToGroupedComponent(DeployedComponent groupedComponentValue) {
@@ -47,8 +50,9 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>groupedComponent</em> feature.
+   * 
    * @generated
    */
   public void removeFromGroupedComponent(DeployedComponent groupedComponentValue) {
@@ -57,8 +61,9 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>groupedComponent</em> feature.
+   * 
    * @generated
    */
   public void clearGroupedComponent() {
@@ -69,9 +74,11 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link DeployedSoftwareSystem#getGroupedComponent() <em>groupedComponent</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DeployedSoftwareSystem#getGroupedComponent() groupedComponent}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DeployedSoftwareSystem#getGroupedComponent() groupedComponent}' feature.
    * @generated
    */
   public void setGroupedComponent(Set<DeployedComponent> newGroupedComponent) {
@@ -79,9 +86,9 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

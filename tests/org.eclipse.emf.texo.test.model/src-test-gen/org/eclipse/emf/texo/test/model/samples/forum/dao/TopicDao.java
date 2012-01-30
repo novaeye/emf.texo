@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.forum.ForumModelPackage;
 import org.eclipse.emf.texo.test.model.samples.forum.Topic;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Topic</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class TopicDao extends BaseDao<Topic> {
 

@@ -8,25 +8,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
-/** 
- * A representation of the model object '<em><b>Machine</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Machine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Machine")
 public class Machine extends AbstractPlatformElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DeployedComponent.class)
   @JoinColumns({ @JoinColumn() })
   private Set<DeployedComponent> deployedComponent = new HashSet<DeployedComponent>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DeployedResource.class)
   @JoinColumns({ @JoinColumn() })
@@ -34,8 +36,9 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>deployedComponent</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>deployedComponent</b></em>' feature
    * @generated
    */
@@ -45,6 +48,7 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>deployedComponent</em> feature.
+   * 
    * @generated
    */
   public void addToDeployedComponent(DeployedComponent deployedComponentValue) {
@@ -55,8 +59,9 @@ public class Machine extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>deployedComponent</em> feature.
+   * 
    * @generated
    */
   public void removeFromDeployedComponent(DeployedComponent deployedComponentValue) {
@@ -65,8 +70,9 @@ public class Machine extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>deployedComponent</em> feature.
+   * 
    * @generated
    */
   public void clearDeployedComponent() {
@@ -77,9 +83,11 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link Machine#getDeployedComponent() <em>deployedComponent</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getDeployedComponent() deployedComponent}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getDeployedComponent() deployedComponent}' feature.
    * @generated
    */
   public void setDeployedComponent(Set<DeployedComponent> newDeployedComponent) {
@@ -88,8 +96,9 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Returns the value of '<em><b>deployedResource</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>deployedResource</b></em>' feature
    * @generated
    */
@@ -99,6 +108,7 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Adds to the <em>deployedResource</em> feature.
+   * 
    * @generated
    */
   public void addToDeployedResource(DeployedResource deployedResourceValue) {
@@ -109,8 +119,9 @@ public class Machine extends AbstractPlatformElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>deployedResource</em> feature.
+   * 
    * @generated
    */
   public void removeFromDeployedResource(DeployedResource deployedResourceValue) {
@@ -119,8 +130,9 @@ public class Machine extends AbstractPlatformElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>deployedResource</em> feature.
+   * 
    * @generated
    */
   public void clearDeployedResource() {
@@ -131,9 +143,11 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Sets the '{@link Machine#getDeployedResource() <em>deployedResource</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Machine#getDeployedResource() deployedResource}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Machine#getDeployedResource() deployedResource}' feature.
    * @generated
    */
   public void setDeployedResource(Set<DeployedResource> newDeployedResource) {
@@ -141,9 +155,9 @@ public class Machine extends AbstractPlatformElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -21,9 +21,10 @@ public class SimCard {
   @Basic(optional = true)
   private String phoneNumber = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String number = null;
@@ -57,8 +58,9 @@ public class SimCard {
 
   /**
    * Returns the value of '<em><b>number</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>number</b></em>' feature
    * @generated
    */
@@ -68,9 +70,11 @@ public class SimCard {
 
   /**
    * Sets the '{@link SimCard#getNumber() <em>number</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link SimCard#getNumber() number}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link SimCard#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(String newNumber) {
@@ -78,9 +82,9 @@ public class SimCard {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

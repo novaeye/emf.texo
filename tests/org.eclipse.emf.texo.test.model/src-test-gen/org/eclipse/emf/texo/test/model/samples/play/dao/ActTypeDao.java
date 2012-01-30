@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.samples.play.ActType;
 import org.eclipse.emf.texo.test.model.samples.play.PlayModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ActType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ActTypeDao extends BaseDao<ActType> {
 

@@ -11,33 +11,36 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
-/** 
- * A representation of the model object '<em><b>BuildResource</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BuildResource</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BuildResource")
 public class BuildResource extends AbstractBuildElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @JoinTable(name = "BuildResource_implementation")
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractBuildElement.class)
   @JoinTable(name = "BuildResource_groupedBuild")
   private Set<AbstractBuildElement> groupedBuild = new HashSet<AbstractBuildElement>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractBuildElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -45,8 +48,9 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Returns the value of '<em><b>implementation</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>implementation</b></em>' feature
    * @generated
    */
@@ -56,6 +60,7 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Adds to the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void addToImplementation(KDMEntity implementationValue) {
@@ -66,8 +71,9 @@ public class BuildResource extends AbstractBuildElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void removeFromImplementation(KDMEntity implementationValue) {
@@ -76,8 +82,9 @@ public class BuildResource extends AbstractBuildElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>implementation</em> feature.
+   * 
    * @generated
    */
   public void clearImplementation() {
@@ -88,9 +95,11 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Sets the '{@link BuildResource#getImplementation() <em>implementation</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BuildResource#getImplementation() implementation}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BuildResource#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<KDMEntity> newImplementation) {
@@ -99,8 +108,9 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Returns the value of '<em><b>groupedBuild</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupedBuild</b></em>' feature
    * @generated
    */
@@ -110,6 +120,7 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Adds to the <em>groupedBuild</em> feature.
+   * 
    * @generated
    */
   public void addToGroupedBuild(AbstractBuildElement groupedBuildValue) {
@@ -120,8 +131,9 @@ public class BuildResource extends AbstractBuildElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>groupedBuild</em> feature.
+   * 
    * @generated
    */
   public void removeFromGroupedBuild(AbstractBuildElement groupedBuildValue) {
@@ -130,8 +142,9 @@ public class BuildResource extends AbstractBuildElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>groupedBuild</em> feature.
+   * 
    * @generated
    */
   public void clearGroupedBuild() {
@@ -142,9 +155,11 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Sets the '{@link BuildResource#getGroupedBuild() <em>groupedBuild</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BuildResource#getGroupedBuild() groupedBuild}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BuildResource#getGroupedBuild() groupedBuild}' feature.
    * @generated
    */
   public void setGroupedBuild(Set<AbstractBuildElement> newGroupedBuild) {
@@ -153,8 +168,9 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Returns the value of '<em><b>buildElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>buildElement</b></em>' feature
    * @generated
    */
@@ -164,6 +180,7 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Adds to the <em>buildElement</em> feature.
+   * 
    * @generated
    */
   public void addToBuildElement(AbstractBuildElement buildElementValue) {
@@ -174,8 +191,9 @@ public class BuildResource extends AbstractBuildElement {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>buildElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromBuildElement(AbstractBuildElement buildElementValue) {
@@ -184,8 +202,9 @@ public class BuildResource extends AbstractBuildElement {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>buildElement</em> feature.
+   * 
    * @generated
    */
   public void clearBuildElement() {
@@ -196,9 +215,11 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Sets the '{@link BuildResource#getBuildElement() <em>buildElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BuildResource#getBuildElement() buildElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BuildResource#getBuildElement() buildElement}' feature.
    * @generated
    */
   public void setBuildElement(Set<AbstractBuildElement> newBuildElement) {
@@ -206,9 +227,9 @@ public class BuildResource extends AbstractBuildElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

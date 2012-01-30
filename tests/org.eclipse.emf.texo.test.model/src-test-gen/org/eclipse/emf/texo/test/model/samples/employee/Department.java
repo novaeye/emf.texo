@@ -10,24 +10,26 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>Department</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Department</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Department")
 public class Department {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Employee.class)
   @OrderColumn()
@@ -44,8 +46,9 @@ public class Department {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -55,9 +58,11 @@ public class Department {
 
   /**
    * Sets the '{@link Department#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Department#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Department#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -66,8 +71,9 @@ public class Department {
 
   /**
    * Returns the value of '<em><b>employees</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>employees</b></em>' feature
    * @generated
    */
@@ -77,6 +83,7 @@ public class Department {
 
   /**
    * Adds to the <em>employees</em> feature.
+   * 
    * @generated
    */
   public void addToEmployees(Employee employeesValue) {
@@ -87,8 +94,9 @@ public class Department {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>employees</em> feature.
+   * 
    * @generated
    */
   public void removeFromEmployees(Employee employeesValue) {
@@ -97,8 +105,9 @@ public class Department {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>employees</em> feature.
+   * 
    * @generated
    */
   public void clearEmployees() {
@@ -109,9 +118,11 @@ public class Department {
 
   /**
    * Sets the '{@link Department#getEmployees() <em>employees</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Department#getEmployees() employees}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Department#getEmployees() employees}' feature.
    * @generated
    */
   public void setEmployees(List<Employee> newEmployees) {
@@ -119,9 +130,9 @@ public class Department {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

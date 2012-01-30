@@ -10,11 +10,11 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
-/** 
- * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
- * <!-- begin-user-doc --> <!--
+/**
+ * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
- * @generated 
+ * 
+ * @generated
  */
 public class DocumentRootMixedFeatureGroup {
 
@@ -95,143 +95,163 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private Feature feature = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String text;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String cDATA;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private String comment;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ActType.class)
   @JoinColumns({ @JoinColumn() })
   private ActType act;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = FmType.class)
   @JoinColumns({ @JoinColumn() })
   private FmType fm;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String groupDescription;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String line;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String p;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String persona;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaeType.class)
   @JoinColumns({ @JoinColumn() })
   private PersonaeType personae;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaGroupType.class)
   @JoinColumns({ @JoinColumn() })
   private PersonaGroupType personaGroup;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PlayType.class)
   @JoinColumns({ @JoinColumn() })
   private PlayType play;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String playSubTitle;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SceneType.class)
   @JoinColumns({ @JoinColumn() })
   private SceneType scene;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String sceneDescription;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String speaker;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SpeechType.class)
   @JoinColumns({ @JoinColumn() })
   private SpeechType speech;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String stageDirections;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String title;
@@ -252,8 +272,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>text</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>text</b></em>' feature
    * @generated
    */
@@ -263,9 +284,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -275,8 +298,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>cDATA</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cDATA</b></em>' feature
    * @generated
    */
@@ -286,9 +310,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -298,8 +324,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>comment</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>comment</b></em>' feature
    * @generated
    */
@@ -309,9 +336,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -321,8 +350,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>act</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>act</b></em>' feature
    * @generated
    */
@@ -332,9 +362,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getAct() <em>act</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getAct() act}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getAct() act}' feature.
    * @generated
    */
   public void setAct(ActType newAct) {
@@ -344,8 +376,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>fm</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>fm</b></em>' feature
    * @generated
    */
@@ -355,9 +388,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getFm() <em>fm</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getFm() fm}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getFm() fm}' feature.
    * @generated
    */
   public void setFm(FmType newFm) {
@@ -367,8 +402,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>groupDescription</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>groupDescription</b></em>' feature
    * @generated
    */
@@ -378,9 +414,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getGroupDescription() <em>groupDescription</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getGroupDescription() groupDescription}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getGroupDescription() groupDescription}' feature.
    * @generated
    */
   public void setGroupDescription(String newGroupDescription) {
@@ -390,8 +428,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>line</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>line</b></em>' feature
    * @generated
    */
@@ -401,9 +440,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getLine() <em>line</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getLine() line}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getLine() line}' feature.
    * @generated
    */
   public void setLine(String newLine) {
@@ -413,8 +454,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>p</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>p</b></em>' feature
    * @generated
    */
@@ -424,9 +466,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getP() <em>p</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getP() p}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getP() p}' feature.
    * @generated
    */
   public void setP(String newP) {
@@ -436,8 +480,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>persona</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>persona</b></em>' feature
    * @generated
    */
@@ -447,9 +492,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getPersona() <em>persona</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getPersona() persona}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(String newPersona) {
@@ -459,8 +506,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>personae</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>personae</b></em>' feature
    * @generated
    */
@@ -470,9 +518,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getPersonae() <em>personae</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getPersonae() personae}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getPersonae() personae}' feature.
    * @generated
    */
   public void setPersonae(PersonaeType newPersonae) {
@@ -482,8 +532,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>personaGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>personaGroup</b></em>' feature
    * @generated
    */
@@ -493,9 +544,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getPersonaGroup() <em>personaGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getPersonaGroup() personaGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getPersonaGroup() personaGroup}' feature.
    * @generated
    */
   public void setPersonaGroup(PersonaGroupType newPersonaGroup) {
@@ -505,8 +558,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>play</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>play</b></em>' feature
    * @generated
    */
@@ -516,9 +570,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getPlay() <em>play</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getPlay() play}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getPlay() play}' feature.
    * @generated
    */
   public void setPlay(PlayType newPlay) {
@@ -528,8 +584,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>playSubTitle</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>playSubTitle</b></em>' feature
    * @generated
    */
@@ -539,9 +596,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getPlaySubTitle() <em>playSubTitle</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getPlaySubTitle() playSubTitle}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getPlaySubTitle() playSubTitle}' feature.
    * @generated
    */
   public void setPlaySubTitle(String newPlaySubTitle) {
@@ -551,8 +610,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>scene</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>scene</b></em>' feature
    * @generated
    */
@@ -562,9 +622,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getScene() <em>scene</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getScene() scene}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getScene() scene}' feature.
    * @generated
    */
   public void setScene(SceneType newScene) {
@@ -574,8 +636,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>sceneDescription</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>sceneDescription</b></em>' feature
    * @generated
    */
@@ -585,9 +648,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getSceneDescription() <em>sceneDescription</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getSceneDescription() sceneDescription}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getSceneDescription() sceneDescription}' feature.
    * @generated
    */
   public void setSceneDescription(String newSceneDescription) {
@@ -597,8 +662,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>speaker</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>speaker</b></em>' feature
    * @generated
    */
@@ -608,9 +674,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getSpeaker() <em>speaker</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getSpeaker() speaker}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getSpeaker() speaker}' feature.
    * @generated
    */
   public void setSpeaker(String newSpeaker) {
@@ -620,8 +688,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>speech</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>speech</b></em>' feature
    * @generated
    */
@@ -631,9 +700,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getSpeech() <em>speech</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getSpeech() speech}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getSpeech() speech}' feature.
    * @generated
    */
   public void setSpeech(SpeechType newSpeech) {
@@ -643,8 +714,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>stageDirections</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stageDirections</b></em>' feature
    * @generated
    */
@@ -654,9 +726,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getStageDirections() <em>stageDirections</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getStageDirections() stageDirections}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
@@ -666,8 +740,9 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -677,9 +752,11 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * Sets the '{@link DocumentRoot#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -689,9 +766,10 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public Object getValue() {
     switch (getFeature()) {
@@ -740,10 +818,13 @@ public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param feature the feature to set
-   * @param the value to set in this instance
+   * 
+   * @param feature
+   *          the feature to set
+   * @param the
+   *          value to set in this instance
    * @see #getFeature()
-   * @generated 
+   * @generated
    */
   public void setValue(Feature feature, Object value) {
     switch (feature) {

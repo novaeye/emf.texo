@@ -3,32 +3,35 @@ package org.eclipse.modisco.kdm.code;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>ParameterUnit</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ParameterUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ParameterUnit")
 public class ParameterUnit extends DataElement {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private ParameterKind kind = ParameterKind.BYVALUE;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private Integer pos = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>kind</b></em>' feature
    * @generated
    */
@@ -38,9 +41,11 @@ public class ParameterUnit extends DataElement {
 
   /**
    * Sets the '{@link ParameterUnit#getKind() <em>kind</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ParameterUnit#getKind() kind}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ParameterUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(ParameterKind newKind) {
@@ -49,8 +54,9 @@ public class ParameterUnit extends DataElement {
 
   /**
    * Returns the value of '<em><b>pos</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>pos</b></em>' feature
    * @generated
    */
@@ -60,9 +66,11 @@ public class ParameterUnit extends DataElement {
 
   /**
    * Sets the '{@link ParameterUnit#getPos() <em>pos</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ParameterUnit#getPos() pos}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ParameterUnit#getPos() pos}' feature.
    * @generated
    */
   public void setPos(Integer newPos) {
@@ -70,9 +78,9 @@ public class ParameterUnit extends DataElement {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.ContentAttribute;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>ContentAttribute</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ContentAttributeDao extends BaseDao<ContentAttribute> {
 

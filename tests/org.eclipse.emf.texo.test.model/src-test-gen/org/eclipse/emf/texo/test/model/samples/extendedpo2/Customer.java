@@ -10,24 +10,26 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>Customer</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Customer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Customer")
 public class Customer extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private int customerID = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PurchaseOrder.class)
   @OrderColumn()
@@ -36,8 +38,9 @@ public class Customer extends Identifiable {
 
   /**
    * Returns the value of '<em><b>customerID</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>customerID</b></em>' feature
    * @generated
    */
@@ -47,9 +50,11 @@ public class Customer extends Identifiable {
 
   /**
    * Sets the '{@link Customer#getCustomerID() <em>customerID</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Customer#getCustomerID() customerID}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Customer#getCustomerID() customerID}' feature.
    * @generated
    */
   public void setCustomerID(int newCustomerID) {
@@ -58,8 +63,9 @@ public class Customer extends Identifiable {
 
   /**
    * Returns the value of '<em><b>orders</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>orders</b></em>' feature
    * @generated
    */
@@ -69,6 +75,7 @@ public class Customer extends Identifiable {
 
   /**
    * Adds to the <em>orders</em> feature.
+   * 
    * @generated
    */
   public void addToOrders(PurchaseOrder ordersValue) {
@@ -79,8 +86,9 @@ public class Customer extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>orders</em> feature.
+   * 
    * @generated
    */
   public void removeFromOrders(PurchaseOrder ordersValue) {
@@ -89,8 +97,9 @@ public class Customer extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>orders</em> feature.
+   * 
    * @generated
    */
   public void clearOrders() {
@@ -101,9 +110,11 @@ public class Customer extends Identifiable {
 
   /**
    * Sets the '{@link Customer#getOrders() <em>orders</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Customer#getOrders() orders}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Customer#getOrders() orders}' feature.
    * @generated
    */
   public void setOrders(List<PurchaseOrder> newOrders) {
@@ -111,9 +122,9 @@ public class Customer extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

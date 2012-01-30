@@ -8,68 +8,67 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 
-/** 
- * A representation of the model object '<em><b>DocumentRoot</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 public class DocumentRoot {
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   private List<DocumentRootMixedFeatureGroup> mixed = new ArrayList<DocumentRootMixedFeatureGroup>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @ElementCollection()
   @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @ElementCollection()
   @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String id = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String title = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String type = null;
 
   /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>mixed</b></em>' feature
    * @generated
    */
@@ -79,10 +78,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getMixed() <em>mixed</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -91,9 +91,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>xMLNSPrefixMap</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>xMLNSPrefixMap</b></em>' feature
    * @generated
    */
@@ -103,10 +103,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getXMLNSPrefixMap() <em>xMLNSPrefixMap</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -115,9 +116,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>xSISchemaLocation</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>xSISchemaLocation</b></em>' feature
    * @generated
    */
@@ -127,10 +128,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getXSISchemaLocation() <em>xSISchemaLocation</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -139,9 +141,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>id</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>id</b></em>' feature
    * @generated
    */
@@ -151,10 +153,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getId() <em>id</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getId() id}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getId() id}' feature.
    * @generated
    */
   public void setId(String newId) {
@@ -163,9 +166,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -175,10 +178,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getTitle() <em>title</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getTitle() title}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -187,9 +191,9 @@ public class DocumentRoot {
 
   /**
    * Returns the value of '<em><b>type</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>type</b></em>' feature
    * @generated
    */
@@ -199,10 +203,11 @@ public class DocumentRoot {
 
   /**
    * Sets the '{@link DocumentRoot#getType() <em>type</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link DocumentRoot#getType() type}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getType() type}' feature.
    * @generated
    */
   public void setType(String newType) {
@@ -210,9 +215,9 @@ public class DocumentRoot {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.data.AllContent;
 import org.eclipse.modisco.kdm.data.DataModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>AllContent</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class AllContentDao extends BaseDao<AllContent> {
 

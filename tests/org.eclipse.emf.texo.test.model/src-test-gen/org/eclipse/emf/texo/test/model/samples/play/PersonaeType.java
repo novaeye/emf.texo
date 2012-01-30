@@ -4,24 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 
-/** 
- * A representation of the model object '<em><b>PersonaeType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>PersonaeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "PersonaeType")
 public class PersonaeType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   private List<PersonaeTypeGroupFeatureGroup> group = new ArrayList<PersonaeTypeGroupFeatureGroup>();
 
   /**
    * Returns the value of '<em><b>group</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>group</b></em>' feature
    * @generated
    */
@@ -31,9 +33,11 @@ public class PersonaeType {
 
   /**
    * Sets the '{@link PersonaeType#getGroup() <em>group</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getGroup() group}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<PersonaeTypeGroupFeatureGroup> newGroup) {
@@ -42,8 +46,9 @@ public class PersonaeType {
 
   /**
    * Returns the value of '<em><b>title</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
@@ -54,9 +59,11 @@ public class PersonaeType {
 
   /**
    * Sets the '{@link PersonaeType#getTitle() <em>title</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getTitle() title}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(List<String> newTitle) {
@@ -66,8 +73,9 @@ public class PersonaeType {
 
   /**
    * Returns the value of '<em><b>persona</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>persona</b></em>' feature
    * @generated
    */
@@ -78,9 +86,11 @@ public class PersonaeType {
 
   /**
    * Sets the '{@link PersonaeType#getPersona() <em>persona</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getPersona() persona}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(List<String> newPersona) {
@@ -90,8 +100,9 @@ public class PersonaeType {
 
   /**
    * Returns the value of '<em><b>personaGroup</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>personaGroup</b></em>' feature
    * @generated
    */
@@ -102,9 +113,11 @@ public class PersonaeType {
 
   /**
    * Sets the '{@link PersonaeType#getPersonaGroup() <em>personaGroup</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
    * @generated
    */
   public void setPersonaGroup(List<PersonaGroupType> newPersonaGroup) {
@@ -113,9 +126,9 @@ public class PersonaeType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

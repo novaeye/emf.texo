@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.platform.PlatformModelPackage;
 import org.eclipse.modisco.kdm.platform.WritesResource;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>WritesResource</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class WritesResourceDao extends BaseDao<WritesResource> {
 

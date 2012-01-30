@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>MachineList</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>MachineList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "MachineList")
 public class MachineList {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Machine.class)
   @OrderColumn()
@@ -28,8 +29,9 @@ public class MachineList {
 
   /**
    * Returns the value of '<em><b>machines</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>machines</b></em>' feature
    * @generated
    */
@@ -39,6 +41,7 @@ public class MachineList {
 
   /**
    * Adds to the <em>machines</em> feature.
+   * 
    * @generated
    */
   public void addToMachines(Machine machinesValue) {
@@ -49,8 +52,9 @@ public class MachineList {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>machines</em> feature.
+   * 
    * @generated
    */
   public void removeFromMachines(Machine machinesValue) {
@@ -59,8 +63,9 @@ public class MachineList {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>machines</em> feature.
+   * 
    * @generated
    */
   public void clearMachines() {
@@ -71,9 +76,11 @@ public class MachineList {
 
   /**
    * Sets the '{@link MachineList#getMachines() <em>machines</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link MachineList#getMachines() machines}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link MachineList#getMachines() machines}' feature.
    * @generated
    */
   public void setMachines(List<Machine> newMachines) {
@@ -81,9 +88,9 @@ public class MachineList {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

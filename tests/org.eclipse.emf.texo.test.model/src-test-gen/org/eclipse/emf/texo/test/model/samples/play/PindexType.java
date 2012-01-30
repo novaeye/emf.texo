@@ -5,15 +5,15 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>PindexType</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>PindexType</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum PindexType {
   /**
-   * The enum: _1
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: _1 <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   _1(0, "_1", "1") {
@@ -28,8 +28,8 @@ public enum PindexType {
     }
   },
   /**
-   * The enum: _2
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: _2 <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   _2(1, "_2", "2") {
@@ -45,24 +45,24 @@ public enum PindexType {
   };
 
   /**
-   * An array of all the '<em><b>PindexType</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>PindexType</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final PindexType[] VALUES_ARRAY = new PindexType[] { _1, _2 };
 
   /**
-   * A public read-only list of all the '<em><b>PindexType</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>PindexType</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<PindexType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>PindexType</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>PindexType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static PindexType get(String literal) {
@@ -92,9 +92,9 @@ public enum PindexType {
   }
 
   /**
-   * Returns the '<em><b>PindexType</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>PindexType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static PindexType get(int value) {
@@ -108,25 +108,28 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private PindexType(int value, String name, String literal) {
@@ -137,6 +140,7 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -146,6 +150,7 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -155,6 +160,7 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -163,6 +169,7 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -171,6 +178,7 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -179,6 +187,7 @@ public enum PindexType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

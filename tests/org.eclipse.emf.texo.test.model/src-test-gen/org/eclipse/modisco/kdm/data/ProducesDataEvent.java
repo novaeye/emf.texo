@@ -17,17 +17,19 @@ import org.eclipse.modisco.kdm.action.ActionElement;
 @Entity(name = "ProducesDataEvent")
 public class ProducesDataEvent extends AbstractActionRelationship {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = DataEvent.class)
   @JoinColumns({ @JoinColumn() })
   private DataEvent to = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = ActionElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -35,8 +37,9 @@ public class ProducesDataEvent extends AbstractActionRelationship {
 
   /**
    * Returns the value of '<em><b>to</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>to</b></em>' feature
    * @generated
    */
@@ -46,9 +49,11 @@ public class ProducesDataEvent extends AbstractActionRelationship {
 
   /**
    * Sets the '{@link ProducesDataEvent#getTo() <em>to</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ProducesDataEvent#getTo() to}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ProducesDataEvent#getTo() to}' feature.
    * @generated
    */
   public void setTo(DataEvent newTo) {
@@ -57,8 +62,9 @@ public class ProducesDataEvent extends AbstractActionRelationship {
 
   /**
    * Returns the value of '<em><b>from</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>from</b></em>' feature
    * @generated
    */
@@ -68,9 +74,11 @@ public class ProducesDataEvent extends AbstractActionRelationship {
 
   /**
    * Sets the '{@link ProducesDataEvent#getFrom() <em>from</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ProducesDataEvent#getFrom() from}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ProducesDataEvent#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {
@@ -78,9 +86,9 @@ public class ProducesDataEvent extends AbstractActionRelationship {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

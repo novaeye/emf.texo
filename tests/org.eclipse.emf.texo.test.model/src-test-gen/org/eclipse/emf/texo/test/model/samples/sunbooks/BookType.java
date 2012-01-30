@@ -10,83 +10,93 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>BookType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>BookType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "BookType")
 public class BookType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private long iSBN = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String price = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = AuthorsType.class)
   @JoinColumns({ @JoinColumn() })
   private AuthorsType authors = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String description = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = PromotionType.class)
   @JoinColumns({ @JoinColumn() })
   private PromotionType promotion = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date publicationDate = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private BookCategoryType1 bookCategory = BookCategoryType1.MAGAZINE;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String itemId = null;
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -96,9 +106,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -107,8 +119,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>iSBN</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>iSBN</b></em>' feature
    * @generated
    */
@@ -118,9 +131,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getISBN() <em>iSBN</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getISBN() iSBN}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getISBN() iSBN}' feature.
    * @generated
    */
   public void setISBN(long newISBN) {
@@ -129,8 +144,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>price</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>price</b></em>' feature
    * @generated
    */
@@ -140,9 +156,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getPrice() <em>price</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getPrice() price}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getPrice() price}' feature.
    * @generated
    */
   public void setPrice(String newPrice) {
@@ -151,8 +169,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>authors</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>authors</b></em>' feature
    * @generated
    */
@@ -162,9 +181,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getAuthors() <em>authors</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getAuthors() authors}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getAuthors() authors}' feature.
    * @generated
    */
   public void setAuthors(AuthorsType newAuthors) {
@@ -173,8 +194,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>description</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>description</b></em>' feature
    * @generated
    */
@@ -184,9 +206,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getDescription() <em>description</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getDescription() description}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -195,8 +219,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>promotion</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>promotion</b></em>' feature
    * @generated
    */
@@ -206,9 +231,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getPromotion() <em>promotion</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getPromotion() promotion}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getPromotion() promotion}' feature.
    * @generated
    */
   public void setPromotion(PromotionType newPromotion) {
@@ -217,8 +244,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>publicationDate</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>publicationDate</b></em>' feature
    * @generated
    */
@@ -228,9 +256,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getPublicationDate() <em>publicationDate</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getPublicationDate() publicationDate}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getPublicationDate() publicationDate}' feature.
    * @generated
    */
   public void setPublicationDate(Date newPublicationDate) {
@@ -239,8 +269,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>bookCategory</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>bookCategory</b></em>' feature
    * @generated
    */
@@ -250,9 +281,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getBookCategory() <em>bookCategory</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getBookCategory() bookCategory}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getBookCategory() bookCategory}' feature.
    * @generated
    */
   public void setBookCategory(BookCategoryType1 newBookCategory) {
@@ -261,8 +294,9 @@ public class BookType {
 
   /**
    * Returns the value of '<em><b>itemId</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>itemId</b></em>' feature
    * @generated
    */
@@ -272,9 +306,11 @@ public class BookType {
 
   /**
    * Sets the '{@link BookType#getItemId() <em>itemId</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link BookType#getItemId() itemId}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link BookType#getItemId() itemId}' feature.
    * @generated
    */
   public void setItemId(String newItemId) {
@@ -282,9 +318,9 @@ public class BookType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

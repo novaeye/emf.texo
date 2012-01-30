@@ -11,33 +11,36 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
-/** 
- * A representation of the model object '<em><b>JournalGroup</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>JournalGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "JournalGroup")
 public class JournalGroup extends Identifiable {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = false)
   private String name = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = JournalGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<JournalGroup> journalGroups = new ArrayList<JournalGroup>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = JournalStatement.class)
   @OrderColumn()
@@ -46,8 +49,9 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -57,9 +61,11 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Sets the '{@link JournalGroup#getName() <em>name</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalGroup#getName() name}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalGroup#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -68,8 +74,9 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>journalGroups</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>journalGroups</b></em>' feature
    * @generated
    */
@@ -79,6 +86,7 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Adds to the <em>journalGroups</em> feature.
+   * 
    * @generated
    */
   public void addToJournalGroups(JournalGroup journalGroupsValue) {
@@ -89,8 +97,9 @@ public class JournalGroup extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>journalGroups</em> feature.
+   * 
    * @generated
    */
   public void removeFromJournalGroups(JournalGroup journalGroupsValue) {
@@ -99,8 +108,9 @@ public class JournalGroup extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>journalGroups</em> feature.
+   * 
    * @generated
    */
   public void clearJournalGroups() {
@@ -111,9 +121,11 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Sets the '{@link JournalGroup#getJournalGroups() <em>journalGroups</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalGroup#getJournalGroups() journalGroups}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalGroup#getJournalGroups() journalGroups}' feature.
    * @generated
    */
   public void setJournalGroups(List<JournalGroup> newJournalGroups) {
@@ -122,8 +134,9 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Returns the value of '<em><b>journalStatements</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>journalStatements</b></em>' feature
    * @generated
    */
@@ -133,6 +146,7 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Adds to the <em>journalStatements</em> feature.
+   * 
    * @generated
    */
   public void addToJournalStatements(JournalStatement journalStatementsValue) {
@@ -143,8 +157,9 @@ public class JournalGroup extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>journalStatements</em> feature.
+   * 
    * @generated
    */
   public void removeFromJournalStatements(JournalStatement journalStatementsValue) {
@@ -153,8 +168,9 @@ public class JournalGroup extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>journalStatements</em> feature.
+   * 
    * @generated
    */
   public void clearJournalStatements() {
@@ -165,9 +181,11 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Sets the '{@link JournalGroup#getJournalStatements() <em>journalStatements</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link JournalGroup#getJournalStatements() journalStatements}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link JournalGroup#getJournalStatements() journalStatements}' feature.
    * @generated
    */
   public void setJournalStatements(List<JournalStatement> newJournalStatements) {
@@ -175,9 +193,9 @@ public class JournalGroup extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

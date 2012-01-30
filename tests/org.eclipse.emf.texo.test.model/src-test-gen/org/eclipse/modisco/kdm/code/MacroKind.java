@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>MacroKind</b></em>'.
- * <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>MacroKind</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public enum MacroKind {
 
   /**
-   * The enum: REGULAR
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: REGULAR <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   REGULAR(0, "regular", "regular") {
@@ -29,8 +29,8 @@ public enum MacroKind {
     }
   },
   /**
-   * The enum: OPTION
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: OPTION <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   OPTION(1, "option", "option") {
@@ -45,8 +45,8 @@ public enum MacroKind {
     }
   },
   /**
-   * The enum: UNDEFINED
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: UNDEFINED <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   UNDEFINED(2, "undefined", "undefined") {
@@ -61,8 +61,8 @@ public enum MacroKind {
     }
   },
   /**
-   * The enum: EXTERNAL
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EXTERNAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   EXTERNAL(3, "external", "external") {
@@ -77,8 +77,8 @@ public enum MacroKind {
     }
   },
   /**
-   * The enum: UNKNOWN
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: UNKNOWN <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   UNKNOWN(4, "unknown", "unknown") {
@@ -94,24 +94,24 @@ public enum MacroKind {
   };
 
   /**
-   * An array of all the '<em><b>MacroKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>MacroKind</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private static final MacroKind[] VALUES_ARRAY = new MacroKind[] { REGULAR, OPTION, UNDEFINED, EXTERNAL, UNKNOWN };
 
   /**
-   * A public read-only list of all the '<em><b>MacroKind</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>MacroKind</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<MacroKind> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>MacroKind</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MacroKind</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MacroKind get(String literal) {
@@ -141,9 +141,9 @@ public enum MacroKind {
   }
 
   /**
-   * Returns the '<em><b>MacroKind</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>MacroKind</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static MacroKind get(int value) {
@@ -157,25 +157,28 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private MacroKind(int value, String name, String literal) {
@@ -186,6 +189,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -195,6 +199,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -204,6 +209,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -213,6 +219,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -222,6 +229,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return false, is overridden by actual enum types.
    * @generated
    */
@@ -231,6 +239,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -239,6 +248,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -247,6 +257,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -255,6 +266,7 @@ public enum MacroKind {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the literal value of the enumerator, which is its string representation.
    * @generated
    */

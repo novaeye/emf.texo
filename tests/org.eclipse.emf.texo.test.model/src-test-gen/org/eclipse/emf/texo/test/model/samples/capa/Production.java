@@ -6,60 +6,67 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/** 
- * A representation of the model object '<em><b>Production</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Production</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "Production")
 public class Production {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String article = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date dueTime = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private float missingAmount = 0.0f;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private String productionId = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Temporal(TemporalType.DATE)
   private Date startTime = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @Basic(optional = true)
   private float totalAmount = 0.0f;
 
   /**
    * Returns the value of '<em><b>article</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>article</b></em>' feature
    * @generated
    */
@@ -69,9 +76,11 @@ public class Production {
 
   /**
    * Sets the '{@link Production#getArticle() <em>article</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Production#getArticle() article}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Production#getArticle() article}' feature.
    * @generated
    */
   public void setArticle(String newArticle) {
@@ -80,8 +89,9 @@ public class Production {
 
   /**
    * Returns the value of '<em><b>dueTime</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>dueTime</b></em>' feature
    * @generated
    */
@@ -91,9 +101,11 @@ public class Production {
 
   /**
    * Sets the '{@link Production#getDueTime() <em>dueTime</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Production#getDueTime() dueTime}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Production#getDueTime() dueTime}' feature.
    * @generated
    */
   public void setDueTime(Date newDueTime) {
@@ -102,8 +114,9 @@ public class Production {
 
   /**
    * Returns the value of '<em><b>missingAmount</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>missingAmount</b></em>' feature
    * @generated
    */
@@ -113,9 +126,11 @@ public class Production {
 
   /**
    * Sets the '{@link Production#getMissingAmount() <em>missingAmount</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Production#getMissingAmount() missingAmount}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Production#getMissingAmount() missingAmount}' feature.
    * @generated
    */
   public void setMissingAmount(float newMissingAmount) {
@@ -124,8 +139,9 @@ public class Production {
 
   /**
    * Returns the value of '<em><b>productionId</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>productionId</b></em>' feature
    * @generated
    */
@@ -135,9 +151,11 @@ public class Production {
 
   /**
    * Sets the '{@link Production#getProductionId() <em>productionId</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Production#getProductionId() productionId}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Production#getProductionId() productionId}' feature.
    * @generated
    */
   public void setProductionId(String newProductionId) {
@@ -146,8 +164,9 @@ public class Production {
 
   /**
    * Returns the value of '<em><b>startTime</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>startTime</b></em>' feature
    * @generated
    */
@@ -157,9 +176,11 @@ public class Production {
 
   /**
    * Sets the '{@link Production#getStartTime() <em>startTime</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Production#getStartTime() startTime}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Production#getStartTime() startTime}' feature.
    * @generated
    */
   public void setStartTime(Date newStartTime) {
@@ -168,8 +189,9 @@ public class Production {
 
   /**
    * Returns the value of '<em><b>totalAmount</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>totalAmount</b></em>' feature
    * @generated
    */
@@ -179,9 +201,11 @@ public class Production {
 
   /**
    * Sets the '{@link Production#getTotalAmount() <em>totalAmount</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link Production#getTotalAmount() totalAmount}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link Production#getTotalAmount() totalAmount}' feature.
    * @generated
    */
   public void setTotalAmount(float newTotalAmount) {
@@ -189,9 +213,9 @@ public class Production {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

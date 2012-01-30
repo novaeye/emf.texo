@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.Implements;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Implements</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class ImplementsDao extends BaseDao<Implements> {
 

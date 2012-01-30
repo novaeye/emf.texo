@@ -14,30 +14,29 @@ import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
-/** 
- * A representation of the model object '<em><b>Writer</b></em>'.
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @TestAnnotationOne("type")
 @Entity(name = "Writer")
 @Table(name = "Writer")
 public class Writer extends Identifiable {
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @Basic(optional = true)
   @Column(name = "name")
   private String name = null;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Book.class)
   @OrderColumn(name = "ind")
@@ -46,9 +45,9 @@ public class Writer extends Identifiable {
 
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
@@ -58,10 +57,11 @@ public class Writer extends Identifiable {
 
   /**
    * Sets the '{@link Writer#getName() <em>name</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Writer#getName() name}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Writer#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -70,9 +70,9 @@ public class Writer extends Identifiable {
 
   /**
    * Returns the value of '<em><b>books</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>books</b></em>' feature
    * @generated
    */
@@ -82,6 +82,7 @@ public class Writer extends Identifiable {
 
   /**
    * Adds to the <em>books</em> feature.
+   * 
    * @generated
    */
   public void addToBooks(Book booksValue) {
@@ -92,8 +93,9 @@ public class Writer extends Identifiable {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>books</em> feature.
+   * 
    * @generated
    */
   public void removeFromBooks(Book booksValue) {
@@ -102,8 +104,9 @@ public class Writer extends Identifiable {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>books</em> feature.
+   * 
    * @generated
    */
   public void clearBooks() {
@@ -114,10 +117,11 @@ public class Writer extends Identifiable {
 
   /**
    * Sets the '{@link Writer#getBooks() <em>books</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link Writer#getBooks() books}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link Writer#getBooks() books}' feature.
    * @generated
    */
   public void setBooks(List<Book> newBooks) {
@@ -125,9 +129,9 @@ public class Writer extends Identifiable {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
    * @generated
    */
   @Override

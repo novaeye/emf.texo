@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.qname.Mytest;
 import org.eclipse.emf.texo.test.model.schemaconstructs.qname.QnameModelPackage;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>Mytest</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class MytestDao extends BaseDao<Mytest> {
 

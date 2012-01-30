@@ -10,25 +10,27 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 
-/** 
- * A representation of the model object '<em><b>ControlElement</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ControlElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ControlElement")
 public class ControlElement extends ComputationalObject {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Datatype.class)
   @JoinColumns({ @JoinColumn() })
   private Datatype type = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
   @OrderColumn()
@@ -37,8 +39,9 @@ public class ControlElement extends ComputationalObject {
 
   /**
    * Returns the value of '<em><b>type</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>type</b></em>' feature
    * @generated
    */
@@ -48,9 +51,11 @@ public class ControlElement extends ComputationalObject {
 
   /**
    * Sets the '{@link ControlElement#getType() <em>type</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ControlElement#getType() type}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ControlElement#getType() type}' feature.
    * @generated
    */
   public void setType(Datatype newType) {
@@ -59,8 +64,9 @@ public class ControlElement extends ComputationalObject {
 
   /**
    * Returns the value of '<em><b>codeElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>codeElement</b></em>' feature
    * @generated
    */
@@ -70,6 +76,7 @@ public class ControlElement extends ComputationalObject {
 
   /**
    * Adds to the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -80,8 +87,9 @@ public class ControlElement extends ComputationalObject {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromCodeElement(AbstractCodeElement codeElementValue) {
@@ -90,8 +98,9 @@ public class ControlElement extends ComputationalObject {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>codeElement</em> feature.
+   * 
    * @generated
    */
   public void clearCodeElement() {
@@ -102,9 +111,11 @@ public class ControlElement extends ComputationalObject {
 
   /**
    * Sets the '{@link ControlElement#getCodeElement() <em>codeElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ControlElement#getCodeElement() codeElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ControlElement#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<AbstractCodeElement> newCodeElement) {
@@ -112,9 +123,9 @@ public class ControlElement extends ComputationalObject {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

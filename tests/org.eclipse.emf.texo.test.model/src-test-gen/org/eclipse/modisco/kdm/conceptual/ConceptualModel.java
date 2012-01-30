@@ -9,17 +9,18 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
-/** 
- * A representation of the model object '<em><b>ConceptualModel</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+/**
+ * A representation of the model object '<em><b>ConceptualModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
 @Entity(name = "ConceptualModel")
 public class ConceptualModel extends KDMModel {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractConceptualElement.class)
   @JoinColumns({ @JoinColumn() })
@@ -27,8 +28,9 @@ public class ConceptualModel extends KDMModel {
 
   /**
    * Returns the value of '<em><b>conceptualElement</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>conceptualElement</b></em>' feature
    * @generated
    */
@@ -38,6 +40,7 @@ public class ConceptualModel extends KDMModel {
 
   /**
    * Adds to the <em>conceptualElement</em> feature.
+   * 
    * @generated
    */
   public void addToConceptualElement(AbstractConceptualElement conceptualElementValue) {
@@ -48,8 +51,9 @@ public class ConceptualModel extends KDMModel {
 
   }
 
-  /**			
+  /**
    * Removes from the <em>conceptualElement</em> feature.
+   * 
    * @generated
    */
   public void removeFromConceptualElement(AbstractConceptualElement conceptualElementValue) {
@@ -58,8 +62,9 @@ public class ConceptualModel extends KDMModel {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>conceptualElement</em> feature.
+   * 
    * @generated
    */
   public void clearConceptualElement() {
@@ -70,9 +75,11 @@ public class ConceptualModel extends KDMModel {
 
   /**
    * Sets the '{@link ConceptualModel#getConceptualElement() <em>conceptualElement</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ConceptualModel#getConceptualElement() conceptualElement}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ConceptualModel#getConceptualElement() conceptualElement}' feature.
    * @generated
    */
   public void setConceptualElement(Set<AbstractConceptualElement> newConceptualElement) {
@@ -80,9 +87,9 @@ public class ConceptualModel extends KDMModel {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

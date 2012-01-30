@@ -5,10 +5,10 @@ import org.eclipse.emf.texo.server.store.BaseDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.code.CompositeType;
 
-/** 
+/**
  * The Dao implementation for the model object '<em><b>CompositeType</b></em>'.
  * 
- * @generated 
+ * @generated
  */
 public class CompositeTypeDao extends BaseDao<CompositeType> {
 
