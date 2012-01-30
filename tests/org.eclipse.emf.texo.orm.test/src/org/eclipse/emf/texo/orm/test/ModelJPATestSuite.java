@@ -23,6 +23,7 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz369931.Bz369931ModelPackage;
 import org.eclipse.emf.texo.test.model.samples.accounting.AccountingModelPackage;
 import org.eclipse.emf.texo.test.model.samples.emap.EmapsampleModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.Epo2ModelPackage;
@@ -66,6 +67,8 @@ public class ModelJPATestSuite {
       modelPackages.add(LibraryModelPackage.INSTANCE);
       addTest(modelPackages, suite, "special-schoollibrary"); //$NON-NLS-1$
     }
+
+    addTest(Bz369931ModelPackage.INSTANCE, suite);
 
     // this one fails as it contains inherited interfaces
     // addTest(InterfacesModelPackage.INSTANCE, suite);

@@ -98,6 +98,7 @@ public class TestModel {
     urls.add("issues/bz352285.ecore"); //$NON-NLS-1$
     urls.add("issues/bz325427.ecore"); //$NON-NLS-1$
     urls.add("issues/bz369931.ecore"); //$NON-NLS-1$
+    urls.add("issues/bz369962.ecore"); //$NON-NLS-1$
 
     urls.add("texo/TexoDataResponse.xsd");//$NON-NLS-1$
     urls.add("texo/TexoModelExtensions.xsd");//$NON-NLS-1$

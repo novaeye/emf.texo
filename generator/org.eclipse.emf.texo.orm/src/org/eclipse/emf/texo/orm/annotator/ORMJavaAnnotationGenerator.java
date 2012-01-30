@@ -238,7 +238,7 @@ public class ORMJavaAnnotationGenerator {
     }
     if (eFeature.getEType() instanceof EEnum) {
       final Enumerator enumerator = (Enumerator) value;
-      return getJavaPackage(eFeature.getEType()) + "." + eFeature.getEType().getName() + "." + enumerator.getName(); //$NON-NLS-1$ //$NON-NLS-2$
+      return getJavaPackage(eFeature.getEType()) + "." + eFeature.getEType().getName() + "." + enumerator.getLiteral(); //$NON-NLS-1$ //$NON-NLS-2$
     }
     return value + ""; //$NON-NLS-1$
   }
@@ -252,7 +252,7 @@ public class ORMJavaAnnotationGenerator {
     }
 
     return "@" + getJavaPackage(eFeature.getEType()) + "." + upperCaseFirst(eFeature.getName()) + "(" + getJavaPackage(eFeature.getEType()) + "." + valueType //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-        + "." + enumerator.getName() + ")"; //$NON-NLS-1$ //$NON-NLS-2$
+        + "." + enumerator.getLiteral() + ")"; //$NON-NLS-1$ //$NON-NLS-2$
   }
 
   private String getJavaPackage(EClassifier eClassifier) {
