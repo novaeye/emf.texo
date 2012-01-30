@@ -104,7 +104,7 @@ public class SourceMerger extends MergingOutputHandler {
     String newSource = ""; //$NON-NLS-1$
     int location = 0;
     try {
-      jMerger.setTargetCompilationUnit(jMerger.createCompilationUnitForInputStream(is));
+      jMerger.setTargetCompilationUnit(jMerger.createCompilationUnitForInputStream(is, "UTF-8")); //$NON-NLS-1$
       location = 1;
       jMerger.merge();
       location = 2;
