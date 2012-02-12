@@ -287,12 +287,14 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     final EPackage ePackage = eReference.getEContainingClass().getEPackage();
     final EPackageORMAnnotation ePackageORMAnnotation = (EPackageORMAnnotation) getAnnotationManager().getAnnotation(
         ePackage, OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
+    boolean generatedOneToOne = false;
     final OneToOne oneToOne;
     if (annotation.getOneToOne() != null) {
       oneToOne = annotation.getOneToOne();
     } else {
       oneToOne = OrmFactory.eINSTANCE.createOneToOne();
       annotation.setOneToOne(oneToOne);
+      generatedOneToOne = true;
     }
 
     if (GeneratorUtils.isEmptyOrNull(oneToOne.getName())) {
@@ -325,7 +327,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
 
     // set mapped by
-    if (!isOwner(eReference)) {
+    if (generatedOneToOne && !isOwner(eReference)) {
       oneToOne.setMappedBy(getMappedBy(eReference));
     }
 
@@ -588,6 +590,14 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
     if (eReference.isMany() && !eOpposite.isMany()) {
       return false;
+    }
+
+    if (eOpposite.isContainment()) {
+      return false;
+    }
+
+    if (eReference.isContainment()) {
+      return true;
     }
 
     final String sideOne = eReference.getEContainingClass().getEPackage().getName() + "_" //$NON-NLS-1$
