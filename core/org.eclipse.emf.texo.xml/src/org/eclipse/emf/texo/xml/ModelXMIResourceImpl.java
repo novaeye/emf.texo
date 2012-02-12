@@ -19,6 +19,7 @@ package org.eclipse.emf.texo.xml;
 
 import java.util.Map;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -110,6 +111,24 @@ public class ModelXMIResourceImpl extends XMIResourceImpl {
       }
 
     };
+  }
+
+  @Override
+  public EList<EObject> getContents() {
+    if (contents == null) {
+      contents = new ToXmiContentEList<EObject>();
+    }
+
+    return contents;
+  }
+
+  protected class ToXmiContentEList<E extends Object & EObject> extends ContentsEList<E> {
+    private static final long serialVersionUID = 1L;
+
+    @Override
+    protected boolean hasInverse() {
+      return false;
+    }
   }
 
   @Override
