@@ -3,11 +3,11 @@
 	xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="accounting-hsqldb">
+	<persistence-unit name="bz369931-hsqldb">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
-		<mapping-file>META-INF/mapping-files/samples/accounting-orm.xml</mapping-file>
+		<mapping-file>META-INF/mapping-files/issues/bz369931-orm.xml</mapping-file>
 		<properties>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
@@ -23,11 +23,11 @@
 
 	</persistence-unit>
 	
-	<persistence-unit name="accounting-mysql">
+	<persistence-unit name="bz369931-mysql">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
-		<mapping-file>META-INF/mapping-files/samples/accounting-orm.xml</mapping-file>
+		<mapping-file>META-INF/mapping-files/issues/bz369931-orm.xml</mapping-file>
 		<properties>
             <property name="eclipselink.target-database" value="Mysql"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
