@@ -45,10 +45,8 @@ public class DeployedComponent extends AbstractPlatformElement {
    */
   public void addToGroupedCode(Module groupedCodeValue) {
     if (!groupedCode.contains(groupedCodeValue)) {
-
       groupedCode.add(groupedCodeValue);
     }
-
   }
 
   /**

@@ -33,7 +33,7 @@ public class Machine {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Task.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Task.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Task> tasks = new ArrayList<Task>();
@@ -114,10 +114,8 @@ public class Machine {
    */
   public void addToTasks(Task tasksValue) {
     if (!tasks.contains(tasksValue)) {
-
       tasks.add(tasksValue);
     }
-
   }
 
   /**

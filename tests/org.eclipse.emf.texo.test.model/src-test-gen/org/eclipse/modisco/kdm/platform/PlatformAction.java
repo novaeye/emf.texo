@@ -30,7 +30,7 @@ public class PlatformAction extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = PlatformEvent.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = PlatformEvent.class)
   @JoinColumns({ @JoinColumn() })
   private Set<PlatformEvent> platformElement = new HashSet<PlatformEvent>();
 
@@ -78,10 +78,8 @@ public class PlatformAction extends AbstractPlatformElement {
    */
   public void addToPlatformElement(PlatformEvent platformElementValue) {
     if (!platformElement.contains(platformElementValue)) {
-
       platformElement.add(platformElementValue);
     }
-
   }
 
   /**

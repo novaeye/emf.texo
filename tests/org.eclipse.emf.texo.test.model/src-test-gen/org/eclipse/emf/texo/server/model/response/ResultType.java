@@ -23,7 +23,7 @@ public class ResultType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = EObject.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Object> updated = new ArrayList<Object>();
@@ -33,7 +33,7 @@ public class ResultType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = EObject.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Object> inserted = new ArrayList<Object>();
@@ -43,7 +43,7 @@ public class ResultType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = EObject.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Object> deleted = new ArrayList<Object>();
@@ -67,10 +67,8 @@ public class ResultType {
    */
   public void addToUpdated(Object updatedValue) {
     if (!updated.contains(updatedValue)) {
-
       updated.add(updatedValue);
     }
-
   }
 
   /**
@@ -127,10 +125,8 @@ public class ResultType {
    */
   public void addToInserted(Object insertedValue) {
     if (!inserted.contains(insertedValue)) {
-
       inserted.add(insertedValue);
     }
-
   }
 
   /**
@@ -187,10 +183,8 @@ public class ResultType {
    */
   public void addToDeleted(Object deletedValue) {
     if (!deleted.contains(deletedValue)) {
-
       deleted.add(deletedValue);
     }
-
   }
 
   /**

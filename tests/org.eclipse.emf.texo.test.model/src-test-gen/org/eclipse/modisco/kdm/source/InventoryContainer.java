@@ -22,7 +22,7 @@ public class InventoryContainer extends AbstractInventoryElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractInventoryElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractInventoryElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractInventoryElement> inventoryElement = new HashSet<AbstractInventoryElement>();
 
@@ -45,10 +45,8 @@ public class InventoryContainer extends AbstractInventoryElement {
    */
   public void addToInventoryElement(AbstractInventoryElement inventoryElementValue) {
     if (!inventoryElement.contains(inventoryElementValue)) {
-
       inventoryElement.add(inventoryElementValue);
     }
-
   }
 
   /**

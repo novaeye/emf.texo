@@ -145,10 +145,8 @@ public class AggregatedRelationship extends ModelElement {
    */
   public void addToRelation(KDMRelationship relationValue) {
     if (!relation.contains(relationValue)) {
-
       relation.add(relationValue);
     }
-
   }
 
   /**

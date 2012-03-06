@@ -21,7 +21,7 @@ public class EventResource extends AbstractEventElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractEventElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractEventElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractEventElement> eventElement = new HashSet<AbstractEventElement>();
 
@@ -44,10 +44,8 @@ public class EventResource extends AbstractEventElement {
    */
   public void addToEventElement(AbstractEventElement eventElementValue) {
     if (!eventElement.contains(eventElementValue)) {
-
       eventElement.add(eventElementValue);
     }
-
   }
 
   /**

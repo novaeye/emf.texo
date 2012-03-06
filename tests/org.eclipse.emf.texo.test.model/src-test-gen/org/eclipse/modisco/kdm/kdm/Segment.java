@@ -21,7 +21,7 @@ public class Segment extends KDMFramework {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Segment.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Segment.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Segment> segment = new HashSet<Segment>();
 
@@ -30,7 +30,7 @@ public class Segment extends KDMFramework {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = KDMModel.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = KDMModel.class)
   @JoinColumns({ @JoinColumn() })
   private Set<KDMModel> model = new HashSet<KDMModel>();
 
@@ -53,10 +53,8 @@ public class Segment extends KDMFramework {
    */
   public void addToSegment(Segment segmentValue) {
     if (!segment.contains(segmentValue)) {
-
       segment.add(segmentValue);
     }
-
   }
 
   /**
@@ -113,10 +111,8 @@ public class Segment extends KDMFramework {
    */
   public void addToModel(KDMModel modelValue) {
     if (!model.contains(modelValue)) {
-
       model.add(modelValue);
     }
-
   }
 
   /**

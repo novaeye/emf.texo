@@ -31,7 +31,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
@@ -40,7 +40,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractEventRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractEventRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractEventRelationship> eventRelation = new HashSet<AbstractEventRelationship>();
 
@@ -49,7 +49,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActionElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ActionElement> abstraction = new ArrayList<ActionElement>();
@@ -82,10 +82,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    */
   public void addToSource(SourceRef sourceValue) {
     if (!source.contains(sourceValue)) {
-
       source.add(sourceValue);
     }
-
   }
 
   /**
@@ -142,10 +140,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    */
   public void addToEventRelation(AbstractEventRelationship eventRelationValue) {
     if (!eventRelation.contains(eventRelationValue)) {
-
       eventRelation.add(eventRelationValue);
     }
-
   }
 
   /**
@@ -202,10 +198,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    */
   public void addToAbstraction(ActionElement abstractionValue) {
     if (!abstraction.contains(abstractionValue)) {
-
       abstraction.add(abstractionValue);
     }
-
   }
 
   /**
@@ -262,10 +256,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    */
   public void addToImplementation(AbstractCodeElement implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**

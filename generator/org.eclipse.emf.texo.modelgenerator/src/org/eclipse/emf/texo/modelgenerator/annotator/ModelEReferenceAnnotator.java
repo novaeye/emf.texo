@@ -87,17 +87,15 @@ public class ModelEReferenceAnnotator extends ModelEStructuralFeatureAnnotator i
         && getEPackageModelGenAnnotation(annotation.getEReference().getEContainingClass().getEPackage())
             .isGenerateBidirectionalAssociationSupport();
 
-    final boolean isManyToMany = annotation.getEReference().isMany()
-        && annotation.getEReference().getEOpposite() != null && annotation.getEReference().getEOpposite().isMany();
     if (!annotation.isSetGenerateSafeManyAccess()) {
-      annotation.setGenerateSafeManyAccess(saveManyAccess && !isManyToMany);
+      annotation.setGenerateSafeManyAccess(saveManyAccess);
     }
     if (!annotation.isSetGenerateBidirectionalAssociationSupport()) {
       annotation.setGenerateBidirectionalAssociationSupport(doBidirectionalHandling);
     }
 
     // set the opposite
-    if (!isManyToMany && saveManyAccess && annotation.getEReference().getEOpposite() != null
+    if (saveManyAccess && annotation.getEReference().getEOpposite() != null
         && annotation.getOppositeModelGenAnnotation() == null) {
 
       final EReferenceModelGenAnnotation oppositeAnnotation = getEReferenceModelGenAnnotation(annotation

@@ -22,7 +22,7 @@ public class DataModel extends KDMModel {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractDataElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractDataElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractDataElement> dataElement = new HashSet<AbstractDataElement>();
 
@@ -45,10 +45,8 @@ public class DataModel extends KDMModel {
    */
   public void addToDataElement(AbstractDataElement dataElementValue) {
     if (!dataElement.contains(dataElementValue)) {
-
       dataElement.add(dataElementValue);
     }
-
   }
 
   /**

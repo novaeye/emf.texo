@@ -44,10 +44,8 @@ public class IndexElement extends DataResource {
    */
   public void addToImplementation(ItemUnit implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**

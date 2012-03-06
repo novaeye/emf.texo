@@ -42,7 +42,7 @@ public class ProductType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = StringType.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = StringType.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<StringType> remark = new ArrayList<StringType>();
@@ -127,10 +127,8 @@ public class ProductType {
    */
   public void addToRemark(StringType remarkValue) {
     if (!remark.contains(remarkValue)) {
-
       remark.add(remarkValue);
     }
-
   }
 
   /**

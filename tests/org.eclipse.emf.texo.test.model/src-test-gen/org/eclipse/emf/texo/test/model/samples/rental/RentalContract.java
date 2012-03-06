@@ -59,7 +59,7 @@ public class RentalContract extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = RentalContractLine.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = RentalContractLine.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<RentalContractLine> rentalContractLines = new ArrayList<RentalContractLine>();
@@ -183,10 +183,8 @@ public class RentalContract extends Identifiable {
    */
   public void addToRentalContractLines(RentalContractLine rentalContractLinesValue) {
     if (!rentalContractLines.contains(rentalContractLinesValue)) {
-
       rentalContractLines.add(rentalContractLinesValue);
     }
-
   }
 
   /**

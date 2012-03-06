@@ -56,7 +56,7 @@ public class ResponseType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = EObject.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Object> data = new ArrayList<Object>();
@@ -180,10 +180,8 @@ public class ResponseType {
    */
   public void addToData(Object dataValue) {
     if (!data.contains(dataValue)) {
-
       data.add(dataValue);
     }
-
   }
 
   /**

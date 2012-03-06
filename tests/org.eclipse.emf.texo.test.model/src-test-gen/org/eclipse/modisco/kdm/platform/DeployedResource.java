@@ -22,7 +22,7 @@ public class DeployedResource extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ResourceType.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ResourceType.class)
   @JoinColumns({ @JoinColumn() })
   private Set<ResourceType> platformElement = new HashSet<ResourceType>();
 
@@ -45,10 +45,8 @@ public class DeployedResource extends AbstractPlatformElement {
    */
   public void addToPlatformElement(ResourceType platformElementValue) {
     if (!platformElement.contains(platformElementValue)) {
-
       platformElement.add(platformElementValue);
     }
-
   }
 
   /**

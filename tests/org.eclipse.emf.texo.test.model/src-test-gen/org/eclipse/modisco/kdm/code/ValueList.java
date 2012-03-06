@@ -22,7 +22,7 @@ public class ValueList extends ValueElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ValueElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ValueElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ValueElement> valueElement = new ArrayList<ValueElement>();
@@ -46,10 +46,8 @@ public class ValueList extends ValueElement {
    */
   public void addToValueElement(ValueElement valueElementValue) {
     if (!valueElement.contains(valueElementValue)) {
-
       valueElement.add(valueElementValue);
     }
-
   }
 
   /**

@@ -304,6 +304,7 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
   protected EPackageORMAnnotation() {
     super();
     namingStrategy.setePackageORMAnnotation(this);
+    generateJavaAnnotations = alwaysGenerateJPAAnnotations;
   }
 
   public ORMNamingStrategy getNamingStrategy() {

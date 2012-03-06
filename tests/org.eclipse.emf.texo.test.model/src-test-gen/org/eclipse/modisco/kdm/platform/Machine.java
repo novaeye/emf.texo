@@ -21,7 +21,7 @@ public class Machine extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DeployedComponent.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DeployedComponent.class)
   @JoinColumns({ @JoinColumn() })
   private Set<DeployedComponent> deployedComponent = new HashSet<DeployedComponent>();
 
@@ -30,7 +30,7 @@ public class Machine extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DeployedResource.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DeployedResource.class)
   @JoinColumns({ @JoinColumn() })
   private Set<DeployedResource> deployedResource = new HashSet<DeployedResource>();
 
@@ -53,10 +53,8 @@ public class Machine extends AbstractPlatformElement {
    */
   public void addToDeployedComponent(DeployedComponent deployedComponentValue) {
     if (!deployedComponent.contains(deployedComponentValue)) {
-
       deployedComponent.add(deployedComponentValue);
     }
-
   }
 
   /**
@@ -113,10 +111,8 @@ public class Machine extends AbstractPlatformElement {
    */
   public void addToDeployedResource(DeployedResource deployedResourceValue) {
     if (!deployedResource.contains(deployedResourceValue)) {
-
       deployedResource.add(deployedResourceValue);
     }
-
   }
 
   /**

@@ -149,10 +149,8 @@ public class Person {
    */
   public void addToContacts(Contact contactsValue) {
     if (!contacts.contains(contactsValue)) {
-
       contacts.add(contactsValue);
     }
-
   }
 
   /**

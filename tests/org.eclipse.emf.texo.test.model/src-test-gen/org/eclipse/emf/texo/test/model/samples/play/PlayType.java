@@ -66,7 +66,7 @@ public class PlayType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActType.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActType.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ActType> act = new ArrayList<ActType>();
@@ -215,10 +215,8 @@ public class PlayType {
    */
   public void addToAct(ActType actValue) {
     if (!act.contains(actValue)) {
-
       act.add(actValue);
     }
-
   }
 
   /**

@@ -31,7 +31,7 @@ public class Department {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Employee.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Employee.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Employee> employees = new ArrayList<Employee>();
@@ -88,10 +88,8 @@ public class Department {
    */
   public void addToEmployees(Employee employeesValue) {
     if (!employees.contains(employeesValue)) {
-
       employees.add(employeesValue);
     }
-
   }
 
   /**

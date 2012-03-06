@@ -23,7 +23,7 @@ public class WorkWeek {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = WorkDay.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = WorkDay.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<WorkDay> days = new ArrayList<WorkDay>();
@@ -55,10 +55,8 @@ public class WorkWeek {
    */
   public void addToDays(WorkDay daysValue) {
     if (!days.contains(daysValue)) {
-
       days.add(daysValue);
     }
-
   }
 
   /**

@@ -63,6 +63,13 @@ public class Bz371509ModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int ECLASS0_MANY_FEATURE_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int ECLASS1_CLASSIFIER_ID = 1;
 
   /**
@@ -71,6 +78,13 @@ public class Bz371509ModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ECLASS1_TOCLASS0_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ECLASS1_MANY_FEATURE_ID = 1;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -169,6 +183,17 @@ public class Bz371509ModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EStructuralFeature} '<em><b>EClass0.many</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>EClass0.many</b></em>'.
+   * @generated
+   */
+  public EReference getEClass0_Many() {
+    return (EReference) getEClass0EClass().getEAllStructuralFeatures().get(ECLASS0_MANY_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>EClass1</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>EClass1</b></em>'
@@ -187,6 +212,17 @@ public class Bz371509ModelPackage extends ModelPackage {
    */
   public EReference getEClass1_ToClass0() {
     return (EReference) getEClass1EClass().getEAllStructuralFeatures().get(ECLASS1_TOCLASS0_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>EClass1.many</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>EClass1.many</b></em>'.
+   * @generated
+   */
+  public EReference getEClass1_Many() {
+    return (EReference) getEClass1EClass().getEAllStructuralFeatures().get(ECLASS1_MANY_FEATURE_ID);
   }
 
   /**

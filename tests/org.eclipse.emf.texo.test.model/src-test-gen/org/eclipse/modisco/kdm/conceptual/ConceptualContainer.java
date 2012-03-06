@@ -22,7 +22,7 @@ public class ConceptualContainer extends AbstractConceptualElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractConceptualElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractConceptualElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractConceptualElement> conceptualElement = new HashSet<AbstractConceptualElement>();
 
@@ -45,10 +45,8 @@ public class ConceptualContainer extends AbstractConceptualElement {
    */
   public void addToConceptualElement(AbstractConceptualElement conceptualElementValue) {
     if (!conceptualElement.contains(conceptualElementValue)) {
-
       conceptualElement.add(conceptualElementValue);
     }
-
   }
 
   /**

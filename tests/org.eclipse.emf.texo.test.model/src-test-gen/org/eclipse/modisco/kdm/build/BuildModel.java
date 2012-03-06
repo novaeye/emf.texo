@@ -22,7 +22,7 @@ public class BuildModel extends KDMModel {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractBuildElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractBuildElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractBuildElement> buildElement = new HashSet<AbstractBuildElement>();
 
@@ -45,10 +45,8 @@ public class BuildModel extends KDMModel {
    */
   public void addToBuildElement(AbstractBuildElement buildElementValue) {
     if (!buildElement.contains(buildElementValue)) {
-
       buildElement.add(buildElementValue);
     }
-
   }
 
   /**

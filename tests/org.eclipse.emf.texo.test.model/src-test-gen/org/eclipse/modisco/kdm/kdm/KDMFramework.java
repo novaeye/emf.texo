@@ -23,7 +23,7 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Audit.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Audit.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Audit> audit = new HashSet<Audit>();
 
@@ -32,7 +32,7 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ExtensionFamily.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ExtensionFamily.class)
   @JoinColumns({ @JoinColumn() })
   private Set<ExtensionFamily> extension = new HashSet<ExtensionFamily>();
 
@@ -63,10 +63,8 @@ public abstract class KDMFramework extends ModelElement {
    */
   public void addToAudit(Audit auditValue) {
     if (!audit.contains(auditValue)) {
-
       audit.add(auditValue);
     }
-
   }
 
   /**
@@ -123,10 +121,8 @@ public abstract class KDMFramework extends ModelElement {
    */
   public void addToExtension(ExtensionFamily extensionValue) {
     if (!extension.contains(extensionValue)) {
-
       extension.add(extensionValue);
     }
-
   }
 
   /**

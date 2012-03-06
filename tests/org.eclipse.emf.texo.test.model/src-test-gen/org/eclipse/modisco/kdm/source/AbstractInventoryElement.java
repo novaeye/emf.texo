@@ -23,7 +23,7 @@ public abstract class AbstractInventoryElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractInventoryRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractInventoryRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractInventoryRelationship> inventoryRelationship = new HashSet<AbstractInventoryRelationship>();
 
@@ -46,10 +46,8 @@ public abstract class AbstractInventoryElement extends KDMEntity {
    */
   public void addToInventoryRelationship(AbstractInventoryRelationship inventoryRelationshipValue) {
     if (!inventoryRelationship.contains(inventoryRelationshipValue)) {
-
       inventoryRelationship.add(inventoryRelationshipValue);
     }
-
   }
 
   /**

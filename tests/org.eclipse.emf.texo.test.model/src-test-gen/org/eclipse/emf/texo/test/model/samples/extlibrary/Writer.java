@@ -76,10 +76,8 @@ public class Writer extends Person {
    */
   public void addToBooks(Book booksValue) {
     if (!books.contains(booksValue)) {
-
       books.add(booksValue);
     }
-
   }
 
   /**

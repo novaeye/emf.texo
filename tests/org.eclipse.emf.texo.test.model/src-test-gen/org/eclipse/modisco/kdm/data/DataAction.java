@@ -42,7 +42,7 @@ public class DataAction extends AbstractDataElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DataEvent.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DataEvent.class)
   @JoinColumns({ @JoinColumn() })
   private Set<DataEvent> dataElement = new HashSet<DataEvent>();
 
@@ -90,10 +90,8 @@ public class DataAction extends AbstractDataElement {
    */
   public void addToImplementation(ActionElement implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**
@@ -150,10 +148,8 @@ public class DataAction extends AbstractDataElement {
    */
   public void addToDataElement(DataEvent dataElementValue) {
     if (!dataElement.contains(dataElementValue)) {
-
       dataElement.add(dataElementValue);
     }
-
   }
 
   /**

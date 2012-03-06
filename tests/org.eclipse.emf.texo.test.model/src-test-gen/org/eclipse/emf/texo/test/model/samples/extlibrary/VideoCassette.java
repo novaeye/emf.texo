@@ -45,10 +45,8 @@ public class VideoCassette extends AudioVisualItem {
    */
   public void addToCast(Person castValue) {
     if (!cast.contains(castValue)) {
-
       cast.add(castValue);
     }
-
   }
 
   /**

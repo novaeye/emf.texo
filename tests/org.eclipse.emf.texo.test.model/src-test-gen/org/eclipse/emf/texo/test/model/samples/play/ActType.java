@@ -23,7 +23,7 @@ public class ActType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SceneType.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SceneType.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<SceneType> scene = new ArrayList<SceneType>();
@@ -63,10 +63,8 @@ public class ActType {
    */
   public void addToScene(SceneType sceneValue) {
     if (!scene.contains(sceneValue)) {
-
       scene.add(sceneValue);
     }
-
   }
 
   /**

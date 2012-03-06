@@ -82,10 +82,8 @@ public class InputPort extends Port {
    */
   public void addToEdges(Edge edgesValue) {
     if (!edges.contains(edgesValue)) {
-
       edges.add(edgesValue);
     }
-
   }
 
   /**

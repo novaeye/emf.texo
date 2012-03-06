@@ -74,10 +74,8 @@ public abstract class CirculatingItem extends Item implements Lendable {
    */
   public void addToBorrowers(Borrower borrowersValue) {
     if (!borrowers.contains(borrowersValue)) {
-
       borrowers.add(borrowersValue);
     }
-
   }
 
   /**

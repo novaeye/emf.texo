@@ -23,7 +23,7 @@ public class CodeModel extends KDMModel {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<AbstractCodeElement> codeElement = new ArrayList<AbstractCodeElement>();
@@ -47,10 +47,8 @@ public class CodeModel extends KDMModel {
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

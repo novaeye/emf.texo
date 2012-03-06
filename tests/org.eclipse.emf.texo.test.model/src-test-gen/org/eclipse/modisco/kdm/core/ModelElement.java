@@ -40,7 +40,7 @@ public abstract class ModelElement extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ExtendedValue.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ExtendedValue.class)
   @JoinColumns({ @JoinColumn() })
   private Set<ExtendedValue> taggedValue = new HashSet<ExtendedValue>();
 
@@ -66,10 +66,8 @@ public abstract class ModelElement extends Element {
    */
   public void addToStereotype(Stereotype stereotypeValue) {
     if (!stereotype.contains(stereotypeValue)) {
-
       stereotype.add(stereotypeValue);
     }
-
   }
 
   /**
@@ -130,10 +128,8 @@ public abstract class ModelElement extends Element {
    */
   public void addToTaggedValue(ExtendedValue taggedValueValue) {
     if (!taggedValue.contains(taggedValueValue)) {
-
       taggedValue.add(taggedValueValue);
     }
-
   }
 
   /**

@@ -48,7 +48,7 @@ public class DataElement extends ComputationalObject {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Datatype.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Datatype.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Datatype> codeElement = new HashSet<Datatype>();
 
@@ -146,10 +146,8 @@ public class DataElement extends ComputationalObject {
    */
   public void addToCodeElement(Datatype codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

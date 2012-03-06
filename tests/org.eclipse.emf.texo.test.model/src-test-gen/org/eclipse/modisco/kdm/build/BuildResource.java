@@ -42,7 +42,7 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractBuildElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractBuildElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractBuildElement> buildElement = new HashSet<AbstractBuildElement>();
 
@@ -65,10 +65,8 @@ public class BuildResource extends AbstractBuildElement {
    */
   public void addToImplementation(KDMEntity implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**
@@ -125,10 +123,8 @@ public class BuildResource extends AbstractBuildElement {
    */
   public void addToGroupedBuild(AbstractBuildElement groupedBuildValue) {
     if (!groupedBuild.contains(groupedBuildValue)) {
-
       groupedBuild.add(groupedBuildValue);
     }
-
   }
 
   /**
@@ -185,10 +181,8 @@ public class BuildResource extends AbstractBuildElement {
    */
   public void addToBuildElement(AbstractBuildElement buildElementValue) {
     if (!buildElement.contains(buildElementValue)) {
-
       buildElement.add(buildElementValue);
     }
-
   }
 
   /**

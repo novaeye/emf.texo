@@ -22,7 +22,7 @@ public class CompositeType extends Datatype {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ItemUnit.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ItemUnit.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ItemUnit> itemUnit = new ArrayList<ItemUnit>();
@@ -46,10 +46,8 @@ public class CompositeType extends Datatype {
    */
   public void addToItemUnit(ItemUnit itemUnitValue) {
     if (!itemUnit.contains(itemUnitValue)) {
-
       itemUnit.add(itemUnitValue);
     }
-
   }
 
   /**

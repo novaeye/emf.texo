@@ -53,7 +53,7 @@ public class PurchaseOrder {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Item.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Item.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Item> items = new ArrayList<Item>();
@@ -160,10 +160,8 @@ public class PurchaseOrder {
    */
   public void addToItems(Item itemsValue) {
     if (!items.contains(itemsValue)) {
-
       items.add(itemsValue);
     }
-
   }
 
   /**

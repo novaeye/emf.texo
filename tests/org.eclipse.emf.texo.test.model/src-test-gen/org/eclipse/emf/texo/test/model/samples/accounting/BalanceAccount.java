@@ -49,10 +49,8 @@ public class BalanceAccount extends Account {
    */
   public void addToReport(ReportGroup reportValue) {
     if (!report.contains(reportValue)) {
-
       report.add(reportValue);
     }
-
   }
 
   /**

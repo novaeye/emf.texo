@@ -23,7 +23,7 @@ public class RelationalSchema extends DataContainer {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CodeItem.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = CodeItem.class)
   @JoinColumns({ @JoinColumn() })
   private Set<CodeItem> codeElement = new HashSet<CodeItem>();
 
@@ -46,10 +46,8 @@ public class RelationalSchema extends DataContainer {
    */
   public void addToCodeElement(CodeItem codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

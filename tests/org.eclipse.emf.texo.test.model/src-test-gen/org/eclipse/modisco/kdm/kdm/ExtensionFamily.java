@@ -23,7 +23,7 @@ public class ExtensionFamily extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Stereotype.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Stereotype.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Stereotype> stereotype = new HashSet<Stereotype>();
 
@@ -54,10 +54,8 @@ public class ExtensionFamily extends Element {
    */
   public void addToStereotype(Stereotype stereotypeValue) {
     if (!stereotype.contains(stereotypeValue)) {
-
       stereotype.add(stereotypeValue);
     }
-
   }
 
   /**

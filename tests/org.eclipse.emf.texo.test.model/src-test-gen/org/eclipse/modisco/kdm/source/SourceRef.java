@@ -24,7 +24,7 @@ public class SourceRef extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRegion.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRegion.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<SourceRegion> region = new ArrayList<SourceRegion>();
@@ -64,10 +64,8 @@ public class SourceRef extends Element {
    */
   public void addToRegion(SourceRegion regionValue) {
     if (!region.contains(regionValue)) {
-
       region.add(regionValue);
     }
-
   }
 
   /**

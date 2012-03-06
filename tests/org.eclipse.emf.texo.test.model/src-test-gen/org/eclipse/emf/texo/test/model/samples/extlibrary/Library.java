@@ -37,7 +37,7 @@ public class Library extends Identifiable implements Addressable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Item.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Item.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Item> stock = new HashSet<Item>();
 
@@ -55,7 +55,7 @@ public class Library extends Identifiable implements Addressable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Library.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Library.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Library> branches = new ArrayList<Library>();
@@ -208,10 +208,8 @@ public class Library extends Identifiable implements Addressable {
    */
   public void addToStock(Item stockValue) {
     if (!stock.contains(stockValue)) {
-
       stock.add(stockValue);
     }
-
   }
 
   /**
@@ -268,10 +266,8 @@ public class Library extends Identifiable implements Addressable {
    */
   public void addToBooks(Book booksValue) {
     if (!books.contains(booksValue)) {
-
       books.add(booksValue);
     }
-
   }
 
   /**
@@ -328,10 +324,8 @@ public class Library extends Identifiable implements Addressable {
    */
   public void addToBranches(Library branchesValue) {
     if (!branches.contains(branchesValue)) {
-
       branches.add(branchesValue);
     }
-
   }
 
   /**

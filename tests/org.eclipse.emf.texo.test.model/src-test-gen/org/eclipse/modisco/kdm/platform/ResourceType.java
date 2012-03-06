@@ -21,7 +21,7 @@ public class ResourceType extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractPlatformElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractPlatformElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractPlatformElement> platformElement = new HashSet<AbstractPlatformElement>();
 
@@ -44,10 +44,8 @@ public class ResourceType extends AbstractPlatformElement {
    */
   public void addToPlatformElement(AbstractPlatformElement platformElementValue) {
     if (!platformElement.contains(platformElementValue)) {
-
       platformElement.add(platformElementValue);
     }
-
   }
 
   /**

@@ -23,7 +23,7 @@ public class ComplexContentType extends AbstractContentElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractContentElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractContentElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<AbstractContentElement> contentElement = new ArrayList<AbstractContentElement>();
@@ -47,10 +47,8 @@ public class ComplexContentType extends AbstractContentElement {
    */
   public void addToContentElement(AbstractContentElement contentElementValue) {
     if (!contentElement.contains(contentElementValue)) {
-
       contentElement.add(contentElementValue);
     }
-
   }
 
   /**

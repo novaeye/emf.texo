@@ -32,7 +32,7 @@ public class Supplier extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Customer.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Customer.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Customer> customers = new ArrayList<Customer>();
@@ -42,7 +42,7 @@ public class Supplier extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = PurchaseOrder.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = PurchaseOrder.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<PurchaseOrder> orders = new ArrayList<PurchaseOrder>();
@@ -91,10 +91,8 @@ public class Supplier extends Identifiable {
    */
   public void addToCustomers(Customer customersValue) {
     if (!customers.contains(customersValue)) {
-
       customers.add(customersValue);
     }
-
   }
 
   /**
@@ -151,10 +149,8 @@ public class Supplier extends Identifiable {
    */
   public void addToOrders(PurchaseOrder ordersValue) {
     if (!orders.contains(ordersValue)) {
-
       orders.add(ordersValue);
     }
-
   }
 
   /**

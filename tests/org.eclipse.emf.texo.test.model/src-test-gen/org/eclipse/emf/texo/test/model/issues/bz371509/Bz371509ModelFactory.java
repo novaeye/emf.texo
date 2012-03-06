@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.test.model.issues.bz371509;
 
+import java.util.List;
 import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -172,6 +173,8 @@ public class Bz371509ModelFactory implements ModelFactory {
       switch (featureID) {
       case Bz371509ModelPackage.ECLASS0_TOCLASS1_FEATURE_ID:
         return getTarget().getToClass1();
+      case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
+        return getTarget().getMany();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -179,12 +182,16 @@ public class Bz371509ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
       case Bz371509ModelPackage.ECLASS0_TOCLASS1_FEATURE_ID:
         getTarget().setToClass1((EClass1) value);
+        return;
+      case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
+        getTarget().setMany((List<EClass1>) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -198,6 +205,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
+        getTarget().addToMany((EClass1) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -210,6 +220,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
+        getTarget().removeFromMany((EClass1) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -244,6 +257,8 @@ public class Bz371509ModelFactory implements ModelFactory {
       switch (featureID) {
       case Bz371509ModelPackage.ECLASS1_TOCLASS0_FEATURE_ID:
         return getTarget().getToClass0();
+      case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
+        return getTarget().getMany();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -258,6 +273,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       switch (featureID) {
       case Bz371509ModelPackage.ECLASS1_TOCLASS0_FEATURE_ID:
         getTarget().setToClass0((Set<EClass0>) value);
+        return;
+      case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
+        getTarget().setMany((List<EClass0>) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -274,6 +292,10 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS1_TOCLASS0_FEATURE_ID:
         getTarget().addToToClass0((EClass0) value);
         return;
+
+      case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
+        getTarget().addToMany((EClass0) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -288,6 +310,10 @@ public class Bz371509ModelFactory implements ModelFactory {
 
       case Bz371509ModelPackage.ECLASS1_TOCLASS0_FEATURE_ID:
         getTarget().removeFromToClass0((EClass0) value);
+        return;
+
+      case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
+        getTarget().removeFromMany((EClass0) value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

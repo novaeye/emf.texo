@@ -37,7 +37,7 @@ public class Library extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Writer.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Writer.class)
   @OrderColumn(name = "ind")
   @JoinColumns({ @JoinColumn() })
   private List<Writer> writers = new ArrayList<Writer>();
@@ -47,7 +47,7 @@ public class Library extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Book.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Book.class)
   @OrderColumn(name = "ind")
   @JoinColumns({ @JoinColumn() })
   private List<Book> books = new ArrayList<Book>();
@@ -96,10 +96,8 @@ public class Library extends Identifiable {
    */
   public void addToWriters(Writer writersValue) {
     if (!writers.contains(writersValue)) {
-
       writers.add(writersValue);
     }
-
   }
 
   /**
@@ -156,10 +154,8 @@ public class Library extends Identifiable {
    */
   public void addToBooks(Book booksValue) {
     if (!books.contains(booksValue)) {
-
       books.add(booksValue);
     }
-
   }
 
   /**

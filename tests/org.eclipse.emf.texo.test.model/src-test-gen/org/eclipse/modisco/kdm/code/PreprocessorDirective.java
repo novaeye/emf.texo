@@ -22,7 +22,7 @@ public class PreprocessorDirective extends AbstractCodeElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractCodeElement> codeElement = new HashSet<AbstractCodeElement>();
 
@@ -45,10 +45,8 @@ public class PreprocessorDirective extends AbstractCodeElement {
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

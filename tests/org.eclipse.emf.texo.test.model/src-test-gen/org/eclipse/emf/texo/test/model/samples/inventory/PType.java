@@ -167,9 +167,7 @@ public class PType extends Identifiable {
    * @generated
    */
   public void addToSubTypes(PType subTypesValue) {
-
     subTypes.add(subTypesValue);
-
   }
 
   /**
@@ -225,9 +223,7 @@ public class PType extends Identifiable {
    * @generated
    */
   public void addToSubNOTypes(PType subNOTypesValue) {
-
     subNOTypes.add(subNOTypesValue);
-
   }
 
   /**
@@ -283,9 +279,7 @@ public class PType extends Identifiable {
    * @generated
    */
   public void addToInfoReferences(PDeclaration infoReferencesValue) {
-
     infoReferences.add(infoReferencesValue);
-
   }
 
   /**

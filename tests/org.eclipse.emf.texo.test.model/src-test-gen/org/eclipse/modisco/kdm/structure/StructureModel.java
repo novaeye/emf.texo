@@ -22,7 +22,7 @@ public class StructureModel extends KDMModel {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractStructureElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractStructureElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractStructureElement> structureElement = new HashSet<AbstractStructureElement>();
 
@@ -45,10 +45,8 @@ public class StructureModel extends KDMModel {
    */
   public void addToStructureElement(AbstractStructureElement structureElementValue) {
     if (!structureElement.contains(structureElementValue)) {
-
       structureElement.add(structureElementValue);
     }
-
   }
 
   /**

@@ -21,7 +21,7 @@ public class DataContainer extends DataResource {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DataResource.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DataResource.class)
   @JoinColumns({ @JoinColumn() })
   private Set<DataResource> dataElement = new HashSet<DataResource>();
 
@@ -44,10 +44,8 @@ public class DataContainer extends DataResource {
    */
   public void addToDataElement(DataResource dataElementValue) {
     if (!dataElement.contains(dataElementValue)) {
-
       dataElement.add(dataElementValue);
     }
-
   }
 
   /**

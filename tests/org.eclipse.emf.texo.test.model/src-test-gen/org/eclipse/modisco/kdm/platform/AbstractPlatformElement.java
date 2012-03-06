@@ -31,7 +31,7 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
@@ -40,7 +40,7 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractPlatformRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractPlatformRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractPlatformRelationship> platformRelation = new HashSet<AbstractPlatformRelationship>();
 
@@ -49,7 +49,7 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActionElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ActionElement> abstraction = new ArrayList<ActionElement>();
@@ -82,10 +82,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    */
   public void addToSource(SourceRef sourceValue) {
     if (!source.contains(sourceValue)) {
-
       source.add(sourceValue);
     }
-
   }
 
   /**
@@ -142,10 +140,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    */
   public void addToPlatformRelation(AbstractPlatformRelationship platformRelationValue) {
     if (!platformRelation.contains(platformRelationValue)) {
-
       platformRelation.add(platformRelationValue);
     }
-
   }
 
   /**
@@ -202,10 +198,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    */
   public void addToAbstraction(ActionElement abstractionValue) {
     if (!abstraction.contains(abstractionValue)) {
-
       abstraction.add(abstractionValue);
     }
-
   }
 
   /**
@@ -262,10 +256,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    */
   public void addToImplementation(AbstractCodeElement implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**

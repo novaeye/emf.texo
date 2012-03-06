@@ -32,7 +32,7 @@ public class JournalGroup extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = JournalGroup.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = JournalGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<JournalGroup> journalGroups = new ArrayList<JournalGroup>();
@@ -42,7 +42,7 @@ public class JournalGroup extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = JournalStatement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = JournalStatement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<JournalStatement> journalStatements = new ArrayList<JournalStatement>();
@@ -91,10 +91,8 @@ public class JournalGroup extends Identifiable {
    */
   public void addToJournalGroups(JournalGroup journalGroupsValue) {
     if (!journalGroups.contains(journalGroupsValue)) {
-
       journalGroups.add(journalGroupsValue);
     }
-
   }
 
   /**
@@ -151,10 +149,8 @@ public class JournalGroup extends Identifiable {
    */
   public void addToJournalStatements(JournalStatement journalStatementsValue) {
     if (!journalStatements.contains(journalStatementsValue)) {
-
       journalStatements.add(journalStatementsValue);
     }
-
   }
 
   /**

@@ -22,7 +22,7 @@ public class Module extends CodeItem {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<AbstractCodeElement> codeElement = new ArrayList<AbstractCodeElement>();
@@ -46,10 +46,8 @@ public class Module extends CodeItem {
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

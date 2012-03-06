@@ -34,7 +34,7 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractCodeElement> codeElement = new HashSet<AbstractCodeElement>();
 
@@ -43,7 +43,7 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractActionRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractActionRelationship.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<AbstractActionRelationship> actionRelation = new ArrayList<AbstractActionRelationship>();
@@ -92,10 +92,8 @@ public class ActionElement extends AbstractCodeElement {
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**
@@ -152,10 +150,8 @@ public class ActionElement extends AbstractCodeElement {
    */
   public void addToActionRelation(AbstractActionRelationship actionRelationValue) {
     if (!actionRelation.contains(actionRelationValue)) {
-
       actionRelation.add(actionRelationValue);
     }
-
   }
 
   /**

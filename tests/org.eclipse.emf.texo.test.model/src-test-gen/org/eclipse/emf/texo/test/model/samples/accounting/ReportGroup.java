@@ -34,7 +34,7 @@ public class ReportGroup extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ReportGroup.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ReportGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ReportGroup> reportGroup = new ArrayList<ReportGroup>();
@@ -93,10 +93,8 @@ public class ReportGroup extends Identifiable {
    */
   public void addToReportGroup(ReportGroup reportGroupValue) {
     if (!reportGroup.contains(reportGroupValue)) {
-
       reportGroup.add(reportGroupValue);
     }
-
   }
 
   /**
@@ -153,10 +151,8 @@ public class ReportGroup extends Identifiable {
    */
   public void addToAccount(BalanceAccount accountValue) {
     if (!account.contains(accountValue)) {
-
       account.add(accountValue);
     }
-
   }
 
   /**

@@ -22,7 +22,7 @@ public class MachineList {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Machine.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Machine.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Machine> machines = new ArrayList<Machine>();
@@ -46,10 +46,8 @@ public class MachineList {
    */
   public void addToMachines(Machine machinesValue) {
     if (!machines.contains(machinesValue)) {
-
       machines.add(machinesValue);
     }
-
   }
 
   /**

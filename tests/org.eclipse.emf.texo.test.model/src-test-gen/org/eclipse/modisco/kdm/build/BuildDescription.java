@@ -24,7 +24,7 @@ public class BuildDescription extends BuildResource {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
@@ -55,10 +55,8 @@ public class BuildDescription extends BuildResource {
    */
   public void addToSource(SourceRef sourceValue) {
     if (!source.contains(sourceValue)) {
-
       source.add(sourceValue);
     }
-
   }
 
   /**

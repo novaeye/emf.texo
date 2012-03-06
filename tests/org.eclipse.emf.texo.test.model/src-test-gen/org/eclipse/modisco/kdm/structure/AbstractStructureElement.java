@@ -26,7 +26,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AggregatedRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AggregatedRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AggregatedRelationship> aggregated = new HashSet<AggregatedRelationship>();
 
@@ -44,7 +44,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractStructureElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractStructureElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractStructureElement> structureElement = new HashSet<AbstractStructureElement>();
 
@@ -53,7 +53,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractStructureRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractStructureRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractStructureRelationship> structureRelationship = new HashSet<AbstractStructureRelationship>();
 
@@ -76,10 +76,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void addToAggregated(AggregatedRelationship aggregatedValue) {
     if (!aggregated.contains(aggregatedValue)) {
-
       aggregated.add(aggregatedValue);
     }
-
   }
 
   /**
@@ -136,10 +134,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void addToImplementation(KDMEntity implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**
@@ -196,10 +192,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void addToStructureElement(AbstractStructureElement structureElementValue) {
     if (!structureElement.contains(structureElementValue)) {
-
       structureElement.add(structureElementValue);
     }
-
   }
 
   /**
@@ -256,10 +250,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    */
   public void addToStructureRelationship(AbstractStructureRelationship structureRelationshipValue) {
     if (!structureRelationship.contains(structureRelationshipValue)) {
-
       structureRelationship.add(structureRelationshipValue);
     }
-
   }
 
   /**

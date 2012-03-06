@@ -27,7 +27,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
@@ -45,7 +45,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractConceptualRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractConceptualRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractConceptualRelationship> conceptualRelation = new HashSet<AbstractConceptualRelationship>();
 
@@ -54,7 +54,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActionElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<ActionElement> abstraction = new HashSet<ActionElement>();
 
@@ -77,10 +77,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    */
   public void addToSource(SourceRef sourceValue) {
     if (!source.contains(sourceValue)) {
-
       source.add(sourceValue);
     }
-
   }
 
   /**
@@ -137,10 +135,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    */
   public void addToImplementation(KDMEntity implementationValue) {
     if (!implementation.contains(implementationValue)) {
-
       implementation.add(implementationValue);
     }
-
   }
 
   /**
@@ -197,10 +193,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    */
   public void addToConceptualRelation(AbstractConceptualRelationship conceptualRelationValue) {
     if (!conceptualRelation.contains(conceptualRelationValue)) {
-
       conceptualRelation.add(conceptualRelationValue);
     }
-
   }
 
   /**
@@ -257,10 +251,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    */
   public void addToAbstraction(ActionElement abstractionValue) {
     if (!abstraction.contains(abstractionValue)) {
-
       abstraction.add(abstractionValue);
     }
-
   }
 
   /**

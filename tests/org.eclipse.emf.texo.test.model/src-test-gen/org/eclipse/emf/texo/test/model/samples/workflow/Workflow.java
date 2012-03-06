@@ -22,7 +22,7 @@ public class Workflow extends WorkflowElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = WorkflowNode.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = WorkflowNode.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<WorkflowNode> nodes = new ArrayList<WorkflowNode>();
@@ -32,7 +32,7 @@ public class Workflow extends WorkflowElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Edge.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Edge.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Edge> edges = new ArrayList<Edge>();
@@ -42,7 +42,7 @@ public class Workflow extends WorkflowElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Comment.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Comment.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Comment> comments = new ArrayList<Comment>();
@@ -66,10 +66,8 @@ public class Workflow extends WorkflowElement {
    */
   public void addToNodes(WorkflowNode nodesValue) {
     if (!nodes.contains(nodesValue)) {
-
       nodes.add(nodesValue);
     }
-
   }
 
   /**
@@ -126,10 +124,8 @@ public class Workflow extends WorkflowElement {
    */
   public void addToEdges(Edge edgesValue) {
     if (!edges.contains(edgesValue)) {
-
       edges.add(edgesValue);
     }
-
   }
 
   /**
@@ -186,10 +182,8 @@ public class Workflow extends WorkflowElement {
    */
   public void addToComments(Comment commentsValue) {
     if (!comments.contains(commentsValue)) {
-
       comments.add(commentsValue);
     }
-
   }
 
   /**

@@ -45,10 +45,8 @@ public class Borrower extends Person {
    */
   public void addToBorrowed(Lendable borrowedValue) {
     if (!borrowed.contains(borrowedValue)) {
-
       borrowed.add(borrowedValue);
     }
-
   }
 
   /**

@@ -21,7 +21,7 @@ public class UIResource extends AbstractUIElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractUIElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractUIElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractUIElement> uIElement = new HashSet<AbstractUIElement>();
 
@@ -44,10 +44,8 @@ public class UIResource extends AbstractUIElement {
    */
   public void addToUIElement(AbstractUIElement uIElementValue) {
     if (!uIElement.contains(uIElementValue)) {
-
       uIElement.add(uIElementValue);
     }
-
   }
 
   /**

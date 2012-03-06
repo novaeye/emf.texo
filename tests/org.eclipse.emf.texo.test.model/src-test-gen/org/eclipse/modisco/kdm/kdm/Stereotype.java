@@ -23,7 +23,7 @@ public class Stereotype extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = TagDefinition.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = TagDefinition.class)
   @JoinColumns({ @JoinColumn() })
   private Set<TagDefinition> tag = new HashSet<TagDefinition>();
 
@@ -62,10 +62,8 @@ public class Stereotype extends Element {
    */
   public void addToTag(TagDefinition tagValue) {
     if (!tag.contains(tagValue)) {
-
       tag.add(tagValue);
     }
-
   }
 
   /**

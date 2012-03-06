@@ -83,7 +83,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Song.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Song.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Song> songs = new ArrayList<Song>();
@@ -242,10 +242,8 @@ public class Album extends Identifiable {
    */
   public void addToGenres(Genre genresValue) {
     if (!genres.contains(genresValue)) {
-
       genres.add(genresValue);
     }
-
   }
 
   /**
@@ -302,10 +300,8 @@ public class Album extends Identifiable {
    */
   public void addToSongs(Song songsValue) {
     if (!songs.contains(songsValue)) {
-
       songs.add(songsValue);
     }
-
   }
 
   /**

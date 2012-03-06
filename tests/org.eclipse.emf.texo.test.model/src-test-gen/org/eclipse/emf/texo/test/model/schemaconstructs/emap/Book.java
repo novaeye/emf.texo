@@ -31,7 +31,7 @@ public class Book {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
+  @OneToMany(cascade = { CascadeType.ALL })
   @MapKeyClass(String.class)
   @MapKeyColumn(table = "Book_writers")
   @JoinTable(name = "Book_writers")

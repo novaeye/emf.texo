@@ -43,10 +43,8 @@ public class Namespace extends CodeItem {
    */
   public void addToGroupedCode(CodeItem groupedCodeValue) {
     if (!groupedCode.contains(groupedCodeValue)) {
-
       groupedCode.add(groupedCodeValue);
     }
-
   }
 
   /**

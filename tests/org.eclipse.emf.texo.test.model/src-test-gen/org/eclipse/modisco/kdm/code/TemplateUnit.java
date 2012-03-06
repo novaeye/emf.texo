@@ -22,7 +22,7 @@ public class TemplateUnit extends Datatype {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CodeItem.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = CodeItem.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<CodeItem> codeElement = new ArrayList<CodeItem>();
@@ -46,10 +46,8 @@ public class TemplateUnit extends Datatype {
    */
   public void addToCodeElement(CodeItem codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

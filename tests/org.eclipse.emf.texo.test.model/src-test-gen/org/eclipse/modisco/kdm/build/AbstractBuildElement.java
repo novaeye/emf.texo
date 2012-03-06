@@ -23,7 +23,7 @@ public abstract class AbstractBuildElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractBuildRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractBuildRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractBuildRelationship> buildRelation = new HashSet<AbstractBuildRelationship>();
 
@@ -46,10 +46,8 @@ public abstract class AbstractBuildElement extends KDMEntity {
    */
   public void addToBuildRelation(AbstractBuildRelationship buildRelationValue) {
     if (!buildRelation.contains(buildRelationValue)) {
-
       buildRelation.add(buildRelationValue);
     }
-
   }
 
   /**

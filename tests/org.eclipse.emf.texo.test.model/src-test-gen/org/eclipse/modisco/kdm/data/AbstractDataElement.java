@@ -28,7 +28,7 @@ public abstract class AbstractDataElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
@@ -37,7 +37,7 @@ public abstract class AbstractDataElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractDataRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractDataRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractDataRelationship> dataRelation = new HashSet<AbstractDataRelationship>();
 
@@ -46,7 +46,7 @@ public abstract class AbstractDataElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ActionElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActionElement.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ActionElement> abstraction = new ArrayList<ActionElement>();
@@ -70,10 +70,8 @@ public abstract class AbstractDataElement extends KDMEntity {
    */
   public void addToSource(SourceRef sourceValue) {
     if (!source.contains(sourceValue)) {
-
       source.add(sourceValue);
     }
-
   }
 
   /**
@@ -130,10 +128,8 @@ public abstract class AbstractDataElement extends KDMEntity {
    */
   public void addToDataRelation(AbstractDataRelationship dataRelationValue) {
     if (!dataRelation.contains(dataRelationValue)) {
-
       dataRelation.add(dataRelationValue);
     }
-
   }
 
   /**
@@ -190,10 +186,8 @@ public abstract class AbstractDataElement extends KDMEntity {
    */
   public void addToAbstraction(ActionElement abstractionValue) {
     if (!abstraction.contains(abstractionValue)) {
-
       abstraction.add(abstractionValue);
     }
-
   }
 
   /**

@@ -22,7 +22,7 @@ public class EnumeratedType extends Datatype {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Value.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Value.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Value> value = new ArrayList<Value>();
@@ -32,7 +32,7 @@ public class EnumeratedType extends Datatype {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CodeItem.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = CodeItem.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<CodeItem> codeElement = new ArrayList<CodeItem>();
@@ -56,10 +56,8 @@ public class EnumeratedType extends Datatype {
    */
   public void addToValue(Value valueValue) {
     if (!value.contains(valueValue)) {
-
       value.add(valueValue);
     }
-
   }
 
   /**
@@ -116,10 +114,8 @@ public class EnumeratedType extends Datatype {
    */
   public void addToCodeElement(CodeItem codeElementValue) {
     if (!codeElement.contains(codeElementValue)) {
-
       codeElement.add(codeElementValue);
     }
-
   }
 
   /**

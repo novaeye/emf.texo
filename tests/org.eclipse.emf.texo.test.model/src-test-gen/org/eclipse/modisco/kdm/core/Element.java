@@ -26,7 +26,7 @@ public abstract class Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Attribute.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Attribute.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Attribute> attribute = new HashSet<Attribute>();
 
@@ -36,7 +36,7 @@ public abstract class Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Annotation.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Annotation.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Annotation> annotation = new HashSet<Annotation>();
 
@@ -62,10 +62,8 @@ public abstract class Element {
    */
   public void addToAttribute(Attribute attributeValue) {
     if (!attribute.contains(attributeValue)) {
-
       attribute.add(attributeValue);
     }
-
   }
 
   /**
@@ -126,10 +124,8 @@ public abstract class Element {
    */
   public void addToAnnotation(Annotation annotationValue) {
     if (!annotation.contains(annotationValue)) {
-
       annotation.add(annotationValue);
     }
-
   }
 
   /**

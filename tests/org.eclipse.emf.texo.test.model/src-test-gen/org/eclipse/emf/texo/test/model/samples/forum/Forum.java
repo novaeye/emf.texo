@@ -31,7 +31,7 @@ public class Forum {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Member.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Member.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Member> members = new ArrayList<Member>();
@@ -41,7 +41,7 @@ public class Forum {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Topic.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Topic.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Topic> topics = new ArrayList<Topic>();
@@ -90,10 +90,8 @@ public class Forum {
    */
   public void addToMembers(Member membersValue) {
     if (!members.contains(membersValue)) {
-
       members.add(membersValue);
     }
-
   }
 
   /**
@@ -150,10 +148,8 @@ public class Forum {
    */
   public void addToTopics(Topic topicsValue) {
     if (!topics.contains(topicsValue)) {
-
       topics.add(topicsValue);
     }
-
   }
 
   /**

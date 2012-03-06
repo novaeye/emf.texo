@@ -38,7 +38,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AccountGroup.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AccountGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<AccountGroup> accountGroup = new ArrayList<AccountGroup>();
@@ -48,7 +48,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Vat.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Vat.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Vat> vat = new ArrayList<Vat>();
@@ -76,7 +76,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = JournalGroup.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = JournalGroup.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<JournalGroup> journalGroup = new ArrayList<JournalGroup>();
@@ -125,10 +125,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    */
   public void addToAccountGroup(AccountGroup accountGroupValue) {
     if (!accountGroup.contains(accountGroupValue)) {
-
       accountGroup.add(accountGroupValue);
     }
-
   }
 
   /**
@@ -185,10 +183,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    */
   public void addToVat(Vat vatValue) {
     if (!vat.contains(vatValue)) {
-
       vat.add(vatValue);
     }
-
   }
 
   /**
@@ -295,10 +291,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    */
   public void addToJournalGroup(JournalGroup journalGroupValue) {
     if (!journalGroup.contains(journalGroupValue)) {
-
       journalGroup.add(journalGroupValue);
     }
-
   }
 
   /**

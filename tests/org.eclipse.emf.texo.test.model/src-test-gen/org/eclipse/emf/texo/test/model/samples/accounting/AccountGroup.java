@@ -32,7 +32,7 @@ public class AccountGroup extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Account.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Account.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Account> account = new ArrayList<Account>();
@@ -81,10 +81,8 @@ public class AccountGroup extends Identifiable {
    */
   public void addToAccount(Account accountValue) {
     if (!account.contains(accountValue)) {
-
       account.add(accountValue);
     }
-
   }
 
   /**

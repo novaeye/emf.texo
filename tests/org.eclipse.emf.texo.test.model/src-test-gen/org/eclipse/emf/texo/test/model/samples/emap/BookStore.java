@@ -36,7 +36,7 @@ public class BookStore extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
+  @OneToMany(cascade = { CascadeType.ALL })
   @MapKeyClass(Writer.class)
   @MapKeyColumn(table = "BookStore_booksByWriter")
   @JoinTable(name = "BookStore_booksByWriter")

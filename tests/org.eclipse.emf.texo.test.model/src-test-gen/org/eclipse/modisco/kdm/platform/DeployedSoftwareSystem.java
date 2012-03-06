@@ -44,10 +44,8 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
    */
   public void addToGroupedComponent(DeployedComponent groupedComponentValue) {
     if (!groupedComponent.contains(groupedComponentValue)) {
-
       groupedComponent.add(groupedComponentValue);
     }
-
   }
 
   /**

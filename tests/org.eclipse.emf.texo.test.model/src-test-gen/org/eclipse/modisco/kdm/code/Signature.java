@@ -22,7 +22,7 @@ public class Signature extends Datatype {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ParameterUnit.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ParameterUnit.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ParameterUnit> parameterUnit = new ArrayList<ParameterUnit>();
@@ -46,10 +46,8 @@ public class Signature extends Datatype {
    */
   public void addToParameterUnit(ParameterUnit parameterUnitValue) {
     if (!parameterUnit.contains(parameterUnitValue)) {
-
       parameterUnit.add(parameterUnitValue);
     }
-
   }
 
   /**

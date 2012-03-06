@@ -87,10 +87,8 @@ public class Writer extends Identifiable {
    */
   public void addToBooks(Book booksValue) {
     if (!books.contains(booksValue)) {
-
       books.add(booksValue);
     }
-
   }
 
   /**

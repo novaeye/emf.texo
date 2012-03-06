@@ -115,7 +115,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 				«IF !featureAnnotation.EStructuralFeature.volatile-»
 				«IF featureAnnotation.EStructuralFeature.unique-»
 				if (!«featureAnnotation.validJavaMemberName».contains(«featureAnnotation.validJavaMemberName»Value)) {
-				«ENDIF»
+				«ENDIF-»
 					«featureAnnotation.validJavaMemberName».add(«featureAnnotation.validJavaMemberName»Value);
 					«IF ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation != null && ((EReferenceModelGenAnnotation)featureAnnotation).generateBidirectionalAssociationSupport-»
 					«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»			
@@ -132,7 +132,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 					«ENDIF-»
 				«IF featureAnnotation.EStructuralFeature.unique-»
 				}
-				«ENDIF»
+				«ENDIF-»
 				«ELSE-»
 		    	// Volatile feature
 				// Ensure that you remove @generated or mark it @generated NOT

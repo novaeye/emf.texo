@@ -30,7 +30,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SourceRef.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
   @JoinColumns({ @JoinColumn() })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
@@ -39,7 +39,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = CommentUnit.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = CommentUnit.class)
   @JoinColumns({ @JoinColumn() })
   private Set<CommentUnit> comment = new HashSet<CommentUnit>();
 
@@ -48,7 +48,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractCodeRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeRelationship.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractCodeRelationship> codeRelation = new HashSet<AbstractCodeRelationship>();
 
@@ -81,10 +81,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    */
   public void addToSource(SourceRef sourceValue) {
     if (!source.contains(sourceValue)) {
-
       source.add(sourceValue);
     }
-
   }
 
   /**
@@ -141,10 +139,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    */
   public void addToComment(CommentUnit commentValue) {
     if (!comment.contains(commentValue)) {
-
       comment.add(commentValue);
     }
-
   }
 
   /**
@@ -201,10 +197,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    */
   public void addToCodeRelation(AbstractCodeRelationship codeRelationValue) {
     if (!codeRelation.contains(codeRelationValue)) {
-
       codeRelation.add(codeRelationValue);
     }
-
   }
 
   /**
@@ -261,10 +255,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    */
   public void addToEntryFlow(EntryFlow entryFlowValue) {
     if (!entryFlow.contains(entryFlowValue)) {
-
       entryFlow.add(entryFlowValue);
     }
-
   }
 
   /**

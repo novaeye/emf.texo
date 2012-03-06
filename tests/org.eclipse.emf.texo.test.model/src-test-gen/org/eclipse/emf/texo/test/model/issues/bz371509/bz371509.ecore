@@ -10,12 +10,24 @@
         <details key="java.member" value="toClass1"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="many" upperBound="-1" eType="#//EClass1"
+        eOpposite="#//EClass1/many">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="many"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EClass1">
     <eStructuralFeatures xsi:type="ecore:EReference" name="toClass0" ordered="false"
         upperBound="-1" eType="#//EClass0" eOpposite="#//EClass0/toClass1">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="toClass0"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="many" upperBound="-1" eType="#//EClass0"
+        eOpposite="#//EClass0/many">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="many"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

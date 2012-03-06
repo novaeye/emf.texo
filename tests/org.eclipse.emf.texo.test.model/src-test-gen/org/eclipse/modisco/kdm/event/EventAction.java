@@ -30,7 +30,7 @@ public class EventAction extends AbstractEventElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Event.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Event.class)
   @JoinColumns({ @JoinColumn() })
   private Set<Event> eventElement = new HashSet<Event>();
 
@@ -78,10 +78,8 @@ public class EventAction extends AbstractEventElement {
    */
   public void addToEventElement(Event eventElementValue) {
     if (!eventElement.contains(eventElementValue)) {
-
       eventElement.add(eventElementValue);
     }
-
   }
 
   /**

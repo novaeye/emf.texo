@@ -68,7 +68,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = KDMEntity.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = KDMEntity.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<KDMEntity> ownedElement = new ArrayList<KDMEntity>();
@@ -101,7 +101,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = KDMRelationship.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = KDMRelationship.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<KDMRelationship> ownedRelation = new ArrayList<KDMRelationship>();

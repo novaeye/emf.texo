@@ -123,10 +123,8 @@ public class CatalogType {
    */
   public void addToSubCatalog(CatalogType subCatalogValue) {
     if (!subCatalog.contains(subCatalogValue)) {
-
       subCatalog.add(subCatalogValue);
     }
-
   }
 
   /**
@@ -186,10 +184,8 @@ public class CatalogType {
    */
   public void addToProduct(ProductType productValue) {
     if (!product.contains(productValue)) {
-
       product.add(productValue);
     }
-
   }
 
   /**

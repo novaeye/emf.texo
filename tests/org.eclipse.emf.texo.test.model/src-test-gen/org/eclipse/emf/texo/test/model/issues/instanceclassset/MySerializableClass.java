@@ -124,10 +124,8 @@ public class MySerializableClass implements Serializable {
    */
   public void addToNonEMFs(NonEMF nonEMFsValue) {
     if (!nonEMFs.contains(nonEMFsValue)) {
-
       nonEMFs.add(nonEMFsValue);
     }
-
   }
 
   /**

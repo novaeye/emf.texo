@@ -89,10 +89,8 @@ public class Member {
    */
   public void addToPosts(Post postsValue) {
     if (!posts.contains(postsValue)) {
-
       posts.add(postsValue);
     }
-
   }
 
   /**
@@ -149,10 +147,8 @@ public class Member {
    */
   public void addToCreated(Topic createdValue) {
     if (!created.contains(createdValue)) {
-
       created.add(createdValue);
     }
-
   }
 
   /**

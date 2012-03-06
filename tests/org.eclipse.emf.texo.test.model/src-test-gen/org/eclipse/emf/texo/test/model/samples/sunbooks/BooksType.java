@@ -22,7 +22,7 @@ public class BooksType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = BookType.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = BookType.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<BookType> book = new ArrayList<BookType>();
@@ -46,10 +46,8 @@ public class BooksType {
    */
   public void addToBook(BookType bookValue) {
     if (!book.contains(bookValue)) {
-
       book.add(bookValue);
     }
-
   }
 
   /**

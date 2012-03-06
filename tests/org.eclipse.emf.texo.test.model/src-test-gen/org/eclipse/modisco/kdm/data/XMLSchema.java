@@ -21,7 +21,7 @@ public class XMLSchema extends AbstractDataElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = AbstractContentElement.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractContentElement.class)
   @JoinColumns({ @JoinColumn() })
   private Set<AbstractContentElement> contentElement = new HashSet<AbstractContentElement>();
 
@@ -44,10 +44,8 @@ public class XMLSchema extends AbstractDataElement {
    */
   public void addToContentElement(AbstractContentElement contentElementValue) {
     if (!contentElement.contains(contentElementValue)) {
-
       contentElement.add(contentElementValue);
     }
-
   }
 
   /**

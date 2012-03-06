@@ -53,10 +53,8 @@ public class SimpleContentType extends ComplexContentType {
    */
   public void addToType(ComplexContentType typeValue) {
     if (!type.contains(typeValue)) {
-
       type.add(typeValue);
     }
-
   }
 
   /**

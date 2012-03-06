@@ -149,10 +149,8 @@ public class Topic {
    */
   public void addToPosts(Post postsValue) {
     if (!posts.contains(postsValue)) {
-
       posts.add(postsValue);
     }
-
   }
 
   /**

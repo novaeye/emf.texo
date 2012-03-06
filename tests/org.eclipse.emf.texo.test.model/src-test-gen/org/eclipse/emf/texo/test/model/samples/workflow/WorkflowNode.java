@@ -33,7 +33,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = OutputPort.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = OutputPort.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<OutputPort> outputs = new ArrayList<OutputPort>();
@@ -43,7 +43,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = InputPort.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = InputPort.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<InputPort> inputs = new ArrayList<InputPort>();
@@ -108,10 +108,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    */
   public void addToOutputs(OutputPort outputsValue) {
     if (!outputs.contains(outputsValue)) {
-
       outputs.add(outputsValue);
     }
-
   }
 
   /**
@@ -168,10 +166,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    */
   public void addToInputs(InputPort inputsValue) {
     if (!inputs.contains(inputsValue)) {
-
       inputs.add(inputsValue);
     }
-
   }
 
   /**

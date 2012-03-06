@@ -60,7 +60,7 @@ public class Claim {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ClaimLine.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ClaimLine.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<ClaimLine> claimLine = new ArrayList<ClaimLine>();
@@ -188,10 +188,8 @@ public class Claim {
    */
   public void addToClaimLine(ClaimLine claimLineValue) {
     if (!claimLine.contains(claimLineValue)) {
-
       claimLine.add(claimLineValue);
     }
-
   }
 
   /**

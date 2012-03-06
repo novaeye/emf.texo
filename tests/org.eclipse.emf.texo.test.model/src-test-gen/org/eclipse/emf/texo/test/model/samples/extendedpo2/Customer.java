@@ -80,10 +80,8 @@ public class Customer extends Identifiable {
    */
   public void addToOrders(PurchaseOrder ordersValue) {
     if (!orders.contains(ordersValue)) {
-
       orders.add(ordersValue);
     }
-
   }
 
   /**

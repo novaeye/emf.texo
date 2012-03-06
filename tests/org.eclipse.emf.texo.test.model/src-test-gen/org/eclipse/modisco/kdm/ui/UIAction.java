@@ -30,7 +30,7 @@ public class UIAction extends AbstractUIElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = UIEvent.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = UIEvent.class)
   @JoinColumns({ @JoinColumn() })
   private Set<UIEvent> uIElement = new HashSet<UIEvent>();
 
@@ -78,10 +78,8 @@ public class UIAction extends AbstractUIElement {
    */
   public void addToUIElement(UIEvent uIElementValue) {
     if (!uIElement.contains(uIElementValue)) {
-
       uIElement.add(uIElementValue);
     }
-
   }
 
   /**

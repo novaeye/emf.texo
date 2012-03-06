@@ -42,7 +42,7 @@ public class TestAny {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = EObject.class)
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
   @OrderColumn()
   @JoinColumns({ @JoinColumn() })
   private List<Object> multiAnyType = new ArrayList<Object>();
@@ -138,10 +138,8 @@ public class TestAny {
    */
   public void addToMultiAnyType(Object multiAnyTypeValue) {
     if (!multiAnyType.contains(multiAnyTypeValue)) {
-
       multiAnyType.add(multiAnyTypeValue);
     }
-
   }
 
   /**
