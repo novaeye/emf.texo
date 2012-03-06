@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz371509.EClass0" name="EClass0">
+    <orm:attributes>
+      <orm:many-to-one name="toClass1" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz371509.EClass1">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz371509.EClass1" name="EClass1">
+    <orm:attributes>
+      <orm:one-to-many mapped-by="toClass1" name="toClass0" target-entity="org.eclipse.emf.texo.test.model.issues.bz371509.EClass0">
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

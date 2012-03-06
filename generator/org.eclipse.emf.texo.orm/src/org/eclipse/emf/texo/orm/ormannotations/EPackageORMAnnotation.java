@@ -299,12 +299,11 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @generated
+   * @generatedNOT
    */
   protected EPackageORMAnnotation() {
     super();
     namingStrategy.setePackageORMAnnotation(this);
-    generateJavaAnnotations = alwaysGenerateJPAAnnotations;
   }
 
   public ORMNamingStrategy getNamingStrategy() {
@@ -672,7 +671,7 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
    * @return the value of the '<em>Use Join Tables For Non Containment</em>' attribute.
    * @see #setUseJoinTablesForNonContainment(boolean)
    * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEPackageORMAnnotation_UseJoinTablesForNonContainment()
-   * @model default="true" derived="true"
+   * @model default="true"
    * @generated
    */
   public boolean isUseJoinTablesForNonContainment() {

@@ -23,6 +23,7 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz371509.Bz371509ModelPackage;
 import org.eclipse.emf.texo.test.model.samples.accounting.AccountingModelPackage;
 import org.eclipse.emf.texo.test.model.samples.emap.EmapsampleModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.Epo2ModelPackage;
@@ -59,6 +60,7 @@ public class ModelJPATestSuite {
     addTest(LibraryModelPackage.INSTANCE, suite);
     addTest(InvModelPackage.INSTANCE, suite);
     addTest(MusicModelPackage.INSTANCE, suite);
+    addTest(Bz371509ModelPackage.INSTANCE, suite);
 
     {
       final List<ModelPackage> modelPackages = new ArrayList<ModelPackage>();
