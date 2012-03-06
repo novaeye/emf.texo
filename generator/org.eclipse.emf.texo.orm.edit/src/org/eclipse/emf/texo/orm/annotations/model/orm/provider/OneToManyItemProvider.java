@@ -40,380 +40,489 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 public class OneToManyItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
     IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
   /**
-   * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This constructs an instance from a factory and a notifier.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public OneToManyItemProvider(AdapterFactory adapterFactory) {
-    super(adapterFactory);
-  }
+		super(adapterFactory);
+	}
 
   /**
-   * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This returns the property descriptors for the adapted class.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-    if (itemPropertyDescriptors == null) {
-      super.getPropertyDescriptors(object);
+		if (itemPropertyDescriptors == null) {
+			super.getPropertyDescriptors(object);
 
-      addOrderByPropertyDescriptor(object);
-      addMapKeyTemporalPropertyDescriptor(object);
-      addMapKeyEnumeratedPropertyDescriptor(object);
-      addMapKeyConvertPropertyDescriptor(object);
-      addJoinFetchPropertyDescriptor(object);
-      addAccessPropertyDescriptor(object);
-      addFetchPropertyDescriptor(object);
-      addMappedByPropertyDescriptor(object);
-      addNamePropertyDescriptor(object);
-      addOrphanRemovalPropertyDescriptor(object);
-      addTargetEntityPropertyDescriptor(object);
-    }
-    return itemPropertyDescriptors;
-  }
+			addOrderByPropertyDescriptor(object);
+			addMapKeyTemporalPropertyDescriptor(object);
+			addMapKeyEnumeratedPropertyDescriptor(object);
+			addMapKeyConvertPropertyDescriptor(object);
+			addJoinFetchPropertyDescriptor(object);
+			addAccessPropertyDescriptor(object);
+			addFetchPropertyDescriptor(object);
+			addMappedByPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addOrphanRemovalPropertyDescriptor(object);
+			addTargetEntityPropertyDescriptor(object);
+		}
+		return itemPropertyDescriptors;
+	}
 
   /**
-   * This adds a property descriptor for the Order By feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Order By feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addOrderByPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_orderBy_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_orderBy_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_OrderBy(), true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-        null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_orderBy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_orderBy_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_OrderBy(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Map Key Temporal feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Map Key Temporal feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addMapKeyTemporalPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_mapKeyTemporal_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mapKeyTemporal_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_MapKeyTemporal(), true, false, false,
-        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_mapKeyTemporal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mapKeyTemporal_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_MapKeyTemporal(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Map Key Enumerated feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Map Key Enumerated feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addMapKeyEnumeratedPropertyDescriptor(Object object) {
-    itemPropertyDescriptors
-        .add(createItemPropertyDescriptor(
-            ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-            getResourceLocator(),
-            getString("_UI_OneToMany_mapKeyEnumerated_feature"),
-            getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mapKeyEnumerated_feature",
-                "_UI_OneToMany_type"), OrmPackage.eINSTANCE.getOneToMany_MapKeyEnumerated(), true, false, false,
-            ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_mapKeyEnumerated_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mapKeyEnumerated_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_MapKeyEnumerated(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Map Key Convert feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Map Key Convert feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addMapKeyConvertPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_mapKeyConvert_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mapKeyConvert_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_MapKeyConvert(), true, false, false,
-        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_mapKeyConvert_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mapKeyConvert_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_MapKeyConvert(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Join Fetch feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Join Fetch feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addJoinFetchPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_joinFetch_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_joinFetch_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_JoinFetch(), true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-        null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_joinFetch_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_joinFetch_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_JoinFetch(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Access feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Access feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addAccessPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_access_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_access_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_Access(), true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-        null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_access_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_access_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_Access(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Fetch feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Fetch feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addFetchPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_fetch_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_fetch_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_Fetch(), true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-        null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_fetch_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_fetch_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_Fetch(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Mapped By feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Mapped By feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addMappedByPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_mappedBy_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mappedBy_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_MappedBy(), true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-        null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_mappedBy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_mappedBy_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_MappedBy(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Name feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addNamePropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_name_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_name_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_Name(), true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
-        null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_name_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_Name(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Orphan Removal feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Orphan Removal feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addOrphanRemovalPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_orphanRemoval_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_orphanRemoval_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_OrphanRemoval(), true, false, false,
-        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_orphanRemoval_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_orphanRemoval_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_OrphanRemoval(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This adds a property descriptor for the Target Entity feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a property descriptor for the Target Entity feature.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected void addTargetEntityPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add(createItemPropertyDescriptor(
-        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-        getString("_UI_OneToMany_targetEntity_feature"),
-        getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_targetEntity_feature", "_UI_OneToMany_type"),
-        OrmPackage.eINSTANCE.getOneToMany_TargetEntity(), true, false, false,
-        ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-  }
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OneToMany_targetEntity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OneToMany_targetEntity_feature", "_UI_OneToMany_type"),
+				 OrmPackage.eINSTANCE.getOneToMany_TargetEntity(),
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
 
   /**
-   * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-   * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-   * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!-- begin-user-doc --> <!--
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-    if (childrenFeatures == null) {
-      super.getChildrenFeatures(object);
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_OrderColumn());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKey());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyClass());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyAttributeOverride());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyAssociationOverride());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyColumn());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyJoinColumn());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_Converter());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_TypeConverter());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_ObjectTypeConverter());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_StructConverter());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_JoinTable());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_JoinColumn());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_Cascade());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_PrivateOwned());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_Property());
-      childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_AccessMethods());
-    }
-    return childrenFeatures;
-  }
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_OrderColumn());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKey());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyClass());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyAttributeOverride());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyAssociationOverride());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyColumn());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_MapKeyJoinColumn());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_Converter());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_TypeConverter());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_ObjectTypeConverter());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_StructConverter());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_JoinTable());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_JoinColumn());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_Cascade());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_PrivateOwned());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_Property());
+			childrenFeatures.add(OrmPackage.eINSTANCE.getOneToMany_AccessMethods());
+		}
+		return childrenFeatures;
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EStructuralFeature getChildFeature(Object object, Object child) {
-    // Check the type of the specified child object and return the proper feature to use for
-    // adding (see {@link AddCommand}) it as a child.
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
 
-    return super.getChildFeature(object, child);
-  }
+		return super.getChildFeature(object, child);
+	}
 
   /**
-   * This returns OneToMany.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This returns OneToMany.gif.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object getImage(Object object) {
-    return overlayImage(object, getResourceLocator().getImage("full/obj16/OneToMany"));
-  }
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/OneToMany"));
+	}
 
   /**
-   * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public String getText(Object object) {
-    String label = ((OneToMany) object).getName();
-    return label == null || label.length() == 0 ? getString("_UI_OneToMany_type") : getString("_UI_OneToMany_type")
-        + " " + label;
-  }
+		String label = ((OneToMany)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_OneToMany_type") :
+			getString("_UI_OneToMany_type") + " " + label;
+	}
 
   /**
-   * This handles model notifications by calling {@link #updateChildren} to update any cached children and by creating a
-   * viewer notification, which it passes to {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public void notifyChanged(Notification notification) {
-    updateChildren(notification);
+		updateChildren(notification);
 
-    switch (notification.getFeatureID(OneToMany.class)) {
-    case OrmPackage.ONE_TO_MANY__ORDER_BY:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_CONVERT:
-    case OrmPackage.ONE_TO_MANY__JOIN_FETCH:
-    case OrmPackage.ONE_TO_MANY__ACCESS:
-    case OrmPackage.ONE_TO_MANY__FETCH:
-    case OrmPackage.ONE_TO_MANY__MAPPED_BY:
-    case OrmPackage.ONE_TO_MANY__NAME:
-    case OrmPackage.ONE_TO_MANY__ORPHAN_REMOVAL:
-    case OrmPackage.ONE_TO_MANY__TARGET_ENTITY:
-      fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-      return;
-    case OrmPackage.ONE_TO_MANY__ORDER_COLUMN:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_CLASS:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_ATTRIBUTE_OVERRIDE:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_ASSOCIATION_OVERRIDE:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_COLUMN:
-    case OrmPackage.ONE_TO_MANY__MAP_KEY_JOIN_COLUMN:
-    case OrmPackage.ONE_TO_MANY__CONVERTER:
-    case OrmPackage.ONE_TO_MANY__TYPE_CONVERTER:
-    case OrmPackage.ONE_TO_MANY__OBJECT_TYPE_CONVERTER:
-    case OrmPackage.ONE_TO_MANY__STRUCT_CONVERTER:
-    case OrmPackage.ONE_TO_MANY__JOIN_TABLE:
-    case OrmPackage.ONE_TO_MANY__JOIN_COLUMN:
-    case OrmPackage.ONE_TO_MANY__CASCADE:
-    case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
-    case OrmPackage.ONE_TO_MANY__PROPERTY:
-    case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
-      fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-      return;
-    }
-    super.notifyChanged(notification);
-  }
+		switch (notification.getFeatureID(OneToMany.class)) {
+			case OrmPackage.ONE_TO_MANY__ORDER_BY:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_CONVERT:
+			case OrmPackage.ONE_TO_MANY__JOIN_FETCH:
+			case OrmPackage.ONE_TO_MANY__ACCESS:
+			case OrmPackage.ONE_TO_MANY__FETCH:
+			case OrmPackage.ONE_TO_MANY__MAPPED_BY:
+			case OrmPackage.ONE_TO_MANY__NAME:
+			case OrmPackage.ONE_TO_MANY__ORPHAN_REMOVAL:
+			case OrmPackage.ONE_TO_MANY__TARGET_ENTITY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case OrmPackage.ONE_TO_MANY__ORDER_COLUMN:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_CLASS:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_ATTRIBUTE_OVERRIDE:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_ASSOCIATION_OVERRIDE:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_COLUMN:
+			case OrmPackage.ONE_TO_MANY__MAP_KEY_JOIN_COLUMN:
+			case OrmPackage.ONE_TO_MANY__CONVERTER:
+			case OrmPackage.ONE_TO_MANY__TYPE_CONVERTER:
+			case OrmPackage.ONE_TO_MANY__OBJECT_TYPE_CONVERTER:
+			case OrmPackage.ONE_TO_MANY__STRUCT_CONVERTER:
+			case OrmPackage.ONE_TO_MANY__JOIN_TABLE:
+			case OrmPackage.ONE_TO_MANY__JOIN_COLUMN:
+			case OrmPackage.ONE_TO_MANY__CASCADE:
+			case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
+			case OrmPackage.ONE_TO_MANY__PROPERTY:
+			case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
+		super.notifyChanged(notification);
+	}
 
   /**
-   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that can be created under
-   * this object. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+	 * that can be created under this object.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-    super.collectNewChildDescriptors(newChildDescriptors, object);
+		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_OrderColumn(),
-        OrmFactory.eINSTANCE.createOrderColumn()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_OrderColumn(),
+				 OrmFactory.eINSTANCE.createOrderColumn()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_MapKey(),
-        OrmFactory.eINSTANCE.createMapKey()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_MapKey(),
+				 OrmFactory.eINSTANCE.createMapKey()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_MapKeyClass(),
-        OrmFactory.eINSTANCE.createMapKeyClass()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_MapKeyClass(),
+				 OrmFactory.eINSTANCE.createMapKeyClass()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_MapKeyAttributeOverride(),
-        OrmFactory.eINSTANCE.createAttributeOverride()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_MapKeyAttributeOverride(),
+				 OrmFactory.eINSTANCE.createAttributeOverride()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_MapKeyAssociationOverride(),
-        OrmFactory.eINSTANCE.createAssociationOverride()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_MapKeyAssociationOverride(),
+				 OrmFactory.eINSTANCE.createAssociationOverride()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_MapKeyColumn(),
-        OrmFactory.eINSTANCE.createMapKeyColumn()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_MapKeyColumn(),
+				 OrmFactory.eINSTANCE.createMapKeyColumn()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_MapKeyJoinColumn(),
-        OrmFactory.eINSTANCE.createMapKeyJoinColumn()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_MapKeyJoinColumn(),
+				 OrmFactory.eINSTANCE.createMapKeyJoinColumn()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_Converter(),
-        OrmFactory.eINSTANCE.createConverter()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_Converter(),
+				 OrmFactory.eINSTANCE.createConverter()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_TypeConverter(),
-        OrmFactory.eINSTANCE.createTypeConverter()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_TypeConverter(),
+				 OrmFactory.eINSTANCE.createTypeConverter()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_ObjectTypeConverter(),
-        OrmFactory.eINSTANCE.createObjectTypeConverter()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_ObjectTypeConverter(),
+				 OrmFactory.eINSTANCE.createObjectTypeConverter()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_StructConverter(),
-        OrmFactory.eINSTANCE.createStructConverter()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_StructConverter(),
+				 OrmFactory.eINSTANCE.createStructConverter()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_JoinTable(),
-        OrmFactory.eINSTANCE.createJoinTable()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_JoinTable(),
+				 OrmFactory.eINSTANCE.createJoinTable()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_JoinColumn(),
-        OrmFactory.eINSTANCE.createJoinColumn()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_JoinColumn(),
+				 OrmFactory.eINSTANCE.createJoinColumn()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_Cascade(),
-        OrmFactory.eINSTANCE.createCascadeType()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_Cascade(),
+				 OrmFactory.eINSTANCE.createCascadeType()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_PrivateOwned(),
-        OrmFactory.eINSTANCE.createEmptyType()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_PrivateOwned(),
+				 OrmFactory.eINSTANCE.createEmptyType()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_Property(),
-        OrmFactory.eINSTANCE.createProperty()));
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_Property(),
+				 OrmFactory.eINSTANCE.createProperty()));
 
-    newChildDescriptors.add(createChildParameter(OrmPackage.eINSTANCE.getOneToMany_AccessMethods(),
-        OrmFactory.eINSTANCE.createAccessMethods()));
-  }
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmPackage.eINSTANCE.getOneToMany_AccessMethods(),
+				 OrmFactory.eINSTANCE.createAccessMethods()));
+	}
 
   /**
-   * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public ResourceLocator getResourceLocator() {
-    return Eclipselink_orm_2_0EditPlugin.INSTANCE;
-  }
+		return Eclipselink_orm_2_0EditPlugin.INSTANCE;
+	}
 
 }

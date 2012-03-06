@@ -40,19 +40,19 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmAdapterFactory;
 public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements ComposeableAdapterFactory,
     IChangeNotifier, IDisposable {
   /**
-   * This keeps track of the root adapter factory that delegates to this adapter factory. <!-- begin-user-doc --> <!--
+	 * This keeps track of the root adapter factory that delegates to this adapter factory.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ComposedAdapterFactory parentAdapterFactory;
 
   /**
-   * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}. <!-- begin-user-doc --> <!--
+	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
   /**
@@ -64,25 +64,24 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
   /**
-   * This constructs an instance. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This constructs an instance.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public OrmItemProviderAdapterFactory() {
-    supportedTypes.add(IEditingDomainItemProvider.class);
-    supportedTypes.add(IStructuredItemContentProvider.class);
-    supportedTypes.add(ITreeItemContentProvider.class);
-    supportedTypes.add(IItemLabelProvider.class);
-    supportedTypes.add(IItemPropertySource.class);
-  }
+		supportedTypes.add(IEditingDomainItemProvider.class);
+		supportedTypes.add(IStructuredItemContentProvider.class);
+		supportedTypes.add(ITreeItemContentProvider.class);
+		supportedTypes.add(IItemLabelProvider.class);
+		supportedTypes.add(IItemPropertySource.class);
+	}
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected AccessMethodsItemProvider accessMethodsItemProvider;
 
   /**
@@ -107,12 +106,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected AssociationOverrideItemProvider associationOverrideItemProvider;
 
   /**
@@ -137,12 +135,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected AttributeOverrideItemProvider attributeOverrideItemProvider;
 
   /**
@@ -167,11 +164,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected AttributesItemProvider attributesItemProvider;
 
   /**
@@ -196,11 +192,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected BasicItemProvider basicItemProvider;
 
   /**
@@ -225,12 +220,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected BasicCollectionItemProvider basicCollectionItemProvider;
 
   /**
@@ -255,11 +249,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected BasicMapItemProvider basicMapItemProvider;
 
   /**
@@ -284,11 +277,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected CacheItemProvider cacheItemProvider;
 
   /**
@@ -313,12 +305,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheInterceptor} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheInterceptor} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected CacheInterceptorItemProvider cacheInterceptorItemProvider;
 
   /**
@@ -343,11 +334,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected CascadeTypeItemProvider cascadeTypeItemProvider;
 
   /**
@@ -372,12 +362,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ChangeTrackingItemProvider changeTrackingItemProvider;
 
   /**
@@ -402,12 +391,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected CloneCopyPolicyItemProvider cloneCopyPolicyItemProvider;
 
   /**
@@ -432,12 +420,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected CollectionTableItemProvider collectionTableItemProvider;
 
   /**
@@ -462,11 +449,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Column}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Column} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected ColumnItemProvider columnItemProvider;
 
   /**
@@ -491,12 +477,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ColumnResultItemProvider columnResultItemProvider;
 
   /**
@@ -521,12 +506,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ConversionValueItemProvider conversionValueItemProvider;
 
   /**
@@ -551,11 +535,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected ConverterItemProvider converterItemProvider;
 
   /**
@@ -580,11 +563,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected CopyPolicyItemProvider copyPolicyItemProvider;
 
   /**
@@ -609,11 +591,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected CustomizerItemProvider customizerItemProvider;
 
   /**
@@ -638,12 +619,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected DiscriminatorClassItemProvider discriminatorClassItemProvider;
 
   /**
@@ -668,12 +648,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected DiscriminatorColumnItemProvider discriminatorColumnItemProvider;
 
   /**
@@ -698,12 +677,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected DocumentRootItemProvider documentRootItemProvider;
 
   /**
@@ -728,12 +706,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable} instances. <!-- begin-user-doc
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable} instances.
+	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected EclipselinkCollectionTableItemProvider eclipselinkCollectionTableItemProvider;
 
   /**
@@ -758,12 +735,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ElementCollectionItemProvider elementCollectionItemProvider;
 
   /**
@@ -788,11 +764,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EmbeddableItemProvider embeddableItemProvider;
 
   /**
@@ -817,11 +792,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EmbeddedItemProvider embeddedItemProvider;
 
   /**
@@ -846,11 +820,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EmbeddedIdItemProvider embeddedIdItemProvider;
 
   /**
@@ -875,11 +848,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EmptyTypeItemProvider emptyTypeItemProvider;
 
   /**
@@ -904,11 +876,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EntityItemProvider entityItemProvider;
 
   /**
@@ -933,12 +904,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListener} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListener} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected EntityListenerItemProvider entityListenerItemProvider;
 
   /**
@@ -963,12 +933,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected EntityListenersItemProvider entityListenersItemProvider;
 
   /**
@@ -993,12 +962,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected EntityMappingsTypeItemProvider entityMappingsTypeItemProvider;
 
   /**
@@ -1023,12 +991,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected EntityResultItemProvider entityResultItemProvider;
 
   /**
@@ -1053,11 +1020,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected FieldResultItemProvider fieldResultItemProvider;
 
   /**
@@ -1082,12 +1048,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.GeneratedValue} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.GeneratedValue} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected GeneratedValueItemProvider generatedValueItemProvider;
 
   /**
@@ -1112,11 +1077,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected IdItemProvider idItemProvider;
 
   /**
@@ -1141,11 +1105,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected IdClassItemProvider idClassItemProvider;
 
   /**
@@ -1170,11 +1133,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected InheritanceItemProvider inheritanceItemProvider;
 
   /**
@@ -1199,12 +1161,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy} instances. <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy} instances.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected InstantiationCopyPolicyItemProvider instantiationCopyPolicyItemProvider;
 
   /**
@@ -1229,11 +1190,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected JoinColumnItemProvider joinColumnItemProvider;
 
   /**
@@ -1258,11 +1218,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected JoinTableItemProvider joinTableItemProvider;
 
   /**
@@ -1287,11 +1246,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Lob}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Lob} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected LobItemProvider lobItemProvider;
 
   /**
@@ -1316,11 +1274,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected ManyToManyItemProvider manyToManyItemProvider;
 
   /**
@@ -1345,11 +1302,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected ManyToOneItemProvider manyToOneItemProvider;
 
   /**
@@ -1374,11 +1330,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected MapKeyItemProvider mapKeyItemProvider;
 
   /**
@@ -1403,11 +1358,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected MapKeyClassItemProvider mapKeyClassItemProvider;
 
   /**
@@ -1432,12 +1386,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected MapKeyColumnItemProvider mapKeyColumnItemProvider;
 
   /**
@@ -1462,12 +1415,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected MapKeyJoinColumnItemProvider mapKeyJoinColumnItemProvider;
 
   /**
@@ -1492,12 +1444,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected MappedSuperclassItemProvider mappedSuperclassItemProvider;
 
   /**
@@ -1522,12 +1473,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected NamedNativeQueryItemProvider namedNativeQueryItemProvider;
 
   /**
@@ -1552,11 +1502,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected NamedQueryItemProvider namedQueryItemProvider;
 
   /**
@@ -1581,12 +1530,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery} instances. <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery} instances.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected NamedStoredProcedureQueryItemProvider namedStoredProcedureQueryItemProvider;
 
   /**
@@ -1611,12 +1559,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ObjectTypeConverterItemProvider objectTypeConverterItemProvider;
 
   /**
@@ -1641,11 +1588,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected OneToManyItemProvider oneToManyItemProvider;
 
   /**
@@ -1670,11 +1616,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected OneToOneItemProvider oneToOneItemProvider;
 
   /**
@@ -1699,12 +1644,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected OptimisticLockingItemProvider optimisticLockingItemProvider;
 
   /**
@@ -1729,11 +1673,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected OrderColumnItemProvider orderColumnItemProvider;
 
   /**
@@ -1758,12 +1701,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults} instances. <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults} instances.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected PersistenceUnitDefaultsItemProvider persistenceUnitDefaultsItemProvider;
 
   /**
@@ -1788,12 +1730,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata} instances. <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata} instances.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected PersistenceUnitMetadataItemProvider persistenceUnitMetadataItemProvider;
 
   /**
@@ -1818,11 +1759,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PostLoadItemProvider postLoadItemProvider;
 
   /**
@@ -1847,11 +1787,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PostPersistItemProvider postPersistItemProvider;
 
   /**
@@ -1876,11 +1815,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PostRemoveItemProvider postRemoveItemProvider;
 
   /**
@@ -1905,11 +1843,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PostUpdateItemProvider postUpdateItemProvider;
 
   /**
@@ -1934,11 +1871,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PrePersistItemProvider prePersistItemProvider;
 
   /**
@@ -1963,11 +1899,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PreRemoveItemProvider preRemoveItemProvider;
 
   /**
@@ -1992,11 +1927,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PreUpdateItemProvider preUpdateItemProvider;
 
   /**
@@ -2021,11 +1955,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PrimaryKeyItemProvider primaryKeyItemProvider;
 
   /**
@@ -2050,12 +1983,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected PrimaryKeyJoinColumnItemProvider primaryKeyJoinColumnItemProvider;
 
   /**
@@ -2080,11 +2012,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected PropertyItemProvider propertyItemProvider;
 
   /**
@@ -2109,11 +2040,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected QueryHintItemProvider queryHintItemProvider;
 
   /**
@@ -2138,12 +2068,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected QueryRedirectorsItemProvider queryRedirectorsItemProvider;
 
   /**
@@ -2168,12 +2097,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected ReadTransformerItemProvider readTransformerItemProvider;
 
   /**
@@ -2198,12 +2126,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected SecondaryTableItemProvider secondaryTableItemProvider;
 
   /**
@@ -2228,12 +2155,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected SequenceGeneratorItemProvider sequenceGeneratorItemProvider;
 
   /**
@@ -2258,12 +2184,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected SqlResultSetMappingItemProvider sqlResultSetMappingItemProvider;
 
   /**
@@ -2288,12 +2213,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter} instances. <!-- begin-user-doc -->
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter} instances.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected StoredProcedureParameterItemProvider storedProcedureParameterItemProvider;
 
   /**
@@ -2318,12 +2242,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected StructConverterItemProvider structConverterItemProvider;
 
   /**
@@ -2348,11 +2271,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Table}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Table} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected TableItemProvider tableItemProvider;
 
   /**
@@ -2377,12 +2299,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected TableGeneratorItemProvider tableGeneratorItemProvider;
 
   /**
@@ -2407,11 +2328,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected TimeOfDayItemProvider timeOfDayItemProvider;
 
   /**
@@ -2436,12 +2356,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected TransformationItemProvider transformationItemProvider;
 
   /**
@@ -2466,11 +2385,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected TransientItemProvider transientItemProvider;
 
   /**
@@ -2495,12 +2413,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected TypeConverterItemProvider typeConverterItemProvider;
 
   /**
@@ -2525,12 +2442,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected UniqueConstraintItemProvider uniqueConstraintItemProvider;
 
   /**
@@ -2555,12 +2471,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected VariableOneToOneItemProvider variableOneToOneItemProvider;
 
   /**
@@ -2585,11 +2500,10 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version}
-   * instances. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version} instances.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected VersionItemProvider versionItemProvider;
 
   /**
@@ -2614,12 +2528,11 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This keeps track of the one adapter used for all
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer} instances. <!-- begin-user-doc --> <!--
+	 * This keeps track of the one adapter used for all {@link org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer} instances.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   protected WriteTransformerItemProvider writeTransformerItemProvider;
 
   /**
@@ -2644,274 +2557,185 @@ public class OrmItemProviderAdapterFactory extends OrmAdapterFactory implements 
   }
 
   /**
-   * This returns the root adapter factory that contains this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This returns the root adapter factory that contains this factory.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public ComposeableAdapterFactory getRootAdapterFactory() {
-    return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-  }
+		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+	}
 
   /**
-   * This sets the composed adapter factory that contains this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This sets the composed adapter factory that contains this factory.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-    this.parentAdapterFactory = parentAdapterFactory;
-  }
+		this.parentAdapterFactory = parentAdapterFactory;
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean isFactoryForType(Object type) {
-    return supportedTypes.contains(type) || super.isFactoryForType(type);
-  }
+		return supportedTypes.contains(type) || super.isFactoryForType(type);
+	}
 
   /**
-   * This implementation substitutes the factory itself as the key for the adapter. <!-- begin-user-doc --> <!--
+	 * This implementation substitutes the factory itself as the key for the adapter.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Adapter adapt(Notifier notifier, Object type) {
-    return super.adapt(notifier, this);
-  }
+		return super.adapt(notifier, this);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object adapt(Object object, Object type) {
-    if (isFactoryForType(type)) {
-      Object adapter = super.adapt(object, type);
-      if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
-        return adapter;
-      }
-    }
+		if (isFactoryForType(type)) {
+			Object adapter = super.adapt(object, type);
+			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+				return adapter;
+			}
+		}
 
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * This adds a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This adds a listener.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public void addListener(INotifyChangedListener notifyChangedListener) {
-    changeNotifier.addListener(notifyChangedListener);
-  }
+		changeNotifier.addListener(notifyChangedListener);
+	}
 
   /**
-   * This removes a listener. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This removes a listener.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public void removeListener(INotifyChangedListener notifyChangedListener) {
-    changeNotifier.removeListener(notifyChangedListener);
-  }
+		changeNotifier.removeListener(notifyChangedListener);
+	}
 
   /**
-   * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}. <!-- begin-user-doc --> <!--
+	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * 
-   * @generated
-   */
+	 * @generated
+	 */
   public void fireNotifyChanged(Notification notification) {
-    changeNotifier.fireNotifyChanged(notification);
+		changeNotifier.fireNotifyChanged(notification);
 
-    if (parentAdapterFactory != null) {
-      parentAdapterFactory.fireNotifyChanged(notification);
-    }
-  }
+		if (parentAdapterFactory != null) {
+			parentAdapterFactory.fireNotifyChanged(notification);
+		}
+	}
 
   /**
-   * This disposes all of the item providers created by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * This disposes all of the item providers created by this factory. 
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public void dispose() {
-    if (accessMethodsItemProvider != null)
-      accessMethodsItemProvider.dispose();
-    if (associationOverrideItemProvider != null)
-      associationOverrideItemProvider.dispose();
-    if (attributeOverrideItemProvider != null)
-      attributeOverrideItemProvider.dispose();
-    if (attributesItemProvider != null)
-      attributesItemProvider.dispose();
-    if (basicItemProvider != null)
-      basicItemProvider.dispose();
-    if (basicCollectionItemProvider != null)
-      basicCollectionItemProvider.dispose();
-    if (basicMapItemProvider != null)
-      basicMapItemProvider.dispose();
-    if (cacheItemProvider != null)
-      cacheItemProvider.dispose();
-    if (cacheInterceptorItemProvider != null)
-      cacheInterceptorItemProvider.dispose();
-    if (cascadeTypeItemProvider != null)
-      cascadeTypeItemProvider.dispose();
-    if (changeTrackingItemProvider != null)
-      changeTrackingItemProvider.dispose();
-    if (cloneCopyPolicyItemProvider != null)
-      cloneCopyPolicyItemProvider.dispose();
-    if (collectionTableItemProvider != null)
-      collectionTableItemProvider.dispose();
-    if (columnItemProvider != null)
-      columnItemProvider.dispose();
-    if (columnResultItemProvider != null)
-      columnResultItemProvider.dispose();
-    if (conversionValueItemProvider != null)
-      conversionValueItemProvider.dispose();
-    if (converterItemProvider != null)
-      converterItemProvider.dispose();
-    if (copyPolicyItemProvider != null)
-      copyPolicyItemProvider.dispose();
-    if (customizerItemProvider != null)
-      customizerItemProvider.dispose();
-    if (discriminatorClassItemProvider != null)
-      discriminatorClassItemProvider.dispose();
-    if (discriminatorColumnItemProvider != null)
-      discriminatorColumnItemProvider.dispose();
-    if (documentRootItemProvider != null)
-      documentRootItemProvider.dispose();
-    if (eclipselinkCollectionTableItemProvider != null)
-      eclipselinkCollectionTableItemProvider.dispose();
-    if (elementCollectionItemProvider != null)
-      elementCollectionItemProvider.dispose();
-    if (embeddableItemProvider != null)
-      embeddableItemProvider.dispose();
-    if (embeddedItemProvider != null)
-      embeddedItemProvider.dispose();
-    if (embeddedIdItemProvider != null)
-      embeddedIdItemProvider.dispose();
-    if (emptyTypeItemProvider != null)
-      emptyTypeItemProvider.dispose();
-    if (entityItemProvider != null)
-      entityItemProvider.dispose();
-    if (entityListenerItemProvider != null)
-      entityListenerItemProvider.dispose();
-    if (entityListenersItemProvider != null)
-      entityListenersItemProvider.dispose();
-    if (entityMappingsTypeItemProvider != null)
-      entityMappingsTypeItemProvider.dispose();
-    if (entityResultItemProvider != null)
-      entityResultItemProvider.dispose();
-    if (fieldResultItemProvider != null)
-      fieldResultItemProvider.dispose();
-    if (generatedValueItemProvider != null)
-      generatedValueItemProvider.dispose();
-    if (idItemProvider != null)
-      idItemProvider.dispose();
-    if (idClassItemProvider != null)
-      idClassItemProvider.dispose();
-    if (inheritanceItemProvider != null)
-      inheritanceItemProvider.dispose();
-    if (instantiationCopyPolicyItemProvider != null)
-      instantiationCopyPolicyItemProvider.dispose();
-    if (joinColumnItemProvider != null)
-      joinColumnItemProvider.dispose();
-    if (joinTableItemProvider != null)
-      joinTableItemProvider.dispose();
-    if (lobItemProvider != null)
-      lobItemProvider.dispose();
-    if (manyToManyItemProvider != null)
-      manyToManyItemProvider.dispose();
-    if (manyToOneItemProvider != null)
-      manyToOneItemProvider.dispose();
-    if (mapKeyItemProvider != null)
-      mapKeyItemProvider.dispose();
-    if (mapKeyClassItemProvider != null)
-      mapKeyClassItemProvider.dispose();
-    if (mapKeyColumnItemProvider != null)
-      mapKeyColumnItemProvider.dispose();
-    if (mapKeyJoinColumnItemProvider != null)
-      mapKeyJoinColumnItemProvider.dispose();
-    if (mappedSuperclassItemProvider != null)
-      mappedSuperclassItemProvider.dispose();
-    if (namedNativeQueryItemProvider != null)
-      namedNativeQueryItemProvider.dispose();
-    if (namedQueryItemProvider != null)
-      namedQueryItemProvider.dispose();
-    if (namedStoredProcedureQueryItemProvider != null)
-      namedStoredProcedureQueryItemProvider.dispose();
-    if (objectTypeConverterItemProvider != null)
-      objectTypeConverterItemProvider.dispose();
-    if (oneToManyItemProvider != null)
-      oneToManyItemProvider.dispose();
-    if (oneToOneItemProvider != null)
-      oneToOneItemProvider.dispose();
-    if (optimisticLockingItemProvider != null)
-      optimisticLockingItemProvider.dispose();
-    if (orderColumnItemProvider != null)
-      orderColumnItemProvider.dispose();
-    if (persistenceUnitDefaultsItemProvider != null)
-      persistenceUnitDefaultsItemProvider.dispose();
-    if (persistenceUnitMetadataItemProvider != null)
-      persistenceUnitMetadataItemProvider.dispose();
-    if (postLoadItemProvider != null)
-      postLoadItemProvider.dispose();
-    if (postPersistItemProvider != null)
-      postPersistItemProvider.dispose();
-    if (postRemoveItemProvider != null)
-      postRemoveItemProvider.dispose();
-    if (postUpdateItemProvider != null)
-      postUpdateItemProvider.dispose();
-    if (prePersistItemProvider != null)
-      prePersistItemProvider.dispose();
-    if (preRemoveItemProvider != null)
-      preRemoveItemProvider.dispose();
-    if (preUpdateItemProvider != null)
-      preUpdateItemProvider.dispose();
-    if (primaryKeyItemProvider != null)
-      primaryKeyItemProvider.dispose();
-    if (primaryKeyJoinColumnItemProvider != null)
-      primaryKeyJoinColumnItemProvider.dispose();
-    if (propertyItemProvider != null)
-      propertyItemProvider.dispose();
-    if (queryHintItemProvider != null)
-      queryHintItemProvider.dispose();
-    if (queryRedirectorsItemProvider != null)
-      queryRedirectorsItemProvider.dispose();
-    if (readTransformerItemProvider != null)
-      readTransformerItemProvider.dispose();
-    if (secondaryTableItemProvider != null)
-      secondaryTableItemProvider.dispose();
-    if (sequenceGeneratorItemProvider != null)
-      sequenceGeneratorItemProvider.dispose();
-    if (sqlResultSetMappingItemProvider != null)
-      sqlResultSetMappingItemProvider.dispose();
-    if (storedProcedureParameterItemProvider != null)
-      storedProcedureParameterItemProvider.dispose();
-    if (structConverterItemProvider != null)
-      structConverterItemProvider.dispose();
-    if (tableItemProvider != null)
-      tableItemProvider.dispose();
-    if (tableGeneratorItemProvider != null)
-      tableGeneratorItemProvider.dispose();
-    if (timeOfDayItemProvider != null)
-      timeOfDayItemProvider.dispose();
-    if (transformationItemProvider != null)
-      transformationItemProvider.dispose();
-    if (transientItemProvider != null)
-      transientItemProvider.dispose();
-    if (typeConverterItemProvider != null)
-      typeConverterItemProvider.dispose();
-    if (uniqueConstraintItemProvider != null)
-      uniqueConstraintItemProvider.dispose();
-    if (variableOneToOneItemProvider != null)
-      variableOneToOneItemProvider.dispose();
-    if (versionItemProvider != null)
-      versionItemProvider.dispose();
-    if (writeTransformerItemProvider != null)
-      writeTransformerItemProvider.dispose();
-  }
+		if (accessMethodsItemProvider != null) accessMethodsItemProvider.dispose();
+		if (associationOverrideItemProvider != null) associationOverrideItemProvider.dispose();
+		if (attributeOverrideItemProvider != null) attributeOverrideItemProvider.dispose();
+		if (attributesItemProvider != null) attributesItemProvider.dispose();
+		if (basicItemProvider != null) basicItemProvider.dispose();
+		if (basicCollectionItemProvider != null) basicCollectionItemProvider.dispose();
+		if (basicMapItemProvider != null) basicMapItemProvider.dispose();
+		if (cacheItemProvider != null) cacheItemProvider.dispose();
+		if (cacheInterceptorItemProvider != null) cacheInterceptorItemProvider.dispose();
+		if (cascadeTypeItemProvider != null) cascadeTypeItemProvider.dispose();
+		if (changeTrackingItemProvider != null) changeTrackingItemProvider.dispose();
+		if (cloneCopyPolicyItemProvider != null) cloneCopyPolicyItemProvider.dispose();
+		if (collectionTableItemProvider != null) collectionTableItemProvider.dispose();
+		if (columnItemProvider != null) columnItemProvider.dispose();
+		if (columnResultItemProvider != null) columnResultItemProvider.dispose();
+		if (conversionValueItemProvider != null) conversionValueItemProvider.dispose();
+		if (converterItemProvider != null) converterItemProvider.dispose();
+		if (copyPolicyItemProvider != null) copyPolicyItemProvider.dispose();
+		if (customizerItemProvider != null) customizerItemProvider.dispose();
+		if (discriminatorClassItemProvider != null) discriminatorClassItemProvider.dispose();
+		if (discriminatorColumnItemProvider != null) discriminatorColumnItemProvider.dispose();
+		if (documentRootItemProvider != null) documentRootItemProvider.dispose();
+		if (eclipselinkCollectionTableItemProvider != null) eclipselinkCollectionTableItemProvider.dispose();
+		if (elementCollectionItemProvider != null) elementCollectionItemProvider.dispose();
+		if (embeddableItemProvider != null) embeddableItemProvider.dispose();
+		if (embeddedItemProvider != null) embeddedItemProvider.dispose();
+		if (embeddedIdItemProvider != null) embeddedIdItemProvider.dispose();
+		if (emptyTypeItemProvider != null) emptyTypeItemProvider.dispose();
+		if (entityItemProvider != null) entityItemProvider.dispose();
+		if (entityListenerItemProvider != null) entityListenerItemProvider.dispose();
+		if (entityListenersItemProvider != null) entityListenersItemProvider.dispose();
+		if (entityMappingsTypeItemProvider != null) entityMappingsTypeItemProvider.dispose();
+		if (entityResultItemProvider != null) entityResultItemProvider.dispose();
+		if (fieldResultItemProvider != null) fieldResultItemProvider.dispose();
+		if (generatedValueItemProvider != null) generatedValueItemProvider.dispose();
+		if (idItemProvider != null) idItemProvider.dispose();
+		if (idClassItemProvider != null) idClassItemProvider.dispose();
+		if (inheritanceItemProvider != null) inheritanceItemProvider.dispose();
+		if (instantiationCopyPolicyItemProvider != null) instantiationCopyPolicyItemProvider.dispose();
+		if (joinColumnItemProvider != null) joinColumnItemProvider.dispose();
+		if (joinTableItemProvider != null) joinTableItemProvider.dispose();
+		if (lobItemProvider != null) lobItemProvider.dispose();
+		if (manyToManyItemProvider != null) manyToManyItemProvider.dispose();
+		if (manyToOneItemProvider != null) manyToOneItemProvider.dispose();
+		if (mapKeyItemProvider != null) mapKeyItemProvider.dispose();
+		if (mapKeyClassItemProvider != null) mapKeyClassItemProvider.dispose();
+		if (mapKeyColumnItemProvider != null) mapKeyColumnItemProvider.dispose();
+		if (mapKeyJoinColumnItemProvider != null) mapKeyJoinColumnItemProvider.dispose();
+		if (mappedSuperclassItemProvider != null) mappedSuperclassItemProvider.dispose();
+		if (namedNativeQueryItemProvider != null) namedNativeQueryItemProvider.dispose();
+		if (namedQueryItemProvider != null) namedQueryItemProvider.dispose();
+		if (namedStoredProcedureQueryItemProvider != null) namedStoredProcedureQueryItemProvider.dispose();
+		if (objectTypeConverterItemProvider != null) objectTypeConverterItemProvider.dispose();
+		if (oneToManyItemProvider != null) oneToManyItemProvider.dispose();
+		if (oneToOneItemProvider != null) oneToOneItemProvider.dispose();
+		if (optimisticLockingItemProvider != null) optimisticLockingItemProvider.dispose();
+		if (orderColumnItemProvider != null) orderColumnItemProvider.dispose();
+		if (persistenceUnitDefaultsItemProvider != null) persistenceUnitDefaultsItemProvider.dispose();
+		if (persistenceUnitMetadataItemProvider != null) persistenceUnitMetadataItemProvider.dispose();
+		if (postLoadItemProvider != null) postLoadItemProvider.dispose();
+		if (postPersistItemProvider != null) postPersistItemProvider.dispose();
+		if (postRemoveItemProvider != null) postRemoveItemProvider.dispose();
+		if (postUpdateItemProvider != null) postUpdateItemProvider.dispose();
+		if (prePersistItemProvider != null) prePersistItemProvider.dispose();
+		if (preRemoveItemProvider != null) preRemoveItemProvider.dispose();
+		if (preUpdateItemProvider != null) preUpdateItemProvider.dispose();
+		if (primaryKeyItemProvider != null) primaryKeyItemProvider.dispose();
+		if (primaryKeyJoinColumnItemProvider != null) primaryKeyJoinColumnItemProvider.dispose();
+		if (propertyItemProvider != null) propertyItemProvider.dispose();
+		if (queryHintItemProvider != null) queryHintItemProvider.dispose();
+		if (queryRedirectorsItemProvider != null) queryRedirectorsItemProvider.dispose();
+		if (readTransformerItemProvider != null) readTransformerItemProvider.dispose();
+		if (secondaryTableItemProvider != null) secondaryTableItemProvider.dispose();
+		if (sequenceGeneratorItemProvider != null) sequenceGeneratorItemProvider.dispose();
+		if (sqlResultSetMappingItemProvider != null) sqlResultSetMappingItemProvider.dispose();
+		if (storedProcedureParameterItemProvider != null) storedProcedureParameterItemProvider.dispose();
+		if (structConverterItemProvider != null) structConverterItemProvider.dispose();
+		if (tableItemProvider != null) tableItemProvider.dispose();
+		if (tableGeneratorItemProvider != null) tableGeneratorItemProvider.dispose();
+		if (timeOfDayItemProvider != null) timeOfDayItemProvider.dispose();
+		if (transformationItemProvider != null) transformationItemProvider.dispose();
+		if (transientItemProvider != null) transientItemProvider.dispose();
+		if (typeConverterItemProvider != null) typeConverterItemProvider.dispose();
+		if (uniqueConstraintItemProvider != null) uniqueConstraintItemProvider.dispose();
+		if (variableOneToOneItemProvider != null) variableOneToOneItemProvider.dispose();
+		if (versionItemProvider != null) versionItemProvider.dispose();
+		if (writeTransformerItemProvider != null) writeTransformerItemProvider.dispose();
+	}
 
   private static class ChildPropertyDescriptorSorter implements Comparator<Object> {
 
