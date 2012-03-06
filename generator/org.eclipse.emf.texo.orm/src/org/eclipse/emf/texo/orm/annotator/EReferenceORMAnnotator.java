@@ -146,10 +146,6 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       }
     }
 
-    if (!oneToMany.isSetOrphanRemoval() && eReference.isContainment()) {
-      oneToMany.setOrphanRemoval(true);
-    }
-
     if (GeneratorUtils.isEmptyOrNull(oneToMany.getName())) {
       oneToMany.setName(getName(eReference));
     }
@@ -319,11 +315,6 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
           oneToOne.getCascade().setCascadeRefresh(OrmFactory.eINSTANCE.createEmptyType());
         }
       }
-    }
-
-    // set orphan removal for containment
-    if (eReference.isContainment() && !oneToOne.isSetOrphanRemoval()) {
-      oneToOne.setOrphanRemoval(true);
     }
 
     // set mapped by
