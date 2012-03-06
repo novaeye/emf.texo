@@ -160,10 +160,7 @@ public class ModelEDataTypeAnnotator extends ModelEClassifierAnnotator implement
   }
 
   private Class<?> getInstanceClass(EDataType eDataType, String instanceClassName) {
-    // if (GenUtils.isObjectTypeWithEnumBaseType(eDataType)) {
-    //
-    // }
-    return GenUtils.getClassForName(eDataType, instanceClassName);
+    return getClassForName(eDataType, instanceClassName);
   }
 
   private String getInstanceClassName(EDataType eDataType) {

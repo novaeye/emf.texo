@@ -17,6 +17,9 @@
 
 package org.eclipse.emf.texo.modelgenerator.annotator;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -47,6 +50,31 @@ import org.eclipse.emf.texo.utils.Check;
 public abstract class ModelENamedElementAnnotator {
 
   private AnnotationManager annotationManager;
+
+  private Map<String, Class<?>> instanceClassCache = new HashMap<String, Class<?>>();
+
+  // used in getClassForName to store that no class could be found
+  private static class NULLIndicator {
+  }
+
+  protected Class<?> getClassForName(EDataType eDataType, String name) {
+    final String cachedName = eDataType.getEPackage().getNsURI() + eDataType.getName() + "___" + name; //$NON-NLS-1$
+    Class<?> result = instanceClassCache.get(cachedName);
+    if (result != null) {
+      // not found
+      if (result == NULLIndicator.class) {
+        return null;
+      }
+      return result;
+    }
+    result = GenUtils.getClassForName(eDataType, name);
+    if (result == null) {
+      instanceClassCache.put(cachedName, NULLIndicator.class);
+    } else {
+      instanceClassCache.put(cachedName, result);
+    }
+    return result;
+  }
 
   protected void annotate(final ENamedElementModelGenAnnotation annotation) {
     Check.isTrue(getAnnotationEClass().isSuperTypeOf(annotation.eClass()),

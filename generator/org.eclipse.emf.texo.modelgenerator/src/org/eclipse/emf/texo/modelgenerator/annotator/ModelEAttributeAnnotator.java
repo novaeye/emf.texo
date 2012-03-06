@@ -228,6 +228,6 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
         + eFeature + " is a featuremap, this method should not be called"); //$NON-NLS-1$
     final EDataType eDataType = ((EAttribute) eFeature).getEAttributeType();
     final EDataTypeModelGenAnnotationDefinition annotation = getEDataTypeModelGenAnnotation(eDataType);
-    return GenUtils.getClassForName(eDataType, annotation.getInstanceClassName());
+    return getClassForName(eDataType, annotation.getInstanceClassName());
   }
 }

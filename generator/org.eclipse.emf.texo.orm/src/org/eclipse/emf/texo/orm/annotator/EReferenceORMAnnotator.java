@@ -106,7 +106,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.eclipse.emf.texo.generator.Annotator#postAnnotating(org.eclipse.emf.texo.annotations.
+   * @see org.eclipse.emf.texo.generator.Annotator#postAnnotating(org.eclipse.emf.texo.annotations.
    * annotationsmodel.ENamedElementAnnotation)
    */
   public void postAnnotating(EReferenceORMAnnotation annotation) {

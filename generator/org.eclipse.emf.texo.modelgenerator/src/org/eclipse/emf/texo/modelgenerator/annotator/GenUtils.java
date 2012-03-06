@@ -681,6 +681,9 @@ public class GenUtils {
     if (!name.contains(GenConstants.DOT)) {
       return getPrimitiveClass(name);
     }
+    if (eDataType instanceof EEnum) {
+      return null;
+    }
     try {
       final EPackage p = eDataType.getEPackage();
       return p != null ? Class.forName(name, true, p.getClass().getClassLoader()) : Class.forName(name);
