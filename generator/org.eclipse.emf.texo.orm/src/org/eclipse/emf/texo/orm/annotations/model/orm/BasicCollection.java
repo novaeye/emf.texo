@@ -68,39 +68,40 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface BasicCollection extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Value Column</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Value Column</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Value Column</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Value Column</em>' containment reference.
    * @see #setValueColumn(Column)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_ValueColumn()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='value-column' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='value-column' namespace='##targetNamespace'"
    * @generated
    */
   Column getValueColumn();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getValueColumn <em>Value Column</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value Column</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getValueColumn
+   * <em>Value Column</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Value Column</em>' containment reference.
    * @see #getValueColumn()
    * @generated
    */
   void setValueColumn(Column value);
 
   /**
-   * Returns the value of the '<em><b>Convert</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Convert</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Convert</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Convert</em>' attribute.
    * @see #setConvert(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Convert()
@@ -111,74 +112,78 @@ public interface BasicCollection extends BaseOrmAnnotation {
   String getConvert();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getConvert <em>Convert</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Convert</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getConvert
+   * <em>Convert</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Convert</em>' attribute.
    * @see #getConvert()
    * @generated
    */
   void setConvert(String value);
 
   /**
-   * Returns the value of the '<em><b>Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Converter</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Converter</em>' containment reference.
    * @see #setConverter(Converter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Converter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='converter' namespace='##targetNamespace'"
    * @generated
    */
   Converter getConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getConverter <em>Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getConverter
+   * <em>Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Converter</em>' containment reference.
    * @see #getConverter()
    * @generated
    */
   void setConverter(Converter value);
 
   /**
-   * Returns the value of the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type Converter</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Type Converter</em>' containment reference.
    * @see #setTypeConverter(TypeConverter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_TypeConverter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='type-converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='type-converter' namespace='##targetNamespace'"
    * @generated
    */
   TypeConverter getTypeConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getTypeConverter <em>Type Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getTypeConverter
+   * <em>Type Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Type Converter</em>' containment reference.
    * @see #getTypeConverter()
    * @generated
    */
   void setTypeConverter(TypeConverter value);
 
   /**
-   * Returns the value of the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Object Type Converter</em>' containment reference isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Object Type Converter</em>' containment reference.
    * @see #setObjectTypeConverter(ObjectTypeConverter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_ObjectTypeConverter()
@@ -189,91 +194,97 @@ public interface BasicCollection extends BaseOrmAnnotation {
   ObjectTypeConverter getObjectTypeConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getObjectTypeConverter <em>Object Type Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Object Type Converter</em>' containment reference.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getObjectTypeConverter
+   * <em>Object Type Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Object Type Converter</em>' containment reference.
    * @see #getObjectTypeConverter()
    * @generated
    */
   void setObjectTypeConverter(ObjectTypeConverter value);
 
   /**
-   * Returns the value of the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Struct Converter</em>' containment reference isn't clear, there really should be more of
    * a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Struct Converter</em>' containment reference.
    * @see #setStructConverter(StructConverter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_StructConverter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='struct-converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='struct-converter' namespace='##targetNamespace'"
    * @generated
    */
   StructConverter getStructConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getStructConverter <em>Struct Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Struct Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getStructConverter
+   * <em>Struct Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Struct Converter</em>' containment reference.
    * @see #getStructConverter()
    * @generated
    */
   void setStructConverter(StructConverter value);
 
   /**
-   * Returns the value of the '<em><b>Collection Table</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Collection Table</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Collection Table</em>' containment reference isn't clear, there really should be more of
    * a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Collection Table</em>' containment reference.
    * @see #setCollectionTable(EclipselinkCollectionTable)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_CollectionTable()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='collection-table' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='collection-table' namespace='##targetNamespace'"
    * @generated
    */
   EclipselinkCollectionTable getCollectionTable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getCollectionTable <em>Collection Table</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Collection Table</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getCollectionTable
+   * <em>Collection Table</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Collection Table</em>' containment reference.
    * @see #getCollectionTable()
    * @generated
    */
   void setCollectionTable(EclipselinkCollectionTable value);
 
   /**
-   * Returns the value of the '<em><b>Join Fetch</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Join Fetch</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Join Fetch</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Join Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @see #isSetJoinFetch()
    * @see #unsetJoinFetch()
    * @see #setJoinFetch(JoinFetchType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_JoinFetch()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='element' name='join-fetch' namespace='##targetNamespace'"
+   * @model unsettable="true" extendedMetaData="kind='element' name='join-fetch' namespace='##targetNamespace'"
    * @generated
    */
   JoinFetchType getJoinFetch();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getJoinFetch <em>Join Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Join Fetch</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getJoinFetch
+   * <em>Join Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Join Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @see #isSetJoinFetch()
    * @see #unsetJoinFetch()
@@ -283,8 +294,9 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void setJoinFetch(JoinFetchType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getJoinFetch <em>Join Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getJoinFetch
+   * <em>Join Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetJoinFetch()
    * @see #getJoinFetch()
    * @see #setJoinFetch(JoinFetchType)
@@ -293,8 +305,10 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void unsetJoinFetch();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getJoinFetch <em>Join Fetch</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getJoinFetch <em>Join Fetch</em>}' attribute
+   * is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Join Fetch</em>' attribute is set.
    * @see #unsetJoinFetch()
    * @see #getJoinFetch()
@@ -304,72 +318,73 @@ public interface BasicCollection extends BaseOrmAnnotation {
   boolean isSetJoinFetch();
 
   /**
-   * Returns the value of the '<em><b>Property</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Property</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Property</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Property</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Property()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
    * @generated
    */
   EList<Property> getProperty();
 
   /**
-   * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access Methods</em>' containment reference.
    * @see #setAccessMethods(AccessMethods)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_AccessMethods()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
    * @generated
    */
   AccessMethods getAccessMethods();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccessMethods <em>Access Methods</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access Methods</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccessMethods
+   * <em>Access Methods</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access Methods</em>' containment reference.
    * @see #getAccessMethods()
    * @generated
    */
   void setAccessMethods(AccessMethods value);
 
   /**
-   * Returns the value of the '<em><b>Access</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
    * @see #setAccess(AccessType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Access()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='access'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='access'"
    * @generated
    */
   AccessType getAccess();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
@@ -379,8 +394,9 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void setAccess(AccessType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetAccess()
    * @see #getAccess()
    * @see #setAccess(AccessType)
@@ -389,8 +405,9 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void unsetAccess();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess <em>Access</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess
+   * <em>Access</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Access</em>' attribute is set.
    * @see #unsetAccess()
    * @see #getAccess()
@@ -400,29 +417,30 @@ public interface BasicCollection extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
-   * Returns the value of the '<em><b>Fetch</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Fetch</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Fetch</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see #isSetFetch()
    * @see #unsetFetch()
    * @see #setFetch(FetchType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Fetch()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='fetch'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='fetch'"
    * @generated
    */
   FetchType getFetch();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getFetch <em>Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fetch</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getFetch
+   * <em>Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see #isSetFetch()
    * @see #unsetFetch()
@@ -432,8 +450,9 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void setFetch(FetchType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getFetch <em>Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getFetch
+   * <em>Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetFetch()
    * @see #getFetch()
    * @see #setFetch(FetchType)
@@ -442,8 +461,9 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void unsetFetch();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getFetch <em>Fetch</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getFetch
+   * <em>Fetch</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Fetch</em>' attribute is set.
    * @see #unsetFetch()
    * @see #getFetch()
@@ -453,25 +473,26 @@ public interface BasicCollection extends BaseOrmAnnotation {
   boolean isSetFetch();
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Name()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='name'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='name'"
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getName <em>Name</em>}
+   * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */

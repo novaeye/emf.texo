@@ -11,25 +11,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Post Remove</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD}) @Retention(RUNTIME)
- * 				public
- * 				@interface PostRemove {}
+ * @Target({METHOD ) @Retention(RUNTIME) public
+ * @interface PostRemove {}
  * 
- *       
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getMethodName <em>Method Name</em>}</li>
- * </ul>
- * </p>
- *
+ * 
+ *            <!-- end-model-doc -->
+ * 
+ *            <p>
+ *            The following features are supported:
+ *            <ul>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getDescription <em>Description</em>}</li>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getMethodName <em>Method Name</em>}</li>
+ *            </ul>
+ *            </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPostRemove()
  * @model extendedMetaData="name='post-remove' kind='elementOnly'"
  * @extends BaseOrmAnnotation
@@ -37,13 +36,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PostRemove extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPostRemove_Description()
@@ -54,22 +53,24 @@ public interface PostRemove extends BaseOrmAnnotation {
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getDescription
+   * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Description</em>' attribute.
    * @see #getDescription()
    * @generated
    */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Method Name</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Method Name</em>' attribute.
    * @see #setMethodName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPostRemove_MethodName()
@@ -80,9 +81,11 @@ public interface PostRemove extends BaseOrmAnnotation {
   String getMethodName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getMethodName <em>Method Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Method Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove#getMethodName
+   * <em>Method Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Method Name</em>' attribute.
    * @see #getMethodName()
    * @generated
    */

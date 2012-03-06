@@ -199,10 +199,9 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -225,11 +224,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__PRE_PERSIST, oldPrePersist, newPrePersist);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -242,22 +240,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPrePersist(PrePersist newPrePersist) {
     if (newPrePersist != prePersist) {
       NotificationChain msgs = null;
-      if (prePersist != null) {
+      if (prePersist != null)
         msgs = ((InternalEObject) prePersist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__PRE_PERSIST, null, msgs);
-      }
-      if (newPrePersist != null) {
+      if (newPrePersist != null)
         msgs = ((InternalEObject) newPrePersist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__PRE_PERSIST, null, msgs);
-      }
       msgs = basicSetPrePersist(newPrePersist, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__PRE_PERSIST, newPrePersist,
           newPrePersist));
-    }
   }
 
   /**
@@ -280,11 +274,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__POST_PERSIST, oldPostPersist, newPostPersist);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -297,22 +290,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPostPersist(PostPersist newPostPersist) {
     if (newPostPersist != postPersist) {
       NotificationChain msgs = null;
-      if (postPersist != null) {
+      if (postPersist != null)
         msgs = ((InternalEObject) postPersist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_PERSIST, null, msgs);
-      }
-      if (newPostPersist != null) {
+      if (newPostPersist != null)
         msgs = ((InternalEObject) newPostPersist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_PERSIST, null, msgs);
-      }
       msgs = basicSetPostPersist(newPostPersist, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__POST_PERSIST, newPostPersist,
           newPostPersist));
-    }
   }
 
   /**
@@ -335,11 +324,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__PRE_REMOVE, oldPreRemove, newPreRemove);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -352,22 +340,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPreRemove(PreRemove newPreRemove) {
     if (newPreRemove != preRemove) {
       NotificationChain msgs = null;
-      if (preRemove != null) {
+      if (preRemove != null)
         msgs = ((InternalEObject) preRemove).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__PRE_REMOVE, null, msgs);
-      }
-      if (newPreRemove != null) {
+      if (newPreRemove != null)
         msgs = ((InternalEObject) newPreRemove).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__PRE_REMOVE, null, msgs);
-      }
       msgs = basicSetPreRemove(newPreRemove, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__PRE_REMOVE, newPreRemove,
           newPreRemove));
-    }
   }
 
   /**
@@ -390,11 +374,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__POST_REMOVE, oldPostRemove, newPostRemove);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -407,22 +390,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPostRemove(PostRemove newPostRemove) {
     if (newPostRemove != postRemove) {
       NotificationChain msgs = null;
-      if (postRemove != null) {
+      if (postRemove != null)
         msgs = ((InternalEObject) postRemove).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_REMOVE, null, msgs);
-      }
-      if (newPostRemove != null) {
+      if (newPostRemove != null)
         msgs = ((InternalEObject) newPostRemove).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_REMOVE, null, msgs);
-      }
       msgs = basicSetPostRemove(newPostRemove, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__POST_REMOVE, newPostRemove,
           newPostRemove));
-    }
   }
 
   /**
@@ -445,11 +424,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__PRE_UPDATE, oldPreUpdate, newPreUpdate);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -462,22 +440,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPreUpdate(PreUpdate newPreUpdate) {
     if (newPreUpdate != preUpdate) {
       NotificationChain msgs = null;
-      if (preUpdate != null) {
+      if (preUpdate != null)
         msgs = ((InternalEObject) preUpdate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__PRE_UPDATE, null, msgs);
-      }
-      if (newPreUpdate != null) {
+      if (newPreUpdate != null)
         msgs = ((InternalEObject) newPreUpdate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__PRE_UPDATE, null, msgs);
-      }
       msgs = basicSetPreUpdate(newPreUpdate, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__PRE_UPDATE, newPreUpdate,
           newPreUpdate));
-    }
   }
 
   /**
@@ -500,11 +474,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__POST_UPDATE, oldPostUpdate, newPostUpdate);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -517,22 +490,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPostUpdate(PostUpdate newPostUpdate) {
     if (newPostUpdate != postUpdate) {
       NotificationChain msgs = null;
-      if (postUpdate != null) {
+      if (postUpdate != null)
         msgs = ((InternalEObject) postUpdate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_UPDATE, null, msgs);
-      }
-      if (newPostUpdate != null) {
+      if (newPostUpdate != null)
         msgs = ((InternalEObject) newPostUpdate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_UPDATE, null, msgs);
-      }
       msgs = basicSetPostUpdate(newPostUpdate, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__POST_UPDATE, newPostUpdate,
           newPostUpdate));
-    }
   }
 
   /**
@@ -555,11 +524,10 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ENTITY_LISTENER__POST_LOAD, oldPostLoad, newPostLoad);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -572,22 +540,18 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setPostLoad(PostLoad newPostLoad) {
     if (newPostLoad != postLoad) {
       NotificationChain msgs = null;
-      if (postLoad != null) {
+      if (postLoad != null)
         msgs = ((InternalEObject) postLoad).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_LOAD, null, msgs);
-      }
-      if (newPostLoad != null) {
+      if (newPostLoad != null)
         msgs = ((InternalEObject) newPostLoad).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ENTITY_LISTENER__POST_LOAD, null, msgs);
-      }
       msgs = basicSetPostLoad(newPostLoad, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__POST_LOAD, newPostLoad,
           newPostLoad));
-    }
   }
 
   /**
@@ -607,9 +571,8 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
   public void setClass(String newClass) {
     String oldClass = class_;
     class_ = newClass;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_LISTENER__CLASS, oldClass, class_));
-    }
   }
 
   /**
@@ -783,9 +746,8 @@ public class EntityListenerImpl extends BaseOrmAnnotationImpl implements EntityL
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

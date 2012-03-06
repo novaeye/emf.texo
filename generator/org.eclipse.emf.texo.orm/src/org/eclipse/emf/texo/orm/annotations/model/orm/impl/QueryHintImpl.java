@@ -22,19 +22,19 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl#getValue <em>Value</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl#getDescription <em>Description</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -42,9 +42,9 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -62,8 +62,8 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -92,6 +92,7 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected QueryHintImpl() {
@@ -100,6 +101,7 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -109,6 +111,7 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDescription() {
@@ -117,17 +120,20 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.QUERY_HINT__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.QUERY_HINT__DESCRIPTION, oldDescription,
+          description));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -136,6 +142,7 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -147,6 +154,7 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getValue() {
@@ -155,6 +163,7 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setValue(String newValue) {
@@ -166,85 +175,91 @@ public class QueryHintImpl extends BaseOrmAnnotationImpl implements QueryHint {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.QUERY_HINT__DESCRIPTION:
-        return getDescription();
-      case OrmPackage.QUERY_HINT__NAME:
-        return getName();
-      case OrmPackage.QUERY_HINT__VALUE:
-        return getValue();
+    case OrmPackage.QUERY_HINT__DESCRIPTION:
+      return getDescription();
+    case OrmPackage.QUERY_HINT__NAME:
+      return getName();
+    case OrmPackage.QUERY_HINT__VALUE:
+      return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.QUERY_HINT__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-      case OrmPackage.QUERY_HINT__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.QUERY_HINT__VALUE:
-        setValue((String)newValue);
-        return;
+    case OrmPackage.QUERY_HINT__DESCRIPTION:
+      setDescription((String) newValue);
+      return;
+    case OrmPackage.QUERY_HINT__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.QUERY_HINT__VALUE:
+      setValue((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.QUERY_HINT__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case OrmPackage.QUERY_HINT__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.QUERY_HINT__VALUE:
-        setValue(VALUE_EDEFAULT);
-        return;
+    case OrmPackage.QUERY_HINT__DESCRIPTION:
+      setDescription(DESCRIPTION_EDEFAULT);
+      return;
+    case OrmPackage.QUERY_HINT__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.QUERY_HINT__VALUE:
+      setValue(VALUE_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.QUERY_HINT__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case OrmPackage.QUERY_HINT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.QUERY_HINT__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+    case OrmPackage.QUERY_HINT__DESCRIPTION:
+      return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+    case OrmPackage.QUERY_HINT__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.QUERY_HINT__VALUE:
+      return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

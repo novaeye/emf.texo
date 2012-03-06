@@ -22,12 +22,12 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl#getValueType <em>Value Type</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl#getValue <em>Value</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl#getValueType <em>Value Type</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
@@ -42,8 +42,8 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -71,9 +71,9 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
   protected String value = VALUE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValueType() <em>Value Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getValueType() <em>Value Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getValueType()
    * @generated
    * @ordered
@@ -81,9 +81,9 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
   protected static final String VALUE_TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValueType() <em>Value Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getValueType() <em>Value Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getValueType()
    * @generated
    * @ordered
@@ -92,6 +92,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected PropertyImpl() {
@@ -100,6 +101,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -109,6 +111,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -117,6 +120,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -128,6 +132,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getValue() {
@@ -136,6 +141,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setValue(String newValue) {
@@ -147,6 +153,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getValueType() {
@@ -155,6 +162,7 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setValueType(String newValueType) {
@@ -166,85 +174,91 @@ public class PropertyImpl extends BaseOrmAnnotationImpl implements Property {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.PROPERTY__NAME:
-        return getName();
-      case OrmPackage.PROPERTY__VALUE:
-        return getValue();
-      case OrmPackage.PROPERTY__VALUE_TYPE:
-        return getValueType();
+    case OrmPackage.PROPERTY__NAME:
+      return getName();
+    case OrmPackage.PROPERTY__VALUE:
+      return getValue();
+    case OrmPackage.PROPERTY__VALUE_TYPE:
+      return getValueType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.PROPERTY__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.PROPERTY__VALUE:
-        setValue((String)newValue);
-        return;
-      case OrmPackage.PROPERTY__VALUE_TYPE:
-        setValueType((String)newValue);
-        return;
+    case OrmPackage.PROPERTY__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.PROPERTY__VALUE:
+      setValue((String) newValue);
+      return;
+    case OrmPackage.PROPERTY__VALUE_TYPE:
+      setValueType((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.PROPERTY__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.PROPERTY__VALUE:
-        setValue(VALUE_EDEFAULT);
-        return;
-      case OrmPackage.PROPERTY__VALUE_TYPE:
-        setValueType(VALUE_TYPE_EDEFAULT);
-        return;
+    case OrmPackage.PROPERTY__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.PROPERTY__VALUE:
+      setValue(VALUE_EDEFAULT);
+      return;
+    case OrmPackage.PROPERTY__VALUE_TYPE:
+      setValueType(VALUE_TYPE_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.PROPERTY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.PROPERTY__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case OrmPackage.PROPERTY__VALUE_TYPE:
-        return VALUE_TYPE_EDEFAULT == null ? valueType != null : !VALUE_TYPE_EDEFAULT.equals(valueType);
+    case OrmPackage.PROPERTY__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.PROPERTY__VALUE:
+      return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+    case OrmPackage.PROPERTY__VALUE_TYPE:
+      return VALUE_TYPE_EDEFAULT == null ? valueType != null : !VALUE_TYPE_EDEFAULT.equals(valueType);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");

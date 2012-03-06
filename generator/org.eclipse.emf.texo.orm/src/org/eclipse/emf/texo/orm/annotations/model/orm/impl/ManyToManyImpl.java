@@ -517,9 +517,8 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setOrderBy(String newOrderBy) {
     String oldOrderBy = orderBy;
     orderBy = newOrderBy;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__ORDER_BY, oldOrderBy, orderBy));
-    }
   }
 
   /**
@@ -542,11 +541,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__ORDER_COLUMN, oldOrderColumn, newOrderColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -559,22 +557,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setOrderColumn(OrderColumn newOrderColumn) {
     if (newOrderColumn != orderColumn) {
       NotificationChain msgs = null;
-      if (orderColumn != null) {
+      if (orderColumn != null)
         msgs = ((InternalEObject) orderColumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__ORDER_COLUMN, null, msgs);
-      }
-      if (newOrderColumn != null) {
+      if (newOrderColumn != null)
         msgs = ((InternalEObject) newOrderColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__ORDER_COLUMN, null, msgs);
-      }
       msgs = basicSetOrderColumn(newOrderColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__ORDER_COLUMN, newOrderColumn,
           newOrderColumn));
-    }
   }
 
   /**
@@ -597,11 +591,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY,
           oldMapKey, newMapKey);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -614,21 +607,17 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setMapKey(MapKey newMapKey) {
     if (newMapKey != mapKey) {
       NotificationChain msgs = null;
-      if (mapKey != null) {
+      if (mapKey != null)
         msgs = ((InternalEObject) mapKey).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__MAP_KEY, null, msgs);
-      }
-      if (newMapKey != null) {
+      if (newMapKey != null)
         msgs = ((InternalEObject) newMapKey).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__MAP_KEY, null, msgs);
-      }
       msgs = basicSetMapKey(newMapKey, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY, newMapKey, newMapKey));
-    }
   }
 
   /**
@@ -651,11 +640,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__MAP_KEY_CLASS, oldMapKeyClass, newMapKeyClass);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -668,22 +656,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setMapKeyClass(MapKeyClass newMapKeyClass) {
     if (newMapKeyClass != mapKeyClass) {
       NotificationChain msgs = null;
-      if (mapKeyClass != null) {
+      if (mapKeyClass != null)
         msgs = ((InternalEObject) mapKeyClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__MAP_KEY_CLASS, null, msgs);
-      }
-      if (newMapKeyClass != null) {
+      if (newMapKeyClass != null)
         msgs = ((InternalEObject) newMapKeyClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__MAP_KEY_CLASS, null, msgs);
-      }
       msgs = basicSetMapKeyClass(newMapKeyClass, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY_CLASS, newMapKeyClass,
           newMapKeyClass));
-    }
   }
 
   /**
@@ -705,10 +689,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     mapKeyTemporal = newMapKeyTemporal == null ? MAP_KEY_TEMPORAL_EDEFAULT : newMapKeyTemporal;
     boolean oldMapKeyTemporalESet = mapKeyTemporalESet;
     mapKeyTemporalESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY_TEMPORAL,
           oldMapKeyTemporal, mapKeyTemporal, !oldMapKeyTemporalESet));
-    }
   }
 
   /**
@@ -721,10 +704,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     boolean oldMapKeyTemporalESet = mapKeyTemporalESet;
     mapKeyTemporal = MAP_KEY_TEMPORAL_EDEFAULT;
     mapKeyTemporalESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MANY_TO_MANY__MAP_KEY_TEMPORAL,
           oldMapKeyTemporal, MAP_KEY_TEMPORAL_EDEFAULT, oldMapKeyTemporalESet));
-    }
   }
 
   /**
@@ -755,10 +737,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     mapKeyEnumerated = newMapKeyEnumerated == null ? MAP_KEY_ENUMERATED_EDEFAULT : newMapKeyEnumerated;
     boolean oldMapKeyEnumeratedESet = mapKeyEnumeratedESet;
     mapKeyEnumeratedESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY_ENUMERATED,
           oldMapKeyEnumerated, mapKeyEnumerated, !oldMapKeyEnumeratedESet));
-    }
   }
 
   /**
@@ -771,10 +752,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     boolean oldMapKeyEnumeratedESet = mapKeyEnumeratedESet;
     mapKeyEnumerated = MAP_KEY_ENUMERATED_EDEFAULT;
     mapKeyEnumeratedESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MANY_TO_MANY__MAP_KEY_ENUMERATED,
           oldMapKeyEnumerated, MAP_KEY_ENUMERATED_EDEFAULT, oldMapKeyEnumeratedESet));
-    }
   }
 
   /**
@@ -803,10 +783,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setMapKeyConvert(String newMapKeyConvert) {
     String oldMapKeyConvert = mapKeyConvert;
     mapKeyConvert = newMapKeyConvert;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY_CONVERT, oldMapKeyConvert,
           mapKeyConvert));
-    }
   }
 
   /**
@@ -855,11 +834,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__MAP_KEY_COLUMN, oldMapKeyColumn, newMapKeyColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -872,22 +850,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setMapKeyColumn(MapKeyColumn newMapKeyColumn) {
     if (newMapKeyColumn != mapKeyColumn) {
       NotificationChain msgs = null;
-      if (mapKeyColumn != null) {
+      if (mapKeyColumn != null)
         msgs = ((InternalEObject) mapKeyColumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__MAP_KEY_COLUMN, null, msgs);
-      }
-      if (newMapKeyColumn != null) {
+      if (newMapKeyColumn != null)
         msgs = ((InternalEObject) newMapKeyColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__MAP_KEY_COLUMN, null, msgs);
-      }
       msgs = basicSetMapKeyColumn(newMapKeyColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAP_KEY_COLUMN, newMapKeyColumn,
           newMapKeyColumn));
-    }
   }
 
   /**
@@ -923,11 +897,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__CONVERTER, oldConverter, newConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -940,22 +913,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setConverter(Converter newConverter) {
     if (newConverter != converter) {
       NotificationChain msgs = null;
-      if (converter != null) {
+      if (converter != null)
         msgs = ((InternalEObject) converter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__CONVERTER, null, msgs);
-      }
-      if (newConverter != null) {
+      if (newConverter != null)
         msgs = ((InternalEObject) newConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__CONVERTER, null, msgs);
-      }
       msgs = basicSetConverter(newConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__CONVERTER, newConverter,
           newConverter));
-    }
   }
 
   /**
@@ -978,11 +947,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__TYPE_CONVERTER, oldTypeConverter, newTypeConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -995,22 +963,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setTypeConverter(TypeConverter newTypeConverter) {
     if (newTypeConverter != typeConverter) {
       NotificationChain msgs = null;
-      if (typeConverter != null) {
+      if (typeConverter != null)
         msgs = ((InternalEObject) typeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__TYPE_CONVERTER, null, msgs);
-      }
-      if (newTypeConverter != null) {
+      if (newTypeConverter != null)
         msgs = ((InternalEObject) newTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__TYPE_CONVERTER, null, msgs);
-      }
       msgs = basicSetTypeConverter(newTypeConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__TYPE_CONVERTER, newTypeConverter,
           newTypeConverter));
-    }
   }
 
   /**
@@ -1034,11 +998,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__OBJECT_TYPE_CONVERTER, oldObjectTypeConverter, newObjectTypeConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1051,22 +1014,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setObjectTypeConverter(ObjectTypeConverter newObjectTypeConverter) {
     if (newObjectTypeConverter != objectTypeConverter) {
       NotificationChain msgs = null;
-      if (objectTypeConverter != null) {
+      if (objectTypeConverter != null)
         msgs = ((InternalEObject) objectTypeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__OBJECT_TYPE_CONVERTER, null, msgs);
-      }
-      if (newObjectTypeConverter != null) {
+      if (newObjectTypeConverter != null)
         msgs = ((InternalEObject) newObjectTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__OBJECT_TYPE_CONVERTER, null, msgs);
-      }
       msgs = basicSetObjectTypeConverter(newObjectTypeConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__OBJECT_TYPE_CONVERTER,
           newObjectTypeConverter, newObjectTypeConverter));
-    }
   }
 
   /**
@@ -1089,11 +1048,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__STRUCT_CONVERTER, oldStructConverter, newStructConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1106,22 +1064,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setStructConverter(StructConverter newStructConverter) {
     if (newStructConverter != structConverter) {
       NotificationChain msgs = null;
-      if (structConverter != null) {
+      if (structConverter != null)
         msgs = ((InternalEObject) structConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__STRUCT_CONVERTER, null, msgs);
-      }
-      if (newStructConverter != null) {
+      if (newStructConverter != null)
         msgs = ((InternalEObject) newStructConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__STRUCT_CONVERTER, null, msgs);
-      }
       msgs = basicSetStructConverter(newStructConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__STRUCT_CONVERTER,
           newStructConverter, newStructConverter));
-    }
   }
 
   /**
@@ -1144,11 +1098,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__JOIN_TABLE, oldJoinTable, newJoinTable);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1161,22 +1114,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setJoinTable(JoinTable newJoinTable) {
     if (newJoinTable != joinTable) {
       NotificationChain msgs = null;
-      if (joinTable != null) {
+      if (joinTable != null)
         msgs = ((InternalEObject) joinTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__JOIN_TABLE, null, msgs);
-      }
-      if (newJoinTable != null) {
+      if (newJoinTable != null)
         msgs = ((InternalEObject) newJoinTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__JOIN_TABLE, null, msgs);
-      }
       msgs = basicSetJoinTable(newJoinTable, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__JOIN_TABLE, newJoinTable,
           newJoinTable));
-    }
   }
 
   /**
@@ -1199,11 +1148,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__CASCADE,
           oldCascade, newCascade);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1216,21 +1164,17 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setCascade(CascadeType newCascade) {
     if (newCascade != cascade) {
       NotificationChain msgs = null;
-      if (cascade != null) {
+      if (cascade != null)
         msgs = ((InternalEObject) cascade).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__CASCADE, null, msgs);
-      }
-      if (newCascade != null) {
+      if (newCascade != null)
         msgs = ((InternalEObject) newCascade).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__CASCADE, null, msgs);
-      }
       msgs = basicSetCascade(newCascade, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__CASCADE, newCascade, newCascade));
-    }
   }
 
   /**
@@ -1252,10 +1196,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     joinFetch = newJoinFetch == null ? JOIN_FETCH_EDEFAULT : newJoinFetch;
     boolean oldJoinFetchESet = joinFetchESet;
     joinFetchESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__JOIN_FETCH, oldJoinFetch,
           joinFetch, !oldJoinFetchESet));
-    }
   }
 
   /**
@@ -1268,10 +1211,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     boolean oldJoinFetchESet = joinFetchESet;
     joinFetch = JOIN_FETCH_EDEFAULT;
     joinFetchESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MANY_TO_MANY__JOIN_FETCH, oldJoinFetch,
           JOIN_FETCH_EDEFAULT, oldJoinFetchESet));
-    }
   }
 
   /**
@@ -1315,11 +1257,10 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MANY_TO_MANY__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1332,22 +1273,18 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setAccessMethods(AccessMethods newAccessMethods) {
     if (newAccessMethods != accessMethods) {
       NotificationChain msgs = null;
-      if (accessMethods != null) {
+      if (accessMethods != null)
         msgs = ((InternalEObject) accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__ACCESS_METHODS, null, msgs);
-      }
-      if (newAccessMethods != null) {
+      if (newAccessMethods != null)
         msgs = ((InternalEObject) newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MANY_TO_MANY__ACCESS_METHODS, null, msgs);
-      }
       msgs = basicSetAccessMethods(newAccessMethods, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__ACCESS_METHODS, newAccessMethods,
           newAccessMethods));
-    }
   }
 
   /**
@@ -1369,10 +1306,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__ACCESS, oldAccess, access,
           !oldAccessESet));
-    }
   }
 
   /**
@@ -1385,10 +1321,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MANY_TO_MANY__ACCESS, oldAccess,
           ACCESS_EDEFAULT, oldAccessESet));
-    }
   }
 
   /**
@@ -1419,10 +1354,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
     boolean oldFetchESet = fetchESet;
     fetchESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__FETCH, oldFetch, fetch,
           !oldFetchESet));
-    }
   }
 
   /**
@@ -1435,10 +1369,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
     boolean oldFetchESet = fetchESet;
     fetch = FETCH_EDEFAULT;
     fetchESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MANY_TO_MANY__FETCH, oldFetch, FETCH_EDEFAULT,
           oldFetchESet));
-    }
   }
 
   /**
@@ -1467,9 +1400,8 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setMappedBy(String newMappedBy) {
     String oldMappedBy = mappedBy;
     mappedBy = newMappedBy;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__MAPPED_BY, oldMappedBy, mappedBy));
-    }
   }
 
   /**
@@ -1489,9 +1421,8 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__NAME, oldName, name));
-    }
   }
 
   /**
@@ -1511,10 +1442,9 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
   public void setTargetEntity(String newTargetEntity) {
     String oldTargetEntity = targetEntity;
     targetEntity = newTargetEntity;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MANY_TO_MANY__TARGET_ENTITY, oldTargetEntity,
           targetEntity));
-    }
   }
 
   /**
@@ -1869,45 +1799,39 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (orderBy: ");
     result.append(orderBy);
     result.append(", mapKeyTemporal: ");
-    if (mapKeyTemporalESet) {
+    if (mapKeyTemporalESet)
       result.append(mapKeyTemporal);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mapKeyEnumerated: ");
-    if (mapKeyEnumeratedESet) {
+    if (mapKeyEnumeratedESet)
       result.append(mapKeyEnumerated);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mapKeyConvert: ");
     result.append(mapKeyConvert);
     result.append(", joinFetch: ");
-    if (joinFetchESet) {
+    if (joinFetchESet)
       result.append(joinFetch);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", fetch: ");
-    if (fetchESet) {
+    if (fetchESet)
       result.append(fetch);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mappedBy: ");
     result.append(mappedBy);
     result.append(", name: ");

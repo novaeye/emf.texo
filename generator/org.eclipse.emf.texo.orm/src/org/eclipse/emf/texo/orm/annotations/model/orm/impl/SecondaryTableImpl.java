@@ -48,8 +48,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements SecondaryTable {
   /**
-   * The cached value of the '{@link #getPrimaryKeyJoinColumn() <em>Primary Key Join Column</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getPrimaryKeyJoinColumn() <em>Primary Key Join Column</em>}' containment reference
+   * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getPrimaryKeyJoinColumn()
    * @generated
    * @ordered
@@ -59,6 +60,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
   /**
    * The cached value of the '{@link #getUniqueConstraint() <em>Unique Constraint</em>}' containment reference list.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getUniqueConstraint()
    * @generated
    * @ordered
@@ -66,9 +68,9 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
   protected EList<UniqueConstraint> uniqueConstraint;
 
   /**
-   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -76,9 +78,9 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
   protected static final String CATALOG_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -96,8 +98,8 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -105,9 +107,9 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSchema()
    * @generated
    * @ordered
@@ -126,6 +128,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected SecondaryTableImpl() {
@@ -134,6 +137,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -143,28 +147,33 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<PrimaryKeyJoinColumn> getPrimaryKeyJoinColumn() {
     if (primaryKeyJoinColumn == null) {
-      primaryKeyJoinColumn = new EObjectContainmentEList<PrimaryKeyJoinColumn>(PrimaryKeyJoinColumn.class, this, OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN);
+      primaryKeyJoinColumn = new EObjectContainmentEList<PrimaryKeyJoinColumn>(PrimaryKeyJoinColumn.class, this,
+          OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN);
     }
     return primaryKeyJoinColumn;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<UniqueConstraint> getUniqueConstraint() {
     if (uniqueConstraint == null) {
-      uniqueConstraint = new EObjectContainmentEList<UniqueConstraint>(UniqueConstraint.class, this, OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT);
+      uniqueConstraint = new EObjectContainmentEList<UniqueConstraint>(UniqueConstraint.class, this,
+          OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT);
     }
     return uniqueConstraint;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getCatalog() {
@@ -173,6 +182,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCatalog(String newCatalog) {
@@ -184,6 +194,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -192,6 +203,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -203,6 +215,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getSchema() {
@@ -211,6 +224,7 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSchema(String newSchema) {
@@ -222,123 +236,130 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        return ((InternalEList<?>)getPrimaryKeyJoinColumn()).basicRemove(otherEnd, msgs);
-      case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
-        return ((InternalEList<?>)getUniqueConstraint()).basicRemove(otherEnd, msgs);
+    case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      return ((InternalEList<?>) getPrimaryKeyJoinColumn()).basicRemove(otherEnd, msgs);
+    case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
+      return ((InternalEList<?>) getUniqueConstraint()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        return getPrimaryKeyJoinColumn();
-      case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
-        return getUniqueConstraint();
-      case OrmPackage.SECONDARY_TABLE__CATALOG:
-        return getCatalog();
-      case OrmPackage.SECONDARY_TABLE__NAME:
-        return getName();
-      case OrmPackage.SECONDARY_TABLE__SCHEMA:
-        return getSchema();
+    case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      return getPrimaryKeyJoinColumn();
+    case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
+      return getUniqueConstraint();
+    case OrmPackage.SECONDARY_TABLE__CATALOG:
+      return getCatalog();
+    case OrmPackage.SECONDARY_TABLE__NAME:
+      return getName();
+    case OrmPackage.SECONDARY_TABLE__SCHEMA:
+      return getSchema();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        getPrimaryKeyJoinColumn().clear();
-        getPrimaryKeyJoinColumn().addAll((Collection<? extends PrimaryKeyJoinColumn>)newValue);
-        return;
-      case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
-        getUniqueConstraint().clear();
-        getUniqueConstraint().addAll((Collection<? extends UniqueConstraint>)newValue);
-        return;
-      case OrmPackage.SECONDARY_TABLE__CATALOG:
-        setCatalog((String)newValue);
-        return;
-      case OrmPackage.SECONDARY_TABLE__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.SECONDARY_TABLE__SCHEMA:
-        setSchema((String)newValue);
-        return;
+    case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      getPrimaryKeyJoinColumn().clear();
+      getPrimaryKeyJoinColumn().addAll((Collection<? extends PrimaryKeyJoinColumn>) newValue);
+      return;
+    case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
+      getUniqueConstraint().clear();
+      getUniqueConstraint().addAll((Collection<? extends UniqueConstraint>) newValue);
+      return;
+    case OrmPackage.SECONDARY_TABLE__CATALOG:
+      setCatalog((String) newValue);
+      return;
+    case OrmPackage.SECONDARY_TABLE__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.SECONDARY_TABLE__SCHEMA:
+      setSchema((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        getPrimaryKeyJoinColumn().clear();
-        return;
-      case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
-        getUniqueConstraint().clear();
-        return;
-      case OrmPackage.SECONDARY_TABLE__CATALOG:
-        setCatalog(CATALOG_EDEFAULT);
-        return;
-      case OrmPackage.SECONDARY_TABLE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.SECONDARY_TABLE__SCHEMA:
-        setSchema(SCHEMA_EDEFAULT);
-        return;
+    case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      getPrimaryKeyJoinColumn().clear();
+      return;
+    case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
+      getUniqueConstraint().clear();
+      return;
+    case OrmPackage.SECONDARY_TABLE__CATALOG:
+      setCatalog(CATALOG_EDEFAULT);
+      return;
+    case OrmPackage.SECONDARY_TABLE__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.SECONDARY_TABLE__SCHEMA:
+      setSchema(SCHEMA_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        return primaryKeyJoinColumn != null && !primaryKeyJoinColumn.isEmpty();
-      case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
-        return uniqueConstraint != null && !uniqueConstraint.isEmpty();
-      case OrmPackage.SECONDARY_TABLE__CATALOG:
-        return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
-      case OrmPackage.SECONDARY_TABLE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.SECONDARY_TABLE__SCHEMA:
-        return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
+    case OrmPackage.SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      return primaryKeyJoinColumn != null && !primaryKeyJoinColumn.isEmpty();
+    case OrmPackage.SECONDARY_TABLE__UNIQUE_CONSTRAINT:
+      return uniqueConstraint != null && !uniqueConstraint.isEmpty();
+    case OrmPackage.SECONDARY_TABLE__CATALOG:
+      return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+    case OrmPackage.SECONDARY_TABLE__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.SECONDARY_TABLE__SCHEMA:
+      return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (catalog: ");

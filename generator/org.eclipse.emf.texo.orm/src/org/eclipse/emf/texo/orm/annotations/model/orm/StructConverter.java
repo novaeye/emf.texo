@@ -41,13 +41,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface StructConverter extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Converter</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Converter</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Converter</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Converter</em>' attribute.
    * @see #setConverter(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStructConverter_Converter()
@@ -58,21 +58,23 @@ public interface StructConverter extends BaseOrmAnnotation {
   String getConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getConverter <em>Converter</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Converter</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getConverter
+   * <em>Converter</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Converter</em>' attribute.
    * @see #getConverter()
    * @generated
    */
   void setConverter(String value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStructConverter_Name()
@@ -83,9 +85,11 @@ public interface StructConverter extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getName <em>Name</em>}
+   * ' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */

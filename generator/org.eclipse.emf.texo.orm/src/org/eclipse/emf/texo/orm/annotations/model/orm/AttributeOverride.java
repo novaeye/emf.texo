@@ -39,13 +39,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface AttributeOverride extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAttributeOverride_Description()
@@ -56,22 +56,24 @@ public interface AttributeOverride extends BaseOrmAnnotation {
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride#getDescription
+   * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Description</em>' attribute.
    * @see #getDescription()
    * @generated
    */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Column</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Column</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Column</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Column</em>' containment reference.
    * @see #setColumn(Column)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAttributeOverride_Column()
@@ -82,21 +84,23 @@ public interface AttributeOverride extends BaseOrmAnnotation {
   Column getColumn();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride#getColumn <em>Column</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Column</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride#getColumn
+   * <em>Column</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Column</em>' containment reference.
    * @see #getColumn()
    * @generated
    */
   void setColumn(Column value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAttributeOverride_Name()
@@ -107,9 +111,11 @@ public interface AttributeOverride extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride#getName
+   * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */

@@ -49,36 +49,37 @@ import org.eclipse.emf.ecore.EReference;
  */
 public interface OrmPackage extends EPackage {
   /**
-   * The package name.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   String eNAME = "orm";
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   String eNS_URI = "http://www.eclipse.org/eclipselink/xsds/persistence/orm";
 
   /**
-   * The package namespace name.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   String eNS_PREFIX = "orm";
 
   /**
-   * The singleton instance of the package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The singleton instance of the package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   OrmPackage eINSTANCE = org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AccessMethodsImpl <em>Access Methods</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AccessMethodsImpl
+   * <em>Access Methods</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.AccessMethodsImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAccessMethods()
    * @generated
@@ -86,16 +87,16 @@ public interface OrmPackage extends EPackage {
   int ACCESS_METHODS = 0;
 
   /**
-   * The feature id for the '<em><b>Get Method</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Get Method</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ACCESS_METHODS__GET_METHOD = 0;
 
   /**
-   * The feature id for the '<em><b>Set Method</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Set Method</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -111,8 +112,9 @@ public interface OrmPackage extends EPackage {
   int ACCESS_METHODS_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AssociationOverrideImpl <em>Association Override</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AssociationOverrideImpl
+   * <em>Association Override</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.AssociationOverrideImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAssociationOverride()
    * @generated
@@ -120,51 +122,52 @@ public interface OrmPackage extends EPackage {
   int ASSOCIATION_OVERRIDE = 1;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ASSOCIATION_OVERRIDE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ASSOCIATION_OVERRIDE__JOIN_COLUMN = 1;
 
   /**
-   * The feature id for the '<em><b>Join Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ASSOCIATION_OVERRIDE__JOIN_TABLE = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ASSOCIATION_OVERRIDE__NAME = 3;
 
   /**
-   * The number of structural features of the '<em>Association Override</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Association Override</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ASSOCIATION_OVERRIDE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributeOverrideImpl <em>Attribute Override</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributeOverrideImpl
+   * <em>Attribute Override</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributeOverrideImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAttributeOverride()
    * @generated
@@ -172,8 +175,8 @@ public interface OrmPackage extends EPackage {
   int ATTRIBUTE_OVERRIDE = 2;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -189,25 +192,26 @@ public interface OrmPackage extends EPackage {
   int ATTRIBUTE_OVERRIDE__COLUMN = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTE_OVERRIDE__NAME = 2;
 
   /**
-   * The number of structural features of the '<em>Attribute Override</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Attribute Override</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTE_OVERRIDE_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl <em>Attributes</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl
+   * <em>Attributes</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAttributes()
    * @generated
@@ -215,8 +219,8 @@ public interface OrmPackage extends EPackage {
   int ATTRIBUTES = 3;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -232,142 +236,143 @@ public interface OrmPackage extends EPackage {
   int ATTRIBUTES__ID = 1;
 
   /**
-   * The feature id for the '<em><b>Embedded Id</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Embedded Id</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__EMBEDDED_ID = 2;
 
   /**
-   * The feature id for the '<em><b>Basic</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Basic</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__BASIC = 3;
 
   /**
-   * The feature id for the '<em><b>Basic Collection</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Basic Collection</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__BASIC_COLLECTION = 4;
 
   /**
-   * The feature id for the '<em><b>Basic Map</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Basic Map</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__BASIC_MAP = 5;
 
   /**
-   * The feature id for the '<em><b>Version</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Version</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__VERSION = 6;
 
   /**
-   * The feature id for the '<em><b>Many To One</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Many To One</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__MANY_TO_ONE = 7;
 
   /**
-   * The feature id for the '<em><b>One To Many</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>One To Many</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__ONE_TO_MANY = 8;
 
   /**
-   * The feature id for the '<em><b>One To One</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>One To One</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__ONE_TO_ONE = 9;
 
   /**
-   * The feature id for the '<em><b>Variable One To One</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Variable One To One</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__VARIABLE_ONE_TO_ONE = 10;
 
   /**
-   * The feature id for the '<em><b>Many To Many</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Many To Many</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__MANY_TO_MANY = 11;
 
   /**
-   * The feature id for the '<em><b>Element Collection</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Element Collection</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__ELEMENT_COLLECTION = 12;
 
   /**
-   * The feature id for the '<em><b>Embedded</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Embedded</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__EMBEDDED = 13;
 
   /**
-   * The feature id for the '<em><b>Transformation</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Transformation</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__TRANSFORMATION = 14;
 
   /**
-   * The feature id for the '<em><b>Transient</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Transient</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES__TRANSIENT = 15;
 
   /**
-   * The number of structural features of the '<em>Attributes</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Attributes</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ATTRIBUTES_FEATURE_COUNT = 16;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl <em>Basic</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl <em>Basic</em>}'
+   * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBasic()
    * @generated
@@ -384,41 +389,41 @@ public interface OrmPackage extends EPackage {
   int BASIC__COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Generated Value</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Generated Value</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__GENERATED_VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Lob</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Lob</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__LOB = 2;
 
   /**
-   * The feature id for the '<em><b>Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__TEMPORAL = 3;
 
   /**
-   * The feature id for the '<em><b>Enumerated</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Enumerated</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__ENUMERATED = 4;
 
   /**
-   * The feature id for the '<em><b>Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -434,119 +439,120 @@ public interface OrmPackage extends EPackage {
   int BASIC__CONVERTER = 6;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__TYPE_CONVERTER = 7;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__OBJECT_TYPE_CONVERTER = 8;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__STRUCT_CONVERTER = 9;
 
   /**
-   * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Table Generator</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__TABLE_GENERATOR = 10;
 
   /**
-   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__SEQUENCE_GENERATOR = 11;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__PROPERTY = 12;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__ACCESS_METHODS = 13;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__ACCESS = 14;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__FETCH = 15;
 
   /**
-   * The feature id for the '<em><b>Mutable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mutable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__MUTABLE = 16;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__NAME = 17;
 
   /**
-   * The feature id for the '<em><b>Optional</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Optional</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC__OPTIONAL = 18;
 
   /**
-   * The number of structural features of the '<em>Basic</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Basic</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_FEATURE_COUNT = 19;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicCollectionImpl <em>Basic Collection</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicCollectionImpl
+   * <em>Basic Collection</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicCollectionImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBasicCollection()
    * @generated
@@ -554,17 +560,17 @@ public interface OrmPackage extends EPackage {
   int BASIC_COLLECTION = 5;
 
   /**
-   * The feature id for the '<em><b>Value Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Value Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__VALUE_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -580,103 +586,104 @@ public interface OrmPackage extends EPackage {
   int BASIC_COLLECTION__CONVERTER = 2;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__TYPE_CONVERTER = 3;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__OBJECT_TYPE_CONVERTER = 4;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__STRUCT_CONVERTER = 5;
 
   /**
-   * The feature id for the '<em><b>Collection Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Collection Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__COLLECTION_TABLE = 6;
 
   /**
-   * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Join Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__JOIN_FETCH = 7;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__PROPERTY = 8;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__ACCESS_METHODS = 9;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__ACCESS = 10;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__FETCH = 11;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION__NAME = 12;
 
   /**
-   * The number of structural features of the '<em>Basic Collection</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Basic Collection</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_COLLECTION_FEATURE_COUNT = 13;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicMapImpl <em>Basic Map</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicMapImpl
+   * <em>Basic Map</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicMapImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBasicMap()
    * @generated
@@ -684,153 +691,154 @@ public interface OrmPackage extends EPackage {
   int BASIC_MAP = 6;
 
   /**
-   * The feature id for the '<em><b>Key Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Key Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__KEY_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Key Converter</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Key Converter</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__KEY_CONVERTER = 1;
 
   /**
-   * The feature id for the '<em><b>Value Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Value Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__VALUE_COLUMN = 2;
 
   /**
-   * The feature id for the '<em><b>Value Converter</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Value Converter</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__VALUE_CONVERTER = 3;
 
   /**
-   * The feature id for the '<em><b>Group</b></em>' attribute list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Group</b></em>' attribute list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__GROUP = 4;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__CONVERTER = 5;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__TYPE_CONVERTER = 6;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__OBJECT_TYPE_CONVERTER = 7;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__STRUCT_CONVERTER = 8;
 
   /**
-   * The feature id for the '<em><b>Collection Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Collection Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__COLLECTION_TABLE = 9;
 
   /**
-   * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Join Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__JOIN_FETCH = 10;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__PROPERTY = 11;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__ACCESS_METHODS = 12;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__ACCESS = 13;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__FETCH = 14;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP__NAME = 15;
 
   /**
-   * The number of structural features of the '<em>Basic Map</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Basic Map</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int BASIC_MAP_FEATURE_COUNT = 16;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl <em>Cache</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl <em>Cache</em>}'
+   * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCache()
    * @generated
@@ -838,41 +846,41 @@ public interface OrmPackage extends EPackage {
   int CACHE = 7;
 
   /**
-   * The feature id for the '<em><b>Expiry</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Expiry</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__EXPIRY = 0;
 
   /**
-   * The feature id for the '<em><b>Expiry Time Of Day</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Expiry Time Of Day</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__EXPIRY_TIME_OF_DAY = 1;
 
   /**
-   * The feature id for the '<em><b>Always Refresh</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Always Refresh</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__ALWAYS_REFRESH = 2;
 
   /**
-   * The feature id for the '<em><b>Coordination Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Coordination Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__COORDINATION_TYPE = 3;
 
   /**
-   * The feature id for the '<em><b>Disable Hits</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Disable Hits</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -888,40 +896,41 @@ public interface OrmPackage extends EPackage {
   int CACHE__REFRESH_ONLY_IF_NEWER = 5;
 
   /**
-   * The feature id for the '<em><b>Shared</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Shared</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__SHARED = 6;
 
   /**
-   * The feature id for the '<em><b>Size</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Size</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__SIZE = 7;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE__TYPE = 8;
 
   /**
-   * The number of structural features of the '<em>Cache</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Cache</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE_FEATURE_COUNT = 9;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheInterceptorImpl <em>Cache Interceptor</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheInterceptorImpl
+   * <em>Cache Interceptor</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheInterceptorImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheInterceptor()
    * @generated
@@ -929,25 +938,26 @@ public interface OrmPackage extends EPackage {
   int CACHE_INTERCEPTOR = 8;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE_INTERCEPTOR__CLASS = 0;
 
   /**
-   * The number of structural features of the '<em>Cache Interceptor</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Cache Interceptor</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CACHE_INTERCEPTOR_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl <em>Cascade Type</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl
+   * <em>Cascade Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCascadeType()
    * @generated
@@ -955,45 +965,45 @@ public interface OrmPackage extends EPackage {
   int CASCADE_TYPE = 9;
 
   /**
-   * The feature id for the '<em><b>Cascade All</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cascade All</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CASCADE_TYPE__CASCADE_ALL = 0;
 
   /**
-   * The feature id for the '<em><b>Cascade Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cascade Persist</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CASCADE_TYPE__CASCADE_PERSIST = 1;
 
   /**
-   * The feature id for the '<em><b>Cascade Merge</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cascade Merge</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CASCADE_TYPE__CASCADE_MERGE = 2;
 
   /**
-   * The feature id for the '<em><b>Cascade Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cascade Remove</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CASCADE_TYPE__CASCADE_REMOVE = 3;
 
   /**
-   * The feature id for the '<em><b>Cascade Refresh</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cascade Refresh</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1009,8 +1019,9 @@ public interface OrmPackage extends EPackage {
   int CASCADE_TYPE_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ChangeTrackingImpl <em>Change Tracking</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ChangeTrackingImpl
+   * <em>Change Tracking</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ChangeTrackingImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getChangeTracking()
    * @generated
@@ -1018,25 +1029,26 @@ public interface OrmPackage extends EPackage {
   int CHANGE_TRACKING = 10;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CHANGE_TRACKING__TYPE = 0;
 
   /**
-   * The number of structural features of the '<em>Change Tracking</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Change Tracking</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CHANGE_TRACKING_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CloneCopyPolicyImpl <em>Clone Copy Policy</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CloneCopyPolicyImpl
+   * <em>Clone Copy Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CloneCopyPolicyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCloneCopyPolicy()
    * @generated
@@ -1044,8 +1056,8 @@ public interface OrmPackage extends EPackage {
   int CLONE_COPY_POLICY = 11;
 
   /**
-   * The feature id for the '<em><b>Method</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1061,17 +1073,18 @@ public interface OrmPackage extends EPackage {
   int CLONE_COPY_POLICY__WORKING_COPY_METHOD = 1;
 
   /**
-   * The number of structural features of the '<em>Clone Copy Policy</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Clone Copy Policy</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CLONE_COPY_POLICY_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CollectionTableImpl <em>Collection Table</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CollectionTableImpl
+   * <em>Collection Table</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CollectionTableImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCollectionTable()
    * @generated
@@ -1079,59 +1092,60 @@ public interface OrmPackage extends EPackage {
   int COLLECTION_TABLE = 12;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLLECTION_TABLE__JOIN_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLLECTION_TABLE__UNIQUE_CONSTRAINT = 1;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLLECTION_TABLE__CATALOG = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLLECTION_TABLE__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLLECTION_TABLE__SCHEMA = 4;
 
   /**
-   * The number of structural features of the '<em>Collection Table</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Collection Table</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLLECTION_TABLE_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnImpl <em>Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnImpl <em>Column</em>}'
+   * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getColumn()
    * @generated
@@ -1139,96 +1153,97 @@ public interface OrmPackage extends EPackage {
   int COLUMN = 13;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__COLUMN_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Insertable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Insertable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__INSERTABLE = 1;
 
   /**
-   * The feature id for the '<em><b>Length</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Length</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__LENGTH = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Nullable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Nullable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__NULLABLE = 4;
 
   /**
-   * The feature id for the '<em><b>Precision</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Precision</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__PRECISION = 5;
 
   /**
-   * The feature id for the '<em><b>Scale</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Scale</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__SCALE = 6;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Table</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__TABLE = 7;
 
   /**
-   * The feature id for the '<em><b>Unique</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Unique</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__UNIQUE = 8;
 
   /**
-   * The feature id for the '<em><b>Updatable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Updatable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN__UPDATABLE = 9;
 
   /**
-   * The number of structural features of the '<em>Column</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Column</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int COLUMN_FEATURE_COUNT = 10;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnResultImpl <em>Column Result</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnResultImpl
+   * <em>Column Result</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnResultImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getColumnResult()
    * @generated
@@ -1236,8 +1251,8 @@ public interface OrmPackage extends EPackage {
   int COLUMN_RESULT = 14;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1253,8 +1268,9 @@ public interface OrmPackage extends EPackage {
   int COLUMN_RESULT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ConversionValueImpl <em>Conversion Value</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ConversionValueImpl
+   * <em>Conversion Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ConversionValueImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getConversionValue()
    * @generated
@@ -1262,33 +1278,34 @@ public interface OrmPackage extends EPackage {
   int CONVERSION_VALUE = 15;
 
   /**
-   * The feature id for the '<em><b>Data Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Data Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CONVERSION_VALUE__DATA_VALUE = 0;
 
   /**
-   * The feature id for the '<em><b>Object Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Object Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CONVERSION_VALUE__OBJECT_VALUE = 1;
 
   /**
-   * The number of structural features of the '<em>Conversion Value</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Conversion Value</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CONVERSION_VALUE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ConverterImpl <em>Converter</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ConverterImpl
+   * <em>Converter</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ConverterImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getConverter()
    * @generated
@@ -1296,32 +1313,33 @@ public interface OrmPackage extends EPackage {
   int CONVERTER = 16;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CONVERTER__CLASS = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CONVERTER__NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Converter</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Converter</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CONVERTER_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CopyPolicyImpl <em>Copy Policy</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CopyPolicyImpl
+   * <em>Copy Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CopyPolicyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCopyPolicy()
    * @generated
@@ -1329,8 +1347,8 @@ public interface OrmPackage extends EPackage {
   int COPY_POLICY = 17;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1346,8 +1364,9 @@ public interface OrmPackage extends EPackage {
   int COPY_POLICY_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CustomizerImpl <em>Customizer</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CustomizerImpl
+   * <em>Customizer</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CustomizerImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCustomizer()
    * @generated
@@ -1355,24 +1374,25 @@ public interface OrmPackage extends EPackage {
   int CUSTOMIZER = 18;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CUSTOMIZER__CLASS = 0;
 
   /**
-   * The number of structural features of the '<em>Customizer</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Customizer</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int CUSTOMIZER_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorClassImpl <em>Discriminator Class</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorClassImpl
+   * <em>Discriminator Class</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorClassImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorClass()
    * @generated
@@ -1380,33 +1400,34 @@ public interface OrmPackage extends EPackage {
   int DISCRIMINATOR_CLASS = 19;
 
   /**
-   * The feature id for the '<em><b>Discriminator</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Discriminator</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DISCRIMINATOR_CLASS__DISCRIMINATOR = 0;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DISCRIMINATOR_CLASS__VALUE = 1;
 
   /**
-   * The number of structural features of the '<em>Discriminator Class</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Discriminator Class</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DISCRIMINATOR_CLASS_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl <em>Discriminator Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl
+   * <em>Discriminator Column</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorColumn()
    * @generated
@@ -1414,8 +1435,8 @@ public interface OrmPackage extends EPackage {
   int DISCRIMINATOR_COLUMN = 20;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1431,33 +1452,34 @@ public interface OrmPackage extends EPackage {
   int DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Length</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Length</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DISCRIMINATOR_COLUMN__LENGTH = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DISCRIMINATOR_COLUMN__NAME = 3;
 
   /**
-   * The number of structural features of the '<em>Discriminator Column</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Discriminator Column</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DISCRIMINATOR_COLUMN_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DocumentRootImpl <em>Document Root</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DocumentRootImpl
+   * <em>Document Root</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.DocumentRootImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDocumentRoot()
    * @generated
@@ -1465,33 +1487,33 @@ public interface OrmPackage extends EPackage {
   int DOCUMENT_ROOT = 21;
 
   /**
-   * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mixed</b></em>' attribute list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DOCUMENT_ROOT__MIXED = 0;
 
   /**
-   * The feature id for the '<em><b>XMLNS Prefix Map</b></em>' map.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>XMLNS Prefix Map</b></em>' map. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DOCUMENT_ROOT__XMLNS_PREFIX_MAP = 1;
 
   /**
-   * The feature id for the '<em><b>XSI Schema Location</b></em>' map.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>XSI Schema Location</b></em>' map. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int DOCUMENT_ROOT__XSI_SCHEMA_LOCATION = 2;
 
   /**
-   * The feature id for the '<em><b>Entity Mappings</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity Mappings</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1507,8 +1529,10 @@ public interface OrmPackage extends EPackage {
   int DOCUMENT_ROOT_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl <em>Eclipselink Collection Table</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl
+   * <em>Eclipselink Collection Table</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEclipselinkCollectionTable()
    * @generated
@@ -1516,59 +1540,60 @@ public interface OrmPackage extends EPackage {
   int ECLIPSELINK_COLLECTION_TABLE = 22;
 
   /**
-   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT = 1;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ECLIPSELINK_COLLECTION_TABLE__CATALOG = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ECLIPSELINK_COLLECTION_TABLE__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ECLIPSELINK_COLLECTION_TABLE__SCHEMA = 4;
 
   /**
-   * The number of structural features of the '<em>Eclipselink Collection Table</em>' class.
-   * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Eclipselink Collection Table</em>' class. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ECLIPSELINK_COLLECTION_TABLE_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ElementCollectionImpl <em>Element Collection</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ElementCollectionImpl
+   * <em>Element Collection</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ElementCollectionImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getElementCollection()
    * @generated
@@ -1576,17 +1601,17 @@ public interface OrmPackage extends EPackage {
   int ELEMENT_COLLECTION = 23;
 
   /**
-   * The feature id for the '<em><b>Order By</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Order By</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__ORDER_BY = 0;
 
   /**
-   * The feature id for the '<em><b>Order Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Order Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1602,17 +1627,17 @@ public interface OrmPackage extends EPackage {
   int ELEMENT_COLLECTION__MAP_KEY = 2;
 
   /**
-   * The feature id for the '<em><b>Map Key Class</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Map Key Class</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__MAP_KEY_CLASS = 3;
 
   /**
-   * The feature id for the '<em><b>Map Key Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Map Key Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1628,17 +1653,17 @@ public interface OrmPackage extends EPackage {
   int ELEMENT_COLLECTION__MAP_KEY_ENUMERATED = 5;
 
   /**
-   * The feature id for the '<em><b>Map Key Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Map Key Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__MAP_KEY_CONVERT = 6;
 
   /**
-   * The feature id for the '<em><b>Map Key Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Map Key Attribute Override</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1654,18 +1679,18 @@ public interface OrmPackage extends EPackage {
   int ELEMENT_COLLECTION__MAP_KEY_ASSOCIATION_OVERRIDE = 8;
 
   /**
-   * The feature id for the '<em><b>Map Key Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Map Key Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__MAP_KEY_COLUMN = 9;
 
   /**
-   * The feature id for the '<em><b>Map Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Map Key Join Column</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -1681,170 +1706,171 @@ public interface OrmPackage extends EPackage {
   int ELEMENT_COLLECTION__COLUMN = 11;
 
   /**
-   * The feature id for the '<em><b>Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__TEMPORAL = 12;
 
   /**
-   * The feature id for the '<em><b>Enumerated</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Enumerated</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__ENUMERATED = 13;
 
   /**
-   * The feature id for the '<em><b>Lob</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Lob</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__LOB = 14;
 
   /**
-   * The feature id for the '<em><b>Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__CONVERT = 15;
 
   /**
-   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__ATTRIBUTE_OVERRIDE = 16;
 
   /**
-   * The feature id for the '<em><b>Association Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Association Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__ASSOCIATION_OVERRIDE = 17;
 
   /**
-   * The feature id for the '<em><b>Group</b></em>' attribute list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Group</b></em>' attribute list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__GROUP = 18;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__CONVERTER = 19;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__TYPE_CONVERTER = 20;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__OBJECT_TYPE_CONVERTER = 21;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__STRUCT_CONVERTER = 22;
 
   /**
-   * The feature id for the '<em><b>Collection Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Collection Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__COLLECTION_TABLE = 23;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__PROPERTY = 24;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__ACCESS_METHODS = 25;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__ACCESS = 26;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__FETCH = 27;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__NAME = 28;
 
   /**
-   * The feature id for the '<em><b>Target Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Target Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION__TARGET_CLASS = 29;
 
   /**
-   * The number of structural features of the '<em>Element Collection</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Element Collection</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ELEMENT_COLLECTION_FEATURE_COUNT = 30;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl <em>Embeddable</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl
+   * <em>Embeddable</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmbeddable()
    * @generated
@@ -1852,156 +1878,157 @@ public interface OrmPackage extends EPackage {
   int EMBEDDABLE = 24;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Customizer</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Customizer</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__CUSTOMIZER = 1;
 
   /**
-   * The feature id for the '<em><b>Change Tracking</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Change Tracking</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__CHANGE_TRACKING = 2;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__CONVERTER = 3;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__TYPE_CONVERTER = 4;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__OBJECT_TYPE_CONVERTER = 5;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__STRUCT_CONVERTER = 6;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__PROPERTY = 7;
 
   /**
-   * The feature id for the '<em><b>Attributes</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Attributes</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__ATTRIBUTES = 8;
 
   /**
-   * The feature id for the '<em><b>Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Copy Policy</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__COPY_POLICY = 9;
 
   /**
-   * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__INSTANTIATION_COPY_POLICY = 10;
 
   /**
-   * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__CLONE_COPY_POLICY = 11;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__ACCESS = 12;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__CLASS = 13;
 
   /**
-   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__EXCLUDE_DEFAULT_MAPPINGS = 14;
 
   /**
-   * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Metadata Complete</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE__METADATA_COMPLETE = 15;
 
   /**
-   * The number of structural features of the '<em>Embeddable</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Embeddable</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDABLE_FEATURE_COUNT = 16;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl <em>Embedded</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl
+   * <em>Embedded</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmbedded()
    * @generated
@@ -2009,68 +2036,69 @@ public interface OrmPackage extends EPackage {
   int EMBEDDED = 25;
 
   /**
-   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED__ATTRIBUTE_OVERRIDE = 0;
 
   /**
-   * The feature id for the '<em><b>Association Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Association Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED__ASSOCIATION_OVERRIDE = 1;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED__PROPERTY = 2;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED__ACCESS_METHODS = 3;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED__ACCESS = 4;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED__NAME = 5;
 
   /**
-   * The number of structural features of the '<em>Embedded</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Embedded</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedIdImpl <em>Embedded Id</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedIdImpl
+   * <em>Embedded Id</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedIdImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmbeddedId()
    * @generated
@@ -2078,43 +2106,43 @@ public interface OrmPackage extends EPackage {
   int EMBEDDED_ID = 26;
 
   /**
-   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED_ID__ATTRIBUTE_OVERRIDE = 0;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED_ID__PROPERTY = 1;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED_ID__ACCESS_METHODS = 2;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMBEDDED_ID__ACCESS = 3;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2130,8 +2158,9 @@ public interface OrmPackage extends EPackage {
   int EMBEDDED_ID_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmptyTypeImpl <em>Empty Type</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmptyTypeImpl
+   * <em>Empty Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmptyTypeImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmptyType()
    * @generated
@@ -2139,16 +2168,17 @@ public interface OrmPackage extends EPackage {
   int EMPTY_TYPE = 27;
 
   /**
-   * The number of structural features of the '<em>Empty Type</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Empty Type</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int EMPTY_TYPE_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityImpl <em>Entity</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityImpl <em>Entity</em>}'
+   * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntity()
    * @generated
@@ -2156,52 +2186,52 @@ public interface OrmPackage extends EPackage {
   int ENTITY = 28;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Customizer</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Customizer</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__CUSTOMIZER = 1;
 
   /**
-   * The feature id for the '<em><b>Change Tracking</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Change Tracking</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__CHANGE_TRACKING = 2;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Table</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__TABLE = 3;
 
   /**
-   * The feature id for the '<em><b>Secondary Table</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Secondary Table</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__SECONDARY_TABLE = 4;
 
   /**
-   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2217,18 +2247,18 @@ public interface OrmPackage extends EPackage {
   int ENTITY__ID_CLASS = 6;
 
   /**
-   * The feature id for the '<em><b>Primary Key</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Primary Key</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__PRIMARY_KEY = 7;
 
   /**
-   * The feature id for the '<em><b>Inheritance</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Inheritance</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2244,134 +2274,134 @@ public interface OrmPackage extends EPackage {
   int ENTITY__DISCRIMINATOR_VALUE = 9;
 
   /**
-   * The feature id for the '<em><b>Discriminator Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Discriminator Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__DISCRIMINATOR_COLUMN = 10;
 
   /**
-   * The feature id for the '<em><b>Optimistic Locking</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Optimistic Locking</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__OPTIMISTIC_LOCKING = 11;
 
   /**
-   * The feature id for the '<em><b>Cache</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Cache</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__CACHE = 12;
 
   /**
-   * The feature id for the '<em><b>Cache Interceptor</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cache Interceptor</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__CACHE_INTERCEPTOR = 13;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__CONVERTER = 14;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__TYPE_CONVERTER = 15;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__OBJECT_TYPE_CONVERTER = 16;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__STRUCT_CONVERTER = 17;
 
   /**
-   * The feature id for the '<em><b>Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Copy Policy</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__COPY_POLICY = 18;
 
   /**
-   * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__INSTANTIATION_COPY_POLICY = 19;
 
   /**
-   * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__CLONE_COPY_POLICY = 20;
 
   /**
-   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__SEQUENCE_GENERATOR = 21;
 
   /**
-   * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Table Generator</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__TABLE_GENERATOR = 22;
 
   /**
-   * The feature id for the '<em><b>Named Query</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Named Query</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__NAMED_QUERY = 23;
 
   /**
-   * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2387,181 +2417,118 @@ public interface OrmPackage extends EPackage {
   int ENTITY__NAMED_STORED_PROCEDURE_QUERY = 25;
 
   /**
-   * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__SQL_RESULT_SET_MAPPING = 26;
 
   /**
-   * The feature id for the '<em><b>Query Redirectors</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Query Redirectors</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__QUERY_REDIRECTORS = 27;
 
   /**
-   * The feature id for the '<em><b>Exclude Default Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Exclude Default Listeners</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__EXCLUDE_DEFAULT_LISTENERS = 28;
 
   /**
-   * The feature id for the '<em><b>Exclude Superclass Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Exclude Superclass Listeners</b></em>' containment reference. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__EXCLUDE_SUPERCLASS_LISTENERS = 29;
 
   /**
-   * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY__ENTITY_LISTENERS = 30;
 
   /**
-   * The feature id for the '<em><b>Pre Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__PRE_PERSIST = 31;
-
-  /**
-   * The feature id for the '<em><b>Post Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__POST_PERSIST = 32;
-
-  /**
-   * The feature id for the '<em><b>Pre Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__PRE_REMOVE = 33;
-
-  /**
-   * The feature id for the '<em><b>Post Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__POST_REMOVE = 34;
-
-  /**
-   * The feature id for the '<em><b>Pre Update</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__PRE_UPDATE = 35;
-
-  /**
-   * The feature id for the '<em><b>Post Update</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__POST_UPDATE = 36;
-
-  /**
-   * The feature id for the '<em><b>Post Load</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
    * 
    * @generated
    * @ordered
    */
-  int ENTITY__POST_LOAD = 37;
+  int ENTITY__PROPERTY = 31;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__PROPERTY = 38;
-
-  /**
-   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__ATTRIBUTE_OVERRIDE = 39;
+  int ENTITY__ATTRIBUTE_OVERRIDE = 32;
 
   /**
-   * The feature id for the '<em><b>Association Override</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Association Override</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__ASSOCIATION_OVERRIDE = 40;
+  int ENTITY__ASSOCIATION_OVERRIDE = 33;
 
   /**
-   * The feature id for the '<em><b>Attributes</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Attributes</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__ATTRIBUTES = 41;
+  int ENTITY__ATTRIBUTES = 34;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__ACCESS = 42;
+  int ENTITY__ACCESS = 35;
 
   /**
-   * The feature id for the '<em><b>Cacheable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Cacheable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__CACHEABLE = 43;
+  int ENTITY__CACHEABLE = 36;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__CLASS = 44;
+  int ENTITY__CLASS = 37;
 
   /**
-   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__EXCLUDE_DEFAULT_MAPPINGS = 45;
+  int ENTITY__EXCLUDE_DEFAULT_MAPPINGS = 38;
 
   /**
    * The feature id for the '<em><b>Existence Checking</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -2570,43 +2537,44 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ENTITY__EXISTENCE_CHECKING = 46;
+  int ENTITY__EXISTENCE_CHECKING = 39;
 
   /**
-   * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Metadata Complete</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__METADATA_COMPLETE = 47;
+  int ENTITY__METADATA_COMPLETE = 40;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__NAME = 48;
+  int ENTITY__NAME = 41;
 
   /**
-   * The feature id for the '<em><b>Read Only</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Read Only</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY__READ_ONLY = 49;
+  int ENTITY__READ_ONLY = 42;
 
   /**
-   * The number of structural features of the '<em>Entity</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Entity</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
-  int ENTITY_FEATURE_COUNT = 50;
+  int ENTITY_FEATURE_COUNT = 43;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenerImpl <em>Entity Listener</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenerImpl
+   * <em>Entity Listener</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenerImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityListener()
    * @generated
@@ -2614,62 +2582,62 @@ public interface OrmPackage extends EPackage {
   int ENTITY_LISTENER = 29;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Pre Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Pre Persist</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__PRE_PERSIST = 1;
 
   /**
-   * The feature id for the '<em><b>Post Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Post Persist</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__POST_PERSIST = 2;
 
   /**
-   * The feature id for the '<em><b>Pre Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Pre Remove</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__PRE_REMOVE = 3;
 
   /**
-   * The feature id for the '<em><b>Post Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Post Remove</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__POST_REMOVE = 4;
 
   /**
-   * The feature id for the '<em><b>Pre Update</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Pre Update</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__PRE_UPDATE = 5;
 
   /**
-   * The feature id for the '<em><b>Post Update</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Post Update</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2685,25 +2653,26 @@ public interface OrmPackage extends EPackage {
   int ENTITY_LISTENER__POST_LOAD = 7;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER__CLASS = 8;
 
   /**
-   * The number of structural features of the '<em>Entity Listener</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Entity Listener</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENER_FEATURE_COUNT = 9;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenersImpl <em>Entity Listeners</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenersImpl
+   * <em>Entity Listeners</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenersImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityListeners()
    * @generated
@@ -2711,26 +2680,27 @@ public interface OrmPackage extends EPackage {
   int ENTITY_LISTENERS = 30;
 
   /**
-   * The feature id for the '<em><b>Entity Listener</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity Listener</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENERS__ENTITY_LISTENER = 0;
 
   /**
-   * The number of structural features of the '<em>Entity Listeners</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Entity Listeners</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_LISTENERS_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl <em>Entity Mappings Type</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl
+   * <em>Entity Mappings Type</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityMappingsType()
    * @generated
@@ -2738,121 +2708,121 @@ public interface OrmPackage extends EPackage {
   int ENTITY_MAPPINGS_TYPE = 31;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Persistence Unit Metadata</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Persistence Unit Metadata</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA = 1;
 
   /**
-   * The feature id for the '<em><b>Package</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Package</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__PACKAGE = 2;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__SCHEMA = 3;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__CATALOG = 4;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__ACCESS = 5;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__CONVERTER = 6;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER = 7;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER = 8;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER = 9;
 
   /**
-   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR = 10;
 
   /**
-   * The feature id for the '<em><b>Table Generator</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Table Generator</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR = 11;
 
   /**
-   * The feature id for the '<em><b>Named Query</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Named Query</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__NAMED_QUERY = 12;
 
   /**
-   * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2868,61 +2838,62 @@ public interface OrmPackage extends EPackage {
   int ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY = 14;
 
   /**
-   * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING = 15;
 
   /**
-   * The feature id for the '<em><b>Mapped Superclass</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Mapped Superclass</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS = 16;
 
   /**
-   * The feature id for the '<em><b>Entity</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__ENTITY = 17;
 
   /**
-   * The feature id for the '<em><b>Embeddable</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Embeddable</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__EMBEDDABLE = 18;
 
   /**
-   * The feature id for the '<em><b>Version</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Version</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE__VERSION = 19;
 
   /**
-   * The number of structural features of the '<em>Entity Mappings Type</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Entity Mappings Type</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ENTITY_MAPPINGS_TYPE_FEATURE_COUNT = 20;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl <em>Entity Result</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl
+   * <em>Entity Result</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityResult()
    * @generated
@@ -2930,9 +2901,9 @@ public interface OrmPackage extends EPackage {
   int ENTITY_RESULT = 32;
 
   /**
-   * The feature id for the '<em><b>Field Result</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Field Result</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2948,8 +2919,8 @@ public interface OrmPackage extends EPackage {
   int ENTITY_RESULT__DISCRIMINATOR_COLUMN = 1;
 
   /**
-   * The feature id for the '<em><b>Entity Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Entity Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2965,8 +2936,9 @@ public interface OrmPackage extends EPackage {
   int ENTITY_RESULT_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl <em>Field Result</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl
+   * <em>Field Result</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFieldResult()
    * @generated
@@ -2974,16 +2946,16 @@ public interface OrmPackage extends EPackage {
   int FIELD_RESULT = 33;
 
   /**
-   * The feature id for the '<em><b>Column</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int FIELD_RESULT__COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -2999,8 +2971,9 @@ public interface OrmPackage extends EPackage {
   int FIELD_RESULT_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.GeneratedValueImpl <em>Generated Value</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.GeneratedValueImpl
+   * <em>Generated Value</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.GeneratedValueImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getGeneratedValue()
    * @generated
@@ -3008,25 +2981,25 @@ public interface OrmPackage extends EPackage {
   int GENERATED_VALUE = 34;
 
   /**
-   * The feature id for the '<em><b>Generator</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Generator</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int GENERATED_VALUE__GENERATOR = 0;
 
   /**
-   * The feature id for the '<em><b>Strategy</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Strategy</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int GENERATED_VALUE__STRATEGY = 1;
 
   /**
-   * The number of structural features of the '<em>Generated Value</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Generated Value</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3035,6 +3008,7 @@ public interface OrmPackage extends EPackage {
   /**
    * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl <em>Id</em>}' class.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getId()
    * @generated
@@ -3051,25 +3025,25 @@ public interface OrmPackage extends EPackage {
   int ID__COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Generated Value</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Generated Value</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__GENERATED_VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__TEMPORAL = 2;
 
   /**
-   * The feature id for the '<em><b>Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3085,103 +3059,104 @@ public interface OrmPackage extends EPackage {
   int ID__CONVERTER = 4;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__TYPE_CONVERTER = 5;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__OBJECT_TYPE_CONVERTER = 6;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__STRUCT_CONVERTER = 7;
 
   /**
-   * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Table Generator</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__TABLE_GENERATOR = 8;
 
   /**
-   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__SEQUENCE_GENERATOR = 9;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__PROPERTY = 10;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__ACCESS_METHODS = 11;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__ACCESS = 12;
 
   /**
-   * The feature id for the '<em><b>Mutable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mutable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__MUTABLE = 13;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID__NAME = 14;
 
   /**
-   * The number of structural features of the '<em>Id</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Id</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID_FEATURE_COUNT = 15;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdClassImpl <em>Id Class</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdClassImpl
+   * <em>Id Class</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdClassImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIdClass()
    * @generated
@@ -3189,24 +3164,25 @@ public interface OrmPackage extends EPackage {
   int ID_CLASS = 36;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID_CLASS__CLASS = 0;
 
   /**
-   * The number of structural features of the '<em>Id Class</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Id Class</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ID_CLASS_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.InheritanceImpl <em>Inheritance</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.InheritanceImpl
+   * <em>Inheritance</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.InheritanceImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInheritance()
    * @generated
@@ -3214,8 +3190,8 @@ public interface OrmPackage extends EPackage {
   int INHERITANCE = 37;
 
   /**
-   * The feature id for the '<em><b>Strategy</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Strategy</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3231,8 +3207,9 @@ public interface OrmPackage extends EPackage {
   int INHERITANCE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.InstantiationCopyPolicyImpl <em>Instantiation Copy Policy</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.InstantiationCopyPolicyImpl
+   * <em>Instantiation Copy Policy</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.InstantiationCopyPolicyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInstantiationCopyPolicy()
    * @generated
@@ -3240,17 +3217,18 @@ public interface OrmPackage extends EPackage {
   int INSTANTIATION_COPY_POLICY = 38;
 
   /**
-   * The number of structural features of the '<em>Instantiation Copy Policy</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Instantiation Copy Policy</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int INSTANTIATION_COPY_POLICY_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl <em>Join Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl
+   * <em>Join Column</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinColumn()
    * @generated
@@ -3258,65 +3236,65 @@ public interface OrmPackage extends EPackage {
   int JOIN_COLUMN = 39;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__COLUMN_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Insertable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Insertable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__INSERTABLE = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__NAME = 2;
 
   /**
-   * The feature id for the '<em><b>Nullable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Nullable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__NULLABLE = 3;
 
   /**
-   * The feature id for the '<em><b>Referenced Column Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Referenced Column Name</b></em>' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__REFERENCED_COLUMN_NAME = 4;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Table</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__TABLE = 5;
 
   /**
-   * The feature id for the '<em><b>Unique</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Unique</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_COLUMN__UNIQUE = 6;
 
   /**
-   * The feature id for the '<em><b>Updatable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Updatable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3332,8 +3310,9 @@ public interface OrmPackage extends EPackage {
   int JOIN_COLUMN_FEATURE_COUNT = 8;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl <em>Join Table</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl
+   * <em>Join Table</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinTable()
    * @generated
@@ -3341,67 +3320,68 @@ public interface OrmPackage extends EPackage {
   int JOIN_TABLE = 40;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE__JOIN_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Inverse Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Inverse Join Column</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE__INVERSE_JOIN_COLUMN = 1;
 
   /**
-   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE__UNIQUE_CONSTRAINT = 2;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE__CATALOG = 3;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE__NAME = 4;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE__SCHEMA = 5;
 
   /**
-   * The number of structural features of the '<em>Join Table</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Join Table</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int JOIN_TABLE_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.LobImpl <em>Lob</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.LobImpl <em>Lob</em>}'
+   * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.LobImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getLob()
    * @generated
@@ -3409,16 +3389,17 @@ public interface OrmPackage extends EPackage {
   int LOB = 41;
 
   /**
-   * The number of structural features of the '<em>Lob</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Lob</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int LOB_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToManyImpl <em>Many To Many</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToManyImpl
+   * <em>Many To Many</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToManyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getManyToMany()
    * @generated
@@ -3426,17 +3407,17 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY = 42;
 
   /**
-   * The feature id for the '<em><b>Order By</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Order By</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__ORDER_BY = 0;
 
   /**
-   * The feature id for the '<em><b>Order Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Order Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3452,17 +3433,17 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY__MAP_KEY = 2;
 
   /**
-   * The feature id for the '<em><b>Map Key Class</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Map Key Class</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__MAP_KEY_CLASS = 3;
 
   /**
-   * The feature id for the '<em><b>Map Key Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Map Key Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3478,17 +3459,17 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY__MAP_KEY_ENUMERATED = 5;
 
   /**
-   * The feature id for the '<em><b>Map Key Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Map Key Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__MAP_KEY_CONVERT = 6;
 
   /**
-   * The feature id for the '<em><b>Map Key Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Map Key Attribute Override</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3504,18 +3485,18 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY__MAP_KEY_ASSOCIATION_OVERRIDE = 8;
 
   /**
-   * The feature id for the '<em><b>Map Key Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Map Key Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__MAP_KEY_COLUMN = 9;
 
   /**
-   * The feature id for the '<em><b>Map Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Map Key Join Column</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3531,36 +3512,36 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY__CONVERTER = 11;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__TYPE_CONVERTER = 12;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__OBJECT_TYPE_CONVERTER = 13;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__STRUCT_CONVERTER = 14;
 
   /**
-   * The feature id for the '<em><b>Join Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3576,66 +3557,66 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY__CASCADE = 16;
 
   /**
-   * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Join Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__JOIN_FETCH = 17;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__PROPERTY = 18;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__ACCESS_METHODS = 19;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__ACCESS = 20;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__FETCH = 21;
 
   /**
-   * The feature id for the '<em><b>Mapped By</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mapped By</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__MAPPED_BY = 22;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_MANY__NAME = 23;
 
   /**
-   * The feature id for the '<em><b>Target Entity</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Target Entity</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3651,8 +3632,9 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY_FEATURE_COUNT = 25;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToOneImpl <em>Many To One</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToOneImpl
+   * <em>Many To One</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToOneImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getManyToOne()
    * @generated
@@ -3660,18 +3642,18 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_ONE = 43;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__JOIN_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Join Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3687,82 +3669,82 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_ONE__CASCADE = 2;
 
   /**
-   * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Join Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__JOIN_FETCH = 3;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__PROPERTY = 4;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__ACCESS_METHODS = 5;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__ACCESS = 6;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__FETCH = 7;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__ID = 8;
 
   /**
-   * The feature id for the '<em><b>Maps Id</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Maps Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__MAPS_ID = 9;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__NAME = 10;
 
   /**
-   * The feature id for the '<em><b>Optional</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Optional</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MANY_TO_ONE__OPTIONAL = 11;
 
   /**
-   * The feature id for the '<em><b>Target Entity</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Target Entity</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3778,8 +3760,9 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_ONE_FEATURE_COUNT = 13;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyImpl <em>Map Key</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyImpl <em>Map Key</em>}
+   * ' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKey()
    * @generated
@@ -3787,24 +3770,25 @@ public interface OrmPackage extends EPackage {
   int MAP_KEY = 44;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Map Key</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Map Key</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyClassImpl <em>Map Key Class</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyClassImpl
+   * <em>Map Key Class</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyClassImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKeyClass()
    * @generated
@@ -3812,8 +3796,8 @@ public interface OrmPackage extends EPackage {
   int MAP_KEY_CLASS = 45;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3829,8 +3813,9 @@ public interface OrmPackage extends EPackage {
   int MAP_KEY_CLASS_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyColumnImpl <em>Map Key Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyColumnImpl
+   * <em>Map Key Column</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKeyColumn()
    * @generated
@@ -3838,80 +3823,80 @@ public interface OrmPackage extends EPackage {
   int MAP_KEY_COLUMN = 46;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__COLUMN_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Insertable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Insertable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__INSERTABLE = 1;
 
   /**
-   * The feature id for the '<em><b>Length</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Length</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__LENGTH = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Nullable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Nullable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__NULLABLE = 4;
 
   /**
-   * The feature id for the '<em><b>Precision</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Precision</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__PRECISION = 5;
 
   /**
-   * The feature id for the '<em><b>Scale</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Scale</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__SCALE = 6;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Table</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__TABLE = 7;
 
   /**
-   * The feature id for the '<em><b>Unique</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Unique</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_COLUMN__UNIQUE = 8;
 
   /**
-   * The feature id for the '<em><b>Updatable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Updatable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -3927,8 +3912,9 @@ public interface OrmPackage extends EPackage {
   int MAP_KEY_COLUMN_FEATURE_COUNT = 10;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyJoinColumnImpl <em>Map Key Join Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyJoinColumnImpl
+   * <em>Map Key Join Column</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyJoinColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKeyJoinColumn()
    * @generated
@@ -3936,82 +3922,83 @@ public interface OrmPackage extends EPackage {
   int MAP_KEY_JOIN_COLUMN = 47;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__COLUMN_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Insertable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Insertable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__INSERTABLE = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__NAME = 2;
 
   /**
-   * The feature id for the '<em><b>Nullable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Nullable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__NULLABLE = 3;
 
   /**
-   * The feature id for the '<em><b>Referenced Column Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Referenced Column Name</b></em>' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__REFERENCED_COLUMN_NAME = 4;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Table</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__TABLE = 5;
 
   /**
-   * The feature id for the '<em><b>Unique</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Unique</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__UNIQUE = 6;
 
   /**
-   * The feature id for the '<em><b>Updatable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Updatable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN__UPDATABLE = 7;
 
   /**
-   * The number of structural features of the '<em>Map Key Join Column</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Map Key Join Column</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAP_KEY_JOIN_COLUMN_FEATURE_COUNT = 8;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MappedSuperclassImpl <em>Mapped Superclass</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MappedSuperclassImpl
+   * <em>Mapped Superclass</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.MappedSuperclassImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMappedSuperclass()
    * @generated
@@ -4019,26 +4006,26 @@ public interface OrmPackage extends EPackage {
   int MAPPED_SUPERCLASS = 48;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Customizer</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Customizer</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CUSTOMIZER = 1;
 
   /**
-   * The feature id for the '<em><b>Change Tracking</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Change Tracking</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4054,179 +4041,179 @@ public interface OrmPackage extends EPackage {
   int MAPPED_SUPERCLASS__ID_CLASS = 3;
 
   /**
-   * The feature id for the '<em><b>Primary Key</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Primary Key</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__PRIMARY_KEY = 4;
 
   /**
-   * The feature id for the '<em><b>Optimistic Locking</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Optimistic Locking</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING = 5;
 
   /**
-   * The feature id for the '<em><b>Cache</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Cache</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CACHE = 6;
 
   /**
-   * The feature id for the '<em><b>Cache Interceptor</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cache Interceptor</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CACHE_INTERCEPTOR = 7;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CONVERTER = 8;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__TYPE_CONVERTER = 9;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__OBJECT_TYPE_CONVERTER = 10;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__STRUCT_CONVERTER = 11;
 
   /**
-   * The feature id for the '<em><b>Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Copy Policy</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__COPY_POLICY = 12;
 
   /**
-   * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY = 13;
 
   /**
-   * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CLONE_COPY_POLICY = 14;
 
   /**
-   * The feature id for the '<em><b>Exclude Default Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Exclude Default Listeners</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS = 15;
 
   /**
-   * The feature id for the '<em><b>Exclude Superclass Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Exclude Superclass Listeners</b></em>' containment reference. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS = 16;
 
   /**
-   * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__ENTITY_LISTENERS = 17;
 
   /**
-   * The feature id for the '<em><b>Pre Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Pre Persist</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__PRE_PERSIST = 18;
 
   /**
-   * The feature id for the '<em><b>Post Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Post Persist</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__POST_PERSIST = 19;
 
   /**
-   * The feature id for the '<em><b>Pre Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Pre Remove</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__PRE_REMOVE = 20;
 
   /**
-   * The feature id for the '<em><b>Post Remove</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Post Remove</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__POST_REMOVE = 21;
 
   /**
-   * The feature id for the '<em><b>Pre Update</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Pre Update</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__PRE_UPDATE = 22;
 
   /**
-   * The feature id for the '<em><b>Post Update</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Post Update</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4242,51 +4229,51 @@ public interface OrmPackage extends EPackage {
   int MAPPED_SUPERCLASS__POST_LOAD = 24;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__PROPERTY = 25;
 
   /**
-   * The feature id for the '<em><b>Attributes</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Attributes</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__ATTRIBUTES = 26;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__ACCESS = 27;
 
   /**
-   * The feature id for the '<em><b>Cacheable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Cacheable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CACHEABLE = 28;
 
   /**
-   * The feature id for the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__CLASS = 29;
 
   /**
-   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4302,33 +4289,34 @@ public interface OrmPackage extends EPackage {
   int MAPPED_SUPERCLASS__EXISTENCE_CHECKING = 31;
 
   /**
-   * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Metadata Complete</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__METADATA_COMPLETE = 32;
 
   /**
-   * The feature id for the '<em><b>Read Only</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Read Only</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS__READ_ONLY = 33;
 
   /**
-   * The number of structural features of the '<em>Mapped Superclass</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Mapped Superclass</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int MAPPED_SUPERCLASS_FEATURE_COUNT = 34;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedNativeQueryImpl <em>Named Native Query</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedNativeQueryImpl
+   * <em>Named Native Query</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedNativeQueryImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedNativeQuery()
    * @generated
@@ -4336,16 +4324,16 @@ public interface OrmPackage extends EPackage {
   int NAMED_NATIVE_QUERY = 49;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_NATIVE_QUERY__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Query</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Query</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4361,16 +4349,16 @@ public interface OrmPackage extends EPackage {
   int NAMED_NATIVE_QUERY__HINT = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_NATIVE_QUERY__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Result Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Result Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4386,17 +4374,18 @@ public interface OrmPackage extends EPackage {
   int NAMED_NATIVE_QUERY__RESULT_SET_MAPPING = 5;
 
   /**
-   * The number of structural features of the '<em>Named Native Query</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Named Native Query</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_NATIVE_QUERY_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl <em>Named Query</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl
+   * <em>Named Query</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedQuery()
    * @generated
@@ -4404,24 +4393,24 @@ public interface OrmPackage extends EPackage {
   int NAMED_QUERY = 50;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_QUERY__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Query</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Query</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_QUERY__QUERY = 1;
 
   /**
-   * The feature id for the '<em><b>Lock Mode</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Lock Mode</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4437,8 +4426,8 @@ public interface OrmPackage extends EPackage {
   int NAMED_QUERY__HINT = 3;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4454,8 +4443,10 @@ public interface OrmPackage extends EPackage {
   int NAMED_QUERY_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl <em>Named Stored Procedure Query</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl
+   * <em>Named Stored Procedure Query</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedStoredProcedureQuery()
    * @generated
@@ -4472,33 +4463,33 @@ public interface OrmPackage extends EPackage {
   int NAMED_STORED_PROCEDURE_QUERY__HINT = 0;
 
   /**
-   * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Parameter</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_STORED_PROCEDURE_QUERY__PARAMETER = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_STORED_PROCEDURE_QUERY__NAME = 2;
 
   /**
-   * The feature id for the '<em><b>Procedure Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Procedure Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Result Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Result Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4523,17 +4514,18 @@ public interface OrmPackage extends EPackage {
   int NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET = 6;
 
   /**
-   * The number of structural features of the '<em>Named Stored Procedure Query</em>' class.
-   * <!-- begin-user-doc -->
+   * The number of structural features of the '<em>Named Stored Procedure Query</em>' class. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int NAMED_STORED_PROCEDURE_QUERY_FEATURE_COUNT = 7;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ObjectTypeConverterImpl <em>Object Type Converter</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ObjectTypeConverterImpl
+   * <em>Object Type Converter</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ObjectTypeConverterImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getObjectTypeConverter()
    * @generated
@@ -4541,9 +4533,9 @@ public interface OrmPackage extends EPackage {
   int OBJECT_TYPE_CONVERTER = 52;
 
   /**
-   * The feature id for the '<em><b>Conversion Value</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Conversion Value</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4559,41 +4551,42 @@ public interface OrmPackage extends EPackage {
   int OBJECT_TYPE_CONVERTER__DEFAULT_OBJECT_VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Data Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Data Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OBJECT_TYPE_CONVERTER__DATA_TYPE = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OBJECT_TYPE_CONVERTER__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Object Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Object Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OBJECT_TYPE_CONVERTER__OBJECT_TYPE = 4;
 
   /**
-   * The number of structural features of the '<em>Object Type Converter</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Object Type Converter</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OBJECT_TYPE_CONVERTER_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl <em>One To Many</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl
+   * <em>One To Many</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOneToMany()
    * @generated
@@ -4601,17 +4594,17 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY = 53;
 
   /**
-   * The feature id for the '<em><b>Order By</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Order By</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__ORDER_BY = 0;
 
   /**
-   * The feature id for the '<em><b>Order Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Order Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4627,17 +4620,17 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY__MAP_KEY = 2;
 
   /**
-   * The feature id for the '<em><b>Map Key Class</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Map Key Class</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__MAP_KEY_CLASS = 3;
 
   /**
-   * The feature id for the '<em><b>Map Key Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Map Key Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4653,17 +4646,17 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY__MAP_KEY_ENUMERATED = 5;
 
   /**
-   * The feature id for the '<em><b>Map Key Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Map Key Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__MAP_KEY_CONVERT = 6;
 
   /**
-   * The feature id for the '<em><b>Map Key Attribute Override</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Map Key Attribute Override</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4679,18 +4672,18 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY__MAP_KEY_ASSOCIATION_OVERRIDE = 8;
 
   /**
-   * The feature id for the '<em><b>Map Key Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Map Key Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__MAP_KEY_COLUMN = 9;
 
   /**
-   * The feature id for the '<em><b>Map Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Map Key Join Column</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4706,45 +4699,45 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY__CONVERTER = 11;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__TYPE_CONVERTER = 12;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__OBJECT_TYPE_CONVERTER = 13;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__STRUCT_CONVERTER = 14;
 
   /**
-   * The feature id for the '<em><b>Join Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__JOIN_TABLE = 15;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4760,83 +4753,83 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY__CASCADE = 17;
 
   /**
-   * The feature id for the '<em><b>Private Owned</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Private Owned</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__PRIVATE_OWNED = 18;
 
   /**
-   * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Join Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__JOIN_FETCH = 19;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__PROPERTY = 20;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__ACCESS_METHODS = 21;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__ACCESS = 22;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__FETCH = 23;
 
   /**
-   * The feature id for the '<em><b>Mapped By</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mapped By</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__MAPPED_BY = 24;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__NAME = 25;
 
   /**
-   * The feature id for the '<em><b>Orphan Removal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Orphan Removal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_MANY__ORPHAN_REMOVAL = 26;
 
   /**
-   * The feature id for the '<em><b>Target Entity</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Target Entity</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4852,8 +4845,9 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY_FEATURE_COUNT = 28;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToOneImpl <em>One To One</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToOneImpl
+   * <em>One To One</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToOneImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOneToOne()
    * @generated
@@ -4861,27 +4855,27 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_ONE = 54;
 
   /**
-   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__PRIMARY_KEY_JOIN_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__JOIN_COLUMN = 1;
 
   /**
-   * The feature id for the '<em><b>Join Table</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Table</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -4897,123 +4891,124 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_ONE__CASCADE = 3;
 
   /**
-   * The feature id for the '<em><b>Private Owned</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Private Owned</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__PRIVATE_OWNED = 4;
 
   /**
-   * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Join Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__JOIN_FETCH = 5;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__PROPERTY = 6;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__ACCESS_METHODS = 7;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__ACCESS = 8;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__FETCH = 9;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__ID = 10;
 
   /**
-   * The feature id for the '<em><b>Mapped By</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mapped By</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__MAPPED_BY = 11;
 
   /**
-   * The feature id for the '<em><b>Maps Id</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Maps Id</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__MAPS_ID = 12;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__NAME = 13;
 
   /**
-   * The feature id for the '<em><b>Optional</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Optional</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__OPTIONAL = 14;
 
   /**
-   * The feature id for the '<em><b>Orphan Removal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Orphan Removal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__ORPHAN_REMOVAL = 15;
 
   /**
-   * The feature id for the '<em><b>Target Entity</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Target Entity</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE__TARGET_ENTITY = 16;
 
   /**
-   * The number of structural features of the '<em>One To One</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>One To One</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ONE_TO_ONE_FEATURE_COUNT = 17;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OptimisticLockingImpl <em>Optimistic Locking</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OptimisticLockingImpl
+   * <em>Optimistic Locking</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OptimisticLockingImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOptimisticLocking()
    * @generated
@@ -5021,42 +5016,43 @@ public interface OrmPackage extends EPackage {
   int OPTIMISTIC_LOCKING = 55;
 
   /**
-   * The feature id for the '<em><b>Selected Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Selected Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OPTIMISTIC_LOCKING__SELECTED_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Cascade</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Cascade</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OPTIMISTIC_LOCKING__CASCADE = 1;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OPTIMISTIC_LOCKING__TYPE = 2;
 
   /**
-   * The number of structural features of the '<em>Optimistic Locking</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Optimistic Locking</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int OPTIMISTIC_LOCKING_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrderColumnImpl <em>Order Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrderColumnImpl
+   * <em>Order Column</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrderColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderColumn()
    * @generated
@@ -5064,48 +5060,48 @@ public interface OrmPackage extends EPackage {
   int ORDER_COLUMN = 56;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ORDER_COLUMN__COLUMN_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Correction Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Correction Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ORDER_COLUMN__CORRECTION_TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Insertable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Insertable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ORDER_COLUMN__INSERTABLE = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ORDER_COLUMN__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Nullable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Nullable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int ORDER_COLUMN__NULLABLE = 4;
 
   /**
-   * The feature id for the '<em><b>Updatable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Updatable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -5121,8 +5117,9 @@ public interface OrmPackage extends EPackage {
   int ORDER_COLUMN_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl <em>Persistence Unit Defaults</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl
+   * <em>Persistence Unit Defaults</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPersistenceUnitDefaults()
    * @generated
@@ -5130,76 +5127,77 @@ public interface OrmPackage extends EPackage {
   int PERSISTENCE_UNIT_DEFAULTS = 57;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__SCHEMA = 1;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__CATALOG = 2;
 
   /**
-   * The feature id for the '<em><b>Delimited Identifiers</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Delimited Identifiers</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__DELIMITED_IDENTIFIERS = 3;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__ACCESS = 4;
 
   /**
-   * The feature id for the '<em><b>Cascade Persist</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Cascade Persist</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST = 5;
 
   /**
-   * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS = 6;
 
   /**
-   * The number of structural features of the '<em>Persistence Unit Defaults</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Persistence Unit Defaults</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_DEFAULTS_FEATURE_COUNT = 7;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitMetadataImpl <em>Persistence Unit Metadata</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitMetadataImpl
+   * <em>Persistence Unit Metadata</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitMetadataImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPersistenceUnitMetadata()
    * @generated
@@ -5207,52 +5205,53 @@ public interface OrmPackage extends EPackage {
   int PERSISTENCE_UNIT_METADATA = 58;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_METADATA__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Xml Mapping Metadata Complete</b></em>' containment reference.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Xml Mapping Metadata Complete</b></em>' containment reference. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_METADATA__XML_MAPPING_METADATA_COMPLETE = 1;
 
   /**
-   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Exclude Default Mappings</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_METADATA__EXCLUDE_DEFAULT_MAPPINGS = 2;
 
   /**
-   * The feature id for the '<em><b>Persistence Unit Defaults</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Persistence Unit Defaults</b></em>' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_METADATA__PERSISTENCE_UNIT_DEFAULTS = 3;
 
   /**
-   * The number of structural features of the '<em>Persistence Unit Metadata</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Persistence Unit Metadata</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PERSISTENCE_UNIT_METADATA_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostLoadImpl <em>Post Load</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostLoadImpl
+   * <em>Post Load</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostLoadImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostLoad()
    * @generated
@@ -5260,32 +5259,33 @@ public interface OrmPackage extends EPackage {
   int POST_LOAD = 59;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int POST_LOAD__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int POST_LOAD__METHOD_NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Post Load</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Post Load</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int POST_LOAD_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostPersistImpl <em>Post Persist</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostPersistImpl
+   * <em>Post Persist</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostPersistImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostPersist()
    * @generated
@@ -5293,16 +5293,16 @@ public interface OrmPackage extends EPackage {
   int POST_PERSIST = 60;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int POST_PERSIST__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -5318,8 +5318,9 @@ public interface OrmPackage extends EPackage {
   int POST_PERSIST_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostRemoveImpl <em>Post Remove</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostRemoveImpl
+   * <em>Post Remove</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostRemoveImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostRemove()
    * @generated
@@ -5327,16 +5328,16 @@ public interface OrmPackage extends EPackage {
   int POST_REMOVE = 61;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int POST_REMOVE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -5352,8 +5353,9 @@ public interface OrmPackage extends EPackage {
   int POST_REMOVE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostUpdateImpl <em>Post Update</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostUpdateImpl
+   * <em>Post Update</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostUpdateImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostUpdate()
    * @generated
@@ -5361,16 +5363,16 @@ public interface OrmPackage extends EPackage {
   int POST_UPDATE = 62;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int POST_UPDATE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -5386,8 +5388,9 @@ public interface OrmPackage extends EPackage {
   int POST_UPDATE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrePersistImpl <em>Pre Persist</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrePersistImpl
+   * <em>Pre Persist</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrePersistImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPrePersist()
    * @generated
@@ -5395,16 +5398,16 @@ public interface OrmPackage extends EPackage {
   int PRE_PERSIST = 63;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_PERSIST__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -5420,8 +5423,9 @@ public interface OrmPackage extends EPackage {
   int PRE_PERSIST_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PreRemoveImpl <em>Pre Remove</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PreRemoveImpl
+   * <em>Pre Remove</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PreRemoveImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPreRemove()
    * @generated
@@ -5429,32 +5433,33 @@ public interface OrmPackage extends EPackage {
   int PRE_REMOVE = 64;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_REMOVE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_REMOVE__METHOD_NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Pre Remove</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Pre Remove</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_REMOVE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PreUpdateImpl <em>Pre Update</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PreUpdateImpl
+   * <em>Pre Update</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PreUpdateImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPreUpdate()
    * @generated
@@ -5462,32 +5467,33 @@ public interface OrmPackage extends EPackage {
   int PRE_UPDATE = 65;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_UPDATE__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_UPDATE__METHOD_NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Pre Update</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Pre Update</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRE_UPDATE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl <em>Primary Key</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl
+   * <em>Primary Key</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPrimaryKey()
    * @generated
@@ -5495,17 +5501,17 @@ public interface OrmPackage extends EPackage {
   int PRIMARY_KEY = 66;
 
   /**
-   * The feature id for the '<em><b>Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRIMARY_KEY__COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Validation</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Validation</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -5521,8 +5527,9 @@ public interface OrmPackage extends EPackage {
   int PRIMARY_KEY_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyJoinColumnImpl <em>Primary Key Join Column</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyJoinColumnImpl
+   * <em>Primary Key Join Column</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyJoinColumnImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPrimaryKeyJoinColumn()
    * @generated
@@ -5530,42 +5537,43 @@ public interface OrmPackage extends EPackage {
   int PRIMARY_KEY_JOIN_COLUMN = 67;
 
   /**
-   * The feature id for the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRIMARY_KEY_JOIN_COLUMN__COLUMN_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRIMARY_KEY_JOIN_COLUMN__NAME = 1;
 
   /**
-   * The feature id for the '<em><b>Referenced Column Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Referenced Column Name</b></em>' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRIMARY_KEY_JOIN_COLUMN__REFERENCED_COLUMN_NAME = 2;
 
   /**
-   * The number of structural features of the '<em>Primary Key Join Column</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Primary Key Join Column</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PRIMARY_KEY_JOIN_COLUMN_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl <em>Property</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl
+   * <em>Property</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PropertyImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getProperty()
    * @generated
@@ -5573,40 +5581,41 @@ public interface OrmPackage extends EPackage {
   int PROPERTY = 68;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PROPERTY__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PROPERTY__VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Value Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Value Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PROPERTY__VALUE_TYPE = 2;
 
   /**
-   * The number of structural features of the '<em>Property</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Property</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int PROPERTY_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl <em>Query Hint</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl
+   * <em>Query Hint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryHintImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getQueryHint()
    * @generated
@@ -5614,40 +5623,41 @@ public interface OrmPackage extends EPackage {
   int QUERY_HINT = 69;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_HINT__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_HINT__NAME = 1;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_HINT__VALUE = 2;
 
   /**
-   * The number of structural features of the '<em>Query Hint</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Query Hint</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_HINT_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryRedirectorsImpl <em>Query Redirectors</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryRedirectorsImpl
+   * <em>Query Redirectors</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.QueryRedirectorsImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getQueryRedirectors()
    * @generated
@@ -5655,73 +5665,74 @@ public interface OrmPackage extends EPackage {
   int QUERY_REDIRECTORS = 70;
 
   /**
-   * The feature id for the '<em><b>All Queries</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>All Queries</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__ALL_QUERIES = 0;
 
   /**
-   * The feature id for the '<em><b>Delete</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Delete</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__DELETE = 1;
 
   /**
-   * The feature id for the '<em><b>Insert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Insert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__INSERT = 2;
 
   /**
-   * The feature id for the '<em><b>Read All</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Read All</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__READ_ALL = 3;
 
   /**
-   * The feature id for the '<em><b>Read Object</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Read Object</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__READ_OBJECT = 4;
 
   /**
-   * The feature id for the '<em><b>Report</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Report</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__REPORT = 5;
 
   /**
-   * The feature id for the '<em><b>Update</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Update</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS__UPDATE = 6;
 
   /**
-   * The number of structural features of the '<em>Query Redirectors</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Query Redirectors</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int QUERY_REDIRECTORS_FEATURE_COUNT = 7;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReadTransformerImpl <em>Read Transformer</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReadTransformerImpl
+   * <em>Read Transformer</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReadTransformerImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getReadTransformer()
    * @generated
@@ -5729,33 +5740,34 @@ public interface OrmPackage extends EPackage {
   int READ_TRANSFORMER = 71;
 
   /**
-   * The feature id for the '<em><b>Method</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int READ_TRANSFORMER__METHOD = 0;
 
   /**
-   * The feature id for the '<em><b>Transformer Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Transformer Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int READ_TRANSFORMER__TRANSFORMER_CLASS = 1;
 
   /**
-   * The number of structural features of the '<em>Read Transformer</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Read Transformer</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int READ_TRANSFORMER_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SecondaryTableImpl <em>Secondary Table</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SecondaryTableImpl
+   * <em>Secondary Table</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.SecondaryTableImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSecondaryTable()
    * @generated
@@ -5763,59 +5775,60 @@ public interface OrmPackage extends EPackage {
   int SECONDARY_TABLE = 72;
 
   /**
-   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc
+   * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SECONDARY_TABLE__PRIMARY_KEY_JOIN_COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SECONDARY_TABLE__UNIQUE_CONSTRAINT = 1;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SECONDARY_TABLE__CATALOG = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SECONDARY_TABLE__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SECONDARY_TABLE__SCHEMA = 4;
 
   /**
-   * The number of structural features of the '<em>Secondary Table</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Secondary Table</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SECONDARY_TABLE_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SequenceGeneratorImpl <em>Sequence Generator</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SequenceGeneratorImpl
+   * <em>Sequence Generator</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.SequenceGeneratorImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSequenceGenerator()
    * @generated
@@ -5823,73 +5836,74 @@ public interface OrmPackage extends EPackage {
   int SEQUENCE_GENERATOR = 73;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Allocation Size</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Allocation Size</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__ALLOCATION_SIZE = 1;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__CATALOG = 2;
 
   /**
-   * The feature id for the '<em><b>Initial Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Initial Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__INITIAL_VALUE = 3;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__NAME = 4;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__SCHEMA = 5;
 
   /**
-   * The feature id for the '<em><b>Sequence Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Sequence Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR__SEQUENCE_NAME = 6;
 
   /**
-   * The number of structural features of the '<em>Sequence Generator</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Sequence Generator</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SEQUENCE_GENERATOR_FEATURE_COUNT = 7;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SqlResultSetMappingImpl <em>Sql Result Set Mapping</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SqlResultSetMappingImpl
+   * <em>Sql Result Set Mapping</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.SqlResultSetMappingImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSqlResultSetMapping()
    * @generated
@@ -5897,51 +5911,53 @@ public interface OrmPackage extends EPackage {
   int SQL_RESULT_SET_MAPPING = 74;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SQL_RESULT_SET_MAPPING__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Entity Result</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Entity Result</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SQL_RESULT_SET_MAPPING__ENTITY_RESULT = 1;
 
   /**
-   * The feature id for the '<em><b>Column Result</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Column Result</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SQL_RESULT_SET_MAPPING__COLUMN_RESULT = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SQL_RESULT_SET_MAPPING__NAME = 3;
 
   /**
-   * The number of structural features of the '<em>Sql Result Set Mapping</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Sql Result Set Mapping</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int SQL_RESULT_SET_MAPPING_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl <em>Stored Procedure Parameter</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl
+   * <em>Stored Procedure Parameter</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getStoredProcedureParameter()
    * @generated
@@ -5949,65 +5965,66 @@ public interface OrmPackage extends EPackage {
   int STORED_PROCEDURE_PARAMETER = 75;
 
   /**
-   * The feature id for the '<em><b>Direction</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Direction</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER__DIRECTION = 0;
 
   /**
-   * The feature id for the '<em><b>Jdbc Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Jdbc Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER__JDBC_TYPE = 1;
 
   /**
-   * The feature id for the '<em><b>Jdbc Type Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Jdbc Type Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER__NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Query Parameter</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Query Parameter</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER = 4;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER__TYPE = 5;
 
   /**
-   * The number of structural features of the '<em>Stored Procedure Parameter</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Stored Procedure Parameter</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STORED_PROCEDURE_PARAMETER_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructConverterImpl <em>Struct Converter</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructConverterImpl
+   * <em>Struct Converter</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructConverterImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getStructConverter()
    * @generated
@@ -6015,33 +6032,34 @@ public interface OrmPackage extends EPackage {
   int STRUCT_CONVERTER = 76;
 
   /**
-   * The feature id for the '<em><b>Converter</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Converter</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STRUCT_CONVERTER__CONVERTER = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STRUCT_CONVERTER__NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Struct Converter</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Struct Converter</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int STRUCT_CONVERTER_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl <em>Table</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl <em>Table</em>}'
+   * class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTable()
    * @generated
@@ -6049,49 +6067,50 @@ public interface OrmPackage extends EPackage {
   int TABLE = 77;
 
   /**
-   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE__UNIQUE_CONSTRAINT = 0;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE__CATALOG = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE__NAME = 2;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE__SCHEMA = 3;
 
   /**
-   * The number of structural features of the '<em>Table</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Table</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableGeneratorImpl <em>Table Generator</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableGeneratorImpl
+   * <em>Table Generator</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableGeneratorImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTableGenerator()
    * @generated
@@ -6099,106 +6118,107 @@ public interface OrmPackage extends EPackage {
   int TABLE_GENERATOR = 78;
 
   /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__DESCRIPTION = 0;
 
   /**
-   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__UNIQUE_CONSTRAINT = 1;
 
   /**
-   * The feature id for the '<em><b>Allocation Size</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Allocation Size</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__ALLOCATION_SIZE = 2;
 
   /**
-   * The feature id for the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__CATALOG = 3;
 
   /**
-   * The feature id for the '<em><b>Initial Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Initial Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__INITIAL_VALUE = 4;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__NAME = 5;
 
   /**
-   * The feature id for the '<em><b>Pk Column Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Pk Column Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__PK_COLUMN_NAME = 6;
 
   /**
-   * The feature id for the '<em><b>Pk Column Value</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Pk Column Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__PK_COLUMN_VALUE = 7;
 
   /**
-   * The feature id for the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__SCHEMA = 8;
 
   /**
-   * The feature id for the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Table</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__TABLE = 9;
 
   /**
-   * The feature id for the '<em><b>Value Column Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Value Column Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR__VALUE_COLUMN_NAME = 10;
 
   /**
-   * The number of structural features of the '<em>Table Generator</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Table Generator</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TABLE_GENERATOR_FEATURE_COUNT = 11;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl <em>Time Of Day</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl
+   * <em>Time Of Day</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTimeOfDay()
    * @generated
@@ -6206,32 +6226,32 @@ public interface OrmPackage extends EPackage {
   int TIME_OF_DAY = 79;
 
   /**
-   * The feature id for the '<em><b>Hour</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Hour</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TIME_OF_DAY__HOUR = 0;
 
   /**
-   * The feature id for the '<em><b>Millisecond</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Millisecond</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TIME_OF_DAY__MILLISECOND = 1;
 
   /**
-   * The feature id for the '<em><b>Minute</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Minute</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TIME_OF_DAY__MINUTE = 2;
 
   /**
-   * The feature id for the '<em><b>Second</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Second</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -6247,8 +6267,9 @@ public interface OrmPackage extends EPackage {
   int TIME_OF_DAY_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl <em>Transformation</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl
+   * <em>Transformation</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTransformation()
    * @generated
@@ -6256,84 +6277,84 @@ public interface OrmPackage extends EPackage {
   int TRANSFORMATION = 80;
 
   /**
-   * The feature id for the '<em><b>Read Transformer</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Read Transformer</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__READ_TRANSFORMER = 0;
 
   /**
-   * The feature id for the '<em><b>Write Transformer</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Write Transformer</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__WRITE_TRANSFORMER = 1;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__ACCESS = 2;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__PROPERTY = 3;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__ACCESS_METHODS = 4;
 
   /**
-   * The feature id for the '<em><b>Access1</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access1</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__ACCESS1 = 5;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__FETCH = 6;
 
   /**
-   * The feature id for the '<em><b>Mutable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mutable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__MUTABLE = 7;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSFORMATION__NAME = 8;
 
   /**
-   * The feature id for the '<em><b>Optional</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Optional</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -6349,8 +6370,9 @@ public interface OrmPackage extends EPackage {
   int TRANSFORMATION_FEATURE_COUNT = 10;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransientImpl <em>Transient</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransientImpl
+   * <em>Transient</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransientImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTransient()
    * @generated
@@ -6358,24 +6380,25 @@ public interface OrmPackage extends EPackage {
   int TRANSIENT = 81;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSIENT__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Transient</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Transient</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TRANSIENT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl <em>Type Converter</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl
+   * <em>Type Converter</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTypeConverter()
    * @generated
@@ -6383,24 +6406,24 @@ public interface OrmPackage extends EPackage {
   int TYPE_CONVERTER = 82;
 
   /**
-   * The feature id for the '<em><b>Data Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Data Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TYPE_CONVERTER__DATA_TYPE = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int TYPE_CONVERTER__NAME = 1;
 
   /**
-   * The feature id for the '<em><b>Object Type</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Object Type</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -6416,8 +6439,9 @@ public interface OrmPackage extends EPackage {
   int TYPE_CONVERTER_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.UniqueConstraintImpl <em>Unique Constraint</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.UniqueConstraintImpl
+   * <em>Unique Constraint</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.UniqueConstraintImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getUniqueConstraint()
    * @generated
@@ -6425,33 +6449,34 @@ public interface OrmPackage extends EPackage {
   int UNIQUE_CONSTRAINT = 83;
 
   /**
-   * The feature id for the '<em><b>Column Name</b></em>' attribute list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Column Name</b></em>' attribute list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int UNIQUE_CONSTRAINT__COLUMN_NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int UNIQUE_CONSTRAINT__NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Unique Constraint</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Unique Constraint</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int UNIQUE_CONSTRAINT_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VariableOneToOneImpl <em>Variable One To One</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VariableOneToOneImpl
+   * <em>Variable One To One</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.VariableOneToOneImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getVariableOneToOne()
    * @generated
@@ -6468,119 +6493,120 @@ public interface OrmPackage extends EPackage {
   int VARIABLE_ONE_TO_ONE__CASCADE = 0;
 
   /**
-   * The feature id for the '<em><b>Discriminator Column</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Discriminator Column</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__DISCRIMINATOR_COLUMN = 1;
 
   /**
-   * The feature id for the '<em><b>Discriminator Class</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+   * The feature id for the '<em><b>Discriminator Class</b></em>' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__DISCRIMINATOR_CLASS = 2;
 
   /**
-   * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Join Column</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__JOIN_COLUMN = 3;
 
   /**
-   * The feature id for the '<em><b>Private Owned</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Private Owned</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__PRIVATE_OWNED = 4;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__PROPERTY = 5;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__ACCESS_METHODS = 6;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__ACCESS = 7;
 
   /**
-   * The feature id for the '<em><b>Fetch</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Fetch</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__FETCH = 8;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__NAME = 9;
 
   /**
-   * The feature id for the '<em><b>Optional</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Optional</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__OPTIONAL = 10;
 
   /**
-   * The feature id for the '<em><b>Orphan Removal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Orphan Removal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__ORPHAN_REMOVAL = 11;
 
   /**
-   * The feature id for the '<em><b>Target Interface</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Target Interface</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE__TARGET_INTERFACE = 12;
 
   /**
-   * The number of structural features of the '<em>Variable One To One</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Variable One To One</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VARIABLE_ONE_TO_ONE_FEATURE_COUNT = 13;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl <em>Version</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl
+   * <em>Version</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getVersion()
    * @generated
@@ -6597,16 +6623,16 @@ public interface OrmPackage extends EPackage {
   int VERSION__COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Temporal</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Temporal</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__TEMPORAL = 1;
 
   /**
-   * The feature id for the '<em><b>Convert</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Convert</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -6622,85 +6648,86 @@ public interface OrmPackage extends EPackage {
   int VERSION__CONVERTER = 3;
 
   /**
-   * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__TYPE_CONVERTER = 4;
 
   /**
-   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__OBJECT_TYPE_CONVERTER = 5;
 
   /**
-   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__STRUCT_CONVERTER = 6;
 
   /**
-   * The feature id for the '<em><b>Property</b></em>' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Property</b></em>' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__PROPERTY = 7;
 
   /**
-   * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc --> <!--
+   * The feature id for the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__ACCESS_METHODS = 8;
 
   /**
-   * The feature id for the '<em><b>Access</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Access</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__ACCESS = 9;
 
   /**
-   * The feature id for the '<em><b>Mutable</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Mutable</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__MUTABLE = 10;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION__NAME = 11;
 
   /**
-   * The number of structural features of the '<em>Version</em>' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The number of structural features of the '<em>Version</em>' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int VERSION_FEATURE_COUNT = 12;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.WriteTransformerImpl <em>Write Transformer</em>}' class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.WriteTransformerImpl
+   * <em>Write Transformer</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.WriteTransformerImpl
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getWriteTransformer()
    * @generated
@@ -6717,33 +6744,34 @@ public interface OrmPackage extends EPackage {
   int WRITE_TRANSFORMER__COLUMN = 0;
 
   /**
-   * The feature id for the '<em><b>Method</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Method</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int WRITE_TRANSFORMER__METHOD = 1;
 
   /**
-   * The feature id for the '<em><b>Transformer Class</b></em>' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The feature id for the '<em><b>Transformer Class</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int WRITE_TRANSFORMER__TRANSFORMER_CLASS = 2;
 
   /**
-   * The number of structural features of the '<em>Write Transformer</em>' class.
-   * <!-- begin-user-doc --> <!--
+   * The number of structural features of the '<em>Write Transformer</em>' class. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   int WRITE_TRANSFORMER_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType <em>Access Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType <em>Access Type</em>}'
+   * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAccessType()
    * @generated
@@ -6751,8 +6779,9 @@ public interface OrmPackage extends EPackage {
   int ACCESS_TYPE = 87;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType <em>Cache Coordination Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
+   * <em>Cache Coordination Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheCoordinationType()
    * @generated
@@ -6760,8 +6789,9 @@ public interface OrmPackage extends EPackage {
   int CACHE_COORDINATION_TYPE = 88;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type</em>}'
+   * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheType()
    * @generated
@@ -6769,8 +6799,9 @@ public interface OrmPackage extends EPackage {
   int CACHE_TYPE = 89;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType <em>Change Tracking Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
+   * <em>Change Tracking Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getChangeTrackingType()
    * @generated
@@ -6778,8 +6809,9 @@ public interface OrmPackage extends EPackage {
   int CHANGE_TRACKING_TYPE = 90;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType <em>Direction Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
+   * <em>Direction Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDirectionType()
    * @generated
@@ -6787,8 +6819,9 @@ public interface OrmPackage extends EPackage {
   int DIRECTION_TYPE = 91;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType <em>Discriminator Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
+   * <em>Discriminator Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorType()
    * @generated
@@ -6796,8 +6829,9 @@ public interface OrmPackage extends EPackage {
   int DISCRIMINATOR_TYPE = 92;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enum Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enum Type</em>}'
+   * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumType()
    * @generated
@@ -6805,8 +6839,9 @@ public interface OrmPackage extends EPackage {
   int ENUM_TYPE = 94;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType <em>Existence Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
+   * <em>Existence Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getExistenceType()
    * @generated
@@ -6814,8 +6849,9 @@ public interface OrmPackage extends EPackage {
   int EXISTENCE_TYPE = 95;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType <em>Fetch Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType <em>Fetch Type</em>}'
+   * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFetchType()
    * @generated
@@ -6823,8 +6859,9 @@ public interface OrmPackage extends EPackage {
   int FETCH_TYPE = 96;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType <em>Generation Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType
+   * <em>Generation Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getGenerationType()
    * @generated
@@ -6832,8 +6869,9 @@ public interface OrmPackage extends EPackage {
   int GENERATION_TYPE = 97;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation <em>Id Validation</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
+   * <em>Id Validation</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIdValidation()
    * @generated
@@ -6841,8 +6879,9 @@ public interface OrmPackage extends EPackage {
   int ID_VALIDATION = 98;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType <em>Inheritance Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType
+   * <em>Inheritance Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInheritanceType()
    * @generated
@@ -6850,8 +6889,9 @@ public interface OrmPackage extends EPackage {
   int INHERITANCE_TYPE = 99;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType <em>Join Fetch Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
+   * <em>Join Fetch Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinFetchType()
    * @generated
@@ -6859,8 +6899,9 @@ public interface OrmPackage extends EPackage {
   int JOIN_FETCH_TYPE = 100;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType <em>Lock Mode Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
+   * <em>Lock Mode Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getLockModeType()
    * @generated
@@ -6868,8 +6909,9 @@ public interface OrmPackage extends EPackage {
   int LOCK_MODE_TYPE = 101;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType <em>Optimistic Locking Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
+   * <em>Optimistic Locking Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOptimisticLockingType()
    * @generated
@@ -6877,8 +6919,9 @@ public interface OrmPackage extends EPackage {
   int OPTIMISTIC_LOCKING_TYPE = 102;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType <em>Order Column Correction Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
+   * <em>Order Column Correction Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderColumnCorrectionType()
    * @generated
@@ -6886,8 +6929,9 @@ public interface OrmPackage extends EPackage {
   int ORDER_COLUMN_CORRECTION_TYPE = 103;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal Type</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
+   * <em>Temporal Type</em>}' enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporalType()
    * @generated
@@ -6895,8 +6939,8 @@ public interface OrmPackage extends EPackage {
   int TEMPORAL_TYPE = 105;
 
   /**
-   * The meta object id for the '<em>Access Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Access Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAccessTypeObject()
    * @generated
@@ -6904,9 +6948,9 @@ public interface OrmPackage extends EPackage {
   int ACCESS_TYPE_OBJECT = 106;
 
   /**
-   * The meta object id for the '<em>Cache Coordination Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!--
+   * The meta object id for the '<em>Cache Coordination Type Object</em>' data type. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheCoordinationTypeObject()
    * @generated
@@ -6914,8 +6958,8 @@ public interface OrmPackage extends EPackage {
   int CACHE_COORDINATION_TYPE_OBJECT = 107;
 
   /**
-   * The meta object id for the '<em>Cache Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Cache Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheTypeObject()
    * @generated
@@ -6923,9 +6967,9 @@ public interface OrmPackage extends EPackage {
   int CACHE_TYPE_OBJECT = 108;
 
   /**
-   * The meta object id for the '<em>Change Tracking Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!--
+   * The meta object id for the '<em>Change Tracking Type Object</em>' data type. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getChangeTrackingTypeObject()
    * @generated
@@ -6943,9 +6987,9 @@ public interface OrmPackage extends EPackage {
   int DIRECTION_TYPE_OBJECT = 110;
 
   /**
-   * The meta object id for the '<em>Discriminator Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!--
+   * The meta object id for the '<em>Discriminator Type Object</em>' data type. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorTypeObject()
    * @generated
@@ -6953,8 +6997,8 @@ public interface OrmPackage extends EPackage {
   int DISCRIMINATOR_TYPE_OBJECT = 111;
 
   /**
-   * The meta object id for the '<em>Discriminator Value</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Discriminator Value</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see java.lang.String
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorValue()
    * @generated
@@ -6962,8 +7006,8 @@ public interface OrmPackage extends EPackage {
   int DISCRIMINATOR_VALUE = 112;
 
   /**
-   * The meta object id for the '<em>Enumerated Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Enumerated Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumeratedObject()
    * @generated
@@ -6971,8 +7015,9 @@ public interface OrmPackage extends EPackage {
   int ENUMERATED_OBJECT = 113;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated</em>}'
+   * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumerated()
    * @generated
@@ -6980,8 +7025,8 @@ public interface OrmPackage extends EPackage {
   int ENUMERATED = 93;
 
   /**
-   * The meta object id for the '<em>Enum Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Enum Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumTypeObject()
    * @generated
@@ -6999,8 +7044,8 @@ public interface OrmPackage extends EPackage {
   int EXISTENCE_TYPE_OBJECT = 115;
 
   /**
-   * The meta object id for the '<em>Fetch Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Fetch Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFetchTypeObject()
    * @generated
@@ -7018,8 +7063,8 @@ public interface OrmPackage extends EPackage {
   int GENERATION_TYPE_OBJECT = 117;
 
   /**
-   * The meta object id for the '<em>Id Validation Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Id Validation Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIdValidationObject()
    * @generated
@@ -7057,9 +7102,9 @@ public interface OrmPackage extends EPackage {
   int LOCK_MODE_TYPE_OBJECT = 121;
 
   /**
-   * The meta object id for the '<em>Optimistic Locking Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!--
+   * The meta object id for the '<em>Optimistic Locking Type Object</em>' data type. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOptimisticLockingTypeObject()
    * @generated
@@ -7067,8 +7112,8 @@ public interface OrmPackage extends EPackage {
   int OPTIMISTIC_LOCKING_TYPE_OBJECT = 122;
 
   /**
-   * The meta object id for the '<em>Order By</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Order By</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see java.lang.String
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderBy()
    * @generated
@@ -7076,9 +7121,9 @@ public interface OrmPackage extends EPackage {
   int ORDER_BY = 123;
 
   /**
-   * The meta object id for the '<em>Order Column Correction Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!--
+   * The meta object id for the '<em>Order Column Correction Type Object</em>' data type. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderColumnCorrectionTypeObject()
    * @generated
@@ -7086,8 +7131,8 @@ public interface OrmPackage extends EPackage {
   int ORDER_COLUMN_CORRECTION_TYPE_OBJECT = 124;
 
   /**
-   * The meta object id for the '<em>Temporal Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Temporal Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporalObject()
    * @generated
@@ -7095,8 +7140,9 @@ public interface OrmPackage extends EPackage {
   int TEMPORAL_OBJECT = 125;
 
   /**
-   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal</em>}' enum.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal</em>}'
+   * enum. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporal()
    * @generated
@@ -7104,8 +7150,8 @@ public interface OrmPackage extends EPackage {
   int TEMPORAL = 104;
 
   /**
-   * The meta object id for the '<em>Temporal Type Object</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Temporal Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporalTypeObject()
    * @generated
@@ -7113,8 +7159,8 @@ public interface OrmPackage extends EPackage {
   int TEMPORAL_TYPE_OBJECT = 126;
 
   /**
-   * The meta object id for the '<em>Version Type</em>' data type.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The meta object id for the '<em>Version Type</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see java.lang.String
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getVersionType()
    * @generated
@@ -7122,8 +7168,9 @@ public interface OrmPackage extends EPackage {
   int VERSION_TYPE = 127;
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods <em>Access Methods</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods
+   * <em>Access Methods</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Access Methods</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods
    * @generated
@@ -7155,8 +7202,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getAccessMethods_SetMethod();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride <em>Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride
+   * <em>Association Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride
    * @generated
@@ -7164,8 +7212,10 @@ public interface OrmPackage extends EPackage {
   EClass getAssociationOverride();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride#getDescription <em>Description</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Description</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride#getDescription()
    * @see #getAssociationOverride()
@@ -7174,8 +7224,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getAssociationOverride_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride#getJoinColumn <em>Join Column</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride#getJoinColumn <em>Join Column</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride#getJoinColumn()
    * @see #getAssociationOverride()
@@ -7208,8 +7260,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getAssociationOverride_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride <em>Attribute Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride
+   * <em>Attribute Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride
    * @generated
@@ -7253,8 +7306,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getAttributeOverride_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes <em>Attributes</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes
+   * <em>Attributes</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Attributes</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes
    * @generated
@@ -7274,9 +7328,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getAttributes_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getId <em>Id</em>}'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getId <em>Id</em>}'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Id</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getId()
    * @see #getAttributes()
@@ -7297,9 +7352,10 @@ public interface OrmPackage extends EPackage {
   EReference getAttributes_EmbeddedId();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getBasic <em>Basic</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getBasic <em>Basic</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Basic</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getBasic()
    * @see #getAttributes()
@@ -7308,8 +7364,10 @@ public interface OrmPackage extends EPackage {
   EReference getAttributes_Basic();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getBasicCollection <em>Basic Collection</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getBasicCollection <em>Basic Collection</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Basic Collection</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getBasicCollection()
    * @see #getAttributes()
@@ -7330,9 +7388,10 @@ public interface OrmPackage extends EPackage {
   EReference getAttributes_BasicMap();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getVersion <em>Version</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getVersion <em>Version</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Version</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getVersion()
    * @see #getAttributes()
@@ -7377,8 +7436,10 @@ public interface OrmPackage extends EPackage {
   EReference getAttributes_OneToOne();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getVariableOneToOne <em>Variable One To One</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getVariableOneToOne <em>Variable One To One</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Variable One To One</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getVariableOneToOne()
    * @see #getAttributes()
@@ -7399,8 +7460,10 @@ public interface OrmPackage extends EPackage {
   EReference getAttributes_ManyToMany();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getElementCollection <em>Element Collection</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getElementCollection <em>Element Collection</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Element Collection</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getElementCollection()
    * @see #getAttributes()
@@ -7447,6 +7510,7 @@ public interface OrmPackage extends EPackage {
   /**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic <em>Basic</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Basic</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic
    * @generated
@@ -7454,9 +7518,10 @@ public interface OrmPackage extends EPackage {
   EClass getBasic();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getColumn <em>Column</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getColumn <em>Column</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getColumn()
    * @see #getBasic()
@@ -7477,9 +7542,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_GeneratedValue();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getLob <em>Lob</em>}'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getLob <em>Lob</em>}'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Lob</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getLob()
    * @see #getBasic()
@@ -7488,8 +7554,9 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_Lob();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal <em>Temporal</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal
+   * <em>Temporal</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Temporal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal()
    * @see #getBasic()
@@ -7510,8 +7577,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Enumerated();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getConvert <em>Convert</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getConvert
+   * <em>Convert</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Convert</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getConvert()
    * @see #getBasic()
@@ -7520,9 +7588,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Convert();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getConverter <em>Converter</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getConverter <em>Converter</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getConverter()
    * @see #getBasic()
@@ -7543,8 +7612,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getObjectTypeConverter <em>Object Type Converter</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getObjectTypeConverter()
    * @see #getBasic()
@@ -7577,8 +7648,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_TableGenerator();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getSequenceGenerator <em>Sequence Generator</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getSequenceGenerator <em>Sequence Generator</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Sequence Generator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getSequenceGenerator()
    * @see #getBasic()
@@ -7587,9 +7660,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_SequenceGenerator();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getProperty <em>Property</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getProperty()
    * @see #getBasic()
@@ -7610,8 +7684,9 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAccess
+   * <em>Access</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAccess()
    * @see #getBasic()
@@ -7620,8 +7695,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getFetch
+   * <em>Fetch</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getFetch()
    * @see #getBasic()
@@ -7630,8 +7706,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Fetch();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isMutable <em>Mutable</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isMutable
+   * <em>Mutable</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Mutable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isMutable()
    * @see #getBasic()
@@ -7640,8 +7717,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Mutable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getName()
    * @see #getBasic()
@@ -7650,8 +7728,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isOptional <em>Optional</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isOptional
+   * <em>Optional</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Optional</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isOptional()
    * @see #getBasic()
@@ -7660,8 +7739,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Optional();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection <em>Basic Collection</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection
+   * <em>Basic Collection</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Basic Collection</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection
    * @generated
@@ -7705,8 +7785,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicCollection_Converter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getTypeConverter <em>Type Converter</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getTypeConverter <em>Type Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getTypeConverter()
    * @see #getBasicCollection()
@@ -7715,8 +7797,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicCollection_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getObjectTypeConverter()
    * @see #getBasicCollection()
@@ -7725,8 +7809,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicCollection_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getStructConverter <em>Struct Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getStructConverter <em>Struct Converter</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getStructConverter()
    * @see #getBasicCollection()
@@ -7735,8 +7821,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicCollection_StructConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getCollectionTable <em>Collection Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getCollectionTable <em>Collection Table</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Collection Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getCollectionTable()
    * @see #getBasicCollection()
@@ -7769,8 +7857,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicCollection_Property();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccessMethods <em>Access Methods</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccessMethods <em>Access Methods</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Access Methods</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccessMethods()
    * @see #getBasicCollection()
@@ -7803,9 +7893,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicCollection_Fetch();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getName()
    * @see #getBasicCollection()
@@ -7814,8 +7905,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicCollection_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap <em>Basic Map</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap
+   * <em>Basic Map</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Basic Map</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap
    * @generated
@@ -7871,9 +7963,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicMap_ValueConverter();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getGroup <em>Group</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getGroup <em>Group</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute list '<em>Group</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getGroup()
    * @see #getBasicMap()
@@ -7906,8 +7999,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicMap_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getObjectTypeConverter()
    * @see #getBasicMap()
@@ -7952,9 +8047,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicMap_JoinFetch();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getProperty <em>Property</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getProperty()
    * @see #getBasicMap()
@@ -7975,9 +8071,10 @@ public interface OrmPackage extends EPackage {
   EReference getBasicMap_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getAccess <em>Access</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getAccess()
    * @see #getBasicMap()
@@ -7986,8 +8083,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicMap_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getFetch
+   * <em>Fetch</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getFetch()
    * @see #getBasicMap()
@@ -7996,8 +8094,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicMap_Fetch();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getName()
    * @see #getBasicMap()
@@ -8008,6 +8107,7 @@ public interface OrmPackage extends EPackage {
   /**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache <em>Cache</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Cache</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache
    * @generated
@@ -8015,8 +8115,9 @@ public interface OrmPackage extends EPackage {
   EClass getCache();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getExpiry <em>Expiry</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getExpiry
+   * <em>Expiry</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Expiry</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getExpiry()
    * @see #getCache()
@@ -8073,8 +8174,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getCache_DisableHits();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isRefreshOnlyIfNewer <em>Refresh Only If Newer</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isRefreshOnlyIfNewer <em>Refresh Only If Newer</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Refresh Only If Newer</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isRefreshOnlyIfNewer()
    * @see #getCache()
@@ -8083,8 +8186,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCache_RefreshOnlyIfNewer();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isShared <em>Shared</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isShared
+   * <em>Shared</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Shared</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isShared()
    * @see #getCache()
@@ -8093,8 +8197,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCache_Shared();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getSize <em>Size</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getSize
+   * <em>Size</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Size</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getSize()
    * @see #getCache()
@@ -8103,8 +8208,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCache_Size();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getType <em>Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getType
+   * <em>Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getType()
    * @see #getCache()
@@ -8113,8 +8219,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCache_Type();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheInterceptor <em>Cache Interceptor</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheInterceptor
+   * <em>Cache Interceptor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Cache Interceptor</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheInterceptor
    * @generated
@@ -8134,8 +8241,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCacheInterceptor_Class();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType <em>Cascade Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType
+   * <em>Cascade Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Cascade Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType
    * @generated
@@ -8155,8 +8263,10 @@ public interface OrmPackage extends EPackage {
   EReference getCascadeType_CascadeAll();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadePersist <em>Cascade Persist</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadePersist <em>Cascade Persist</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade Persist</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadePersist()
    * @see #getCascadeType()
@@ -8189,8 +8299,10 @@ public interface OrmPackage extends EPackage {
   EReference getCascadeType_CascadeRemove();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeRefresh <em>Cascade Refresh</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeRefresh <em>Cascade Refresh</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade Refresh</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeRefresh()
    * @see #getCascadeType()
@@ -8199,8 +8311,9 @@ public interface OrmPackage extends EPackage {
   EReference getCascadeType_CascadeRefresh();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking <em>Change Tracking</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking
+   * <em>Change Tracking</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Change Tracking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking
    * @generated
@@ -8208,9 +8321,10 @@ public interface OrmPackage extends EPackage {
   EClass getChangeTracking();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking#getType <em>Type</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking#getType <em>Type</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking#getType()
    * @see #getChangeTracking()
@@ -8219,8 +8333,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getChangeTracking_Type();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy <em>Clone Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy
+   * <em>Clone Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Clone Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy
    * @generated
@@ -8240,8 +8355,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getCloneCopyPolicy_Method();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy#getWorkingCopyMethod <em>Working Copy Method</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy#getWorkingCopyMethod
+   * <em>Working Copy Method</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Working Copy Method</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy#getWorkingCopyMethod()
    * @see #getCloneCopyPolicy()
@@ -8250,8 +8367,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCloneCopyPolicy_WorkingCopyMethod();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable <em>Collection Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable
+   * <em>Collection Table</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Collection Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable
    * @generated
@@ -8271,8 +8389,10 @@ public interface OrmPackage extends EPackage {
   EReference getCollectionTable_JoinColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getUniqueConstraint <em>Unique Constraint</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getUniqueConstraint
+   * <em>Unique Constraint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Unique Constraint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getUniqueConstraint()
    * @see #getCollectionTable()
@@ -8293,9 +8413,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getCollectionTable_Catalog();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getName()
    * @see #getCollectionTable()
@@ -8318,6 +8439,7 @@ public interface OrmPackage extends EPackage {
   /**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column <em>Column</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column
    * @generated
@@ -8349,8 +8471,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Insertable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getLength <em>Length</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getLength
+   * <em>Length</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Length</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#getLength()
    * @see #getColumn()
@@ -8359,8 +8482,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Length();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#getName()
    * @see #getColumn()
@@ -8369,8 +8493,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#isNullable <em>Nullable</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#isNullable
+   * <em>Nullable</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Nullable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#isNullable()
    * @see #getColumn()
@@ -8379,9 +8504,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Nullable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getPrecision <em>Precision</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getPrecision <em>Precision</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Precision</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#getPrecision()
    * @see #getColumn()
@@ -8390,8 +8516,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Precision();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getScale <em>Scale</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getScale
+   * <em>Scale</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Scale</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#getScale()
    * @see #getColumn()
@@ -8400,8 +8527,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Scale();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getTable <em>Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#getTable
+   * <em>Table</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#getTable()
    * @see #getColumn()
@@ -8410,8 +8538,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Table();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#isUnique <em>Unique</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#isUnique
+   * <em>Unique</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Unique</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#isUnique()
    * @see #getColumn()
@@ -8420,9 +8549,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Unique();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#isUpdatable <em>Updatable</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Column#isUpdatable <em>Updatable</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Updatable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column#isUpdatable()
    * @see #getColumn()
@@ -8431,8 +8561,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumn_Updatable();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult <em>Column Result</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult
+   * <em>Column Result</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Column Result</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult
    * @generated
@@ -8440,9 +8571,10 @@ public interface OrmPackage extends EPackage {
   EClass getColumnResult();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult#getName()
    * @see #getColumnResult()
@@ -8451,8 +8583,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getColumnResult_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue <em>Conversion Value</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue
+   * <em>Conversion Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Conversion Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue
    * @generated
@@ -8484,8 +8617,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getConversionValue_ObjectValue();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter <em>Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter
+   * <em>Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Converter
    * @generated
@@ -8493,9 +8627,10 @@ public interface OrmPackage extends EPackage {
   EClass getConverter();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter#getClass_ <em>Class</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Converter#getClass_()
    * @see #getConverter()
@@ -8504,8 +8639,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getConverter_Class();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Converter#getName()
    * @see #getConverter()
@@ -8514,8 +8650,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getConverter_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy <em>Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy
+   * <em>Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy
    * @generated
@@ -8523,9 +8660,10 @@ public interface OrmPackage extends EPackage {
   EClass getCopyPolicy();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_ <em>Class</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_()
    * @see #getCopyPolicy()
@@ -8534,8 +8672,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCopyPolicy_Class();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer <em>Customizer</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer
+   * <em>Customizer</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Customizer</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Customizer
    * @generated
@@ -8543,9 +8682,10 @@ public interface OrmPackage extends EPackage {
   EClass getCustomizer();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer#getClass_ <em>Class</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Customizer#getClass_()
    * @see #getCustomizer()
@@ -8554,8 +8694,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getCustomizer_Class();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass <em>Discriminator Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass
+   * <em>Discriminator Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Discriminator Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass
    * @generated
@@ -8563,8 +8704,10 @@ public interface OrmPackage extends EPackage {
   EClass getDiscriminatorClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getDiscriminator <em>Discriminator</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getDiscriminator <em>Discriminator</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Discriminator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getDiscriminator()
    * @see #getDiscriminatorClass()
@@ -8585,8 +8728,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getDiscriminatorClass_Value();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn <em>Discriminator Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn
+   * <em>Discriminator Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Discriminator Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn
    * @generated
@@ -8594,8 +8738,10 @@ public interface OrmPackage extends EPackage {
   EClass getDiscriminatorColumn();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn#getColumnDefinition <em>Column Definition</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn#getColumnDefinition
+   * <em>Column Definition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column Definition</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn#getColumnDefinition()
    * @see #getDiscriminatorColumn()
@@ -8604,8 +8750,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getDiscriminatorColumn_ColumnDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn#getDiscriminatorType <em>Discriminator Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn#getDiscriminatorType
+   * <em>Discriminator Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Discriminator Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn#getDiscriminatorType()
    * @see #getDiscriminatorColumn()
@@ -8638,8 +8786,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getDiscriminatorColumn_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot <em>Document Root</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot
+   * <em>Document Root</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Document Root</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot
    * @generated
@@ -8647,9 +8796,10 @@ public interface OrmPackage extends EPackage {
   EClass getDocumentRoot();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getMixed <em>Mixed</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getMixed <em>Mixed</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute list '<em>Mixed</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getMixed()
    * @see #getDocumentRoot()
@@ -8658,8 +8808,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getDocumentRoot_Mixed();
 
   /**
-   * Returns the meta object for the map '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getXMLNSPrefixMap <em>XMLNS Prefix Map</em>}'.
+   * Returns the meta object for the map '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getXMLNSPrefixMap <em>XMLNS Prefix Map</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the map '<em>XMLNS Prefix Map</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getXMLNSPrefixMap()
    * @see #getDocumentRoot()
@@ -8668,8 +8820,10 @@ public interface OrmPackage extends EPackage {
   EReference getDocumentRoot_XMLNSPrefixMap();
 
   /**
-   * Returns the meta object for the map '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getXSISchemaLocation <em>XSI Schema Location</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the map '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getXSISchemaLocation
+   * <em>XSI Schema Location</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the map '<em>XSI Schema Location</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getXSISchemaLocation()
    * @see #getDocumentRoot()
@@ -8678,8 +8832,10 @@ public interface OrmPackage extends EPackage {
   EReference getDocumentRoot_XSISchemaLocation();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getEntityMappings <em>Entity Mappings</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getEntityMappings <em>Entity Mappings</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Entity Mappings</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot#getEntityMappings()
    * @see #getDocumentRoot()
@@ -8688,8 +8844,10 @@ public interface OrmPackage extends EPackage {
   EReference getDocumentRoot_EntityMappings();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable <em>Eclipselink Collection Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable
+   * <em>Eclipselink Collection Table</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Eclipselink Collection Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable
    * @generated
@@ -8697,8 +8855,10 @@ public interface OrmPackage extends EPackage {
   EClass getEclipselinkCollectionTable();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getPrimaryKeyJoinColumn
+   * <em>Primary Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Primary Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getPrimaryKeyJoinColumn()
    * @see #getEclipselinkCollectionTable()
@@ -8707,8 +8867,10 @@ public interface OrmPackage extends EPackage {
   EReference getEclipselinkCollectionTable_PrimaryKeyJoinColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getUniqueConstraint <em>Unique Constraint</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getUniqueConstraint
+   * <em>Unique Constraint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Unique Constraint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getUniqueConstraint()
    * @see #getEclipselinkCollectionTable()
@@ -8717,8 +8879,10 @@ public interface OrmPackage extends EPackage {
   EReference getEclipselinkCollectionTable_UniqueConstraint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getCatalog <em>Catalog</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getCatalog <em>Catalog</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Catalog</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getCatalog()
    * @see #getEclipselinkCollectionTable()
@@ -8751,8 +8915,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEclipselinkCollectionTable_Schema();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection <em>Element Collection</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection
+   * <em>Element Collection</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Element Collection</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection
    * @generated
@@ -8772,8 +8937,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_OrderBy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getOrderColumn <em>Order Column</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getOrderColumn <em>Order Column</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Order Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getOrderColumn()
    * @see #getElementCollection()
@@ -8794,8 +8961,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_MapKey();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyClass <em>Map Key Class</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyClass <em>Map Key Class</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Map Key Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyClass()
    * @see #getElementCollection()
@@ -8804,8 +8973,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_MapKeyClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyTemporal <em>Map Key Temporal</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyTemporal
+   * <em>Map Key Temporal</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Map Key Temporal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyTemporal()
    * @see #getElementCollection()
@@ -8814,8 +8985,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_MapKeyTemporal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyEnumerated <em>Map Key Enumerated</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyEnumerated
+   * <em>Map Key Enumerated</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Map Key Enumerated</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyEnumerated()
    * @see #getElementCollection()
@@ -8824,8 +8997,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_MapKeyEnumerated();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyConvert <em>Map Key Convert</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyConvert <em>Map Key Convert</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Map Key Convert</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyConvert()
    * @see #getElementCollection()
@@ -8834,8 +9009,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_MapKeyConvert();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyAttributeOverride <em>Map Key Attribute Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyAttributeOverride
+   * <em>Map Key Attribute Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyAttributeOverride()
    * @see #getElementCollection()
@@ -8844,8 +9021,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_MapKeyAttributeOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyAssociationOverride <em>Map Key Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyAssociationOverride
+   * <em>Map Key Association Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyAssociationOverride()
    * @see #getElementCollection()
@@ -8854,8 +9033,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_MapKeyAssociationOverride();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyColumn <em>Map Key Column</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyColumn <em>Map Key Column</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Map Key Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyColumn()
    * @see #getElementCollection()
@@ -8864,8 +9045,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_MapKeyColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyJoinColumn <em>Map Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyJoinColumn
+   * <em>Map Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getMapKeyJoinColumn()
    * @see #getElementCollection()
@@ -8910,9 +9093,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_Enumerated();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getLob <em>Lob</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getLob <em>Lob</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Lob</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getLob()
    * @see #getElementCollection()
@@ -8933,8 +9117,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_Convert();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAttributeOverride <em>Attribute Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAttributeOverride
+   * <em>Attribute Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAttributeOverride()
    * @see #getElementCollection()
@@ -8943,8 +9129,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_AttributeOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAssociationOverride <em>Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAssociationOverride
+   * <em>Association Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAssociationOverride()
    * @see #getElementCollection()
@@ -8977,8 +9165,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_Converter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getTypeConverter <em>Type Converter</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getTypeConverter <em>Type Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getTypeConverter()
    * @see #getElementCollection()
@@ -8987,8 +9177,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getObjectTypeConverter()
    * @see #getElementCollection()
@@ -8997,8 +9189,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getStructConverter <em>Struct Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getStructConverter
+   * <em>Struct Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getStructConverter()
    * @see #getElementCollection()
@@ -9007,8 +9201,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_StructConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getCollectionTable <em>Collection Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getCollectionTable
+   * <em>Collection Table</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Collection Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getCollectionTable()
    * @see #getElementCollection()
@@ -9029,8 +9225,10 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_Property();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAccessMethods <em>Access Methods</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAccessMethods <em>Access Methods</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Access Methods</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAccessMethods()
    * @see #getElementCollection()
@@ -9075,8 +9273,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getTargetClass <em>Target Class</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getTargetClass <em>Target Class</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Target Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getTargetClass()
    * @see #getElementCollection()
@@ -9085,8 +9285,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_TargetClass();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable <em>Embeddable</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable
+   * <em>Embeddable</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Embeddable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable
    * @generated
@@ -9154,8 +9355,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getObjectTypeConverter()
    * @see #getEmbeddable()
@@ -9164,8 +9367,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStructConverter <em>Struct Converter</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStructConverter <em>Struct Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStructConverter()
    * @see #getEmbeddable()
@@ -9210,8 +9415,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_CopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getInstantiationCopyPolicy <em>Instantiation Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getInstantiationCopyPolicy
+   * <em>Instantiation Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Instantiation Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getInstantiationCopyPolicy()
    * @see #getEmbeddable()
@@ -9220,8 +9427,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_InstantiationCopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCloneCopyPolicy <em>Clone Copy Policy</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCloneCopyPolicy <em>Clone Copy Policy</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Clone Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCloneCopyPolicy()
    * @see #getEmbeddable()
@@ -9230,9 +9439,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_CloneCopyPolicy();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccess <em>Access</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccess()
    * @see #getEmbeddable()
@@ -9241,9 +9451,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddable_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getClass_ <em>Class</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getClass_()
    * @see #getEmbeddable()
@@ -9252,8 +9463,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddable_Class();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Exclude Default Mappings</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isExcludeDefaultMappings()
    * @see #getEmbeddable()
@@ -9262,8 +9475,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddable_ExcludeDefaultMappings();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isMetadataComplete <em>Metadata Complete</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isMetadataComplete <em>Metadata Complete</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Metadata Complete</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isMetadataComplete()
    * @see #getEmbeddable()
@@ -9272,8 +9487,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddable_MetadataComplete();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded <em>Embedded</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded
+   * <em>Embedded</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Embedded</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded
    * @generated
@@ -9281,8 +9497,10 @@ public interface OrmPackage extends EPackage {
   EClass getEmbedded();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAttributeOverride <em>Attribute Override</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAttributeOverride <em>Attribute Override</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAttributeOverride()
    * @see #getEmbedded()
@@ -9291,8 +9509,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbedded_AttributeOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAssociationOverride <em>Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAssociationOverride
+   * <em>Association Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAssociationOverride()
    * @see #getEmbedded()
@@ -9301,9 +9521,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbedded_AssociationOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getProperty <em>Property</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getProperty()
    * @see #getEmbedded()
@@ -9324,9 +9545,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbedded_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAccess <em>Access</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAccess()
    * @see #getEmbedded()
@@ -9335,8 +9557,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbedded_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getName()
    * @see #getEmbedded()
@@ -9345,8 +9568,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbedded_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId <em>Embedded Id</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId
+   * <em>Embedded Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Embedded Id</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId
    * @generated
@@ -9354,8 +9578,10 @@ public interface OrmPackage extends EPackage {
   EClass getEmbeddedId();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAttributeOverride <em>Attribute Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAttributeOverride <em>Attribute Override</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAttributeOverride()
    * @see #getEmbeddedId()
@@ -9388,9 +9614,10 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddedId_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAccess <em>Access</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAccess()
    * @see #getEmbeddedId()
@@ -9399,9 +9626,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddedId_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getName()
    * @see #getEmbeddedId()
@@ -9410,8 +9638,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddedId_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType <em>Empty Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType
+   * <em>Empty Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Empty Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType
    * @generated
@@ -9421,6 +9650,7 @@ public interface OrmPackage extends EPackage {
   /**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity <em>Entity</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Entity</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity
    * @generated
@@ -9464,9 +9694,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_ChangeTracking();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getTable <em>Table</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getTable <em>Table</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getTable()
    * @see #getEntity()
@@ -9487,8 +9718,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_SecondaryTable();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrimaryKeyJoinColumn
+   * <em>Primary Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Primary Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrimaryKeyJoinColumn()
    * @see #getEntity()
@@ -9497,9 +9730,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_PrimaryKeyJoinColumn();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIdClass <em>Id Class</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIdClass <em>Id Class</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Id Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIdClass()
    * @see #getEntity()
@@ -9532,8 +9766,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_Inheritance();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorValue <em>Discriminator Value</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorValue <em>Discriminator Value</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Discriminator Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorValue()
    * @see #getEntity()
@@ -9542,8 +9778,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_DiscriminatorValue();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorColumn <em>Discriminator Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorColumn <em>Discriminator Column</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Discriminator Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorColumn()
    * @see #getEntity()
@@ -9552,8 +9790,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_DiscriminatorColumn();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getOptimisticLocking <em>Optimistic Locking</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getOptimisticLocking <em>Optimistic Locking</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Optimistic Locking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getOptimisticLocking()
    * @see #getEntity()
@@ -9562,9 +9802,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_OptimisticLocking();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCache <em>Cache</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCache <em>Cache</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cache</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCache()
    * @see #getEntity()
@@ -9585,9 +9826,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_CacheInterceptor();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getConverter <em>Converter</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getConverter <em>Converter</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getConverter()
    * @see #getEntity()
@@ -9608,8 +9850,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getObjectTypeConverter <em>Object Type Converter</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getObjectTypeConverter()
    * @see #getEntity()
@@ -9642,8 +9886,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_CopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getInstantiationCopyPolicy <em>Instantiation Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getInstantiationCopyPolicy
+   * <em>Instantiation Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Instantiation Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getInstantiationCopyPolicy()
    * @see #getEntity()
@@ -9664,8 +9910,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_CloneCopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSequenceGenerator <em>Sequence Generator</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSequenceGenerator <em>Sequence Generator</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Sequence Generator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSequenceGenerator()
    * @see #getEntity()
@@ -9698,8 +9946,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_NamedQuery();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedNativeQuery <em>Named Native Query</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedNativeQuery <em>Named Native Query</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Named Native Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedNativeQuery()
    * @see #getEntity()
@@ -9708,8 +9958,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_NamedNativeQuery();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredProcedureQuery
+   * <em>Named Stored Procedure Query</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Named Stored Procedure Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredProcedureQuery()
    * @see #getEntity()
@@ -9718,8 +9970,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_NamedStoredProcedureQuery();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSqlResultSetMapping
+   * <em>Sql Result Set Mapping</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Sql Result Set Mapping</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSqlResultSetMapping()
    * @see #getEntity()
@@ -9740,8 +9994,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_QueryRedirectors();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeDefaultListeners <em>Exclude Default Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeDefaultListeners
+   * <em>Exclude Default Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Exclude Default Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeDefaultListeners()
    * @see #getEntity()
@@ -9750,8 +10006,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_ExcludeDefaultListeners();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeSuperclassListeners <em>Exclude Superclass Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeSuperclassListeners
+   * <em>Exclude Superclass Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Exclude Superclass Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeSuperclassListeners()
    * @see #getEntity()
@@ -9772,92 +10030,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_EntityListeners();
 
   /**
-   * Returns the meta object for the containment reference '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrePersist <em>Pre Persist</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the containment reference '<em>Pre Persist</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrePersist()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PrePersist();
-
-  /**
-   * Returns the meta object for the containment reference '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostPersist <em>Post Persist</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the containment reference '<em>Post Persist</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostPersist()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PostPersist();
-
-  /**
-   * Returns the meta object for the containment reference '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreRemove <em>Pre Remove</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the containment reference '<em>Pre Remove</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreRemove()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PreRemove();
-
-  /**
-   * Returns the meta object for the containment reference '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostRemove <em>Post Remove</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the containment reference '<em>Post Remove</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostRemove()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PostRemove();
-
-  /**
-   * Returns the meta object for the containment reference '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreUpdate <em>Pre Update</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the containment reference '<em>Pre Update</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreUpdate()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PreUpdate();
-
-  /**
-   * Returns the meta object for the containment reference '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostUpdate <em>Post Update</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the containment reference '<em>Post Update</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostUpdate()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PostUpdate();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostLoad <em>Post Load</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getProperty <em>Property</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Post Load</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostLoad()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_PostLoad();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc
-   * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getProperty()
    * @see #getEntity()
@@ -9866,8 +10042,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_Property();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAttributeOverride <em>Attribute Override</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAttributeOverride <em>Attribute Override</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAttributeOverride()
    * @see #getEntity()
@@ -9876,8 +10054,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_AttributeOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAssociationOverride <em>Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAssociationOverride <em>Association Override</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAssociationOverride()
    * @see #getEntity()
@@ -9898,8 +10078,9 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_Attributes();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccess
+   * <em>Access</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccess()
    * @see #getEntity()
@@ -9908,9 +10089,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCacheable <em>Cacheable</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCacheable <em>Cacheable</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Cacheable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCacheable()
    * @see #getEntity()
@@ -9919,8 +10101,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_Cacheable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClass_
+   * <em>Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClass_()
    * @see #getEntity()
@@ -9929,8 +10112,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_Class();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Exclude Default Mappings</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isExcludeDefaultMappings()
    * @see #getEntity()
@@ -9939,8 +10124,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_ExcludeDefaultMappings();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExistenceChecking <em>Existence Checking</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExistenceChecking <em>Existence Checking</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Existence Checking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExistenceChecking()
    * @see #getEntity()
@@ -9961,8 +10148,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_MetadataComplete();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getName()
    * @see #getEntity()
@@ -9971,8 +10159,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isReadOnly <em>Read Only</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isReadOnly
+   * <em>Read Only</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Read Only</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isReadOnly()
    * @see #getEntity()
@@ -9981,8 +10170,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_ReadOnly();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListener <em>Entity Listener</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListener
+   * <em>Entity Listener</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Entity Listener</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityListener
    * @generated
@@ -10098,8 +10288,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntityListener_Class();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners <em>Entity Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners
+   * <em>Entity Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Entity Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners
    * @generated
@@ -10107,8 +10298,10 @@ public interface OrmPackage extends EPackage {
   EClass getEntityListeners();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners#getEntityListener <em>Entity Listener</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners#getEntityListener <em>Entity Listener</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Entity Listener</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners#getEntityListener()
    * @see #getEntityListeners()
@@ -10117,8 +10310,9 @@ public interface OrmPackage extends EPackage {
   EReference getEntityListeners_EntityListener();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType <em>Entity Mappings Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType
+   * <em>Entity Mappings Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Entity Mappings Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType
    * @generated
@@ -10126,8 +10320,10 @@ public interface OrmPackage extends EPackage {
   EClass getEntityMappingsType();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getDescription <em>Description</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Description</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getDescription()
    * @see #getEntityMappingsType()
@@ -10136,8 +10332,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntityMappingsType_Description();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPersistenceUnitMetadata <em>Persistence Unit Metadata</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPersistenceUnitMetadata
+   * <em>Persistence Unit Metadata</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Persistence Unit Metadata</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPersistenceUnitMetadata()
    * @see #getEntityMappingsType()
@@ -10206,8 +10404,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_Converter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTypeConverter <em>Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTypeConverter <em>Type Converter</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTypeConverter()
    * @see #getEntityMappingsType()
@@ -10216,8 +10416,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getObjectTypeConverter()
    * @see #getEntityMappingsType()
@@ -10226,8 +10428,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getStructConverter <em>Struct Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getStructConverter
+   * <em>Struct Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getStructConverter()
    * @see #getEntityMappingsType()
@@ -10236,8 +10440,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_StructConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSequenceGenerator <em>Sequence Generator</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSequenceGenerator
+   * <em>Sequence Generator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Sequence Generator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSequenceGenerator()
    * @see #getEntityMappingsType()
@@ -10246,8 +10452,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_SequenceGenerator();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTableGenerator <em>Table Generator</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTableGenerator
+   * <em>Table Generator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Table Generator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTableGenerator()
    * @see #getEntityMappingsType()
@@ -10268,8 +10476,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_NamedQuery();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedNativeQuery <em>Named Native Query</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedNativeQuery
+   * <em>Named Native Query</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Named Native Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedNativeQuery()
    * @see #getEntityMappingsType()
@@ -10278,8 +10488,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_NamedNativeQuery();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedStoredProcedureQuery
+   * <em>Named Stored Procedure Query</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Named Stored Procedure Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedStoredProcedureQuery()
    * @see #getEntityMappingsType()
@@ -10288,8 +10500,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_NamedStoredProcedureQuery();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSqlResultSetMapping
+   * <em>Sql Result Set Mapping</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Sql Result Set Mapping</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSqlResultSetMapping()
    * @see #getEntityMappingsType()
@@ -10298,8 +10512,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_SqlResultSetMapping();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getMappedSuperclass <em>Mapped Superclass</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getMappedSuperclass
+   * <em>Mapped Superclass</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Mapped Superclass</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getMappedSuperclass()
    * @see #getEntityMappingsType()
@@ -10344,8 +10560,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntityMappingsType_Version();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult <em>Entity Result</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult
+   * <em>Entity Result</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Entity Result</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult
    * @generated
@@ -10365,8 +10582,10 @@ public interface OrmPackage extends EPackage {
   EReference getEntityResult_FieldResult();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult#getDiscriminatorColumn <em>Discriminator Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult#getDiscriminatorColumn
+   * <em>Discriminator Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Discriminator Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult#getDiscriminatorColumn()
    * @see #getEntityResult()
@@ -10387,8 +10606,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntityResult_EntityClass();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult <em>Field Result</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult
+   * <em>Field Result</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Field Result</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult
    * @generated
@@ -10396,9 +10616,10 @@ public interface OrmPackage extends EPackage {
   EClass getFieldResult();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult#getColumn <em>Column</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult#getColumn <em>Column</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult#getColumn()
    * @see #getFieldResult()
@@ -10407,9 +10628,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getFieldResult_Column();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult#getName()
    * @see #getFieldResult()
@@ -10418,8 +10640,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getFieldResult_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GeneratedValue <em>Generated Value</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GeneratedValue
+   * <em>Generated Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Generated Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.GeneratedValue
    * @generated
@@ -10461,9 +10684,10 @@ public interface OrmPackage extends EPackage {
   EClass getId();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getColumn <em>Column</em>}'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getColumn <em>Column</em>}'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getColumn()
    * @see #getId()
@@ -10484,8 +10708,9 @@ public interface OrmPackage extends EPackage {
   EReference getId_GeneratedValue();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getTemporal <em>Temporal</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getTemporal
+   * <em>Temporal</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Temporal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getTemporal()
    * @see #getId()
@@ -10494,8 +10719,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Temporal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConvert <em>Convert</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConvert
+   * <em>Convert</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Convert</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConvert()
    * @see #getId()
@@ -10504,9 +10730,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Convert();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConverter <em>Converter</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConverter <em>Converter</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConverter()
    * @see #getId()
@@ -10527,8 +10754,10 @@ public interface OrmPackage extends EPackage {
   EReference getId_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getObjectTypeConverter <em>Object Type Converter</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getObjectTypeConverter <em>Object Type Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getObjectTypeConverter()
    * @see #getId()
@@ -10573,9 +10802,10 @@ public interface OrmPackage extends EPackage {
   EReference getId_SequenceGenerator();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getProperty <em>Property</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getProperty()
    * @see #getId()
@@ -10596,8 +10826,9 @@ public interface OrmPackage extends EPackage {
   EReference getId_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getAccess
+   * <em>Access</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getAccess()
    * @see #getId()
@@ -10606,8 +10837,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#isMutable <em>Mutable</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#isMutable
+   * <em>Mutable</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Mutable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#isMutable()
    * @see #getId()
@@ -10616,8 +10848,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Mutable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getName()
    * @see #getId()
@@ -10626,8 +10859,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass <em>Id Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass <em>Id Class</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Id Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdClass
    * @generated
@@ -10635,8 +10869,9 @@ public interface OrmPackage extends EPackage {
   EClass getIdClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass#getClass_
+   * <em>Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdClass#getClass_()
    * @see #getIdClass()
@@ -10645,8 +10880,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getIdClass_Class();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance <em>Inheritance</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance
+   * <em>Inheritance</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Inheritance</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance
    * @generated
@@ -10666,8 +10902,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getInheritance_Strategy();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy <em>Instantiation Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy
+   * <em>Instantiation Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Instantiation Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy
    * @generated
@@ -10675,8 +10912,9 @@ public interface OrmPackage extends EPackage {
   EClass getInstantiationCopyPolicy();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn <em>Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn
+   * <em>Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn
    * @generated
@@ -10684,8 +10922,10 @@ public interface OrmPackage extends EPackage {
   EClass getJoinColumn();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getColumnDefinition <em>Column Definition</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getColumnDefinition <em>Column Definition</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column Definition</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getColumnDefinition()
    * @see #getJoinColumn()
@@ -10706,9 +10946,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinColumn_Insertable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getName()
    * @see #getJoinColumn()
@@ -10729,8 +10970,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinColumn_Nullable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getReferencedColumnName <em>Referenced Column Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getReferencedColumnName
+   * <em>Referenced Column Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Referenced Column Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getReferencedColumnName()
    * @see #getJoinColumn()
@@ -10739,9 +10982,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinColumn_ReferencedColumnName();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getTable <em>Table</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getTable <em>Table</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#getTable()
    * @see #getJoinColumn()
@@ -10750,9 +10994,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinColumn_Table();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#isUnique <em>Unique</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#isUnique <em>Unique</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Unique</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn#isUnique()
    * @see #getJoinColumn()
@@ -10773,8 +11018,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinColumn_Updatable();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable <em>Join Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable
+   * <em>Join Table</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Join Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable
    * @generated
@@ -10794,8 +11040,10 @@ public interface OrmPackage extends EPackage {
   EReference getJoinTable_JoinColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getInverseJoinColumn <em>Inverse Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getInverseJoinColumn <em>Inverse Join Column</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Inverse Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getInverseJoinColumn()
    * @see #getJoinTable()
@@ -10804,8 +11052,10 @@ public interface OrmPackage extends EPackage {
   EReference getJoinTable_InverseJoinColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getUniqueConstraint <em>Unique Constraint</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getUniqueConstraint <em>Unique Constraint</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Unique Constraint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getUniqueConstraint()
    * @see #getJoinTable()
@@ -10814,9 +11064,10 @@ public interface OrmPackage extends EPackage {
   EReference getJoinTable_UniqueConstraint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCatalog <em>Catalog</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCatalog <em>Catalog</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Catalog</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCatalog()
    * @see #getJoinTable()
@@ -10825,8 +11076,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinTable_Catalog();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getName()
    * @see #getJoinTable()
@@ -10835,9 +11087,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinTable_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getSchema <em>Schema</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getSchema <em>Schema</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Schema</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getSchema()
    * @see #getJoinTable()
@@ -10856,8 +11109,9 @@ public interface OrmPackage extends EPackage {
   EClass getLob();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany <em>Many To Many</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany
+   * <em>Many To Many</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Many To Many</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany
    * @generated
@@ -10889,9 +11143,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_OrderColumn();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey <em>Map Key</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey <em>Map Key</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Map Key</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey()
    * @see #getManyToMany()
@@ -10912,8 +11167,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_MapKeyClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Map Key Temporal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal()
    * @see #getManyToMany()
@@ -10922,8 +11179,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_MapKeyTemporal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Map Key Enumerated</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated()
    * @see #getManyToMany()
@@ -10944,8 +11203,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_MapKeyConvert();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAttributeOverride <em>Map Key Attribute Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAttributeOverride
+   * <em>Map Key Attribute Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAttributeOverride()
    * @see #getManyToMany()
@@ -10954,8 +11215,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_MapKeyAttributeOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAssociationOverride <em>Map Key Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAssociationOverride
+   * <em>Map Key Association Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAssociationOverride()
    * @see #getManyToMany()
@@ -10976,8 +11239,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_MapKeyColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyJoinColumn <em>Map Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyJoinColumn <em>Map Key Join Column</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyJoinColumn()
    * @see #getManyToMany()
@@ -11010,8 +11275,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter()
    * @see #getManyToMany()
@@ -11020,8 +11287,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter <em>Struct Converter</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter <em>Struct Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter()
    * @see #getManyToMany()
@@ -11042,9 +11311,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_JoinTable();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade <em>Cascade</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade <em>Cascade</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade()
    * @see #getManyToMany()
@@ -11089,9 +11359,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess()
    * @see #getManyToMany()
@@ -11100,9 +11371,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch()
    * @see #getManyToMany()
@@ -11123,9 +11395,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_MappedBy();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName()
    * @see #getManyToMany()
@@ -11146,8 +11419,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_TargetEntity();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne <em>Many To One</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne
+   * <em>Many To One</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Many To One</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne
    * @generated
@@ -11179,9 +11453,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToOne_JoinTable();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getCascade <em>Cascade</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getCascade <em>Cascade</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getCascade()
    * @see #getManyToOne()
@@ -11226,9 +11501,10 @@ public interface OrmPackage extends EPackage {
   EReference getManyToOne_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getAccess <em>Access</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getAccess()
    * @see #getManyToOne()
@@ -11237,9 +11513,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToOne_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getFetch <em>Fetch</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getFetch()
    * @see #getManyToOne()
@@ -11248,8 +11525,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToOne_Fetch();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#isId <em>Id</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#isId
+   * <em>Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Id</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#isId()
    * @see #getManyToOne()
@@ -11258,9 +11536,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToOne_Id();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getMapsId <em>Maps Id</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getMapsId <em>Maps Id</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Maps Id</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getMapsId()
    * @see #getManyToOne()
@@ -11269,8 +11548,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToOne_MapsId();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getName()
    * @see #getManyToOne()
@@ -11279,9 +11559,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToOne_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#isOptional <em>Optional</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#isOptional <em>Optional</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Optional</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#isOptional()
    * @see #getManyToOne()
@@ -11304,6 +11585,7 @@ public interface OrmPackage extends EPackage {
   /**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey <em>Map Key</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Map Key</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKey
    * @generated
@@ -11311,8 +11593,9 @@ public interface OrmPackage extends EPackage {
   EClass getMapKey();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKey#getName()
    * @see #getMapKey()
@@ -11321,8 +11604,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKey_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass <em>Map Key Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass
+   * <em>Map Key Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Map Key Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass
    * @generated
@@ -11330,9 +11614,10 @@ public interface OrmPackage extends EPackage {
   EClass getMapKeyClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass#getClass_ <em>Class</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass#getClass_ <em>Class</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass#getClass_()
    * @see #getMapKeyClass()
@@ -11341,8 +11626,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyClass_Class();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn <em>Map Key Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn
+   * <em>Map Key Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Map Key Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn
    * @generated
@@ -11350,8 +11636,10 @@ public interface OrmPackage extends EPackage {
   EClass getMapKeyColumn();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getColumnDefinition <em>Column Definition</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getColumnDefinition <em>Column Definition</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column Definition</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getColumnDefinition()
    * @see #getMapKeyColumn()
@@ -11372,9 +11660,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyColumn_Insertable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getLength <em>Length</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getLength <em>Length</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Length</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getLength()
    * @see #getMapKeyColumn()
@@ -11383,9 +11672,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyColumn_Length();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getName()
    * @see #getMapKeyColumn()
@@ -11418,9 +11708,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyColumn_Precision();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getScale <em>Scale</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getScale <em>Scale</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Scale</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getScale()
    * @see #getMapKeyColumn()
@@ -11429,9 +11720,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyColumn_Scale();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getTable <em>Table</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getTable <em>Table</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#getTable()
    * @see #getMapKeyColumn()
@@ -11440,9 +11732,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyColumn_Table();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#isUnique <em>Unique</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#isUnique <em>Unique</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Unique</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn#isUnique()
    * @see #getMapKeyColumn()
@@ -11463,8 +11756,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyColumn_Updatable();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn <em>Map Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn
+   * <em>Map Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Map Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn
    * @generated
@@ -11472,8 +11766,10 @@ public interface OrmPackage extends EPackage {
   EClass getMapKeyJoinColumn();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getColumnDefinition <em>Column Definition</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getColumnDefinition
+   * <em>Column Definition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column Definition</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getColumnDefinition()
    * @see #getMapKeyJoinColumn()
@@ -11494,9 +11790,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyJoinColumn_Insertable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getName()
    * @see #getMapKeyJoinColumn()
@@ -11517,8 +11814,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyJoinColumn_Nullable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getReferencedColumnName <em>Referenced Column Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getReferencedColumnName
+   * <em>Referenced Column Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Referenced Column Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getReferencedColumnName()
    * @see #getMapKeyJoinColumn()
@@ -11563,8 +11862,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getMapKeyJoinColumn_Updatable();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass <em>Mapped Superclass</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass
+   * <em>Mapped Superclass</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Mapped Superclass</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass
    * @generated
@@ -11596,8 +11896,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_Customizer();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getChangeTracking <em>Change Tracking</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getChangeTracking <em>Change Tracking</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Change Tracking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getChangeTracking()
    * @see #getMappedSuperclass()
@@ -11630,8 +11932,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_PrimaryKey();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getOptimisticLocking <em>Optimistic Locking</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getOptimisticLocking
+   * <em>Optimistic Locking</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Optimistic Locking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getOptimisticLocking()
    * @see #getMappedSuperclass()
@@ -11652,8 +11956,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_Cache();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCacheInterceptor <em>Cache Interceptor</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCacheInterceptor
+   * <em>Cache Interceptor</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cache Interceptor</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCacheInterceptor()
    * @see #getMappedSuperclass()
@@ -11674,8 +11980,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_Converter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getTypeConverter <em>Type Converter</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getTypeConverter <em>Type Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getTypeConverter()
    * @see #getMappedSuperclass()
@@ -11684,8 +11992,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getObjectTypeConverter()
    * @see #getMappedSuperclass()
@@ -11694,8 +12004,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getStructConverter <em>Struct Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getStructConverter
+   * <em>Struct Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getStructConverter()
    * @see #getMappedSuperclass()
@@ -11716,8 +12028,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_CopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getInstantiationCopyPolicy <em>Instantiation Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getInstantiationCopyPolicy
+   * <em>Instantiation Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Instantiation Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getInstantiationCopyPolicy()
    * @see #getMappedSuperclass()
@@ -11726,8 +12040,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_InstantiationCopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCloneCopyPolicy <em>Clone Copy Policy</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCloneCopyPolicy
+   * <em>Clone Copy Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Clone Copy Policy</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCloneCopyPolicy()
    * @see #getMappedSuperclass()
@@ -11736,8 +12052,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_CloneCopyPolicy();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeDefaultListeners <em>Exclude Default Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeDefaultListeners
+   * <em>Exclude Default Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Exclude Default Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeDefaultListeners()
    * @see #getMappedSuperclass()
@@ -11746,8 +12064,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_ExcludeDefaultListeners();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeSuperclassListeners <em>Exclude Superclass Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeSuperclassListeners
+   * <em>Exclude Superclass Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Exclude Superclass Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeSuperclassListeners()
    * @see #getMappedSuperclass()
@@ -11756,8 +12076,10 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_ExcludeSuperclassListeners();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getEntityListeners <em>Entity Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getEntityListeners
+   * <em>Entity Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Entity Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getEntityListeners()
    * @see #getMappedSuperclass()
@@ -11910,8 +12232,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_Class();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Exclude Default Mappings</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings()
    * @see #getMappedSuperclass()
@@ -11920,8 +12244,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_ExcludeDefaultMappings();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking <em>Existence Checking</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking
+   * <em>Existence Checking</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Existence Checking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking()
    * @see #getMappedSuperclass()
@@ -11930,8 +12256,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_ExistenceChecking();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete <em>Metadata Complete</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete
+   * <em>Metadata Complete</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Metadata Complete</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete()
    * @see #getMappedSuperclass()
@@ -11952,8 +12280,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_ReadOnly();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery <em>Named Native Query</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery
+   * <em>Named Native Query</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Named Native Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery
    * @generated
@@ -11985,9 +12314,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedNativeQuery_Query();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getHint <em>Hint</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getHint <em>Hint</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Hint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getHint()
    * @see #getNamedNativeQuery()
@@ -11996,9 +12326,10 @@ public interface OrmPackage extends EPackage {
   EReference getNamedNativeQuery_Hint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getName()
    * @see #getNamedNativeQuery()
@@ -12019,8 +12350,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedNativeQuery_ResultClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getResultSetMapping <em>Result Set Mapping</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getResultSetMapping
+   * <em>Result Set Mapping</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Result Set Mapping</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery#getResultSetMapping()
    * @see #getNamedNativeQuery()
@@ -12029,8 +12362,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedNativeQuery_ResultSetMapping();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery <em>Named Query</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery
+   * <em>Named Query</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Named Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery
    * @generated
@@ -12050,9 +12384,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedQuery_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery <em>Query</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery <em>Query</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery()
    * @see #getNamedQuery()
@@ -12073,9 +12408,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedQuery_LockMode();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getHint <em>Hint</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getHint <em>Hint</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Hint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getHint()
    * @see #getNamedQuery()
@@ -12084,9 +12420,10 @@ public interface OrmPackage extends EPackage {
   EReference getNamedQuery_Hint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName()
    * @see #getNamedQuery()
@@ -12095,8 +12432,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedQuery_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery
+   * <em>Named Stored Procedure Query</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Named Stored Procedure Query</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery
    * @generated
@@ -12116,8 +12454,10 @@ public interface OrmPackage extends EPackage {
   EReference getNamedStoredProcedureQuery_Hint();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getParameter <em>Parameter</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getParameter <em>Parameter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Parameter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getParameter()
    * @see #getNamedStoredProcedureQuery()
@@ -12138,8 +12478,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedStoredProcedureQuery_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName <em>Procedure Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName
+   * <em>Procedure Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Procedure Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName()
    * @see #getNamedStoredProcedureQuery()
@@ -12148,8 +12490,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedStoredProcedureQuery_ProcedureName();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass <em>Result Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass
+   * <em>Result Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Result Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass()
    * @see #getNamedStoredProcedureQuery()
@@ -12158,8 +12502,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedStoredProcedureQuery_ResultClass();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping <em>Result Set Mapping</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping
+   * <em>Result Set Mapping</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Result Set Mapping</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping()
    * @see #getNamedStoredProcedureQuery()
@@ -12168,8 +12514,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedStoredProcedureQuery_ResultSetMapping();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet <em>Returns Result Set</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet
+   * <em>Returns Result Set</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Returns Result Set</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet()
    * @see #getNamedStoredProcedureQuery()
@@ -12178,8 +12526,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedStoredProcedureQuery_ReturnsResultSet();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter
    * @generated
@@ -12187,8 +12536,10 @@ public interface OrmPackage extends EPackage {
   EClass getObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getConversionValue <em>Conversion Value</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getConversionValue
+   * <em>Conversion Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Conversion Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getConversionValue()
    * @see #getObjectTypeConverter()
@@ -12197,8 +12548,10 @@ public interface OrmPackage extends EPackage {
   EReference getObjectTypeConverter_ConversionValue();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getDefaultObjectValue <em>Default Object Value</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getDefaultObjectValue
+   * <em>Default Object Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Default Object Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getDefaultObjectValue()
    * @see #getObjectTypeConverter()
@@ -12231,8 +12584,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getObjectTypeConverter_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getObjectType <em>Object Type</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getObjectType <em>Object Type</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Object Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter#getObjectType()
    * @see #getObjectTypeConverter()
@@ -12241,8 +12596,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getObjectTypeConverter_ObjectType();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany <em>One To Many</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany
+   * <em>One To Many</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>One To Many</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany
    * @generated
@@ -12250,9 +12606,10 @@ public interface OrmPackage extends EPackage {
   EClass getOneToMany();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getOrderBy <em>Order By</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getOrderBy <em>Order By</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Order By</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getOrderBy()
    * @see #getOneToMany()
@@ -12273,9 +12630,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_OrderColumn();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKey <em>Map Key</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKey <em>Map Key</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Map Key</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKey()
    * @see #getOneToMany()
@@ -12308,8 +12666,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_MapKeyTemporal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Map Key Enumerated</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyEnumerated()
    * @see #getOneToMany()
@@ -12330,8 +12690,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_MapKeyConvert();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyAttributeOverride <em>Map Key Attribute Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyAttributeOverride
+   * <em>Map Key Attribute Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Attribute Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyAttributeOverride()
    * @see #getOneToMany()
@@ -12340,8 +12702,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_MapKeyAttributeOverride();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyAssociationOverride <em>Map Key Association Override</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyAssociationOverride
+   * <em>Map Key Association Override</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Association Override</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyAssociationOverride()
    * @see #getOneToMany()
@@ -12362,8 +12726,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_MapKeyColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyJoinColumn <em>Map Key Join Column</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyJoinColumn <em>Map Key Join Column</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Map Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getMapKeyJoinColumn()
    * @see #getOneToMany()
@@ -12396,8 +12762,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getObjectTypeConverter()
    * @see #getOneToMany()
@@ -12406,8 +12774,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_ObjectTypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getStructConverter <em>Struct Converter</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getStructConverter <em>Struct Converter</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getStructConverter()
    * @see #getOneToMany()
@@ -12440,9 +12810,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_JoinColumn();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getCascade <em>Cascade</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getCascade <em>Cascade</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getCascade()
    * @see #getOneToMany()
@@ -12499,9 +12870,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getAccess <em>Access</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getAccess()
    * @see #getOneToMany()
@@ -12510,9 +12882,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getFetch <em>Fetch</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getFetch()
    * @see #getOneToMany()
@@ -12533,8 +12906,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_MappedBy();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getName()
    * @see #getOneToMany()
@@ -12567,8 +12941,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_TargetEntity();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne <em>One To One</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne
+   * <em>One To One</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>One To One</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne
    * @generated
@@ -12576,8 +12951,10 @@ public interface OrmPackage extends EPackage {
   EClass getOneToOne();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPrimaryKeyJoinColumn
+   * <em>Primary Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Primary Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPrimaryKeyJoinColumn()
    * @see #getOneToOne()
@@ -12610,9 +12987,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToOne_JoinTable();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getCascade <em>Cascade</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getCascade <em>Cascade</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getCascade()
    * @see #getOneToOne()
@@ -12645,9 +13023,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_JoinFetch();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getProperty <em>Property</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getProperty()
    * @see #getOneToOne()
@@ -12668,9 +13047,10 @@ public interface OrmPackage extends EPackage {
   EReference getOneToOne_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getAccess <em>Access</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getAccess()
    * @see #getOneToOne()
@@ -12679,8 +13059,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getFetch
+   * <em>Fetch</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getFetch()
    * @see #getOneToOne()
@@ -12689,8 +13070,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_Fetch();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isId <em>Id</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isId
+   * <em>Id</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Id</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isId()
    * @see #getOneToOne()
@@ -12711,9 +13093,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_MappedBy();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getMapsId <em>Maps Id</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getMapsId <em>Maps Id</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Maps Id</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getMapsId()
    * @see #getOneToOne()
@@ -12722,8 +13105,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_MapsId();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getName()
    * @see #getOneToOne()
@@ -12732,9 +13116,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isOptional <em>Optional</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isOptional <em>Optional</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Optional</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isOptional()
    * @see #getOneToOne()
@@ -12767,8 +13152,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_TargetEntity();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking <em>Optimistic Locking</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking
+   * <em>Optimistic Locking</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Optimistic Locking</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking
    * @generated
@@ -12776,8 +13162,10 @@ public interface OrmPackage extends EPackage {
   EClass getOptimisticLocking();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getSelectedColumn <em>Selected Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getSelectedColumn <em>Selected Column</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Selected Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getSelectedColumn()
    * @see #getOptimisticLocking()
@@ -12810,8 +13198,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOptimisticLocking_Type();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn <em>Order Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn
+   * <em>Order Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Order Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn
    * @generated
@@ -12819,8 +13208,10 @@ public interface OrmPackage extends EPackage {
   EClass getOrderColumn();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getColumnDefinition <em>Column Definition</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getColumnDefinition <em>Column Definition</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column Definition</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getColumnDefinition()
    * @see #getOrderColumn()
@@ -12829,8 +13220,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOrderColumn_ColumnDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getCorrectionType <em>Correction Type</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getCorrectionType <em>Correction Type</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Correction Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getCorrectionType()
    * @see #getOrderColumn()
@@ -12851,9 +13244,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getOrderColumn_Insertable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getName <em>Name</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn#getName()
    * @see #getOrderColumn()
@@ -12886,8 +13280,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getOrderColumn_Updatable();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults <em>Persistence Unit Defaults</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults
+   * <em>Persistence Unit Defaults</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Persistence Unit Defaults</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults
    * @generated
@@ -12895,8 +13290,10 @@ public interface OrmPackage extends EPackage {
   EClass getPersistenceUnitDefaults();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDescription <em>Description</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDescription <em>Description</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Description</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDescription()
    * @see #getPersistenceUnitDefaults()
@@ -12929,8 +13326,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getPersistenceUnitDefaults_Catalog();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDelimitedIdentifiers <em>Delimited Identifiers</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDelimitedIdentifiers
+   * <em>Delimited Identifiers</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Delimited Identifiers</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDelimitedIdentifiers()
    * @see #getPersistenceUnitDefaults()
@@ -12951,8 +13350,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getPersistenceUnitDefaults_Access();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getCascadePersist <em>Cascade Persist</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getCascadePersist
+   * <em>Cascade Persist</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Cascade Persist</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getCascadePersist()
    * @see #getPersistenceUnitDefaults()
@@ -12961,8 +13362,10 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitDefaults_CascadePersist();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getEntityListeners <em>Entity Listeners</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getEntityListeners
+   * <em>Entity Listeners</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Entity Listeners</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getEntityListeners()
    * @see #getPersistenceUnitDefaults()
@@ -12971,8 +13374,9 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitDefaults_EntityListeners();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata <em>Persistence Unit Metadata</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata
+   * <em>Persistence Unit Metadata</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Persistence Unit Metadata</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata
    * @generated
@@ -12980,8 +13384,10 @@ public interface OrmPackage extends EPackage {
   EClass getPersistenceUnitMetadata();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getDescription <em>Description</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getDescription <em>Description</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Description</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getDescription()
    * @see #getPersistenceUnitMetadata()
@@ -12990,8 +13396,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getPersistenceUnitMetadata_Description();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getXmlMappingMetadataComplete <em>Xml Mapping Metadata Complete</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getXmlMappingMetadataComplete
+   * <em>Xml Mapping Metadata Complete</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Xml Mapping Metadata Complete</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getXmlMappingMetadataComplete()
    * @see #getPersistenceUnitMetadata()
@@ -13000,8 +13408,10 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitMetadata_XmlMappingMetadataComplete();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getExcludeDefaultMappings <em>Exclude Default Mappings</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Exclude Default Mappings</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getExcludeDefaultMappings()
    * @see #getPersistenceUnitMetadata()
@@ -13010,8 +13420,10 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitMetadata_ExcludeDefaultMappings();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getPersistenceUnitDefaults <em>Persistence Unit Defaults</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getPersistenceUnitDefaults
+   * <em>Persistence Unit Defaults</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Persistence Unit Defaults</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata#getPersistenceUnitDefaults()
    * @see #getPersistenceUnitMetadata()
@@ -13020,8 +13432,9 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitMetadata_PersistenceUnitDefaults();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad <em>Post Load</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad
+   * <em>Post Load</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Post Load</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad
    * @generated
@@ -13053,8 +13466,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPostLoad_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist <em>Post Persist</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist
+   * <em>Post Persist</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Post Persist</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist
    * @generated
@@ -13086,8 +13500,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPostPersist_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove <em>Post Remove</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove
+   * <em>Post Remove</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Post Remove</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove
    * @generated
@@ -13119,8 +13534,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPostRemove_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate <em>Post Update</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate
+   * <em>Post Update</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Post Update</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate
    * @generated
@@ -13152,8 +13568,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPostUpdate_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist <em>Pre Persist</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist
+   * <em>Pre Persist</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Pre Persist</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist
    * @generated
@@ -13185,8 +13602,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPrePersist_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove <em>Pre Remove</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove
+   * <em>Pre Remove</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Pre Remove</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove
    * @generated
@@ -13218,8 +13636,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPreRemove_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate <em>Pre Update</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate
+   * <em>Pre Update</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Pre Update</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate
    * @generated
@@ -13251,8 +13670,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPreUpdate_MethodName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey <em>Primary Key</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey
+   * <em>Primary Key</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Primary Key</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey
    * @generated
@@ -13260,9 +13680,10 @@ public interface OrmPackage extends EPackage {
   EClass getPrimaryKey();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey#getColumn <em>Column</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey#getColumn <em>Column</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey#getColumn()
    * @see #getPrimaryKey()
@@ -13283,8 +13704,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPrimaryKey_Validation();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn <em>Primary Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn
+   * <em>Primary Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Primary Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn
    * @generated
@@ -13292,8 +13714,10 @@ public interface OrmPackage extends EPackage {
   EClass getPrimaryKeyJoinColumn();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn#getColumnDefinition <em>Column Definition</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn#getColumnDefinition
+   * <em>Column Definition</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Column Definition</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn#getColumnDefinition()
    * @see #getPrimaryKeyJoinColumn()
@@ -13314,8 +13738,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getPrimaryKeyJoinColumn_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn#getReferencedColumnName <em>Referenced Column Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn#getReferencedColumnName
+   * <em>Referenced Column Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Referenced Column Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn#getReferencedColumnName()
    * @see #getPrimaryKeyJoinColumn()
@@ -13324,8 +13750,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getPrimaryKeyJoinColumn_ReferencedColumnName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property <em>Property</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property
+   * <em>Property</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Property
    * @generated
@@ -13333,8 +13760,9 @@ public interface OrmPackage extends EPackage {
   EClass getProperty();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Property#getName()
    * @see #getProperty()
@@ -13343,8 +13771,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getProperty_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property#getValue
+   * <em>Value</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Property#getValue()
    * @see #getProperty()
@@ -13365,8 +13794,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getProperty_ValueType();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint <em>Query Hint</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint
+   * <em>Query Hint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Query Hint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint
    * @generated
@@ -13386,8 +13816,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getQueryHint_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint#getName()
    * @see #getQueryHint()
@@ -13396,9 +13827,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getQueryHint_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint#getValue <em>Value</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint#getValue()
    * @see #getQueryHint()
@@ -13407,8 +13839,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getQueryHint_Value();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors <em>Query Redirectors</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors
+   * <em>Query Redirectors</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Query Redirectors</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors
    * @generated
@@ -13500,8 +13933,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getQueryRedirectors_Update();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer <em>Read Transformer</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer
+   * <em>Read Transformer</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Read Transformer</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer
    * @generated
@@ -13521,8 +13955,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getReadTransformer_Method();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getTransformerClass <em>Transformer Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getTransformerClass
+   * <em>Transformer Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Transformer Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getTransformerClass()
    * @see #getReadTransformer()
@@ -13531,8 +13967,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getReadTransformer_TransformerClass();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable <em>Secondary Table</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable
+   * <em>Secondary Table</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Secondary Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable
    * @generated
@@ -13540,8 +13977,10 @@ public interface OrmPackage extends EPackage {
   EClass getSecondaryTable();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getPrimaryKeyJoinColumn
+   * <em>Primary Key Join Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Primary Key Join Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getPrimaryKeyJoinColumn()
    * @see #getSecondaryTable()
@@ -13550,8 +13989,10 @@ public interface OrmPackage extends EPackage {
   EReference getSecondaryTable_PrimaryKeyJoinColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getUniqueConstraint <em>Unique Constraint</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getUniqueConstraint
+   * <em>Unique Constraint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Unique Constraint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getUniqueConstraint()
    * @see #getSecondaryTable()
@@ -13572,9 +14013,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getSecondaryTable_Catalog();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getName()
    * @see #getSecondaryTable()
@@ -13595,8 +14037,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getSecondaryTable_Schema();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator <em>Sequence Generator</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator
+   * <em>Sequence Generator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Sequence Generator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator
    * @generated
@@ -13616,8 +14059,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getSequenceGenerator_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize <em>Allocation Size</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize <em>Allocation Size</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Allocation Size</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize()
    * @see #getSequenceGenerator()
@@ -13638,8 +14083,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getSequenceGenerator_Catalog();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue <em>Initial Value</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue <em>Initial Value</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Initial Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue()
    * @see #getSequenceGenerator()
@@ -13672,8 +14119,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getSequenceGenerator_Schema();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSequenceName <em>Sequence Name</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSequenceName <em>Sequence Name</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Sequence Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSequenceName()
    * @see #getSequenceGenerator()
@@ -13682,8 +14131,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getSequenceGenerator_SequenceName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping <em>Sql Result Set Mapping</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping
+   * <em>Sql Result Set Mapping</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Sql Result Set Mapping</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping
    * @generated
@@ -13691,8 +14141,10 @@ public interface OrmPackage extends EPackage {
   EClass getSqlResultSetMapping();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getDescription <em>Description</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Description</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getDescription()
    * @see #getSqlResultSetMapping()
@@ -13701,8 +14153,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getSqlResultSetMapping_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getEntityResult <em>Entity Result</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getEntityResult <em>Entity Result</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Entity Result</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getEntityResult()
    * @see #getSqlResultSetMapping()
@@ -13711,8 +14165,10 @@ public interface OrmPackage extends EPackage {
   EReference getSqlResultSetMapping_EntityResult();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getColumnResult <em>Column Result</em>}'.
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getColumnResult <em>Column Result</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Column Result</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping#getColumnResult()
    * @see #getSqlResultSetMapping()
@@ -13733,8 +14189,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getSqlResultSetMapping_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter <em>Stored Procedure Parameter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter
+   * <em>Stored Procedure Parameter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Stored Procedure Parameter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter
    * @generated
@@ -13742,8 +14199,10 @@ public interface OrmPackage extends EPackage {
   EClass getStoredProcedureParameter();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Direction</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection()
    * @see #getStoredProcedureParameter()
@@ -13752,8 +14211,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getStoredProcedureParameter_Direction();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType <em>Jdbc Type</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType <em>Jdbc Type</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Jdbc Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType()
    * @see #getStoredProcedureParameter()
@@ -13762,8 +14223,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getStoredProcedureParameter_JdbcType();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName <em>Jdbc Type Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName
+   * <em>Jdbc Type Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Jdbc Type Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName()
    * @see #getStoredProcedureParameter()
@@ -13784,8 +14247,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getStoredProcedureParameter_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter <em>Query Parameter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter
+   * <em>Query Parameter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Query Parameter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter()
    * @see #getStoredProcedureParameter()
@@ -13806,8 +14271,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getStoredProcedureParameter_Type();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter <em>Struct Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter
+   * <em>Struct Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Struct Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter
    * @generated
@@ -13827,9 +14293,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getStructConverter_Converter();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter#getName()
    * @see #getStructConverter()
@@ -13840,6 +14307,7 @@ public interface OrmPackage extends EPackage {
   /**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table <em>Table</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Table
    * @generated
@@ -13859,8 +14327,9 @@ public interface OrmPackage extends EPackage {
   EReference getTable_UniqueConstraint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getCatalog <em>Catalog</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getCatalog
+   * <em>Catalog</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Catalog</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Table#getCatalog()
    * @see #getTable()
@@ -13869,8 +14338,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTable_Catalog();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Table#getName()
    * @see #getTable()
@@ -13879,8 +14349,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTable_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getSchema <em>Schema</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getSchema
+   * <em>Schema</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Schema</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Table#getSchema()
    * @see #getTable()
@@ -13889,8 +14360,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTable_Schema();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator <em>Table Generator</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator
+   * <em>Table Generator</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Table Generator</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator
    * @generated
@@ -13910,8 +14382,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_Description();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getUniqueConstraint <em>Unique Constraint</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getUniqueConstraint
+   * <em>Unique Constraint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Unique Constraint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getUniqueConstraint()
    * @see #getTableGenerator()
@@ -13920,8 +14394,10 @@ public interface OrmPackage extends EPackage {
   EReference getTableGenerator_UniqueConstraint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getAllocationSize <em>Allocation Size</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getAllocationSize <em>Allocation Size</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Allocation Size</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getAllocationSize()
    * @see #getTableGenerator()
@@ -13954,9 +14430,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_InitialValue();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getName()
    * @see #getTableGenerator()
@@ -13965,8 +14442,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnName <em>Pk Column Name</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnName <em>Pk Column Name</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Pk Column Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnName()
    * @see #getTableGenerator()
@@ -13975,8 +14454,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_PkColumnName();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnValue <em>Pk Column Value</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnValue <em>Pk Column Value</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Pk Column Value</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnValue()
    * @see #getTableGenerator()
@@ -13997,9 +14478,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_Schema();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getTable <em>Table</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getTable <em>Table</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Table</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getTable()
    * @see #getTableGenerator()
@@ -14008,8 +14490,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_Table();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getValueColumnName <em>Value Column Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getValueColumnName <em>Value Column Name</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Value Column Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getValueColumnName()
    * @see #getTableGenerator()
@@ -14018,8 +14502,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_ValueColumnName();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay <em>Time Of Day</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay
+   * <em>Time Of Day</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Time Of Day</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay
    * @generated
@@ -14027,8 +14512,9 @@ public interface OrmPackage extends EPackage {
   EClass getTimeOfDay();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getHour <em>Hour</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getHour
+   * <em>Hour</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Hour</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getHour()
    * @see #getTimeOfDay()
@@ -14049,9 +14535,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTimeOfDay_Millisecond();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getMinute <em>Minute</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getMinute <em>Minute</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Minute</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getMinute()
    * @see #getTimeOfDay()
@@ -14060,9 +14547,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTimeOfDay_Minute();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getSecond <em>Second</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getSecond <em>Second</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Second</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay#getSecond()
    * @see #getTimeOfDay()
@@ -14071,8 +14559,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTimeOfDay_Second();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation <em>Transformation</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation
+   * <em>Transformation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Transformation</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation
    * @generated
@@ -14080,8 +14569,10 @@ public interface OrmPackage extends EPackage {
   EClass getTransformation();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getReadTransformer <em>Read Transformer</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getReadTransformer <em>Read Transformer</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Read Transformer</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getReadTransformer()
    * @see #getTransformation()
@@ -14090,8 +14581,10 @@ public interface OrmPackage extends EPackage {
   EReference getTransformation_ReadTransformer();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getWriteTransformer <em>Write Transformer</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getWriteTransformer
+   * <em>Write Transformer</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Write Transformer</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getWriteTransformer()
    * @see #getTransformation()
@@ -14124,8 +14617,10 @@ public interface OrmPackage extends EPackage {
   EReference getTransformation_Property();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccessMethods <em>Access Methods</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccessMethods <em>Access Methods</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Access Methods</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccessMethods()
    * @see #getTransformation()
@@ -14146,9 +14641,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTransformation_Access1();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getFetch <em>Fetch</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getFetch <em>Fetch</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Fetch</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getFetch()
    * @see #getTransformation()
@@ -14169,9 +14665,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTransformation_Mutable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getName()
    * @see #getTransformation()
@@ -14192,8 +14689,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTransformation_Optional();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient <em>Transient</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient
+   * <em>Transient</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Transient</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transient
    * @generated
@@ -14201,8 +14699,9 @@ public interface OrmPackage extends EPackage {
   EClass getTransient();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transient#getName()
    * @see #getTransient()
@@ -14211,8 +14710,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTransient_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter <em>Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter
+   * <em>Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter
    * @generated
@@ -14232,9 +14732,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getTypeConverter_DataType();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter#getName()
    * @see #getTypeConverter()
@@ -14255,8 +14756,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getTypeConverter_ObjectType();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint <em>Unique Constraint</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint
+   * <em>Unique Constraint</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Unique Constraint</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint
    * @generated
@@ -14276,9 +14778,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getUniqueConstraint_ColumnName();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint#getName()
    * @see #getUniqueConstraint()
@@ -14287,8 +14790,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getUniqueConstraint_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne <em>Variable One To One</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne
+   * <em>Variable One To One</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Variable One To One</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne
    * @generated
@@ -14308,8 +14812,10 @@ public interface OrmPackage extends EPackage {
   EReference getVariableOneToOne_Cascade();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorColumn <em>Discriminator Column</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorColumn
+   * <em>Discriminator Column</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Discriminator Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorColumn()
    * @see #getVariableOneToOne()
@@ -14318,8 +14824,10 @@ public interface OrmPackage extends EPackage {
   EReference getVariableOneToOne_DiscriminatorColumn();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorClass <em>Discriminator Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorClass
+   * <em>Discriminator Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Discriminator Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorClass()
    * @see #getVariableOneToOne()
@@ -14340,8 +14848,10 @@ public interface OrmPackage extends EPackage {
   EReference getVariableOneToOne_JoinColumn();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPrivateOwned <em>Private Owned</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPrivateOwned <em>Private Owned</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Private Owned</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPrivateOwned()
    * @see #getVariableOneToOne()
@@ -14362,8 +14872,10 @@ public interface OrmPackage extends EPackage {
   EReference getVariableOneToOne_Property();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccessMethods <em>Access Methods</em>}'.
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccessMethods <em>Access Methods</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Access Methods</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccessMethods()
    * @see #getVariableOneToOne()
@@ -14396,9 +14908,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getVariableOneToOne_Fetch();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getName <em>Name</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getName <em>Name</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getName()
    * @see #getVariableOneToOne()
@@ -14419,8 +14932,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getVariableOneToOne_Optional();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval <em>Orphan Removal</em>}'.
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval <em>Orphan Removal</em>}'.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Orphan Removal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval()
    * @see #getVariableOneToOne()
@@ -14429,8 +14944,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getVariableOneToOne_OrphanRemoval();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getTargetInterface <em>Target Interface</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getTargetInterface
+   * <em>Target Interface</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Target Interface</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getTargetInterface()
    * @see #getVariableOneToOne()
@@ -14439,8 +14956,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getVariableOneToOne_TargetInterface();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version <em>Version</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version <em>Version</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Version</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version
    * @generated
@@ -14448,9 +14966,10 @@ public interface OrmPackage extends EPackage {
   EClass getVersion();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getColumn <em>Column</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getColumn <em>Column</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Column</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getColumn()
    * @see #getVersion()
@@ -14459,9 +14978,10 @@ public interface OrmPackage extends EPackage {
   EReference getVersion_Column();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Temporal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal()
    * @see #getVersion()
@@ -14470,9 +14990,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getVersion_Temporal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getConvert <em>Convert</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getConvert <em>Convert</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Convert</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getConvert()
    * @see #getVersion()
@@ -14505,8 +15026,10 @@ public interface OrmPackage extends EPackage {
   EReference getVersion_TypeConverter();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getObjectTypeConverter <em>Object Type Converter</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the containment reference '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getObjectTypeConverter
+   * <em>Object Type Converter</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference '<em>Object Type Converter</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getObjectTypeConverter()
    * @see #getVersion()
@@ -14527,9 +15050,10 @@ public interface OrmPackage extends EPackage {
   EReference getVersion_StructConverter();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getProperty <em>Property</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for the containment reference list '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getProperty <em>Property</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the containment reference list '<em>Property</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getProperty()
    * @see #getVersion()
@@ -14550,8 +15074,9 @@ public interface OrmPackage extends EPackage {
   EReference getVersion_AccessMethods();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAccess <em>Access</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAccess
+   * <em>Access</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Access</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAccess()
    * @see #getVersion()
@@ -14560,8 +15085,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getVersion_Access();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#isMutable <em>Mutable</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#isMutable
+   * <em>Mutable</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Mutable</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#isMutable()
    * @see #getVersion()
@@ -14570,8 +15096,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getVersion_Mutable();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getName <em>Name</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getName
+   * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Name</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getName()
    * @see #getVersion()
@@ -14580,8 +15107,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getVersion_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer <em>Write Transformer</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer
+   * <em>Write Transformer</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for class '<em>Write Transformer</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer
    * @generated
@@ -14613,8 +15141,10 @@ public interface OrmPackage extends EPackage {
   EAttribute getWriteTransformer_Method();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer#getTransformerClass <em>Transformer Class</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for the attribute '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer#getTransformerClass
+   * <em>Transformer Class</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for the attribute '<em>Transformer Class</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.WriteTransformer#getTransformerClass()
    * @see #getWriteTransformer()
@@ -14623,8 +15153,9 @@ public interface OrmPackage extends EPackage {
   EAttribute getWriteTransformer_TransformerClass();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType <em>Access Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
+   * <em>Access Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Access Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @generated
@@ -14632,8 +15163,9 @@ public interface OrmPackage extends EPackage {
   EEnum getAccessType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType <em>Cache Coordination Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
+   * <em>Cache Coordination Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Cache Coordination Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
    * @generated
@@ -14641,8 +15173,9 @@ public interface OrmPackage extends EPackage {
   EEnum getCacheCoordinationType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
+   * <em>Cache Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Cache Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
    * @generated
@@ -14650,8 +15183,9 @@ public interface OrmPackage extends EPackage {
   EEnum getCacheType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType <em>Change Tracking Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
+   * <em>Change Tracking Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Change Tracking Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
    * @generated
@@ -14659,8 +15193,9 @@ public interface OrmPackage extends EPackage {
   EEnum getChangeTrackingType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType <em>Direction Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
+   * <em>Direction Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Direction Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
    * @generated
@@ -14668,8 +15203,9 @@ public interface OrmPackage extends EPackage {
   EEnum getDirectionType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType <em>Discriminator Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
+   * <em>Discriminator Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Discriminator Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
    * @generated
@@ -14677,8 +15213,9 @@ public interface OrmPackage extends EPackage {
   EEnum getDiscriminatorType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enum Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
+   * <em>Enum Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Enum Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
    * @generated
@@ -14686,8 +15223,9 @@ public interface OrmPackage extends EPackage {
   EEnum getEnumType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType <em>Existence Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
+   * <em>Existence Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Existence Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
    * @generated
@@ -14695,8 +15233,9 @@ public interface OrmPackage extends EPackage {
   EEnum getExistenceType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType <em>Fetch Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
+   * <em>Fetch Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Fetch Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @generated
@@ -14704,8 +15243,9 @@ public interface OrmPackage extends EPackage {
   EEnum getFetchType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType <em>Generation Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType
+   * <em>Generation Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Generation Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType
    * @generated
@@ -14713,8 +15253,9 @@ public interface OrmPackage extends EPackage {
   EEnum getGenerationType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation <em>Id Validation</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
+   * <em>Id Validation</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Id Validation</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
    * @generated
@@ -14722,8 +15263,9 @@ public interface OrmPackage extends EPackage {
   EEnum getIdValidation();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType <em>Inheritance Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType
+   * <em>Inheritance Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Inheritance Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType
    * @generated
@@ -14731,8 +15273,9 @@ public interface OrmPackage extends EPackage {
   EEnum getInheritanceType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType <em>Join Fetch Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
+   * <em>Join Fetch Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Join Fetch Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @generated
@@ -14740,8 +15283,9 @@ public interface OrmPackage extends EPackage {
   EEnum getJoinFetchType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType <em>Lock Mode Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
+   * <em>Lock Mode Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Lock Mode Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
    * @generated
@@ -14749,8 +15293,9 @@ public interface OrmPackage extends EPackage {
   EEnum getLockModeType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType <em>Optimistic Locking Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
+   * <em>Optimistic Locking Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Optimistic Locking Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
    * @generated
@@ -14758,8 +15303,9 @@ public interface OrmPackage extends EPackage {
   EEnum getOptimisticLockingType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType <em>Order Column Correction Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
+   * <em>Order Column Correction Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Order Column Correction Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
    * @generated
@@ -14767,8 +15313,9 @@ public interface OrmPackage extends EPackage {
   EEnum getOrderColumnCorrectionType();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal Type</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
+   * <em>Temporal Type</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Temporal Type</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
    * @generated
@@ -14776,8 +15323,9 @@ public interface OrmPackage extends EPackage {
   EEnum getTemporalType();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType <em>Access Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
+   * <em>Access Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Access Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.AccessType"
@@ -14787,8 +15335,9 @@ public interface OrmPackage extends EPackage {
   EDataType getAccessTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType <em>Cache Coordination Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
+   * <em>Cache Coordination Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Cache Coordination Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType"
@@ -14798,8 +15347,9 @@ public interface OrmPackage extends EPackage {
   EDataType getCacheCoordinationTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
+   * <em>Cache Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Cache Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.CacheType"
@@ -14809,8 +15359,9 @@ public interface OrmPackage extends EPackage {
   EDataType getCacheTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType <em>Change Tracking Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
+   * <em>Change Tracking Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Change Tracking Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType"
@@ -14820,8 +15371,9 @@ public interface OrmPackage extends EPackage {
   EDataType getChangeTrackingTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType <em>Direction Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
+   * <em>Direction Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Direction Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType"
@@ -14831,8 +15383,9 @@ public interface OrmPackage extends EPackage {
   EDataType getDirectionTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType <em>Discriminator Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
+   * <em>Discriminator Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Discriminator Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType"
@@ -14842,9 +15395,9 @@ public interface OrmPackage extends EPackage {
   EDataType getDiscriminatorTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link java.lang.String <em>Discriminator Value</em>}'.
-   * <!-- begin-user-doc
+   * Returns the meta object for data type '{@link java.lang.String <em>Discriminator Value</em>}'. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Discriminator Value</em>'.
    * @see java.lang.String
    * @model instanceClass="java.lang.String"
@@ -14854,8 +15407,9 @@ public interface OrmPackage extends EPackage {
   EDataType getDiscriminatorValue();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
+   * <em>Enumerated Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Enumerated Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated"
@@ -14865,8 +15419,9 @@ public interface OrmPackage extends EPackage {
   EDataType getEnumeratedObject();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
+   * <em>Enumerated</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Enumerated</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
    * @generated
@@ -14874,8 +15429,9 @@ public interface OrmPackage extends EPackage {
   EEnum getEnumerated();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enum Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
+   * <em>Enum Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Enum Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.EnumType"
@@ -14885,8 +15441,9 @@ public interface OrmPackage extends EPackage {
   EDataType getEnumTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType <em>Existence Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
+   * <em>Existence Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Existence Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType"
@@ -14896,8 +15453,9 @@ public interface OrmPackage extends EPackage {
   EDataType getExistenceTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType <em>Fetch Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
+   * <em>Fetch Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Fetch Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.FetchType"
@@ -14907,8 +15465,9 @@ public interface OrmPackage extends EPackage {
   EDataType getFetchTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType <em>Generation Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType
+   * <em>Generation Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Generation Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType"
@@ -14918,8 +15477,9 @@ public interface OrmPackage extends EPackage {
   EDataType getGenerationTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation <em>Id Validation Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
+   * <em>Id Validation Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Id Validation Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation"
@@ -14929,8 +15489,9 @@ public interface OrmPackage extends EPackage {
   EDataType getIdValidationObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType <em>Inheritance Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType
+   * <em>Inheritance Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Inheritance Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType"
@@ -14940,8 +15501,9 @@ public interface OrmPackage extends EPackage {
   EDataType getInheritanceTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType <em>Join Fetch Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
+   * <em>Join Fetch Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Join Fetch Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType"
@@ -14951,8 +15513,9 @@ public interface OrmPackage extends EPackage {
   EDataType getJoinFetchTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType <em>Lock Mode Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
+   * <em>Lock Mode Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Lock Mode Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType"
@@ -14962,8 +15525,9 @@ public interface OrmPackage extends EPackage {
   EDataType getLockModeTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType <em>Optimistic Locking Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
+   * <em>Optimistic Locking Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Optimistic Locking Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType"
@@ -14973,9 +15537,9 @@ public interface OrmPackage extends EPackage {
   EDataType getOptimisticLockingTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link java.lang.String <em>Order By</em>}'.
-   * <!-- begin-user-doc --> <!--
+   * Returns the meta object for data type '{@link java.lang.String <em>Order By</em>}'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Order By</em>'.
    * @see java.lang.String
    * @model instanceClass="java.lang.String"
@@ -14985,8 +15549,10 @@ public interface OrmPackage extends EPackage {
   EDataType getOrderBy();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType <em>Order Column Correction Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
+   * <em>Order Column Correction Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Order Column Correction Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType"
@@ -14996,8 +15562,9 @@ public interface OrmPackage extends EPackage {
   EDataType getOrderColumnCorrectionTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
+   * <em>Temporal Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Temporal Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.Temporal"
@@ -15007,8 +15574,9 @@ public interface OrmPackage extends EPackage {
   EDataType getTemporalObject();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal</em>}
+   * '. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for enum '<em>Temporal</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
    * @generated
@@ -15016,8 +15584,9 @@ public interface OrmPackage extends EPackage {
   EEnum getTemporal();
 
   /**
-   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal Type Object</em>}'.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
+   * <em>Temporal Type Object</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Temporal Type Object</em>'.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
    * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType"
@@ -15027,20 +15596,20 @@ public interface OrmPackage extends EPackage {
   EDataType getTemporalTypeObject();
 
   /**
-   * Returns the meta object for data type '{@link java.lang.String <em>Version Type</em>}'.
-   * <!-- begin-user-doc -->
+   * Returns the meta object for data type '{@link java.lang.String <em>Version Type</em>}'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @return the meta object for data type '<em>Version Type</em>'.
    * @see java.lang.String
-   * @model instanceClass="java.lang.String"
-   *        extendedMetaData="name='versionType' baseType='http://www.eclipse.org/emf/2003/XMLType#token' pattern='[0-9]+(\\.[0-9]+)*'"
+   * @model instanceClass="java.lang.String" extendedMetaData=
+   *        "name='versionType' baseType='http://www.eclipse.org/emf/2003/XMLType#token' pattern='[0-9]+(\\.[0-9]+)*'"
    * @generated
    */
   EDataType getVersionType();
 
   /**
-   * Returns the factory that creates the instances of the model.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the factory that creates the instances of the model.
    * @generated
    */

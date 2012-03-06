@@ -22,24 +22,26 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getColumnDefinition <em>Column Definition</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isInsertable <em>Insertable</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isNullable <em>Nullable</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getReferencedColumnName <em>Referenced Column Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getTable <em>Table</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isUnique <em>Unique</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isUpdatable <em>Updatable</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getColumnDefinition <em>Column
+ * Definition</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isInsertable <em>Insertable</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isNullable <em>Nullable</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getReferencedColumnName <em>Referenced
+ * Column Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#getTable <em>Table</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isUnique <em>Unique</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinColumnImpl#isUpdatable <em>Updatable</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn {
   /**
-   * The default value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute.
-   * <!-- begin-user-doc
+   * The default value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getColumnDefinition()
    * @generated
    * @ordered
@@ -47,9 +49,9 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected static final String COLUMN_DEFINITION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getColumnDefinition()
    * @generated
    * @ordered
@@ -57,9 +59,9 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected String columnDefinition = COLUMN_DEFINITION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isInsertable() <em>Insertable</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isInsertable() <em>Insertable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isInsertable()
    * @generated
    * @ordered
@@ -67,9 +69,9 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected static final boolean INSERTABLE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isInsertable() <em>Insertable</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isInsertable() <em>Insertable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isInsertable()
    * @generated
    * @ordered
@@ -77,8 +79,8 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected boolean insertable = INSERTABLE_EDEFAULT;
 
   /**
-   * This is true if the Insertable attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Insertable attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -95,8 +97,8 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -104,9 +106,9 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isNullable() <em>Nullable</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isNullable() <em>Nullable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isNullable()
    * @generated
    * @ordered
@@ -114,9 +116,9 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected static final boolean NULLABLE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isNullable() <em>Nullable</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isNullable() <em>Nullable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isNullable()
    * @generated
    * @ordered
@@ -124,8 +126,8 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected boolean nullable = NULLABLE_EDEFAULT;
 
   /**
-   * This is true if the Nullable attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Nullable attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -192,17 +194,17 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected boolean unique = UNIQUE_EDEFAULT;
 
   /**
-   * This is true if the Unique attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Unique attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean uniqueESet;
 
   /**
-   * The default value of the '{@link #isUpdatable() <em>Updatable</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isUpdatable() <em>Updatable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isUpdatable()
    * @generated
    * @ordered
@@ -210,9 +212,9 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected static final boolean UPDATABLE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isUpdatable() <em>Updatable</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isUpdatable() <em>Updatable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isUpdatable()
    * @generated
    * @ordered
@@ -220,8 +222,8 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
   protected boolean updatable = UPDATABLE_EDEFAULT;
 
   /**
-   * This is true if the Updatable attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Updatable attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -229,6 +231,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected JoinColumnImpl() {
@@ -237,6 +240,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -246,6 +250,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getColumnDefinition() {
@@ -254,17 +259,20 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setColumnDefinition(String newColumnDefinition) {
     String oldColumnDefinition = columnDefinition;
     columnDefinition = newColumnDefinition;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION, oldColumnDefinition, columnDefinition));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION,
+          oldColumnDefinition, columnDefinition));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isInsertable() {
@@ -273,6 +281,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setInsertable(boolean newInsertable) {
@@ -281,11 +290,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     boolean oldInsertableESet = insertableESet;
     insertableESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__INSERTABLE, oldInsertable, insertable, !oldInsertableESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__INSERTABLE, oldInsertable,
+          insertable, !oldInsertableESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetInsertable() {
@@ -294,11 +305,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     insertable = INSERTABLE_EDEFAULT;
     insertableESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__INSERTABLE, oldInsertable, INSERTABLE_EDEFAULT, oldInsertableESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__INSERTABLE, oldInsertable,
+          INSERTABLE_EDEFAULT, oldInsertableESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetInsertable() {
@@ -307,6 +320,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -315,6 +329,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -326,6 +341,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isNullable() {
@@ -334,6 +350,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setNullable(boolean newNullable) {
@@ -342,11 +359,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     boolean oldNullableESet = nullableESet;
     nullableESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__NULLABLE, oldNullable, nullable, !oldNullableESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__NULLABLE, oldNullable, nullable,
+          !oldNullableESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetNullable() {
@@ -355,11 +374,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     nullable = NULLABLE_EDEFAULT;
     nullableESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__NULLABLE, oldNullable, NULLABLE_EDEFAULT, oldNullableESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__NULLABLE, oldNullable,
+          NULLABLE_EDEFAULT, oldNullableESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetNullable() {
@@ -368,6 +389,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getReferencedColumnName() {
@@ -376,17 +398,20 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setReferencedColumnName(String newReferencedColumnName) {
     String oldReferencedColumnName = referencedColumnName;
     referencedColumnName = newReferencedColumnName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME, oldReferencedColumnName, referencedColumnName));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME,
+          oldReferencedColumnName, referencedColumnName));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getTable() {
@@ -395,6 +420,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setTable(String newTable) {
@@ -406,6 +432,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isUnique() {
@@ -414,6 +441,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setUnique(boolean newUnique) {
@@ -422,11 +450,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     boolean oldUniqueESet = uniqueESet;
     uniqueESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__UNIQUE, oldUnique, unique, !oldUniqueESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__UNIQUE, oldUnique, unique,
+          !oldUniqueESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetUnique() {
@@ -435,11 +465,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     unique = UNIQUE_EDEFAULT;
     uniqueESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__UNIQUE, oldUnique, UNIQUE_EDEFAULT, oldUniqueESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__UNIQUE, oldUnique,
+          UNIQUE_EDEFAULT, oldUniqueESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetUnique() {
@@ -448,6 +480,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isUpdatable() {
@@ -456,6 +489,7 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setUpdatable(boolean newUpdatable) {
@@ -464,11 +498,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     boolean oldUpdatableESet = updatableESet;
     updatableESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__UPDATABLE, oldUpdatable, updatable, !oldUpdatableESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_COLUMN__UPDATABLE, oldUpdatable, updatable,
+          !oldUpdatableESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetUpdatable() {
@@ -477,11 +513,13 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
     updatable = UPDATABLE_EDEFAULT;
     updatableESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__UPDATABLE, oldUpdatable, UPDATABLE_EDEFAULT, oldUpdatableESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.JOIN_COLUMN__UPDATABLE, oldUpdatable,
+          UPDATABLE_EDEFAULT, oldUpdatableESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetUpdatable() {
@@ -490,153 +528,173 @@ public class JoinColumnImpl extends BaseOrmAnnotationImpl implements JoinColumn 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
-        return getColumnDefinition();
-      case OrmPackage.JOIN_COLUMN__INSERTABLE:
-        return isInsertable();
-      case OrmPackage.JOIN_COLUMN__NAME:
-        return getName();
-      case OrmPackage.JOIN_COLUMN__NULLABLE:
-        return isNullable();
-      case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
-        return getReferencedColumnName();
-      case OrmPackage.JOIN_COLUMN__TABLE:
-        return getTable();
-      case OrmPackage.JOIN_COLUMN__UNIQUE:
-        return isUnique();
-      case OrmPackage.JOIN_COLUMN__UPDATABLE:
-        return isUpdatable();
+    case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
+      return getColumnDefinition();
+    case OrmPackage.JOIN_COLUMN__INSERTABLE:
+      return isInsertable();
+    case OrmPackage.JOIN_COLUMN__NAME:
+      return getName();
+    case OrmPackage.JOIN_COLUMN__NULLABLE:
+      return isNullable();
+    case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
+      return getReferencedColumnName();
+    case OrmPackage.JOIN_COLUMN__TABLE:
+      return getTable();
+    case OrmPackage.JOIN_COLUMN__UNIQUE:
+      return isUnique();
+    case OrmPackage.JOIN_COLUMN__UPDATABLE:
+      return isUpdatable();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
-        setColumnDefinition((String)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__INSERTABLE:
-        setInsertable((Boolean)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__NULLABLE:
-        setNullable((Boolean)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
-        setReferencedColumnName((String)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__TABLE:
-        setTable((String)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__UNIQUE:
-        setUnique((Boolean)newValue);
-        return;
-      case OrmPackage.JOIN_COLUMN__UPDATABLE:
-        setUpdatable((Boolean)newValue);
-        return;
+    case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
+      setColumnDefinition((String) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__INSERTABLE:
+      setInsertable((Boolean) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__NULLABLE:
+      setNullable((Boolean) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
+      setReferencedColumnName((String) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__TABLE:
+      setTable((String) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__UNIQUE:
+      setUnique((Boolean) newValue);
+      return;
+    case OrmPackage.JOIN_COLUMN__UPDATABLE:
+      setUpdatable((Boolean) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
-        setColumnDefinition(COLUMN_DEFINITION_EDEFAULT);
-        return;
-      case OrmPackage.JOIN_COLUMN__INSERTABLE:
-        unsetInsertable();
-        return;
-      case OrmPackage.JOIN_COLUMN__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.JOIN_COLUMN__NULLABLE:
-        unsetNullable();
-        return;
-      case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
-        setReferencedColumnName(REFERENCED_COLUMN_NAME_EDEFAULT);
-        return;
-      case OrmPackage.JOIN_COLUMN__TABLE:
-        setTable(TABLE_EDEFAULT);
-        return;
-      case OrmPackage.JOIN_COLUMN__UNIQUE:
-        unsetUnique();
-        return;
-      case OrmPackage.JOIN_COLUMN__UPDATABLE:
-        unsetUpdatable();
-        return;
+    case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
+      setColumnDefinition(COLUMN_DEFINITION_EDEFAULT);
+      return;
+    case OrmPackage.JOIN_COLUMN__INSERTABLE:
+      unsetInsertable();
+      return;
+    case OrmPackage.JOIN_COLUMN__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.JOIN_COLUMN__NULLABLE:
+      unsetNullable();
+      return;
+    case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
+      setReferencedColumnName(REFERENCED_COLUMN_NAME_EDEFAULT);
+      return;
+    case OrmPackage.JOIN_COLUMN__TABLE:
+      setTable(TABLE_EDEFAULT);
+      return;
+    case OrmPackage.JOIN_COLUMN__UNIQUE:
+      unsetUnique();
+      return;
+    case OrmPackage.JOIN_COLUMN__UPDATABLE:
+      unsetUpdatable();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
-        return COLUMN_DEFINITION_EDEFAULT == null ? columnDefinition != null : !COLUMN_DEFINITION_EDEFAULT.equals(columnDefinition);
-      case OrmPackage.JOIN_COLUMN__INSERTABLE:
-        return isSetInsertable();
-      case OrmPackage.JOIN_COLUMN__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.JOIN_COLUMN__NULLABLE:
-        return isSetNullable();
-      case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
-        return REFERENCED_COLUMN_NAME_EDEFAULT == null ? referencedColumnName != null : !REFERENCED_COLUMN_NAME_EDEFAULT.equals(referencedColumnName);
-      case OrmPackage.JOIN_COLUMN__TABLE:
-        return TABLE_EDEFAULT == null ? table != null : !TABLE_EDEFAULT.equals(table);
-      case OrmPackage.JOIN_COLUMN__UNIQUE:
-        return isSetUnique();
-      case OrmPackage.JOIN_COLUMN__UPDATABLE:
-        return isSetUpdatable();
+    case OrmPackage.JOIN_COLUMN__COLUMN_DEFINITION:
+      return COLUMN_DEFINITION_EDEFAULT == null ? columnDefinition != null : !COLUMN_DEFINITION_EDEFAULT
+          .equals(columnDefinition);
+    case OrmPackage.JOIN_COLUMN__INSERTABLE:
+      return isSetInsertable();
+    case OrmPackage.JOIN_COLUMN__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.JOIN_COLUMN__NULLABLE:
+      return isSetNullable();
+    case OrmPackage.JOIN_COLUMN__REFERENCED_COLUMN_NAME:
+      return REFERENCED_COLUMN_NAME_EDEFAULT == null ? referencedColumnName != null : !REFERENCED_COLUMN_NAME_EDEFAULT
+          .equals(referencedColumnName);
+    case OrmPackage.JOIN_COLUMN__TABLE:
+      return TABLE_EDEFAULT == null ? table != null : !TABLE_EDEFAULT.equals(table);
+    case OrmPackage.JOIN_COLUMN__UNIQUE:
+      return isSetUnique();
+    case OrmPackage.JOIN_COLUMN__UPDATABLE:
+      return isSetUpdatable();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (columnDefinition: ");
     result.append(columnDefinition);
     result.append(", insertable: ");
-    if (insertableESet) result.append(insertable); else result.append("<unset>");
+    if (insertableESet)
+      result.append(insertable);
+    else
+      result.append("<unset>");
     result.append(", name: ");
     result.append(name);
     result.append(", nullable: ");
-    if (nullableESet) result.append(nullable); else result.append("<unset>");
+    if (nullableESet)
+      result.append(nullable);
+    else
+      result.append("<unset>");
     result.append(", referencedColumnName: ");
     result.append(referencedColumnName);
     result.append(", table: ");
     result.append(table);
     result.append(", unique: ");
-    if (uniqueESet) result.append(unique); else result.append("<unset>");
+    if (uniqueESet)
+      result.append(unique);
+    else
+      result.append("<unset>");
     result.append(", updatable: ");
-    if (updatableESet) result.append(updatable); else result.append("<unset>");
+    if (updatableESet)
+      result.append(updatable);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

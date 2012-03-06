@@ -33,9 +33,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneCopyPolicy {
   /**
-   * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getMethod() <em>Method</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getMethod()
    * @generated
    * @ordered
@@ -74,6 +74,7 @@ public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneC
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected CloneCopyPolicyImpl() {
@@ -82,6 +83,7 @@ public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneC
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -91,6 +93,7 @@ public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneC
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getMethod() {
@@ -99,6 +102,7 @@ public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneC
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setMethod(String newMethod) {
@@ -110,6 +114,7 @@ public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneC
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getWorkingCopyMethod() {
@@ -118,86 +123,95 @@ public class CloneCopyPolicyImpl extends BaseOrmAnnotationImpl implements CloneC
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setWorkingCopyMethod(String newWorkingCopyMethod) {
     String oldWorkingCopyMethod = workingCopyMethod;
     workingCopyMethod = newWorkingCopyMethod;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD, oldWorkingCopyMethod, workingCopyMethod));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD,
+          oldWorkingCopyMethod, workingCopyMethod));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.CLONE_COPY_POLICY__METHOD:
-        return getMethod();
-      case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
-        return getWorkingCopyMethod();
+    case OrmPackage.CLONE_COPY_POLICY__METHOD:
+      return getMethod();
+    case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
+      return getWorkingCopyMethod();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.CLONE_COPY_POLICY__METHOD:
-        setMethod((String)newValue);
-        return;
-      case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
-        setWorkingCopyMethod((String)newValue);
-        return;
+    case OrmPackage.CLONE_COPY_POLICY__METHOD:
+      setMethod((String) newValue);
+      return;
+    case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
+      setWorkingCopyMethod((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.CLONE_COPY_POLICY__METHOD:
-        setMethod(METHOD_EDEFAULT);
-        return;
-      case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
-        setWorkingCopyMethod(WORKING_COPY_METHOD_EDEFAULT);
-        return;
+    case OrmPackage.CLONE_COPY_POLICY__METHOD:
+      setMethod(METHOD_EDEFAULT);
+      return;
+    case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
+      setWorkingCopyMethod(WORKING_COPY_METHOD_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.CLONE_COPY_POLICY__METHOD:
-        return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
-      case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
-        return WORKING_COPY_METHOD_EDEFAULT == null ? workingCopyMethod != null : !WORKING_COPY_METHOD_EDEFAULT.equals(workingCopyMethod);
+    case OrmPackage.CLONE_COPY_POLICY__METHOD:
+      return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
+    case OrmPackage.CLONE_COPY_POLICY__WORKING_COPY_METHOD:
+      return WORKING_COPY_METHOD_EDEFAULT == null ? workingCopyMethod != null : !WORKING_COPY_METHOD_EDEFAULT
+          .equals(workingCopyMethod);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (method: ");

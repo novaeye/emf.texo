@@ -53,30 +53,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface OptimisticLocking extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Selected Column</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Column}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Selected Column</b></em>' containment reference list. The list contents are of
+   * type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Column}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Selected Column</em>' containment reference list isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Selected Column</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getOptimisticLocking_SelectedColumn()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='selected-column' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='selected-column' namespace='##targetNamespace'"
    * @generated
    */
   EList<Column> getSelectedColumn();
 
   /**
-   * Returns the value of the '<em><b>Cascade</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cascade</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cascade</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Cascade</em>' attribute.
    * @see #isSetCascade()
    * @see #unsetCascade()
@@ -89,9 +88,11 @@ public interface OptimisticLocking extends BaseOrmAnnotation {
   boolean isCascade();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#isCascade <em>Cascade</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cascade</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#isCascade
+   * <em>Cascade</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Cascade</em>' attribute.
    * @see #isSetCascade()
    * @see #unsetCascade()
    * @see #isCascade()
@@ -100,8 +101,9 @@ public interface OptimisticLocking extends BaseOrmAnnotation {
   void setCascade(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#isCascade <em>Cascade</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#isCascade
+   * <em>Cascade</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetCascade()
    * @see #isCascade()
    * @see #setCascade(boolean)
@@ -110,8 +112,10 @@ public interface OptimisticLocking extends BaseOrmAnnotation {
   void unsetCascade();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#isCascade <em>Cascade</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#isCascade <em>Cascade</em>}' attribute is
+   * set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Cascade</em>' attribute is set.
    * @see #unsetCascade()
    * @see #isCascade()
@@ -121,29 +125,30 @@ public interface OptimisticLocking extends BaseOrmAnnotation {
   boolean isSetCascade();
 
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Type</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
    * @see #isSetType()
    * @see #unsetType()
    * @see #setType(OptimisticLockingType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getOptimisticLocking_Type()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='type'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='type'"
    * @generated
    */
   OptimisticLockingType getType();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getType <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getType
+   * <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Type</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
    * @see #isSetType()
    * @see #unsetType()
@@ -153,8 +158,9 @@ public interface OptimisticLocking extends BaseOrmAnnotation {
   void setType(OptimisticLockingType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getType <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getType
+   * <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetType()
    * @see #getType()
    * @see #setType(OptimisticLockingType)
@@ -163,8 +169,9 @@ public interface OptimisticLocking extends BaseOrmAnnotation {
   void unsetType();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getType <em>Type</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking#getType
+   * <em>Type</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Type</em>' attribute is set.
    * @see #unsetType()
    * @see #getType()

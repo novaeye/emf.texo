@@ -35,8 +35,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum DirectionType implements Enumerator {
   /**
-   * The '<em><b>IN</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>IN</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #IN_VALUE
    * @generated
    * @ordered
@@ -44,8 +44,8 @@ public enum DirectionType implements Enumerator {
   IN(0, "IN", "IN"),
 
   /**
-   * The '<em><b>OUT</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>OUT</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #OUT_VALUE
    * @generated
    * @ordered
@@ -53,8 +53,8 @@ public enum DirectionType implements Enumerator {
   OUT(1, "OUT", "OUT"),
 
   /**
-   * The '<em><b>INOUT</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>INOUT</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #INOUT_VALUE
    * @generated
    * @ordered
@@ -62,8 +62,8 @@ public enum DirectionType implements Enumerator {
   INOUT(2, "INOUT", "IN_OUT"),
 
   /**
-   * The '<em><b>OUTCURSOR</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>OUTCURSOR</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #OUTCURSOR_VALUE
    * @generated
    * @ordered
@@ -71,13 +71,13 @@ public enum DirectionType implements Enumerator {
   OUTCURSOR(3, "OUTCURSOR", "OUT_CURSOR");
 
   /**
-   * The '<em><b>IN</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>IN</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>IN</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #IN
    * @model
    * @generated
@@ -86,13 +86,13 @@ public enum DirectionType implements Enumerator {
   public static final int IN_VALUE = 0;
 
   /**
-   * The '<em><b>OUT</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>OUT</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>OUT</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #OUT
    * @model
    * @generated
@@ -101,13 +101,13 @@ public enum DirectionType implements Enumerator {
   public static final int OUT_VALUE = 1;
 
   /**
-   * The '<em><b>INOUT</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>INOUT</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>INOUT</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #INOUT
    * @model literal="IN_OUT"
    * @generated
@@ -116,13 +116,13 @@ public enum DirectionType implements Enumerator {
   public static final int INOUT_VALUE = 2;
 
   /**
-   * The '<em><b>OUTCURSOR</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>OUTCURSOR</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>OUTCURSOR</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #OUTCURSOR
    * @model literal="OUT_CURSOR"
    * @generated
@@ -131,29 +131,24 @@ public enum DirectionType implements Enumerator {
   public static final int OUTCURSOR_VALUE = 3;
 
   /**
-   * An array of all the '<em><b>Direction Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Direction Type</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  private static final DirectionType[] VALUES_ARRAY = new DirectionType[] {
-      IN,
-      OUT,
-      INOUT,
-      OUTCURSOR,
-    };
+  private static final DirectionType[] VALUES_ARRAY = new DirectionType[] { IN, OUT, INOUT, OUTCURSOR, };
 
   /**
-   * A public read-only list of all the '<em><b>Direction Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Direction Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<DirectionType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Direction Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Direction Type</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static DirectionType get(String literal) {
@@ -167,9 +162,9 @@ public enum DirectionType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Direction Type</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Direction Type</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static DirectionType getByName(String name) {
@@ -183,42 +178,49 @@ public enum DirectionType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Direction Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Direction Type</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static DirectionType get(int value) {
     switch (value) {
-      case IN_VALUE: return IN;
-      case OUT_VALUE: return OUT;
-      case INOUT_VALUE: return INOUT;
-      case OUTCURSOR_VALUE: return OUTCURSOR;
+    case IN_VALUE:
+      return IN;
+    case OUT_VALUE:
+      return OUT;
+    case INOUT_VALUE:
+      return INOUT;
+    case OUTCURSOR_VALUE:
+      return OUTCURSOR;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private DirectionType(int value, String name, String literal) {
@@ -229,6 +231,7 @@ public enum DirectionType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -237,6 +240,7 @@ public enum DirectionType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -245,6 +249,7 @@ public enum DirectionType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -252,9 +257,9 @@ public enum DirectionType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

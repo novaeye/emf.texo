@@ -28,8 +28,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum FetchType implements Enumerator {
   /**
-   * The '<em><b>LAZY</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>LAZY</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #LAZY_VALUE
    * @generated
    * @ordered
@@ -37,8 +37,8 @@ public enum FetchType implements Enumerator {
   LAZY(0, "LAZY", "LAZY"),
 
   /**
-   * The '<em><b>EAGER</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>EAGER</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #EAGER_VALUE
    * @generated
    * @ordered
@@ -46,13 +46,13 @@ public enum FetchType implements Enumerator {
   EAGER(1, "EAGER", "EAGER");
 
   /**
-   * The '<em><b>LAZY</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>LAZY</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>LAZY</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #LAZY
    * @model
    * @generated
@@ -61,13 +61,13 @@ public enum FetchType implements Enumerator {
   public static final int LAZY_VALUE = 0;
 
   /**
-   * The '<em><b>EAGER</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>EAGER</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>EAGER</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #EAGER
    * @model
    * @generated
@@ -76,27 +76,24 @@ public enum FetchType implements Enumerator {
   public static final int EAGER_VALUE = 1;
 
   /**
-   * An array of all the '<em><b>Fetch Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Fetch Type</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  private static final FetchType[] VALUES_ARRAY = new FetchType[] {
-      LAZY,
-      EAGER,
-    };
+  private static final FetchType[] VALUES_ARRAY = new FetchType[] { LAZY, EAGER, };
 
   /**
-   * A public read-only list of all the '<em><b>Fetch Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Fetch Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<FetchType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Fetch Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Fetch Type</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static FetchType get(String literal) {
@@ -126,40 +123,45 @@ public enum FetchType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Fetch Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Fetch Type</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static FetchType get(int value) {
     switch (value) {
-      case LAZY_VALUE: return LAZY;
-      case EAGER_VALUE: return EAGER;
+    case LAZY_VALUE:
+      return LAZY;
+    case EAGER_VALUE:
+      return EAGER;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private FetchType(int value, String name, String literal) {
@@ -170,6 +172,7 @@ public enum FetchType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -178,6 +181,7 @@ public enum FetchType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -186,6 +190,7 @@ public enum FetchType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -193,9 +198,9 @@ public enum FetchType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

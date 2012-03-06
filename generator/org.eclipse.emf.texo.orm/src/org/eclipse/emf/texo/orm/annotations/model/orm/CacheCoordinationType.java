@@ -38,8 +38,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum CacheCoordinationType implements Enumerator {
   /**
-   * The '<em><b>SENDOBJECTCHANGES</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>SENDOBJECTCHANGES</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #SENDOBJECTCHANGES_VALUE
    * @generated
    * @ordered
@@ -47,8 +47,8 @@ public enum CacheCoordinationType implements Enumerator {
   SENDOBJECTCHANGES(0, "SENDOBJECTCHANGES", "SEND_OBJECT_CHANGES"),
 
   /**
-   * The '<em><b>INVALIDATECHANGEDOBJECTS</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>INVALIDATECHANGEDOBJECTS</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #INVALIDATECHANGEDOBJECTS_VALUE
    * @generated
    * @ordered
@@ -56,8 +56,8 @@ public enum CacheCoordinationType implements Enumerator {
   INVALIDATECHANGEDOBJECTS(1, "INVALIDATECHANGEDOBJECTS", "INVALIDATE_CHANGED_OBJECTS"),
 
   /**
-   * The '<em><b>SENDNEWOBJECTSWITHCHANGES</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>SENDNEWOBJECTSWITHCHANGES</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #SENDNEWOBJECTSWITHCHANGES_VALUE
    * @generated
    * @ordered
@@ -65,8 +65,8 @@ public enum CacheCoordinationType implements Enumerator {
   SENDNEWOBJECTSWITHCHANGES(2, "SENDNEWOBJECTSWITHCHANGES", "SEND_NEW_OBJECTS_WITH_CHANGES"),
 
   /**
-   * The '<em><b>NONE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>NONE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #NONE_VALUE
    * @generated
    * @ordered
@@ -74,13 +74,13 @@ public enum CacheCoordinationType implements Enumerator {
   NONE(3, "NONE", "NONE");
 
   /**
-   * The '<em><b>SENDOBJECTCHANGES</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>SENDOBJECTCHANGES</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>SENDOBJECTCHANGES</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #SENDOBJECTCHANGES
    * @model literal="SEND_OBJECT_CHANGES"
    * @generated
@@ -89,13 +89,13 @@ public enum CacheCoordinationType implements Enumerator {
   public static final int SENDOBJECTCHANGES_VALUE = 0;
 
   /**
-   * The '<em><b>INVALIDATECHANGEDOBJECTS</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>INVALIDATECHANGEDOBJECTS</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>INVALIDATECHANGEDOBJECTS</b></em>' literal object isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #INVALIDATECHANGEDOBJECTS
    * @model literal="INVALIDATE_CHANGED_OBJECTS"
    * @generated
@@ -104,13 +104,13 @@ public enum CacheCoordinationType implements Enumerator {
   public static final int INVALIDATECHANGEDOBJECTS_VALUE = 1;
 
   /**
-   * The '<em><b>SENDNEWOBJECTSWITHCHANGES</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>SENDNEWOBJECTSWITHCHANGES</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>SENDNEWOBJECTSWITHCHANGES</b></em>' literal object isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #SENDNEWOBJECTSWITHCHANGES
    * @model literal="SEND_NEW_OBJECTS_WITH_CHANGES"
    * @generated
@@ -119,13 +119,13 @@ public enum CacheCoordinationType implements Enumerator {
   public static final int SENDNEWOBJECTSWITHCHANGES_VALUE = 2;
 
   /**
-   * The '<em><b>NONE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>NONE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>NONE</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #NONE
    * @model
    * @generated
@@ -134,30 +134,26 @@ public enum CacheCoordinationType implements Enumerator {
   public static final int NONE_VALUE = 3;
 
   /**
-   * An array of all the '<em><b>Cache Coordination Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * An array of all the '<em><b>Cache Coordination Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
-  private static final CacheCoordinationType[] VALUES_ARRAY = new CacheCoordinationType[] {
-      SENDOBJECTCHANGES,
-      INVALIDATECHANGEDOBJECTS,
-      SENDNEWOBJECTSWITHCHANGES,
-      NONE,
-    };
+  private static final CacheCoordinationType[] VALUES_ARRAY = new CacheCoordinationType[] { SENDOBJECTCHANGES,
+      INVALIDATECHANGEDOBJECTS, SENDNEWOBJECTSWITHCHANGES, NONE, };
 
   /**
-   * A public read-only list of all the '<em><b>Cache Coordination Type</b></em>' enumerators.
-   * <!-- begin-user-doc -->
+   * A public read-only list of all the '<em><b>Cache Coordination Type</b></em>' enumerators. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static final List<CacheCoordinationType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Cache Coordination Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc
+   * Returns the '<em><b>Cache Coordination Type</b></em>' literal with the specified literal value. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static CacheCoordinationType get(String literal) {
@@ -171,9 +167,9 @@ public enum CacheCoordinationType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Cache Coordination Type</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Cache Coordination Type</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static CacheCoordinationType getByName(String name) {
@@ -187,42 +183,49 @@ public enum CacheCoordinationType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Cache Coordination Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc
+   * Returns the '<em><b>Cache Coordination Type</b></em>' literal with the specified integer value. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static CacheCoordinationType get(int value) {
     switch (value) {
-      case SENDOBJECTCHANGES_VALUE: return SENDOBJECTCHANGES;
-      case INVALIDATECHANGEDOBJECTS_VALUE: return INVALIDATECHANGEDOBJECTS;
-      case SENDNEWOBJECTSWITHCHANGES_VALUE: return SENDNEWOBJECTSWITHCHANGES;
-      case NONE_VALUE: return NONE;
+    case SENDOBJECTCHANGES_VALUE:
+      return SENDOBJECTCHANGES;
+    case INVALIDATECHANGEDOBJECTS_VALUE:
+      return INVALIDATECHANGEDOBJECTS;
+    case SENDNEWOBJECTSWITHCHANGES_VALUE:
+      return SENDNEWOBJECTSWITHCHANGES;
+    case NONE_VALUE:
+      return NONE;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private CacheCoordinationType(int value, String name, String literal) {
@@ -233,6 +236,7 @@ public enum CacheCoordinationType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -241,6 +245,7 @@ public enum CacheCoordinationType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -249,6 +254,7 @@ public enum CacheCoordinationType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -256,9 +262,9 @@ public enum CacheCoordinationType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

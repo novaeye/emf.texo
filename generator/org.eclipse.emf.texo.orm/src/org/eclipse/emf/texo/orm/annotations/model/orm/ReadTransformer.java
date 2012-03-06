@@ -52,38 +52,39 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ReadTransformer extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Method</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Method</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Method</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Method</em>' attribute.
    * @see #setMethod(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getReadTransformer_Method()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='method'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='method'"
    * @generated
    */
   String getMethod();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getMethod <em>Method</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Method</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getMethod
+   * <em>Method</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Method</em>' attribute.
    * @see #getMethod()
    * @generated
    */
   void setMethod(String value);
 
   /**
-   * Returns the value of the '<em><b>Transformer Class</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Transformer Class</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Transformer Class</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Transformer Class</em>' attribute.
    * @see #setTransformerClass(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getReadTransformer_TransformerClass()
@@ -94,9 +95,11 @@ public interface ReadTransformer extends BaseOrmAnnotation {
   String getTransformerClass();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getTransformerClass <em>Transformer Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Transformer Class</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer#getTransformerClass
+   * <em>Transformer Class</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Transformer Class</em>' attribute.
    * @see #getTransformerClass()
    * @generated
    */

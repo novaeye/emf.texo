@@ -28,8 +28,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum EnumType implements Enumerator {
   /**
-   * The '<em><b>ORDINAL</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>ORDINAL</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #ORDINAL_VALUE
    * @generated
    * @ordered
@@ -37,8 +37,8 @@ public enum EnumType implements Enumerator {
   ORDINAL(0, "ORDINAL", "ORDINAL"),
 
   /**
-   * The '<em><b>STRING</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>STRING</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #STRING_VALUE
    * @generated
    * @ordered
@@ -46,13 +46,13 @@ public enum EnumType implements Enumerator {
   STRING(1, "STRING", "STRING");
 
   /**
-   * The '<em><b>ORDINAL</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>ORDINAL</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>ORDINAL</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #ORDINAL
    * @model
    * @generated
@@ -61,13 +61,13 @@ public enum EnumType implements Enumerator {
   public static final int ORDINAL_VALUE = 0;
 
   /**
-   * The '<em><b>STRING</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>STRING</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>STRING</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #STRING
    * @model
    * @generated
@@ -76,27 +76,24 @@ public enum EnumType implements Enumerator {
   public static final int STRING_VALUE = 1;
 
   /**
-   * An array of all the '<em><b>Enum Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Enum Type</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  private static final EnumType[] VALUES_ARRAY = new EnumType[] {
-      ORDINAL,
-      STRING,
-    };
+  private static final EnumType[] VALUES_ARRAY = new EnumType[] { ORDINAL, STRING, };
 
   /**
-   * A public read-only list of all the '<em><b>Enum Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Enum Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<EnumType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Enum Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Enum Type</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static EnumType get(String literal) {
@@ -126,40 +123,45 @@ public enum EnumType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Enum Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Enum Type</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static EnumType get(int value) {
     switch (value) {
-      case ORDINAL_VALUE: return ORDINAL;
-      case STRING_VALUE: return STRING;
+    case ORDINAL_VALUE:
+      return ORDINAL;
+    case STRING_VALUE:
+      return STRING;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private EnumType(int value, String name, String literal) {
@@ -170,6 +172,7 @@ public enum EnumType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -178,6 +181,7 @@ public enum EnumType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -186,6 +190,7 @@ public enum EnumType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -193,9 +198,9 @@ public enum EnumType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

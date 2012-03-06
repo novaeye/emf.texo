@@ -107,10 +107,9 @@ public class PrePersistImpl extends BaseOrmAnnotationImpl implements PrePersist 
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRE_PERSIST__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -130,10 +129,9 @@ public class PrePersistImpl extends BaseOrmAnnotationImpl implements PrePersist 
   public void setMethodName(String newMethodName) {
     String oldMethodName = methodName;
     methodName = newMethodName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRE_PERSIST__METHOD_NAME, oldMethodName,
           methodName));
-    }
   }
 
   /**
@@ -211,9 +209,8 @@ public class PrePersistImpl extends BaseOrmAnnotationImpl implements PrePersist 
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

@@ -29,8 +29,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum OrderColumnCorrectionType implements Enumerator {
   /**
-   * The '<em><b>READ</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>READ</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #READ_VALUE
    * @generated
    * @ordered
@@ -38,8 +38,8 @@ public enum OrderColumnCorrectionType implements Enumerator {
   READ(0, "READ", "READ"),
 
   /**
-   * The '<em><b>READWRITE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>READWRITE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #READWRITE_VALUE
    * @generated
    * @ordered
@@ -47,8 +47,8 @@ public enum OrderColumnCorrectionType implements Enumerator {
   READWRITE(1, "READWRITE", "READ_WRITE"),
 
   /**
-   * The '<em><b>EXCEPTION</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>EXCEPTION</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #EXCEPTION_VALUE
    * @generated
    * @ordered
@@ -56,13 +56,13 @@ public enum OrderColumnCorrectionType implements Enumerator {
   EXCEPTION(2, "EXCEPTION", "EXCEPTION");
 
   /**
-   * The '<em><b>READ</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>READ</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>READ</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #READ
    * @model
    * @generated
@@ -71,13 +71,13 @@ public enum OrderColumnCorrectionType implements Enumerator {
   public static final int READ_VALUE = 0;
 
   /**
-   * The '<em><b>READWRITE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>READWRITE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>READWRITE</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #READWRITE
    * @model literal="READ_WRITE"
    * @generated
@@ -86,13 +86,13 @@ public enum OrderColumnCorrectionType implements Enumerator {
   public static final int READWRITE_VALUE = 1;
 
   /**
-   * The '<em><b>EXCEPTION</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>EXCEPTION</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>EXCEPTION</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #EXCEPTION
    * @model
    * @generated
@@ -101,24 +101,22 @@ public enum OrderColumnCorrectionType implements Enumerator {
   public static final int EXCEPTION_VALUE = 2;
 
   /**
-   * An array of all the '<em><b>Order Column Correction Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * An array of all the '<em><b>Order Column Correction Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
-  private static final OrderColumnCorrectionType[] VALUES_ARRAY = new OrderColumnCorrectionType[] {
-      READ,
-      READWRITE,
-      EXCEPTION,
-    };
+  private static final OrderColumnCorrectionType[] VALUES_ARRAY = new OrderColumnCorrectionType[] { READ, READWRITE,
+      EXCEPTION, };
 
   /**
-   * A public read-only list of all the '<em><b>Order Column Correction Type</b></em>' enumerators.
-   * <!-- begin-user-doc
+   * A public read-only list of all the '<em><b>Order Column Correction Type</b></em>' enumerators. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  public static final List<OrderColumnCorrectionType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<OrderColumnCorrectionType> VALUES = Collections
+      .unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
    * Returns the '<em><b>Order Column Correction Type</b></em>' literal with the specified literal value. <!--
@@ -137,9 +135,9 @@ public enum OrderColumnCorrectionType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Order Column Correction Type</b></em>' literal with the specified name.
-   * <!-- begin-user-doc -->
+   * Returns the '<em><b>Order Column Correction Type</b></em>' literal with the specified name. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @generated
    */
   public static OrderColumnCorrectionType getByName(String name) {
@@ -160,34 +158,40 @@ public enum OrderColumnCorrectionType implements Enumerator {
    */
   public static OrderColumnCorrectionType get(int value) {
     switch (value) {
-      case READ_VALUE: return READ;
-      case READWRITE_VALUE: return READWRITE;
-      case EXCEPTION_VALUE: return EXCEPTION;
+    case READ_VALUE:
+      return READ;
+    case READWRITE_VALUE:
+      return READWRITE;
+    case EXCEPTION_VALUE:
+      return EXCEPTION;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private OrderColumnCorrectionType(int value, String name, String literal) {
@@ -198,6 +202,7 @@ public enum OrderColumnCorrectionType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -206,6 +211,7 @@ public enum OrderColumnCorrectionType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -214,6 +220,7 @@ public enum OrderColumnCorrectionType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -221,9 +228,9 @@ public enum OrderColumnCorrectionType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

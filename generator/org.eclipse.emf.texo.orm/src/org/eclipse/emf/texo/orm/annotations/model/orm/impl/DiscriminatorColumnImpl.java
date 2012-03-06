@@ -24,20 +24,22 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getColumnDefinition <em>Column Definition</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getDiscriminatorType <em>Discriminator Type</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getLength <em>Length</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getColumnDefinition <em>Column
+ * Definition</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getDiscriminatorType <em>
+ * Discriminator Type</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getLength <em>Length</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.DiscriminatorColumnImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements DiscriminatorColumn {
   /**
-   * The default value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute.
-   * <!-- begin-user-doc
+   * The default value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getColumnDefinition()
    * @generated
    * @ordered
@@ -45,9 +47,9 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
   protected static final String COLUMN_DEFINITION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getColumnDefinition() <em>Column Definition</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getColumnDefinition()
    * @generated
    * @ordered
@@ -75,17 +77,17 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
   protected DiscriminatorType discriminatorType = DISCRIMINATOR_TYPE_EDEFAULT;
 
   /**
-   * This is true if the Discriminator Type attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Discriminator Type attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean discriminatorTypeESet;
 
   /**
-   * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getLength() <em>Length</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getLength()
    * @generated
    * @ordered
@@ -103,8 +105,8 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
   protected int length = LENGTH_EDEFAULT;
 
   /**
-   * This is true if the Length attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Length attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -121,8 +123,8 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -131,6 +133,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected DiscriminatorColumnImpl() {
@@ -139,6 +142,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -148,6 +152,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getColumnDefinition() {
@@ -156,17 +161,20 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setColumnDefinition(String newColumnDefinition) {
     String oldColumnDefinition = columnDefinition;
     columnDefinition = newColumnDefinition;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION, oldColumnDefinition, columnDefinition));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION,
+          oldColumnDefinition, columnDefinition));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public DiscriminatorType getDiscriminatorType() {
@@ -175,6 +183,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDiscriminatorType(DiscriminatorType newDiscriminatorType) {
@@ -183,11 +192,13 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
     boolean oldDiscriminatorTypeESet = discriminatorTypeESet;
     discriminatorTypeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE, oldDiscriminatorType, discriminatorType, !oldDiscriminatorTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE,
+          oldDiscriminatorType, discriminatorType, !oldDiscriminatorTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetDiscriminatorType() {
@@ -196,11 +207,13 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
     discriminatorType = DISCRIMINATOR_TYPE_EDEFAULT;
     discriminatorTypeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE, oldDiscriminatorType, DISCRIMINATOR_TYPE_EDEFAULT, oldDiscriminatorTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE,
+          oldDiscriminatorType, DISCRIMINATOR_TYPE_EDEFAULT, oldDiscriminatorTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetDiscriminatorType() {
@@ -209,6 +222,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getLength() {
@@ -217,6 +231,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setLength(int newLength) {
@@ -225,11 +240,13 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
     boolean oldLengthESet = lengthESet;
     lengthESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.DISCRIMINATOR_COLUMN__LENGTH, oldLength, length, !oldLengthESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.DISCRIMINATOR_COLUMN__LENGTH, oldLength, length,
+          !oldLengthESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetLength() {
@@ -238,11 +255,13 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
     length = LENGTH_EDEFAULT;
     lengthESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.DISCRIMINATOR_COLUMN__LENGTH, oldLength, LENGTH_EDEFAULT, oldLengthESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.DISCRIMINATOR_COLUMN__LENGTH, oldLength,
+          LENGTH_EDEFAULT, oldLengthESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetLength() {
@@ -251,6 +270,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -259,6 +279,7 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -270,103 +291,116 @@ public class DiscriminatorColumnImpl extends BaseOrmAnnotationImpl implements Di
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
-        return getColumnDefinition();
-      case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
-        return getDiscriminatorType();
-      case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
-        return getLength();
-      case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
-        return getName();
+    case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
+      return getColumnDefinition();
+    case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
+      return getDiscriminatorType();
+    case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
+      return getLength();
+    case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
+      return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
-        setColumnDefinition((String)newValue);
-        return;
-      case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
-        setDiscriminatorType((DiscriminatorType)newValue);
-        return;
-      case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
-        setLength((Integer)newValue);
-        return;
-      case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
-        setName((String)newValue);
-        return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
+      setColumnDefinition((String) newValue);
+      return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
+      setDiscriminatorType((DiscriminatorType) newValue);
+      return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
+      setLength((Integer) newValue);
+      return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
+      setName((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
-        setColumnDefinition(COLUMN_DEFINITION_EDEFAULT);
-        return;
-      case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
-        unsetDiscriminatorType();
-        return;
-      case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
-        unsetLength();
-        return;
-      case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
-        setName(NAME_EDEFAULT);
-        return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
+      setColumnDefinition(COLUMN_DEFINITION_EDEFAULT);
+      return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
+      unsetDiscriminatorType();
+      return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
+      unsetLength();
+      return;
+    case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
+      setName(NAME_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
-        return COLUMN_DEFINITION_EDEFAULT == null ? columnDefinition != null : !COLUMN_DEFINITION_EDEFAULT.equals(columnDefinition);
-      case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
-        return isSetDiscriminatorType();
-      case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
-        return isSetLength();
-      case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.DISCRIMINATOR_COLUMN__COLUMN_DEFINITION:
+      return COLUMN_DEFINITION_EDEFAULT == null ? columnDefinition != null : !COLUMN_DEFINITION_EDEFAULT
+          .equals(columnDefinition);
+    case OrmPackage.DISCRIMINATOR_COLUMN__DISCRIMINATOR_TYPE:
+      return isSetDiscriminatorType();
+    case OrmPackage.DISCRIMINATOR_COLUMN__LENGTH:
+      return isSetLength();
+    case OrmPackage.DISCRIMINATOR_COLUMN__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (columnDefinition: ");
     result.append(columnDefinition);
     result.append(", discriminatorType: ");
-    if (discriminatorTypeESet) result.append(discriminatorType); else result.append("<unset>");
+    if (discriminatorTypeESet)
+      result.append(discriminatorType);
+    else
+      result.append("<unset>");
     result.append(", length: ");
-    if (lengthESet) result.append(length); else result.append("<unset>");
+    if (lengthESet)
+      result.append(length);
+    else
+      result.append("<unset>");
     result.append(", name: ");
     result.append(name);
     result.append(')');

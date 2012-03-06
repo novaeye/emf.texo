@@ -213,11 +213,10 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.EMBEDDED__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -230,22 +229,18 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
   public void setAccessMethods(AccessMethods newAccessMethods) {
     if (newAccessMethods != accessMethods) {
       NotificationChain msgs = null;
-      if (accessMethods != null) {
+      if (accessMethods != null)
         msgs = ((InternalEObject) accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDED__ACCESS_METHODS, null, msgs);
-      }
-      if (newAccessMethods != null) {
+      if (newAccessMethods != null)
         msgs = ((InternalEObject) newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDED__ACCESS_METHODS, null, msgs);
-      }
       msgs = basicSetAccessMethods(newAccessMethods, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDED__ACCESS_METHODS, newAccessMethods,
           newAccessMethods));
-    }
   }
 
   /**
@@ -267,10 +262,9 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDED__ACCESS, oldAccess, access,
           !oldAccessESet));
-    }
   }
 
   /**
@@ -283,10 +277,9 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.EMBEDDED__ACCESS, oldAccess, ACCESS_EDEFAULT,
           oldAccessESet));
-    }
   }
 
   /**
@@ -315,9 +308,8 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDED__NAME, oldName, name));
-    }
   }
 
   /**
@@ -459,17 +451,15 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", name: ");
     result.append(name);
     result.append(')');

@@ -43,13 +43,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface DiscriminatorClass extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Discriminator</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Discriminator</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Discriminator</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Discriminator</em>' attribute.
    * @see #setDiscriminator(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getDiscriminatorClass_Discriminator()
@@ -60,21 +60,23 @@ public interface DiscriminatorClass extends BaseOrmAnnotation {
   String getDiscriminator();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getDiscriminator <em>Discriminator</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Discriminator</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getDiscriminator
+   * <em>Discriminator</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Discriminator</em>' attribute.
    * @see #getDiscriminator()
    * @generated
    */
   void setDiscriminator(String value);
 
   /**
-   * Returns the value of the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Value</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Value</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Value</em>' attribute.
    * @see #setValue(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getDiscriminatorClass_Value()
@@ -85,9 +87,11 @@ public interface DiscriminatorClass extends BaseOrmAnnotation {
   String getValue();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getValue <em>Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass#getValue
+   * <em>Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Value</em>' attribute.
    * @see #getValue()
    * @generated
    */

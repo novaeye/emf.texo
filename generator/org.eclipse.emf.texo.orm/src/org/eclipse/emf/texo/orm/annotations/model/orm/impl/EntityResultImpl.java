@@ -32,12 +32,15 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl#getFieldResult <em>Field Result</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl#getDiscriminatorColumn <em>Discriminator Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl#getEntityClass <em>Entity Class</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl#getFieldResult <em>Field Result</em>}
+ * </li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl#getDiscriminatorColumn <em>
+ * Discriminator Column</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl#getEntityClass <em>Entity Class</em>}
+ * </li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityResult {
@@ -72,9 +75,9 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
   protected String discriminatorColumn = DISCRIMINATOR_COLUMN_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEntityClass() <em>Entity Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getEntityClass() <em>Entity Class</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getEntityClass()
    * @generated
    * @ordered
@@ -82,9 +85,9 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
   protected static final String ENTITY_CLASS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getEntityClass() <em>Entity Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getEntityClass() <em>Entity Class</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getEntityClass()
    * @generated
    * @ordered
@@ -93,6 +96,7 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected EntityResultImpl() {
@@ -101,6 +105,7 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -110,17 +115,20 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<FieldResult> getFieldResult() {
     if (fieldResult == null) {
-      fieldResult = new EObjectContainmentEList<FieldResult>(FieldResult.class, this, OrmPackage.ENTITY_RESULT__FIELD_RESULT);
+      fieldResult = new EObjectContainmentEList<FieldResult>(FieldResult.class, this,
+          OrmPackage.ENTITY_RESULT__FIELD_RESULT);
     }
     return fieldResult;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDiscriminatorColumn() {
@@ -129,17 +137,20 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDiscriminatorColumn(String newDiscriminatorColumn) {
     String oldDiscriminatorColumn = discriminatorColumn;
     discriminatorColumn = newDiscriminatorColumn;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN, oldDiscriminatorColumn, discriminatorColumn));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN,
+          oldDiscriminatorColumn, discriminatorColumn));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getEntityClass() {
@@ -148,111 +159,121 @@ public class EntityResultImpl extends BaseOrmAnnotationImpl implements EntityRes
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setEntityClass(String newEntityClass) {
     String oldEntityClass = entityClass;
     entityClass = newEntityClass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_RESULT__ENTITY_CLASS, oldEntityClass, entityClass));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_RESULT__ENTITY_CLASS, oldEntityClass,
+          entityClass));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
-        return ((InternalEList<?>)getFieldResult()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
+      return ((InternalEList<?>) getFieldResult()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
-        return getFieldResult();
-      case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
-        return getDiscriminatorColumn();
-      case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
-        return getEntityClass();
+    case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
+      return getFieldResult();
+    case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
+      return getDiscriminatorColumn();
+    case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
+      return getEntityClass();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
-        getFieldResult().clear();
-        getFieldResult().addAll((Collection<? extends FieldResult>)newValue);
-        return;
-      case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
-        setDiscriminatorColumn((String)newValue);
-        return;
-      case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
-        setEntityClass((String)newValue);
-        return;
+    case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
+      getFieldResult().clear();
+      getFieldResult().addAll((Collection<? extends FieldResult>) newValue);
+      return;
+    case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
+      setDiscriminatorColumn((String) newValue);
+      return;
+    case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
+      setEntityClass((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
-        getFieldResult().clear();
-        return;
-      case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
-        setDiscriminatorColumn(DISCRIMINATOR_COLUMN_EDEFAULT);
-        return;
-      case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
-        setEntityClass(ENTITY_CLASS_EDEFAULT);
-        return;
+    case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
+      getFieldResult().clear();
+      return;
+    case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
+      setDiscriminatorColumn(DISCRIMINATOR_COLUMN_EDEFAULT);
+      return;
+    case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
+      setEntityClass(ENTITY_CLASS_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
-        return fieldResult != null && !fieldResult.isEmpty();
-      case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
-        return DISCRIMINATOR_COLUMN_EDEFAULT == null ? discriminatorColumn != null : !DISCRIMINATOR_COLUMN_EDEFAULT.equals(discriminatorColumn);
-      case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
-        return ENTITY_CLASS_EDEFAULT == null ? entityClass != null : !ENTITY_CLASS_EDEFAULT.equals(entityClass);
+    case OrmPackage.ENTITY_RESULT__FIELD_RESULT:
+      return fieldResult != null && !fieldResult.isEmpty();
+    case OrmPackage.ENTITY_RESULT__DISCRIMINATOR_COLUMN:
+      return DISCRIMINATOR_COLUMN_EDEFAULT == null ? discriminatorColumn != null : !DISCRIMINATOR_COLUMN_EDEFAULT
+          .equals(discriminatorColumn);
+    case OrmPackage.ENTITY_RESULT__ENTITY_CLASS:
+      return ENTITY_CLASS_EDEFAULT == null ? entityClass != null : !ENTITY_CLASS_EDEFAULT.equals(entityClass);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (discriminatorColumn: ");

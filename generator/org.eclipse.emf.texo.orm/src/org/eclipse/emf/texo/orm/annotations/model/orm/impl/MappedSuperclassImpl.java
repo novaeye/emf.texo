@@ -626,10 +626,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -652,11 +651,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER, oldCustomizer, newCustomizer);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -669,22 +667,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setCustomizer(Customizer newCustomizer) {
     if (newCustomizer != customizer) {
       NotificationChain msgs = null;
-      if (customizer != null) {
+      if (customizer != null)
         msgs = ((InternalEObject) customizer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER, null, msgs);
-      }
-      if (newCustomizer != null) {
+      if (newCustomizer != null)
         msgs = ((InternalEObject) newCustomizer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER, null, msgs);
-      }
       msgs = basicSetCustomizer(newCustomizer, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER, newCustomizer,
           newCustomizer));
-    }
   }
 
   /**
@@ -707,11 +701,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING, oldChangeTracking, newChangeTracking);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -724,22 +717,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setChangeTracking(ChangeTracking newChangeTracking) {
     if (newChangeTracking != changeTracking) {
       NotificationChain msgs = null;
-      if (changeTracking != null) {
+      if (changeTracking != null)
         msgs = ((InternalEObject) changeTracking).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING, null, msgs);
-      }
-      if (newChangeTracking != null) {
+      if (newChangeTracking != null)
         msgs = ((InternalEObject) newChangeTracking).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING, null, msgs);
-      }
       msgs = basicSetChangeTracking(newChangeTracking, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING,
           newChangeTracking, newChangeTracking));
-    }
   }
 
   /**
@@ -762,11 +751,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__ID_CLASS, oldIdClass, newIdClass);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -779,22 +767,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setIdClass(IdClass newIdClass) {
     if (newIdClass != idClass) {
       NotificationChain msgs = null;
-      if (idClass != null) {
+      if (idClass != null)
         msgs = ((InternalEObject) idClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__ID_CLASS, null, msgs);
-      }
-      if (newIdClass != null) {
+      if (newIdClass != null)
         msgs = ((InternalEObject) newIdClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__ID_CLASS, null, msgs);
-      }
       msgs = basicSetIdClass(newIdClass, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ID_CLASS, newIdClass,
           newIdClass));
-    }
   }
 
   /**
@@ -817,11 +801,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__PRIMARY_KEY, oldPrimaryKey, newPrimaryKey);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -834,22 +817,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPrimaryKey(PrimaryKey newPrimaryKey) {
     if (newPrimaryKey != primaryKey) {
       NotificationChain msgs = null;
-      if (primaryKey != null) {
+      if (primaryKey != null)
         msgs = ((InternalEObject) primaryKey).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRIMARY_KEY, null, msgs);
-      }
-      if (newPrimaryKey != null) {
+      if (newPrimaryKey != null)
         msgs = ((InternalEObject) newPrimaryKey).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRIMARY_KEY, null, msgs);
-      }
       msgs = basicSetPrimaryKey(newPrimaryKey, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PRIMARY_KEY, newPrimaryKey,
           newPrimaryKey));
-    }
   }
 
   /**
@@ -872,11 +851,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING, oldOptimisticLocking, newOptimisticLocking);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -889,22 +867,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setOptimisticLocking(OptimisticLocking newOptimisticLocking) {
     if (newOptimisticLocking != optimisticLocking) {
       NotificationChain msgs = null;
-      if (optimisticLocking != null) {
+      if (optimisticLocking != null)
         msgs = ((InternalEObject) optimisticLocking).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING, null, msgs);
-      }
-      if (newOptimisticLocking != null) {
+      if (newOptimisticLocking != null)
         msgs = ((InternalEObject) newOptimisticLocking).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING, null, msgs);
-      }
       msgs = basicSetOptimisticLocking(newOptimisticLocking, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING,
           newOptimisticLocking, newOptimisticLocking));
-    }
   }
 
   /**
@@ -927,11 +901,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__CACHE, oldCache, newCache);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -944,21 +917,17 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setCache(Cache newCache) {
     if (newCache != cache) {
       NotificationChain msgs = null;
-      if (cache != null) {
+      if (cache != null)
         msgs = ((InternalEObject) cache).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CACHE, null, msgs);
-      }
-      if (newCache != null) {
+      if (newCache != null)
         msgs = ((InternalEObject) newCache).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CACHE, null, msgs);
-      }
       msgs = basicSetCache(newCache, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CACHE, newCache, newCache));
-    }
   }
 
   /**
@@ -981,11 +950,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR, oldCacheInterceptor, newCacheInterceptor);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -998,22 +966,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setCacheInterceptor(CacheInterceptor newCacheInterceptor) {
     if (newCacheInterceptor != cacheInterceptor) {
       NotificationChain msgs = null;
-      if (cacheInterceptor != null) {
+      if (cacheInterceptor != null)
         msgs = ((InternalEObject) cacheInterceptor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR, null, msgs);
-      }
-      if (newCacheInterceptor != null) {
+      if (newCacheInterceptor != null)
         msgs = ((InternalEObject) newCacheInterceptor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR, null, msgs);
-      }
       msgs = basicSetCacheInterceptor(newCacheInterceptor, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR,
           newCacheInterceptor, newCacheInterceptor));
-    }
   }
 
   /**
@@ -1087,11 +1051,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__COPY_POLICY, oldCopyPolicy, newCopyPolicy);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1104,22 +1067,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setCopyPolicy(CopyPolicy newCopyPolicy) {
     if (newCopyPolicy != copyPolicy) {
       NotificationChain msgs = null;
-      if (copyPolicy != null) {
+      if (copyPolicy != null)
         msgs = ((InternalEObject) copyPolicy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__COPY_POLICY, null, msgs);
-      }
-      if (newCopyPolicy != null) {
+      if (newCopyPolicy != null)
         msgs = ((InternalEObject) newCopyPolicy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__COPY_POLICY, null, msgs);
-      }
       msgs = basicSetCopyPolicy(newCopyPolicy, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__COPY_POLICY, newCopyPolicy,
           newCopyPolicy));
-    }
   }
 
   /**
@@ -1144,11 +1103,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY, oldInstantiationCopyPolicy,
           newInstantiationCopyPolicy);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1161,22 +1119,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setInstantiationCopyPolicy(InstantiationCopyPolicy newInstantiationCopyPolicy) {
     if (newInstantiationCopyPolicy != instantiationCopyPolicy) {
       NotificationChain msgs = null;
-      if (instantiationCopyPolicy != null) {
+      if (instantiationCopyPolicy != null)
         msgs = ((InternalEObject) instantiationCopyPolicy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY, null, msgs);
-      }
-      if (newInstantiationCopyPolicy != null) {
+      if (newInstantiationCopyPolicy != null)
         msgs = ((InternalEObject) newInstantiationCopyPolicy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY, null, msgs);
-      }
       msgs = basicSetInstantiationCopyPolicy(newInstantiationCopyPolicy, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY,
           newInstantiationCopyPolicy, newInstantiationCopyPolicy));
-    }
   }
 
   /**
@@ -1199,11 +1153,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY, oldCloneCopyPolicy, newCloneCopyPolicy);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1216,22 +1169,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setCloneCopyPolicy(CloneCopyPolicy newCloneCopyPolicy) {
     if (newCloneCopyPolicy != cloneCopyPolicy) {
       NotificationChain msgs = null;
-      if (cloneCopyPolicy != null) {
+      if (cloneCopyPolicy != null)
         msgs = ((InternalEObject) cloneCopyPolicy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY, null, msgs);
-      }
-      if (newCloneCopyPolicy != null) {
+      if (newCloneCopyPolicy != null)
         msgs = ((InternalEObject) newCloneCopyPolicy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY, null, msgs);
-      }
       msgs = basicSetCloneCopyPolicy(newCloneCopyPolicy, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY,
           newCloneCopyPolicy, newCloneCopyPolicy));
-    }
   }
 
   /**
@@ -1255,11 +1204,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS, oldExcludeDefaultListeners,
           newExcludeDefaultListeners);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1272,22 +1220,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setExcludeDefaultListeners(EmptyType newExcludeDefaultListeners) {
     if (newExcludeDefaultListeners != excludeDefaultListeners) {
       NotificationChain msgs = null;
-      if (excludeDefaultListeners != null) {
+      if (excludeDefaultListeners != null)
         msgs = ((InternalEObject) excludeDefaultListeners).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS, null, msgs);
-      }
-      if (newExcludeDefaultListeners != null) {
+      if (newExcludeDefaultListeners != null)
         msgs = ((InternalEObject) newExcludeDefaultListeners).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS, null, msgs);
-      }
       msgs = basicSetExcludeDefaultListeners(newExcludeDefaultListeners, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS,
           newExcludeDefaultListeners, newExcludeDefaultListeners));
-    }
   }
 
   /**
@@ -1312,11 +1256,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS, oldExcludeSuperclassListeners,
           newExcludeSuperclassListeners);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1329,22 +1272,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setExcludeSuperclassListeners(EmptyType newExcludeSuperclassListeners) {
     if (newExcludeSuperclassListeners != excludeSuperclassListeners) {
       NotificationChain msgs = null;
-      if (excludeSuperclassListeners != null) {
+      if (excludeSuperclassListeners != null)
         msgs = ((InternalEObject) excludeSuperclassListeners).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS, null, msgs);
-      }
-      if (newExcludeSuperclassListeners != null) {
+      if (newExcludeSuperclassListeners != null)
         msgs = ((InternalEObject) newExcludeSuperclassListeners).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS, null, msgs);
-      }
       msgs = basicSetExcludeSuperclassListeners(newExcludeSuperclassListeners, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS,
           newExcludeSuperclassListeners, newExcludeSuperclassListeners));
-    }
   }
 
   /**
@@ -1367,11 +1306,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__ENTITY_LISTENERS, oldEntityListeners, newEntityListeners);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1384,22 +1322,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setEntityListeners(EntityListeners newEntityListeners) {
     if (newEntityListeners != entityListeners) {
       NotificationChain msgs = null;
-      if (entityListeners != null) {
+      if (entityListeners != null)
         msgs = ((InternalEObject) entityListeners).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__ENTITY_LISTENERS, null, msgs);
-      }
-      if (newEntityListeners != null) {
+      if (newEntityListeners != null)
         msgs = ((InternalEObject) newEntityListeners).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__ENTITY_LISTENERS, null, msgs);
-      }
       msgs = basicSetEntityListeners(newEntityListeners, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ENTITY_LISTENERS,
           newEntityListeners, newEntityListeners));
-    }
   }
 
   /**
@@ -1422,11 +1356,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__PRE_PERSIST, oldPrePersist, newPrePersist);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1439,22 +1372,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPrePersist(PrePersist newPrePersist) {
     if (newPrePersist != prePersist) {
       NotificationChain msgs = null;
-      if (prePersist != null) {
+      if (prePersist != null)
         msgs = ((InternalEObject) prePersist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRE_PERSIST, null, msgs);
-      }
-      if (newPrePersist != null) {
+      if (newPrePersist != null)
         msgs = ((InternalEObject) newPrePersist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRE_PERSIST, null, msgs);
-      }
       msgs = basicSetPrePersist(newPrePersist, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PRE_PERSIST, newPrePersist,
           newPrePersist));
-    }
   }
 
   /**
@@ -1477,11 +1406,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__POST_PERSIST, oldPostPersist, newPostPersist);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1494,22 +1422,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPostPersist(PostPersist newPostPersist) {
     if (newPostPersist != postPersist) {
       NotificationChain msgs = null;
-      if (postPersist != null) {
+      if (postPersist != null)
         msgs = ((InternalEObject) postPersist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_PERSIST, null, msgs);
-      }
-      if (newPostPersist != null) {
+      if (newPostPersist != null)
         msgs = ((InternalEObject) newPostPersist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_PERSIST, null, msgs);
-      }
       msgs = basicSetPostPersist(newPostPersist, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__POST_PERSIST, newPostPersist,
           newPostPersist));
-    }
   }
 
   /**
@@ -1532,11 +1456,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__PRE_REMOVE, oldPreRemove, newPreRemove);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1549,22 +1472,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPreRemove(PreRemove newPreRemove) {
     if (newPreRemove != preRemove) {
       NotificationChain msgs = null;
-      if (preRemove != null) {
+      if (preRemove != null)
         msgs = ((InternalEObject) preRemove).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRE_REMOVE, null, msgs);
-      }
-      if (newPreRemove != null) {
+      if (newPreRemove != null)
         msgs = ((InternalEObject) newPreRemove).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRE_REMOVE, null, msgs);
-      }
       msgs = basicSetPreRemove(newPreRemove, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PRE_REMOVE, newPreRemove,
           newPreRemove));
-    }
   }
 
   /**
@@ -1587,11 +1506,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__POST_REMOVE, oldPostRemove, newPostRemove);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1604,22 +1522,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPostRemove(PostRemove newPostRemove) {
     if (newPostRemove != postRemove) {
       NotificationChain msgs = null;
-      if (postRemove != null) {
+      if (postRemove != null)
         msgs = ((InternalEObject) postRemove).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_REMOVE, null, msgs);
-      }
-      if (newPostRemove != null) {
+      if (newPostRemove != null)
         msgs = ((InternalEObject) newPostRemove).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_REMOVE, null, msgs);
-      }
       msgs = basicSetPostRemove(newPostRemove, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__POST_REMOVE, newPostRemove,
           newPostRemove));
-    }
   }
 
   /**
@@ -1642,11 +1556,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__PRE_UPDATE, oldPreUpdate, newPreUpdate);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1659,22 +1572,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPreUpdate(PreUpdate newPreUpdate) {
     if (newPreUpdate != preUpdate) {
       NotificationChain msgs = null;
-      if (preUpdate != null) {
+      if (preUpdate != null)
         msgs = ((InternalEObject) preUpdate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRE_UPDATE, null, msgs);
-      }
-      if (newPreUpdate != null) {
+      if (newPreUpdate != null)
         msgs = ((InternalEObject) newPreUpdate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__PRE_UPDATE, null, msgs);
-      }
       msgs = basicSetPreUpdate(newPreUpdate, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PRE_UPDATE, newPreUpdate,
           newPreUpdate));
-    }
   }
 
   /**
@@ -1697,11 +1606,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__POST_UPDATE, oldPostUpdate, newPostUpdate);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1714,22 +1622,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPostUpdate(PostUpdate newPostUpdate) {
     if (newPostUpdate != postUpdate) {
       NotificationChain msgs = null;
-      if (postUpdate != null) {
+      if (postUpdate != null)
         msgs = ((InternalEObject) postUpdate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_UPDATE, null, msgs);
-      }
-      if (newPostUpdate != null) {
+      if (newPostUpdate != null)
         msgs = ((InternalEObject) newPostUpdate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_UPDATE, null, msgs);
-      }
       msgs = basicSetPostUpdate(newPostUpdate, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__POST_UPDATE, newPostUpdate,
           newPostUpdate));
-    }
   }
 
   /**
@@ -1752,11 +1656,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__POST_LOAD, oldPostLoad, newPostLoad);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1769,22 +1672,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setPostLoad(PostLoad newPostLoad) {
     if (newPostLoad != postLoad) {
       NotificationChain msgs = null;
-      if (postLoad != null) {
+      if (postLoad != null)
         msgs = ((InternalEObject) postLoad).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_LOAD, null, msgs);
-      }
-      if (newPostLoad != null) {
+      if (newPostLoad != null)
         msgs = ((InternalEObject) newPostLoad).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__POST_LOAD, null, msgs);
-      }
       msgs = basicSetPostLoad(newPostLoad, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__POST_LOAD, newPostLoad,
           newPostLoad));
-    }
   }
 
   /**
@@ -1819,11 +1718,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES, oldAttributes, newAttributes);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1836,22 +1734,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setAttributes(Attributes newAttributes) {
     if (newAttributes != attributes) {
       NotificationChain msgs = null;
-      if (attributes != null) {
+      if (attributes != null)
         msgs = ((InternalEObject) attributes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES, null, msgs);
-      }
-      if (newAttributes != null) {
+      if (newAttributes != null)
         msgs = ((InternalEObject) newAttributes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES, null, msgs);
-      }
       msgs = basicSetAttributes(newAttributes, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES, newAttributes,
           newAttributes));
-    }
   }
 
   /**
@@ -1873,10 +1767,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ACCESS, oldAccess, access,
           !oldAccessESet));
-    }
   }
 
   /**
@@ -1889,10 +1782,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MAPPED_SUPERCLASS__ACCESS, oldAccess,
           ACCESS_EDEFAULT, oldAccessESet));
-    }
   }
 
   /**
@@ -1923,10 +1815,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     cacheable = newCacheable;
     boolean oldCacheableESet = cacheableESet;
     cacheableESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CACHEABLE, oldCacheable,
           cacheable, !oldCacheableESet));
-    }
   }
 
   /**
@@ -1939,10 +1830,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     boolean oldCacheableESet = cacheableESet;
     cacheable = CACHEABLE_EDEFAULT;
     cacheableESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MAPPED_SUPERCLASS__CACHEABLE, oldCacheable,
           CACHEABLE_EDEFAULT, oldCacheableESet));
-    }
   }
 
   /**
@@ -1971,9 +1861,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   public void setClass(String newClass) {
     String oldClass = class_;
     class_ = newClass;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__CLASS, oldClass, class_));
-    }
   }
 
   /**
@@ -1995,10 +1884,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     excludeDefaultMappings = newExcludeDefaultMappings;
     boolean oldExcludeDefaultMappingsESet = excludeDefaultMappingsESet;
     excludeDefaultMappingsESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_MAPPINGS,
           oldExcludeDefaultMappings, excludeDefaultMappings, !oldExcludeDefaultMappingsESet));
-    }
   }
 
   /**
@@ -2011,10 +1899,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     boolean oldExcludeDefaultMappingsESet = excludeDefaultMappingsESet;
     excludeDefaultMappings = EXCLUDE_DEFAULT_MAPPINGS_EDEFAULT;
     excludeDefaultMappingsESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_MAPPINGS,
           oldExcludeDefaultMappings, EXCLUDE_DEFAULT_MAPPINGS_EDEFAULT, oldExcludeDefaultMappingsESet));
-    }
   }
 
   /**
@@ -2045,10 +1932,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     existenceChecking = newExistenceChecking == null ? EXISTENCE_CHECKING_EDEFAULT : newExistenceChecking;
     boolean oldExistenceCheckingESet = existenceCheckingESet;
     existenceCheckingESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__EXISTENCE_CHECKING,
           oldExistenceChecking, existenceChecking, !oldExistenceCheckingESet));
-    }
   }
 
   /**
@@ -2061,10 +1947,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     boolean oldExistenceCheckingESet = existenceCheckingESet;
     existenceChecking = EXISTENCE_CHECKING_EDEFAULT;
     existenceCheckingESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MAPPED_SUPERCLASS__EXISTENCE_CHECKING,
           oldExistenceChecking, EXISTENCE_CHECKING_EDEFAULT, oldExistenceCheckingESet));
-    }
   }
 
   /**
@@ -2095,10 +1980,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     metadataComplete = newMetadataComplete;
     boolean oldMetadataCompleteESet = metadataCompleteESet;
     metadataCompleteESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__METADATA_COMPLETE,
           oldMetadataComplete, metadataComplete, !oldMetadataCompleteESet));
-    }
   }
 
   /**
@@ -2111,10 +1995,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     boolean oldMetadataCompleteESet = metadataCompleteESet;
     metadataComplete = METADATA_COMPLETE_EDEFAULT;
     metadataCompleteESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MAPPED_SUPERCLASS__METADATA_COMPLETE,
           oldMetadataComplete, METADATA_COMPLETE_EDEFAULT, oldMetadataCompleteESet));
-    }
   }
 
   /**
@@ -2145,10 +2028,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     readOnly = newReadOnly;
     boolean oldReadOnlyESet = readOnlyESet;
     readOnlyESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__READ_ONLY, oldReadOnly,
           readOnly, !oldReadOnlyESet));
-    }
   }
 
   /**
@@ -2161,10 +2043,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
     boolean oldReadOnlyESet = readOnlyESet;
     readOnly = READ_ONLY_EDEFAULT;
     readOnlyESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.MAPPED_SUPERCLASS__READ_ONLY, oldReadOnly,
           READ_ONLY_EDEFAULT, oldReadOnlyESet));
-    }
   }
 
   /**
@@ -2641,51 +2522,44 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");
     result.append(description);
     result.append(", access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", cacheable: ");
-    if (cacheableESet) {
+    if (cacheableESet)
       result.append(cacheable);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", class: ");
     result.append(class_);
     result.append(", excludeDefaultMappings: ");
-    if (excludeDefaultMappingsESet) {
+    if (excludeDefaultMappingsESet)
       result.append(excludeDefaultMappings);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", existenceChecking: ");
-    if (existenceCheckingESet) {
+    if (existenceCheckingESet)
       result.append(existenceChecking);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", metadataComplete: ");
-    if (metadataCompleteESet) {
+    if (metadataCompleteESet)
       result.append(metadataComplete);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", readOnly: ");
-    if (readOnlyESet) {
+    if (readOnlyESet)
       result.append(readOnly);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(')');
     return result.toString();
   }

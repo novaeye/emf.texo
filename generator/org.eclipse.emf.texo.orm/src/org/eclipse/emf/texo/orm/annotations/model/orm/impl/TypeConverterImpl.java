@@ -22,19 +22,19 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl#getDataType <em>Data Type</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl#getObjectType <em>Object Type</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl#getDataType <em>Data Type</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TypeConverterImpl#getObjectType <em>Object Type</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConverter {
   /**
-   * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDataType()
    * @generated
    * @ordered
@@ -42,9 +42,9 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
   protected static final String DATA_TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDataType()
    * @generated
    * @ordered
@@ -62,8 +62,8 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -71,9 +71,9 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getObjectType() <em>Object Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getObjectType() <em>Object Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getObjectType()
    * @generated
    * @ordered
@@ -81,9 +81,9 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
   protected static final String OBJECT_TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getObjectType() <em>Object Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getObjectType() <em>Object Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getObjectType()
    * @generated
    * @ordered
@@ -92,6 +92,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected TypeConverterImpl() {
@@ -100,6 +101,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -109,6 +111,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDataType() {
@@ -117,6 +120,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDataType(String newDataType) {
@@ -128,6 +132,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -136,6 +141,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -147,6 +153,7 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getObjectType() {
@@ -155,96 +162,104 @@ public class TypeConverterImpl extends BaseOrmAnnotationImpl implements TypeConv
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setObjectType(String newObjectType) {
     String oldObjectType = objectType;
     objectType = newObjectType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TYPE_CONVERTER__OBJECT_TYPE, oldObjectType, objectType));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TYPE_CONVERTER__OBJECT_TYPE, oldObjectType,
+          objectType));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
-        return getDataType();
-      case OrmPackage.TYPE_CONVERTER__NAME:
-        return getName();
-      case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
-        return getObjectType();
+    case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
+      return getDataType();
+    case OrmPackage.TYPE_CONVERTER__NAME:
+      return getName();
+    case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
+      return getObjectType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
-        setDataType((String)newValue);
-        return;
-      case OrmPackage.TYPE_CONVERTER__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
-        setObjectType((String)newValue);
-        return;
+    case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
+      setDataType((String) newValue);
+      return;
+    case OrmPackage.TYPE_CONVERTER__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
+      setObjectType((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
-        setDataType(DATA_TYPE_EDEFAULT);
-        return;
-      case OrmPackage.TYPE_CONVERTER__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
-        setObjectType(OBJECT_TYPE_EDEFAULT);
-        return;
+    case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
+      setDataType(DATA_TYPE_EDEFAULT);
+      return;
+    case OrmPackage.TYPE_CONVERTER__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
+      setObjectType(OBJECT_TYPE_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
-        return DATA_TYPE_EDEFAULT == null ? dataType != null : !DATA_TYPE_EDEFAULT.equals(dataType);
-      case OrmPackage.TYPE_CONVERTER__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
-        return OBJECT_TYPE_EDEFAULT == null ? objectType != null : !OBJECT_TYPE_EDEFAULT.equals(objectType);
+    case OrmPackage.TYPE_CONVERTER__DATA_TYPE:
+      return DATA_TYPE_EDEFAULT == null ? dataType != null : !DATA_TYPE_EDEFAULT.equals(dataType);
+    case OrmPackage.TYPE_CONVERTER__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.TYPE_CONVERTER__OBJECT_TYPE:
+      return OBJECT_TYPE_EDEFAULT == null ? objectType != null : !OBJECT_TYPE_EDEFAULT.equals(objectType);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (dataType: ");

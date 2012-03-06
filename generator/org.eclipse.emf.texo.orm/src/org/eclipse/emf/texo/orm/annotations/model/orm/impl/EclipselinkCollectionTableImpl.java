@@ -34,20 +34,26 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getUniqueConstraint <em>Unique Constraint</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getCatalog <em>Catalog</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getSchema <em>Schema</em>}</li>
+ * <li>
+ * {@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getPrimaryKeyJoinColumn
+ * <em>Primary Key Join Column</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getUniqueConstraint
+ * <em>Unique Constraint</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getCatalog <em>Catalog
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EclipselinkCollectionTableImpl#getSchema <em>Schema
+ * </em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implements EclipselinkCollectionTable {
   /**
-   * The cached value of the '{@link #getPrimaryKeyJoinColumn() <em>Primary Key Join Column</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getPrimaryKeyJoinColumn() <em>Primary Key Join Column</em>}' containment reference
+   * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getPrimaryKeyJoinColumn()
    * @generated
    * @ordered
@@ -57,6 +63,7 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
   /**
    * The cached value of the '{@link #getUniqueConstraint() <em>Unique Constraint</em>}' containment reference list.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getUniqueConstraint()
    * @generated
    * @ordered
@@ -64,9 +71,9 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
   protected EList<UniqueConstraint> uniqueConstraint;
 
   /**
-   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -74,9 +81,9 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
   protected static final String CATALOG_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -94,8 +101,8 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -103,9 +110,9 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSchema()
    * @generated
    * @ordered
@@ -124,6 +131,7 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected EclipselinkCollectionTableImpl() {
@@ -132,6 +140,7 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -141,28 +150,33 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<PrimaryKeyJoinColumn> getPrimaryKeyJoinColumn() {
     if (primaryKeyJoinColumn == null) {
-      primaryKeyJoinColumn = new EObjectContainmentEList<PrimaryKeyJoinColumn>(PrimaryKeyJoinColumn.class, this, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN);
+      primaryKeyJoinColumn = new EObjectContainmentEList<PrimaryKeyJoinColumn>(PrimaryKeyJoinColumn.class, this,
+          OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN);
     }
     return primaryKeyJoinColumn;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<UniqueConstraint> getUniqueConstraint() {
     if (uniqueConstraint == null) {
-      uniqueConstraint = new EObjectContainmentEList<UniqueConstraint>(UniqueConstraint.class, this, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT);
+      uniqueConstraint = new EObjectContainmentEList<UniqueConstraint>(UniqueConstraint.class, this,
+          OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT);
     }
     return uniqueConstraint;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getCatalog() {
@@ -171,17 +185,20 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCatalog(String newCatalog) {
     String oldCatalog = catalog;
     catalog = newCatalog;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG, oldCatalog, catalog));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG,
+          oldCatalog, catalog));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -190,17 +207,20 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME, oldName,
+          name));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getSchema() {
@@ -209,134 +229,143 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSchema(String newSchema) {
     String oldSchema = schema;
     schema = newSchema;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA, oldSchema, schema));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA, oldSchema,
+          schema));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        return ((InternalEList<?>)getPrimaryKeyJoinColumn()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
-        return ((InternalEList<?>)getUniqueConstraint()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      return ((InternalEList<?>) getPrimaryKeyJoinColumn()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
+      return ((InternalEList<?>) getUniqueConstraint()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        return getPrimaryKeyJoinColumn();
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
-        return getUniqueConstraint();
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
-        return getCatalog();
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
-        return getName();
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
-        return getSchema();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      return getPrimaryKeyJoinColumn();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
+      return getUniqueConstraint();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
+      return getCatalog();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
+      return getName();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
+      return getSchema();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        getPrimaryKeyJoinColumn().clear();
-        getPrimaryKeyJoinColumn().addAll((Collection<? extends PrimaryKeyJoinColumn>)newValue);
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
-        getUniqueConstraint().clear();
-        getUniqueConstraint().addAll((Collection<? extends UniqueConstraint>)newValue);
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
-        setCatalog((String)newValue);
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
-        setSchema((String)newValue);
-        return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      getPrimaryKeyJoinColumn().clear();
+      getPrimaryKeyJoinColumn().addAll((Collection<? extends PrimaryKeyJoinColumn>) newValue);
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
+      getUniqueConstraint().clear();
+      getUniqueConstraint().addAll((Collection<? extends UniqueConstraint>) newValue);
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
+      setCatalog((String) newValue);
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
+      setSchema((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        getPrimaryKeyJoinColumn().clear();
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
-        getUniqueConstraint().clear();
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
-        setCatalog(CATALOG_EDEFAULT);
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
-        setSchema(SCHEMA_EDEFAULT);
-        return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      getPrimaryKeyJoinColumn().clear();
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
+      getUniqueConstraint().clear();
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
+      setCatalog(CATALOG_EDEFAULT);
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
+      setSchema(SCHEMA_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
-        return primaryKeyJoinColumn != null && !primaryKeyJoinColumn.isEmpty();
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
-        return uniqueConstraint != null && !uniqueConstraint.isEmpty();
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
-        return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
-        return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__PRIMARY_KEY_JOIN_COLUMN:
+      return primaryKeyJoinColumn != null && !primaryKeyJoinColumn.isEmpty();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__UNIQUE_CONSTRAINT:
+      return uniqueConstraint != null && !uniqueConstraint.isEmpty();
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
+      return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
+      return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (catalog: ");

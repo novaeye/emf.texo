@@ -24,13 +24,13 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getHour <em>Hour</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getMillisecond <em>Millisecond</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getMinute <em>Minute</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getSecond <em>Second</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getHour <em>Hour</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getMillisecond <em>Millisecond</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getMinute <em>Minute</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl#getSecond <em>Second</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
@@ -45,8 +45,8 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
   protected static final BigInteger HOUR_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getHour() <em>Hour</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getHour() <em>Hour</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getHour()
    * @generated
    * @ordered
@@ -54,9 +54,9 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
   protected BigInteger hour = HOUR_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getMillisecond() <em>Millisecond</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getMillisecond() <em>Millisecond</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getMillisecond()
    * @generated
    * @ordered
@@ -64,9 +64,9 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
   protected static final BigInteger MILLISECOND_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getMillisecond() <em>Millisecond</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getMillisecond() <em>Millisecond</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getMillisecond()
    * @generated
    * @ordered
@@ -74,9 +74,9 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
   protected BigInteger millisecond = MILLISECOND_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getMinute() <em>Minute</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getMinute() <em>Minute</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getMinute()
    * @generated
    * @ordered
@@ -94,9 +94,9 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
   protected BigInteger minute = MINUTE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSecond() <em>Second</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getSecond() <em>Second</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSecond()
    * @generated
    * @ordered
@@ -115,6 +115,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected TimeOfDayImpl() {
@@ -123,6 +124,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -132,6 +134,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getHour() {
@@ -140,6 +143,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setHour(BigInteger newHour) {
@@ -151,6 +155,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getMillisecond() {
@@ -159,17 +164,20 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setMillisecond(BigInteger newMillisecond) {
     BigInteger oldMillisecond = millisecond;
     millisecond = newMillisecond;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TIME_OF_DAY__MILLISECOND, oldMillisecond, millisecond));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TIME_OF_DAY__MILLISECOND, oldMillisecond,
+          millisecond));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getMinute() {
@@ -178,6 +186,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setMinute(BigInteger newMinute) {
@@ -189,6 +198,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getSecond() {
@@ -197,6 +207,7 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSecond(BigInteger newSecond) {
@@ -208,95 +219,101 @@ public class TimeOfDayImpl extends BaseOrmAnnotationImpl implements TimeOfDay {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.TIME_OF_DAY__HOUR:
-        return getHour();
-      case OrmPackage.TIME_OF_DAY__MILLISECOND:
-        return getMillisecond();
-      case OrmPackage.TIME_OF_DAY__MINUTE:
-        return getMinute();
-      case OrmPackage.TIME_OF_DAY__SECOND:
-        return getSecond();
+    case OrmPackage.TIME_OF_DAY__HOUR:
+      return getHour();
+    case OrmPackage.TIME_OF_DAY__MILLISECOND:
+      return getMillisecond();
+    case OrmPackage.TIME_OF_DAY__MINUTE:
+      return getMinute();
+    case OrmPackage.TIME_OF_DAY__SECOND:
+      return getSecond();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.TIME_OF_DAY__HOUR:
-        setHour((BigInteger)newValue);
-        return;
-      case OrmPackage.TIME_OF_DAY__MILLISECOND:
-        setMillisecond((BigInteger)newValue);
-        return;
-      case OrmPackage.TIME_OF_DAY__MINUTE:
-        setMinute((BigInteger)newValue);
-        return;
-      case OrmPackage.TIME_OF_DAY__SECOND:
-        setSecond((BigInteger)newValue);
-        return;
+    case OrmPackage.TIME_OF_DAY__HOUR:
+      setHour((BigInteger) newValue);
+      return;
+    case OrmPackage.TIME_OF_DAY__MILLISECOND:
+      setMillisecond((BigInteger) newValue);
+      return;
+    case OrmPackage.TIME_OF_DAY__MINUTE:
+      setMinute((BigInteger) newValue);
+      return;
+    case OrmPackage.TIME_OF_DAY__SECOND:
+      setSecond((BigInteger) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.TIME_OF_DAY__HOUR:
-        setHour(HOUR_EDEFAULT);
-        return;
-      case OrmPackage.TIME_OF_DAY__MILLISECOND:
-        setMillisecond(MILLISECOND_EDEFAULT);
-        return;
-      case OrmPackage.TIME_OF_DAY__MINUTE:
-        setMinute(MINUTE_EDEFAULT);
-        return;
-      case OrmPackage.TIME_OF_DAY__SECOND:
-        setSecond(SECOND_EDEFAULT);
-        return;
+    case OrmPackage.TIME_OF_DAY__HOUR:
+      setHour(HOUR_EDEFAULT);
+      return;
+    case OrmPackage.TIME_OF_DAY__MILLISECOND:
+      setMillisecond(MILLISECOND_EDEFAULT);
+      return;
+    case OrmPackage.TIME_OF_DAY__MINUTE:
+      setMinute(MINUTE_EDEFAULT);
+      return;
+    case OrmPackage.TIME_OF_DAY__SECOND:
+      setSecond(SECOND_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.TIME_OF_DAY__HOUR:
-        return HOUR_EDEFAULT == null ? hour != null : !HOUR_EDEFAULT.equals(hour);
-      case OrmPackage.TIME_OF_DAY__MILLISECOND:
-        return MILLISECOND_EDEFAULT == null ? millisecond != null : !MILLISECOND_EDEFAULT.equals(millisecond);
-      case OrmPackage.TIME_OF_DAY__MINUTE:
-        return MINUTE_EDEFAULT == null ? minute != null : !MINUTE_EDEFAULT.equals(minute);
-      case OrmPackage.TIME_OF_DAY__SECOND:
-        return SECOND_EDEFAULT == null ? second != null : !SECOND_EDEFAULT.equals(second);
+    case OrmPackage.TIME_OF_DAY__HOUR:
+      return HOUR_EDEFAULT == null ? hour != null : !HOUR_EDEFAULT.equals(hour);
+    case OrmPackage.TIME_OF_DAY__MILLISECOND:
+      return MILLISECOND_EDEFAULT == null ? millisecond != null : !MILLISECOND_EDEFAULT.equals(millisecond);
+    case OrmPackage.TIME_OF_DAY__MINUTE:
+      return MINUTE_EDEFAULT == null ? minute != null : !MINUTE_EDEFAULT.equals(minute);
+    case OrmPackage.TIME_OF_DAY__SECOND:
+      return SECOND_EDEFAULT == null ? second != null : !SECOND_EDEFAULT.equals(second);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (hour: ");

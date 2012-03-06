@@ -58,9 +58,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGenerator {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -68,9 +68,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -80,6 +80,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   /**
    * The cached value of the '{@link #getUniqueConstraint() <em>Unique Constraint</em>}' containment reference list.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getUniqueConstraint()
    * @generated
    * @ordered
@@ -87,9 +88,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected EList<UniqueConstraint> uniqueConstraint;
 
   /**
-   * The default value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getAllocationSize()
    * @generated
    * @ordered
@@ -97,9 +98,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final int ALLOCATION_SIZE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getAllocationSize()
    * @generated
    * @ordered
@@ -107,17 +108,17 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected int allocationSize = ALLOCATION_SIZE_EDEFAULT;
 
   /**
-   * This is true if the Allocation Size attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Allocation Size attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean allocationSizeESet;
 
   /**
-   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -125,9 +126,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final String CATALOG_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -135,9 +136,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getInitialValue()
    * @generated
    * @ordered
@@ -145,9 +146,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final int INITIAL_VALUE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getInitialValue()
    * @generated
    * @ordered
@@ -155,8 +156,8 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected int initialValue = INITIAL_VALUE_EDEFAULT;
 
   /**
-   * This is true if the Initial Value attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Initial Value attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -173,8 +174,8 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -182,9 +183,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getPkColumnName() <em>Pk Column Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getPkColumnName() <em>Pk Column Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getPkColumnName()
    * @generated
    * @ordered
@@ -192,9 +193,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final String PK_COLUMN_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getPkColumnName() <em>Pk Column Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getPkColumnName() <em>Pk Column Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getPkColumnName()
    * @generated
    * @ordered
@@ -202,9 +203,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected String pkColumnName = PK_COLUMN_NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getPkColumnValue() <em>Pk Column Value</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getPkColumnValue() <em>Pk Column Value</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getPkColumnValue()
    * @generated
    * @ordered
@@ -212,9 +213,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final String PK_COLUMN_VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getPkColumnValue() <em>Pk Column Value</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getPkColumnValue() <em>Pk Column Value</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getPkColumnValue()
    * @generated
    * @ordered
@@ -222,9 +223,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected String pkColumnValue = PK_COLUMN_VALUE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSchema()
    * @generated
    * @ordered
@@ -262,9 +263,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected String table = TABLE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValueColumnName() <em>Value Column Name</em>}' attribute.
-   * <!-- begin-user-doc
+   * The default value of the '{@link #getValueColumnName() <em>Value Column Name</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getValueColumnName()
    * @generated
    * @ordered
@@ -272,9 +273,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected static final String VALUE_COLUMN_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValueColumnName() <em>Value Column Name</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getValueColumnName() <em>Value Column Name</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getValueColumnName()
    * @generated
    * @ordered
@@ -283,6 +284,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected TableGeneratorImpl() {
@@ -291,6 +293,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -300,6 +303,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDescription() {
@@ -308,28 +312,33 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__DESCRIPTION, oldDescription,
+          description));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<UniqueConstraint> getUniqueConstraint() {
     if (uniqueConstraint == null) {
-      uniqueConstraint = new EObjectContainmentEList<UniqueConstraint>(UniqueConstraint.class, this, OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT);
+      uniqueConstraint = new EObjectContainmentEList<UniqueConstraint>(UniqueConstraint.class, this,
+          OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT);
     }
     return uniqueConstraint;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getAllocationSize() {
@@ -338,6 +347,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setAllocationSize(int newAllocationSize) {
@@ -346,11 +356,13 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
     boolean oldAllocationSizeESet = allocationSizeESet;
     allocationSizeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE, oldAllocationSize, allocationSize, !oldAllocationSizeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE,
+          oldAllocationSize, allocationSize, !oldAllocationSizeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetAllocationSize() {
@@ -359,11 +371,13 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
     allocationSize = ALLOCATION_SIZE_EDEFAULT;
     allocationSizeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE, oldAllocationSize, ALLOCATION_SIZE_EDEFAULT, oldAllocationSizeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE,
+          oldAllocationSize, ALLOCATION_SIZE_EDEFAULT, oldAllocationSizeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetAllocationSize() {
@@ -372,6 +386,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getCatalog() {
@@ -380,6 +395,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCatalog(String newCatalog) {
@@ -391,6 +407,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getInitialValue() {
@@ -399,6 +416,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setInitialValue(int newInitialValue) {
@@ -407,11 +425,13 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
     boolean oldInitialValueESet = initialValueESet;
     initialValueESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__INITIAL_VALUE, oldInitialValue, initialValue, !oldInitialValueESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__INITIAL_VALUE, oldInitialValue,
+          initialValue, !oldInitialValueESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetInitialValue() {
@@ -420,11 +440,13 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
     initialValue = INITIAL_VALUE_EDEFAULT;
     initialValueESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.TABLE_GENERATOR__INITIAL_VALUE, oldInitialValue, INITIAL_VALUE_EDEFAULT, oldInitialValueESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.TABLE_GENERATOR__INITIAL_VALUE,
+          oldInitialValue, INITIAL_VALUE_EDEFAULT, oldInitialValueESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetInitialValue() {
@@ -433,6 +455,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -441,6 +464,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -452,6 +476,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getPkColumnName() {
@@ -460,17 +485,20 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setPkColumnName(String newPkColumnName) {
     String oldPkColumnName = pkColumnName;
     pkColumnName = newPkColumnName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME, oldPkColumnName, pkColumnName));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME,
+          oldPkColumnName, pkColumnName));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getPkColumnValue() {
@@ -479,17 +507,20 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setPkColumnValue(String newPkColumnValue) {
     String oldPkColumnValue = pkColumnValue;
     pkColumnValue = newPkColumnValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE, oldPkColumnValue, pkColumnValue));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE,
+          oldPkColumnValue, pkColumnValue));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getSchema() {
@@ -498,6 +529,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSchema(String newSchema) {
@@ -509,6 +541,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getTable() {
@@ -517,6 +550,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setTable(String newTable) {
@@ -528,6 +562,7 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getValueColumnName() {
@@ -536,201 +571,217 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setValueColumnName(String newValueColumnName) {
     String oldValueColumnName = valueColumnName;
     valueColumnName = newValueColumnName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME, oldValueColumnName, valueColumnName));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME,
+          oldValueColumnName, valueColumnName));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
-        return ((InternalEList<?>)getUniqueConstraint()).basicRemove(otherEnd, msgs);
+    case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
+      return ((InternalEList<?>) getUniqueConstraint()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
-        return getDescription();
-      case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
-        return getUniqueConstraint();
-      case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
-        return getAllocationSize();
-      case OrmPackage.TABLE_GENERATOR__CATALOG:
-        return getCatalog();
-      case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
-        return getInitialValue();
-      case OrmPackage.TABLE_GENERATOR__NAME:
-        return getName();
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
-        return getPkColumnName();
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
-        return getPkColumnValue();
-      case OrmPackage.TABLE_GENERATOR__SCHEMA:
-        return getSchema();
-      case OrmPackage.TABLE_GENERATOR__TABLE:
-        return getTable();
-      case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
-        return getValueColumnName();
+    case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
+      return getDescription();
+    case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
+      return getUniqueConstraint();
+    case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
+      return getAllocationSize();
+    case OrmPackage.TABLE_GENERATOR__CATALOG:
+      return getCatalog();
+    case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
+      return getInitialValue();
+    case OrmPackage.TABLE_GENERATOR__NAME:
+      return getName();
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
+      return getPkColumnName();
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
+      return getPkColumnValue();
+    case OrmPackage.TABLE_GENERATOR__SCHEMA:
+      return getSchema();
+    case OrmPackage.TABLE_GENERATOR__TABLE:
+      return getTable();
+    case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
+      return getValueColumnName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
-        getUniqueConstraint().clear();
-        getUniqueConstraint().addAll((Collection<? extends UniqueConstraint>)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
-        setAllocationSize((Integer)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__CATALOG:
-        setCatalog((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
-        setInitialValue((Integer)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
-        setPkColumnName((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
-        setPkColumnValue((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__SCHEMA:
-        setSchema((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__TABLE:
-        setTable((String)newValue);
-        return;
-      case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
-        setValueColumnName((String)newValue);
-        return;
+    case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
+      setDescription((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
+      getUniqueConstraint().clear();
+      getUniqueConstraint().addAll((Collection<? extends UniqueConstraint>) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
+      setAllocationSize((Integer) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__CATALOG:
+      setCatalog((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
+      setInitialValue((Integer) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
+      setPkColumnName((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
+      setPkColumnValue((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__SCHEMA:
+      setSchema((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__TABLE:
+      setTable((String) newValue);
+      return;
+    case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
+      setValueColumnName((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
-        getUniqueConstraint().clear();
-        return;
-      case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
-        unsetAllocationSize();
-        return;
-      case OrmPackage.TABLE_GENERATOR__CATALOG:
-        setCatalog(CATALOG_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
-        unsetInitialValue();
-        return;
-      case OrmPackage.TABLE_GENERATOR__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
-        setPkColumnName(PK_COLUMN_NAME_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
-        setPkColumnValue(PK_COLUMN_VALUE_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__SCHEMA:
-        setSchema(SCHEMA_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__TABLE:
-        setTable(TABLE_EDEFAULT);
-        return;
-      case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
-        setValueColumnName(VALUE_COLUMN_NAME_EDEFAULT);
-        return;
+    case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
+      setDescription(DESCRIPTION_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
+      getUniqueConstraint().clear();
+      return;
+    case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
+      unsetAllocationSize();
+      return;
+    case OrmPackage.TABLE_GENERATOR__CATALOG:
+      setCatalog(CATALOG_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
+      unsetInitialValue();
+      return;
+    case OrmPackage.TABLE_GENERATOR__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
+      setPkColumnName(PK_COLUMN_NAME_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
+      setPkColumnValue(PK_COLUMN_VALUE_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__SCHEMA:
+      setSchema(SCHEMA_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__TABLE:
+      setTable(TABLE_EDEFAULT);
+      return;
+    case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
+      setValueColumnName(VALUE_COLUMN_NAME_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
-        return uniqueConstraint != null && !uniqueConstraint.isEmpty();
-      case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
-        return isSetAllocationSize();
-      case OrmPackage.TABLE_GENERATOR__CATALOG:
-        return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
-      case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
-        return isSetInitialValue();
-      case OrmPackage.TABLE_GENERATOR__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
-        return PK_COLUMN_NAME_EDEFAULT == null ? pkColumnName != null : !PK_COLUMN_NAME_EDEFAULT.equals(pkColumnName);
-      case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
-        return PK_COLUMN_VALUE_EDEFAULT == null ? pkColumnValue != null : !PK_COLUMN_VALUE_EDEFAULT.equals(pkColumnValue);
-      case OrmPackage.TABLE_GENERATOR__SCHEMA:
-        return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
-      case OrmPackage.TABLE_GENERATOR__TABLE:
-        return TABLE_EDEFAULT == null ? table != null : !TABLE_EDEFAULT.equals(table);
-      case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
-        return VALUE_COLUMN_NAME_EDEFAULT == null ? valueColumnName != null : !VALUE_COLUMN_NAME_EDEFAULT.equals(valueColumnName);
+    case OrmPackage.TABLE_GENERATOR__DESCRIPTION:
+      return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+    case OrmPackage.TABLE_GENERATOR__UNIQUE_CONSTRAINT:
+      return uniqueConstraint != null && !uniqueConstraint.isEmpty();
+    case OrmPackage.TABLE_GENERATOR__ALLOCATION_SIZE:
+      return isSetAllocationSize();
+    case OrmPackage.TABLE_GENERATOR__CATALOG:
+      return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+    case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
+      return isSetInitialValue();
+    case OrmPackage.TABLE_GENERATOR__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_NAME:
+      return PK_COLUMN_NAME_EDEFAULT == null ? pkColumnName != null : !PK_COLUMN_NAME_EDEFAULT.equals(pkColumnName);
+    case OrmPackage.TABLE_GENERATOR__PK_COLUMN_VALUE:
+      return PK_COLUMN_VALUE_EDEFAULT == null ? pkColumnValue != null : !PK_COLUMN_VALUE_EDEFAULT.equals(pkColumnValue);
+    case OrmPackage.TABLE_GENERATOR__SCHEMA:
+      return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
+    case OrmPackage.TABLE_GENERATOR__TABLE:
+      return TABLE_EDEFAULT == null ? table != null : !TABLE_EDEFAULT.equals(table);
+    case OrmPackage.TABLE_GENERATOR__VALUE_COLUMN_NAME:
+      return VALUE_COLUMN_NAME_EDEFAULT == null ? valueColumnName != null : !VALUE_COLUMN_NAME_EDEFAULT
+          .equals(valueColumnName);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");
     result.append(description);
     result.append(", allocationSize: ");
-    if (allocationSizeESet) result.append(allocationSize); else result.append("<unset>");
+    if (allocationSizeESet)
+      result.append(allocationSize);
+    else
+      result.append("<unset>");
     result.append(", catalog: ");
     result.append(catalog);
     result.append(", initialValue: ");
-    if (initialValueESet) result.append(initialValue); else result.append("<unset>");
+    if (initialValueESet)
+      result.append(initialValue);
+    else
+      result.append("<unset>");
     result.append(", name: ");
     result.append(name);
     result.append(", pkColumnName: ");

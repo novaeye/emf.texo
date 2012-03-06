@@ -49,9 +49,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements NamedNativeQuery {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -59,9 +59,9 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -89,9 +89,9 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
   protected String query = QUERY_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getHint() <em>Hint</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getHint() <em>Hint</em>}' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getHint()
    * @generated
    * @ordered
@@ -109,8 +109,8 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -118,9 +118,9 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getResultClass() <em>Result Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getResultClass() <em>Result Class</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getResultClass()
    * @generated
    * @ordered
@@ -128,9 +128,9 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
   protected static final String RESULT_CLASS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getResultClass() <em>Result Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getResultClass() <em>Result Class</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getResultClass()
    * @generated
    * @ordered
@@ -148,9 +148,9 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
   protected static final String RESULT_SET_MAPPING_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getResultSetMapping() <em>Result Set Mapping</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getResultSetMapping() <em>Result Set Mapping</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getResultSetMapping()
    * @generated
    * @ordered
@@ -159,6 +159,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected NamedNativeQueryImpl() {
@@ -167,6 +168,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -176,6 +178,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDescription() {
@@ -184,17 +187,20 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION, oldDescription,
+          description));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getQuery() {
@@ -203,6 +209,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setQuery(String newQuery) {
@@ -214,6 +221,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<QueryHint> getHint() {
@@ -225,6 +233,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -233,6 +242,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -244,6 +254,7 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getResultClass() {
@@ -252,17 +263,20 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setResultClass(String newResultClass) {
     String oldResultClass = resultClass;
     resultClass = newResultClass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS, oldResultClass, resultClass));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS,
+          oldResultClass, resultClass));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getResultSetMapping() {
@@ -271,141 +285,151 @@ public class NamedNativeQueryImpl extends BaseOrmAnnotationImpl implements Named
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setResultSetMapping(String newResultSetMapping) {
     String oldResultSetMapping = resultSetMapping;
     resultSetMapping = newResultSetMapping;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING, oldResultSetMapping, resultSetMapping));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING,
+          oldResultSetMapping, resultSetMapping));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.NAMED_NATIVE_QUERY__HINT:
-        return ((InternalEList<?>)getHint()).basicRemove(otherEnd, msgs);
+    case OrmPackage.NAMED_NATIVE_QUERY__HINT:
+      return ((InternalEList<?>) getHint()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
-        return getDescription();
-      case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
-        return getQuery();
-      case OrmPackage.NAMED_NATIVE_QUERY__HINT:
-        return getHint();
-      case OrmPackage.NAMED_NATIVE_QUERY__NAME:
-        return getName();
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
-        return getResultClass();
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
-        return getResultSetMapping();
+    case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
+      return getDescription();
+    case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
+      return getQuery();
+    case OrmPackage.NAMED_NATIVE_QUERY__HINT:
+      return getHint();
+    case OrmPackage.NAMED_NATIVE_QUERY__NAME:
+      return getName();
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
+      return getResultClass();
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
+      return getResultSetMapping();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
-        setQuery((String)newValue);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__HINT:
-        getHint().clear();
-        getHint().addAll((Collection<? extends QueryHint>)newValue);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
-        setResultClass((String)newValue);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
-        setResultSetMapping((String)newValue);
-        return;
+    case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
+      setDescription((String) newValue);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
+      setQuery((String) newValue);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__HINT:
+      getHint().clear();
+      getHint().addAll((Collection<? extends QueryHint>) newValue);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
+      setResultClass((String) newValue);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
+      setResultSetMapping((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
-        setQuery(QUERY_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__HINT:
-        getHint().clear();
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
-        setResultClass(RESULT_CLASS_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
-        setResultSetMapping(RESULT_SET_MAPPING_EDEFAULT);
-        return;
+    case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
+      setDescription(DESCRIPTION_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
+      setQuery(QUERY_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__HINT:
+      getHint().clear();
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
+      setResultClass(RESULT_CLASS_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
+      setResultSetMapping(RESULT_SET_MAPPING_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
-        return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
-      case OrmPackage.NAMED_NATIVE_QUERY__HINT:
-        return hint != null && !hint.isEmpty();
-      case OrmPackage.NAMED_NATIVE_QUERY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
-        return RESULT_CLASS_EDEFAULT == null ? resultClass != null : !RESULT_CLASS_EDEFAULT.equals(resultClass);
-      case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
-        return RESULT_SET_MAPPING_EDEFAULT == null ? resultSetMapping != null : !RESULT_SET_MAPPING_EDEFAULT.equals(resultSetMapping);
+    case OrmPackage.NAMED_NATIVE_QUERY__DESCRIPTION:
+      return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+    case OrmPackage.NAMED_NATIVE_QUERY__QUERY:
+      return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
+    case OrmPackage.NAMED_NATIVE_QUERY__HINT:
+      return hint != null && !hint.isEmpty();
+    case OrmPackage.NAMED_NATIVE_QUERY__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_CLASS:
+      return RESULT_CLASS_EDEFAULT == null ? resultClass != null : !RESULT_CLASS_EDEFAULT.equals(resultClass);
+    case OrmPackage.NAMED_NATIVE_QUERY__RESULT_SET_MAPPING:
+      return RESULT_SET_MAPPING_EDEFAULT == null ? resultSetMapping != null : !RESULT_SET_MAPPING_EDEFAULT
+          .equals(resultSetMapping);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

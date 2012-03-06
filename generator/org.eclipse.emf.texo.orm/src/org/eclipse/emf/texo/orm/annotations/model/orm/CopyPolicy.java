@@ -11,51 +11,31 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Copy Policy</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
- * 				*
- * 				* A CopyPolicy is used to set a
- * 				*
- * 				org.eclipse.persistence.descriptors.copying.CopyPolicy on an
- * 				Entity.
- * 				* It is required that a class that implements
- * 				*
- * 				org.eclipse.persistence.descriptors.copying.CopyPolicy be specified
- * 				* as the argument.
- * 				*
- * 				* A CopyPolicy should be specified on an Entity,
- * 				MappedSuperclass or
- * 				* Embeddable.
- * 				*
- * 				* For instance:
- * 				* @Entity
- * 				*
- * 				@CopyPolicy("example.MyCopyPolicy")
- * 				*
- * 				public @interface CopyPolicy {
+ * * * A CopyPolicy is used to set a * org.eclipse.persistence.descriptors.copying.CopyPolicy on an Entity. * It is
+ * required that a class that implements * org.eclipse.persistence.descriptors.copying.CopyPolicy be specified * as the
+ * argument. * * A CopyPolicy should be specified on an Entity, MappedSuperclass or * Embeddable. * * For instance: * @Entity
+ * *
  * 
- * 				/*
- * 				* (Required)
- * 				* This defines the class of the copy policy. It must
- * 				specify a class
- * 				* that implements
- * 				org.eclipse.persistence.descriptors.copying.CopyPolicy
- * 				*
- * 				Class
- * 				value();
- * 				}
+ * @CopyPolicy("example.MyCopyPolicy") * public @interface CopyPolicy {
  * 
- *       
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_ <em>Class</em>}</li>
- * </ul>
- * </p>
- *
+ *                                     /* * (Required) * This defines the class of the copy policy. It must specify a
+ *                                     class * that implements org.eclipse.persistence.descriptors.copying.CopyPolicy *
+ *                                     Class value(); }
+ * 
+ * 
+ *                                     <!-- end-model-doc -->
+ * 
+ *                                     <p>
+ *                                     The following features are supported:
+ *                                     <ul>
+ *                                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_
+ *                                     <em>Class</em>}</li>
+ *                                     </ul>
+ *                                     </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCopyPolicy()
  * @model extendedMetaData="name='copy-policy' kind='empty'"
  * @extends BaseOrmAnnotation
@@ -63,12 +43,12 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CopyPolicy extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Class</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Class</em>' attribute.
    * @see #setClass(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCopyPolicy_Class()
@@ -79,9 +59,11 @@ public interface CopyPolicy extends BaseOrmAnnotation {
   String getClass_();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_ <em>Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Class</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy#getClass_ <em>Class</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Class</em>' attribute.
    * @see #getClass_()
    * @generated
    */

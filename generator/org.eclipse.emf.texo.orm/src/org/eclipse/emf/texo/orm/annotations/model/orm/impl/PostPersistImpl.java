@@ -107,10 +107,9 @@ public class PostPersistImpl extends BaseOrmAnnotationImpl implements PostPersis
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.POST_PERSIST__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -130,10 +129,9 @@ public class PostPersistImpl extends BaseOrmAnnotationImpl implements PostPersis
   public void setMethodName(String newMethodName) {
     String oldMethodName = methodName;
     methodName = newMethodName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.POST_PERSIST__METHOD_NAME, oldMethodName,
           methodName));
-    }
   }
 
   /**
@@ -211,9 +209,8 @@ public class PostPersistImpl extends BaseOrmAnnotationImpl implements PostPersis
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

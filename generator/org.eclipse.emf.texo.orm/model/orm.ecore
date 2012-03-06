@@ -4,7 +4,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="orm"
     nsURI="http://www.eclipse.org/eclipselink/xsds/persistence/orm" nsPrefix="orm">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="&#xA;&#x9;&#x9;&#x9;@(#)eclipselink_orm_2_0.xsd 2.0 October 5 2008&#xA;&#x9;&#x9;&#xA;&lt;![CDATA[&#xA;&#xA;       This is the XML Schema for the native Eclipselink XML mapping file&#xA;       The file may be named &quot;META-INF/eclipselink-orm.xml&quot; in the persistence&#xA;       archive or it may be named some other name which would be&#xA;       used to locate the file as resource on the classpath.&#xA;       Object/relational mapping files must indicate the object/relational&#xA;       mapping file schema by using the persistence namespace:&#xA;&#xA;       http://www.eclipse.org/eclipselink/xsds/persistence/orm&#xA;&#xA;       and indicate the version of the schema by using the version element as shown below:&#xA;&#xA;       &lt;entity-mappings xmlns=&quot;http://www.eclipse.org/eclipselink/xsds/persistence/orm&quot;&#xA;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#xA;       xsi:schemaLocation=&quot;http://www.eclipse.org/eclipselink/xsds/persistence/orm &#xA;       eclipselink_orm_2_0.xsd&#xA;       version=&quot;2.0&quot;>&#xA;       ...&#xA;       &lt;/entity-mappings>&#xA;&#xA;     ]]>"/>
+    <details key="documentation" value="&#xA;&#x9;&#x9;&#x9;@(#)eclipselink_orm_2_0.xsd 2.0 October 5 2008&#xA;&#x9;&#x9;&#xA;&#xA;&#xA;       This is the XML Schema for the native Eclipselink XML mapping file&#xA;       The file may be named &quot;META-INF/eclipselink-orm.xml&quot; in the persistence&#xA;       archive or it may be named some other name which would be&#xA;       used to locate the file as resource on the classpath.&#xA;       Object/relational mapping files must indicate the object/relational&#xA;       mapping file schema by using the persistence namespace:&#xA;&#xA;       http://www.eclipse.org/eclipselink/xsds/persistence/orm&#xA;&#xA;       and indicate the version of the schema by using the version element as shown below:&#xA;&#xA;       &lt;entity-mappings xmlns=&quot;http://www.eclipse.org/eclipselink/xsds/persistence/orm&quot;&#xA;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#xA;       xsi:schemaLocation=&quot;http://www.eclipse.org/eclipselink/xsds/persistence/orm &#xA;       eclipselink_orm_2_0.xsd&#xA;       version=&quot;2.0&quot;>&#xA;       ...&#xA;       &lt;/entity-mappings>&#xA;&#xA;     "/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="AccessMethods">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -2005,62 +2005,6 @@
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
         <details key="name" value="entity-listeners"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prePersist" eType="#//PrePersist"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="pre-persist"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postPersist" eType="#//PostPersist"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="post-persist"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preRemove" eType="#//PreRemove"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="pre-remove"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postRemove" eType="#//PostRemove"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="post-remove"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preUpdate" eType="#//PreUpdate"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="pre-update"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postUpdate" eType="#//PostUpdate"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="post-update"/>
-        <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postLoad" eType="#//PostLoad"
-        containment="true" resolveProxies="false">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="post-load"/>
         <details key="namespace" value="##targetNamespace"/>
       </eAnnotations>
     </eStructuralFeatures>

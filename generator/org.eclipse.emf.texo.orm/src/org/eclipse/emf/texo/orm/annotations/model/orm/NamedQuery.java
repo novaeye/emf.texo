@@ -13,33 +13,27 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Named Query</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE}) @Retention(RUNTIME)
- * 				public
- * 				@interface NamedQuery {
- * 				String name();
- * 				String query();
- * 				QueryHint[]
- * 				hints() default {};
- * 				}
+ * @Target({TYPE ) @Retention(RUNTIME) public
+ * @interface NamedQuery { String name(); String query(); QueryHint[] hints() default {}; }
  * 
- *       
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery <em>Query</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode <em>Lock Mode</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getHint <em>Hint</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName <em>Name</em>}</li>
- * </ul>
- * </p>
- *
+ * 
+ *            <!-- end-model-doc -->
+ * 
+ *            <p>
+ *            The following features are supported:
+ *            <ul>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getDescription <em>Description</em>}</li>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery <em>Query</em>}</li>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode <em>Lock Mode</em>}</li>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getHint <em>Hint</em>}</li>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName <em>Name</em>}</li>
+ *            </ul>
+ *            </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedQuery()
  * @model extendedMetaData="name='named-query' kind='elementOnly'"
  * @extends BaseOrmAnnotation
@@ -47,13 +41,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface NamedQuery extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedQuery_Description()
@@ -64,21 +58,23 @@ public interface NamedQuery extends BaseOrmAnnotation {
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getDescription
+   * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Description</em>' attribute.
    * @see #getDescription()
    * @generated
    */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Query</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Query</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Query</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Query</em>' attribute.
    * @see #setQuery(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedQuery_Query()
@@ -89,39 +85,42 @@ public interface NamedQuery extends BaseOrmAnnotation {
   String getQuery();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery <em>Query</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Query</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getQuery <em>Query</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Query</em>' attribute.
    * @see #getQuery()
    * @generated
    */
   void setQuery(String value);
 
   /**
-   * Returns the value of the '<em><b>Lock Mode</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Lock Mode</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Lock Mode</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Lock Mode</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
    * @see #isSetLockMode()
    * @see #unsetLockMode()
    * @see #setLockMode(LockModeType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedQuery_LockMode()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='element' name='lock-mode' namespace='##targetNamespace'"
+   * @model unsettable="true" extendedMetaData="kind='element' name='lock-mode' namespace='##targetNamespace'"
    * @generated
    */
   LockModeType getLockMode();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode <em>Lock Mode</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Lock Mode</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode
+   * <em>Lock Mode</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Lock Mode</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType
    * @see #isSetLockMode()
    * @see #unsetLockMode()
@@ -131,8 +130,9 @@ public interface NamedQuery extends BaseOrmAnnotation {
   void setLockMode(LockModeType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode <em>Lock Mode</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode
+   * <em>Lock Mode</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetLockMode()
    * @see #getLockMode()
    * @see #setLockMode(LockModeType)
@@ -141,8 +141,9 @@ public interface NamedQuery extends BaseOrmAnnotation {
   void unsetLockMode();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode <em>Lock Mode</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getLockMode
+   * <em>Lock Mode</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Lock Mode</em>' attribute is set.
    * @see #unsetLockMode()
    * @see #getLockMode()
@@ -152,29 +153,28 @@ public interface NamedQuery extends BaseOrmAnnotation {
   boolean isSetLockMode();
 
   /**
-   * Returns the value of the '<em><b>Hint</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Hint</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Hint</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Hint</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedQuery_Hint()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='hint' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='hint' namespace='##targetNamespace'"
    * @generated
    */
   EList<QueryHint> getHint();
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedQuery_Name()
@@ -185,9 +185,11 @@ public interface NamedQuery extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery#getName <em>Name</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */

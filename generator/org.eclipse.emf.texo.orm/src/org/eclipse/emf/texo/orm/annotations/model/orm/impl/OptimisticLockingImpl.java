@@ -55,9 +55,9 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
   protected EList<Column> selectedColumn;
 
   /**
-   * The default value of the '{@link #isCascade() <em>Cascade</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isCascade() <em>Cascade</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isCascade()
    * @generated
    * @ordered
@@ -65,9 +65,9 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
   protected static final boolean CASCADE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isCascade() <em>Cascade</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isCascade() <em>Cascade</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isCascade()
    * @generated
    * @ordered
@@ -75,8 +75,8 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
   protected boolean cascade = CASCADE_EDEFAULT;
 
   /**
-   * This is true if the Cascade attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Cascade attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -93,8 +93,8 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
   protected static final OptimisticLockingType TYPE_EDEFAULT = OptimisticLockingType.ALLCOLUMNS;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getType()
    * @generated
    * @ordered
@@ -102,8 +102,8 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
   protected OptimisticLockingType type = TYPE_EDEFAULT;
 
   /**
-   * This is true if the Type attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Type attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -111,6 +111,7 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected OptimisticLockingImpl() {
@@ -119,6 +120,7 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -128,17 +130,20 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<Column> getSelectedColumn() {
     if (selectedColumn == null) {
-      selectedColumn = new EObjectContainmentEList<Column>(Column.class, this, OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN);
+      selectedColumn = new EObjectContainmentEList<Column>(Column.class, this,
+          OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN);
     }
     return selectedColumn;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isCascade() {
@@ -147,6 +152,7 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCascade(boolean newCascade) {
@@ -155,11 +161,13 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
     boolean oldCascadeESet = cascadeESet;
     cascadeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.OPTIMISTIC_LOCKING__CASCADE, oldCascade, cascade, !oldCascadeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.OPTIMISTIC_LOCKING__CASCADE, oldCascade,
+          cascade, !oldCascadeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetCascade() {
@@ -168,11 +176,13 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
     cascade = CASCADE_EDEFAULT;
     cascadeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.OPTIMISTIC_LOCKING__CASCADE, oldCascade, CASCADE_EDEFAULT, oldCascadeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.OPTIMISTIC_LOCKING__CASCADE, oldCascade,
+          CASCADE_EDEFAULT, oldCascadeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetCascade() {
@@ -181,6 +191,7 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public OptimisticLockingType getType() {
@@ -189,6 +200,7 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setType(OptimisticLockingType newType) {
@@ -197,11 +209,13 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
     boolean oldTypeESet = typeESet;
     typeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.OPTIMISTIC_LOCKING__TYPE, oldType, type, !oldTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.OPTIMISTIC_LOCKING__TYPE, oldType, type,
+          !oldTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetType() {
@@ -210,11 +224,13 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
     type = TYPE_EDEFAULT;
     typeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.OPTIMISTIC_LOCKING__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.OPTIMISTIC_LOCKING__TYPE, oldType,
+          TYPE_EDEFAULT, oldTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetType() {
@@ -223,106 +239,119 @@ public class OptimisticLockingImpl extends BaseOrmAnnotationImpl implements Opti
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
-        return ((InternalEList<?>)getSelectedColumn()).basicRemove(otherEnd, msgs);
+    case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
+      return ((InternalEList<?>) getSelectedColumn()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
-        return getSelectedColumn();
-      case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
-        return isCascade();
-      case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
-        return getType();
+    case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
+      return getSelectedColumn();
+    case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
+      return isCascade();
+    case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
+      return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
-        getSelectedColumn().clear();
-        getSelectedColumn().addAll((Collection<? extends Column>)newValue);
-        return;
-      case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
-        setCascade((Boolean)newValue);
-        return;
-      case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
-        setType((OptimisticLockingType)newValue);
-        return;
+    case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
+      getSelectedColumn().clear();
+      getSelectedColumn().addAll((Collection<? extends Column>) newValue);
+      return;
+    case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
+      setCascade((Boolean) newValue);
+      return;
+    case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
+      setType((OptimisticLockingType) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
-        getSelectedColumn().clear();
-        return;
-      case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
-        unsetCascade();
-        return;
-      case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
-        unsetType();
-        return;
+    case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
+      getSelectedColumn().clear();
+      return;
+    case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
+      unsetCascade();
+      return;
+    case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
+      unsetType();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
-        return selectedColumn != null && !selectedColumn.isEmpty();
-      case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
-        return isSetCascade();
-      case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
-        return isSetType();
+    case OrmPackage.OPTIMISTIC_LOCKING__SELECTED_COLUMN:
+      return selectedColumn != null && !selectedColumn.isEmpty();
+    case OrmPackage.OPTIMISTIC_LOCKING__CASCADE:
+      return isSetCascade();
+    case OrmPackage.OPTIMISTIC_LOCKING__TYPE:
+      return isSetType();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (cascade: ");
-    if (cascadeESet) result.append(cascade); else result.append("<unset>");
+    if (cascadeESet)
+      result.append(cascade);
+    else
+      result.append("<unset>");
     result.append(", type: ");
-    if (typeESet) result.append(type); else result.append("<unset>");
+    if (typeESet)
+      result.append(type);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

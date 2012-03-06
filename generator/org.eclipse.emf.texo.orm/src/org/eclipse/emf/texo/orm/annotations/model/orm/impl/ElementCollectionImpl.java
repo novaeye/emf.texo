@@ -560,10 +560,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setOrderBy(String newOrderBy) {
     String oldOrderBy = orderBy;
     orderBy = newOrderBy;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__ORDER_BY, oldOrderBy,
           orderBy));
-    }
   }
 
   /**
@@ -586,11 +585,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__ORDER_COLUMN, oldOrderColumn, newOrderColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -603,22 +601,18 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setOrderColumn(OrderColumn newOrderColumn) {
     if (newOrderColumn != orderColumn) {
       NotificationChain msgs = null;
-      if (orderColumn != null) {
+      if (orderColumn != null)
         msgs = ((InternalEObject) orderColumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__ORDER_COLUMN, null, msgs);
-      }
-      if (newOrderColumn != null) {
+      if (newOrderColumn != null)
         msgs = ((InternalEObject) newOrderColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__ORDER_COLUMN, null, msgs);
-      }
       msgs = basicSetOrderColumn(newOrderColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__ORDER_COLUMN,
           newOrderColumn, newOrderColumn));
-    }
   }
 
   /**
@@ -641,11 +635,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__MAP_KEY, oldMapKey, newMapKey);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -658,22 +651,18 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setMapKey(MapKey newMapKey) {
     if (newMapKey != mapKey) {
       NotificationChain msgs = null;
-      if (mapKey != null) {
+      if (mapKey != null)
         msgs = ((InternalEObject) mapKey).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__MAP_KEY, null, msgs);
-      }
-      if (newMapKey != null) {
+      if (newMapKey != null)
         msgs = ((InternalEObject) newMapKey).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__MAP_KEY, null, msgs);
-      }
       msgs = basicSetMapKey(newMapKey, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY, newMapKey,
           newMapKey));
-    }
   }
 
   /**
@@ -696,11 +685,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__MAP_KEY_CLASS, oldMapKeyClass, newMapKeyClass);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -713,22 +701,18 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setMapKeyClass(MapKeyClass newMapKeyClass) {
     if (newMapKeyClass != mapKeyClass) {
       NotificationChain msgs = null;
-      if (mapKeyClass != null) {
+      if (mapKeyClass != null)
         msgs = ((InternalEObject) mapKeyClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__MAP_KEY_CLASS, null, msgs);
-      }
-      if (newMapKeyClass != null) {
+      if (newMapKeyClass != null)
         msgs = ((InternalEObject) newMapKeyClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__MAP_KEY_CLASS, null, msgs);
-      }
       msgs = basicSetMapKeyClass(newMapKeyClass, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_CLASS,
           newMapKeyClass, newMapKeyClass));
-    }
   }
 
   /**
@@ -750,10 +734,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     mapKeyTemporal = newMapKeyTemporal == null ? MAP_KEY_TEMPORAL_EDEFAULT : newMapKeyTemporal;
     boolean oldMapKeyTemporalESet = mapKeyTemporalESet;
     mapKeyTemporalESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_TEMPORAL,
           oldMapKeyTemporal, mapKeyTemporal, !oldMapKeyTemporalESet));
-    }
   }
 
   /**
@@ -766,10 +749,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     boolean oldMapKeyTemporalESet = mapKeyTemporalESet;
     mapKeyTemporal = MAP_KEY_TEMPORAL_EDEFAULT;
     mapKeyTemporalESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_TEMPORAL,
           oldMapKeyTemporal, MAP_KEY_TEMPORAL_EDEFAULT, oldMapKeyTemporalESet));
-    }
   }
 
   /**
@@ -800,10 +782,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     mapKeyEnumerated = newMapKeyEnumerated == null ? MAP_KEY_ENUMERATED_EDEFAULT : newMapKeyEnumerated;
     boolean oldMapKeyEnumeratedESet = mapKeyEnumeratedESet;
     mapKeyEnumeratedESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_ENUMERATED,
           oldMapKeyEnumerated, mapKeyEnumerated, !oldMapKeyEnumeratedESet));
-    }
   }
 
   /**
@@ -816,10 +797,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     boolean oldMapKeyEnumeratedESet = mapKeyEnumeratedESet;
     mapKeyEnumerated = MAP_KEY_ENUMERATED_EDEFAULT;
     mapKeyEnumeratedESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_ENUMERATED,
           oldMapKeyEnumerated, MAP_KEY_ENUMERATED_EDEFAULT, oldMapKeyEnumeratedESet));
-    }
   }
 
   /**
@@ -848,10 +828,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setMapKeyConvert(String newMapKeyConvert) {
     String oldMapKeyConvert = mapKeyConvert;
     mapKeyConvert = newMapKeyConvert;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_CONVERT,
           oldMapKeyConvert, mapKeyConvert));
-    }
   }
 
   /**
@@ -900,11 +879,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__MAP_KEY_COLUMN, oldMapKeyColumn, newMapKeyColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -917,22 +895,18 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setMapKeyColumn(MapKeyColumn newMapKeyColumn) {
     if (newMapKeyColumn != mapKeyColumn) {
       NotificationChain msgs = null;
-      if (mapKeyColumn != null) {
+      if (mapKeyColumn != null)
         msgs = ((InternalEObject) mapKeyColumn).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__MAP_KEY_COLUMN, null, msgs);
-      }
-      if (newMapKeyColumn != null) {
+      if (newMapKeyColumn != null)
         msgs = ((InternalEObject) newMapKeyColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__MAP_KEY_COLUMN, null, msgs);
-      }
       msgs = basicSetMapKeyColumn(newMapKeyColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__MAP_KEY_COLUMN,
           newMapKeyColumn, newMapKeyColumn));
-    }
   }
 
   /**
@@ -968,11 +942,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__COLUMN, oldColumn, newColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -985,21 +958,17 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setColumn(Column newColumn) {
     if (newColumn != column) {
       NotificationChain msgs = null;
-      if (column != null) {
+      if (column != null)
         msgs = ((InternalEObject) column).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__COLUMN, null, msgs);
-      }
-      if (newColumn != null) {
+      if (newColumn != null)
         msgs = ((InternalEObject) newColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__COLUMN, null, msgs);
-      }
       msgs = basicSetColumn(newColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__COLUMN, newColumn, newColumn));
-    }
   }
 
   /**
@@ -1021,10 +990,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     temporal = newTemporal == null ? TEMPORAL_EDEFAULT : newTemporal;
     boolean oldTemporalESet = temporalESet;
     temporalESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__TEMPORAL, oldTemporal,
           temporal, !oldTemporalESet));
-    }
   }
 
   /**
@@ -1037,10 +1005,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     boolean oldTemporalESet = temporalESet;
     temporal = TEMPORAL_EDEFAULT;
     temporalESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ELEMENT_COLLECTION__TEMPORAL, oldTemporal,
           TEMPORAL_EDEFAULT, oldTemporalESet));
-    }
   }
 
   /**
@@ -1071,10 +1038,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     enumerated = newEnumerated == null ? ENUMERATED_EDEFAULT : newEnumerated;
     boolean oldEnumeratedESet = enumeratedESet;
     enumeratedESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__ENUMERATED, oldEnumerated,
           enumerated, !oldEnumeratedESet));
-    }
   }
 
   /**
@@ -1087,10 +1053,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     boolean oldEnumeratedESet = enumeratedESet;
     enumerated = ENUMERATED_EDEFAULT;
     enumeratedESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ELEMENT_COLLECTION__ENUMERATED, oldEnumerated,
           ENUMERATED_EDEFAULT, oldEnumeratedESet));
-    }
   }
 
   /**
@@ -1122,11 +1087,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__LOB, oldLob, newLob);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1139,21 +1103,17 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setLob(Lob newLob) {
     if (newLob != lob) {
       NotificationChain msgs = null;
-      if (lob != null) {
+      if (lob != null)
         msgs = ((InternalEObject) lob).eInverseRemove(this,
             EOPPOSITE_FEATURE_BASE - OrmPackage.ELEMENT_COLLECTION__LOB, null, msgs);
-      }
-      if (newLob != null) {
+      if (newLob != null)
         msgs = ((InternalEObject) newLob).eInverseAdd(this,
             EOPPOSITE_FEATURE_BASE - OrmPackage.ELEMENT_COLLECTION__LOB, null, msgs);
-      }
       msgs = basicSetLob(newLob, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__LOB, newLob, newLob));
-    }
   }
 
   /**
@@ -1173,9 +1133,8 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setConvert(String newConvert) {
     String oldConvert = convert;
     convert = newConvert;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__CONVERT, oldConvert, convert));
-    }
   }
 
   /**
@@ -1272,11 +1231,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__COLLECTION_TABLE, oldCollectionTable, newCollectionTable);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1289,22 +1247,18 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setCollectionTable(CollectionTable newCollectionTable) {
     if (newCollectionTable != collectionTable) {
       NotificationChain msgs = null;
-      if (collectionTable != null) {
+      if (collectionTable != null)
         msgs = ((InternalEObject) collectionTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__COLLECTION_TABLE, null, msgs);
-      }
-      if (newCollectionTable != null) {
+      if (newCollectionTable != null)
         msgs = ((InternalEObject) newCollectionTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__COLLECTION_TABLE, null, msgs);
-      }
       msgs = basicSetCollectionTable(newCollectionTable, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__COLLECTION_TABLE,
           newCollectionTable, newCollectionTable));
-    }
   }
 
   /**
@@ -1339,11 +1293,10 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ELEMENT_COLLECTION__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -1356,22 +1309,18 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setAccessMethods(AccessMethods newAccessMethods) {
     if (newAccessMethods != accessMethods) {
       NotificationChain msgs = null;
-      if (accessMethods != null) {
+      if (accessMethods != null)
         msgs = ((InternalEObject) accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__ACCESS_METHODS, null, msgs);
-      }
-      if (newAccessMethods != null) {
+      if (newAccessMethods != null)
         msgs = ((InternalEObject) newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ELEMENT_COLLECTION__ACCESS_METHODS, null, msgs);
-      }
       msgs = basicSetAccessMethods(newAccessMethods, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__ACCESS_METHODS,
           newAccessMethods, newAccessMethods));
-    }
   }
 
   /**
@@ -1393,10 +1342,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__ACCESS, oldAccess, access,
           !oldAccessESet));
-    }
   }
 
   /**
@@ -1409,10 +1357,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ELEMENT_COLLECTION__ACCESS, oldAccess,
           ACCESS_EDEFAULT, oldAccessESet));
-    }
   }
 
   /**
@@ -1443,10 +1390,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
     boolean oldFetchESet = fetchESet;
     fetchESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__FETCH, oldFetch, fetch,
           !oldFetchESet));
-    }
   }
 
   /**
@@ -1459,10 +1405,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     boolean oldFetchESet = fetchESet;
     fetch = FETCH_EDEFAULT;
     fetchESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ELEMENT_COLLECTION__FETCH, oldFetch,
           FETCH_EDEFAULT, oldFetchESet));
-    }
   }
 
   /**
@@ -1491,9 +1436,8 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__NAME, oldName, name));
-    }
   }
 
   /**
@@ -1513,10 +1457,9 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
   public void setTargetClass(String newTargetClass) {
     String oldTargetClass = targetClass;
     targetClass = newTargetClass;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ELEMENT_COLLECTION__TARGET_CLASS,
           oldTargetClass, targetClass));
-    }
   }
 
   /**
@@ -1614,9 +1557,8 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
     case OrmPackage.ELEMENT_COLLECTION__ASSOCIATION_OVERRIDE:
       return getAssociationOverride();
     case OrmPackage.ELEMENT_COLLECTION__GROUP:
-      if (coreType) {
+      if (coreType)
         return getGroup();
-      }
       return ((FeatureMap.Internal) getGroup()).getWrapper();
     case OrmPackage.ELEMENT_COLLECTION__CONVERTER:
       return getConverter();
@@ -1938,55 +1880,48 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (orderBy: ");
     result.append(orderBy);
     result.append(", mapKeyTemporal: ");
-    if (mapKeyTemporalESet) {
+    if (mapKeyTemporalESet)
       result.append(mapKeyTemporal);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mapKeyEnumerated: ");
-    if (mapKeyEnumeratedESet) {
+    if (mapKeyEnumeratedESet)
       result.append(mapKeyEnumerated);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mapKeyConvert: ");
     result.append(mapKeyConvert);
     result.append(", temporal: ");
-    if (temporalESet) {
+    if (temporalESet)
       result.append(temporal);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", enumerated: ");
-    if (enumeratedESet) {
+    if (enumeratedESet)
       result.append(enumerated);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", convert: ");
     result.append(convert);
     result.append(", group: ");
     result.append(group);
     result.append(", access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", fetch: ");
-    if (fetchESet) {
+    if (fetchESet)
       result.append(fetch);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", name: ");
     result.append(name);
     result.append(", targetClass: ");

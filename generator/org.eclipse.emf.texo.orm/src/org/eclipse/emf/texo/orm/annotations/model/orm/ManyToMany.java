@@ -13,54 +13,65 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Many To Many</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface ManyToMany {
- * 				Class targetEntity() default
- * 				void.class;
- * 				CascadeType[] cascade() default {};
- * 				FetchType fetch()
- * 				default LAZY;
- * 				String mappedBy() default "";
- * 				}
- *         
- *       
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderBy <em>Order By</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderColumn <em>Order Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey <em>Map Key</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyClass <em>Map Key Class</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyConvert <em>Map Key Convert</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAttributeOverride <em>Map Key Attribute Override</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAssociationOverride <em>Map Key Association Override</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyColumn <em>Map Key Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyJoinColumn <em>Map Key Join Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getConverter <em>Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTypeConverter <em>Type Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter <em>Object Type Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter <em>Struct Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinTable <em>Join Table</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade <em>Cascade</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getProperty <em>Property</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccessMethods <em>Access Methods</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMappedBy <em>Mapped By</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTargetEntity <em>Target Entity</em>}</li>
- * </ul>
- * </p>
- *
+ * @Target({METHOD, FIELD}) @Retention(RUNTIME) public @interface ManyToMany { Class targetEntity() default void.class;
+ *                  CascadeType[] cascade() default {}; FetchType fetch() default LAZY; String mappedBy() default ""; }
+ * 
+ * 
+ *                  <!-- end-model-doc -->
+ * 
+ *                  <p>
+ *                  The following features are supported:
+ *                  <ul>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderBy <em>Order By</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderColumn <em>Order Column
+ *                  </em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey <em>Map Key</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyClass <em>Map Key
+ *                  Class</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key
+ *                  Temporal</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key
+ *                  Enumerated</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyConvert <em>Map Key
+ *                  Convert</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAttributeOverride <em>
+ *                  Map Key Attribute Override</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyAssociationOverride
+ *                  <em>Map Key Association Override</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyColumn <em>Map Key
+ *                  Column</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyJoinColumn <em>Map Key
+ *                  Join Column</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getConverter <em>Converter
+ *                  </em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTypeConverter <em>Type
+ *                  Converter</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter <em>
+ *                  Object Type Converter</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter <em>Struct
+ *                  Converter</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinTable <em>Join Table
+ *                  </em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade <em>Cascade</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch
+ *                  </em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getProperty <em>Property</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccessMethods <em>Access
+ *                  Methods</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMappedBy <em>Mapped By</em>}
+ *                  </li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}</li>
+ *                  <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTargetEntity <em>Target
+ *                  Entity</em>}</li>
+ *                  </ul>
+ *                  </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany()
  * @model extendedMetaData="name='many-to-many' kind='elementOnly'"
  * @extends BaseOrmAnnotation
@@ -68,13 +79,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ManyToMany extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Order By</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Order By</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Order By</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Order By</em>' attribute.
    * @see #setOrderBy(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_OrderBy()
@@ -85,117 +96,123 @@ public interface ManyToMany extends BaseOrmAnnotation {
   String getOrderBy();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderBy <em>Order By</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Order By</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderBy
+   * <em>Order By</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Order By</em>' attribute.
    * @see #getOrderBy()
    * @generated
    */
   void setOrderBy(String value);
 
   /**
-   * Returns the value of the '<em><b>Order Column</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Order Column</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Order Column</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Order Column</em>' containment reference.
    * @see #setOrderColumn(OrderColumn)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_OrderColumn()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='order-column' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='order-column' namespace='##targetNamespace'"
    * @generated
    */
   OrderColumn getOrderColumn();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderColumn <em>Order Column</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Order Column</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getOrderColumn
+   * <em>Order Column</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Order Column</em>' containment reference.
    * @see #getOrderColumn()
    * @generated
    */
   void setOrderColumn(OrderColumn value);
 
   /**
-   * Returns the value of the '<em><b>Map Key</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key</em>' containment reference.
    * @see #setMapKey(MapKey)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKey()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='map-key' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='map-key' namespace='##targetNamespace'"
    * @generated
    */
   MapKey getMapKey();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey <em>Map Key</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Map Key</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKey <em>Map Key</em>}
+   * ' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Map Key</em>' containment reference.
    * @see #getMapKey()
    * @generated
    */
   void setMapKey(MapKey value);
 
   /**
-   * Returns the value of the '<em><b>Map Key Class</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Class</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Class</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Class</em>' containment reference.
    * @see #setMapKeyClass(MapKeyClass)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyClass()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='map-key-class' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='map-key-class' namespace='##targetNamespace'"
    * @generated
    */
   MapKeyClass getMapKeyClass();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyClass <em>Map Key Class</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Map Key Class</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyClass
+   * <em>Map Key Class</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Map Key Class</em>' containment reference.
    * @see #getMapKeyClass()
    * @generated
    */
   void setMapKeyClass(MapKeyClass value);
 
   /**
-   * Returns the value of the '<em><b>Map Key Temporal</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Temporal</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Temporal</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Temporal</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
    * @see #isSetMapKeyTemporal()
    * @see #unsetMapKeyTemporal()
    * @see #setMapKeyTemporal(Temporal)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyTemporal()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='element' name='map-key-temporal' namespace='##targetNamespace'"
+   * @model unsettable="true" extendedMetaData="kind='element' name='map-key-temporal' namespace='##targetNamespace'"
    * @generated
    */
   Temporal getMapKeyTemporal();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Map Key Temporal</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal
+   * <em>Map Key Temporal</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Map Key Temporal</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
    * @see #isSetMapKeyTemporal()
    * @see #unsetMapKeyTemporal()
@@ -205,8 +222,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setMapKeyTemporal(Temporal value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal
+   * <em>Map Key Temporal</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetMapKeyTemporal()
    * @see #getMapKeyTemporal()
    * @see #setMapKeyTemporal(Temporal)
@@ -215,8 +233,10 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void unsetMapKeyTemporal();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}'
+   * attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Map Key Temporal</em>' attribute is set.
    * @see #unsetMapKeyTemporal()
    * @see #getMapKeyTemporal()
@@ -226,30 +246,31 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetMapKeyTemporal();
 
   /**
-   * Returns the value of the '<em><b>Map Key Enumerated</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Enumerated</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Enumerated</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Enumerated</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
    * @see #isSetMapKeyEnumerated()
    * @see #unsetMapKeyEnumerated()
    * @see #setMapKeyEnumerated(Enumerated)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyEnumerated()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='element' name='map-key-enumerated' namespace='##targetNamespace'"
+   * @model unsettable="true" extendedMetaData="kind='element' name='map-key-enumerated' namespace='##targetNamespace'"
    * @generated
    */
   Enumerated getMapKeyEnumerated();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Map Key Enumerated</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated
+   * <em>Map Key Enumerated</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Map Key Enumerated</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
    * @see #isSetMapKeyEnumerated()
    * @see #unsetMapKeyEnumerated()
@@ -259,8 +280,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setMapKeyEnumerated(Enumerated value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated
+   * <em>Map Key Enumerated</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetMapKeyEnumerated()
    * @see #getMapKeyEnumerated()
    * @see #setMapKeyEnumerated(Enumerated)
@@ -269,8 +291,10 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void unsetMapKeyEnumerated();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}'
+   * attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Map Key Enumerated</em>' attribute is set.
    * @see #unsetMapKeyEnumerated()
    * @see #getMapKeyEnumerated()
@@ -280,13 +304,13 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetMapKeyEnumerated();
 
   /**
-   * Returns the value of the '<em><b>Map Key Convert</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Convert</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Convert</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Convert</em>' attribute.
    * @see #setMapKeyConvert(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyConvert()
@@ -297,23 +321,25 @@ public interface ManyToMany extends BaseOrmAnnotation {
   String getMapKeyConvert();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyConvert <em>Map Key Convert</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Map Key Convert</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyConvert
+   * <em>Map Key Convert</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Map Key Convert</em>' attribute.
    * @see #getMapKeyConvert()
    * @generated
    */
   void setMapKeyConvert(String value);
 
   /**
-   * Returns the value of the '<em><b>Map Key Attribute Override</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Attribute Override</b></em>' containment reference list. The list contents
+   * are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Attribute Override</em>' containment reference list isn't clear, there really
    * should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Attribute Override</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyAttributeOverride()
    * @model containment="true"
@@ -341,40 +367,41 @@ public interface ManyToMany extends BaseOrmAnnotation {
   EList<AssociationOverride> getMapKeyAssociationOverride();
 
   /**
-   * Returns the value of the '<em><b>Map Key Column</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Column</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Column</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Column</em>' containment reference.
    * @see #setMapKeyColumn(MapKeyColumn)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyColumn()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='map-key-column' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='map-key-column' namespace='##targetNamespace'"
    * @generated
    */
   MapKeyColumn getMapKeyColumn();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyColumn <em>Map Key Column</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Map Key Column</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyColumn
+   * <em>Map Key Column</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Map Key Column</em>' containment reference.
    * @see #getMapKeyColumn()
    * @generated
    */
   void setMapKeyColumn(MapKeyColumn value);
 
   /**
-   * Returns the value of the '<em><b>Map Key Join Column</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Map Key Join Column</b></em>' containment reference list. The list contents are of
+   * type {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Join Column</em>' containment reference list isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Map Key Join Column</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyJoinColumn()
    * @model containment="true"
@@ -384,65 +411,67 @@ public interface ManyToMany extends BaseOrmAnnotation {
   EList<MapKeyJoinColumn> getMapKeyJoinColumn();
 
   /**
-   * Returns the value of the '<em><b>Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Converter</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Converter</em>' containment reference.
    * @see #setConverter(Converter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Converter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='converter' namespace='##targetNamespace'"
    * @generated
    */
   Converter getConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getConverter <em>Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getConverter
+   * <em>Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Converter</em>' containment reference.
    * @see #getConverter()
    * @generated
    */
   void setConverter(Converter value);
 
   /**
-   * Returns the value of the '<em><b>Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type Converter</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Type Converter</em>' containment reference.
    * @see #setTypeConverter(TypeConverter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_TypeConverter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='type-converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='type-converter' namespace='##targetNamespace'"
    * @generated
    */
   TypeConverter getTypeConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTypeConverter <em>Type Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTypeConverter
+   * <em>Type Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Type Converter</em>' containment reference.
    * @see #getTypeConverter()
    * @generated
    */
   void setTypeConverter(TypeConverter value);
 
   /**
-   * Returns the value of the '<em><b>Object Type Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Object Type Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Object Type Converter</em>' containment reference isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Object Type Converter</em>' containment reference.
    * @see #setObjectTypeConverter(ObjectTypeConverter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_ObjectTypeConverter()
@@ -453,117 +482,123 @@ public interface ManyToMany extends BaseOrmAnnotation {
   ObjectTypeConverter getObjectTypeConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter <em>Object Type Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Object Type Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getObjectTypeConverter
+   * <em>Object Type Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Object Type Converter</em>' containment reference.
    * @see #getObjectTypeConverter()
    * @generated
    */
   void setObjectTypeConverter(ObjectTypeConverter value);
 
   /**
-   * Returns the value of the '<em><b>Struct Converter</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Struct Converter</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Struct Converter</em>' containment reference isn't clear, there really should be more of
    * a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Struct Converter</em>' containment reference.
    * @see #setStructConverter(StructConverter)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_StructConverter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='struct-converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='struct-converter' namespace='##targetNamespace'"
    * @generated
    */
   StructConverter getStructConverter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter <em>Struct Converter</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Struct Converter</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter
+   * <em>Struct Converter</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Struct Converter</em>' containment reference.
    * @see #getStructConverter()
    * @generated
    */
   void setStructConverter(StructConverter value);
 
   /**
-   * Returns the value of the '<em><b>Join Table</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Join Table</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Join Table</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Join Table</em>' containment reference.
    * @see #setJoinTable(JoinTable)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_JoinTable()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='join-table' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='join-table' namespace='##targetNamespace'"
    * @generated
    */
   JoinTable getJoinTable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinTable <em>Join Table</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Join Table</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinTable
+   * <em>Join Table</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Join Table</em>' containment reference.
    * @see #getJoinTable()
    * @generated
    */
   void setJoinTable(JoinTable value);
 
   /**
-   * Returns the value of the '<em><b>Cascade</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cascade</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cascade</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Cascade</em>' containment reference.
    * @see #setCascade(CascadeType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Cascade()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='cascade' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='cascade' namespace='##targetNamespace'"
    * @generated
    */
   CascadeType getCascade();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade <em>Cascade</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cascade</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade
+   * <em>Cascade</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Cascade</em>' containment reference.
    * @see #getCascade()
    * @generated
    */
   void setCascade(CascadeType value);
 
   /**
-   * Returns the value of the '<em><b>Join Fetch</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Join Fetch</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Join Fetch</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Join Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @see #isSetJoinFetch()
    * @see #unsetJoinFetch()
    * @see #setJoinFetch(JoinFetchType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_JoinFetch()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='element' name='join-fetch' namespace='##targetNamespace'"
+   * @model unsettable="true" extendedMetaData="kind='element' name='join-fetch' namespace='##targetNamespace'"
    * @generated
    */
   JoinFetchType getJoinFetch();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Join Fetch</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch
+   * <em>Join Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Join Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType
    * @see #isSetJoinFetch()
    * @see #unsetJoinFetch()
@@ -573,8 +608,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setJoinFetch(JoinFetchType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch
+   * <em>Join Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetJoinFetch()
    * @see #getJoinFetch()
    * @see #setJoinFetch(JoinFetchType)
@@ -583,8 +619,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void unsetJoinFetch();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch
+   * <em>Join Fetch</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Join Fetch</em>' attribute is set.
    * @see #unsetJoinFetch()
    * @see #getJoinFetch()
@@ -594,72 +631,73 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetJoinFetch();
 
   /**
-   * Returns the value of the '<em><b>Property</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Property</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Property</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Property</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Property()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
    * @generated
    */
   EList<Property> getProperty();
 
   /**
-   * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access Methods</em>' containment reference.
    * @see #setAccessMethods(AccessMethods)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_AccessMethods()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
    * @generated
    */
   AccessMethods getAccessMethods();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccessMethods <em>Access Methods</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access Methods</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccessMethods
+   * <em>Access Methods</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access Methods</em>' containment reference.
    * @see #getAccessMethods()
    * @generated
    */
   void setAccessMethods(AccessMethods value);
 
   /**
-   * Returns the value of the '<em><b>Access</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
    * @see #setAccess(AccessType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Access()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='access'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='access'"
    * @generated
    */
   AccessType getAccess();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
@@ -669,8 +707,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setAccess(AccessType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetAccess()
    * @see #getAccess()
    * @see #setAccess(AccessType)
@@ -679,8 +718,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void unsetAccess();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess
+   * <em>Access</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Access</em>' attribute is set.
    * @see #unsetAccess()
    * @see #getAccess()
@@ -690,29 +730,30 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
-   * Returns the value of the '<em><b>Fetch</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Fetch</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Fetch</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see #isSetFetch()
    * @see #unsetFetch()
    * @see #setFetch(FetchType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Fetch()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='fetch'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='fetch'"
    * @generated
    */
   FetchType getFetch();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fetch</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see #isSetFetch()
    * @see #unsetFetch()
@@ -722,8 +763,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setFetch(FetchType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetFetch()
    * @see #getFetch()
    * @see #setFetch(FetchType)
@@ -732,8 +774,9 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void unsetFetch();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch
+   * <em>Fetch</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Fetch</em>' attribute is set.
    * @see #unsetFetch()
    * @see #getFetch()
@@ -743,38 +786,39 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetFetch();
 
   /**
-   * Returns the value of the '<em><b>Mapped By</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Mapped By</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Mapped By</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Mapped By</em>' attribute.
    * @see #setMappedBy(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MappedBy()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='mapped-by'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='mapped-by'"
    * @generated
    */
   String getMappedBy();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMappedBy <em>Mapped By</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Mapped By</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMappedBy
+   * <em>Mapped By</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Mapped By</em>' attribute.
    * @see #getMappedBy()
    * @generated
    */
   void setMappedBy(String value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Name()
@@ -785,35 +829,38 @@ public interface ManyToMany extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Target Entity</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Target Entity</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Target Entity</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Target Entity</em>' attribute.
    * @see #setTargetEntity(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_TargetEntity()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='target-entity'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='target-entity'"
    * @generated
    */
   String getTargetEntity();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTargetEntity <em>Target Entity</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Target Entity</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getTargetEntity
+   * <em>Target Entity</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Target Entity</em>' attribute.
    * @see #getTargetEntity()
    * @generated
    */

@@ -125,11 +125,10 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.CASCADE_TYPE__CASCADE_ALL, oldCascadeAll, newCascadeAll);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -142,22 +141,18 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
   public void setCascadeAll(EmptyType newCascadeAll) {
     if (newCascadeAll != cascadeAll) {
       NotificationChain msgs = null;
-      if (cascadeAll != null) {
+      if (cascadeAll != null)
         msgs = ((InternalEObject) cascadeAll).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_ALL, null, msgs);
-      }
-      if (newCascadeAll != null) {
+      if (newCascadeAll != null)
         msgs = ((InternalEObject) newCascadeAll).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_ALL, null, msgs);
-      }
       msgs = basicSetCascadeAll(newCascadeAll, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_ALL, newCascadeAll,
           newCascadeAll));
-    }
   }
 
   /**
@@ -180,11 +175,10 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.CASCADE_TYPE__CASCADE_PERSIST, oldCascadePersist, newCascadePersist);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -197,22 +191,18 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
   public void setCascadePersist(EmptyType newCascadePersist) {
     if (newCascadePersist != cascadePersist) {
       NotificationChain msgs = null;
-      if (cascadePersist != null) {
+      if (cascadePersist != null)
         msgs = ((InternalEObject) cascadePersist).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_PERSIST, null, msgs);
-      }
-      if (newCascadePersist != null) {
+      if (newCascadePersist != null)
         msgs = ((InternalEObject) newCascadePersist).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_PERSIST, null, msgs);
-      }
       msgs = basicSetCascadePersist(newCascadePersist, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_PERSIST,
           newCascadePersist, newCascadePersist));
-    }
   }
 
   /**
@@ -235,11 +225,10 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.CASCADE_TYPE__CASCADE_MERGE, oldCascadeMerge, newCascadeMerge);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -252,22 +241,18 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
   public void setCascadeMerge(EmptyType newCascadeMerge) {
     if (newCascadeMerge != cascadeMerge) {
       NotificationChain msgs = null;
-      if (cascadeMerge != null) {
+      if (cascadeMerge != null)
         msgs = ((InternalEObject) cascadeMerge).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_MERGE, null, msgs);
-      }
-      if (newCascadeMerge != null) {
+      if (newCascadeMerge != null)
         msgs = ((InternalEObject) newCascadeMerge).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_MERGE, null, msgs);
-      }
       msgs = basicSetCascadeMerge(newCascadeMerge, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_MERGE, newCascadeMerge,
           newCascadeMerge));
-    }
   }
 
   /**
@@ -290,11 +275,10 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.CASCADE_TYPE__CASCADE_REMOVE, oldCascadeRemove, newCascadeRemove);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -307,22 +291,18 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
   public void setCascadeRemove(EmptyType newCascadeRemove) {
     if (newCascadeRemove != cascadeRemove) {
       NotificationChain msgs = null;
-      if (cascadeRemove != null) {
+      if (cascadeRemove != null)
         msgs = ((InternalEObject) cascadeRemove).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_REMOVE, null, msgs);
-      }
-      if (newCascadeRemove != null) {
+      if (newCascadeRemove != null)
         msgs = ((InternalEObject) newCascadeRemove).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_REMOVE, null, msgs);
-      }
       msgs = basicSetCascadeRemove(newCascadeRemove, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_REMOVE, newCascadeRemove,
           newCascadeRemove));
-    }
   }
 
   /**
@@ -345,11 +325,10 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.CASCADE_TYPE__CASCADE_REFRESH, oldCascadeRefresh, newCascadeRefresh);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -362,22 +341,18 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
   public void setCascadeRefresh(EmptyType newCascadeRefresh) {
     if (newCascadeRefresh != cascadeRefresh) {
       NotificationChain msgs = null;
-      if (cascadeRefresh != null) {
+      if (cascadeRefresh != null)
         msgs = ((InternalEObject) cascadeRefresh).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_REFRESH, null, msgs);
-      }
-      if (newCascadeRefresh != null) {
+      if (newCascadeRefresh != null)
         msgs = ((InternalEObject) newCascadeRefresh).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.CASCADE_TYPE__CASCADE_REFRESH, null, msgs);
-      }
       msgs = basicSetCascadeRefresh(newCascadeRefresh, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_REFRESH,
           newCascadeRefresh, newCascadeRefresh));
-    }
   }
 
   /**

@@ -33,21 +33,21 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getQuery <em>Query</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getLockMode <em>Lock Mode</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getHint <em>Hint</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getDescription <em>Description</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getQuery <em>Query</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getLockMode <em>Lock Mode</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getHint <em>Hint</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -55,9 +55,9 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -85,9 +85,9 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
   protected String query = QUERY_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getLockMode() <em>Lock Mode</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getLockMode() <em>Lock Mode</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getLockMode()
    * @generated
    * @ordered
@@ -95,9 +95,9 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
   protected static final LockModeType LOCK_MODE_EDEFAULT = LockModeType.READ;
 
   /**
-   * The cached value of the '{@link #getLockMode() <em>Lock Mode</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getLockMode() <em>Lock Mode</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getLockMode()
    * @generated
    * @ordered
@@ -105,17 +105,17 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
   protected LockModeType lockMode = LOCK_MODE_EDEFAULT;
 
   /**
-   * This is true if the Lock Mode attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Lock Mode attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean lockModeESet;
 
   /**
-   * The cached value of the '{@link #getHint() <em>Hint</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getHint() <em>Hint</em>}' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getHint()
    * @generated
    * @ordered
@@ -133,8 +133,8 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -143,6 +143,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected NamedQueryImpl() {
@@ -151,6 +152,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -160,6 +162,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDescription() {
@@ -168,17 +171,20 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_QUERY__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_QUERY__DESCRIPTION, oldDescription,
+          description));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getQuery() {
@@ -187,6 +193,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setQuery(String newQuery) {
@@ -198,6 +205,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public LockModeType getLockMode() {
@@ -206,6 +214,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setLockMode(LockModeType newLockMode) {
@@ -214,11 +223,13 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
     boolean oldLockModeESet = lockModeESet;
     lockModeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_QUERY__LOCK_MODE, oldLockMode, lockMode, !oldLockModeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_QUERY__LOCK_MODE, oldLockMode, lockMode,
+          !oldLockModeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetLockMode() {
@@ -227,11 +238,13 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
     lockMode = LOCK_MODE_EDEFAULT;
     lockModeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.NAMED_QUERY__LOCK_MODE, oldLockMode, LOCK_MODE_EDEFAULT, oldLockModeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.NAMED_QUERY__LOCK_MODE, oldLockMode,
+          LOCK_MODE_EDEFAULT, oldLockModeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetLockMode() {
@@ -240,6 +253,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<QueryHint> getHint() {
@@ -251,6 +265,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -259,6 +274,7 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -270,120 +286,127 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.NAMED_QUERY__HINT:
-        return ((InternalEList<?>)getHint()).basicRemove(otherEnd, msgs);
+    case OrmPackage.NAMED_QUERY__HINT:
+      return ((InternalEList<?>) getHint()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.NAMED_QUERY__DESCRIPTION:
-        return getDescription();
-      case OrmPackage.NAMED_QUERY__QUERY:
-        return getQuery();
-      case OrmPackage.NAMED_QUERY__LOCK_MODE:
-        return getLockMode();
-      case OrmPackage.NAMED_QUERY__HINT:
-        return getHint();
-      case OrmPackage.NAMED_QUERY__NAME:
-        return getName();
+    case OrmPackage.NAMED_QUERY__DESCRIPTION:
+      return getDescription();
+    case OrmPackage.NAMED_QUERY__QUERY:
+      return getQuery();
+    case OrmPackage.NAMED_QUERY__LOCK_MODE:
+      return getLockMode();
+    case OrmPackage.NAMED_QUERY__HINT:
+      return getHint();
+    case OrmPackage.NAMED_QUERY__NAME:
+      return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.NAMED_QUERY__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-      case OrmPackage.NAMED_QUERY__QUERY:
-        setQuery((String)newValue);
-        return;
-      case OrmPackage.NAMED_QUERY__LOCK_MODE:
-        setLockMode((LockModeType)newValue);
-        return;
-      case OrmPackage.NAMED_QUERY__HINT:
-        getHint().clear();
-        getHint().addAll((Collection<? extends QueryHint>)newValue);
-        return;
-      case OrmPackage.NAMED_QUERY__NAME:
-        setName((String)newValue);
-        return;
+    case OrmPackage.NAMED_QUERY__DESCRIPTION:
+      setDescription((String) newValue);
+      return;
+    case OrmPackage.NAMED_QUERY__QUERY:
+      setQuery((String) newValue);
+      return;
+    case OrmPackage.NAMED_QUERY__LOCK_MODE:
+      setLockMode((LockModeType) newValue);
+      return;
+    case OrmPackage.NAMED_QUERY__HINT:
+      getHint().clear();
+      getHint().addAll((Collection<? extends QueryHint>) newValue);
+      return;
+    case OrmPackage.NAMED_QUERY__NAME:
+      setName((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.NAMED_QUERY__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_QUERY__QUERY:
-        setQuery(QUERY_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_QUERY__LOCK_MODE:
-        unsetLockMode();
-        return;
-      case OrmPackage.NAMED_QUERY__HINT:
-        getHint().clear();
-        return;
-      case OrmPackage.NAMED_QUERY__NAME:
-        setName(NAME_EDEFAULT);
-        return;
+    case OrmPackage.NAMED_QUERY__DESCRIPTION:
+      setDescription(DESCRIPTION_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_QUERY__QUERY:
+      setQuery(QUERY_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_QUERY__LOCK_MODE:
+      unsetLockMode();
+      return;
+    case OrmPackage.NAMED_QUERY__HINT:
+      getHint().clear();
+      return;
+    case OrmPackage.NAMED_QUERY__NAME:
+      setName(NAME_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.NAMED_QUERY__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case OrmPackage.NAMED_QUERY__QUERY:
-        return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
-      case OrmPackage.NAMED_QUERY__LOCK_MODE:
-        return isSetLockMode();
-      case OrmPackage.NAMED_QUERY__HINT:
-        return hint != null && !hint.isEmpty();
-      case OrmPackage.NAMED_QUERY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.NAMED_QUERY__DESCRIPTION:
+      return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+    case OrmPackage.NAMED_QUERY__QUERY:
+      return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
+    case OrmPackage.NAMED_QUERY__LOCK_MODE:
+      return isSetLockMode();
+    case OrmPackage.NAMED_QUERY__HINT:
+      return hint != null && !hint.isEmpty();
+    case OrmPackage.NAMED_QUERY__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");
@@ -391,7 +414,10 @@ public class NamedQueryImpl extends BaseOrmAnnotationImpl implements NamedQuery 
     result.append(", query: ");
     result.append(query);
     result.append(", lockMode: ");
-    if (lockModeESet) result.append(lockMode); else result.append("<unset>");
+    if (lockModeESet)
+      result.append(lockMode);
+    else
+      result.append("<unset>");
     result.append(", name: ");
     result.append(name);
     result.append(')');

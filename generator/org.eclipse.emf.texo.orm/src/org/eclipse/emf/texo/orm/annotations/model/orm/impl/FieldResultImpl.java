@@ -22,18 +22,18 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl#getColumn <em>Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl#getColumn <em>Column</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResult {
   /**
-   * The default value of the '{@link #getColumn() <em>Column</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getColumn() <em>Column</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getColumn()
    * @generated
    * @ordered
@@ -61,8 +61,8 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -71,6 +71,7 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected FieldResultImpl() {
@@ -79,6 +80,7 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -88,6 +90,7 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getColumn() {
@@ -96,6 +99,7 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setColumn(String newColumn) {
@@ -107,6 +111,7 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -115,6 +120,7 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -126,75 +132,81 @@ public class FieldResultImpl extends BaseOrmAnnotationImpl implements FieldResul
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.FIELD_RESULT__COLUMN:
-        return getColumn();
-      case OrmPackage.FIELD_RESULT__NAME:
-        return getName();
+    case OrmPackage.FIELD_RESULT__COLUMN:
+      return getColumn();
+    case OrmPackage.FIELD_RESULT__NAME:
+      return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.FIELD_RESULT__COLUMN:
-        setColumn((String)newValue);
-        return;
-      case OrmPackage.FIELD_RESULT__NAME:
-        setName((String)newValue);
-        return;
+    case OrmPackage.FIELD_RESULT__COLUMN:
+      setColumn((String) newValue);
+      return;
+    case OrmPackage.FIELD_RESULT__NAME:
+      setName((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.FIELD_RESULT__COLUMN:
-        setColumn(COLUMN_EDEFAULT);
-        return;
-      case OrmPackage.FIELD_RESULT__NAME:
-        setName(NAME_EDEFAULT);
-        return;
+    case OrmPackage.FIELD_RESULT__COLUMN:
+      setColumn(COLUMN_EDEFAULT);
+      return;
+    case OrmPackage.FIELD_RESULT__NAME:
+      setName(NAME_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.FIELD_RESULT__COLUMN:
-        return COLUMN_EDEFAULT == null ? column != null : !COLUMN_EDEFAULT.equals(column);
-      case OrmPackage.FIELD_RESULT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.FIELD_RESULT__COLUMN:
+      return COLUMN_EDEFAULT == null ? column != null : !COLUMN_EDEFAULT.equals(column);
+    case OrmPackage.FIELD_RESULT__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (column: ");

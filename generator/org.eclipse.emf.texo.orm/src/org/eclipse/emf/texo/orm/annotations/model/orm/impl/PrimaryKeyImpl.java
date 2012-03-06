@@ -33,18 +33,18 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getColumn <em>Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getValidation <em>Validation</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getColumn <em>Column</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getValidation <em>Validation</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey {
   /**
-   * The cached value of the '{@link #getColumn() <em>Column</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getColumn() <em>Column</em>}' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getColumn()
    * @generated
    * @ordered
@@ -52,9 +52,9 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
   protected EList<Column> column;
 
   /**
-   * The default value of the '{@link #getValidation() <em>Validation</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getValidation() <em>Validation</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getValidation()
    * @generated
    * @ordered
@@ -62,9 +62,9 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
   protected static final IdValidation VALIDATION_EDEFAULT = IdValidation.NULL;
 
   /**
-   * The cached value of the '{@link #getValidation() <em>Validation</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getValidation() <em>Validation</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getValidation()
    * @generated
    * @ordered
@@ -72,8 +72,8 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
   protected IdValidation validation = VALIDATION_EDEFAULT;
 
   /**
-   * This is true if the Validation attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Validation attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -81,6 +81,7 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected PrimaryKeyImpl() {
@@ -89,6 +90,7 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -98,6 +100,7 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<Column> getColumn() {
@@ -109,6 +112,7 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public IdValidation getValidation() {
@@ -117,6 +121,7 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setValidation(IdValidation newValidation) {
@@ -125,11 +130,13 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
     boolean oldValidationESet = validationESet;
     validationESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRIMARY_KEY__VALIDATION, oldValidation, validation, !oldValidationESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRIMARY_KEY__VALIDATION, oldValidation,
+          validation, !oldValidationESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetValidation() {
@@ -138,11 +145,13 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
     validation = VALIDATION_EDEFAULT;
     validationESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.PRIMARY_KEY__VALIDATION, oldValidation, VALIDATION_EDEFAULT, oldValidationESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.PRIMARY_KEY__VALIDATION, oldValidation,
+          VALIDATION_EDEFAULT, oldValidationESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetValidation() {
@@ -151,94 +160,104 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.PRIMARY_KEY__COLUMN:
-        return ((InternalEList<?>)getColumn()).basicRemove(otherEnd, msgs);
+    case OrmPackage.PRIMARY_KEY__COLUMN:
+      return ((InternalEList<?>) getColumn()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.PRIMARY_KEY__COLUMN:
-        return getColumn();
-      case OrmPackage.PRIMARY_KEY__VALIDATION:
-        return getValidation();
+    case OrmPackage.PRIMARY_KEY__COLUMN:
+      return getColumn();
+    case OrmPackage.PRIMARY_KEY__VALIDATION:
+      return getValidation();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.PRIMARY_KEY__COLUMN:
-        getColumn().clear();
-        getColumn().addAll((Collection<? extends Column>)newValue);
-        return;
-      case OrmPackage.PRIMARY_KEY__VALIDATION:
-        setValidation((IdValidation)newValue);
-        return;
+    case OrmPackage.PRIMARY_KEY__COLUMN:
+      getColumn().clear();
+      getColumn().addAll((Collection<? extends Column>) newValue);
+      return;
+    case OrmPackage.PRIMARY_KEY__VALIDATION:
+      setValidation((IdValidation) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.PRIMARY_KEY__COLUMN:
-        getColumn().clear();
-        return;
-      case OrmPackage.PRIMARY_KEY__VALIDATION:
-        unsetValidation();
-        return;
+    case OrmPackage.PRIMARY_KEY__COLUMN:
+      getColumn().clear();
+      return;
+    case OrmPackage.PRIMARY_KEY__VALIDATION:
+      unsetValidation();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.PRIMARY_KEY__COLUMN:
-        return column != null && !column.isEmpty();
-      case OrmPackage.PRIMARY_KEY__VALIDATION:
-        return isSetValidation();
+    case OrmPackage.PRIMARY_KEY__COLUMN:
+      return column != null && !column.isEmpty();
+    case OrmPackage.PRIMARY_KEY__VALIDATION:
+      return isSetValidation();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (validation: ");
-    if (validationESet) result.append(validation); else result.append("<unset>");
+    if (validationESet)
+      result.append(validation);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

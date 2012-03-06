@@ -47,36 +47,50 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPersistenceUnitMetadata <em>Persistence Unit Metadata</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPackage <em>Package</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSchema <em>Schema</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getCatalog <em>Catalog</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getAccess <em>Access</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getConverter <em>Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTypeConverter <em>Type Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getObjectTypeConverter <em>Object Type Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getStructConverter <em>Struct Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSequenceGenerator <em>Sequence Generator</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTableGenerator <em>Table Generator</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedQuery <em>Named Query</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedNativeQuery <em>Named Native Query</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getMappedSuperclass <em>Mapped Superclass</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getEntity <em>Entity</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getEmbeddable <em>Embeddable</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getVersion <em>Version</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getDescription <em>Description
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPersistenceUnitMetadata <em>
+ * Persistence Unit Metadata</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPackage <em>Package</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSchema <em>Schema</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getCatalog <em>Catalog</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getAccess <em>Access</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getConverter <em>Converter
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTypeConverter <em>Type
+ * Converter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getObjectTypeConverter <em>
+ * Object Type Converter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getStructConverter <em>Struct
+ * Converter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSequenceGenerator <em>
+ * Sequence Generator</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTableGenerator <em>Table
+ * Generator</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedQuery <em>Named Query
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedNativeQuery <em>Named
+ * Native Query</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedStoredProcedureQuery
+ * <em>Named Stored Procedure Query</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSqlResultSetMapping <em>Sql
+ * Result Set Mapping</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getMappedSuperclass <em>Mapped
+ * Superclass</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getEntity <em>Entity</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getEmbeddable <em>Embeddable
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getVersion <em>Version</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements EntityMappingsType {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -84,9 +98,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -94,8 +108,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPersistenceUnitMetadata() <em>Persistence Unit Metadata</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getPersistenceUnitMetadata() <em>Persistence Unit Metadata</em>}' containment
+   * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getPersistenceUnitMetadata()
    * @generated
    * @ordered
@@ -103,9 +118,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected PersistenceUnitMetadata persistenceUnitMetadata;
 
   /**
-   * The default value of the '{@link #getPackage() <em>Package</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getPackage() <em>Package</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getPackage()
    * @generated
    * @ordered
@@ -113,9 +128,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected static final String PACKAGE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getPackage() <em>Package</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getPackage() <em>Package</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getPackage()
    * @generated
    * @ordered
@@ -123,9 +138,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected String package_ = PACKAGE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSchema()
    * @generated
    * @ordered
@@ -143,9 +158,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected String schema = SCHEMA_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -153,9 +168,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected static final String CATALOG_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -163,9 +178,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getAccess()
    * @generated
    * @ordered
@@ -183,8 +198,8 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected AccessType access = ACCESS_EDEFAULT;
 
   /**
-   * This is true if the Access attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Access attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -211,8 +226,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<TypeConverter> typeConverter;
 
   /**
-   * The cached value of the '{@link #getObjectTypeConverter() <em>Object Type Converter</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getObjectTypeConverter() <em>Object Type Converter</em>}' containment reference
+   * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getObjectTypeConverter()
    * @generated
    * @ordered
@@ -232,6 +248,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   /**
    * The cached value of the '{@link #getSequenceGenerator() <em>Sequence Generator</em>}' containment reference list.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getSequenceGenerator()
    * @generated
    * @ordered
@@ -261,6 +278,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   /**
    * The cached value of the '{@link #getNamedNativeQuery() <em>Named Native Query</em>}' containment reference list.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getNamedNativeQuery()
    * @generated
    * @ordered
@@ -268,8 +286,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<NamedNativeQuery> namedNativeQuery;
 
   /**
-   * The cached value of the '{@link #getNamedStoredProcedureQuery() <em>Named Stored Procedure Query</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getNamedStoredProcedureQuery() <em>Named Stored Procedure Query</em>}' containment
+   * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getNamedStoredProcedureQuery()
    * @generated
    * @ordered
@@ -277,8 +296,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<NamedStoredProcedureQuery> namedStoredProcedureQuery;
 
   /**
-   * The cached value of the '{@link #getSqlResultSetMapping() <em>Sql Result Set Mapping</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getSqlResultSetMapping() <em>Sql Result Set Mapping</em>}' containment reference
+   * list. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getSqlResultSetMapping()
    * @generated
    * @ordered
@@ -288,6 +308,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   /**
    * The cached value of the '{@link #getMappedSuperclass() <em>Mapped Superclass</em>}' containment reference list.
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getMappedSuperclass()
    * @generated
    * @ordered
@@ -295,9 +316,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<MappedSuperclass> mappedSuperclass;
 
   /**
-   * The cached value of the '{@link #getEntity() <em>Entity</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getEntity() <em>Entity</em>}' containment reference list. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getEntity()
    * @generated
    * @ordered
@@ -315,9 +336,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<Embeddable> embeddable;
 
   /**
-   * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getVersion() <em>Version</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getVersion()
    * @generated
    * @ordered
@@ -325,9 +346,9 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected static final String VERSION_EDEFAULT = "2.0";
 
   /**
-   * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getVersion()
    * @generated
    * @ordered
@@ -335,8 +356,8 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected String version = VERSION_EDEFAULT;
 
   /**
-   * This is true if the Version attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Version attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -344,6 +365,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected EntityMappingsTypeImpl() {
@@ -352,6 +374,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -361,6 +384,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDescription() {
@@ -369,17 +393,20 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION,
+          oldDescription, description));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public PersistenceUnitMetadata getPersistenceUnitMetadata() {
@@ -388,6 +415,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public NotificationChain basicSetPersistenceUnitMetadata(PersistenceUnitMetadata newPersistenceUnitMetadata,
@@ -395,32 +423,42 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
     PersistenceUnitMetadata oldPersistenceUnitMetadata = persistenceUnitMetadata;
     persistenceUnitMetadata = newPersistenceUnitMetadata;
     if (eNotificationRequired()) {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, oldPersistenceUnitMetadata, newPersistenceUnitMetadata);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, oldPersistenceUnitMetadata,
+          newPersistenceUnitMetadata);
+      if (msgs == null)
+        msgs = notification;
+      else
+        msgs.add(notification);
     }
     return msgs;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setPersistenceUnitMetadata(PersistenceUnitMetadata newPersistenceUnitMetadata) {
     if (newPersistenceUnitMetadata != persistenceUnitMetadata) {
       NotificationChain msgs = null;
       if (persistenceUnitMetadata != null)
-        msgs = ((InternalEObject)persistenceUnitMetadata).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, null, msgs);
+        msgs = ((InternalEObject) persistenceUnitMetadata).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, null, msgs);
       if (newPersistenceUnitMetadata != null)
-        msgs = ((InternalEObject)newPersistenceUnitMetadata).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, null, msgs);
+        msgs = ((InternalEObject) newPersistenceUnitMetadata).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, null, msgs);
       msgs = basicSetPersistenceUnitMetadata(newPersistenceUnitMetadata, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA, newPersistenceUnitMetadata, newPersistenceUnitMetadata));
+      if (msgs != null)
+        msgs.dispatch();
+    } else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA,
+          newPersistenceUnitMetadata, newPersistenceUnitMetadata));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getPackage() {
@@ -429,17 +467,20 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setPackage(String newPackage) {
     String oldPackage = package_;
     package_ = newPackage;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE, oldPackage, package_));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE, oldPackage,
+          package_));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getSchema() {
@@ -448,6 +489,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSchema(String newSchema) {
@@ -459,6 +501,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getCatalog() {
@@ -467,17 +510,20 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCatalog(String newCatalog) {
     String oldCatalog = catalog;
     catalog = newCatalog;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG, oldCatalog, catalog));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG, oldCatalog,
+          catalog));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public AccessType getAccess() {
@@ -486,6 +532,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setAccess(AccessType newAccess) {
@@ -494,11 +541,13 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
     boolean oldAccessESet = accessESet;
     accessESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS, oldAccess, access, !oldAccessESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS, oldAccess, access,
+          !oldAccessESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetAccess() {
@@ -507,11 +556,13 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
     access = ACCESS_EDEFAULT;
     accessESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS, oldAccess, ACCESS_EDEFAULT, oldAccessESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS, oldAccess,
+          ACCESS_EDEFAULT, oldAccessESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetAccess() {
@@ -520,127 +571,150 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<Converter> getConverter() {
     if (converter == null) {
-      converter = new EObjectContainmentEList<Converter>(Converter.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER);
+      converter = new EObjectContainmentEList<Converter>(Converter.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER);
     }
     return converter;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<TypeConverter> getTypeConverter() {
     if (typeConverter == null) {
-      typeConverter = new EObjectContainmentEList<TypeConverter>(TypeConverter.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER);
+      typeConverter = new EObjectContainmentEList<TypeConverter>(TypeConverter.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER);
     }
     return typeConverter;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<ObjectTypeConverter> getObjectTypeConverter() {
     if (objectTypeConverter == null) {
-      objectTypeConverter = new EObjectContainmentEList<ObjectTypeConverter>(ObjectTypeConverter.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER);
+      objectTypeConverter = new EObjectContainmentEList<ObjectTypeConverter>(ObjectTypeConverter.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER);
     }
     return objectTypeConverter;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<StructConverter> getStructConverter() {
     if (structConverter == null) {
-      structConverter = new EObjectContainmentEList<StructConverter>(StructConverter.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER);
+      structConverter = new EObjectContainmentEList<StructConverter>(StructConverter.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER);
     }
     return structConverter;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<SequenceGenerator> getSequenceGenerator() {
     if (sequenceGenerator == null) {
-      sequenceGenerator = new EObjectContainmentEList<SequenceGenerator>(SequenceGenerator.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR);
+      sequenceGenerator = new EObjectContainmentEList<SequenceGenerator>(SequenceGenerator.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR);
     }
     return sequenceGenerator;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<TableGenerator> getTableGenerator() {
     if (tableGenerator == null) {
-      tableGenerator = new EObjectContainmentEList<TableGenerator>(TableGenerator.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR);
+      tableGenerator = new EObjectContainmentEList<TableGenerator>(TableGenerator.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR);
     }
     return tableGenerator;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<NamedQuery> getNamedQuery() {
     if (namedQuery == null) {
-      namedQuery = new EObjectContainmentEList<NamedQuery>(NamedQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY);
+      namedQuery = new EObjectContainmentEList<NamedQuery>(NamedQuery.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY);
     }
     return namedQuery;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<NamedNativeQuery> getNamedNativeQuery() {
     if (namedNativeQuery == null) {
-      namedNativeQuery = new EObjectContainmentEList<NamedNativeQuery>(NamedNativeQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY);
+      namedNativeQuery = new EObjectContainmentEList<NamedNativeQuery>(NamedNativeQuery.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY);
     }
     return namedNativeQuery;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<NamedStoredProcedureQuery> getNamedStoredProcedureQuery() {
     if (namedStoredProcedureQuery == null) {
-      namedStoredProcedureQuery = new EObjectContainmentEList<NamedStoredProcedureQuery>(NamedStoredProcedureQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY);
+      namedStoredProcedureQuery = new EObjectContainmentEList<NamedStoredProcedureQuery>(
+          NamedStoredProcedureQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY);
     }
     return namedStoredProcedureQuery;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<SqlResultSetMapping> getSqlResultSetMapping() {
     if (sqlResultSetMapping == null) {
-      sqlResultSetMapping = new EObjectContainmentEList<SqlResultSetMapping>(SqlResultSetMapping.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING);
+      sqlResultSetMapping = new EObjectContainmentEList<SqlResultSetMapping>(SqlResultSetMapping.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING);
     }
     return sqlResultSetMapping;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<MappedSuperclass> getMappedSuperclass() {
     if (mappedSuperclass == null) {
-      mappedSuperclass = new EObjectContainmentEList<MappedSuperclass>(MappedSuperclass.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS);
+      mappedSuperclass = new EObjectContainmentEList<MappedSuperclass>(MappedSuperclass.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS);
     }
     return mappedSuperclass;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<Entity> getEntity() {
@@ -652,17 +726,20 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<Embeddable> getEmbeddable() {
     if (embeddable == null) {
-      embeddable = new EObjectContainmentEList<Embeddable>(Embeddable.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE);
+      embeddable = new EObjectContainmentEList<Embeddable>(Embeddable.class, this,
+          OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE);
     }
     return embeddable;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getVersion() {
@@ -671,6 +748,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setVersion(String newVersion) {
@@ -679,11 +757,13 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
     boolean oldVersionESet = versionESet;
     versionESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION, oldVersion, version, !oldVersionESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION, oldVersion,
+          version, !oldVersionESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetVersion() {
@@ -692,11 +772,13 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
     version = VERSION_EDEFAULT;
     versionESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION, oldVersion, VERSION_EDEFAULT, oldVersionESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION, oldVersion,
+          VERSION_EDEFAULT, oldVersionESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetVersion() {
@@ -705,308 +787,315 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
-        return basicSetPersistenceUnitMetadata(null, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
-        return ((InternalEList<?>)getConverter()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
-        return ((InternalEList<?>)getTypeConverter()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
-        return ((InternalEList<?>)getObjectTypeConverter()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
-        return ((InternalEList<?>)getStructConverter()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
-        return ((InternalEList<?>)getSequenceGenerator()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
-        return ((InternalEList<?>)getTableGenerator()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
-        return ((InternalEList<?>)getNamedQuery()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
-        return ((InternalEList<?>)getNamedNativeQuery()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
-        return ((InternalEList<?>)getNamedStoredProcedureQuery()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
-        return ((InternalEList<?>)getSqlResultSetMapping()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
-        return ((InternalEList<?>)getMappedSuperclass()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
-        return ((InternalEList<?>)getEntity()).basicRemove(otherEnd, msgs);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
-        return ((InternalEList<?>)getEmbeddable()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
+      return basicSetPersistenceUnitMetadata(null, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
+      return ((InternalEList<?>) getConverter()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
+      return ((InternalEList<?>) getTypeConverter()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
+      return ((InternalEList<?>) getObjectTypeConverter()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
+      return ((InternalEList<?>) getStructConverter()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
+      return ((InternalEList<?>) getSequenceGenerator()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
+      return ((InternalEList<?>) getTableGenerator()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
+      return ((InternalEList<?>) getNamedQuery()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
+      return ((InternalEList<?>) getNamedNativeQuery()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
+      return ((InternalEList<?>) getNamedStoredProcedureQuery()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
+      return ((InternalEList<?>) getSqlResultSetMapping()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
+      return ((InternalEList<?>) getMappedSuperclass()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
+      return ((InternalEList<?>) getEntity()).basicRemove(otherEnd, msgs);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
+      return ((InternalEList<?>) getEmbeddable()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
-        return getDescription();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
-        return getPersistenceUnitMetadata();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
-        return getPackage();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
-        return getSchema();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
-        return getCatalog();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
-        return getAccess();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
-        return getConverter();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
-        return getTypeConverter();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
-        return getObjectTypeConverter();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
-        return getStructConverter();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
-        return getSequenceGenerator();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
-        return getTableGenerator();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
-        return getNamedQuery();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
-        return getNamedNativeQuery();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
-        return getNamedStoredProcedureQuery();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
-        return getSqlResultSetMapping();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
-        return getMappedSuperclass();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
-        return getEntity();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
-        return getEmbeddable();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
-        return getVersion();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
+      return getDescription();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
+      return getPersistenceUnitMetadata();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
+      return getPackage();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
+      return getSchema();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
+      return getCatalog();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
+      return getAccess();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
+      return getConverter();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
+      return getTypeConverter();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
+      return getObjectTypeConverter();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
+      return getStructConverter();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
+      return getSequenceGenerator();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
+      return getTableGenerator();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
+      return getNamedQuery();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
+      return getNamedNativeQuery();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
+      return getNamedStoredProcedureQuery();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
+      return getSqlResultSetMapping();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
+      return getMappedSuperclass();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
+      return getEntity();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
+      return getEmbeddable();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
+      return getVersion();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
-        setPersistenceUnitMetadata((PersistenceUnitMetadata)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
-        setPackage((String)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
-        setSchema((String)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
-        setCatalog((String)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
-        setAccess((AccessType)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
-        getConverter().clear();
-        getConverter().addAll((Collection<? extends Converter>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
-        getTypeConverter().clear();
-        getTypeConverter().addAll((Collection<? extends TypeConverter>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
-        getObjectTypeConverter().clear();
-        getObjectTypeConverter().addAll((Collection<? extends ObjectTypeConverter>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
-        getStructConverter().clear();
-        getStructConverter().addAll((Collection<? extends StructConverter>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
-        getSequenceGenerator().clear();
-        getSequenceGenerator().addAll((Collection<? extends SequenceGenerator>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
-        getTableGenerator().clear();
-        getTableGenerator().addAll((Collection<? extends TableGenerator>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
-        getNamedQuery().clear();
-        getNamedQuery().addAll((Collection<? extends NamedQuery>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
-        getNamedNativeQuery().clear();
-        getNamedNativeQuery().addAll((Collection<? extends NamedNativeQuery>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
-        getNamedStoredProcedureQuery().clear();
-        getNamedStoredProcedureQuery().addAll((Collection<? extends NamedStoredProcedureQuery>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
-        getSqlResultSetMapping().clear();
-        getSqlResultSetMapping().addAll((Collection<? extends SqlResultSetMapping>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
-        getMappedSuperclass().clear();
-        getMappedSuperclass().addAll((Collection<? extends MappedSuperclass>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
-        getEntity().clear();
-        getEntity().addAll((Collection<? extends Entity>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
-        getEmbeddable().clear();
-        getEmbeddable().addAll((Collection<? extends Embeddable>)newValue);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
-        setVersion((String)newValue);
-        return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
+      setDescription((String) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
+      setPersistenceUnitMetadata((PersistenceUnitMetadata) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
+      setPackage((String) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
+      setSchema((String) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
+      setCatalog((String) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
+      setAccess((AccessType) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
+      getConverter().clear();
+      getConverter().addAll((Collection<? extends Converter>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
+      getTypeConverter().clear();
+      getTypeConverter().addAll((Collection<? extends TypeConverter>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
+      getObjectTypeConverter().clear();
+      getObjectTypeConverter().addAll((Collection<? extends ObjectTypeConverter>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
+      getStructConverter().clear();
+      getStructConverter().addAll((Collection<? extends StructConverter>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
+      getSequenceGenerator().clear();
+      getSequenceGenerator().addAll((Collection<? extends SequenceGenerator>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
+      getTableGenerator().clear();
+      getTableGenerator().addAll((Collection<? extends TableGenerator>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
+      getNamedQuery().clear();
+      getNamedQuery().addAll((Collection<? extends NamedQuery>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
+      getNamedNativeQuery().clear();
+      getNamedNativeQuery().addAll((Collection<? extends NamedNativeQuery>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
+      getNamedStoredProcedureQuery().clear();
+      getNamedStoredProcedureQuery().addAll((Collection<? extends NamedStoredProcedureQuery>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
+      getSqlResultSetMapping().clear();
+      getSqlResultSetMapping().addAll((Collection<? extends SqlResultSetMapping>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
+      getMappedSuperclass().clear();
+      getMappedSuperclass().addAll((Collection<? extends MappedSuperclass>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
+      getEntity().clear();
+      getEntity().addAll((Collection<? extends Entity>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
+      getEmbeddable().clear();
+      getEmbeddable().addAll((Collection<? extends Embeddable>) newValue);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
+      setVersion((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
-        setPersistenceUnitMetadata((PersistenceUnitMetadata)null);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
-        setPackage(PACKAGE_EDEFAULT);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
-        setSchema(SCHEMA_EDEFAULT);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
-        setCatalog(CATALOG_EDEFAULT);
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
-        unsetAccess();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
-        getConverter().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
-        getTypeConverter().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
-        getObjectTypeConverter().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
-        getStructConverter().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
-        getSequenceGenerator().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
-        getTableGenerator().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
-        getNamedQuery().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
-        getNamedNativeQuery().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
-        getNamedStoredProcedureQuery().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
-        getSqlResultSetMapping().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
-        getMappedSuperclass().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
-        getEntity().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
-        getEmbeddable().clear();
-        return;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
-        unsetVersion();
-        return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
+      setDescription(DESCRIPTION_EDEFAULT);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
+      setPersistenceUnitMetadata((PersistenceUnitMetadata) null);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
+      setPackage(PACKAGE_EDEFAULT);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
+      setSchema(SCHEMA_EDEFAULT);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
+      setCatalog(CATALOG_EDEFAULT);
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
+      unsetAccess();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
+      getConverter().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
+      getTypeConverter().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
+      getObjectTypeConverter().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
+      getStructConverter().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
+      getSequenceGenerator().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
+      getTableGenerator().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
+      getNamedQuery().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
+      getNamedNativeQuery().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
+      getNamedStoredProcedureQuery().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
+      getSqlResultSetMapping().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
+      getMappedSuperclass().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
+      getEntity().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
+      getEmbeddable().clear();
+      return;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
+      unsetVersion();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
-        return persistenceUnitMetadata != null;
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
-        return PACKAGE_EDEFAULT == null ? package_ != null : !PACKAGE_EDEFAULT.equals(package_);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
-        return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
-        return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
-        return isSetAccess();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
-        return converter != null && !converter.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
-        return typeConverter != null && !typeConverter.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
-        return objectTypeConverter != null && !objectTypeConverter.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
-        return structConverter != null && !structConverter.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
-        return sequenceGenerator != null && !sequenceGenerator.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
-        return tableGenerator != null && !tableGenerator.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
-        return namedQuery != null && !namedQuery.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
-        return namedNativeQuery != null && !namedNativeQuery.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
-        return namedStoredProcedureQuery != null && !namedStoredProcedureQuery.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
-        return sqlResultSetMapping != null && !sqlResultSetMapping.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
-        return mappedSuperclass != null && !mappedSuperclass.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
-        return entity != null && !entity.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
-        return embeddable != null && !embeddable.isEmpty();
-      case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
-        return isSetVersion();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__DESCRIPTION:
+      return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
+      return persistenceUnitMetadata != null;
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__PACKAGE:
+      return PACKAGE_EDEFAULT == null ? package_ != null : !PACKAGE_EDEFAULT.equals(package_);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SCHEMA:
+      return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CATALOG:
+      return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
+      return isSetAccess();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
+      return converter != null && !converter.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
+      return typeConverter != null && !typeConverter.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER:
+      return objectTypeConverter != null && !objectTypeConverter.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER:
+      return structConverter != null && !structConverter.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR:
+      return sequenceGenerator != null && !sequenceGenerator.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
+      return tableGenerator != null && !tableGenerator.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
+      return namedQuery != null && !namedQuery.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
+      return namedNativeQuery != null && !namedNativeQuery.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
+      return namedStoredProcedureQuery != null && !namedStoredProcedureQuery.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
+      return sqlResultSetMapping != null && !sqlResultSetMapping.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
+      return mappedSuperclass != null && !mappedSuperclass.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__ENTITY:
+      return entity != null && !entity.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__EMBEDDABLE:
+      return embeddable != null && !embeddable.isEmpty();
+    case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
+      return isSetVersion();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");
@@ -1018,9 +1107,15 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
     result.append(", catalog: ");
     result.append(catalog);
     result.append(", access: ");
-    if (accessESet) result.append(access); else result.append("<unset>");
+    if (accessESet)
+      result.append(access);
+    else
+      result.append("<unset>");
     result.append(", version: ");
-    if (versionESet) result.append(version); else result.append("<unset>");
+    if (versionESet)
+      result.append(version);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

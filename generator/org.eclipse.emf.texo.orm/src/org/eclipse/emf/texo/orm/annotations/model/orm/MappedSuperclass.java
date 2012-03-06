@@ -105,13 +105,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MappedSuperclass extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Description()
@@ -122,239 +122,246 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getDescription
+   * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Description</em>' attribute.
    * @see #getDescription()
    * @generated
    */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Customizer</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Customizer</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Customizer</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Customizer</em>' containment reference.
    * @see #setCustomizer(Customizer)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Customizer()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='customizer' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='customizer' namespace='##targetNamespace'"
    * @generated
    */
   Customizer getCustomizer();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCustomizer <em>Customizer</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Customizer</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCustomizer
+   * <em>Customizer</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Customizer</em>' containment reference.
    * @see #getCustomizer()
    * @generated
    */
   void setCustomizer(Customizer value);
 
   /**
-   * Returns the value of the '<em><b>Change Tracking</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Change Tracking</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Change Tracking</em>' containment reference isn't clear, there really should be more of
    * a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Change Tracking</em>' containment reference.
    * @see #setChangeTracking(ChangeTracking)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ChangeTracking()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='change-tracking' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='change-tracking' namespace='##targetNamespace'"
    * @generated
    */
   ChangeTracking getChangeTracking();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getChangeTracking <em>Change Tracking</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Change Tracking</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getChangeTracking
+   * <em>Change Tracking</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Change Tracking</em>' containment reference.
    * @see #getChangeTracking()
    * @generated
    */
   void setChangeTracking(ChangeTracking value);
 
   /**
-   * Returns the value of the '<em><b>Id Class</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Id Class</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Id Class</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Id Class</em>' containment reference.
    * @see #setIdClass(IdClass)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_IdClass()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='id-class' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='id-class' namespace='##targetNamespace'"
    * @generated
    */
   IdClass getIdClass();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getIdClass <em>Id Class</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id Class</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getIdClass
+   * <em>Id Class</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Id Class</em>' containment reference.
    * @see #getIdClass()
    * @generated
    */
   void setIdClass(IdClass value);
 
   /**
-   * Returns the value of the '<em><b>Primary Key</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Primary Key</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Primary Key</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Primary Key</em>' containment reference.
    * @see #setPrimaryKey(PrimaryKey)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PrimaryKey()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='primary-key' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='primary-key' namespace='##targetNamespace'"
    * @generated
    */
   PrimaryKey getPrimaryKey();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPrimaryKey <em>Primary Key</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Primary Key</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPrimaryKey
+   * <em>Primary Key</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Primary Key</em>' containment reference.
    * @see #getPrimaryKey()
    * @generated
    */
   void setPrimaryKey(PrimaryKey value);
 
   /**
-   * Returns the value of the '<em><b>Optimistic Locking</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Optimistic Locking</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Optimistic Locking</em>' containment reference isn't clear, there really should be more
    * of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Optimistic Locking</em>' containment reference.
    * @see #setOptimisticLocking(OptimisticLocking)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_OptimisticLocking()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='optimistic-locking' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='optimistic-locking' namespace='##targetNamespace'"
    * @generated
    */
   OptimisticLocking getOptimisticLocking();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getOptimisticLocking <em>Optimistic Locking</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Optimistic Locking</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getOptimisticLocking
+   * <em>Optimistic Locking</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Optimistic Locking</em>' containment reference.
    * @see #getOptimisticLocking()
    * @generated
    */
   void setOptimisticLocking(OptimisticLocking value);
 
   /**
-   * Returns the value of the '<em><b>Cache</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cache</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cache</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Cache</em>' containment reference.
    * @see #setCache(Cache)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Cache()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='cache' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='cache' namespace='##targetNamespace'"
    * @generated
    */
   Cache getCache();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCache <em>Cache</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cache</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCache
+   * <em>Cache</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Cache</em>' containment reference.
    * @see #getCache()
    * @generated
    */
   void setCache(Cache value);
 
   /**
-   * Returns the value of the '<em><b>Cache Interceptor</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cache Interceptor</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cache Interceptor</em>' containment reference isn't clear, there really should be more
    * of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Cache Interceptor</em>' containment reference.
    * @see #setCacheInterceptor(CacheInterceptor)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_CacheInterceptor()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='cache-interceptor' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='cache-interceptor' namespace='##targetNamespace'"
    * @generated
    */
   CacheInterceptor getCacheInterceptor();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCacheInterceptor <em>Cache Interceptor</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cache Interceptor</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCacheInterceptor
+   * <em>Cache Interceptor</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Cache Interceptor</em>' containment reference.
    * @see #getCacheInterceptor()
    * @generated
    */
   void setCacheInterceptor(CacheInterceptor value);
 
   /**
-   * Returns the value of the '<em><b>Converter</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Converter</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Converter</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Converter</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Converter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='converter' namespace='##targetNamespace'"
    * @generated
    */
   EList<Converter> getConverter();
 
   /**
-   * Returns the value of the '<em><b>Type Converter</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type Converter</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type Converter</em>' containment reference list isn't clear, there really should be more
    * of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Type Converter</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_TypeConverter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='type-converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='type-converter' namespace='##targetNamespace'"
    * @generated
    */
   EList<TypeConverter> getTypeConverter();
 
   /**
-   * Returns the value of the '<em><b>Object Type Converter</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Object Type Converter</b></em>' containment reference list. The list contents are
+   * of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Object Type Converter</em>' containment reference list isn't clear, there really should
    * be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Object Type Converter</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ObjectTypeConverter()
    * @model containment="true"
@@ -364,56 +371,56 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   EList<ObjectTypeConverter> getObjectTypeConverter();
 
   /**
-   * Returns the value of the '<em><b>Struct Converter</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Struct Converter</b></em>' containment reference list. The list contents are of
+   * type {@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Struct Converter</em>' containment reference list isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Struct Converter</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_StructConverter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='struct-converter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='struct-converter' namespace='##targetNamespace'"
    * @generated
    */
   EList<StructConverter> getStructConverter();
 
   /**
-   * Returns the value of the '<em><b>Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Copy Policy</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Copy Policy</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Copy Policy</em>' containment reference.
    * @see #setCopyPolicy(CopyPolicy)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_CopyPolicy()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='copy-policy' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='copy-policy' namespace='##targetNamespace'"
    * @generated
    */
   CopyPolicy getCopyPolicy();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCopyPolicy <em>Copy Policy</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Copy Policy</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCopyPolicy
+   * <em>Copy Policy</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Copy Policy</em>' containment reference.
    * @see #getCopyPolicy()
    * @generated
    */
   void setCopyPolicy(CopyPolicy value);
 
   /**
-   * Returns the value of the '<em><b>Instantiation Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Instantiation Copy Policy</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Instantiation Copy Policy</em>' containment reference isn't clear, there really should
    * be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Instantiation Copy Policy</em>' containment reference.
    * @see #setInstantiationCopyPolicy(InstantiationCopyPolicy)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_InstantiationCopyPolicy()
@@ -424,48 +431,52 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   InstantiationCopyPolicy getInstantiationCopyPolicy();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getInstantiationCopyPolicy <em>Instantiation Copy Policy</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Instantiation Copy Policy</em>' containment reference.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getInstantiationCopyPolicy
+   * <em>Instantiation Copy Policy</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Instantiation Copy Policy</em>' containment reference.
    * @see #getInstantiationCopyPolicy()
    * @generated
    */
   void setInstantiationCopyPolicy(InstantiationCopyPolicy value);
 
   /**
-   * Returns the value of the '<em><b>Clone Copy Policy</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Clone Copy Policy</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Clone Copy Policy</em>' containment reference isn't clear, there really should be more
    * of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Clone Copy Policy</em>' containment reference.
    * @see #setCloneCopyPolicy(CloneCopyPolicy)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_CloneCopyPolicy()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='clone-copy-policy' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='clone-copy-policy' namespace='##targetNamespace'"
    * @generated
    */
   CloneCopyPolicy getCloneCopyPolicy();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCloneCopyPolicy <em>Clone Copy Policy</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Clone Copy Policy</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCloneCopyPolicy
+   * <em>Clone Copy Policy</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Clone Copy Policy</em>' containment reference.
    * @see #getCloneCopyPolicy()
    * @generated
    */
   void setCloneCopyPolicy(CloneCopyPolicy value);
 
   /**
-   * Returns the value of the '<em><b>Exclude Default Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Exclude Default Listeners</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Exclude Default Listeners</em>' containment reference isn't clear, there really should
    * be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Exclude Default Listeners</em>' containment reference.
    * @see #setExcludeDefaultListeners(EmptyType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ExcludeDefaultListeners()
@@ -476,23 +487,26 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   EmptyType getExcludeDefaultListeners();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeDefaultListeners <em>Exclude Default Listeners</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Exclude Default Listeners</em>' containment reference.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeDefaultListeners
+   * <em>Exclude Default Listeners</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Exclude Default Listeners</em>' containment reference.
    * @see #getExcludeDefaultListeners()
    * @generated
    */
   void setExcludeDefaultListeners(EmptyType value);
 
   /**
-   * Returns the value of the '<em><b>Exclude Superclass Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc
+   * Returns the value of the '<em><b>Exclude Superclass Listeners</b></em>' containment reference. <!-- begin-user-doc
    * -->
    * <p>
    * If the meaning of the '<em>Exclude Superclass Listeners</em>' containment reference isn't clear, there really
    * should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Exclude Superclass Listeners</em>' containment reference.
    * @see #setExcludeSuperclassListeners(EmptyType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ExcludeSuperclassListeners()
@@ -503,289 +517,301 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   EmptyType getExcludeSuperclassListeners();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeSuperclassListeners <em>Exclude Superclass Listeners</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Exclude Superclass Listeners</em>' containment reference.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeSuperclassListeners
+   * <em>Exclude Superclass Listeners</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Exclude Superclass Listeners</em>' containment reference.
    * @see #getExcludeSuperclassListeners()
    * @generated
    */
   void setExcludeSuperclassListeners(EmptyType value);
 
   /**
-   * Returns the value of the '<em><b>Entity Listeners</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Entity Listeners</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Entity Listeners</em>' containment reference isn't clear, there really should be more of
    * a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Entity Listeners</em>' containment reference.
    * @see #setEntityListeners(EntityListeners)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_EntityListeners()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='entity-listeners' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='entity-listeners' namespace='##targetNamespace'"
    * @generated
    */
   EntityListeners getEntityListeners();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getEntityListeners <em>Entity Listeners</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Entity Listeners</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getEntityListeners
+   * <em>Entity Listeners</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Entity Listeners</em>' containment reference.
    * @see #getEntityListeners()
    * @generated
    */
   void setEntityListeners(EntityListeners value);
 
   /**
-   * Returns the value of the '<em><b>Pre Persist</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Pre Persist</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Pre Persist</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Pre Persist</em>' containment reference.
    * @see #setPrePersist(PrePersist)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PrePersist()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='pre-persist' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='pre-persist' namespace='##targetNamespace'"
    * @generated
    */
   PrePersist getPrePersist();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPrePersist <em>Pre Persist</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pre Persist</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPrePersist
+   * <em>Pre Persist</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Pre Persist</em>' containment reference.
    * @see #getPrePersist()
    * @generated
    */
   void setPrePersist(PrePersist value);
 
   /**
-   * Returns the value of the '<em><b>Post Persist</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Post Persist</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Post Persist</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Post Persist</em>' containment reference.
    * @see #setPostPersist(PostPersist)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PostPersist()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='post-persist' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='post-persist' namespace='##targetNamespace'"
    * @generated
    */
   PostPersist getPostPersist();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostPersist <em>Post Persist</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Post Persist</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostPersist
+   * <em>Post Persist</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Post Persist</em>' containment reference.
    * @see #getPostPersist()
    * @generated
    */
   void setPostPersist(PostPersist value);
 
   /**
-   * Returns the value of the '<em><b>Pre Remove</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Pre Remove</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Pre Remove</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Pre Remove</em>' containment reference.
    * @see #setPreRemove(PreRemove)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PreRemove()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='pre-remove' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='pre-remove' namespace='##targetNamespace'"
    * @generated
    */
   PreRemove getPreRemove();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPreRemove <em>Pre Remove</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pre Remove</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPreRemove
+   * <em>Pre Remove</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Pre Remove</em>' containment reference.
    * @see #getPreRemove()
    * @generated
    */
   void setPreRemove(PreRemove value);
 
   /**
-   * Returns the value of the '<em><b>Post Remove</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Post Remove</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Post Remove</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Post Remove</em>' containment reference.
    * @see #setPostRemove(PostRemove)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PostRemove()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='post-remove' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='post-remove' namespace='##targetNamespace'"
    * @generated
    */
   PostRemove getPostRemove();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostRemove <em>Post Remove</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Post Remove</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostRemove
+   * <em>Post Remove</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Post Remove</em>' containment reference.
    * @see #getPostRemove()
    * @generated
    */
   void setPostRemove(PostRemove value);
 
   /**
-   * Returns the value of the '<em><b>Pre Update</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Pre Update</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Pre Update</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Pre Update</em>' containment reference.
    * @see #setPreUpdate(PreUpdate)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PreUpdate()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='pre-update' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='pre-update' namespace='##targetNamespace'"
    * @generated
    */
   PreUpdate getPreUpdate();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPreUpdate <em>Pre Update</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pre Update</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPreUpdate
+   * <em>Pre Update</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Pre Update</em>' containment reference.
    * @see #getPreUpdate()
    * @generated
    */
   void setPreUpdate(PreUpdate value);
 
   /**
-   * Returns the value of the '<em><b>Post Update</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Post Update</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Post Update</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Post Update</em>' containment reference.
    * @see #setPostUpdate(PostUpdate)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PostUpdate()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='post-update' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='post-update' namespace='##targetNamespace'"
    * @generated
    */
   PostUpdate getPostUpdate();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostUpdate <em>Post Update</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Post Update</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostUpdate
+   * <em>Post Update</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Post Update</em>' containment reference.
    * @see #getPostUpdate()
    * @generated
    */
   void setPostUpdate(PostUpdate value);
 
   /**
-   * Returns the value of the '<em><b>Post Load</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Post Load</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Post Load</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Post Load</em>' containment reference.
    * @see #setPostLoad(PostLoad)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PostLoad()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='post-load' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='post-load' namespace='##targetNamespace'"
    * @generated
    */
   PostLoad getPostLoad();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostLoad <em>Post Load</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Post Load</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPostLoad
+   * <em>Post Load</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Post Load</em>' containment reference.
    * @see #getPostLoad()
    * @generated
    */
   void setPostLoad(PostLoad value);
 
   /**
-   * Returns the value of the '<em><b>Property</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Property</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Property</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Property</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Property()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
    * @generated
    */
   EList<Property> getProperty();
 
   /**
-   * Returns the value of the '<em><b>Attributes</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Attributes</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Attributes</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Attributes</em>' containment reference.
    * @see #setAttributes(Attributes)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Attributes()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='attributes' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='attributes' namespace='##targetNamespace'"
    * @generated
    */
   Attributes getAttributes();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAttributes <em>Attributes</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Attributes</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAttributes
+   * <em>Attributes</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Attributes</em>' containment reference.
    * @see #getAttributes()
    * @generated
    */
   void setAttributes(Attributes value);
 
   /**
-   * Returns the value of the '<em><b>Access</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
    * @see #setAccess(AccessType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Access()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='access'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='access'"
    * @generated
    */
   AccessType getAccess();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
@@ -795,8 +821,9 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setAccess(AccessType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetAccess()
    * @see #getAccess()
    * @see #setAccess(AccessType)
@@ -805,8 +832,9 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void unsetAccess();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccess <em>Access</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccess
+   * <em>Access</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Access</em>' attribute is set.
    * @see #unsetAccess()
    * @see #getAccess()
@@ -816,13 +844,13 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
-   * Returns the value of the '<em><b>Cacheable</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cacheable</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cacheable</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Cacheable</em>' attribute.
    * @see #isSetCacheable()
    * @see #unsetCacheable()
@@ -835,9 +863,11 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isCacheable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isCacheable <em>Cacheable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cacheable</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isCacheable
+   * <em>Cacheable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Cacheable</em>' attribute.
    * @see #isSetCacheable()
    * @see #unsetCacheable()
    * @see #isCacheable()
@@ -846,8 +876,9 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setCacheable(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isCacheable <em>Cacheable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isCacheable
+   * <em>Cacheable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetCacheable()
    * @see #isCacheable()
    * @see #setCacheable(boolean)
@@ -856,8 +887,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void unsetCacheable();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isCacheable <em>Cacheable</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isCacheable <em>Cacheable</em>}' attribute
+   * is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Cacheable</em>' attribute is set.
    * @see #unsetCacheable()
    * @see #isCacheable()
@@ -867,12 +900,12 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isSetCacheable();
 
   /**
-   * Returns the value of the '<em><b>Class</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Class</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Class</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Class</em>' attribute.
    * @see #setClass(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Class()
@@ -883,22 +916,24 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   String getClass_();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getClass_ <em>Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Class</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getClass_
+   * <em>Class</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Class</em>' attribute.
    * @see #getClass_()
    * @generated
    */
   void setClass(String value);
 
   /**
-   * Returns the value of the '<em><b>Exclude Default Mappings</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Exclude Default Mappings</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Exclude Default Mappings</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Exclude Default Mappings</em>' attribute.
    * @see #isSetExcludeDefaultMappings()
    * @see #unsetExcludeDefaultMappings()
@@ -911,9 +946,12 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isExcludeDefaultMappings();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Exclude Default Mappings</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Exclude Default Mappings</em>' attribute.
    * @see #isSetExcludeDefaultMappings()
    * @see #unsetExcludeDefaultMappings()
    * @see #isExcludeDefaultMappings()
@@ -922,8 +960,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setExcludeDefaultMappings(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetExcludeDefaultMappings()
    * @see #isExcludeDefaultMappings()
    * @see #setExcludeDefaultMappings(boolean)
@@ -932,8 +972,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void unsetExcludeDefaultMappings();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isExcludeDefaultMappings
+   * <em>Exclude Default Mappings</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Exclude Default Mappings</em>' attribute is set.
    * @see #unsetExcludeDefaultMappings()
    * @see #isExcludeDefaultMappings()
@@ -943,30 +985,31 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isSetExcludeDefaultMappings();
 
   /**
-   * Returns the value of the '<em><b>Existence Checking</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Existence Checking</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Existence Checking</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Existence Checking</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
    * @see #isSetExistenceChecking()
    * @see #unsetExistenceChecking()
    * @see #setExistenceChecking(ExistenceType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ExistenceChecking()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='existence-checking'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='existence-checking'"
    * @generated
    */
   ExistenceType getExistenceChecking();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking <em>Existence Checking</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Existence Checking</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking
+   * <em>Existence Checking</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Existence Checking</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType
    * @see #isSetExistenceChecking()
    * @see #unsetExistenceChecking()
@@ -976,8 +1019,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setExistenceChecking(ExistenceType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking <em>Existence Checking</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking
+   * <em>Existence Checking</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetExistenceChecking()
    * @see #getExistenceChecking()
    * @see #setExistenceChecking(ExistenceType)
@@ -986,8 +1031,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void unsetExistenceChecking();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking <em>Existence Checking</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExistenceChecking
+   * <em>Existence Checking</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Existence Checking</em>' attribute is set.
    * @see #unsetExistenceChecking()
    * @see #getExistenceChecking()
@@ -997,13 +1044,13 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isSetExistenceChecking();
 
   /**
-   * Returns the value of the '<em><b>Metadata Complete</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Metadata Complete</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Metadata Complete</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Metadata Complete</em>' attribute.
    * @see #isSetMetadataComplete()
    * @see #unsetMetadataComplete()
@@ -1016,9 +1063,11 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isMetadataComplete();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete <em>Metadata Complete</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Metadata Complete</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete
+   * <em>Metadata Complete</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Metadata Complete</em>' attribute.
    * @see #isSetMetadataComplete()
    * @see #unsetMetadataComplete()
    * @see #isMetadataComplete()
@@ -1027,8 +1076,9 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setMetadataComplete(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete <em>Metadata Complete</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete
+   * <em>Metadata Complete</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetMetadataComplete()
    * @see #isMetadataComplete()
    * @see #setMetadataComplete(boolean)
@@ -1037,8 +1087,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void unsetMetadataComplete();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete <em>Metadata Complete</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isMetadataComplete
+   * <em>Metadata Complete</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Metadata Complete</em>' attribute is set.
    * @see #unsetMetadataComplete()
    * @see #isMetadataComplete()
@@ -1048,13 +1100,13 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isSetMetadataComplete();
 
   /**
-   * Returns the value of the '<em><b>Read Only</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Read Only</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Read Only</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Read Only</em>' attribute.
    * @see #isSetReadOnly()
    * @see #unsetReadOnly()
@@ -1067,9 +1119,11 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isReadOnly();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly <em>Read Only</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Read Only</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly
+   * <em>Read Only</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Read Only</em>' attribute.
    * @see #isSetReadOnly()
    * @see #unsetReadOnly()
    * @see #isReadOnly()
@@ -1078,8 +1132,9 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setReadOnly(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly <em>Read Only</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly
+   * <em>Read Only</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetReadOnly()
    * @see #isReadOnly()
    * @see #setReadOnly(boolean)
@@ -1088,8 +1143,10 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void unsetReadOnly();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly <em>Read Only</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly <em>Read Only</em>}' attribute is
+   * set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Read Only</em>' attribute is set.
    * @see #unsetReadOnly()
    * @see #isReadOnly()

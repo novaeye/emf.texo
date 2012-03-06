@@ -41,13 +41,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ConversionValue extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Data Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Data Value</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Data Value</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Data Value</em>' attribute.
    * @see #setDataValue(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getConversionValue_DataValue()
@@ -58,22 +58,24 @@ public interface ConversionValue extends BaseOrmAnnotation {
   String getDataValue();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue#getDataValue <em>Data Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Data Value</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue#getDataValue
+   * <em>Data Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Data Value</em>' attribute.
    * @see #getDataValue()
    * @generated
    */
   void setDataValue(String value);
 
   /**
-   * Returns the value of the '<em><b>Object Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Object Value</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Object Value</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Object Value</em>' attribute.
    * @see #setObjectValue(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getConversionValue_ObjectValue()
@@ -84,9 +86,11 @@ public interface ConversionValue extends BaseOrmAnnotation {
   String getObjectValue();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue#getObjectValue <em>Object Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Object Value</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ConversionValue#getObjectValue
+   * <em>Object Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Object Value</em>' attribute.
    * @see #getObjectValue()
    * @generated
    */

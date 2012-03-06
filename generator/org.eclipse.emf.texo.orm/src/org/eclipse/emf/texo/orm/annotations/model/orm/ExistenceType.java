@@ -43,8 +43,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum ExistenceType implements Enumerator {
   /**
-   * The '<em><b>CHECKCACHE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>CHECKCACHE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #CHECKCACHE_VALUE
    * @generated
    * @ordered
@@ -52,8 +52,8 @@ public enum ExistenceType implements Enumerator {
   CHECKCACHE(0, "CHECKCACHE", "CHECK_CACHE"),
 
   /**
-   * The '<em><b>CHECKDATABASE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>CHECKDATABASE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #CHECKDATABASE_VALUE
    * @generated
    * @ordered
@@ -61,8 +61,8 @@ public enum ExistenceType implements Enumerator {
   CHECKDATABASE(1, "CHECKDATABASE", "CHECK_DATABASE"),
 
   /**
-   * The '<em><b>ASSUMEEXISTENCE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>ASSUMEEXISTENCE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #ASSUMEEXISTENCE_VALUE
    * @generated
    * @ordered
@@ -70,8 +70,8 @@ public enum ExistenceType implements Enumerator {
   ASSUMEEXISTENCE(2, "ASSUMEEXISTENCE", "ASSUME_EXISTENCE"),
 
   /**
-   * The '<em><b>ASSUMENONEXISTENCE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>ASSUMENONEXISTENCE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #ASSUMENONEXISTENCE_VALUE
    * @generated
    * @ordered
@@ -79,13 +79,13 @@ public enum ExistenceType implements Enumerator {
   ASSUMENONEXISTENCE(3, "ASSUMENONEXISTENCE", "ASSUME_NON_EXISTENCE");
 
   /**
-   * The '<em><b>CHECKCACHE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>CHECKCACHE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>CHECKCACHE</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #CHECKCACHE
    * @model literal="CHECK_CACHE"
    * @generated
@@ -94,13 +94,13 @@ public enum ExistenceType implements Enumerator {
   public static final int CHECKCACHE_VALUE = 0;
 
   /**
-   * The '<em><b>CHECKDATABASE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>CHECKDATABASE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>CHECKDATABASE</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #CHECKDATABASE
    * @model literal="CHECK_DATABASE"
    * @generated
@@ -109,13 +109,13 @@ public enum ExistenceType implements Enumerator {
   public static final int CHECKDATABASE_VALUE = 1;
 
   /**
-   * The '<em><b>ASSUMEEXISTENCE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>ASSUMEEXISTENCE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>ASSUMEEXISTENCE</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #ASSUMEEXISTENCE
    * @model literal="ASSUME_EXISTENCE"
    * @generated
@@ -124,13 +124,13 @@ public enum ExistenceType implements Enumerator {
   public static final int ASSUMEEXISTENCE_VALUE = 2;
 
   /**
-   * The '<em><b>ASSUMENONEXISTENCE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>ASSUMENONEXISTENCE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>ASSUMENONEXISTENCE</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #ASSUMENONEXISTENCE
    * @model literal="ASSUME_NON_EXISTENCE"
    * @generated
@@ -139,29 +139,25 @@ public enum ExistenceType implements Enumerator {
   public static final int ASSUMENONEXISTENCE_VALUE = 3;
 
   /**
-   * An array of all the '<em><b>Existence Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Existence Type</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  private static final ExistenceType[] VALUES_ARRAY = new ExistenceType[] {
-      CHECKCACHE,
-      CHECKDATABASE,
-      ASSUMEEXISTENCE,
-      ASSUMENONEXISTENCE,
-    };
+  private static final ExistenceType[] VALUES_ARRAY = new ExistenceType[] { CHECKCACHE, CHECKDATABASE, ASSUMEEXISTENCE,
+      ASSUMENONEXISTENCE, };
 
   /**
-   * A public read-only list of all the '<em><b>Existence Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Existence Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<ExistenceType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Existence Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Existence Type</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static ExistenceType get(String literal) {
@@ -175,9 +171,9 @@ public enum ExistenceType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Existence Type</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Existence Type</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static ExistenceType getByName(String name) {
@@ -191,42 +187,49 @@ public enum ExistenceType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Existence Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Existence Type</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static ExistenceType get(int value) {
     switch (value) {
-      case CHECKCACHE_VALUE: return CHECKCACHE;
-      case CHECKDATABASE_VALUE: return CHECKDATABASE;
-      case ASSUMEEXISTENCE_VALUE: return ASSUMEEXISTENCE;
-      case ASSUMENONEXISTENCE_VALUE: return ASSUMENONEXISTENCE;
+    case CHECKCACHE_VALUE:
+      return CHECKCACHE;
+    case CHECKDATABASE_VALUE:
+      return CHECKDATABASE;
+    case ASSUMEEXISTENCE_VALUE:
+      return ASSUMEEXISTENCE;
+    case ASSUMENONEXISTENCE_VALUE:
+      return ASSUMENONEXISTENCE;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private ExistenceType(int value, String name, String literal) {
@@ -237,6 +240,7 @@ public enum ExistenceType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -245,6 +249,7 @@ public enum ExistenceType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -253,6 +258,7 @@ public enum ExistenceType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -260,9 +266,9 @@ public enum ExistenceType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

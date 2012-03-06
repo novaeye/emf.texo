@@ -81,9 +81,8 @@ public class MapKeyClassImpl extends BaseOrmAnnotationImpl implements MapKeyClas
   public void setClass(String newClass) {
     String oldClass = class_;
     class_ = newClass;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAP_KEY_CLASS__CLASS, oldClass, class_));
-    }
   }
 
   /**
@@ -151,9 +150,8 @@ public class MapKeyClassImpl extends BaseOrmAnnotationImpl implements MapKeyClas
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (class: ");

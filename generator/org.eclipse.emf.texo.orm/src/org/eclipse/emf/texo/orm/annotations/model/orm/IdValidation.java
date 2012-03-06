@@ -36,8 +36,8 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum IdValidation implements Enumerator {
   /**
-   * The '<em><b>NULL</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>NULL</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #NULL_VALUE
    * @generated
    * @ordered
@@ -45,8 +45,8 @@ public enum IdValidation implements Enumerator {
   NULL(0, "NULL", "NULL"),
 
   /**
-   * The '<em><b>ZERO</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>ZERO</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #ZERO_VALUE
    * @generated
    * @ordered
@@ -54,8 +54,8 @@ public enum IdValidation implements Enumerator {
   ZERO(1, "ZERO", "ZERO"),
 
   /**
-   * The '<em><b>NONE</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>NONE</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #NONE_VALUE
    * @generated
    * @ordered
@@ -63,13 +63,13 @@ public enum IdValidation implements Enumerator {
   NONE(2, "NONE", "NONE");
 
   /**
-   * The '<em><b>NULL</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>NULL</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>NULL</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #NULL
    * @model
    * @generated
@@ -78,13 +78,13 @@ public enum IdValidation implements Enumerator {
   public static final int NULL_VALUE = 0;
 
   /**
-   * The '<em><b>ZERO</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>ZERO</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>ZERO</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #ZERO
    * @model
    * @generated
@@ -93,13 +93,13 @@ public enum IdValidation implements Enumerator {
   public static final int ZERO_VALUE = 1;
 
   /**
-   * The '<em><b>NONE</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>NONE</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>NONE</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #NONE
    * @model
    * @generated
@@ -108,28 +108,24 @@ public enum IdValidation implements Enumerator {
   public static final int NONE_VALUE = 2;
 
   /**
-   * An array of all the '<em><b>Id Validation</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Id Validation</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  private static final IdValidation[] VALUES_ARRAY = new IdValidation[] {
-      NULL,
-      ZERO,
-      NONE,
-    };
+  private static final IdValidation[] VALUES_ARRAY = new IdValidation[] { NULL, ZERO, NONE, };
 
   /**
-   * A public read-only list of all the '<em><b>Id Validation</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Id Validation</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<IdValidation> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Id Validation</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Id Validation</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static IdValidation get(String literal) {
@@ -143,9 +139,9 @@ public enum IdValidation implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Id Validation</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Id Validation</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static IdValidation getByName(String name) {
@@ -159,41 +155,47 @@ public enum IdValidation implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Id Validation</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Id Validation</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static IdValidation get(int value) {
     switch (value) {
-      case NULL_VALUE: return NULL;
-      case ZERO_VALUE: return ZERO;
-      case NONE_VALUE: return NONE;
+    case NULL_VALUE:
+      return NULL;
+    case ZERO_VALUE:
+      return ZERO;
+    case NONE_VALUE:
+      return NONE;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private IdValidation(int value, String name, String literal) {
@@ -204,6 +206,7 @@ public enum IdValidation implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -212,6 +215,7 @@ public enum IdValidation implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -220,6 +224,7 @@ public enum IdValidation implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -227,9 +232,9 @@ public enum IdValidation implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

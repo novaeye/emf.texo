@@ -14,82 +14,58 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Named Stored Procedure Query</b></em>'. <!--
  * end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* A NamedStoredProcedureQuery annotation allows
- * 				the definition of
- * 				* queries that call stored procedures as named
- * 				queries.
- * 				* A NamedStoredProcedureQuery annotation may be defined on
- * 				an Entity
- * 				or
- * 				* MappedSuperclass.
- * 				*
- * 				@Target({TYPE})
- * 				@Retention(RUNTIME)
- * 				public @interface NamedStoredProcedureQuery {
- * 				*
- * 				* (Required) Unique
- * 				name that references this stored procedure query.
- * 				*
- * 				String name();
+ * * * A NamedStoredProcedureQuery annotation allows the definition of * queries that call stored procedures as named
+ * queries. * A NamedStoredProcedureQuery annotation may be defined on an Entity or * MappedSuperclass. *
  * 
- * 				*
- * 				*
- * 				(Optional) Query hints.
- * 				*
- * 				QueryHint[] hints() default {};
+ * @Target({TYPE )
+ * @Retention(RUNTIME) public @interface NamedStoredProcedureQuery { * * (Required) Unique name that references this
+ *                     stored procedure query. * String name();
  * 
- * 				*
- * 				* (Optional)
- * 				Refers to the class of the result.
- * 				*
- * 				Class resultClass() default
- * 				void.class;
+ *                     * * (Optional) Query hints. * QueryHint[] hints() default {};
  * 
- * 				*
- * 				* (Optional) The name of the SQLResultMapping.
- * 				*
- * 				String
- * 				resultSetMapping() default "";
+ *                     * * (Optional) Refers to the class of the result. * Class resultClass() default void.class;
  * 
- * 				*
- * 				* (Required) The name of the stored
- * 				procedure.
- * 				*
- * 				String procedureName();
+ *                     * * (Optional) The name of the SQLResultMapping. * String resultSetMapping() default "";
  * 
- * 				*
- * 				* (Optional) Whether the query
- * 				should return a result set.
- * 				*
- * 				boolean returnsResultSet() default true;
+ *                     * * (Required) The name of the stored procedure. * String procedureName();
  * 
- * 				*
- * 				* (Optional) Defines arguments to the stored procedure.
- * 				*
- * 				StoredProcedureParameter[] parameters() default {};
- * 				}
+ *                     * * (Optional) Whether the query should return a result set. * boolean returnsResultSet() default
+ *                     true;
  * 
- * 			
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getHint <em>Hint</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getParameter <em>Parameter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName <em>Procedure Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass <em>Result Class</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping <em>Result Set Mapping</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet <em>Returns Result Set</em>}</li>
- * </ul>
- * </p>
- *
+ *                     * * (Optional) Defines arguments to the stored procedure. * StoredProcedureParameter[]
+ *                     parameters() default {}; }
+ * 
+ * 
+ *                     <!-- end-model-doc -->
+ * 
+ *                     <p>
+ *                     The following features are supported:
+ *                     <ul>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getHint <em>
+ *                     Hint</em>}</li>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getParameter
+ *                     <em>Parameter</em>}</li>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getName <em>
+ *                     Name</em>}</li>
+ *                     <li>
+ *                     {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName
+ *                     <em>Procedure Name</em>}</li>
+ *                     <li>
+ *                     {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass
+ *                     <em>Result Class</em>}</li>
+ *                     <li>
+ *                     {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping
+ *                     <em>Result Set Mapping</em>}</li>
+ *                     <li>
+ *                     {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet
+ *                     <em>Returns Result Set</em>}</li>
+ *                     </ul>
+ *                     </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery()
  * @model extendedMetaData="name='named-stored-procedure-query' kind='elementOnly'"
  * @extends BaseOrmAnnotation
@@ -97,46 +73,44 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Hint</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Hint</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Hint</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Hint</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_Hint()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='hint' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='hint' namespace='##targetNamespace'"
    * @generated
    */
   EList<QueryHint> getHint();
 
   /**
-   * Returns the value of the '<em><b>Parameter</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Parameter</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Parameter</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Parameter</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_Parameter()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='parameter' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='parameter' namespace='##targetNamespace'"
    * @generated
    */
   EList<StoredProcedureParameter> getParameter();
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_Name()
@@ -147,22 +121,24 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getName
+   * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Procedure Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Procedure Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Procedure Name</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Procedure Name</em>' attribute.
    * @see #setProcedureName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_ProcedureName()
@@ -173,48 +149,53 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   String getProcedureName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName <em>Procedure Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Procedure Name</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName
+   * <em>Procedure Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Procedure Name</em>' attribute.
    * @see #getProcedureName()
    * @generated
    */
   void setProcedureName(String value);
 
   /**
-   * Returns the value of the '<em><b>Result Class</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Result Class</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Result Class</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Result Class</em>' attribute.
    * @see #setResultClass(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_ResultClass()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='result-class'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='result-class'"
    * @generated
    */
   String getResultClass();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass <em>Result Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Result Class</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass
+   * <em>Result Class</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Result Class</em>' attribute.
    * @see #getResultClass()
    * @generated
    */
   void setResultClass(String value);
 
   /**
-   * Returns the value of the '<em><b>Result Set Mapping</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Result Set Mapping</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Result Set Mapping</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Result Set Mapping</em>' attribute.
    * @see #setResultSetMapping(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_ResultSetMapping()
@@ -225,22 +206,25 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   String getResultSetMapping();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping <em>Result Set Mapping</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Result Set Mapping</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultSetMapping
+   * <em>Result Set Mapping</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Result Set Mapping</em>' attribute.
    * @see #getResultSetMapping()
    * @generated
    */
   void setResultSetMapping(String value);
 
   /**
-   * Returns the value of the '<em><b>Returns Result Set</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Returns Result Set</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Returns Result Set</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Returns Result Set</em>' attribute.
    * @see #isSetReturnsResultSet()
    * @see #unsetReturnsResultSet()
@@ -253,9 +237,12 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   boolean isReturnsResultSet();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet <em>Returns Result Set</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Returns Result Set</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet
+   * <em>Returns Result Set</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Returns Result Set</em>' attribute.
    * @see #isSetReturnsResultSet()
    * @see #unsetReturnsResultSet()
    * @see #isReturnsResultSet()
@@ -264,8 +251,10 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   void setReturnsResultSet(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet <em>Returns Result Set</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet
+   * <em>Returns Result Set</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetReturnsResultSet()
    * @see #isReturnsResultSet()
    * @see #setReturnsResultSet(boolean)
@@ -274,8 +263,10 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   void unsetReturnsResultSet();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet <em>Returns Result Set</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isReturnsResultSet
+   * <em>Returns Result Set</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Returns Result Set</em>' attribute is set.
    * @see #unsetReturnsResultSet()
    * @see #isReturnsResultSet()

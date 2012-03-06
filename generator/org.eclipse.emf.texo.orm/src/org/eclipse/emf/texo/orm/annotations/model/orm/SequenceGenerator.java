@@ -48,13 +48,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface SequenceGenerator extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getSequenceGenerator_Description()
@@ -65,22 +65,24 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getDescription
+   * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Description</em>' attribute.
    * @see #getDescription()
    * @generated
    */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Allocation Size</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Allocation Size</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Allocation Size</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Allocation Size</em>' attribute.
    * @see #isSetAllocationSize()
    * @see #unsetAllocationSize()
@@ -93,9 +95,11 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   int getAllocationSize();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize <em>Allocation Size</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Allocation Size</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize
+   * <em>Allocation Size</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Allocation Size</em>' attribute.
    * @see #isSetAllocationSize()
    * @see #unsetAllocationSize()
    * @see #getAllocationSize()
@@ -104,8 +108,9 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   void setAllocationSize(int value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize <em>Allocation Size</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize
+   * <em>Allocation Size</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetAllocationSize()
    * @see #getAllocationSize()
    * @see #setAllocationSize(int)
@@ -114,8 +119,10 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   void unsetAllocationSize();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize <em>Allocation Size</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getAllocationSize <em>Allocation Size</em>}
+   * ' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Allocation Size</em>' attribute is set.
    * @see #unsetAllocationSize()
    * @see #getAllocationSize()
@@ -125,39 +132,40 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   boolean isSetAllocationSize();
 
   /**
-   * Returns the value of the '<em><b>Catalog</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Catalog</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Catalog</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Catalog</em>' attribute.
    * @see #setCatalog(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getSequenceGenerator_Catalog()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='catalog'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='catalog'"
    * @generated
    */
   String getCatalog();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getCatalog <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Catalog</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getCatalog
+   * <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Catalog</em>' attribute.
    * @see #getCatalog()
    * @generated
    */
   void setCatalog(String value);
 
   /**
-   * Returns the value of the '<em><b>Initial Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Initial Value</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Initial Value</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Initial Value</em>' attribute.
    * @see #isSetInitialValue()
    * @see #unsetInitialValue()
@@ -170,9 +178,11 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   int getInitialValue();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue <em>Initial Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Initial Value</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue
+   * <em>Initial Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Initial Value</em>' attribute.
    * @see #isSetInitialValue()
    * @see #unsetInitialValue()
    * @see #getInitialValue()
@@ -181,8 +191,9 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   void setInitialValue(int value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue <em>Initial Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue
+   * <em>Initial Value</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetInitialValue()
    * @see #getInitialValue()
    * @see #setInitialValue(int)
@@ -191,8 +202,10 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   void unsetInitialValue();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue <em>Initial Value</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getInitialValue <em>Initial Value</em>}'
+   * attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Initial Value</em>' attribute is set.
    * @see #unsetInitialValue()
    * @see #getInitialValue()
@@ -202,12 +215,12 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   boolean isSetInitialValue();
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getSequenceGenerator_Name()
@@ -218,60 +231,64 @@ public interface SequenceGenerator extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getName
+   * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Schema</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Schema</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Schema</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Schema</em>' attribute.
    * @see #setSchema(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getSequenceGenerator_Schema()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='schema'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='schema'"
    * @generated
    */
   String getSchema();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSchema <em>Schema</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Schema</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSchema
+   * <em>Schema</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Schema</em>' attribute.
    * @see #getSchema()
    * @generated
    */
   void setSchema(String value);
 
   /**
-   * Returns the value of the '<em><b>Sequence Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Sequence Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Sequence Name</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Sequence Name</em>' attribute.
    * @see #setSequenceName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getSequenceGenerator_SequenceName()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='sequence-name'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='sequence-name'"
    * @generated
    */
   String getSequenceName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSequenceName <em>Sequence Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Sequence Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator#getSequenceName
+   * <em>Sequence Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Sequence Name</em>' attribute.
    * @see #getSequenceName()
    * @generated
    */

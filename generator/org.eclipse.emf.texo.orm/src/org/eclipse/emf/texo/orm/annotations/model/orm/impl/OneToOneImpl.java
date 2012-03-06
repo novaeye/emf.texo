@@ -443,11 +443,10 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__JOIN_TABLE,
           oldJoinTable, newJoinTable);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -460,22 +459,18 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setJoinTable(JoinTable newJoinTable) {
     if (newJoinTable != joinTable) {
       NotificationChain msgs = null;
-      if (joinTable != null) {
+      if (joinTable != null)
         msgs = ((InternalEObject) joinTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ONE_TO_ONE__JOIN_TABLE, null, msgs);
-      }
-      if (newJoinTable != null) {
+      if (newJoinTable != null)
         msgs = ((InternalEObject) newJoinTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ONE_TO_ONE__JOIN_TABLE, null, msgs);
-      }
       msgs = basicSetJoinTable(newJoinTable, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__JOIN_TABLE, newJoinTable,
           newJoinTable));
-    }
   }
 
   /**
@@ -498,11 +493,10 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__CASCADE,
           oldCascade, newCascade);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -515,21 +509,17 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setCascade(CascadeType newCascade) {
     if (newCascade != cascade) {
       NotificationChain msgs = null;
-      if (cascade != null) {
+      if (cascade != null)
         msgs = ((InternalEObject) cascade).eInverseRemove(this,
             EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_ONE__CASCADE, null, msgs);
-      }
-      if (newCascade != null) {
+      if (newCascade != null)
         msgs = ((InternalEObject) newCascade).eInverseAdd(this,
             EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_ONE__CASCADE, null, msgs);
-      }
       msgs = basicSetCascade(newCascade, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__CASCADE, newCascade, newCascade));
-    }
   }
 
   /**
@@ -552,11 +542,10 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ONE_TO_ONE__PRIVATE_OWNED, oldPrivateOwned, newPrivateOwned);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -569,22 +558,18 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setPrivateOwned(EmptyType newPrivateOwned) {
     if (newPrivateOwned != privateOwned) {
       NotificationChain msgs = null;
-      if (privateOwned != null) {
+      if (privateOwned != null)
         msgs = ((InternalEObject) privateOwned).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ONE_TO_ONE__PRIVATE_OWNED, null, msgs);
-      }
-      if (newPrivateOwned != null) {
+      if (newPrivateOwned != null)
         msgs = ((InternalEObject) newPrivateOwned).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ONE_TO_ONE__PRIVATE_OWNED, null, msgs);
-      }
       msgs = basicSetPrivateOwned(newPrivateOwned, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__PRIVATE_OWNED, newPrivateOwned,
           newPrivateOwned));
-    }
   }
 
   /**
@@ -606,10 +591,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     joinFetch = newJoinFetch == null ? JOIN_FETCH_EDEFAULT : newJoinFetch;
     boolean oldJoinFetchESet = joinFetchESet;
     joinFetchESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__JOIN_FETCH, oldJoinFetch, joinFetch,
           !oldJoinFetchESet));
-    }
   }
 
   /**
@@ -622,10 +606,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     boolean oldJoinFetchESet = joinFetchESet;
     joinFetch = JOIN_FETCH_EDEFAULT;
     joinFetchESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_ONE__JOIN_FETCH, oldJoinFetch,
           JOIN_FETCH_EDEFAULT, oldJoinFetchESet));
-    }
   }
 
   /**
@@ -669,11 +652,10 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ONE_TO_ONE__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -686,22 +668,18 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setAccessMethods(AccessMethods newAccessMethods) {
     if (newAccessMethods != accessMethods) {
       NotificationChain msgs = null;
-      if (accessMethods != null) {
+      if (accessMethods != null)
         msgs = ((InternalEObject) accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ONE_TO_ONE__ACCESS_METHODS, null, msgs);
-      }
-      if (newAccessMethods != null) {
+      if (newAccessMethods != null)
         msgs = ((InternalEObject) newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ONE_TO_ONE__ACCESS_METHODS, null, msgs);
-      }
       msgs = basicSetAccessMethods(newAccessMethods, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__ACCESS_METHODS, newAccessMethods,
           newAccessMethods));
-    }
   }
 
   /**
@@ -723,10 +701,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__ACCESS, oldAccess, access,
           !oldAccessESet));
-    }
   }
 
   /**
@@ -739,10 +716,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_ONE__ACCESS, oldAccess,
           ACCESS_EDEFAULT, oldAccessESet));
-    }
   }
 
   /**
@@ -773,10 +749,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
     boolean oldFetchESet = fetchESet;
     fetchESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__FETCH, oldFetch, fetch,
           !oldFetchESet));
-    }
   }
 
   /**
@@ -789,10 +764,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     boolean oldFetchESet = fetchESet;
     fetch = FETCH_EDEFAULT;
     fetchESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_ONE__FETCH, oldFetch, FETCH_EDEFAULT,
           oldFetchESet));
-    }
   }
 
   /**
@@ -823,9 +797,8 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     id = newId;
     boolean oldIdESet = idESet;
     idESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__ID, oldId, id, !oldIdESet));
-    }
   }
 
   /**
@@ -838,9 +811,8 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     boolean oldIdESet = idESet;
     id = ID_EDEFAULT;
     idESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_ONE__ID, oldId, ID_EDEFAULT, oldIdESet));
-    }
   }
 
   /**
@@ -869,9 +841,8 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setMappedBy(String newMappedBy) {
     String oldMappedBy = mappedBy;
     mappedBy = newMappedBy;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__MAPPED_BY, oldMappedBy, mappedBy));
-    }
   }
 
   /**
@@ -891,9 +862,8 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setMapsId(String newMapsId) {
     String oldMapsId = mapsId;
     mapsId = newMapsId;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__MAPS_ID, oldMapsId, mapsId));
-    }
   }
 
   /**
@@ -913,9 +883,8 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__NAME, oldName, name));
-    }
   }
 
   /**
@@ -937,10 +906,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     optional = newOptional;
     boolean oldOptionalESet = optionalESet;
     optionalESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__OPTIONAL, oldOptional, optional,
           !oldOptionalESet));
-    }
   }
 
   /**
@@ -953,10 +921,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     boolean oldOptionalESet = optionalESet;
     optional = OPTIONAL_EDEFAULT;
     optionalESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_ONE__OPTIONAL, oldOptional,
           OPTIONAL_EDEFAULT, oldOptionalESet));
-    }
   }
 
   /**
@@ -987,10 +954,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     orphanRemoval = newOrphanRemoval;
     boolean oldOrphanRemovalESet = orphanRemovalESet;
     orphanRemovalESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__ORPHAN_REMOVAL, oldOrphanRemoval,
           orphanRemoval, !oldOrphanRemovalESet));
-    }
   }
 
   /**
@@ -1003,10 +969,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     boolean oldOrphanRemovalESet = orphanRemovalESet;
     orphanRemoval = ORPHAN_REMOVAL_EDEFAULT;
     orphanRemovalESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_ONE__ORPHAN_REMOVAL, oldOrphanRemoval,
           ORPHAN_REMOVAL_EDEFAULT, oldOrphanRemovalESet));
-    }
   }
 
   /**
@@ -1035,10 +1000,9 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
   public void setTargetEntity(String newTargetEntity) {
     String oldTargetEntity = targetEntity;
     targetEntity = newTargetEntity;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_ONE__TARGET_ENTITY, oldTargetEntity,
           targetEntity));
-    }
   }
 
   /**
@@ -1296,35 +1260,30 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (joinFetch: ");
-    if (joinFetchESet) {
+    if (joinFetchESet)
       result.append(joinFetch);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", fetch: ");
-    if (fetchESet) {
+    if (fetchESet)
       result.append(fetch);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", id: ");
-    if (idESet) {
+    if (idESet)
       result.append(id);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mappedBy: ");
     result.append(mappedBy);
     result.append(", mapsId: ");
@@ -1332,17 +1291,15 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     result.append(", name: ");
     result.append(name);
     result.append(", optional: ");
-    if (optionalESet) {
+    if (optionalESet)
       result.append(optional);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", orphanRemoval: ");
-    if (orphanRemovalESet) {
+    if (orphanRemovalESet)
       result.append(orphanRemoval);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", targetEntity: ");
     result.append(targetEntity);
     result.append(')');

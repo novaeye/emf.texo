@@ -96,39 +96,40 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VariableOneToOne extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Cascade</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cascade</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cascade</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Cascade</em>' containment reference.
    * @see #setCascade(CascadeType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Cascade()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='cascade' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='cascade' namespace='##targetNamespace'"
    * @generated
    */
   CascadeType getCascade();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getCascade <em>Cascade</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cascade</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getCascade
+   * <em>Cascade</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Cascade</em>' containment reference.
    * @see #getCascade()
    * @generated
    */
   void setCascade(CascadeType value);
 
   /**
-   * Returns the value of the '<em><b>Discriminator Column</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Discriminator Column</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Discriminator Column</em>' containment reference isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Discriminator Column</em>' containment reference.
    * @see #setDiscriminatorColumn(DiscriminatorColumn)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_DiscriminatorColumn()
@@ -139,23 +140,26 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   DiscriminatorColumn getDiscriminatorColumn();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorColumn <em>Discriminator Column</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Discriminator Column</em>' containment reference.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getDiscriminatorColumn
+   * <em>Discriminator Column</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Discriminator Column</em>' containment reference.
    * @see #getDiscriminatorColumn()
    * @generated
    */
   void setDiscriminatorColumn(DiscriminatorColumn value);
 
   /**
-   * Returns the value of the '<em><b>Discriminator Class</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Discriminator Class</b></em>' containment reference list. The list contents are of
+   * type {@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorClass}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Discriminator Class</em>' containment reference list isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Discriminator Class</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_DiscriminatorClass()
    * @model containment="true"
@@ -165,115 +169,116 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   EList<DiscriminatorClass> getDiscriminatorClass();
 
   /**
-   * Returns the value of the '<em><b>Join Column</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Join Column</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Join Column</em>' containment reference list isn't clear, there really should be more of
    * a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Join Column</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_JoinColumn()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='join-column' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='join-column' namespace='##targetNamespace'"
    * @generated
    */
   EList<JoinColumn> getJoinColumn();
 
   /**
-   * Returns the value of the '<em><b>Private Owned</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Private Owned</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Private Owned</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Private Owned</em>' containment reference.
    * @see #setPrivateOwned(EmptyType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_PrivateOwned()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='private-owned' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='private-owned' namespace='##targetNamespace'"
    * @generated
    */
   EmptyType getPrivateOwned();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPrivateOwned <em>Private Owned</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Private Owned</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPrivateOwned
+   * <em>Private Owned</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Private Owned</em>' containment reference.
    * @see #getPrivateOwned()
    * @generated
    */
   void setPrivateOwned(EmptyType value);
 
   /**
-   * Returns the value of the '<em><b>Property</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Property</b></em>' containment reference list. The list contents are of type
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Property</em>' containment reference list isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Property</em>' containment reference list.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Property()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='property' namespace='##targetNamespace'"
    * @generated
    */
   EList<Property> getProperty();
 
   /**
-   * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access Methods</b></em>' containment reference. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access Methods</em>' containment reference.
    * @see #setAccessMethods(AccessMethods)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_AccessMethods()
-   * @model containment="true"
-   *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+   * @model containment="true" extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
    * @generated
    */
   AccessMethods getAccessMethods();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccessMethods <em>Access Methods</em>}' containment reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access Methods</em>' containment reference.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccessMethods
+   * <em>Access Methods</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access Methods</em>' containment reference.
    * @see #getAccessMethods()
    * @generated
    */
   void setAccessMethods(AccessMethods value);
 
   /**
-   * Returns the value of the '<em><b>Access</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Access</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Access</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
    * @see #setAccess(AccessType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Access()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='access'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='access'"
    * @generated
    */
   AccessType getAccess();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Access</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Access</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
    * @see #isSetAccess()
    * @see #unsetAccess()
@@ -283,8 +288,9 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void setAccess(AccessType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess <em>Access</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess
+   * <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetAccess()
    * @see #getAccess()
    * @see #setAccess(AccessType)
@@ -293,8 +299,9 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void unsetAccess();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess <em>Access</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess
+   * <em>Access</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Access</em>' attribute is set.
    * @see #unsetAccess()
    * @see #getAccess()
@@ -304,29 +311,30 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
-   * Returns the value of the '<em><b>Fetch</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Fetch</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Fetch</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see #isSetFetch()
    * @see #unsetFetch()
    * @see #setFetch(FetchType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Fetch()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='fetch'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='fetch'"
    * @generated
    */
   FetchType getFetch();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getFetch <em>Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fetch</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getFetch
+   * <em>Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Fetch</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchType
    * @see #isSetFetch()
    * @see #unsetFetch()
@@ -336,8 +344,9 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void setFetch(FetchType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getFetch <em>Fetch</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getFetch
+   * <em>Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetFetch()
    * @see #getFetch()
    * @see #setFetch(FetchType)
@@ -346,8 +355,9 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void unsetFetch();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getFetch <em>Fetch</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getFetch
+   * <em>Fetch</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Fetch</em>' attribute is set.
    * @see #unsetFetch()
    * @see #getFetch()
@@ -357,12 +367,12 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   boolean isSetFetch();
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Name()
@@ -373,22 +383,24 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getName
+   * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Optional</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Optional</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Optional</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Optional</em>' attribute.
    * @see #isSetOptional()
    * @see #unsetOptional()
@@ -401,9 +413,11 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   boolean isOptional();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOptional <em>Optional</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Optional</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOptional
+   * <em>Optional</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Optional</em>' attribute.
    * @see #isSetOptional()
    * @see #unsetOptional()
    * @see #isOptional()
@@ -412,8 +426,9 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void setOptional(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOptional <em>Optional</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOptional
+   * <em>Optional</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetOptional()
    * @see #isOptional()
    * @see #setOptional(boolean)
@@ -422,8 +437,10 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void unsetOptional();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOptional <em>Optional</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOptional <em>Optional</em>}' attribute is
+   * set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Optional</em>' attribute is set.
    * @see #unsetOptional()
    * @see #isOptional()
@@ -433,13 +450,13 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   boolean isSetOptional();
 
   /**
-   * Returns the value of the '<em><b>Orphan Removal</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Orphan Removal</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Orphan Removal</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Orphan Removal</em>' attribute.
    * @see #isSetOrphanRemoval()
    * @see #unsetOrphanRemoval()
@@ -452,9 +469,11 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   boolean isOrphanRemoval();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval <em>Orphan Removal</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Orphan Removal</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval
+   * <em>Orphan Removal</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Orphan Removal</em>' attribute.
    * @see #isSetOrphanRemoval()
    * @see #unsetOrphanRemoval()
    * @see #isOrphanRemoval()
@@ -463,8 +482,9 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void setOrphanRemoval(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval <em>Orphan Removal</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval
+   * <em>Orphan Removal</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetOrphanRemoval()
    * @see #isOrphanRemoval()
    * @see #setOrphanRemoval(boolean)
@@ -473,8 +493,10 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void unsetOrphanRemoval();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval <em>Orphan Removal</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#isOrphanRemoval <em>Orphan Removal</em>}'
+   * attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Orphan Removal</em>' attribute is set.
    * @see #unsetOrphanRemoval()
    * @see #isOrphanRemoval()
@@ -484,26 +506,27 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   boolean isSetOrphanRemoval();
 
   /**
-   * Returns the value of the '<em><b>Target Interface</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Target Interface</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Target Interface</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Target Interface</em>' attribute.
    * @see #setTargetInterface(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_TargetInterface()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='target-interface'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='target-interface'"
    * @generated
    */
   String getTargetInterface();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getTargetInterface <em>Target Interface</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Target Interface</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getTargetInterface
+   * <em>Target Interface</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Target Interface</em>' attribute.
    * @see #getTargetInterface()
    * @generated
    */

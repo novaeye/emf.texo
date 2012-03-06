@@ -122,10 +122,9 @@ public class AttributeOverrideImpl extends BaseOrmAnnotationImpl implements Attr
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ATTRIBUTE_OVERRIDE__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -148,11 +147,10 @@ public class AttributeOverrideImpl extends BaseOrmAnnotationImpl implements Attr
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ATTRIBUTE_OVERRIDE__COLUMN, oldColumn, newColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -165,21 +163,17 @@ public class AttributeOverrideImpl extends BaseOrmAnnotationImpl implements Attr
   public void setColumn(Column newColumn) {
     if (newColumn != column) {
       NotificationChain msgs = null;
-      if (column != null) {
+      if (column != null)
         msgs = ((InternalEObject) column).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ATTRIBUTE_OVERRIDE__COLUMN, null, msgs);
-      }
-      if (newColumn != null) {
+      if (newColumn != null)
         msgs = ((InternalEObject) newColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ATTRIBUTE_OVERRIDE__COLUMN, null, msgs);
-      }
       msgs = basicSetColumn(newColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ATTRIBUTE_OVERRIDE__COLUMN, newColumn, newColumn));
-    }
   }
 
   /**
@@ -199,9 +193,8 @@ public class AttributeOverrideImpl extends BaseOrmAnnotationImpl implements Attr
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ATTRIBUTE_OVERRIDE__NAME, oldName, name));
-    }
   }
 
   /**
@@ -303,9 +296,8 @@ public class AttributeOverrideImpl extends BaseOrmAnnotationImpl implements Attr
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

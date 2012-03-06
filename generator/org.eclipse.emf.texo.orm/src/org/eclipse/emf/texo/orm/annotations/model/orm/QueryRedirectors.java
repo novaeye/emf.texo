@@ -84,178 +84,185 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface QueryRedirectors extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>All Queries</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>All Queries</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>All Queries</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>All Queries</em>' attribute.
    * @see #setAllQueries(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_AllQueries()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='all-queries'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='all-queries'"
    * @generated
    */
   String getAllQueries();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getAllQueries <em>All Queries</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>All Queries</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getAllQueries
+   * <em>All Queries</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>All Queries</em>' attribute.
    * @see #getAllQueries()
    * @generated
    */
   void setAllQueries(String value);
 
   /**
-   * Returns the value of the '<em><b>Delete</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Delete</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Delete</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Delete</em>' attribute.
    * @see #setDelete(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_Delete()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='delete'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='delete'"
    * @generated
    */
   String getDelete();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getDelete <em>Delete</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Delete</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getDelete
+   * <em>Delete</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Delete</em>' attribute.
    * @see #getDelete()
    * @generated
    */
   void setDelete(String value);
 
   /**
-   * Returns the value of the '<em><b>Insert</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Insert</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Insert</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Insert</em>' attribute.
    * @see #setInsert(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_Insert()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='insert'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='insert'"
    * @generated
    */
   String getInsert();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getInsert <em>Insert</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Insert</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getInsert
+   * <em>Insert</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Insert</em>' attribute.
    * @see #getInsert()
    * @generated
    */
   void setInsert(String value);
 
   /**
-   * Returns the value of the '<em><b>Read All</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Read All</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Read All</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Read All</em>' attribute.
    * @see #setReadAll(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_ReadAll()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='read-all'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='read-all'"
    * @generated
    */
   String getReadAll();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getReadAll <em>Read All</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Read All</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getReadAll
+   * <em>Read All</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Read All</em>' attribute.
    * @see #getReadAll()
    * @generated
    */
   void setReadAll(String value);
 
   /**
-   * Returns the value of the '<em><b>Read Object</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Read Object</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Read Object</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Read Object</em>' attribute.
    * @see #setReadObject(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_ReadObject()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='read-object'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='read-object'"
    * @generated
    */
   String getReadObject();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getReadObject <em>Read Object</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Read Object</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getReadObject
+   * <em>Read Object</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Read Object</em>' attribute.
    * @see #getReadObject()
    * @generated
    */
   void setReadObject(String value);
 
   /**
-   * Returns the value of the '<em><b>Report</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Report</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Report</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Report</em>' attribute.
    * @see #setReport(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_Report()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='report'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='report'"
    * @generated
    */
   String getReport();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getReport <em>Report</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Report</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getReport
+   * <em>Report</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Report</em>' attribute.
    * @see #getReport()
    * @generated
    */
   void setReport(String value);
 
   /**
-   * Returns the value of the '<em><b>Update</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Update</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Update</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Update</em>' attribute.
    * @see #setUpdate(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getQueryRedirectors_Update()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='update'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='update'"
    * @generated
    */
   String getUpdate();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getUpdate <em>Update</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Update</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors#getUpdate
+   * <em>Update</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Update</em>' attribute.
    * @see #getUpdate()
    * @generated
    */

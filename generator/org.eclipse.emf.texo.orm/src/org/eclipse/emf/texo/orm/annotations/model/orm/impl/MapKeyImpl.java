@@ -80,9 +80,8 @@ public class MapKeyImpl extends BaseOrmAnnotationImpl implements MapKey {
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAP_KEY__NAME, oldName, name));
-    }
   }
 
   /**
@@ -150,9 +149,8 @@ public class MapKeyImpl extends BaseOrmAnnotationImpl implements MapKey {
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");

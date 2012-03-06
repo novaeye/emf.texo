@@ -28,16 +28,16 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum AccessType implements Enumerator {
   /**
-   * The '<em><b>FIELD</b></em>' literal object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The '<em><b>FIELD</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #FIELD_VALUE
    * @generated
    * @ordered
    */
   FIELD(0, "FIELD", "FIELD"), /**
-   * The '<em><b>PROPERTY</b></em>' literal object.
-   * <!-- begin-user-doc --> <!--
+   * The '<em><b>PROPERTY</b></em>' literal object. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #PROPERTY_VALUE
    * @generated
    * @ordered
@@ -45,13 +45,13 @@ public enum AccessType implements Enumerator {
   PROPERTY(1, "PROPERTY", "PROPERTY");
 
   /**
-   * The '<em><b>FIELD</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>FIELD</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>FIELD</b></em>' literal object isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #FIELD
    * @model
    * @generated
@@ -60,13 +60,13 @@ public enum AccessType implements Enumerator {
   public static final int FIELD_VALUE = 0;
 
   /**
-   * The '<em><b>PROPERTY</b></em>' literal value.
-   * <!-- begin-user-doc -->
+   * The '<em><b>PROPERTY</b></em>' literal value. <!-- begin-user-doc -->
    * <p>
    * If the meaning of '<em><b>PROPERTY</b></em>' literal object isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @see #PROPERTY
    * @model
    * @generated
@@ -75,27 +75,24 @@ public enum AccessType implements Enumerator {
   public static final int PROPERTY_VALUE = 1;
 
   /**
-   * An array of all the '<em><b>Access Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>Access Type</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
-  private static final AccessType[] VALUES_ARRAY = new AccessType[] {
-      FIELD,
-      PROPERTY,
-    };
+  private static final AccessType[] VALUES_ARRAY = new AccessType[] { FIELD, PROPERTY, };
 
   /**
-   * A public read-only list of all the '<em><b>Access Type</b></em>' enumerators.
-   * <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>Access Type</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static final List<AccessType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Access Type</b></em>' literal with the specified literal value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Access Type</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static AccessType get(String literal) {
@@ -109,9 +106,9 @@ public enum AccessType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Access Type</b></em>' literal with the specified name.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Access Type</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static AccessType getByName(String name) {
@@ -125,40 +122,45 @@ public enum AccessType implements Enumerator {
   }
 
   /**
-   * Returns the '<em><b>Access Type</b></em>' literal with the specified integer value.
-   * <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>Access Type</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   public static AccessType get(int value) {
     switch (value) {
-      case FIELD_VALUE: return FIELD;
-      case PROPERTY_VALUE: return PROPERTY;
+    case FIELD_VALUE:
+      return FIELD;
+    case PROPERTY_VALUE:
+      return PROPERTY;
     }
     return null;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final int value;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String name;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private final String literal;
 
   /**
-   * Only this class can construct instances.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Only this class can construct instances. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   private AccessType(int value, String name, String literal) {
@@ -169,6 +171,7 @@ public enum AccessType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getValue() {
@@ -177,6 +180,7 @@ public enum AccessType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -185,6 +189,7 @@ public enum AccessType implements Enumerator {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getLiteral() {
@@ -192,9 +197,9 @@ public enum AccessType implements Enumerator {
   }
 
   /**
-   * Returns the literal value of the enumerator, which is its string representation.
-   * <!-- begin-user-doc --> <!--
+   * Returns the literal value of the enumerator, which is its string representation. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

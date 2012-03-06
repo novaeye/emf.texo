@@ -33,9 +33,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements GeneratedValue {
   /**
-   * The default value of the '{@link #getGenerator() <em>Generator</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getGenerator() <em>Generator</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getGenerator()
    * @generated
    * @ordered
@@ -43,9 +43,9 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
   protected static final String GENERATOR_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getGenerator() <em>Generator</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getGenerator() <em>Generator</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getGenerator()
    * @generated
    * @ordered
@@ -53,9 +53,9 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
   protected String generator = GENERATOR_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getStrategy() <em>Strategy</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getStrategy() <em>Strategy</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getStrategy()
    * @generated
    * @ordered
@@ -63,9 +63,9 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
   protected static final GenerationType STRATEGY_EDEFAULT = GenerationType.TABLE;
 
   /**
-   * The cached value of the '{@link #getStrategy() <em>Strategy</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getStrategy() <em>Strategy</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getStrategy()
    * @generated
    * @ordered
@@ -73,8 +73,8 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
   protected GenerationType strategy = STRATEGY_EDEFAULT;
 
   /**
-   * This is true if the Strategy attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Strategy attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -82,6 +82,7 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected GeneratedValueImpl() {
@@ -90,6 +91,7 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -99,6 +101,7 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getGenerator() {
@@ -107,17 +110,20 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setGenerator(String newGenerator) {
     String oldGenerator = generator;
     generator = newGenerator;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.GENERATED_VALUE__GENERATOR, oldGenerator, generator));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.GENERATED_VALUE__GENERATOR, oldGenerator,
+          generator));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public GenerationType getStrategy() {
@@ -126,6 +132,7 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setStrategy(GenerationType newStrategy) {
@@ -134,11 +141,13 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
     boolean oldStrategyESet = strategyESet;
     strategyESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.GENERATED_VALUE__STRATEGY, oldStrategy, strategy, !oldStrategyESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.GENERATED_VALUE__STRATEGY, oldStrategy,
+          strategy, !oldStrategyESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetStrategy() {
@@ -147,11 +156,13 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
     strategy = STRATEGY_EDEFAULT;
     strategyESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.GENERATED_VALUE__STRATEGY, oldStrategy, STRATEGY_EDEFAULT, oldStrategyESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.GENERATED_VALUE__STRATEGY, oldStrategy,
+          STRATEGY_EDEFAULT, oldStrategyESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetStrategy() {
@@ -160,81 +171,90 @@ public class GeneratedValueImpl extends BaseOrmAnnotationImpl implements Generat
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.GENERATED_VALUE__GENERATOR:
-        return getGenerator();
-      case OrmPackage.GENERATED_VALUE__STRATEGY:
-        return getStrategy();
+    case OrmPackage.GENERATED_VALUE__GENERATOR:
+      return getGenerator();
+    case OrmPackage.GENERATED_VALUE__STRATEGY:
+      return getStrategy();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.GENERATED_VALUE__GENERATOR:
-        setGenerator((String)newValue);
-        return;
-      case OrmPackage.GENERATED_VALUE__STRATEGY:
-        setStrategy((GenerationType)newValue);
-        return;
+    case OrmPackage.GENERATED_VALUE__GENERATOR:
+      setGenerator((String) newValue);
+      return;
+    case OrmPackage.GENERATED_VALUE__STRATEGY:
+      setStrategy((GenerationType) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.GENERATED_VALUE__GENERATOR:
-        setGenerator(GENERATOR_EDEFAULT);
-        return;
-      case OrmPackage.GENERATED_VALUE__STRATEGY:
-        unsetStrategy();
-        return;
+    case OrmPackage.GENERATED_VALUE__GENERATOR:
+      setGenerator(GENERATOR_EDEFAULT);
+      return;
+    case OrmPackage.GENERATED_VALUE__STRATEGY:
+      unsetStrategy();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.GENERATED_VALUE__GENERATOR:
-        return GENERATOR_EDEFAULT == null ? generator != null : !GENERATOR_EDEFAULT.equals(generator);
-      case OrmPackage.GENERATED_VALUE__STRATEGY:
-        return isSetStrategy();
+    case OrmPackage.GENERATED_VALUE__GENERATOR:
+      return GENERATOR_EDEFAULT == null ? generator != null : !GENERATOR_EDEFAULT.equals(generator);
+    case OrmPackage.GENERATED_VALUE__STRATEGY:
+      return isSetStrategy();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (generator: ");
     result.append(generator);
     result.append(", strategy: ");
-    if (strategyESet) result.append(strategy); else result.append("<unset>");
+    if (strategyESet)
+      result.append(strategy);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

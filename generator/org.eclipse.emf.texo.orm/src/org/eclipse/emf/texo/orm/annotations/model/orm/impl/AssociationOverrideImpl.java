@@ -140,10 +140,9 @@ public class AssociationOverrideImpl extends BaseOrmAnnotationImpl implements As
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ASSOCIATION_OVERRIDE__DESCRIPTION,
           oldDescription, description));
-    }
   }
 
   /**
@@ -179,11 +178,10 @@ public class AssociationOverrideImpl extends BaseOrmAnnotationImpl implements As
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ASSOCIATION_OVERRIDE__JOIN_TABLE, oldJoinTable, newJoinTable);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -196,22 +194,18 @@ public class AssociationOverrideImpl extends BaseOrmAnnotationImpl implements As
   public void setJoinTable(JoinTable newJoinTable) {
     if (newJoinTable != joinTable) {
       NotificationChain msgs = null;
-      if (joinTable != null) {
+      if (joinTable != null)
         msgs = ((InternalEObject) joinTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ASSOCIATION_OVERRIDE__JOIN_TABLE, null, msgs);
-      }
-      if (newJoinTable != null) {
+      if (newJoinTable != null)
         msgs = ((InternalEObject) newJoinTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ASSOCIATION_OVERRIDE__JOIN_TABLE, null, msgs);
-      }
       msgs = basicSetJoinTable(newJoinTable, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ASSOCIATION_OVERRIDE__JOIN_TABLE, newJoinTable,
           newJoinTable));
-    }
   }
 
   /**
@@ -231,9 +225,8 @@ public class AssociationOverrideImpl extends BaseOrmAnnotationImpl implements As
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ASSOCIATION_OVERRIDE__NAME, oldName, name));
-    }
   }
 
   /**
@@ -349,9 +342,8 @@ public class AssociationOverrideImpl extends BaseOrmAnnotationImpl implements As
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

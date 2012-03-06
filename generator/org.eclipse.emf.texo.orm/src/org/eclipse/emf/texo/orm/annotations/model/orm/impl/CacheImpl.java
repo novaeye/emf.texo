@@ -29,25 +29,28 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getExpiry <em>Expiry</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getExpiryTimeOfDay <em>Expiry Time Of Day</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isAlwaysRefresh <em>Always Refresh</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getCoordinationType <em>Coordination Type</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isDisableHits <em>Disable Hits</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isRefreshOnlyIfNewer <em>Refresh Only If Newer</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isShared <em>Shared</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getSize <em>Size</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getType <em>Type</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getExpiry <em>Expiry</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getExpiryTimeOfDay <em>Expiry Time Of Day
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isAlwaysRefresh <em>Always Refresh</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getCoordinationType <em>Coordination Type
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isDisableHits <em>Disable Hits</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isRefreshOnlyIfNewer <em>Refresh Only If
+ * Newer</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isShared <em>Shared</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getSize <em>Size</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   /**
-   * The default value of the '{@link #getExpiry() <em>Expiry</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getExpiry() <em>Expiry</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getExpiry()
    * @generated
    * @ordered
@@ -75,9 +78,9 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected TimeOfDay expiryTimeOfDay;
 
   /**
-   * The default value of the '{@link #isAlwaysRefresh() <em>Always Refresh</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #isAlwaysRefresh() <em>Always Refresh</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #isAlwaysRefresh()
    * @generated
    * @ordered
@@ -85,9 +88,9 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected static final boolean ALWAYS_REFRESH_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isAlwaysRefresh() <em>Always Refresh</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #isAlwaysRefresh() <em>Always Refresh</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #isAlwaysRefresh()
    * @generated
    * @ordered
@@ -95,17 +98,17 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected boolean alwaysRefresh = ALWAYS_REFRESH_EDEFAULT;
 
   /**
-   * This is true if the Always Refresh attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Always Refresh attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean alwaysRefreshESet;
 
   /**
-   * The default value of the '{@link #getCoordinationType() <em>Coordination Type</em>}' attribute.
-   * <!-- begin-user-doc
+   * The default value of the '{@link #getCoordinationType() <em>Coordination Type</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getCoordinationType()
    * @generated
    * @ordered
@@ -113,9 +116,9 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected static final CacheCoordinationType COORDINATION_TYPE_EDEFAULT = CacheCoordinationType.SENDOBJECTCHANGES;
 
   /**
-   * The cached value of the '{@link #getCoordinationType() <em>Coordination Type</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getCoordinationType() <em>Coordination Type</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getCoordinationType()
    * @generated
    * @ordered
@@ -123,17 +126,17 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected CacheCoordinationType coordinationType = COORDINATION_TYPE_EDEFAULT;
 
   /**
-   * This is true if the Coordination Type attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Coordination Type attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean coordinationTypeESet;
 
   /**
-   * The default value of the '{@link #isDisableHits() <em>Disable Hits</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isDisableHits() <em>Disable Hits</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isDisableHits()
    * @generated
    * @ordered
@@ -141,9 +144,9 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected static final boolean DISABLE_HITS_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isDisableHits() <em>Disable Hits</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isDisableHits() <em>Disable Hits</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #isDisableHits()
    * @generated
    * @ordered
@@ -151,8 +154,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected boolean disableHits = DISABLE_HITS_EDEFAULT;
 
   /**
-   * This is true if the Disable Hits attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Disable Hits attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -179,8 +182,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected boolean refreshOnlyIfNewer = REFRESH_ONLY_IF_NEWER_EDEFAULT;
 
   /**
-   * This is true if the Refresh Only If Newer attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Refresh Only If Newer attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -207,8 +210,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected boolean shared = SHARED_EDEFAULT;
 
   /**
-   * This is true if the Shared attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Shared attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -225,8 +228,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected static final BigInteger SIZE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getSize()
    * @generated
    * @ordered
@@ -244,8 +247,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected static final CacheType TYPE_EDEFAULT = CacheType.FULL;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getType()
    * @generated
    * @ordered
@@ -253,8 +256,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected CacheType type = TYPE_EDEFAULT;
 
   /**
-   * This is true if the Type attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Type attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -262,6 +265,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected CacheImpl() {
@@ -270,6 +274,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -279,6 +284,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getExpiry() {
@@ -287,6 +293,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setExpiry(BigInteger newExpiry) {
@@ -298,6 +305,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public TimeOfDay getExpiryTimeOfDay() {
@@ -306,38 +314,48 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public NotificationChain basicSetExpiryTimeOfDay(TimeOfDay newExpiryTimeOfDay, NotificationChain msgs) {
     TimeOfDay oldExpiryTimeOfDay = expiryTimeOfDay;
     expiryTimeOfDay = newExpiryTimeOfDay;
     if (eNotificationRequired()) {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, oldExpiryTimeOfDay, newExpiryTimeOfDay);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+          OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, oldExpiryTimeOfDay, newExpiryTimeOfDay);
+      if (msgs == null)
+        msgs = notification;
+      else
+        msgs.add(notification);
     }
     return msgs;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setExpiryTimeOfDay(TimeOfDay newExpiryTimeOfDay) {
     if (newExpiryTimeOfDay != expiryTimeOfDay) {
       NotificationChain msgs = null;
       if (expiryTimeOfDay != null)
-        msgs = ((InternalEObject)expiryTimeOfDay).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, null, msgs);
+        msgs = ((InternalEObject) expiryTimeOfDay).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, null, msgs);
       if (newExpiryTimeOfDay != null)
-        msgs = ((InternalEObject)newExpiryTimeOfDay).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, null, msgs);
+        msgs = ((InternalEObject) newExpiryTimeOfDay).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, null, msgs);
       msgs = basicSetExpiryTimeOfDay(newExpiryTimeOfDay, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, newExpiryTimeOfDay, newExpiryTimeOfDay));
+      if (msgs != null)
+        msgs.dispatch();
+    } else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__EXPIRY_TIME_OF_DAY, newExpiryTimeOfDay,
+          newExpiryTimeOfDay));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isAlwaysRefresh() {
@@ -346,6 +364,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setAlwaysRefresh(boolean newAlwaysRefresh) {
@@ -354,11 +373,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     boolean oldAlwaysRefreshESet = alwaysRefreshESet;
     alwaysRefreshESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__ALWAYS_REFRESH, oldAlwaysRefresh, alwaysRefresh, !oldAlwaysRefreshESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__ALWAYS_REFRESH, oldAlwaysRefresh,
+          alwaysRefresh, !oldAlwaysRefreshESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetAlwaysRefresh() {
@@ -367,11 +388,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     alwaysRefresh = ALWAYS_REFRESH_EDEFAULT;
     alwaysRefreshESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__ALWAYS_REFRESH, oldAlwaysRefresh, ALWAYS_REFRESH_EDEFAULT, oldAlwaysRefreshESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__ALWAYS_REFRESH, oldAlwaysRefresh,
+          ALWAYS_REFRESH_EDEFAULT, oldAlwaysRefreshESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetAlwaysRefresh() {
@@ -380,6 +403,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public CacheCoordinationType getCoordinationType() {
@@ -388,6 +412,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCoordinationType(CacheCoordinationType newCoordinationType) {
@@ -396,11 +421,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     boolean oldCoordinationTypeESet = coordinationTypeESet;
     coordinationTypeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__COORDINATION_TYPE, oldCoordinationType, coordinationType, !oldCoordinationTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__COORDINATION_TYPE, oldCoordinationType,
+          coordinationType, !oldCoordinationTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetCoordinationType() {
@@ -409,11 +436,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     coordinationType = COORDINATION_TYPE_EDEFAULT;
     coordinationTypeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__COORDINATION_TYPE, oldCoordinationType, COORDINATION_TYPE_EDEFAULT, oldCoordinationTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__COORDINATION_TYPE, oldCoordinationType,
+          COORDINATION_TYPE_EDEFAULT, oldCoordinationTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetCoordinationType() {
@@ -422,6 +451,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isDisableHits() {
@@ -430,6 +460,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDisableHits(boolean newDisableHits) {
@@ -438,11 +469,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     boolean oldDisableHitsESet = disableHitsESet;
     disableHitsESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__DISABLE_HITS, oldDisableHits, disableHits, !oldDisableHitsESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__DISABLE_HITS, oldDisableHits,
+          disableHits, !oldDisableHitsESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetDisableHits() {
@@ -451,11 +484,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     disableHits = DISABLE_HITS_EDEFAULT;
     disableHitsESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__DISABLE_HITS, oldDisableHits, DISABLE_HITS_EDEFAULT, oldDisableHitsESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__DISABLE_HITS, oldDisableHits,
+          DISABLE_HITS_EDEFAULT, oldDisableHitsESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetDisableHits() {
@@ -464,6 +499,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isRefreshOnlyIfNewer() {
@@ -472,6 +508,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setRefreshOnlyIfNewer(boolean newRefreshOnlyIfNewer) {
@@ -480,11 +517,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     boolean oldRefreshOnlyIfNewerESet = refreshOnlyIfNewerESet;
     refreshOnlyIfNewerESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER, oldRefreshOnlyIfNewer, refreshOnlyIfNewer, !oldRefreshOnlyIfNewerESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER,
+          oldRefreshOnlyIfNewer, refreshOnlyIfNewer, !oldRefreshOnlyIfNewerESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetRefreshOnlyIfNewer() {
@@ -493,11 +532,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     refreshOnlyIfNewer = REFRESH_ONLY_IF_NEWER_EDEFAULT;
     refreshOnlyIfNewerESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER, oldRefreshOnlyIfNewer, REFRESH_ONLY_IF_NEWER_EDEFAULT, oldRefreshOnlyIfNewerESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER,
+          oldRefreshOnlyIfNewer, REFRESH_ONLY_IF_NEWER_EDEFAULT, oldRefreshOnlyIfNewerESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetRefreshOnlyIfNewer() {
@@ -506,6 +547,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isShared() {
@@ -514,6 +556,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setShared(boolean newShared) {
@@ -527,6 +570,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetShared() {
@@ -535,11 +579,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     shared = SHARED_EDEFAULT;
     sharedESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__SHARED, oldShared, SHARED_EDEFAULT, oldSharedESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__SHARED, oldShared, SHARED_EDEFAULT,
+          oldSharedESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetShared() {
@@ -548,6 +594,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getSize() {
@@ -556,6 +603,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSize(BigInteger newSize) {
@@ -567,6 +615,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public CacheType getType() {
@@ -575,6 +624,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setType(CacheType newType) {
@@ -588,6 +638,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetType() {
@@ -596,11 +647,13 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
     type = TYPE_EDEFAULT;
     typeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__TYPE, oldType, TYPE_EDEFAULT,
+          oldTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetType() {
@@ -609,176 +662,201 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
-        return basicSetExpiryTimeOfDay(null, msgs);
+    case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
+      return basicSetExpiryTimeOfDay(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.CACHE__EXPIRY:
-        return getExpiry();
-      case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
-        return getExpiryTimeOfDay();
-      case OrmPackage.CACHE__ALWAYS_REFRESH:
-        return isAlwaysRefresh();
-      case OrmPackage.CACHE__COORDINATION_TYPE:
-        return getCoordinationType();
-      case OrmPackage.CACHE__DISABLE_HITS:
-        return isDisableHits();
-      case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
-        return isRefreshOnlyIfNewer();
-      case OrmPackage.CACHE__SHARED:
-        return isShared();
-      case OrmPackage.CACHE__SIZE:
-        return getSize();
-      case OrmPackage.CACHE__TYPE:
-        return getType();
+    case OrmPackage.CACHE__EXPIRY:
+      return getExpiry();
+    case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
+      return getExpiryTimeOfDay();
+    case OrmPackage.CACHE__ALWAYS_REFRESH:
+      return isAlwaysRefresh();
+    case OrmPackage.CACHE__COORDINATION_TYPE:
+      return getCoordinationType();
+    case OrmPackage.CACHE__DISABLE_HITS:
+      return isDisableHits();
+    case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
+      return isRefreshOnlyIfNewer();
+    case OrmPackage.CACHE__SHARED:
+      return isShared();
+    case OrmPackage.CACHE__SIZE:
+      return getSize();
+    case OrmPackage.CACHE__TYPE:
+      return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.CACHE__EXPIRY:
-        setExpiry((BigInteger)newValue);
-        return;
-      case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
-        setExpiryTimeOfDay((TimeOfDay)newValue);
-        return;
-      case OrmPackage.CACHE__ALWAYS_REFRESH:
-        setAlwaysRefresh((Boolean)newValue);
-        return;
-      case OrmPackage.CACHE__COORDINATION_TYPE:
-        setCoordinationType((CacheCoordinationType)newValue);
-        return;
-      case OrmPackage.CACHE__DISABLE_HITS:
-        setDisableHits((Boolean)newValue);
-        return;
-      case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
-        setRefreshOnlyIfNewer((Boolean)newValue);
-        return;
-      case OrmPackage.CACHE__SHARED:
-        setShared((Boolean)newValue);
-        return;
-      case OrmPackage.CACHE__SIZE:
-        setSize((BigInteger)newValue);
-        return;
-      case OrmPackage.CACHE__TYPE:
-        setType((CacheType)newValue);
-        return;
+    case OrmPackage.CACHE__EXPIRY:
+      setExpiry((BigInteger) newValue);
+      return;
+    case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
+      setExpiryTimeOfDay((TimeOfDay) newValue);
+      return;
+    case OrmPackage.CACHE__ALWAYS_REFRESH:
+      setAlwaysRefresh((Boolean) newValue);
+      return;
+    case OrmPackage.CACHE__COORDINATION_TYPE:
+      setCoordinationType((CacheCoordinationType) newValue);
+      return;
+    case OrmPackage.CACHE__DISABLE_HITS:
+      setDisableHits((Boolean) newValue);
+      return;
+    case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
+      setRefreshOnlyIfNewer((Boolean) newValue);
+      return;
+    case OrmPackage.CACHE__SHARED:
+      setShared((Boolean) newValue);
+      return;
+    case OrmPackage.CACHE__SIZE:
+      setSize((BigInteger) newValue);
+      return;
+    case OrmPackage.CACHE__TYPE:
+      setType((CacheType) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.CACHE__EXPIRY:
-        setExpiry(EXPIRY_EDEFAULT);
-        return;
-      case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
-        setExpiryTimeOfDay((TimeOfDay)null);
-        return;
-      case OrmPackage.CACHE__ALWAYS_REFRESH:
-        unsetAlwaysRefresh();
-        return;
-      case OrmPackage.CACHE__COORDINATION_TYPE:
-        unsetCoordinationType();
-        return;
-      case OrmPackage.CACHE__DISABLE_HITS:
-        unsetDisableHits();
-        return;
-      case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
-        unsetRefreshOnlyIfNewer();
-        return;
-      case OrmPackage.CACHE__SHARED:
-        unsetShared();
-        return;
-      case OrmPackage.CACHE__SIZE:
-        setSize(SIZE_EDEFAULT);
-        return;
-      case OrmPackage.CACHE__TYPE:
-        unsetType();
-        return;
+    case OrmPackage.CACHE__EXPIRY:
+      setExpiry(EXPIRY_EDEFAULT);
+      return;
+    case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
+      setExpiryTimeOfDay((TimeOfDay) null);
+      return;
+    case OrmPackage.CACHE__ALWAYS_REFRESH:
+      unsetAlwaysRefresh();
+      return;
+    case OrmPackage.CACHE__COORDINATION_TYPE:
+      unsetCoordinationType();
+      return;
+    case OrmPackage.CACHE__DISABLE_HITS:
+      unsetDisableHits();
+      return;
+    case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
+      unsetRefreshOnlyIfNewer();
+      return;
+    case OrmPackage.CACHE__SHARED:
+      unsetShared();
+      return;
+    case OrmPackage.CACHE__SIZE:
+      setSize(SIZE_EDEFAULT);
+      return;
+    case OrmPackage.CACHE__TYPE:
+      unsetType();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.CACHE__EXPIRY:
-        return EXPIRY_EDEFAULT == null ? expiry != null : !EXPIRY_EDEFAULT.equals(expiry);
-      case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
-        return expiryTimeOfDay != null;
-      case OrmPackage.CACHE__ALWAYS_REFRESH:
-        return isSetAlwaysRefresh();
-      case OrmPackage.CACHE__COORDINATION_TYPE:
-        return isSetCoordinationType();
-      case OrmPackage.CACHE__DISABLE_HITS:
-        return isSetDisableHits();
-      case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
-        return isSetRefreshOnlyIfNewer();
-      case OrmPackage.CACHE__SHARED:
-        return isSetShared();
-      case OrmPackage.CACHE__SIZE:
-        return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
-      case OrmPackage.CACHE__TYPE:
-        return isSetType();
+    case OrmPackage.CACHE__EXPIRY:
+      return EXPIRY_EDEFAULT == null ? expiry != null : !EXPIRY_EDEFAULT.equals(expiry);
+    case OrmPackage.CACHE__EXPIRY_TIME_OF_DAY:
+      return expiryTimeOfDay != null;
+    case OrmPackage.CACHE__ALWAYS_REFRESH:
+      return isSetAlwaysRefresh();
+    case OrmPackage.CACHE__COORDINATION_TYPE:
+      return isSetCoordinationType();
+    case OrmPackage.CACHE__DISABLE_HITS:
+      return isSetDisableHits();
+    case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
+      return isSetRefreshOnlyIfNewer();
+    case OrmPackage.CACHE__SHARED:
+      return isSetShared();
+    case OrmPackage.CACHE__SIZE:
+      return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
+    case OrmPackage.CACHE__TYPE:
+      return isSetType();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (expiry: ");
     result.append(expiry);
     result.append(", alwaysRefresh: ");
-    if (alwaysRefreshESet) result.append(alwaysRefresh); else result.append("<unset>");
+    if (alwaysRefreshESet)
+      result.append(alwaysRefresh);
+    else
+      result.append("<unset>");
     result.append(", coordinationType: ");
-    if (coordinationTypeESet) result.append(coordinationType); else result.append("<unset>");
+    if (coordinationTypeESet)
+      result.append(coordinationType);
+    else
+      result.append("<unset>");
     result.append(", disableHits: ");
-    if (disableHitsESet) result.append(disableHits); else result.append("<unset>");
+    if (disableHitsESet)
+      result.append(disableHits);
+    else
+      result.append("<unset>");
     result.append(", refreshOnlyIfNewer: ");
-    if (refreshOnlyIfNewerESet) result.append(refreshOnlyIfNewer); else result.append("<unset>");
+    if (refreshOnlyIfNewerESet)
+      result.append(refreshOnlyIfNewer);
+    else
+      result.append("<unset>");
     result.append(", shared: ");
-    if (sharedESet) result.append(shared); else result.append("<unset>");
+    if (sharedESet)
+      result.append(shared);
+    else
+      result.append("<unset>");
     result.append(", size: ");
     result.append(size);
     result.append(", type: ");
-    if (typeESet) result.append(type); else result.append("<unset>");
+    if (typeESet)
+      result.append(type);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

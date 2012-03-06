@@ -26,22 +26,26 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getDirection <em>Direction</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getJdbcType <em>Jdbc Type</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getJdbcTypeName <em>Jdbc Type Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getQueryParameter <em>Query Parameter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getType <em>Type</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getDirection <em>
+ * Direction</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getJdbcType <em>Jdbc Type
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getJdbcTypeName <em>Jdbc
+ * Type Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getQueryParameter <em>
+ * Query Parameter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implements StoredProcedureParameter {
   /**
-   * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDirection() <em>Direction</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDirection()
    * @generated
    * @ordered
@@ -49,9 +53,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected static final DirectionType DIRECTION_EDEFAULT = DirectionType.IN;
 
   /**
-   * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDirection()
    * @generated
    * @ordered
@@ -59,17 +63,17 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected DirectionType direction = DIRECTION_EDEFAULT;
 
   /**
-   * This is true if the Direction attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Direction attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean directionESet;
 
   /**
-   * The default value of the '{@link #getJdbcType() <em>Jdbc Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getJdbcType() <em>Jdbc Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getJdbcType()
    * @generated
    * @ordered
@@ -77,9 +81,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected static final BigInteger JDBC_TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getJdbcType() <em>Jdbc Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getJdbcType() <em>Jdbc Type</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getJdbcType()
    * @generated
    * @ordered
@@ -87,9 +91,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected BigInteger jdbcType = JDBC_TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getJdbcTypeName() <em>Jdbc Type Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getJdbcTypeName() <em>Jdbc Type Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getJdbcTypeName()
    * @generated
    * @ordered
@@ -97,9 +101,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected static final String JDBC_TYPE_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getJdbcTypeName() <em>Jdbc Type Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getJdbcTypeName() <em>Jdbc Type Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getJdbcTypeName()
    * @generated
    * @ordered
@@ -117,8 +121,8 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -126,9 +130,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getQueryParameter() <em>Query Parameter</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getQueryParameter() <em>Query Parameter</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getQueryParameter()
    * @generated
    * @ordered
@@ -136,9 +140,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected static final String QUERY_PARAMETER_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getQueryParameter() <em>Query Parameter</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getQueryParameter() <em>Query Parameter</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getQueryParameter()
    * @generated
    * @ordered
@@ -156,8 +160,8 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected static final String TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getType()
    * @generated
    * @ordered
@@ -166,6 +170,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected StoredProcedureParameterImpl() {
@@ -174,6 +179,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -183,6 +189,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public DirectionType getDirection() {
@@ -191,6 +198,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDirection(DirectionType newDirection) {
@@ -199,11 +207,13 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
     boolean oldDirectionESet = directionESet;
     directionESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION, oldDirection, direction, !oldDirectionESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION,
+          oldDirection, direction, !oldDirectionESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetDirection() {
@@ -212,11 +222,13 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
     direction = DIRECTION_EDEFAULT;
     directionESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION, oldDirection, DIRECTION_EDEFAULT, oldDirectionESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION,
+          oldDirection, DIRECTION_EDEFAULT, oldDirectionESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetDirection() {
@@ -225,6 +237,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public BigInteger getJdbcType() {
@@ -233,17 +246,20 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setJdbcType(BigInteger newJdbcType) {
     BigInteger oldJdbcType = jdbcType;
     jdbcType = newJdbcType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE, oldJdbcType, jdbcType));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE,
+          oldJdbcType, jdbcType));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getJdbcTypeName() {
@@ -252,17 +268,20 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setJdbcTypeName(String newJdbcTypeName) {
     String oldJdbcTypeName = jdbcTypeName;
     jdbcTypeName = newJdbcTypeName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME, oldJdbcTypeName, jdbcTypeName));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME,
+          oldJdbcTypeName, jdbcTypeName));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -271,6 +290,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -282,6 +302,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getQueryParameter() {
@@ -290,17 +311,20 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setQueryParameter(String newQueryParameter) {
     String oldQueryParameter = queryParameter;
     queryParameter = newQueryParameter;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER, oldQueryParameter, queryParameter));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER,
+          oldQueryParameter, queryParameter));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getType() {
@@ -309,6 +333,7 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setType(String newType) {
@@ -320,119 +345,129 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
-        return getDirection();
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
-        return getJdbcType();
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
-        return getJdbcTypeName();
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
-        return getName();
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
-        return getQueryParameter();
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
-        return getType();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
+      return getDirection();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
+      return getJdbcType();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
+      return getJdbcTypeName();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
+      return getName();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
+      return getQueryParameter();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
+      return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
-        setDirection((DirectionType)newValue);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
-        setJdbcType((BigInteger)newValue);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
-        setJdbcTypeName((String)newValue);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
-        setQueryParameter((String)newValue);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
-        setType((String)newValue);
-        return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
+      setDirection((DirectionType) newValue);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
+      setJdbcType((BigInteger) newValue);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
+      setJdbcTypeName((String) newValue);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
+      setQueryParameter((String) newValue);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
+      setType((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
-        unsetDirection();
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
-        setJdbcType(JDBC_TYPE_EDEFAULT);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
-        setJdbcTypeName(JDBC_TYPE_NAME_EDEFAULT);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
-        setQueryParameter(QUERY_PARAMETER_EDEFAULT);
-        return;
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
+      unsetDirection();
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
+      setJdbcType(JDBC_TYPE_EDEFAULT);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
+      setJdbcTypeName(JDBC_TYPE_NAME_EDEFAULT);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
+      setQueryParameter(QUERY_PARAMETER_EDEFAULT);
+      return;
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
+      setType(TYPE_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
-        return isSetDirection();
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
-        return JDBC_TYPE_EDEFAULT == null ? jdbcType != null : !JDBC_TYPE_EDEFAULT.equals(jdbcType);
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
-        return JDBC_TYPE_NAME_EDEFAULT == null ? jdbcTypeName != null : !JDBC_TYPE_NAME_EDEFAULT.equals(jdbcTypeName);
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
-        return QUERY_PARAMETER_EDEFAULT == null ? queryParameter != null : !QUERY_PARAMETER_EDEFAULT.equals(queryParameter);
-      case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__DIRECTION:
+      return isSetDirection();
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE:
+      return JDBC_TYPE_EDEFAULT == null ? jdbcType != null : !JDBC_TYPE_EDEFAULT.equals(jdbcType);
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__JDBC_TYPE_NAME:
+      return JDBC_TYPE_NAME_EDEFAULT == null ? jdbcTypeName != null : !JDBC_TYPE_NAME_EDEFAULT.equals(jdbcTypeName);
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
+      return QUERY_PARAMETER_EDEFAULT == null ? queryParameter != null : !QUERY_PARAMETER_EDEFAULT
+          .equals(queryParameter);
+    case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
+      return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (direction: ");
-    if (directionESet) result.append(direction); else result.append("<unset>");
+    if (directionESet)
+      result.append(direction);
+    else
+      result.append("<unset>");
     result.append(", jdbcType: ");
     result.append(jdbcType);
     result.append(", jdbcTypeName: ");

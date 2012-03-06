@@ -11,21 +11,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Access Methods</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 			
+ * 
  * <!-- end-model-doc -->
- *
+ * 
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getGetMethod <em>Get Method</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getSetMethod <em>Set Method</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getGetMethod <em>Get Method</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getSetMethod <em>Set Method</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAccessMethods()
  * @model extendedMetaData="name='access-methods' kind='empty'"
  * @extends BaseOrmAnnotation
@@ -33,13 +33,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface AccessMethods extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Get Method</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Get Method</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Get Method</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Get Method</em>' attribute.
    * @see #setGetMethod(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAccessMethods_GetMethod()
@@ -50,22 +50,24 @@ public interface AccessMethods extends BaseOrmAnnotation {
   String getGetMethod();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getGetMethod <em>Get Method</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Get Method</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getGetMethod
+   * <em>Get Method</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Get Method</em>' attribute.
    * @see #getGetMethod()
    * @generated
    */
   void setGetMethod(String value);
 
   /**
-   * Returns the value of the '<em><b>Set Method</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Set Method</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Set Method</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Set Method</em>' attribute.
    * @see #setSetMethod(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAccessMethods_SetMethod()
@@ -76,9 +78,11 @@ public interface AccessMethods extends BaseOrmAnnotation {
   String getSetMethod();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getSetMethod <em>Set Method</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Set Method</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods#getSetMethod
+   * <em>Set Method</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Set Method</em>' attribute.
    * @see #getSetMethod()
    * @generated
    */

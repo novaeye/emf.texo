@@ -34,23 +34,28 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getHint <em>Hint</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getParameter <em>Parameter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getProcedureName <em>Procedure Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getResultClass <em>Result Class</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getResultSetMapping <em>Result Set Mapping</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#isReturnsResultSet <em>Returns Result Set</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getHint <em>Hint</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getParameter <em>
+ * Parameter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getProcedureName <em>
+ * Procedure Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getResultClass <em>
+ * Result Class</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getResultSetMapping <em>
+ * Result Set Mapping</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#isReturnsResultSet <em>
+ * Returns Result Set</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl implements NamedStoredProcedureQuery {
   /**
-   * The cached value of the '{@link #getHint() <em>Hint</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getHint() <em>Hint</em>}' containment reference list. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getHint()
    * @generated
    * @ordered
@@ -78,8 +83,8 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -87,9 +92,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getProcedureName() <em>Procedure Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getProcedureName() <em>Procedure Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getProcedureName()
    * @generated
    * @ordered
@@ -97,9 +102,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected static final String PROCEDURE_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getProcedureName() <em>Procedure Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getProcedureName() <em>Procedure Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getProcedureName()
    * @generated
    * @ordered
@@ -107,9 +112,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected String procedureName = PROCEDURE_NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getResultClass() <em>Result Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getResultClass() <em>Result Class</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getResultClass()
    * @generated
    * @ordered
@@ -117,9 +122,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected static final String RESULT_CLASS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getResultClass() <em>Result Class</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getResultClass() <em>Result Class</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getResultClass()
    * @generated
    * @ordered
@@ -137,9 +142,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected static final String RESULT_SET_MAPPING_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getResultSetMapping() <em>Result Set Mapping</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getResultSetMapping() <em>Result Set Mapping</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getResultSetMapping()
    * @generated
    * @ordered
@@ -147,9 +152,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected String resultSetMapping = RESULT_SET_MAPPING_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isReturnsResultSet() <em>Returns Result Set</em>}' attribute.
-   * <!-- begin-user-doc
+   * The default value of the '{@link #isReturnsResultSet() <em>Returns Result Set</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #isReturnsResultSet()
    * @generated
    * @ordered
@@ -157,9 +162,9 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected static final boolean RETURNS_RESULT_SET_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isReturnsResultSet() <em>Returns Result Set</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #isReturnsResultSet() <em>Returns Result Set</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #isReturnsResultSet()
    * @generated
    * @ordered
@@ -167,8 +172,8 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected boolean returnsResultSet = RETURNS_RESULT_SET_EDEFAULT;
 
   /**
-   * This is true if the Returns Result Set attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Returns Result Set attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -176,6 +181,7 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected NamedStoredProcedureQueryImpl() {
@@ -184,6 +190,7 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -193,28 +200,33 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<QueryHint> getHint() {
     if (hint == null) {
-      hint = new EObjectContainmentEList<QueryHint>(QueryHint.class, this, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT);
+      hint = new EObjectContainmentEList<QueryHint>(QueryHint.class, this,
+          OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT);
     }
     return hint;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EList<StoredProcedureParameter> getParameter() {
     if (parameter == null) {
-      parameter = new EObjectContainmentEList<StoredProcedureParameter>(StoredProcedureParameter.class, this, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER);
+      parameter = new EObjectContainmentEList<StoredProcedureParameter>(StoredProcedureParameter.class, this,
+          OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER);
     }
     return parameter;
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -223,17 +235,20 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME, oldName,
+          name));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getProcedureName() {
@@ -242,17 +257,20 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setProcedureName(String newProcedureName) {
     String oldProcedureName = procedureName;
     procedureName = newProcedureName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME, oldProcedureName, procedureName));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME,
+          oldProcedureName, procedureName));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getResultClass() {
@@ -261,17 +279,20 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setResultClass(String newResultClass) {
     String oldResultClass = resultClass;
     resultClass = newResultClass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS, oldResultClass, resultClass));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS,
+          oldResultClass, resultClass));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getResultSetMapping() {
@@ -280,17 +301,20 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setResultSetMapping(String newResultSetMapping) {
     String oldResultSetMapping = resultSetMapping;
     resultSetMapping = newResultSetMapping;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING, oldResultSetMapping, resultSetMapping));
+      eNotify(new ENotificationImpl(this, Notification.SET,
+          OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING, oldResultSetMapping, resultSetMapping));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isReturnsResultSet() {
@@ -299,6 +323,7 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setReturnsResultSet(boolean newReturnsResultSet) {
@@ -307,11 +332,14 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
     boolean oldReturnsResultSetESet = returnsResultSetESet;
     returnsResultSetESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET, oldReturnsResultSet, returnsResultSet, !oldReturnsResultSetESet));
+      eNotify(new ENotificationImpl(this, Notification.SET,
+          OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET, oldReturnsResultSet, returnsResultSet,
+          !oldReturnsResultSetESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetReturnsResultSet() {
@@ -320,11 +348,14 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
     returnsResultSet = RETURNS_RESULT_SET_EDEFAULT;
     returnsResultSetESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET, oldReturnsResultSet, RETURNS_RESULT_SET_EDEFAULT, oldReturnsResultSetESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET,
+          OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET, oldReturnsResultSet,
+          RETURNS_RESULT_SET_EDEFAULT, oldReturnsResultSetESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetReturnsResultSet() {
@@ -333,143 +364,151 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
-        return ((InternalEList<?>)getHint()).basicRemove(otherEnd, msgs);
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
-        return ((InternalEList<?>)getParameter()).basicRemove(otherEnd, msgs);
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
+      return ((InternalEList<?>) getHint()).basicRemove(otherEnd, msgs);
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
+      return ((InternalEList<?>) getParameter()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
-        return getHint();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
-        return getParameter();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
-        return getName();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
-        return getProcedureName();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
-        return getResultClass();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
-        return getResultSetMapping();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
-        return isReturnsResultSet();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
+      return getHint();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
+      return getParameter();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
+      return getName();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
+      return getProcedureName();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
+      return getResultClass();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
+      return getResultSetMapping();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
+      return isReturnsResultSet();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
-        getHint().clear();
-        getHint().addAll((Collection<? extends QueryHint>)newValue);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
-        getParameter().clear();
-        getParameter().addAll((Collection<? extends StoredProcedureParameter>)newValue);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
-        setProcedureName((String)newValue);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
-        setResultClass((String)newValue);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
-        setResultSetMapping((String)newValue);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
-        setReturnsResultSet((Boolean)newValue);
-        return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
+      getHint().clear();
+      getHint().addAll((Collection<? extends QueryHint>) newValue);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
+      getParameter().clear();
+      getParameter().addAll((Collection<? extends StoredProcedureParameter>) newValue);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
+      setProcedureName((String) newValue);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
+      setResultClass((String) newValue);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
+      setResultSetMapping((String) newValue);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
+      setReturnsResultSet((Boolean) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
-        getHint().clear();
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
-        getParameter().clear();
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
-        setProcedureName(PROCEDURE_NAME_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
-        setResultClass(RESULT_CLASS_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
-        setResultSetMapping(RESULT_SET_MAPPING_EDEFAULT);
-        return;
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
-        unsetReturnsResultSet();
-        return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
+      getHint().clear();
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
+      getParameter().clear();
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
+      setProcedureName(PROCEDURE_NAME_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
+      setResultClass(RESULT_CLASS_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
+      setResultSetMapping(RESULT_SET_MAPPING_EDEFAULT);
+      return;
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
+      unsetReturnsResultSet();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
-        return hint != null && !hint.isEmpty();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
-        return parameter != null && !parameter.isEmpty();
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
-        return PROCEDURE_NAME_EDEFAULT == null ? procedureName != null : !PROCEDURE_NAME_EDEFAULT.equals(procedureName);
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
-        return RESULT_CLASS_EDEFAULT == null ? resultClass != null : !RESULT_CLASS_EDEFAULT.equals(resultClass);
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
-        return RESULT_SET_MAPPING_EDEFAULT == null ? resultSetMapping != null : !RESULT_SET_MAPPING_EDEFAULT.equals(resultSetMapping);
-      case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
-        return isSetReturnsResultSet();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__HINT:
+      return hint != null && !hint.isEmpty();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
+      return parameter != null && !parameter.isEmpty();
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
+      return PROCEDURE_NAME_EDEFAULT == null ? procedureName != null : !PROCEDURE_NAME_EDEFAULT.equals(procedureName);
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS:
+      return RESULT_CLASS_EDEFAULT == null ? resultClass != null : !RESULT_CLASS_EDEFAULT.equals(resultClass);
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING:
+      return RESULT_SET_MAPPING_EDEFAULT == null ? resultSetMapping != null : !RESULT_SET_MAPPING_EDEFAULT
+          .equals(resultSetMapping);
+    case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET:
+      return isSetReturnsResultSet();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
@@ -481,7 +520,10 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
     result.append(", resultSetMapping: ");
     result.append(resultSetMapping);
     result.append(", returnsResultSet: ");
-    if (returnsResultSetESet) result.append(returnsResultSet); else result.append("<unset>");
+    if (returnsResultSetESet)
+      result.append(returnsResultSet);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

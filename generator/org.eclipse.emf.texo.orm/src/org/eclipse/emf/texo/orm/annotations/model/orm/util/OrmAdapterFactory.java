@@ -18,20 +18,21 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.*;
 /**
  * <!-- begin-user-doc --> The <b>Adapter Factory</b> for the model. It provides an adapter <code>createXXX</code>
  * method for each class of the model. <!-- end-user-doc -->
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage
  * @generated
  */
 public class OrmAdapterFactory extends AdapterFactoryImpl {
   /**
-   * The cached model package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached model package. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected static OrmPackage modelPackage;
 
   /**
-   * Creates an instance of the adapter factory.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Creates an instance of the adapter factory. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public OrmAdapterFactory() {
@@ -41,10 +42,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Returns whether this factory is applicable for the type of the object.
-   * <!-- begin-user-doc --> This implementation
+   * Returns whether this factory is applicable for the type of the object. <!-- begin-user-doc --> This implementation
    * returns <code>true</code> if the object is either the model's package or is an instance object of the model. <!--
    * end-user-doc -->
+   * 
    * @return whether this factory is applicable for the type of the object.
    * @generated
    */
@@ -54,387 +55,476 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
       return true;
     }
     if (object instanceof EObject) {
-      return ((EObject)object).eClass().getEPackage() == modelPackage;
+      return ((EObject) object).eClass().getEPackage() == modelPackage;
     }
     return false;
   }
 
   /**
-   * The switch that delegates to the <code>createXXX</code> methods.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The switch that delegates to the <code>createXXX</code> methods. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected OrmSwitch<Adapter> modelSwitch = new OrmSwitch<Adapter>() {
-      @Override
-      public Adapter caseAccessMethods(AccessMethods object) {
-        return createAccessMethodsAdapter();
-      }
-      @Override
-      public Adapter caseAssociationOverride(AssociationOverride object) {
-        return createAssociationOverrideAdapter();
-      }
-      @Override
-      public Adapter caseAttributeOverride(AttributeOverride object) {
-        return createAttributeOverrideAdapter();
-      }
-      @Override
-      public Adapter caseAttributes(Attributes object) {
-        return createAttributesAdapter();
-      }
-      @Override
-      public Adapter caseBasic(Basic object) {
-        return createBasicAdapter();
-      }
-      @Override
-      public Adapter caseBasicCollection(BasicCollection object) {
-        return createBasicCollectionAdapter();
-      }
-      @Override
-      public Adapter caseBasicMap(BasicMap object) {
-        return createBasicMapAdapter();
-      }
-      @Override
-      public Adapter caseCache(Cache object) {
-        return createCacheAdapter();
-      }
-      @Override
-      public Adapter caseCacheInterceptor(CacheInterceptor object) {
-        return createCacheInterceptorAdapter();
-      }
-      @Override
-      public Adapter caseCascadeType(CascadeType object) {
-        return createCascadeTypeAdapter();
-      }
-      @Override
-      public Adapter caseChangeTracking(ChangeTracking object) {
-        return createChangeTrackingAdapter();
-      }
-      @Override
-      public Adapter caseCloneCopyPolicy(CloneCopyPolicy object) {
-        return createCloneCopyPolicyAdapter();
-      }
-      @Override
-      public Adapter caseCollectionTable(CollectionTable object) {
-        return createCollectionTableAdapter();
-      }
-      @Override
-      public Adapter caseColumn(Column object) {
-        return createColumnAdapter();
-      }
-      @Override
-      public Adapter caseColumnResult(ColumnResult object) {
-        return createColumnResultAdapter();
-      }
-      @Override
-      public Adapter caseConversionValue(ConversionValue object) {
-        return createConversionValueAdapter();
-      }
-      @Override
-      public Adapter caseConverter(Converter object) {
-        return createConverterAdapter();
-      }
-      @Override
-      public Adapter caseCopyPolicy(CopyPolicy object) {
-        return createCopyPolicyAdapter();
-      }
-      @Override
-      public Adapter caseCustomizer(Customizer object) {
-        return createCustomizerAdapter();
-      }
-      @Override
-      public Adapter caseDiscriminatorClass(DiscriminatorClass object) {
-        return createDiscriminatorClassAdapter();
-      }
-      @Override
-      public Adapter caseDiscriminatorColumn(DiscriminatorColumn object) {
-        return createDiscriminatorColumnAdapter();
-      }
-      @Override
-      public Adapter caseDocumentRoot(DocumentRoot object) {
-        return createDocumentRootAdapter();
-      }
-      @Override
-      public Adapter caseEclipselinkCollectionTable(EclipselinkCollectionTable object) {
-        return createEclipselinkCollectionTableAdapter();
-      }
-      @Override
-      public Adapter caseElementCollection(ElementCollection object) {
-        return createElementCollectionAdapter();
-      }
-      @Override
-      public Adapter caseEmbeddable(Embeddable object) {
-        return createEmbeddableAdapter();
-      }
-      @Override
-      public Adapter caseEmbedded(Embedded object) {
-        return createEmbeddedAdapter();
-      }
-      @Override
-      public Adapter caseEmbeddedId(EmbeddedId object) {
-        return createEmbeddedIdAdapter();
-      }
-      @Override
-      public Adapter caseEmptyType(EmptyType object) {
-        return createEmptyTypeAdapter();
-      }
-      @Override
-      public Adapter caseEntity(Entity object) {
-        return createEntityAdapter();
-      }
-      @Override
-      public Adapter caseEntityListener(EntityListener object) {
-        return createEntityListenerAdapter();
-      }
-      @Override
-      public Adapter caseEntityListeners(EntityListeners object) {
-        return createEntityListenersAdapter();
-      }
-      @Override
-      public Adapter caseEntityMappingsType(EntityMappingsType object) {
-        return createEntityMappingsTypeAdapter();
-      }
-      @Override
-      public Adapter caseEntityResult(EntityResult object) {
-        return createEntityResultAdapter();
-      }
-      @Override
-      public Adapter caseFieldResult(FieldResult object) {
-        return createFieldResultAdapter();
-      }
-      @Override
-      public Adapter caseGeneratedValue(GeneratedValue object) {
-        return createGeneratedValueAdapter();
-      }
-      @Override
-      public Adapter caseId(Id object) {
-        return createIdAdapter();
-      }
-      @Override
-      public Adapter caseIdClass(IdClass object) {
-        return createIdClassAdapter();
-      }
-      @Override
-      public Adapter caseInheritance(Inheritance object) {
-        return createInheritanceAdapter();
-      }
-      @Override
-      public Adapter caseInstantiationCopyPolicy(InstantiationCopyPolicy object) {
-        return createInstantiationCopyPolicyAdapter();
-      }
-      @Override
-      public Adapter caseJoinColumn(JoinColumn object) {
-        return createJoinColumnAdapter();
-      }
-      @Override
-      public Adapter caseJoinTable(JoinTable object) {
-        return createJoinTableAdapter();
-      }
-      @Override
-      public Adapter caseLob(Lob object) {
-        return createLobAdapter();
-      }
-      @Override
-      public Adapter caseManyToMany(ManyToMany object) {
-        return createManyToManyAdapter();
-      }
-      @Override
-      public Adapter caseManyToOne(ManyToOne object) {
-        return createManyToOneAdapter();
-      }
-      @Override
-      public Adapter caseMapKey(MapKey object) {
-        return createMapKeyAdapter();
-      }
-      @Override
-      public Adapter caseMapKeyClass(MapKeyClass object) {
-        return createMapKeyClassAdapter();
-      }
-      @Override
-      public Adapter caseMapKeyColumn(MapKeyColumn object) {
-        return createMapKeyColumnAdapter();
-      }
-      @Override
-      public Adapter caseMapKeyJoinColumn(MapKeyJoinColumn object) {
-        return createMapKeyJoinColumnAdapter();
-      }
-      @Override
-      public Adapter caseMappedSuperclass(MappedSuperclass object) {
-        return createMappedSuperclassAdapter();
-      }
-      @Override
-      public Adapter caseNamedNativeQuery(NamedNativeQuery object) {
-        return createNamedNativeQueryAdapter();
-      }
-      @Override
-      public Adapter caseNamedQuery(NamedQuery object) {
-        return createNamedQueryAdapter();
-      }
-      @Override
-      public Adapter caseNamedStoredProcedureQuery(NamedStoredProcedureQuery object) {
-        return createNamedStoredProcedureQueryAdapter();
-      }
-      @Override
-      public Adapter caseObjectTypeConverter(ObjectTypeConverter object) {
-        return createObjectTypeConverterAdapter();
-      }
-      @Override
-      public Adapter caseOneToMany(OneToMany object) {
-        return createOneToManyAdapter();
-      }
-      @Override
-      public Adapter caseOneToOne(OneToOne object) {
-        return createOneToOneAdapter();
-      }
-      @Override
-      public Adapter caseOptimisticLocking(OptimisticLocking object) {
-        return createOptimisticLockingAdapter();
-      }
-      @Override
-      public Adapter caseOrderColumn(OrderColumn object) {
-        return createOrderColumnAdapter();
-      }
-      @Override
-      public Adapter casePersistenceUnitDefaults(PersistenceUnitDefaults object) {
-        return createPersistenceUnitDefaultsAdapter();
-      }
-      @Override
-      public Adapter casePersistenceUnitMetadata(PersistenceUnitMetadata object) {
-        return createPersistenceUnitMetadataAdapter();
-      }
-      @Override
-      public Adapter casePostLoad(PostLoad object) {
-        return createPostLoadAdapter();
-      }
-      @Override
-      public Adapter casePostPersist(PostPersist object) {
-        return createPostPersistAdapter();
-      }
-      @Override
-      public Adapter casePostRemove(PostRemove object) {
-        return createPostRemoveAdapter();
-      }
-      @Override
-      public Adapter casePostUpdate(PostUpdate object) {
-        return createPostUpdateAdapter();
-      }
-      @Override
-      public Adapter casePrePersist(PrePersist object) {
-        return createPrePersistAdapter();
-      }
-      @Override
-      public Adapter casePreRemove(PreRemove object) {
-        return createPreRemoveAdapter();
-      }
-      @Override
-      public Adapter casePreUpdate(PreUpdate object) {
-        return createPreUpdateAdapter();
-      }
-      @Override
-      public Adapter casePrimaryKey(PrimaryKey object) {
-        return createPrimaryKeyAdapter();
-      }
-      @Override
-      public Adapter casePrimaryKeyJoinColumn(PrimaryKeyJoinColumn object) {
-        return createPrimaryKeyJoinColumnAdapter();
-      }
-      @Override
-      public Adapter caseProperty(Property object) {
-        return createPropertyAdapter();
-      }
-      @Override
-      public Adapter caseQueryHint(QueryHint object) {
-        return createQueryHintAdapter();
-      }
-      @Override
-      public Adapter caseQueryRedirectors(QueryRedirectors object) {
-        return createQueryRedirectorsAdapter();
-      }
-      @Override
-      public Adapter caseReadTransformer(ReadTransformer object) {
-        return createReadTransformerAdapter();
-      }
-      @Override
-      public Adapter caseSecondaryTable(SecondaryTable object) {
-        return createSecondaryTableAdapter();
-      }
-      @Override
-      public Adapter caseSequenceGenerator(SequenceGenerator object) {
-        return createSequenceGeneratorAdapter();
-      }
-      @Override
-      public Adapter caseSqlResultSetMapping(SqlResultSetMapping object) {
-        return createSqlResultSetMappingAdapter();
-      }
-      @Override
-      public Adapter caseStoredProcedureParameter(StoredProcedureParameter object) {
-        return createStoredProcedureParameterAdapter();
-      }
-      @Override
-      public Adapter caseStructConverter(StructConverter object) {
-        return createStructConverterAdapter();
-      }
-      @Override
-      public Adapter caseTable(Table object) {
-        return createTableAdapter();
-      }
-      @Override
-      public Adapter caseTableGenerator(TableGenerator object) {
-        return createTableGeneratorAdapter();
-      }
-      @Override
-      public Adapter caseTimeOfDay(TimeOfDay object) {
-        return createTimeOfDayAdapter();
-      }
-      @Override
-      public Adapter caseTransformation(Transformation object) {
-        return createTransformationAdapter();
-      }
-      @Override
-      public Adapter caseTransient(Transient object) {
-        return createTransientAdapter();
-      }
-      @Override
-      public Adapter caseTypeConverter(TypeConverter object) {
-        return createTypeConverterAdapter();
-      }
-      @Override
-      public Adapter caseUniqueConstraint(UniqueConstraint object) {
-        return createUniqueConstraintAdapter();
-      }
-      @Override
-      public Adapter caseVariableOneToOne(VariableOneToOne object) {
-        return createVariableOneToOneAdapter();
-      }
-      @Override
-      public Adapter caseVersion(Version object) {
-        return createVersionAdapter();
-      }
-      @Override
-      public Adapter caseWriteTransformer(WriteTransformer object) {
-        return createWriteTransformerAdapter();
-      }
-      @Override
-      public Adapter defaultCase(EObject object) {
-        return createEObjectAdapter();
-      }
-    };
+    @Override
+    public Adapter caseAccessMethods(AccessMethods object) {
+      return createAccessMethodsAdapter();
+    }
+
+    @Override
+    public Adapter caseAssociationOverride(AssociationOverride object) {
+      return createAssociationOverrideAdapter();
+    }
+
+    @Override
+    public Adapter caseAttributeOverride(AttributeOverride object) {
+      return createAttributeOverrideAdapter();
+    }
+
+    @Override
+    public Adapter caseAttributes(Attributes object) {
+      return createAttributesAdapter();
+    }
+
+    @Override
+    public Adapter caseBasic(Basic object) {
+      return createBasicAdapter();
+    }
+
+    @Override
+    public Adapter caseBasicCollection(BasicCollection object) {
+      return createBasicCollectionAdapter();
+    }
+
+    @Override
+    public Adapter caseBasicMap(BasicMap object) {
+      return createBasicMapAdapter();
+    }
+
+    @Override
+    public Adapter caseCache(Cache object) {
+      return createCacheAdapter();
+    }
+
+    @Override
+    public Adapter caseCacheInterceptor(CacheInterceptor object) {
+      return createCacheInterceptorAdapter();
+    }
+
+    @Override
+    public Adapter caseCascadeType(CascadeType object) {
+      return createCascadeTypeAdapter();
+    }
+
+    @Override
+    public Adapter caseChangeTracking(ChangeTracking object) {
+      return createChangeTrackingAdapter();
+    }
+
+    @Override
+    public Adapter caseCloneCopyPolicy(CloneCopyPolicy object) {
+      return createCloneCopyPolicyAdapter();
+    }
+
+    @Override
+    public Adapter caseCollectionTable(CollectionTable object) {
+      return createCollectionTableAdapter();
+    }
+
+    @Override
+    public Adapter caseColumn(Column object) {
+      return createColumnAdapter();
+    }
+
+    @Override
+    public Adapter caseColumnResult(ColumnResult object) {
+      return createColumnResultAdapter();
+    }
+
+    @Override
+    public Adapter caseConversionValue(ConversionValue object) {
+      return createConversionValueAdapter();
+    }
+
+    @Override
+    public Adapter caseConverter(Converter object) {
+      return createConverterAdapter();
+    }
+
+    @Override
+    public Adapter caseCopyPolicy(CopyPolicy object) {
+      return createCopyPolicyAdapter();
+    }
+
+    @Override
+    public Adapter caseCustomizer(Customizer object) {
+      return createCustomizerAdapter();
+    }
+
+    @Override
+    public Adapter caseDiscriminatorClass(DiscriminatorClass object) {
+      return createDiscriminatorClassAdapter();
+    }
+
+    @Override
+    public Adapter caseDiscriminatorColumn(DiscriminatorColumn object) {
+      return createDiscriminatorColumnAdapter();
+    }
+
+    @Override
+    public Adapter caseDocumentRoot(DocumentRoot object) {
+      return createDocumentRootAdapter();
+    }
+
+    @Override
+    public Adapter caseEclipselinkCollectionTable(EclipselinkCollectionTable object) {
+      return createEclipselinkCollectionTableAdapter();
+    }
+
+    @Override
+    public Adapter caseElementCollection(ElementCollection object) {
+      return createElementCollectionAdapter();
+    }
+
+    @Override
+    public Adapter caseEmbeddable(Embeddable object) {
+      return createEmbeddableAdapter();
+    }
+
+    @Override
+    public Adapter caseEmbedded(Embedded object) {
+      return createEmbeddedAdapter();
+    }
+
+    @Override
+    public Adapter caseEmbeddedId(EmbeddedId object) {
+      return createEmbeddedIdAdapter();
+    }
+
+    @Override
+    public Adapter caseEmptyType(EmptyType object) {
+      return createEmptyTypeAdapter();
+    }
+
+    @Override
+    public Adapter caseEntity(Entity object) {
+      return createEntityAdapter();
+    }
+
+    @Override
+    public Adapter caseEntityListener(EntityListener object) {
+      return createEntityListenerAdapter();
+    }
+
+    @Override
+    public Adapter caseEntityListeners(EntityListeners object) {
+      return createEntityListenersAdapter();
+    }
+
+    @Override
+    public Adapter caseEntityMappingsType(EntityMappingsType object) {
+      return createEntityMappingsTypeAdapter();
+    }
+
+    @Override
+    public Adapter caseEntityResult(EntityResult object) {
+      return createEntityResultAdapter();
+    }
+
+    @Override
+    public Adapter caseFieldResult(FieldResult object) {
+      return createFieldResultAdapter();
+    }
+
+    @Override
+    public Adapter caseGeneratedValue(GeneratedValue object) {
+      return createGeneratedValueAdapter();
+    }
+
+    @Override
+    public Adapter caseId(Id object) {
+      return createIdAdapter();
+    }
+
+    @Override
+    public Adapter caseIdClass(IdClass object) {
+      return createIdClassAdapter();
+    }
+
+    @Override
+    public Adapter caseInheritance(Inheritance object) {
+      return createInheritanceAdapter();
+    }
+
+    @Override
+    public Adapter caseInstantiationCopyPolicy(InstantiationCopyPolicy object) {
+      return createInstantiationCopyPolicyAdapter();
+    }
+
+    @Override
+    public Adapter caseJoinColumn(JoinColumn object) {
+      return createJoinColumnAdapter();
+    }
+
+    @Override
+    public Adapter caseJoinTable(JoinTable object) {
+      return createJoinTableAdapter();
+    }
+
+    @Override
+    public Adapter caseLob(Lob object) {
+      return createLobAdapter();
+    }
+
+    @Override
+    public Adapter caseManyToMany(ManyToMany object) {
+      return createManyToManyAdapter();
+    }
+
+    @Override
+    public Adapter caseManyToOne(ManyToOne object) {
+      return createManyToOneAdapter();
+    }
+
+    @Override
+    public Adapter caseMapKey(MapKey object) {
+      return createMapKeyAdapter();
+    }
+
+    @Override
+    public Adapter caseMapKeyClass(MapKeyClass object) {
+      return createMapKeyClassAdapter();
+    }
+
+    @Override
+    public Adapter caseMapKeyColumn(MapKeyColumn object) {
+      return createMapKeyColumnAdapter();
+    }
+
+    @Override
+    public Adapter caseMapKeyJoinColumn(MapKeyJoinColumn object) {
+      return createMapKeyJoinColumnAdapter();
+    }
+
+    @Override
+    public Adapter caseMappedSuperclass(MappedSuperclass object) {
+      return createMappedSuperclassAdapter();
+    }
+
+    @Override
+    public Adapter caseNamedNativeQuery(NamedNativeQuery object) {
+      return createNamedNativeQueryAdapter();
+    }
+
+    @Override
+    public Adapter caseNamedQuery(NamedQuery object) {
+      return createNamedQueryAdapter();
+    }
+
+    @Override
+    public Adapter caseNamedStoredProcedureQuery(NamedStoredProcedureQuery object) {
+      return createNamedStoredProcedureQueryAdapter();
+    }
+
+    @Override
+    public Adapter caseObjectTypeConverter(ObjectTypeConverter object) {
+      return createObjectTypeConverterAdapter();
+    }
+
+    @Override
+    public Adapter caseOneToMany(OneToMany object) {
+      return createOneToManyAdapter();
+    }
+
+    @Override
+    public Adapter caseOneToOne(OneToOne object) {
+      return createOneToOneAdapter();
+    }
+
+    @Override
+    public Adapter caseOptimisticLocking(OptimisticLocking object) {
+      return createOptimisticLockingAdapter();
+    }
+
+    @Override
+    public Adapter caseOrderColumn(OrderColumn object) {
+      return createOrderColumnAdapter();
+    }
+
+    @Override
+    public Adapter casePersistenceUnitDefaults(PersistenceUnitDefaults object) {
+      return createPersistenceUnitDefaultsAdapter();
+    }
+
+    @Override
+    public Adapter casePersistenceUnitMetadata(PersistenceUnitMetadata object) {
+      return createPersistenceUnitMetadataAdapter();
+    }
+
+    @Override
+    public Adapter casePostLoad(PostLoad object) {
+      return createPostLoadAdapter();
+    }
+
+    @Override
+    public Adapter casePostPersist(PostPersist object) {
+      return createPostPersistAdapter();
+    }
+
+    @Override
+    public Adapter casePostRemove(PostRemove object) {
+      return createPostRemoveAdapter();
+    }
+
+    @Override
+    public Adapter casePostUpdate(PostUpdate object) {
+      return createPostUpdateAdapter();
+    }
+
+    @Override
+    public Adapter casePrePersist(PrePersist object) {
+      return createPrePersistAdapter();
+    }
+
+    @Override
+    public Adapter casePreRemove(PreRemove object) {
+      return createPreRemoveAdapter();
+    }
+
+    @Override
+    public Adapter casePreUpdate(PreUpdate object) {
+      return createPreUpdateAdapter();
+    }
+
+    @Override
+    public Adapter casePrimaryKey(PrimaryKey object) {
+      return createPrimaryKeyAdapter();
+    }
+
+    @Override
+    public Adapter casePrimaryKeyJoinColumn(PrimaryKeyJoinColumn object) {
+      return createPrimaryKeyJoinColumnAdapter();
+    }
+
+    @Override
+    public Adapter caseProperty(Property object) {
+      return createPropertyAdapter();
+    }
+
+    @Override
+    public Adapter caseQueryHint(QueryHint object) {
+      return createQueryHintAdapter();
+    }
+
+    @Override
+    public Adapter caseQueryRedirectors(QueryRedirectors object) {
+      return createQueryRedirectorsAdapter();
+    }
+
+    @Override
+    public Adapter caseReadTransformer(ReadTransformer object) {
+      return createReadTransformerAdapter();
+    }
+
+    @Override
+    public Adapter caseSecondaryTable(SecondaryTable object) {
+      return createSecondaryTableAdapter();
+    }
+
+    @Override
+    public Adapter caseSequenceGenerator(SequenceGenerator object) {
+      return createSequenceGeneratorAdapter();
+    }
+
+    @Override
+    public Adapter caseSqlResultSetMapping(SqlResultSetMapping object) {
+      return createSqlResultSetMappingAdapter();
+    }
+
+    @Override
+    public Adapter caseStoredProcedureParameter(StoredProcedureParameter object) {
+      return createStoredProcedureParameterAdapter();
+    }
+
+    @Override
+    public Adapter caseStructConverter(StructConverter object) {
+      return createStructConverterAdapter();
+    }
+
+    @Override
+    public Adapter caseTable(Table object) {
+      return createTableAdapter();
+    }
+
+    @Override
+    public Adapter caseTableGenerator(TableGenerator object) {
+      return createTableGeneratorAdapter();
+    }
+
+    @Override
+    public Adapter caseTimeOfDay(TimeOfDay object) {
+      return createTimeOfDayAdapter();
+    }
+
+    @Override
+    public Adapter caseTransformation(Transformation object) {
+      return createTransformationAdapter();
+    }
+
+    @Override
+    public Adapter caseTransient(Transient object) {
+      return createTransientAdapter();
+    }
+
+    @Override
+    public Adapter caseTypeConverter(TypeConverter object) {
+      return createTypeConverterAdapter();
+    }
+
+    @Override
+    public Adapter caseUniqueConstraint(UniqueConstraint object) {
+      return createUniqueConstraintAdapter();
+    }
+
+    @Override
+    public Adapter caseVariableOneToOne(VariableOneToOne object) {
+      return createVariableOneToOneAdapter();
+    }
+
+    @Override
+    public Adapter caseVersion(Version object) {
+      return createVersionAdapter();
+    }
+
+    @Override
+    public Adapter caseWriteTransformer(WriteTransformer object) {
+      return createWriteTransformerAdapter();
+    }
+
+    @Override
+    public Adapter defaultCase(EObject object) {
+      return createEObjectAdapter();
+    }
+  };
 
   /**
-   * Creates an adapter for the <code>target</code>.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param target the object to adapt.
+   * Creates an adapter for the <code>target</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param target
+   *          the object to adapt.
    * @return the adapter for the <code>target</code>.
    * @generated
    */
   @Override
   public Adapter createAdapter(Notifier target) {
-    return modelSwitch.doSwitch((EObject)target);
+    return modelSwitch.doSwitch((EObject) target);
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods <em>Access Methods</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods
+   * <em>Access Methods</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods
    * @generated
@@ -472,9 +562,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes <em>Attributes</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes
+   * <em>Attributes</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes
    * @generated
@@ -484,9 +575,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic <em>Basic</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic
+   * <em>Basic</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic
    * @generated
@@ -510,9 +602,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap <em>Basic Map</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap
+   * <em>Basic Map</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap
    * @generated
@@ -522,9 +615,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache <em>Cache</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache
+   * <em>Cache</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache
    * @generated
@@ -548,9 +642,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType <em>Cascade Type</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType
+   * <em>Cascade Type</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType
    * @generated
@@ -602,9 +697,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column <em>Column</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Column
+   * <em>Column</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Column
    * @generated
@@ -614,9 +710,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult <em>Column Result</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult
+   * <em>Column Result</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ColumnResult
    * @generated
@@ -640,9 +737,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter <em>Converter</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter
+   * <em>Converter</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Converter
    * @generated
@@ -652,9 +750,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy <em>Copy Policy</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy
+   * <em>Copy Policy</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.CopyPolicy
    * @generated
@@ -664,9 +763,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer <em>Customizer</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Customizer
+   * <em>Customizer</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Customizer
    * @generated
@@ -704,9 +804,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot <em>Document Root</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot
+   * <em>Document Root</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot
    * @generated
@@ -716,10 +817,12 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable <em>Eclipselink Collection Table</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that
+   * Creates a new adapter for an object of class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable
+   * <em>Eclipselink Collection Table</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
    * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
    * end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable
    * @generated
@@ -743,9 +846,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable <em>Embeddable</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable
+   * <em>Embeddable</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable
    * @generated
@@ -755,9 +859,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded <em>Embedded</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded
+   * <em>Embedded</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded
    * @generated
@@ -767,9 +872,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId <em>Embedded Id</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId
+   * <em>Embedded Id</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId
    * @generated
@@ -779,9 +885,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType <em>Empty Type</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType
+   * <em>Empty Type</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType
    * @generated
@@ -791,9 +898,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity <em>Entity</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity
+   * <em>Entity</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity
    * @generated
@@ -845,9 +953,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult <em>Entity Result</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult
+   * <em>Entity Result</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityResult
    * @generated
@@ -857,9 +966,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult <em>Field Result</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult
+   * <em>Field Result</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult
    * @generated
@@ -883,9 +993,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id <em>Id</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id <em>Id</em>}
+   * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
    * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id
    * @generated
@@ -895,9 +1006,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass <em>Id Class</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdClass
+   * <em>Id Class</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.IdClass
    * @generated
@@ -907,9 +1019,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance <em>Inheritance</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance
+   * <em>Inheritance</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance
    * @generated
@@ -919,9 +1032,11 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy <em>Instantiation Copy Policy</em>}'.
+   * Creates a new adapter for an object of class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy <em>Instantiation Copy Policy</em>}'.
    * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy
    * @generated
@@ -931,9 +1046,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn <em>Join Column</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn
+   * <em>Join Column</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn
    * @generated
@@ -943,9 +1059,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable <em>Join Table</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable
+   * <em>Join Table</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable
    * @generated
@@ -955,9 +1072,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Lob <em>Lob</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Lob
+   * <em>Lob</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Lob
    * @generated
@@ -967,9 +1085,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany <em>Many To Many</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany
+   * <em>Many To Many</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany
    * @generated
@@ -979,9 +1098,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne <em>Many To One</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne
+   * <em>Many To One</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne
    * @generated
@@ -991,9 +1111,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey <em>Map Key</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKey
+   * <em>Map Key</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKey
    * @generated
@@ -1003,9 +1124,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass <em>Map Key Class</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass
+   * <em>Map Key Class</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyClass
    * @generated
@@ -1015,9 +1137,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn <em>Map Key Column</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn
+   * <em>Map Key Column</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyColumn
    * @generated
@@ -1069,9 +1192,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery <em>Named Query</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery
+   * <em>Named Query</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery
    * @generated
@@ -1081,10 +1205,12 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that
+   * Creates a new adapter for an object of class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery
+   * <em>Named Stored Procedure Query</em>}'. <!-- begin-user-doc --> This default implementation returns null so that
    * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
    * end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery
    * @generated
@@ -1108,9 +1234,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany <em>One To Many</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany
+   * <em>One To Many</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany
    * @generated
@@ -1120,9 +1247,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne <em>One To One</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne
+   * <em>One To One</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne
    * @generated
@@ -1146,9 +1274,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn <em>Order Column</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn
+   * <em>Order Column</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn
    * @generated
@@ -1158,9 +1287,11 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults <em>Persistence Unit Defaults</em>}'.
+   * Creates a new adapter for an object of class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults <em>Persistence Unit Defaults</em>}'.
    * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults
    * @generated
@@ -1170,9 +1301,11 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata <em>Persistence Unit Metadata</em>}'.
+   * Creates a new adapter for an object of class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata <em>Persistence Unit Metadata</em>}'.
    * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata
    * @generated
@@ -1182,9 +1315,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad <em>Post Load</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad
+   * <em>Post Load</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad
    * @generated
@@ -1194,9 +1328,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist <em>Post Persist</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist
+   * <em>Post Persist</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist
    * @generated
@@ -1206,9 +1341,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove <em>Post Remove</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove
+   * <em>Post Remove</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove
    * @generated
@@ -1218,9 +1354,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate <em>Post Update</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate
+   * <em>Post Update</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PostUpdate
    * @generated
@@ -1230,9 +1367,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist <em>Pre Persist</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist
+   * <em>Pre Persist</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrePersist
    * @generated
@@ -1242,9 +1380,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove <em>Pre Remove</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove
+   * <em>Pre Remove</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove
    * @generated
@@ -1254,9 +1393,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate <em>Pre Update</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate
+   * <em>Pre Update</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate
    * @generated
@@ -1266,9 +1406,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey <em>Primary Key</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey
+   * <em>Primary Key</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey
    * @generated
@@ -1292,9 +1433,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property <em>Property</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Property
+   * <em>Property</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Property
    * @generated
@@ -1304,9 +1446,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint <em>Query Hint</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint
+   * <em>Query Hint</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.QueryHint
    * @generated
@@ -1386,9 +1529,11 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter <em>Stored Procedure Parameter</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
+   * Creates a new adapter for an object of class '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter <em>Stored Procedure Parameter</em>}
+   * '. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
    * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter
    * @generated
@@ -1412,9 +1557,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table <em>Table</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table
+   * <em>Table</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Table
    * @generated
@@ -1438,9 +1584,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay <em>Time Of Day</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay
+   * <em>Time Of Day</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay
    * @generated
@@ -1450,10 +1597,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation <em>Transformation</em>}'.
-   * <!-- begin-user-doc
-   * --> This default implementation returns null so that we can easily ignore cases; it's useful to ignore a case when
-   * inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation
+   * <em>Transformation</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation
    * @generated
@@ -1463,9 +1610,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient <em>Transient</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transient
+   * <em>Transient</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transient
    * @generated
@@ -1475,9 +1623,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter <em>Type Converter</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter
+   * <em>Type Converter</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter
    * @generated
@@ -1515,9 +1664,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version <em>Version</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version
+   * <em>Version</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
+   * 
    * @return the new adapter.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version
    * @generated
@@ -1541,9 +1691,9 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
   }
 
   /**
-   * Creates a new adapter for the default case.
-   * <!-- begin-user-doc --> This default implementation returns null. <!--
+   * Creates a new adapter for the default case. <!-- begin-user-doc --> This default implementation returns null. <!--
    * end-user-doc -->
+   * 
    * @return the new adapter.
    * @generated
    */

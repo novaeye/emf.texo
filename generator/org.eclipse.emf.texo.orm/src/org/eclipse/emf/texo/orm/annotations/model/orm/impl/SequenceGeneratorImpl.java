@@ -41,9 +41,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements SequenceGenerator {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -51,9 +51,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getDescription()
    * @generated
    * @ordered
@@ -61,9 +61,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getAllocationSize()
    * @generated
    * @ordered
@@ -71,9 +71,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected static final int ALLOCATION_SIZE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getAllocationSize() <em>Allocation Size</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getAllocationSize()
    * @generated
    * @ordered
@@ -81,17 +81,17 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected int allocationSize = ALLOCATION_SIZE_EDEFAULT;
 
   /**
-   * This is true if the Allocation Size attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Allocation Size attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
   protected boolean allocationSizeESet;
 
   /**
-   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -99,9 +99,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected static final String CATALOG_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getCatalog() <em>Catalog</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getCatalog()
    * @generated
    * @ordered
@@ -109,9 +109,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getInitialValue()
    * @generated
    * @ordered
@@ -119,9 +119,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected static final int INITIAL_VALUE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getInitialValue()
    * @generated
    * @ordered
@@ -129,8 +129,8 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected int initialValue = INITIAL_VALUE_EDEFAULT;
 
   /**
-   * This is true if the Initial Value attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Initial Value attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -147,8 +147,8 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getName()
    * @generated
    * @ordered
@@ -156,9 +156,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSchema()
    * @generated
    * @ordered
@@ -176,9 +176,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected String schema = SCHEMA_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getSequenceName() <em>Sequence Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+   * The default value of the '{@link #getSequenceName() <em>Sequence Name</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * 
    * @see #getSequenceName()
    * @generated
    * @ordered
@@ -186,9 +186,9 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
   protected static final String SEQUENCE_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getSequenceName() <em>Sequence Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getSequenceName() <em>Sequence Name</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getSequenceName()
    * @generated
    * @ordered
@@ -197,6 +197,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected SequenceGeneratorImpl() {
@@ -205,6 +206,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -214,6 +216,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getDescription() {
@@ -222,17 +225,20 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION, oldDescription,
+          description));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getAllocationSize() {
@@ -241,6 +247,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setAllocationSize(int newAllocationSize) {
@@ -249,11 +256,13 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
     boolean oldAllocationSizeESet = allocationSizeESet;
     allocationSizeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE, oldAllocationSize, allocationSize, !oldAllocationSizeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE,
+          oldAllocationSize, allocationSize, !oldAllocationSizeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetAllocationSize() {
@@ -262,11 +271,13 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
     allocationSize = ALLOCATION_SIZE_EDEFAULT;
     allocationSizeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE, oldAllocationSize, ALLOCATION_SIZE_EDEFAULT, oldAllocationSizeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE,
+          oldAllocationSize, ALLOCATION_SIZE_EDEFAULT, oldAllocationSizeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetAllocationSize() {
@@ -275,6 +286,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getCatalog() {
@@ -283,6 +295,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setCatalog(String newCatalog) {
@@ -294,6 +307,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public int getInitialValue() {
@@ -302,6 +316,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setInitialValue(int newInitialValue) {
@@ -310,11 +325,13 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
     boolean oldInitialValueESet = initialValueESet;
     initialValueESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE, oldInitialValue, initialValue, !oldInitialValueESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE,
+          oldInitialValue, initialValue, !oldInitialValueESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetInitialValue() {
@@ -323,11 +340,13 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
     initialValue = INITIAL_VALUE_EDEFAULT;
     initialValueESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE, oldInitialValue, INITIAL_VALUE_EDEFAULT, oldInitialValueESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE,
+          oldInitialValue, INITIAL_VALUE_EDEFAULT, oldInitialValueESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetInitialValue() {
@@ -336,6 +355,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getName() {
@@ -344,6 +364,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setName(String newName) {
@@ -355,6 +376,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getSchema() {
@@ -363,6 +385,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSchema(String newSchema) {
@@ -374,6 +397,7 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getSequenceName() {
@@ -382,146 +406,160 @@ public class SequenceGeneratorImpl extends BaseOrmAnnotationImpl implements Sequ
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setSequenceName(String newSequenceName) {
     String oldSequenceName = sequenceName;
     sequenceName = newSequenceName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME, oldSequenceName, sequenceName));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME,
+          oldSequenceName, sequenceName));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
-        return getDescription();
-      case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
-        return getAllocationSize();
-      case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
-        return getCatalog();
-      case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
-        return getInitialValue();
-      case OrmPackage.SEQUENCE_GENERATOR__NAME:
-        return getName();
-      case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
-        return getSchema();
-      case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
-        return getSequenceName();
+    case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
+      return getDescription();
+    case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
+      return getAllocationSize();
+    case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
+      return getCatalog();
+    case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
+      return getInitialValue();
+    case OrmPackage.SEQUENCE_GENERATOR__NAME:
+      return getName();
+    case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
+      return getSchema();
+    case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
+      return getSequenceName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
-        setDescription((String)newValue);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
-        setAllocationSize((Integer)newValue);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
-        setCatalog((String)newValue);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
-        setInitialValue((Integer)newValue);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__NAME:
-        setName((String)newValue);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
-        setSchema((String)newValue);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
-        setSequenceName((String)newValue);
-        return;
+    case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
+      setDescription((String) newValue);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
+      setAllocationSize((Integer) newValue);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
+      setCatalog((String) newValue);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
+      setInitialValue((Integer) newValue);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
+      setSchema((String) newValue);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
+      setSequenceName((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
-        unsetAllocationSize();
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
-        setCatalog(CATALOG_EDEFAULT);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
-        unsetInitialValue();
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
-        setSchema(SCHEMA_EDEFAULT);
-        return;
-      case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
-        setSequenceName(SEQUENCE_NAME_EDEFAULT);
-        return;
+    case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
+      setDescription(DESCRIPTION_EDEFAULT);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
+      unsetAllocationSize();
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
+      setCatalog(CATALOG_EDEFAULT);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
+      unsetInitialValue();
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
+      setSchema(SCHEMA_EDEFAULT);
+      return;
+    case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
+      setSequenceName(SEQUENCE_NAME_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
-        return isSetAllocationSize();
-      case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
-        return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
-      case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
-        return isSetInitialValue();
-      case OrmPackage.SEQUENCE_GENERATOR__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
-        return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
-      case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
-        return SEQUENCE_NAME_EDEFAULT == null ? sequenceName != null : !SEQUENCE_NAME_EDEFAULT.equals(sequenceName);
+    case OrmPackage.SEQUENCE_GENERATOR__DESCRIPTION:
+      return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+    case OrmPackage.SEQUENCE_GENERATOR__ALLOCATION_SIZE:
+      return isSetAllocationSize();
+    case OrmPackage.SEQUENCE_GENERATOR__CATALOG:
+      return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+    case OrmPackage.SEQUENCE_GENERATOR__INITIAL_VALUE:
+      return isSetInitialValue();
+    case OrmPackage.SEQUENCE_GENERATOR__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.SEQUENCE_GENERATOR__SCHEMA:
+      return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
+    case OrmPackage.SEQUENCE_GENERATOR__SEQUENCE_NAME:
+      return SEQUENCE_NAME_EDEFAULT == null ? sequenceName != null : !SEQUENCE_NAME_EDEFAULT.equals(sequenceName);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");
     result.append(description);
     result.append(", allocationSize: ");
-    if (allocationSizeESet) result.append(allocationSize); else result.append("<unset>");
+    if (allocationSizeESet)
+      result.append(allocationSize);
+    else
+      result.append("<unset>");
     result.append(", catalog: ");
     result.append(catalog);
     result.append(", initialValue: ");
-    if (initialValueESet) result.append(initialValue); else result.append("<unset>");
+    if (initialValueESet)
+      result.append(initialValue);
+    else
+      result.append("<unset>");
     result.append(", name: ");
     result.append(name);
     result.append(", schema: ");

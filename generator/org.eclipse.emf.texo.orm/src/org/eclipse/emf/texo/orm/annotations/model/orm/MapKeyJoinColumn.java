@@ -50,13 +50,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Column Definition</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Column Definition</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Column Definition</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Column Definition</em>' attribute.
    * @see #setColumnDefinition(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_ColumnDefinition()
@@ -67,22 +67,24 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   String getColumnDefinition();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getColumnDefinition <em>Column Definition</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Column Definition</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getColumnDefinition
+   * <em>Column Definition</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Column Definition</em>' attribute.
    * @see #getColumnDefinition()
    * @generated
    */
   void setColumnDefinition(String value);
 
   /**
-   * Returns the value of the '<em><b>Insertable</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Insertable</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Insertable</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Insertable</em>' attribute.
    * @see #isSetInsertable()
    * @see #unsetInsertable()
@@ -95,9 +97,11 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isInsertable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isInsertable <em>Insertable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Insertable</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isInsertable
+   * <em>Insertable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Insertable</em>' attribute.
    * @see #isSetInsertable()
    * @see #unsetInsertable()
    * @see #isInsertable()
@@ -106,8 +110,9 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void setInsertable(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isInsertable <em>Insertable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isInsertable
+   * <em>Insertable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetInsertable()
    * @see #isInsertable()
    * @see #setInsertable(boolean)
@@ -116,8 +121,10 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void unsetInsertable();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isInsertable <em>Insertable</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isInsertable <em>Insertable</em>}' attribute
+   * is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Insertable</em>' attribute is set.
    * @see #unsetInsertable()
    * @see #isInsertable()
@@ -127,38 +134,39 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isSetInsertable();
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_Name()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='name'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='name'"
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getName
+   * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Nullable</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Nullable</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nullable</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Nullable</em>' attribute.
    * @see #isSetNullable()
    * @see #unsetNullable()
@@ -171,9 +179,11 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isNullable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isNullable <em>Nullable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nullable</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isNullable
+   * <em>Nullable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Nullable</em>' attribute.
    * @see #isSetNullable()
    * @see #unsetNullable()
    * @see #isNullable()
@@ -182,8 +192,9 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void setNullable(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isNullable <em>Nullable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isNullable
+   * <em>Nullable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetNullable()
    * @see #isNullable()
    * @see #setNullable(boolean)
@@ -192,8 +203,10 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void unsetNullable();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isNullable <em>Nullable</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isNullable <em>Nullable</em>}' attribute is
+   * set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Nullable</em>' attribute is set.
    * @see #unsetNullable()
    * @see #isNullable()
@@ -203,13 +216,13 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isSetNullable();
 
   /**
-   * Returns the value of the '<em><b>Referenced Column Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Referenced Column Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Referenced Column Name</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Referenced Column Name</em>' attribute.
    * @see #setReferencedColumnName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_ReferencedColumnName()
@@ -220,46 +233,50 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   String getReferencedColumnName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getReferencedColumnName <em>Referenced Column Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Referenced Column Name</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getReferencedColumnName
+   * <em>Referenced Column Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Referenced Column Name</em>' attribute.
    * @see #getReferencedColumnName()
    * @generated
    */
   void setReferencedColumnName(String value);
 
   /**
-   * Returns the value of the '<em><b>Table</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Table</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Table</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Table</em>' attribute.
    * @see #setTable(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_Table()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='table'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='table'"
    * @generated
    */
   String getTable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getTable <em>Table</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Table</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#getTable
+   * <em>Table</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Table</em>' attribute.
    * @see #getTable()
    * @generated
    */
   void setTable(String value);
 
   /**
-   * Returns the value of the '<em><b>Unique</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Unique</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Unique</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Unique</em>' attribute.
    * @see #isSetUnique()
    * @see #unsetUnique()
@@ -272,9 +289,11 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isUnique();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUnique <em>Unique</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Unique</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUnique
+   * <em>Unique</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Unique</em>' attribute.
    * @see #isSetUnique()
    * @see #unsetUnique()
    * @see #isUnique()
@@ -283,8 +302,9 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void setUnique(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUnique <em>Unique</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUnique
+   * <em>Unique</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetUnique()
    * @see #isUnique()
    * @see #setUnique(boolean)
@@ -293,8 +313,9 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void unsetUnique();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUnique <em>Unique</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUnique
+   * <em>Unique</em>}' attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Unique</em>' attribute is set.
    * @see #unsetUnique()
    * @see #isUnique()
@@ -304,13 +325,13 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isSetUnique();
 
   /**
-   * Returns the value of the '<em><b>Updatable</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Updatable</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Updatable</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Updatable</em>' attribute.
    * @see #isSetUpdatable()
    * @see #unsetUpdatable()
@@ -323,9 +344,11 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   boolean isUpdatable();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUpdatable <em>Updatable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Updatable</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUpdatable
+   * <em>Updatable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Updatable</em>' attribute.
    * @see #isSetUpdatable()
    * @see #unsetUpdatable()
    * @see #isUpdatable()
@@ -334,8 +357,9 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void setUpdatable(boolean value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUpdatable <em>Updatable</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUpdatable
+   * <em>Updatable</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetUpdatable()
    * @see #isUpdatable()
    * @see #setUpdatable(boolean)
@@ -344,8 +368,10 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
   void unsetUpdatable();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUpdatable <em>Updatable</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MapKeyJoinColumn#isUpdatable <em>Updatable</em>}' attribute
+   * is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Updatable</em>' attribute is set.
    * @see #unsetUpdatable()
    * @see #isUpdatable()

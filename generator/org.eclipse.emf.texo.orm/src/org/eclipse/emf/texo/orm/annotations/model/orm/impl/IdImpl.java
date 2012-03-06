@@ -326,11 +326,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__COLUMN, oldColumn,
           newColumn);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -343,21 +342,17 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setColumn(Column newColumn) {
     if (newColumn != column) {
       NotificationChain msgs = null;
-      if (column != null) {
+      if (column != null)
         msgs = ((InternalEObject) column).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ID__COLUMN, null,
             msgs);
-      }
-      if (newColumn != null) {
+      if (newColumn != null)
         msgs = ((InternalEObject) newColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ID__COLUMN, null,
             msgs);
-      }
       msgs = basicSetColumn(newColumn, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__COLUMN, newColumn, newColumn));
-    }
   }
 
   /**
@@ -380,11 +375,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__GENERATED_VALUE,
           oldGeneratedValue, newGeneratedValue);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -397,22 +391,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setGeneratedValue(GeneratedValue newGeneratedValue) {
     if (newGeneratedValue != generatedValue) {
       NotificationChain msgs = null;
-      if (generatedValue != null) {
+      if (generatedValue != null)
         msgs = ((InternalEObject) generatedValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__GENERATED_VALUE, null, msgs);
-      }
-      if (newGeneratedValue != null) {
+      if (newGeneratedValue != null)
         msgs = ((InternalEObject) newGeneratedValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__GENERATED_VALUE, null, msgs);
-      }
       msgs = basicSetGeneratedValue(newGeneratedValue, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__GENERATED_VALUE, newGeneratedValue,
           newGeneratedValue));
-    }
   }
 
   /**
@@ -434,10 +424,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     temporal = newTemporal == null ? TEMPORAL_EDEFAULT : newTemporal;
     boolean oldTemporalESet = temporalESet;
     temporalESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TEMPORAL, oldTemporal, temporal,
           !oldTemporalESet));
-    }
   }
 
   /**
@@ -450,10 +439,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     boolean oldTemporalESet = temporalESet;
     temporal = TEMPORAL_EDEFAULT;
     temporalESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ID__TEMPORAL, oldTemporal, TEMPORAL_EDEFAULT,
           oldTemporalESet));
-    }
   }
 
   /**
@@ -482,9 +470,8 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setConvert(String newConvert) {
     String oldConvert = convert;
     convert = newConvert;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__CONVERT, oldConvert, convert));
-    }
   }
 
   /**
@@ -507,11 +494,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__CONVERTER,
           oldConverter, newConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -524,21 +510,17 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setConverter(Converter newConverter) {
     if (newConverter != converter) {
       NotificationChain msgs = null;
-      if (converter != null) {
+      if (converter != null)
         msgs = ((InternalEObject) converter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ID__CONVERTER,
             null, msgs);
-      }
-      if (newConverter != null) {
+      if (newConverter != null)
         msgs = ((InternalEObject) newConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ID__CONVERTER,
             null, msgs);
-      }
       msgs = basicSetConverter(newConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__CONVERTER, newConverter, newConverter));
-    }
   }
 
   /**
@@ -561,11 +543,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TYPE_CONVERTER,
           oldTypeConverter, newTypeConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -578,22 +559,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setTypeConverter(TypeConverter newTypeConverter) {
     if (newTypeConverter != typeConverter) {
       NotificationChain msgs = null;
-      if (typeConverter != null) {
+      if (typeConverter != null)
         msgs = ((InternalEObject) typeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__TYPE_CONVERTER, null, msgs);
-      }
-      if (newTypeConverter != null) {
+      if (newTypeConverter != null)
         msgs = ((InternalEObject) newTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__TYPE_CONVERTER, null, msgs);
-      }
       msgs = basicSetTypeConverter(newTypeConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TYPE_CONVERTER, newTypeConverter,
           newTypeConverter));
-    }
   }
 
   /**
@@ -617,11 +594,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.ID__OBJECT_TYPE_CONVERTER, oldObjectTypeConverter, newObjectTypeConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -634,22 +610,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setObjectTypeConverter(ObjectTypeConverter newObjectTypeConverter) {
     if (newObjectTypeConverter != objectTypeConverter) {
       NotificationChain msgs = null;
-      if (objectTypeConverter != null) {
+      if (objectTypeConverter != null)
         msgs = ((InternalEObject) objectTypeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__OBJECT_TYPE_CONVERTER, null, msgs);
-      }
-      if (newObjectTypeConverter != null) {
+      if (newObjectTypeConverter != null)
         msgs = ((InternalEObject) newObjectTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__OBJECT_TYPE_CONVERTER, null, msgs);
-      }
       msgs = basicSetObjectTypeConverter(newObjectTypeConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__OBJECT_TYPE_CONVERTER,
           newObjectTypeConverter, newObjectTypeConverter));
-    }
   }
 
   /**
@@ -672,11 +644,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__STRUCT_CONVERTER,
           oldStructConverter, newStructConverter);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -689,22 +660,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setStructConverter(StructConverter newStructConverter) {
     if (newStructConverter != structConverter) {
       NotificationChain msgs = null;
-      if (structConverter != null) {
+      if (structConverter != null)
         msgs = ((InternalEObject) structConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__STRUCT_CONVERTER, null, msgs);
-      }
-      if (newStructConverter != null) {
+      if (newStructConverter != null)
         msgs = ((InternalEObject) newStructConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__STRUCT_CONVERTER, null, msgs);
-      }
       msgs = basicSetStructConverter(newStructConverter, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__STRUCT_CONVERTER, newStructConverter,
           newStructConverter));
-    }
   }
 
   /**
@@ -727,11 +694,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TABLE_GENERATOR,
           oldTableGenerator, newTableGenerator);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -744,22 +710,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setTableGenerator(TableGenerator newTableGenerator) {
     if (newTableGenerator != tableGenerator) {
       NotificationChain msgs = null;
-      if (tableGenerator != null) {
+      if (tableGenerator != null)
         msgs = ((InternalEObject) tableGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__TABLE_GENERATOR, null, msgs);
-      }
-      if (newTableGenerator != null) {
+      if (newTableGenerator != null)
         msgs = ((InternalEObject) newTableGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__TABLE_GENERATOR, null, msgs);
-      }
       msgs = basicSetTableGenerator(newTableGenerator, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TABLE_GENERATOR, newTableGenerator,
           newTableGenerator));
-    }
   }
 
   /**
@@ -782,11 +744,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__SEQUENCE_GENERATOR,
           oldSequenceGenerator, newSequenceGenerator);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -799,22 +760,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setSequenceGenerator(SequenceGenerator newSequenceGenerator) {
     if (newSequenceGenerator != sequenceGenerator) {
       NotificationChain msgs = null;
-      if (sequenceGenerator != null) {
+      if (sequenceGenerator != null)
         msgs = ((InternalEObject) sequenceGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__SEQUENCE_GENERATOR, null, msgs);
-      }
-      if (newSequenceGenerator != null) {
+      if (newSequenceGenerator != null)
         msgs = ((InternalEObject) newSequenceGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__SEQUENCE_GENERATOR, null, msgs);
-      }
       msgs = basicSetSequenceGenerator(newSequenceGenerator, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__SEQUENCE_GENERATOR, newSequenceGenerator,
           newSequenceGenerator));
-    }
   }
 
   /**
@@ -849,11 +806,10 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__ACCESS_METHODS,
           oldAccessMethods, newAccessMethods);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -866,22 +822,18 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setAccessMethods(AccessMethods newAccessMethods) {
     if (newAccessMethods != accessMethods) {
       NotificationChain msgs = null;
-      if (accessMethods != null) {
+      if (accessMethods != null)
         msgs = ((InternalEObject) accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__ACCESS_METHODS, null, msgs);
-      }
-      if (newAccessMethods != null) {
+      if (newAccessMethods != null)
         msgs = ((InternalEObject) newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.ID__ACCESS_METHODS, null, msgs);
-      }
       msgs = basicSetAccessMethods(newAccessMethods, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__ACCESS_METHODS, newAccessMethods,
           newAccessMethods));
-    }
   }
 
   /**
@@ -903,9 +855,8 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__ACCESS, oldAccess, access, !oldAccessESet));
-    }
   }
 
   /**
@@ -918,10 +869,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ID__ACCESS, oldAccess, ACCESS_EDEFAULT,
           oldAccessESet));
-    }
   }
 
   /**
@@ -952,10 +902,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     mutable = newMutable;
     boolean oldMutableESet = mutableESet;
     mutableESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__MUTABLE, oldMutable, mutable,
           !oldMutableESet));
-    }
   }
 
   /**
@@ -968,10 +917,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
     boolean oldMutableESet = mutableESet;
     mutable = MUTABLE_EDEFAULT;
     mutableESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ID__MUTABLE, oldMutable, MUTABLE_EDEFAULT,
           oldMutableESet));
-    }
   }
 
   /**
@@ -1000,9 +948,8 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__NAME, oldName, name));
-    }
   }
 
   /**
@@ -1244,31 +1191,27 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (temporal: ");
-    if (temporalESet) {
+    if (temporalESet)
       result.append(temporal);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", convert: ");
     result.append(convert);
     result.append(", access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", mutable: ");
-    if (mutableESet) {
+    if (mutableESet)
       result.append(mutable);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", name: ");
     result.append(name);
     result.append(')');

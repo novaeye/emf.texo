@@ -11,25 +11,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Pre Remove</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD}) @Retention(RUNTIME)
- * 				public
- * 				@interface PreRemove {}
+ * @Target({METHOD ) @Retention(RUNTIME) public
+ * @interface PreRemove {}
  * 
- *       
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getDescription <em>Description</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getMethodName <em>Method Name</em>}</li>
- * </ul>
- * </p>
- *
+ * 
+ *            <!-- end-model-doc -->
+ * 
+ *            <p>
+ *            The following features are supported:
+ *            <ul>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getDescription <em>Description</em>}</li>
+ *            <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getMethodName <em>Method Name</em>}</li>
+ *            </ul>
+ *            </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPreRemove()
  * @model extendedMetaData="name='pre-remove' kind='elementOnly'"
  * @extends BaseOrmAnnotation
@@ -37,13 +36,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface PreRemove extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Description</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Description</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPreRemove_Description()
@@ -54,22 +53,24 @@ public interface PreRemove extends BaseOrmAnnotation {
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getDescription <em>Description</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getDescription
+   * <em>Description</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Description</em>' attribute.
    * @see #getDescription()
    * @generated
    */
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Method Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Method Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Method Name</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Method Name</em>' attribute.
    * @see #setMethodName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPreRemove_MethodName()
@@ -80,9 +81,11 @@ public interface PreRemove extends BaseOrmAnnotation {
   String getMethodName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getMethodName <em>Method Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Method Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove#getMethodName
+   * <em>Method Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Method Name</em>' attribute.
    * @see #getMethodName()
    * @generated
    */

@@ -341,10 +341,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -367,11 +366,10 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__CUSTOMIZER,
           oldCustomizer, newCustomizer);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -384,22 +382,18 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setCustomizer(Customizer newCustomizer) {
     if (newCustomizer != customizer) {
       NotificationChain msgs = null;
-      if (customizer != null) {
+      if (customizer != null)
         msgs = ((InternalEObject) customizer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__CUSTOMIZER, null, msgs);
-      }
-      if (newCustomizer != null) {
+      if (newCustomizer != null)
         msgs = ((InternalEObject) newCustomizer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__CUSTOMIZER, null, msgs);
-      }
       msgs = basicSetCustomizer(newCustomizer, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__CUSTOMIZER, newCustomizer,
           newCustomizer));
-    }
   }
 
   /**
@@ -422,11 +416,10 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.EMBEDDABLE__CHANGE_TRACKING, oldChangeTracking, newChangeTracking);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -439,22 +432,18 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setChangeTracking(ChangeTracking newChangeTracking) {
     if (newChangeTracking != changeTracking) {
       NotificationChain msgs = null;
-      if (changeTracking != null) {
+      if (changeTracking != null)
         msgs = ((InternalEObject) changeTracking).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__CHANGE_TRACKING, null, msgs);
-      }
-      if (newChangeTracking != null) {
+      if (newChangeTracking != null)
         msgs = ((InternalEObject) newChangeTracking).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__CHANGE_TRACKING, null, msgs);
-      }
       msgs = basicSetChangeTracking(newChangeTracking, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__CHANGE_TRACKING, newChangeTracking,
           newChangeTracking));
-    }
   }
 
   /**
@@ -540,11 +529,10 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__ATTRIBUTES,
           oldAttributes, newAttributes);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -557,22 +545,18 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setAttributes(Attributes newAttributes) {
     if (newAttributes != attributes) {
       NotificationChain msgs = null;
-      if (attributes != null) {
+      if (attributes != null)
         msgs = ((InternalEObject) attributes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__ATTRIBUTES, null, msgs);
-      }
-      if (newAttributes != null) {
+      if (newAttributes != null)
         msgs = ((InternalEObject) newAttributes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__ATTRIBUTES, null, msgs);
-      }
       msgs = basicSetAttributes(newAttributes, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__ATTRIBUTES, newAttributes,
           newAttributes));
-    }
   }
 
   /**
@@ -595,11 +579,10 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.EMBEDDABLE__COPY_POLICY, oldCopyPolicy, newCopyPolicy);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -612,22 +595,18 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setCopyPolicy(CopyPolicy newCopyPolicy) {
     if (newCopyPolicy != copyPolicy) {
       NotificationChain msgs = null;
-      if (copyPolicy != null) {
+      if (copyPolicy != null)
         msgs = ((InternalEObject) copyPolicy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__COPY_POLICY, null, msgs);
-      }
-      if (newCopyPolicy != null) {
+      if (newCopyPolicy != null)
         msgs = ((InternalEObject) newCopyPolicy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__COPY_POLICY, null, msgs);
-      }
       msgs = basicSetCopyPolicy(newCopyPolicy, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__COPY_POLICY, newCopyPolicy,
           newCopyPolicy));
-    }
   }
 
   /**
@@ -651,11 +630,10 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY, oldInstantiationCopyPolicy, newInstantiationCopyPolicy);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -668,22 +646,18 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setInstantiationCopyPolicy(InstantiationCopyPolicy newInstantiationCopyPolicy) {
     if (newInstantiationCopyPolicy != instantiationCopyPolicy) {
       NotificationChain msgs = null;
-      if (instantiationCopyPolicy != null) {
+      if (instantiationCopyPolicy != null)
         msgs = ((InternalEObject) instantiationCopyPolicy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY, null, msgs);
-      }
-      if (newInstantiationCopyPolicy != null) {
+      if (newInstantiationCopyPolicy != null)
         msgs = ((InternalEObject) newInstantiationCopyPolicy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY, null, msgs);
-      }
       msgs = basicSetInstantiationCopyPolicy(newInstantiationCopyPolicy, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY,
           newInstantiationCopyPolicy, newInstantiationCopyPolicy));
-    }
   }
 
   /**
@@ -706,11 +680,10 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     if (eNotificationRequired()) {
       ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
           OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY, oldCloneCopyPolicy, newCloneCopyPolicy);
-      if (msgs == null) {
+      if (msgs == null)
         msgs = notification;
-      } else {
+      else
         msgs.add(notification);
-      }
     }
     return msgs;
   }
@@ -723,22 +696,18 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setCloneCopyPolicy(CloneCopyPolicy newCloneCopyPolicy) {
     if (newCloneCopyPolicy != cloneCopyPolicy) {
       NotificationChain msgs = null;
-      if (cloneCopyPolicy != null) {
+      if (cloneCopyPolicy != null)
         msgs = ((InternalEObject) cloneCopyPolicy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY, null, msgs);
-      }
-      if (newCloneCopyPolicy != null) {
+      if (newCloneCopyPolicy != null)
         msgs = ((InternalEObject) newCloneCopyPolicy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
             - OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY, null, msgs);
-      }
       msgs = basicSetCloneCopyPolicy(newCloneCopyPolicy, msgs);
-      if (msgs != null) {
+      if (msgs != null)
         msgs.dispatch();
-      }
-    } else if (eNotificationRequired()) {
+    } else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY,
           newCloneCopyPolicy, newCloneCopyPolicy));
-    }
   }
 
   /**
@@ -760,10 +729,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
     boolean oldAccessESet = accessESet;
     accessESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__ACCESS, oldAccess, access,
           !oldAccessESet));
-    }
   }
 
   /**
@@ -776,10 +744,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     boolean oldAccessESet = accessESet;
     access = ACCESS_EDEFAULT;
     accessESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.EMBEDDABLE__ACCESS, oldAccess,
           ACCESS_EDEFAULT, oldAccessESet));
-    }
   }
 
   /**
@@ -808,9 +775,8 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   public void setClass(String newClass) {
     String oldClass = class_;
     class_ = newClass;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__CLASS, oldClass, class_));
-    }
   }
 
   /**
@@ -832,10 +798,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     excludeDefaultMappings = newExcludeDefaultMappings;
     boolean oldExcludeDefaultMappingsESet = excludeDefaultMappingsESet;
     excludeDefaultMappingsESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__EXCLUDE_DEFAULT_MAPPINGS,
           oldExcludeDefaultMappings, excludeDefaultMappings, !oldExcludeDefaultMappingsESet));
-    }
   }
 
   /**
@@ -848,10 +813,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     boolean oldExcludeDefaultMappingsESet = excludeDefaultMappingsESet;
     excludeDefaultMappings = EXCLUDE_DEFAULT_MAPPINGS_EDEFAULT;
     excludeDefaultMappingsESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.EMBEDDABLE__EXCLUDE_DEFAULT_MAPPINGS,
           oldExcludeDefaultMappings, EXCLUDE_DEFAULT_MAPPINGS_EDEFAULT, oldExcludeDefaultMappingsESet));
-    }
   }
 
   /**
@@ -882,10 +846,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     metadataComplete = newMetadataComplete;
     boolean oldMetadataCompleteESet = metadataCompleteESet;
     metadataCompleteESet = true;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__METADATA_COMPLETE,
           oldMetadataComplete, metadataComplete, !oldMetadataCompleteESet));
-    }
   }
 
   /**
@@ -898,10 +861,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
     boolean oldMetadataCompleteESet = metadataCompleteESet;
     metadataComplete = METADATA_COMPLETE_EDEFAULT;
     metadataCompleteESet = false;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.EMBEDDABLE__METADATA_COMPLETE,
           oldMetadataComplete, METADATA_COMPLETE_EDEFAULT, oldMetadataCompleteESet));
-    }
   }
 
   /**
@@ -1168,33 +1130,29 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");
     result.append(description);
     result.append(", access: ");
-    if (accessESet) {
+    if (accessESet)
       result.append(access);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", class: ");
     result.append(class_);
     result.append(", excludeDefaultMappings: ");
-    if (excludeDefaultMappingsESet) {
+    if (excludeDefaultMappingsESet)
       result.append(excludeDefaultMappings);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(", metadataComplete: ");
-    if (metadataCompleteESet) {
+    if (metadataCompleteESet)
       result.append(metadataComplete);
-    } else {
+    else
       result.append("<unset>");
-    }
     result.append(')');
     return result.toString();
   }

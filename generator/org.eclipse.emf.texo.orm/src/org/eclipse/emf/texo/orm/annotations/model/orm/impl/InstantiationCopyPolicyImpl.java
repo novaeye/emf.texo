@@ -19,12 +19,13 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public class InstantiationCopyPolicyImpl extends BaseOrmAnnotationImpl implements InstantiationCopyPolicy {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected InstantiationCopyPolicyImpl() {
@@ -33,6 +34,7 @@ public class InstantiationCopyPolicyImpl extends BaseOrmAnnotationImpl implement
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override

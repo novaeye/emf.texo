@@ -18,12 +18,13 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <!-- begin-user-doc --> An implementation of the model object '<em><b>Empty Type</b></em>'. <!-- end-user-doc -->
  * <p>
  * </p>
- *
+ * 
  * @generated
  */
 public class EmptyTypeImpl extends BaseOrmAnnotationImpl implements EmptyType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected EmptyTypeImpl() {
@@ -32,6 +33,7 @@ public class EmptyTypeImpl extends BaseOrmAnnotationImpl implements EmptyType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override

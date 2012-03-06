@@ -17,16 +17,16 @@ import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 
 /**
- * This class contains helper methods to serialize and deserialize XML documents
- * <!-- begin-user-doc --> <!--
+ * This class contains helper methods to serialize and deserialize XML documents <!-- begin-user-doc --> <!--
  * end-user-doc -->
+ * 
  * @generated
  */
 public class OrmXMLProcessor extends XMLProcessor {
 
   /**
-   * Public constructor to instantiate the helper.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Public constructor to instantiate the helper. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public OrmXMLProcessor() {
@@ -35,9 +35,9 @@ public class OrmXMLProcessor extends XMLProcessor {
   }
 
   /**
-   * Register for "*" and "xml" file extensions the OrmResourceFactoryImpl factory.
-   * <!-- begin-user-doc --> <!--
+   * Register for "*" and "xml" file extensions the OrmResourceFactoryImpl factory. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

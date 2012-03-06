@@ -42,8 +42,8 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
   protected static final ChangeTrackingType TYPE_EDEFAULT = ChangeTrackingType.ATTRIBUTE;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #getType()
    * @generated
    * @ordered
@@ -51,8 +51,8 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
   protected ChangeTrackingType type = TYPE_EDEFAULT;
 
   /**
-   * This is true if the Type attribute has been set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This is true if the Type attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    * @ordered
    */
@@ -60,6 +60,7 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected ChangeTrackingImpl() {
@@ -68,6 +69,7 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -77,6 +79,7 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public ChangeTrackingType getType() {
@@ -85,6 +88,7 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setType(ChangeTrackingType newType) {
@@ -93,11 +97,13 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
     boolean oldTypeESet = typeESet;
     typeESet = true;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CHANGE_TRACKING__TYPE, oldType, type, !oldTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CHANGE_TRACKING__TYPE, oldType, type,
+          !oldTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void unsetType() {
@@ -106,11 +112,13 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
     type = TYPE_EDEFAULT;
     typeESet = false;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CHANGE_TRACKING__TYPE, oldType, TYPE_EDEFAULT, oldTypeESet));
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CHANGE_TRACKING__TYPE, oldType, TYPE_EDEFAULT,
+          oldTypeESet));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public boolean isSetType() {
@@ -119,69 +127,78 @@ public class ChangeTrackingImpl extends BaseOrmAnnotationImpl implements ChangeT
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.CHANGE_TRACKING__TYPE:
-        return getType();
+    case OrmPackage.CHANGE_TRACKING__TYPE:
+      return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.CHANGE_TRACKING__TYPE:
-        setType((ChangeTrackingType)newValue);
-        return;
+    case OrmPackage.CHANGE_TRACKING__TYPE:
+      setType((ChangeTrackingType) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.CHANGE_TRACKING__TYPE:
-        unsetType();
-        return;
+    case OrmPackage.CHANGE_TRACKING__TYPE:
+      unsetType();
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.CHANGE_TRACKING__TYPE:
-        return isSetType();
+    case OrmPackage.CHANGE_TRACKING__TYPE:
+      return isSetType();
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (type: ");
-    if (typeESet) result.append(type); else result.append("<unset>");
+    if (typeESet)
+      result.append(type);
+    else
+      result.append("<unset>");
     result.append(')');
     return result.toString();
   }

@@ -85,9 +85,8 @@ public class TransientImpl extends BaseOrmAnnotationImpl implements Transient {
   public void setName(String newName) {
     String oldName = name;
     name = newName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TRANSIENT__NAME, oldName, name));
-    }
   }
 
   /**
@@ -155,9 +154,8 @@ public class TransientImpl extends BaseOrmAnnotationImpl implements Transient {
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");

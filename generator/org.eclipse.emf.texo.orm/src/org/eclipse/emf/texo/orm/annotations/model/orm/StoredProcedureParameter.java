@@ -14,76 +14,52 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Stored Procedure Parameter</b></em>'. <!--
  * end-user-doc -->
- *
+ * 
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* A StoredProcedureParameter annotation is used
- * 				within a
- * 				* NamedStoredProcedureQuery annotation.
- * 				*
- * 				@Target({})
- * 				@Retention(RUNTIME)
- * 				public @interface StoredProcedureParameter {
- * 				*
- * 				*
- * 				(Optional) The direction of the stored procedure parameter.
- * 				*
- * 				Direction direction() default IN;
+ * * * A StoredProcedureParameter annotation is used within a * NamedStoredProcedureQuery annotation. *
  * 
- * 				*
- * 				* (Optional) Stored procedure
- * 				parameter name.
- * 				*
- * 				String name() default "";
+ * @Target({ )
+ * @Retention(RUNTIME) public @interface StoredProcedureParameter { * * (Optional) The direction of the stored procedure
+ *                     parameter. * Direction direction() default IN;
  * 
- * 				*
- * 				* (Required) The query
- * 				parameter name.
- * 				*
- * 				String queryParameter();
+ *                     * * (Optional) Stored procedure parameter name. * String name() default "";
  * 
- * 				*
- * 				* (Optional) The type of
- * 				Java class desired back from the procedure,
- * 				* this is dependent on
- * 				the type returned from the procedure.
- * 				*
- * 				Class type() default
- * 				void.class;
+ *                     * * (Required) The query parameter name. * String queryParameter();
  * 
- * 				*
- * 				* (Optional) The JDBC type code, this dependent on the
- * 				type returned
- * 				* from the procedure.
- * 				*
- * 				int jdbcType() default -1;
+ *                     * * (Optional) The type of Java class desired back from the procedure, * this is dependent on the
+ *                     type returned from the procedure. * Class type() default void.class;
  * 
- * 				*
- * 				*
- * 				(Optional) The JDBC type name, this may be required for ARRAY or
- * 				*
- * 				STRUCT types.
- * 				*
- * 				String jdbcTypeName() default "";
- * 				}
+ *                     * * (Optional) The JDBC type code, this dependent on the type returned * from the procedure. *
+ *                     int jdbcType() default -1;
  * 
- *       
- * <!-- end-model-doc -->
- *
- * <p>
- * The following features are supported:
- * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType <em>Jdbc Type</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName <em>Jdbc Type Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter <em>Query Parameter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getType <em>Type</em>}</li>
- * </ul>
- * </p>
- *
+ *                     * * (Optional) The JDBC type name, this may be required for ARRAY or * STRUCT types. * String
+ *                     jdbcTypeName() default ""; }
+ * 
+ * 
+ *                     <!-- end-model-doc -->
+ * 
+ *                     <p>
+ *                     The following features are supported:
+ *                     <ul>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection
+ *                     <em>Direction</em>}</li>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType
+ *                     <em>Jdbc Type</em>}</li>
+ *                     <li>
+ *                     {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName
+ *                     <em>Jdbc Type Name</em>}</li>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getName <em>
+ *                     Name</em>}</li>
+ *                     <li>
+ *                     {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter
+ *                     <em>Query Parameter</em>}</li>
+ *                     <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getType <em>
+ *                     Type</em>}</li>
+ *                     </ul>
+ *                     </p>
+ * 
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter()
  * @model extendedMetaData="name='stored-procedure-parameter' kind='empty'"
  * @extends BaseOrmAnnotation
@@ -91,30 +67,31 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface StoredProcedureParameter extends BaseOrmAnnotation {
   /**
-   * Returns the value of the '<em><b>Direction</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType}.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Direction</b></em>' attribute. The literals are from the enumeration
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType}. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Direction</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Direction</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
    * @see #isSetDirection()
    * @see #unsetDirection()
    * @see #setDirection(DirectionType)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_Direction()
-   * @model unsettable="true"
-   *        extendedMetaData="kind='attribute' name='direction'"
+   * @model unsettable="true" extendedMetaData="kind='attribute' name='direction'"
    * @generated
    */
   DirectionType getDirection();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Direction</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection
+   * <em>Direction</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Direction</em>' attribute.
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType
    * @see #isSetDirection()
    * @see #unsetDirection()
@@ -124,8 +101,10 @@ public interface StoredProcedureParameter extends BaseOrmAnnotation {
   void setDirection(DirectionType value);
 
   /**
-   * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Unsets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}'
+   * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @see #isSetDirection()
    * @see #getDirection()
    * @see #setDirection(DirectionType)
@@ -134,8 +113,10 @@ public interface StoredProcedureParameter extends BaseOrmAnnotation {
   void unsetDirection();
 
   /**
-   * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}' attribute is set.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns whether the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getDirection <em>Direction</em>}'
+   * attribute is set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return whether the value of the '<em>Direction</em>' attribute is set.
    * @see #unsetDirection()
    * @see #getDirection()
@@ -145,90 +126,94 @@ public interface StoredProcedureParameter extends BaseOrmAnnotation {
   boolean isSetDirection();
 
   /**
-   * Returns the value of the '<em><b>Jdbc Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Jdbc Type</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Jdbc Type</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Jdbc Type</em>' attribute.
    * @see #setJdbcType(BigInteger)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_JdbcType()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.Integer"
-   *        extendedMetaData="kind='attribute' name='jdbc-type'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.Integer" extendedMetaData="kind='attribute' name='jdbc-type'"
    * @generated
    */
   BigInteger getJdbcType();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType <em>Jdbc Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Jdbc Type</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType
+   * <em>Jdbc Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Jdbc Type</em>' attribute.
    * @see #getJdbcType()
    * @generated
    */
   void setJdbcType(BigInteger value);
 
   /**
-   * Returns the value of the '<em><b>Jdbc Type Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Jdbc Type Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Jdbc Type Name</em>' attribute isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Jdbc Type Name</em>' attribute.
    * @see #setJdbcTypeName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_JdbcTypeName()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='jdbc-type-name'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='jdbc-type-name'"
    * @generated
    */
   String getJdbcTypeName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName <em>Jdbc Type Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Jdbc Type Name</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName
+   * <em>Jdbc Type Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Jdbc Type Name</em>' attribute.
    * @see #getJdbcTypeName()
    * @generated
    */
   void setJdbcTypeName(String value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_Name()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='name'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='name'"
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getName
+   * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Query Parameter</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Query Parameter</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Query Parameter</em>' attribute isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Query Parameter</em>' attribute.
    * @see #setQueryParameter(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_QueryParameter()
@@ -239,34 +224,38 @@ public interface StoredProcedureParameter extends BaseOrmAnnotation {
   String getQueryParameter();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter <em>Query Parameter</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Query Parameter</em>' attribute.
+   * Sets the value of the '
+   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter
+   * <em>Query Parameter</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Query Parameter</em>' attribute.
    * @see #getQueryParameter()
    * @generated
    */
   void setQueryParameter(String value);
 
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type</b></em>' attribute. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type</em>' attribute isn't clear, there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+   * 
    * @return the value of the '<em>Type</em>' attribute.
    * @see #setType(String)
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_Type()
-   * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-   *        extendedMetaData="kind='attribute' name='type'"
+   * @model dataType="org.eclipse.emf.ecore.xml.type.String" extendedMetaData="kind='attribute' name='type'"
    * @generated
    */
   String getType();
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getType <em>Type</em>}' attribute.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getType
+   * <em>Type</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Type</em>' attribute.
    * @see #getType()
    * @generated
    */

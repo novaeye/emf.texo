@@ -107,10 +107,9 @@ public class PreUpdateImpl extends BaseOrmAnnotationImpl implements PreUpdate {
   public void setDescription(String newDescription) {
     String oldDescription = description;
     description = newDescription;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRE_UPDATE__DESCRIPTION, oldDescription,
           description));
-    }
   }
 
   /**
@@ -130,10 +129,9 @@ public class PreUpdateImpl extends BaseOrmAnnotationImpl implements PreUpdate {
   public void setMethodName(String newMethodName) {
     String oldMethodName = methodName;
     methodName = newMethodName;
-    if (eNotificationRequired()) {
+    if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRE_UPDATE__METHOD_NAME, oldMethodName,
           methodName));
-    }
   }
 
   /**
@@ -211,9 +209,8 @@ public class PreUpdateImpl extends BaseOrmAnnotationImpl implements PreUpdate {
    */
   @Override
   public String toString() {
-    if (eIsProxy()) {
+    if (eIsProxy())
       return super.toString();
-    }
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (description: ");

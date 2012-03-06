@@ -33,9 +33,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  */
 public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTransformer {
   /**
-   * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
-   * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getMethod() <em>Method</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @see #getMethod()
    * @generated
    * @ordered
@@ -53,9 +53,9 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
   protected String method = METHOD_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getTransformerClass() <em>Transformer Class</em>}' attribute.
-   * <!-- begin-user-doc
+   * The default value of the '{@link #getTransformerClass() <em>Transformer Class</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getTransformerClass()
    * @generated
    * @ordered
@@ -63,9 +63,9 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
   protected static final String TRANSFORMER_CLASS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTransformerClass() <em>Transformer Class</em>}' attribute.
-   * <!-- begin-user-doc
+   * The cached value of the '{@link #getTransformerClass() <em>Transformer Class</em>}' attribute. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
+   * 
    * @see #getTransformerClass()
    * @generated
    * @ordered
@@ -74,6 +74,7 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected ReadTransformerImpl() {
@@ -82,6 +83,7 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -91,6 +93,7 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getMethod() {
@@ -99,6 +102,7 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setMethod(String newMethod) {
@@ -110,6 +114,7 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getTransformerClass() {
@@ -118,86 +123,95 @@ public class ReadTransformerImpl extends BaseOrmAnnotationImpl implements ReadTr
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setTransformerClass(String newTransformerClass) {
     String oldTransformerClass = transformerClass;
     transformerClass = newTransformerClass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS, oldTransformerClass, transformerClass));
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS,
+          oldTransformerClass, transformerClass));
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.READ_TRANSFORMER__METHOD:
-        return getMethod();
-      case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
-        return getTransformerClass();
+    case OrmPackage.READ_TRANSFORMER__METHOD:
+      return getMethod();
+    case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
+      return getTransformerClass();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.READ_TRANSFORMER__METHOD:
-        setMethod((String)newValue);
-        return;
-      case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
-        setTransformerClass((String)newValue);
-        return;
+    case OrmPackage.READ_TRANSFORMER__METHOD:
+      setMethod((String) newValue);
+      return;
+    case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
+      setTransformerClass((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.READ_TRANSFORMER__METHOD:
-        setMethod(METHOD_EDEFAULT);
-        return;
-      case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
-        setTransformerClass(TRANSFORMER_CLASS_EDEFAULT);
-        return;
+    case OrmPackage.READ_TRANSFORMER__METHOD:
+      setMethod(METHOD_EDEFAULT);
+      return;
+    case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
+      setTransformerClass(TRANSFORMER_CLASS_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.READ_TRANSFORMER__METHOD:
-        return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
-      case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
-        return TRANSFORMER_CLASS_EDEFAULT == null ? transformerClass != null : !TRANSFORMER_CLASS_EDEFAULT.equals(transformerClass);
+    case OrmPackage.READ_TRANSFORMER__METHOD:
+      return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
+    case OrmPackage.READ_TRANSFORMER__TRANSFORMER_CLASS:
+      return TRANSFORMER_CLASS_EDEFAULT == null ? transformerClass != null : !TRANSFORMER_CLASS_EDEFAULT
+          .equals(transformerClass);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (method: ");

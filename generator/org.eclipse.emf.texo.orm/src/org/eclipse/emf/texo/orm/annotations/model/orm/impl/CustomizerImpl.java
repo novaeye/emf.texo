@@ -22,10 +22,10 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CustomizerImpl#getClass_ <em>Class</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CustomizerImpl#getClass_ <em>Class</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class CustomizerImpl extends BaseOrmAnnotationImpl implements Customizer {
@@ -51,6 +51,7 @@ public class CustomizerImpl extends BaseOrmAnnotationImpl implements Customizer 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected CustomizerImpl() {
@@ -59,6 +60,7 @@ public class CustomizerImpl extends BaseOrmAnnotationImpl implements Customizer 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -68,6 +70,7 @@ public class CustomizerImpl extends BaseOrmAnnotationImpl implements Customizer 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public String getClass_() {
@@ -76,6 +79,7 @@ public class CustomizerImpl extends BaseOrmAnnotationImpl implements Customizer 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public void setClass(String newClass) {
@@ -87,65 +91,71 @@ public class CustomizerImpl extends BaseOrmAnnotationImpl implements Customizer 
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case OrmPackage.CUSTOMIZER__CLASS:
-        return getClass_();
+    case OrmPackage.CUSTOMIZER__CLASS:
+      return getClass_();
     }
     return super.eGet(featureID, resolve, coreType);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case OrmPackage.CUSTOMIZER__CLASS:
-        setClass((String)newValue);
-        return;
+    case OrmPackage.CUSTOMIZER__CLASS:
+      setClass((String) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public void eUnset(int featureID) {
     switch (featureID) {
-      case OrmPackage.CUSTOMIZER__CLASS:
-        setClass(CLASS_EDEFAULT);
-        return;
+    case OrmPackage.CUSTOMIZER__CLASS:
+      setClass(CLASS_EDEFAULT);
+      return;
     }
     super.eUnset(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case OrmPackage.CUSTOMIZER__CLASS:
-        return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
+    case OrmPackage.CUSTOMIZER__CLASS:
+      return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
     }
     return super.eIsSet(featureID);
   }
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String toString() {
-    if (eIsProxy()) return super.toString();
+    if (eIsProxy())
+      return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (class: ");
