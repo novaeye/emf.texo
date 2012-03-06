@@ -37,6 +37,9 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="../base/identifiable.ecore#//Identifiable">
+    <eAnnotations source="texo.java.annotation">
+      <details key="type" value="@orgeclipseemftexo.OneDotAnnotation(&quot;test&quot;)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="writers" upperBound="-1"
         eType="#//Writer" containment="true"/>

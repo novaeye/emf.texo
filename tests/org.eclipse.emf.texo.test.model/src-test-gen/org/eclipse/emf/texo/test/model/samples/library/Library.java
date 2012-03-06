@@ -12,14 +12,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
 /**
  * A representation of the model object '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@TestAnnotationOne("type")
+@orgeclipseemftexo.OneDotAnnotation("test")
 @Entity(name = "Library")
 @Table(name = "Library")
 public class Library extends Identifiable {
