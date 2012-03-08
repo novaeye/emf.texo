@@ -24,9 +24,10 @@ import java.io.InputStream;
 import java.io.Reader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.QualifiedName;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.internal.xtend.expression.parser.SyntaxConstants;
@@ -46,26 +47,24 @@ public class TexoResourceManager extends ResourceManagerDefaultImpl {
   public static final QualifiedName TEMPLATE_FOLDER_PROPERTY = new QualifiedName(
       "org.eclipse.emf.texo.eclipse", "TEMPLATE_FOLDER"); //$NON-NLS-1$ //$NON-NLS-2$
 
+  private static final String TEMPLATES_LOCATION_PROPERTY = "TEMPLATE_FOLDER"; //$NON-NLS-1$
+
   private final Map<String, Resource> resources = new HashMap<String, Resource>();
 
   private File templateFolder;
 
   public void setProjectName(String projectName) {
-    try {
-      final IProject project = EclipseGeneratorUtils.getProject(projectName);
-      final String projectFilePath = EclipseGeneratorUtils.getProjectFilePath(projectName);
-      final File projectDirectory = new File(projectFilePath);
-      final String templateFolderPath = project.getPersistentProperty(TEMPLATE_FOLDER_PROPERTY);
-      if (templateFolderPath != null) {
-        templateFolder = new File(projectDirectory, templateFolderPath);
-        if (!templateFolder.exists()) {
-          templateFolder = null;
-        }
-      } else {
+    final IProject project = EclipseGeneratorUtils.getProject(projectName);
+    final String projectFilePath = EclipseGeneratorUtils.getProjectFilePath(projectName);
+    final File projectDirectory = new File(projectFilePath);
+    final String templateFolderPath = getTemplateFolderPath(project);
+    if (templateFolderPath != null) {
+      templateFolder = new File(projectDirectory, templateFolderPath);
+      if (!templateFolder.exists()) {
         templateFolder = null;
       }
-    } catch (CoreException e) {
-      throw new IllegalStateException(e);
+    } else {
+      templateFolder = null;
     }
   }
 
@@ -107,6 +106,28 @@ public class TexoResourceManager extends ResourceManagerDefaultImpl {
     } catch (Exception e) {
       throw new IllegalStateException("Exception loading resource " + resourceName, e); //$NON-NLS-1$
     }
+  }
 
+  private String getTemplateFolderPath(IProject project) {
+    final IPath settingsPath = project.getLocation().append(".settings"); //$NON-NLS-1$
+    final File settingsDir = settingsPath.toFile();
+    if (!settingsDir.exists()) {
+      settingsDir.mkdir();
+    }
+    final IPath iPath = settingsPath.append("org.eclipse.emf.texo.prefs"); //$NON-NLS-1$ 
+    final File file = iPath.toFile();
+    try {
+      if (file.exists()) {
+        final Properties props = new Properties();
+        final InputStream is = new FileInputStream(file);
+        props.load(is);
+        is.close();
+        return (String) props.get(TEMPLATES_LOCATION_PROPERTY);
+      }
+
+      return project.getPersistentProperty(TEMPLATE_FOLDER_PROPERTY);
+    } catch (Exception e) {
+      throw new IllegalStateException(e);
+    }
   }
 }
