@@ -53,16 +53,18 @@ public class GenerateEcoreFromXSD extends BaseGenerateAction {
       if (uri.toString().endsWith("xsd")) { //$NON-NLS-1$
         final org.eclipse.emf.common.util.URI emfURI = org.eclipse.emf.common.util.URI.createURI(uri.toString());
         final Collection<EObject> eObjects = ecoreBuilder.generate(emfURI);
-        if (eObjects.size() > 1) {
-          throw new IllegalStateException(
-              "Ecore generation can only handle xsd files with one top level EPackage, this file (" //$NON-NLS-1$
-                  + uri.toString() + ") has " + eObjects.size() + " EPackages "); //$NON-NLS-1$//$NON-NLS-2$
-        }
+        final boolean multipleFiles = eObjects.size() > 1;
         for (final EObject eObject : eObjects) {
           final EPackage ePackage = (EPackage) eObject;
 
           // create the new URI
-          final org.eclipse.emf.common.util.URI ecoreURI = emfURI.trimFileExtension().appendFileExtension("ecore"); //$NON-NLS-1$
+          org.eclipse.emf.common.util.URI ecoreURI = emfURI.trimFileExtension().appendFileExtension("ecore"); //$NON-NLS-1$
+          if (multipleFiles) {
+            String strUri = ecoreURI.toString();
+            final int lastDot = strUri.lastIndexOf(".");
+            strUri = strUri.substring(0, lastDot) + "_" + ePackage.getName() + strUri.substring(lastDot);
+            ecoreURI = org.eclipse.emf.common.util.URI.createURI(strUri);
+          }
 
           // save the EPackage in the file
           final Resource resource;
@@ -74,13 +76,14 @@ public class GenerateEcoreFromXSD extends BaseGenerateAction {
           }
           resource.getContents().clear();
           resource.getContents().add(ePackage);
+        }
 
-          try {
+        try {
+          for (Resource resource : resourceSet.getResources()) {
             resource.save(Collections.emptyMap());
-          } catch (IOException e) {
-            throw new IllegalStateException(e);
           }
-          break;
+        } catch (IOException e) {
+          throw new IllegalStateException(e);
         }
       }
     }
