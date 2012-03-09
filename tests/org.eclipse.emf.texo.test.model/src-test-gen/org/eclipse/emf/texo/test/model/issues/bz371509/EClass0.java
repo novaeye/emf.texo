@@ -11,6 +11,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>EClass0</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,7 +19,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "EClass0")
-public class EClass0 {
+public class EClass0 extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
