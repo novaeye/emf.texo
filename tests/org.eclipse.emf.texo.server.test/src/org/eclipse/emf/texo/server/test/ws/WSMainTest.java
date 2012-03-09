@@ -65,6 +65,10 @@ public class WSMainTest extends BaseWSWebTest {
   public void testRetrievalAndDelete() {
     final Library lib = createTestData();
 
+    // children
+    final Writer w = lib.getWriters().get(0);
+    final Book bk = lib.getBooks().get(0);
+
     // get all libraries
     {
       final String content = doGetRequest(LibraryModelPackage.INSTANCE.getLibraryEClass().getName(), null,
@@ -116,6 +120,10 @@ public class WSMainTest extends BaseWSWebTest {
       final ErrorType errorType = (ErrorType) objects.get(0);
       Assert.assertTrue(errorType.getMessage().contains("Resource not found")); //$NON-NLS-1$
     }
+
+    // children are removed
+    checkExists(w, false);
+    checkExists(bk, false);
   }
 
   @Test
@@ -138,9 +146,10 @@ public class WSMainTest extends BaseWSWebTest {
       libResult.setName("updated"); //$NON-NLS-1$
       content = serialize(libResult);
       doContentRequest(getObjectUrlPart(libResult), content, HttpServletResponse.SC_OK, null, HttpMethods.PUT);
-      checkExists(w, false);
+      // these are not removed, as delete-orphan is not enabled
+      checkExists(w, true);
       for (Book bk : w.getBooks()) {
-        checkExists(bk, false);
+        checkExists(bk, true);
       }
     }
 
