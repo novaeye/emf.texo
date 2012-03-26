@@ -64,6 +64,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date orderDate = null;
 

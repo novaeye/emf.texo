@@ -171,6 +171,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date date = (Date) EcoreFactory.eINSTANCE.createFromString(EcorePackage.eINSTANCE.getEDate(), null);
 

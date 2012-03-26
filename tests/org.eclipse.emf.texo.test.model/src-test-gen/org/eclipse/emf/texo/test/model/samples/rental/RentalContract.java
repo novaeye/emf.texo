@@ -35,6 +35,7 @@ public class RentalContract extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date startDate = null;
 
@@ -43,6 +44,7 @@ public class RentalContract extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date endDate = null;
 

@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 import java.util.Set;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
 
 /**
@@ -10,6 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
  * 
  * @generated
  */
+@Entity(name = "Lendable")
 @Access(AccessType.PROPERTY)
 public interface Lendable extends IdentifiableInterface {
 

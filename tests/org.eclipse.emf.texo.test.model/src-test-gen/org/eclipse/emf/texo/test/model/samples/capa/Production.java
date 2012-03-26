@@ -27,6 +27,7 @@ public class Production {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date dueTime = null;
 
@@ -51,6 +52,7 @@ public class Production {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date startTime = null;
 

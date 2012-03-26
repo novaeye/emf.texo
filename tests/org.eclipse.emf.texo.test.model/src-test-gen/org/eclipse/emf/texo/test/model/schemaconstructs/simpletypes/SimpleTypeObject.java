@@ -92,6 +92,7 @@ public class SimpleTypeObject {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date dat = null;
 

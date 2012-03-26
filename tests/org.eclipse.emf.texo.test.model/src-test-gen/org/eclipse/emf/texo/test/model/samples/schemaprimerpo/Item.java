@@ -53,6 +53,7 @@ public class Item {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date shipDate = null;
 

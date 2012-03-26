@@ -7,11 +7,15 @@ import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Version;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
 
 /**
@@ -47,6 +51,8 @@ public class Book implements IdentifiableInterface {
    * 
    * @generated
    */
+  @Id()
+  @GeneratedValue(strategy = GenerationType.AUTO)
   @Access(AccessType.PROPERTY)
   private Long db_Id = null;
 
@@ -55,6 +61,7 @@ public class Book implements IdentifiableInterface {
    * 
    * @generated
    */
+  @Version()
   @Access(AccessType.PROPERTY)
   private Integer db_version = null;
 

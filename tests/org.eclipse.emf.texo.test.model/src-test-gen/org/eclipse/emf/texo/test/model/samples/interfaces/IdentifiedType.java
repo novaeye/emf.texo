@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.samples.interfaces;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
 
 /**
@@ -9,6 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
  * 
  * @generated
  */
+@Entity(name = "IdentifiedType")
 @Access(AccessType.PROPERTY)
 public interface IdentifiedType extends IdentifiableInterface {
   /**

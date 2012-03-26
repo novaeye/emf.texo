@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.test.model.issues.bz369931;
 
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -17,6 +18,7 @@ public class Formula {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Enumerated(EnumType.STRING)
   private FormulaType formulaType = FormulaType.SIMPLE;
 

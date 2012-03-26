@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Entity;
 
 /**
  * A representation of the model object '<em><b>PaymentItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -11,6 +12,7 @@ import javax.persistence.AccessType;
  * 
  * @generated
  */
+@Entity(name = "PaymentItem")
 @Access(AccessType.PROPERTY)
 public interface PaymentItem {
   /**

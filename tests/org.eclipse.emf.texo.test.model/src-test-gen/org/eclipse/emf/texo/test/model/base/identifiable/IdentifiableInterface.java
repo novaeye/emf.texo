@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.base.identifiable;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.MappedSuperclass;
 
 /**
  * A representation of the model object '<em><b>IdentifiableInterface</b></em>'. <!-- begin-user-doc --> <!--
@@ -9,6 +10,7 @@ import javax.persistence.AccessType;
  * 
  * @generated
  */
+@MappedSuperclass()
 @Access(AccessType.PROPERTY)
 public interface IdentifiableInterface {
   /**

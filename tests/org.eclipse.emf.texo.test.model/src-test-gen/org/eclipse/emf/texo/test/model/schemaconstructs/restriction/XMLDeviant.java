@@ -44,6 +44,7 @@ public class XMLDeviant {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date firstSubscribed = null;
 

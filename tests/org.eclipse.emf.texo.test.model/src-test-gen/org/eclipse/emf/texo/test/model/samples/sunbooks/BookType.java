@@ -73,6 +73,7 @@ public class BookType {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date publicationDate = null;
 

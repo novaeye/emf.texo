@@ -149,8 +149,12 @@ public class ORMJavaAnnotationGenerator {
 
       if ((localIncludedFeatures.size() == 0 || !localIncludedFeatures.contains(eFeature))
           && eFeature instanceof EAttribute && value instanceof Enumerator && referencesEnumsAsSeparateAnnotation) {
+        if (separateAnnotation.length() > 0) {
+          separateAnnotation.append("\n"); //$NON-NLS-1$
+        }
         final Enumerator enumerator = (Enumerator) value;
-        return generateJavaAnnotation(eFeature, enumerator);
+        separateAnnotation.append(generateJavaAnnotation(eFeature, enumerator));
+        continue;
       }
 
       if ((localIncludedFeatures.size() == 0 || !localIncludedFeatures.contains(eFeature))

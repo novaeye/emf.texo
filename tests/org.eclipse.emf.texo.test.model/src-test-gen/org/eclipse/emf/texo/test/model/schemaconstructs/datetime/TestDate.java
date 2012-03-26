@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.datetime;
 
 import java.util.Date;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -18,6 +19,7 @@ public class TestDate {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date date = null;
 
@@ -26,6 +28,7 @@ public class TestDate {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.TIMESTAMP)
   private Date datetime = null;
 

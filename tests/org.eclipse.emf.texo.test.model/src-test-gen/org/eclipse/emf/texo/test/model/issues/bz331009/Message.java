@@ -58,6 +58,7 @@ public class Message {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date dateTime = null;
 

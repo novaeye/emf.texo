@@ -113,7 +113,10 @@ public class SimpleList {
    * 
    * @generated
    */
+  @ElementCollection()
+  @OrderColumn()
   @Temporal(TemporalType.DATE)
+  @CollectionTable(name = "SimpleList_dat")
   private List<Date> dat = new ArrayList<Date>();
 
   /**

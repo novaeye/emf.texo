@@ -45,6 +45,7 @@ public class Employee {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date hireDate = null;
 

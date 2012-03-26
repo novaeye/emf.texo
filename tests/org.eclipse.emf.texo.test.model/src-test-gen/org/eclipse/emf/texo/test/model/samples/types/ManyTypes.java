@@ -146,7 +146,9 @@ public class ManyTypes extends Identifiable {
    * 
    * @generated
    */
+  @ElementCollection()
   @Temporal(TemporalType.DATE)
+  @CollectionTable(name = "ManyTypes_date")
   private Set<Date> date = new HashSet<Date>();
 
   /**

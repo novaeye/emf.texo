@@ -50,6 +50,7 @@ public class CarRegInfo implements Document {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date releaseYear = null;
 

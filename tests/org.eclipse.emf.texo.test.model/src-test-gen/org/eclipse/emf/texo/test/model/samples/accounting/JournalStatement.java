@@ -33,6 +33,7 @@ public class JournalStatement extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date date = null;
 

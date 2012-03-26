@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.samples.extlibrary;
 
 import java.util.Date;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,6 +20,7 @@ public abstract class Item extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date publicationDate = null;
 

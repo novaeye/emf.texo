@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import java.util.List;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.Entity;
 
 /**
  * A representation of the model object '<em><b>Tariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -10,6 +11,7 @@ import javax.persistence.AccessType;
  * 
  * @generated
  */
+@Entity(name = "Tariff")
 @Access(AccessType.PROPERTY)
 public interface Tariff {
   /**

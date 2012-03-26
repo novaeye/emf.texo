@@ -66,6 +66,7 @@ public class VolumePayment implements PaymentItem {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date date = null;
 

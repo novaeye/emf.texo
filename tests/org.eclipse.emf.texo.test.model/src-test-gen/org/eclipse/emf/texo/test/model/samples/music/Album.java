@@ -65,6 +65,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date releaseDate = null;
 

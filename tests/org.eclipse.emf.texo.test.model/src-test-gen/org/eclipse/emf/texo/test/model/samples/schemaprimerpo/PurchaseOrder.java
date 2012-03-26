@@ -63,6 +63,7 @@ public class PurchaseOrder {
    * 
    * @generated
    */
+  @Basic(optional = true)
   @Temporal(TemporalType.DATE)
   private Date orderDate = null;
 
