@@ -11,16 +11,17 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Lob</b></em>'. <!-- end-user-doc -->
- * 
+ *
  * <!-- begin-model-doc -->
  * 
  * 
- * @Target({METHOD, FIELD}) @Retention(RUNTIME) public @interface Lob {}
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface Lob {}
  * 
- * 
- *                  <!-- end-model-doc -->
- * 
- * 
+ *       
+ * <!-- end-model-doc -->
+ *
+ *
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getLob()
  * @model extendedMetaData="name='lob' kind='empty'"
  * @extends BaseOrmAnnotation

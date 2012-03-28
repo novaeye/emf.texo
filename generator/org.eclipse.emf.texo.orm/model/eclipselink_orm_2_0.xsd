@@ -182,7 +182,7 @@
 				minOccurs="0" />
 		</xsd:choice>
 		<xsd:attribute name="size" type="xsd:integer" />
-		<xsd:attribute name="shared" type="xsd:boolean" />
+		<xsd:attribute name="shared" type="xsd:boolean" default="true" />
 		<xsd:attribute name="type" type="orm:cache-type" />
 		<xsd:attribute name="always-refresh" type="xsd:boolean" />
 		<xsd:attribute name="refresh-only-if-newer" type="xsd:boolean" />
@@ -1084,7 +1084,7 @@
 		</xsd:sequence>
 		<xsd:attribute name="name" type="xsd:string" use="required" />
 		<xsd:attribute name="fetch" type="orm:fetch-type" />
-		<xsd:attribute name="optional" type="xsd:boolean" />
+		<xsd:attribute name="optional" type="xsd:boolean" default="true"/>
 		<xsd:attribute name="access" type="orm:access-type" />
 		<xsd:attribute name="mutable" type="xsd:boolean" />
 	</xsd:complexType>
@@ -1496,9 +1496,9 @@
 		</xsd:annotation>
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="unique" type="xsd:boolean" />
-		<xsd:attribute name="nullable" type="xsd:boolean" />
-		<xsd:attribute name="insertable" type="xsd:boolean" />
-		<xsd:attribute name="updatable" type="xsd:boolean" />
+		<xsd:attribute name="nullable" type="xsd:boolean" default="true"/>
+		<xsd:attribute name="insertable" type="xsd:boolean" default="true"/>
+		<xsd:attribute name="updatable" type="xsd:boolean" default="true"/>
 		<xsd:attribute name="column-definition" type="xsd:string" />
 		<xsd:attribute name="table" type="xsd:string" />
 		<xsd:attribute name="length" type="xsd:int" />
@@ -2308,9 +2308,9 @@
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="referenced-column-name" type="xsd:string" />
 		<xsd:attribute name="unique" type="xsd:boolean" />
-		<xsd:attribute name="nullable" type="xsd:boolean" />
-		<xsd:attribute name="insertable" type="xsd:boolean" />
-		<xsd:attribute name="updatable" type="xsd:boolean" />
+		<xsd:attribute name="nullable" type="xsd:boolean" default="true"/>
+		<xsd:attribute name="insertable" type="xsd:boolean" default="true"/>
+		<xsd:attribute name="updatable" type="xsd:boolean" default="true"/>
 		<xsd:attribute name="column-definition" type="xsd:string" />
 		<xsd:attribute name="table" type="xsd:string" />
 	</xsd:complexType>
@@ -2531,7 +2531,7 @@
 		<xsd:attribute name="name" type="xsd:string" use="required" />
 		<xsd:attribute name="target-entity" type="xsd:string" />
 		<xsd:attribute name="fetch" type="orm:fetch-type" />
-		<xsd:attribute name="optional" type="xsd:boolean" />
+		<xsd:attribute name="optional" type="xsd:boolean" default="true" />
 		<xsd:attribute name="access" type="orm:access-type" />
 		<xsd:attribute name="maps-id" type="xsd:string" />
 		<xsd:attribute name="id" type="xsd:boolean" />
@@ -2598,9 +2598,9 @@
 		</xsd:annotation>
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="unique" type="xsd:boolean" />
-		<xsd:attribute name="nullable" type="xsd:boolean" />
-		<xsd:attribute name="insertable" type="xsd:boolean" />
-		<xsd:attribute name="updatable" type="xsd:boolean" />
+		<xsd:attribute name="nullable" type="xsd:boolean" default="true" />
+		<xsd:attribute name="insertable" type="xsd:boolean" default="true" />
+		<xsd:attribute name="updatable" type="xsd:boolean" default="true" />
 		<xsd:attribute name="column-definition" type="xsd:string" />
 		<xsd:attribute name="table" type="xsd:string" />
 		<xsd:attribute name="length" type="xsd:int" />
@@ -2633,9 +2633,9 @@
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="referenced-column-name" type="xsd:string" />
 		<xsd:attribute name="unique" type="xsd:boolean" />
-		<xsd:attribute name="nullable" type="xsd:boolean" />
-		<xsd:attribute name="insertable" type="xsd:boolean" />
-		<xsd:attribute name="updatable" type="xsd:boolean" />
+		<xsd:attribute name="nullable" type="xsd:boolean" default="true" />
+		<xsd:attribute name="insertable" type="xsd:boolean" default="true" />
+		<xsd:attribute name="updatable" type="xsd:boolean" default="true" />
 		<xsd:attribute name="column-definition" type="xsd:string" />
 		<xsd:attribute name="table" type="xsd:string" />
 	</xsd:complexType>
@@ -3057,7 +3057,7 @@
 		<xsd:attribute name="name" type="xsd:string" use="required" />
 		<xsd:attribute name="target-entity" type="xsd:string" />
 		<xsd:attribute name="fetch" type="orm:fetch-type" />
-		<xsd:attribute name="optional" type="xsd:boolean" />
+		<xsd:attribute name="optional" type="xsd:boolean" default="true" />
 		<xsd:attribute name="access" type="orm:access-type" />
 		<xsd:attribute name="mapped-by" type="xsd:string" />
 		<xsd:attribute name="orphan-removal" type="xsd:boolean" />
@@ -3228,9 +3228,9 @@
 			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:attribute name="name" type="xsd:string" />
-		<xsd:attribute name="nullable" type="xsd:boolean" />
-		<xsd:attribute name="insertable" type="xsd:boolean" />
-		<xsd:attribute name="updatable" type="xsd:boolean" />
+		<xsd:attribute name="nullable" type="xsd:boolean" default="true" />
+		<xsd:attribute name="insertable" type="xsd:boolean" default="true" />
+		<xsd:attribute name="updatable" type="xsd:boolean" default="true" />
 		<xsd:attribute name="column-definition" type="xsd:string" />
 		<xsd:attribute name="correction-type" type="orm:order-column-correction-type" />
 	</xsd:complexType>

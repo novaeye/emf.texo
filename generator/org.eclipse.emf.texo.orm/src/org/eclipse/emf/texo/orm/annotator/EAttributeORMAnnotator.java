@@ -224,7 +224,9 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       return;
     }
 
+    boolean basicSet = true;
     if (annotation.getBasic() == null) {
+      basicSet = false;
       annotation.setBasic(OrmFactory.eINSTANCE.createBasic());
     }
     final Basic basic = annotation.getBasic();
@@ -242,7 +244,9 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       basic.setTemporal(Temporal.DATE);
     }
 
-    basic.setOptional(!eAttribute.isRequired());
+    if (!basicSet) {
+      basic.setOptional(!eAttribute.isRequired());
+    }
 
     if (isEnum && basic.getEnumerated() == null) {
       basic.setEnumerated(Enumerated.STRING);

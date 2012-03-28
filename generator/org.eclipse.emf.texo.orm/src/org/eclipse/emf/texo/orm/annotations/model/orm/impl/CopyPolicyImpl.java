@@ -22,10 +22,10 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CopyPolicyImpl#getClass_ <em>Class</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CopyPolicyImpl#getClass_ <em>Class</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class CopyPolicyImpl extends BaseOrmAnnotationImpl implements CopyPolicy {
@@ -50,118 +50,108 @@ public class CopyPolicyImpl extends BaseOrmAnnotationImpl implements CopyPolicy 
   protected String class_ = CLASS_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected CopyPolicyImpl() {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass() {
-    return OrmPackage.eINSTANCE.getCopyPolicy();
-  }
+		return OrmPackage.eINSTANCE.getCopyPolicy();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public String getClass_() {
-    return class_;
-  }
+		return class_;
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public void setClass(String newClass) {
-    String oldClass = class_;
-    class_ = newClass;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.COPY_POLICY__CLASS, oldClass, class_));
-  }
+		String oldClass = class_;
+		class_ = newClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.COPY_POLICY__CLASS, oldClass, class_));
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-    switch (featureID) {
-    case OrmPackage.COPY_POLICY__CLASS:
-      return getClass_();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case OrmPackage.COPY_POLICY__CLASS:
+				return getClass_();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue) {
-    switch (featureID) {
-    case OrmPackage.COPY_POLICY__CLASS:
-      setClass((String) newValue);
-      return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case OrmPackage.COPY_POLICY__CLASS:
+				setClass((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID) {
-    switch (featureID) {
-    case OrmPackage.COPY_POLICY__CLASS:
-      setClass(CLASS_EDEFAULT);
-      return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case OrmPackage.COPY_POLICY__CLASS:
+				setClass(CLASS_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID) {
-    switch (featureID) {
-    case OrmPackage.COPY_POLICY__CLASS:
-      return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case OrmPackage.COPY_POLICY__CLASS:
+				return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public String toString() {
-    if (eIsProxy())
-      return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (class: ");
-    result.append(class_);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (class: ");
+		result.append(class_);
+		result.append(')');
+		return result.toString();
+	}
 
 } // CopyPolicyImpl

@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Empty Type</b></em>'. <!-- end-user-doc -->
- * 
- * 
+ *
+ *
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmptyType()
  * @model extendedMetaData="name='emptyType' kind='empty'"
  * @extends BaseOrmAnnotation
