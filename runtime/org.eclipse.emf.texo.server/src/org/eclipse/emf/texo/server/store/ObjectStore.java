@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.texo.ComponentProvider;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
-import org.eclipse.emf.texo.xml.DefaultObjectResolver;
 import org.eclipse.emf.texo.xml.ModelXMLLoader;
 import org.eclipse.emf.texo.xml.ModelXMLSaver;
 

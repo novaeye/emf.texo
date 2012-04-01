@@ -53,8 +53,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Writer" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="org.eclipse.emf.texo">
-        <details key="title" value="true"/>
-        <details key="id" value="true"/>
         <details key="java.member" value="name"/>
       </eAnnotations>
     </eStructuralFeatures>

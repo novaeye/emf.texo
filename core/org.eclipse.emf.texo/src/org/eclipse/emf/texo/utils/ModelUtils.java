@@ -38,6 +38,28 @@ public class ModelUtils {
   private static final SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
 
   /**
+   * Returns a qualified string representation of the {@link EStructuralFeature} using
+   * {@link #getQualifiedNameFromEClass(EClass)}.
+   */
+  public static String getQualifiedNameFromEStructuralFeature(EStructuralFeature eFeature) {
+    return getQualifiedNameFromEClass(eFeature.getEContainingClass()) + QUALIFIERSEPARATOR + eFeature.getName();
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} of a certain {@link EClass} also encoded in the name.
+   * 
+   * @param name
+   * @see #getEClassFromQualifiedName(String)
+   */
+  public static EStructuralFeature getEStructuralFeatureFromQualifiedName(String name) {
+    final int index = name.lastIndexOf(QUALIFIERSEPARATOR);
+    final String eClassString = name.substring(0, index);
+    final EClass eClass = getEClassFromQualifiedName(eClassString);
+    final String featureName = name.substring(1 + index);
+    return eClass.getEStructuralFeature(featureName);
+  }
+
+  /**
    * Returns a qualified string representation of the class using the ns prefix of the epackage.
    */
   public static String getQualifiedNameFromEClass(EClass eClass) {

@@ -42,6 +42,8 @@ import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
+import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -63,7 +65,7 @@ public class EMFModelConverter {
   private final List<EObject> toConvert = new ArrayList<EObject>();
 
   // keeps track of all objects which have been converted
-  private final List<Object> allConvertedObjects = new ArrayList<Object>();
+  private final List<EObject> allConvertedEObjects = new ArrayList<EObject>();
 
   /**
    * Converts a set of EObjects and all the objects they reference to a a collection of model managed objects.
@@ -81,7 +83,7 @@ public class EMFModelConverter {
     }
     while (!toConvert.isEmpty()) {
       final ArrayList<EObject> beingConverted = new ArrayList<EObject>(toConvert);
-      allConvertedObjects.addAll(beingConverted);
+      allConvertedEObjects.addAll(beingConverted);
       toConvert.clear();
       for (EObject eObject : beingConverted) {
         convertContent(eObject);
@@ -394,7 +396,11 @@ public class EMFModelConverter {
     this.objectResolver = uriResolver;
   }
 
-  public List<Object> getAllConvertedObjects() {
-    return allConvertedObjects;
+  public List<EObject> getAllConvertedEObjects() {
+    return allConvertedEObjects;
+  }
+
+  public Collection<Object> getAllConvertedObjects() {
+    return objectMapping.values();
   }
 }

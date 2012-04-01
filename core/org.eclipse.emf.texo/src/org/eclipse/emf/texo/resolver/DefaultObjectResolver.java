@@ -1,4 +1,4 @@
-package org.eclipse.emf.texo.xml;
+package org.eclipse.emf.texo.resolver;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
@@ -24,7 +24,17 @@ public class DefaultObjectResolver implements ObjectResolver {
   public static final String FRAGMENTSEPARATOR = "||"; //$NON-NLS-1$
   private static final int FRAGMENTSEPARATOR_LENGTH = FRAGMENTSEPARATOR.length();
 
-  private URI uri = URI.createURI("http://www.eclipse.org/texo"); //$NON-NLS-1$
+  private static String serverUri = null;
+
+  public static void setServerUri(String uri) {
+    serverUri = uri;
+  }
+
+  public static String getServerUri() {
+    return serverUri;
+  }
+
+  private URI uri = null;
 
   private boolean useWebServiceUriFormat = false;
 
@@ -32,6 +42,13 @@ public class DefaultObjectResolver implements ObjectResolver {
    * @return the uniquely identifying uri of this object store
    */
   public URI getUri() {
+    if (uri == null) {
+      if (getServerUri() != null) {
+        uri = URI.createURI(getServerUri());
+      } else {
+        uri = URI.createURI("http://www.eclipse.org/texo"); //$NON-NLS-1$
+      }
+    }
     return uri;
   }
 
@@ -109,13 +126,30 @@ public class DefaultObjectResolver implements ObjectResolver {
   public URI toUri(Object object) {
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
     final String idString = IdProvider.getInstance().getIdAsString(modelObject);
+    if (idString == null || idString.trim().length() == 0) {
+      return null;
+    }
     if (isUseWebServiceUriFormat()) {
       // append a fragment to make sure that EMF correctly handles the id
-      return uri.appendSegment(ModelUtils.getQualifiedNameFromEClass(modelObject.eClass())).appendSegment(idString)
+      return getUri().appendSegment(ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()))
+          .appendSegment(idString).appendFragment(""); //$NON-NLS-1$
+    }
+
+    return getUri().appendFragment(
+        ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()) + FRAGMENTSEPARATOR + idString);
+  }
+
+  /**
+   * Create an uri on the basis of the type and the id value.
+   */
+  public URI toURI(EClass eClass, String idString) {
+    if (isUseWebServiceUriFormat()) {
+      // append a fragment to make sure that EMF correctly handles the id
+      return getUri().appendSegment(ModelUtils.getQualifiedNameFromEClass(eClass)).appendSegment(idString)
           .appendFragment(""); //$NON-NLS-1$
     }
 
-    return uri.appendFragment(ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()) + FRAGMENTSEPARATOR + idString);
+    return getUri().appendFragment(ModelUtils.getQualifiedNameFromEClass(eClass) + FRAGMENTSEPARATOR + idString);
   }
 
   /*

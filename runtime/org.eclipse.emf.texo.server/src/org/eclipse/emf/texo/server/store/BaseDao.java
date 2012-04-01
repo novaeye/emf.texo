@@ -86,6 +86,9 @@ public abstract class BaseDao<T extends Object> {
    * Get a specific T using the id.
    */
   public T get(Object id) {
+    if (id == null) {
+      return null;
+    }
     return getEntityManager().find(getEntityClass(), id);
   }
 

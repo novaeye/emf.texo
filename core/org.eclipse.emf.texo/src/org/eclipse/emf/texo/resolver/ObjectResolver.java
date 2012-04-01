@@ -1,4 +1,4 @@
-package org.eclipse.emf.texo.xml;
+package org.eclipse.emf.texo.resolver;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -47,6 +47,18 @@ public interface ObjectResolver {
    * @see IdProvider#getIdAsString(ModelObject)
    */
   public URI toUri(Object object);
+
+  /**
+   * Creates an uri from the type and id.
+   * 
+   * @param eClass
+   *          the eClass defining the type
+   * @param idString
+   *          the id as a string
+   * 
+   * @return the created uri which fits to the store
+   */
+  public URI toURI(EClass eClass, String idString);
 
   /**
    * If true then this uri resolver will generate and parse uris of the form: http://localhost:8080/texo/wsxml/Library/1

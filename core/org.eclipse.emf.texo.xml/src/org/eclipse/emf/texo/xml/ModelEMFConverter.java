@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.ecore.xml.type.internal.XMLCalendar;
+import org.eclipse.emf.texo.converter.ModelToConverter;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -58,13 +59,9 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @see ModelObject
  * @see DynamicEObjectImpl
  */
-public class ModelEMFConverter {
+public class ModelEMFConverter extends ModelToConverter {
 
   private Map<Object, InternalEObject> objectMapping = new HashMap<Object, InternalEObject>();
-
-  // list of objects that are to be proxied
-  private List<Object> proxyObjects = new ArrayList<Object>();
-  private List<Object> nonProxiedObjects = new ArrayList<Object>();
 
   // list of objects for which the content needs to be converted
   private List<Object> toConvert = new ArrayList<Object>();
@@ -74,21 +71,6 @@ public class ModelEMFConverter {
   private List<ManyToMany> toRepairManyToMany = new ArrayList<ManyToMany>();
 
   /**
-   * If true then referenced non contained objects are also converted and added to the conversion stack.
-   */
-  private boolean convertNonContainedReferencedObjects = false;
-
-  /**
-   * How many levels of child objects should be traversed before using proxy objects and stop converting
-   */
-  private int maxChildLevelsToConvert = Integer.MAX_VALUE;
-
-  /**
-   * The object resolver responsible for creating uri's and objects.
-   */
-  private ObjectResolver objectResolver = new DefaultObjectResolver();
-
-  /**
    * Converts a set of model managed objects and all the objects they reference to a collection of EObjects.
    * 
    * @param objects
@@ -96,12 +78,7 @@ public class ModelEMFConverter {
    * @return the created EObjects
    */
   public List<EObject> convert(final List<Object> objects) {
-    if (objectResolver != null
-        && (!convertNonContainedReferencedObjects || maxChildLevelsToConvert < Integer.MAX_VALUE)) {
-      computeProxyObjects(objects);
-    }
-    // make sure that the non proxied objects get proxied
-    proxyObjects.removeAll(nonProxiedObjects);
+    doBaseActions(objects);
 
     // the process creates the new target objects and then converts the content
     // this multi-step process prevents stack overflow with large object graphs
@@ -142,76 +119,6 @@ public class ModelEMFConverter {
     return result;
   }
 
-  protected void computeProxyObjects(final List<Object> objects) {
-    for (Object o : objects) {
-      traverseEReferencesForProxyDetermination(o, 1);
-    }
-  }
-
-  protected void traverseEReferencesForProxyDetermination(Object object, int level) {
-    nonProxiedObjects.add(object);
-
-    final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
-    final boolean proxyChildObjects = level == maxChildLevelsToConvert;
-    for (EReference eReference : modelObject.eClass().getEAllReferences()) {
-      if (eReference.isVolatile() || eReference.isTransient()) {
-        continue;
-      }
-      final Object value = modelObject.eGet(eReference);
-      if (value == null) {
-        continue;
-      }
-      if (eReference.isContainment()) {
-        if (!proxyChildObjects) {
-          if (value instanceof Collection<?>) {
-            for (Object o : (Collection<?>) value) {
-              traverseEReferencesForProxyDetermination(o, level + 1);
-            }
-          } else if (value instanceof Map<?, ?>) {
-            final Map<?, ?> map = (Map<?, ?>) value;
-            for (Object key : map.keySet()) {
-              final Object keyValue = map.get(key);
-              if (ModelResolver.getInstance().isModelEnabled(key)) {
-                traverseEReferencesForProxyDetermination(key, level + 1);
-              }
-              if (ModelResolver.getInstance().isModelEnabled(keyValue)) {
-                traverseEReferencesForProxyDetermination(keyValue, level + 1);
-              }
-            }
-          } else {
-            traverseEReferencesForProxyDetermination(value, level + 1);
-          }
-          continue;
-        }
-      } else if (convertNonContainedReferencedObjects) {
-        if (value instanceof Collection<?>) {
-          for (Object o : (Collection<?>) value) {
-            traverseEReferencesForProxyDetermination(o, level);
-          }
-        } else if (value instanceof Map<?, ?>) {
-          final Map<?, ?> map = (Map<?, ?>) value;
-          for (Object key : map.keySet()) {
-            final Object keyValue = map.get(key);
-            if (ModelResolver.getInstance().isModelEnabled(key)) {
-              traverseEReferencesForProxyDetermination(key, level + 1);
-            }
-            if (ModelResolver.getInstance().isModelEnabled(keyValue)) {
-              traverseEReferencesForProxyDetermination(keyValue, level + 1);
-            }
-          }
-        } else {
-          traverseEReferencesForProxyDetermination(value, level);
-        }
-        continue;
-      }
-      if (value instanceof Collection<?>) {
-        proxyObjects.addAll((Collection<?>) value);
-      } else {
-        proxyObjects.add(value);
-      }
-    }
-  }
-
   /**
    * Converts a single model managed object.
    * 
@@ -226,7 +133,7 @@ public class ModelEMFConverter {
     }
 
     // not found, create it and add a new entry to the mapping
-    eObject = (InternalEObject) objectResolver.resolveToEObject(target);
+    eObject = (InternalEObject) getUriResolver().resolveToEObject(target);
     objectMapping.put(target, eObject);
     toConvert.add(target);
     return eObject;
@@ -241,7 +148,7 @@ public class ModelEMFConverter {
     if (proxyURI != null) {
       eObject.eSetProxyURI(proxyURI);
     }
-    if (proxyObjects.contains(target)) {
+    if (getProxyObjects().contains(target)) {
       return;
     }
 
@@ -270,22 +177,6 @@ public class ModelEMFConverter {
         }
       }
     }
-  }
-
-  /**
-   * If a non-null value is returned then the content of the modelObject is not converted.
-   * 
-   * The default implementation returns null.
-   * 
-   * @param modelObject
-   *          the modelObject to get the proxy id for
-   * @return the proxy uri, should encode the type of the object as well as its id
-   */
-  protected URI getProxyId(final ModelObject<?> modelObject) {
-    if (proxyObjects.contains(modelObject.getTarget())) {
-      return objectResolver.toUri(modelObject.getTarget());
-    }
-    return null;
   }
 
   /**
@@ -329,28 +220,6 @@ public class ModelEMFConverter {
       final FeatureMap.Entry eEntry = FeatureMapUtil.createEntry(entryFeature, convertedValue);
       values.add(eEntry);
     }
-  }
-
-  // if the value is a featuregroup then walk through the structure to
-  // find the deepest one
-  private Object findValue(ModelFeatureMapEntry<?> modelFeatureMap) {
-    if (FeatureMapUtil.isFeatureMap(modelFeatureMap.getEStructuralFeature())) {
-      final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
-          modelFeatureMap.getEStructuralFeature(), modelFeatureMap.getValue());
-
-      return findValue(modelFeatureMapEntry);
-    }
-    return modelFeatureMap.getValue();
-  }
-
-  private EStructuralFeature findFeature(ModelFeatureMapEntry<?> modelFeatureMap) {
-    if (FeatureMapUtil.isFeatureMap(modelFeatureMap.getEStructuralFeature())) {
-      final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
-          modelFeatureMap.getEStructuralFeature(), modelFeatureMap.getValue());
-
-      return findFeature(modelFeatureMapEntry);
-    }
-    return modelFeatureMap.getEStructuralFeature();
   }
 
   /**
@@ -557,20 +426,6 @@ public class ModelEMFConverter {
   }
 
   /**
-   * See the javadoc in the {@link ModelUtils#getEnumBaseDataTypeIfObject(EDataType)} for details.
-   * 
-   * @param eDataType
-   * @return the passed EDataType or its base type if the base type is an EEnum
-   */
-  private EDataType getDataTypeOrBaseType(EDataType eDataType) {
-    final EDataType baseType = ModelUtils.getEnumBaseDataTypeIfObject(eDataType);
-    if (baseType != null) {
-      return baseType;
-    }
-    return eDataType;
-  }
-
-  /**
    * Class is used to keep track of all the many to many for which the order has to be repaired.
    * 
    * @author mtaal
@@ -608,30 +463,6 @@ public class ModelEMFConverter {
       this.eReference = eReference;
     }
 
-  }
-
-  public boolean isConvertNonContainedReferencedObjects() {
-    return convertNonContainedReferencedObjects;
-  }
-
-  public void setConvertNonContainedReferencedObjects(boolean convertNonContainedReferencedObjects) {
-    this.convertNonContainedReferencedObjects = convertNonContainedReferencedObjects;
-  }
-
-  public int getMaxChildLevelsToConvert() {
-    return maxChildLevelsToConvert;
-  }
-
-  public void setMaxChildLevelsToConvert(int maxChildLevelsToConvert) {
-    this.maxChildLevelsToConvert = maxChildLevelsToConvert;
-  }
-
-  public ObjectResolver getUriResolver() {
-    return objectResolver;
-  }
-
-  public void setUriResolver(ObjectResolver uriResolver) {
-    this.objectResolver = uriResolver;
   }
 
   public Map<Object, InternalEObject> getObjectMapping() {

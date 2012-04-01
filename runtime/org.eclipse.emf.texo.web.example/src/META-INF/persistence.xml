@@ -6,8 +6,12 @@
 	<persistence-unit name="library-derby">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<mapping-file>META-INF/identifiable-orm.xml</mapping-file>
-		<mapping-file>META-INF/library-orm.xml</mapping-file>
+		<!-- mapping-file>META-INF/identifiable-orm.xml</mapping-file-->
+		<!-- mapping-file>META-INF/library-orm.xml</mapping-file-->
+		<class>org.eclipse.emf.texo.test.mode.base.identifiable.Identifiable</class>
+		<class>org.eclipse.emf.texo.test.model.samples.library.Library</class>
+		<class>org.eclipse.emf.texo.test.model.samples.library.Book</class>
+		<class>org.eclipse.emf.texo.test.model.samples.library.Writer</class>
 		<properties>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.DerbyPlatform"/>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>

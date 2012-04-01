@@ -1,7 +1,7 @@
 /**
  * <copyright>
  *
- * Copyright (c) 2009, 2010 Springsite BV (The Netherlands) and others
+ * Copyright (c) 2009, 2010, 2012 Springsite BV (The Netherlands) and others
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -21,6 +21,8 @@ import java.util.List;
 
 import org.eclipse.emf.texo.server.service.ServiceConstants;
 import org.eclipse.emf.texo.server.service.ServiceContext;
+import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.xml.XMLWebServiceObjectResolver;
 
 /**
  * Contains XML specific implementations of the {@link ServiceContext}.
@@ -29,11 +31,16 @@ import org.eclipse.emf.texo.server.service.ServiceContext;
  * @version $Revision: 1.6 $
  */
 public class XMLServiceContext extends ServiceContext {
-  public static final String CONTENT_TYPE = "text/html;charset=UTF-8"; //$NON-NLS-1$
   private static String TRUE_STRING = Boolean.TRUE.toString();
 
   public XMLServiceContext() {
-    setResponseContentType(CONTENT_TYPE);
+    setResponseContentType(XMLWebServiceObjectResolver.XML_CONTENT_TYPE);
+  }
+
+  @Override
+  public void setObjectStore(ObjectStore objectStore) {
+    objectStore.setUseWebServiceUriFormat(true);
+    super.setObjectStore(objectStore);
   }
 
   /*

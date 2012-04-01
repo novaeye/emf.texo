@@ -21,7 +21,7 @@ import org.eclipse.emf.texo.server.service.ServiceContext;
 import org.eclipse.emf.texo.server.service.xml.XMLServiceContext;
 
 /**
- * The XML implementation of the RestWSHandler.
+ * The XML implementation of the {@link WebServiceHandler}.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */

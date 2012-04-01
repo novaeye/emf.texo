@@ -56,11 +56,6 @@ public class WSMainTest extends BaseWSWebTest {
     ServiceModelPackageRegistry.getInstance().register(LibraryModelPackage.INSTANCE);
   }
 
-  @Override
-  protected String getURL() {
-    return super.getURL() + "/" + XMLWS; //$NON-NLS-1$ 
-  }
-
   @Test
   public void testRetrievalAndDelete() {
     final Library lib = createTestData();
@@ -146,10 +141,9 @@ public class WSMainTest extends BaseWSWebTest {
       libResult.setName("updated"); //$NON-NLS-1$
       content = serialize(libResult);
       doContentRequest(getObjectUrlPart(libResult), content, HttpServletResponse.SC_OK, null, HttpMethods.PUT);
-      // these are not removed, as delete-orphan is not enabled
-      checkExists(w, true);
+      checkExists(w, false);
       for (Book bk : w.getBooks()) {
-        checkExists(bk, true);
+        checkExists(bk, false);
       }
     }
 
@@ -357,4 +351,9 @@ public class WSMainTest extends BaseWSWebTest {
     }
     return lib;
   }
+
+  protected String getURL() {
+    return super.getBaseURL() + "/" + XMLWS; //$NON-NLS-1$ 
+  }
+
 }

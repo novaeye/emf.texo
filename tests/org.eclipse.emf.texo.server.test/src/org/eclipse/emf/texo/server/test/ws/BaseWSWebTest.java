@@ -27,16 +27,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
 import org.eclipse.emf.texo.server.store.CurrentEntityManagerRequestFilter;
 import org.eclipse.emf.texo.server.store.EntityManagerProvider;
 import org.eclipse.emf.texo.server.test.BaseTest;
+import org.eclipse.emf.texo.server.web.JSONRestWebServiceServlet;
 import org.eclipse.emf.texo.server.web.XMLRestWebServiceServlet;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.eclipse.emf.texo.xml.ModelXMLLoader;
 import org.eclipse.emf.texo.xml.ModelXMLSaver;
-import org.eclipse.emf.texo.xml.WebServiceObjectResolver;
+import org.eclipse.emf.texo.xml.XMLWebServiceObjectResolver;
 import org.eclipse.jetty.client.ContentExchange;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.http.HttpMethods;
@@ -64,6 +66,7 @@ public abstract class BaseWSWebTest extends BaseTest {
   private static final int PORT = 8080;
   private static final String CONTEXTNAME = "texo"; //$NON-NLS-1$
   protected static final String XMLWS = "xmlws"; //$NON-NLS-1$
+  protected static final String JSONWS = "jsonws"; //$NON-NLS-1$
 
   private HttpClient httpClient;
 
@@ -91,15 +94,22 @@ public abstract class BaseWSWebTest extends BaseTest {
   @Override
   public void setUp() throws Exception {
     super.setUp();
+
+    DefaultObjectResolver.setServerUri(getBaseURL());
+
     server = new Server(PORT);
 
     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
     context.setContextPath("/" + CONTEXTNAME); //$NON-NLS-1$
     server.setHandler(context);
 
-    final XMLRestWebServiceServlet xmlWebServiceServlet = new XMLRestWebServiceServlet();
     EntityManagerProvider.getInstance().setUseCurrentEntityManagerPattern(true);
+
+    final XMLRestWebServiceServlet xmlWebServiceServlet = new XMLRestWebServiceServlet();
     context.addServlet(new ServletHolder(xmlWebServiceServlet), "/" + XMLWS + "/*"); //$NON-NLS-1$ //$NON-NLS-2$
+
+    final JSONRestWebServiceServlet jsonRestWebServiceServlet = new JSONRestWebServiceServlet();
+    context.addServlet(new ServletHolder(jsonRestWebServiceServlet), "/" + JSONWS + "/*"); //$NON-NLS-1$ //$NON-NLS-2$
 
     final TestEntityManagerCleanUpServlet testEMServlet = new TestEntityManagerCleanUpServlet();
     context.addServlet(new ServletHolder(testEMServlet), "/testEM"); //$NON-NLS-1$ 
@@ -223,7 +233,7 @@ public abstract class BaseWSWebTest extends BaseTest {
 
   protected List<Object> deserialize(String content) {
     final ModelXMLLoader xmlLoader = new ModelXMLLoader();
-    xmlLoader.getEMFModelConverter().setUriResolver(new WebServiceObjectResolver());
+    xmlLoader.getEMFModelConverter().setUriResolver(new XMLWebServiceObjectResolver());
     xmlLoader.setReader(new StringReader(content));
     final List<Object> result = xmlLoader.read();
     return result;
@@ -251,7 +261,7 @@ public abstract class BaseWSWebTest extends BaseTest {
       }
       return content;
     } catch (final Exception e) {
-      throw new IllegalStateException("Exception when executing ws: " + wsPart); //$NON-NLS-1$
+      throw new IllegalStateException("Exception when executing ws: " + wsPart, e); //$NON-NLS-1$
     }
   }
 
@@ -270,7 +280,9 @@ public abstract class BaseWSWebTest extends BaseTest {
   /**
    * @return the base url of the webservice
    */
-  protected String getURL() {
+  protected String getBaseURL() {
     return "http://localhost:" + PORT + "/" + CONTEXTNAME; //$NON-NLS-1$//$NON-NLS-2$
   }
+
+  protected abstract String getURL();
 }

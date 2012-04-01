@@ -105,7 +105,6 @@ public class ModelXMLLoader {
    * 
    * @return the resource which is used to convert the model objects to a writer.
    */
-
   public XMLResource getXmlResource() {
     final ResourceSet resourceSet = ComponentProvider.getInstance().newInstance(ResourceSetImpl.class);
     if (xmlResource == null) {

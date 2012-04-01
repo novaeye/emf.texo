@@ -3,10 +3,6 @@
 	<name>org.eclipse.emf.texo.web.example</name>
 	<comment></comment>
 	<projects>
-		<project>org.eclipse.emf.texo</project>
-		<project>org.eclipse.emf.texo.xml</project>
-		<project>org.eclipse.emf.texo.server</project>
-		<project>org.eclipse.emf.texo.datagenerator</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

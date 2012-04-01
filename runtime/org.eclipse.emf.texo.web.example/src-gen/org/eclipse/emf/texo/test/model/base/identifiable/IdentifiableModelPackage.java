@@ -11,70 +11,71 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>identifiable</b></em>'.
- * It contains initialization code and access to the Factory to instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>identifiable</b></em>'. It contains
+ * initialization code and access to the Factory to instantiate types of this
+ * package.
  * 
- * <!-- begin-user-doc -->
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class IdentifiableModelPackage extends ModelPackage {
 
 	/**
 	 * Is set when the package has been initialized.
+	 * 
 	 * @generated
 	 */
 	private static boolean isInitialized = false;
 
 	/**
-	 * The package namespace URI.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/base/identifiable";
 
 	/**
-	 * The {@link ModelFactory} for this package.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final IdentifiableModelFactory MODELFACTORY = new IdentifiableModelFactory();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final int IDENTIFIABLE_CLASSIFIER_ID = 0;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final int IDENTIFIABLE_DB_ID_FEATURE_ID = 0;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final int IDENTIFIABLE_DB_VERSION_FEATURE_ID = 1;
 
 	/**
-	 * The static member with the instance of this {@link ModelPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The static member with the instance of this {@link ModelPackage}. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static final IdentifiableModelPackage INSTANCE = initialize();
 
 	/**
-	 * Initializes this {@link ModelPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public static IdentifiableModelPackage initialize() {
@@ -90,7 +91,8 @@ public class IdentifiableModelPackage extends ModelPackage {
 
 		isInitialized = true;
 
-		// read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+		// read the model from the ecore file, the EPackage is registered in the
+		// EPackage.Registry
 		// see the ModelResolver getEPackageRegistry method
 		ModelUtils.readEPackagesFromFile(modelPackage);
 
@@ -104,9 +106,8 @@ public class IdentifiableModelPackage extends ModelPackage {
 	}
 
 	/**
-	 * Returns the {@link ModelFactory} of this ModelPackage.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the {@link ModelFactory} of this ModelPackage. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @return the {@link IdentifiableModelFactory} instance.
 	 * @generated
@@ -116,12 +117,11 @@ public class IdentifiableModelPackage extends ModelPackage {
 		return MODELFACTORY;
 	}
 
-	/** 
-	 * Returns the nsUri of the {@link EPackage} managed by this Package instance.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the nsUri of the {@link EPackage} managed by this Package
+	 * instance. <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @return the nsUri of the EPackage 
+	 * @return the nsUri of the EPackage
 	 * @generated
 	 */
 	@Override
@@ -129,12 +129,12 @@ public class IdentifiableModelPackage extends ModelPackage {
 		return NS_URI;
 	}
 
-	/** 
-	 * Returns the name of the ecore file containing the ecore model of the {@link EPackage} managed here.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	/**
+	 * Returns the name of the ecore file containing the ecore model of the
+	 * {@link EPackage} managed here. <!-- begin-user-doc --> <!-- end-user-doc
+	 * -->
 	 * 
-	 * @return the name of the ecore file 
+	 * @return the name of the ecore file
 	 * @generated
 	 */
 	@Override
@@ -143,10 +143,10 @@ public class IdentifiableModelPackage extends ModelPackage {
 	}
 
 	/**
-	 * Returns the {@link EClass} '<em><b>Identifiable</b></em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return an instance of the {@link EClass} '<em><b>Identifiable</b></em>' 
+	 * Returns the {@link EClass} '<em><b>Identifiable</b></em>'. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @return an instance of the {@link EClass} '<em><b>Identifiable</b></em>'
 	 * @generated
 	 */
 	public EClass getIdentifiableEClass() {
@@ -155,10 +155,12 @@ public class IdentifiableModelPackage extends ModelPackage {
 	}
 
 	/**
-	 * Returns the {@link EStructuralFeature} '<em><b>Identifiable.db_Id</b></em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return an instance of the {@link EStructuralFeature}: '<em><b>Identifiable.db_Id</b></em>'.
+	 * Returns the {@link EStructuralFeature} '
+	 * <em><b>Identifiable.db_Id</b></em>'. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @return an instance of the {@link EStructuralFeature}: '
+	 *         <em><b>Identifiable.db_Id</b></em>'.
 	 * @generated
 	 */
 	public EAttribute getIdentifiable_Db_Id() {
@@ -167,10 +169,12 @@ public class IdentifiableModelPackage extends ModelPackage {
 	}
 
 	/**
-	 * Returns the {@link EStructuralFeature} '<em><b>Identifiable.db_version</b></em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return an instance of the {@link EStructuralFeature}: '<em><b>Identifiable.db_version</b></em>'.
+	 * Returns the {@link EStructuralFeature} '
+	 * <em><b>Identifiable.db_version</b></em>'. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
+	 * @return an instance of the {@link EStructuralFeature}: '
+	 *         <em><b>Identifiable.db_version</b></em>'.
 	 * @generated
 	 */
 	public EAttribute getIdentifiable_Db_version() {
@@ -179,8 +183,8 @@ public class IdentifiableModelPackage extends ModelPackage {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @param eClassifier
 	 *            the {@link EClassifier}
 	 * @return the class implementing a specific {@link EClass}.

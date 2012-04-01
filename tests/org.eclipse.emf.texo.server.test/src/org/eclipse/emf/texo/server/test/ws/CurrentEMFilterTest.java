@@ -37,6 +37,11 @@ public class CurrentEMFilterTest extends BaseWSWebTest {
     ServiceModelPackageRegistry.getInstance().register(LibraryModelPackage.INSTANCE);
   }
 
+  @Override
+  protected String getURL() {
+    return super.getBaseURL();
+  }
+
   @Test
   public void testCreateFindError() {
     doGetRequest("testEM?insert=true", null, HttpServletResponse.SC_OK); //$NON-NLS-1$

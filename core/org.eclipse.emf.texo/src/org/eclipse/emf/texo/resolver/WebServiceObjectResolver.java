@@ -1,28 +1,44 @@
-package org.eclipse.emf.texo.xml;
+/**
+ * <copyright>
+ *
+ * Copyright (c) 2012 Springsite BV (The Netherlands) and others
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   Martin Taal - Initial API and implementation
+ *   Dzmitry [zmicer] Harachka - implementation
+ * </copyright>
+ *
+ * $Id: XMLServiceContext.java,v 1.6 2011/08/27 05:40:32 mtaal Exp $
+ */
+package org.eclipse.emf.texo.resolver;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.texo.ComponentProvider;
 
 /**
  * An {@link ObjectResolver} which reads referenced objects using the url, through a webservice.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class WebServiceObjectResolver extends DefaultObjectResolver {
+public abstract class WebServiceObjectResolver extends DefaultObjectResolver {
+  public static final String XML_CONTENT_TYPE = "text/html;charset=UTF-8"; //$NON-NLS-1$
+  public static final String JSON_CONTENT_TYPE = "application/json;charset=UTF-8"; //$NON-NLS-1$
 
   final Map<String, Object> objectCache = new HashMap<String, Object>();
 
   public WebServiceObjectResolver() {
-    this.setUseWebServiceUriFormat(true);
+    setUseWebServiceUriFormat(true);
   }
 
   @Override
@@ -54,12 +70,10 @@ public class WebServiceObjectResolver extends DefaultObjectResolver {
       sb.append(line).append("\n"); //$NON-NLS-1$
     }
 
-    final ModelXMLLoader xmlLoader = ComponentProvider.getInstance().newInstance(ModelXMLLoader.class);
-    xmlLoader.setLoadAsXMI(urlStr.contains("xmi=true")); //$NON-NLS-1$
-    xmlLoader.setReader(new StringReader(sb.toString()));
-    xmlLoader.getEMFModelConverter().setUriResolver(this);
-    return xmlLoader.read().get(0);
+    return deserialize(urlStr, sb.toString());
   }
+
+  protected abstract Object deserialize(String urlString, String content);
 
   protected HttpURLConnection createConnection(String urlStr) throws Exception {
     final URL url = new URL(urlStr);

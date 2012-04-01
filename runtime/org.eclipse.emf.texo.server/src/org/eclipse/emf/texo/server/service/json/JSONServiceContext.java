@@ -1,7 +1,7 @@
 /**
  * <copyright>
  *
- * Copyright (c) 2009, 2010 Springsite BV (The Netherlands) and others
+ * Copyright (c) 2009, 2010, 2012 Springsite BV (The Netherlands) and others
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -16,9 +16,17 @@
  */
 package org.eclipse.emf.texo.server.service.json;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.json.JSONModelConverter;
+import org.eclipse.emf.texo.json.JSONWebServiceObjectResolver;
+import org.eclipse.emf.texo.json.ModelJSONConverter;
 import org.eclipse.emf.texo.server.service.ServiceContext;
+import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Contains JSON specific implementations of the {@link ServiceContext}.
@@ -28,20 +36,38 @@ import org.eclipse.emf.texo.server.service.ServiceContext;
  */
 public class JSONServiceContext extends ServiceContext {
 
-  public static final String CONTENT_TYPE = "application/json;charset=UTF-8"; //$NON-NLS-1$
-
   public JSONServiceContext() {
     // set some defaults here
-    setResponseContentType(CONTENT_TYPE);
+    setResponseContentType(JSONWebServiceObjectResolver.JSON_CONTENT_TYPE);
+  }
+
+  @Override
+  public void setObjectStore(ObjectStore objectStore) {
+    objectStore.setUseWebServiceUriFormat(true);
+    super.setObjectStore(objectStore);
   }
 
   @Override
   protected String convertToResultFormat(Object object) {
-    throw new UnsupportedOperationException("TO BE IMPLEMENTED"); //$NON-NLS-1$
+    final ModelJSONConverter converter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
+    converter.setMaxChildLevelsToConvert(2);
+    converter.setUriResolver(getObjectStore());
+    final JSONObject jsonObject = converter.convert(object);
+    return jsonObject.toString();
   }
 
   @Override
   public List<Object> getRequestData() {
-    throw new UnsupportedOperationException("TO BE IMPLEMENTED"); //$NON-NLS-1$
+    try {
+      final JSONObject jsonObject = new JSONObject(getRequestContent());
+      final JSONModelConverter converter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
+      converter.setUriResolver(getObjectStore());
+      final Object result = converter.convert(jsonObject);
+      final List<Object> resultList = new ArrayList<Object>();
+      resultList.add(result);
+      return resultList;
+    } catch (JSONException e) {
+      throw new RuntimeException(e.getMessage() + getRequestContent(), e);
+    }
   }
 }

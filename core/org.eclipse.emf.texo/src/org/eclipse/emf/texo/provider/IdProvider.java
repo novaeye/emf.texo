@@ -105,6 +105,9 @@ public class IdProvider {
    * @see ModelFactory#createFromString(EDataType, String)
    */
   public Object convertIdStringToId(EClass eClass, String idString) {
+    if (idString == null || idString.trim().length() == 0) {
+      return null;
+    }
     final EAttribute idEAttribute = getCreateIdEAttribute(eClass);
     final EDataType eDataType = idEAttribute.getEAttributeType();
     final String eDataTypePackageUri = eDataType.getEPackage().getNsURI();

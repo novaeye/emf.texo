@@ -137,7 +137,6 @@ public abstract class WebServiceHandler {
       final EntityManagerObjectStore emObjectStore = ComponentProvider.getInstance().newInstance(
           EntityManagerObjectStore.class);
       emObjectStore.setEntityManager(entityManager);
-      emObjectStore.setUseWebServiceUriFormat(true);
 
       // find the uri on the basis of the request uri
       String objectStoreUri = getUri() == null ? request.getContextPath() : getUri();

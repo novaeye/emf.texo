@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.server.store;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +24,20 @@ public class MemoryObjectStore extends ObjectStore {
 
   private final Map<EClass, List<Object>> data = new HashMap<EClass, List<Object>>();
 
+  public void addData(Collection<Object> objects) {
+    for (Object object : objects) {
+      @SuppressWarnings("unchecked")
+      final ModelObject<Object> modelObject = (ModelObject<Object>) ModelResolver.getInstance().getModelObject(object);
+      final EClass eClass = modelObject.eClass();
+      List<Object> dataList = data.get(eClass);
+      if (dataList == null) {
+        dataList = new ArrayList<Object>();
+        data.put(eClass, dataList);
+      }
+      dataList.add(object);
+    }
+  }
+
   @Override
   public Object get(EClass eClass, Object id) {
     final List<Object> dataList = data.get(eClass);
@@ -34,7 +49,7 @@ public class MemoryObjectStore extends ObjectStore {
         }
       }
     }
-    return null;
+    return super.get(eClass, id);
   }
 
   /*

@@ -20,6 +20,7 @@ import java.io.StringReader;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.texo.server.service.RetrieveModelOperation;
 import org.eclipse.emf.texo.server.service.xml.XMLServiceContext;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
@@ -66,18 +67,18 @@ public class SingleXMLServiceTest extends ModelPackageBaseTest {
         final String result = serviceContext.getResponseContent();
         retrieveModelOperation.close();
         System.err.println(result);
-        final List<Object> objects = loadXMLData(result);
+        final List<EObject> objects = loadXMLData(result);
         Assert.assertTrue(objects.size() > 0);
       }
     }
   }
 
-  private List<Object> loadXMLData(String xml) {
+  private List<EObject> loadXMLData(String xml) {
     final ModelXMLLoader xmlLoader = new ModelXMLLoader();
     xmlLoader.setLoadAsXMI(false);
     xmlLoader.setReader(new StringReader(xml));
     xmlLoader.getEMFModelConverter().setUriResolver(getObjectStore());
     xmlLoader.read();
-    return xmlLoader.getEMFModelConverter().getAllConvertedObjects();
+    return xmlLoader.getEMFModelConverter().getAllConvertedEObjects();
   }
 }
