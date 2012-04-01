@@ -143,6 +143,12 @@ public abstract class BaseWSWebTest extends BaseTest {
     ContentExchange contentExchange = new ContentExchange();
     contentExchange.setURL(getURL() + "/" + encodeWsPart(wsPartOfUrl)); //$NON-NLS-1$ 
     contentExchange.setMethod(method);
+
+    System.err.println(">>>>>>>>>>>>>>>>>>>>>");
+    System.err.println(getURL() + "/" + wsPartOfUrl);
+    System.err.println(method);
+    System.err.println("<<<<<<<<<<<<<<<<<<<<<");
+
     if (content != null) {
       contentExchange.setRequestContent(new ByteArrayBuffer(content.getBytes(CHARACTER_ENCODING)));
     }
@@ -164,6 +170,8 @@ public abstract class BaseWSWebTest extends BaseTest {
   protected void doDeleteRequest(String wsPart, int expectedResponse) {
     try {
       final ContentExchange contentExchange = doRequest(wsPart, HttpMethods.DELETE, null);
+      System.err.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+      System.err.println(contentExchange.getResponseContent());
       Assert.assertEquals(expectedResponse, contentExchange.getResponseStatus());
     } catch (final Exception e) {
       throw new IllegalStateException(e);
@@ -173,7 +181,10 @@ public abstract class BaseWSWebTest extends BaseTest {
   protected String doContentRequest(String wsPart, String content, int expectedResponse, String expectedContent,
       String method) {
     try {
+
       final ContentExchange contentExchange = doRequest(wsPart, method, content);
+
+      System.err.println(content);
 
       dumpError(expectedResponse, contentExchange);
 
@@ -184,6 +195,9 @@ public abstract class BaseWSWebTest extends BaseTest {
         return ""; //$NON-NLS-1$
       }
       final String retContent = contentExchange.getResponseContent();
+      System.err.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+      System.err.println(retContent);
+
       if (expectedContent != null && retContent.indexOf(expectedContent) == -1) {
         System.err.println(retContent);
         Assert.fail();
@@ -254,6 +268,10 @@ public abstract class BaseWSWebTest extends BaseTest {
       final ContentExchange contentExchange = doRequest(wsPart, HttpMethods.GET, null);
       dumpError(responseCode, contentExchange);
       final String content = contentExchange.getResponseContent();
+      System.err.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+      System.err.println(content);
+
       Assert.assertEquals(responseCode, contentExchange.getResponseStatus());
       if (testContent != null && content.indexOf(testContent) == -1) {
         System.err.println(content);

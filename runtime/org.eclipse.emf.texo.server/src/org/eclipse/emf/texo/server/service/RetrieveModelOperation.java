@@ -84,7 +84,7 @@ public class RetrieveModelOperation extends ModelOperation {
         resultList.remove(resultList.size() - 1);
       }
 
-      final Object responseObject = getResponse(resultList, startRow, startRow + resultList.size(), cnt);
+      final Object responseObject = getResponse(resultList, startRow, startRow + resultList.size() - 1, cnt);
       getServiceContext().setResultInResponse(responseObject);
     } else if (getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_ID)) {
       // an id which must be a uri

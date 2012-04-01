@@ -235,7 +235,7 @@ public class WSMainTest extends BaseWSWebTest {
       final ResponseType result = (ResponseType) deserialize(content).get(0);
       Assert.assertEquals(11, result.getTotalRows());
       Assert.assertEquals(5, result.getData().size());
-      Assert.assertEquals(5, result.getEndRow());
+      Assert.assertEquals(4, result.getEndRow());
       for (Object o : result.getData()) {
         Writer w = (Writer) o;
         Assert.assertTrue(w.getName().startsWith("name2")); //$NON-NLS-1$
@@ -312,6 +312,7 @@ public class WSMainTest extends BaseWSWebTest {
     // and add one book again
     {
       w.getBooks().add(bk);
+      bk.setAuthor(w);
       final String content = serialize(w);
       final String resultStr = doContentRequest(LibraryModelPackage.INSTANCE.getWriterEClass().getName(), content,
           HttpServletResponse.SC_OK, null, HttpMethods.POST);
@@ -320,6 +321,7 @@ public class WSMainTest extends BaseWSWebTest {
       Assert.assertNotSame(w, wResult);
       Assert.assertEquals(w.getDb_Id(), wResult.getDb_Id());
       Assert.assertEquals(1, wResult.getBooks().size());
+      Assert.assertEquals(wResult.getBooks().get(0).getAuthor(), wResult);
     }
 
     {
