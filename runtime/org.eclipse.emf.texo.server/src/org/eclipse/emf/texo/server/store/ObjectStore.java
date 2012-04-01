@@ -223,12 +223,13 @@ public abstract class ObjectStore extends DefaultObjectResolver {
    * Serialize a set of objects to XML/XMI, references are correctly translated to strings which can be de-serialized
    * when reading the xml/xmi.
    */
-  public String toXML(List<Object> objects, boolean asXMI) {
+  public String toXML(List<Object> objects, boolean asXMI, int childLevels) {
     final ModelXMLSaver xmlSaver = ComponentProvider.getInstance().newInstance(ModelXMLSaver.class);
     xmlSaver.setOutputExtensionAttributes(true);
     xmlSaver.setSaveAsXMI(asXMI);
     xmlSaver.setObjects(objects);
     xmlSaver.getModelEMFConverter().setConvertNonContainedReferencedObjects(false);
+    xmlSaver.getModelEMFConverter().setMaxChildLevelsToConvert(childLevels);
     xmlSaver.getModelEMFConverter().setUriResolver(this);
     final StringWriter sw = new StringWriter();
     xmlSaver.setWriter(sw);

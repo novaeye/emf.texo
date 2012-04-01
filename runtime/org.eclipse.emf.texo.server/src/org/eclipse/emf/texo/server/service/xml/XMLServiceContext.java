@@ -50,7 +50,16 @@ public class XMLServiceContext extends ServiceContext {
    */
   @Override
   protected String convertToResultFormat(Object object) {
-    return getObjectStore().toXML(Collections.singletonList(object), isXmi());
+    int childLevels = 2;
+    if (getRequestParameters().containsKey(ServiceConstants.PARAM_CHILD_LEVELS)) {
+      try {
+        childLevels = Integer.parseInt((String) getRequestParameters().get(ServiceConstants.PARAM_CHILD_LEVELS));
+      } catch (NumberFormatException e) {
+        // ignore on purpose...
+      }
+    }
+
+    return getObjectStore().toXML(Collections.singletonList(object), isXmi(), childLevels);
   }
 
   public boolean isXmi() {
