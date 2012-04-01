@@ -16,7 +16,9 @@
  */
 package org.eclipse.emf.texo.json;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.resolver.WebServiceObjectResolver;
 import org.json.JSONException;
@@ -32,12 +34,17 @@ public class JSONWebServiceObjectResolver extends WebServiceObjectResolver {
 
   @Override
   protected Object deserialize(String urlStr, String content) {
-    if (true) {
-      return null;
-    }
     try {
       final JSONModelConverter converter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
       converter.setUriResolver(this);
+
+      // prevent loops by already setting the resolved object
+      final TypeIdTuple tuple = getTypeAndIdFromUri(URI.createURI(urlStr));
+      final Object result = ModelResolver.getInstance().getModelPackage(tuple.getEClass().getEPackage().getNsURI())
+          .getModelFactory().create(tuple.getEClass());
+      getObjectCache().put(urlStr, result);
+      converter.getResolvedObjects().put(urlStr, result);
+      
       return converter.convert(new JSONObject(content));
     } catch (JSONException e) {
       throw new RuntimeException(e);

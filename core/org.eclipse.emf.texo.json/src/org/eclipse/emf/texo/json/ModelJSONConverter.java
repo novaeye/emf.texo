@@ -140,6 +140,9 @@ public class ModelJSONConverter extends ModelToConverter {
       final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
       final org.eclipse.emf.common.util.URI uri = getProxyId(modelObject);
       if (uri != null) {
+        if (getProxyObjects().contains(object)) {
+          jsonObject.put(ModelJSONConstants.PROXY_PROPERTY, true);
+        }
         jsonObject.put(ModelJSONConstants.URI_PROPERTY, uri.toString());
       }
     } catch (JSONException e) {

@@ -158,8 +158,13 @@ public class DefaultObjectResolver implements ObjectResolver {
    * @see org.eclipse.emf.texo.store.ObjectURIResolver#fromUri(org.eclipse.emf.common.util.URI)
    */
   public Object fromUri(URI objectUri) {
-    final Object idValue;
-    EClass eClass = null;
+    final TypeIdTuple tuple = getTypeAndIdFromUri(objectUri);
+    return get(tuple.getEClass(), tuple.getId());
+  }
+
+  protected TypeIdTuple getTypeAndIdFromUri(URI objectUri) {
+    EClass eClass;
+    Object idValue;
     if (isUseWebServiceUriFormat() && !objectUri.toString().contains(FRAGMENTSEPARATOR)) {
       final String idString = objectUri.lastSegment();
       final String eClassName = objectUri.trimSegments(1).lastSegment();
@@ -179,7 +184,10 @@ public class DefaultObjectResolver implements ObjectResolver {
       final String idString = fragment.substring(separatorIndex + FRAGMENTSEPARATOR_LENGTH);
       idValue = IdProvider.getInstance().convertIdStringToId(eClass, idString);
     }
-    return get(eClass, idValue);
+    final TypeIdTuple tuple = new TypeIdTuple();
+    tuple.setEClass(eClass);
+    tuple.setId(idValue);
+    return tuple;
   }
 
   public Object get(EClass eClass, Object id) {
@@ -197,6 +205,28 @@ public class DefaultObjectResolver implements ObjectResolver {
 
   public void setUseWebServiceUriFormat(boolean useWebServiceUriFormat) {
     this.useWebServiceUriFormat = useWebServiceUriFormat;
+  }
+
+  protected static class TypeIdTuple {
+    private EClass eClass;
+    private Object id;
+
+    public EClass getEClass() {
+      return eClass;
+    }
+
+    public void setEClass(EClass eClass) {
+      this.eClass = eClass;
+    }
+
+    public Object getId() {
+      return id;
+    }
+
+    public void setId(Object id) {
+      this.id = id;
+    }
+
   }
 
 }

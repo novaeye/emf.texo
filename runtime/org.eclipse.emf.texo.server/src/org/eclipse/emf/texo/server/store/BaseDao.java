@@ -167,6 +167,13 @@ public abstract class BaseDao<T extends Object> {
   }
 
   /**
+   * Refreshes t from the backend db
+   */
+  public void refresh(T t) {
+    getEntityManager().refresh(t);
+  }
+
+  /**
    * Removes t, first removes the dependent objects referenced by t.
    */
   public void remove(T t) {

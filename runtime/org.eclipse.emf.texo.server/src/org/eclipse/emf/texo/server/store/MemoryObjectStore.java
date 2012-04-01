@@ -86,6 +86,11 @@ public class MemoryObjectStore extends ObjectStore {
   }
 
   @Override
+  public <T extends Object> void refresh(T object) {
+    // don't do anything
+  }
+
+  @Override
   public <T extends Object> void insert(T object) {
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
     List<Object> dataList = data.get(modelObject.eClass());

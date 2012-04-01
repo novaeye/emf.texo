@@ -281,7 +281,7 @@ public class WSMainTest extends BaseWSWebTest {
     }
 
     // remove all books
-    final Writer w = lib.getWriters().get(0);
+    Writer w = lib.getWriters().get(0);
     final String newName = "" + System.currentTimeMillis(); //$NON-NLS-1$
     w.setName(newName);
     final Book bk = w.getBooks().get(0);
@@ -296,6 +296,17 @@ public class WSMainTest extends BaseWSWebTest {
       Assert.assertNotSame(w, wResult);
       Assert.assertEquals(w.getDb_Id(), wResult.getDb_Id());
       Assert.assertEquals(0, wResult.getBooks().size());
+
+      // use the new writer as the version may have changed
+      w = wResult;
+      checkExists(w, true);
+    }
+
+    {
+      final String content = doGetRequest(LibraryModelPackage.INSTANCE.getWriterEClass().getName(), null,
+          HttpServletResponse.SC_OK);
+      final List<Object> objects = deserialize(content);
+      System.err.println(objects.size());
     }
 
     // and add one book again
@@ -352,6 +363,7 @@ public class WSMainTest extends BaseWSWebTest {
     return lib;
   }
 
+  @Override
   protected String getURL() {
     return super.getBaseURL() + "/" + XMLWS; //$NON-NLS-1$ 
   }

@@ -88,4 +88,8 @@ public abstract class WebServiceObjectResolver extends DefaultObjectResolver {
     return hc;
   }
 
+  public Map<String, Object> getObjectCache() {
+    return objectCache;
+  }
+
 }

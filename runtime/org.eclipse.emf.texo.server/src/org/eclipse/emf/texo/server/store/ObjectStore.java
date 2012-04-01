@@ -69,6 +69,13 @@ public abstract class ObjectStore extends DefaultObjectResolver {
   public abstract <T extends Object> void insert(T object);
 
   /**
+   * Refresh an existing object from the object store.
+   * 
+   * @param object
+   */
+  public abstract <T extends Object> void refresh(T object);
+
+  /**
    * Query for a set of objects from the object store.
    * 
    * @param qry

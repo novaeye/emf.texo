@@ -87,6 +87,17 @@ public class EntityManagerObjectStore extends ObjectStore {
   /*
    * (non-Javadoc)
    * 
+   * @see org.eclipse.emf.texo.server.store.ObjectStore#refresh(java.lang.Object)
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  public <T extends Object> void refresh(T object) {
+    ((BaseDao<T>) getDao(object.getClass())).refresh(object);
+  }
+
+  /*
+   * (non-Javadoc)
+   * 
    * @see org.eclipse.emf.texo.store.ObjectStore#insert(java.lang.Object)
    */
   @SuppressWarnings("unchecked")
@@ -177,6 +188,14 @@ public class EntityManagerObjectStore extends ObjectStore {
   @Override
   public void commit() {
     getEntityManager().getTransaction().commit();
+  }
+
+  /**
+   * Calls {@link EntityManager#flush()}.
+   */
+  @Override
+  public void flush() {
+    getEntityManager().flush();
   }
 
   /**

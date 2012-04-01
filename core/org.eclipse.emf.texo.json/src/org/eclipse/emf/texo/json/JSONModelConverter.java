@@ -108,6 +108,7 @@ public class JSONModelConverter {
           if (resolvedObjects.containsKey(uriString)) {
             return resolvedObjects.get(uriString);
           }
+
           final Object object = getUriResolver().fromUri(URI.createURI(uriString));
           resolvedObjects.put(uriString, object);
           return object;
@@ -501,5 +502,13 @@ public class JSONModelConverter {
 
   public void setUriResolver(ObjectResolver uriResolver) {
     this.objectResolver = uriResolver;
+  }
+
+  public Map<String, Object> getResolvedObjects() {
+    return resolvedObjects;
+  }
+
+  public void setResolvedObjects(Map<String, Object> resolvedObjects) {
+    this.resolvedObjects = resolvedObjects;
   }
 }

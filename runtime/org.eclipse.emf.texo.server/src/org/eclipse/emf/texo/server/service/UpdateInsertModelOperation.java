@@ -55,8 +55,8 @@ public class UpdateInsertModelOperation extends ModelOperation {
 
     // and update the remaining objects
     for (Object o : allConvertedObjects) {
-      localObjectStore.update(o);
-      result.getUpdated().add(o);
+      final Object updated = localObjectStore.update(o);
+      result.getUpdated().add(updated);
     }
 
     localObjectStore.flush();
