@@ -23,6 +23,7 @@ import org.eclipse.emf.texo.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONModelConverter;
 import org.eclipse.emf.texo.json.JSONWebServiceObjectResolver;
 import org.eclipse.emf.texo.json.ModelJSONConverter;
+import org.eclipse.emf.texo.server.service.ServiceConstants;
 import org.eclipse.emf.texo.server.service.ServiceContext;
 import org.eclipse.emf.texo.server.store.ObjectStore;
 import org.json.JSONException;
@@ -50,7 +51,17 @@ public class JSONServiceContext extends ServiceContext {
   @Override
   protected String convertToResultFormat(Object object) {
     final ModelJSONConverter converter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
-    converter.setMaxChildLevelsToConvert(2);
+    if (getRequestParameters().containsKey(ServiceConstants.PARAM_CHILD_LEVELS)) {
+      try {
+        converter.setMaxChildLevelsToConvert(Integer.parseInt((String) getRequestParameters().get(
+            ServiceConstants.PARAM_CHILD_LEVELS)));
+      } catch (NumberFormatException e) {
+        // ignore on purpose...
+        converter.setMaxChildLevelsToConvert(2);
+      }
+    } else {
+      converter.setMaxChildLevelsToConvert(2);
+    }
     converter.setUriResolver(getObjectStore());
     final JSONObject jsonObject = converter.convert(object);
     return jsonObject.toString();

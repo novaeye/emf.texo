@@ -230,7 +230,7 @@ public class WSMainTest extends BaseWSWebTest {
       final String wsPartUrl = ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass())
           + "?query=" //$NON-NLS-1$
           + URLEncoder.encode("select e from Writer e where e.name like 'name2%'", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          + "&maxResults=5"; //$NON-NLS-1$
+          + "&maxResults=5&childLevels=3"; //$NON-NLS-1$
       final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
       final ResponseType result = (ResponseType) deserialize(content).get(0);
       Assert.assertEquals(11, result.getTotalRows());
