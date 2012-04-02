@@ -265,7 +265,8 @@ public class WSMainTest extends BaseWSWebTest {
     Library lib = null;
     {
       final String content = serialize(createTestDataInstance());
-      final String resultStr = doContentRequest(LibraryModelPackage.INSTANCE.getWriterEClass().getName(), content,
+      final String resultStr = doContentRequest(
+          ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass()), content,
           HttpServletResponse.SC_OK, null, HttpMethods.POST);
       final ResultType result = (ResultType) deserialize(resultStr).get(0);
       lib = (Library) result.getInserted().get(0);
@@ -289,7 +290,8 @@ public class WSMainTest extends BaseWSWebTest {
 
     {
       final String content = serialize(w);
-      final String resultStr = doContentRequest(LibraryModelPackage.INSTANCE.getWriterEClass().getName(), content,
+      final String resultStr = doContentRequest(
+          ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass()), content,
           HttpServletResponse.SC_OK, null, HttpMethods.POST);
       final ResultType resultType = (ResultType) deserialize(resultStr).get(0);
       final Writer wResult = (Writer) resultType.getUpdated().get(0);
@@ -303,7 +305,8 @@ public class WSMainTest extends BaseWSWebTest {
     }
 
     {
-      final String content = doGetRequest(LibraryModelPackage.INSTANCE.getWriterEClass().getName(), null,
+      final String content = doGetRequest(
+          ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass()), null,
           HttpServletResponse.SC_OK);
       final List<Object> objects = deserialize(content);
       System.err.println(objects.size());
@@ -314,7 +317,8 @@ public class WSMainTest extends BaseWSWebTest {
       w.getBooks().add(bk);
       bk.setAuthor(w);
       final String content = serialize(w);
-      final String resultStr = doContentRequest(LibraryModelPackage.INSTANCE.getWriterEClass().getName(), content,
+      final String resultStr = doContentRequest(
+          ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass()), content,
           HttpServletResponse.SC_OK, null, HttpMethods.POST);
       final ResultType resultType = (ResultType) deserialize(resultStr).get(0);
       final Writer wResult = (Writer) resultType.getUpdated().get(0);

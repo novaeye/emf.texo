@@ -85,6 +85,7 @@ public class ModelXMLLoader {
       setDefaultOptions(XMLResource.OPTION_RECORD_ANY_TYPE_NAMESPACE_DECLARATIONS, true);
 
       localXMLResource.load(new InputSource(getReader()), options);
+      getEMFModelConverter().getUriResolver().setUseWebServiceUriFormat(true);
       return getEMFModelConverter().convert(localXMLResource.getContents());
     } catch (final IOException e) {
       throw new IllegalStateException(e);
