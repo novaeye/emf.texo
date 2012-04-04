@@ -245,4 +245,12 @@ public class ArtifactGenerator {
   public void setDoDao(boolean doDao) {
     this.doDao = doDao;
   }
+
+  public TexoResourceManager getResourceManager() {
+    return resourceManager;
+  }
+
+  public void setResourceManager(TexoResourceManager resourceManager) {
+    this.resourceManager = resourceManager;
+  }
 }
