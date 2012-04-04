@@ -28,9 +28,13 @@ import junit.framework.Assert;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.model.request.Parameter;
+import org.eclipse.emf.texo.server.model.request.QueryType;
+import org.eclipse.emf.texo.server.model.request.RequestModelPackage;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
 import org.eclipse.emf.texo.server.model.response.ResponseType;
 import org.eclipse.emf.texo.server.model.response.ResultType;
+import org.eclipse.emf.texo.server.service.ServiceConstants;
 import org.eclipse.emf.texo.server.service.ServiceModelPackageRegistry;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.samples.library.Book;
@@ -258,6 +262,30 @@ public class WSMainTest extends BaseWSWebTest {
 
         Assert.assertTrue(w.getName().startsWith("name2")); //$NON-NLS-1$
         Assert.assertEquals(name, w.getName());
+      }
+    }
+
+    // test querytype
+    if (!isXmlTest()) {
+      final QueryType queryType = RequestModelPackage.INSTANCE.getModelFactory().createQueryType();
+      queryType.setQuery("select e, e.name from Writer e where e.name like :name");
+      final Parameter parameter = RequestModelPackage.INSTANCE.getModelFactory().createParameter();
+      parameter.setName("name");
+      parameter.setValue("name2%");
+      queryType.getParameters().add(parameter);
+
+      final String content = serialize(queryType);
+      final String resultStr = doContentRequest("?" + ServiceConstants.PARAM_RETRIEVAL + "=true", content,
+          HttpServletResponse.SC_OK, null, HttpMethods.POST);
+      final ResponseType result = (ResponseType) deserialize(resultStr).get(0);
+      Assert.assertEquals(11, result.getTotalRows());
+      Assert.assertEquals(11, result.getData().size());
+      for (Object o : result.getData()) {
+        final Object[] os = (Object[]) o;
+        Writer w = (Writer) os[0];
+        String n = (String) os[1];
+        Assert.assertTrue(w.getName().startsWith("name2")); //$NON-NLS-1$
+        Assert.assertEquals(n, w.getName());
       }
     }
 

@@ -412,6 +412,8 @@ public class RequestModelFactory implements ModelFactory {
       switch (featureID) {
       case RequestModelPackage.QUERYTYPE_QUERY_FEATURE_ID:
         return getTarget().getQuery();
+      case RequestModelPackage.QUERYTYPE_NAMEDQUERY_FEATURE_ID:
+        return getTarget().getNamedQuery();
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
         return getTarget().getParameters();
       }
@@ -428,6 +430,9 @@ public class RequestModelFactory implements ModelFactory {
       switch (featureID) {
       case RequestModelPackage.QUERYTYPE_QUERY_FEATURE_ID:
         getTarget().setQuery((String) value);
+        return;
+      case RequestModelPackage.QUERYTYPE_NAMEDQUERY_FEATURE_ID:
+        getTarget().setNamedQuery((String) value);
         return;
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
         getTarget().setParameters((List<Parameter>) value);
