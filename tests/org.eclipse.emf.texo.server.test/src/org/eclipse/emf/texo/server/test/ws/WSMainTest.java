@@ -269,6 +269,11 @@ public class WSMainTest extends BaseWSWebTest {
     if (!isXmlTest()) {
       final QueryType queryType = RequestModelPackage.INSTANCE.getModelFactory().createQueryType();
       queryType.setQuery("select e, e.name from Writer e where e.name like :name");
+      // test named query, add this snippet to library-orm.xml:
+      // <orm:named-query name="testWriter">
+      // <orm:query>select e, e.name from Writer e where e.name like :name</orm:query>
+      // </orm:named-query>
+      // queryType.setNamedQuery("testWriter");
       final Parameter parameter = RequestModelPackage.INSTANCE.getModelFactory().createParameter();
       parameter.setName("name");
       parameter.setValue("name2%");

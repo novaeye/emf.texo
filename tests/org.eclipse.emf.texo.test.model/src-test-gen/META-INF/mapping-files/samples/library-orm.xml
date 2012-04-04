@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
   <orm:access>FIELD</orm:access>
+  <orm:named-query name="testWriter">
+  	<orm:query>select e, e.name from Writer e where e.name like :name</orm:query>
+  </orm:named-query>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Book" name="Book">
     <orm:table name="Book"/>
     <orm:attributes>
