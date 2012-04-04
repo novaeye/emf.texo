@@ -83,7 +83,8 @@ public class ModelXMLLoader {
       setDefaultOptions(XMLResource.OPTION_SAVE_TYPE_INFORMATION, true);
       // if set then texo extensions won't work
       // setDefaultOptions(XMLResource.OPTION_LAX_FEATURE_PROCESSING, true);
-      setDefaultOptions(XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, true);
+      // setting this results in strange side effects in several xml testcases...
+      // setDefaultOptions(XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, true);
       setDefaultOptions(XMLResource.OPTION_RECORD_ANY_TYPE_NAMESPACE_DECLARATIONS, true);
 
       localXMLResource.load(new InputSource(getReader()), options);
