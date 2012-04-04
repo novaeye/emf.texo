@@ -3,48 +3,71 @@ package org.eclipse.emf.texo.server.model.response;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 
- * A representation of the model object '<em><b>ResponseType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * A representation of the model object '<em><b>ResponseType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
+@Entity(name = "ResponseType")
 public class ResponseType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private String status = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private long startRow = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private long endRow = 0;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private long totalRows = 0;
 
-  /** 
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated 
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
+  @OrderColumn()
+  @JoinColumns({ @JoinColumn() })
   private List<Object> data = new ArrayList<Object>();
 
   /**
    * Returns the value of '<em><b>status</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>status</b></em>' feature
    * @generated
    */
@@ -54,9 +77,11 @@ public class ResponseType {
 
   /**
    * Sets the '{@link ResponseType#getStatus() <em>status</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ResponseType#getStatus() status}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ResponseType#getStatus() status}' feature.
    * @generated
    */
   public void setStatus(String newStatus) {
@@ -65,8 +90,9 @@ public class ResponseType {
 
   /**
    * Returns the value of '<em><b>startRow</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>startRow</b></em>' feature
    * @generated
    */
@@ -76,9 +102,11 @@ public class ResponseType {
 
   /**
    * Sets the '{@link ResponseType#getStartRow() <em>startRow</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ResponseType#getStartRow() startRow}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ResponseType#getStartRow() startRow}' feature.
    * @generated
    */
   public void setStartRow(long newStartRow) {
@@ -87,8 +115,9 @@ public class ResponseType {
 
   /**
    * Returns the value of '<em><b>endRow</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>endRow</b></em>' feature
    * @generated
    */
@@ -98,9 +127,11 @@ public class ResponseType {
 
   /**
    * Sets the '{@link ResponseType#getEndRow() <em>endRow</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ResponseType#getEndRow() endRow}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ResponseType#getEndRow() endRow}' feature.
    * @generated
    */
   public void setEndRow(long newEndRow) {
@@ -109,8 +140,9 @@ public class ResponseType {
 
   /**
    * Returns the value of '<em><b>totalRows</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>totalRows</b></em>' feature
    * @generated
    */
@@ -120,9 +152,11 @@ public class ResponseType {
 
   /**
    * Sets the '{@link ResponseType#getTotalRows() <em>totalRows</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ResponseType#getTotalRows() totalRows}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ResponseType#getTotalRows() totalRows}' feature.
    * @generated
    */
   public void setTotalRows(long newTotalRows) {
@@ -131,9 +165,9 @@ public class ResponseType {
 
   /**
    * Returns the value of '<em><b>data</b></em>' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>data</b></em>' feature
    * @generated
    */
@@ -143,6 +177,7 @@ public class ResponseType {
 
   /**
    * Adds to the <em>data</em> feature.
+   * 
    * @generated
    */
   public void addToData(Object dataValue) {
@@ -151,8 +186,9 @@ public class ResponseType {
     }
   }
 
-  /**			
+  /**
    * Removes from the <em>data</em> feature.
+   * 
    * @generated
    */
   public void removeFromData(Object dataValue) {
@@ -161,22 +197,24 @@ public class ResponseType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>data</em> feature.
+   * 
    * @generated
    */
   public void clearData() {
-    for (Object dataElement : data) {
-      removeFromData(dataElement);
+    while (!data.isEmpty()) {
+      removeFromData(data.iterator().next());
     }
   }
 
   /**
    * Sets the '{@link ResponseType#getData() <em>data</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link ResponseType#getData() data}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link ResponseType#getData() data}' feature.
    * @generated
    */
   public void setData(List<Object> newData) {
@@ -184,9 +222,9 @@ public class ResponseType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

@@ -67,4 +67,10 @@ public class WSMainJSONTest extends WSMainTest {
     objectResolver.setUri(getURL());
     return objectResolver;
   }
+
+  @Override
+  protected boolean isXmlTest() {
+    return false;
+  }
+
 }

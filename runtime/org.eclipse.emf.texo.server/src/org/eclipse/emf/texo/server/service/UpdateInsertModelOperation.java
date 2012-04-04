@@ -19,6 +19,7 @@ package org.eclipse.emf.texo.server.service;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.emf.texo.server.model.request.ActionType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResultType;
 import org.eclipse.emf.texo.server.store.ObjectStore;
@@ -40,6 +41,48 @@ public class UpdateInsertModelOperation extends ModelOperation {
     final ObjectStore localObjectStore = getObjectStore();
 
     final ResultType result = ResponseModelPackage.INSTANCE.getModelFactory().createResultType();
+
+    for (Iterator<Object> it = allConvertedObjects.iterator(); it.hasNext();) {
+      final Object o = it.next();
+      if (o instanceof ActionType) {
+        final ActionType actionType = (ActionType) o;
+
+        // first delete
+        for (Iterator<Object> itObject = actionType.getDelete().iterator(); itObject.hasNext();) {
+          final Object object = itObject.next();
+          localObjectStore.remove(object);
+          result.getDeleted().add(object);
+        }
+
+        // then insert
+        for (Iterator<Object> itObject = actionType.getInsert().iterator(); itObject.hasNext();) {
+          final Object object = itObject.next();
+          if (localObjectStore.isNew(object)) {
+            localObjectStore.insert(object);
+            result.getInserted().add(object);
+          } else {
+            final Object updated = localObjectStore.update(object);
+            result.getUpdated().add(updated);
+          }
+        }
+
+        // then update
+        for (Iterator<Object> itObject = actionType.getUpdate().iterator(); itObject.hasNext();) {
+          final Object object = itObject.next();
+          if (localObjectStore.isNew(object)) {
+            localObjectStore.insert(object);
+            result.getInserted().add(object);
+          } else {
+            final Object updated = localObjectStore.update(object);
+            result.getUpdated().add(updated);
+          }
+        }
+
+        it.remove();
+
+        localObjectStore.flush();
+      }
+    }
 
     // first insert the new objects
     for (Iterator<Object> it = allConvertedObjects.iterator(); it.hasNext();) {

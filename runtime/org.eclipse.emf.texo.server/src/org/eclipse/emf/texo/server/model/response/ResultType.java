@@ -3,35 +3,58 @@ package org.eclipse.emf.texo.server.model.response;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 
- * A representation of the model object '<em><b>ResultType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * A representation of the model object '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
+@Entity(name = "ResultType")
 public class ResultType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
+  @OrderColumn()
+  @JoinColumns({ @JoinColumn() })
   private List<Object> updated = new ArrayList<Object>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
+  @OrderColumn()
+  @JoinColumns({ @JoinColumn() })
   private List<Object> inserted = new ArrayList<Object>();
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
+  @OrderColumn()
+  @JoinColumns({ @JoinColumn() })
   private List<Object> deleted = new ArrayList<Object>();
 
   /**
    * Returns the value of '<em><b>updated</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>updated</b></em>' feature
    * @generated
    */
@@ -41,6 +64,7 @@ public class ResultType {
 
   /**
    * Adds to the <em>updated</em> feature.
+   * 
    * @generated
    */
   public void addToUpdated(Object updatedValue) {
@@ -49,8 +73,9 @@ public class ResultType {
     }
   }
 
-  /**			
+  /**
    * Removes from the <em>updated</em> feature.
+   * 
    * @generated
    */
   public void removeFromUpdated(Object updatedValue) {
@@ -59,22 +84,24 @@ public class ResultType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>updated</em> feature.
+   * 
    * @generated
    */
   public void clearUpdated() {
-    for (Object updatedElement : updated) {
-      removeFromUpdated(updatedElement);
+    while (!updated.isEmpty()) {
+      removeFromUpdated(updated.iterator().next());
     }
   }
 
   /**
    * Sets the '{@link ResultType#getUpdated() <em>updated</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link ResultType#getUpdated() updated}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link ResultType#getUpdated() updated}' feature.
    * @generated
    */
   public void setUpdated(List<Object> newUpdated) {
@@ -83,8 +110,9 @@ public class ResultType {
 
   /**
    * Returns the value of '<em><b>inserted</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>inserted</b></em>' feature
    * @generated
    */
@@ -94,6 +122,7 @@ public class ResultType {
 
   /**
    * Adds to the <em>inserted</em> feature.
+   * 
    * @generated
    */
   public void addToInserted(Object insertedValue) {
@@ -102,8 +131,9 @@ public class ResultType {
     }
   }
 
-  /**			
+  /**
    * Removes from the <em>inserted</em> feature.
+   * 
    * @generated
    */
   public void removeFromInserted(Object insertedValue) {
@@ -112,22 +142,24 @@ public class ResultType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>inserted</em> feature.
+   * 
    * @generated
    */
   public void clearInserted() {
-    for (Object insertedElement : inserted) {
-      removeFromInserted(insertedElement);
+    while (!inserted.isEmpty()) {
+      removeFromInserted(inserted.iterator().next());
     }
   }
 
   /**
    * Sets the '{@link ResultType#getInserted() <em>inserted</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link ResultType#getInserted() inserted}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link ResultType#getInserted() inserted}' feature.
    * @generated
    */
   public void setInserted(List<Object> newInserted) {
@@ -136,8 +168,9 @@ public class ResultType {
 
   /**
    * Returns the value of '<em><b>deleted</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>deleted</b></em>' feature
    * @generated
    */
@@ -147,6 +180,7 @@ public class ResultType {
 
   /**
    * Adds to the <em>deleted</em> feature.
+   * 
    * @generated
    */
   public void addToDeleted(Object deletedValue) {
@@ -155,8 +189,9 @@ public class ResultType {
     }
   }
 
-  /**			
+  /**
    * Removes from the <em>deleted</em> feature.
+   * 
    * @generated
    */
   public void removeFromDeleted(Object deletedValue) {
@@ -165,22 +200,24 @@ public class ResultType {
     }
   }
 
-  /**			
+  /**
    * Clears the <em>deleted</em> feature.
+   * 
    * @generated
    */
   public void clearDeleted() {
-    for (Object deletedElement : deleted) {
-      removeFromDeleted(deletedElement);
+    while (!deleted.isEmpty()) {
+      removeFromDeleted(deleted.iterator().next());
     }
   }
 
   /**
    * Sets the '{@link ResultType#getDeleted() <em>deleted</em>}' feature.
-   *
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param the new value of the '{@link ResultType#getDeleted() deleted}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link ResultType#getDeleted() deleted}' feature.
    * @generated
    */
   public void setDeleted(List<Object> newDeleted) {
@@ -188,9 +225,9 @@ public class ResultType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

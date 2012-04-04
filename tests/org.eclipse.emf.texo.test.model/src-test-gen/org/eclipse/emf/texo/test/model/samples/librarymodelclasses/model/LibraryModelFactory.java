@@ -37,10 +37,10 @@ public class LibraryModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case LibraryModelPackage.BOOK_CLASSIFIER_ID:
       return createBook();
-    case LibraryModelPackage.WRITER_CLASSIFIER_ID:
-      return createWriter();
     case LibraryModelPackage.LIBRARY_CLASSIFIER_ID:
       return createLibrary();
+    case LibraryModelPackage.WRITER_CLASSIFIER_ID:
+      return createWriter();
     }
     throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
@@ -62,11 +62,11 @@ public class LibraryModelFactory implements ModelFactory {
     case LibraryModelPackage.BOOK_CLASSIFIER_ID:
       modelObject = new BookModelObject();
       break;
-    case LibraryModelPackage.WRITER_CLASSIFIER_ID:
-      modelObject = new WriterModelObject();
-      break;
     case LibraryModelPackage.LIBRARY_CLASSIFIER_ID:
       modelObject = new LibraryModelObject();
+      break;
+    case LibraryModelPackage.WRITER_CLASSIFIER_ID:
+      modelObject = new WriterModelObject();
       break;
     default:
       throw new IllegalArgumentException("The EClass '" + eClass + "' is not defined in this EPackage");

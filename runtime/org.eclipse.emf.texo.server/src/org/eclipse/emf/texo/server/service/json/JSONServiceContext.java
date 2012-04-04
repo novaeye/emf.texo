@@ -17,6 +17,7 @@
 package org.eclipse.emf.texo.server.service.json;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.texo.ComponentProvider;
@@ -26,6 +27,7 @@ import org.eclipse.emf.texo.json.ModelJSONConverter;
 import org.eclipse.emf.texo.server.service.ServiceConstants;
 import org.eclipse.emf.texo.server.service.ServiceContext;
 import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -63,19 +65,34 @@ public class JSONServiceContext extends ServiceContext {
       converter.setMaxChildLevelsToConvert(2);
     }
     converter.setUriResolver(getObjectStore());
-    final JSONObject jsonObject = converter.convert(object);
+    final Object jsonObject = converter.convert(object);
     return jsonObject.toString();
   }
 
   @Override
   public List<Object> getRequestData() {
     try {
-      final JSONObject jsonObject = new JSONObject(getRequestContent());
+      String content = getRequestContent();
+      if (content == null) {
+        return Collections.emptyList();
+      }
+
       final JSONModelConverter converter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
       converter.setUriResolver(getObjectStore());
-      final Object result = converter.convert(jsonObject);
-      final List<Object> resultList = new ArrayList<Object>();
-      resultList.add(result);
+
+      content = content.trim();
+
+      final List<Object> resultList;
+      if (content.startsWith("[")) { //$NON-NLS-1$
+        final JSONArray jsonArray = new JSONArray(content);
+        resultList = converter.convert(jsonArray);
+      } else {
+        final JSONObject jsonObject = new JSONObject(content);
+        final Object result = converter.convert(jsonObject);
+        resultList = new ArrayList<Object>();
+        resultList.add(result);
+      }
+
       return resultList;
     } catch (JSONException e) {
       throw new RuntimeException(e.getMessage() + getRequestContent(), e);

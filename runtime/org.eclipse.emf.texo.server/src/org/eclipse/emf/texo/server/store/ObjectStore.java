@@ -91,6 +91,21 @@ public abstract class ObjectStore extends DefaultObjectResolver {
   public abstract List<?> query(String qryStr, Map<String, Object> namedParameters, int firstResult, int maxResults);
 
   /**
+   * Query for a set of objects from the object store using a predefined named query.
+   * 
+   * @param name
+   *          the name of the named query
+   * @param namedParameters
+   *          a set of parameters used in the query
+   * @param firstResult
+   *          the row number of the first row to return, pass -1 to not have a first row.
+   * @param maxResults
+   *          the number of rows to return
+   * @return the objects part of the query
+   */
+  public abstract List<?> namedQuery(String name, Map<String, Object> namedParameters, int firstResult, int maxResults);
+
+  /**
    * Query for a specific type
    * 
    * @param eClass
@@ -113,6 +128,17 @@ public abstract class ObjectStore extends DefaultObjectResolver {
    * @return the objects part of the query
    */
   public abstract long count(String qry, Map<String, Object> namedParameters);
+
+  /**
+   * Count a set of objects in the object store.
+   * 
+   * @param name
+   *          the named query for counting
+   * @param namedParameters
+   *          a set of parameters used in the query
+   * @return the objects part of the query
+   */
+  public abstract long countNamedQuery(String name, Map<String, Object> namedParameters);
 
   /**
    * Method to indicate that a transaction is to be started by the underlying implementation.

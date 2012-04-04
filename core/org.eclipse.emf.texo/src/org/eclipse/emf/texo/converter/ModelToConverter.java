@@ -17,6 +17,7 @@
 
 package org.eclipse.emf.texo.converter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -77,6 +78,19 @@ public abstract class ModelToConverter {
   }
 
   protected void traverseEReferencesForProxyDetermination(Object object, int level) {
+
+    // special case, a query can return an array, allows jsonizing this
+    // to be send to the client
+    if (object.getClass().isArray()) {
+      for (int i = 0; i < Array.getLength(object); i++) {
+        final Object value = Array.get(object, i);
+        if (ModelResolver.getInstance().isModelEnabled(value)) {
+          traverseEReferencesForProxyDetermination(value, level);
+        }
+      }
+      return;
+    }
+
     nonProxiedObjects.add(object);
 
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
@@ -150,10 +164,7 @@ public abstract class ModelToConverter {
    * @return the proxy uri, should encode the type of the object as well as its id
    */
   protected org.eclipse.emf.common.util.URI getProxyId(final ModelObject<?> modelObject) {
-    if (proxyObjects.contains(modelObject.getTarget())) {
-      return objectResolver.toUri(modelObject.getTarget());
-    }
-    return null;
+    return objectResolver.toUri(modelObject.getTarget());
   }
 
   // if the value is a featuregroup then walk through the structure to

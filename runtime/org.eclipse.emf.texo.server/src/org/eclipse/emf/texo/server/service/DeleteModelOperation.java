@@ -1,7 +1,7 @@
 /**
  * <copyright>
  *
- * Copyright (c) 2009, 2010 Springsite BV (The Netherlands) and others
+ * Copyright (c) 2009, 2010, 2012 Springsite BV (The Netherlands) and others
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.texo.ComponentProvider;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResultType;
@@ -54,6 +55,12 @@ public class DeleteModelOperation extends ModelOperation {
     // 1) there is a query!
     if (getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_QUERY)) {
       final String qryStr = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
+
+      getServiceContext().getServiceOptions().checkFalse(ServiceOptions.OPTION_ALLOW_RETRIEVE_QUERIES);
+
+      // check the query
+      ComponentProvider.getInstance().newInstance(QueryChecker.class).checkQuery(qryStr);
+
       toDelete = (List<Object>) getObjectStore().query(qryStr, new HashMap<String, Object>(), getFirstResult(),
           getMaxResults());
     } else if (getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_ID)) {

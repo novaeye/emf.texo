@@ -18,7 +18,7 @@ public class Formula {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Enumerated(EnumType.STRING)
   private FormulaType formulaType = FormulaType.SIMPLE;
 

@@ -24,6 +24,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -65,6 +66,35 @@ public class JSONModelConverter {
   private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
   private final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ssZZZZZ");
   private final SimpleDateFormat dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ");
+
+  /**
+   * Converts a JSONArray to a list of equivalent model objects.
+   * 
+   * @param jsonArray
+   *          the jsonArray to convert
+   * @return the model object
+   */
+  public List<Object> convert(final JSONArray jsonArray) {
+    resolvedObjects.clear();
+    return doConvert(jsonArray);
+  }
+
+  protected List<Object> doConvert(final JSONArray jsonArray) {
+    try {
+      final List<Object> result = new ArrayList<Object>();
+      for (int i = 0; i < jsonArray.length(); i++) {
+        final Object o = jsonArray.get(i);
+        if (o instanceof JSONArray) {
+          result.addAll(convert((JSONArray) o));
+        } else if (o instanceof JSONObject) {
+          result.add(doConvert((JSONObject) o));
+        }
+      }
+      return result;
+    } catch (JSONException e) {
+      throw new RuntimeException(e);
+    }
+  }
 
   /**
    * Converts a JSONObject to its equivalent model object.
@@ -284,6 +314,22 @@ public class JSONModelConverter {
             continue;
           }
 
+          // special case, queries can return arrays of data
+          if (jValues.get(i) instanceof JSONArray) {
+            final JSONArray objects = (JSONArray) jValues.get(i);
+            final Object[] target = new Object[objects.length()];
+            for (int j = 0; j < objects.length(); j++) {
+              final Object object = objects.get(j);
+              if (object instanceof JSONObject) {
+                target[j] = doConvert((JSONObject) object);
+              } else {
+                target[j] = object;
+              }
+            }
+            modelObject.eAddTo(eReference, target);
+            continue;
+          }
+
           final JSONObject jValue = jValues.getJSONObject(i);
 
           final Object target = doConvert(jValue);
@@ -465,7 +511,7 @@ public class JSONModelConverter {
     return value;
   }
 
-  protected Date convertDateTime(Object value, boolean isDate, boolean isDateTime, boolean isTime) {
+  public Date convertDateTime(Object value, boolean isDate, boolean isDateTime, boolean isTime) {
     try {
       if (isDate) {
         return dateFormat.parse((String) value);

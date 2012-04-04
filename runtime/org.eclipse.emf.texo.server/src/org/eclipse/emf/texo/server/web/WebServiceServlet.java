@@ -24,6 +24,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.eclipse.emf.texo.server.service.ServiceConstants;
+
 /**
  * The base implementation of a CRUD Rest WS Servlet. It is the basis of the XML and JSON CRUD REST servlets.
  * 
@@ -57,11 +59,17 @@ public abstract class WebServiceServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    if (req.getParameter(ServiceConstants.PARAM_RETRIEVAL) != null) {
+      webServiceHandler.doGet(req, resp);
+    }
     webServiceHandler.doPost(req, resp);
   }
 
   @Override
   protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    if (req.getParameter(ServiceConstants.PARAM_RETRIEVAL) != null) {
+      webServiceHandler.doGet(req, resp);
+    }
     webServiceHandler.doPut(req, resp);
   }
 

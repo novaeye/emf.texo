@@ -374,10 +374,10 @@ public class BuildModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
     KdmModelPackage.initialize();
     CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    SourceModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractBuildElement.class,

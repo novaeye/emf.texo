@@ -23,7 +23,7 @@ public class DocumentRootMixedFeatureGroup {
    * @generated
    */
   public static enum Feature {
-    TEXT, CDATA, COMMENT, ERROR, RESPONSE, RESULT
+    TEXT, CDATA, COMMENT, ACTION, ERROR, RESPONSE, RESULT
   }
 
   /**

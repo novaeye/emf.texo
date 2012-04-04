@@ -81,7 +81,8 @@ public class ModelXMLLoader {
         setDefaultOptions(XMLResource.OPTION_USE_LEXICAL_HANDLER, true);
       }
       setDefaultOptions(XMLResource.OPTION_SAVE_TYPE_INFORMATION, true);
-      // setDefaultOptions(XMLResource.OPTION_LAX_FEATURE_PROCESSING, true);
+      setDefaultOptions(XMLResource.OPTION_LAX_FEATURE_PROCESSING, true);
+      setDefaultOptions(XMLResource.OPTION_RECORD_UNKNOWN_FEATURE, true);
       setDefaultOptions(XMLResource.OPTION_RECORD_ANY_TYPE_NAMESPACE_DECLARATIONS, true);
 
       localXMLResource.load(new InputSource(getReader()), options);

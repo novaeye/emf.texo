@@ -176,17 +176,17 @@ public class LibraryModelPackage extends ModelPackage {
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Book.class, modelPackage.getBookEClass(), modelPackage);
-    ModelResolver.getInstance().registerClassModelMapping(Writer.class, modelPackage.getWriterEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(Library.class, modelPackage.getLibraryEClass(), modelPackage);
+    ModelResolver.getInstance().registerClassModelMapping(Writer.class, modelPackage.getWriterEClass(), modelPackage);
 
     ModelResolver.getInstance().registerClassModelMapping(BookCategory.class, modelPackage.getBookCategoryEEnum(),
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Book.class, BookDao.class);
 
-    DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
-
     DaoRegistry.getInstance().registerDao(Library.class, LibraryDao.class);
+
+    DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
 
     // and return ourselves
     return modelPackage;
@@ -375,10 +375,10 @@ public class LibraryModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case BOOK_CLASSIFIER_ID:
       return Book.class;
-    case WRITER_CLASSIFIER_ID:
-      return Writer.class;
     case LIBRARY_CLASSIFIER_ID:
       return Library.class;
+    case WRITER_CLASSIFIER_ID:
+      return Writer.class;
     case BOOKCATEGORY_CLASSIFIER_ID:
       return BookCategory.class;
     }

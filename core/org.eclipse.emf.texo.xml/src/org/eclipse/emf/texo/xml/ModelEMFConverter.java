@@ -144,11 +144,11 @@ public class ModelEMFConverter extends ModelToConverter {
     // the object
     InternalEObject eObject = objectMapping.get(target);
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(target);
-    final URI proxyURI = getProxyId(modelObject);
-    if (proxyURI != null) {
-      eObject.eSetProxyURI(proxyURI);
-    }
     if (getProxyObjects().contains(target)) {
+      final URI proxyURI = getProxyId(modelObject);
+      if (proxyURI != null) {
+        eObject.eSetProxyURI(proxyURI);
+      }
       return;
     }
 

@@ -18,7 +18,7 @@ public class ConditionalOutputPort extends OutputPort {
    * 
    * @generated
    */
-  @Basic(optional = false)
+  @Basic()
   @Column(name = "COND")
   private String condition = null;
 

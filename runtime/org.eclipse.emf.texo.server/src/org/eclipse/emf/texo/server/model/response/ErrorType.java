@@ -1,40 +1,58 @@
 package org.eclipse.emf.texo.server.model.response;
 
-/** 
- * A representation of the model object '<em><b>ErrorType</b></em>'.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
- * @generated 
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
+
+/**
+ * A representation of the model object '<em><b>ErrorType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
  */
+@Entity(name = "ErrorType")
 public class ErrorType {
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private String errorClass = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private String message = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @Basic(optional = false)
   private String stackTrace = null;
 
-  /** 
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated 
+   * 
+   * @generated
    */
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ErrorType.class)
+  @JoinColumns({ @JoinColumn() })
   private ErrorType cause = null;
 
   /**
    * Returns the value of '<em><b>errorClass</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>errorClass</b></em>' feature
    * @generated
    */
@@ -44,9 +62,11 @@ public class ErrorType {
 
   /**
    * Sets the '{@link ErrorType#getErrorClass() <em>errorClass</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ErrorType#getErrorClass() errorClass}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ErrorType#getErrorClass() errorClass}' feature.
    * @generated
    */
   public void setErrorClass(String newErrorClass) {
@@ -55,8 +75,9 @@ public class ErrorType {
 
   /**
    * Returns the value of '<em><b>message</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>message</b></em>' feature
    * @generated
    */
@@ -66,9 +87,11 @@ public class ErrorType {
 
   /**
    * Sets the '{@link ErrorType#getMessage() <em>message</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ErrorType#getMessage() message}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ErrorType#getMessage() message}' feature.
    * @generated
    */
   public void setMessage(String newMessage) {
@@ -77,8 +100,9 @@ public class ErrorType {
 
   /**
    * Returns the value of '<em><b>stackTrace</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>stackTrace</b></em>' feature
    * @generated
    */
@@ -88,9 +112,11 @@ public class ErrorType {
 
   /**
    * Sets the '{@link ErrorType#getStackTrace() <em>stackTrace</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ErrorType#getStackTrace() stackTrace}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ErrorType#getStackTrace() stackTrace}' feature.
    * @generated
    */
   public void setStackTrace(String newStackTrace) {
@@ -99,8 +125,9 @@ public class ErrorType {
 
   /**
    * Returns the value of '<em><b>cause</b></em>' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return the value of '<em><b>cause</b></em>' feature
    * @generated
    */
@@ -110,9 +137,11 @@ public class ErrorType {
 
   /**
    * Sets the '{@link ErrorType#getCause() <em>cause</em>}' feature.
-   *
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param the new value of the '{@link ErrorType#getCause() cause}' feature.
+   * 
+   * @param the
+   *          new value of the '{@link ErrorType#getCause() cause}' feature.
    * @generated
    */
   public void setCause(ErrorType newCause) {
@@ -120,9 +149,9 @@ public class ErrorType {
   }
 
   /**
-   * A toString method which prints the values of all EAttributes of this instance.
-   * <!-- begin-user-doc --> <!--
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override

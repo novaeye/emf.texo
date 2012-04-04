@@ -52,6 +52,11 @@ public class MemoryObjectStore extends ObjectStore {
     return super.get(eClass, id);
   }
 
+  @Override
+  public long countNamedQuery(String name, Map<String, Object> namedParameters) {
+    throw new UnsupportedOperationException();
+  }
+
   /*
    * (non-Javadoc)
    * 
@@ -114,6 +119,11 @@ public class MemoryObjectStore extends ObjectStore {
       }
     }
     return Collections.emptyList();
+  }
+
+  @Override
+  public List<?> namedQuery(String name, Map<String, Object> namedParameters, int firstResult, int maxResults) {
+    throw new UnsupportedOperationException();
   }
 
   @Override

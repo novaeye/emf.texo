@@ -193,7 +193,7 @@ public class WSMainTest extends BaseWSWebTest {
       Assert.assertEquals(expectedCount[i], result.getData().size());
       if (result.getData().size() > 0) {
         Assert.assertEquals(startRow, result.getStartRow());
-        Assert.assertEquals(startRow + expectedCount[i], result.getEndRow());
+        Assert.assertEquals(startRow + expectedCount[i] - 1, result.getEndRow());
       }
 
       // check that the data exists
@@ -229,8 +229,8 @@ public class WSMainTest extends BaseWSWebTest {
     {
       final String wsPartUrl = ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass())
           + "?query=" //$NON-NLS-1$
-          + URLEncoder.encode("select e from Writer e where e.name like 'name2%'", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-          + "&maxResults=5&childLevels=3"; //$NON-NLS-1$
+          + URLEncoder.encode("select e from Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "&maxResults=5&childLevels=3&qp.name=" + URLEncoder.encode("name2%", "UTF-8"); //$NON-NLS-1$
       final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
       final ResponseType result = (ResponseType) deserialize(content).get(0);
       Assert.assertEquals(11, result.getTotalRows());
@@ -242,12 +242,31 @@ public class WSMainTest extends BaseWSWebTest {
       }
     }
 
+    // query for an array of results, writer, name
+    if (!isXmlTest()) {
+      final String wsPartUrl = ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass())
+          + "?query=" //$NON-NLS-1$
+          + URLEncoder.encode("select e, e.name from Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + "&maxResults=5&childLevels=3&qp.name=" + URLEncoder.encode("name2%", "UTF-8"); //$NON-NLS-1$
+      final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
+      final ResponseType result = (ResponseType) deserialize(content).get(0);
+      for (Object o : result.getData()) {
+        Object[] os = (Object[]) o;
+
+        Writer w = (Writer) os[0];
+        String name = (String) os[1];
+
+        Assert.assertTrue(w.getName().startsWith("name2")); //$NON-NLS-1$
+        Assert.assertEquals(name, w.getName());
+      }
+    }
+
     // get all the writers which start with name2, in total there are 11
     // do not do the count, so the total rows should be equal to the maxResults
     {
       final String wsPartUrl = LibraryModelPackage.INSTANCE.getWriterEClass().getName()
-          + "?query=" + URLEncoder.encode("select e from Writer e where e.name like 'name3%'", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-          + "&maxResults=5&noCount=true"; //$NON-NLS-1$
+          + "?query=" + URLEncoder.encode("select e from Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+          + "&maxResults=5&noCount=true&qp.name=" + URLEncoder.encode("name3%", "UTF-8"); //$NON-NLS-1$
       final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
       final ResponseType result = (ResponseType) deserialize(content).get(0);
       // as there are more than 5 writers, the result is one more than the maxResults
@@ -372,6 +391,10 @@ public class WSMainTest extends BaseWSWebTest {
   @Override
   protected String getURL() {
     return super.getBaseURL() + "/" + XMLWS; //$NON-NLS-1$ 
+  }
+
+  protected boolean isXmlTest() {
+    return true;
   }
 
 }

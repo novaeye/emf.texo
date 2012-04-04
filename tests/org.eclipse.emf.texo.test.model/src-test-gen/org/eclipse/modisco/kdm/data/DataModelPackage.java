@@ -736,12 +736,12 @@ public class DataModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
     CodeModelPackage.initialize();
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    SourceModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(DataModel.class, modelPackage.getDataModelEClass(),

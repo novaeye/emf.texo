@@ -126,6 +126,21 @@ public class EntityManagerObjectStore extends ObjectStore {
     return qry.getResultList();
   }
 
+  @Override
+  public List<?> namedQuery(String name, Map<String, Object> namedParameters, int firstResult, int maxResults) {
+    final Query qry = getEntityManager().createNamedQuery(name);
+    if (firstResult != -1) {
+      qry.setFirstResult(firstResult);
+    }
+    if (maxResults != -1) {
+      qry.setMaxResults(maxResults);
+    }
+    for (String key : namedParameters.keySet()) {
+      qry.setParameter(key, namedParameters.get(key));
+    }
+    return qry.getResultList();
+  }
+
   /*
    * (non-Javadoc)
    * 
@@ -147,6 +162,16 @@ public class EntityManagerObjectStore extends ObjectStore {
       qry.setParameter(key, namedParameters.get(key));
     }
     return ((Number) qry.getSingleResult()).longValue();
+  }
+
+  @Override
+  public long countNamedQuery(String name, Map<String, Object> namedParameters) {
+    final Query qry = getEntityManager().createNamedQuery(name);
+    for (String key : namedParameters.keySet()) {
+      qry.setParameter(key, namedParameters.get(key));
+    }
+    return ((Number) qry.getSingleResult()).longValue();
+
   }
 
   /*

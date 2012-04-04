@@ -1,7 +1,7 @@
 /**
  * <copyright>
  *
- * Copyright (c) 2009, 2010 Springsite BV (The Netherlands) and others
+ * Copyright (c) 2009, 2010, 2012 Springsite BV (The Netherlands) and others
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -25,6 +25,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.server.model.request.RequestModelPackage;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.store.ObjectStore;
@@ -62,9 +64,13 @@ public abstract class ServiceContext {
 
   private ObjectStore objectStore;
 
+  private ServiceOptions serviceOptions = ComponentProvider.getInstance().newInstance(ServiceOptions.class);
+
   public ServiceContext() {
     // most of the time caching is not needed
     getResponseHeaders().put(RESPONSE_HEADER_CACHE_CONTROL, RESPONSE_NO_CACHE);
+    // touch the request package so it is read
+    RequestModelPackage.initialize();
   }
 
   /**
@@ -223,6 +229,14 @@ public abstract class ServiceContext {
 
   public void setObjectStore(ObjectStore objectStore) {
     this.objectStore = objectStore;
+  }
+
+  public ServiceOptions getServiceOptions() {
+    return serviceOptions;
+  }
+
+  public void setServiceOptions(ServiceOptions serviceOptions) {
+    this.serviceOptions = serviceOptions;
   }
 
 }

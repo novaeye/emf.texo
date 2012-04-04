@@ -27,6 +27,7 @@ import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.server.store.MemoryObjectStore;
 import org.eclipse.emf.texo.test.TestUtils;
 import org.eclipse.emf.texo.xml.EMFModelConverter;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Assert;
 
@@ -59,9 +60,15 @@ public class JSONTest extends BaseJSONTest {
     final JSONModelConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
     fromJsonConverter.setUriResolver(memObjectStore);
 
-    final JSONObject json1 = toJsonConverter.convert(m1);
-    final Object m2 = fromJsonConverter.convert(json1);
-    final JSONObject json2 = toJsonConverter.convert(m2);
+    final Object json1 = toJsonConverter.convert(m1);
+    final Object m2;
+    if (json1 instanceof JSONArray) {
+      m2 = fromJsonConverter.convert((JSONArray) json1);
+    } else {
+      m2 = fromJsonConverter.convert((JSONObject) json1);
+    }
+
+    final Object json2 = toJsonConverter.convert(m2);
 
     // System.err.println(json1);
     // System.err.println("---------------------------------------------");
@@ -69,8 +76,8 @@ public class JSONTest extends BaseJSONTest {
 
     Assert.assertEquals(json1.toString(), json2.toString());
 
-    final Object m3 = fromJsonConverter.convert(json2);
-    final JSONObject json3 = toJsonConverter.convert(m3);
+    final Object m3 = fromJsonConverter.convert((JSONObject) json2);
+    final Object json3 = toJsonConverter.convert(m3);
 
     Assert.assertEquals(json2.toString(), json3.toString());
   }

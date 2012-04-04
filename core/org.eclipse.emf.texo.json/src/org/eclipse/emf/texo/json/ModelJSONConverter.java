@@ -17,6 +17,7 @@
 
 package org.eclipse.emf.texo.json;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -66,9 +67,9 @@ public class ModelJSONConverter extends ModelToConverter {
    * 
    * @param the
    *          {@link ModelObject} to convert
-   * @return the {@link JSONObject}
+   * @return the {@link JSONObject} or {@link JSONArray}
    */
-  public JSONObject convert(Object object) {
+  public Object convert(Object object) {
     doBaseActions(Collections.singletonList(object));
 
     hasConverted.clear();
@@ -76,7 +77,54 @@ public class ModelJSONConverter extends ModelToConverter {
     return doConvert(object);
   }
 
-  protected JSONObject doConvert(Object object) {
+  protected Object doConvert(Object object) {
+    // handle a special case needed for supporting queries
+    // with multiple select values
+    if (object == null) {
+      return null;
+    }
+
+    if (object.getClass().isArray()) {
+      try {
+        final JSONArray jsonArray = new JSONArray();
+        for (int i = 0; i < Array.getLength(object); i++) {
+          final Object value = Array.get(object, i);
+          if (ModelResolver.getInstance().isModelEnabled(value)) {
+            jsonArray.put(i, doConvert(value));
+          } else if (value instanceof Date) {
+            jsonArray.put(i, convertDateTime(value, false, true, false));
+          } else {
+            jsonArray.put(i, value);
+          }
+        }
+        return jsonArray;
+      } catch (JSONException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    if (object instanceof Collection) {
+      try {
+        final JSONArray jsonArray = new JSONArray();
+        @SuppressWarnings("unchecked")
+        final Collection<Object> collection = (Collection<Object>) object;
+        int i = 0;
+        for (Object value : collection) {
+          if (ModelResolver.getInstance().isModelEnabled(value)) {
+            jsonArray.put(i, doConvert(value));
+          } else if (value instanceof Date) {
+            jsonArray.put(i, convertDateTime(value, false, true, false));
+          } else {
+            jsonArray.put(i, value);
+          }
+          i++;
+        }
+        return jsonArray;
+      } catch (JSONException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
     // if there are cycles then use proxies
     if (hasConverted.contains(object) && !getProxyObjects().contains(object)) {
       getProxyObjects().add(object);
@@ -247,8 +295,8 @@ public class ModelJSONConverter extends ModelToConverter {
       if (value == null) {
         target.put(jsonPropName, JSONObject.NULL);
       } else {
-        final JSONObject jsonObject = doConvert(value);
-        target.put(jsonPropName, jsonObject);
+        final Object object = doConvert(value);
+        target.put(jsonPropName, object);
       }
     } catch (JSONException e) {
       throw new RuntimeException(e);
@@ -440,7 +488,7 @@ public class ModelJSONConverter extends ModelToConverter {
     return value;
   }
 
-  protected String convertDateTime(Object value, boolean isDate, boolean isDateTime, boolean isTime) {
+  public String convertDateTime(Object value, boolean isDate, boolean isDateTime, boolean isTime) {
     if (isDate) {
       return dateFormat.format((Date) value);
     }

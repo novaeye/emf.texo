@@ -125,6 +125,9 @@ public class DefaultObjectResolver implements ObjectResolver {
    */
   public URI toUri(Object object) {
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
+    if (!IdProvider.getInstance().hasIdEAttribute(modelObject)) {
+      return null;
+    }
     final String idString = IdProvider.getInstance().getIdAsString(modelObject);
     if (idString == null || idString.trim().length() == 0) {
       return null;
