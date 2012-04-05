@@ -70,7 +70,7 @@ public class DeleteModelOperation extends ModelOperation {
       toDelete = Collections.singletonList(object);
     } else {
       final String[] segments = ServiceUtils.getSegments(getServiceContext().getServiceRequestURI());
-      if (segments.length == 0) {
+      if (segments.length < 2) {
         // try posted content
         toDelete = getServiceContext().getRequestData();
       } else if (segments.length == 2) {

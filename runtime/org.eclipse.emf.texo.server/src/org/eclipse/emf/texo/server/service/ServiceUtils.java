@@ -23,6 +23,9 @@ public class ServiceUtils {
    * @return the segments of the path: {"SalesOrder", "1233"}
    */
   public static String[] getSegments(String path) {
+    if (path == null) {
+      return new String[0];
+    }
     String localPath = path;
     if (path.startsWith(ServiceConstants.PATH_SEPARATOR)) {
       localPath = localPath.substring(1);
