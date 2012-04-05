@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.xmi.impl.SAXXMIHandler;
 import org.eclipse.emf.ecore.xmi.impl.XMILoadImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.xml.model.texoextensions.TexoExtensionsModelPackage;
@@ -42,7 +43,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ModelXMIResourceImpl extends XMIResourceImpl {
+public class ModelXMIResourceImpl extends XMIResourceImpl implements TexoComponent {
 
   public ModelXMIResourceImpl() {
     super(URI.createURI("")); //$NON-NLS-1$

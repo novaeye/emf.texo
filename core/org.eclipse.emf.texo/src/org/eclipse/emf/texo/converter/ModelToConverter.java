@@ -27,7 +27,8 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -41,7 +42,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @see ModelObject
  */
-public abstract class ModelToConverter {
+public abstract class ModelToConverter implements TexoComponent {
 
   // list of objects that are to be proxied
   private List<Object> proxyObjects = new ArrayList<Object>();

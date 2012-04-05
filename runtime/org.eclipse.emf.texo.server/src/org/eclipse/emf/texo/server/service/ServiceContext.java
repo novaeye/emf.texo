@@ -25,7 +25,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.server.model.request.RequestModelPackage;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
@@ -41,7 +42,7 @@ import org.eclipse.emf.texo.server.store.ObjectStore;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.7 $
  */
-public abstract class ServiceContext {
+public abstract class ServiceContext implements TexoComponent {
 
   protected static final String CONTENT_TYPE_HEADER_PARAM = "Content-Type"; //$NON-NLS-1$
   protected static final String RESPONSE_HEADER_CACHE_CONTROL = "Cache-Control"; //$NON-NLS-1$

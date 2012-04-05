@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.ElementHandlerImpl;
 import org.eclipse.emf.ecore.xml.type.AnyType;
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.provider.IdProvider;
@@ -61,7 +62,7 @@ import org.eclipse.emf.texo.xml.model.texoextensions.TexoExtensionsModelPackage;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ModelXMLSaver {
+public class ModelXMLSaver implements TexoComponent {
 
   private Writer writer;
   private XMLResource xmlResource;

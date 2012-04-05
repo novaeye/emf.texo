@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.resolver.DefaultObjectResolver;

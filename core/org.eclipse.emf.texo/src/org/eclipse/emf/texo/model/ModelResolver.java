@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.component.TexoStaticSingleton;
 import org.eclipse.emf.texo.utils.Check;
 
 /**
@@ -61,7 +62,7 @@ import org.eclipse.emf.texo.utils.Check;
  * @see ModelFactory
  * @see ModelObject
  */
-public class ModelResolver {
+public class ModelResolver implements TexoStaticSingleton {
 
   private static ModelResolver instance = new ModelResolver();
   private static ThreadLocal<ModelResolver> threadInstance = new ThreadLocal<ModelResolver>();

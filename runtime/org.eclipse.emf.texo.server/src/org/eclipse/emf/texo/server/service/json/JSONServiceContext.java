@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONModelConverter;
 import org.eclipse.emf.texo.json.JSONWebServiceObjectResolver;
 import org.eclipse.emf.texo.json.ModelJSONConverter;

@@ -28,7 +28,8 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.ElementHandlerImpl;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.xml.sax.InputSource;
 
 /**
@@ -53,7 +54,7 @@ import org.xml.sax.InputSource;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ModelXMLLoader {
+public class ModelXMLLoader implements TexoComponent {
 
   private Reader reader;
   private XMLResource xmlResource;

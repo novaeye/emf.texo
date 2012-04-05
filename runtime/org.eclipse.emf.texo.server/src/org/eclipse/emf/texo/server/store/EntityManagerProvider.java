@@ -22,14 +22,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.component.TexoStaticSingleton;
 
 /**
  * Class which provides an entity manager.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class EntityManagerProvider {
+public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton {
 
   private static EntityManagerProvider instance = ComponentProvider.getInstance().newInstance(
       EntityManagerProvider.class);

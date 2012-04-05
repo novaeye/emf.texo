@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.converter.ModelToConverter;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -54,7 +55,7 @@ import org.json.JSONObject;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @see ModelObject
  */
-public class ModelJSONConverter extends ModelToConverter {
+public class ModelJSONConverter extends ModelToConverter implements TexoComponent {
 
   private final HashSet<Object> hasConverted = new HashSet<Object>();
 

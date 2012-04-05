@@ -19,12 +19,14 @@ package org.eclipse.emf.texo.server.service;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.eclipse.emf.texo.component.TexoComponent;
+
 /**
  * Defines options which control the behavior of the service layer.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ServiceOptions {
+public class ServiceOptions implements TexoComponent {
   /**
    * Controls if free format queries are allowed when retrieving, there is a small risk of sql-injection as many types
    * of queries can be passed.

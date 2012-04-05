@@ -33,6 +33,7 @@ import javax.persistence.metamodel.Metamodel;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -50,7 +51,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.3 $
  */
-public abstract class BaseDao<T extends Object> {
+public abstract class BaseDao<T extends Object> implements TexoComponent {
 
   @PersistenceContext
   private EntityManager entityManager;

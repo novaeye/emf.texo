@@ -7,7 +7,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.DynamicModelObject;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
@@ -20,7 +21,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class DefaultObjectResolver implements ObjectResolver {
+public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
   public static final String FRAGMENTSEPARATOR = "||"; //$NON-NLS-1$
   private static final int FRAGMENTSEPARATOR_LENGTH = FRAGMENTSEPARATOR.length();
 

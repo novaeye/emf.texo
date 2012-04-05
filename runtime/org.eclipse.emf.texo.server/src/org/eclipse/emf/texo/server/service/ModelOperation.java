@@ -16,6 +16,7 @@
  */
 package org.eclipse.emf.texo.server.service;
 
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.server.store.ObjectStore;
 
 /**
@@ -25,7 +26,7 @@ import org.eclipse.emf.texo.server.store.ObjectStore;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.6 $
  */
-public abstract class ModelOperation {
+public abstract class ModelOperation implements TexoComponent {
 
   private ServiceContext serviceContext;
 

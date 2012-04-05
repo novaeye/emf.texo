@@ -37,7 +37,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.DynamicEObjectImpl;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
@@ -56,7 +57,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @see ModelObject
  * @see DynamicEObjectImpl
  */
-public class EMFModelConverter {
+public class EMFModelConverter implements TexoComponent {
 
   private Map<EObject, Object> objectMapping = new HashMap<EObject, Object>();
 

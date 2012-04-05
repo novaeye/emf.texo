@@ -19,6 +19,9 @@ package org.eclipse.emf.texo.server.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.component.TexoStaticSingleton;
 import org.eclipse.emf.texo.model.ModelPackage;
 
 /**
@@ -26,9 +29,10 @@ import org.eclipse.emf.texo.model.ModelPackage;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ServiceModelPackageRegistry {
+public class ServiceModelPackageRegistry implements TexoStaticSingleton, TexoComponent {
 
-  private static ServiceModelPackageRegistry instance = new ServiceModelPackageRegistry();
+  private static ServiceModelPackageRegistry instance = ComponentProvider.getInstance().newInstance(
+      ServiceModelPackageRegistry.class);
 
   public static ServiceModelPackageRegistry getInstance() {
     return instance;

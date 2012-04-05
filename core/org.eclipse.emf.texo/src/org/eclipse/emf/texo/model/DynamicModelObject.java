@@ -23,13 +23,14 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.component.TexoComponent;
 
 /**
  * A dynamic representation of the {@link ModelObject}. Stores its values internally in an ArrayList.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class DynamicModelObject implements ModelObject<DynamicModelObject> {
+public class DynamicModelObject implements ModelObject<DynamicModelObject>, TexoComponent {
 
   private EClass eClass;
   private List<Object> values = new ArrayList<Object>();

@@ -16,12 +16,14 @@
  */
 package org.eclipse.emf.texo.server.service;
 
+import org.eclipse.emf.texo.component.TexoComponent;
+
 /**
  * Is used to check that a query string does not contain any non-allowed characters: ', " or ;.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class QueryChecker {
+public class QueryChecker implements TexoComponent {
 
   private char[] disallowed = new char[] { '\'', '"', ';' };
 

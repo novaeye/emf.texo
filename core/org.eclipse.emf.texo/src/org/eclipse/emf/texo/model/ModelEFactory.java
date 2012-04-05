@@ -43,6 +43,7 @@ import org.eclipse.emf.ecore.impl.DynamicEObjectImpl;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.Resource.Internal;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -52,7 +53,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ModelEFactory implements EFactory, InternalEObject {
+public class ModelEFactory implements EFactory, InternalEObject, TexoComponent {
 
   private EFactoryImpl delegate;
   private boolean isDynamicEFactory = false;

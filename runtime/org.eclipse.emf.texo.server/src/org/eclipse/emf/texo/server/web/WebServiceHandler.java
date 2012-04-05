@@ -32,7 +32,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.server.service.DeleteModelOperation;
 import org.eclipse.emf.texo.server.service.ModelOperation;
 import org.eclipse.emf.texo.server.service.RetrieveModelOperation;
@@ -55,7 +56,7 @@ import org.eclipse.emf.texo.server.store.EntityManagerProvider;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public abstract class WebServiceHandler {
+public abstract class WebServiceHandler implements TexoComponent {
   private String uri = null;
   private ServiceContextResultProcessor serviceContextResultProcessor = ComponentProvider.getInstance().newInstance(
       ServiceContextResultProcessor.class);
@@ -244,7 +245,7 @@ public abstract class WebServiceHandler {
    * 
    * @author mtaal
    */
-  public static class ServiceContextResultProcessor {
+  public static class ServiceContextResultProcessor implements TexoComponent {
 
     private ServiceContext serviceContext;
 

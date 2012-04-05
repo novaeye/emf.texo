@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONModelConverter;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.server.model.request.Parameter;

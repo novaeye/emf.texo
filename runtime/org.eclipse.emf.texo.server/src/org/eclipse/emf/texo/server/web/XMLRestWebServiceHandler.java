@@ -16,7 +16,7 @@
  */
 package org.eclipse.emf.texo.server.web;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.server.service.ServiceContext;
 import org.eclipse.emf.texo.server.service.xml.XMLServiceContext;
 

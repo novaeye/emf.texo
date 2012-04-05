@@ -18,7 +18,7 @@ package org.eclipse.emf.texo.xml;
 
 import java.io.StringReader;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.resolver.WebServiceObjectResolver;
 

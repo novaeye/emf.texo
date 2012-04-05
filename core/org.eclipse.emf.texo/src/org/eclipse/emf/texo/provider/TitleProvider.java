@@ -1,3 +1,19 @@
+/**
+ * <copyright>
+ *
+ * Copyright (c) 2011-2012 Springsite BV (The Netherlands) and others
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   Martin Taal - Initial API and implementation
+ *
+ * </copyright>
+ *
+ * $Id: EntityManagerProvider.java,v 1.7 2011/09/26 19:48:10 mtaal Exp $
+ */
 package org.eclipse.emf.texo.provider;
 
 import java.util.ArrayList;
@@ -13,7 +29,9 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.component.TexoStaticSingleton;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -52,7 +70,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class TitleProvider {
+public class TitleProvider implements TexoComponent, TexoStaticSingleton {
 
   private static TitleProvider instance = ComponentProvider.getInstance().newInstance(TitleProvider.class);
 
@@ -208,7 +226,7 @@ public class TitleProvider {
     }
   }
 
-  public static class ExpressionTitleProvider extends EClassTitleProvider {
+  public static class ExpressionTitleProvider extends EClassTitleProvider implements TexoComponent {
     private static final String EXPRESSION_START = "${"; //$NON-NLS-1$
     private static final int EXPRESSION_START_LENGTH = EXPRESSION_START.length();
     private static final String EXPRESSION_END = "}"; //$NON-NLS-1$

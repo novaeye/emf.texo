@@ -31,7 +31,8 @@ import org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler;
 import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.xml.model.texoextensions.TexoExtensionsModelPackage;
@@ -43,7 +44,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public class ModelXMLResourceImpl extends XMLResourceImpl {
+public class ModelXMLResourceImpl extends XMLResourceImpl implements TexoComponent {
 
   public ModelXMLResourceImpl() {
     super(URI.createURI("")); //$NON-NLS-1$

@@ -20,7 +20,7 @@ package org.eclipse.emf.texo.json.test;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONModelConverter;
 import org.eclipse.emf.texo.json.ModelJSONConverter;
 import org.eclipse.emf.texo.model.ModelObject;

@@ -18,7 +18,9 @@ package org.eclipse.emf.texo.server.store;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.eclipse.emf.texo.ComponentProvider;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.component.TexoStaticSingleton;
 
 /**
  * The BaseDaoRegistry keeps track which {@link BaseDao} classes are available for a certain entity class.
@@ -26,7 +28,7 @@ import org.eclipse.emf.texo.ComponentProvider;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
-public class DaoRegistry {
+public class DaoRegistry implements TexoComponent, TexoStaticSingleton {
 
   private static DaoRegistry instance = ComponentProvider.getInstance().newInstance(DaoRegistry.class);
 
