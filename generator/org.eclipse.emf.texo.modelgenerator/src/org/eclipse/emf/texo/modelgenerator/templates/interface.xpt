@@ -39,7 +39,7 @@ public interface «this.simpleClassName-»
 		«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "getter")-»
 		public «featureAnnotation.type» «featureAnnotation.getter»();
 
-		«IF featureAnnotation.EStructuralFeature.changeable || ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation != null-»
+		«IF featureAnnotation.EStructuralFeature.changeable || (featureAnnotation.reference && ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation != null)-»
 			«IF featureAnnotation.featureMapFeature == null && featureAnnotation.many && featureAnnotation.reference && ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess-»
 			/**
 			 * Adds to the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
