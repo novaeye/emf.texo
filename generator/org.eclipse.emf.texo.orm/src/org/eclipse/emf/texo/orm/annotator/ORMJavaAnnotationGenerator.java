@@ -168,7 +168,7 @@ public class ORMJavaAnnotationGenerator {
             continue;
           }
           separateAnnotation
-              .append("@" + getJavaPackage(eFeature.getEType()) + "." + upperCaseFirst(eFeature.getName()) + "s({"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+              .append("@" + getJavaPackage(eFeature.getEType()) + "." + pluralize(upperCaseFirst(eFeature.getName())) + "({"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           boolean addArrayComma = false;
           for (Object val : values) {
             if (val instanceof BaseOrmAnnotation) {
@@ -220,6 +220,16 @@ public class ORMJavaAnnotationGenerator {
       sb.append("\n" + separateAnnotation); //$NON-NLS-1$
     }
     return sb.toString();
+  }
+
+  private String pluralize(String value) {
+    if (value == null) {
+      return null;
+    }
+    if (value.endsWith("y")) {
+      return value.substring(0, value.length() - 1) + "ies";
+    }
+    return value + "s";
   }
 
   private String upperCaseFirst(String value) {
