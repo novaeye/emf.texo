@@ -73,9 +73,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EReferenceORMAnnotation" eSuperTypes="../../org.eclipse.emf.texo.annotations.model/model/texo-annotations-model.ecore#//EReferenceAnnotation #//EStructuralFeatureORMAnnotation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="embedded" eType="ecore:EClass orm.ecore#//Embedded"
-        derived="true"/>
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="embeddedId" eType="ecore:EClass orm.ecore#//EmbeddedId"
-        derived="true" containment="true"/>
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="joinColumn" upperBound="-1"
         eType="ecore:EClass orm.ecore#//JoinColumn" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="joinTable" eType="ecore:EClass orm.ecore#//JoinTable"

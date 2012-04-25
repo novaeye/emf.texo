@@ -46,8 +46,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EAttributeORMAnnotation/featureMapEntity"/>
     </genClasses>
     <genClasses ecoreClass="texo-annotations-orm.ecore#//EReferenceORMAnnotation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/embedded"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/embeddedId"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/embedded"/>
+      <genFeatures property="None" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/embeddedId"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/joinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/joinTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/manyToMany"/>

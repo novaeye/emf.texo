@@ -69,40 +69,44 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
       }
       return;
     }
-    if (annotation.getEntity() == null) {
+
+    // only add entity if not embeddable
+    if (annotation.getEmbeddable() == null && annotation.getEntity() == null) {
       annotation.setEntity(OrmFactory.eINSTANCE.createEntity());
     }
 
     final Entity entity = annotation.getEntity();
 
-    if (namingStrategy.isGenerateAllDBSchemaNames()) {
-      if (hasItsOwnTable(annotation)) {
-        // set the tablename
-        if (entity.getTable() == null) {
-          entity.setTable(OrmFactory.eINSTANCE.createTable());
+    if (entity != null) {
+      if (namingStrategy.isGenerateAllDBSchemaNames()) {
+        if (hasItsOwnTable(annotation)) {
+          // set the tablename
+          if (entity.getTable() == null) {
+            entity.setTable(OrmFactory.eINSTANCE.createTable());
+          }
+          final Table table = entity.getTable();
+          if (table.getName() == null) {
+            table.setName(namingStrategy.getTableName(eClass));
+          }
+        } else if (entity.getPrimaryKeyJoinColumn().isEmpty()) {
+          // create a join column to the parent
+          entity.getPrimaryKeyJoinColumn().add(OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn());
+          entity.getPrimaryKeyJoinColumn().get(0).setName(namingStrategy.getPrimaryKeyJoinColumn(eClass));
         }
-        final Table table = entity.getTable();
-        if (table.getName() == null) {
-          table.setName(namingStrategy.getTableName(eClass));
-        }
-      } else if (entity.getPrimaryKeyJoinColumn().isEmpty()) {
-        // create a join column to the parent
-        entity.getPrimaryKeyJoinColumn().add(OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn());
-        entity.getPrimaryKeyJoinColumn().get(0).setName(namingStrategy.getPrimaryKeyJoinColumn(eClass));
       }
-    }
 
-    // with interfaces always access through the property
-    if (eClass.isInterface()) {
-      entity.setAccess(AccessType.PROPERTY);
-    }
+      // with interfaces always access through the property
+      if (eClass.isInterface()) {
+        entity.setAccess(AccessType.PROPERTY);
+      }
 
-    if (GeneratorUtils.isEmptyOrNull(entity.getClass_())) {
-      entity.setClass(modelGenAnnotation.getQualifiedClassName());
-    }
+      if (GeneratorUtils.isEmptyOrNull(entity.getClass_())) {
+        entity.setClass(modelGenAnnotation.getQualifiedClassName());
+      }
 
-    if (GeneratorUtils.isEmptyOrNull(entity.getName())) {
-      entity.setName(namingStrategy.getEntityName(eClass));
+      if (GeneratorUtils.isEmptyOrNull(entity.getName())) {
+        entity.setName(namingStrategy.getEntityName(eClass));
+      }
     }
   }
 

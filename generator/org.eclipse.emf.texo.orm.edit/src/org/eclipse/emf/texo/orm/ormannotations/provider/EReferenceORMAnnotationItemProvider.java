@@ -2,7 +2,7 @@
  * <copyright>
  * </copyright>
  *
- * $Id: EReferenceORMAnnotationItemProvider.java,v 1.6 2011/09/23 20:59:49 mtaal Exp $
+ * $Id$
  */
 package org.eclipse.emf.texo.orm.ormannotations.provider;
 
@@ -11,11 +11,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -25,25 +22,23 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import org.eclipse.emf.texo.annotations.annotationsmodel.provider.EReferenceAnnotationItemProvider;
-
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
-
 import org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation} object.
- * <!-- begin-user-doc --> <!-- end-user-doc -->
+ * This is the item provider adapter for a {@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation}
+ * object. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationItemProvider implements
     IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
     IItemPropertySource {
   /**
-   * This constructs an instance from a factory and a notifier.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This constructs an instance from a factory and a notifier. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   public EReferenceORMAnnotationItemProvider(AdapterFactory adapterFactory) {
@@ -51,8 +46,8 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
   }
 
   /**
-   * This returns the property descriptors for the adapted class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This returns the property descriptors for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -67,53 +62,50 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
   }
 
   /**
-   * This adds a property descriptor for the Embedded feature.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
+   * This adds a property descriptor for the Embedded feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generatedNOT
    */
   protected void addEmbeddedPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add
-      (createItemPropertyDescriptor
-        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_EReferenceORMAnnotation_embedded_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_EReferenceORMAnnotation_embedded_feature", "_UI_EReferenceORMAnnotation_type"),
-         OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED,
-         true,
-         false,
-         true,
-         null,
-         null,
-         null));
+    // somehow EMF insists on generating the embedded as a property....
+    // prevent this by just commenting out
+    // itemPropertyDescriptors.add
+    // (createItemPropertyDescriptor
+    // (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+    // getResourceLocator(),
+    // getString("_UI_EReferenceORMAnnotation_embedded_feature"),
+    // getString("_UI_PropertyDescriptor_description", "_UI_EReferenceORMAnnotation_embedded_feature",
+    // "_UI_EReferenceORMAnnotation_type"),
+    // OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED,
+    // true,
+    // false,
+    // true,
+    // null,
+    // null,
+    // null));
   }
 
   /**
-   * This adds a property descriptor for the Order By feature.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This adds a property descriptor for the Order By feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   protected void addOrderByPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add
-      (createItemPropertyDescriptor
-        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_EReferenceORMAnnotation_orderBy_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_EReferenceORMAnnotation_orderBy_feature", "_UI_EReferenceORMAnnotation_type"),
-         OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ORDER_BY,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-         null,
-         null));
+    itemPropertyDescriptors.add(createItemPropertyDescriptor(
+        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+        getResourceLocator(),
+        getString("_UI_EReferenceORMAnnotation_orderBy_feature"),
+        getString("_UI_PropertyDescriptor_description", "_UI_EReferenceORMAnnotation_orderBy_feature",
+            "_UI_EReferenceORMAnnotation_type"), OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ORDER_BY,
+        true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
   }
 
   /**
    * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
    * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-   * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-   * <!-- begin-user-doc --> <!--
+   * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -123,6 +115,7 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
       childrenFeatures.add(OrmannotationsPackage.Literals.ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT);
       childrenFeatures.add(OrmannotationsPackage.Literals.ESTRUCTURAL_FEATURE_ORM_ANNOTATION__COLLECTION_TABLE);
       childrenFeatures.add(OrmannotationsPackage.Literals.ESTRUCTURAL_FEATURE_ORM_ANNOTATION__ELEMENT_COLLECTION);
+      childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED);
       childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID);
       childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN);
       childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__JOIN_TABLE);
@@ -146,6 +139,7 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -157,8 +151,8 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
   }
 
   /**
-   * This returns EReferenceORMAnnotation.gif.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This returns EReferenceORMAnnotation.gif. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -167,22 +161,21 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
   }
 
   /**
-   * This returns the label text for the adapted class.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   public String getText(Object object) {
-    String label = ((EReferenceORMAnnotation)object).getDescription();
-    return label == null || label.length() == 0 ?
-      getString("_UI_EReferenceORMAnnotation_type") :
-      getString("_UI_EReferenceORMAnnotation_type") + " " + label;
+    String label = ((EReferenceORMAnnotation) object).getDescription();
+    return label == null || label.length() == 0 ? getString("_UI_EReferenceORMAnnotation_type")
+        : getString("_UI_EReferenceORMAnnotation_type") + " " + label;
   }
 
   /**
-   * This handles model notifications by calling {@link #updateChildren} to update any cached
-   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This handles model notifications by calling {@link #updateChildren} to update any cached children and by creating a
+   * viewer notification, which it passes to {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
@@ -190,149 +183,125 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
     updateChildren(notification);
 
     switch (notification.getFeatureID(EReferenceORMAnnotation.class)) {
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ORDER_BY:
-        fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-        return;
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__TRANSIENT:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__COLLECTION_TABLE:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ELEMENT_COLLECTION:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__JOIN_TABLE:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MANY_TO_MANY:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MANY_TO_ONE:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ONE_TO_MANY:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ONE_TO_ONE:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY_CLASS:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY_COLUMN:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY_JOIN_COLUMN:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ORDER_COLUMN:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC_COLLECTION:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC_MAP:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ASSOCIATION_OVERRIDE:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ATTRIBUTE_OVERRIDE:
-      case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
-        fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-        return;
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ORDER_BY:
+      fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+      return;
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__TRANSIENT:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__COLLECTION_TABLE:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ELEMENT_COLLECTION:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__JOIN_TABLE:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MANY_TO_MANY:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MANY_TO_ONE:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ONE_TO_MANY:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ONE_TO_ONE:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY_CLASS:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY_COLUMN:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__MAP_KEY_JOIN_COLUMN:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ORDER_COLUMN:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC_COLLECTION:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC_MAP:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ASSOCIATION_OVERRIDE:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ATTRIBUTE_OVERRIDE:
+    case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
+      fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+      return;
     }
     super.notifyChanged(notification);
   }
 
   /**
-   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-   * that can be created under this object.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children that can be created under
+   * this object. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override
   protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
     super.collectNewChildDescriptors(newChildDescriptors, object);
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT,
-         OrmFactory.eINSTANCE.createTransient()));
+    newChildDescriptors
+        .add(createChildParameter(OrmannotationsPackage.Literals.ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT,
+            OrmFactory.eINSTANCE.createTransient()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.ESTRUCTURAL_FEATURE_ORM_ANNOTATION__COLLECTION_TABLE,
-         OrmFactory.eINSTANCE.createCollectionTable()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.ESTRUCTURAL_FEATURE_ORM_ANNOTATION__COLLECTION_TABLE,
+        OrmFactory.eINSTANCE.createCollectionTable()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.ESTRUCTURAL_FEATURE_ORM_ANNOTATION__ELEMENT_COLLECTION,
-         OrmFactory.eINSTANCE.createElementCollection()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.ESTRUCTURAL_FEATURE_ORM_ANNOTATION__ELEMENT_COLLECTION,
+        OrmFactory.eINSTANCE.createElementCollection()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID,
-         OrmFactory.eINSTANCE.createEmbeddedId()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED,
+        OrmFactory.eINSTANCE.createEmbedded()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN,
-         OrmFactory.eINSTANCE.createJoinColumn()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID,
+        OrmFactory.eINSTANCE.createEmbeddedId()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__JOIN_TABLE,
-         OrmFactory.eINSTANCE.createJoinTable()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN,
+        OrmFactory.eINSTANCE.createJoinColumn()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MANY_TO_MANY,
-         OrmFactory.eINSTANCE.createManyToMany()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__JOIN_TABLE,
+        OrmFactory.eINSTANCE.createJoinTable()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MANY_TO_ONE,
-         OrmFactory.eINSTANCE.createManyToOne()));
+    newChildDescriptors
+        .add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MANY_TO_MANY,
+            OrmFactory.eINSTANCE.createManyToMany()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ONE_TO_MANY,
-         OrmFactory.eINSTANCE.createOneToMany()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MANY_TO_ONE,
+        OrmFactory.eINSTANCE.createManyToOne()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ONE_TO_ONE,
-         OrmFactory.eINSTANCE.createOneToOne()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ONE_TO_MANY,
+        OrmFactory.eINSTANCE.createOneToMany()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY,
-         OrmFactory.eINSTANCE.createMapKey()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ONE_TO_ONE,
+        OrmFactory.eINSTANCE.createOneToOne()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY_CLASS,
-         OrmFactory.eINSTANCE.createMapKeyClass()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY,
+        OrmFactory.eINSTANCE.createMapKey()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY_COLUMN,
-         OrmFactory.eINSTANCE.createMapKeyColumn()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY_CLASS,
+        OrmFactory.eINSTANCE.createMapKeyClass()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY_JOIN_COLUMN,
-         OrmFactory.eINSTANCE.createMapKeyJoinColumn()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY_COLUMN,
+        OrmFactory.eINSTANCE.createMapKeyColumn()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ORDER_COLUMN,
-         OrmFactory.eINSTANCE.createOrderColumn()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__MAP_KEY_JOIN_COLUMN,
+        OrmFactory.eINSTANCE.createMapKeyJoinColumn()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__BASIC_COLLECTION,
-         OrmFactory.eINSTANCE.createBasicCollection()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ORDER_COLUMN,
+        OrmFactory.eINSTANCE.createOrderColumn()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__BASIC_MAP,
-         OrmFactory.eINSTANCE.createBasicMap()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__BASIC_COLLECTION,
+        OrmFactory.eINSTANCE.createBasicCollection()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ASSOCIATION_OVERRIDE,
-         OrmFactory.eINSTANCE.createAssociationOverride()));
+    newChildDescriptors.add(createChildParameter(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__BASIC_MAP,
+        OrmFactory.eINSTANCE.createBasicMap()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ATTRIBUTE_OVERRIDE,
-         OrmFactory.eINSTANCE.createAttributeOverride()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ASSOCIATION_OVERRIDE,
+        OrmFactory.eINSTANCE.createAssociationOverride()));
 
-    newChildDescriptors.add
-      (createChildParameter
-        (OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN,
-         OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn()));
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ATTRIBUTE_OVERRIDE,
+        OrmFactory.eINSTANCE.createAttributeOverride()));
+
+    newChildDescriptors.add(createChildParameter(
+        OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN,
+        OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn()));
   }
 
   /**
-   * Return the resource locator for this item provider's resources.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Return the resource locator for this item provider's resources. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @generated
    */
   @Override

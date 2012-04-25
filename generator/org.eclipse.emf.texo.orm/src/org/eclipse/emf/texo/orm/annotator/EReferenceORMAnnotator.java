@@ -30,6 +30,7 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAn
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Embedded;
 import org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany;
@@ -41,6 +42,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint;
+import org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage;
@@ -95,7 +97,14 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
         annotateManyToMany(annotation);
       }
     } else {
-      if (eOpposite != null && !eOpposite.isMany()) {
+      final EClass referencedEClass = eReference.getEReferenceType();
+      final EClassORMAnnotation referencedEClassORMAnnotation = (EClassORMAnnotation) getAnnotationManager()
+          .getAnnotation(referencedEClass, OrmannotationsPackage.eINSTANCE.getEClassORMAnnotation());
+
+      if (annotation.getEmbedded() != null || referencedEClassORMAnnotation.getEmbeddable() != null
+          && referencedEClassORMAnnotation.getEntity() == null) {
+        annotateEmbedded(annotation);
+      } else if (eOpposite != null && !eOpposite.isMany()) {
         annotateOneToOne(annotation);
       } else {
         annotateManyToOne(annotation);
@@ -276,6 +285,21 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
     elementCollection.setName(getName(eReference));
     annotation.setElementCollection(elementCollection);
+  }
+
+  protected void annotateEmbedded(EReferenceORMAnnotation annotation) {
+    final EReference eReference = annotation.getEReference();
+    final Embedded embedded;
+    if (annotation.getEmbedded() != null) {
+      embedded = annotation.getEmbedded();
+    } else {
+      embedded = OrmFactory.eINSTANCE.createEmbedded();
+      annotation.setEmbedded(embedded);
+    }
+
+    if (GeneratorUtils.isEmptyOrNull(embedded.getName())) {
+      embedded.setName(getName(eReference));
+    }
   }
 
   protected void annotateOneToOne(EReferenceORMAnnotation annotation) {

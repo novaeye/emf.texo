@@ -108,7 +108,7 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
   protected ElementCollection elementCollection;
 
   /**
-	 * The cached value of the '{@link #getEmbedded() <em>Embedded</em>}' reference.
+	 * The cached value of the '{@link #getEmbedded() <em>Embedded</em>}' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @see #getEmbedded()
@@ -593,51 +593,57 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 	}
 
   /**
-	 * Returns the value of the '<em><b>Embedded</b></em>' reference.
+	 * Returns the value of the '<em><b>Embedded</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Embedded</em>' reference isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Embedded</em>' reference.
+	 * @return the value of the '<em>Embedded</em>' containment reference.
 	 * @see #setEmbedded(Embedded)
 	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEReferenceORMAnnotation_Embedded()
-	 * @model derived="true"
+	 * @model containment="true"
 	 * @generated
 	 */
   public Embedded getEmbedded() {
-		if (embedded != null && ((EObject)embedded).eIsProxy()) {
-			InternalEObject oldEmbedded = (InternalEObject)embedded;
-			embedded = (Embedded)eResolveProxy(oldEmbedded);
-			if (embedded != oldEmbedded) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED, oldEmbedded, embedded));
-			}
-		}
 		return embedded;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Embedded basicGetEmbedded() {
-		return embedded;
+	public NotificationChain basicSetEmbedded(Embedded newEmbedded, NotificationChain msgs) {
+		Embedded oldEmbedded = embedded;
+		embedded = newEmbedded;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED, oldEmbedded, newEmbedded);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
-  /**
-	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getEmbedded <em>Embedded</em>}' reference.
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getEmbedded <em>Embedded</em>}' containment reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Embedded</em>' reference.
+	 * @param value the new value of the '<em>Embedded</em>' containment reference.
 	 * @see #getEmbedded()
 	 * @generated
 	 */
   public void setEmbedded(Embedded newEmbedded) {
-		Embedded oldEmbedded = embedded;
-		embedded = newEmbedded;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED, oldEmbedded, embedded));
+		if (newEmbedded != embedded) {
+			NotificationChain msgs = null;
+			if (embedded != null)
+				msgs = ((InternalEObject)embedded).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED, null, msgs);
+			if (newEmbedded != null)
+				msgs = ((InternalEObject)newEmbedded).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED, null, msgs);
+			msgs = basicSetEmbedded(newEmbedded, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED, newEmbedded, newEmbedded));
 	}
 
   /**
@@ -651,7 +657,7 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 	 * @return the value of the '<em>Embedded Id</em>' containment reference.
 	 * @see #setEmbeddedId(EmbeddedId)
 	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEReferenceORMAnnotation_EmbeddedId()
-	 * @model containment="true" derived="true"
+	 * @model containment="true"
 	 * @generated
 	 */
   public EmbeddedId getEmbeddedId() {
@@ -1363,6 +1369,8 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 				return basicSetCollectionTable(null, msgs);
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ELEMENT_COLLECTION:
 				return basicSetElementCollection(null, msgs);
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED:
+				return basicSetEmbedded(null, msgs);
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID:
 				return basicSetEmbeddedId(null, msgs);
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN:
@@ -1415,8 +1423,7 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ELEMENT_COLLECTION:
 				return getElementCollection();
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED:
-				if (resolve) return getEmbedded();
-				return basicGetEmbedded();
+				return getEmbedded();
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__EMBEDDED_ID:
 				return getEmbeddedId();
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__JOIN_COLUMN:

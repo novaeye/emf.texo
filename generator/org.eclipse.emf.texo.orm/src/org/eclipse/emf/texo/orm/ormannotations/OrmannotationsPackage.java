@@ -738,7 +738,7 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EREFERENCE_ORM_ANNOTATION__ELEMENT_COLLECTION = AnnotationsmodelPackage.EREFERENCE_ANNOTATION_FEATURE_COUNT + 2;
 
   /**
-	 * The feature id for the '<em><b>Embedded</b></em>' reference.
+	 * The feature id for the '<em><b>Embedded</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -2266,8 +2266,8 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEReference(getEAttributeORMAnnotation_FeatureMapEntity(), theOrmPackage.getEntity(), null, "featureMapEntity", null, 0, 1, EAttributeORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eReferenceORMAnnotationEClass, EReferenceORMAnnotation.class, "EReferenceORMAnnotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEReferenceORMAnnotation_Embedded(), theOrmPackage.getEmbedded(), null, "embedded", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEReferenceORMAnnotation_EmbeddedId(), theOrmPackage.getEmbeddedId(), null, "embeddedId", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getEReferenceORMAnnotation_Embedded(), theOrmPackage.getEmbedded(), null, "embedded", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEReferenceORMAnnotation_EmbeddedId(), theOrmPackage.getEmbeddedId(), null, "embeddedId", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEReferenceORMAnnotation_JoinColumn(), theOrmPackage.getJoinColumn(), null, "joinColumn", null, 0, -1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEReferenceORMAnnotation_JoinTable(), theOrmPackage.getJoinTable(), null, "joinTable", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEReferenceORMAnnotation_ManyToMany(), theOrmPackage.getManyToMany(), null, "manyToMany", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2588,7 +2588,7 @@ public class OrmannotationsPackage extends EPackageImpl {
     public static final EClass EREFERENCE_ORM_ANNOTATION = eINSTANCE.getEReferenceORMAnnotation();
 
     /**
-		 * The meta object literal for the '<em><b>Embedded</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Embedded</b></em>' containment reference feature.
 		 * <!-- begin-user-doc --> <!--
      * end-user-doc -->
 		 * @generated
