@@ -146,7 +146,12 @@ public abstract class ModelEStructuralFeatureAnnotator extends ModelENamedElemen
 
   /** @return the get accessor, always prefixes with get */
   protected String getGetter(EStructuralFeature eStructuralFeature) {
-    return "get" + ModelUtils.upCaseFirst(getName(eStructuralFeature)); //$NON-NLS-1$
+    final String result = "get" + ModelUtils.upCaseFirst(getName(eStructuralFeature)); //$NON-NLS-1$
+    // https://bugs.eclipse.org/bugs/show_bug.cgi?id=378087
+    if (result.equals("getClass")) { //$NON-NLS-1$
+      return "get_Class"; //$NON-NLS-1$
+    }
+    return result;
   }
 
   /** @return the set accessor, always prefixes with set */
