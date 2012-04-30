@@ -34,6 +34,8 @@ import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.utils.ModelUtils;
+import org.eclipse.xsd.XSDDiagnostic;
+import org.eclipse.xsd.XSDDiagnosticSeverity;
 import org.eclipse.xsd.XSDSchema;
 import org.eclipse.xsd.ecore.XSDEcoreBuilder;
 import org.eclipse.xsd.util.XSDResourceFactoryImpl;
@@ -209,9 +211,13 @@ public class GeneratorUtils {
     // this ensures that epackages which refer to eachother are handled
     // correctly
     final XSDEcoreBuilder ecoreBuilder = new XSDEcoreBuilder(new BasicExtendedMetaData(rs.getPackageRegistry()));
+    ecoreBuilder.setValidate(true);
     for (final URI emfURI : uris) {
       if (emfURI.toString().endsWith("xsd")) { //$NON-NLS-1$
         for (final EObject eObject : ecoreBuilder.generate(emfURI)) {
+
+          checkDiagnostics(ecoreBuilder);
+
           final EPackage ePackage = ModelUtils.registerEPackage((EPackage) eObject, registry);
           if (!ePackages.contains(ePackage)) {
             ePackages.add(ePackage);
@@ -240,6 +246,25 @@ public class GeneratorUtils {
       }
     }
     return ePackages;
+  }
+
+  private static void checkDiagnostics(XSDEcoreBuilder ecoreBuilder) {
+    final StringBuilder sb = new StringBuilder();
+    final List<XSDDiagnostic> diagnostics = ecoreBuilder.getDiagnostics();
+    for (XSDDiagnostic xsdDiagnostic : diagnostics) {
+      if (xsdDiagnostic.getSeverity() == XSDDiagnosticSeverity.ERROR_LITERAL
+          || xsdDiagnostic.getSeverity() == XSDDiagnosticSeverity.FATAL_LITERAL) {
+        if (sb.length() > 0) {
+          sb.append("\n"); //$NON-NLS-1$
+        }
+        sb.append(xsdDiagnostic.getLocation() + " (" + xsdDiagnostic.getLine() + ":" + xsdDiagnostic.getColumn() //$NON-NLS-1$//$NON-NLS-2$
+            + "):" + xsdDiagnostic.getMessage());//$NON-NLS-1$
+      }
+    }
+
+    if (sb.length() > 0) {
+      throw new IllegalStateException(sb.toString());
+    }
   }
 
   /**
