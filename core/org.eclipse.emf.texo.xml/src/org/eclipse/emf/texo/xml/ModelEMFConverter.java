@@ -66,6 +66,9 @@ public class ModelEMFConverter extends ModelToConverter {
   // list of objects for which the content needs to be converted
   private List<Object> toConvert = new ArrayList<Object>();
 
+  // list of objects which have been converted
+  private List<Object> converted = new ArrayList<Object>();
+
   // keeps track of all many-to-many associations, for these the order of
   // elements has to be repaired
   private List<ManyToMany> toRepairManyToMany = new ArrayList<ManyToMany>();
@@ -93,6 +96,7 @@ public class ModelEMFConverter extends ModelToConverter {
       toConvert.clear();
       for (Object object : beingConverted) {
         convertContent(object);
+        converted.add(object);
       }
     }
 
@@ -128,14 +132,14 @@ public class ModelEMFConverter extends ModelToConverter {
    */
   protected EObject createTarget(final Object target) {
     InternalEObject eObject = objectMapping.get(target);
-    if (eObject != null) {
-      return eObject;
+    if (eObject == null) {
+      // not found, create it and add a new entry to the mapping
+      eObject = (InternalEObject) getUriResolver().resolveToEObject(target);
+      objectMapping.put(target, eObject);
     }
-
-    // not found, create it and add a new entry to the mapping
-    eObject = (InternalEObject) getUriResolver().resolveToEObject(target);
-    objectMapping.put(target, eObject);
-    toConvert.add(target);
+    if (!converted.contains(target)) {
+      toConvert.add(target);
+    }
     return eObject;
   }
 
@@ -471,6 +475,14 @@ public class ModelEMFConverter extends ModelToConverter {
 
   public void setObjectMapping(Map<Object, InternalEObject> objectMapping) {
     this.objectMapping = objectMapping;
+  }
+
+  public List<Object> getConverted() {
+    return converted;
+  }
+
+  public void setConverted(List<Object> converted) {
+    this.converted = converted;
   }
 
 }

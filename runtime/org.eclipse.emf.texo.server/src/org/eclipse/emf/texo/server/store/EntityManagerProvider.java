@@ -16,6 +16,7 @@
  */
 package org.eclipse.emf.texo.server.store;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
@@ -33,6 +34,8 @@ import org.eclipse.emf.texo.component.TexoStaticSingleton;
  */
 public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton {
 
+  public static final String ECLIPSELINK_CLASSLOADER_OPTION = "eclipselink.classloader"; //$NON-NLS-1$
+
   private static EntityManagerProvider instance = ComponentProvider.getInstance().newInstance(
       EntityManagerProvider.class);
 
@@ -48,7 +51,7 @@ public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton
 
   private EntityManagerFactory entityManagerFactory;
   private String persistenceUnitName;
-  private Map<?, ?> persistenceOptions;
+  private Map<Object, Object> persistenceOptions = new HashMap<Object, Object>();
   private boolean useCurrentEntityManagerPattern = false;
 
   /**
@@ -62,6 +65,9 @@ public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton
       return;
     }
     if (persistenceOptions != null) {
+      if (!persistenceOptions.containsKey(ECLIPSELINK_CLASSLOADER_OPTION)) {
+        persistenceOptions.put(ECLIPSELINK_CLASSLOADER_OPTION, EntityManagerProvider.class.getClassLoader());
+      }
       entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName, persistenceOptions);
     } else {
       entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName);
@@ -176,11 +182,11 @@ public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton
     this.persistenceUnitName = persistenceUnitName;
   }
 
-  public Map<?, ?> getPersistenceOptions() {
+  public Map<Object, Object> getPersistenceOptions() {
     return persistenceOptions;
   }
 
-  public void setPersistenceOptions(Map<?, ?> persistenceOptions) {
+  public void setPersistenceOptions(Map<Object, Object> persistenceOptions) {
     this.persistenceOptions = persistenceOptions;
   }
 

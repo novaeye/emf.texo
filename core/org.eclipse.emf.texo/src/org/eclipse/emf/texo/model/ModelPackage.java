@@ -20,6 +20,7 @@ package org.eclipse.emf.texo.model;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -43,7 +44,8 @@ public abstract class ModelPackage {
   public EPackage getEPackage() {
     if (ePackage == null) {
       ePackage = ModelUtils.getEPackage(getNsURI());
-      if (!(ePackage.getEFactoryInstance() instanceof ModelEFactory)) {
+      // only replacec if the efactory is a dynamic factory
+      if (ePackage.getEFactoryInstance().getClass() == EFactoryImpl.class) {
         final ModelEFactory modelEFactory = ComponentProvider.getInstance().newInstance(ModelEFactory.class);
         modelEFactory.setEPackage(ePackage);
         modelEFactory.setModelFactory(getModelFactory());
