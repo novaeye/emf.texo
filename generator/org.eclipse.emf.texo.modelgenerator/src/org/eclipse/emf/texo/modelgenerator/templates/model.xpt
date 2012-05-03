@@ -24,7 +24,7 @@
 		«ENDIF»
 		«IF doDao»
 			«FOREACH ePackageAnnotation.EClassModelGenAnnotations AS eClassAnnotation»
-				«IF eClassAnnotation.daoQualifiedClassName != null && !eClassAnnotation.EClass.interface && !eClassAnnotation.EClass.abstract»
+				«IF eClassAnnotation.daoQualifiedClassName != null»
 					«EXPAND org::eclipse::emf::texo::modelgenerator::templates::dao::root(modelController) FOR eClassAnnotation»
 				«ENDIF»
 			«ENDFOREACH»
