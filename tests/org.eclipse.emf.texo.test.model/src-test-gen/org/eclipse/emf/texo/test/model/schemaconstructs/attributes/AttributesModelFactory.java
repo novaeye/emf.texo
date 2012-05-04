@@ -203,8 +203,6 @@ public class AttributesModelFactory implements ModelFactory {
         return getTarget().getB();
       case AttributesModelPackage.ATYPE_C_FEATURE_ID:
         return getTarget().getC();
-      case AttributesModelPackage.ATYPE_COMMENT_FEATURE_ID:
-        return getTarget().getComment();
       case AttributesModelPackage.ATYPE_ID_FEATURE_ID:
         return getTarget().getId();
       case AttributesModelPackage.ATYPE_D_FEATURE_ID:
@@ -230,9 +228,6 @@ public class AttributesModelFactory implements ModelFactory {
         return;
       case AttributesModelPackage.ATYPE_C_FEATURE_ID:
         getTarget().setC((String) value);
-        return;
-      case AttributesModelPackage.ATYPE_COMMENT_FEATURE_ID:
-        getTarget().setComment((Object) value);
         return;
       case AttributesModelPackage.ATYPE_ID_FEATURE_ID:
         getTarget().setId((String) value);

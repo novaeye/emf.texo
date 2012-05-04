@@ -128,14 +128,14 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int QUERYTYPE_QUERY_FEATURE_ID = 0;
+  public static final int QUERYTYPE_QUERY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 1;
+  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

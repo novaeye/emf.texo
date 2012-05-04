@@ -142,15 +142,6 @@
       <details key="name" value="QueryType"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="element"/>
-        <details key="name" value="query"/>
-      </eAnnotations>
-      <eAnnotations source="org.eclipse.emf.texo">
-        <details key="java.member" value="query"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="namedQuery" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
@@ -158,6 +149,15 @@
       </eAnnotations>
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="namedQuery"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="query"/>
+      </eAnnotations>
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="java.member" value="query"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" lowerBound="1"

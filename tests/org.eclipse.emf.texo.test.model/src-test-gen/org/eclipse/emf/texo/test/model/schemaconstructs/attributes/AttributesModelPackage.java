@@ -78,28 +78,21 @@ public class AttributesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ATYPE_COMMENT_FEATURE_ID = 3;
+  public static final int ATYPE_ID_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ATYPE_ID_FEATURE_ID = 4;
+  public static final int ATYPE_D_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ATYPE_D_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ATYPE_MYR_FEATURE_ID = 6;
+  public static final int ATYPE_MYR_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -272,17 +265,6 @@ public class AttributesModelPackage extends ModelPackage {
    */
   public EAttribute getAType_C() {
     return (EAttribute) getATypeEClass().getEAllStructuralFeatures().get(ATYPE_C_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>AType.comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>AType.comment</b></em>'.
-   * @generated
-   */
-  public EAttribute getAType_Comment() {
-    return (EAttribute) getATypeEClass().getEAllStructuralFeatures().get(ATYPE_COMMENT_FEATURE_ID);
   }
 
   /**

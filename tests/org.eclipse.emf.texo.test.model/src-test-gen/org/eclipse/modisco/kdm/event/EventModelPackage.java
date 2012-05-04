@@ -360,11 +360,11 @@ public class EventModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    KdmModelPackage.initialize();
-    CodeModelPackage.initialize();
-    CoreModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     SourceModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier

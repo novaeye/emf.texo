@@ -160,6 +160,6 @@ public class QueryType {
    */
   @Override
   public String toString() {
-    return "QueryType " + " [query: " + getQuery() + "]" + " [namedQuery: " + getNamedQuery() + "]";
+    return "QueryType " + " [namedQuery: " + getNamedQuery() + "]" + " [query: " + getQuery() + "]";
   }
 }

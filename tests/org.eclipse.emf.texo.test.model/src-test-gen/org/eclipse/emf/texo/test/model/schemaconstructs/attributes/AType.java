@@ -46,14 +46,6 @@ public class AType {
    * @generated
    */
   @Basic(optional = true)
-  private Object comment = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  @Basic(optional = true)
   private String id = null;
 
   /**
@@ -149,31 +141,6 @@ public class AType {
   }
 
   /**
-   * Returns the value of '<em><b>comment</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>comment</b></em>' feature
-   * @generated
-   */
-  public Object getComment() {
-    return comment;
-  }
-
-  /**
-   * Sets the '{@link AType#getComment() <em>comment</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link AType#getComment() comment}' feature.
-   * @generated
-   */
-  public void setComment(Object newComment) {
-    comment = newComment;
-  }
-
-  /**
    * Returns the value of '<em><b>id</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -256,7 +223,7 @@ public class AType {
    */
   @Override
   public String toString() {
-    return "AType " + " [name: " + getName() + "]" + " [b: " + getB() + "]" + " [c: " + getC() + "]" + " [comment: "
-        + getComment() + "]" + " [id: " + getId() + "]" + " [d: " + getD() + "]";
+    return "AType " + " [name: " + getName() + "]" + " [b: " + getB() + "]" + " [c: " + getC() + "]" + " [id: "
+        + getId() + "]" + " [d: " + getD() + "]";
   }
 }
