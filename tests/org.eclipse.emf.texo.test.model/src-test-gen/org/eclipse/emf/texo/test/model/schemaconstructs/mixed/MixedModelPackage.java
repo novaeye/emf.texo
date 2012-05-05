@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.dao.LetterBodyTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.dao.SalutationTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -178,6 +179,8 @@ public class MixedModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(SalutationType.class, modelPackage.getSalutationTypeEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(LetterBodyType.class, LetterBodyTypeDao.class);
 

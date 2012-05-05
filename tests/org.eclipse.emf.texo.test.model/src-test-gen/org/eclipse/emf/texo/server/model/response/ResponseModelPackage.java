@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.model.response.dao.DocumentRootDao;
 import org.eclipse.emf.texo.server.model.response.dao.ErrorTypeDao;
 import org.eclipse.emf.texo.server.model.response.dao.ResponseTypeDao;
 import org.eclipse.emf.texo.server.model.response.dao.ResultTypeDao;
@@ -237,6 +238,8 @@ public class ResponseModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(ResultType.class, modelPackage.getResultTypeEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(ErrorType.class, ErrorTypeDao.class);
 

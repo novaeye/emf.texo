@@ -11,11 +11,17 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.AddressableDao;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.AudioVisualItemDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.BookDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.BookOnTapeDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.BorrowerDao;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.CirculatingItemDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.EmployeeDao;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.ItemDao;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.LendableDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.LibraryDao;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.PeriodicalDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.PersonDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.VideoCassetteDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.WriterDao;
@@ -460,7 +466,15 @@ public class ExtlibraryModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(Book.class, BookDao.class);
 
+    DaoRegistry.getInstance().registerDao(Item.class, ItemDao.class);
+
+    DaoRegistry.getInstance().registerDao(Lendable.class, LendableDao.class);
+
+    DaoRegistry.getInstance().registerDao(CirculatingItem.class, CirculatingItemDao.class);
+
     DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
+
+    DaoRegistry.getInstance().registerDao(Addressable.class, AddressableDao.class);
 
     DaoRegistry.getInstance().registerDao(Person.class, PersonDao.class);
 
@@ -469,6 +483,10 @@ public class ExtlibraryModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(Employee.class, EmployeeDao.class);
 
     DaoRegistry.getInstance().registerDao(Borrower.class, BorrowerDao.class);
+
+    DaoRegistry.getInstance().registerDao(Periodical.class, PeriodicalDao.class);
+
+    DaoRegistry.getInstance().registerDao(AudioVisualItem.class, AudioVisualItemDao.class);
 
     DaoRegistry.getInstance().registerDao(BookOnTape.class, BookOnTapeDao.class);
 

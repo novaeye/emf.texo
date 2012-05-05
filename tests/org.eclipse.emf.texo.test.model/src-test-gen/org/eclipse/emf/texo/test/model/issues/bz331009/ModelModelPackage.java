@@ -21,12 +21,14 @@ import org.eclipse.emf.texo.test.model.issues.bz331009.dao.ClientTariffDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.ContractDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.ContractPackageDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.CoordinatesDao;
+import org.eclipse.emf.texo.test.model.issues.bz331009.dao.DocumentDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.DrivingLicenseDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.EventDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.MessageDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.OneTimePaymentDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.PassportDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.PaymentInfoDao;
+import org.eclipse.emf.texo.test.model.issues.bz331009.dao.PaymentItemDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.PeriodicalPaymentDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.PersonDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.PhoneDao;
@@ -37,6 +39,7 @@ import org.eclipse.emf.texo.test.model.issues.bz331009.dao.SimCardDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.SimCardXSimContractDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.SimContractDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.SimTariffDao;
+import org.eclipse.emf.texo.test.model.issues.bz331009.dao.TariffDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.UnitsDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.UserDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.UserGroupDao;
@@ -1431,6 +1434,10 @@ public class ModelModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(SimTariff.class, SimTariffDao.class);
 
+    DaoRegistry.getInstance().registerDao(Tariff.class, TariffDao.class);
+
+    DaoRegistry.getInstance().registerDao(PaymentItem.class, PaymentItemDao.class);
+
     DaoRegistry.getInstance().registerDao(VolumePayment.class, VolumePaymentDao.class);
 
     DaoRegistry.getInstance().registerDao(PeriodicalPayment.class, PeriodicalPaymentDao.class);
@@ -1448,6 +1455,8 @@ public class ModelModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(CarModel.class, CarModelDao.class);
 
     DaoRegistry.getInstance().registerDao(CarRegInfo.class, CarRegInfoDao.class);
+
+    DaoRegistry.getInstance().registerDao(Document.class, DocumentDao.class);
 
     DaoRegistry.getInstance().registerDao(Person.class, PersonDao.class);
 

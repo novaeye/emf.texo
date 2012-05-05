@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.base.identifiable.dao.IdentifiableDao;
+import org.eclipse.emf.texo.test.model.base.identifiable.dao.IdentifiableInterfaceDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -120,6 +121,8 @@ public class IdentifiableModelPackage extends ModelPackage {
         modelPackage.getIdentifiableInterfaceEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Identifiable.class, IdentifiableDao.class);
+
+    DaoRegistry.getInstance().registerDao(IdentifiableInterface.class, IdentifiableInterfaceDao.class);
 
     // and return ourselves
     return modelPackage;

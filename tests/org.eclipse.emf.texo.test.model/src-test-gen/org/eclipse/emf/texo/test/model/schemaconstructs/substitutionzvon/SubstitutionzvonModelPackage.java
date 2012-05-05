@@ -16,6 +16,7 @@ import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.ComplexAAADao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.ComplexEvenTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.ComplexOddTypeDao;
+import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.RootTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -274,6 +275,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(ComplexEvenType.class, ComplexEvenTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(ComplexOddType.class, ComplexOddTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(RootType.class, RootTypeDao.class);
 

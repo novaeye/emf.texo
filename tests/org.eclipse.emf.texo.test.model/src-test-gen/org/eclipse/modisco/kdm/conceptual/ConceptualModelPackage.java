@@ -11,6 +11,8 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
+import org.eclipse.modisco.kdm.conceptual.dao.AbstractConceptualElementDao;
+import org.eclipse.modisco.kdm.conceptual.dao.AbstractConceptualRelationshipDao;
 import org.eclipse.modisco.kdm.conceptual.dao.BehaviorUnitDao;
 import org.eclipse.modisco.kdm.conceptual.dao.ConceptualContainerDao;
 import org.eclipse.modisco.kdm.conceptual.dao.ConceptualElementDao;
@@ -248,11 +250,11 @@ public class ConceptualModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(ConceptualModel.class,
@@ -283,6 +285,11 @@ public class ConceptualModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ConceptualModel.class, ConceptualModelDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractConceptualElement.class, AbstractConceptualElementDao.class);
+
+    DaoRegistry.getInstance()
+        .registerDao(AbstractConceptualRelationship.class, AbstractConceptualRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(TermUnit.class, TermUnitDao.class);
 

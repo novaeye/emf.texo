@@ -20,6 +20,7 @@ import org.eclipse.emf.texo.test.model.samples.rental.dao.RentalCarDao;
 import org.eclipse.emf.texo.test.model.samples.rental.dao.RentalCarDriverDao;
 import org.eclipse.emf.texo.test.model.samples.rental.dao.RentalContractDao;
 import org.eclipse.emf.texo.test.model.samples.rental.dao.RentalContractLineDao;
+import org.eclipse.emf.texo.test.model.samples.rental.dao.RentalUnitDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -301,6 +302,8 @@ public class RentalModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(RentalBicycle.class, RentalBicycleDao.class);
+
+    DaoRegistry.getInstance().registerDao(RentalUnit.class, RentalUnitDao.class);
 
     DaoRegistry.getInstance().registerDao(RentalCar.class, RentalCarDao.class);
 

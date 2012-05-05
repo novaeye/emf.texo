@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.dao.ComplexTypeDao;
+import org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.dao.DocumentRootDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -135,6 +136,8 @@ public class DocumentrootModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ComplexType.class, ComplexTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     // and return ourselves
     return modelPackage;

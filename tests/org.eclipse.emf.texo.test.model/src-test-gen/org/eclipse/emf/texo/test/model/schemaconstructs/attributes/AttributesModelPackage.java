@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.schemaconstructs.attributes.dao.ATypeDao;
+import org.eclipse.emf.texo.test.model.schemaconstructs.attributes.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.attributes.dao.RTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -185,6 +186,8 @@ public class AttributesModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(RType.class, modelPackage.getRTypeEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(AType.class, ATypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(RType.class, RTypeDao.class);
 

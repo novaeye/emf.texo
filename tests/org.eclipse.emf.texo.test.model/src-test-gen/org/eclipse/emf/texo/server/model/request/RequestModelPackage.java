@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.model.request.dao.ActionTypeDao;
+import org.eclipse.emf.texo.server.model.request.dao.DocumentRootDao;
 import org.eclipse.emf.texo.server.model.request.dao.ParameterDao;
 import org.eclipse.emf.texo.server.model.request.dao.QueryTypeDao;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
@@ -211,6 +212,8 @@ public class RequestModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ActionType.class, ActionTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(QueryType.class, QueryTypeDao.class);
 

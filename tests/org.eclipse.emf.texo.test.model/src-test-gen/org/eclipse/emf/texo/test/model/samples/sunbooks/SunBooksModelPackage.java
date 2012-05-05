@@ -16,6 +16,7 @@ import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.AuthorsTypeDao;
 import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.BookTypeDao;
 import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.BooksTypeDao;
 import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.CollectionTypeDao;
+import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.samples.sunbooks.dao.PromotionTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -302,6 +303,8 @@ public class SunBooksModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(PromotionType.class, PromotionTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(CollectionType.class, CollectionTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     // and return ourselves
     return modelPackage;

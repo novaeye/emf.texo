@@ -14,6 +14,9 @@ import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
+import org.eclipse.modisco.kdm.data.dao.AbstractContentElementDao;
+import org.eclipse.modisco.kdm.data.dao.AbstractDataElementDao;
+import org.eclipse.modisco.kdm.data.dao.AbstractDataRelationshipDao;
 import org.eclipse.modisco.kdm.data.dao.AllContentDao;
 import org.eclipse.modisco.kdm.data.dao.CatalogDao;
 import org.eclipse.modisco.kdm.data.dao.ChoiceContentDao;
@@ -736,12 +739,12 @@ public class DataModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
-    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(DataModel.class, modelPackage.getDataModelEClass(),
@@ -834,6 +837,10 @@ public class DataModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(DataModel.class, DataModelDao.class);
 
+    DaoRegistry.getInstance().registerDao(AbstractDataElement.class, AbstractDataElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractDataRelationship.class, AbstractDataRelationshipDao.class);
+
     DaoRegistry.getInstance().registerDao(DataResource.class, DataResourceDao.class);
 
     DaoRegistry.getInstance().registerDao(IndexElement.class, IndexElementDao.class);
@@ -863,6 +870,8 @@ public class DataModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(DataEvent.class, DataEventDao.class);
 
     DaoRegistry.getInstance().registerDao(XMLSchema.class, XMLSchemaDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractContentElement.class, AbstractContentElementDao.class);
 
     DaoRegistry.getInstance().registerDao(ComplexContentType.class, ComplexContentTypeDao.class);
 

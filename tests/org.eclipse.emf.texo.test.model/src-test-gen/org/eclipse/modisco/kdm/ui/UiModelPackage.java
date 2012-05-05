@@ -15,6 +15,8 @@ import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
 import org.eclipse.modisco.kdm.source.SourceModelPackage;
+import org.eclipse.modisco.kdm.ui.dao.AbstractUIElementDao;
+import org.eclipse.modisco.kdm.ui.dao.AbstractUIRelationshipDao;
 import org.eclipse.modisco.kdm.ui.dao.DisplaysDao;
 import org.eclipse.modisco.kdm.ui.dao.DisplaysImageDao;
 import org.eclipse.modisco.kdm.ui.dao.ManagesUIDao;
@@ -396,12 +398,12 @@ public class UiModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
-    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractUIElement.class,
@@ -435,6 +437,10 @@ public class UiModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(ManagesUI.class, modelPackage.getManagesUIEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(AbstractUIElement.class, AbstractUIElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractUIRelationship.class, AbstractUIRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(UIResource.class, UIResourceDao.class);
 

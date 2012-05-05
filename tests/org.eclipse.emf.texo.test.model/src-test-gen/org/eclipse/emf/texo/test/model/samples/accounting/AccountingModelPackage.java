@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountGroupDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountingClassDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.BalanceAccountDao;
@@ -21,6 +22,7 @@ import org.eclipse.emf.texo.test.model.samples.accounting.dao.JournalStatementDa
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.PLAccountDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.ReportDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.ReportGroupDao;
+import org.eclipse.emf.texo.test.model.samples.accounting.dao.SerializableDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.VatDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -378,6 +380,10 @@ public class AccountingModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(AccountingClass.class, AccountingClassDao.class);
+
+    DaoRegistry.getInstance().registerDao(Serializable.class, SerializableDao.class);
+
+    DaoRegistry.getInstance().registerDao(Account.class, AccountDao.class);
 
     DaoRegistry.getInstance().registerDao(AccountGroup.class, AccountGroupDao.class);
 

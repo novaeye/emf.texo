@@ -14,6 +14,7 @@ import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
 import org.eclipse.emf.texo.test.model.issues.instanceclassset.dao.MySerializableClassDao;
 import org.eclipse.emf.texo.test.model.issues.instanceclassset.dao.NonEMFDao;
+import org.eclipse.emf.texo.test.model.issues.instanceclassset.dao.SerializableDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -123,6 +124,8 @@ public class Bz306546ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(MySerializableClass.class,
         modelPackage.getMySerializableClassEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(NonEMF.class, modelPackage.getNonEMFEClass(), modelPackage);
+
+    DaoRegistry.getInstance().registerDao(Serializable.class, SerializableDao.class);
 
     DaoRegistry.getInstance().registerDao(MySerializableClass.class, MySerializableClassDao.class);
 

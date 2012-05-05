@@ -14,6 +14,8 @@ import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
+import org.eclipse.modisco.kdm.event.dao.AbstractEventElementDao;
+import org.eclipse.modisco.kdm.event.dao.AbstractEventRelationshipDao;
 import org.eclipse.modisco.kdm.event.dao.ConsumesEventDao;
 import org.eclipse.modisco.kdm.event.dao.EventActionDao;
 import org.eclipse.modisco.kdm.event.dao.EventDao;
@@ -360,12 +362,12 @@ public class EventModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
-    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EventModel.class, modelPackage.getEventModelEClass(),
@@ -402,6 +404,10 @@ public class EventModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(EventModel.class, EventModelDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractEventElement.class, AbstractEventElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractEventRelationship.class, AbstractEventRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(Event.class, EventDao.class);
 

@@ -19,9 +19,12 @@ import org.eclipse.emf.texo.test.model.samples.workflow.dao.FaultDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.InputPortDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.LoopTaskDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.OutputPortDao;
+import org.eclipse.emf.texo.test.model.samples.workflow.dao.PortDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.TaskDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.TransformationTaskDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.WorkflowDao;
+import org.eclipse.emf.texo.test.model.samples.workflow.dao.WorkflowElementDao;
+import org.eclipse.emf.texo.test.model.samples.workflow.dao.WorkflowNodeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -408,11 +411,17 @@ public class WorkflowModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(Workflow.class, WorkflowDao.class);
 
+    DaoRegistry.getInstance().registerDao(WorkflowElement.class, WorkflowElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(WorkflowNode.class, WorkflowNodeDao.class);
+
     DaoRegistry.getInstance().registerDao(Edge.class, EdgeDao.class);
 
     DaoRegistry.getInstance().registerDao(Comment.class, CommentDao.class);
 
     DaoRegistry.getInstance().registerDao(OutputPort.class, OutputPortDao.class);
+
+    DaoRegistry.getInstance().registerDao(Port.class, PortDao.class);
 
     DaoRegistry.getInstance().registerDao(InputPort.class, InputPortDao.class);
 

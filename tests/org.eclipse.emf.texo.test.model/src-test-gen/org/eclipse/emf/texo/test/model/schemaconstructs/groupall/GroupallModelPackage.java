@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.dao.AddressGroupTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.dao.AddressListDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.dao.AddressTypeDao;
+import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.dao.SimpleAllMapTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.groupall.dao.SimpleAllTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -312,6 +313,8 @@ public class GroupallModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(AddressType.class, AddressTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(AddressList.class, AddressListDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(SimpleAllType.class, SimpleAllTypeDao.class);
 

@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.AddressDao;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.CustomerDao;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.GlobalAddressDao;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.GlobalLocationDao;
@@ -406,6 +407,8 @@ public class Epo2ModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(PurchaseOrder.class, PurchaseOrderDao.class);
 
     DaoRegistry.getInstance().registerDao(USAddress.class, USAddressDao.class);
+
+    DaoRegistry.getInstance().registerDao(Address.class, AddressDao.class);
 
     DaoRegistry.getInstance().registerDao(Customer.class, CustomerDao.class);
 

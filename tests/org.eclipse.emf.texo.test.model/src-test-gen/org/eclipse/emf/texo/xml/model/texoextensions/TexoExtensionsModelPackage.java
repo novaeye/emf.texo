@@ -9,7 +9,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.utils.ModelUtils;
+import org.eclipse.emf.texo.xml.model.texoextensions.dao.DocumentRootDao;
 
 /**
  * The <b>Package</b> for the model '<em><b>texoExtensions</b></em>'. It contains initialization code and access to the
@@ -122,6 +124,8 @@ public class TexoExtensionsModelPackage extends ModelPackage {
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(DocumentRoot.class, modelPackage.getDocumentRootEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     // and return ourselves
     return modelPackage;

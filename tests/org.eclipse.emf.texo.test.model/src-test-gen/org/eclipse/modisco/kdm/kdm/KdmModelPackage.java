@@ -14,7 +14,10 @@ import org.eclipse.modisco.kdm.core.CoreModelPackage;
 import org.eclipse.modisco.kdm.kdm.dao.AnnotationDao;
 import org.eclipse.modisco.kdm.kdm.dao.AttributeDao;
 import org.eclipse.modisco.kdm.kdm.dao.AuditDao;
+import org.eclipse.modisco.kdm.kdm.dao.ExtendedValueDao;
 import org.eclipse.modisco.kdm.kdm.dao.ExtensionFamilyDao;
+import org.eclipse.modisco.kdm.kdm.dao.KDMFrameworkDao;
+import org.eclipse.modisco.kdm.kdm.dao.KDMModelDao;
 import org.eclipse.modisco.kdm.kdm.dao.SegmentDao;
 import org.eclipse.modisco.kdm.kdm.dao.StereotypeDao;
 import org.eclipse.modisco.kdm.kdm.dao.TagDefinitionDao;
@@ -346,6 +349,12 @@ public class KdmModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(Annotation.class, AnnotationDao.class);
 
     DaoRegistry.getInstance().registerDao(Stereotype.class, StereotypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(ExtendedValue.class, ExtendedValueDao.class);
+
+    DaoRegistry.getInstance().registerDao(KDMModel.class, KDMModelDao.class);
+
+    DaoRegistry.getInstance().registerDao(KDMFramework.class, KDMFrameworkDao.class);
 
     DaoRegistry.getInstance().registerDao(Audit.class, AuditDao.class);
 

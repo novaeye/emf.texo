@@ -12,6 +12,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.ItemDao;
 import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.PurchaseOrderDao;
 import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.USAddressDao;
@@ -280,6 +281,8 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Item.class, modelPackage.getItemEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(USAddress.class, modelPackage.getUSAddressEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(PurchaseOrder.class, PurchaseOrderDao.class);
 

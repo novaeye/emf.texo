@@ -13,6 +13,10 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.core.dao.AggregatedRelationshipDao;
+import org.eclipse.modisco.kdm.core.dao.ElementDao;
+import org.eclipse.modisco.kdm.core.dao.KDMEntityDao;
+import org.eclipse.modisco.kdm.core.dao.KDMRelationshipDao;
+import org.eclipse.modisco.kdm.core.dao.ModelElementDao;
 
 /**
  * The <b>Package</b> for the model '<em><b>core</b></em>'. It contains initialization code and access to the Factory to
@@ -262,7 +266,7 @@ public class CoreModelPackage extends ModelPackage {
     isInitialized = true;
 
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Element.class, modelPackage.getElementEClass(), modelPackage);
@@ -274,6 +278,14 @@ public class CoreModelPackage extends ModelPackage {
         modelPackage.getKDMRelationshipEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(AggregatedRelationship.class,
         modelPackage.getAggregatedRelationshipEClass(), modelPackage);
+
+    DaoRegistry.getInstance().registerDao(Element.class, ElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(ModelElement.class, ModelElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(KDMEntity.class, KDMEntityDao.class);
+
+    DaoRegistry.getInstance().registerDao(KDMRelationship.class, KDMRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(AggregatedRelationship.class, AggregatedRelationshipDao.class);
 

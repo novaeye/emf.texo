@@ -14,6 +14,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.dao.ComplexNumberDao;
+import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.dao.EvenComplexNumberTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.dao.MultiNumberTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.dao.NumberTypeDao;
@@ -322,6 +323,8 @@ public class SubstitutionModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(OddType.class, modelPackage.getOddTypeEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(ComplexNumber.class, ComplexNumberDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(EvenComplexNumberType.class, EvenComplexNumberTypeDao.class);
 

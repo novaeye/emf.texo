@@ -12,6 +12,8 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
+import org.eclipse.modisco.kdm.source.dao.AbstractInventoryElementDao;
+import org.eclipse.modisco.kdm.source.dao.AbstractInventoryRelationshipDao;
 import org.eclipse.modisco.kdm.source.dao.BinaryFileDao;
 import org.eclipse.modisco.kdm.source.dao.ConfigurationDao;
 import org.eclipse.modisco.kdm.source.dao.DependsOnDao;
@@ -364,9 +366,9 @@ public class SourceModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(InventoryModel.class, modelPackage.getInventoryModelEClass(),
@@ -405,6 +407,10 @@ public class SourceModelPackage extends ModelPackage {
         modelPackage.getInventoryRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(InventoryModel.class, InventoryModelDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractInventoryElement.class, AbstractInventoryElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractInventoryRelationship.class, AbstractInventoryRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(InventoryItem.class, InventoryItemDao.class);
 

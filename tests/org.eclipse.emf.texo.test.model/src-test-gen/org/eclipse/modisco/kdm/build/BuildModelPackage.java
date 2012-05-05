@@ -11,6 +11,8 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
+import org.eclipse.modisco.kdm.build.dao.AbstractBuildElementDao;
+import org.eclipse.modisco.kdm.build.dao.AbstractBuildRelationshipDao;
 import org.eclipse.modisco.kdm.build.dao.BuildComponentDao;
 import org.eclipse.modisco.kdm.build.dao.BuildDescriptionDao;
 import org.eclipse.modisco.kdm.build.dao.BuildElementDao;
@@ -374,10 +376,10 @@ public class BuildModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractBuildElement.class,
@@ -417,6 +419,10 @@ public class BuildModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(DescribedBy.class, modelPackage.getDescribedByEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(AbstractBuildElement.class, AbstractBuildElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractBuildRelationship.class, AbstractBuildRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(BuildResource.class, BuildResourceDao.class);
 

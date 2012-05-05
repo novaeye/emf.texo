@@ -14,6 +14,8 @@ import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
+import org.eclipse.modisco.kdm.platform.dao.AbstractPlatformElementDao;
+import org.eclipse.modisco.kdm.platform.dao.AbstractPlatformRelationshipDao;
 import org.eclipse.modisco.kdm.platform.dao.BindsToDao;
 import org.eclipse.modisco.kdm.platform.dao.DataManagerDao;
 import org.eclipse.modisco.kdm.platform.dao.DefinedByDao;
@@ -549,12 +551,12 @@ public class PlatformModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
-    CodeModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(PlatformModel.class, modelPackage.getPlatformModelEClass(),
@@ -617,6 +619,10 @@ public class PlatformModelPackage extends ModelPackage {
         modelPackage.getPlatformRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(PlatformModel.class, PlatformModelDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractPlatformElement.class, AbstractPlatformElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractPlatformRelationship.class, AbstractPlatformRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(ResourceType.class, ResourceTypeDao.class);
 

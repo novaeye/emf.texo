@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.samples.play.dao.ActTypeDao;
+import org.eclipse.emf.texo.test.model.samples.play.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.samples.play.dao.FmTypeDao;
 import org.eclipse.emf.texo.test.model.samples.play.dao.PersonaGroupTypeDao;
 import org.eclipse.emf.texo.test.model.samples.play.dao.PersonaeTypeDao;
@@ -480,6 +481,8 @@ public class PlayModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(ActType.class, ActTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(SceneType.class, SceneTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(FmType.class, FmTypeDao.class);
 

@@ -10,8 +10,10 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.samples.interfaces.dao.DescribableConcreteDao;
+import org.eclipse.emf.texo.test.model.samples.interfaces.dao.DescribableDao;
 import org.eclipse.emf.texo.test.model.samples.interfaces.dao.DescribableIdentifiableConcreteDao;
 import org.eclipse.emf.texo.test.model.samples.interfaces.dao.IdentifiableConcreteDao;
+import org.eclipse.emf.texo.test.model.samples.interfaces.dao.IdentifiedTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -185,6 +187,10 @@ public class InterfacesModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(DescribableIdentifiableConcrete.class,
         DescribableIdentifiableConcreteDao.class);
+
+    DaoRegistry.getInstance().registerDao(Describable.class, DescribableDao.class);
+
+    DaoRegistry.getInstance().registerDao(IdentifiedType.class, IdentifiedTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(DescribableConcrete.class, DescribableConcreteDao.class);
 

@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
+import org.eclipse.modisco.kdm.action.dao.AbstractActionRelationshipDao;
 import org.eclipse.modisco.kdm.action.dao.ActionElementDao;
 import org.eclipse.modisco.kdm.action.dao.ActionRelationshipDao;
 import org.eclipse.modisco.kdm.action.dao.AddressesDao;
@@ -486,11 +487,11 @@ public class ActionModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
     CodeModelPackage.initialize();
-    KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EntryFlow.class, modelPackage.getEntryFlowEClass(),
@@ -538,6 +539,8 @@ public class ActionModelPackage extends ModelPackage {
         modelPackage.getActionRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(EntryFlow.class, EntryFlowDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractActionRelationship.class, AbstractActionRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(ActionElement.class, ActionElementDao.class);
 

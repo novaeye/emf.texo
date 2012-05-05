@@ -13,6 +13,8 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.action.ActionModelPackage;
+import org.eclipse.modisco.kdm.code.dao.AbstractCodeElementDao;
+import org.eclipse.modisco.kdm.code.dao.AbstractCodeRelationshipDao;
 import org.eclipse.modisco.kdm.code.dao.ArrayTypeDao;
 import org.eclipse.modisco.kdm.code.dao.BagTypeDao;
 import org.eclipse.modisco.kdm.code.dao.BitTypeDao;
@@ -24,6 +26,7 @@ import org.eclipse.modisco.kdm.code.dao.ChoiceTypeDao;
 import org.eclipse.modisco.kdm.code.dao.ClassUnitDao;
 import org.eclipse.modisco.kdm.code.dao.CodeAssemblyDao;
 import org.eclipse.modisco.kdm.code.dao.CodeElementDao;
+import org.eclipse.modisco.kdm.code.dao.CodeItemDao;
 import org.eclipse.modisco.kdm.code.dao.CodeModelDao;
 import org.eclipse.modisco.kdm.code.dao.CodeRelationshipDao;
 import org.eclipse.modisco.kdm.code.dao.CommentUnitDao;
@@ -36,6 +39,7 @@ import org.eclipse.modisco.kdm.code.dao.DataElementDao;
 import org.eclipse.modisco.kdm.code.dao.DatatypeDao;
 import org.eclipse.modisco.kdm.code.dao.DateTypeDao;
 import org.eclipse.modisco.kdm.code.dao.DecimalTypeDao;
+import org.eclipse.modisco.kdm.code.dao.DefinedTypeDao;
 import org.eclipse.modisco.kdm.code.dao.DerivedTypeDao;
 import org.eclipse.modisco.kdm.code.dao.EnumeratedTypeDao;
 import org.eclipse.modisco.kdm.code.dao.ExpandsDao;
@@ -87,6 +91,7 @@ import org.eclipse.modisco.kdm.code.dao.TemplateUnitDao;
 import org.eclipse.modisco.kdm.code.dao.TimeTypeDao;
 import org.eclipse.modisco.kdm.code.dao.TypeUnitDao;
 import org.eclipse.modisco.kdm.code.dao.ValueDao;
+import org.eclipse.modisco.kdm.code.dao.ValueElementDao;
 import org.eclipse.modisco.kdm.code.dao.ValueListDao;
 import org.eclipse.modisco.kdm.code.dao.VariantToDao;
 import org.eclipse.modisco.kdm.code.dao.VisibleInDao;
@@ -1276,11 +1281,11 @@ public class CodeModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
     SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CodeModel.class, modelPackage.getCodeModelEClass(),
@@ -1455,7 +1460,13 @@ public class CodeModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(CodeModel.class, CodeModelDao.class);
 
+    DaoRegistry.getInstance().registerDao(AbstractCodeElement.class, AbstractCodeElementDao.class);
+
     DaoRegistry.getInstance().registerDao(CommentUnit.class, CommentUnitDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractCodeRelationship.class, AbstractCodeRelationshipDao.class);
+
+    DaoRegistry.getInstance().registerDao(CodeItem.class, CodeItemDao.class);
 
     DaoRegistry.getInstance().registerDao(ComputationalObject.class, ComputationalObjectDao.class);
 
@@ -1490,6 +1501,8 @@ public class CodeModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(MemberUnit.class, MemberUnitDao.class);
 
     DaoRegistry.getInstance().registerDao(ParameterUnit.class, ParameterUnitDao.class);
+
+    DaoRegistry.getInstance().registerDao(ValueElement.class, ValueElementDao.class);
 
     DaoRegistry.getInstance().registerDao(Value.class, ValueDao.class);
 
@@ -1550,6 +1563,8 @@ public class CodeModelPackage extends ModelPackage {
     DaoRegistry.getInstance().registerDao(SequenceType.class, SequenceTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(Signature.class, SignatureDao.class);
+
+    DaoRegistry.getInstance().registerDao(DefinedType.class, DefinedTypeDao.class);
 
     DaoRegistry.getInstance().registerDao(TypeUnit.class, TypeUnitDao.class);
 

@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.schemaconstructs.datetime.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.datetime.dao.TestDateDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -133,6 +134,8 @@ public class DatetimeModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(TestDate.class, modelPackage.getTestDateEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(TestDate.class, TestDateDao.class);
 

@@ -11,6 +11,8 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
+import org.eclipse.modisco.kdm.structure.dao.AbstractStructureElementDao;
+import org.eclipse.modisco.kdm.structure.dao.AbstractStructureRelationshipDao;
 import org.eclipse.modisco.kdm.structure.dao.ArchitectureViewDao;
 import org.eclipse.modisco.kdm.structure.dao.ComponentDao;
 import org.eclipse.modisco.kdm.structure.dao.LayerDao;
@@ -194,9 +196,9 @@ public class StructureModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractStructureElement.class,
@@ -218,6 +220,10 @@ public class StructureModelPackage extends ModelPackage {
         modelPackage.getArchitectureViewEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(StructureElement.class,
         modelPackage.getStructureElementEClass(), modelPackage);
+
+    DaoRegistry.getInstance().registerDao(AbstractStructureElement.class, AbstractStructureElementDao.class);
+
+    DaoRegistry.getInstance().registerDao(AbstractStructureRelationship.class, AbstractStructureRelationshipDao.class);
 
     DaoRegistry.getInstance().registerDao(Subsystem.class, SubsystemDao.class);
 

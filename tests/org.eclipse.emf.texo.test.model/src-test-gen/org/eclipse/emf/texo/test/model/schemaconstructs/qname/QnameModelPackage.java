@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.schemaconstructs.qname.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.qname.dao.MytestDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -139,6 +140,8 @@ public class QnameModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(DocumentRoot.class, modelPackage.getDocumentRootEClass(),
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(Mytest.class, modelPackage.getMytestEClass(), modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     DaoRegistry.getInstance().registerDao(Mytest.class, MytestDao.class);
 

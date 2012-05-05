@@ -116,8 +116,7 @@ public class ModelEClassAnnotator extends ModelEClassifierAnnotator implements A
       }
     }
 
-    if (!GenUtils.isDocumentRoot(eClass) && !eClass.isInterface() && !eClass.isAbstract() && !ModelUtils.isEMap(eClass)
-        && GeneratorUtils.isEmptyOrNull(annotation.getDaoQualifiedClassName())) {
+    if (!ModelUtils.isEMap(eClass) && GeneratorUtils.isEmptyOrNull(annotation.getDaoQualifiedClassName())) {
       final EPackageModelGenAnnotation ePackageModelGenAnnotation = getEPackageModelGenAnnotation(eClass.getEPackage());
       final String packagePath = ePackageModelGenAnnotation.getDaoClassesPackagePath();
       annotation.setDaoQualifiedClassName(packagePath + GenConstants.DOT + annotation.getSimpleClassName()
