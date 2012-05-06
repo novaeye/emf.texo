@@ -17,7 +17,9 @@
 
 package org.eclipse.emf.texo.model;
 
+import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -548,5 +550,21 @@ public class ModelEFactory implements EFactory, InternalEObject, TexoComponent {
   @Override
   public String toString() {
     return delegate.toString();
+  }
+
+  /**
+   * Uses the {@link Proxy} concept to encapsulate the {@link ModelEFactory} within the correct class.
+   */
+  public static class EFactoryInvocationHandler implements InvocationHandler {
+
+    private final ModelEFactory modelEFactory;
+
+    public EFactoryInvocationHandler(ModelEFactory modelEFactory) {
+      this.modelEFactory = modelEFactory;
+    }
+
+    public Object invoke(Object object, Method method, Object[] args) throws Throwable {
+      return method.invoke(modelEFactory, args);
+    }
   }
 }
