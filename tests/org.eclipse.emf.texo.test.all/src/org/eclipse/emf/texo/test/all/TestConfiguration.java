@@ -83,6 +83,7 @@ public class TestConfiguration {
 
   protected void initialize() {
     tests = new ArrayList<Test>();
+
     addSampleTestModels();
     addIssuesTestModels();
     addSchemaConstructsTestModels();

@@ -113,7 +113,8 @@ public class TestUtils {
   public static void compareObjects(final List<Object> objects1, final List<Object> objects2) {
     final ModelEMFConverter modelEMFConverter = new ModelEMFConverter();
     final List<EObject> eObjects1 = modelEMFConverter.convert(objects1);
-    final List<EObject> eObjects2 = modelEMFConverter.convert(objects2);
+    final ModelEMFConverter modelEMFConverter2 = new ModelEMFConverter();
+    final List<EObject> eObjects2 = modelEMFConverter2.convert(objects2);
 
     // compare sizes, should be all > 0 and the same!
     Assert.assertFalse(objects1.isEmpty());
