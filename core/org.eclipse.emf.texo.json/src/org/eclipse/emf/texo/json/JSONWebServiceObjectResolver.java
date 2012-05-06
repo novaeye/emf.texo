@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.resolver.ObjectResolver;
-import org.eclipse.emf.texo.store.WebServiceObjectResolver;
+import org.eclipse.emf.texo.resolver.WebServiceObjectResolver;
 import org.json.JSONException;
 import org.json.JSONObject;
 

@@ -32,10 +32,8 @@ import org.eclipse.emf.common.util.URI;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
 public abstract class WebServiceObjectResolver extends DefaultObjectResolver {
-  public static final String XML_CONTENT_TYPE = "text/html;charset=UTF-8"; //$NON-NLS-1$
-  public static final String JSON_CONTENT_TYPE = "application/json;charset=UTF-8"; //$NON-NLS-1$
 
-  final Map<String, Object> objectCache = new HashMap<String, Object>();
+  private final Map<String, Object> objectCache = new HashMap<String, Object>();
 
   public WebServiceObjectResolver() {
     setUseWebServiceUriFormat(true);
