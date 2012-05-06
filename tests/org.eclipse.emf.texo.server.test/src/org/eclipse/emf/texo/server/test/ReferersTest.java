@@ -18,7 +18,7 @@ package org.eclipse.emf.texo.server.test;
 
 import java.util.List;
 
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 import org.eclipse.emf.texo.test.model.samples.library.Book;
 import org.eclipse.emf.texo.test.model.samples.library.Library;
 import org.eclipse.emf.texo.test.model.samples.library.Writer;

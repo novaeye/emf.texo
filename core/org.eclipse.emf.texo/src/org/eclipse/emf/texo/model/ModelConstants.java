@@ -12,4 +12,7 @@ public class ModelConstants {
   public static final String TITLE_ANNOTATION_KEY = "title"; //$NON-NLS-1$
   public static final String TITLE_SEPARATOR = " - "; //$NON-NLS-1$
   public static final String FINDER_ANNOTATION_KEY = "finder"; //$NON-NLS-1$
+  public static final String FRAGMENTSEPARATOR = "||"; //$NON-NLS-1$
+  public static final int FRAGMENTSEPARATOR_LENGTH = FRAGMENTSEPARATOR.length();
+
 }

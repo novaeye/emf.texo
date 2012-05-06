@@ -26,7 +26,7 @@ import org.eclipse.emf.texo.json.JSONWebServiceObjectResolver;
 import org.eclipse.emf.texo.json.ModelJSONConverter;
 import org.eclipse.emf.texo.server.service.ServiceConstants;
 import org.eclipse.emf.texo.server.service.ServiceContext;
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

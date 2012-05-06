@@ -14,4 +14,5 @@ Export-Package: org.eclipse.emf.texo.component;version="0.1.0",
  org.eclipse.emf.texo.model;version="0.1.0",
  org.eclipse.emf.texo.provider;version="0.1.0",
  org.eclipse.emf.texo.resolver;version="0.1.0",
+ org.eclipse.emf.texo.store;version="0.1.0",
  org.eclipse.emf.texo.utils;version="0.1.0"

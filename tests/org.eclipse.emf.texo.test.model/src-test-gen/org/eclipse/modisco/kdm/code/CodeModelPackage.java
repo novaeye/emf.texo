@@ -1281,11 +1281,11 @@ public class CodeModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
     KdmModelPackage.initialize();
     ActionModelPackage.initialize();
     CoreModelPackage.initialize();
-    SourceModelPackage.initialize();
-    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CodeModel.class, modelPackage.getCodeModelEClass(),

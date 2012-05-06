@@ -19,7 +19,6 @@
 	  		<xsd:attribute name="C" type="xsd:string" use="optional"/>
 	  		<xsd:attribute name="myD" ecore:name="D" type="xsd:string" use="required"/>
 	  		<xsd:attribute name="myR" ecore:reference="R" type="xsd:IDREF"/>
-	  		<xsd:attribute ref="comment"/>
 	 	</xsd:complexType>
  	</xsd:element>
 

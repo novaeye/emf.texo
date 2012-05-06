@@ -13,6 +13,7 @@ import javax.persistence.metamodel.Metamodel;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.store.ObjectStore;
 
 /**
  * An {@link ObjectStore} backed by an EntityManager.
@@ -21,6 +22,7 @@ import org.eclipse.emf.texo.model.ModelResolver;
  */
 public class EntityManagerObjectStore extends ObjectStore {
 
+  private static final String COUNT = "count("; //$NON-NLS-1$
   private static final String FROM = " from "; //$NON-NLS-1$
   private static final String START_FROM = "from "; //$NON-NLS-1$
   private static final int FROM_LENGTH = FROM.length();
@@ -149,7 +151,11 @@ public class EntityManagerObjectStore extends ObjectStore {
   @Override
   public long count(String qryStr, Map<String, Object> namedParameters) {
     final String subQryStr;
-    if (qryStr.toLowerCase().contains(FROM)) {
+    String prefix = "select count(e) from "; //$NON-NLS-1$
+    if (qryStr.toLowerCase().contains(COUNT)) {
+      subQryStr = qryStr;
+      prefix = ""; //$NON-NLS-1$
+    } else if (qryStr.toLowerCase().contains(FROM)) {
       final int index = qryStr.toLowerCase().indexOf(FROM);
       subQryStr = qryStr.substring(index + FROM_LENGTH);
     } else if (qryStr.toLowerCase().startsWith(START_FROM)) {
@@ -157,7 +163,7 @@ public class EntityManagerObjectStore extends ObjectStore {
     } else {
       subQryStr = qryStr;
     }
-    final Query qry = getEntityManager().createQuery("select count(e) from " + subQryStr); //$NON-NLS-1$
+    final Query qry = getEntityManager().createQuery(prefix + subQryStr);
     for (String key : namedParameters.keySet()) {
       qry.setParameter(key, namedParameters.get(key));
     }

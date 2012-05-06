@@ -16,12 +16,17 @@
  */
 package org.eclipse.emf.texo.server.service.xml;
 
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.server.service.ServiceConstants;
 import org.eclipse.emf.texo.server.service.ServiceContext;
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
+import org.eclipse.emf.texo.xml.ModelXMLLoader;
+import org.eclipse.emf.texo.xml.ModelXMLSaver;
 import org.eclipse.emf.texo.xml.XMLWebServiceObjectResolver;
 
 /**
@@ -59,7 +64,7 @@ public class XMLServiceContext extends ServiceContext {
       }
     }
 
-    return getObjectStore().toXML(Collections.singletonList(object), isXmi(), childLevels);
+    return toXML(Collections.singletonList(object), isXmi(), childLevels);
   }
 
   public boolean isXmi() {
@@ -72,6 +77,36 @@ public class XMLServiceContext extends ServiceContext {
 
   @Override
   public List<Object> getRequestData() {
-    return getObjectStore().fromXML(getRequestContent(), isXmi());
+    return fromXML(getRequestContent(), isXmi());
+  }
+
+  /**
+   * Serialize a set of objects to XML/XMI, references are correctly translated to strings which can be de-serialized
+   * when reading the xml/xmi.
+   */
+  private String toXML(List<Object> objects, boolean asXMI, int childLevels) {
+    final ModelXMLSaver xmlSaver = ComponentProvider.getInstance().newInstance(ModelXMLSaver.class);
+    xmlSaver.setOutputExtensionAttributes(true);
+    xmlSaver.setSaveAsXMI(asXMI);
+    xmlSaver.setObjects(objects);
+    xmlSaver.getModelEMFConverter().setConvertNonContainedReferencedObjects(false);
+    xmlSaver.getModelEMFConverter().setMaxChildLevelsToConvert(childLevels);
+    xmlSaver.getModelEMFConverter().setUriResolver(getObjectStore());
+    final StringWriter sw = new StringWriter();
+    xmlSaver.setWriter(sw);
+    xmlSaver.write();
+    return sw.toString();
+  }
+
+  /**
+   * De-serialize a XML/XMI string to list of objects, the references in the XML/XMI are resolved against the object
+   * store.
+   */
+  private List<Object> fromXML(String content, boolean isXMI) {
+    final ModelXMLLoader xmlLoader = ComponentProvider.getInstance().newInstance(ModelXMLLoader.class);
+    xmlLoader.setLoadAsXMI(isXMI);
+    xmlLoader.setReader(new StringReader(content));
+    xmlLoader.getEMFModelConverter().setUriResolver(getObjectStore());
+    return xmlLoader.read();
   }
 }

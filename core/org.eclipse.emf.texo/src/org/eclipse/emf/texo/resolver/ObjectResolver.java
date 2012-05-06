@@ -68,4 +68,10 @@ public interface ObjectResolver {
 
   public void setUseWebServiceUriFormat(boolean useWebServiceUriFormat);
 
+  public void setUri(URI uri);
+
+  public EObject getEObject(URI uri);
+
+  public void removeFromCache(URI objectUri);
+
 }

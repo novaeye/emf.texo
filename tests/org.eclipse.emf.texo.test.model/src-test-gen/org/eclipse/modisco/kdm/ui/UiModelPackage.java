@@ -398,12 +398,12 @@ public class UiModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
-    ActionModelPackage.initialize();
-    CoreModelPackage.initialize();
-    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
     KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
+    CodeModelPackage.initialize();
+    ActionModelPackage.initialize();
+    CoreModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractUIElement.class,

@@ -9,7 +9,7 @@
 «LET ((EPackageModelGenAnnotation)this.ownerEPackageAnnotation) AS ePackageAnnotation»
 
 «REM»Only generate if not transient, in case of document root only generate if the model info needs to be generated«ENDREM»
-«IF ePackageAnnotation.addRuntimeModelBehavior && !isDocumentRoot(this.EClass)-»
+«IF ePackageAnnotation.addRuntimeModelBehavior-»
 «FILE daoClassFileName(this) java-»
 «ePackageAnnotation.javaFileHeader-»
 package «ePackageAnnotation.daoClassesPackagePath»;

@@ -24,12 +24,17 @@ import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
+import org.eclipse.emf.texo.resolver.ObjectResolver;
+import org.eclipse.emf.texo.store.EObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 import org.eclipse.emf.texo.xml.EMFModelConverter;
 import org.eclipse.emf.texo.xml.ModelEMFConverter;
 
@@ -53,9 +58,28 @@ import org.eclipse.emf.texo.xml.ModelEMFConverter;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
-public class EPersistenceService implements TexoComponent {
+public class EPersistenceService extends EObjectStore implements TexoComponent {
 
   private EntityManagerFactory entityManagerFactory;
+
+  private boolean cacheEObjects = false;
+
+  private ObjectResolver objectResolver = null;
+
+  @Override
+  public EObject getFromQualifiedIdString(String qualifiedIdString) {
+    if (cacheEObjects) {
+      final URI theUri = getUri().appendFragment(qualifiedIdString);
+      final EObject eObject = getObjectResolver().getEObject(theUri);
+      if (eObject != null) {
+        // not a proxy don't load
+        if (!eObject.eIsProxy()) {
+          return eObject;
+        }
+      }
+    }
+    return super.getFromQualifiedIdString(qualifiedIdString);
+  }
 
   /**
    * Performs several persistence actions, the insert and updates are done in the order in the toInsertUpdate list, the
@@ -67,6 +91,7 @@ public class EPersistenceService implements TexoComponent {
    * NOTE: After the persist action the {@link EObject} instances in toInsertUpdate are updated with the data returned
    * from the database. So id's for new objects and other computed information is set back in the passed EObjects.
    */
+  @Override
   public void persist(List<EObject> toInsertUpdate, List<EObject> toDelete) {
     final ObjectStore os = getObjectStore();
     boolean err = true;
@@ -95,8 +120,7 @@ public class EPersistenceService implements TexoComponent {
       os.flush();
 
       // and convert back
-      final ModelEMFConverter m2eConverter = ComponentProvider.getInstance().newInstance(ModelEMFConverter.class);
-      m2eConverter.setUriResolver(os);
+      final ModelEMFConverter m2eConverter = createModelEMFConverter();
       m2eConverter.setObjectMapping(objectMapping);
       final List<EObject> result = m2eConverter.convert(allObjects);
       i = 0;
@@ -114,6 +138,10 @@ public class EPersistenceService implements TexoComponent {
         os.rollback();
       } else {
         os.commit();
+
+        for (EObject delete : toDelete) {
+          deleted(delete);
+        }
       }
 
       os.close();
@@ -123,6 +151,7 @@ public class EPersistenceService implements TexoComponent {
   /**
    * Query for a list of EObjects.
    */
+  @Override
   public List<EObject> query(String qryStr, Map<String, Object> namedParameters, int firstResult, int maxResults) {
     final ObjectStore os = getObjectStore();
     boolean err = true;
@@ -130,8 +159,7 @@ public class EPersistenceService implements TexoComponent {
     try {
       final List<?> objects = os.query(qryStr, namedParameters, firstResult, maxResults);
 
-      final ModelEMFConverter converter = ComponentProvider.getInstance().newInstance(ModelEMFConverter.class);
-      converter.setUriResolver(os);
+      final ModelEMFConverter converter = createModelEMFConverter();
       @SuppressWarnings("unchecked")
       final List<EObject> result = converter.convert((List<Object>) objects);
       err = false;
@@ -172,8 +200,7 @@ public class EPersistenceService implements TexoComponent {
    */
   public EObject get(EClass eClass, Object id) {
     final ObjectStore os = getObjectStore();
-    final ModelEMFConverter converter = ComponentProvider.getInstance().newInstance(ModelEMFConverter.class);
-    converter.setUriResolver(os);
+    final ModelEMFConverter converter = createModelEMFConverter();
 
     boolean err = true;
     os.begin();
@@ -200,7 +227,7 @@ public class EPersistenceService implements TexoComponent {
     final EntityManagerObjectStore emStore = ComponentProvider.getInstance()
         .newInstance(EntityManagerObjectStore.class);
     emStore.setEntityManager(getEntityManager());
-    emStore.setUri("jpa://org.eclipse.emf.texo/"); //$NON-NLS-1$
+    emStore.setUri(getUri());
     return emStore;
   }
 
@@ -220,4 +247,133 @@ public class EPersistenceService implements TexoComponent {
   public void setEntityManagerFactory(EntityManagerFactory emf) {
     entityManagerFactory = emf;
   }
+
+  @Override
+  protected EObject loadEObject(EClass eClass, String idString) {
+    final ObjectStore os = getObjectStore();
+    boolean err = true;
+    os.begin();
+    try {
+      final Object id = IdProvider.getInstance().convertIdStringToId(eClass, idString);
+      final Object target = os.get(eClass, id);
+
+      if (target == null) {
+        return null;
+      }
+
+      final ModelEMFConverter converter = createModelEMFConverter();
+      final List<EObject> result = converter.convert(Collections.singletonList(target));
+      err = false;
+      return result.get(0);
+    } finally {
+      if (err) {
+        os.rollback();
+      } else {
+        os.commit();
+      }
+      os.close();
+    }
+  }
+
+  @Override
+  public void refresh(EObject eObject) {
+    final ObjectStore os = getObjectStore();
+    boolean err = true;
+    os.begin();
+    try {
+      final Object target = os.resolveFromEObject(eObject);
+      final Map<Object, InternalEObject> objectMapping = new HashMap<Object, InternalEObject>();
+      objectMapping.put(target, (InternalEObject) eObject);
+
+      final ModelEMFConverter converter = createModelEMFConverter();
+      converter.setObjectMapping(objectMapping);
+
+      final List<EObject> result = converter.convert(Collections.singletonList(target));
+      if (result.get(0) != eObject) {
+        throw new IllegalStateException("Object not refreshed, different object resolved back expected " + eObject //$NON-NLS-1$
+            + " got " + result.get(0)); //$NON-NLS-1$
+      }
+      err = false;
+    } finally {
+      if (err) {
+        os.rollback();
+      } else {
+        os.commit();
+      }
+      os.close();
+    }
+  }
+
+  @Override
+  public List<EObject> getReferingObjects(EObject eTarget, int maxResult, boolean includeContainmentReferences) {
+    final ObjectStore os = getObjectStore();
+    boolean err = true;
+    os.begin();
+    try {
+      final Object id = eTarget.eGet(IdProvider.getInstance().getIdEAttribute(eTarget.eClass()));
+      final Object target = get(eTarget.eClass(), id);
+      final List<?> objects = os.getReferingObjects(target, maxResult, includeContainmentReferences);
+
+      final ModelEMFConverter converter = createModelEMFConverter();
+      @SuppressWarnings("unchecked")
+      final List<EObject> result = converter.convert((List<Object>) objects);
+      err = false;
+      return result;
+    } finally {
+      if (err) {
+        os.rollback();
+      } else {
+        os.commit();
+      }
+      os.close();
+    }
+  }
+
+  protected ModelEMFConverter createModelEMFConverter() {
+    final ModelEMFConverter converter = ComponentProvider.getInstance().newInstance(ModelEMFConverter.class);
+    converter.setUriResolver(getObjectResolver());
+    converter.setMaxChildLevelsToConvert(1);
+    return converter;
+  }
+
+  public boolean isCacheEObjects() {
+    return cacheEObjects;
+  }
+
+  public void setCacheEObjects(boolean cacheEObjects) {
+    this.cacheEObjects = cacheEObjects;
+  }
+
+  public ObjectResolver getObjectResolver() {
+    if (isCacheEObjects()) {
+      if (objectResolver == null) {
+        objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
+        objectResolver.setUri(getUri());
+      }
+      return objectResolver;
+    }
+
+    final ObjectResolver localObjectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
+    localObjectResolver.setUri(getUri());
+    return localObjectResolver;
+  }
+
+  public void setObjectResolver(ObjectResolver objectResolver) {
+    this.objectResolver = objectResolver;
+  }
+
+  @Override
+  public void close() {
+    objectResolver = null;
+    super.close();
+  }
+
+  @Override
+  protected void deleted(EObject deletedEObject) {
+    if (isCacheEObjects()) {
+      final URI theUri = getUri().appendFragment(getQualifiedIdString(deletedEObject));
+      getObjectResolver().removeFromCache(theUri);
+    }
+  }
+
 }

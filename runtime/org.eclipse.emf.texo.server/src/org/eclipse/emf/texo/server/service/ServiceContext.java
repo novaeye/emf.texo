@@ -30,7 +30,7 @@ import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.server.model.request.RequestModelPackage;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 
 /**
  * Defines the context in which a {@link ModelOperation} operates. Contains for example request parameters and allows to

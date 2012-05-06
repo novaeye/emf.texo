@@ -24,7 +24,7 @@ import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONModelConverter;
 import org.eclipse.emf.texo.json.ModelJSONConverter;
 import org.eclipse.emf.texo.model.ModelObject;
-import org.eclipse.emf.texo.server.store.MemoryObjectStore;
+import org.eclipse.emf.texo.store.MemoryObjectStore;
 import org.eclipse.emf.texo.test.TestUtils;
 import org.eclipse.emf.texo.xml.EMFModelConverter;
 import org.json.JSONArray;

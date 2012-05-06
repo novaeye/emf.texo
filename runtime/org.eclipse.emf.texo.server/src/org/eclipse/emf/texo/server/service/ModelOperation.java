@@ -17,7 +17,7 @@
 package org.eclipse.emf.texo.server.service;
 
 import org.eclipse.emf.texo.component.TexoComponent;
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 
 /**
  * The base abstract class for model operations. Model operations can for example be crud operations on model instances.

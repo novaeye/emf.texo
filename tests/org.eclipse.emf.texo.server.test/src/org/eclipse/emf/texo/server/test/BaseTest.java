@@ -25,7 +25,7 @@ import javax.persistence.EntityManagerFactory;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.texo.server.store.EntityManagerObjectStore;
 import org.eclipse.emf.texo.server.store.EntityManagerProvider;
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 import org.eclipse.persistence.jpa.osgi.PersistenceProvider;
@@ -39,7 +39,7 @@ import org.junit.Before;
  * @version $Revision: 1.9 $
  */
 public abstract class BaseTest {
-  private static final String STORE_URI = "jpa://test.com"; //$NON-NLS-1$
+  protected static final String STORE_URI = "jpa://test.com"; //$NON-NLS-1$
 
   private String persistenceXMLPrefix;
   private String persistenceUnitName;

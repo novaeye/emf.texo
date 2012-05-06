@@ -487,11 +487,11 @@ public class ActionModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
     KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
+    CodeModelPackage.initialize();
+    CoreModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EntryFlow.class, modelPackage.getEntryFlowEClass(),

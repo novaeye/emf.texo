@@ -1,5 +1,8 @@
 package org.eclipse.emf.texo.resolver;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,6 +13,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.DynamicModelObject;
+import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -22,9 +26,6 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
 public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
-  public static final String FRAGMENTSEPARATOR = "||"; //$NON-NLS-1$
-  private static final int FRAGMENTSEPARATOR_LENGTH = FRAGMENTSEPARATOR.length();
-
   private static String serverUri = null;
 
   public static void setServerUri(String uri) {
@@ -34,6 +35,8 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
   public static String getServerUri() {
     return serverUri;
   }
+
+  private Map<String, EObject> uriEObjectMap = new HashMap<String, EObject>();
 
   private URI uri = null;
 
@@ -72,9 +75,21 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
    * @see org.eclipse.emf.texo.xml.ObjectResolver#resolveToEObject(java.lang.Object)
    */
   public EObject resolveToEObject(Object object) {
+    final URI toUri = toUri(object);
+    if (toUri != null) {
+      final EObject eObject = uriEObjectMap.get(toUri.toString());
+      if (eObject != null) {
+        return eObject;
+      }
+    }
+
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
     final EClass eClass = modelObject.eClass();
-    return EcoreUtil.create(eClass);
+    final EObject eObject = EcoreUtil.create(eClass);
+    if (toUri != null) {
+      uriEObjectMap.put(toUri.toString(), eObject);
+    }
+    return eObject;
   }
 
   /*
@@ -85,6 +100,10 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
   public Object resolveFromEObject(EObject eObject) {
     final URI proxyUri = ((InternalEObject) eObject).eProxyURI();
     if (proxyUri != null) {
+
+      // store in our map for later usage
+      uriEObjectMap.put(proxyUri.toString(), eObject);
+
       final String fragment = proxyUri.fragment();
       if (fragment != null) {
         final boolean localRef = fragment.startsWith("/"); //$NON-NLS-1$
@@ -140,7 +159,7 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
     }
 
     return getUri().appendFragment(
-        ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()) + FRAGMENTSEPARATOR + idString);
+        ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()) + ModelConstants.FRAGMENTSEPARATOR + idString);
   }
 
   /**
@@ -153,7 +172,8 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
           .appendFragment(""); //$NON-NLS-1$
     }
 
-    return getUri().appendFragment(ModelUtils.getQualifiedNameFromEClass(eClass) + FRAGMENTSEPARATOR + idString);
+    return getUri().appendFragment(
+        ModelUtils.getQualifiedNameFromEClass(eClass) + ModelConstants.FRAGMENTSEPARATOR + idString);
   }
 
   /*
@@ -166,10 +186,18 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
     return get(tuple.getEClass(), tuple.getId());
   }
 
+  public EObject getEObject(URI objectUri) {
+    return uriEObjectMap.get(objectUri.toString());
+  }
+
+  public void removeFromCache(URI objectUri) {
+    uriEObjectMap.remove(objectUri.toString());
+  }
+
   protected TypeIdTuple getTypeAndIdFromUri(URI objectUri) {
     EClass eClass;
     Object idValue;
-    if (isUseWebServiceUriFormat() && !objectUri.toString().contains(FRAGMENTSEPARATOR)) {
+    if (isUseWebServiceUriFormat() && !objectUri.toString().contains(ModelConstants.FRAGMENTSEPARATOR)) {
       final String idString = objectUri.lastSegment();
       final String eClassName = objectUri.trimSegments(1).lastSegment();
       eClass = ModelUtils.getEClassFromQualifiedName(eClassName);
@@ -180,12 +208,12 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
     } else {
       final String fragment = objectUri.fragment();
 
-      final int separatorIndex = fragment.indexOf(FRAGMENTSEPARATOR);
+      final int separatorIndex = fragment.indexOf(ModelConstants.FRAGMENTSEPARATOR);
       if (separatorIndex == -1) {
         throw new IllegalArgumentException("Fragment format not supported for fragment: " + fragment); //$NON-NLS-1$
       }
       eClass = ModelUtils.getEClassFromQualifiedName(fragment.substring(0, separatorIndex));
-      final String idString = fragment.substring(separatorIndex + FRAGMENTSEPARATOR_LENGTH);
+      final String idString = fragment.substring(separatorIndex + ModelConstants.FRAGMENTSEPARATOR_LENGTH);
       idValue = IdProvider.getInstance().convertIdStringToId(eClass, idString);
     }
     final TypeIdTuple tuple = new TypeIdTuple();

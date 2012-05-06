@@ -20,7 +20,7 @@ import java.io.StringReader;
 
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.resolver.ObjectResolver;
-import org.eclipse.emf.texo.resolver.WebServiceObjectResolver;
+import org.eclipse.emf.texo.store.WebServiceObjectResolver;
 
 /**
  * An {@link ObjectResolver} which reads referenced objects using the url, through a webservice.

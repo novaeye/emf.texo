@@ -22,7 +22,7 @@ import java.util.List;
 import org.eclipse.emf.texo.server.model.request.ActionType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResultType;
-import org.eclipse.emf.texo.server.store.ObjectStore;
+import org.eclipse.emf.texo.store.ObjectStore;
 
 /**
  * The model operation which takes care of updating and inserting data using an content string (xml/json) and an
