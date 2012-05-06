@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.XMLHelper;
 import org.eclipse.emf.ecore.xmi.XMLLoad;
 import org.eclipse.emf.ecore.xmi.impl.SAXXMIHandler;
 import org.eclipse.emf.ecore.xmi.impl.XMILoadImpl;
@@ -47,16 +46,6 @@ public class ModelXMIResourceImpl extends XMIResourceImpl implements TexoCompone
 
   public ModelXMIResourceImpl() {
     super(URI.createURI("")); //$NON-NLS-1$
-  }
-
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl#createXMLHelper()
-   */
-  @Override
-  protected XMLHelper createXMLHelper() {
-    return new ModelXMLHelperImpl(this);
   }
 
   /**

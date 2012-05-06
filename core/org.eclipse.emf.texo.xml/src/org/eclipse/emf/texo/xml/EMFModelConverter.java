@@ -355,7 +355,14 @@ public class EMFModelConverter implements TexoComponent {
    */
   @SuppressWarnings({ "unchecked", "rawtypes" })
   protected Object convertEAttributeValue(final Object value, final EDataType eDataType) {
-    if (value instanceof EEnumLiteral) {
+    if (value instanceof Enum<?>) {
+      final EDataType enumDataType = getDataTypeOrBaseType(eDataType);
+      Check.isInstanceOf(enumDataType, EEnum.class);
+      final ModelPackage modelPackage = ModelResolver.getInstance().getModelPackage(
+          enumDataType.getEPackage().getNsURI());
+      final Class<? extends Enum> enumClass = (Class<? extends Enum>) modelPackage.getEClassifierClass(enumDataType);
+      return Enum.valueOf(enumClass, ((Enum<?>) value).name().toUpperCase(Locale.ENGLISH));
+    } else if (value instanceof EEnumLiteral) {
       final EDataType enumDataType = getDataTypeOrBaseType(eDataType);
       Check.isInstanceOf(enumDataType, EEnum.class);
       final EEnumLiteral eeNumLiteral = (EEnumLiteral) value;

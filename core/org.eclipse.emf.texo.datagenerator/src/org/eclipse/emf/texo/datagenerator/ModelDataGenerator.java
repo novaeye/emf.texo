@@ -105,7 +105,7 @@ public class ModelDataGenerator {
   // if true then no generated enum values are used,
   // if the epackage contains generated EMF epackages then
   // it is needed to set this to false.
-  private boolean useDynamicEnums = true;
+  private boolean useDynamicEnums = false;
 
   /**
    * Generate the test objects, see the description in the top of the class. After this call the top-objects (with

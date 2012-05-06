@@ -75,16 +75,16 @@ public class ModelEFactory implements EFactory, InternalEObject, TexoComponent {
    * @see #getXmlHandler()
    */
   public String convertToString(final EDataType dataType, final Object objectValue) {
-    if (objectValue instanceof Enumerator) {
-      final Enumerator enumerator = (Enumerator) objectValue;
-      return enumerator.getLiteral();
-    }
-    if (objectValue instanceof EEnumLiteral) {
-      final EEnumLiteral eEnumLiteral = (EEnumLiteral) objectValue;
-      return eEnumLiteral.getLiteral();
-    }
-
     if (isDynamicEFactory) {
+      if (objectValue instanceof Enumerator) {
+        final Enumerator enumerator = (Enumerator) objectValue;
+        return enumerator.getLiteral();
+      }
+      if (objectValue instanceof EEnumLiteral) {
+        final EEnumLiteral eEnumLiteral = (EEnumLiteral) objectValue;
+        return eEnumLiteral.getLiteral();
+      }
+
       return modelFactory.convertToString(dataType, objectValue);
     }
     return delegate.convertToString(dataType, objectValue);
@@ -117,7 +117,17 @@ public class ModelEFactory implements EFactory, InternalEObject, TexoComponent {
       if (stringValue == null || stringValue.trim().length() == 0) {
         return null;
       }
-      return ((EEnum) baseType).getEEnumLiteralByLiteral(stringValue);
+      final EEnum eeNum = (EEnum) baseType;
+      EEnumLiteral eeNumLiteral = eeNum.getEEnumLiteralByLiteral(stringValue);
+      if (eeNumLiteral == null) {
+        eeNumLiteral = eeNum.getEEnumLiteral(stringValue);
+      }
+      if (eeNumLiteral == null) {
+        throw new IllegalArgumentException("The value '" + stringValue //$NON-NLS-1$
+            + "' is not a valid enumerator of '" //$NON-NLS-1$
+            + dataType.getName() + "'"); //$NON-NLS-1$
+      }
+      return eeNumLiteral;
     }
 
     return modelFactory.createFromString(dataType, stringValue);

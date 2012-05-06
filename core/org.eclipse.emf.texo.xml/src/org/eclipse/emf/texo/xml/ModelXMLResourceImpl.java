@@ -24,14 +24,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.xmi.XMLHelper;
 import org.eclipse.emf.ecore.xmi.XMLLoad;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.SAXXMLHandler;
 import org.eclipse.emf.ecore.xmi.impl.XMLHelperImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
-import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.utils.Check;
@@ -48,17 +45,6 @@ public class ModelXMLResourceImpl extends XMLResourceImpl implements TexoCompone
 
   public ModelXMLResourceImpl() {
     super(URI.createURI("")); //$NON-NLS-1$
-  }
-
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl#createXMLHelper()
-   */
-  @Override
-  protected XMLHelper createXMLHelper() {
-    return ComponentProvider.getInstance().newInstance(ModelXMLHelperImpl.class, new Class<?>[] { XMLResource.class },
-        new Object[] { this });
   }
 
   /**
