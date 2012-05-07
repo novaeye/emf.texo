@@ -22,6 +22,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.texo.eclipse.Messages;
 import org.eclipse.emf.texo.eclipse.ProjectPropertyUtil;
+import org.eclipse.emf.texo.generator.EclipseGeneratorUtils;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
@@ -47,6 +48,9 @@ public class ProjectPropertyPage extends PropertyPage {
 
   private static final int TEXT_FIELD_WIDTH = 50;
 
+  private Text targetProjectText;
+  private Button targetProjectButton;
+
   private Text outputFolderText;
   private Button outputFolderButton;
 
@@ -60,6 +64,14 @@ public class ProjectPropertyPage extends PropertyPage {
    */
   public ProjectPropertyPage() {
     super();
+  }
+
+  private void setTargetProject(IProject project) {
+    if (project == null) {
+      targetProjectText.setText(null);
+    } else {
+      targetProjectText.setText(project.getName());
+    }
   }
 
   private void setOutputFolder(IFolder outputFolder) {
@@ -102,13 +114,33 @@ public class ProjectPropertyPage extends PropertyPage {
 
     final Properties projectProps = ProjectPropertyUtil.getProjectProperties(project);
 
+    final Label projectLabel = new Label(composite, SWT.LEFT);
+    projectLabel.setText(Messages.getString("project.target.label")); //$NON-NLS-1$
+
+    targetProjectText = new Text(composite, SWT.BORDER | SWT.LEFT | SWT.SINGLE | SWT.READ_ONLY);
+    final GridData projectGd = new GridData();
+    projectGd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
+    targetProjectText.setLayoutData(projectGd);
+    targetProjectText.setEditable(true);
+    targetProjectText.setText(projectProps.getProperty(ProjectPropertyUtil.TARGET_PROJECT_PROPERTY));
+
+    targetProjectButton = new Button(composite, SWT.PUSH);
+    targetProjectButton.setText(Messages.getString("browse")); //$NON-NLS-1$
+    targetProjectButton.addSelectionListener(new SelectionAdapter() {
+      @Override
+      public void widgetSelected(SelectionEvent e) {
+        browseTargetProject();
+      }
+    });
+
     final Label outputFolderLabel = new Label(composite, SWT.LEFT);
     outputFolderLabel.setText(Messages.getString("project.output.folder.label")); //$NON-NLS-1$
 
     outputFolderText = new Text(composite, SWT.BORDER | SWT.LEFT | SWT.SINGLE | SWT.READ_ONLY);
-    final GridData gd = new GridData();
-    gd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
-    outputFolderText.setLayoutData(gd);
+    final GridData folderGd = new GridData();
+    folderGd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
+    outputFolderText.setLayoutData(folderGd);
+    outputFolderText.setEditable(true);
     outputFolderText.setText(projectProps.getProperty(ProjectPropertyUtil.OUTPUT_LOCATION_PROPERTY));
 
     outputFolderButton = new Button(composite, SWT.PUSH);
@@ -127,6 +159,7 @@ public class ProjectPropertyPage extends PropertyPage {
     final GridData templateFolderGd = new GridData();
     templateFolderGd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
     templateFolderText.setLayoutData(templateFolderGd);
+    templateFolderText.setEditable(true);
     templateFolderText.setText(getSafeValue(projectProps.getProperty(ProjectPropertyUtil.TEMPLATES_LOCATION_PROPERTY)));
 
     templateFolderButton = new Button(composite, SWT.PUSH);
@@ -139,12 +172,28 @@ public class ProjectPropertyPage extends PropertyPage {
     });
   }
 
+  private void browseTargetProject() {
+    final ProjectSelectionDialog selectionDialog = new ProjectSelectionDialog(Display.getCurrent().getActiveShell());
+    selectionDialog.setTitle(Messages.getString("project.target.select.title")); //$NON-NLS-1$
+    selectionDialog.setMessage(Messages.getString("project.target.select.message")); //$NON-NLS-1$
+    selectionDialog.setBlockOnOpen(true);
+    selectionDialog.setInput(project.getWorkspace().getRoot());
+    selectionDialog.setInitialSelection(targetProjectText.getText());
+    if (selectionDialog.open() == Window.OK) {
+      setTargetProject((IProject) selectionDialog.getFirstResult());
+    }
+  }
+
   private void browseOutputFolder() {
     final ElementTreeSelectionDialog selectionDialog = new FolderSelectionDialog(Display.getCurrent().getActiveShell());
     selectionDialog.setTitle(Messages.getString("project.output.folder.select.title")); //$NON-NLS-1$
     selectionDialog.setMessage(Messages.getString("project.output.folder.select.message")); //$NON-NLS-1$
     selectionDialog.setBlockOnOpen(true);
-    selectionDialog.setInput(project);
+    if (targetProjectText.getText() != null && targetProjectText.getText().trim().length() > 0) {
+      selectionDialog.setInput(EclipseGeneratorUtils.getProject(targetProjectText.getText()));
+    } else {
+      selectionDialog.setInput(project);
+    }
     selectionDialog.setInitialSelection(outputFolderText.getText());
     if (selectionDialog.open() == Window.OK) {
       setOutputFolder((IFolder) selectionDialog.getFirstResult());
@@ -194,7 +243,8 @@ public class ProjectPropertyPage extends PropertyPage {
       } else {
         templateLocation = templateFolderText.getText();
       }
-      ProjectPropertyUtil.setProjectProperties(project, outputFolderText.getText(), templateLocation);
+      ProjectPropertyUtil.setProjectProperties(project, targetProjectText.getText(), outputFolderText.getText(),
+          templateLocation);
     } catch (Exception e) {
       return false;
     }

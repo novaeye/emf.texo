@@ -1,14 +1,14 @@
 /**
  * <copyright>
  *
- * Copyright (c) 2010 Springsite BV (The Netherlands) and others
+ * Copyright (c) 2012 Springsite BV (The Netherlands) and others
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *   Springsite B.V. - Initial API and implementation
+ *   Martin Taal - Initial API and implementation
  *
  * </copyright>
  *
@@ -19,13 +19,15 @@ package org.eclipse.emf.texo.eclipse.properties;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.core.resources.IContainer;
-import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.texo.eclipse.TexoEclipsePlugin;
+import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
 import org.eclipse.ui.dialogs.ISelectionStatusValidator;
@@ -33,12 +35,12 @@ import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.model.WorkbenchLabelProvider;
 
 /**
- * Dialog for selecting IFolders from an IContainer.
+ * Dialog for selecting projects.
  * 
- * @author Springsite B.V.
+ * @author mtaal
  * 
  */
-public class FolderSelectionDialog extends ElementTreeSelectionDialog {
+public class ProjectSelectionDialog extends ElementTreeSelectionDialog {
   /**
    * Provides the IFolders from an IContainer structure.
    * 
@@ -47,24 +49,27 @@ public class FolderSelectionDialog extends ElementTreeSelectionDialog {
   private static class ContainerContentProvider extends WorkbenchContentProvider {
     @Override
     public Object[] getElements(Object element) {
-      return filter((IContainer) element);
+      return filter((IWorkspaceRoot) element);
     }
 
     @Override
     public Object[] getChildren(Object element) {
-      if (element instanceof IContainer) {
-        return filter((IContainer) element);
+      if (element instanceof IWorkspaceRoot) {
+        return filter((IWorkspaceRoot) element);
       }
 
       return new Object[0];
     }
 
-    private Object[] filter(IContainer container) {
+    private Object[] filter(IWorkspaceRoot container) {
       try {
         final List<IResource> resources = new ArrayList<IResource>();
         for (IResource resource : container.members()) {
-          if (resource instanceof IFolder && !resource.getName().startsWith(".")) {
-            resources.add(resource);
+          if (resource instanceof IProject && ((IProject) resource).isOpen()) {
+            final IJavaProject javaProject = JavaCore.create((IProject) resource);
+            if (javaProject.exists()) {
+              resources.add(resource);
+            }
           }
         }
         return resources.toArray();
@@ -82,14 +87,14 @@ public class FolderSelectionDialog extends ElementTreeSelectionDialog {
   private class SelectionValidator implements ISelectionStatusValidator {
 
     public IStatus validate(Object[] selection) {
-      if (selection.length == 1 && selection[0] instanceof IFolder) {
+      if (selection.length == 1 && selection[0] instanceof IProject) {
         return new Status(IStatus.OK, TexoEclipsePlugin.PLUGIN_ID, IStatus.OK, "", null); //$NON-NLS-1$
       }
       return new Status(IStatus.ERROR, TexoEclipsePlugin.PLUGIN_ID, IStatus.ERROR, "", null); //$NON-NLS-1$
     }
   }
 
-  public FolderSelectionDialog(Shell parent) {
+  public ProjectSelectionDialog(Shell parent) {
     super(parent, new WorkbenchLabelProvider(), new ContainerContentProvider());
     setValidator(new SelectionValidator());
   }
@@ -103,8 +108,8 @@ public class FolderSelectionDialog extends ElementTreeSelectionDialog {
    */
   @Override
   public void setInput(Object input) {
-    if (!(input instanceof IContainer)) {
-      throw new IllegalArgumentException("Input must be of type IContainer."); //$NON-NLS-1$
+    if (!(input instanceof IWorkspaceRoot)) {
+      throw new IllegalArgumentException("Input must be of type IWorkspaceRoot."); //$NON-NLS-1$
     }
     super.setInput(input);
   }

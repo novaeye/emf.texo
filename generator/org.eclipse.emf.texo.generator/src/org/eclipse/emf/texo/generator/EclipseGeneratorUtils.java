@@ -85,6 +85,9 @@ public class EclipseGeneratorUtils {
    */
   public static String getProjectFilePath(final String projectName) {
     final IProject project = getProject(projectName);
+    if (project == null || project.getLocation() == null) {
+      throw new IllegalStateException("Project " + projectName + " not found"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
     if (project.getRawLocation() == null) {
       return project.getLocation().toOSString();
     }
