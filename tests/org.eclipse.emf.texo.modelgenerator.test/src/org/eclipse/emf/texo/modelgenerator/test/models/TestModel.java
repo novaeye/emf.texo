@@ -59,7 +59,6 @@ public class TestModel {
     urls.add("samples/employee.xsd");//$NON-NLS-1$
     urls.add("samples/epo2.ecore");//$NON-NLS-1$
     urls.add("samples/extlibrary.ecore");//$NON-NLS-1$
-    urls.add("samples/forum.xsd");//$NON-NLS-1$
     urls.add("samples/interfaces.ecore");//$NON-NLS-1$
     urls.add("samples/inventory.ecore");//$NON-NLS-1$
     urls.add("samples/kdm.ecore");//$NON-NLS-1$
@@ -106,6 +105,10 @@ public class TestModel {
     urls.add("texo/TexoDataRequest.xsd");//$NON-NLS-1$
     urls.add("texo/TexoDataResponse.xsd");//$NON-NLS-1$
     urls.add("texo/TexoModelExtensions.xsd");//$NON-NLS-1$
+
+    // do this one as the last one as it causes the load of the
+    // test.model plugin which contains generated EMF epackages
+    urls.add("samples/forum.xsd");//$NON-NLS-1$
     // disabled for now
     return urls;
   }

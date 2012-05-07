@@ -72,7 +72,10 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
 
   @Override
   protected void attachedHelper(EObject eObject) {
-    if (!isLoading() && !newObjects.contains(eObject)) {
+    // re-attached
+    if (deletedObjects.contains(eObject)) {
+      deletedObjects.remove(eObject);
+    } else if (!isLoading() && !newObjects.contains(eObject)) {
       newObjects.add(eObject);
     }
     eObject.eAdapters().add(objectModificationTrackingAdapter);

@@ -22,6 +22,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -29,6 +30,7 @@ import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
@@ -277,22 +279,24 @@ public class ModelEMFConverter extends ModelToConverter {
     }
 
     final Object manyValue = modelObject.eGet(eReference);
-    if (Map.class.isAssignableFrom(manyValue.getClass())) {
+    final Collection<EObject> newValues = new ArrayList<EObject>();
+
+    boolean isMap = Map.class.isAssignableFrom(manyValue.getClass());
+    EStructuralFeature valueFeature = null;
+    EStructuralFeature keyFeature = null;
+    if (isMap) {
+      final EClass mapEClass = eReference.getEReferenceType();
+      valueFeature = mapEClass.getEStructuralFeature("value"); //$NON-NLS-1$
+      keyFeature = mapEClass.getEStructuralFeature("key"); //$NON-NLS-1$
+
       Check.isTrue(ModelUtils.isEMap(eReference), "Expected emap EReference, but th// case for EReference " //$NON-NLS-1$
           + eReference);
-      @SuppressWarnings("unchecked")
-      final Collection<EObject> eValues = (Collection<EObject>) eObject.eGet(eReference);
 
       final Map<?, ?> map = (Map<?, ?>) manyValue;
 
-      // clear the evalues so that an empty tag is created in the xml
-      eValues.clear();
-
       for (final Object key : map.keySet()) {
         final Object value = map.get(key);
-        final EObject mapEntryEObject = EcoreUtil.create(eReference.getEReferenceType());
-        final EStructuralFeature valueFeature = mapEntryEObject.eClass().getEStructuralFeature("value"); //$NON-NLS-1$
-        final EStructuralFeature keyFeature = mapEntryEObject.eClass().getEStructuralFeature("key"); //$NON-NLS-1$
+        final EObject mapEntryEObject = EcoreUtil.create(mapEClass);
 
         // key and value maybe primitive types but can also be
         // references to model objects.
@@ -306,7 +310,7 @@ public class ModelEMFConverter extends ModelToConverter {
         } else {
           mapEntryEObject.eSet(keyFeature, key);
         }
-        eValues.add(mapEntryEObject);
+        newValues.add(mapEntryEObject);
       }
     } else {
 
@@ -320,22 +324,64 @@ public class ModelEMFConverter extends ModelToConverter {
 
       @SuppressWarnings("unchecked")
       final Collection<Object> values = (Collection<Object>) manyValue;
-      @SuppressWarnings("unchecked")
-      final Collection<EObject> eValues = (Collection<EObject>) eObject.eGet(eReference);
-
-      // clear the evalues so that an empty tag is created in the xml
-      eValues.clear();
 
       for (final Object value : values) {
         if (value == null) {
-          eValues.add(null);
+          newValues.add(null);
         } else {
           final InternalEObject eValue = (InternalEObject) createTarget(value);
-          if (!eValues.contains(eValue)) {
-            eValues.add(eValue);
+          if (!newValues.contains(eValue)) {
+            newValues.add(eValue);
           }
         }
       }
+    }
+
+    @SuppressWarnings("unchecked")
+    final Collection<EObject> eValues = (Collection<EObject>) eObject.eGet(eReference);
+
+    boolean updateList = false;
+    if (newValues.size() == eValues.size()) {
+      final Iterator<?> it = eValues.iterator();
+      for (Object newValue : newValues) {
+        final Object oldValue = it.next();
+
+        if (isMap) {
+          final EObject oldMapEntry = (EObject) oldValue;
+          final EObject newMapEntry = (EObject) newValue;
+          final Object oldMapValue = oldMapEntry.eGet(valueFeature);
+          final Object oldMapKey = oldMapEntry.eGet(keyFeature);
+          final Object newMapValue = newMapEntry.eGet(valueFeature);
+          final Object newMapKey = newMapEntry.eGet(keyFeature);
+          if (valueFeature instanceof EReference) {
+            updateList = oldMapValue == newMapValue;
+          } else {
+            updateList = oldMapValue != null ? !oldMapValue.equals(newMapValue) : newMapValue != null ? !newMapValue
+                .equals(oldMapValue) : false;
+          }
+          if (keyFeature instanceof EReference) {
+            updateList = updateList || oldMapKey == newMapKey;
+          } else {
+            updateList = updateList
+                || (oldMapKey != null ? !oldMapKey.equals(newMapKey) : newMapKey != null ? !newMapKey.equals(oldMapKey)
+                    : false);
+          }
+        } else {
+          updateList = oldValue != newValue;
+        }
+
+        if (updateList) {
+          break;
+        }
+      }
+    } else {
+      updateList = true;
+    }
+
+    if (updateList) {
+      // clear the evalues so that an empty tag is created in the xml
+      eValues.clear();
+      eValues.addAll(newValues);
     }
   }
 
@@ -376,11 +422,34 @@ public class ModelEMFConverter extends ModelToConverter {
     @SuppressWarnings("unchecked")
     final List<Object> eValues = (List<Object>) eObject.eGet(eAttribute);
 
-    // clear the evalues so that an empty tag is created in the xml
-    eValues.clear();
-
+    final List<Object> newValues = new ArrayList<Object>();
     for (final Object value : values) {
-      eValues.add(convertEAttributeValue(value, eDataType));
+      newValues.add(convertEAttributeValue(value, eDataType));
+    }
+    boolean updateList = false;
+    if (values.size() == eValues.size()) {
+      final Iterator<?> it = eValues.iterator();
+      for (Object newValue : newValues) {
+        final Object oldValue = it.next();
+        if (newValue != null && oldValue == null) {
+          updateList = true;
+        } else if (oldValue == null && newValue != null) {
+          updateList = true;
+        } else if (oldValue != null && newValue != null) {
+          updateList = !oldValue.equals(newValue);
+        }
+        if (updateList) {
+          break;
+        }
+      }
+    } else {
+      updateList = true;
+    }
+
+    if (updateList) {
+      // clear the evalues so that an empty tag is created in the xml
+      eValues.clear();
+      eValues.addAll(newValues);
     }
   }
 
