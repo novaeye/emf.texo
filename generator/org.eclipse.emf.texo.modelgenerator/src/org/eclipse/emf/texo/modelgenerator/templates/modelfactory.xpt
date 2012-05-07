@@ -226,7 +226,7 @@ public class «this.simpleModelFactoryClassName» implements org.eclipse.emf.tex
 		«ELSEIF eDataTypeAnnotation.instanceClassName == 'java.lang.String'-»
 		return value;
 		«ELSEIF eDataTypeAnnotation.automaticStringConversion-»
-		return new «eDataTypeAnnotation.qualifiedClassName»(value);
+		return new «eDataTypeAnnotation.objectClassName»(value);
 		«ELSE-»
 		EDataType eDataType = «this.qualifiedClassName».INSTANCE.get«toFirstUpper(eDataTypeAnnotation.name)»EDataType();
 		throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName() + " converting from value " + value);

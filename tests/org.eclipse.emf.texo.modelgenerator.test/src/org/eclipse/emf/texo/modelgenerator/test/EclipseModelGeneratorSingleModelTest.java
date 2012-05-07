@@ -43,7 +43,8 @@ public class EclipseModelGeneratorSingleModelTest extends EclipseModelGeneratorT
     //    modelFiles.add("issues/bz3780?87.ecore"); //$NON-NLS-1$
     //    modelFiles.add("texo/TexoDataRequest.xsd"); //$NON-NLS-1$
     //		modelFiles.add("samples/types.ecore"); //$NON-NLS-1$
-    modelFiles.add("samples/schoollibrary.ecore"); //$NON-NLS-1$
+    modelFiles.add("issues/bz378642.xsd"); //$NON-NLS-1$
+    //    modelFiles.add("samples/schoollibrary.ecore"); //$NON-NLS-1$
     //		modelFiles.add("samples/kdm.ecore"); //$NON-NLS-1$
     //		modelFiles.add("schemaconstructs/TexoDataResponse.xsd"); //$NON-NLS-1$
     return modelFiles;

@@ -176,7 +176,14 @@ public class ModelEDataTypeAnnotator extends ModelEClassifierAnnotator implement
       return false;
     }
     try {
-      instanceClass.getConstructor(String.class);
+      Class<?> useClass = instanceClass;
+      if (!useClass.getName().contains(".")) { //$NON-NLS-1$
+        useClass = GenUtils.getObjectClass(instanceClass);
+        if (useClass == null) {
+          return false;
+        }
+      }
+      useClass.getConstructor(String.class);
       return true;
     } catch (final NoSuchMethodException e) {
       return false;

@@ -183,32 +183,36 @@ public class GenUtils {
       }
       return instanceClass.getName();
     }
+    final Class<?> objectClass = getObjectClass(instanceClass);
+    if (objectClass != null) {
+      return objectClass.getName();
+    }
+    return null;
+  }
+
+  /**
+   * Return the object class of a primitive java class, int --> Integer, long --> Long etc. If there is no object class
+   * (e.g. if the instanceClass is not a primitive java class) then null is returned.
+   */
+  public static Class<?> getObjectClass(Class<?> instanceClass) {
     if (XMLGregorianCalendar.class.isAssignableFrom(instanceClass)) {
-      return Date.class.getName();
-    }
-    if (instanceClass == java.lang.Boolean.TYPE) {
-      return Boolean.class.getName();
-    }
-    if (instanceClass == java.lang.Byte.TYPE) {
-      return Byte.class.getName();
-    }
-    if (instanceClass == java.lang.Character.TYPE) {
-      return Character.class.getName();
-    }
-    if (instanceClass == java.lang.Double.TYPE) {
-      return Double.class.getName();
-    }
-    if (instanceClass == java.lang.Float.TYPE) {
-      return Float.class.getName();
-    }
-    if (instanceClass == java.lang.Integer.TYPE) {
-      return Integer.class.getName();
-    }
-    if (instanceClass == java.lang.Long.TYPE) {
-      return Long.class.getName();
-    }
-    if (instanceClass == java.lang.Short.TYPE) {
-      return Short.class.getName();
+      return Date.class;
+    } else if (instanceClass == java.lang.Boolean.TYPE) {
+      return Boolean.class;
+    } else if (instanceClass == java.lang.Byte.TYPE) {
+      return Byte.class;
+    } else if (instanceClass == java.lang.Character.TYPE) {
+      return Character.class;
+    } else if (instanceClass == java.lang.Double.TYPE) {
+      return Double.class;
+    } else if (instanceClass == java.lang.Float.TYPE) {
+      return Float.class;
+    } else if (instanceClass == java.lang.Integer.TYPE) {
+      return Integer.class;
+    } else if (instanceClass == java.lang.Long.TYPE) {
+      return Long.class;
+    } else if (instanceClass == java.lang.Short.TYPE) {
+      return Short.class;
     }
     return null;
   }
