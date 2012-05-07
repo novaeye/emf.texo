@@ -28,14 +28,14 @@ import junit.framework.Assert;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.texo.component.ComponentProvider;
-import org.eclipse.emf.texo.emf.model.samples.library.Book;
-import org.eclipse.emf.texo.emf.model.samples.library.Library;
-import org.eclipse.emf.texo.emf.model.samples.library.LibraryFactory;
-import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;
-import org.eclipse.emf.texo.emf.model.samples.library.Writer;
 import org.eclipse.emf.texo.server.store.EPersistenceService;
 import org.eclipse.emf.texo.server.store.EntityManagerProvider;
 import org.eclipse.emf.texo.server.test.BaseTest;
+import org.eclipse.emf.texo.test.emfmodel.library.Book;
+import org.eclipse.emf.texo.test.emfmodel.library.Library;
+import org.eclipse.emf.texo.test.emfmodel.library.LibraryFactory;
+import org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage;
+import org.eclipse.emf.texo.test.emfmodel.library.Writer;
 import org.junit.Test;
 
 /**

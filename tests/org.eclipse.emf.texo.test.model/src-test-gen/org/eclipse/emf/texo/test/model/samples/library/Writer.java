@@ -10,7 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
-import javax.persistence.Table;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
@@ -21,7 +22,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
  */
 @TestAnnotationOne("type")
 @Entity(name = "Writer")
-@Table(name = "Writer")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Writer extends Identifiable {
 
   /**

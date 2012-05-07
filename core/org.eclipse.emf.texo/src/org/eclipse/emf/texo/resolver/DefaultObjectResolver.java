@@ -133,8 +133,12 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
       // ignore on purpose
     }
 
-    final ModelPackage modelPackage = ModelResolver.getInstance().getModelPackage(
-        eObject.eClass().getEPackage().getNsURI());
+    final String nsUri = eObject.eClass().getEPackage().getNsURI();
+    final ModelPackage modelPackage = ModelResolver.getInstance().getModelPackage(nsUri);
+    if (modelPackage == null) {
+      throw new IllegalStateException("ModelPackage with ns uri: " + nsUri //$NON-NLS-1$
+          + " not found, did you initialize/touch the ModelPackage at application start?"); //$NON-NLS-1$
+    }
     return modelPackage.getModelFactory().create(eObject.eClass());
   }
 

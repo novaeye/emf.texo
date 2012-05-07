@@ -7,7 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
@@ -20,7 +21,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
  */
 @TestAnnotationOne("test")
 @Entity(name = "Book")
-@Table(name = "Book")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Book extends Identifiable {
 
   /**

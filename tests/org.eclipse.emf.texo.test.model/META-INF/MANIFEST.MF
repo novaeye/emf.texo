@@ -8,26 +8,10 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Eclipse-BuddyPolicy: dependent
-Export-Package: extlibrary;version="0.1.0",
- extlibrary.impl;version="0.1.0",
- extlibrary.util;version="0.1.0",
- nonemf,
- nonemf.impl,
- nonemf.util,
- org.eclipse.emf.texo.emf.model.base.identifiable;version="0.1.0",
- org.eclipse.emf.texo.emf.model.base.identifiable.impl;version="0.1.0",
- org.eclipse.emf.texo.emf.model.base.identifiable.util;version="0.1.0",
- org.eclipse.emf.texo.emf.model.samples.library;version="0.1.0",
- org.eclipse.emf.texo.emf.model.samples.library.impl;version="0.1.0",
- org.eclipse.emf.texo.emf.model.samples.library.util;version="0.1.0",
- org.eclipse.emf.texo.emf.model.samples.schoollibrary;version="0.1.0",
- org.eclipse.emf.texo.emf.model.samples.schoollibrary.impl;version="0.1.0",
- org.eclipse.emf.texo.emf.model.samples.schoollibrary.util;version="0.1.0",
- org.eclipse.emf.texo.server.model.request,
- org.eclipse.emf.texo.server.model.request.dao,
- org.eclipse.emf.texo.server.model.response,
- org.eclipse.emf.texo.server.model.response.dao,
- org.eclipse.emf.texo.test.model,
+Export-Package: org.eclipse.emf.texo.server.model.request;version="0.1.0",
+ org.eclipse.emf.texo.server.model.request.dao;version="0.1.0",
+ org.eclipse.emf.texo.server.model.response;version="0.1.0",
+ org.eclipse.emf.texo.server.model.response.dao;version="0.1.0",
  org.eclipse.emf.texo.test.model.base.identifiable;version="0.1.0",
  org.eclipse.emf.texo.test.model.base.identifiable.dao;version="0.1.0",
  org.eclipse.emf.texo.test.model.instanceclassset;version="0.1.0",
@@ -170,7 +154,5 @@ Require-Bundle: org.eclipse.emf.texo;bundle-version="[0.1.0,1.1.0)",
  org.eclipse.emf.ecore.xmi;bundle-version="[2.5.0,3.0.0)",
  org.eclipse.emf.texo.server;bundle-version="[0.1.0,1.1.0)",
  javax.persistence;bundle-version="[2.0.0,3.0.0)"
-Import-Package: org.eclipse.persistence.annotations;version="[2.2.0,3.0.0)",
- org.osgi.framework;version="[1.0.0,3.0.0)"
-Bundle-Activator: org.eclipse.emf.texo.test.model.ModelPluginActivator
+Import-Package: org.eclipse.persistence.annotations;version="[2.2.0,3.0.0)"
 Bundle-ActivationPolicy: lazy

@@ -10,7 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
-import javax.persistence.Table;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -20,7 +21,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  */
 @orgeclipseemftexo.OneDotAnnotation("test")
 @Entity(name = "Library")
-@Table(name = "Library")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Library extends Identifiable {
 
   /**

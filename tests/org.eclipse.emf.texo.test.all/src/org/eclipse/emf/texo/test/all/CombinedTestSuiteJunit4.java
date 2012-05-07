@@ -26,9 +26,12 @@ import org.junit.runners.Suite;
 /**
  * Combines all junit4 testcases.
  * 
+ * Note: AllServerTests needs to be done first to ensure proper initialization of package.
+ * 
  * @author mtaal
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ JSONTests.class, TestBz363802.class, TestBz325427.class, AllServerTests.class })
+@Suite.SuiteClasses({ JSONTests.class, TestBz363802.class, TestBz325427.class, CombinedTestSuite.class,
+    AllServerTests.class })
 public class CombinedTestSuiteJunit4 {
 }

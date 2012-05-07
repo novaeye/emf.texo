@@ -6,7 +6,7 @@
   <eAnnotations source="texo.java.annotation">
     <details key="type" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;type&quot;)"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Book" eSuperTypes="../base/identifiable.ecore#//Identifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="Book" eSuperTypes="identifiable.ecore#//Identifiable">
     <eAnnotations source="texo.java.annotation">
       <details key="value" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;test&quot;)"/>
     </eAnnotations>
@@ -36,7 +36,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="../base/identifiable.ecore#//Identifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="identifiable.ecore#//Identifiable">
     <eAnnotations source="texo.java.annotation">
       <details key="type" value="@orgeclipseemftexo.OneDotAnnotation(&quot;test&quot;)"/>
     </eAnnotations>
@@ -46,7 +46,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="books" upperBound="-1"
         eType="#//Book" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Writer" eSuperTypes="../base/identifiable.ecore#//Identifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="Writer" eSuperTypes="identifiable.ecore#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="title" value="true"/>

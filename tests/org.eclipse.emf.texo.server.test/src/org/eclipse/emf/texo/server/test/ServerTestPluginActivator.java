@@ -14,11 +14,11 @@
  *
  * $Id: CombinedTestSuite.java,v 1.14 2011/08/26 06:59:07 mtaal Exp $
  */
-package org.eclipse.emf.texo.test.model;
+package org.eclipse.emf.texo.server.test;
 
-import org.eclipse.emf.texo.emf.model.base.identifiable.IdentifiablePackage;
-import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;
-import org.eclipse.emf.texo.emf.model.samples.schoollibrary.SchoollibraryPackage;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage;
+import org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage;
+import org.eclipse.emf.texo.test.emfmodel.schoollibrary.SchoollibraryPackage;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoollibraryModelPackage;
 import org.osgi.framework.BundleActivator;
@@ -29,7 +29,7 @@ import org.osgi.framework.BundleContext;
  * 
  * @author mtaal
  */
-public class ModelPluginActivator implements BundleActivator {
+public class ServerTestPluginActivator implements BundleActivator {
 
   public void start(BundleContext context) throws Exception {
     // first init EMF generated epackages
