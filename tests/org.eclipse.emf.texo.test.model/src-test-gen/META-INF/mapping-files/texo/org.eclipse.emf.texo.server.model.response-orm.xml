@@ -58,7 +58,7 @@
       <orm:basic name="startRow" optional="false"/>
       <orm:basic name="endRow" optional="false"/>
       <orm:basic name="totalRows" optional="false"/>
-      <orm:one-to-many name="data" orphan-removal="true" target-entity="org.eclipse.emf.ecore.EObject">
+      <orm:one-to-many name="data" target-entity="org.eclipse.emf.ecore.EObject">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -69,21 +69,21 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ResultType" name="ResultType">
     <orm:attributes>
-      <orm:one-to-many name="updated" orphan-removal="true" target-entity="org.eclipse.emf.ecore.EObject">
+      <orm:one-to-many name="updated" target-entity="org.eclipse.emf.ecore.EObject">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="inserted" orphan-removal="true" target-entity="org.eclipse.emf.ecore.EObject">
+      <orm:one-to-many name="inserted" target-entity="org.eclipse.emf.ecore.EObject">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="deleted" orphan-removal="true" target-entity="org.eclipse.emf.ecore.EObject">
+      <orm:one-to-many name="deleted" target-entity="org.eclipse.emf.ecore.EObject">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

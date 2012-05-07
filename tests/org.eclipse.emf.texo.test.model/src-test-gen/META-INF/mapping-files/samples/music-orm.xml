@@ -58,7 +58,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="songs" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.music.Song">
+      <orm:one-to-many name="songs" target-entity="org.eclipse.emf.texo.test.model.samples.music.Song">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

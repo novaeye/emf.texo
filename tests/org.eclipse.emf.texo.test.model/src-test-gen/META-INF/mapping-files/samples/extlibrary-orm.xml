@@ -112,13 +112,13 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="stock" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.extlibrary.Item">
+      <orm:one-to-many name="stock" target-entity="org.eclipse.emf.texo.test.model.samples.extlibrary.Item">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="branches" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.extlibrary.Library">
+      <orm:one-to-many name="branches" target-entity="org.eclipse.emf.texo.test.model.samples.extlibrary.Library">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

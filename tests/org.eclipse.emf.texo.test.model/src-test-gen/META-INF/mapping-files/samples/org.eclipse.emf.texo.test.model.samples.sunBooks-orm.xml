@@ -11,7 +11,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.BooksType" name="BooksType">
     <orm:attributes>
-      <orm:one-to-many name="book" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.sunbooks.BookType">
+      <orm:one-to-many name="book" target-entity="org.eclipse.emf.texo.test.model.samples.sunbooks.BookType">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

@@ -4,14 +4,14 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Forum" name="Forum">
     <orm:attributes>
       <orm:basic name="title" optional="false"/>
-      <orm:one-to-many name="members" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Member">
+      <orm:one-to-many name="members" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Member">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="topics" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Topic">
+      <orm:one-to-many name="topics" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Topic">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

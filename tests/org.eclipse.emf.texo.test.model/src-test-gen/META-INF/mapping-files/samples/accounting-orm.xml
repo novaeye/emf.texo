@@ -18,21 +18,21 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="accountGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.AccountGroup">
+      <orm:one-to-many name="accountGroup" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.AccountGroup">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="vat" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.Vat">
+      <orm:one-to-many name="vat" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.Vat">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="journalGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.JournalGroup">
+      <orm:one-to-many name="journalGroup" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.JournalGroup">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -49,7 +49,7 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.AccountGroup" name="AccountGroup">
     <orm:attributes>
       <orm:basic name="name" optional="false"/>
-      <orm:one-to-many name="account" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.Account">
+      <orm:one-to-many name="account" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.Account">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -97,14 +97,14 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.JournalGroup" name="JournalGroup">
     <orm:attributes>
       <orm:basic name="name" optional="false"/>
-      <orm:one-to-many name="journalGroups" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.JournalGroup">
+      <orm:one-to-many name="journalGroups" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.JournalGroup">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="journalStatements" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.JournalStatement">
+      <orm:one-to-many name="journalStatements" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.JournalStatement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -116,7 +116,7 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.ReportGroup" name="ReportGroup">
     <orm:attributes>
       <orm:basic name="name" optional="false"/>
-      <orm:one-to-many name="reportGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.ReportGroup">
+      <orm:one-to-many name="reportGroup" target-entity="org.eclipse.emf.texo.test.model.samples.accounting.ReportGroup">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

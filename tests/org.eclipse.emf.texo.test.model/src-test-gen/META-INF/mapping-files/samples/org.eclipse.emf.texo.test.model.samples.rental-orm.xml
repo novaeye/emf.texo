@@ -58,7 +58,7 @@
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
       <orm:basic name="cost" optional="false"/>
-      <orm:one-to-many name="rentalContractLines" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.rental.RentalContractLine">
+      <orm:one-to-many name="rentalContractLines" target-entity="org.eclipse.emf.texo.test.model.samples.rental.RentalContractLine">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

@@ -5,7 +5,7 @@
     <orm:attributes>
       <orm:basic name="pindex" optional="false"/>
       <orm:basic name="title" optional="false"/>
-      <orm:one-to-many name="scene" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SceneType">
+      <orm:one-to-many name="scene" target-entity="org.eclipse.emf.texo.test.model.samples.play.SceneType">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -164,7 +164,7 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="act" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.ActType">
+      <orm:one-to-many name="act" target-entity="org.eclipse.emf.texo.test.model.samples.play.ActType">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

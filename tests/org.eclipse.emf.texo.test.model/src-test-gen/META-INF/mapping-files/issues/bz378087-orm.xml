@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz369931.Formula" name="Formula">
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz378087.Test" name="Test">
     <orm:attributes>
-      <orm:basic name="formulaType">
-        <orm:enumerated>STRING</orm:enumerated>
-      </orm:basic>
+      <orm:basic name="class_" optional="true"/>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

@@ -11,6 +11,15 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
+      <orm:many-to-many name="many" target-entity="org.eclipse.emf.texo.test.model.issues.bz371509.EClass1">
+        <orm:order-column/>
+        <orm:join-table name="EClass0_many"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz371509.EClass1" name="EClass1">
@@ -22,6 +31,15 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:one-to-many>
+      <orm:many-to-many name="many" target-entity="org.eclipse.emf.texo.test.model.issues.bz371509.EClass0">
+        <orm:order-column/>
+        <orm:join-table name="EClass1_many"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

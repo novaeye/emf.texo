@@ -3,13 +3,13 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.modisco.kdm.core.Element" name="Element">
     <orm:attributes>
-      <orm:one-to-many name="attribute" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.Attribute">
+      <orm:one-to-many name="attribute" target-entity="org.eclipse.modisco.kdm.kdm.Attribute">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="annotation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.Annotation">
+      <orm:one-to-many name="annotation" target-entity="org.eclipse.modisco.kdm.kdm.Annotation">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -19,7 +19,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.core.ModelElement" name="ModelElement">
     <orm:attributes>
-      <orm:one-to-many name="taggedValue" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.ExtendedValue">
+      <orm:one-to-many name="taggedValue" target-entity="org.eclipse.modisco.kdm.kdm.ExtendedValue">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -54,14 +54,14 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="ownedElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
+      <orm:one-to-many name="ownedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="ownedRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
+      <orm:one-to-many name="ownedRelation" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -171,7 +171,7 @@
     <orm:attributes>
       <orm:basic name="name" optional="true"/>
       <orm:basic name="type" optional="true"/>
-      <orm:one-to-many name="tag" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.TagDefinition">
+      <orm:one-to-many name="tag" target-entity="org.eclipse.modisco.kdm.kdm.TagDefinition">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -207,13 +207,13 @@
   <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMFramework" name="KDMFramework">
     <orm:attributes>
       <orm:basic name="name" optional="true"/>
-      <orm:one-to-many name="audit" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.Audit">
+      <orm:one-to-many name="audit" target-entity="org.eclipse.modisco.kdm.kdm.Audit">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="extension" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.ExtensionFamily">
+      <orm:one-to-many name="extension" target-entity="org.eclipse.modisco.kdm.kdm.ExtensionFamily">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -231,7 +231,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtensionFamily" name="ExtensionFamily">
     <orm:attributes>
       <orm:basic name="name" optional="true"/>
-      <orm:one-to-many name="stereotype" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.Stereotype">
+      <orm:one-to-many name="stereotype" target-entity="org.eclipse.modisco.kdm.kdm.Stereotype">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -241,13 +241,13 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.Segment" name="Segment">
     <orm:attributes>
-      <orm:one-to-many name="segment" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.Segment">
+      <orm:one-to-many name="segment" target-entity="org.eclipse.modisco.kdm.kdm.Segment">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="model" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.kdm.KDMModel">
+      <orm:one-to-many name="model" target-entity="org.eclipse.modisco.kdm.kdm.KDMModel">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -280,7 +280,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryModel" name="InventoryModel">
     <orm:attributes>
-      <orm:one-to-many name="inventoryElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.AbstractInventoryElement">
+      <orm:one-to-many name="inventoryElement" target-entity="org.eclipse.modisco.kdm.source.AbstractInventoryElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -290,7 +290,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryElement" name="AbstractInventoryElement">
     <orm:attributes>
-      <orm:one-to-many name="inventoryRelationship" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.AbstractInventoryRelationship">
+      <orm:one-to-many name="inventoryRelationship" target-entity="org.eclipse.modisco.kdm.source.AbstractInventoryRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -330,7 +330,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryContainer" name="InventoryContainer">
     <orm:attributes>
-      <orm:one-to-many name="inventoryElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.AbstractInventoryElement">
+      <orm:one-to-many name="inventoryElement" target-entity="org.eclipse.modisco.kdm.source.AbstractInventoryElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -370,7 +370,7 @@
     <orm:attributes>
       <orm:basic name="language" optional="true"/>
       <orm:basic name="snippet" optional="true"/>
-      <orm:one-to-many name="region" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRegion">
+      <orm:one-to-many name="region" target-entity="org.eclipse.modisco.kdm.source.SourceRegion">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -422,7 +422,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CodeModel" name="CodeModel">
     <orm:attributes>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -433,19 +433,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeElement" name="AbstractCodeElement">
     <orm:attributes>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="comment" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.CommentUnit">
+      <orm:one-to-many name="comment" target-entity="org.eclipse.modisco.kdm.code.CommentUnit">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="codeRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeRelationship">
+      <orm:one-to-many name="codeRelation" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -481,7 +481,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Module" name="Module">
     <orm:attributes>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -515,7 +515,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -547,7 +547,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.Datatype">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.Datatype">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -585,7 +585,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ValueList" name="ValueList">
     <orm:attributes>
-      <orm:one-to-many name="valueElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.ValueElement">
+      <orm:one-to-many name="valueElement" target-entity="org.eclipse.modisco.kdm.code.ValueElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -644,14 +644,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.EnumeratedType" name="EnumeratedType">
     <orm:attributes>
-      <orm:one-to-many name="value" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.Value">
+      <orm:one-to-many name="value" target-entity="org.eclipse.modisco.kdm.code.Value">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -662,7 +662,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CompositeType" name="CompositeType">
     <orm:attributes>
-      <orm:one-to-many name="itemUnit" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.ItemUnit">
+      <orm:one-to-many name="itemUnit" target-entity="org.eclipse.modisco.kdm.code.ItemUnit">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -724,7 +724,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Signature" name="Signature">
     <orm:attributes>
-      <orm:one-to-many name="parameterUnit" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.ParameterUnit">
+      <orm:one-to-many name="parameterUnit" target-entity="org.eclipse.modisco.kdm.code.ParameterUnit">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -760,7 +760,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.code.ClassUnit" name="ClassUnit">
     <orm:attributes>
       <orm:basic name="isAbstract" optional="true"/>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -771,7 +771,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.InterfaceUnit" name="InterfaceUnit">
     <orm:attributes>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -782,7 +782,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.TemplateUnit" name="TemplateUnit">
     <orm:attributes>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -939,7 +939,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.PreprocessorDirective" name="PreprocessorDirective">
     <orm:attributes>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1162,13 +1162,13 @@
   <orm:entity class="org.eclipse.modisco.kdm.action.ActionElement" name="ActionElement">
     <orm:attributes>
       <orm:basic name="kind" optional="true"/>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.AbstractCodeElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="actionRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.action.AbstractActionRelationship">
+      <orm:one-to-many name="actionRelation" target-entity="org.eclipse.modisco.kdm.action.AbstractActionRelationship">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -1466,7 +1466,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformModel" name="PlatformModel">
     <orm:attributes>
-      <orm:one-to-many name="platformElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.AbstractPlatformElement">
+      <orm:one-to-many name="platformElement" target-entity="org.eclipse.modisco.kdm.platform.AbstractPlatformElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1476,19 +1476,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformElement" name="AbstractPlatformElement">
     <orm:attributes>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="platformRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.AbstractPlatformRelationship">
+      <orm:one-to-many name="platformRelation" target-entity="org.eclipse.modisco.kdm.platform.AbstractPlatformRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="abstraction" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
+      <orm:one-to-many name="abstraction" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -1510,7 +1510,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.ResourceType" name="ResourceType">
     <orm:attributes>
-      <orm:one-to-many name="platformElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.AbstractPlatformElement">
+      <orm:one-to-many name="platformElement" target-entity="org.eclipse.modisco.kdm.platform.AbstractPlatformElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1550,7 +1550,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformAction" name="PlatformAction">
     <orm:attributes>
       <orm:basic name="kind" optional="true"/>
-      <orm:one-to-many name="platformElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.PlatformEvent">
+      <orm:one-to-many name="platformElement" target-entity="org.eclipse.modisco.kdm.platform.PlatformEvent">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1707,13 +1707,13 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Machine" name="Machine">
     <orm:attributes>
-      <orm:one-to-many name="deployedComponent" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.DeployedComponent">
+      <orm:one-to-many name="deployedComponent" target-entity="org.eclipse.modisco.kdm.platform.DeployedComponent">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="deployedResource" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.DeployedResource">
+      <orm:one-to-many name="deployedResource" target-entity="org.eclipse.modisco.kdm.platform.DeployedResource">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1723,7 +1723,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedResource" name="DeployedResource">
     <orm:attributes>
-      <orm:one-to-many name="platformElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.platform.ResourceType">
+      <orm:one-to-many name="platformElement" target-entity="org.eclipse.modisco.kdm.platform.ResourceType">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1805,7 +1805,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildElement" name="AbstractBuildElement">
     <orm:attributes>
-      <orm:one-to-many name="buildRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.build.AbstractBuildRelationship">
+      <orm:one-to-many name="buildRelation" target-entity="org.eclipse.modisco.kdm.build.AbstractBuildRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1818,7 +1818,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildResource" name="BuildResource">
     <orm:attributes>
-      <orm:one-to-many name="buildElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.build.AbstractBuildElement">
+      <orm:one-to-many name="buildElement" target-entity="org.eclipse.modisco.kdm.build.AbstractBuildElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1845,7 +1845,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildDescription" name="BuildDescription">
     <orm:attributes>
       <orm:basic name="text" optional="true"/>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -1901,7 +1901,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildModel" name="BuildModel">
     <orm:attributes>
-      <orm:one-to-many name="buildElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.build.AbstractBuildElement">
+      <orm:one-to-many name="buildElement" target-entity="org.eclipse.modisco.kdm.build.AbstractBuildElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2029,7 +2029,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualModel" name="ConceptualModel">
     <orm:attributes>
-      <orm:one-to-many name="conceptualElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement">
+      <orm:one-to-many name="conceptualElement" target-entity="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2039,19 +2039,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement" name="AbstractConceptualElement">
     <orm:attributes>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="conceptualRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.conceptual.AbstractConceptualRelationship">
+      <orm:one-to-many name="conceptualRelation" target-entity="org.eclipse.modisco.kdm.conceptual.AbstractConceptualRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="abstraction" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
+      <orm:one-to-many name="abstraction" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2075,7 +2075,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualContainer" name="ConceptualContainer">
     <orm:attributes>
-      <orm:one-to-many name="conceptualElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement">
+      <orm:one-to-many name="conceptualElement" target-entity="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2152,7 +2152,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataModel" name="DataModel">
     <orm:attributes>
-      <orm:one-to-many name="dataElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.AbstractDataElement">
+      <orm:one-to-many name="dataElement" target-entity="org.eclipse.modisco.kdm.data.AbstractDataElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2162,19 +2162,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataElement" name="AbstractDataElement">
     <orm:attributes>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="dataRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.AbstractDataRelationship">
+      <orm:one-to-many name="dataRelation" target-entity="org.eclipse.modisco.kdm.data.AbstractDataRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="abstraction" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
+      <orm:one-to-many name="abstraction" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -2232,7 +2232,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataContainer" name="DataContainer">
     <orm:attributes>
-      <orm:one-to-many name="dataElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.DataResource">
+      <orm:one-to-many name="dataElement" target-entity="org.eclipse.modisco.kdm.data.DataResource">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2245,7 +2245,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.RelationalSchema" name="RelationalSchema">
     <orm:attributes>
-      <orm:one-to-many name="codeElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
+      <orm:one-to-many name="codeElement" target-entity="org.eclipse.modisco.kdm.code.CodeItem">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2255,7 +2255,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ColumnSet" name="ColumnSet">
     <orm:attributes>
-      <orm:one-to-many name="itemUnit" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.code.ItemUnit">
+      <orm:one-to-many name="itemUnit" target-entity="org.eclipse.modisco.kdm.code.ItemUnit">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -2280,7 +2280,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.XMLSchema" name="XMLSchema">
     <orm:attributes>
-      <orm:one-to-many name="contentElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.AbstractContentElement">
+      <orm:one-to-many name="contentElement" target-entity="org.eclipse.modisco.kdm.data.AbstractContentElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2293,7 +2293,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ComplexContentType" name="ComplexContentType">
     <orm:attributes>
-      <orm:one-to-many name="contentElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.AbstractContentElement">
+      <orm:one-to-many name="contentElement" target-entity="org.eclipse.modisco.kdm.data.AbstractContentElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -2321,7 +2321,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="contentElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.AbstractContentElement">
+      <orm:one-to-many name="contentElement" target-entity="org.eclipse.modisco.kdm.data.AbstractContentElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2383,7 +2383,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.data.DataAction" name="DataAction">
     <orm:attributes>
       <orm:basic name="kind" optional="true"/>
-      <orm:one-to-many name="dataElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.data.DataEvent">
+      <orm:one-to-many name="dataElement" target-entity="org.eclipse.modisco.kdm.data.DataEvent">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2610,7 +2610,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventModel" name="EventModel">
     <orm:attributes>
-      <orm:one-to-many name="eventElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.event.AbstractEventElement">
+      <orm:one-to-many name="eventElement" target-entity="org.eclipse.modisco.kdm.event.AbstractEventElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2620,19 +2620,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventElement" name="AbstractEventElement">
     <orm:attributes>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="eventRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.event.AbstractEventRelationship">
+      <orm:one-to-many name="eventRelation" target-entity="org.eclipse.modisco.kdm.event.AbstractEventRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="abstraction" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
+      <orm:one-to-many name="abstraction" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -2679,7 +2679,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventResource" name="EventResource">
     <orm:attributes>
-      <orm:one-to-many name="eventElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.event.AbstractEventElement">
+      <orm:one-to-many name="eventElement" target-entity="org.eclipse.modisco.kdm.event.AbstractEventElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2702,7 +2702,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.event.EventAction" name="EventAction">
     <orm:attributes>
       <orm:basic name="kind" optional="true"/>
-      <orm:one-to-many name="eventElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.event.Event">
+      <orm:one-to-many name="eventElement" target-entity="org.eclipse.modisco.kdm.event.Event">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2818,19 +2818,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureElement" name="AbstractStructureElement">
     <orm:attributes>
-      <orm:one-to-many name="aggregated" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.core.AggregatedRelationship">
+      <orm:one-to-many name="aggregated" target-entity="org.eclipse.modisco.kdm.core.AggregatedRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="structureElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.structure.AbstractStructureElement">
+      <orm:one-to-many name="structureElement" target-entity="org.eclipse.modisco.kdm.structure.AbstractStructureElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="structureRelationship" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.structure.AbstractStructureRelationship">
+      <orm:one-to-many name="structureRelationship" target-entity="org.eclipse.modisco.kdm.structure.AbstractStructureRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2857,7 +2857,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.StructureModel" name="StructureModel">
     <orm:attributes>
-      <orm:one-to-many name="structureElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.structure.AbstractStructureElement">
+      <orm:one-to-many name="structureElement" target-entity="org.eclipse.modisco.kdm.structure.AbstractStructureElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2899,19 +2899,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIElement" name="AbstractUIElement">
     <orm:attributes>
-      <orm:one-to-many name="source" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
+      <orm:one-to-many name="source" target-entity="org.eclipse.modisco.kdm.source.SourceRef">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="uIRelation" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.ui.AbstractUIRelationship">
+      <orm:one-to-many name="uIRelation" target-entity="org.eclipse.modisco.kdm.ui.AbstractUIRelationship">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="abstraction" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
+      <orm:one-to-many name="abstraction" target-entity="org.eclipse.modisco.kdm.action.ActionElement">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -2933,7 +2933,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIResource" name="UIResource">
     <orm:attributes>
-      <orm:one-to-many name="uIElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.ui.AbstractUIElement">
+      <orm:one-to-many name="uIElement" target-entity="org.eclipse.modisco.kdm.ui.AbstractUIElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -2952,7 +2952,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIModel" name="UIModel">
     <orm:attributes>
-      <orm:one-to-many name="uIElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.ui.AbstractUIElement">
+      <orm:one-to-many name="uIElement" target-entity="org.eclipse.modisco.kdm.ui.AbstractUIElement">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -3069,7 +3069,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIAction" name="UIAction">
     <orm:attributes>
       <orm:basic name="kind" optional="true"/>
-      <orm:one-to-many name="uIElement" orphan-removal="true" target-entity="org.eclipse.modisco.kdm.ui.UIEvent">
+      <orm:one-to-many name="uIElement" target-entity="org.eclipse.modisco.kdm.ui.UIEvent">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>

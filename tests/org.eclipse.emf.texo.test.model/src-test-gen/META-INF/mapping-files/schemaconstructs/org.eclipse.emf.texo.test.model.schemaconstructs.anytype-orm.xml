@@ -52,7 +52,7 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="multiAnyType" orphan-removal="true" target-entity="org.eclipse.emf.ecore.EObject">
+      <orm:one-to-many name="multiAnyType" target-entity="org.eclipse.emf.ecore.EObject">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>

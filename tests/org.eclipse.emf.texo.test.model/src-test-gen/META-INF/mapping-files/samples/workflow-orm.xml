@@ -3,28 +3,28 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalOutputPort" name="ConditionalOutputPort">
     <orm:attributes>
-      <orm:basic name="condition" optional="false">
+      <orm:basic name="condition">
         <orm:column name="COND"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Workflow" name="Workflow">
     <orm:attributes>
-      <orm:one-to-many name="nodes" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode">
+      <orm:one-to-many name="nodes" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="edges" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Edge">
+      <orm:one-to-many name="edges" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Edge">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="comments" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Comment">
+      <orm:one-to-many name="comments" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Comment">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
@@ -55,14 +55,14 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="outputs" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort">
+      <orm:one-to-many name="outputs" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="inputs" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.InputPort">
+      <orm:one-to-many name="inputs" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.InputPort">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
