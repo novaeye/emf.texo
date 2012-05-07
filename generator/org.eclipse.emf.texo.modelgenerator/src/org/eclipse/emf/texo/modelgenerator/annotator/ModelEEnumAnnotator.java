@@ -63,7 +63,9 @@ public class ModelEEnumAnnotator extends ModelEClassifierAnnotator implements An
       annotation.setEnum(eDataType instanceof EEnum);
     }
 
-    if (!GeneratorUtils.isEmptyOrNull(eDataType.getInstanceClassName())) {
+    // only use instance class name if the epackage is not a generated one
+    if (GenUtils.useInstanceClassNames(eDataType.getEPackage())
+        && !GeneratorUtils.isEmptyOrNull(eDataType.getInstanceClassName())) {
       annotation.setQualifiedClassName(eDataType.getInstanceClassName());
       // do not generate this one
       annotation.setGenerateCode(false);

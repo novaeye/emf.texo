@@ -36,13 +36,14 @@ public class EclipseModelGeneratorSingleModelTest extends EclipseModelGeneratorT
   protected List<String> getModelFileRelativePaths() {
     final List<String> modelFiles = new ArrayList<String>();
     //    modelFiles.add("issues/bz369476.ecore"); //$NON-NLS-1$
+    //    modelFiles.add("samples/extlibrary.ecore"); //$NON-NLS-1$
     //    modelFiles.add("samples/library.ecore"); //$NON-NLS-1$
     //    modelFiles.add("issues/bz371509.ecore"); //$NON-NLS-1$
     //    modelFiles.add("samples/music.ecore"); //$NON-NLS-1$
-    modelFiles.add("issues/bz378087.ecore"); //$NON-NLS-1$
+    //    modelFiles.add("issues/bz3780?87.ecore"); //$NON-NLS-1$
     //    modelFiles.add("texo/TexoDataRequest.xsd"); //$NON-NLS-1$
     //		modelFiles.add("samples/types.ecore"); //$NON-NLS-1$
-    //		modelFiles.add("samples/schoollibrary.ecore"); //$NON-NLS-1$
+    modelFiles.add("samples/schoollibrary.ecore"); //$NON-NLS-1$
     //		modelFiles.add("samples/kdm.ecore"); //$NON-NLS-1$
     //		modelFiles.add("schemaconstructs/TexoDataResponse.xsd"); //$NON-NLS-1$
     return modelFiles;

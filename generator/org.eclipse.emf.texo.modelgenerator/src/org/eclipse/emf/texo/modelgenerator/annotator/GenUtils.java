@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
@@ -112,6 +113,19 @@ public class GenUtils {
     javaWords.add("native");//$NON-NLS-1$
     javaWords.add("super");//$NON-NLS-1$
     javaWords.add("while");//$NON-NLS-1$
+  }
+
+  /**
+   * @return true if the epackage is not a generated EMF epackage.
+   * 
+   *         Note will return true for the {@link EcorePackage} and {@link XMLTypePackage}. As from these packages the
+   *         instance classes should be used.
+   */
+  public static boolean useInstanceClassNames(EPackage ePackage) {
+    if (ePackage.getNsURI().equals(EcorePackage.eNS_URI) || ePackage.getNsURI().equals(XMLTypePackage.eNS_URI)) {
+      return true;
+    }
+    return ePackage.getClass() == EPackageImpl.class;
   }
 
   /**

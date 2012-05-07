@@ -15,7 +15,7 @@ import javax.persistence.Version;
  */
 @MappedSuperclass()
 @Access(AccessType.FIELD)
-public class Identifiable {
+public abstract class Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

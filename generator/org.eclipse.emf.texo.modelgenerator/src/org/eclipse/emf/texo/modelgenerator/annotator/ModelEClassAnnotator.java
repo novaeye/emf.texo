@@ -84,11 +84,15 @@ public class ModelEClassAnnotator extends ModelEClassifierAnnotator implements A
       annotation.getClassExtends().addAll(classExtends);
     }
 
-    // emap always have instance class set
-    if (!ModelUtils.isEMap(eClass) && !GeneratorUtils.isEmptyOrNull(eClass.getInstanceClassName())) {
+    // - emap always have instance class set
+    // - do not generate this one if the epackage is a dynamic one
+    // in other cases the instanceclassname is the original EMF instance class
+    if (!ModelUtils.isEMap(eClass) && GenUtils.useInstanceClassNames(eClass.getEPackage())
+        && !GeneratorUtils.isEmptyOrNull(eClass.getInstanceClassName())) {
       annotation.setQualifiedClassName(eClass.getInstanceClassName());
-      // do not generate this one
+
       annotation.setGenerateCode(false);
+
       final int dotIndex = eClass.getInstanceClassName().lastIndexOf(GenConstants.DOT);
       // TODO: will this work for inner classes, a rare case
       if (dotIndex == -1) {

@@ -29,8 +29,6 @@ public class IdentifiableModelFactory implements ModelFactory {
    */
   public Object create(EClass eClass) {
     switch (eClass.getClassifierID()) {
-    case IdentifiableModelPackage.IDENTIFIABLE_CLASSIFIER_ID:
-      return createIdentifiable();
     }
     throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
@@ -89,16 +87,6 @@ public class IdentifiableModelFactory implements ModelFactory {
   public ModelFeatureMapEntry<?> createModelFeatureMapEntry(EStructuralFeature eFeature, Object adaptee) {
     throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
         + "' is not a valid feature map in this EPackage");
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Identifiable
-   * @generated
-   */
-  public Identifiable createIdentifiable() {
-    return new Identifiable();
   }
 
   /**
