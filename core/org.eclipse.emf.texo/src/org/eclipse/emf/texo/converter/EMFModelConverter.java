@@ -15,7 +15,7 @@
  * $Id: EMFModelConverter.java,v 1.23 2011/08/29 05:16:04 mtaal Exp $
  */
 
-package org.eclipse.emf.texo.xml;
+package org.eclipse.emf.texo.converter;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -15,7 +15,7 @@
  * $Id: ModelEMFConverter.java,v 1.27 2011/09/14 15:35:53 mtaal Exp $
  */
 
-package org.eclipse.emf.texo.xml;
+package org.eclipse.emf.texo.converter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -42,7 +42,6 @@ import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.ecore.xml.type.internal.XMLCalendar;
-import org.eclipse.emf.texo.converter.ModelToConverter;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
