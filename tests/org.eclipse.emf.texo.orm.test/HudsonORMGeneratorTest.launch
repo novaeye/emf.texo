@@ -3,7 +3,7 @@
 <booleanAttribute key="append.args" value="true"/>
 <stringAttribute key="application" value="org.eclipse.pde.junit.runtime.coretestapplication"/>
 <booleanAttribute key="askclear" value="false"/>
-<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
 <booleanAttribute key="automaticValidate" value="false"/>
 <stringAttribute key="bootstrap" value=""/>
 <stringAttribute key="checked" value="[NONE]"/>
@@ -12,7 +12,6 @@
 <booleanAttribute key="clearwslog" value="true"/>
 <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/pde-junit"/>
 <booleanAttribute key="default" value="false"/>
-<stringAttribute key="deselected_workspace_plugins" value="org.eclipse.emf.texo.annotations.model.edit,org.eclipse.emf.texo.annotations.model.editor,org.eclipse.emf.texo.datagenerator.test,org.eclipse.emf.texo.demo,org.eclipse.emf.texo.example1.rcp,org.eclipse.emf.texo.jetty,org.eclipse.emf.texo.json.test,org.eclipse.emf.texo.modelgenerator.edit,org.eclipse.emf.texo.orm.edit,org.eclipse.emf.texo.rcp.client,org.eclipse.emf.texo.server.test,org.eclipse.emf.texo.test,org.eclipse.emf.texo.test.all,org.eclipse.emf.texo.xml.test"/>
 <booleanAttribute key="includeOptional" value="true"/>
 <stringAttribute key="location" value="${workspace_loc}/../workspace"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
