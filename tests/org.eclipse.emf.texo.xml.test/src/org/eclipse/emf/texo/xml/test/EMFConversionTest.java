@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
+import org.eclipse.emf.texo.converter.ModelEMFConverter;
 import org.eclipse.emf.texo.datagenerator.DataGeneratorUtils;
 import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
 import org.eclipse.emf.texo.test.model.samples.accounting.AccountingModelPackage;
@@ -36,8 +38,6 @@ import org.eclipse.emf.texo.test.model.samples.emap.EmapsampleModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.ExtlibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.play.PlayModelPackage;
 import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
-import org.eclipse.emf.texo.xml.ModelEMFConverter;
 
 /**
  * Test the conversion from and to EMF objects.

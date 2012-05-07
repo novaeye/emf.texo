@@ -41,7 +41,6 @@ import org.eclipse.emf.texo.server.store.EPersistenceTexoResource;
 import org.eclipse.emf.texo.server.store.EntityManagerProvider;
 import org.eclipse.emf.texo.server.test.BaseTest;
 import org.eclipse.emf.texo.store.TexoResource;
-import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.junit.Test;
 
@@ -55,11 +54,6 @@ public class TexoResourceTest extends BaseTest {
 
   public TexoResourceTest() {
     super("library"); //$NON-NLS-1$
-
-    // initialize some stuff, do the EMF generated code before the
-    // Texo generated code
-    LibraryPackage.eINSTANCE.getBook();
-    LibraryModelPackage.initialize();
   }
 
   @Override

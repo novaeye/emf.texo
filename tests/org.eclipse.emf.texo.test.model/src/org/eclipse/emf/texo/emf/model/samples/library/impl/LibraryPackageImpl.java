@@ -11,19 +11,17 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.texo.emf.model.base.identifiable.IdentifiablePackage;
-
 import org.eclipse.emf.texo.emf.model.base.identifiable.impl.IdentifiablePackageImpl;
-
 import org.eclipse.emf.texo.emf.model.samples.library.Book;
 import org.eclipse.emf.texo.emf.model.samples.library.BookCategory;
 import org.eclipse.emf.texo.emf.model.samples.library.Library;
 import org.eclipse.emf.texo.emf.model.samples.library.LibraryFactory;
 import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;
 import org.eclipse.emf.texo.emf.model.samples.library.Writer;
+import org.eclipse.emf.texo.emf.model.samples.schoollibrary.SchoollibraryPackage;
+import org.eclipse.emf.texo.emf.model.samples.schoollibrary.impl.SchoollibraryPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -107,14 +105,17 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		isInited = true;
 
 		// Obtain or create and register interdependencies
+		SchoollibraryPackageImpl theSchoollibraryPackage = (SchoollibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) instanceof SchoollibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) : SchoollibraryPackage.eINSTANCE);
 		IdentifiablePackageImpl theIdentifiablePackage = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theLibraryPackage.createPackageContents();
+		theSchoollibraryPackage.createPackageContents();
 		theIdentifiablePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theLibraryPackage.initializePackageContents();
+		theSchoollibraryPackage.initializePackageContents();
 		theIdentifiablePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed

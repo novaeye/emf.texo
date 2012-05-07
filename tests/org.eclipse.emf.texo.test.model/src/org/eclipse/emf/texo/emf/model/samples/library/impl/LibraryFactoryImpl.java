@@ -10,12 +10,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.eclipse.emf.texo.emf.model.samples.library.*;
+import org.eclipse.emf.texo.emf.model.samples.library.Book;
+import org.eclipse.emf.texo.emf.model.samples.library.BookCategory;
+import org.eclipse.emf.texo.emf.model.samples.library.Library;
+import org.eclipse.emf.texo.emf.model.samples.library.LibraryFactory;
+import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;
+import org.eclipse.emf.texo.emf.model.samples.library.Writer;
 
 /**
  * <!-- begin-user-doc -->

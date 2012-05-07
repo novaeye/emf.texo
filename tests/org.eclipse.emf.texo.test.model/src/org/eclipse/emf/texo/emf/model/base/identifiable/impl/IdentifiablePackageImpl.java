@@ -9,17 +9,15 @@ package org.eclipse.emf.texo.emf.model.base.identifiable.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.texo.emf.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.emf.model.base.identifiable.IdentifiableFactory;
 import org.eclipse.emf.texo.emf.model.base.identifiable.IdentifiableInterface;
 import org.eclipse.emf.texo.emf.model.base.identifiable.IdentifiablePackage;
-
 import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;
-
 import org.eclipse.emf.texo.emf.model.samples.library.impl.LibraryPackageImpl;
+import org.eclipse.emf.texo.emf.model.samples.schoollibrary.SchoollibraryPackage;
+import org.eclipse.emf.texo.emf.model.samples.schoollibrary.impl.SchoollibraryPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,14 +88,17 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 
 		// Obtain or create and register interdependencies
 		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) instanceof LibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) : LibraryPackage.eINSTANCE);
+		SchoollibraryPackageImpl theSchoollibraryPackage = (SchoollibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) instanceof SchoollibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) : SchoollibraryPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theIdentifiablePackage.createPackageContents();
 		theLibraryPackage.createPackageContents();
+		theSchoollibraryPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theIdentifiablePackage.initializePackageContents();
 		theLibraryPackage.initializePackageContents();
+		theSchoollibraryPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theIdentifiablePackage.freeze();

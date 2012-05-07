@@ -39,8 +39,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
+import org.eclipse.emf.texo.converter.ModelEMFConverter;
 import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
-import org.eclipse.emf.texo.xml.ModelEMFConverter;
 import org.eclipse.emf.texo.xml.ModelXMLLoader;
 import org.eclipse.emf.texo.xml.ModelXMLSaver;
 

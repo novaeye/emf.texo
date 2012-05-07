@@ -24,11 +24,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
 import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.server.service.ServiceModelPackageRegistry;
 import org.eclipse.emf.texo.utils.ModelUtils;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
 
 /**
  * Base Package Test

@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.ElementHandlerImpl;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
 import org.xml.sax.InputSource;
 
 /**

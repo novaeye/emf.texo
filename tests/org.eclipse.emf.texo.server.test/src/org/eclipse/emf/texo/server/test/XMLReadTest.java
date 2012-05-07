@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -51,10 +50,6 @@ public class XMLReadTest extends ModelPackageBaseTest {
 
   @Parameters
   public static Collection<Object[]> configs() {
-    // make sure that the EMF generated package gets
-    // inited first
-    LibraryPackage.eINSTANCE.getBook();
-
     return Arrays.asList(new Object[][] { { LibraryModelPackage.INSTANCE, new XMLServiceContext() },
         { RentalModelPackage.INSTANCE, new XMLServiceContext() } });
   }

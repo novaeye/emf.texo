@@ -8,14 +8,10 @@ package org.eclipse.emf.texo.emf.model.samples.library.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.texo.emf.model.base.identifiable.impl.IdentifiableImpl;
-
 import org.eclipse.emf.texo.emf.model.samples.library.Book;
 import org.eclipse.emf.texo.emf.model.samples.library.BookCategory;
 import org.eclipse.emf.texo.emf.model.samples.library.LibraryPackage;

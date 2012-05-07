@@ -23,10 +23,10 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
 import org.eclipse.emf.texo.datagenerator.DataGeneratorUtils;
 import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
 import org.eclipse.emf.texo.model.ModelPackage;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
 
 /**
  * Base JPA Test

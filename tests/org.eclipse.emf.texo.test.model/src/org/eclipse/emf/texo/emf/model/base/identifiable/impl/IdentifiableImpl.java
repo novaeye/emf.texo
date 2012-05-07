@@ -7,12 +7,9 @@
 package org.eclipse.emf.texo.emf.model.base.identifiable.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.emf.texo.emf.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.emf.model.base.identifiable.IdentifiablePackage;
 

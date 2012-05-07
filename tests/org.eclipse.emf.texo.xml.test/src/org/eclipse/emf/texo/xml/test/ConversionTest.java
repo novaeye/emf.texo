@@ -20,9 +20,9 @@ package org.eclipse.emf.texo.xml.test;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
+import org.eclipse.emf.texo.converter.ModelEMFConverter;
 import org.eclipse.emf.texo.test.TestUtils;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
-import org.eclipse.emf.texo.xml.ModelEMFConverter;
 
 /**
  * Test the conversion from and to EMF objects.

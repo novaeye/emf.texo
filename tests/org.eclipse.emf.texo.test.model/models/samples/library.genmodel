@@ -5,6 +5,7 @@
     modelPluginID="org.eclipse.emf.texo.test.model" modelName="Library" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="5.0" copyrightFields="false">
   <foreignModel>library.ecore</foreignModel>
+  <foreignModel>schoollibrary.ecore</foreignModel>
   <genPackages prefix="Library" basePackage="org.eclipse.emf.texo.emf.model.samples"
       disposableProviderFactory="true" ecorePackage="library.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="library.ecore#//BookCategory">
@@ -26,6 +27,16 @@
     <genClasses ecoreClass="library.ecore#//Writer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute library.ecore#//Writer/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference library.ecore#//Writer/books"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Schoollibrary" basePackage="org.eclipse.emf.texo.emf.model.samples"
+      disposableProviderFactory="true" ecorePackage="schoollibrary.ecore#/">
+    <genClasses ecoreClass="schoollibrary.ecore#//Asset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schoollibrary.ecore#//Asset/value"/>
+    </genClasses>
+    <genClasses ecoreClass="schoollibrary.ecore#//SchoolBook"/>
+    <genClasses ecoreClass="schoollibrary.ecore#//SchoolLibrary">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schoollibrary.ecore#//SchoolLibrary/location"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Identifiable" basePackage="org.eclipse.emf.texo.emf.model.base"

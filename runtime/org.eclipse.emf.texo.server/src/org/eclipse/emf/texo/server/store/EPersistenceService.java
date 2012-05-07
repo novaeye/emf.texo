@@ -30,13 +30,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
+import org.eclipse.emf.texo.converter.ModelEMFConverter;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
 import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.store.ObjectStore;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
-import org.eclipse.emf.texo.xml.ModelEMFConverter;
 
 /**
  * An implementation of a persistence service which can be used as an OSGI service.

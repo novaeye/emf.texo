@@ -23,14 +23,14 @@ import java.util.List;
 import junit.framework.TestCase;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
+import org.eclipse.emf.texo.converter.ModelEMFConverter;
 import org.eclipse.emf.texo.test.model.samples.library.Book;
 import org.eclipse.emf.texo.test.model.samples.library.BookCategory;
 import org.eclipse.emf.texo.test.model.samples.library.Library;
 import org.eclipse.emf.texo.test.model.samples.library.Writer;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelFactory;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
-import org.eclipse.emf.texo.xml.ModelEMFConverter;
 
 /**
  * A simple test case to test conversion from and to EMF EObjects.

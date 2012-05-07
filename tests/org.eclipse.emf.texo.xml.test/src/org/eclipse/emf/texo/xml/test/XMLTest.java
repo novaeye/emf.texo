@@ -21,10 +21,10 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
+import org.eclipse.emf.texo.converter.EMFModelConverter;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.test.TestUtils;
 import org.eclipse.emf.texo.utils.Check;
-import org.eclipse.emf.texo.xml.EMFModelConverter;
 
 /**
  * Test the conversion to and from EMF/XMI. For each test the following steps are done:
