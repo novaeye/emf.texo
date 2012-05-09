@@ -91,7 +91,7 @@ public class XMLServiceContext extends ServiceContext {
     xmlSaver.setObjects(objects);
     xmlSaver.getModelEMFConverter().setConvertNonContainedReferencedObjects(false);
     xmlSaver.getModelEMFConverter().setMaxChildLevelsToConvert(childLevels);
-    xmlSaver.getModelEMFConverter().setUriResolver(getObjectStore());
+    xmlSaver.getModelEMFConverter().setObjectResolver(getObjectStore());
     final StringWriter sw = new StringWriter();
     xmlSaver.setWriter(sw);
     xmlSaver.write();

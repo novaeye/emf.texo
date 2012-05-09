@@ -22,8 +22,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.texo.model.ModelConstants;
+import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 
@@ -36,6 +38,35 @@ public class ModelUtils {
   public static final String QUALIFIERSEPARATOR = "|"; //$NON-NLS-1$
 
   private static final SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+
+  /**
+   * If the value is a featuregroup then walk through the structure to find the deepest one and return that value.
+   */
+  public static Object findValue(ModelFeatureMapEntry<?> modelFeatureMap) {
+    if (FeatureMapUtil.isFeatureMap(modelFeatureMap.getEStructuralFeature())) {
+      final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
+          modelFeatureMap.getEStructuralFeature(), modelFeatureMap.getValue());
+
+      return findValue(modelFeatureMapEntry);
+    }
+    return modelFeatureMap.getValue();
+  }
+
+  /**
+   * if the value is a featuregroup then walk through the structure to find the deepest one and return that value.
+   * 
+   * In EMF nested featuremaps are stored in a flat list, in Texo the hierarchical structure is maintained this method
+   * helps in the conversion.
+   */
+  public static EStructuralFeature findFeature(ModelFeatureMapEntry<?> modelFeatureMap) {
+    if (FeatureMapUtil.isFeatureMap(modelFeatureMap.getEStructuralFeature())) {
+      final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
+          modelFeatureMap.getEStructuralFeature(), modelFeatureMap.getValue());
+
+      return findFeature(modelFeatureMapEntry);
+    }
+    return modelFeatureMap.getEStructuralFeature();
+  }
 
   /**
    * Returns a qualified string representation of the {@link EStructuralFeature} using

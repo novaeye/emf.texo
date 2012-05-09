@@ -258,7 +258,7 @@ public abstract class BaseWSWebTest extends BaseTest {
     xmlSaver.setObjects(Collections.singletonList(object));
     final StringWriter sw = new StringWriter();
     xmlSaver.setWriter(sw);
-    xmlSaver.getModelEMFConverter().getUriResolver().setUseWebServiceUriFormat(true);
+    xmlSaver.getModelEMFConverter().getObjectResolver().setUseWebServiceUriFormat(true);
     xmlSaver.write();
     return sw.toString();
   }

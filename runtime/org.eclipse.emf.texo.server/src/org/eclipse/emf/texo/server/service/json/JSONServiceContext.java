@@ -64,7 +64,7 @@ public class JSONServiceContext extends ServiceContext {
     } else {
       converter.setMaxChildLevelsToConvert(2);
     }
-    converter.setUriResolver(getObjectStore());
+    converter.setObjectResolver(getObjectStore());
     final Object jsonObject = converter.convert(object);
     return jsonObject.toString();
   }
@@ -78,7 +78,7 @@ public class JSONServiceContext extends ServiceContext {
       }
 
       final JSONModelConverter converter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
-      converter.setUriResolver(getObjectStore());
+      converter.setObjectResolver(getObjectStore());
 
       content = content.trim();
 

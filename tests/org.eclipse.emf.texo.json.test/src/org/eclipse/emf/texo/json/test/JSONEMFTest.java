@@ -21,22 +21,19 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.texo.component.ComponentProvider;
-import org.eclipse.emf.texo.converter.EMFModelConverter;
-import org.eclipse.emf.texo.json.JSONModelConverter;
-import org.eclipse.emf.texo.json.ModelJSONConverter;
-import org.eclipse.emf.texo.model.ModelObject;
+import org.eclipse.emf.texo.json.EMFJSONConverter;
+import org.eclipse.emf.texo.json.JSONEMFConverter;
 import org.eclipse.emf.texo.store.MemoryObjectStore;
 import org.eclipse.emf.texo.test.TestUtils;
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Assert;
 
 /**
- * Test the conversion to and from JSON. For each test the following steps are done:
+ * Test the conversion to and from JSON and EMF. For each test the following steps are done:
  * <ol>
  * <li>Generate test data set</li>
  * <li>Convert the test data set to json (json1)</li>
- * <li>Convert the json back to a {@link ModelObject} instance</li>
+ * <li>Convert the json back to a {@link EObject} instance</li>
  * <li>Convert this list back to json (json22)</li>
  * <li>then the following should be true: json1.equals(json2)</li>
  * </ol>
@@ -44,39 +41,31 @@ import org.junit.Assert;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.16 $
  */
-public class JSONTest extends BaseJSONTest {
+public class JSONEMFTest extends BaseJSONTest {
 
   public void runTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
 
-    final List<EObject> eObjects = TestUtils.generateTestSet(1, 3, 3, 10000, getEPackages(), getEClasses());
-    final EMFModelConverter emfModelConverter = new EMFModelConverter();
-    emfModelConverter.setUriResolver(memObjectStore);
-    final Object m1 = emfModelConverter.convert(eObjects).get(0);
-    memObjectStore.addData(emfModelConverter.getAllConvertedObjects());
+    final List<EObject> m1 = TestUtils.generateTestSet(1, 3, 3, 10000, getEPackages(), getEClasses());
 
-    final ModelJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
+    final EMFJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
     toJsonConverter.setObjectResolver(memObjectStore);
-    final JSONModelConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
+    toJsonConverter.setConvertNonContainedReferencedObjects(true);
+    final JSONEMFConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
     fromJsonConverter.setObjectResolver(memObjectStore);
 
-    final Object json1 = toJsonConverter.convert(m1);
-    final Object m2;
-    if (json1 instanceof JSONArray) {
-      m2 = fromJsonConverter.convert((JSONArray) json1);
-    } else {
-      m2 = fromJsonConverter.convert((JSONObject) json1);
-    }
+    final Object json1 = toJsonConverter.convert(m1.get(0));
+    final EObject m2 = fromJsonConverter.convert((JSONObject) json1);
 
     final Object json2 = toJsonConverter.convert(m2);
 
-    // System.err.println(json1);
-    // System.err.println("---------------------------------------------");
-    // System.err.println(json2);
+    System.err.println(json1);
+    System.err.println("---------------------------------------------");
+    System.err.println(json2);
 
     Assert.assertEquals(json1.toString(), json2.toString());
 
-    final Object m3 = fromJsonConverter.convert((JSONObject) json2);
+    final EObject m3 = fromJsonConverter.convert((JSONObject) json2);
     final Object json3 = toJsonConverter.convert(m3);
 
     Assert.assertEquals(json2.toString(), json3.toString());

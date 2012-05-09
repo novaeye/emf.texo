@@ -39,7 +39,7 @@ import org.eclipse.emf.texo.test.emfmodel.library.Writer;
 import org.junit.Test;
 
 /**
- * Tests the {@link EPersistenceService} api.
+ * Tests the {@link JSONEObjectStore} api.
  * 
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.4 $

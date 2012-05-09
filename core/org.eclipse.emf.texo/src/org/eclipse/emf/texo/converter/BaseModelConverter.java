@@ -23,15 +23,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
-import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
-import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
 import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -42,11 +40,11 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @see ModelObject
  */
-public abstract class ModelToConverter implements TexoComponent {
+public abstract class BaseModelConverter<T extends Object> implements TexoComponent {
 
   // list of objects that are to be proxied
-  private List<Object> proxyObjects = new ArrayList<Object>();
-  private List<Object> nonProxiedObjects = new ArrayList<Object>();
+  private List<T> proxyObjects = new ArrayList<T>();
+  private List<T> nonProxiedObjects = new ArrayList<T>();
 
   /**
    * If true then referenced non contained objects are also converted and added to the conversion stack.
@@ -63,7 +61,7 @@ public abstract class ModelToConverter implements TexoComponent {
    */
   private ObjectResolver objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
 
-  protected void doBaseActions(List<Object> objects) {
+  protected void doBaseActions(List<T> objects) {
     if (objectResolver != null
         && (!convertNonContainedReferencedObjects || maxChildLevelsToConvert < Integer.MAX_VALUE)) {
       computeProxyObjects(objects);
@@ -72,21 +70,22 @@ public abstract class ModelToConverter implements TexoComponent {
     proxyObjects.removeAll(nonProxiedObjects);
   }
 
-  protected void computeProxyObjects(final List<Object> objects) {
-    for (Object o : objects) {
+  protected void computeProxyObjects(final List<T> objects) {
+    for (T o : objects) {
       traverseEReferencesForProxyDetermination(o, 0);
     }
   }
 
-  protected void traverseEReferencesForProxyDetermination(Object object, int level) {
+  @SuppressWarnings("unchecked")
+  protected void traverseEReferencesForProxyDetermination(T object, int level) {
 
     // special case, a query can return an array, allows jsonizing this
     // to be send to the client
     if (object.getClass().isArray()) {
       for (int i = 0; i < Array.getLength(object); i++) {
         final Object value = Array.get(object, i);
-        if (ModelResolver.getInstance().isModelEnabled(value)) {
-          traverseEReferencesForProxyDetermination(value, level);
+        if (isModelEnabled(value)) {
+          traverseEReferencesForProxyDetermination((T) value, level);
         }
       }
       return;
@@ -94,31 +93,30 @@ public abstract class ModelToConverter implements TexoComponent {
 
     nonProxiedObjects.add(object);
 
-    final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
     final boolean proxyChildObjects = level == maxChildLevelsToConvert;
-    for (EReference eReference : modelObject.eClass().getEAllReferences()) {
+    for (EReference eReference : eClass(object).getEAllReferences()) {
       if (eReference.isVolatile() || eReference.isTransient()) {
         continue;
       }
-      final Object value = modelObject.eGet(eReference);
+      final T value = (T) eGet(object, eReference);
       if (value == null) {
         continue;
       }
       if (eReference.isContainment()) {
         if (!proxyChildObjects) {
           if (value instanceof Collection<?>) {
-            for (Object o : (Collection<?>) value) {
+            for (T o : (Collection<T>) value) {
               traverseEReferencesForProxyDetermination(o, level + 1);
             }
           } else if (value instanceof Map<?, ?>) {
             final Map<?, ?> map = (Map<?, ?>) value;
             for (Object key : map.keySet()) {
               final Object keyValue = map.get(key);
-              if (ModelResolver.getInstance().isModelEnabled(key)) {
-                traverseEReferencesForProxyDetermination(key, level + 1);
+              if (isModelEnabled(key)) {
+                traverseEReferencesForProxyDetermination((T) key, level + 1);
               }
-              if (ModelResolver.getInstance().isModelEnabled(keyValue)) {
-                traverseEReferencesForProxyDetermination(keyValue, level + 1);
+              if (isModelEnabled(keyValue)) {
+                traverseEReferencesForProxyDetermination((T) keyValue, level + 1);
               }
             }
           } else {
@@ -128,18 +126,18 @@ public abstract class ModelToConverter implements TexoComponent {
         }
       } else if (convertNonContainedReferencedObjects) {
         if (value instanceof Collection<?>) {
-          for (Object o : (Collection<?>) value) {
+          for (T o : (Collection<T>) value) {
             traverseEReferencesForProxyDetermination(o, level);
           }
         } else if (value instanceof Map<?, ?>) {
           final Map<?, ?> map = (Map<?, ?>) value;
           for (Object key : map.keySet()) {
             final Object keyValue = map.get(key);
-            if (ModelResolver.getInstance().isModelEnabled(key)) {
-              traverseEReferencesForProxyDetermination(key, level + 1);
+            if (isModelEnabled(key)) {
+              traverseEReferencesForProxyDetermination((T) key, level + 1);
             }
-            if (ModelResolver.getInstance().isModelEnabled(keyValue)) {
-              traverseEReferencesForProxyDetermination(keyValue, level + 1);
+            if (isModelEnabled(keyValue)) {
+              traverseEReferencesForProxyDetermination((T) keyValue, level + 1);
             }
           }
         } else {
@@ -148,12 +146,22 @@ public abstract class ModelToConverter implements TexoComponent {
         continue;
       }
       if (value instanceof Collection<?>) {
-        proxyObjects.addAll((Collection<?>) value);
+        proxyObjects.addAll((Collection<T>) value);
       } else {
         proxyObjects.add(value);
       }
     }
   }
+
+  protected abstract EClass eClass(T target);
+
+  protected abstract Object eGet(T target, EStructuralFeature eFeature);
+
+  // final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
+
+  protected abstract boolean isModelEnabled(Object target);
+
+  // ModelResolver.getInstance().isModelEnabled(key)
 
   /**
    * If a non-null value is returned then the content of the modelObject is not converted.
@@ -164,30 +172,8 @@ public abstract class ModelToConverter implements TexoComponent {
    *          the modelObject to get the proxy id for
    * @return the proxy uri, should encode the type of the object as well as its id
    */
-  protected org.eclipse.emf.common.util.URI getProxyId(final ModelObject<?> modelObject) {
-    return objectResolver.toUri(modelObject.getTarget());
-  }
-
-  // if the value is a featuregroup then walk through the structure to
-  // find the deepest one
-  protected Object findValue(ModelFeatureMapEntry<?> modelFeatureMap) {
-    if (FeatureMapUtil.isFeatureMap(modelFeatureMap.getEStructuralFeature())) {
-      final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
-          modelFeatureMap.getEStructuralFeature(), modelFeatureMap.getValue());
-
-      return findValue(modelFeatureMapEntry);
-    }
-    return modelFeatureMap.getValue();
-  }
-
-  protected EStructuralFeature findFeature(ModelFeatureMapEntry<?> modelFeatureMap) {
-    if (FeatureMapUtil.isFeatureMap(modelFeatureMap.getEStructuralFeature())) {
-      final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
-          modelFeatureMap.getEStructuralFeature(), modelFeatureMap.getValue());
-
-      return findFeature(modelFeatureMapEntry);
-    }
-    return modelFeatureMap.getEStructuralFeature();
+  protected org.eclipse.emf.common.util.URI getProxyId(T target) {
+    return getObjectResolver().toUri(target);
   }
 
   /**
@@ -220,27 +206,27 @@ public abstract class ModelToConverter implements TexoComponent {
     this.maxChildLevelsToConvert = maxChildLevelsToConvert;
   }
 
-  public ObjectResolver getUriResolver() {
+  public ObjectResolver getObjectResolver() {
     return objectResolver;
   }
 
-  public void setUriResolver(ObjectResolver uriResolver) {
+  public void setObjectResolver(ObjectResolver uriResolver) {
     objectResolver = uriResolver;
   }
 
-  public List<Object> getProxyObjects() {
+  public List<T> getProxyObjects() {
     return proxyObjects;
   }
 
-  public void setProxyObjects(List<Object> proxyObjects) {
+  public void setProxyObjects(List<T> proxyObjects) {
     this.proxyObjects = proxyObjects;
   }
 
-  public List<Object> getNonProxiedObjects() {
+  public List<T> getNonProxiedObjects() {
     return nonProxiedObjects;
   }
 
-  public void setNonProxiedObjects(List<Object> nonProxiedObjects) {
+  public void setNonProxiedObjects(List<T> nonProxiedObjects) {
     this.nonProxiedObjects = nonProxiedObjects;
   }
 

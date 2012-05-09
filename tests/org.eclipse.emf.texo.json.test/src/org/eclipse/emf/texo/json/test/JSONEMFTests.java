@@ -19,7 +19,6 @@ package org.eclipse.emf.texo.json.test;
 
 import java.util.Collections;
 
-import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
 import org.junit.Test;
@@ -31,17 +30,17 @@ import org.junit.Test;
  * @version $Revision: 1.9 $
  */
 
-public class JSONTests extends JSONTest {
+public class JSONEMFTests extends JSONEMFTest {
 
   @Test
   public void doLibraryJSONConversion() throws Exception {
-    super.setModelPackages(Collections.singletonList((ModelPackage) LibraryModelPackage.INSTANCE));
+    super.setEPackages(Collections.singletonList(LibraryModelPackage.INSTANCE.getEPackage()));
     runTest();
   }
 
   @Test
   public void doRentalModelPackage() throws Exception {
-    super.setModelPackages(Collections.singletonList((ModelPackage) RentalModelPackage.INSTANCE));
+    super.setEPackages(Collections.singletonList(RentalModelPackage.INSTANCE.getEPackage()));
     runTest();
   }
 

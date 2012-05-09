@@ -24,8 +24,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
+import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -35,9 +39,13 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
-public abstract class EObjectStore {
+public abstract class EObjectStore implements TexoComponent {
 
   private URI uri;
+
+  private boolean cacheEObjects = false;
+
+  private ObjectResolver objectResolver = null;
 
   /*
    * (non-Javadoc)
@@ -45,6 +53,17 @@ public abstract class EObjectStore {
    * @see org.eclipse.emf.texo.store.EObjectStore#getFromQualifiedIdString(java.lang.String)
    */
   public EObject getFromQualifiedIdString(String qualifiedIdString) {
+    if (cacheEObjects) {
+      final URI theUri = getUri().appendFragment(qualifiedIdString);
+      final EObject eObject = getObjectResolver().getEObject(theUri);
+      if (eObject != null) {
+        // not a proxy don't load
+        if (!eObject.eIsProxy()) {
+          return eObject;
+        }
+      }
+    }
+
     final int separatorIndex = qualifiedIdString.indexOf(ModelConstants.FRAGMENTSEPARATOR);
     if (separatorIndex == -1) {
       throw new IllegalArgumentException("Fragment format not supported for fragment: " + qualifiedIdString); //$NON-NLS-1$
@@ -59,6 +78,14 @@ public abstract class EObjectStore {
     // not a proxy anymore
     ((InternalEObject) eObject).eSetProxyURI(null);
     return eObject;
+  }
+
+  /**
+   * Return a single instance of the eClass with the passed in id. If the object does not exist then null is returned.
+   */
+  public EObject get(EClass eClass, Object id) {
+    return getFromQualifiedIdString(ModelUtils.getQualifiedNameFromEClass(eClass) + ModelConstants.FRAGMENTSEPARATOR
+        + id);
   }
 
   /**
@@ -115,17 +142,17 @@ public abstract class EObjectStore {
   public abstract List<EObject> getReferingObjects(EObject target, int maxResult, boolean includeContainmentReferences);
 
   /**
-   * Should be called when an object gets deleted.
+   * Is called when an object is deleted after the commit has happened.
    */
   protected void deleted(EObject deletedEObject) {
+    if (isCacheEObjects()) {
+      final URI theUri = getUri().appendFragment(getQualifiedIdString(deletedEObject));
+      getObjectResolver().removeFromCache(theUri);
+    }
   }
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.texo.store.EObjectStore#close()
-   */
   public void close() {
+    objectResolver = null;
   }
 
   public URI getUri() {
@@ -138,4 +165,27 @@ public abstract class EObjectStore {
   public void setUri(URI uri) {
     this.uri = uri;
   }
+
+  public boolean isCacheEObjects() {
+    return cacheEObjects;
+  }
+
+  public void setCacheEObjects(boolean cacheEObjects) {
+    this.cacheEObjects = cacheEObjects;
+  }
+
+  public ObjectResolver getObjectResolver() {
+    if (isCacheEObjects()) {
+      if (objectResolver == null) {
+        objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
+        objectResolver.setUri(getUri());
+      }
+      return objectResolver;
+    }
+
+    final ObjectResolver localObjectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
+    localObjectResolver.setUri(getUri());
+    return localObjectResolver;
+  }
+
 }

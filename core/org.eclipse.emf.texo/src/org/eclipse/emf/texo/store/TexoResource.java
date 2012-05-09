@@ -103,7 +103,7 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
   }
 
   protected void uriSet(URI theUri) {
-
+    getEObjectStore().setUri(theUri);
   }
 
   @Override

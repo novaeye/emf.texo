@@ -24,7 +24,6 @@ import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -33,8 +32,6 @@ import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.converter.EMFModelConverter;
 import org.eclipse.emf.texo.converter.ModelEMFConverter;
 import org.eclipse.emf.texo.provider.IdProvider;
-import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
-import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.store.ObjectStore;
 
@@ -50,8 +47,8 @@ import org.eclipse.emf.texo.store.ObjectStore;
  * You can set the entity manager provider to be used by this persistence service. If none is set then the one from the
  * {@link EntityManagerProvider} is used.
  * 
- * @see EMFModelConverter
- * @see ModelEMFConverter
+ * @see EMFJSONConverter
+ * @see JSONToConverter
  * @see ObjectStore
  * @see EntityManagerProvider
  * 
@@ -61,25 +58,6 @@ import org.eclipse.emf.texo.store.ObjectStore;
 public class EPersistenceService extends EObjectStore implements TexoComponent {
 
   private EntityManagerFactory entityManagerFactory;
-
-  private boolean cacheEObjects = false;
-
-  private ObjectResolver objectResolver = null;
-
-  @Override
-  public EObject getFromQualifiedIdString(String qualifiedIdString) {
-    if (cacheEObjects) {
-      final URI theUri = getUri().appendFragment(qualifiedIdString);
-      final EObject eObject = getObjectResolver().getEObject(theUri);
-      if (eObject != null) {
-        // not a proxy don't load
-        if (!eObject.eIsProxy()) {
-          return eObject;
-        }
-      }
-    }
-    return super.getFromQualifiedIdString(qualifiedIdString);
-  }
 
   /**
    * Performs several persistence actions, the insert and updates are done in the order in the toInsertUpdate list, the
@@ -195,34 +173,6 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
     }
   }
 
-  /**
-   * Return a single instance of the eClass with the passed in id. If the object does not exist then null is returned.
-   */
-  public EObject get(EClass eClass, Object id) {
-    final ObjectStore os = getObjectStore();
-    final ModelEMFConverter converter = createModelEMFConverter();
-
-    boolean err = true;
-    os.begin();
-    try {
-      final Object object = os.get(eClass, id);
-      if (object == null) {
-        return null;
-      }
-      EObject result = null;
-      result = converter.convert(Collections.singletonList(object)).get(0);
-      err = false;
-      return result;
-    } finally {
-      if (err) {
-        os.rollback();
-      } else {
-        os.commit();
-      }
-      os.close();
-    }
-  }
-
   protected ObjectStore getObjectStore() {
     final EntityManagerObjectStore emStore = ComponentProvider.getInstance()
         .newInstance(EntityManagerObjectStore.class);
@@ -311,7 +261,7 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
     os.begin();
     try {
       final Object id = eTarget.eGet(IdProvider.getInstance().getIdEAttribute(eTarget.eClass()));
-      final Object target = get(eTarget.eClass(), id);
+      final Object target = os.get(eTarget.eClass(), id);
       final List<?> objects = os.getReferingObjects(target, maxResult, includeContainmentReferences);
 
       final ModelEMFConverter converter = createModelEMFConverter();
@@ -331,49 +281,9 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
 
   protected ModelEMFConverter createModelEMFConverter() {
     final ModelEMFConverter converter = ComponentProvider.getInstance().newInstance(ModelEMFConverter.class);
-    converter.setUriResolver(getObjectResolver());
+    converter.setObjectResolver(getObjectResolver());
     converter.setMaxChildLevelsToConvert(1);
     return converter;
-  }
-
-  public boolean isCacheEObjects() {
-    return cacheEObjects;
-  }
-
-  public void setCacheEObjects(boolean cacheEObjects) {
-    this.cacheEObjects = cacheEObjects;
-  }
-
-  public ObjectResolver getObjectResolver() {
-    if (isCacheEObjects()) {
-      if (objectResolver == null) {
-        objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
-        objectResolver.setUri(getUri());
-      }
-      return objectResolver;
-    }
-
-    final ObjectResolver localObjectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
-    localObjectResolver.setUri(getUri());
-    return localObjectResolver;
-  }
-
-  public void setObjectResolver(ObjectResolver objectResolver) {
-    this.objectResolver = objectResolver;
-  }
-
-  @Override
-  public void close() {
-    objectResolver = null;
-    super.close();
-  }
-
-  @Override
-  protected void deleted(EObject deletedEObject) {
-    if (isCacheEObjects()) {
-      final URI theUri = getUri().appendFragment(getQualifiedIdString(deletedEObject));
-      getObjectResolver().removeFromCache(theUri);
-    }
   }
 
 }

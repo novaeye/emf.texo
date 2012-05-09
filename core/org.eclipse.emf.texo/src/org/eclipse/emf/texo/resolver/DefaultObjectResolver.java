@@ -148,22 +148,35 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
    * @see org.eclipse.emf.texo.store.ObjectURIResolver#toUri(java.lang.Object)
    */
   public URI toUri(Object object) {
-    final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
-    if (!IdProvider.getInstance().hasIdEAttribute(modelObject)) {
-      return null;
+    final String idString;
+    final EClass eClass;
+    if (object instanceof EObject) {
+      final EObject eObject = (EObject) object;
+      eClass = eObject.eClass();
+      if (!IdProvider.getInstance().hasIdEAttribute(eClass)) {
+        return null;
+      }
+      idString = "" + eObject.eGet(IdProvider.getInstance().getIdEAttribute(eClass)); //$NON-NLS-1$
+    } else {
+      final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
+      if (!IdProvider.getInstance().hasIdEAttribute(modelObject)) {
+        return null;
+      }
+      idString = IdProvider.getInstance().getIdAsString(modelObject);
+      if (idString == null || idString.trim().length() == 0) {
+        return null;
+      }
+      eClass = modelObject.eClass();
     }
-    final String idString = IdProvider.getInstance().getIdAsString(modelObject);
-    if (idString == null || idString.trim().length() == 0) {
-      return null;
-    }
+
     if (isUseWebServiceUriFormat()) {
       // append a fragment to make sure that EMF correctly handles the id
-      return getUri().appendSegment(ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()))
-          .appendSegment(idString).appendFragment(""); //$NON-NLS-1$
+      return getUri().appendSegment(ModelUtils.getQualifiedNameFromEClass(eClass)).appendSegment(idString)
+          .appendFragment(""); //$NON-NLS-1$
     }
 
     return getUri().appendFragment(
-        ModelUtils.getQualifiedNameFromEClass(modelObject.eClass()) + ModelConstants.FRAGMENTSEPARATOR + idString);
+        ModelUtils.getQualifiedNameFromEClass(eClass) + ModelConstants.FRAGMENTSEPARATOR + idString);
   }
 
   /**
@@ -191,7 +204,8 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
   }
 
   public EObject getEObject(URI objectUri) {
-    return uriEObjectMap.get(objectUri.toString());
+    EObject eObject = uriEObjectMap.get(objectUri.toString());
+    return eObject;
   }
 
   public void removeFromCache(URI objectUri) {
@@ -227,8 +241,11 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
   }
 
   public Object get(EClass eClass, Object id) {
-    return ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI()).getModelFactory()
-        .create(eClass);
+    final Object target = ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI())
+        .getModelFactory().create(eClass);
+    final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(target);
+    modelObject.eSet(IdProvider.getInstance().getIdEAttribute(eClass), id);
+    return target;
   }
 
   /**

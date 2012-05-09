@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.component.ComponentProvider;
@@ -62,7 +63,7 @@ public class IdProvider implements TexoComponent, TexoStaticSingleton {
   private final Set<EClass> noIdEAttributes = new HashSet<EClass>();
 
   /**
-   * Returns the id value of an object.
+   * Returns the id value of an object. Works for EObject as well as ModelObjects.
    * 
    * @param object
    *          the object to determine an id for, must be an object which can be converted to a {@link ModelObject} using
@@ -70,6 +71,12 @@ public class IdProvider implements TexoComponent, TexoStaticSingleton {
    * @return the id value of the object
    */
   public Object getId(Object object) {
+    if (object instanceof EObject) {
+      final EObject eObject = (EObject) object;
+      final EAttribute idEAttribute = getCreateIdEAttribute(eObject.eClass());
+      return eObject.eGet(idEAttribute);
+    }
+
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
     return modelObject.eGet(getCreateIdEAttribute(modelObject.eClass()));
   }
@@ -84,23 +91,29 @@ public class IdProvider implements TexoComponent, TexoStaticSingleton {
    * @see ModelFactory#convertToString(EDataType, Object)
    */
   public String getIdAsString(Object object) {
-    final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
-    return getIdAsString(modelObject);
+    if (object instanceof EObject) {
+      final EObject eObject = (EObject) object;
+      final EAttribute idEAttribute = getCreateIdEAttribute(eObject.eClass());
+      return getIdAsString(eObject.eClass(), eObject.eGet(idEAttribute));
+    }
+    return getIdAsString(ModelResolver.getInstance().getModelObject(object));
   }
 
   /**
-   * Returns the id value of an object as a String.
-   * 
-   * @param object
-   *          the object to determine an id for, must be an object which can be converted to a {@link ModelObject} using
-   *          the {@link ModelResolver#getModelObject(Object)}.
-   * @return the id value of the object as a String
-   * @see ModelFactory#convertToString(EDataType, Object)
+   * @see #getIdAsString(Object)
    */
   public String getIdAsString(ModelObject<?> modelObject) {
     final EAttribute idEAttribute = getCreateIdEAttribute(modelObject.eClass());
+    return getIdAsString(modelObject.eClass(), modelObject.eGet(idEAttribute));
+  }
+
+  /**
+   * @see #getIdAsString(Object)
+   * @see ModelFactory#convertToString(EDataType, Object)
+   */
+  public String getIdAsString(EClass eClass, Object idValue) {
+    final EAttribute idEAttribute = getCreateIdEAttribute(eClass);
     final EDataType eDataType = idEAttribute.getEAttributeType();
-    final Object idValue = modelObject.eGet(idEAttribute);
     if (idValue == null) {
       // NOTE: or should null be returned....
       return EMPTY_ID_STRING;
@@ -149,18 +162,25 @@ public class IdProvider implements TexoComponent, TexoStaticSingleton {
    */
   public boolean hasIdEAttribute(Object object) {
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
-    EAttribute idEAttribute = idEAttributes.get(modelObject.eClass());
+    return hasIdEAttribute(modelObject.eClass());
+  }
+
+  /**
+   * Return true if the eClass has a modeled id eattribute, false otherwise.
+   */
+  public boolean hasIdEAttribute(EClass eClass) {
+    EAttribute idEAttribute = idEAttributes.get(eClass);
     if (idEAttribute != null) {
       return true;
     }
-    if (noIdEAttributes.contains(modelObject.eClass())) {
+    if (noIdEAttributes.contains(eClass)) {
       return false;
     }
     try {
-      getCreateIdEAttribute(modelObject.eClass());
+      getCreateIdEAttribute(eClass);
       return true;
     } catch (IllegalStateException e) {
-      noIdEAttributes.add(modelObject.eClass());
+      noIdEAttributes.add(eClass);
       return false;
     }
   }

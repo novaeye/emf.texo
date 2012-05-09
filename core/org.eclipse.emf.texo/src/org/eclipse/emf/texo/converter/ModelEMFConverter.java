@@ -60,7 +60,10 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @see ModelObject
  * @see DynamicEObjectImpl
  */
-public class ModelEMFConverter extends ModelToConverter {
+public class ModelEMFConverter extends BaseModelConverter<Object> {
+
+  private Object lastObject = null;
+  private ModelObject<?> lastModelObject = null;
 
   private Map<Object, InternalEObject> objectMapping = new HashMap<Object, InternalEObject>();
 
@@ -135,7 +138,7 @@ public class ModelEMFConverter extends ModelToConverter {
     InternalEObject eObject = objectMapping.get(target);
     if (eObject == null) {
       // not found, create it and add a new entry to the mapping
-      eObject = (InternalEObject) getUriResolver().resolveToEObject(target);
+      eObject = (InternalEObject) getObjectResolver().resolveToEObject(target);
       objectMapping.put(target, eObject);
     }
     if (!converted.contains(target)) {
@@ -212,8 +215,8 @@ public class ModelEMFConverter extends ModelToConverter {
       if (FeatureMapUtil.isFeatureMap(entryFeature)) {
         final ModelFeatureMapEntry<?> modelFeatureMapEntry = ModelResolver.getInstance().getModelFeatureMapEntry(
             entryFeature, entryValue);
-        entryFeature = findFeature(modelFeatureMapEntry);
-        entryValue = findValue(modelFeatureMapEntry);
+        entryFeature = ModelUtils.findFeature(modelFeatureMapEntry);
+        entryValue = ModelUtils.findValue(modelFeatureMapEntry);
       }
 
       final Object convertedValue;
@@ -551,6 +554,30 @@ public class ModelEMFConverter extends ModelToConverter {
 
   public void setConverted(List<Object> converted) {
     this.converted = converted;
+  }
+
+  private ModelObject<?> getModelObject(Object target) {
+    if (target == lastObject) {
+      return lastModelObject;
+    }
+    lastObject = target;
+    lastModelObject = ModelResolver.getInstance().getModelObject(target);
+    return lastModelObject;
+  }
+
+  @Override
+  protected EClass eClass(Object target) {
+    return getModelObject(target).eClass();
+  }
+
+  @Override
+  protected Object eGet(Object target, EStructuralFeature eFeature) {
+    return getModelObject(target).eGet(eFeature);
+  }
+
+  @Override
+  protected boolean isModelEnabled(Object target) {
+    return ModelResolver.getInstance().isModelEnabled(target);
   }
 
 }

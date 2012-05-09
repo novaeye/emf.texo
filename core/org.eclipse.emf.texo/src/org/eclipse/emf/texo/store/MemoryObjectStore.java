@@ -7,7 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.provider.IdProvider;
@@ -187,6 +190,17 @@ public class MemoryObjectStore extends ObjectStore {
   public List<Object> getReferingObjects(Object target, int maxResult, boolean includeContainmentReferences) {
     // TODO Auto-generated method stub
     return null;
+  }
+
+  @Override
+  public EObject getEObject(URI objectUri) {
+    EObject eObject = super.getEObject(objectUri);
+    if (eObject == null) {
+      final TypeIdTuple tuple = getTypeAndIdFromUri(objectUri);
+      eObject = EcoreUtil.create(tuple.getEClass());
+      eObject.eSet(IdProvider.getInstance().getIdEAttribute(tuple.getEClass()), tuple.getId());
+    }
+    return eObject;
   }
 
 }

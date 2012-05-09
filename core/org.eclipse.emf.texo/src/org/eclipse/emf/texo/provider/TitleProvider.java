@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
@@ -95,6 +96,10 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
    * @return the title of an object.
    */
   public String getTitle(Object object) {
+    if (object instanceof EObject) {
+      final EObject eObject = (EObject) object;
+      return getCreateTitleProvider(eObject.eClass()).getTitle(eObject);
+    }
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
     return getCreateTitleProvider(modelObject.eClass()).getTitle(modelObject);
   }
@@ -174,6 +179,12 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
 
     protected abstract String getTitle(ModelObject<?> modelObject, boolean nextStep);
 
+    protected abstract String getTitle(EObject modelObject, boolean nextStep);
+
+    public String getTitle(EObject modelObject) {
+      return getTitle(modelObject, true);
+    }
+
     public String getTitle(ModelObject<?> modelObject) {
       return getTitle(modelObject, true);
     }
@@ -181,6 +192,41 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
 
   public static class EFeatureTitleProvider extends EClassTitleProvider {
     private List<EStructuralFeature> eFeatures = new ArrayList<EStructuralFeature>();
+
+    @Override
+    protected String getTitle(EObject modelObject, boolean nextStep) {
+      if (eFeatures.isEmpty()) {
+        // just do toString
+        return modelObject.toString();
+      }
+      final StringBuilder sb = new StringBuilder();
+      for (EStructuralFeature eFeature : eFeatures) {
+        if (sb.length() > 0) {
+          sb.append(ModelConstants.TITLE_SEPARATOR);
+        }
+        final Object value = modelObject.eGet(eFeature);
+        if (value == null) {
+          continue;
+        }
+        if (eFeature instanceof EAttribute) {
+          final EDataType eDataType = ((EAttribute) eFeature).getEAttributeType();
+          sb.append(eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, value));
+        } else if (nextStep) {
+          if (eFeature.isMany()) {
+            for (Object o : (Collection<?>) value) {
+              if (o instanceof EObject) {
+                sb.append(TitleProvider.getInstance().getTitle(o, false));
+              }
+            }
+          } else {
+            if (value instanceof EObject) {
+              sb.append(TitleProvider.getInstance().getTitle(value, false));
+            }
+          }
+        }
+      }
+      return sb.toString();
+    }
 
     @Override
     protected String getTitle(ModelObject<?> modelObject, boolean nextStep) {
@@ -234,6 +280,30 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
     private String expression = null;
     private List<Object> expressionList = new ArrayList<Object>();
     private EClass eClass;
+
+    @Override
+    protected String getTitle(EObject modelObject, boolean nextStep) {
+      final StringBuilder sb = new StringBuilder();
+      for (Object element : expressionList) {
+        if (element instanceof String) {
+          sb.append((String) element);
+        } else {
+          final Object value = modelObject.eGet((EStructuralFeature) element);
+          if (element instanceof EReference) {
+            if (nextStep) {
+              sb.append(TitleProvider.getInstance().getTitle(value, false));
+            }
+          } else if (element instanceof EAttribute) {
+            final EDataType eDataType = ((EAttribute) element).getEAttributeType();
+            sb.append(eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, value));
+          } else {
+            throw new IllegalStateException("Type " + element.getClass().getName() //$NON-NLS-1$
+                + " not supported, expression " + expression); //$NON-NLS-1$
+          }
+        }
+      }
+      return sb.toString();
+    }
 
     @Override
     protected String getTitle(ModelObject<?> modelObject, boolean nextStep) {

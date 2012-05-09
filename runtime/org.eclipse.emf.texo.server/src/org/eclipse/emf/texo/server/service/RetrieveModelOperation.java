@@ -23,7 +23,7 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.texo.component.ComponentProvider;
-import org.eclipse.emf.texo.json.JSONModelConverter;
+import org.eclipse.emf.texo.json.JSONValueConverter;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.server.model.request.Parameter;
 import org.eclipse.emf.texo.server.model.request.QueryType;
@@ -202,17 +202,17 @@ public class RetrieveModelOperation extends ModelOperation {
       return result;
     }
 
-    final JSONModelConverter converter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
+    final JSONValueConverter converter = ComponentProvider.getInstance().newInstance(JSONValueConverter.class);
     for (Parameter parameter : queryType.getParameters()) {
       final String type = parameter.getType();
       Object value = parameter.getValue();
       if (type != null) {
         if ("date".equals(type)) { //$NON-NLS-1$
-          value = converter.convertDateTime(value, true, false, false);
+          value = converter.convertDateTimeFromJSON(value, true, false, false);
         } else if ("dateTime".equals(type)) { //$NON-NLS-1$
-          value = converter.convertDateTime(value, false, true, false);
+          value = converter.convertDateTimeFromJSON(value, false, true, false);
         } else {
-          value = converter.convertDateTime(value, false, false, true);
+          value = converter.convertDateTimeFromJSON(value, false, false, true);
         }
       }
       result.put(parameter.getName(), value);

@@ -13,27 +13,26 @@
  *
  * $Id: DaoRegistry.java,v 1.1 2011/09/24 04:00:25 mtaal Exp $
  */
-package org.eclipse.emf.texo.server.store;
+package org.eclipse.emf.texo.json;
 
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.store.TexoResource;
 
 /**
- * A TexoResource which uses the {@link JSONEObjectStore} for querying and persisting.
+ * A TexoResource which connects to a remote server and communicates with the remote server using json.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
-public class EPersistenceTexoResource extends TexoResource {
+public class TexoJSONResource extends TexoResource {
 
   @Override
   protected EObjectStore createEObjectStore() {
-    final EPersistenceService ePersistenceService = ComponentProvider.getInstance().newInstance(
-        EPersistenceService.class);
-    ePersistenceService.setUri(getURI());
-    ePersistenceService.setCacheEObjects(true);
-    return ePersistenceService;
+    final JSONEObjectStore jsonEObjectStore = ComponentProvider.getInstance().newInstance(JSONEObjectStore.class);
+    jsonEObjectStore.setUri(getURI());
+    jsonEObjectStore.setCacheEObjects(true);
+    return jsonEObjectStore;
   }
 
 }

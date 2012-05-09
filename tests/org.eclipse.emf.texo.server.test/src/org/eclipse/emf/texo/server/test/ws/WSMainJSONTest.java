@@ -47,7 +47,7 @@ public class WSMainJSONTest extends WSMainTest {
     try {
       final JSONModelConverter jsonModelConverter = ComponentProvider.getInstance().newInstance(
           JSONModelConverter.class);
-      jsonModelConverter.setUriResolver(getUriResolver());
+      jsonModelConverter.setObjectResolver(getUriResolver());
       return Collections.singletonList(jsonModelConverter.convert(new JSONObject(content)));
     } catch (JSONException e) {
       throw new RuntimeException(content, e);
@@ -57,7 +57,7 @@ public class WSMainJSONTest extends WSMainTest {
   @Override
   protected String serialize(Object object) {
     final ModelJSONConverter modelJSONConverter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
-    modelJSONConverter.setUriResolver(getUriResolver());
+    modelJSONConverter.setObjectResolver(getUriResolver());
     return modelJSONConverter.convert(object).toString();
   }
 

@@ -36,7 +36,7 @@ public class JSONWebServiceObjectResolver extends WebServiceObjectResolver {
   protected Object deserialize(String urlStr, String content) {
     try {
       final JSONModelConverter converter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
-      converter.setUriResolver(this);
+      converter.setObjectResolver(this);
 
       // prevent loops by already setting the resolved object
       final TypeIdTuple tuple = getTypeAndIdFromUri(URI.createURI(urlStr));

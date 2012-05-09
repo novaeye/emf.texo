@@ -40,7 +40,7 @@ public interface ObjectResolver {
    * Create a unique URI from an object.
    * 
    * @param object
-   *          must be an object which can be converted to a {@link ModelObject} using the
+   *          must be an EObject or an object which can be converted to a {@link ModelObject} using the
    *          {@link ModelResolver#getModelObject(Object)}.
    * @return the unique URI for the object
    * @see #fromUri(URI)
