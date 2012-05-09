@@ -25,7 +25,7 @@ import org.eclipse.emf.texo.store.TexoResource;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
-public class TexoJSONResource extends TexoResource {
+public class JSONTexoResource extends TexoResource {
 
   @Override
   protected EObjectStore createEObjectStore() {
