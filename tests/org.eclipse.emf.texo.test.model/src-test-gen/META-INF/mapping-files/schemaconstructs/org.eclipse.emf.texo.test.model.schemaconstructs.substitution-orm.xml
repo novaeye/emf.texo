@@ -12,6 +12,18 @@
       <orm:basic name="even" optional="true"/>
       <orm:basic name="mySimpleAbstract" optional="true"/>
       <orm:basic name="odd" optional="true"/>
+      <orm:basic name="text" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="cDATA" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="comment" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="evenComplexNumber" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.EvenComplexNumberType">
         <orm:join-column/>
         <orm:cascade>
@@ -65,6 +77,9 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup" name="MultiNumberType_myComplexAbstractGroup">
     <orm:attributes>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
         <orm:join-column/>
         <orm:cascade>
@@ -87,10 +102,16 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup" name="NumberType_mySimpleAbstractGroup">
     <orm:attributes>
       <orm:basic name="mySimpleAbstract" optional="false"/>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMyComplexAbstractGroupFeatureGroup" name="NumberType_myComplexAbstractGroup">
     <orm:attributes>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
         <orm:join-column/>
         <orm:cascade>

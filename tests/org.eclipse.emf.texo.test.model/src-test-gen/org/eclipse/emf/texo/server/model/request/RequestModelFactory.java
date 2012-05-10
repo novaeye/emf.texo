@@ -274,15 +274,15 @@ public class RequestModelFactory implements ModelFactory {
       switch (featureID) {
 
       case RequestModelPackage.ACTIONTYPE_UPDATE_FEATURE_ID:
-        getTarget().getUpdate().remove((Object) value);
+        getTarget().getUpdate().remove(value);
         return;
 
       case RequestModelPackage.ACTIONTYPE_INSERT_FEATURE_ID:
-        getTarget().getInsert().remove((Object) value);
+        getTarget().getInsert().remove(value);
         return;
 
       case RequestModelPackage.ACTIONTYPE_DELETE_FEATURE_ID:
-        getTarget().getDelete().remove((Object) value);
+        getTarget().getDelete().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -464,7 +464,7 @@ public class RequestModelFactory implements ModelFactory {
       switch (featureID) {
 
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
-        getTarget().getParameters().remove((Parameter) value);
+        getTarget().getParameters().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

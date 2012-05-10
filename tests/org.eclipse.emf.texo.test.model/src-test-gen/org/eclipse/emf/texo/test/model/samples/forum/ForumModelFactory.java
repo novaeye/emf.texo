@@ -343,11 +343,11 @@ public class ForumModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ForumModelPackage.FORUM_MEMBERS_FEATURE_ID:
-        getTarget().getMembers().remove((Member) value);
+        getTarget().getMembers().remove(value);
         return;
 
       case ForumModelPackage.FORUM_TOPICS_FEATURE_ID:
-        getTarget().getTopics().remove((Topic) value);
+        getTarget().getTopics().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -454,11 +454,11 @@ public class ForumModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ForumModelPackage.MEMBER_POSTS_FEATURE_ID:
-        getTarget().getPosts().remove((Post) value);
+        getTarget().getPosts().remove(value);
         return;
 
       case ForumModelPackage.MEMBER_CREATED_FEATURE_ID:
-        getTarget().getCreated().remove((Topic) value);
+        getTarget().getCreated().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -663,7 +663,7 @@ public class ForumModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ForumModelPackage.TOPIC_POSTS_FEATURE_ID:
-        getTarget().getPosts().remove((Post) value);
+        getTarget().getPosts().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

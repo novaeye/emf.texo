@@ -280,11 +280,11 @@ public class CatalogModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CatalogModelPackage.CATALOGTYPE_SUBCATALOG_FEATURE_ID:
-        getTarget().getSubCatalog().remove((CatalogType) value);
+        getTarget().getSubCatalog().remove(value);
         return;
 
       case CatalogModelPackage.CATALOGTYPE_PRODUCT_FEATURE_ID:
-        getTarget().getProduct().remove((ProductType) value);
+        getTarget().getProduct().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -461,7 +461,7 @@ public class CatalogModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CatalogModelPackage.PRODUCTTYPE_REMARK_FEATURE_ID:
-        getTarget().getRemark().remove((StringType) value);
+        getTarget().getRemark().remove(value);
         return;
 
       }

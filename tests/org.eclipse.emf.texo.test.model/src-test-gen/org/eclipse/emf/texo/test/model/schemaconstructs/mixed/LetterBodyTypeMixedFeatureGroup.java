@@ -7,8 +7,12 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,6 +23,7 @@ import javax.persistence.TemporalType;
  * 
  * @generated
  */
+@Entity(name = "LetterBodyType_mixed")
 public class LetterBodyTypeMixedFeatureGroup {
 
   /**
@@ -77,6 +82,31 @@ public class LetterBodyTypeMixedFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<LetterBodyTypeMixedFeatureGroup> featureGroup, Feature feature,
+      Object value) {
+    for (final LetterBodyTypeMixedFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final LetterBodyTypeMixedFeatureGroup entry = new LetterBodyTypeMixedFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -102,6 +132,8 @@ public class LetterBodyTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**
@@ -109,6 +141,8 @@ public class LetterBodyTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String text;
 
   /**
@@ -116,6 +150,8 @@ public class LetterBodyTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String cDATA;
 
   /**
@@ -123,6 +159,8 @@ public class LetterBodyTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String comment;
 
   /**

@@ -673,7 +673,7 @@ public class Epo2ModelFactory implements ModelFactory {
       switch (featureID) {
 
       case Epo2ModelPackage.PURCHASEORDER_ITEMS_FEATURE_ID:
-        getTarget().getItems().remove((Item) value);
+        getTarget().getItems().remove(value);
         return;
 
       }
@@ -878,11 +878,11 @@ public class Epo2ModelFactory implements ModelFactory {
       switch (featureID) {
 
       case Epo2ModelPackage.SUPPLIER_CUSTOMERS_FEATURE_ID:
-        getTarget().getCustomers().remove((Customer) value);
+        getTarget().getCustomers().remove(value);
         return;
 
       case Epo2ModelPackage.SUPPLIER_ORDERS_FEATURE_ID:
-        getTarget().getOrders().remove((PurchaseOrder) value);
+        getTarget().getOrders().remove(value);
         return;
 
       }
@@ -981,7 +981,7 @@ public class Epo2ModelFactory implements ModelFactory {
       switch (featureID) {
 
       case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
-        getTarget().getOrders().remove((PurchaseOrder) value);
+        getTarget().getOrders().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

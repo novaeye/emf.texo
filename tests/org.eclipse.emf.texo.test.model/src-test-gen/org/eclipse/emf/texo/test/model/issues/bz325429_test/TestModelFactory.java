@@ -280,7 +280,7 @@ public class TestModelFactory implements ModelFactory {
       switch (featureID) {
 
       case TestModelPackage.PERSON_CONTACTS_FEATURE_ID:
-        getTarget().getContacts().remove((Contact) value);
+        getTarget().getContacts().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

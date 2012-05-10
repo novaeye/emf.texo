@@ -5,6 +5,9 @@
     <orm:attributes>
       <orm:basic name="age" optional="true"/>
       <orm:basic name="length" optional="true"/>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.Person" name="Person">

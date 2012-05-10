@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 /**
  * A representation for the Feature Group '<em><b>Person.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
+@Entity(name = "Person_group")
 public class PersonGroupFeatureGroup {
 
   /**
@@ -67,6 +71,30 @@ public class PersonGroupFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<PersonGroupFeatureGroup> featureGroup, Feature feature, Object value) {
+    for (final PersonGroupFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final PersonGroupFeatureGroup entry = new PersonGroupFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -92,6 +120,8 @@ public class PersonGroupFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**

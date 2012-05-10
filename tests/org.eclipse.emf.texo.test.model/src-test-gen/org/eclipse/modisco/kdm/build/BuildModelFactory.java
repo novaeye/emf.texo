@@ -469,7 +469,7 @@ public class BuildModelFactory implements ModelFactory {
       switch (featureID) {
 
       case BuildModelPackage.ABSTRACTBUILDELEMENT_BUILDRELATION_FEATURE_ID:
-        getTarget().getBuildRelation().remove((AbstractBuildRelationship) value);
+        getTarget().getBuildRelation().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -637,15 +637,15 @@ public class BuildModelFactory implements ModelFactory {
       switch (featureID) {
 
       case BuildModelPackage.BUILDRESOURCE_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((KDMEntity) value);
+        getTarget().getImplementation().remove(value);
         return;
 
       case BuildModelPackage.BUILDRESOURCE_GROUPEDBUILD_FEATURE_ID:
-        getTarget().getGroupedBuild().remove((AbstractBuildElement) value);
+        getTarget().getGroupedBuild().remove(value);
         return;
 
       case BuildModelPackage.BUILDRESOURCE_BUILDELEMENT_FEATURE_ID:
-        getTarget().getBuildElement().remove((AbstractBuildElement) value);
+        getTarget().getBuildElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -733,7 +733,7 @@ public class BuildModelFactory implements ModelFactory {
       switch (featureID) {
 
       case BuildModelPackage.BUILDDESCRIPTION_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       }
@@ -1107,7 +1107,7 @@ public class BuildModelFactory implements ModelFactory {
       switch (featureID) {
 
       case BuildModelPackage.BUILDMODEL_BUILDELEMENT_FEATURE_ID:
-        getTarget().getBuildElement().remove((AbstractBuildElement) value);
+        getTarget().getBuildElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

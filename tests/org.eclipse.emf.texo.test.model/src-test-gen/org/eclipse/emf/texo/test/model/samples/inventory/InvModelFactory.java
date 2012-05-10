@@ -250,15 +250,15 @@ public class InvModelFactory implements ModelFactory {
       switch (featureID) {
 
       case InvModelPackage.PTYPE_SUBTYPES_FEATURE_ID:
-        getTarget().getSubTypes().remove((PType) value);
+        getTarget().getSubTypes().remove(value);
         return;
 
       case InvModelPackage.PTYPE_SUBNOTYPES_FEATURE_ID:
-        getTarget().getSubNOTypes().remove((PType) value);
+        getTarget().getSubNOTypes().remove(value);
         return;
 
       case InvModelPackage.PTYPE_INFOREFERENCES_FEATURE_ID:
-        getTarget().getInfoReferences().remove((PDeclaration) value);
+        getTarget().getInfoReferences().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

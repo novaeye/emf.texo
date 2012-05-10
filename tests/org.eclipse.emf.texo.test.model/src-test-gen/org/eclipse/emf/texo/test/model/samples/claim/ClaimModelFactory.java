@@ -267,7 +267,7 @@ public class ClaimModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ClaimModelPackage.CLAIM_CLAIMLINE_FEATURE_ID:
-        getTarget().getClaimLine().remove((ClaimLine) value);
+        getTarget().getClaimLine().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

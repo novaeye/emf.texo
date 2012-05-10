@@ -25,10 +25,18 @@
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyMyAnyFeatureGroup" name="TestAny_myAny">
-    <orm:attributes/>
+    <orm:attributes>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
+    </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyAnyFeatureGroup" name="TestAny_any">
-    <orm:attributes/>
+    <orm:attributes>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
+    </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAny" name="TestAny">
     <orm:attributes>

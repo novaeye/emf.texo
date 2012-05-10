@@ -1,9 +1,11 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.mixed;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>SalutationType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,6 +20,8 @@ public class SalutationType {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SalutationTypeMixedFeatureGroup.class)
+  @JoinTable()
   private List<SalutationTypeMixedFeatureGroup> mixed = new ArrayList<SalutationTypeMixedFeatureGroup>();
 
   /**
@@ -68,8 +72,8 @@ public class SalutationType {
    * @generated
    */
   public void setName(String newName) {
-    setMixed(SalutationTypeMixedFeatureGroup.createFeatureGroupList(SalutationTypeMixedFeatureGroup.Feature.NAME,
-        Collections.singletonList(newName)));
+    SalutationTypeMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), SalutationTypeMixedFeatureGroup.Feature.NAME,
+        newName);
   }
 
   /**

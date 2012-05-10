@@ -3,7 +3,10 @@ package org.eclipse.emf.texo.test.model.samples.featuremaptest;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -29,6 +32,8 @@ public class Supplier extends Identifiable {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SupplierOrdersFeatureGroup.class)
+  @JoinTable()
   private List<SupplierOrdersFeatureGroup> orders = new ArrayList<SupplierOrdersFeatureGroup>();
 
   /**

@@ -3,9 +3,14 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.datetime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
@@ -15,6 +20,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
+@Entity(name = "DocumentRoot_mixed")
 public class DocumentRootMixedFeatureGroup {
 
   /**
@@ -72,6 +78,31 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<DocumentRootMixedFeatureGroup> featureGroup, Feature feature,
+      Object value) {
+    for (final DocumentRootMixedFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final DocumentRootMixedFeatureGroup entry = new DocumentRootMixedFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -97,6 +128,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**
@@ -104,6 +137,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String text;
 
   /**
@@ -111,6 +146,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String cDATA;
 
   /**
@@ -118,6 +155,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String comment;
 
   /**

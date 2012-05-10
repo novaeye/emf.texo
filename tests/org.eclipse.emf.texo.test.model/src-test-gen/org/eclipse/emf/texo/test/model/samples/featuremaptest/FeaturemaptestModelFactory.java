@@ -325,11 +325,11 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       switch (featureID) {
 
       case FeaturemaptestModelPackage.SUPPLIER_PREFERREDORDERS_FEATURE_ID:
-        getTarget().getPreferredOrders().remove((PurchaseOrder) value);
+        getTarget().getPreferredOrders().remove(value);
         return;
 
       case FeaturemaptestModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
-        getTarget().getStandardOrders().remove((PurchaseOrder) value);
+        getTarget().getStandardOrders().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

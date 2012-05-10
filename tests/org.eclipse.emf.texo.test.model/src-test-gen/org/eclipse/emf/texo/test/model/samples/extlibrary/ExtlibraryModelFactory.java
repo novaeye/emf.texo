@@ -525,27 +525,27 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ExtlibraryModelPackage.LIBRARY_WRITERS_FEATURE_ID:
-        getTarget().getWriters().remove((Writer) value);
+        getTarget().getWriters().remove(value);
         return;
 
       case ExtlibraryModelPackage.LIBRARY_EMPLOYEES_FEATURE_ID:
-        getTarget().getEmployees().remove((Employee) value);
+        getTarget().getEmployees().remove(value);
         return;
 
       case ExtlibraryModelPackage.LIBRARY_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().remove((Borrower) value);
+        getTarget().getBorrowers().remove(value);
         return;
 
       case ExtlibraryModelPackage.LIBRARY_STOCK_FEATURE_ID:
-        getTarget().getStock().remove((Item) value);
+        getTarget().getStock().remove(value);
         return;
 
       case ExtlibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
-        getTarget().getBooks().remove((Book) value);
+        getTarget().getBooks().remove(value);
         return;
 
       case ExtlibraryModelPackage.LIBRARY_BRANCHES_FEATURE_ID:
-        getTarget().getBranches().remove((Library) value);
+        getTarget().getBranches().remove(value);
         return;
 
       }
@@ -634,7 +634,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().getBooks().remove((Book) value);
+        getTarget().getBooks().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -790,7 +790,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().remove((Borrower) value);
+        getTarget().getBorrowers().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -878,7 +878,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().remove((Borrower) value);
+        getTarget().getBorrowers().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1207,7 +1207,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
-        getTarget().getCast().remove((Person) value);
+        getTarget().getCast().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1348,7 +1348,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
-        getTarget().getBorrowed().remove((Lendable) value);
+        getTarget().getBorrowed().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

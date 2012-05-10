@@ -653,7 +653,7 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.PLATFORMMODEL_PLATFORMELEMENT_FEATURE_ID:
-        getTarget().getPlatformElement().remove((AbstractPlatformElement) value);
+        getTarget().getPlatformElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -763,19 +763,19 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.ABSTRACTPLATFORMELEMENT_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       case PlatformModelPackage.ABSTRACTPLATFORMELEMENT_PLATFORMRELATION_FEATURE_ID:
-        getTarget().getPlatformRelation().remove((AbstractPlatformRelationship) value);
+        getTarget().getPlatformRelation().remove(value);
         return;
 
       case PlatformModelPackage.ABSTRACTPLATFORMELEMENT_ABSTRACTION_FEATURE_ID:
-        getTarget().getAbstraction().remove((ActionElement) value);
+        getTarget().getAbstraction().remove(value);
         return;
 
       case PlatformModelPackage.ABSTRACTPLATFORMELEMENT_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((AbstractCodeElement) value);
+        getTarget().getImplementation().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -925,7 +925,7 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.RESOURCETYPE_PLATFORMELEMENT_FEATURE_ID:
-        getTarget().getPlatformElement().remove((AbstractPlatformElement) value);
+        getTarget().getPlatformElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1624,7 +1624,7 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.PLATFORMACTION_PLATFORMELEMENT_FEATURE_ID:
-        getTarget().getPlatformElement().remove((PlatformEvent) value);
+        getTarget().getPlatformElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1932,7 +1932,7 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.DEPLOYEDCOMPONENT_GROUPEDCODE_FEATURE_ID:
-        getTarget().getGroupedCode().remove((Module) value);
+        getTarget().getGroupedCode().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2335,7 +2335,7 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.DEPLOYEDSOFTWARESYSTEM_GROUPEDCOMPONENT_FEATURE_ID:
-        getTarget().getGroupedComponent().remove((DeployedComponent) value);
+        getTarget().getGroupedComponent().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2425,11 +2425,11 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.MACHINE_DEPLOYEDCOMPONENT_FEATURE_ID:
-        getTarget().getDeployedComponent().remove((DeployedComponent) value);
+        getTarget().getDeployedComponent().remove(value);
         return;
 
       case PlatformModelPackage.MACHINE_DEPLOYEDRESOURCE_FEATURE_ID:
-        getTarget().getDeployedResource().remove((DeployedResource) value);
+        getTarget().getDeployedResource().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2512,7 +2512,7 @@ public class PlatformModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlatformModelPackage.DEPLOYEDRESOURCE_PLATFORMELEMENT_FEATURE_ID:
-        getTarget().getPlatformElement().remove((ResourceType) value);
+        getTarget().getPlatformElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

@@ -5,8 +5,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -20,6 +23,8 @@ public class DocumentRoot {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DocumentRootMixedFeatureGroup.class)
+  @JoinTable()
   private List<DocumentRootMixedFeatureGroup> mixed = new ArrayList<DocumentRootMixedFeatureGroup>();
 
   /**

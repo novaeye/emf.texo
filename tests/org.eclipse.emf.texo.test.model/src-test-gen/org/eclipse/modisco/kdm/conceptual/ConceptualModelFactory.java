@@ -364,7 +364,7 @@ public class ConceptualModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ConceptualModelPackage.CONCEPTUALMODEL_CONCEPTUALELEMENT_FEATURE_ID:
-        getTarget().getConceptualElement().remove((AbstractConceptualElement) value);
+        getTarget().getConceptualElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -474,19 +474,19 @@ public class ConceptualModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ConceptualModelPackage.ABSTRACTCONCEPTUALELEMENT_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       case ConceptualModelPackage.ABSTRACTCONCEPTUALELEMENT_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((KDMEntity) value);
+        getTarget().getImplementation().remove(value);
         return;
 
       case ConceptualModelPackage.ABSTRACTCONCEPTUALELEMENT_CONCEPTUALRELATION_FEATURE_ID:
-        getTarget().getConceptualRelation().remove((AbstractConceptualRelationship) value);
+        getTarget().getConceptualRelation().remove(value);
         return;
 
       case ConceptualModelPackage.ABSTRACTCONCEPTUALELEMENT_ABSTRACTION_FEATURE_ID:
-        getTarget().getAbstraction().remove((ActionElement) value);
+        getTarget().getAbstraction().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -705,7 +705,7 @@ public class ConceptualModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ConceptualModelPackage.CONCEPTUALCONTAINER_CONCEPTUALELEMENT_FEATURE_ID:
-        getTarget().getConceptualElement().remove((AbstractConceptualElement) value);
+        getTarget().getConceptualElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

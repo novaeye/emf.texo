@@ -1,9 +1,11 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.groupall;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>SimpleAllMapType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -19,6 +21,8 @@ public class SimpleAllMapType {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SimpleAllMapTypeAllMapFeatureGroup.class)
+  @JoinTable()
   private List<SimpleAllMapTypeAllMapFeatureGroup> allMap = new ArrayList<SimpleAllMapTypeAllMapFeatureGroup>();
 
   /**
@@ -69,8 +73,8 @@ public class SimpleAllMapType {
    * @generated
    */
   public void setAaa(String newAaa) {
-    setAllMap(SimpleAllMapTypeAllMapFeatureGroup.createFeatureGroupList(SimpleAllMapTypeAllMapFeatureGroup.Feature.AAA,
-        Collections.singletonList(newAaa)));
+    SimpleAllMapTypeAllMapFeatureGroup.setSingleFeatureMapValue(getAllMap(),
+        SimpleAllMapTypeAllMapFeatureGroup.Feature.AAA, newAaa);
   }
 
   /**
@@ -96,8 +100,8 @@ public class SimpleAllMapType {
    * @generated
    */
   public void setBbb(String newBbb) {
-    setAllMap(SimpleAllMapTypeAllMapFeatureGroup.createFeatureGroupList(SimpleAllMapTypeAllMapFeatureGroup.Feature.BBB,
-        Collections.singletonList(newBbb)));
+    SimpleAllMapTypeAllMapFeatureGroup.setSingleFeatureMapValue(getAllMap(),
+        SimpleAllMapTypeAllMapFeatureGroup.Feature.BBB, newBbb);
   }
 
   /**
@@ -123,8 +127,8 @@ public class SimpleAllMapType {
    * @generated
    */
   public void setCcc(String newCcc) {
-    setAllMap(SimpleAllMapTypeAllMapFeatureGroup.createFeatureGroupList(SimpleAllMapTypeAllMapFeatureGroup.Feature.CCC,
-        Collections.singletonList(newCcc)));
+    SimpleAllMapTypeAllMapFeatureGroup.setSingleFeatureMapValue(getAllMap(),
+        SimpleAllMapTypeAllMapFeatureGroup.Feature.CCC, newCcc);
   }
 
   /**

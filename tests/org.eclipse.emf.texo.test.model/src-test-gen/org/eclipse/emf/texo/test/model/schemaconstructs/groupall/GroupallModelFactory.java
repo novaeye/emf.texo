@@ -418,11 +418,11 @@ public class GroupallModelFactory implements ModelFactory {
       switch (featureID) {
 
       case GroupallModelPackage.ADDRESSLIST_SHIPTO_FEATURE_ID:
-        getTarget().getShipTo().remove((AddressType) value);
+        getTarget().getShipTo().remove(value);
         return;
 
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
-        getTarget().getBillTo().remove((AddressType) value);
+        getTarget().getBillTo().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

@@ -28,6 +28,18 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
     <orm:attributes>
+      <orm:basic name="text" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="cDATA" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="comment" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="action" optional="true" target-entity="org.eclipse.emf.texo.server.model.request.ActionType">
         <orm:join-column/>
         <orm:cascade>

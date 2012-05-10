@@ -346,19 +346,19 @@ public class StructureModelFactory implements ModelFactory {
       switch (featureID) {
 
       case StructureModelPackage.ABSTRACTSTRUCTUREELEMENT_AGGREGATED_FEATURE_ID:
-        getTarget().getAggregated().remove((AggregatedRelationship) value);
+        getTarget().getAggregated().remove(value);
         return;
 
       case StructureModelPackage.ABSTRACTSTRUCTUREELEMENT_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((KDMEntity) value);
+        getTarget().getImplementation().remove(value);
         return;
 
       case StructureModelPackage.ABSTRACTSTRUCTUREELEMENT_STRUCTUREELEMENT_FEATURE_ID:
-        getTarget().getStructureElement().remove((AbstractStructureElement) value);
+        getTarget().getStructureElement().remove(value);
         return;
 
       case StructureModelPackage.ABSTRACTSTRUCTUREELEMENT_STRUCTURERELATIONSHIP_FEATURE_ID:
-        getTarget().getStructureRelationship().remove((AbstractStructureRelationship) value);
+        getTarget().getStructureRelationship().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -643,7 +643,7 @@ public class StructureModelFactory implements ModelFactory {
       switch (featureID) {
 
       case StructureModelPackage.STRUCTUREMODEL_STRUCTUREELEMENT_FEATURE_ID:
-        getTarget().getStructureElement().remove((AbstractStructureElement) value);
+        getTarget().getStructureElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Lob;
 
 /**
  * A representation for the Feature Group '<em><b>SalutationType.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -11,6 +15,7 @@ import javax.persistence.Basic;
  * 
  * @generated
  */
+@Entity(name = "SalutationType_mixed")
 public class SalutationTypeMixedFeatureGroup {
 
   /**
@@ -69,6 +74,31 @@ public class SalutationTypeMixedFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<SalutationTypeMixedFeatureGroup> featureGroup, Feature feature,
+      Object value) {
+    for (final SalutationTypeMixedFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final SalutationTypeMixedFeatureGroup entry = new SalutationTypeMixedFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -94,6 +124,8 @@ public class SalutationTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**
@@ -101,6 +133,8 @@ public class SalutationTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String text;
 
   /**
@@ -108,6 +142,8 @@ public class SalutationTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String cDATA;
 
   /**
@@ -115,6 +151,8 @@ public class SalutationTypeMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String comment;
 
   /**

@@ -44,4 +44,11 @@ public abstract class AbstractModelFeatureMapEntry<E extends Object> implements 
   public void setTarget(final E target) {
     this.target = target;
   }
+
+  /**
+   * Returns true if the entry models an xsd:any model element.
+   */
+  public boolean isAnyType() {
+    return false;
+  }
 }

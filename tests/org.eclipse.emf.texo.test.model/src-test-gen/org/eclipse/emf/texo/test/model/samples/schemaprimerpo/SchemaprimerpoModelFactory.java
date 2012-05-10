@@ -581,7 +581,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SchemaprimerpoModelPackage.PURCHASEORDER_ITEMS_FEATURE_ID:
-        getTarget().getItems().remove((Item) value);
+        getTarget().getItems().remove(value);
         return;
 
       }

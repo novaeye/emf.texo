@@ -3,7 +3,10 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -26,6 +29,8 @@ public class Supplier {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SupplierOrdersFeatureGroup.class)
+  @JoinTable()
   private List<SupplierOrdersFeatureGroup> orders = new ArrayList<SupplierOrdersFeatureGroup>();
 
   /**

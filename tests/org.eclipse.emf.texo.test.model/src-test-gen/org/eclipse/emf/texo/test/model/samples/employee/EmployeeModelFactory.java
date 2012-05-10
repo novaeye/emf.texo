@@ -257,7 +257,7 @@ public class EmployeeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case EmployeeModelPackage.DEPARTMENT_EMPLOYEES_FEATURE_ID:
-        getTarget().getEmployees().remove((Employee) value);
+        getTarget().getEmployees().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

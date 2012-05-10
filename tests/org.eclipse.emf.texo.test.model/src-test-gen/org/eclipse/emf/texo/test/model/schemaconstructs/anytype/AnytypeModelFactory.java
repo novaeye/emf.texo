@@ -513,7 +513,7 @@ public class AnytypeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AnytypeModelPackage.TESTANY_MULTIANYTYPE_FEATURE_ID:
-        getTarget().getMultiAnyType().remove((Object) value);
+        getTarget().getMultiAnyType().remove(value);
         return;
 
       }

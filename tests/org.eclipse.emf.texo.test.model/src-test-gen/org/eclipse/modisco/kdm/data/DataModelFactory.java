@@ -836,7 +836,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.DATAMODEL_DATAELEMENT_FEATURE_ID:
-        getTarget().getDataElement().remove((AbstractDataElement) value);
+        getTarget().getDataElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -937,15 +937,15 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.ABSTRACTDATAELEMENT_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       case DataModelPackage.ABSTRACTDATAELEMENT_DATARELATION_FEATURE_ID:
-        getTarget().getDataRelation().remove((AbstractDataRelationship) value);
+        getTarget().getDataRelation().remove(value);
         return;
 
       case DataModelPackage.ABSTRACTDATAELEMENT_ABSTRACTION_FEATURE_ID:
-        getTarget().getAbstraction().remove((ActionElement) value);
+        getTarget().getAbstraction().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1162,7 +1162,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.INDEXELEMENT_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((ItemUnit) value);
+        getTarget().getImplementation().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1523,7 +1523,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.DATACONTAINER_DATAELEMENT_FEATURE_ID:
-        getTarget().getDataElement().remove((DataResource) value);
+        getTarget().getDataElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1672,7 +1672,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.RELATIONALSCHEMA_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((CodeItem) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1753,7 +1753,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.COLUMNSET_ITEMUNIT_FEATURE_ID:
-        getTarget().getItemUnit().remove((ItemUnit) value);
+        getTarget().getItemUnit().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2109,7 +2109,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.XMLSCHEMA_CONTENTELEMENT_FEATURE_ID:
-        getTarget().getContentElement().remove((AbstractContentElement) value);
+        getTarget().getContentElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2261,7 +2261,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.COMPLEXCONTENTTYPE_CONTENTELEMENT_FEATURE_ID:
-        getTarget().getContentElement().remove((AbstractContentElement) value);
+        getTarget().getContentElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2548,7 +2548,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.CONTENTITEM_CONTENTELEMENT_FEATURE_ID:
-        getTarget().getContentElement().remove((AbstractContentElement) value);
+        getTarget().getContentElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2785,7 +2785,7 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.SIMPLECONTENTTYPE_TYPE_FEATURE_ID:
-        getTarget().getType().remove((ComplexContentType) value);
+        getTarget().getType().remove(value);
         return;
 
       }
@@ -3166,11 +3166,11 @@ public class DataModelFactory implements ModelFactory {
       switch (featureID) {
 
       case DataModelPackage.DATAACTION_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((ActionElement) value);
+        getTarget().getImplementation().remove(value);
         return;
 
       case DataModelPackage.DATAACTION_DATAELEMENT_FEATURE_ID:
-        getTarget().getDataElement().remove((DataEvent) value);
+        getTarget().getDataElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

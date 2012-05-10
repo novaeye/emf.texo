@@ -853,7 +853,7 @@ public class RentalModelFactory implements ModelFactory {
       switch (featureID) {
 
       case RentalModelPackage.RENTALCONTRACT_RENTALCONTRACTLINES_FEATURE_ID:
-        getTarget().getRentalContractLines().remove((RentalContractLine) value);
+        getTarget().getRentalContractLines().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

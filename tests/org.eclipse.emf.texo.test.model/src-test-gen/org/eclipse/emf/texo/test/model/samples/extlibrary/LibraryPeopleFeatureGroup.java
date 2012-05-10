@@ -3,7 +3,11 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
@@ -15,6 +19,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
+@Entity(name = "Library_people")
 public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
@@ -72,6 +77,31 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<LibraryPeopleFeatureGroup> featureGroup, Feature feature,
+      Object value) {
+    for (final LibraryPeopleFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final LibraryPeopleFeatureGroup entry = new LibraryPeopleFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -97,6 +127,8 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**

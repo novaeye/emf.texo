@@ -499,7 +499,7 @@ public class SunBooksModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SunBooksModelPackage.BOOKSTYPE_BOOK_FEATURE_ID:
-        getTarget().getBook().remove((BookType) value);
+        getTarget().getBook().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

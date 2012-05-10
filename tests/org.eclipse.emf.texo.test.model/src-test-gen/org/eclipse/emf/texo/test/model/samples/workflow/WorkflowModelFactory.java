@@ -395,15 +395,15 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
 
       case WorkflowModelPackage.WORKFLOW_NODES_FEATURE_ID:
-        getTarget().getNodes().remove((WorkflowNode) value);
+        getTarget().getNodes().remove(value);
         return;
 
       case WorkflowModelPackage.WORKFLOW_EDGES_FEATURE_ID:
-        getTarget().getEdges().remove((Edge) value);
+        getTarget().getEdges().remove(value);
         return;
 
       case WorkflowModelPackage.WORKFLOW_COMMENTS_FEATURE_ID:
-        getTarget().getComments().remove((Comment) value);
+        getTarget().getComments().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -509,11 +509,11 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
 
       case WorkflowModelPackage.WORKFLOWNODE_OUTPUTS_FEATURE_ID:
-        getTarget().getOutputs().remove((OutputPort) value);
+        getTarget().getOutputs().remove(value);
         return;
 
       case WorkflowModelPackage.WORKFLOWNODE_INPUTS_FEATURE_ID:
-        getTarget().getInputs().remove((InputPort) value);
+        getTarget().getInputs().remove(value);
         return;
 
       }
@@ -684,7 +684,7 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
 
       case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
-        getTarget().getEdges().remove((Edge) value);
+        getTarget().getEdges().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -770,7 +770,7 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
 
       case WorkflowModelPackage.OUTPUTPORT_EDGES_FEATURE_ID:
-        getTarget().getEdges().remove((Edge) value);
+        getTarget().getEdges().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

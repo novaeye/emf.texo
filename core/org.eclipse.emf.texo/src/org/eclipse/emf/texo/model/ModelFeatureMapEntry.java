@@ -58,9 +58,16 @@ public interface ModelFeatureMapEntry<E extends Object> {
   Object getValue();
 
   /**
-   * Sets the value in the feature map entry/
+   * Sets the value in the feature map entry. Note first call {@link #setEStructuralFeature(EStructuralFeature)} before
+   * calling this method.
    * 
    * @param value
    */
   void setValue(final Object value);
+
+  /**
+   * Returns true if the entry models an xsd:any model element.
+   */
+  public boolean isAnyType();
+
 }

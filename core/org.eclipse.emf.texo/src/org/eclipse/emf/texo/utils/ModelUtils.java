@@ -40,6 +40,20 @@ public class ModelUtils {
   private static final SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
 
   /**
+   * Returns true if the {@link EStructuralFeature} models an xsd:any.
+   * 
+   * @see AnyFeatureMapEntry
+   */
+  public static boolean isAnyType(EStructuralFeature eFeature) {
+    final EAnnotation eAnnotation = eFeature.getEAnnotation(ExtendedMetaData.ANNOTATION_URI);
+    if (eAnnotation == null) {
+      return false;
+    }
+    final String kind = eAnnotation.getDetails().get("kind"); //$NON-NLS-1$
+    return kind != null && (kind.equals("elementWildcard") || kind.equals("attributeWildcard")); //$NON-NLS-1$//$NON-NLS-2$
+  }
+
+  /**
    * If the value is a featuregroup then walk through the structure to find the deepest one and return that value.
    */
   public static Object findValue(ModelFeatureMapEntry<?> modelFeatureMap) {

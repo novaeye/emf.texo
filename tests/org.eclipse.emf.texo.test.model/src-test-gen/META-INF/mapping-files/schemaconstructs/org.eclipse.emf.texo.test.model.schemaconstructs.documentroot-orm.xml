@@ -10,6 +10,18 @@
     <orm:attributes>
       <orm:basic name="otherTest" optional="true"/>
       <orm:basic name="test" optional="true"/>
+      <orm:basic name="text" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="cDATA" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="comment" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.DocumentRoot" name="DocumentRoot">

@@ -2,7 +2,20 @@
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.xml.model.texoextensions.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
-    <orm:attributes/>
+    <orm:attributes>
+      <orm:basic name="text" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="cDATA" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="comment" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
+    </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.xml.model.texoextensions.DocumentRoot" name="DocumentRoot">
     <orm:attributes>

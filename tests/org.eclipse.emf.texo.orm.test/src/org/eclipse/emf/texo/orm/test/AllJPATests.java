@@ -20,6 +20,7 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 import org.eclipse.emf.texo.orm.test.samples.DataGenLibraryTest;
+import org.eclipse.emf.texo.orm.test.samples.FeatureGroupJPATest;
 import org.eclipse.emf.texo.orm.test.samples.SimpleLibraryTest;
 
 /**
@@ -36,6 +37,7 @@ public class AllJPATests {
 
     // sample test cases
     suite.addTest(ModelJPATestSuite.suite());
+    suite.addTestSuite(FeatureGroupJPATest.class);
     suite.addTestSuite(SimpleLibraryTest.class);
     suite.addTestSuite(DataGenLibraryTest.class);
 

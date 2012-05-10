@@ -497,7 +497,7 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
 
       case KdmModelPackage.STEREOTYPE_TAG_FEATURE_ID:
-        getTarget().getTag().remove((TagDefinition) value);
+        getTarget().getTag().remove(value);
         return;
 
       }
@@ -740,11 +740,11 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
 
       case KdmModelPackage.KDMFRAMEWORK_AUDIT_FEATURE_ID:
-        getTarget().getAudit().remove((Audit) value);
+        getTarget().getAudit().remove(value);
         return;
 
       case KdmModelPackage.KDMFRAMEWORK_EXTENSION_FEATURE_ID:
-        getTarget().getExtension().remove((ExtensionFamily) value);
+        getTarget().getExtension().remove(value);
         return;
 
       }
@@ -917,7 +917,7 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
 
       case KdmModelPackage.EXTENSIONFAMILY_STEREOTYPE_FEATURE_ID:
-        getTarget().getStereotype().remove((Stereotype) value);
+        getTarget().getStereotype().remove(value);
         return;
 
       }
@@ -1008,11 +1008,11 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
 
       case KdmModelPackage.SEGMENT_SEGMENT_FEATURE_ID:
-        getTarget().getSegment().remove((Segment) value);
+        getTarget().getSegment().remove(value);
         return;
 
       case KdmModelPackage.SEGMENT_MODEL_FEATURE_ID:
-        getTarget().getModel().remove((KDMModel) value);
+        getTarget().getModel().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

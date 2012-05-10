@@ -3,7 +3,10 @@ package org.eclipse.emf.texo.test.model.samples.play;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,6 +21,8 @@ public class SceneType {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = SceneTypeGroupFeatureGroup.class)
+  @JoinTable()
   private List<SceneTypeGroupFeatureGroup> group = new ArrayList<SceneTypeGroupFeatureGroup>();
 
   /**

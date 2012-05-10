@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 /**
  * A representation for the Feature Group '<em><b>SpeechType.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -11,6 +14,7 @@ import javax.persistence.Basic;
  * 
  * @generated
  */
+@Entity(name = "SpeechType_group")
 public class SpeechTypeGroupFeatureGroup {
 
   /**
@@ -68,6 +72,31 @@ public class SpeechTypeGroupFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<SpeechTypeGroupFeatureGroup> featureGroup, Feature feature,
+      Object value) {
+    for (final SpeechTypeGroupFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final SpeechTypeGroupFeatureGroup entry = new SpeechTypeGroupFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -93,6 +122,8 @@ public class SpeechTypeGroupFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**

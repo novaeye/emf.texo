@@ -394,15 +394,15 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
-        getTarget().getAccountGroup().remove((AccountGroup) value);
+        getTarget().getAccountGroup().remove(value);
         return;
 
       case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
-        getTarget().getVat().remove((Vat) value);
+        getTarget().getVat().remove(value);
         return;
 
       case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
-        getTarget().getJournalGroup().remove((JournalGroup) value);
+        getTarget().getJournalGroup().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -587,7 +587,7 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AccountingModelPackage.ACCOUNTGROUP_ACCOUNT_FEATURE_ID:
-        getTarget().getAccount().remove((Account) value);
+        getTarget().getAccount().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -749,7 +749,7 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AccountingModelPackage.BALANCEACCOUNT_REPORT_FEATURE_ID:
-        getTarget().getReport().remove((ReportGroup) value);
+        getTarget().getReport().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -856,11 +856,11 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AccountingModelPackage.JOURNALGROUP_JOURNALGROUPS_FEATURE_ID:
-        getTarget().getJournalGroups().remove((JournalGroup) value);
+        getTarget().getJournalGroups().remove(value);
         return;
 
       case AccountingModelPackage.JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID:
-        getTarget().getJournalStatements().remove((JournalStatement) value);
+        getTarget().getJournalStatements().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1261,11 +1261,11 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
-        getTarget().getReportGroup().remove((ReportGroup) value);
+        getTarget().getReportGroup().remove(value);
         return;
 
       case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
-        getTarget().getAccount().remove((BalanceAccount) value);
+        getTarget().getAccount().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

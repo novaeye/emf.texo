@@ -433,7 +433,7 @@ public class PlayModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlayModelPackage.ACTTYPE_SCENE_FEATURE_ID:
-        getTarget().getScene().remove((SceneType) value);
+        getTarget().getScene().remove(value);
         return;
 
       }
@@ -806,7 +806,7 @@ public class PlayModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
-        getTarget().getPersonaGroup().remove((PersonaGroupType) value);
+        getTarget().getPersonaGroup().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1017,7 +1017,7 @@ public class PlayModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlayModelPackage.PLAYTYPE_ACT_FEATURE_ID:
-        getTarget().getAct().remove((ActType) value);
+        getTarget().getAct().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1131,7 +1131,7 @@ public class PlayModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
-        getTarget().getSpeech().remove((SpeechType) value);
+        getTarget().getSpeech().remove(value);
         return;
 
       }

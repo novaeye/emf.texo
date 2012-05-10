@@ -395,7 +395,7 @@ public class CapaModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CapaModelPackage.MACHINE_TASKS_FEATURE_ID:
-        getTarget().getTasks().remove((Task) value);
+        getTarget().getTasks().remove(value);
         return;
 
       }
@@ -475,7 +475,7 @@ public class CapaModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CapaModelPackage.MACHINELIST_MACHINES_FEATURE_ID:
-        getTarget().getMachines().remove((Machine) value);
+        getTarget().getMachines().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -836,7 +836,7 @@ public class CapaModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
-        getTarget().getDays().remove((WorkDay) value);
+        getTarget().getDays().remove(value);
         return;
 
       }

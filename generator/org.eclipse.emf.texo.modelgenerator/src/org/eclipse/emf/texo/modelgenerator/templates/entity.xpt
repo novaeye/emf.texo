@@ -249,7 +249,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 				«IF featureAnnotation.many-»
 				«featureAnnotation.featureMapFeature.setter»(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».createFeatureGroupList(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«toUpperCase(featureAnnotation.name)», new«toFirstUpper(featureAnnotation.validJavaMemberName)»));
 				«ELSE-»
-				«featureAnnotation.featureMapFeature.setter»(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».createFeatureGroupList(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«toUpperCase(featureAnnotation.name)», java.util.Collections.singletonList(new«toFirstUpper(featureAnnotation.validJavaMemberName)»)));
+				«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».setSingleFeatureMapValue(«featureAnnotation.featureMapFeature.getter»(), «featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«toUpperCase(featureAnnotation.name)», new«toFirstUpper(featureAnnotation.validJavaMemberName)»);
 				«ENDIF-»
 			«ELSE-»
 		    	// Volatile feature

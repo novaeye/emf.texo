@@ -486,19 +486,19 @@ public class UiModelFactory implements ModelFactory {
       switch (featureID) {
 
       case UiModelPackage.ABSTRACTUIELEMENT_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       case UiModelPackage.ABSTRACTUIELEMENT_UIRELATION_FEATURE_ID:
-        getTarget().getUIRelation().remove((AbstractUIRelationship) value);
+        getTarget().getUIRelation().remove(value);
         return;
 
       case UiModelPackage.ABSTRACTUIELEMENT_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((AbstractCodeElement) value);
+        getTarget().getImplementation().remove(value);
         return;
 
       case UiModelPackage.ABSTRACTUIELEMENT_ABSTRACTION_FEATURE_ID:
-        getTarget().getAbstraction().remove((ActionElement) value);
+        getTarget().getAbstraction().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -648,7 +648,7 @@ public class UiModelFactory implements ModelFactory {
       switch (featureID) {
 
       case UiModelPackage.UIRESOURCE_UIELEMENT_FEATURE_ID:
-        getTarget().getUIElement().remove((AbstractUIElement) value);
+        getTarget().getUIElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -930,7 +930,7 @@ public class UiModelFactory implements ModelFactory {
       switch (featureID) {
 
       case UiModelPackage.UIMODEL_UIELEMENT_FEATURE_ID:
-        getTarget().getUIElement().remove((AbstractUIElement) value);
+        getTarget().getUIElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1545,7 +1545,7 @@ public class UiModelFactory implements ModelFactory {
       switch (featureID) {
 
       case UiModelPackage.UIACTION_UIELEMENT_FEATURE_ID:
-        getTarget().getUIElement().remove((UIEvent) value);
+        getTarget().getUIElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

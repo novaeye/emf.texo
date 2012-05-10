@@ -4,6 +4,9 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.AGroupFeatureGroup" name="A_group">
     <orm:attributes>
       <orm:basic name="b" optional="true"/>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="c" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType">
         <orm:join-column/>
         <orm:cascade>
@@ -31,6 +34,9 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementTrueFeatureGroup" name="Element_true">
     <orm:attributes>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="c" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType">
         <orm:join-column/>
         <orm:cascade>
@@ -42,6 +48,18 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup" name="Element_mixed">
     <orm:attributes>
       <orm:basic name="name" optional="false"/>
+      <orm:basic name="text" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="cDATA" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="comment" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="c" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType">
         <orm:join-column/>
         <orm:cascade>

@@ -3,7 +3,11 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.substitution;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
@@ -14,6 +18,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
+@Entity(name = "MultiNumberType_myComplexAbstractGroup")
 public class MultiNumberTypeMyComplexAbstractGroupFeatureGroup {
 
   /**
@@ -72,6 +77,31 @@ public class MultiNumberTypeMyComplexAbstractGroupFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<MultiNumberTypeMyComplexAbstractGroupFeatureGroup> featureGroup,
+      Feature feature, Object value) {
+    for (final MultiNumberTypeMyComplexAbstractGroupFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final MultiNumberTypeMyComplexAbstractGroupFeatureGroup entry = new MultiNumberTypeMyComplexAbstractGroupFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -98,6 +128,8 @@ public class MultiNumberTypeMyComplexAbstractGroupFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**

@@ -461,7 +461,7 @@ public class ResponseModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ResponseModelPackage.RESPONSETYPE_DATA_FEATURE_ID:
-        getTarget().getData().remove((Object) value);
+        getTarget().getData().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -558,15 +558,15 @@ public class ResponseModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ResponseModelPackage.RESULTTYPE_UPDATED_FEATURE_ID:
-        getTarget().getUpdated().remove((Object) value);
+        getTarget().getUpdated().remove(value);
         return;
 
       case ResponseModelPackage.RESULTTYPE_INSERTED_FEATURE_ID:
-        getTarget().getInserted().remove((Object) value);
+        getTarget().getInserted().remove(value);
         return;
 
       case ResponseModelPackage.RESULTTYPE_DELETED_FEATURE_ID:
-        getTarget().getDeleted().remove((Object) value);
+        getTarget().getDeleted().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

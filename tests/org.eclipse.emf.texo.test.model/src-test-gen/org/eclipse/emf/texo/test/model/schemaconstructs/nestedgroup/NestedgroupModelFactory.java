@@ -272,7 +272,7 @@ public class NestedgroupModelFactory implements ModelFactory {
       switch (featureID) {
 
       case NestedgroupModelPackage.A_C_FEATURE_ID:
-        getTarget().getC().remove((CType) value);
+        getTarget().getC().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -449,7 +449,7 @@ public class NestedgroupModelFactory implements ModelFactory {
       switch (featureID) {
 
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
-        getTarget().getC().remove((CType) value);
+        getTarget().getC().remove(value);
         return;
 
       }

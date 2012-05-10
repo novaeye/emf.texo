@@ -366,7 +366,7 @@ public class LibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().getBooks().remove((Book) value);
+        getTarget().getBooks().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -461,11 +461,11 @@ public class LibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       case LibraryModelPackage.LIBRARY_WRITERS_FEATURE_ID:
-        getTarget().getWriters().remove((Writer) value);
+        getTarget().getWriters().remove(value);
         return;
 
       case LibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
-        getTarget().getBooks().remove((Book) value);
+        getTarget().getBooks().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

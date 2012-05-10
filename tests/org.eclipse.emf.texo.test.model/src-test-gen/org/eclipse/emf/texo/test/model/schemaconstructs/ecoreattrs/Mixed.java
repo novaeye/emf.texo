@@ -1,9 +1,11 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>Mixed</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,6 +20,8 @@ public class Mixed {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = MixedMixedFeatureGroup.class)
+  @JoinTable()
   private List<MixedMixedFeatureGroup> mixed = new ArrayList<MixedMixedFeatureGroup>();
 
   /**
@@ -67,8 +71,7 @@ public class Mixed {
    * @generated
    */
   public void setName(String newName) {
-    setMixed(MixedMixedFeatureGroup.createFeatureGroupList(MixedMixedFeatureGroup.Feature.NAME,
-        Collections.singletonList(newName)));
+    MixedMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), MixedMixedFeatureGroup.Feature.NAME, newName);
   }
 
   /**
@@ -93,8 +96,7 @@ public class Mixed {
    * @generated
    */
   public void setValue_(double newValue_) {
-    setMixed(MixedMixedFeatureGroup.createFeatureGroupList(MixedMixedFeatureGroup.Feature.VALUE_,
-        Collections.singletonList(newValue_)));
+    MixedMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), MixedMixedFeatureGroup.Feature.VALUE_, newValue_);
   }
 
   /**

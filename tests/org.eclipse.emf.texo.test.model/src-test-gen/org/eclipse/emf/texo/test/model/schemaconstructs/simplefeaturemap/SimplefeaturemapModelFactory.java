@@ -327,11 +327,11 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SimplefeaturemapModelPackage.SUPPLIER_PREFERREDORDERS_FEATURE_ID:
-        getTarget().getPreferredOrders().remove((PurchaseOrder) value);
+        getTarget().getPreferredOrders().remove(value);
         return;
 
       case SimplefeaturemapModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
-        getTarget().getStandardOrders().remove((PurchaseOrder) value);
+        getTarget().getStandardOrders().remove(value);
         return;
 
       }

@@ -441,7 +441,7 @@ public class EventModelFactory implements ModelFactory {
       switch (featureID) {
 
       case EventModelPackage.EVENTMODEL_EVENTELEMENT_FEATURE_ID:
-        getTarget().getEventElement().remove((AbstractEventElement) value);
+        getTarget().getEventElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -551,19 +551,19 @@ public class EventModelFactory implements ModelFactory {
       switch (featureID) {
 
       case EventModelPackage.ABSTRACTEVENTELEMENT_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       case EventModelPackage.ABSTRACTEVENTELEMENT_EVENTRELATION_FEATURE_ID:
-        getTarget().getEventRelation().remove((AbstractEventRelationship) value);
+        getTarget().getEventRelation().remove(value);
         return;
 
       case EventModelPackage.ABSTRACTEVENTELEMENT_ABSTRACTION_FEATURE_ID:
-        getTarget().getAbstraction().remove((ActionElement) value);
+        getTarget().getAbstraction().remove(value);
         return;
 
       case EventModelPackage.ABSTRACTEVENTELEMENT_IMPLEMENTATION_FEATURE_ID:
-        getTarget().getImplementation().remove((AbstractCodeElement) value);
+        getTarget().getImplementation().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -868,7 +868,7 @@ public class EventModelFactory implements ModelFactory {
       switch (featureID) {
 
       case EventModelPackage.EVENTRESOURCE_EVENTELEMENT_FEATURE_ID:
-        getTarget().getEventElement().remove((AbstractEventElement) value);
+        getTarget().getEventElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1222,7 +1222,7 @@ public class EventModelFactory implements ModelFactory {
       switch (featureID) {
 
       case EventModelPackage.EVENTACTION_EVENTELEMENT_FEATURE_ID:
-        getTarget().getEventElement().remove((Event) value);
+        getTarget().getEventElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

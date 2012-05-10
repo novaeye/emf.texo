@@ -5,9 +5,15 @@ import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
@@ -15,6 +21,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
+@Entity(name = "Element_mixed")
 public class ElementMixedFeatureGroup {
 
   /**
@@ -72,6 +79,30 @@ public class ElementMixedFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<ElementMixedFeatureGroup> featureGroup, Feature feature, Object value) {
+    for (final ElementMixedFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final ElementMixedFeatureGroup entry = new ElementMixedFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -97,6 +128,8 @@ public class ElementMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**
@@ -104,6 +137,8 @@ public class ElementMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String text;
 
   /**
@@ -111,6 +146,8 @@ public class ElementMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String cDATA;
 
   /**
@@ -118,6 +155,8 @@ public class ElementMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String comment;
 
   /**
@@ -133,6 +172,8 @@ public class ElementMixedFeatureGroup {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ElementTrueFeatureGroup.class)
+  @JoinTable()
   private ElementTrueFeatureGroup true_;
 
   /**

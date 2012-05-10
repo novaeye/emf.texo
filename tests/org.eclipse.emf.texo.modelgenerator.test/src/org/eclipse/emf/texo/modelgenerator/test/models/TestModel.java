@@ -69,6 +69,7 @@ public class TestModel {
     urls.add("samples/SchemaPrimerPO.xsd");//$NON-NLS-1$
     urls.add("samples/sun_books.xsd");//$NON-NLS-1$
     urls.add("samples/schoollibrary.ecore");//$NON-NLS-1$
+    urls.add("samples/jpamixed.ecore");//$NON-NLS-1$
     urls.add("samples/types.ecore");//$NON-NLS-1$
     urls.add("samples/Workflow.ecore");//$NON-NLS-1$
     urls.add("samples/FeatureMapTest.ecore");//$NON-NLS-1$

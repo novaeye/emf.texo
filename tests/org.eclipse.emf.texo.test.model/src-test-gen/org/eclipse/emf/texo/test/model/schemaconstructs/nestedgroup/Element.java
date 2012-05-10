@@ -1,9 +1,11 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>Element</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,6 +20,8 @@ public class Element {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ElementMixedFeatureGroup.class)
+  @JoinTable()
   private List<ElementMixedFeatureGroup> mixed = new ArrayList<ElementMixedFeatureGroup>();
 
   /**
@@ -67,8 +71,7 @@ public class Element {
    * @generated
    */
   public void setName(String newName) {
-    setMixed(ElementMixedFeatureGroup.createFeatureGroupList(ElementMixedFeatureGroup.Feature.NAME,
-        Collections.singletonList(newName)));
+    ElementMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), ElementMixedFeatureGroup.Feature.NAME, newName);
   }
 
   /**
@@ -143,8 +146,8 @@ public class Element {
    * @generated
    */
   public void setRecursive(Element newRecursive) {
-    setMixed(ElementMixedFeatureGroup.createFeatureGroupList(ElementMixedFeatureGroup.Feature.RECURSIVE,
-        Collections.singletonList(newRecursive)));
+    ElementMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), ElementMixedFeatureGroup.Feature.RECURSIVE,
+        newRecursive);
   }
 
   /**

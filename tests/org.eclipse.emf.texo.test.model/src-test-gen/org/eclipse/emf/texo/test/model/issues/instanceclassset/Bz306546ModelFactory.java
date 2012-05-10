@@ -279,7 +279,7 @@ public class Bz306546ModelFactory implements ModelFactory {
       switch (featureID) {
 
       case Bz306546ModelPackage.MYSERIALIZABLECLASS_NONEMFS_FEATURE_ID:
-        getTarget().getNonEMFs().remove((NonEMF) value);
+        getTarget().getNonEMFs().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

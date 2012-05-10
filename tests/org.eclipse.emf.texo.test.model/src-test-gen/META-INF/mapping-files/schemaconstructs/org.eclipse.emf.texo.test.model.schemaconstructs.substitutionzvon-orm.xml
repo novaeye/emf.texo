@@ -17,6 +17,18 @@
       <orm:basic name="even" optional="true"/>
       <orm:basic name="myAbstract" optional="true"/>
       <orm:basic name="odd" optional="true"/>
+      <orm:basic name="text" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="cDATA" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="comment" optional="true">
+        <orm:lob/>
+      </orm:basic>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="complexEven" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType">
         <orm:join-column/>
         <orm:cascade>
@@ -62,10 +74,16 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="RootType_myAbstractGroup">
     <orm:attributes>
       <orm:basic name="myAbstract" optional="false"/>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyComplexAbstractGroupFeatureGroup" name="RootType_myComplexAbstractGroup">
     <orm:attributes>
+      <orm:basic name="feature" optional="false">
+        <orm:enumerated>STRING</orm:enumerated>
+      </orm:basic>
       <orm:many-to-one name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexAAA">
         <orm:join-column/>
         <orm:cascade>

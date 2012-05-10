@@ -438,7 +438,7 @@ public class SourceModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SourceModelPackage.INVENTORYMODEL_INVENTORYELEMENT_FEATURE_ID:
-        getTarget().getInventoryElement().remove((AbstractInventoryElement) value);
+        getTarget().getInventoryElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -521,7 +521,7 @@ public class SourceModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SourceModelPackage.ABSTRACTINVENTORYELEMENT_INVENTORYRELATIONSHIP_FEATURE_ID:
-        getTarget().getInventoryRelationship().remove((AbstractInventoryRelationship) value);
+        getTarget().getInventoryRelationship().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1167,7 +1167,7 @@ public class SourceModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SourceModelPackage.INVENTORYCONTAINER_INVENTORYELEMENT_FEATURE_ID:
-        getTarget().getInventoryElement().remove((AbstractInventoryElement) value);
+        getTarget().getInventoryElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1479,7 +1479,7 @@ public class SourceModelFactory implements ModelFactory {
       switch (featureID) {
 
       case SourceModelPackage.SOURCEREF_REGION_FEATURE_ID:
-        getTarget().getRegion().remove((SourceRegion) value);
+        getTarget().getRegion().remove(value);
         return;
 
       }

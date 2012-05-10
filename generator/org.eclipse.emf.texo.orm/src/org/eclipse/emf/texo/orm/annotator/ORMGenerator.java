@@ -53,9 +53,11 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureMo
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Attributes;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
@@ -94,9 +96,17 @@ public class ORMGenerator extends BaseGenerateAction {
    * @param annotationOwner
    * @return
    */
-  public static String generateJavaAnnotations(EObject annotationOwner) {
+  public static String generateJavaAnnotations(EObject annotationOwner, List<EReference> includes,
+      List<EReference> excludes) {
     final StringBuilder sb = new StringBuilder();
     for (EReference eReference : annotationOwner.eClass().getEAllReferences()) {
+      if (includes != null && !includes.contains(eReference)) {
+        continue;
+      }
+      if (excludes != null && excludes.contains(eReference)) {
+        continue;
+      }
+
       final Object value = annotationOwner.eGet(eReference);
       if (value instanceof BaseOrmAnnotation) {
         if (sb.length() > 0) {
@@ -345,9 +355,32 @@ public class ORMGenerator extends BaseGenerateAction {
 
     final Attributes attributes = OrmFactory.eINSTANCE.createAttributes();
     collectAttributes(entityMappings, annotationManager, eReferences, eAttributes, true, attributes);
+
+    if (ModelUtils.isMixed(eAttribute)) {
+      attributes.getBasic().add(createBasic("text"));
+      attributes.getBasic().add(createBasic("cDATA"));
+      attributes.getBasic().add(createBasic("comment"));
+    }
+
+    {
+      final Basic featureBasic = OrmFactory.eINSTANCE.createBasic();
+      featureBasic.setEnumerated(Enumerated.STRING);
+      featureBasic.setName("feature");
+      featureBasic.setOptional(false);
+      attributes.getBasic().add(featureBasic);
+    }
+
     entity.setAttributes(attributes);
 
     entityMappings.getEntity().add(EcoreUtil.copy(entity));
+  }
+
+  private Basic createBasic(String name) {
+    final Basic basic = OrmFactory.eINSTANCE.createBasic();
+    basic.setLob(OrmFactory.eINSTANCE.createLob());
+    basic.setName(name);
+    basic.setOptional(true);
+    return basic;
   }
 
   private void mergeManyFeatures(EObject o1, EObject o2) {

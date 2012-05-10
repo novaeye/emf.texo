@@ -1582,7 +1582,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.CODEMODEL_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((AbstractCodeElement) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -1692,19 +1692,19 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.ABSTRACTCODEELEMENT_SOURCE_FEATURE_ID:
-        getTarget().getSource().remove((SourceRef) value);
+        getTarget().getSource().remove(value);
         return;
 
       case CodeModelPackage.ABSTRACTCODEELEMENT_COMMENT_FEATURE_ID:
-        getTarget().getComment().remove((CommentUnit) value);
+        getTarget().getComment().remove(value);
         return;
 
       case CodeModelPackage.ABSTRACTCODEELEMENT_CODERELATION_FEATURE_ID:
-        getTarget().getCodeRelation().remove((AbstractCodeRelationship) value);
+        getTarget().getCodeRelation().remove(value);
         return;
 
       case CodeModelPackage.ABSTRACTCODEELEMENT_ENTRYFLOW_FEATURE_ID:
-        getTarget().getEntryFlow().remove((EntryFlow) value);
+        getTarget().getEntryFlow().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2130,7 +2130,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.MODULE_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((AbstractCodeElement) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2551,7 +2551,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.CONTROLELEMENT_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((AbstractCodeElement) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -2800,7 +2800,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.DATAELEMENT_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((Datatype) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -3376,7 +3376,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.VALUELIST_VALUEELEMENT_FEATURE_ID:
-        getTarget().getValueElement().remove((ValueElement) value);
+        getTarget().getValueElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -4538,11 +4538,11 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.ENUMERATEDTYPE_VALUE_FEATURE_ID:
-        getTarget().getValue().remove((Value) value);
+        getTarget().getValue().remove(value);
         return;
 
       case CodeModelPackage.ENUMERATEDTYPE_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((CodeItem) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -4623,7 +4623,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.COMPOSITETYPE_ITEMUNIT_FEATURE_ID:
-        getTarget().getItemUnit().remove((ItemUnit) value);
+        getTarget().getItemUnit().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -5359,7 +5359,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.SIGNATURE_PARAMETERUNIT_FEATURE_ID:
-        getTarget().getParameterUnit().remove((ParameterUnit) value);
+        getTarget().getParameterUnit().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -5658,7 +5658,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.CLASSUNIT_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((CodeItem) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -5739,7 +5739,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.INTERFACEUNIT_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((CodeItem) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -5820,7 +5820,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.TEMPLATEUNIT_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((CodeItem) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -6593,7 +6593,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.PREPROCESSORDIRECTIVE_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((AbstractCodeElement) value);
+        getTarget().getCodeElement().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -7348,7 +7348,7 @@ public class CodeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CodeModelPackage.NAMESPACE_GROUPEDCODE_FEATURE_ID:
-        getTarget().getGroupedCode().remove((CodeItem) value);
+        getTarget().getGroupedCode().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

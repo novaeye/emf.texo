@@ -723,11 +723,11 @@ public class ActionModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ActionModelPackage.ACTIONELEMENT_CODEELEMENT_FEATURE_ID:
-        getTarget().getCodeElement().remove((AbstractCodeElement) value);
+        getTarget().getCodeElement().remove(value);
         return;
 
       case ActionModelPackage.ACTIONELEMENT_ACTIONRELATION_FEATURE_ID:
-        getTarget().getActionRelation().remove((AbstractActionRelationship) value);
+        getTarget().getActionRelation().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);

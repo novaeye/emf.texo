@@ -2,10 +2,12 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.mixed;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  * A representation of the model object '<em><b>LetterBodyType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -20,6 +22,8 @@ public class LetterBodyType {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = LetterBodyTypeMixedFeatureGroup.class)
+  @JoinTable()
   private List<LetterBodyTypeMixedFeatureGroup> mixed = new ArrayList<LetterBodyTypeMixedFeatureGroup>();
 
   /**
@@ -70,8 +74,8 @@ public class LetterBodyType {
    * @generated
    */
   public void setSalutation(SalutationType newSalutation) {
-    setMixed(LetterBodyTypeMixedFeatureGroup.createFeatureGroupList(LetterBodyTypeMixedFeatureGroup.Feature.SALUTATION,
-        Collections.singletonList(newSalutation)));
+    LetterBodyTypeMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        LetterBodyTypeMixedFeatureGroup.Feature.SALUTATION, newSalutation);
   }
 
   /**
@@ -97,8 +101,8 @@ public class LetterBodyType {
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
-    setMixed(LetterBodyTypeMixedFeatureGroup.createFeatureGroupList(LetterBodyTypeMixedFeatureGroup.Feature.QUANTITY,
-        Collections.singletonList(newQuantity)));
+    LetterBodyTypeMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        LetterBodyTypeMixedFeatureGroup.Feature.QUANTITY, newQuantity);
   }
 
   /**
@@ -124,8 +128,8 @@ public class LetterBodyType {
    * @generated
    */
   public void setProductName(String newProductName) {
-    setMixed(LetterBodyTypeMixedFeatureGroup.createFeatureGroupList(
-        LetterBodyTypeMixedFeatureGroup.Feature.PRODUCTNAME, Collections.singletonList(newProductName)));
+    LetterBodyTypeMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        LetterBodyTypeMixedFeatureGroup.Feature.PRODUCTNAME, newProductName);
   }
 
   /**
@@ -151,8 +155,8 @@ public class LetterBodyType {
    * @generated
    */
   public void setShipDate(Date newShipDate) {
-    setMixed(LetterBodyTypeMixedFeatureGroup.createFeatureGroupList(LetterBodyTypeMixedFeatureGroup.Feature.SHIPDATE,
-        Collections.singletonList(newShipDate)));
+    LetterBodyTypeMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        LetterBodyTypeMixedFeatureGroup.Feature.SHIPDATE, newShipDate);
   }
 
   /**

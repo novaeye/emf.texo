@@ -331,11 +331,11 @@ public class CoreModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CoreModelPackage.ELEMENT_ATTRIBUTE_FEATURE_ID:
-        getTarget().getAttribute().remove((Attribute) value);
+        getTarget().getAttribute().remove(value);
         return;
 
       case CoreModelPackage.ELEMENT_ANNOTATION_FEATURE_ID:
-        getTarget().getAnnotation().remove((Annotation) value);
+        getTarget().getAnnotation().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -425,11 +425,11 @@ public class CoreModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CoreModelPackage.MODELELEMENT_STEREOTYPE_FEATURE_ID:
-        getTarget().getStereotype().remove((Stereotype) value);
+        getTarget().getStereotype().remove(value);
         return;
 
       case CoreModelPackage.MODELELEMENT_TAGGEDVALUE_FEATURE_ID:
-        getTarget().getTaggedValue().remove((ExtendedValue) value);
+        getTarget().getTaggedValue().remove(value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -689,7 +689,7 @@ public class CoreModelFactory implements ModelFactory {
       switch (featureID) {
 
       case CoreModelPackage.AGGREGATEDRELATIONSHIP_RELATION_FEATURE_ID:
-        getTarget().getRelation().remove((KDMRelationship) value);
+        getTarget().getRelation().remove(value);
         return;
 
       }

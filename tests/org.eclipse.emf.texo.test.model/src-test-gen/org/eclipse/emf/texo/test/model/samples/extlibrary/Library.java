@@ -74,6 +74,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = LibraryPeopleFeatureGroup.class)
+  @JoinTable()
   private List<LibraryPeopleFeatureGroup> people = new ArrayList<LibraryPeopleFeatureGroup>();
 
   /**

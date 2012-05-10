@@ -7,6 +7,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
@@ -60,6 +61,8 @@ public class TestAny {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = TestAnyMyAnyFeatureGroup.class)
+  @JoinTable()
   private List<TestAnyMyAnyFeatureGroup> myAny = new ArrayList<TestAnyMyAnyFeatureGroup>();
 
   /**
@@ -67,6 +70,8 @@ public class TestAny {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = TestAnyAnyFeatureGroup.class)
+  @JoinTable()
   private List<TestAnyAnyFeatureGroup> any = new ArrayList<TestAnyAnyFeatureGroup>();
 
   /**
