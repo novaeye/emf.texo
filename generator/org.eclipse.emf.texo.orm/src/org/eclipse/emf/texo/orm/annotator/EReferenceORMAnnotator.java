@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.generator.Annotator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
@@ -137,9 +138,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
     if (oneToMany.getCascade() == null) {
       if (eReference.isContainment()) {
-        oneToMany.setCascade(ePackageORMAnnotation.getDefaultCascadeContainment());
+        oneToMany.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeContainment()));
       } else {
-        oneToMany.setCascade(ePackageORMAnnotation.getDefaultCascadeNonContainment());
+        oneToMany.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeNonContainment()));
       }
 
       // no defaults set, do something smart...
@@ -323,9 +324,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
 
     if (oneToOne.getCascade() == null) {
       if (eReference.isContainment()) {
-        oneToOne.setCascade(ePackageORMAnnotation.getDefaultCascadeContainment());
+        oneToOne.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeContainment()));
       } else {
-        oneToOne.setCascade(ePackageORMAnnotation.getDefaultCascadeNonContainment());
+        oneToOne.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeNonContainment()));
       }
 
       // no defaults set, do something smart...
@@ -379,9 +380,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
 
     if (manyToOne.getCascade() == null) {
       if (eReference.isContainment()) {
-        manyToOne.setCascade(ePackageORMAnnotation.getDefaultCascadeContainment());
+        manyToOne.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeContainment()));
       } else {
-        manyToOne.setCascade(ePackageORMAnnotation.getDefaultCascadeNonContainment());
+        manyToOne.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeNonContainment()));
       }
 
       // no defaults set, do something smart...
@@ -473,9 +474,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
 
     if (manyToMany.getCascade() == null) {
       if (eReference.isContainment()) {
-        manyToMany.setCascade(ePackageORMAnnotation.getDefaultCascadeContainment());
+        manyToMany.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeContainment()));
       } else {
-        manyToMany.setCascade(ePackageORMAnnotation.getDefaultCascadeNonContainment());
+        manyToMany.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeNonContainment()));
       }
 
       // no defaults set, do something smart...
