@@ -12,6 +12,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -64,11 +65,13 @@ public class EmptyTypeItemProvider extends ItemProviderAdapter implements IEditi
   /**
    * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @generated
+   * @generatedNOT
    */
   @Override
   public String getText(Object object) {
-    return getString("_UI_EmptyType_type");
+    final EObject eObject = (EObject) object;
+    return getString("_UI_" + eObject.eContainingFeature().getName());
+    // return getString("_UI_EmptyType_type");
   }
 
   /**

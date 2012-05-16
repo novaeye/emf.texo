@@ -12,6 +12,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,6 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType} object.
@@ -107,6 +109,10 @@ public class CascadeTypeItemProvider extends ItemProviderAdapter implements IEdi
    */
   @Override
   public String getText(Object object) {
+    final EObject eObject = (EObject) object;
+    if (eObject.eContainer() instanceof EPackageORMAnnotation) {
+      return getString("_UI_EPackageORMAnnotation_" + eObject.eContainingFeature().getName() + "_feature");
+    }
     return getString("_UI_CascadeType_type");
   }
 
@@ -162,12 +168,12 @@ public class CascadeTypeItemProvider extends ItemProviderAdapter implements IEdi
    * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * 
-   * @generated
+   * @generatedNOT
    */
   @Override
   public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
     Object childFeature = feature;
-    Object childObject = child;
+    // Object childObject = child;
 
     boolean qualify = childFeature == OrmPackage.eINSTANCE.getCascadeType_CascadeAll()
         || childFeature == OrmPackage.eINSTANCE.getCascadeType_CascadePersist()
@@ -176,8 +182,10 @@ public class CascadeTypeItemProvider extends ItemProviderAdapter implements IEdi
         || childFeature == OrmPackage.eINSTANCE.getCascadeType_CascadeRefresh();
 
     if (qualify) {
-      return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject), getFeatureText(childFeature),
-          getTypeText(owner) });
+      return getString("_UI_CreateChild_text2", new Object[] { "", getFeatureText(childFeature), "" });
+      // return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
+      // getFeatureText(childFeature),
+      // getTypeText(owner) });
     }
     return super.getCreateChildText(owner, feature, child, selection);
   }
