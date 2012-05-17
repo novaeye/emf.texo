@@ -192,13 +192,15 @@ public class JoinColumnItemProvider extends ItemProviderAdapter implements IEdit
   /**
    * This returns the label text for the adapted class. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @generated
+   * @generatedNOT
    */
   @Override
   public String getText(Object object) {
-    String label = ((JoinColumn) object).getName();
-    return label == null || label.length() == 0 ? getString("_UI_JoinColumn_type") : getString("_UI_JoinColumn_type")
-        + " " + label;
+    // String label = ((JoinColumn) object).getName();
+    //
+    // return label == null || label.length() == 0 ? getString("_UI_JoinColumn_type") : getString("_UI_JoinColumn_type")
+    // + " " + label;
+    return getFeatureText(((JoinColumn) object).eContainingFeature());
   }
 
   /**
