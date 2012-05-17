@@ -38,7 +38,18 @@ import org.eclipse.emf.texo.model.ModelResolver;
 public class ModelUtils {
   public static final String QUALIFIERSEPARATOR = "|"; //$NON-NLS-1$
 
-  private static final SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+  private static SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+
+  /**
+   * Override the default xml dateformat with your own settings.
+   */
+  public static void setXMLDateFormat(SimpleDateFormat simpleDateFormat) {
+    xmlDateFormat = simpleDateFormat;
+  }
+
+  public static SimpleDateFormat getXMLDateFormat() {
+    return xmlDateFormat;
+  }
 
   /**
    * Return true if the {@link EStructuralFeature} is an {@link EAttribute} is a optional xsd attribute.
