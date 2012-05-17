@@ -17,7 +17,7 @@ public class StorableUnit extends DataElement {
    * @generated
    */
   @Basic(optional = true)
-  private StorableKind kind = StorableKind.GLOBAL;
+  private StorableKind kind = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

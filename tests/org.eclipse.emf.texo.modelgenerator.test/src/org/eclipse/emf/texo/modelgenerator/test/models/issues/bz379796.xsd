@@ -5,5 +5,16 @@
 
 	<xs:complexType name="priceType">
 		<xs:attribute name="value" type="xs:int" use="optional" />
+		<xs:attribute name="enable_mode" type="enable_modeType" />
 	</xs:complexType>
+
+	<xs:simpleType name="enable_modeType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="less" />
+			<xs:enumeration value="less-or-equal" />
+			<xs:enumeration value="equal" />
+			<xs:enumeration value="greater-or-equal" />
+			<xs:enumeration value="greater" />
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

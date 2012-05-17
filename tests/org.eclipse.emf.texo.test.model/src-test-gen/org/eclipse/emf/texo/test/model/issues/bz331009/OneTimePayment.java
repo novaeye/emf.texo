@@ -30,7 +30,7 @@ public class OneTimePayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private Currency currency = Currency.ROUBLES;
+  private Currency currency = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата платежа <!-- end-model-doc -->
@@ -55,7 +55,7 @@ public class OneTimePayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private PaymentType paymentType = PaymentType.REQUIRED;
+  private PaymentType paymentType = null;
 
   /**
    * Returns the value of '<em><b>sum</b></em>' feature.

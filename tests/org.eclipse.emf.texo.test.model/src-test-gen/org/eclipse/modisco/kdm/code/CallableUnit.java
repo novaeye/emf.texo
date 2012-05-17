@@ -17,7 +17,7 @@ public class CallableUnit extends ControlElement {
    * @generated
    */
   @Basic(optional = true)
-  private CallableKind kind = CallableKind.EXTERNAL;
+  private CallableKind kind = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.issues.bz379796;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
@@ -48,6 +50,20 @@ public class Bz379796ModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int ENABLEMODETYPE_CLASSIFIER_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ENABLEMODETYPEOBJECT_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int PRICETYPE_CLASSIFIER_ID = 0;
 
   /**
@@ -55,7 +71,14 @@ public class Bz379796ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRICETYPE_VALUE_FEATURE_ID = 0;
+  public static final int PRICETYPE_ENABLEMODE_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_VALUE_FEATURE_ID = 1;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -87,6 +110,9 @@ public class Bz379796ModelPackage extends ModelPackage {
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(PriceType.class, modelPackage.getPriceTypeEClass(),
+        modelPackage);
+
+    ModelResolver.getInstance().registerClassModelMapping(EnableModeType.class, modelPackage.getEnableModeTypeEEnum(),
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(PriceType.class, PriceTypeDao.class);
@@ -141,6 +167,17 @@ public class Bz379796ModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.enableMode</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.enableMode</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_EnableMode() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_ENABLEMODE_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EStructuralFeature} '<em><b>PriceType.value</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -149,6 +186,26 @@ public class Bz379796ModelPackage extends ModelPackage {
    */
   public EAttribute getPriceType_Value() {
     return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_VALUE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the EEnum '<em><b>EnableModeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the EEnum representing '<em><b>EnableModeType</b></em>'
+   * @generated
+   */
+  public EEnum getEnableModeTypeEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(ENABLEMODETYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>EnableModeTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>EnableModeTypeObject</b></em>'
+   * @generated
+   */
+  public EDataType getEnableModeTypeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(ENABLEMODETYPEOBJECT_CLASSIFIER_ID);
   }
 
   /**
@@ -164,6 +221,10 @@ public class Bz379796ModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case PRICETYPE_CLASSIFIER_ID:
       return PriceType.class;
+    case ENABLEMODETYPE_CLASSIFIER_ID:
+      return EnableModeType.class;
+    case ENABLEMODETYPEOBJECT_CLASSIFIER_ID:
+      return EnableModeType.class;
     }
     throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }

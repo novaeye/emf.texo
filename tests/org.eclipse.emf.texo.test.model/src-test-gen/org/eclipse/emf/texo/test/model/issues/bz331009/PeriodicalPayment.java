@@ -22,7 +22,7 @@ public class PeriodicalPayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private Periodicity periodicity = Periodicity.DAILY;
+  private Periodicity periodicity = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сумма платежа <!-- end-model-doc -->
@@ -38,7 +38,7 @@ public class PeriodicalPayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private Currency currency = Currency.ROUBLES;
+  private Currency currency = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата платежа <!-- end-model-doc -->
@@ -63,7 +63,7 @@ public class PeriodicalPayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private PaymentType paymentType = PaymentType.REQUIRED;
+  private PaymentType paymentType = null;
 
   /**
    * Returns the value of '<em><b>periodicity</b></em>' feature.

@@ -59,7 +59,7 @@ public class VolumePayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private Currency currency = Currency.ROUBLES;
+  private Currency currency = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата платежа <!-- end-model-doc -->
@@ -84,7 +84,7 @@ public class VolumePayment implements PaymentItem {
    * @generated
    */
   @Basic(optional = true)
-  private PaymentType paymentType = PaymentType.REQUIRED;
+  private PaymentType paymentType = null;
 
   /**
    * Returns the value of '<em><b>volume</b></em>' feature.

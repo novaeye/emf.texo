@@ -17,7 +17,7 @@ public class MemberUnit extends DataElement {
    * @generated
    */
   @Basic(optional = true)
-  private ExportKind export = ExportKind.PUBLIC;
+  private ExportKind export = null;
 
   /**
    * Returns the value of '<em><b>export</b></em>' feature.

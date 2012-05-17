@@ -23,7 +23,6 @@ import junit.framework.TestSuite;
 
 import org.eclipse.emf.texo.datagenerator.test.DataGenTest;
 import org.eclipse.emf.texo.orm.test.AllJPATests;
-import org.eclipse.emf.texo.test.EClassInstanceClassSetTest;
 import org.eclipse.emf.texo.test.TestDirectJavaAnnotations;
 import org.eclipse.emf.texo.test.TestMerge;
 import org.eclipse.emf.texo.test.TestModelAccess;
@@ -45,7 +44,6 @@ public class CombinedTestSuite {
     TestSuite suite = new TestSuite("Combined Texo Test Suite"); //$NON-NLS-1$
 
     // org.eclipse.emf.texo.test
-    suite.addTestSuite(EClassInstanceClassSetTest.class);
     suite.addTestSuite(TestMerge.class);
     suite.addTestSuite(TestModelAccess.class);
     suite.addTestSuite(TestTemplateOverride.class);

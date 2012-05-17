@@ -74,7 +74,7 @@ public class PurchaseOrder extends Identifiable {
    * @generated
    */
   @Basic(optional = true)
-  private OrderStatus status = OrderStatus.PENDING;
+  private OrderStatus status = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

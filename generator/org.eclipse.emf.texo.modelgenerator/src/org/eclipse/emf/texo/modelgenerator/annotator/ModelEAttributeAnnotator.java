@@ -26,6 +26,7 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.generator.Annotator;
@@ -220,6 +221,9 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
     try {
       if (eFeature.getDefaultValueLiteral() == null && !eFeature.isMany() && eFeature.getLowerBound() == 0
           && eFeature instanceof EAttribute) {
+        if (eFeature.getEType() instanceof EEnum) {
+          return "null"; //$NON-NLS-1$
+        }
         final Class<?> clz = getInstanceClass(eFeature);
         if (clz != null && !clz.isPrimitive()) {
           return "null"; //$NON-NLS-1$

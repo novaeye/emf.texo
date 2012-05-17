@@ -108,6 +108,10 @@ public class Bz379796ModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    case Bz379796ModelPackage.ENABLEMODETYPE_CLASSIFIER_ID:
+      return createEnableModeTypeFromString(value);
+    case Bz379796ModelPackage.ENABLEMODETYPEOBJECT_CLASSIFIER_ID:
+      return createEnableModeTypeObjectFromString(value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
@@ -123,8 +127,73 @@ public class Bz379796ModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    case Bz379796ModelPackage.ENABLEMODETYPE_CLASSIFIER_ID:
+      return convertEnableModeTypeToString((EnableModeType) value);
+    case Bz379796ModelPackage.ENABLEMODETYPEOBJECT_CLASSIFIER_ID:
+      return convertEnableModeTypeObjectToString((EnableModeType) value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+  }
+
+  /**
+   * Converts the EDataType: EnableModeType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertEnableModeTypeToString(EnableModeType value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: EnableModeType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public EnableModeType createEnableModeTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return EnableModeType.get(value);
+  }
+
+  /**
+   * Converts the EDataType: EnableModeTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertEnableModeTypeObjectToString(EnableModeType value) {
+    if (value == null) {
+      return null;
+    }
+    return convertEnableModeTypeToString(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: EnableModeTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public EnableModeType createEnableModeTypeObjectFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return createEnableModeTypeFromString(value);
   }
 
   /**
@@ -154,6 +223,8 @@ public class Bz379796ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz379796ModelPackage.PRICETYPE_ENABLEMODE_FEATURE_ID:
+        return getTarget().getEnableMode();
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
         return getTarget().getValue();
       }
@@ -167,6 +238,9 @@ public class Bz379796ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz379796ModelPackage.PRICETYPE_ENABLEMODE_FEATURE_ID:
+        getTarget().setEnableMode((EnableModeType) value);
+        return;
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
         getTarget().setValue((Integer) value);
         return;

@@ -22,7 +22,7 @@ public class Event {
    * @generated
    */
   @Basic(optional = true)
-  private EventType eventType = EventType.COORDINATES;
+  private EventType eventType = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Полученное сообщение <!-- end-model-doc -->

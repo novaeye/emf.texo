@@ -33,7 +33,7 @@ public class Message {
    * @generated
    */
   @Basic(optional = true)
-  private MessageType type = MessageType.SERVICE;
+  private MessageType type = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Отправитель <!-- end-model-doc -->

@@ -35,7 +35,7 @@ public class Book extends CirculatingItem {
    * @generated
    */
   @Basic(optional = true)
-  private BookCategory category = BookCategory.MYSTERY;
+  private BookCategory category = null;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

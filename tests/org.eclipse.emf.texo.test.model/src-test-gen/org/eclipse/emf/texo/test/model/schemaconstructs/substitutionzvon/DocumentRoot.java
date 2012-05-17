@@ -82,7 +82,7 @@ public class DocumentRoot {
    * @generated
    */
   @Basic(optional = true)
-  private EvenType even = EvenType._2;
+  private EvenType even = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -98,7 +98,7 @@ public class DocumentRoot {
    * @generated
    */
   @Basic(optional = true)
-  private OddType odd = OddType._1;
+  private OddType odd = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

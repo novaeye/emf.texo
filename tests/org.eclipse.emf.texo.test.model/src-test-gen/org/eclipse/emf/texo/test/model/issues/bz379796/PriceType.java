@@ -17,7 +17,40 @@ public class PriceType {
    * @generated
    */
   @Basic(optional = true)
+  private EnableModeType enableMode = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = true)
   private Integer value = null;
+
+  /**
+   * Returns the value of '<em><b>enableMode</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>enableMode</b></em>' feature
+   * @generated
+   */
+  public EnableModeType getEnableMode() {
+    return enableMode;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getEnableMode() <em>enableMode</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getEnableMode() enableMode}' feature.
+   * @generated
+   */
+  public void setEnableMode(EnableModeType newEnableMode) {
+    enableMode = newEnableMode;
+  }
 
   /**
    * Returns the value of '<em><b>value</b></em>' feature.
@@ -52,6 +85,6 @@ public class PriceType {
    */
   @Override
   public String toString() {
-    return "PriceType " + " [value: " + getValue() + "]";
+    return "PriceType " + " [enableMode: " + getEnableMode() + "]" + " [value: " + getValue() + "]";
   }
 }
