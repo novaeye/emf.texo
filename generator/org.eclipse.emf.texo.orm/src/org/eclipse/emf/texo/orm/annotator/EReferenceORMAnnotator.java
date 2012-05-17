@@ -225,6 +225,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       oneToMany.setTargetEntity(getTargetEntity(eReference));
     }
 
+    // copy any join columns over
+    oneToMany.getJoinColumn().addAll(annotation.getJoinColumn());
+
     // now work on jointable or joincolumn
     if (isOwner && oneToMany.getJoinColumn().isEmpty() && oneToMany.getJoinTable() == null) {
       if (eReference.isContainment()) {
@@ -352,8 +355,11 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       oneToOne.setTargetEntity(getTargetEntity(eReference));
     }
 
+    // copy any join columns over
+    oneToOne.getJoinColumn().addAll(annotation.getJoinColumn());
+
     final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eReference.getEContainingClass().getEPackage());
-    if (oneToOne.getJoinColumn() == null && namingStrategy.isGenerateAllDBSchemaNames()) {
+    if (oneToOne.getJoinColumn().isEmpty() && namingStrategy.isGenerateAllDBSchemaNames()) {
       oneToOne.getJoinColumn().add(OrmFactory.eINSTANCE.createJoinColumn());
       oneToOne.getJoinColumn().get(0).setName(namingStrategy.getJoinColumnName(eReference));
     }
@@ -404,6 +410,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
 
     manyToOne.setOptional(!eReference.isRequired());
+
+    // copy any join columns over
+    manyToOne.getJoinColumn().addAll(annotation.getJoinColumn());
 
     // now work on jointable or joincolumn
     if (manyToOne.getJoinColumn().isEmpty() && manyToOne.getJoinTable() == null) {
