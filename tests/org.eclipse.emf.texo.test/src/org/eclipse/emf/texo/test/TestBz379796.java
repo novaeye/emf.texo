@@ -16,17 +16,23 @@
  */
 package org.eclipse.emf.texo.test;
 
-import org.eclipse.emf.texo.test.model.issues.bz325427.Bz325427ModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz379796.Bz379796ModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz379796.PriceType;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestBz325427 {
+public class TestBz379796 {
 
   @Test
   public void test() throws Exception {
-    Assert.assertTrue(Bz325427ModelPackage.ECLASSB_CLASSIFIER_ID == 0);
-    Assert.assertTrue(Bz325427ModelPackage.ECLASSA_CLASSIFIER_ID == 1);
-    Assert.assertTrue(Bz325427ModelPackage.ENUMA_CLASSIFIER_ID == 3);
-    Assert.assertTrue(Bz325427ModelPackage.ENUMB_CLASSIFIER_ID == 2);
+    final PriceType priceType = Bz379796ModelPackage.INSTANCE.getModelFactory().createPriceType();
+    Assert.assertTrue(priceType.getValue() == null);
+    priceType.setValue(5);
+    Assert.assertTrue(priceType.getValue() == 5);
+    final Integer newInteger = new Integer(6);
+    priceType.setValue(newInteger);
+    Assert.assertTrue(priceType.getValue() == newInteger);
+    priceType.setValue(null);
+    Assert.assertTrue(priceType.getValue() == null);
   }
 }

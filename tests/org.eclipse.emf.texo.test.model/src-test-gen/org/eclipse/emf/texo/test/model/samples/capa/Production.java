@@ -37,7 +37,7 @@ public class Production {
    * @generated
    */
   @Basic(optional = true)
-  private float missingAmount = 0.0f;
+  private Float missingAmount = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -62,7 +62,7 @@ public class Production {
    * @generated
    */
   @Basic(optional = true)
-  private float totalAmount = 0.0f;
+  private Float totalAmount = null;
 
   /**
    * Returns the value of '<em><b>article</b></em>' feature.
@@ -122,7 +122,7 @@ public class Production {
    * @return the value of '<em><b>missingAmount</b></em>' feature
    * @generated
    */
-  public float getMissingAmount() {
+  public Float getMissingAmount() {
     return missingAmount;
   }
 
@@ -135,7 +135,7 @@ public class Production {
    *          new value of the '{@link Production#getMissingAmount() missingAmount}' feature.
    * @generated
    */
-  public void setMissingAmount(float newMissingAmount) {
+  public void setMissingAmount(Float newMissingAmount) {
     missingAmount = newMissingAmount;
   }
 
@@ -197,7 +197,7 @@ public class Production {
    * @return the value of '<em><b>totalAmount</b></em>' feature
    * @generated
    */
-  public float getTotalAmount() {
+  public Float getTotalAmount() {
     return totalAmount;
   }
 
@@ -210,7 +210,7 @@ public class Production {
    *          new value of the '{@link Production#getTotalAmount() totalAmount}' feature.
    * @generated
    */
-  public void setTotalAmount(float newTotalAmount) {
+  public void setTotalAmount(Float newTotalAmount) {
     totalAmount = newTotalAmount;
   }
 

@@ -17,7 +17,7 @@ public class WorkDay {
    * @generated
    */
   @Basic(optional = true)
-  private int dayOfWeek = 0;
+  private Integer dayOfWeek = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -25,7 +25,7 @@ public class WorkDay {
    * @generated
    */
   @Basic(optional = true)
-  private int duration = 0;
+  private Integer duration = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -33,7 +33,7 @@ public class WorkDay {
    * @generated
    */
   @Basic(optional = true)
-  private int startTime = 0;
+  private Integer startTime = null;
 
   /**
    * Returns the value of '<em><b>dayOfWeek</b></em>' feature.
@@ -43,7 +43,7 @@ public class WorkDay {
    * @return the value of '<em><b>dayOfWeek</b></em>' feature
    * @generated
    */
-  public int getDayOfWeek() {
+  public Integer getDayOfWeek() {
     return dayOfWeek;
   }
 
@@ -56,7 +56,7 @@ public class WorkDay {
    *          new value of the '{@link WorkDay#getDayOfWeek() dayOfWeek}' feature.
    * @generated
    */
-  public void setDayOfWeek(int newDayOfWeek) {
+  public void setDayOfWeek(Integer newDayOfWeek) {
     dayOfWeek = newDayOfWeek;
   }
 
@@ -68,7 +68,7 @@ public class WorkDay {
    * @return the value of '<em><b>duration</b></em>' feature
    * @generated
    */
-  public int getDuration() {
+  public Integer getDuration() {
     return duration;
   }
 
@@ -81,7 +81,7 @@ public class WorkDay {
    *          new value of the '{@link WorkDay#getDuration() duration}' feature.
    * @generated
    */
-  public void setDuration(int newDuration) {
+  public void setDuration(Integer newDuration) {
     duration = newDuration;
   }
 
@@ -93,7 +93,7 @@ public class WorkDay {
    * @return the value of '<em><b>startTime</b></em>' feature
    * @generated
    */
-  public int getStartTime() {
+  public Integer getStartTime() {
     return startTime;
   }
 
@@ -106,7 +106,7 @@ public class WorkDay {
    *          new value of the '{@link WorkDay#getStartTime() startTime}' feature.
    * @generated
    */
-  public void setStartTime(int newStartTime) {
+  public void setStartTime(Integer newStartTime) {
     startTime = newStartTime;
   }
 

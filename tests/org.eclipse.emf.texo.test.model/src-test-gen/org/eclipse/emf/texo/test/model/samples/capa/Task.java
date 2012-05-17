@@ -55,7 +55,7 @@ public class Task {
    * @generated
    */
   @Basic(optional = true)
-  private float timePerPice = 0.0f;
+  private Float timePerPice = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -63,7 +63,7 @@ public class Task {
    * @generated
    */
   @Basic(optional = true)
-  private float timePerPreperation = 0.0f;
+  private Float timePerPreperation = null;
 
   /**
    * Returns the value of '<em><b>capacityEntry</b></em>' feature.
@@ -173,7 +173,7 @@ public class Task {
    * @return the value of '<em><b>timePerPice</b></em>' feature
    * @generated
    */
-  public float getTimePerPice() {
+  public Float getTimePerPice() {
     return timePerPice;
   }
 
@@ -186,7 +186,7 @@ public class Task {
    *          new value of the '{@link Task#getTimePerPice() timePerPice}' feature.
    * @generated
    */
-  public void setTimePerPice(float newTimePerPice) {
+  public void setTimePerPice(Float newTimePerPice) {
     timePerPice = newTimePerPice;
   }
 
@@ -198,7 +198,7 @@ public class Task {
    * @return the value of '<em><b>timePerPreperation</b></em>' feature
    * @generated
    */
-  public float getTimePerPreperation() {
+  public Float getTimePerPreperation() {
     return timePerPreperation;
   }
 
@@ -211,7 +211,7 @@ public class Task {
    *          new value of the '{@link Task#getTimePerPreperation() timePerPreperation}' feature.
    * @generated
    */
-  public void setTimePerPreperation(float newTimePerPreperation) {
+  public void setTimePerPreperation(Float newTimePerPreperation) {
     timePerPreperation = newTimePerPreperation;
   }
 

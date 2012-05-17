@@ -196,9 +196,9 @@ public class StructureModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
+    KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractStructureElement.class,

@@ -154,6 +154,14 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
       final EDataTypeModelGenAnnotationDefinition eDataTypeAnnotation = getEDataTypeModelGenAnnotation(eDataType);
       return eDataTypeAnnotation.getInstanceClassName() + "<" + eDataTypeAnnotation.getItemType() + ">"; //$NON-NLS-1$ //$NON-NLS-2$
     }
+
+    // if not required then use the object variant to keep track of null values
+    // https://bugs.eclipse.org/bugs/show_bug.cgi?id=379796
+    final Class<?> clz = getInstanceClass(eFeature);
+    if (clz != null) {
+      return clz.getName();
+    }
+
     return getInstanceClassName(eFeature);
   }
 
@@ -210,6 +218,14 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
           + getItemType(eFeature) + ">()"; //$NON-NLS-1$
     }
     try {
+      if (eFeature.getDefaultValueLiteral() == null && !eFeature.isMany() && eFeature.getLowerBound() == 0
+          && eFeature instanceof EAttribute) {
+        final Class<?> clz = getInstanceClass(eFeature);
+        if (clz != null && !clz.isPrimitive()) {
+          return "null"; //$NON-NLS-1$
+        }
+      }
+
       return GenUtils.getStaticDefaultValue(getAnnotationManager(), ((EAttribute) eFeature).getEAttributeType(),
           eFeature.getDefaultValueLiteral());
     } catch (final Throwable t) {
@@ -228,6 +244,16 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
         + eFeature + " is a featuremap, this method should not be called"); //$NON-NLS-1$
     final EDataType eDataType = ((EAttribute) eFeature).getEAttributeType();
     final EDataTypeModelGenAnnotationDefinition annotation = getEDataTypeModelGenAnnotation(eDataType);
-    return getClassForName(eDataType, annotation.getInstanceClassName());
+    final Class<?> clz = getClassForName(eDataType, annotation.getInstanceClassName());
+
+    // if not required then use the object variant to keep track of null values
+    // https://bugs.eclipse.org/bugs/show_bug.cgi?id=379796
+    if (ModelUtils.isOptionalXSDAttribute(eFeature) && clz != null) {
+      if (eFeature.getLowerBound() == 0 && clz.isPrimitive()) {
+        return GenUtils.getObjectClass(clz);
+      }
+    }
+
+    return clz;
   }
 }

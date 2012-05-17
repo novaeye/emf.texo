@@ -60,6 +60,8 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceFactoryImpl;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
@@ -167,6 +169,14 @@ public class ORMGenerator extends BaseGenerateAction {
     }
   }
 
+  protected void setPersistenceUnitMetaData(EntityMappingsType entityMappingsType) {
+    final PersistenceUnitMetadata metadata = OrmFactory.eINSTANCE.createPersistenceUnitMetadata();
+    final PersistenceUnitDefaults defaults = OrmFactory.eINSTANCE.createPersistenceUnitDefaults();
+    defaults.setDelimitedIdentifiers(OrmFactory.eINSTANCE.createEmptyType());
+    metadata.setPersistenceUnitDefaults(defaults);
+    entityMappingsType.setPersistenceUnitMetadata(metadata);
+  }
+
   protected EntityMappingsType createEntityMappings(List<EPackage> ePackages, AnnotatedModel annotatedModel,
       AnnotationManager annotationManager) {
     // create a new EntityMappings and copy the values over from the
@@ -217,6 +227,9 @@ public class ORMGenerator extends BaseGenerateAction {
         }
       }
     }
+
+    setPersistenceUnitMetaData(entityMappings);
+
     return entityMappings;
   }
 

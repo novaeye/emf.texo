@@ -13,6 +13,7 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
@@ -38,6 +39,14 @@ public class ModelUtils {
   public static final String QUALIFIERSEPARATOR = "|"; //$NON-NLS-1$
 
   private static final SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+
+  /**
+   * Return true if the {@link EStructuralFeature} is an {@link EAttribute} is a optional xsd attribute.
+   */
+  public static boolean isOptionalXSDAttribute(EStructuralFeature eFeature) {
+    return eFeature instanceof EAttribute && !eFeature.isMany()
+        && ExtendedMetaData.INSTANCE.getFeatureKind(eFeature) == ExtendedMetaData.ATTRIBUTE_FEATURE;
+  }
 
   /**
    * Returns true if the {@link EStructuralFeature} models an xsd:any.

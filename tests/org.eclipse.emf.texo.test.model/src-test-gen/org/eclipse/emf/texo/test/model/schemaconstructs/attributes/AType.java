@@ -30,7 +30,7 @@ public class AType {
    * @generated
    */
   @Basic(optional = true)
-  private long b = 0;
+  private Long b = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -98,7 +98,7 @@ public class AType {
    * @return the value of '<em><b>b</b></em>' feature
    * @generated
    */
-  public long getB() {
+  public Long getB() {
     return b;
   }
 
@@ -111,7 +111,7 @@ public class AType {
    *          new value of the '{@link AType#getB() b}' feature.
    * @generated
    */
-  public void setB(long newB) {
+  public void setB(Long newB) {
     b = newB;
   }
 

@@ -60,7 +60,7 @@ public class Machine {
    * @generated
    */
   @Basic(optional = true)
-  private int multiplicity = 0;
+  private Integer multiplicity = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -211,7 +211,7 @@ public class Machine {
    * @return the value of '<em><b>multiplicity</b></em>' feature
    * @generated
    */
-  public int getMultiplicity() {
+  public Integer getMultiplicity() {
     return multiplicity;
   }
 
@@ -224,7 +224,7 @@ public class Machine {
    *          new value of the '{@link Machine#getMultiplicity() multiplicity}' feature.
    * @generated
    */
-  public void setMultiplicity(int newMultiplicity) {
+  public void setMultiplicity(Integer newMultiplicity) {
     multiplicity = newMultiplicity;
   }
 

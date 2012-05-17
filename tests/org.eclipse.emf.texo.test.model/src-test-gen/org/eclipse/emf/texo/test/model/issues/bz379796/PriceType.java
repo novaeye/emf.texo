@@ -1,4 +1,4 @@
-package org.eclipse.emf.texo.test.model.issues.bz378642;
+package org.eclipse.emf.texo.test.model.issues.bz379796;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;

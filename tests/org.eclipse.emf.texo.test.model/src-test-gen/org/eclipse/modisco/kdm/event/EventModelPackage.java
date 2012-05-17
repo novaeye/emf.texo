@@ -362,12 +362,12 @@ public class EventModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    SourceModelPackage.initialize();
-    KdmModelPackage.initialize();
-    KdmModelPackage.initialize();
     CodeModelPackage.initialize();
     CoreModelPackage.initialize();
+    KdmModelPackage.initialize();
     ActionModelPackage.initialize();
+    SourceModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EventModel.class, modelPackage.getEventModelEClass(),
