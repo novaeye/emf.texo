@@ -17,7 +17,63 @@ public class PriceType {
    * @generated
    */
   @Basic(optional = true)
-  private EnableModeType enableMode = null;
+  private Integer valueElement = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = false)
+  private Integer nillableValueElement = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = false)
+  private int requiredValueElement = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = true)
+  private ComparisonType comparisonElement = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = false)
+  private ComparisonType requiredComparisonElement = ComparisonType.LESS;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = true)
+  private ComparisonType comparison = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = false)
+  private ComparisonType requiredComparison = ComparisonType.LESS;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Basic(optional = false)
+  private int requiredValue = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -28,28 +84,203 @@ public class PriceType {
   private Integer value = null;
 
   /**
-   * Returns the value of '<em><b>enableMode</b></em>' feature.
+   * Returns the value of '<em><b>valueElement</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>enableMode</b></em>' feature
+   * @return the value of '<em><b>valueElement</b></em>' feature
    * @generated
    */
-  public EnableModeType getEnableMode() {
-    return enableMode;
+  public Integer getValueElement() {
+    return valueElement;
   }
 
   /**
-   * Sets the '{@link PriceType#getEnableMode() <em>enableMode</em>}' feature.
+   * Sets the '{@link PriceType#getValueElement() <em>valueElement</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link PriceType#getEnableMode() enableMode}' feature.
+   *          new value of the '{@link PriceType#getValueElement() valueElement}' feature.
    * @generated
    */
-  public void setEnableMode(EnableModeType newEnableMode) {
-    enableMode = newEnableMode;
+  public void setValueElement(Integer newValueElement) {
+    valueElement = newValueElement;
+  }
+
+  /**
+   * Returns the value of '<em><b>nillableValueElement</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>nillableValueElement</b></em>' feature
+   * @generated
+   */
+  public Integer getNillableValueElement() {
+    return nillableValueElement;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getNillableValueElement() <em>nillableValueElement</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getNillableValueElement() nillableValueElement}' feature.
+   * @generated
+   */
+  public void setNillableValueElement(Integer newNillableValueElement) {
+    nillableValueElement = newNillableValueElement;
+  }
+
+  /**
+   * Returns the value of '<em><b>requiredValueElement</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>requiredValueElement</b></em>' feature
+   * @generated
+   */
+  public int getRequiredValueElement() {
+    return requiredValueElement;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getRequiredValueElement() <em>requiredValueElement</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getRequiredValueElement() requiredValueElement}' feature.
+   * @generated
+   */
+  public void setRequiredValueElement(int newRequiredValueElement) {
+    requiredValueElement = newRequiredValueElement;
+  }
+
+  /**
+   * Returns the value of '<em><b>comparisonElement</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>comparisonElement</b></em>' feature
+   * @generated
+   */
+  public ComparisonType getComparisonElement() {
+    return comparisonElement;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getComparisonElement() <em>comparisonElement</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getComparisonElement() comparisonElement}' feature.
+   * @generated
+   */
+  public void setComparisonElement(ComparisonType newComparisonElement) {
+    comparisonElement = newComparisonElement;
+  }
+
+  /**
+   * Returns the value of '<em><b>requiredComparisonElement</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>requiredComparisonElement</b></em>' feature
+   * @generated
+   */
+  public ComparisonType getRequiredComparisonElement() {
+    return requiredComparisonElement;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getRequiredComparisonElement() <em>requiredComparisonElement</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getRequiredComparisonElement() requiredComparisonElement}' feature.
+   * @generated
+   */
+  public void setRequiredComparisonElement(ComparisonType newRequiredComparisonElement) {
+    requiredComparisonElement = newRequiredComparisonElement;
+  }
+
+  /**
+   * Returns the value of '<em><b>comparison</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>comparison</b></em>' feature
+   * @generated
+   */
+  public ComparisonType getComparison() {
+    return comparison;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getComparison() <em>comparison</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getComparison() comparison}' feature.
+   * @generated
+   */
+  public void setComparison(ComparisonType newComparison) {
+    comparison = newComparison;
+  }
+
+  /**
+   * Returns the value of '<em><b>requiredComparison</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>requiredComparison</b></em>' feature
+   * @generated
+   */
+  public ComparisonType getRequiredComparison() {
+    return requiredComparison;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getRequiredComparison() <em>requiredComparison</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getRequiredComparison() requiredComparison}' feature.
+   * @generated
+   */
+  public void setRequiredComparison(ComparisonType newRequiredComparison) {
+    requiredComparison = newRequiredComparison;
+  }
+
+  /**
+   * Returns the value of '<em><b>requiredValue</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>requiredValue</b></em>' feature
+   * @generated
+   */
+  public int getRequiredValue() {
+    return requiredValue;
+  }
+
+  /**
+   * Sets the '{@link PriceType#getRequiredValue() <em>requiredValue</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link PriceType#getRequiredValue() requiredValue}' feature.
+   * @generated
+   */
+  public void setRequiredValue(int newRequiredValue) {
+    requiredValue = newRequiredValue;
   }
 
   /**
@@ -85,6 +316,11 @@ public class PriceType {
    */
   @Override
   public String toString() {
-    return "PriceType " + " [enableMode: " + getEnableMode() + "]" + " [value: " + getValue() + "]";
+    return "PriceType " + " [valueElement: " + getValueElement() + "]" + " [nillableValueElement: "
+        + getNillableValueElement() + "]" + " [requiredValueElement: " + getRequiredValueElement() + "]"
+        + " [comparisonElement: " + getComparisonElement() + "]" + " [requiredComparisonElement: "
+        + getRequiredComparisonElement() + "]" + " [comparison: " + getComparison() + "]" + " [requiredComparison: "
+        + getRequiredComparison() + "]" + " [requiredValue: " + getRequiredValue() + "]" + " [value: " + getValue()
+        + "]";
   }
 }

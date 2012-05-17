@@ -5,12 +5,12 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A representation of the literals of the enumeration '<em><b>EnableModeType</b></em>'. <!-- begin-user-doc --> <!--
+ * A representation of the literals of the enumeration '<em><b>ComparisonType</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
  * 
  * @generated
  */
-public enum EnableModeType {
+public enum ComparisonType {
 
   /**
    * The enum: LESS <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -94,30 +94,30 @@ public enum EnableModeType {
   };
 
   /**
-   * An array of all the '<em><b>EnableModeType</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * An array of all the '<em><b>ComparisonType</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  private static final EnableModeType[] VALUES_ARRAY = new EnableModeType[] { LESS, LESSOREQUAL, EQUAL, GREATEROREQUAL,
+  private static final ComparisonType[] VALUES_ARRAY = new ComparisonType[] { LESS, LESSOREQUAL, EQUAL, GREATEROREQUAL,
       GREATER };
 
   /**
-   * A public read-only list of all the '<em><b>EnableModeType</b></em>' enumerators. <!-- begin-user-doc --> <!--
+   * A public read-only list of all the '<em><b>ComparisonType</b></em>' enumerators. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
    * @generated
    */
-  public static final List<EnableModeType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<ComparisonType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>EnableModeType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>ComparisonType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
    * @generated
    */
-  public static EnableModeType get(String literal) {
+  public static ComparisonType get(String literal) {
     for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-      EnableModeType result = VALUES_ARRAY[i];
+      ComparisonType result = VALUES_ARRAY[i];
       if (result.toString().equals(literal)) {
         return result;
       }
@@ -126,14 +126,14 @@ public enum EnableModeType {
   }
 
   /**
-   * Returns the '<em><b>EnableModeType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>ComparisonType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
    * @generated
    */
-  public static EnableModeType getByName(String name) {
+  public static ComparisonType getByName(String name) {
     for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-      EnableModeType result = VALUES_ARRAY[i];
+      ComparisonType result = VALUES_ARRAY[i];
       if (result.getName().equals(name)) {
         return result;
       }
@@ -142,13 +142,13 @@ public enum EnableModeType {
   }
 
   /**
-   * Returns the '<em><b>EnableModeType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
+   * Returns the '<em><b>ComparisonType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
    * @generated
    */
-  public static EnableModeType get(int value) {
-    for (EnableModeType enumInstance : VALUES_ARRAY) {
+  public static ComparisonType get(int value) {
+    for (ComparisonType enumInstance : VALUES_ARRAY) {
       if (enumInstance.getValue() == value) {
         return enumInstance;
       }
@@ -182,7 +182,7 @@ public enum EnableModeType {
    * 
    * @generated
    */
-  private EnableModeType(int value, String name, String literal) {
+  private ComparisonType(int value, String name, String literal) {
     this.value = value;
     this.name = name;
     this.literal = literal;

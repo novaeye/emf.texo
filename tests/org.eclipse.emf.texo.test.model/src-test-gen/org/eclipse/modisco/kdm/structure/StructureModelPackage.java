@@ -196,9 +196,9 @@ public class StructureModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CoreModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
+    CoreModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractStructureElement.class,

@@ -4,11 +4,20 @@
 	targetNamespace="http://www.eclipse.org/emf/texo/test/model/issues/bz379796">
 
 	<xs:complexType name="priceType">
+		<xs:sequence>
+			<xs:element name="valueElement" type="xs:int" minOccurs="0"/>
+			<xs:element name="nillableValueElement" type="xs:int" nillable="true" minOccurs="1"/>
+			<xs:element name="requiredValueElement" type="xs:int" minOccurs="1" default="2"/>
+			<xs:element name="comparisonElement" type="ComparisonType" minOccurs="0"/>
+			<xs:element name="requiredComparisonElement" type="ComparisonType" minOccurs="1"/>
+		</xs:sequence>
 		<xs:attribute name="value" type="xs:int" use="optional" />
-		<xs:attribute name="enable_mode" type="enable_modeType" />
+		<xs:attribute name="requiredValue" type="xs:int" use="required" />
+		<xs:attribute name="comparison" type="ComparisonType" />
+		<xs:attribute name="requiredComparison" type="ComparisonType" use="required"/>
 	</xs:complexType>
 
-	<xs:simpleType name="enable_modeType">
+	<xs:simpleType name="ComparisonType">
 		<xs:restriction base="xs:NMTOKEN">
 			<xs:enumeration value="less" />
 			<xs:enumeration value="less-or-equal" />

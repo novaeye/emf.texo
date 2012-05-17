@@ -25,7 +25,7 @@ public class Contact {
    * @generated
    */
   @Basic(optional = true)
-  private ContactType type = null;
+  private ContactType type = ContactType.PHONE;
 
   /**
    * Returns the value of '<em><b>value</b></em>' feature.

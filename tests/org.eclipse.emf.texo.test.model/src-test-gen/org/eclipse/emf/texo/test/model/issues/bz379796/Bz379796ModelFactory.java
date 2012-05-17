@@ -108,10 +108,10 @@ public class Bz379796ModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
-    case Bz379796ModelPackage.ENABLEMODETYPE_CLASSIFIER_ID:
-      return createEnableModeTypeFromString(value);
-    case Bz379796ModelPackage.ENABLEMODETYPEOBJECT_CLASSIFIER_ID:
-      return createEnableModeTypeObjectFromString(value);
+    case Bz379796ModelPackage.COMPARISONTYPE_CLASSIFIER_ID:
+      return createComparisonTypeFromString(value);
+    case Bz379796ModelPackage.COMPARISONTYPEOBJECT_CLASSIFIER_ID:
+      return createComparisonTypeObjectFromString(value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
@@ -127,23 +127,23 @@ public class Bz379796ModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
-    case Bz379796ModelPackage.ENABLEMODETYPE_CLASSIFIER_ID:
-      return convertEnableModeTypeToString((EnableModeType) value);
-    case Bz379796ModelPackage.ENABLEMODETYPEOBJECT_CLASSIFIER_ID:
-      return convertEnableModeTypeObjectToString((EnableModeType) value);
+    case Bz379796ModelPackage.COMPARISONTYPE_CLASSIFIER_ID:
+      return convertComparisonTypeToString((ComparisonType) value);
+    case Bz379796ModelPackage.COMPARISONTYPEOBJECT_CLASSIFIER_ID:
+      return convertComparisonTypeObjectToString((ComparisonType) value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
-   * Converts the EDataType: EnableModeType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: ComparisonType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
-  public String convertEnableModeTypeToString(EnableModeType value) {
+  public String convertComparisonTypeToString(ComparisonType value) {
     if (value == null) {
       return null;
     }
@@ -151,37 +151,37 @@ public class Bz379796ModelFactory implements ModelFactory {
   }
 
   /**
-   * Creates an instance of the EDataType: EnableModeType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Creates an instance of the EDataType: ComparisonType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
-  public EnableModeType createEnableModeTypeFromString(String value) {
+  public ComparisonType createComparisonTypeFromString(String value) {
     if (value == null) {
       return null;
     }
-    return EnableModeType.get(value);
+    return ComparisonType.get(value);
   }
 
   /**
-   * Converts the EDataType: EnableModeTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: ComparisonTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
-  public String convertEnableModeTypeObjectToString(EnableModeType value) {
+  public String convertComparisonTypeObjectToString(ComparisonType value) {
     if (value == null) {
       return null;
     }
-    return convertEnableModeTypeToString(value);
+    return convertComparisonTypeToString(value);
   }
 
   /**
-   * Creates an instance of the EDataType: EnableModeTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc
+   * Creates an instance of the EDataType: ComparisonTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
    * @param value
@@ -189,11 +189,11 @@ public class Bz379796ModelFactory implements ModelFactory {
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
-  public EnableModeType createEnableModeTypeObjectFromString(String value) {
+  public ComparisonType createComparisonTypeObjectFromString(String value) {
     if (value == null) {
       return null;
     }
-    return createEnableModeTypeFromString(value);
+    return createComparisonTypeFromString(value);
   }
 
   /**
@@ -223,8 +223,22 @@ public class Bz379796ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case Bz379796ModelPackage.PRICETYPE_ENABLEMODE_FEATURE_ID:
-        return getTarget().getEnableMode();
+      case Bz379796ModelPackage.PRICETYPE_VALUEELEMENT_FEATURE_ID:
+        return getTarget().getValueElement();
+      case Bz379796ModelPackage.PRICETYPE_NILLABLEVALUEELEMENT_FEATURE_ID:
+        return getTarget().getNillableValueElement();
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDVALUEELEMENT_FEATURE_ID:
+        return getTarget().getRequiredValueElement();
+      case Bz379796ModelPackage.PRICETYPE_COMPARISONELEMENT_FEATURE_ID:
+        return getTarget().getComparisonElement();
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDCOMPARISONELEMENT_FEATURE_ID:
+        return getTarget().getRequiredComparisonElement();
+      case Bz379796ModelPackage.PRICETYPE_COMPARISON_FEATURE_ID:
+        return getTarget().getComparison();
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDCOMPARISON_FEATURE_ID:
+        return getTarget().getRequiredComparison();
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDVALUE_FEATURE_ID:
+        return getTarget().getRequiredValue();
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
         return getTarget().getValue();
       }
@@ -238,8 +252,29 @@ public class Bz379796ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case Bz379796ModelPackage.PRICETYPE_ENABLEMODE_FEATURE_ID:
-        getTarget().setEnableMode((EnableModeType) value);
+      case Bz379796ModelPackage.PRICETYPE_VALUEELEMENT_FEATURE_ID:
+        getTarget().setValueElement((Integer) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_NILLABLEVALUEELEMENT_FEATURE_ID:
+        getTarget().setNillableValueElement((Integer) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDVALUEELEMENT_FEATURE_ID:
+        getTarget().setRequiredValueElement((Integer) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_COMPARISONELEMENT_FEATURE_ID:
+        getTarget().setComparisonElement((ComparisonType) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDCOMPARISONELEMENT_FEATURE_ID:
+        getTarget().setRequiredComparisonElement((ComparisonType) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_COMPARISON_FEATURE_ID:
+        getTarget().setComparison((ComparisonType) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDCOMPARISON_FEATURE_ID:
+        getTarget().setRequiredComparison((ComparisonType) value);
+        return;
+      case Bz379796ModelPackage.PRICETYPE_REQUIREDVALUE_FEATURE_ID:
+        getTarget().setRequiredValue((Integer) value);
         return;
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
         getTarget().setValue((Integer) value);

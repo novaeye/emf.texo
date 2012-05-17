@@ -51,7 +51,7 @@ public class SecretQuestion {
    * @generated
    */
   @Basic(optional = true)
-  private SecretQuestionType type = null;
+  private SecretQuestionType type = SecretQuestionType.REGULAR;
 
   /**
    * Returns the value of '<em><b>question</b></em>' feature.

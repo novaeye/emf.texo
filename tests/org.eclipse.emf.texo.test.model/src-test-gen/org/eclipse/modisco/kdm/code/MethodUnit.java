@@ -17,7 +17,7 @@ public class MethodUnit extends ControlElement {
    * @generated
    */
   @Basic(optional = true)
-  private MethodKind kind = null;
+  private MethodKind kind = MethodKind.METHOD;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -25,7 +25,7 @@ public class MethodUnit extends ControlElement {
    * @generated
    */
   @Basic(optional = true)
-  private ExportKind export = null;
+  private ExportKind export = ExportKind.PUBLIC;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

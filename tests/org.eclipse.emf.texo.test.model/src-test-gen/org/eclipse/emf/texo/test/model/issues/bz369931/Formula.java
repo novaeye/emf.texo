@@ -20,7 +20,7 @@ public class Formula {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private FormulaType formulaType = null;
+  private FormulaType formulaType = FormulaType.SIMPLE;
 
   /**
    * Returns the value of '<em><b>formulaType</b></em>' feature.

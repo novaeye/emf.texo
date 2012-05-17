@@ -40,6 +40,10 @@ import org.eclipse.emf.texo.utils.ModelUtils;
 /**
  * Responsible for setting the values in a {@link EAttributeModelGenAnnotation}.
  * 
+ * There is a special detail related to eattributes which are derived from a xsd model. Specifically the attributes
+ * which are optional or which represent xml elements with minOccurs="0". These should be treated in a special way in
+ * xml (de-serialization).
+ * 
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.16 $
  */
@@ -219,8 +223,7 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
           + getItemType(eFeature) + ">()"; //$NON-NLS-1$
     }
     try {
-      if (eFeature.getDefaultValueLiteral() == null && !eFeature.isMany() && eFeature.getLowerBound() == 0
-          && eFeature instanceof EAttribute) {
+      if (ModelUtils.isUnsettable(eFeature)) {
         if (eFeature.getEType() instanceof EEnum) {
           return "null"; //$NON-NLS-1$
         }
@@ -250,12 +253,11 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
     final EDataTypeModelGenAnnotationDefinition annotation = getEDataTypeModelGenAnnotation(eDataType);
     final Class<?> clz = getClassForName(eDataType, annotation.getInstanceClassName());
 
-    // if not required then use the object variant to keep track of null values
+    // if unsettable then use the object variant to keep track of null values
+    // unset is represented by null in Texo
     // https://bugs.eclipse.org/bugs/show_bug.cgi?id=379796
-    if (ModelUtils.isOptionalXSDAttribute(eFeature) && clz != null) {
-      if (eFeature.getLowerBound() == 0 && clz.isPrimitive()) {
-        return GenUtils.getObjectClass(clz);
-      }
+    if (ModelUtils.isUnsettable(eFeature) && clz != null && clz.isPrimitive()) {
+      return GenUtils.getObjectClass(clz);
     }
 
     return clz;

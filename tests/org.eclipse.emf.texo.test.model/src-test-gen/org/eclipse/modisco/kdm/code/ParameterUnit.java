@@ -17,7 +17,7 @@ public class ParameterUnit extends DataElement {
    * @generated
    */
   @Basic(optional = true)
-  private ParameterKind kind = null;
+  private ParameterKind kind = ParameterKind.BYVALUE;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -56,6 +56,8 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * Internally a map from {@link ModelObject} to {@link EObject} is maintained so that an object is at most converted
  * once.
  * 
+ * Note: keeps state, to prevent side effects always create new converters for new conversion actions.
+ * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @see ModelObject
  * @see DynamicEObjectImpl
@@ -403,7 +405,15 @@ public class ModelEMFConverter extends BaseModelConverter<Object> {
   protected void convertSingleEAttribute(final ModelObject<?> modelObject, final EObject eObject,
       final EAttribute eAttribute) {
     final Object value = modelObject.eGet(eAttribute);
-    ((InternalEObject) eObject).eSet(eAttribute, convertEAttributeValue(value, eAttribute.getEAttributeType()));
+
+    // don't set the eObject if the value is null and the attribute is unsettable.
+    // unsettable is modelled with null in Texo.
+    if (value == null && ModelUtils.isUnsettable(eAttribute)) {
+      eObject.eUnset(eAttribute);
+      return;
+    }
+    final Object newValue = convertEAttributeValue(value, eAttribute.getEAttributeType());
+    ((InternalEObject) eObject).eSet(eAttribute, newValue);
   }
 
   /**

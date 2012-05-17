@@ -17,7 +17,7 @@ public class MacroUnit extends PreprocessorDirective {
    * @generated
    */
   @Basic(optional = true)
-  private MacroKind kind = null;
+  private MacroKind kind = MacroKind.REGULAR;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

@@ -50,14 +50,14 @@ public class Bz379796ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ENABLEMODETYPE_CLASSIFIER_ID = 1;
+  public static final int COMPARISONTYPE_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ENABLEMODETYPEOBJECT_CLASSIFIER_ID = 2;
+  public static final int COMPARISONTYPEOBJECT_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -71,14 +71,63 @@ public class Bz379796ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRICETYPE_ENABLEMODE_FEATURE_ID = 0;
+  public static final int PRICETYPE_VALUEELEMENT_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_VALUE_FEATURE_ID = 1;
+  public static final int PRICETYPE_NILLABLEVALUEELEMENT_FEATURE_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_REQUIREDVALUEELEMENT_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_COMPARISONELEMENT_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_REQUIREDCOMPARISONELEMENT_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_COMPARISON_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_REQUIREDCOMPARISON_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_REQUIREDVALUE_FEATURE_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_VALUE_FEATURE_ID = 8;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -112,7 +161,7 @@ public class Bz379796ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(PriceType.class, modelPackage.getPriceTypeEClass(),
         modelPackage);
 
-    ModelResolver.getInstance().registerClassModelMapping(EnableModeType.class, modelPackage.getEnableModeTypeEEnum(),
+    ModelResolver.getInstance().registerClassModelMapping(ComparisonType.class, modelPackage.getComparisonTypeEEnum(),
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(PriceType.class, PriceTypeDao.class);
@@ -167,14 +216,92 @@ public class Bz379796ModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PriceType.enableMode</b></em>'. <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.valueElement</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.enableMode</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.valueElement</b></em>'.
    * @generated
    */
-  public EAttribute getPriceType_EnableMode() {
-    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_ENABLEMODE_FEATURE_ID);
+  public EAttribute getPriceType_ValueElement() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_VALUEELEMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.nillableValueElement</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.nillableValueElement</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_NillableValueElement() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_NILLABLEVALUEELEMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.requiredValueElement</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.requiredValueElement</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_RequiredValueElement() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_REQUIREDVALUEELEMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.comparisonElement</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.comparisonElement</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_ComparisonElement() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_COMPARISONELEMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.requiredComparisonElement</b></em>'. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.requiredComparisonElement</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_RequiredComparisonElement() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(
+        PRICETYPE_REQUIREDCOMPARISONELEMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.comparison</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.comparison</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_Comparison() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_COMPARISON_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.requiredComparison</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.requiredComparison</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_RequiredComparison() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_REQUIREDCOMPARISON_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.requiredValue</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.requiredValue</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_RequiredValue() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_REQUIREDVALUE_FEATURE_ID);
   }
 
   /**
@@ -189,23 +316,23 @@ public class Bz379796ModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>EnableModeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>ComparisonType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the EEnum representing '<em><b>EnableModeType</b></em>'
+   * @return an instance of the EEnum representing '<em><b>ComparisonType</b></em>'
    * @generated
    */
-  public EEnum getEnableModeTypeEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(ENABLEMODETYPE_CLASSIFIER_ID);
+  public EEnum getComparisonTypeEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(COMPARISONTYPE_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>EnableModeTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>ComparisonTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>EnableModeTypeObject</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>ComparisonTypeObject</b></em>'
    * @generated
    */
-  public EDataType getEnableModeTypeObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(ENABLEMODETYPEOBJECT_CLASSIFIER_ID);
+  public EDataType getComparisonTypeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(COMPARISONTYPEOBJECT_CLASSIFIER_ID);
   }
 
   /**
@@ -221,10 +348,10 @@ public class Bz379796ModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case PRICETYPE_CLASSIFIER_ID:
       return PriceType.class;
-    case ENABLEMODETYPE_CLASSIFIER_ID:
-      return EnableModeType.class;
-    case ENABLEMODETYPEOBJECT_CLASSIFIER_ID:
-      return EnableModeType.class;
+    case COMPARISONTYPE_CLASSIFIER_ID:
+      return ComparisonType.class;
+    case COMPARISONTYPEOBJECT_CLASSIFIER_ID:
+      return ComparisonType.class;
     }
     throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }

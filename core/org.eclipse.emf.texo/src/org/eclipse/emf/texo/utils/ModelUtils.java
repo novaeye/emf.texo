@@ -13,7 +13,6 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
@@ -52,11 +51,11 @@ public class ModelUtils {
   }
 
   /**
-   * Return true if the {@link EStructuralFeature} is an {@link EAttribute} is a optional xsd attribute.
+   * Return true if the {@link EStructuralFeature} is unsettable, non required and has no default.
    */
-  public static boolean isOptionalXSDAttribute(EStructuralFeature eFeature) {
-    return eFeature instanceof EAttribute && !eFeature.isMany()
-        && ExtendedMetaData.INSTANCE.getFeatureKind(eFeature) == ExtendedMetaData.ATTRIBUTE_FEATURE;
+  public static boolean isUnsettable(EStructuralFeature eFeature) {
+    return !eFeature.isMany() && eFeature.isUnsettable() && eFeature.getDefaultValueLiteral() == null
+        && eFeature.getLowerBound() == 0;
   }
 
   /**

@@ -551,11 +551,11 @@ public class PlatformModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    CodeModelPackage.initialize();
+    KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
     SourceModelPackage.initialize();
     CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
-    CodeModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     ActionModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
