@@ -412,7 +412,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     manyToOne.setOptional(!eReference.isRequired());
 
     // copy any join columns over
-    manyToOne.getJoinColumn().addAll(annotation.getJoinColumn());
+    manyToOne.getJoinColumn().addAll(EcoreUtil.copyAll(annotation.getJoinColumn()));
 
     // now work on jointable or joincolumn
     if (manyToOne.getJoinColumn().isEmpty() && manyToOne.getJoinTable() == null) {
@@ -459,7 +459,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
         addColumnsToJoinTable(namingStrategy, manyToOne.getJoinTable(), annotation);
       }
     }
-    if (!manyToOne.getJoinColumn().isEmpty() && namingStrategy.isGenerateAllDBSchemaNames()) {
+    if (!manyToOne.getJoinColumn().isEmpty() && namingStrategy.isGenerateAllDBSchemaNames()
+        && manyToOne.getJoinColumn().get(0).getName() == null) {
       manyToOne.getJoinColumn().get(0).setName(namingStrategy.getForeignKeyColumnName(eReference));
     }
   }
