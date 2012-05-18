@@ -135,7 +135,6 @@ public class TexoAutoCodeGenerator extends IncrementalProjectBuilder {
         if (props.containsKey(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY)) {
           final String modelFilter = props.getProperty(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY);
           final IPath path = getProject().getFullPath().append(modelFilter);
-          final String checkPath = path.toOSString();
           final List<IFile> toIgnore = new ArrayList<IFile>();
           for (IFile file : files) {
             if (!path.isPrefixOf(file.getFullPath())) {
