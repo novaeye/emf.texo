@@ -44,6 +44,10 @@ public class ProjectPropertyUtil {
   public static final String TEMPLATES_LOCATION_PROPERTY = "TEMPLATE_FOLDER"; //$NON-NLS-1$
   public static final String OUTPUT_LOCATION_PROPERTY = "OUTPUT_FOLDER"; //$NON-NLS-1$
   public static final String TARGET_PROJECT_PROPERTY = "TARGET_PROJECT"; //$NON-NLS-1$
+  public static final String MODEL_LOCATION_PROPERTY = "MODEL_FOLDER"; //$NON-NLS-1$
+  public static final String ENABLE_AUTOGEN_PROPERTY = "ENABLE_AUTOGEN_PROPERTY"; //$NON-NLS-1$
+  public static final String ENABLE_JPA_PROPERTY = "ENABLE_JPA_PROPERTY"; //$NON-NLS-1$
+  public static final String ENABLE_DAO_PROPERTY = "ENABLE_DAO_PROPERTY"; //$NON-NLS-1$
 
   public static final QualifiedName GEN_OUTPUT_FOLDER_PROPERTY = new QualifiedName(TexoEclipsePlugin.PLUGIN_ID,
       "GEN_OUTPUT_FOLDER"); //$NON-NLS-1$
@@ -117,16 +121,7 @@ public class ProjectPropertyUtil {
   /**
    * Set the project properties in the .settings folder.
    */
-  public static void setProjectProperties(IProject project, String targetProject, String outputLocation,
-      String templateLocation) throws CoreException {
-    final Properties props = new Properties();
-    if (targetProject != null) {
-      props.setProperty(TARGET_PROJECT_PROPERTY, targetProject);
-    }
-    if (templateLocation != null) {
-      props.setProperty(TEMPLATES_LOCATION_PROPERTY, templateLocation);
-    }
-    props.setProperty(OUTPUT_LOCATION_PROPERTY, outputLocation);
+  public static void setProjectProperties(IProject project, Properties props) throws CoreException {
     final File file = getPropertiesFile(project);
     try {
       final OutputStream os = new FileOutputStream(file, false);

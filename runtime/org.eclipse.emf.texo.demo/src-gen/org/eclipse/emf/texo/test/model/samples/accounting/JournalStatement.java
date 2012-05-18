@@ -1,15 +1,6 @@
 package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>JournalStatement</b></em>'. <!--
@@ -17,15 +8,13 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "JournalStatement")
-public class JournalStatement extends Identifiable {
+public class JournalStatement {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String description = null;
 
 	/**
@@ -33,8 +22,6 @@ public class JournalStatement extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
-	@Temporal(TemporalType.DATE)
 	private Date date = null;
 
 	/**
@@ -42,7 +29,6 @@ public class JournalStatement extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private float amount = 0.0f;
 
 	/**
@@ -50,9 +36,6 @@ public class JournalStatement extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
-	@JoinColumns({ @JoinColumn() })
 	private Account debitAccount = null;
 
 	/**
@@ -60,9 +43,6 @@ public class JournalStatement extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, optional = false, targetEntity = Account.class)
-	@JoinColumns({ @JoinColumn() })
 	private Account creditAccount = null;
 
 	/**
@@ -70,9 +50,6 @@ public class JournalStatement extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, optional = true, targetEntity = Vat.class)
-	@JoinColumns({ @JoinColumn() })
 	private Vat vat = null;
 
 	/**

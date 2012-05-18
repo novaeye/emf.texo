@@ -22,18 +22,23 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.texo.eclipse.Messages;
 import org.eclipse.emf.texo.eclipse.ProjectPropertyUtil;
+import org.eclipse.emf.texo.eclipse.nature.TexoAutoCodeGenerator;
 import org.eclipse.emf.texo.generator.EclipseGeneratorUtils;
 import org.eclipse.jface.preference.PreferencePage;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
@@ -57,7 +62,20 @@ public class ProjectPropertyPage extends PropertyPage {
   private Text templateFolderText;
   private Button templateFolderButton;
 
+  private Button autoGenButton;
+  private Button daoGenButton;
+  private Button jpaGenButton;
+
+  private Text modelFolderText;
+  private Button modelFolderButton;
+
   private IProject project;
+
+  private ModifyListener listener = new ModifyListener() {
+    public void modifyText(ModifyEvent e) {
+      getApplyButton().setEnabled(true);
+    }
+  };
 
   /**
    * Constructor for Property page.
@@ -91,6 +109,14 @@ public class ProjectPropertyPage extends PropertyPage {
     }
   }
 
+  private void setModelFolder(IFolder modelFolder) {
+    if (modelFolder == null) {
+      modelFolderText.setText(null);
+    } else {
+      modelFolderText.setText(modelFolder.getProjectRelativePath().toPortableString());
+    }
+  }
+
   /**
    * @see PreferencePage#createContents(Composite)
    */
@@ -100,17 +126,22 @@ public class ProjectPropertyPage extends PropertyPage {
 
     Composite composite = new Composite(parent, SWT.NONE);
     GridLayout layout = new GridLayout();
+    layout.numColumns = 1;
     composite.setLayout(layout);
-    GridData data = new GridData(GridData.FILL);
-    data.grabExcessHorizontalSpace = true;
+
+    GridData data = new GridData();
+    data.verticalAlignment = GridData.FILL;
+    data.horizontalAlignment = GridData.FILL;
     composite.setLayoutData(data);
 
     createFields(composite);
+
+    createAutoGenGroup(composite);
     return composite;
   }
 
   private void createFields(Composite parent) {
-    final Composite composite = createDefaultComposite(parent);
+    final Composite composite = createDefaultComposite(parent, 3);
 
     final Properties projectProps = ProjectPropertyUtil.getProjectProperties(project);
 
@@ -123,6 +154,7 @@ public class ProjectPropertyPage extends PropertyPage {
     targetProjectText.setLayoutData(projectGd);
     targetProjectText.setEditable(true);
     targetProjectText.setText(projectProps.getProperty(ProjectPropertyUtil.TARGET_PROJECT_PROPERTY));
+    targetProjectText.addModifyListener(listener);
 
     targetProjectButton = new Button(composite, SWT.PUSH);
     targetProjectButton.setText(Messages.getString("browse")); //$NON-NLS-1$
@@ -142,6 +174,7 @@ public class ProjectPropertyPage extends PropertyPage {
     outputFolderText.setLayoutData(folderGd);
     outputFolderText.setEditable(true);
     outputFolderText.setText(projectProps.getProperty(ProjectPropertyUtil.OUTPUT_LOCATION_PROPERTY));
+    outputFolderText.addModifyListener(listener);
 
     outputFolderButton = new Button(composite, SWT.PUSH);
     outputFolderButton.setText(Messages.getString("browse")); //$NON-NLS-1$
@@ -161,6 +194,7 @@ public class ProjectPropertyPage extends PropertyPage {
     templateFolderText.setLayoutData(templateFolderGd);
     templateFolderText.setEditable(true);
     templateFolderText.setText(getSafeValue(projectProps.getProperty(ProjectPropertyUtil.TEMPLATES_LOCATION_PROPERTY)));
+    templateFolderText.addModifyListener(listener);
 
     templateFolderButton = new Button(composite, SWT.PUSH);
     templateFolderButton.setText(Messages.getString("browse")); //$NON-NLS-1$
@@ -170,6 +204,90 @@ public class ProjectPropertyPage extends PropertyPage {
         browseTemplateFolder();
       }
     });
+  }
+
+  private void createAutoGenGroup(Composite parent) {
+    final Composite composite = createDefaultComposite(parent, 1);
+
+    final Properties projectProps = ProjectPropertyUtil.getProjectProperties(project);
+
+    Group autoGenGroup = new Group(composite, SWT.SHADOW_ETCHED_IN);
+    GridLayout layout = new GridLayout();
+    layout.numColumns = 3;
+    autoGenGroup.setLayout(layout);
+    GridData data = new GridData(GridData.FILL + GridData.GRAB_HORIZONTAL);
+    data.grabExcessHorizontalSpace = true;
+    autoGenGroup.setLayoutData(data);
+    autoGenGroup.setText(Messages.getString("autoGenGroup"));
+
+    autoGenButton = new Button(autoGenGroup, SWT.CHECK);
+    autoGenButton.setText(Messages.getString("autoGen")); //$NON-NLS-1$
+    autoGenButton.setSelection(projectProps.getProperty(ProjectPropertyUtil.ENABLE_AUTOGEN_PROPERTY) != null);
+    autoGenButton.addSelectionListener(new SelectionAdapter() {
+      @Override
+      public void widgetSelected(SelectionEvent e) {
+        enableDisableAutoGenFields(autoGenButton.getSelection());
+        getApplyButton().setEnabled(true);
+      }
+    });
+    autoGenButton.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true, 3, 1));
+
+    final Label modelFolderLabel = new Label(autoGenGroup, SWT.LEFT);
+    modelFolderLabel.setText(Messages.getString("project.model.folder.label")); //$NON-NLS-1$
+
+    modelFolderText = new Text(autoGenGroup, SWT.BORDER | SWT.LEFT | SWT.SINGLE | SWT.READ_ONLY);
+    final GridData folderGd = new GridData();
+    folderGd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
+    modelFolderText.setLayoutData(folderGd);
+    modelFolderText.setEditable(true);
+    modelFolderText.setText(getSafeValue(projectProps.getProperty(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY)));
+    modelFolderText.addModifyListener(listener);
+
+    modelFolderButton = new Button(autoGenGroup, SWT.PUSH);
+    modelFolderButton.setText(Messages.getString("browse")); //$NON-NLS-1$
+    modelFolderButton.addSelectionListener(new SelectionAdapter() {
+      @Override
+      public void widgetSelected(SelectionEvent e) {
+        browseModelFolder();
+      }
+    });
+
+    daoGenButton = new Button(autoGenGroup, SWT.CHECK);
+    daoGenButton.setText(Messages.getString("autoDaoGen")); //$NON-NLS-1$
+    daoGenButton.setSelection(projectProps.getProperty(ProjectPropertyUtil.ENABLE_DAO_PROPERTY) != null);
+    daoGenButton.addSelectionListener(new SelectionListener() {
+      public void widgetSelected(SelectionEvent arg0) {
+        getApplyButton().setEnabled(true);
+      }
+
+      public void widgetDefaultSelected(SelectionEvent arg0) {
+      }
+    });
+    daoGenButton.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true, 3, 1));
+
+    jpaGenButton = new Button(autoGenGroup, SWT.CHECK);
+    jpaGenButton.setText(Messages.getString("autoJpaGen")); //$NON-NLS-1$
+    jpaGenButton.setSelection(projectProps.getProperty(ProjectPropertyUtil.ENABLE_JPA_PROPERTY) != null);
+    jpaGenButton.addSelectionListener(new SelectionListener() {
+      public void widgetSelected(SelectionEvent arg0) {
+        getApplyButton().setEnabled(true);
+      }
+
+      public void widgetDefaultSelected(SelectionEvent arg0) {
+      }
+    });
+    jpaGenButton.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true, 3, 1));
+
+    enableDisableAutoGenFields(autoGenButton.getSelection());
+
+    TexoAutoCodeGenerator.addRemoveProjectBuilder(project, autoGenButton.getSelection());
+  }
+
+  private void enableDisableAutoGenFields(boolean autoGen) {
+    jpaGenButton.setEnabled(autoGen);
+    daoGenButton.setEnabled(autoGen);
+    modelFolderButton.setEnabled(autoGen);
+    modelFolderText.setEnabled(autoGen);
   }
 
   private void browseTargetProject() {
@@ -212,10 +330,22 @@ public class ProjectPropertyPage extends PropertyPage {
     }
   }
 
-  private Composite createDefaultComposite(Composite parent) {
+  private void browseModelFolder() {
+    final ElementTreeSelectionDialog selectionDialog = new FolderSelectionDialog(Display.getCurrent().getActiveShell());
+    selectionDialog.setTitle(Messages.getString("project.model.folder.select.title")); //$NON-NLS-1$
+    selectionDialog.setMessage(Messages.getString("project.model.folder.select.message")); //$NON-NLS-1$
+    selectionDialog.setBlockOnOpen(true);
+    selectionDialog.setInput(project);
+    selectionDialog.setInitialSelection(modelFolderText.getText());
+    if (selectionDialog.open() == Window.OK) {
+      setModelFolder((IFolder) selectionDialog.getFirstResult());
+    }
+  }
+
+  private Composite createDefaultComposite(Composite parent, int numColumns) {
     Composite composite = new Composite(parent, SWT.NULL);
     GridLayout layout = new GridLayout();
-    layout.numColumns = 3;
+    layout.numColumns = numColumns;
     composite.setLayout(layout);
 
     GridData data = new GridData();
@@ -232,23 +362,55 @@ public class ProjectPropertyPage extends PropertyPage {
     outputFolderText.setText(project.getProjectRelativePath()
         .append(ProjectPropertyUtil.GEN_OUTPUT_FOLDER_PROPERTY_DEFAULT).toPortableString());
     templateFolderText.setText(""); //$NON-NLS-1$
+    modelFolderText.setText("");
+    autoGenButton.setSelection(false);
+    jpaGenButton.setSelection(false);
+    daoGenButton.setSelection(false);
+    enableDisableAutoGenFields(autoGenButton.getSelection());
   }
 
   @Override
   public boolean performOk() {
     try {
-      final String templateLocation;
-      if (templateFolderText.getText().trim().length() == 0) {
-        templateLocation = null;
-      } else {
-        templateLocation = templateFolderText.getText();
-      }
-      ProjectPropertyUtil.setProjectProperties(project, targetProjectText.getText(), outputFolderText.getText(),
-          templateLocation);
+      final Properties props = new Properties();
+      setProperty(props, ProjectPropertyUtil.TARGET_PROJECT_PROPERTY,
+          getNullForEmptyString(targetProjectText.getText()));
+      setProperty(props, ProjectPropertyUtil.TEMPLATES_LOCATION_PROPERTY,
+          getNullForEmptyString(templateFolderText.getText()));
+      setProperty(props, ProjectPropertyUtil.OUTPUT_LOCATION_PROPERTY,
+          getNullForEmptyString(outputFolderText.getText()));
+      setProperty(props, ProjectPropertyUtil.MODEL_LOCATION_PROPERTY, getNullForEmptyString(modelFolderText.getText()));
+      setProperty(props, ProjectPropertyUtil.ENABLE_AUTOGEN_PROPERTY, autoGenButton.getSelection() ? "true" : null);
+      setProperty(props, ProjectPropertyUtil.ENABLE_DAO_PROPERTY, daoGenButton.getSelection() ? "true" : null);
+      setProperty(props, ProjectPropertyUtil.ENABLE_JPA_PROPERTY, jpaGenButton.getSelection() ? "true" : null);
+
+      ProjectPropertyUtil.setProjectProperties(project, props);
+
+      TexoAutoCodeGenerator.addRemoveProjectBuilder(project, autoGenButton.getSelection());
+
     } catch (Exception e) {
       return false;
     }
     return true;
+  }
+
+  private void setProperty(Properties props, String property, String value) {
+    if (value == null) {
+      props.remove(property);
+    } else {
+      props.put(property, value);
+    }
+
+  }
+
+  private String getNullForEmptyString(String value) {
+    if (value == null) {
+      return null;
+    }
+    if (value.trim().length() == 0) {
+      return null;
+    }
+    return value.trim();
   }
 
   private String getSafeValue(String value) {
@@ -256,5 +418,17 @@ public class ProjectPropertyPage extends PropertyPage {
       return ""; //$NON-NLS-1$
     }
     return value;
+  }
+
+  @Override
+  protected void performApply() {
+    performOk();
+    getApplyButton().setEnabled(false);
+  }
+
+  @Override
+  public void createControl(Composite parent) {
+    super.createControl(parent);
+    getApplyButton().setEnabled(false);
   }
 }

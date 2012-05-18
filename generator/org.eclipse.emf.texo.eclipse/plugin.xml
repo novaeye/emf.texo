@@ -150,5 +150,14 @@
  
        </page>
    </extension>
+   <extension
+   		 id="TexoAutoCodeGenerator" 
+         name="Texo Code Generator Builder"
+         point="org.eclipse.core.resources.builders">
+     <builder>
+         <run class="org.eclipse.emf.texo.eclipse.nature.TexoAutoCodeGenerator">
+         </run>
+      </builder>
+   </extension>
 
 </plugin>

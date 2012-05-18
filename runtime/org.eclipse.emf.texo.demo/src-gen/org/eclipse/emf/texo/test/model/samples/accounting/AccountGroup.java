@@ -2,14 +2,6 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>AccountGroup</b></em>'. <!--
@@ -17,15 +9,13 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "AccountGroup")
-public class AccountGroup extends Identifiable {
+public class AccountGroup {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**
@@ -33,9 +23,6 @@ public class AccountGroup extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Account.class)
-	@OrderColumn()
-	@JoinColumns({ @JoinColumn() })
 	private List<Account> account = new ArrayList<Account>();
 
 	/**

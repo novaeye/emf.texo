@@ -34,10 +34,10 @@ public class AccountingModelFactory implements ModelFactory {
 	 */
 	public Object create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case AccountingModelPackage.ACCOUNTING_CLASSIFIER_ID:
-			return createAccounting();
 		case AccountingModelPackage.ACCOUNTGROUP_CLASSIFIER_ID:
 			return createAccountGroup();
+		case AccountingModelPackage.ACCOUNTING_CLASSIFIER_ID:
+			return createAccounting();
 		case AccountingModelPackage.VAT_CLASSIFIER_ID:
 			return createVat();
 		case AccountingModelPackage.BALANCEACCOUNT_CLASSIFIER_ID:
@@ -72,14 +72,14 @@ public class AccountingModelFactory implements ModelFactory {
 	public ModelObject createModelObject(EClass eClass, Object adaptee) {
 		ModelObject<Object> modelObject = null;
 		switch (eClass.getClassifierID()) {
-		case AccountingModelPackage.ACCOUNTING_CLASSIFIER_ID:
-			modelObject = new AccountingClassModelObject();
-			break;
 		case AccountingModelPackage.ACCOUNT_CLASSIFIER_ID:
 			modelObject = new AccountModelObject();
 			break;
 		case AccountingModelPackage.ACCOUNTGROUP_CLASSIFIER_ID:
 			modelObject = new AccountGroupModelObject();
+			break;
+		case AccountingModelPackage.ACCOUNTING_CLASSIFIER_ID:
+			modelObject = new AccountingModelObject();
 			break;
 		case AccountingModelPackage.VAT_CLASSIFIER_ID:
 			modelObject = new VatModelObject();
@@ -148,8 +148,8 @@ public class AccountingModelFactory implements ModelFactory {
 	 *         Accounting
 	 * @generated
 	 */
-	public AccountingClass createAccounting() {
-		return new AccountingClass();
+	public Accounting createAccounting() {
+		return new Accounting();
 	}
 
 	/**
@@ -308,129 +308,6 @@ public class AccountingModelFactory implements ModelFactory {
 			return null;
 		}
 		return ModelUtils.createFromXML(value);
-	}
-
-	/**
-	 * The adapter/wrapper for the EClass '<em><b>Accounting</b></em>'. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	public static class AccountingClassModelObject<E extends AccountingClass>
-			extends AbstractModelObject<E> {
-		/**
-		 * @generated
-		 */
-		public EClass eClass() {
-			return AccountingModelPackage.INSTANCE.getAccountingEClass();
-		}
-
-		/**
-		 * @generated
-		 */
-		public ModelPackage getModelPackage() {
-			return AccountingModelPackage.INSTANCE;
-		}
-
-		/**
-		 * @generated
-		 */
-		@Override
-		public Object eGet(EStructuralFeature eStructuralFeature) {
-			final int featureID = eClass().getFeatureID(eStructuralFeature);
-			switch (featureID) {
-			case AccountingModelPackage.ACCOUNTING_NAME_FEATURE_ID:
-				return getTarget().getName();
-			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
-				return getTarget().getAccountGroup();
-			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
-				return getTarget().getVat();
-			case AccountingModelPackage.ACCOUNTING_VATACCOUNT_FEATURE_ID:
-				return getTarget().getVatAccount();
-			case AccountingModelPackage.ACCOUNTING_REPORT_FEATURE_ID:
-				return getTarget().getReport();
-			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
-				return getTarget().getJournalGroup();
-			}
-			return super.eGet(eStructuralFeature);
-		}
-
-		/**
-		 * @generated
-		 */
-		@SuppressWarnings("unchecked")
-		@Override
-		public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-			final int featureID = eClass().getFeatureID(eStructuralFeature);
-			switch (featureID) {
-			case AccountingModelPackage.ACCOUNTING_NAME_FEATURE_ID:
-				getTarget().setName((String) value);
-				return;
-			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
-				getTarget().setAccountGroup((List<AccountGroup>) value);
-				return;
-			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
-				getTarget().setVat((List<Vat>) value);
-				return;
-			case AccountingModelPackage.ACCOUNTING_VATACCOUNT_FEATURE_ID:
-				getTarget().setVatAccount((BalanceAccount) value);
-				return;
-			case AccountingModelPackage.ACCOUNTING_REPORT_FEATURE_ID:
-				getTarget().setReport((Report) value);
-				return;
-			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
-				getTarget().setJournalGroup((List<JournalGroup>) value);
-				return;
-			}
-			super.eSet(eStructuralFeature, value);
-		}
-
-		/**
-		 * @generated
-		 */
-		@Override
-		public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-			final int featureID = eClass().getFeatureID(eStructuralFeature);
-			switch (featureID) {
-
-			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
-				getTarget().getAccountGroup().add((AccountGroup) value);
-				return;
-
-			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
-				getTarget().getVat().add((Vat) value);
-				return;
-
-			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
-				getTarget().getJournalGroup().add((JournalGroup) value);
-				return;
-			}
-			super.eAddTo(eStructuralFeature, value);
-		}
-
-		/**
-		 * @generated
-		 */
-		@Override
-		public void eRemoveFrom(EStructuralFeature eStructuralFeature,
-				Object value) {
-			final int featureID = eClass().getFeatureID(eStructuralFeature);
-			switch (featureID) {
-
-			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
-				getTarget().getAccountGroup().remove((AccountGroup) value);
-				return;
-
-			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
-				getTarget().getVat().remove((Vat) value);
-				return;
-
-			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
-				getTarget().getJournalGroup().remove((JournalGroup) value);
-				return;
-			}
-			super.eAddTo(eStructuralFeature, value);
-		}
 	}
 
 	/**
@@ -656,7 +533,130 @@ public class AccountingModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			case AccountingModelPackage.ACCOUNTGROUP_ACCOUNT_FEATURE_ID:
-				getTarget().getAccount().remove((Account) value);
+				getTarget().getAccount().remove(value);
+				return;
+			}
+			super.eAddTo(eStructuralFeature, value);
+		}
+	}
+
+	/**
+	 * The adapter/wrapper for the EClass '<em><b>Accounting</b></em>'. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public static class AccountingModelObject<E extends Accounting> extends
+			AbstractModelObject<E> {
+		/**
+		 * @generated
+		 */
+		public EClass eClass() {
+			return AccountingModelPackage.INSTANCE.getAccountingEClass();
+		}
+
+		/**
+		 * @generated
+		 */
+		public ModelPackage getModelPackage() {
+			return AccountingModelPackage.INSTANCE;
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public Object eGet(EStructuralFeature eStructuralFeature) {
+			final int featureID = eClass().getFeatureID(eStructuralFeature);
+			switch (featureID) {
+			case AccountingModelPackage.ACCOUNTING_NAME_FEATURE_ID:
+				return getTarget().getName();
+			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
+				return getTarget().getAccountGroup();
+			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
+				return getTarget().getVat();
+			case AccountingModelPackage.ACCOUNTING_VATACCOUNT_FEATURE_ID:
+				return getTarget().getVatAccount();
+			case AccountingModelPackage.ACCOUNTING_REPORT_FEATURE_ID:
+				return getTarget().getReport();
+			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
+				return getTarget().getJournalGroup();
+			}
+			return super.eGet(eStructuralFeature);
+		}
+
+		/**
+		 * @generated
+		 */
+		@SuppressWarnings("unchecked")
+		@Override
+		public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+			final int featureID = eClass().getFeatureID(eStructuralFeature);
+			switch (featureID) {
+			case AccountingModelPackage.ACCOUNTING_NAME_FEATURE_ID:
+				getTarget().setName((String) value);
+				return;
+			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
+				getTarget().setAccountGroup((List<AccountGroup>) value);
+				return;
+			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
+				getTarget().setVat((List<Vat>) value);
+				return;
+			case AccountingModelPackage.ACCOUNTING_VATACCOUNT_FEATURE_ID:
+				getTarget().setVatAccount((BalanceAccount) value);
+				return;
+			case AccountingModelPackage.ACCOUNTING_REPORT_FEATURE_ID:
+				getTarget().setReport((Report) value);
+				return;
+			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
+				getTarget().setJournalGroup((List<JournalGroup>) value);
+				return;
+			}
+			super.eSet(eStructuralFeature, value);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+			final int featureID = eClass().getFeatureID(eStructuralFeature);
+			switch (featureID) {
+
+			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
+				getTarget().getAccountGroup().add((AccountGroup) value);
+				return;
+
+			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
+				getTarget().getVat().add((Vat) value);
+				return;
+
+			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
+				getTarget().getJournalGroup().add((JournalGroup) value);
+				return;
+			}
+			super.eAddTo(eStructuralFeature, value);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public void eRemoveFrom(EStructuralFeature eStructuralFeature,
+				Object value) {
+			final int featureID = eClass().getFeatureID(eStructuralFeature);
+			switch (featureID) {
+
+			case AccountingModelPackage.ACCOUNTING_ACCOUNTGROUP_FEATURE_ID:
+				getTarget().getAccountGroup().remove(value);
+				return;
+
+			case AccountingModelPackage.ACCOUNTING_VAT_FEATURE_ID:
+				getTarget().getVat().remove(value);
+				return;
+
+			case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
+				getTarget().getJournalGroup().remove(value);
 				return;
 			}
 			super.eAddTo(eStructuralFeature, value);
@@ -820,7 +820,7 @@ public class AccountingModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			case AccountingModelPackage.BALANCEACCOUNT_REPORT_FEATURE_ID:
-				getTarget().getReport().remove((ReportGroup) value);
+				getTarget().getReport().remove(value);
 				return;
 			}
 			super.eAddTo(eStructuralFeature, value);
@@ -1003,12 +1003,11 @@ public class AccountingModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			case AccountingModelPackage.JOURNALGROUP_JOURNALGROUPS_FEATURE_ID:
-				getTarget().getJournalGroups().remove((JournalGroup) value);
+				getTarget().getJournalGroups().remove(value);
 				return;
 
 			case AccountingModelPackage.JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID:
-				getTarget().getJournalStatements().remove(
-						(JournalStatement) value);
+				getTarget().getJournalStatements().remove(value);
 				return;
 			}
 			super.eAddTo(eStructuralFeature, value);
@@ -1104,11 +1103,11 @@ public class AccountingModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
-				getTarget().getReportGroup().remove((ReportGroup) value);
+				getTarget().getReportGroup().remove(value);
 				return;
 
 			case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
-				getTarget().getAccount().remove((BalanceAccount) value);
+				getTarget().getAccount().remove(value);
 				return;
 			}
 			super.eAddTo(eStructuralFeature, value);

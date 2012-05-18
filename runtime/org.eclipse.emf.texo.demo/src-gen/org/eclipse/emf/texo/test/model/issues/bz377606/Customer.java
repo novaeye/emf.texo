@@ -1,16 +1,11 @@
 package org.eclipse.emf.texo.test.model.issues.bz377606;
 
-import javax.persistence.Basic;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-
 /**
  * A representation of the model object '<em><b>Customer</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Customer")
 public class Customer {
 
 	/**
@@ -18,7 +13,6 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private String firstName = null;
 
 	/**
@@ -26,7 +20,6 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private String lastName = null;
 
 	/**
@@ -34,7 +27,6 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
-	@Embedded()
 	private Address address = null;
 
 	/**
@@ -42,8 +34,7 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
-	private double id = 0.0;
+	private Double id = null;
 
 	/**
 	 * Returns the value of '<em><b>firstName</b></em>' feature.
@@ -131,7 +122,7 @@ public class Customer {
 	 * @return the value of '<em><b>id</b></em>' feature
 	 * @generated
 	 */
-	public double getId() {
+	public Double getId() {
 		return id;
 	}
 
@@ -144,7 +135,7 @@ public class Customer {
 	 *            new value of the '{@link Customer#getId() id}' feature.
 	 * @generated
 	 */
-	public void setId(double newId) {
+	public void setId(Double newId) {
 		id = newId;
 	}
 

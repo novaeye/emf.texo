@@ -2,11 +2,6 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>BalanceAccount</b></em>'. <!--
@@ -14,22 +9,12 @@ import javax.persistence.OrderColumn;
  * 
  * @generated
  */
-@Entity(name = "BalanceAccount")
 public class BalanceAccount extends Account {
-	/**
-	 * @generated
-	 */
-	private static final long serialVersionUID = 1L;
-
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, targetEntity = ReportGroup.class)
-	@OrderColumn()
-	@JoinTable(name = "BalanceAccount_report")
 	private List<ReportGroup> report = new ArrayList<ReportGroup>();
 
 	/**

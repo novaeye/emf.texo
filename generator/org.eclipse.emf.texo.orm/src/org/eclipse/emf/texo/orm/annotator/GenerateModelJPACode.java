@@ -22,7 +22,7 @@ import java.util.List;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.texo.eclipse.popup.actions.GenerateCode;
-import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
+import org.eclipse.emf.texo.generator.AnnotationManager;
 
 /**
  * Generates jpa annotated model code.
@@ -34,10 +34,10 @@ public class GenerateModelJPACode extends GenerateCode {
   @Override
   protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
     try {
-      EPackageORMAnnotation.setAlwaysGenerateJPAAnnotations(true);
+      AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
       super.generateFromUris(monitor, project, uris);
     } finally {
-      EPackageORMAnnotation.setAlwaysGenerateJPAAnnotations(false);
+      AnnotationManager.removeEnabledAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
   }
 }

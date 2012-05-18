@@ -2,16 +2,6 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>ReportGroup</b></em>'. <!--
@@ -19,15 +9,13 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ReportGroup")
-public class ReportGroup extends Identifiable {
+public class ReportGroup {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**
@@ -35,9 +23,6 @@ public class ReportGroup extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = ReportGroup.class)
-	@OrderColumn()
-	@JoinColumns({ @JoinColumn() })
 	private List<ReportGroup> reportGroup = new ArrayList<ReportGroup>();
 
 	/**
@@ -45,10 +30,6 @@ public class ReportGroup extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, targetEntity = BalanceAccount.class)
-	@OrderColumn()
-	@JoinTable(name = "ReportGroup_account")
 	private List<BalanceAccount> account = new ArrayList<BalanceAccount>();
 
 	/**

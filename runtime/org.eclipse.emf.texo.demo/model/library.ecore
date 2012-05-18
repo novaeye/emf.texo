@@ -6,13 +6,19 @@
   <eAnnotations source="texo.java.annotation">
     <details key="type" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;type&quot;)"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Book">
+  <eClassifiers xsi:type="ecore:EClass" name="Book" eSuperTypes="identifiable.ecore#//Identifiable">
     <eAnnotations source="texo.java.annotation">
       <details key="value" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;test&quot;)"/>
+    </eAnnotations>
+    <eAnnotations source="org.eclipse.emf.texo">
+      <details key="title" value="${title} (${pages}) - ${category}"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="texo.java.annotation">
         <details key="field" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;field&quot;)&#xA;@org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo(&quot;field&quot;)"/>
+      </eAnnotations>
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="id" value="true"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pages" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -30,15 +36,23 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Library">
+  <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="identifiable.ecore#//Identifiable">
+    <eAnnotations source="texo.java.annotation">
+      <details key="type" value="@orgeclipseemftexo.OneDotAnnotation(&quot;test&quot;)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="writers" upperBound="-1"
         eType="#//Writer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="books" upperBound="-1"
         eType="#//Book" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Writer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Writer" eSuperTypes="identifiable.ecore#//Identifiable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="org.eclipse.emf.texo">
+        <details key="title" value="true"/>
+        <details key="id" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="books" upperBound="-1"
         eType="#//Book" eOpposite="#//Book/author"/>
   </eClassifiers>
@@ -50,4 +64,5 @@
     <eLiterals name="ScienceFiction" value="1"/>
     <eLiterals name="Biography" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="asdad"/>
 </ecore:EPackage>

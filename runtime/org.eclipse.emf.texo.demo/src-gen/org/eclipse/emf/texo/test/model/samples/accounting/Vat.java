@@ -1,24 +1,18 @@
 package org.eclipse.emf.texo.test.model.samples.accounting;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-
 /**
  * A representation of the model object '<em><b>Vat</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Vat")
-public class Vat extends Identifiable {
+public class Vat {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**
@@ -26,7 +20,6 @@ public class Vat extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private float rate = 0.0f;
 
 	/**

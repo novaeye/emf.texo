@@ -12,18 +12,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.server.store.DaoRegistry;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountGroupDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountingClassDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.BalanceAccountDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.JournalGroupDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.JournalStatementDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.PLAccountDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.ReportDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.ReportGroupDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.SerializableDao;
-import org.eclipse.emf.texo.test.model.samples.accounting.dao.VatDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -365,16 +353,15 @@ public class AccountingModelPackage extends ModelPackage {
 		ModelUtils.readEPackagesFromFile(modelPackage);
 
 		// register the relation between a Class and its EClassifier
-		ModelResolver.getInstance().registerClassModelMapping(
-				AccountingClass.class, modelPackage.getAccountingEClass(),
-				modelPackage);
-		ModelResolver.getInstance().registerClassModelMapping(
-				Serializable.class, modelPackage.getSerializableEClass(),
-				modelPackage);
 		ModelResolver.getInstance().registerClassModelMapping(Account.class,
 				modelPackage.getAccountEClass(), modelPackage);
 		ModelResolver.getInstance().registerClassModelMapping(
 				AccountGroup.class, modelPackage.getAccountGroupEClass(),
+				modelPackage);
+		ModelResolver.getInstance().registerClassModelMapping(Accounting.class,
+				modelPackage.getAccountingEClass(), modelPackage);
+		ModelResolver.getInstance().registerClassModelMapping(
+				Serializable.class, modelPackage.getSerializableEClass(),
 				modelPackage);
 		ModelResolver.getInstance().registerClassModelMapping(Vat.class,
 				modelPackage.getVatEClass(), modelPackage);
@@ -394,36 +381,6 @@ public class AccountingModelPackage extends ModelPackage {
 				modelPackage.getJournalStatementEClass(), modelPackage);
 		ModelResolver.getInstance().registerClassModelMapping(PLAccount.class,
 				modelPackage.getPLAccountEClass(), modelPackage);
-
-		DaoRegistry.getInstance().registerDao(AccountingClass.class,
-				AccountingClassDao.class);
-
-		DaoRegistry.getInstance().registerDao(Serializable.class,
-				SerializableDao.class);
-
-		DaoRegistry.getInstance().registerDao(Account.class, AccountDao.class);
-
-		DaoRegistry.getInstance().registerDao(AccountGroup.class,
-				AccountGroupDao.class);
-
-		DaoRegistry.getInstance().registerDao(Vat.class, VatDao.class);
-
-		DaoRegistry.getInstance().registerDao(BalanceAccount.class,
-				BalanceAccountDao.class);
-
-		DaoRegistry.getInstance().registerDao(Report.class, ReportDao.class);
-
-		DaoRegistry.getInstance().registerDao(JournalGroup.class,
-				JournalGroupDao.class);
-
-		DaoRegistry.getInstance().registerDao(ReportGroup.class,
-				ReportGroupDao.class);
-
-		DaoRegistry.getInstance().registerDao(JournalStatement.class,
-				JournalStatementDao.class);
-
-		DaoRegistry.getInstance().registerDao(PLAccount.class,
-				PLAccountDao.class);
 
 		// and return ourselves
 		return modelPackage;
@@ -998,14 +955,14 @@ public class AccountingModelPackage extends ModelPackage {
 	@Override
 	public Class<?> getEClassifierClass(EClassifier eClassifier) {
 		switch (eClassifier.getClassifierID()) {
-		case ACCOUNTING_CLASSIFIER_ID:
-			return AccountingClass.class;
-		case SERIALIZABLE_CLASSIFIER_ID:
-			return Serializable.class;
 		case ACCOUNT_CLASSIFIER_ID:
 			return Account.class;
 		case ACCOUNTGROUP_CLASSIFIER_ID:
 			return AccountGroup.class;
+		case ACCOUNTING_CLASSIFIER_ID:
+			return Accounting.class;
+		case SERIALIZABLE_CLASSIFIER_ID:
+			return Serializable.class;
 		case VAT_CLASSIFIER_ID:
 			return Vat.class;
 		case BALANCEACCOUNT_CLASSIFIER_ID:

@@ -1,28 +1,18 @@
 package org.eclipse.emf.texo.test.model.samples.accounting;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-
 /**
  * A representation of the model object '<em><b>Report</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Report")
-public class Report extends Identifiable {
+public class Report {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**
@@ -30,8 +20,6 @@ public class Report extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ReportGroup.class)
-	@JoinColumns({ @JoinColumn() })
 	private ReportGroup debitReportGroup = null;
 
 	/**
@@ -39,8 +27,6 @@ public class Report extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ReportGroup.class)
-	@JoinColumns({ @JoinColumn() })
 	private ReportGroup creditReportGroup = null;
 
 	/**

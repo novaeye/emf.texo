@@ -1,29 +1,17 @@
 package org.eclipse.emf.texo.test.model.samples.accounting;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-
 /**
  * A representation of the model object '<em><b>Account</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Account")
-public abstract class Account extends Identifiable implements Serializable {
-	/**
-	 * @generated
-	 */
-	private static final long serialVersionUID = 1L;
-
+public abstract class Account {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**

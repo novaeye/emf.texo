@@ -1,15 +1,11 @@
 package org.eclipse.emf.texo.test.model.samples.music;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-
 /**
  * A representation of the model object '<em><b>Genre</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Genre")
 public class Genre {
 
 	/**
@@ -17,7 +13,6 @@ public class Genre {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private long id = 0;
 
 	/**
@@ -25,7 +20,6 @@ public class Genre {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private Long version = null;
 
 	/**
@@ -33,7 +27,6 @@ public class Genre {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**

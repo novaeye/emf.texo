@@ -2,14 +2,6 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>JournalGroup</b></em>'. <!--
@@ -17,15 +9,13 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "JournalGroup")
-public class JournalGroup extends Identifiable {
+public class JournalGroup {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = false)
 	private String name = null;
 
 	/**
@@ -33,9 +23,6 @@ public class JournalGroup extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = JournalGroup.class)
-	@OrderColumn()
-	@JoinColumns({ @JoinColumn() })
 	private List<JournalGroup> journalGroups = new ArrayList<JournalGroup>();
 
 	/**
@@ -43,9 +30,6 @@ public class JournalGroup extends Identifiable {
 	 * 
 	 * @generated
 	 */
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = JournalStatement.class)
-	@OrderColumn()
-	@JoinColumns({ @JoinColumn() })
 	private List<JournalStatement> journalStatements = new ArrayList<JournalStatement>();
 
 	/**

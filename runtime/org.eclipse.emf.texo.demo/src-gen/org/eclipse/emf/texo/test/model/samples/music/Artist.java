@@ -1,14 +1,6 @@
 package org.eclipse.emf.texo.test.model.samples.music;
 
 import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
  * A representation of the model object '<em><b>Artist</b></em>'. <!--
@@ -16,7 +8,6 @@ import javax.persistence.TemporalType;
  * 
  * @generated
  */
-@Entity(name = "Artist")
 public class Artist {
 
 	/**
@@ -24,7 +15,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private long id = 0;
 
 	/**
@@ -32,7 +22,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private Long version = null;
 
 	/**
@@ -40,7 +29,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private String firstName = null;
 
 	/**
@@ -48,7 +36,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private String lastName = null;
 
 	/**
@@ -56,8 +43,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
-	@Temporal(TemporalType.DATE)
 	private Date birthDate = null;
 
 	/**
@@ -65,9 +50,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, optional = true, targetEntity = Country.class)
-	@JoinColumns({ @JoinColumn() })
 	private Country country = null;
 
 	/**
@@ -75,9 +57,6 @@ public class Artist {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, optional = true, targetEntity = Genre.class)
-	@JoinColumns({ @JoinColumn() })
 	private Genre genre = null;
 
 	/**

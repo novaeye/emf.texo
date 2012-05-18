@@ -33,9 +33,6 @@ public class TexoProjectNature implements IProjectNature {
   private IProject project;
 
   public void configure() throws CoreException {
-    // Add nature-specific information
-    // for the project, such as adding a builder
-    // to a project's build spec.
   }
 
   public void deconfigure() throws CoreException {

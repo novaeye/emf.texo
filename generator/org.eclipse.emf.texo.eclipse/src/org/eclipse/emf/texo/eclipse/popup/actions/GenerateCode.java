@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.eclipse.Messages;
 import org.eclipse.emf.texo.eclipse.ProjectPropertyUtil;
+import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.generator.ArtifactGenerator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.generator.ModelAnnotator;
@@ -45,38 +46,49 @@ import org.eclipse.emf.texo.generator.ModelController;
  */
 public class GenerateCode extends BaseGenerateAction {
 
+  private boolean doDao = false;
+  private boolean doJpa = false;
+
   @Override
   protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
-    // always start with a fresh epackage registry
-    final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, GeneratorUtils.createEPackageRegistry());
+    if (isDoJpa()) {
+      AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
+    }
+    try {
+      // always start with a fresh epackage registry
+      final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, GeneratorUtils.createEPackageRegistry());
 
-    validateEPackages(ePackages);
+      validateEPackages(ePackages);
 
-    final ModelController modelController = new ModelController();
-    modelController.setEPackages(ePackages);
-    monitor.subTask(Messages.getString("generate.Annotating")); //$NON-NLS-1$
-    modelController.annotate(new ArrayList<ModelAnnotator>());
+      final ModelController modelController = new ModelController();
+      modelController.setEPackages(ePackages);
+      monitor.subTask(Messages.getString("generate.Annotating")); //$NON-NLS-1$
+      modelController.annotate(new ArrayList<ModelAnnotator>());
 
-    final ArtifactGenerator artifactGenerator = new ArtifactGenerator();
-    artifactGenerator.setMonitor(monitor);
-    artifactGenerator.setOutputFolder(ProjectPropertyUtil.getGenOutputFolder(project));
-    artifactGenerator.setModelController(modelController);
-    artifactGenerator.setProjectName(ProjectPropertyUtil.getTargetProject(project).getName());
-    artifactGenerator.setDoDao(isDoDao());
+      final ArtifactGenerator artifactGenerator = new ArtifactGenerator();
+      artifactGenerator.setMonitor(monitor);
+      artifactGenerator.setOutputFolder(ProjectPropertyUtil.getGenOutputFolder(project));
+      artifactGenerator.setModelController(modelController);
+      artifactGenerator.setProjectName(ProjectPropertyUtil.getTargetProject(project).getName());
+      artifactGenerator.setDoDao(isDoDao());
 
-    int eClassifierCount = 0;
-    for (EPackage ePackage : ePackages) {
-      eClassifierCount += ePackage.getEClassifiers().size();
-      eClassifierCount++;
+      int eClassifierCount = 0;
+      for (EPackage ePackage : ePackages) {
+        eClassifierCount += ePackage.getEClassifiers().size();
+        eClassifierCount++;
+      }
+
+      monitor.beginTask(Messages.getString("generate.Initialize"), eClassifierCount); //$NON-NLS-1$
+
+      artifactGenerator.run();
+    } finally {
+      AnnotationManager.removeEnabledAnnotationSystem("jpa"); //$NON-NLS-1$
     }
 
-    monitor.beginTask(Messages.getString("generate.Initialize"), eClassifierCount); //$NON-NLS-1$
-
-    artifactGenerator.run();
   }
 
   protected boolean isDoDao() {
-    return false;
+    return doDao;
   }
 
   private void validateEPackages(List<EPackage> ePackages) {
@@ -124,5 +136,17 @@ public class GenerateCode extends BaseGenerateAction {
       result.addAll(getNotWellFormedPackageNames(subEPackage));
     }
     return result;
+  }
+
+  public void setDoDao(boolean doDao) {
+    this.doDao = doDao;
+  }
+
+  public boolean isDoJpa() {
+    return doJpa;
+  }
+
+  public void setDoJpa(boolean doJpa) {
+    this.doJpa = doJpa;
   }
 }

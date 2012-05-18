@@ -17,6 +17,7 @@
 
 package org.eclipse.emf.texo.generator;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,6 +61,25 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
 public class AnnotationManager {
+
+  public static final String JPA_ANNOTATION_SYSTEM_ID = "jpa"; //$NON-NLS-1$
+
+  private static List<String> enabledAnnotationSystems = new ArrayList<String>();
+
+  public static boolean isAnnotationSystemEnabled(String id) {
+    return enabledAnnotationSystems.contains(id);
+  }
+
+  public static void enableAnnotationSystem(String id) {
+    if (!isAnnotationSystemEnabled(id)) {
+      enabledAnnotationSystems.add(id);
+    }
+  }
+
+  public static void removeEnabledAnnotationSystem(String id) {
+    enabledAnnotationSystems.remove(id);
+  }
+
   private Map<EClass, Annotator<? extends ENamedElementAnnotation>> annotators = new HashMap<EClass, Annotator<? extends ENamedElementAnnotation>>();
 
   // the initial annotated model containing them all
@@ -137,7 +157,7 @@ public class AnnotationManager {
       final AnnotatedEDataType aDataType = annotatedModel.getAnnotatedEDataType((EDataType) eModelElement, true);
       aDataType.getEDataTypeAnnotations().add((EDataTypeAnnotation) annotation);
     } else {
-      throw new IllegalArgumentException("Type " + eModelElement + " not supported here"); //$NON-NLS-1$ //$NON-NLS-2$
+      throw new IllegalArgumentException("Type " + eModelElement + " not supported here");// $//$
     }
   }
 

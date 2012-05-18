@@ -3,18 +3,6 @@ package org.eclipse.emf.texo.test.model.samples.music;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
  * A representation of the model object '<em><b>Album</b></em>'. <!--
@@ -22,7 +10,6 @@ import javax.persistence.TemporalType;
  * 
  * @generated
  */
-@Entity(name = "Album")
 public class Album {
 
 	/**
@@ -30,7 +17,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private long id = 0;
 
 	/**
@@ -38,7 +24,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private Long version = null;
 
 	/**
@@ -46,7 +31,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
 	private String name = null;
 
 	/**
@@ -54,9 +38,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, optional = true, targetEntity = Artist.class)
-	@JoinColumns({ @JoinColumn() })
 	private Artist artist = null;
 
 	/**
@@ -64,8 +45,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@Basic(optional = true)
-	@Temporal(TemporalType.DATE)
 	private Date releaseDate = null;
 
 	/**
@@ -73,10 +52,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST,
-			CascadeType.REFRESH }, targetEntity = Genre.class)
-	@OrderColumn()
-	@JoinTable(name = "Album_genres")
 	private List<Genre> genres = new ArrayList<Genre>();
 
 	/**
@@ -84,9 +59,6 @@ public class Album {
 	 * 
 	 * @generated
 	 */
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Song.class)
-	@OrderColumn()
-	@JoinColumns({ @JoinColumn() })
 	private List<Song> songs = new ArrayList<Song>();
 
 	/**

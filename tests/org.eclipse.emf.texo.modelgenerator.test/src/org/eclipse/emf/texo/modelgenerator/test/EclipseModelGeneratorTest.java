@@ -26,6 +26,7 @@ import junit.framework.TestCase;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.generator.ArtifactGenerator;
 import org.eclipse.emf.texo.generator.EclipseGeneratorUtils;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
@@ -34,7 +35,6 @@ import org.eclipse.emf.texo.generator.ModelAnnotatorRegistry;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.generator.TexoResourceManager;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
-import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 
 /**
  * Test the generation of model code through the Eclipse plugin. Needs to be run as a junit plugin test.
@@ -57,7 +57,7 @@ public class EclipseModelGeneratorTest extends TestCase {
     // force initialization
     ModelAnnotatorRegistry.getInstance().getModelAnnotators();
     // let everyone have orm annotations..
-    EPackageORMAnnotation.setAlwaysGenerateJPAAnnotations(true);
+    AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
 
     for (String modelFile : getModelFileRelativePaths()) {
       System.err.println("Generating modelfile " + modelFile); //$NON-NLS-1$

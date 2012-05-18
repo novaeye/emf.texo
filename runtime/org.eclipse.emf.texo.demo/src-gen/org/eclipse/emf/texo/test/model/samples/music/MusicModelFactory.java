@@ -623,11 +623,11 @@ public class MusicModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			case MusicModelPackage.ALBUM_GENRES_FEATURE_ID:
-				getTarget().getGenres().remove((Genre) value);
+				getTarget().getGenres().remove(value);
 				return;
 
 			case MusicModelPackage.ALBUM_SONGS_FEATURE_ID:
-				getTarget().getSongs().remove((Song) value);
+				getTarget().getSongs().remove(value);
 				return;
 			}
 			super.eAddTo(eStructuralFeature, value);

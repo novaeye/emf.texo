@@ -1,21 +1,11 @@
 package org.eclipse.emf.texo.test.model.base.identifiable;
 
-import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Version;
-
 /**
  * A representation of the model object '<em><b>Identifiable</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@MappedSuperclass()
-@Access(AccessType.FIELD)
 public abstract class Identifiable {
 
 	/**
@@ -23,8 +13,6 @@ public abstract class Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Id()
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long db_Id = 0;
 
 	/**
@@ -32,8 +20,6 @@ public abstract class Identifiable {
 	 * 
 	 * @generated
 	 */
-	@Version()
-	@Access(AccessType.FIELD)
 	private int db_version = 0;
 
 	/**

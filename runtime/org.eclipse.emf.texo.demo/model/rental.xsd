@@ -4,7 +4,7 @@
 	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" 
 	xmlns:this="http://www.eclipse.org/emf/texo/test/model/samples/rental" 
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	
+	    
 	<complexType abstract="true" name="RentalUnit">
 		<sequence>
 			<element name="description" type="string"/>
@@ -62,9 +62,9 @@
 
 	<complexType name="RentalBusiness">
 		<sequence>
-			<element name="name" type="string"/>
-			<element maxOccurs="unbounded" minOccurs="0" maxOccurs="unbounded" name="rentalUnits" type="this:RentalUnit"/>
-			<element maxOccurs="unbounded" minOccurs="0" maxOccurs="unbounded" name="rentalContracts" type="this:RentalContract"/>
+			<element name="name" type="string"/> 
+			<element maxOccurs="unbounded" minOccurs="0" name="rentalUnits" type="this:RentalUnit"/>
+			<element maxOccurs="unbounded" minOccurs="0" name="rentalContracts" type="this:RentalContract"/>
 		</sequence>
 	</complexType>
 </schema>

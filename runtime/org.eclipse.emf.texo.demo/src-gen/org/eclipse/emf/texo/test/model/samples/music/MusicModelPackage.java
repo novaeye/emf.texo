@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.server.store.DaoRegistry;
-import org.eclipse.emf.texo.test.model.samples.music.dao.AlbumDao;
-import org.eclipse.emf.texo.test.model.samples.music.dao.ArtistDao;
-import org.eclipse.emf.texo.test.model.samples.music.dao.CountryDao;
-import org.eclipse.emf.texo.test.model.samples.music.dao.GenreDao;
-import org.eclipse.emf.texo.test.model.samples.music.dao.SongDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -307,16 +301,6 @@ public class MusicModelPackage extends ModelPackage {
 
 		ModelResolver.getInstance().registerClassModelMapping(Rating.class,
 				modelPackage.getRatingEEnum(), modelPackage);
-
-		DaoRegistry.getInstance().registerDao(Artist.class, ArtistDao.class);
-
-		DaoRegistry.getInstance().registerDao(Country.class, CountryDao.class);
-
-		DaoRegistry.getInstance().registerDao(Genre.class, GenreDao.class);
-
-		DaoRegistry.getInstance().registerDao(Album.class, AlbumDao.class);
-
-		DaoRegistry.getInstance().registerDao(Song.class, SongDao.class);
 
 		// and return ourselves
 		return modelPackage;

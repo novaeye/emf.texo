@@ -88,7 +88,7 @@ public abstract class BaseGenerateAction implements IObjectActionDelegate {
     }
   }
 
-  private void generate(IProgressMonitor monitor) {
+  public void generate(IProgressMonitor monitor) {
     // sort the modelfiles by project and run by project
     final Map<IProject, List<IFile>> filesByProject = new HashMap<IProject, List<IFile>>();
     for (IFile modelFile : modelFiles) {
@@ -158,6 +158,14 @@ public abstract class BaseGenerateAction implements IObjectActionDelegate {
         modelFiles.add((IFile) obj);
       }
     }
+  }
+
+  public List<IFile> getModelFiles() {
+    return modelFiles;
+  }
+
+  public void setModelFiles(List<IFile> modelFiles) {
+    this.modelFiles = modelFiles;
   }
 
 }

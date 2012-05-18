@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://java.sun.com/xml/ns/persistence/orm" version="2.0">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="model._1.Class1" name="Class1">
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Library" name="Library">
     <orm:attributes>
-      <orm:one-to-one name="toClass2" optional="true" orphan-removal="true" target-entity="model._1.Class2">
+      <orm:basic name="name" optional="true"/>
+      <orm:one-to-many name="writers" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.library.Writer">
+        <orm:order-column/>
+        <orm:join-column/>
         <orm:cascade>
-          <orm:cascade-all/>
+          <orm:cascade-persist/>
+          <orm:cascade-refresh/>
         </orm:cascade>
-      </orm:one-to-one>
+      </orm:one-to-many>
+      <orm:one-to-many name="books" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.library.Book">
+        <orm:order-column/>
+        <orm:join-column/>
+        <orm:cascade/>
+      </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="model._1.Class2" name="Class2">
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Book" name="Book">
     <orm:attributes>
-      <orm:one-to-one mapped-by="toClass2" name="toClass1" optional="true" target-entity="model._1.Class1">
+      <orm:basic name="title" optional="true"/>
+      <orm:basic name="pages" optional="true"/>
+      <orm:basic name="category" optional="true"/>
+      <orm:many-to-one name="author" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.library.Writer">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Writer" name="Writer">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+      <orm:one-to-many name="books" target-entity="org.eclipse.emf.texo.test.model.samples.library.Book">
+        <orm:order-column/>
+        <orm:join-table name="Writer_books"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
-      </orm:one-to-one>
+      </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>
