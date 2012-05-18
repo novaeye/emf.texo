@@ -32,8 +32,10 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.texo.eclipse.ProjectPropertyUtil;
 import org.eclipse.emf.texo.eclipse.popup.actions.GenerateCode;
+import org.eclipse.emf.texo.eclipse.popup.actions.GenerateEcoreFromXSD;
 
 /**
  * Regenerate source code if a model file changes.
@@ -92,6 +94,7 @@ public class TexoAutoCodeGenerator extends IncrementalProjectBuilder {
 
   private void incrementalBuild(IResourceDelta delta, IProgressMonitor monitor) {
     final List<IFile> files = new ArrayList<IFile>();
+    final List<IFile> xsdFiles = new ArrayList<IFile>();
     try {
       delta.accept(new IResourceDeltaVisitor() {
         public boolean visit(IResourceDelta delta) {
@@ -101,8 +104,11 @@ public class TexoAutoCodeGenerator extends IncrementalProjectBuilder {
           final IResource resource = delta.getResource();
           if (resource instanceof IFile) {
             final String extension = resource.getRawLocation().getFileExtension();
-            if (extension.endsWith("ecore") || extension.endsWith("xsd")) {
+            if (extension.endsWith("ecore")) {
               files.add((IFile) resource);
+            } else if (extension.endsWith("xsd")) {
+              files.add((IFile) resource);
+              xsdFiles.add((IFile) resource);
             } else if (extension.endsWith("annotationsmodel")) {
               final String name = resource.getName();
               int dashIndex = name.indexOf("-");
@@ -123,25 +129,44 @@ public class TexoAutoCodeGenerator extends IncrementalProjectBuilder {
           return true; // visit children too
         }
       });
+
+      final Properties props = ProjectPropertyUtil.getProjectProperties(getProject());
+      if (props.containsKey(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY)) {
+        final String modelFilter = props.getProperty(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY);
+        final IPath modelPath = getProject().getFullPath().append(modelFilter);
+        final List<IFile> toIgnore = new ArrayList<IFile>();
+        for (IFile file : files) {
+          if (modelPath != null && !modelPath.isPrefixOf(file.getFullPath())) {
+            toIgnore.add(file);
+          }
+        }
+        files.removeAll(toIgnore);
+        xsdFiles.removeAll(toIgnore);
+      }
+
+      // first regenerate the ecore files
+      if (xsdFiles.size() > 0) {
+        final GenerateEcoreFromXSD action = new GenerateEcoreFromXSD();
+        action.setModelFiles(xsdFiles);
+        action.generate(monitor);
+
+        // then for each xsd file in files, replace it with the ecore file
+        files.removeAll(xsdFiles);
+        for (IFile file : xsdFiles) {
+          final String ecoreFileName = file.getRawLocation().removeFileExtension().addFileExtension("ecore")
+              .lastSegment();
+          files.add(file.getParent().getFile(new Path(ecoreFileName)));
+        }
+      }
+
+      // now generate on the basis of the ecore files
       if (files.size() > 0) {
-        final Properties props = ProjectPropertyUtil.getProjectProperties(getProject());
         final GenerateCode action = new GenerateCode();
         if (props.containsKey(ProjectPropertyUtil.ENABLE_DAO_PROPERTY)) {
           action.setDoDao(true);
         }
         if (props.containsKey(ProjectPropertyUtil.ENABLE_JPA_PROPERTY)) {
           action.setDoJpa(true);
-        }
-        if (props.containsKey(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY)) {
-          final String modelFilter = props.getProperty(ProjectPropertyUtil.MODEL_LOCATION_PROPERTY);
-          final IPath path = getProject().getFullPath().append(modelFilter);
-          final List<IFile> toIgnore = new ArrayList<IFile>();
-          for (IFile file : files) {
-            if (!path.isPrefixOf(file.getFullPath())) {
-              toIgnore.add(file);
-            }
-          }
-          files.removeAll(toIgnore);
         }
         action.setModelFiles(files);
         action.generate(monitor);
