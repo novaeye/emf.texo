@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Element</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,7 +14,7 @@ import javax.persistence.OneToMany;
  * @generated
  */
 @Entity(name = "Element")
-public class Element {
+public class Element extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -82,21 +83,21 @@ public class Element {
    * @return the value of '<em><b>true</b></em>' feature
    * @generated
    */
-  public List<ElementTrueFeatureGroup> getTrue() {
-    return ElementMixedFeatureGroup.createUnmodifiableValueList(getMixed(), ElementMixedFeatureGroup.Feature.TRUE);
+  public List<ElementTrue_FeatureGroup> getTrue_() {
+    return ElementMixedFeatureGroup.createUnmodifiableValueList(getMixed(), ElementMixedFeatureGroup.Feature.TRUE_);
   }
 
   /**
-   * Sets the '{@link Element#getTrue() <em>true</em>}' feature.
+   * Sets the '{@link Element#getTrue_() <em>true</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link Element#getTrue() true}' feature.
+   *          new value of the '{@link Element#getTrue_() true}' feature.
    * @generated
    */
-  public void setTrue(List<ElementTrueFeatureGroup> newTrue_) {
-    setMixed(ElementMixedFeatureGroup.createFeatureGroupList(ElementMixedFeatureGroup.Feature.TRUE, newTrue_));
+  public void setTrue_(List<ElementTrue_FeatureGroup> newTrue_) {
+    setMixed(ElementMixedFeatureGroup.createFeatureGroupList(ElementMixedFeatureGroup.Feature.TRUE_, newTrue_));
   }
 
   /**
@@ -108,7 +109,7 @@ public class Element {
    * @generated
    */
   public List<CType> getC() {
-    return ElementTrueFeatureGroup.createUnmodifiableValueList(getTrue(), ElementTrueFeatureGroup.Feature.C);
+    return ElementTrue_FeatureGroup.createUnmodifiableValueList(getTrue_(), ElementTrue_FeatureGroup.Feature.C);
   }
 
   /**
@@ -121,7 +122,7 @@ public class Element {
    * @generated
    */
   public void setC(List<CType> newC) {
-    setTrue(ElementTrueFeatureGroup.createFeatureGroupList(ElementTrueFeatureGroup.Feature.C, newC));
+    setTrue_(ElementTrue_FeatureGroup.createFeatureGroupList(ElementTrue_FeatureGroup.Feature.C, newC));
   }
 
   /**

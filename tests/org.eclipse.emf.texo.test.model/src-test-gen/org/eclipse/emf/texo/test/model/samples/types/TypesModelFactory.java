@@ -345,26 +345,26 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getInteger();
       case TypesModelPackage.SINGLETYPES_INTEGEROBJECT_FEATURE_ID:
         return getTarget().getIntegerObject();
-      case TypesModelPackage.SINGLETYPES_LONG_FEATURE_ID:
-        return getTarget().getLong();
+      case TypesModelPackage.SINGLETYPES_LONG__FEATURE_ID:
+        return getTarget().getLong_();
       case TypesModelPackage.SINGLETYPES_LONGOBJECT_FEATURE_ID:
         return getTarget().getLongObject();
-      case TypesModelPackage.SINGLETYPES_DOUBLE_FEATURE_ID:
-        return getTarget().getDouble();
+      case TypesModelPackage.SINGLETYPES_DOUBLE__FEATURE_ID:
+        return getTarget().getDouble_();
       case TypesModelPackage.SINGLETYPES_DOUBLEOBJECT_FEATURE_ID:
         return getTarget().getDoubleObject();
-      case TypesModelPackage.SINGLETYPES_FLOAT_FEATURE_ID:
-        return getTarget().getFloat();
+      case TypesModelPackage.SINGLETYPES_FLOAT__FEATURE_ID:
+        return getTarget().getFloat_();
       case TypesModelPackage.SINGLETYPES_FLOATOBJECT_FEATURE_ID:
         return getTarget().getFloatObject();
       case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
         return getTarget().getClazz();
-      case TypesModelPackage.SINGLETYPES_CHAR_FEATURE_ID:
-        return getTarget().getChar();
+      case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
+        return getTarget().getChar_();
       case TypesModelPackage.SINGLETYPES_CHAROBJECT_FEATURE_ID:
         return getTarget().getCharObject();
-      case TypesModelPackage.SINGLETYPES_BYTE_FEATURE_ID:
-        return getTarget().getByte();
+      case TypesModelPackage.SINGLETYPES_BYTE__FEATURE_ID:
+        return getTarget().getByte_();
       case TypesModelPackage.SINGLETYPES_BYTEOBJECT_FEATURE_ID:
         return getTarget().getByteObject();
       case TypesModelPackage.SINGLETYPES_BYTEARRAY_FEATURE_ID:
@@ -373,8 +373,8 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getBigDecimal();
       case TypesModelPackage.SINGLETYPES_BIGINTEGER_FEATURE_ID:
         return getTarget().getBigInteger();
-      case TypesModelPackage.SINGLETYPES_ENUM_FEATURE_ID:
-        return getTarget().getEnum();
+      case TypesModelPackage.SINGLETYPES_ENUM__FEATURE_ID:
+        return getTarget().getEnum_();
       case TypesModelPackage.SINGLETYPES_DATE_FEATURE_ID:
         return getTarget().getDate();
       case TypesModelPackage.SINGLETYPES_STRINGARRAY_FEATURE_ID:
@@ -410,20 +410,20 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.SINGLETYPES_INTEGEROBJECT_FEATURE_ID:
         getTarget().setIntegerObject((Integer) value);
         return;
-      case TypesModelPackage.SINGLETYPES_LONG_FEATURE_ID:
-        getTarget().setLong((Long) value);
+      case TypesModelPackage.SINGLETYPES_LONG__FEATURE_ID:
+        getTarget().setLong_((Long) value);
         return;
       case TypesModelPackage.SINGLETYPES_LONGOBJECT_FEATURE_ID:
         getTarget().setLongObject((Long) value);
         return;
-      case TypesModelPackage.SINGLETYPES_DOUBLE_FEATURE_ID:
-        getTarget().setDouble((Double) value);
+      case TypesModelPackage.SINGLETYPES_DOUBLE__FEATURE_ID:
+        getTarget().setDouble_((Double) value);
         return;
       case TypesModelPackage.SINGLETYPES_DOUBLEOBJECT_FEATURE_ID:
         getTarget().setDoubleObject((Double) value);
         return;
-      case TypesModelPackage.SINGLETYPES_FLOAT_FEATURE_ID:
-        getTarget().setFloat((Float) value);
+      case TypesModelPackage.SINGLETYPES_FLOAT__FEATURE_ID:
+        getTarget().setFloat_((Float) value);
         return;
       case TypesModelPackage.SINGLETYPES_FLOATOBJECT_FEATURE_ID:
         getTarget().setFloatObject((Float) value);
@@ -431,14 +431,14 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
         getTarget().setClazz((Class) value);
         return;
-      case TypesModelPackage.SINGLETYPES_CHAR_FEATURE_ID:
-        getTarget().setChar((Character) value);
+      case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
+        getTarget().setChar_((Character) value);
         return;
       case TypesModelPackage.SINGLETYPES_CHAROBJECT_FEATURE_ID:
         getTarget().setCharObject((Character) value);
         return;
-      case TypesModelPackage.SINGLETYPES_BYTE_FEATURE_ID:
-        getTarget().setByte((Byte) value);
+      case TypesModelPackage.SINGLETYPES_BYTE__FEATURE_ID:
+        getTarget().setByte_((Byte) value);
         return;
       case TypesModelPackage.SINGLETYPES_BYTEOBJECT_FEATURE_ID:
         getTarget().setByteObject((Byte) value);
@@ -452,8 +452,8 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.SINGLETYPES_BIGINTEGER_FEATURE_ID:
         getTarget().setBigInteger((BigInteger) value);
         return;
-      case TypesModelPackage.SINGLETYPES_ENUM_FEATURE_ID:
-        getTarget().setEnum((TestEnum) value);
+      case TypesModelPackage.SINGLETYPES_ENUM__FEATURE_ID:
+        getTarget().setEnum_((TestEnum) value);
         return;
       case TypesModelPackage.SINGLETYPES_DATE_FEATURE_ID:
         getTarget().setDate((Date) value);
@@ -535,8 +535,8 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getString();
       case TypesModelPackage.MANYTYPES_INTEGEROBJECT_FEATURE_ID:
         return getTarget().getIntegerObject();
-      case TypesModelPackage.MANYTYPES_LONG_FEATURE_ID:
-        return getTarget().getLong();
+      case TypesModelPackage.MANYTYPES_LONG__FEATURE_ID:
+        return getTarget().getLong_();
       case TypesModelPackage.MANYTYPES_DOUBLEOBJECT_FEATURE_ID:
         return getTarget().getDoubleObject();
       case TypesModelPackage.MANYTYPES_FLOATOBJECT_FEATURE_ID:
@@ -553,8 +553,8 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getBigDecimal();
       case TypesModelPackage.MANYTYPES_BIGINTEGER_FEATURE_ID:
         return getTarget().getBigInteger();
-      case TypesModelPackage.MANYTYPES_ENUM_FEATURE_ID:
-        return getTarget().getEnum();
+      case TypesModelPackage.MANYTYPES_ENUM__FEATURE_ID:
+        return getTarget().getEnum_();
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         return getTarget().getDate();
       case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
@@ -585,8 +585,8 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_INTEGEROBJECT_FEATURE_ID:
         getTarget().setIntegerObject((List<Integer>) value);
         return;
-      case TypesModelPackage.MANYTYPES_LONG_FEATURE_ID:
-        getTarget().setLong((Set<Long>) value);
+      case TypesModelPackage.MANYTYPES_LONG__FEATURE_ID:
+        getTarget().setLong_((Set<Long>) value);
         return;
       case TypesModelPackage.MANYTYPES_DOUBLEOBJECT_FEATURE_ID:
         getTarget().setDoubleObject((Set<Double>) value);
@@ -612,8 +612,8 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_BIGINTEGER_FEATURE_ID:
         getTarget().setBigInteger((Set<BigInteger>) value);
         return;
-      case TypesModelPackage.MANYTYPES_ENUM_FEATURE_ID:
-        getTarget().setEnum((List<TestEnum>) value);
+      case TypesModelPackage.MANYTYPES_ENUM__FEATURE_ID:
+        getTarget().setEnum_((List<TestEnum>) value);
         return;
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().setDate((Set<Date>) value);

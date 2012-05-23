@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.featuremaptest.PurchaseOrder" name="PurchaseOrder">
     <orm:table name="PUR_ORDER"/>
@@ -9,8 +14,8 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.featuremaptest.SupplierOrdersFeatureGroup" name="Supplier_orders">
     <orm:attributes>
-      <orm:basic name="hardCopyOrderReference" optional="true"/>
-      <orm:basic name="hardCopyOrderNumber" optional="true"/>
+      <orm:basic access="PROPERTY" name="hardCopyOrderReference" optional="true"/>
+      <orm:basic access="PROPERTY" name="hardCopyOrderNumber" optional="true"/>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>

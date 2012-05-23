@@ -9,6 +9,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -16,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 @Entity(name = "ResultType")
-public class ResultType {
+public class ResultType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

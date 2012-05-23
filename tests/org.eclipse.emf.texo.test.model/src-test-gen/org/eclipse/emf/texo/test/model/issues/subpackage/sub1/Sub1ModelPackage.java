@@ -8,7 +8,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.issues.subpackage.MainModelPackage;
+import org.eclipse.emf.texo.test.model.issues.subpackage.sub1.dao.Sub1TypeDao;
 
 /**
  * The <b>Package</b> for the model '<em><b>sub1</b></em>'. It contains initialization code and access to the Factory to
@@ -73,17 +75,19 @@ public class Sub1ModelPackage extends ModelPackage {
       return (Sub1ModelPackage) ModelResolver.getInstance().getModelPackage(NS_URI);
     }
 
-    MainModelPackage.initialize();
-
     final Sub1ModelPackage modelPackage = new Sub1ModelPackage();
+
+    ModelResolver.getInstance().registerModelPackage(modelPackage);
+
+    isInitialized = true;
+
+    MainModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Sub1Type.class, modelPackage.getSub1TypeEClass(),
         modelPackage);
 
-    ModelResolver.getInstance().registerModelPackage(modelPackage);
-
-    isInitialized = true;
+    DaoRegistry.getInstance().registerDao(Sub1Type.class, Sub1TypeDao.class);
 
     // and return ourselves
     return modelPackage;

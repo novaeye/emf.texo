@@ -283,20 +283,20 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>long</b></em>' feature
    * @generated
    */
-  public long getLong() {
+  public long getLong_() {
     return long_;
   }
 
   /**
-   * Sets the '{@link SingleTypes#getLong() <em>long</em>}' feature.
+   * Sets the '{@link SingleTypes#getLong_() <em>long</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SingleTypes#getLong() long}' feature.
+   *          new value of the '{@link SingleTypes#getLong_() long}' feature.
    * @generated
    */
-  public void setLong(long newLong_) {
+  public void setLong_(long newLong_) {
     long_ = newLong_;
   }
 
@@ -333,20 +333,20 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>double</b></em>' feature
    * @generated
    */
-  public double getDouble() {
+  public double getDouble_() {
     return double_;
   }
 
   /**
-   * Sets the '{@link SingleTypes#getDouble() <em>double</em>}' feature.
+   * Sets the '{@link SingleTypes#getDouble_() <em>double</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SingleTypes#getDouble() double}' feature.
+   *          new value of the '{@link SingleTypes#getDouble_() double}' feature.
    * @generated
    */
-  public void setDouble(double newDouble_) {
+  public void setDouble_(double newDouble_) {
     double_ = newDouble_;
   }
 
@@ -383,20 +383,20 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>float</b></em>' feature
    * @generated
    */
-  public float getFloat() {
+  public float getFloat_() {
     return float_;
   }
 
   /**
-   * Sets the '{@link SingleTypes#getFloat() <em>float</em>}' feature.
+   * Sets the '{@link SingleTypes#getFloat_() <em>float</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SingleTypes#getFloat() float}' feature.
+   *          new value of the '{@link SingleTypes#getFloat_() float}' feature.
    * @generated
    */
-  public void setFloat(float newFloat_) {
+  public void setFloat_(float newFloat_) {
     float_ = newFloat_;
   }
 
@@ -458,20 +458,20 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>char</b></em>' feature
    * @generated
    */
-  public char getChar() {
+  public char getChar_() {
     return char_;
   }
 
   /**
-   * Sets the '{@link SingleTypes#getChar() <em>char</em>}' feature.
+   * Sets the '{@link SingleTypes#getChar_() <em>char</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SingleTypes#getChar() char}' feature.
+   *          new value of the '{@link SingleTypes#getChar_() char}' feature.
    * @generated
    */
-  public void setChar(char newChar_) {
+  public void setChar_(char newChar_) {
     char_ = newChar_;
   }
 
@@ -508,20 +508,20 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>byte</b></em>' feature
    * @generated
    */
-  public byte getByte() {
+  public byte getByte_() {
     return byte_;
   }
 
   /**
-   * Sets the '{@link SingleTypes#getByte() <em>byte</em>}' feature.
+   * Sets the '{@link SingleTypes#getByte_() <em>byte</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SingleTypes#getByte() byte}' feature.
+   *          new value of the '{@link SingleTypes#getByte_() byte}' feature.
    * @generated
    */
-  public void setByte(byte newByte_) {
+  public void setByte_(byte newByte_) {
     byte_ = newByte_;
   }
 
@@ -633,20 +633,20 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>enum</b></em>' feature
    * @generated
    */
-  public TestEnum getEnum() {
+  public TestEnum getEnum_() {
     return enum_;
   }
 
   /**
-   * Sets the '{@link SingleTypes#getEnum() <em>enum</em>}' feature.
+   * Sets the '{@link SingleTypes#getEnum_() <em>enum</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SingleTypes#getEnum() enum}' feature.
+   *          new value of the '{@link SingleTypes#getEnum_() enum}' feature.
    * @generated
    */
-  public void setEnum(TestEnum newEnum_) {
+  public void setEnum_(TestEnum newEnum_) {
     enum_ = newEnum_;
   }
 
@@ -759,13 +759,13 @@ public class SingleTypes extends Identifiable {
   @Override
   public String toString() {
     return "SingleTypes " + " [string: " + getString() + "]" + " [integer: " + getInteger() + "]" + " [integerObject: "
-        + getIntegerObject() + "]" + " [long: " + getLong() + "]" + " [longObject: " + getLongObject() + "]"
-        + " [double: " + getDouble() + "]" + " [doubleObject: " + getDoubleObject() + "]" + " [float: " + getFloat()
-        + "]" + " [floatObject: " + getFloatObject() + "]" + " [clazz: " + getClazz() + "]" + " [char: " + getChar()
-        + "]" + " [charObject: " + getCharObject() + "]" + " [byte: " + getByte() + "]" + " [byteObject: "
-        + getByteObject() + "]" + " [byteArray: " + getByteArray() + "]" + " [bigDecimal: " + getBigDecimal() + "]"
-        + " [bigInteger: " + getBigInteger() + "]" + " [enum: " + getEnum() + "]" + " [date: " + getDate() + "]"
-        + " [stringArray: " + getStringArray() + "]" + " [longArray: " + getLongArray() + "]" + " [nextEnum: "
-        + getNextEnum() + "]";
+        + getIntegerObject() + "]" + " [long_: " + getLong_() + "]" + " [longObject: " + getLongObject() + "]"
+        + " [double_: " + getDouble_() + "]" + " [doubleObject: " + getDoubleObject() + "]" + " [float_: "
+        + getFloat_() + "]" + " [floatObject: " + getFloatObject() + "]" + " [clazz: " + getClazz() + "]" + " [char_: "
+        + getChar_() + "]" + " [charObject: " + getCharObject() + "]" + " [byte_: " + getByte_() + "]"
+        + " [byteObject: " + getByteObject() + "]" + " [byteArray: " + getByteArray() + "]" + " [bigDecimal: "
+        + getBigDecimal() + "]" + " [bigInteger: " + getBigInteger() + "]" + " [enum_: " + getEnum_() + "]"
+        + " [date: " + getDate() + "]" + " [stringArray: " + getStringArray() + "]" + " [longArray: " + getLongArray()
+        + "]" + " [nextEnum: " + getNextEnum() + "]";
   }
 }

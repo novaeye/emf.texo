@@ -260,7 +260,7 @@ public class Item extends Identifiable {
    */
   @Override
   public String toString() {
-    return "Item " + " [productName: " + getProductName() + "]" + " [quantity: " + getQuantity() + "]" + " [USPrice: "
+    return "Item " + " [productName: " + getProductName() + "]" + " [quantity: " + getQuantity() + "]" + " [uSPrice: "
         + getUSPrice() + "]" + " [comment: " + getComment() + "]" + " [shipDate: " + getShipDate() + "]"
         + " [partNum: " + getPartNum() + "]";
   }

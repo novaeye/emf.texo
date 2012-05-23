@@ -2575,11 +2575,11 @@ public class EntityImpl extends BaseOrmAnnotationImpl implements Entity {
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getEntity_Name());
 
-    final String jAnnotation = ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    final String jAnnotation = ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
     if (getDiscriminatorValue() != null) {
       return "@javax.persistence.DiscriminatorValue(\"" + getDiscriminatorValue() + "\")\n" + jAnnotation; //$NON-NLS-1$//$NON-NLS-2$
     }

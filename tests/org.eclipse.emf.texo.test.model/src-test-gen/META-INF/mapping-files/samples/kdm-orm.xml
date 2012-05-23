@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.modisco.kdm.core.Element" name="Element">
     <orm:attributes>
@@ -38,7 +43,7 @@
   <orm:entity class="org.eclipse.modisco.kdm.core.KDMEntity" name="KDMEntity">
     <orm:attributes>
       <orm:basic name="name" optional="true"/>
-      <orm:many-to-one name="model" optional="true" target-entity="org.eclipse.modisco.kdm.kdm.KDMModel">
+      <orm:many-to-one access="FIELD" name="model" optional="true" target-entity="org.eclipse.modisco.kdm.kdm.KDMModel">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -46,7 +51,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="owner" optional="true" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
+      <orm:many-to-one access="FIELD" name="owner" optional="true" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -54,21 +59,21 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="ownedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
+      <orm:one-to-many access="FIELD" name="ownedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="ownedRelation" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
+      <orm:one-to-many access="FIELD" name="ownedRelation" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
         <orm:order-column/>
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="inAggregated" target-entity="org.eclipse.modisco.kdm.core.AggregatedRelationship">
+      <orm:one-to-many access="FIELD" name="inAggregated" target-entity="org.eclipse.modisco.kdm.core.AggregatedRelationship">
         <orm:order-column/>
         <orm:join-table name="KDMEntity_inAggregated"/>
         <orm:cascade>
@@ -77,7 +82,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="outAggregated" target-entity="org.eclipse.modisco.kdm.core.AggregatedRelationship">
+      <orm:one-to-many access="FIELD" name="outAggregated" target-entity="org.eclipse.modisco.kdm.core.AggregatedRelationship">
         <orm:order-column/>
         <orm:join-table name="KDMEntity_outAggregated"/>
         <orm:cascade>
@@ -86,7 +91,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:many-to-many name="outbound" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
+      <orm:many-to-many access="FIELD" name="outbound" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
         <orm:order-column/>
         <orm:join-table name="KDMEntity_outbound"/>
         <orm:cascade>
@@ -95,7 +100,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many name="inbound" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
+      <orm:many-to-many access="FIELD" name="inbound" target-entity="org.eclipse.modisco.kdm.core.KDMRelationship">
         <orm:order-column/>
         <orm:join-table name="KDMEntity_inbound"/>
         <orm:cascade>
@@ -104,7 +109,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many name="group" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
+      <orm:many-to-many access="FIELD" name="group" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
         <orm:order-column/>
         <orm:join-table name="KDMEntity_group"/>
         <orm:cascade>
@@ -113,7 +118,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many name="groupedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
+      <orm:many-to-many access="FIELD" name="groupedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
         <orm:order-column/>
         <orm:join-table name="KDMEntity_groupedElement"/>
         <orm:cascade>
@@ -193,7 +198,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMModel" name="KDMModel">
     <orm:attributes>
-      <orm:one-to-many name="ownedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
+      <orm:one-to-many access="FIELD" name="ownedElement" target-entity="org.eclipse.modisco.kdm.core.KDMEntity">
         <orm:order-column/>
         <orm:join-table name="KDMModel_ownedElement"/>
         <orm:cascade>

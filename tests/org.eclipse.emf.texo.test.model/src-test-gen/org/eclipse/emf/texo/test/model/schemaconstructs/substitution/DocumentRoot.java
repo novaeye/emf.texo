@@ -5,30 +5,20 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class DocumentRoot {
+public class DocumentRoot extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DocumentRootMixedFeatureGroup.class)
-  @JoinTable()
   private List<DocumentRootMixedFeatureGroup> mixed = new ArrayList<DocumentRootMixedFeatureGroup>();
 
   /**
@@ -36,8 +26,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
   /**
@@ -45,8 +33,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
@@ -54,7 +40,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private EvenType even = EvenType._2;
 
   /**
@@ -62,7 +47,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private BigInteger mySimpleAbstract = null;
 
   /**
@@ -70,8 +54,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = EvenComplexNumberType.class)
-  @JoinColumns({ @JoinColumn() })
   private EvenComplexNumberType evenComplexNumber = null;
 
   /**
@@ -79,8 +61,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ComplexNumber.class)
-  @JoinColumns({ @JoinColumn() })
   private ComplexNumber myComplexAbstract = null;
 
   /**
@@ -88,8 +68,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = MultiNumberType.class)
-  @JoinColumns({ @JoinColumn() })
   private MultiNumberType multiNumber = null;
 
   /**
@@ -97,8 +75,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = NumberType.class)
-  @JoinColumns({ @JoinColumn() })
   private NumberType number = null;
 
   /**
@@ -106,7 +82,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private OddType odd = OddType._1;
 
   /**
@@ -114,8 +89,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = OddComplexNumberType.class)
-  @JoinColumns({ @JoinColumn() })
   private OddComplexNumberType oddComplexNumber = null;
 
   /**

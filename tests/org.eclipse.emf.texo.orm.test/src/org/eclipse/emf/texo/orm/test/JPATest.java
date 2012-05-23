@@ -18,12 +18,13 @@ package org.eclipse.emf.texo.orm.test;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-import junit.framework.TestCase;
-
+import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.base.ModelPackageJPATest;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.persistence.config.PersistenceUnitProperties;
 import org.eclipse.persistence.jpa.osgi.PersistenceProvider;
@@ -36,7 +37,7 @@ import org.eclipse.persistence.sessions.factories.SessionManager;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.8 $
  */
-public abstract class JPATest extends TestCase {
+public abstract class JPATest extends ModelPackageJPATest {
   private EntityManagerFactory factory;
 
   private EntityManager em;
@@ -44,10 +45,17 @@ public abstract class JPATest extends TestCase {
   private String persistenceUnitName;
   private String persistenceUnitPostFix = "-hsqldb"; //$NON-NLS-1$
 
-  public JPATest(String name) {
-    super(name);
-    persistenceXMLPrefix = name;
-    persistenceUnitName = name;
+  public JPATest(ModelPackage modelPackage, String postFix) {
+    super(modelPackage, postFix);
+    persistenceUnitPostFix = postFix;
+    persistenceXMLPrefix = modelPackage.getEPackage().getName();
+    persistenceUnitName = modelPackage.getEPackage().getName();
+  }
+
+  public JPATest(List<ModelPackage> modelPackages) {
+    super(modelPackages);
+    persistenceXMLPrefix = modelPackages.get(0).getEPackage().getName();
+    persistenceUnitName = modelPackages.get(0).getEPackage().getName();
   }
 
   public EntityManagerFactory getEntityManagerFactory() {

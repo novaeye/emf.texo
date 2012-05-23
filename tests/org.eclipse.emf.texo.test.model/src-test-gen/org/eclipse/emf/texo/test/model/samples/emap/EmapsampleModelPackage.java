@@ -59,28 +59,14 @@ public class EmapsampleModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOK_TITLE_FEATURE_ID = 2;
+  public static final int BOOK_TITLE_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOK_WRITERS_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int BOOK_DB_ID_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int BOOK_DB_VERSION_FEATURE_ID = 1;
+  public static final int BOOK_WRITERS_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -304,27 +290,6 @@ public class EmapsampleModelPackage extends ModelPackage {
    */
   public EReference getBook_Writers() {
     return (EReference) getBookEClass().getEAllStructuralFeatures().get(BOOK_WRITERS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Book.db_Id</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Book.db_Id</b></em>'.
-   * @generated
-   */
-  public EAttribute getBook_Db_Id() {
-    return (EAttribute) getBookEClass().getEAllStructuralFeatures().get(BOOK_DB_ID_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Book.db_version</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Book.db_version</b></em>'.
-   * @generated
-   */
-  public EAttribute getBook_Db_version() {
-    return (EAttribute) getBookEClass().getEAllStructuralFeatures().get(BOOK_DB_VERSION_FEATURE_ID);
   }
 
   /**

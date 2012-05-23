@@ -116,7 +116,7 @@ public class ORMJavaAnnotationGenerator {
    * @return the java annotation which can be added to the javacode
    */
   public String generateJavaAnnotation(EObject annotation, List<EStructuralFeature> includeFeatures,
-      boolean referencesEnumsAsSeparateAnnotation) {
+      boolean referencesEnumsAsSeparateAnnotation, String identifier) {
 
     final StringBuilder separateAnnotation = new StringBuilder();
 
@@ -176,12 +176,12 @@ public class ORMJavaAnnotationGenerator {
                 separateAnnotation.append(", "); //$NON-NLS-1$
               }
               addArrayComma = true;
-              separateAnnotation.append(((BaseOrmAnnotation) val).getJavaAnnotation());
+              separateAnnotation.append(((BaseOrmAnnotation) val).getJavaAnnotation(identifier));
             }
           }
           separateAnnotation.append("})"); //$NON-NLS-1$
         } else {
-          separateAnnotation.append(((BaseOrmAnnotation) value).getJavaAnnotation());
+          separateAnnotation.append(((BaseOrmAnnotation) value).getJavaAnnotation(identifier));
         }
         continue;
       }
@@ -206,13 +206,13 @@ public class ORMJavaAnnotationGenerator {
           if (doAddComma) {
             sb.append(", "); //$NON-NLS-1$
           }
-          sb.append(generateJavaAnnotation(eFeature, val));
+          sb.append(generateJavaAnnotation(eFeature, val, identifier));
           doAddComma = true;
         }
         sb.append("}"); //$NON-NLS-1$
       } else {
         sb.append(eFeature.getName() + "="); //$NON-NLS-1$
-        sb.append(generateJavaAnnotation(eFeature, value));
+        sb.append(generateJavaAnnotation(eFeature, value, identifier));
       }
     }
     sb.append(")"); //$NON-NLS-1$
@@ -236,7 +236,7 @@ public class ORMJavaAnnotationGenerator {
     return value.substring(0, 1).toUpperCase() + value.substring(1);
   }
 
-  public String generateJavaAnnotation(EStructuralFeature eFeature, Object value) {
+  public String generateJavaAnnotation(EStructuralFeature eFeature, Object value, String identifier) {
     if (value instanceof String) {
       // special case
       if (classFeatureNames.contains(eFeature.getName())) {
@@ -246,7 +246,7 @@ public class ORMJavaAnnotationGenerator {
     }
     if (eFeature instanceof EReference) {
       if (value instanceof BaseOrmAnnotation) {
-        return ((BaseOrmAnnotation) value).getJavaAnnotation();
+        return ((BaseOrmAnnotation) value).getJavaAnnotation(identifier);
       }
       return ""; //$NON-NLS-1$
     }

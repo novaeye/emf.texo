@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.PersonGroupFeatureGroup" name="Person_group">
     <orm:attributes>
-      <orm:basic name="age" optional="true"/>
-      <orm:basic name="length" optional="true"/>
+      <orm:basic access="PROPERTY" name="age" optional="true"/>
+      <orm:basic access="PROPERTY" name="length" optional="true"/>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>

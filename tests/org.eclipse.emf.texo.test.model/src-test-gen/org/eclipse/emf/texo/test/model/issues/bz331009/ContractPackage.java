@@ -2,6 +2,8 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -10,6 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>ContractPackage</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,7 +21,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "ContractPackage")
-public class ContractPackage {
+public class ContractPackage extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -46,6 +49,7 @@ public class ContractPackage {
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Contract.class)
   @OrderColumn()
   @JoinTable(name = "ContractPackage_contracts")
+  @Access(AccessType.FIELD)
   private List<Contract> contracts = new ArrayList<Contract>();
 
   /**
@@ -99,9 +103,7 @@ public class ContractPackage {
   }
 
   /**
-   * Returns the value of '<em><b>contracts</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToContracts(org.eclipse.emf.texo.test.model.issues.bz331009.Contract value)} and
-   * {@link #removeFromContracts(Contract value)} methods to modify this feature.
+   * Returns the value of '<em><b>contracts</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Контракты <!-- end-model-doc -->
    * 

@@ -4,27 +4,20 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class DocumentRoot {
+public class DocumentRoot extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DocumentRootMixedFeatureGroup.class)
-  @JoinTable()
   private List<DocumentRootMixedFeatureGroup> mixed = new ArrayList<DocumentRootMixedFeatureGroup>();
 
   /**
@@ -32,8 +25,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
   /**
@@ -41,8 +32,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
@@ -50,7 +39,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String otherTest = null;
 
   /**
@@ -58,7 +46,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String test = null;
 
   /**

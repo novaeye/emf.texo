@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.emap.Book" name="Book">
     <orm:table name="EMAP_BOOK"/>
     <orm:attributes>
-      <orm:id access="PROPERTY" name="db_Id">
-        <orm:generated-value strategy="AUTO"/>
-        <orm:convert></orm:convert>
-      </orm:id>
       <orm:basic name="title" optional="false"/>
-      <orm:version access="PROPERTY" name="db_version">
-        <orm:convert></orm:convert>
-      </orm:version>
       <orm:one-to-many name="writers">
         <orm:map-key-class class="java.lang.String"/>
         <orm:map-key-column table="Book_writers"/>

@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.attributes;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>RType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,7 +10,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "RType")
-public class RType {
+public class RType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

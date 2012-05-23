@@ -7,6 +7,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>PersonaGroupType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -15,7 +16,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "PersonaGroupType")
-public class PersonaGroupType {
+public class PersonaGroupType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

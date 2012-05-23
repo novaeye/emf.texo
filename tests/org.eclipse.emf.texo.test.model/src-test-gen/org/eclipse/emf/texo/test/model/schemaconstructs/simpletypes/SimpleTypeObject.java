@@ -5,6 +5,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>SimpleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -13,7 +14,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "SimpleTypeObject")
-public class SimpleTypeObject {
+public class SimpleTypeObject extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -204,20 +205,20 @@ public class SimpleTypeObject {
    * @return the value of '<em><b>float</b></em>' feature
    * @generated
    */
-  public Float getFloat() {
+  public Float getFloat_() {
     return float_;
   }
 
   /**
-   * Sets the '{@link SimpleTypeObject#getFloat() <em>float</em>}' feature.
+   * Sets the '{@link SimpleTypeObject#getFloat_() <em>float</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SimpleTypeObject#getFloat() float}' feature.
+   *          new value of the '{@link SimpleTypeObject#getFloat_() float}' feature.
    * @generated
    */
-  public void setFloat(Float newFloat_) {
+  public void setFloat_(Float newFloat_) {
     float_ = newFloat_;
   }
 
@@ -355,7 +356,7 @@ public class SimpleTypeObject {
   @Override
   public String toString() {
     return "SimpleTypeObject " + " [code: " + getCode() + "]" + " [boo: " + getBoo() + "]" + " [byt: " + getByt() + "]"
-        + " [doubl: " + getDoubl() + "]" + " [float: " + getFloat() + "]" + " [inte: " + getInte() + "]" + " [lon: "
+        + " [doubl: " + getDoubl() + "]" + " [float_: " + getFloat_() + "]" + " [inte: " + getInte() + "]" + " [lon: "
         + getLon() + "]" + " [shor: " + getShor() + "]" + " [enu: " + getEnu() + "]" + " [dat: " + getDat() + "]";
   }
 }

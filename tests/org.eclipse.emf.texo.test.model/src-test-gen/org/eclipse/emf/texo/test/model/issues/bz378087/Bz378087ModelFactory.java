@@ -154,8 +154,8 @@ public class Bz378087ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case Bz378087ModelPackage.TEST_CLASS_FEATURE_ID:
-        return getTarget().get_Class();
+      case Bz378087ModelPackage.TEST_CLASS__FEATURE_ID:
+        return getTarget().getClass_();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -167,8 +167,8 @@ public class Bz378087ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case Bz378087ModelPackage.TEST_CLASS_FEATURE_ID:
-        getTarget().setClass((String) value);
+      case Bz378087ModelPackage.TEST_CLASS__FEATURE_ID:
+        getTarget().setClass_((String) value);
         return;
       }
       super.eSet(eStructuralFeature, value);

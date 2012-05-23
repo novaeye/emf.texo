@@ -957,14 +957,14 @@ public class ManyToOneImpl extends BaseOrmAnnotationImpl implements ManyToOne {
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getManyToOne_Cascade());
     features.add(OrmPackage.eINSTANCE.getManyToOne_Fetch());
     features.add(OrmPackage.eINSTANCE.getManyToOne_Optional());
     features.add(OrmPackage.eINSTANCE.getManyToOne_TargetEntity());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 
 } // ManyToOneImpl

@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -20,7 +21,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "PurchaseOrder")
-public class PurchaseOrder {
+public class PurchaseOrder extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -6,23 +6,26 @@
  */
 package org.eclipse.emf.texo.orm.ormannotations;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.annotations.AnnotationProvider;
 import org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation;
+import org.eclipse.emf.texo.generator.GeneratorConstants;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Id;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
@@ -41,6 +44,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
  * <li>{@link org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation#getOneToMany <em>One To Many</em>}</li>
  * <li>{@link org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation#getFeatureMapEntity <em>Feature Map Entity
  * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation#getManyToOne <em>Many To One</em>}</li>
  * </ul>
  * </p>
  * 
@@ -128,6 +132,16 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
    * @ordered
    */
   protected Entity featureMapEntity;
+
+  /**
+   * The cached value of the '{@link #getManyToOne() <em>Many To One</em>}' containment reference. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @see #getManyToOne()
+   * @generated
+   * @ordered
+   */
+  protected ManyToOne manyToOne;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -695,6 +709,74 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
   }
 
   /**
+   * Returns the value of the '<em><b>Many To One</b></em>' containment reference. <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Many To One</em>' containment reference isn't clear, there really should be more of a
+   * description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * 
+   * @return the value of the '<em>Many To One</em>' containment reference.
+   * @see #setManyToOne(ManyToOne)
+   * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEAttributeORMAnnotation_ManyToOne()
+   * @model containment="true"
+   * @generated
+   */
+  public ManyToOne getManyToOne() {
+    return manyToOne;
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public NotificationChain basicSetManyToOne(ManyToOne newManyToOne, NotificationChain msgs) {
+    ManyToOne oldManyToOne = manyToOne;
+    manyToOne = newManyToOne;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+          OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE, oldManyToOne, newManyToOne);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
+
+  /**
+   * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation#getManyToOne
+   * <em>Many To One</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Many To One</em>' containment reference.
+   * @see #getManyToOne()
+   * @generated
+   */
+  public void setManyToOne(ManyToOne newManyToOne) {
+    if (newManyToOne != manyToOne) {
+      NotificationChain msgs = null;
+      if (manyToOne != null) {
+        msgs = ((InternalEObject) manyToOne).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE, null, msgs);
+      }
+      if (newManyToOne != null) {
+        msgs = ((InternalEObject) newManyToOne).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE, null, msgs);
+      }
+      msgs = basicSetManyToOne(newManyToOne, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET,
+          OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE, newManyToOne, newManyToOne));
+    }
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -718,6 +800,8 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
       return basicSetOneToMany(null, msgs);
     case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY:
       return basicSetFeatureMapEntity(null, msgs);
+    case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE:
+      return basicSetManyToOne(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -746,6 +830,8 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
       return getOneToMany();
     case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY:
       return getFeatureMapEntity();
+    case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE:
+      return getManyToOne();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -783,6 +869,9 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
     case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY:
       setFeatureMapEntity((Entity) newValue);
       return;
+    case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE:
+      setManyToOne((ManyToOne) newValue);
+      return;
     }
     super.eSet(featureID, newValue);
   }
@@ -819,6 +908,9 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
     case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY:
       setFeatureMapEntity((Entity) null);
       return;
+    case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE:
+      setManyToOne((ManyToOne) null);
+      return;
     }
     super.eUnset(featureID);
   }
@@ -847,6 +939,8 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
       return oneToMany != null;
     case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY:
       return featureMapEntity != null;
+    case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE:
+      return manyToOne != null;
     }
     return super.eIsSet(featureID);
   }
@@ -921,8 +1015,7 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
 
   @Override
   public String getJavaAnnotation(AnnotationProvider annotationProvider, String identifier) {
-    final List<EReference> typeAnnotation = Collections.singletonList(OrmannotationsPackage.eINSTANCE
-        .getEAttributeORMAnnotation_FeatureMapEntity());
+    final List<EReference> typeAnnotation = new ArrayList<EReference>();
 
     if (FeatureMapUtil.isFeatureMap(getEStructuralFeature())) {
       if (identifier.equals("featureMap.feature")) {
@@ -934,9 +1027,12 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
       }
     }
 
-    if (!identifier.equals("type") && !identifier.equals("field")) {
+    // never set on setters
+    if (identifier.equals(GeneratorConstants.SETTER) || identifier.equals(GeneratorConstants.FEATUREMAP_SETTER)) {
       return "";
     }
+
+    final EStructuralFeature eFeature = getEStructuralFeature();
 
     // if (FeatureMapUtil.isFeatureMap(getEStructuralFeature())) {
     //      return ""; //$NON-NLS-1$
@@ -950,12 +1046,15 @@ public class EAttributeORMAnnotation extends EAttributeAnnotation implements ESt
     if (!ePackageORMAnnotation.isGenerateJavaAnnotations()) {
       return ""; //$NON-NLS-1$
     }
-    if (identifier.equals("type")) {
+
+    typeAnnotation.add(OrmannotationsPackage.eINSTANCE.getEAttributeORMAnnotation_FeatureMapEntity());
+
+    if (identifier.equals(GeneratorConstants.FEATUREMAP_TYPE)) {
       // only export the entity one
-      return ORMGenerator.generateJavaAnnotations(this, typeAnnotation, null);
+      return ORMGenerator.generateJavaAnnotations(this, typeAnnotation, null, identifier);
     }
-    // only export the non-entity one
-    return ORMGenerator.generateJavaAnnotations(this, null, typeAnnotation);
+
+    return ORMGenerator.generateJavaAnnotations(this, null, typeAnnotation, identifier);
   }
 
 } // EAttributeORMAnnotation

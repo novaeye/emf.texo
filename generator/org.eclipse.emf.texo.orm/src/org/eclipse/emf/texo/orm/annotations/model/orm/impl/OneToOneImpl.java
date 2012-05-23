@@ -1191,7 +1191,7 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getOneToOne_Cascade());
     features.add(OrmPackage.eINSTANCE.getOneToOne_Fetch());
@@ -1200,6 +1200,6 @@ public class OneToOneImpl extends BaseOrmAnnotationImpl implements OneToOne {
     features.add(OrmPackage.eINSTANCE.getOneToOne_OrphanRemoval());
     features.add(OrmPackage.eINSTANCE.getOneToOne_MappedBy());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 } // OneToOneImpl

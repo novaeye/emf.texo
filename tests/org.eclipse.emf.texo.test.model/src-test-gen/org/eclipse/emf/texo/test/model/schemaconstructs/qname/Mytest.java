@@ -8,6 +8,7 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
 import javax.xml.namespace.QName;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Mytest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -15,7 +16,7 @@ import javax.xml.namespace.QName;
  * @generated
  */
 @Entity(name = "Mytest")
-public class Mytest {
+public class Mytest extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

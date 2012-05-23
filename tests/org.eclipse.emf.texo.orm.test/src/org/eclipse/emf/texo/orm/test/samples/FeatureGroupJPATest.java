@@ -40,7 +40,7 @@ import org.junit.Test;
 public class FeatureGroupJPATest extends JPATest {
 
   public FeatureGroupJPATest() {
-    super("org.eclipse.emf.texo.test.model.samples.jpamixed");
+    super(JpamixedModelPackage.INSTANCE, "-hsqldb");
   }
 
   @Test

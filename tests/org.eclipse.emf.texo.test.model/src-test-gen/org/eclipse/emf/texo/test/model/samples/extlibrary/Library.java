@@ -83,7 +83,6 @@ public class Library extends Identifiable implements Addressable {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String address = null;
 
   /**

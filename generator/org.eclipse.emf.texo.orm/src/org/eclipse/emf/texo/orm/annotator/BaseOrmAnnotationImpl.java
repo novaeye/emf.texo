@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  */
 
 public class BaseOrmAnnotationImpl extends EObjectImpl {
-  public String getJavaAnnotation() {
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, null, false);
+  public String getJavaAnnotation(String identifier) {
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, null, false, identifier);
   }
 }

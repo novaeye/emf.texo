@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,7 +10,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "PurchaseOrder")
-public class PurchaseOrder {
+public class PurchaseOrder extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

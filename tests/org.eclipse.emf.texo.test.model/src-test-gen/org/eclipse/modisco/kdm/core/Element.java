@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.modisco.kdm.kdm.Annotation;
 import org.eclipse.modisco.kdm.kdm.Attribute;
 
@@ -18,7 +19,7 @@ import org.eclipse.modisco.kdm.kdm.Attribute;
  * @generated
  */
 @Entity(name = "Element")
-public abstract class Element {
+public abstract class Element extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of attributes owned by the given

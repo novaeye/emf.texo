@@ -103,13 +103,6 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PHONETYPE_CLASSIFIER_ID = 36;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int SECRETQUESTIONTYPE_CLASSIFIER_ID = 37;
 
   /**
@@ -125,6 +118,13 @@ public class ModelModelPackage extends ModelPackage {
    * @generated
    */
   public static final int EVENTTYPE_CLASSIFIER_ID = 40;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PHONETYPE_CLASSIFIER_ID = 36;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -237,48 +237,6 @@ public class ModelModelPackage extends ModelPackage {
    * @generated
    */
   public static final int SIMTARIFF_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMTARIFF_NAME_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMTARIFF_ACTIVE_FEATURE_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMTARIFF_VOLUMEPAYMENTS_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMTARIFF_PERIODICALPAYMENTS_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMTARIFF_INITIALPAYMENT_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMTARIFF_SERVICES_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -404,41 +362,6 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VOLUMEPAYMENT_SUM_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VOLUMEPAYMENT_CURRENCY_FEATURE_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VOLUMEPAYMENT_DATE_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VOLUMEPAYMENT_DESCRIPTION_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VOLUMEPAYMENT_PAYMENTTYPE_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int PERIODICALPAYMENT_CLASSIFIER_ID = 8;
 
   /**
@@ -453,77 +376,7 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERIODICALPAYMENT_SUM_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERIODICALPAYMENT_CURRENCY_FEATURE_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERIODICALPAYMENT_DATE_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERIODICALPAYMENT_DESCRIPTION_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERIODICALPAYMENT_PAYMENTTYPE_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int ONETIMEPAYMENT_CLASSIFIER_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ONETIMEPAYMENT_SUM_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ONETIMEPAYMENT_CURRENCY_FEATURE_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ONETIMEPAYMENT_DATE_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ONETIMEPAYMENT_DESCRIPTION_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ONETIMEPAYMENT_PAYMENTTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1132,48 +985,6 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CLIENTTARIFF_NAME_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CLIENTTARIFF_ACTIVE_FEATURE_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CLIENTTARIFF_VOLUMEPAYMENTS_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CLIENTTARIFF_PERIODICALPAYMENTS_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CLIENTTARIFF_INITIALPAYMENT_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CLIENTTARIFF_SERVICES_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int CONTRACTPACKAGE_CLASSIFIER_ID = 26;
 
   /**
@@ -1692,72 +1503,6 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getSimTariff_Name() {
-    return (EAttribute) getSimTariffEClass().getEAllStructuralFeatures().get(SIMTARIFF_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.active</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.active</b></em>'.
-   * @generated
-   */
-  public EAttribute getSimTariff_Active() {
-    return (EAttribute) getSimTariffEClass().getEAllStructuralFeatures().get(SIMTARIFF_ACTIVE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.volumePayments</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.volumePayments</b></em>'.
-   * @generated
-   */
-  public EReference getSimTariff_VolumePayments() {
-    return (EReference) getSimTariffEClass().getEAllStructuralFeatures().get(SIMTARIFF_VOLUMEPAYMENTS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.periodicalPayments</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.periodicalPayments</b></em>'.
-   * @generated
-   */
-  public EReference getSimTariff_PeriodicalPayments() {
-    return (EReference) getSimTariffEClass().getEAllStructuralFeatures().get(SIMTARIFF_PERIODICALPAYMENTS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.initialPayment</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.initialPayment</b></em>'.
-   * @generated
-   */
-  public EReference getSimTariff_InitialPayment() {
-    return (EReference) getSimTariffEClass().getEAllStructuralFeatures().get(SIMTARIFF_INITIALPAYMENT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimTariff.services</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimTariff.services</b></em>'.
-   * @generated
-   */
-  public EReference getSimTariff_Services() {
-    return (EReference) getSimTariffEClass().getEAllStructuralFeatures().get(SIMTARIFF_SERVICES_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>Tariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Tariff</b></em>'
@@ -1941,61 +1686,6 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.sum</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.sum</b></em>'.
-   * @generated
-   */
-  public EAttribute getVolumePayment_Sum() {
-    return (EAttribute) getVolumePaymentEClass().getEAllStructuralFeatures().get(VOLUMEPAYMENT_SUM_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.currency</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.currency</b></em>'.
-   * @generated
-   */
-  public EAttribute getVolumePayment_Currency() {
-    return (EAttribute) getVolumePaymentEClass().getEAllStructuralFeatures().get(VOLUMEPAYMENT_CURRENCY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.date</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.date</b></em>'.
-   * @generated
-   */
-  public EAttribute getVolumePayment_Date() {
-    return (EAttribute) getVolumePaymentEClass().getEAllStructuralFeatures().get(VOLUMEPAYMENT_DATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.description</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.description</b></em>'.
-   * @generated
-   */
-  public EAttribute getVolumePayment_Description() {
-    return (EAttribute) getVolumePaymentEClass().getEAllStructuralFeatures().get(VOLUMEPAYMENT_DESCRIPTION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>VolumePayment.paymentType</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>VolumePayment.paymentType</b></em>'.
-   * @generated
-   */
-  public EAttribute getVolumePayment_PaymentType() {
-    return (EAttribute) getVolumePaymentEClass().getEAllStructuralFeatures().get(VOLUMEPAYMENT_PAYMENTTYPE_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>PeriodicalPayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>PeriodicalPayment</b></em>'
@@ -2018,64 +1708,6 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.sum</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.sum</b></em>'.
-   * @generated
-   */
-  public EAttribute getPeriodicalPayment_Sum() {
-    return (EAttribute) getPeriodicalPaymentEClass().getEAllStructuralFeatures().get(PERIODICALPAYMENT_SUM_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.currency</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.currency</b></em>'.
-   * @generated
-   */
-  public EAttribute getPeriodicalPayment_Currency() {
-    return (EAttribute) getPeriodicalPaymentEClass().getEAllStructuralFeatures().get(
-        PERIODICALPAYMENT_CURRENCY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.date</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.date</b></em>'.
-   * @generated
-   */
-  public EAttribute getPeriodicalPayment_Date() {
-    return (EAttribute) getPeriodicalPaymentEClass().getEAllStructuralFeatures().get(PERIODICALPAYMENT_DATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.description</b></em>'. <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.description</b></em>'.
-   * @generated
-   */
-  public EAttribute getPeriodicalPayment_Description() {
-    return (EAttribute) getPeriodicalPaymentEClass().getEAllStructuralFeatures().get(
-        PERIODICALPAYMENT_DESCRIPTION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PeriodicalPayment.paymentType</b></em>'. <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PeriodicalPayment.paymentType</b></em>'.
-   * @generated
-   */
-  public EAttribute getPeriodicalPayment_PaymentType() {
-    return (EAttribute) getPeriodicalPaymentEClass().getEAllStructuralFeatures().get(
-        PERIODICALPAYMENT_PAYMENTTYPE_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>OneTimePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>OneTimePayment</b></em>'
@@ -2083,63 +1715,6 @@ public class ModelModelPackage extends ModelPackage {
    */
   public EClass getOneTimePaymentEClass() {
     return (EClass) getEPackage().getEClassifiers().get(ONETIMEPAYMENT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.sum</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.sum</b></em>'.
-   * @generated
-   */
-  public EAttribute getOneTimePayment_Sum() {
-    return (EAttribute) getOneTimePaymentEClass().getEAllStructuralFeatures().get(ONETIMEPAYMENT_SUM_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.currency</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.currency</b></em>'.
-   * @generated
-   */
-  public EAttribute getOneTimePayment_Currency() {
-    return (EAttribute) getOneTimePaymentEClass().getEAllStructuralFeatures().get(ONETIMEPAYMENT_CURRENCY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.date</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.date</b></em>'.
-   * @generated
-   */
-  public EAttribute getOneTimePayment_Date() {
-    return (EAttribute) getOneTimePaymentEClass().getEAllStructuralFeatures().get(ONETIMEPAYMENT_DATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.description</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.description</b></em>'.
-   * @generated
-   */
-  public EAttribute getOneTimePayment_Description() {
-    return (EAttribute) getOneTimePaymentEClass().getEAllStructuralFeatures()
-        .get(ONETIMEPAYMENT_DESCRIPTION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>OneTimePayment.paymentType</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>OneTimePayment.paymentType</b></em>'.
-   * @generated
-   */
-  public EAttribute getOneTimePayment_PaymentType() {
-    return (EAttribute) getOneTimePaymentEClass().getEAllStructuralFeatures()
-        .get(ONETIMEPAYMENT_PAYMENTTYPE_FEATURE_ID);
   }
 
   /**
@@ -3070,73 +2645,6 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.name</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getClientTariff_Name() {
-    return (EAttribute) getClientTariffEClass().getEAllStructuralFeatures().get(CLIENTTARIFF_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.active</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.active</b></em>'.
-   * @generated
-   */
-  public EAttribute getClientTariff_Active() {
-    return (EAttribute) getClientTariffEClass().getEAllStructuralFeatures().get(CLIENTTARIFF_ACTIVE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.volumePayments</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.volumePayments</b></em>'.
-   * @generated
-   */
-  public EReference getClientTariff_VolumePayments() {
-    return (EReference) getClientTariffEClass().getEAllStructuralFeatures().get(CLIENTTARIFF_VOLUMEPAYMENTS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.periodicalPayments</b></em>'. <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.periodicalPayments</b></em>'.
-   * @generated
-   */
-  public EReference getClientTariff_PeriodicalPayments() {
-    return (EReference) getClientTariffEClass().getEAllStructuralFeatures().get(
-        CLIENTTARIFF_PERIODICALPAYMENTS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.initialPayment</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.initialPayment</b></em>'.
-   * @generated
-   */
-  public EReference getClientTariff_InitialPayment() {
-    return (EReference) getClientTariffEClass().getEAllStructuralFeatures().get(CLIENTTARIFF_INITIALPAYMENT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ClientTariff.services</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ClientTariff.services</b></em>'.
-   * @generated
-   */
-  public EReference getClientTariff_Services() {
-    return (EReference) getClientTariffEClass().getEAllStructuralFeatures().get(CLIENTTARIFF_SERVICES_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>ContractPackage</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>ContractPackage</b></em>'
@@ -3401,16 +2909,6 @@ public class ModelModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>PhoneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the EEnum representing '<em><b>PhoneType</b></em>'
-   * @generated
-   */
-  public EEnum getPhoneTypeEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(PHONETYPE_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the EEnum '<em><b>SecretQuestionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the EEnum representing '<em><b>SecretQuestionType</b></em>'
@@ -3438,6 +2936,16 @@ public class ModelModelPackage extends ModelPackage {
    */
   public EEnum getEventTypeEEnum() {
     return (EEnum) getEPackage().getEClassifiers().get(EVENTTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the EEnum '<em><b>PhoneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the EEnum representing '<em><b>PhoneType</b></em>'
+   * @generated
+   */
+  public EEnum getPhoneTypeEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(PHONETYPE_CLASSIFIER_ID);
   }
 
   /**

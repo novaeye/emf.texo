@@ -45,6 +45,7 @@ import org.eclipse.xtend.type.impl.java.JavaMetaModel;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
 public class ArtifactGenerator {
+
   private static final String MODEL_CONTROLLER = "modelController"; //$NON-NLS-1$
   private static final String DO_DAO = "doDao"; //$NON-NLS-1$
   private static final String FILE_ENCODING = "UTF-8"; //$NON-NLS-1$

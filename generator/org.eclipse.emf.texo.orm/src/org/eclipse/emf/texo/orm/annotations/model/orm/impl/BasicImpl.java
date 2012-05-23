@@ -44,39 +44,42 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getColumn <em>Column</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getGeneratedValue <em>Generated Value</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getLob <em>Lob</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getTemporal <em>Temporal</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getEnumerated <em>Enumerated</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getConvert <em>Convert</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getConverter <em>Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getTypeConverter <em>Type Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getObjectTypeConverter <em>Object Type Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getStructConverter <em>Struct Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getTableGenerator <em>Table Generator</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getSequenceGenerator <em>Sequence Generator</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getProperty <em>Property</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getAccessMethods <em>Access Methods</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getAccess <em>Access</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getFetch <em>Fetch</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#isMutable <em>Mutable</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#isOptional <em>Optional</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getColumn <em>Column</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getGeneratedValue <em>Generated Value</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getLob <em>Lob</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getTemporal <em>Temporal</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getEnumerated <em>Enumerated</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getConvert <em>Convert</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getConverter <em>Converter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getTypeConverter <em>Type Converter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getObjectTypeConverter <em>Object Type
+ * Converter</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getStructConverter <em>Struct Converter
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getTableGenerator <em>Table Generator</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getSequenceGenerator <em>Sequence Generator
+ * </em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getProperty <em>Property</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getAccessMethods <em>Access Methods</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getAccess <em>Access</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getFetch <em>Fetch</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#isMutable <em>Mutable</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#getName <em>Name</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl#isOptional <em>Optional</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   /**
-	 * The cached value of the '{@link #getColumn() <em>Column</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getColumn() <em>Column</em>}' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getColumn()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getColumn()
+   * @generated
+   * @ordered
+   */
   protected Column column;
 
   /**
@@ -90,99 +93,99 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected GeneratedValue generatedValue;
 
   /**
-	 * The cached value of the '{@link #getLob() <em>Lob</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getLob() <em>Lob</em>}' containment reference. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getLob()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getLob()
+   * @generated
+   * @ordered
+   */
   protected Lob lob;
 
   /**
-	 * The default value of the '{@link #getTemporal() <em>Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getTemporal() <em>Temporal</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getTemporal()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getTemporal()
+   * @generated
+   * @ordered
+   */
   protected static final Temporal TEMPORAL_EDEFAULT = Temporal.DATE;
 
   /**
-	 * The cached value of the '{@link #getTemporal() <em>Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getTemporal() <em>Temporal</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getTemporal()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getTemporal()
+   * @generated
+   * @ordered
+   */
   protected Temporal temporal = TEMPORAL_EDEFAULT;
 
   /**
-	 * This is true if the Temporal attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * This is true if the Temporal attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   * @ordered
+   */
   protected boolean temporalESet;
 
   /**
-	 * The default value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getEnumerated()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getEnumerated()
+   * @generated
+   * @ordered
+   */
   protected static final Enumerated ENUMERATED_EDEFAULT = Enumerated.ORDINAL;
 
   /**
-	 * The cached value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getEnumerated()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getEnumerated()
+   * @generated
+   * @ordered
+   */
   protected Enumerated enumerated = ENUMERATED_EDEFAULT;
 
   /**
-	 * This is true if the Enumerated attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * This is true if the Enumerated attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   * @ordered
+   */
   protected boolean enumeratedESet;
 
   /**
-	 * The default value of the '{@link #getConvert() <em>Convert</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getConvert() <em>Convert</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getConvert()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getConvert()
+   * @generated
+   * @ordered
+   */
   protected static final String CONVERT_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getConvert() <em>Convert</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #getConvert() <em>Convert</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getConvert()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getConvert()
+   * @generated
+   * @ordered
+   */
   protected String convert = CONVERT_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getConverter() <em>Converter</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getConverter() <em>Converter</em>}' containment reference. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getConverter()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getConverter()
+   * @generated
+   * @ordered
+   */
   protected Converter converter;
 
   /**
@@ -196,12 +199,13 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected TypeConverter typeConverter;
 
   /**
-	 * The cached value of the '{@link #getObjectTypeConverter() <em>Object Type Converter</em>}' containment reference.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getObjectTypeConverter()
-	 * @generated
-	 * @ordered
-	 */
+   * The cached value of the '{@link #getObjectTypeConverter() <em>Object Type Converter</em>}' containment reference.
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @see #getObjectTypeConverter()
+   * @generated
+   * @ordered
+   */
   protected ObjectTypeConverter objectTypeConverter;
 
   /**
@@ -235,13 +239,13 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected SequenceGenerator sequenceGenerator;
 
   /**
-	 * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
-	 * <!-- begin-user-doc
+   * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
-	 * @see #getProperty()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getProperty()
+   * @generated
+   * @ordered
+   */
   protected EList<Property> property;
 
   /**
@@ -255,13 +259,13 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected AccessMethods accessMethods;
 
   /**
-	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getAccess()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #getAccess()
+   * @generated
+   * @ordered
+   */
   protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
 
   /**
@@ -275,11 +279,11 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected AccessType access = ACCESS_EDEFAULT;
 
   /**
-	 * This is true if the Access attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * This is true if the Access attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   * @ordered
+   */
   protected boolean accessESet;
 
   /**
@@ -303,39 +307,39 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected FetchType fetch = FETCH_EDEFAULT;
 
   /**
-	 * This is true if the Fetch attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * This is true if the Fetch attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   * @ordered
+   */
   protected boolean fetchESet;
 
   /**
-	 * The default value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isMutable() <em>Mutable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #isMutable()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #isMutable()
+   * @generated
+   * @ordered
+   */
   protected static final boolean MUTABLE_EDEFAULT = false;
 
   /**
-	 * The cached value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isMutable() <em>Mutable</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #isMutable()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #isMutable()
+   * @generated
+   * @ordered
+   */
   protected boolean mutable = MUTABLE_EDEFAULT;
 
   /**
-	 * This is true if the Mutable attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * This is true if the Mutable attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   * @ordered
+   */
   protected boolean mutableESet;
 
   /**
@@ -349,1065 +353,1297 @@ public class BasicImpl extends BaseOrmAnnotationImpl implements Basic {
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #isOptional() <em>Optional</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The default value of the '{@link #isOptional() <em>Optional</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #isOptional()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #isOptional()
+   * @generated
+   * @ordered
+   */
   protected static final boolean OPTIONAL_EDEFAULT = true;
 
   /**
-	 * The cached value of the '{@link #isOptional() <em>Optional</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
+   * The cached value of the '{@link #isOptional() <em>Optional</em>}' attribute. <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #isOptional()
-	 * @generated
-	 * @ordered
-	 */
+   * 
+   * @see #isOptional()
+   * @generated
+   * @ordered
+   */
   protected boolean optional = OPTIONAL_EDEFAULT;
 
   /**
-	 * This is true if the Optional attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
+   * This is true if the Optional attribute has been set. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   * @ordered
+   */
   protected boolean optionalESet;
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   protected BasicImpl() {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   protected EClass eStaticClass() {
-		return OrmPackage.eINSTANCE.getBasic();
-	}
+    return OrmPackage.eINSTANCE.getBasic();
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public Column getColumn() {
-		return column;
-	}
+    return column;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetColumn(Column newColumn, NotificationChain msgs) {
-		Column oldColumn = column;
-		column = newColumn;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__COLUMN, oldColumn, newColumn);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Column oldColumn = column;
+    column = newColumn;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__COLUMN,
+          oldColumn, newColumn);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setColumn(Column newColumn) {
-		if (newColumn != column) {
-			NotificationChain msgs = null;
-			if (column != null)
-				msgs = ((InternalEObject)column).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__COLUMN, null, msgs);
-			if (newColumn != null)
-				msgs = ((InternalEObject)newColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__COLUMN, null, msgs);
-			msgs = basicSetColumn(newColumn, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__COLUMN, newColumn, newColumn));
-	}
+    if (newColumn != column) {
+      NotificationChain msgs = null;
+      if (column != null) {
+        msgs = ((InternalEObject) column).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__COLUMN, null,
+            msgs);
+      }
+      if (newColumn != null) {
+        msgs = ((InternalEObject) newColumn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__COLUMN, null,
+            msgs);
+      }
+      msgs = basicSetColumn(newColumn, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__COLUMN, newColumn, newColumn));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public GeneratedValue getGeneratedValue() {
-		return generatedValue;
-	}
+    return generatedValue;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetGeneratedValue(GeneratedValue newGeneratedValue, NotificationChain msgs) {
-		GeneratedValue oldGeneratedValue = generatedValue;
-		generatedValue = newGeneratedValue;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__GENERATED_VALUE, oldGeneratedValue, newGeneratedValue);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    GeneratedValue oldGeneratedValue = generatedValue;
+    generatedValue = newGeneratedValue;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__GENERATED_VALUE,
+          oldGeneratedValue, newGeneratedValue);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setGeneratedValue(GeneratedValue newGeneratedValue) {
-		if (newGeneratedValue != generatedValue) {
-			NotificationChain msgs = null;
-			if (generatedValue != null)
-				msgs = ((InternalEObject)generatedValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__GENERATED_VALUE, null, msgs);
-			if (newGeneratedValue != null)
-				msgs = ((InternalEObject)newGeneratedValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__GENERATED_VALUE, null, msgs);
-			msgs = basicSetGeneratedValue(newGeneratedValue, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__GENERATED_VALUE, newGeneratedValue, newGeneratedValue));
-	}
+    if (newGeneratedValue != generatedValue) {
+      NotificationChain msgs = null;
+      if (generatedValue != null) {
+        msgs = ((InternalEObject) generatedValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__GENERATED_VALUE, null, msgs);
+      }
+      if (newGeneratedValue != null) {
+        msgs = ((InternalEObject) newGeneratedValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__GENERATED_VALUE, null, msgs);
+      }
+      msgs = basicSetGeneratedValue(newGeneratedValue, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__GENERATED_VALUE, newGeneratedValue,
+          newGeneratedValue));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public Lob getLob() {
-		return lob;
-	}
+    return lob;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetLob(Lob newLob, NotificationChain msgs) {
-		Lob oldLob = lob;
-		lob = newLob;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__LOB, oldLob, newLob);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Lob oldLob = lob;
+    lob = newLob;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__LOB, oldLob,
+          newLob);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setLob(Lob newLob) {
-		if (newLob != lob) {
-			NotificationChain msgs = null;
-			if (lob != null)
-				msgs = ((InternalEObject)lob).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__LOB, null, msgs);
-			if (newLob != null)
-				msgs = ((InternalEObject)newLob).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__LOB, null, msgs);
-			msgs = basicSetLob(newLob, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__LOB, newLob, newLob));
-	}
+    if (newLob != lob) {
+      NotificationChain msgs = null;
+      if (lob != null) {
+        msgs = ((InternalEObject) lob).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__LOB, null, msgs);
+      }
+      if (newLob != null) {
+        msgs = ((InternalEObject) newLob).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__LOB, null, msgs);
+      }
+      msgs = basicSetLob(newLob, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__LOB, newLob, newLob));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public Temporal getTemporal() {
-		return temporal;
-	}
+    return temporal;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setTemporal(Temporal newTemporal) {
-		Temporal oldTemporal = temporal;
-		temporal = newTemporal == null ? TEMPORAL_EDEFAULT : newTemporal;
-		boolean oldTemporalESet = temporalESet;
-		temporalESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TEMPORAL, oldTemporal, temporal, !oldTemporalESet));
-	}
+    Temporal oldTemporal = temporal;
+    temporal = newTemporal == null ? TEMPORAL_EDEFAULT : newTemporal;
+    boolean oldTemporalESet = temporalESet;
+    temporalESet = true;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TEMPORAL, oldTemporal, temporal,
+          !oldTemporalESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void unsetTemporal() {
-		Temporal oldTemporal = temporal;
-		boolean oldTemporalESet = temporalESet;
-		temporal = TEMPORAL_EDEFAULT;
-		temporalESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__TEMPORAL, oldTemporal, TEMPORAL_EDEFAULT, oldTemporalESet));
-	}
+    Temporal oldTemporal = temporal;
+    boolean oldTemporalESet = temporalESet;
+    temporal = TEMPORAL_EDEFAULT;
+    temporalESet = false;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__TEMPORAL, oldTemporal,
+          TEMPORAL_EDEFAULT, oldTemporalESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isSetTemporal() {
-		return temporalESet;
-	}
+    return temporalESet;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public Enumerated getEnumerated() {
-		return enumerated;
-	}
+    return enumerated;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setEnumerated(Enumerated newEnumerated) {
-		Enumerated oldEnumerated = enumerated;
-		enumerated = newEnumerated == null ? ENUMERATED_EDEFAULT : newEnumerated;
-		boolean oldEnumeratedESet = enumeratedESet;
-		enumeratedESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ENUMERATED, oldEnumerated, enumerated, !oldEnumeratedESet));
-	}
+    Enumerated oldEnumerated = enumerated;
+    enumerated = newEnumerated == null ? ENUMERATED_EDEFAULT : newEnumerated;
+    boolean oldEnumeratedESet = enumeratedESet;
+    enumeratedESet = true;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ENUMERATED, oldEnumerated, enumerated,
+          !oldEnumeratedESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void unsetEnumerated() {
-		Enumerated oldEnumerated = enumerated;
-		boolean oldEnumeratedESet = enumeratedESet;
-		enumerated = ENUMERATED_EDEFAULT;
-		enumeratedESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__ENUMERATED, oldEnumerated, ENUMERATED_EDEFAULT, oldEnumeratedESet));
-	}
+    Enumerated oldEnumerated = enumerated;
+    boolean oldEnumeratedESet = enumeratedESet;
+    enumerated = ENUMERATED_EDEFAULT;
+    enumeratedESet = false;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__ENUMERATED, oldEnumerated,
+          ENUMERATED_EDEFAULT, oldEnumeratedESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isSetEnumerated() {
-		return enumeratedESet;
-	}
+    return enumeratedESet;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public String getConvert() {
-		return convert;
-	}
+    return convert;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setConvert(String newConvert) {
-		String oldConvert = convert;
-		convert = newConvert;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__CONVERT, oldConvert, convert));
-	}
+    String oldConvert = convert;
+    convert = newConvert;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__CONVERT, oldConvert, convert));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public Converter getConverter() {
-		return converter;
-	}
+    return converter;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetConverter(Converter newConverter, NotificationChain msgs) {
-		Converter oldConverter = converter;
-		converter = newConverter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__CONVERTER, oldConverter, newConverter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Converter oldConverter = converter;
+    converter = newConverter;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__CONVERTER,
+          oldConverter, newConverter);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setConverter(Converter newConverter) {
-		if (newConverter != converter) {
-			NotificationChain msgs = null;
-			if (converter != null)
-				msgs = ((InternalEObject)converter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__CONVERTER, null, msgs);
-			if (newConverter != null)
-				msgs = ((InternalEObject)newConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__CONVERTER, null, msgs);
-			msgs = basicSetConverter(newConverter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__CONVERTER, newConverter, newConverter));
-	}
+    if (newConverter != converter) {
+      NotificationChain msgs = null;
+      if (converter != null) {
+        msgs = ((InternalEObject) converter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__CONVERTER,
+            null, msgs);
+      }
+      if (newConverter != null) {
+        msgs = ((InternalEObject) newConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__CONVERTER,
+            null, msgs);
+      }
+      msgs = basicSetConverter(newConverter, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__CONVERTER, newConverter, newConverter));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public TypeConverter getTypeConverter() {
-		return typeConverter;
-	}
+    return typeConverter;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetTypeConverter(TypeConverter newTypeConverter, NotificationChain msgs) {
-		TypeConverter oldTypeConverter = typeConverter;
-		typeConverter = newTypeConverter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TYPE_CONVERTER, oldTypeConverter, newTypeConverter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    TypeConverter oldTypeConverter = typeConverter;
+    typeConverter = newTypeConverter;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TYPE_CONVERTER,
+          oldTypeConverter, newTypeConverter);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setTypeConverter(TypeConverter newTypeConverter) {
-		if (newTypeConverter != typeConverter) {
-			NotificationChain msgs = null;
-			if (typeConverter != null)
-				msgs = ((InternalEObject)typeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__TYPE_CONVERTER, null, msgs);
-			if (newTypeConverter != null)
-				msgs = ((InternalEObject)newTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__TYPE_CONVERTER, null, msgs);
-			msgs = basicSetTypeConverter(newTypeConverter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TYPE_CONVERTER, newTypeConverter, newTypeConverter));
-	}
+    if (newTypeConverter != typeConverter) {
+      NotificationChain msgs = null;
+      if (typeConverter != null) {
+        msgs = ((InternalEObject) typeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__TYPE_CONVERTER, null, msgs);
+      }
+      if (newTypeConverter != null) {
+        msgs = ((InternalEObject) newTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__TYPE_CONVERTER, null, msgs);
+      }
+      msgs = basicSetTypeConverter(newTypeConverter, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TYPE_CONVERTER, newTypeConverter,
+          newTypeConverter));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public ObjectTypeConverter getObjectTypeConverter() {
-		return objectTypeConverter;
-	}
+    return objectTypeConverter;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetObjectTypeConverter(ObjectTypeConverter newObjectTypeConverter,
       NotificationChain msgs) {
-		ObjectTypeConverter oldObjectTypeConverter = objectTypeConverter;
-		objectTypeConverter = newObjectTypeConverter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, oldObjectTypeConverter, newObjectTypeConverter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    ObjectTypeConverter oldObjectTypeConverter = objectTypeConverter;
+    objectTypeConverter = newObjectTypeConverter;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+          OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, oldObjectTypeConverter, newObjectTypeConverter);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setObjectTypeConverter(ObjectTypeConverter newObjectTypeConverter) {
-		if (newObjectTypeConverter != objectTypeConverter) {
-			NotificationChain msgs = null;
-			if (objectTypeConverter != null)
-				msgs = ((InternalEObject)objectTypeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, null, msgs);
-			if (newObjectTypeConverter != null)
-				msgs = ((InternalEObject)newObjectTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, null, msgs);
-			msgs = basicSetObjectTypeConverter(newObjectTypeConverter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, newObjectTypeConverter, newObjectTypeConverter));
-	}
+    if (newObjectTypeConverter != objectTypeConverter) {
+      NotificationChain msgs = null;
+      if (objectTypeConverter != null) {
+        msgs = ((InternalEObject) objectTypeConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, null, msgs);
+      }
+      if (newObjectTypeConverter != null) {
+        msgs = ((InternalEObject) newObjectTypeConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__OBJECT_TYPE_CONVERTER, null, msgs);
+      }
+      msgs = basicSetObjectTypeConverter(newObjectTypeConverter, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__OBJECT_TYPE_CONVERTER,
+          newObjectTypeConverter, newObjectTypeConverter));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public StructConverter getStructConverter() {
-		return structConverter;
-	}
+    return structConverter;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetStructConverter(StructConverter newStructConverter, NotificationChain msgs) {
-		StructConverter oldStructConverter = structConverter;
-		structConverter = newStructConverter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__STRUCT_CONVERTER, oldStructConverter, newStructConverter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    StructConverter oldStructConverter = structConverter;
+    structConverter = newStructConverter;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+          OrmPackage.BASIC__STRUCT_CONVERTER, oldStructConverter, newStructConverter);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setStructConverter(StructConverter newStructConverter) {
-		if (newStructConverter != structConverter) {
-			NotificationChain msgs = null;
-			if (structConverter != null)
-				msgs = ((InternalEObject)structConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__STRUCT_CONVERTER, null, msgs);
-			if (newStructConverter != null)
-				msgs = ((InternalEObject)newStructConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__STRUCT_CONVERTER, null, msgs);
-			msgs = basicSetStructConverter(newStructConverter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__STRUCT_CONVERTER, newStructConverter, newStructConverter));
-	}
+    if (newStructConverter != structConverter) {
+      NotificationChain msgs = null;
+      if (structConverter != null) {
+        msgs = ((InternalEObject) structConverter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__STRUCT_CONVERTER, null, msgs);
+      }
+      if (newStructConverter != null) {
+        msgs = ((InternalEObject) newStructConverter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__STRUCT_CONVERTER, null, msgs);
+      }
+      msgs = basicSetStructConverter(newStructConverter, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__STRUCT_CONVERTER, newStructConverter,
+          newStructConverter));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public TableGenerator getTableGenerator() {
-		return tableGenerator;
-	}
+    return tableGenerator;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetTableGenerator(TableGenerator newTableGenerator, NotificationChain msgs) {
-		TableGenerator oldTableGenerator = tableGenerator;
-		tableGenerator = newTableGenerator;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TABLE_GENERATOR, oldTableGenerator, newTableGenerator);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    TableGenerator oldTableGenerator = tableGenerator;
+    tableGenerator = newTableGenerator;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TABLE_GENERATOR,
+          oldTableGenerator, newTableGenerator);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setTableGenerator(TableGenerator newTableGenerator) {
-		if (newTableGenerator != tableGenerator) {
-			NotificationChain msgs = null;
-			if (tableGenerator != null)
-				msgs = ((InternalEObject)tableGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__TABLE_GENERATOR, null, msgs);
-			if (newTableGenerator != null)
-				msgs = ((InternalEObject)newTableGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__TABLE_GENERATOR, null, msgs);
-			msgs = basicSetTableGenerator(newTableGenerator, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TABLE_GENERATOR, newTableGenerator, newTableGenerator));
-	}
+    if (newTableGenerator != tableGenerator) {
+      NotificationChain msgs = null;
+      if (tableGenerator != null) {
+        msgs = ((InternalEObject) tableGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__TABLE_GENERATOR, null, msgs);
+      }
+      if (newTableGenerator != null) {
+        msgs = ((InternalEObject) newTableGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__TABLE_GENERATOR, null, msgs);
+      }
+      msgs = basicSetTableGenerator(newTableGenerator, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__TABLE_GENERATOR, newTableGenerator,
+          newTableGenerator));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public SequenceGenerator getSequenceGenerator() {
-		return sequenceGenerator;
-	}
+    return sequenceGenerator;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetSequenceGenerator(SequenceGenerator newSequenceGenerator, NotificationChain msgs) {
-		SequenceGenerator oldSequenceGenerator = sequenceGenerator;
-		sequenceGenerator = newSequenceGenerator;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__SEQUENCE_GENERATOR, oldSequenceGenerator, newSequenceGenerator);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    SequenceGenerator oldSequenceGenerator = sequenceGenerator;
+    sequenceGenerator = newSequenceGenerator;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+          OrmPackage.BASIC__SEQUENCE_GENERATOR, oldSequenceGenerator, newSequenceGenerator);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setSequenceGenerator(SequenceGenerator newSequenceGenerator) {
-		if (newSequenceGenerator != sequenceGenerator) {
-			NotificationChain msgs = null;
-			if (sequenceGenerator != null)
-				msgs = ((InternalEObject)sequenceGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__SEQUENCE_GENERATOR, null, msgs);
-			if (newSequenceGenerator != null)
-				msgs = ((InternalEObject)newSequenceGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__SEQUENCE_GENERATOR, null, msgs);
-			msgs = basicSetSequenceGenerator(newSequenceGenerator, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__SEQUENCE_GENERATOR, newSequenceGenerator, newSequenceGenerator));
-	}
+    if (newSequenceGenerator != sequenceGenerator) {
+      NotificationChain msgs = null;
+      if (sequenceGenerator != null) {
+        msgs = ((InternalEObject) sequenceGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__SEQUENCE_GENERATOR, null, msgs);
+      }
+      if (newSequenceGenerator != null) {
+        msgs = ((InternalEObject) newSequenceGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__SEQUENCE_GENERATOR, null, msgs);
+      }
+      msgs = basicSetSequenceGenerator(newSequenceGenerator, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__SEQUENCE_GENERATOR, newSequenceGenerator,
+          newSequenceGenerator));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public EList<Property> getProperty() {
-		if (property == null) {
-			property = new EObjectContainmentEList<Property>(Property.class, this, OrmPackage.BASIC__PROPERTY);
-		}
-		return property;
-	}
+    if (property == null) {
+      property = new EObjectContainmentEList<Property>(Property.class, this, OrmPackage.BASIC__PROPERTY);
+    }
+    return property;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public AccessMethods getAccessMethods() {
-		return accessMethods;
-	}
+    return accessMethods;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public NotificationChain basicSetAccessMethods(AccessMethods newAccessMethods, NotificationChain msgs) {
-		AccessMethods oldAccessMethods = accessMethods;
-		accessMethods = newAccessMethods;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    AccessMethods oldAccessMethods = accessMethods;
+    accessMethods = newAccessMethods;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ACCESS_METHODS,
+          oldAccessMethods, newAccessMethods);
+      if (msgs == null) {
+        msgs = notification;
+      } else {
+        msgs.add(notification);
+      }
+    }
+    return msgs;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setAccessMethods(AccessMethods newAccessMethods) {
-		if (newAccessMethods != accessMethods) {
-			NotificationChain msgs = null;
-			if (accessMethods != null)
-				msgs = ((InternalEObject)accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__ACCESS_METHODS, null, msgs);
-			if (newAccessMethods != null)
-				msgs = ((InternalEObject)newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC__ACCESS_METHODS, null, msgs);
-			msgs = basicSetAccessMethods(newAccessMethods, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ACCESS_METHODS, newAccessMethods, newAccessMethods));
-	}
+    if (newAccessMethods != accessMethods) {
+      NotificationChain msgs = null;
+      if (accessMethods != null) {
+        msgs = ((InternalEObject) accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__ACCESS_METHODS, null, msgs);
+      }
+      if (newAccessMethods != null) {
+        msgs = ((InternalEObject) newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
+            - OrmPackage.BASIC__ACCESS_METHODS, null, msgs);
+      }
+      msgs = basicSetAccessMethods(newAccessMethods, msgs);
+      if (msgs != null) {
+        msgs.dispatch();
+      }
+    } else if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ACCESS_METHODS, newAccessMethods,
+          newAccessMethods));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public AccessType getAccess() {
-		return access;
-	}
+    return access;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setAccess(AccessType newAccess) {
-		AccessType oldAccess = access;
-		access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
-		boolean oldAccessESet = accessESet;
-		accessESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ACCESS, oldAccess, access, !oldAccessESet));
-	}
+    AccessType oldAccess = access;
+    access = newAccess == null ? ACCESS_EDEFAULT : newAccess;
+    boolean oldAccessESet = accessESet;
+    accessESet = true;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__ACCESS, oldAccess, access, !oldAccessESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void unsetAccess() {
-		AccessType oldAccess = access;
-		boolean oldAccessESet = accessESet;
-		access = ACCESS_EDEFAULT;
-		accessESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__ACCESS, oldAccess, ACCESS_EDEFAULT, oldAccessESet));
-	}
+    AccessType oldAccess = access;
+    boolean oldAccessESet = accessESet;
+    access = ACCESS_EDEFAULT;
+    accessESet = false;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__ACCESS, oldAccess, ACCESS_EDEFAULT,
+          oldAccessESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isSetAccess() {
-		return accessESet;
-	}
+    return accessESet;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public FetchType getFetch() {
-		return fetch;
-	}
+    return fetch;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setFetch(FetchType newFetch) {
-		FetchType oldFetch = fetch;
-		fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
-		boolean oldFetchESet = fetchESet;
-		fetchESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__FETCH, oldFetch, fetch, !oldFetchESet));
-	}
+    FetchType oldFetch = fetch;
+    fetch = newFetch == null ? FETCH_EDEFAULT : newFetch;
+    boolean oldFetchESet = fetchESet;
+    fetchESet = true;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__FETCH, oldFetch, fetch, !oldFetchESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void unsetFetch() {
-		FetchType oldFetch = fetch;
-		boolean oldFetchESet = fetchESet;
-		fetch = FETCH_EDEFAULT;
-		fetchESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__FETCH, oldFetch, FETCH_EDEFAULT, oldFetchESet));
-	}
+    FetchType oldFetch = fetch;
+    boolean oldFetchESet = fetchESet;
+    fetch = FETCH_EDEFAULT;
+    fetchESet = false;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__FETCH, oldFetch, FETCH_EDEFAULT,
+          oldFetchESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isSetFetch() {
-		return fetchESet;
-	}
+    return fetchESet;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isMutable() {
-		return mutable;
-	}
+    return mutable;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setMutable(boolean newMutable) {
-		boolean oldMutable = mutable;
-		mutable = newMutable;
-		boolean oldMutableESet = mutableESet;
-		mutableESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__MUTABLE, oldMutable, mutable, !oldMutableESet));
-	}
+    boolean oldMutable = mutable;
+    mutable = newMutable;
+    boolean oldMutableESet = mutableESet;
+    mutableESet = true;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__MUTABLE, oldMutable, mutable,
+          !oldMutableESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void unsetMutable() {
-		boolean oldMutable = mutable;
-		boolean oldMutableESet = mutableESet;
-		mutable = MUTABLE_EDEFAULT;
-		mutableESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__MUTABLE, oldMutable, MUTABLE_EDEFAULT, oldMutableESet));
-	}
+    boolean oldMutable = mutable;
+    boolean oldMutableESet = mutableESet;
+    mutable = MUTABLE_EDEFAULT;
+    mutableESet = false;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__MUTABLE, oldMutable, MUTABLE_EDEFAULT,
+          oldMutableESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isSetMutable() {
-		return mutableESet;
-	}
+    return mutableESet;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public String getName() {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__NAME, oldName, name));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isOptional() {
-		return optional;
-	}
+    return optional;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void setOptional(boolean newOptional) {
-		boolean oldOptional = optional;
-		optional = newOptional;
-		boolean oldOptionalESet = optionalESet;
-		optionalESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__OPTIONAL, oldOptional, optional, !oldOptionalESet));
-	}
+    boolean oldOptional = optional;
+    optional = newOptional;
+    boolean oldOptionalESet = optionalESet;
+    optionalESet = true;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC__OPTIONAL, oldOptional, optional,
+          !oldOptionalESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public void unsetOptional() {
-		boolean oldOptional = optional;
-		boolean oldOptionalESet = optionalESet;
-		optional = OPTIONAL_EDEFAULT;
-		optionalESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__OPTIONAL, oldOptional, OPTIONAL_EDEFAULT, oldOptionalESet));
-	}
+    boolean oldOptional = optional;
+    boolean oldOptionalESet = optionalESet;
+    optional = OPTIONAL_EDEFAULT;
+    optionalESet = false;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.BASIC__OPTIONAL, oldOptional,
+          OPTIONAL_EDEFAULT, oldOptionalESet));
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public boolean isSetOptional() {
-		return optionalESet;
-	}
+    return optionalESet;
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OrmPackage.BASIC__COLUMN:
-				return basicSetColumn(null, msgs);
-			case OrmPackage.BASIC__GENERATED_VALUE:
-				return basicSetGeneratedValue(null, msgs);
-			case OrmPackage.BASIC__LOB:
-				return basicSetLob(null, msgs);
-			case OrmPackage.BASIC__CONVERTER:
-				return basicSetConverter(null, msgs);
-			case OrmPackage.BASIC__TYPE_CONVERTER:
-				return basicSetTypeConverter(null, msgs);
-			case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
-				return basicSetObjectTypeConverter(null, msgs);
-			case OrmPackage.BASIC__STRUCT_CONVERTER:
-				return basicSetStructConverter(null, msgs);
-			case OrmPackage.BASIC__TABLE_GENERATOR:
-				return basicSetTableGenerator(null, msgs);
-			case OrmPackage.BASIC__SEQUENCE_GENERATOR:
-				return basicSetSequenceGenerator(null, msgs);
-			case OrmPackage.BASIC__PROPERTY:
-				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
-			case OrmPackage.BASIC__ACCESS_METHODS:
-				return basicSetAccessMethods(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+    case OrmPackage.BASIC__COLUMN:
+      return basicSetColumn(null, msgs);
+    case OrmPackage.BASIC__GENERATED_VALUE:
+      return basicSetGeneratedValue(null, msgs);
+    case OrmPackage.BASIC__LOB:
+      return basicSetLob(null, msgs);
+    case OrmPackage.BASIC__CONVERTER:
+      return basicSetConverter(null, msgs);
+    case OrmPackage.BASIC__TYPE_CONVERTER:
+      return basicSetTypeConverter(null, msgs);
+    case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
+      return basicSetObjectTypeConverter(null, msgs);
+    case OrmPackage.BASIC__STRUCT_CONVERTER:
+      return basicSetStructConverter(null, msgs);
+    case OrmPackage.BASIC__TABLE_GENERATOR:
+      return basicSetTableGenerator(null, msgs);
+    case OrmPackage.BASIC__SEQUENCE_GENERATOR:
+      return basicSetSequenceGenerator(null, msgs);
+    case OrmPackage.BASIC__PROPERTY:
+      return ((InternalEList<?>) getProperty()).basicRemove(otherEnd, msgs);
+    case OrmPackage.BASIC__ACCESS_METHODS:
+      return basicSetAccessMethods(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OrmPackage.BASIC__COLUMN:
-				return getColumn();
-			case OrmPackage.BASIC__GENERATED_VALUE:
-				return getGeneratedValue();
-			case OrmPackage.BASIC__LOB:
-				return getLob();
-			case OrmPackage.BASIC__TEMPORAL:
-				return getTemporal();
-			case OrmPackage.BASIC__ENUMERATED:
-				return getEnumerated();
-			case OrmPackage.BASIC__CONVERT:
-				return getConvert();
-			case OrmPackage.BASIC__CONVERTER:
-				return getConverter();
-			case OrmPackage.BASIC__TYPE_CONVERTER:
-				return getTypeConverter();
-			case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
-				return getObjectTypeConverter();
-			case OrmPackage.BASIC__STRUCT_CONVERTER:
-				return getStructConverter();
-			case OrmPackage.BASIC__TABLE_GENERATOR:
-				return getTableGenerator();
-			case OrmPackage.BASIC__SEQUENCE_GENERATOR:
-				return getSequenceGenerator();
-			case OrmPackage.BASIC__PROPERTY:
-				return getProperty();
-			case OrmPackage.BASIC__ACCESS_METHODS:
-				return getAccessMethods();
-			case OrmPackage.BASIC__ACCESS:
-				return getAccess();
-			case OrmPackage.BASIC__FETCH:
-				return getFetch();
-			case OrmPackage.BASIC__MUTABLE:
-				return isMutable();
-			case OrmPackage.BASIC__NAME:
-				return getName();
-			case OrmPackage.BASIC__OPTIONAL:
-				return isOptional();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+    case OrmPackage.BASIC__COLUMN:
+      return getColumn();
+    case OrmPackage.BASIC__GENERATED_VALUE:
+      return getGeneratedValue();
+    case OrmPackage.BASIC__LOB:
+      return getLob();
+    case OrmPackage.BASIC__TEMPORAL:
+      return getTemporal();
+    case OrmPackage.BASIC__ENUMERATED:
+      return getEnumerated();
+    case OrmPackage.BASIC__CONVERT:
+      return getConvert();
+    case OrmPackage.BASIC__CONVERTER:
+      return getConverter();
+    case OrmPackage.BASIC__TYPE_CONVERTER:
+      return getTypeConverter();
+    case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
+      return getObjectTypeConverter();
+    case OrmPackage.BASIC__STRUCT_CONVERTER:
+      return getStructConverter();
+    case OrmPackage.BASIC__TABLE_GENERATOR:
+      return getTableGenerator();
+    case OrmPackage.BASIC__SEQUENCE_GENERATOR:
+      return getSequenceGenerator();
+    case OrmPackage.BASIC__PROPERTY:
+      return getProperty();
+    case OrmPackage.BASIC__ACCESS_METHODS:
+      return getAccessMethods();
+    case OrmPackage.BASIC__ACCESS:
+      return getAccess();
+    case OrmPackage.BASIC__FETCH:
+      return getFetch();
+    case OrmPackage.BASIC__MUTABLE:
+      return isMutable();
+    case OrmPackage.BASIC__NAME:
+      return getName();
+    case OrmPackage.BASIC__OPTIONAL:
+      return isOptional();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OrmPackage.BASIC__COLUMN:
-				setColumn((Column)newValue);
-				return;
-			case OrmPackage.BASIC__GENERATED_VALUE:
-				setGeneratedValue((GeneratedValue)newValue);
-				return;
-			case OrmPackage.BASIC__LOB:
-				setLob((Lob)newValue);
-				return;
-			case OrmPackage.BASIC__TEMPORAL:
-				setTemporal((Temporal)newValue);
-				return;
-			case OrmPackage.BASIC__ENUMERATED:
-				setEnumerated((Enumerated)newValue);
-				return;
-			case OrmPackage.BASIC__CONVERT:
-				setConvert((String)newValue);
-				return;
-			case OrmPackage.BASIC__CONVERTER:
-				setConverter((Converter)newValue);
-				return;
-			case OrmPackage.BASIC__TYPE_CONVERTER:
-				setTypeConverter((TypeConverter)newValue);
-				return;
-			case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
-				setObjectTypeConverter((ObjectTypeConverter)newValue);
-				return;
-			case OrmPackage.BASIC__STRUCT_CONVERTER:
-				setStructConverter((StructConverter)newValue);
-				return;
-			case OrmPackage.BASIC__TABLE_GENERATOR:
-				setTableGenerator((TableGenerator)newValue);
-				return;
-			case OrmPackage.BASIC__SEQUENCE_GENERATOR:
-				setSequenceGenerator((SequenceGenerator)newValue);
-				return;
-			case OrmPackage.BASIC__PROPERTY:
-				getProperty().clear();
-				getProperty().addAll((Collection<? extends Property>)newValue);
-				return;
-			case OrmPackage.BASIC__ACCESS_METHODS:
-				setAccessMethods((AccessMethods)newValue);
-				return;
-			case OrmPackage.BASIC__ACCESS:
-				setAccess((AccessType)newValue);
-				return;
-			case OrmPackage.BASIC__FETCH:
-				setFetch((FetchType)newValue);
-				return;
-			case OrmPackage.BASIC__MUTABLE:
-				setMutable((Boolean)newValue);
-				return;
-			case OrmPackage.BASIC__NAME:
-				setName((String)newValue);
-				return;
-			case OrmPackage.BASIC__OPTIONAL:
-				setOptional((Boolean)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+    case OrmPackage.BASIC__COLUMN:
+      setColumn((Column) newValue);
+      return;
+    case OrmPackage.BASIC__GENERATED_VALUE:
+      setGeneratedValue((GeneratedValue) newValue);
+      return;
+    case OrmPackage.BASIC__LOB:
+      setLob((Lob) newValue);
+      return;
+    case OrmPackage.BASIC__TEMPORAL:
+      setTemporal((Temporal) newValue);
+      return;
+    case OrmPackage.BASIC__ENUMERATED:
+      setEnumerated((Enumerated) newValue);
+      return;
+    case OrmPackage.BASIC__CONVERT:
+      setConvert((String) newValue);
+      return;
+    case OrmPackage.BASIC__CONVERTER:
+      setConverter((Converter) newValue);
+      return;
+    case OrmPackage.BASIC__TYPE_CONVERTER:
+      setTypeConverter((TypeConverter) newValue);
+      return;
+    case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
+      setObjectTypeConverter((ObjectTypeConverter) newValue);
+      return;
+    case OrmPackage.BASIC__STRUCT_CONVERTER:
+      setStructConverter((StructConverter) newValue);
+      return;
+    case OrmPackage.BASIC__TABLE_GENERATOR:
+      setTableGenerator((TableGenerator) newValue);
+      return;
+    case OrmPackage.BASIC__SEQUENCE_GENERATOR:
+      setSequenceGenerator((SequenceGenerator) newValue);
+      return;
+    case OrmPackage.BASIC__PROPERTY:
+      getProperty().clear();
+      getProperty().addAll((Collection<? extends Property>) newValue);
+      return;
+    case OrmPackage.BASIC__ACCESS_METHODS:
+      setAccessMethods((AccessMethods) newValue);
+      return;
+    case OrmPackage.BASIC__ACCESS:
+      setAccess((AccessType) newValue);
+      return;
+    case OrmPackage.BASIC__FETCH:
+      setFetch((FetchType) newValue);
+      return;
+    case OrmPackage.BASIC__MUTABLE:
+      setMutable((Boolean) newValue);
+      return;
+    case OrmPackage.BASIC__NAME:
+      setName((String) newValue);
+      return;
+    case OrmPackage.BASIC__OPTIONAL:
+      setOptional((Boolean) newValue);
+      return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public void eUnset(int featureID) {
-		switch (featureID) {
-			case OrmPackage.BASIC__COLUMN:
-				setColumn((Column)null);
-				return;
-			case OrmPackage.BASIC__GENERATED_VALUE:
-				setGeneratedValue((GeneratedValue)null);
-				return;
-			case OrmPackage.BASIC__LOB:
-				setLob((Lob)null);
-				return;
-			case OrmPackage.BASIC__TEMPORAL:
-				unsetTemporal();
-				return;
-			case OrmPackage.BASIC__ENUMERATED:
-				unsetEnumerated();
-				return;
-			case OrmPackage.BASIC__CONVERT:
-				setConvert(CONVERT_EDEFAULT);
-				return;
-			case OrmPackage.BASIC__CONVERTER:
-				setConverter((Converter)null);
-				return;
-			case OrmPackage.BASIC__TYPE_CONVERTER:
-				setTypeConverter((TypeConverter)null);
-				return;
-			case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
-				setObjectTypeConverter((ObjectTypeConverter)null);
-				return;
-			case OrmPackage.BASIC__STRUCT_CONVERTER:
-				setStructConverter((StructConverter)null);
-				return;
-			case OrmPackage.BASIC__TABLE_GENERATOR:
-				setTableGenerator((TableGenerator)null);
-				return;
-			case OrmPackage.BASIC__SEQUENCE_GENERATOR:
-				setSequenceGenerator((SequenceGenerator)null);
-				return;
-			case OrmPackage.BASIC__PROPERTY:
-				getProperty().clear();
-				return;
-			case OrmPackage.BASIC__ACCESS_METHODS:
-				setAccessMethods((AccessMethods)null);
-				return;
-			case OrmPackage.BASIC__ACCESS:
-				unsetAccess();
-				return;
-			case OrmPackage.BASIC__FETCH:
-				unsetFetch();
-				return;
-			case OrmPackage.BASIC__MUTABLE:
-				unsetMutable();
-				return;
-			case OrmPackage.BASIC__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case OrmPackage.BASIC__OPTIONAL:
-				unsetOptional();
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+    case OrmPackage.BASIC__COLUMN:
+      setColumn((Column) null);
+      return;
+    case OrmPackage.BASIC__GENERATED_VALUE:
+      setGeneratedValue((GeneratedValue) null);
+      return;
+    case OrmPackage.BASIC__LOB:
+      setLob((Lob) null);
+      return;
+    case OrmPackage.BASIC__TEMPORAL:
+      unsetTemporal();
+      return;
+    case OrmPackage.BASIC__ENUMERATED:
+      unsetEnumerated();
+      return;
+    case OrmPackage.BASIC__CONVERT:
+      setConvert(CONVERT_EDEFAULT);
+      return;
+    case OrmPackage.BASIC__CONVERTER:
+      setConverter((Converter) null);
+      return;
+    case OrmPackage.BASIC__TYPE_CONVERTER:
+      setTypeConverter((TypeConverter) null);
+      return;
+    case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
+      setObjectTypeConverter((ObjectTypeConverter) null);
+      return;
+    case OrmPackage.BASIC__STRUCT_CONVERTER:
+      setStructConverter((StructConverter) null);
+      return;
+    case OrmPackage.BASIC__TABLE_GENERATOR:
+      setTableGenerator((TableGenerator) null);
+      return;
+    case OrmPackage.BASIC__SEQUENCE_GENERATOR:
+      setSequenceGenerator((SequenceGenerator) null);
+      return;
+    case OrmPackage.BASIC__PROPERTY:
+      getProperty().clear();
+      return;
+    case OrmPackage.BASIC__ACCESS_METHODS:
+      setAccessMethods((AccessMethods) null);
+      return;
+    case OrmPackage.BASIC__ACCESS:
+      unsetAccess();
+      return;
+    case OrmPackage.BASIC__FETCH:
+      unsetFetch();
+      return;
+    case OrmPackage.BASIC__MUTABLE:
+      unsetMutable();
+      return;
+    case OrmPackage.BASIC__NAME:
+      setName(NAME_EDEFAULT);
+      return;
+    case OrmPackage.BASIC__OPTIONAL:
+      unsetOptional();
+      return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OrmPackage.BASIC__COLUMN:
-				return column != null;
-			case OrmPackage.BASIC__GENERATED_VALUE:
-				return generatedValue != null;
-			case OrmPackage.BASIC__LOB:
-				return lob != null;
-			case OrmPackage.BASIC__TEMPORAL:
-				return isSetTemporal();
-			case OrmPackage.BASIC__ENUMERATED:
-				return isSetEnumerated();
-			case OrmPackage.BASIC__CONVERT:
-				return CONVERT_EDEFAULT == null ? convert != null : !CONVERT_EDEFAULT.equals(convert);
-			case OrmPackage.BASIC__CONVERTER:
-				return converter != null;
-			case OrmPackage.BASIC__TYPE_CONVERTER:
-				return typeConverter != null;
-			case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
-				return objectTypeConverter != null;
-			case OrmPackage.BASIC__STRUCT_CONVERTER:
-				return structConverter != null;
-			case OrmPackage.BASIC__TABLE_GENERATOR:
-				return tableGenerator != null;
-			case OrmPackage.BASIC__SEQUENCE_GENERATOR:
-				return sequenceGenerator != null;
-			case OrmPackage.BASIC__PROPERTY:
-				return property != null && !property.isEmpty();
-			case OrmPackage.BASIC__ACCESS_METHODS:
-				return accessMethods != null;
-			case OrmPackage.BASIC__ACCESS:
-				return isSetAccess();
-			case OrmPackage.BASIC__FETCH:
-				return isSetFetch();
-			case OrmPackage.BASIC__MUTABLE:
-				return isSetMutable();
-			case OrmPackage.BASIC__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case OrmPackage.BASIC__OPTIONAL:
-				return isSetOptional();
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+    case OrmPackage.BASIC__COLUMN:
+      return column != null;
+    case OrmPackage.BASIC__GENERATED_VALUE:
+      return generatedValue != null;
+    case OrmPackage.BASIC__LOB:
+      return lob != null;
+    case OrmPackage.BASIC__TEMPORAL:
+      return isSetTemporal();
+    case OrmPackage.BASIC__ENUMERATED:
+      return isSetEnumerated();
+    case OrmPackage.BASIC__CONVERT:
+      return CONVERT_EDEFAULT == null ? convert != null : !CONVERT_EDEFAULT.equals(convert);
+    case OrmPackage.BASIC__CONVERTER:
+      return converter != null;
+    case OrmPackage.BASIC__TYPE_CONVERTER:
+      return typeConverter != null;
+    case OrmPackage.BASIC__OBJECT_TYPE_CONVERTER:
+      return objectTypeConverter != null;
+    case OrmPackage.BASIC__STRUCT_CONVERTER:
+      return structConverter != null;
+    case OrmPackage.BASIC__TABLE_GENERATOR:
+      return tableGenerator != null;
+    case OrmPackage.BASIC__SEQUENCE_GENERATOR:
+      return sequenceGenerator != null;
+    case OrmPackage.BASIC__PROPERTY:
+      return property != null && !property.isEmpty();
+    case OrmPackage.BASIC__ACCESS_METHODS:
+      return accessMethods != null;
+    case OrmPackage.BASIC__ACCESS:
+      return isSetAccess();
+    case OrmPackage.BASIC__FETCH:
+      return isSetFetch();
+    case OrmPackage.BASIC__MUTABLE:
+      return isSetMutable();
+    case OrmPackage.BASIC__NAME:
+      return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    case OrmPackage.BASIC__OPTIONAL:
+      return isSetOptional();
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public String toString() {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) {
+      return super.toString();
+    }
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (temporal: ");
-		if (temporalESet) result.append(temporal); else result.append("<unset>");
-		result.append(", enumerated: ");
-		if (enumeratedESet) result.append(enumerated); else result.append("<unset>");
-		result.append(", convert: ");
-		result.append(convert);
-		result.append(", access: ");
-		if (accessESet) result.append(access); else result.append("<unset>");
-		result.append(", fetch: ");
-		if (fetchESet) result.append(fetch); else result.append("<unset>");
-		result.append(", mutable: ");
-		if (mutableESet) result.append(mutable); else result.append("<unset>");
-		result.append(", name: ");
-		result.append(name);
-		result.append(", optional: ");
-		if (optionalESet) result.append(optional); else result.append("<unset>");
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (temporal: ");
+    if (temporalESet) {
+      result.append(temporal);
+    } else {
+      result.append("<unset>");
+    }
+    result.append(", enumerated: ");
+    if (enumeratedESet) {
+      result.append(enumerated);
+    } else {
+      result.append("<unset>");
+    }
+    result.append(", convert: ");
+    result.append(convert);
+    result.append(", access: ");
+    if (accessESet) {
+      result.append(access);
+    } else {
+      result.append("<unset>");
+    }
+    result.append(", fetch: ");
+    if (fetchESet) {
+      result.append(fetch);
+    } else {
+      result.append("<unset>");
+    }
+    result.append(", mutable: ");
+    if (mutableESet) {
+      result.append(mutable);
+    } else {
+      result.append("<unset>");
+    }
+    result.append(", name: ");
+    result.append(name);
+    result.append(", optional: ");
+    if (optionalESet) {
+      result.append(optional);
+    } else {
+      result.append("<unset>");
+    }
+    result.append(')');
+    return result.toString();
+  }
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getBasic_Fetch());
     features.add(OrmPackage.eINSTANCE.getBasic_Optional());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 } // BasicImpl

@@ -151,7 +151,7 @@ public class IdClassImpl extends BaseOrmAnnotationImpl implements IdClass {
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     return "@javax.persistence.IdClass(" + getClass_() + ".class)"; //$NON-NLS-1$ //$NON-NLS-2$
   }
 

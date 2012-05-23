@@ -34,6 +34,7 @@ import org.eclipse.emf.texo.generator.ModelAnnotator;
 import org.eclipse.emf.texo.generator.ModelAnnotatorRegistry;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.generator.TexoResourceManager;
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
 
 /**
@@ -48,6 +49,7 @@ import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
  */
 
 public class EclipseModelGeneratorTest extends TestCase {
+  private static final String DEFAULT_EXTENDS = "org.eclipse.emf.texo.test.model.base.identifiable.Identifiable"; //$NON-NLS-1$
 
   private static final String TEST_MODEL_PROJECT = "org.eclipse.emf.texo.test.model"; //$NON-NLS-1$
 
@@ -85,16 +87,35 @@ public class EclipseModelGeneratorTest extends TestCase {
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, useSharedEPackageRegistry() ? SHARED_REGISTRY
           : GeneratorUtils.createEPackageRegistry());
 
-      final ModelController modelController = new ModelController();
-      modelController.setEPackages(ePackages);
-      modelController.annotate(new ArrayList<ModelAnnotator>());
+      boolean hasIdentifiable = false;
+      for (EPackage ePackage : ePackages) {
+        hasIdentifiable = hasIdentifiable
+            || ePackage.getNsURI().equals("http://www.eclipse.org/emf/texo/test/model/base/identifiable"); //$NON-NLS-1$
+      }
 
-      final ArtifactGenerator artifactGenerator = new ArtifactGenerator();
-      artifactGenerator.setModelController(modelController);
-      artifactGenerator.setOutputFolder("src-test-gen"); //$NON-NLS-1$
-      artifactGenerator.setProjectName(TEST_MODEL_PROJECT);
-      artifactGenerator.setDoDao(true);
-      artifactGenerator.run();
+      // give everyone the identifiable as super, except the identifiable
+      // package
+      if (hasIdentifiable) {
+        EPackageModelGenAnnotation.setDefaultExtends(null);
+      } else {
+        EPackageModelGenAnnotation.setDefaultExtends(DEFAULT_EXTENDS);
+      }
+      try {
+        final ModelController modelController = new ModelController();
+        modelController.setEPackages(ePackages);
+        modelController.getAnnotationManager().getAnnotatedModel().setGeneratingSources(true);
+        modelController.annotate(new ArrayList<ModelAnnotator>());
+
+        final ArtifactGenerator artifactGenerator = new ArtifactGenerator();
+        artifactGenerator.setModelController(modelController);
+        artifactGenerator.setOutputFolder("src-test-gen"); //$NON-NLS-1$
+        artifactGenerator.setProjectName(TEST_MODEL_PROJECT);
+        artifactGenerator.setDoDao(true);
+        artifactGenerator.run();
+      } finally {
+        EPackageModelGenAnnotation.setDefaultExtends(null);
+      }
+
     } catch (final Exception e) {
       throw new IllegalStateException(e);
     }

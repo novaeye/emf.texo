@@ -11,6 +11,7 @@
     <genClasses image="false" ecoreClass="texo-annotations-model.ecore#//ENamedElementAnnotation">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference texo-annotations-model.ecore#//ENamedElementAnnotation/eNamedElement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-model.ecore#//ENamedElementAnnotation/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-model.ecore#//ENamedElementAnnotation/lastIdentifier"/>
       <genOperations ecoreOperation="texo-annotations-model.ecore#//ENamedElementAnnotation/getJavaAnnotation">
         <genParameters ecoreParameter="texo-annotations-model.ecore#//ENamedElementAnnotation/getJavaAnnotation/identifier"/>
       </genOperations>
@@ -75,6 +76,7 @@
     </genClasses>
     <genClasses ecoreClass="texo-annotations-model.ecore#//AnnotatedModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-model.ecore#//AnnotatedModel/annotatedEPackages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-model.ecore#//AnnotatedModel/generatingSources"/>
     </genClasses>
     <genClasses image="false" ecoreClass="texo-annotations-model.ecore#//AnnotatedENamedElement">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference texo-annotations-model.ecore#//AnnotatedENamedElement/eNamedElement"/>

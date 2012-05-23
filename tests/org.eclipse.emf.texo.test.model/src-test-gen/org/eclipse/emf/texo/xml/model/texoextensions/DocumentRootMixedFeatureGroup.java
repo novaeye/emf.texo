@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Lob;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -15,8 +15,7 @@ import javax.persistence.Lob;
  * 
  * @generated
  */
-@Entity(name = "DocumentRoot_mixed")
-public class DocumentRootMixedFeatureGroup {
+public class DocumentRootMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.

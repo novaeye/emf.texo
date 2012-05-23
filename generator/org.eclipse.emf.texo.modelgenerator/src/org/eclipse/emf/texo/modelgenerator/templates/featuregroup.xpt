@@ -24,7 +24,7 @@ package «ePackageAnnotation.packagePath»;
 «ENDIF-»
  * @generated 
 */
-«modelController.getJavaAnnotations(this.EStructuralFeature, "type")-»
+«modelController.getJavaAnnotations(this.EStructuralFeature, "featureMap.type")-»
 public class «this.featureMapSimpleClassName-» 
 «IF ePackageAnnotation.featureMapClassExtends != null && ePackageAnnotation.featureMapClassExtends.trim().length > 0-» extends «ePackageAnnotation.featureMapClassExtends-»«ENDIF-»
 {
@@ -169,7 +169,7 @@ public class «this.featureMapSimpleClassName-»
  	 * <!-- end-user-doc -->
 	 * @generated 
 	*/
-	«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "field")-»
+	«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "featureMap.field")-»
 	private «memberFeatureAnnotation.itemType» «memberFeatureAnnotation.validJavaMemberName»;
 	«ENDIF-»
 	«ENDFOREACH-»
@@ -274,7 +274,7 @@ public class «this.featureMapSimpleClassName-»
 		 * @return the value of '<em><b>«memberFeatureAnnotation.EStructuralFeature.name»</b></em>' feature
 		 * @generated
 		 */
-		«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "getter")-»
+		«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "featureMap.getter")-»
 		public «memberFeatureAnnotation.itemType» «memberFeatureAnnotation.getter»() {
 		«IF memberFeatureAnnotation.featureMapFeature == this-»
 			return «memberFeatureAnnotation.validJavaMemberName»;
@@ -294,7 +294,7 @@ public class «this.featureMapSimpleClassName-»
 		 * @param the new value of the '{@link «eClassAnnotation.simpleClassName»#«memberFeatureAnnotation.getter»() «memberFeatureAnnotation.EStructuralFeature.name»}' feature.
 		 * @generated
 		 */
-		«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "getter")-»
+		«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "featureMap.setter")-»
 		public void «memberFeatureAnnotation.setter»(«memberFeatureAnnotation.itemType» new«toFirstUpper(memberFeatureAnnotation.name)») {
 			«IF memberFeatureAnnotation.featureMapFeature == this-»
 			«memberFeatureAnnotation.validJavaMemberName» = new«toFirstUpper(memberFeatureAnnotation.name)»;

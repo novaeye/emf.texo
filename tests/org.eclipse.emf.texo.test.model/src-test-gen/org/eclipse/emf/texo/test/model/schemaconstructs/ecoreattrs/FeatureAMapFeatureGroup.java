@@ -7,6 +7,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>Feature.aMap</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,7 +15,7 @@ import javax.persistence.Enumerated;
  * @generated
  */
 @Entity(name = "Feature_aMap")
-public class FeatureAMapFeatureGroup {
+public class FeatureAMapFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.

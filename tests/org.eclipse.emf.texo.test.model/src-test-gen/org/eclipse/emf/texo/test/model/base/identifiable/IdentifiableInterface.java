@@ -2,7 +2,11 @@ package org.eclipse.emf.texo.test.model.base.identifiable;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Version;
 
 /**
  * A representation of the model object '<em><b>IdentifiableInterface</b></em>'. <!-- begin-user-doc --> <!--
@@ -21,6 +25,9 @@ public interface IdentifiableInterface {
    * @return the value of '<em><b>db_Id</b></em>' feature
    * @generated
    */
+  @Id()
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Access(AccessType.PROPERTY)
   public Long getDb_Id();
 
   /**
@@ -32,6 +39,9 @@ public interface IdentifiableInterface {
    *          new value of the '{@link IdentifiableInterface#getDb_Id() <em>db_Id</em>}' feature.
    * @generated
    */
+  @Id()
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Access(AccessType.PROPERTY)
   public void setDb_Id(Long newDb_Id);
 
   /**
@@ -42,6 +52,8 @@ public interface IdentifiableInterface {
    * @return the value of '<em><b>db_version</b></em>' feature
    * @generated
    */
+  @Version()
+  @Access(AccessType.PROPERTY)
   public Integer getDb_version();
 
   /**
@@ -53,6 +65,8 @@ public interface IdentifiableInterface {
    *          new value of the '{@link IdentifiableInterface#getDb_version() <em>db_version</em>}' feature.
    * @generated
    */
+  @Version()
+  @Access(AccessType.PROPERTY)
   public void setDb_version(Integer newDb_version);
 
 }

@@ -29,39 +29,39 @@ import org.eclipse.emf.ecore.InternalEObject;
  */
 public abstract class EClassifierAnnotation extends ENamedElementAnnotation {
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EClassifierAnnotation() {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass() {
-    return AnnotationsmodelPackage.Literals.ECLASSIFIER_ANNOTATION;
-  }
+		return AnnotationsmodelPackage.Literals.ECLASSIFIER_ANNOTATION;
+	}
 
   /**
-   * Returns the value of the '<em><b>EClassifier</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>EClassifier</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>EClassifier</em>' reference isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>EClassifier</em>' reference.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEClassifierAnnotation_EClassifier()
-   * @model transient="true" changeable="false" volatile="true"
-   * @generated
-   */
+	 * @return the value of the '<em>EClassifier</em>' reference.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEClassifierAnnotation_EClassifier()
+	 * @model transient="true" changeable="false" volatile="true"
+	 * @generated
+	 */
   public EClassifier getEClassifier() {
-    EClassifier eClassifier = basicGetEClassifier();
-    return eClassifier != null && eClassifier.eIsProxy() ? (EClassifier)eResolveProxy((InternalEObject)eClassifier) : eClassifier;
-  }
+		EClassifier eClassifier = basicGetEClassifier();
+		return eClassifier != null && eClassifier.eIsProxy() ? (EClassifier)eResolveProxy((InternalEObject)eClassifier) : eClassifier;
+	}
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -71,22 +71,22 @@ public abstract class EClassifierAnnotation extends ENamedElementAnnotation {
   public abstract EClassifier basicGetEClassifier();
 
   /**
-   * Returns the value of the '<em><b>Annotated EClassifier</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Annotated EClassifier</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Annotated EClassifier</em>' reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Annotated EClassifier</em>' reference.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEClassifierAnnotation_AnnotatedEClassifier()
-   * @model transient="true" changeable="false" volatile="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Annotated EClassifier</em>' reference.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEClassifierAnnotation_AnnotatedEClassifier()
+	 * @model transient="true" changeable="false" volatile="true"
+	 * @generated
+	 */
   public AnnotatedEClassifier getAnnotatedEClassifier() {
-    AnnotatedEClassifier annotatedEClassifier = basicGetAnnotatedEClassifier();
-    return annotatedEClassifier != null && annotatedEClassifier.eIsProxy() ? (AnnotatedEClassifier)eResolveProxy((InternalEObject)annotatedEClassifier) : annotatedEClassifier;
-  }
+		AnnotatedEClassifier annotatedEClassifier = basicGetAnnotatedEClassifier();
+		return annotatedEClassifier != null && annotatedEClassifier.eIsProxy() ? (AnnotatedEClassifier)eResolveProxy((InternalEObject)annotatedEClassifier) : annotatedEClassifier;
+	}
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -96,36 +96,36 @@ public abstract class EClassifierAnnotation extends ENamedElementAnnotation {
   public abstract AnnotatedEClassifier basicGetAnnotatedEClassifier();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ECLASSIFIER:
-        if (resolve) return getEClassifier();
-        return basicGetEClassifier();
-      case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ANNOTATED_ECLASSIFIER:
-        if (resolve) return getAnnotatedEClassifier();
-        return basicGetAnnotatedEClassifier();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ECLASSIFIER:
+				if (resolve) return getEClassifier();
+				return basicGetEClassifier();
+			case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ANNOTATED_ECLASSIFIER:
+				if (resolve) return getAnnotatedEClassifier();
+				return basicGetAnnotatedEClassifier();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ECLASSIFIER:
-        return basicGetEClassifier() != null;
-      case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ANNOTATED_ECLASSIFIER:
-        return basicGetAnnotatedEClassifier() != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ECLASSIFIER:
+				return basicGetEClassifier() != null;
+			case AnnotationsmodelPackage.ECLASSIFIER_ANNOTATION__ANNOTATED_ECLASSIFIER:
+				return basicGetAnnotatedEClassifier() != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   @Override
   public ENamedElement basicGetENamedElement() {

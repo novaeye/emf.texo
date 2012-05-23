@@ -98,6 +98,18 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.EPackageAnnotation;
  * @generated
  */
 public class EPackageModelGenAnnotation extends EPackageAnnotation implements ENamedElementModelGenAnnotation {
+
+  private static String defaultExtends = null;
+
+  /**
+   * Is used during test code generation to give all generated classes a super class which has an id and version.
+   * 
+   * @param value
+   */
+  public static void setDefaultExtends(String value) {
+    defaultExtends = value;
+  }
+
   /**
    * The default value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -632,10 +644,14 @@ public class EPackageModelGenAnnotation extends EPackageAnnotation implements EN
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @generated
+   * @generatedNOT
    */
   protected EPackageModelGenAnnotation() {
     super();
+    if (defaultExtends != null) {
+      setRootClassExtends(defaultExtends);
+      setFeatureMapClassExtends(defaultExtends);
+    }
   }
 
   /**

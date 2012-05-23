@@ -151,7 +151,7 @@ public class MapKeyClassImpl extends BaseOrmAnnotationImpl implements MapKeyClas
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     return "@javax.persistence.MapKeyClass(" + getClass_() + ".class)"; //$NON-NLS-1$ //$NON-NLS-2$
   }
 

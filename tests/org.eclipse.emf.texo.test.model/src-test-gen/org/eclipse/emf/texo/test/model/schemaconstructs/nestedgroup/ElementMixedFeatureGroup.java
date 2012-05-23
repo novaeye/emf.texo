@@ -10,10 +10,9 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
@@ -22,7 +21,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * @generated
  */
 @Entity(name = "Element_mixed")
-public class ElementMixedFeatureGroup {
+public class ElementMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -30,7 +29,7 @@ public class ElementMixedFeatureGroup {
    * @generated
    */
   public static enum Feature {
-    TEXT, CDATA, COMMENT, NAME, TRUE, C, RECURSIVE
+    TEXT, CDATA, COMMENT, NAME, TRUE_, TRUE, C, RECURSIVE
   }
 
   /**
@@ -172,9 +171,8 @@ public class ElementMixedFeatureGroup {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = ElementTrueFeatureGroup.class)
-  @JoinTable()
-  private ElementTrueFeatureGroup true_;
+  @ManyToOne(cascade = { CascadeType.ALL }, targetEntity = ElementTrue_FeatureGroup.class)
+  private ElementTrue_FeatureGroup true_;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -311,22 +309,22 @@ public class ElementMixedFeatureGroup {
    * @return the value of '<em><b>true</b></em>' feature
    * @generated
    */
-  public ElementTrueFeatureGroup getTrue() {
+  public ElementTrue_FeatureGroup getTrue_() {
     return true_;
   }
 
   /**
-   * Sets the '{@link Element#getTrue() <em>true</em>}' feature.
+   * Sets the '{@link Element#getTrue_() <em>true</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link Element#getTrue() true}' feature.
+   *          new value of the '{@link Element#getTrue_() true}' feature.
    * @generated
    */
-  public void setTrue(ElementTrueFeatureGroup newTrue) {
-    true_ = newTrue;
-    setFeature(Feature.TRUE);
+  public void setTrue_(ElementTrue_FeatureGroup newTrue_) {
+    true_ = newTrue_;
+    setFeature(Feature.TRUE_);
   }
 
   /**
@@ -338,10 +336,10 @@ public class ElementMixedFeatureGroup {
    * @generated
    */
   public CType getC() {
-    if (getTrue() == null) {
+    if (getTrue_() == null) {
       return null;
     }
-    return getTrue().getC();
+    return getTrue_().getC();
   }
 
   /**
@@ -354,10 +352,10 @@ public class ElementMixedFeatureGroup {
    * @generated
    */
   public void setC(CType newC) {
-    if (getTrue() == null) {
-      setTrue(new ElementTrueFeatureGroup());
+    if (getTrue_() == null) {
+      setTrue_(new ElementTrue_FeatureGroup());
     }
-    getTrue().setC(newC);
+    getTrue_().setC(newC);
   }
 
   /**
@@ -403,8 +401,8 @@ public class ElementMixedFeatureGroup {
       return getComment();
     case NAME:
       return getName();
-    case TRUE:
-      return getTrue();
+    case TRUE_:
+      return getTrue_();
     case C:
       return getC();
     case RECURSIVE:
@@ -438,8 +436,8 @@ public class ElementMixedFeatureGroup {
     case NAME:
       setName((String) value);
       break;
-    case TRUE:
-      setTrue((ElementTrueFeatureGroup) value);
+    case TRUE_:
+      setTrue_((ElementTrue_FeatureGroup) value);
       break;
     case C:
       setC((CType) value);

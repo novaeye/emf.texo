@@ -7,6 +7,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,7 +15,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "statesByCountry")
-public class StatesByCountry {
+public class StatesByCountry extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

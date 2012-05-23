@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>XMLDeviant</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,7 +14,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "XMLDeviant")
-public class XMLDeviant {
+public class XMLDeviant extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

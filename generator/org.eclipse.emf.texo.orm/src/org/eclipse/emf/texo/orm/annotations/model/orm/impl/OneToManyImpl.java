@@ -1829,7 +1829,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getOneToMany_Cascade());
     features.add(OrmPackage.eINSTANCE.getOneToMany_Fetch());
@@ -1837,7 +1837,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
     features.add(OrmPackage.eINSTANCE.getOneToMany_OrphanRemoval());
     features.add(OrmPackage.eINSTANCE.getOneToMany_TargetEntity());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 
 } // OneToManyImpl

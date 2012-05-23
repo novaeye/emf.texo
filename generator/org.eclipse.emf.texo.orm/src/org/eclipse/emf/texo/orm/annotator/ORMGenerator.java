@@ -44,9 +44,11 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelFactory
 import org.eclipse.emf.texo.annotations.annotationsmodel.EClassAnnotation;
 import org.eclipse.emf.texo.eclipse.popup.actions.BaseGenerateAction;
 import org.eclipse.emf.texo.generator.AnnotationManager;
+import org.eclipse.emf.texo.generator.GeneratorConstants;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.generator.ModelAnnotatorRegistry;
 import org.eclipse.emf.texo.generator.ModelController;
+import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EAttributeModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
@@ -99,7 +101,10 @@ public class ORMGenerator extends BaseGenerateAction {
    * @return
    */
   public static String generateJavaAnnotations(EObject annotationOwner, List<EReference> includes,
-      List<EReference> excludes) {
+      List<EReference> excludes, String identifier) {
+    if (!isValidIdentifier(annotationOwner, identifier)) {
+      return "";
+    }
     final StringBuilder sb = new StringBuilder();
     for (EReference eReference : annotationOwner.eClass().getEAllReferences()) {
       if (includes != null && !includes.contains(eReference)) {
@@ -114,10 +119,51 @@ public class ORMGenerator extends BaseGenerateAction {
         if (sb.length() > 0) {
           sb.append("\n"); //$NON-NLS-1$
         }
-        sb.append(((BaseOrmAnnotation) value).getJavaAnnotation());
+        sb.append(((BaseOrmAnnotation) value).getJavaAnnotation(identifier));
       }
     }
+
     return sb.toString();
+  }
+
+  // if the type has an accesstype set then generate the javaannotation
+  // on the correct location
+  private static boolean isValidIdentifier(EObject annotation, String identifier) {
+    if (identifier.equals(GeneratorConstants.TYPE) || identifier.equals(GeneratorConstants.FEATUREMAP_TYPE)) {
+      return true;
+    }
+    AccessType accessType = getAccessType(annotation, new ArrayList<EObject>());
+    if (accessType == null) {
+      accessType = AccessType.FIELD;
+    }
+    if (accessType == AccessType.FIELD
+        && (identifier.equals(GeneratorConstants.FEATUREMAP_FIELD) || identifier.equals(GeneratorConstants.FIELD))) {
+      return true;
+    }
+    if (accessType == AccessType.PROPERTY
+        && (identifier.equals(GeneratorConstants.FEATUREMAP_GETTER) || identifier.equals(GeneratorConstants.GETTER))) {
+      return true;
+    }
+    return false;
+  }
+
+  private static AccessType getAccessType(EObject annotation, List<EObject> visitedObjects) {
+    visitedObjects.add(annotation);
+    for (EStructuralFeature eFeature : annotation.eClass().getEAllStructuralFeatures()) {
+      if (eFeature.isMany()) {
+        continue;
+      }
+      if (eFeature.getEType() == OrmPackage.eINSTANCE.getAccessType() && annotation.eIsSet(eFeature)) {
+        return (AccessType) annotation.eGet(eFeature);
+      } else if (eFeature instanceof EReference && annotation.eIsSet(eFeature)
+          && !visitedObjects.contains(annotation.eGet(eFeature))) {
+        final AccessType at = getAccessType((EObject) annotation.eGet(eFeature), visitedObjects);
+        if (at != null) {
+          return at;
+        }
+      }
+    }
+    return null;
   }
 
   @Override
@@ -137,7 +183,7 @@ public class ORMGenerator extends BaseGenerateAction {
     generateStoreORM(ePackages, ormUri);
   }
 
-  public void generateStoreORM(List<EPackage> ePackages, URI ormUri) {
+  public ModelController generateStoreORM(List<EPackage> ePackages, URI ormUri) {
     final AnnotatedModel aModel = AnnotationsmodelFactory.eINSTANCE.createAnnotatedModel();
     final ModelController modelController = new ModelController();
     modelController.setEPackages(ePackages);
@@ -148,6 +194,7 @@ public class ORMGenerator extends BaseGenerateAction {
     final EntityMappingsType entityMappings = createEntityMappings(ePackages, aModel,
         modelController.getAnnotationManager());
     storeORM(ormUri, aModel, modelController.getAnnotationManager(), entityMappings);
+    return modelController;
   }
 
   protected void storeORM(URI fileUri, AnnotatedModel annotatedModel, AnnotationManager annotationManager,
@@ -202,6 +249,14 @@ public class ORMGenerator extends BaseGenerateAction {
             if (eClassAnnotation instanceof EClassORMAnnotation) {
               final EClassORMAnnotation eClassORMAnnotation = (EClassORMAnnotation) eClassAnnotation;
               if (eClassORMAnnotation.getTransient() != null) {
+                continue;
+              }
+
+              if (aClass.getEClass().isInterface()) {
+                continue;
+              }
+
+              if (GenUtils.isDocumentRoot(aClass.getEClass())) {
                 continue;
               }
 

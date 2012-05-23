@@ -12,7 +12,7 @@
  *
  * </copyright>
  *
- * $Id: ModelJPATestSuite.java,v 1.7 2011/08/25 12:42:40 mtaal Exp $
+ * $Id: TestModelPackageProvider.java,v 1.7 2011/08/25 12:42:40 mtaal Exp $
  */
 package org.eclipse.emf.texo.orm.test;
 
@@ -23,18 +23,14 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 import org.eclipse.emf.texo.model.ModelPackage;
-import org.eclipse.emf.texo.test.model.issues.bz371509.Bz371509ModelPackage;
-import org.eclipse.emf.texo.test.model.samples.accounting.AccountingModelPackage;
-import org.eclipse.emf.texo.test.model.samples.emap.EmapsampleModelPackage;
-import org.eclipse.emf.texo.test.model.samples.extendedpo2.Epo2ModelPackage;
-import org.eclipse.emf.texo.test.model.samples.featuremaptest.FeaturemaptestModelPackage;
-import org.eclipse.emf.texo.test.model.samples.inventory.InvModelPackage;
+import org.eclipse.emf.texo.test.model.TestModelPackageProvider;
+import org.eclipse.emf.texo.test.model.samples.extlibrary.ExtlibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
-import org.eclipse.emf.texo.test.model.samples.music.MusicModelPackage;
-import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
 import org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoollibraryModelPackage;
-import org.eclipse.emf.texo.test.model.samples.types.TypesModelPackage;
-import org.eclipse.emf.texo.test.model.samples.workflow.WorkflowModelPackage;
+import org.eclipse.emf.texo.test.model.schemaconstructs.anytype.AnytypeModelPackage;
+import org.eclipse.emf.texo.test.model.schemaconstructs.attributes.AttributesModelPackage;
+import org.eclipse.emf.texo.test.model.schemaconstructs.duration.DurationModelPackage;
+import org.eclipse.emf.texo.test.model.schemaconstructs.listunion.ListunionModelPackage;
 
 /**
  * Creates the JPA test cases for several model packages.
@@ -43,46 +39,45 @@ import org.eclipse.emf.texo.test.model.samples.workflow.WorkflowModelPackage;
  */
 public class ModelJPATestSuite {
 
-  private static String[] persistenceUnitPostFixes = new String[] { "-hsqldb" }; // {"-hsqldb", "-mysql"}; //$NON-NLS-1$
+  private static String[] persistenceUnitPostFixes = new String[] { "-hsqldb", "-class-hsqldb" }; //  {"-hsqldb", "-mysql"}; //$NON-NLS-1$
 
   public static Test suite() {
     TestSuite suite = new TestSuite("Model JPA Test Suite"); //$NON-NLS-1$
 
-    // note: if test models use the same tables then sometimes they can interfere with
-    // eachother as the drop not always succeeds.
-    addTest(EmapsampleModelPackage.INSTANCE, suite);
-    addTest(RentalModelPackage.INSTANCE, suite);
-    addTest(FeaturemaptestModelPackage.INSTANCE, suite);
-    addTest(Epo2ModelPackage.INSTANCE, suite);
-    addTest(TypesModelPackage.INSTANCE, suite);
-    addTest(WorkflowModelPackage.INSTANCE, suite);
-    addTest(AccountingModelPackage.INSTANCE, suite);
-    addTest(LibraryModelPackage.INSTANCE, suite);
-    addTest(InvModelPackage.INSTANCE, suite);
-    addTest(MusicModelPackage.INSTANCE, suite);
-    addTest(Bz371509ModelPackage.INSTANCE, suite);
+    final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
-    {
-      final List<ModelPackage> modelPackages = new ArrayList<ModelPackage>();
-      modelPackages.add(SchoollibraryModelPackage.INSTANCE);
-      modelPackages.add(LibraryModelPackage.INSTANCE);
-      addTest(modelPackages, suite, "special-schoollibrary"); //$NON-NLS-1$
-    }
+    // modelPackages.clear();
+    // modelPackages.add(JpamixedModelPackage.INSTANCE);
 
-    // this one fails as it contains inherited interfaces
-    // addTest(InterfacesModelPackage.INSTANCE, suite);
+    // anytype is not supported, result in Object as item/target entity
+    modelPackages.remove(AttributesModelPackage.INSTANCE);
+    modelPackages.remove(AnytypeModelPackage.INSTANCE);
+    // union not supported, results in Object as item/target entity
+    modelPackages.remove(ListunionModelPackage.INSTANCE);
+    // duration can't be persisted
+    modelPackages.remove(DurationModelPackage.INSTANCE);
 
     // extlibrary works with interfaces and multiple inheritance
     // this does not work nicely with JPA/ORM
-    // addTest(ExtlibraryModelPackage.INSTANCE, suite);
+    modelPackages.remove(ExtlibraryModelPackage.INSTANCE);
+
+    for (ModelPackage modelPackage : modelPackages) {
+      if (modelPackage == SchoollibraryModelPackage.INSTANCE) {
+        final List<ModelPackage> testModelPackages = new ArrayList<ModelPackage>();
+        testModelPackages.add(SchoollibraryModelPackage.INSTANCE);
+        testModelPackages.add(LibraryModelPackage.INSTANCE);
+        addTest(testModelPackages, suite, "special-schoollibrary"); //$NON-NLS-1$        
+      } else {
+        addTest(modelPackage, suite);
+      }
+    }
 
     return suite;
   }
 
   private static void addTest(ModelPackage modelPackage, TestSuite suite) {
     for (String postFix : persistenceUnitPostFixes) {
-      final DataGenCompareModelJPATest test = new DataGenCompareModelJPATest(modelPackage);
-      test.setPersistenceUnitPostFix(postFix);
+      final DataGenCompareModelJPATest test = new DataGenCompareModelJPATest(modelPackage, postFix);
       suite.addTest(test);
     }
   }

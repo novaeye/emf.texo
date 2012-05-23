@@ -10,6 +10,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Machine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,7 +18,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "Machine")
-public class Machine {
+public class Machine extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

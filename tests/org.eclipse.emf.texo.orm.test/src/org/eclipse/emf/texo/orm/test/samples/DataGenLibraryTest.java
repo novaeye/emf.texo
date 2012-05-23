@@ -19,7 +19,7 @@ package org.eclipse.emf.texo.orm.test.samples;
 import java.util.List;
 
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
-import org.eclipse.emf.texo.orm.test.ModelPackageJPATest;
+import org.eclipse.emf.texo.orm.test.JPATest;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 
 /**
@@ -29,9 +29,9 @@ import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.Library
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.3 $
  */
-public class DataGenLibraryTest extends ModelPackageJPATest {
+public class DataGenLibraryTest extends JPATest {
   public DataGenLibraryTest() {
-    super(LibraryModelPackage.INSTANCE);
+    super(LibraryModelPackage.INSTANCE, "-hsqldb");
   }
 
   public void testPersist() {

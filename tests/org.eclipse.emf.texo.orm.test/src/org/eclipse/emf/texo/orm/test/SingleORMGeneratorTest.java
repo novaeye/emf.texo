@@ -35,8 +35,8 @@ public class SingleORMGeneratorTest extends ORMGeneratorTest {
   protected List<String> getModelFileRelativePaths() {
     final List<String> modelFiles = new ArrayList<String>();
     //    modelFiles.add("issues/bz371509.ecore"); //$NON-NLS-1$
-    modelFiles.add("samples/forum.xsd"); //$NON-NLS-1$
-    modelFiles.add("samples/library.ecore"); //$NON-NLS-1$
+    //    modelFiles.add("samples/forum.xsd"); //$NON-NLS-1$
+    modelFiles.add("schemaconstructs/NestedGroup.xsd"); //$NON-NLS-1$
     //        modelFiles.add("base/identifiable.ecore"); //$NON-NLS-1$
     return modelFiles;
   }

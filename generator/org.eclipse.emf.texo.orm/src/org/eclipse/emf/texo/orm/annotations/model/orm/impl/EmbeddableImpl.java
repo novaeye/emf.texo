@@ -1039,11 +1039,11 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     // add any other feature to hide non-jpa features
     features.add(OrmPackage.eINSTANCE.getElementCollection_Fetch());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 } // EmbeddableImpl

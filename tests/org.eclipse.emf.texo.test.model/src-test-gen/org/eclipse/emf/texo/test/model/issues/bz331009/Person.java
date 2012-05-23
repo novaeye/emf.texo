@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -14,6 +16,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -21,7 +24,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "Person")
-public class Person {
+public class Person extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Фамилия <!-- end-model-doc -->
@@ -101,6 +104,7 @@ public class Person {
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Phone.class)
   @OrderColumn()
   @JoinTable(name = "Person_phones")
+  @Access(AccessType.FIELD)
   private List<Phone> phones = new ArrayList<Phone>();
 
   /**
@@ -306,9 +310,7 @@ public class Person {
   }
 
   /**
-   * Returns the value of '<em><b>phones</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToPhones(org.eclipse.emf.texo.test.model.issues.bz331009.Phone value)} and
-   * {@link #removeFromPhones(Phone value)} methods to modify this feature.
+   * Returns the value of '<em><b>phones</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Телефоны <!-- end-model-doc -->
    * 

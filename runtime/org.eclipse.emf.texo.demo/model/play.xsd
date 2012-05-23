@@ -6,9 +6,9 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
 	jxb:version="1.0">
-	
+	    
 	<!-- Schema found in an older article here: http://www.devx.com/Java/Article/10904/0/page/1 -->
-	
+	     
 	<xs:annotation>
 		<xs:appinfo>
 			<jxb:globalBindings

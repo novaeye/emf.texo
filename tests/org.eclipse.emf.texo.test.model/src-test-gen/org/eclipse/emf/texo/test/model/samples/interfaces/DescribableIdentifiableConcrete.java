@@ -26,14 +26,12 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String description = "";
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String identifier = "";
 
   /**

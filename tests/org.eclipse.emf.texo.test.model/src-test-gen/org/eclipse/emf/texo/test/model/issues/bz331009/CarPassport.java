@@ -1,7 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>CarPassport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -10,35 +10,34 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "CarPassport")
-public class CarPassport implements Document {
+public class CarPassport extends Identifiable implements Document {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Серия <!-- end-model-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String series = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер <!-- end-model-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String number = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата выдачи <!-- end-model-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String issueDate = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Кем выдан <!-- end-model-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String issued = null;
 
   /**

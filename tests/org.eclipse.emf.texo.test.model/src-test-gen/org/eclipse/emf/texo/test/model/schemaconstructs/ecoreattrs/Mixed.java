@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Mixed</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,7 +14,7 @@ import javax.persistence.OneToMany;
  * @generated
  */
 @Entity(name = "Mixed")
-public class Mixed {
+public class Mixed extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -73,7 +73,6 @@ public class Book extends Identifiable {
    * @return the value of '<em><b>title</b></em>' feature
    * @generated
    */
-  @TestAnnotationOne("test")
   public String getTitle() {
     return title;
   }
@@ -87,7 +86,6 @@ public class Book extends Identifiable {
    *          new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
-  @TestAnnotationOne("test")
   public void setTitle(String newTitle) {
     title = newTitle;
   }
@@ -100,7 +98,6 @@ public class Book extends Identifiable {
    * @return the value of '<em><b>pages</b></em>' feature
    * @generated
    */
-  @TestAnnotationOne("getter")
   public int getPages() {
     return pages;
   }
@@ -114,7 +111,6 @@ public class Book extends Identifiable {
    *          new value of the '{@link Book#getPages() pages}' feature.
    * @generated
    */
-  @TestAnnotationOne("test")
   public void setPages(int newPages) {
     pages = newPages;
   }
@@ -127,7 +123,6 @@ public class Book extends Identifiable {
    * @return the value of '<em><b>category</b></em>' feature
    * @generated
    */
-  @TestAnnotationOne("test")
   public BookCategory getCategory() {
     return category;
   }
@@ -141,7 +136,6 @@ public class Book extends Identifiable {
    *          new value of the '{@link Book#getCategory() category}' feature.
    * @generated
    */
-  @TestAnnotationOne("test")
   public void setCategory(BookCategory newCategory) {
     category = newCategory;
   }
@@ -154,7 +148,6 @@ public class Book extends Identifiable {
    * @return the value of '<em><b>author</b></em>' feature
    * @generated
    */
-  @TestAnnotationOne("test")
   public Writer getAuthor() {
     return author;
   }
@@ -168,7 +161,6 @@ public class Book extends Identifiable {
    *          new value of the '{@link Book#getAuthor() author}' feature.
    * @generated
    */
-  @TestAnnotationOne("setter")
   public void setAuthor(Writer newAuthor) {
     author = newAuthor;
   }

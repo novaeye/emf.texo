@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Lob;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
@@ -16,8 +16,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
-@Entity(name = "DocumentRoot_mixed")
-public class DocumentRootMixedFeatureGroup {
+public class DocumentRootMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -160,7 +159,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String otherTest;
 
   /**
@@ -168,7 +166,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String test;
 
   /**

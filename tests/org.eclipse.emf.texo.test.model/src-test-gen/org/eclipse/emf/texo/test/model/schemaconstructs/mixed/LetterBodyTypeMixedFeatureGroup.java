@@ -16,6 +16,7 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>LetterBodyType.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -24,7 +25,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "LetterBodyType_mixed")
-public class LetterBodyTypeMixedFeatureGroup {
+public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.

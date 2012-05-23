@@ -1,17 +1,23 @@
 package org.eclipse.emf.texo.test.model.issues.subpackage.sub1;
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+
 /**
  * A representation of the model object '<em><b>Sub1Type</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class Sub1Type {
+@Entity(name = "Sub1Type")
+public class Sub1Type extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @Basic(optional = true)
   private String name = null;
 
   /**

@@ -44,6 +44,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EAttributeORMAnnotation/version"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EAttributeORMAnnotation/oneToMany"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EAttributeORMAnnotation/featureMapEntity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EAttributeORMAnnotation/manyToOne"/>
     </genClasses>
     <genClasses ecoreClass="texo-annotations-orm.ecore#//EReferenceORMAnnotation">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/embedded"/>

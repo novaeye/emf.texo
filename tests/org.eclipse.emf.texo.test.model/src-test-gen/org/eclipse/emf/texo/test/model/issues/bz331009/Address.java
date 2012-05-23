@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -10,7 +11,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "Address")
-public class Address {
+public class Address extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Индекс <!-- end-model-doc -->

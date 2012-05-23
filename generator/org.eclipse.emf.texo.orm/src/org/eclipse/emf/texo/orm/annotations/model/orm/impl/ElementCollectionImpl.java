@@ -1755,11 +1755,11 @@ public class ElementCollectionImpl extends BaseOrmAnnotationImpl implements Elem
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getElementCollection_Fetch());
     features.add(OrmPackage.eINSTANCE.getElementCollection_TargetClass());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 } // ElementCollectionImpl

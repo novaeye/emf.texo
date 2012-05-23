@@ -5,6 +5,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationTwo;
 
@@ -14,7 +15,7 @@ import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationTwo;
  * @generated
  */
 @Entity(name = "Employee")
-public class Employee {
+public class Employee extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

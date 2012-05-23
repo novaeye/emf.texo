@@ -10,6 +10,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="eNamedElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ENamedElement"
         changeable="false" volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastIdentifier" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EClassifierAnnotation" abstract="true"
       eSuperTypes="#//ENamedElementAnnotation">
@@ -115,6 +116,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AnnotatedModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="annotatedEPackages" upperBound="-1"
         eType="#//AnnotatedEPackage" containment="true" eOpposite="#//AnnotatedEPackage/annotatedModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generatingSources" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnnotatedENamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="eNamedElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ENamedElement"

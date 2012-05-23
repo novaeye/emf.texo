@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>AType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 @Entity(name = "AType")
-public class AType {
+public class AType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

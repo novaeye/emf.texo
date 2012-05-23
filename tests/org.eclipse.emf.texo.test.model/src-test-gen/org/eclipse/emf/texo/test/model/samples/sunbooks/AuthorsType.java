@@ -6,6 +6,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>AuthorsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,7 +14,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "AuthorsType")
-public class AuthorsType {
+public class AuthorsType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -1646,14 +1646,14 @@ public class ManyToManyImpl extends BaseOrmAnnotationImpl implements ManyToMany 
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     features.add(OrmPackage.eINSTANCE.getManyToMany_Cascade());
     features.add(OrmPackage.eINSTANCE.getManyToMany_Fetch());
     features.add(OrmPackage.eINSTANCE.getManyToMany_MappedBy());
     features.add(OrmPackage.eINSTANCE.getManyToMany_TargetEntity());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 
 } // ManyToManyImpl

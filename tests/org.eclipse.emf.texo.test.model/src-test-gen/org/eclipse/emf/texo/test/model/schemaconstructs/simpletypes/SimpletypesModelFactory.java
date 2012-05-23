@@ -801,8 +801,8 @@ public class SimpletypesModelFactory implements ModelFactory {
         return getTarget().getFloa();
       case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
         return getTarget().getInte();
-      case SimpletypesModelPackage.SIMPLELIST_LONG_FEATURE_ID:
-        return getTarget().getLong();
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        return getTarget().getLong_();
       case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
         return getTarget().getShor();
       case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
@@ -851,8 +851,8 @@ public class SimpletypesModelFactory implements ModelFactory {
       case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
         getTarget().setInte((List<Integer>) value);
         return;
-      case SimpletypesModelPackage.SIMPLELIST_LONG_FEATURE_ID:
-        getTarget().setLong((List<Long>) value);
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        getTarget().setLong_((List<Long>) value);
         return;
       case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
         getTarget().setShor((List<Short>) value);
@@ -945,8 +945,8 @@ public class SimpletypesModelFactory implements ModelFactory {
         return getTarget().getByt();
       case SimpletypesModelPackage.SIMPLETYPE_DOUBL_FEATURE_ID:
         return getTarget().getDoubl();
-      case SimpletypesModelPackage.SIMPLETYPE_FLOAT_FEATURE_ID:
-        return getTarget().getFloat();
+      case SimpletypesModelPackage.SIMPLETYPE_FLOAT__FEATURE_ID:
+        return getTarget().getFloat_();
       case SimpletypesModelPackage.SIMPLETYPE_INTE_FEATURE_ID:
         return getTarget().getInte();
       case SimpletypesModelPackage.SIMPLETYPE_LON_FEATURE_ID:
@@ -986,8 +986,8 @@ public class SimpletypesModelFactory implements ModelFactory {
       case SimpletypesModelPackage.SIMPLETYPE_DOUBL_FEATURE_ID:
         getTarget().setDoubl((Double) value);
         return;
-      case SimpletypesModelPackage.SIMPLETYPE_FLOAT_FEATURE_ID:
-        getTarget().setFloat((Float) value);
+      case SimpletypesModelPackage.SIMPLETYPE_FLOAT__FEATURE_ID:
+        getTarget().setFloat_((Float) value);
         return;
       case SimpletypesModelPackage.SIMPLETYPE_INTE_FEATURE_ID:
         getTarget().setInte((Integer) value);
@@ -1078,8 +1078,8 @@ public class SimpletypesModelFactory implements ModelFactory {
         return getTarget().getByt();
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_DOUBL_FEATURE_ID:
         return getTarget().getDoubl();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT_FEATURE_ID:
-        return getTarget().getFloat();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT__FEATURE_ID:
+        return getTarget().getFloat_();
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_INTE_FEATURE_ID:
         return getTarget().getInte();
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_LON_FEATURE_ID:
@@ -1113,8 +1113,8 @@ public class SimpletypesModelFactory implements ModelFactory {
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_DOUBL_FEATURE_ID:
         getTarget().setDoubl((Double) value);
         return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT_FEATURE_ID:
-        getTarget().setFloat((Float) value);
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT__FEATURE_ID:
+        getTarget().setFloat_((Float) value);
         return;
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_INTE_FEATURE_ID:
         getTarget().setInte((Integer) value);

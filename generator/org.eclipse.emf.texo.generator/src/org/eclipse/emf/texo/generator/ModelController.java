@@ -155,12 +155,27 @@ public class ModelController implements AnnotationProvider {
     final StringBuilder sb = new StringBuilder();
     for (final ENamedElementAnnotation annotation : annotations) {
       if (annotation.getENamedElement() == eNamedElement) {
+        if (annotation.getLastIdentifier() != null) {
+          // do some checking
+          if (annotation.getLastIdentifier().equals(GeneratorConstants.FIELD)
+              && (identifier.equals(GeneratorConstants.GETTER) || identifier.equals(GeneratorConstants.SETTER))) {
+            // already set on a field, continue
+            continue;
+          }
+          if (annotation.getLastIdentifier().equals(GeneratorConstants.FEATUREMAP_FIELD)
+              && (identifier.equals(GeneratorConstants.FEATUREMAP_GETTER) || identifier
+                  .equals(GeneratorConstants.FEATUREMAP_SETTER))) {
+            // already set on a field, continue
+            continue;
+          }
+        }
         final String javaAnnotation = annotation.getJavaAnnotation(this, identifier);
-        if (javaAnnotation != null) {
+        if (javaAnnotation != null && javaAnnotation.trim().length() > 0) {
           if (sb.length() > 0) {
             sb.append("\n"); //$NON-NLS-1$
           }
           sb.append(javaAnnotation);
+          annotation.setLastIdentifier(identifier);
         }
       }
     }

@@ -40,7 +40,7 @@ import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.Library
  */
 public class SimpleLibraryTest extends JPATest {
   public SimpleLibraryTest() {
-    super(LibraryModelPackage.INSTANCE.getEPackage().getName());
+    super(LibraryModelPackage.INSTANCE, "-hsqldb");
   }
 
   public void testPersist() {

@@ -55,7 +55,7 @@ public class Bz378087ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TEST_CLASS_FEATURE_ID = 0;
+  public static final int TEST_CLASS__FEATURE_ID = 0;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -145,8 +145,8 @@ public class Bz378087ModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Test.class</b></em>'.
    * @generated
    */
-  public EAttribute getTest_Class() {
-    return (EAttribute) getTestEClass().getEAllStructuralFeatures().get(TEST_CLASS_FEATURE_ID);
+  public EAttribute getTest_Class_() {
+    return (EAttribute) getTestEClass().getEAllStructuralFeatures().get(TEST_CLASS__FEATURE_ID);
   }
 
   /**

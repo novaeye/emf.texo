@@ -79,7 +79,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PaymentItem" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentItem" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о платеже"/>
     </eAnnotations>
@@ -105,7 +105,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tariff" abstract="true" interface="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Tariff" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о тарифе"/>
     </eAnnotations>

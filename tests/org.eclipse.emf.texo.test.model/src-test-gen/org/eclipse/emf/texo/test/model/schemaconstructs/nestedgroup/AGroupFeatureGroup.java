@@ -11,6 +11,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>A.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,7 +19,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "A_group")
-public class AGroupFeatureGroup {
+public class AGroupFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.

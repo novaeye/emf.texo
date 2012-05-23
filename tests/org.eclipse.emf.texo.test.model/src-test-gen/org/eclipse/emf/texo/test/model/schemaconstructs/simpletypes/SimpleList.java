@@ -11,6 +11,7 @@ import javax.persistence.Lob;
 import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>SimpleList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,7 +19,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "SimpleList")
-public class SimpleList {
+public class SimpleList extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -330,20 +331,20 @@ public class SimpleList {
    * @return the value of '<em><b>long</b></em>' feature
    * @generated
    */
-  public List<Long> getLong() {
+  public List<Long> getLong_() {
     return long_;
   }
 
   /**
-   * Sets the '{@link SimpleList#getLong() <em>long</em>}' feature.
+   * Sets the '{@link SimpleList#getLong_() <em>long</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SimpleList#getLong() long}' feature.
+   *          new value of the '{@link SimpleList#getLong_() long}' feature.
    * @generated
    */
-  public void setLong(List<Long> newLong_) {
+  public void setLong_(List<Long> newLong_) {
     long_ = newLong_;
   }
 

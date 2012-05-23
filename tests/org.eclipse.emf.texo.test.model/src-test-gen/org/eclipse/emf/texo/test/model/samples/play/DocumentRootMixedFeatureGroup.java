@@ -4,14 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
@@ -20,8 +16,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
-@Entity(name = "DocumentRoot_mixed")
-public class DocumentRootMixedFeatureGroup {
+public class DocumentRootMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -164,8 +159,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ActType.class)
-  @JoinColumns({ @JoinColumn() })
   private ActType act;
 
   /**
@@ -173,8 +166,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = FmType.class)
-  @JoinColumns({ @JoinColumn() })
   private FmType fm;
 
   /**
@@ -182,7 +173,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String groupDescription;
 
   /**
@@ -190,7 +180,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String line;
 
   /**
@@ -198,7 +187,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String p;
 
   /**
@@ -206,7 +194,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String persona;
 
   /**
@@ -214,8 +201,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaeType.class)
-  @JoinColumns({ @JoinColumn() })
   private PersonaeType personae;
 
   /**
@@ -223,8 +208,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaGroupType.class)
-  @JoinColumns({ @JoinColumn() })
   private PersonaGroupType personaGroup;
 
   /**
@@ -232,8 +215,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PlayType.class)
-  @JoinColumns({ @JoinColumn() })
   private PlayType play;
 
   /**
@@ -241,7 +222,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String playSubTitle;
 
   /**
@@ -249,8 +229,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SceneType.class)
-  @JoinColumns({ @JoinColumn() })
   private SceneType scene;
 
   /**
@@ -258,7 +236,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String sceneDescription;
 
   /**
@@ -266,7 +243,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String speaker;
 
   /**
@@ -274,8 +250,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SpeechType.class)
-  @JoinColumns({ @JoinColumn() })
   private SpeechType speech;
 
   /**
@@ -283,7 +257,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String stageDirections;
 
   /**
@@ -291,7 +264,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String title;
 
   /**

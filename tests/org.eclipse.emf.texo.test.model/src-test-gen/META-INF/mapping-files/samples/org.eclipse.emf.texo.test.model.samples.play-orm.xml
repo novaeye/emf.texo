@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.ActType" name="ActType">
     <orm:attributes>
@@ -16,11 +21,11 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SceneTypeGroupFeatureGroup" name="SceneType_group">
     <orm:attributes>
-      <orm:basic name="stageDirections" optional="true"/>
+      <orm:basic access="PROPERTY" name="stageDirections" optional="true"/>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="speech" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SpeechType">
+      <orm:many-to-one access="PROPERTY" name="speech" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SpeechType">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -40,89 +45,6 @@
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
-    <orm:attributes>
-      <orm:basic name="groupDescription" optional="true"/>
-      <orm:basic name="line" optional="true"/>
-      <orm:basic name="p" optional="true"/>
-      <orm:basic name="persona" optional="true"/>
-      <orm:basic name="playSubTitle" optional="true"/>
-      <orm:basic name="sceneDescription" optional="true"/>
-      <orm:basic name="speaker" optional="true"/>
-      <orm:basic name="stageDirections" optional="true"/>
-      <orm:basic name="title" optional="true"/>
-      <orm:basic name="text" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="cDATA" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="comment" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="feature" optional="false">
-        <orm:enumerated>STRING</orm:enumerated>
-      </orm:basic>
-      <orm:many-to-one name="act" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.ActType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="fm" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.FmType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="personae" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaeType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="personaGroup" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaGroupType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="play" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PlayType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="scene" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SceneType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="speech" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SpeechType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-    </orm:attributes>
-  </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.DocumentRoot" name="DocumentRoot">
-    <orm:attributes>
-      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.DocumentRootMixedFeatureGroup">
-        <orm:join-table/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:element-collection name="xMLNSPrefixMap">
-        <orm:collection-table name="DocumentRoot_xMLNSPrefixMap"/>
-      </orm:element-collection>
-      <orm:element-collection name="xSISchemaLocation">
-        <orm:collection-table name="DocumentRoot_xSISchemaLocation"/>
-      </orm:element-collection>
-    </orm:attributes>
-  </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.FmType" name="FmType">
     <orm:attributes>
       <orm:element-collection name="p">
@@ -133,12 +55,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PersonaeTypeGroupFeatureGroup" name="PersonaeType_group">
     <orm:attributes>
-      <orm:basic name="title" optional="true"/>
-      <orm:basic name="persona" optional="true"/>
+      <orm:basic access="PROPERTY" name="title" optional="true"/>
+      <orm:basic access="PROPERTY" name="persona" optional="true"/>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="personaGroup" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaGroupType">
+      <orm:many-to-one access="PROPERTY" name="personaGroup" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaGroupType">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -193,9 +115,9 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SpeechTypeGroupFeatureGroup" name="SpeechType_group">
     <orm:attributes>
-      <orm:basic name="speaker" optional="true"/>
-      <orm:basic name="line" optional="true"/>
-      <orm:basic name="stageDirections" optional="true"/>
+      <orm:basic access="PROPERTY" name="speaker" optional="true"/>
+      <orm:basic access="PROPERTY" name="line" optional="true"/>
+      <orm:basic access="PROPERTY" name="stageDirections" optional="true"/>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>

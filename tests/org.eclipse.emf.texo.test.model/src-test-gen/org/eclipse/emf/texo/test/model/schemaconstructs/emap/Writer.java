@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.emap;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,7 +10,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "Writer")
-public class Writer {
+public class Writer extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

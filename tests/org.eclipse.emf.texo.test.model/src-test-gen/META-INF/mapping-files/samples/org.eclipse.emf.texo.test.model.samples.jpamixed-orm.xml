@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
-    <orm:attributes>
-      <orm:basic name="text" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="cDATA" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="comment" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="feature" optional="false">
-        <orm:enumerated>STRING</orm:enumerated>
-      </orm:basic>
-      <orm:many-to-one name="letterBody" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-    </orm:attributes>
-  </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.DocumentRoot" name="DocumentRoot">
-    <orm:attributes>
-      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.DocumentRootMixedFeatureGroup">
-        <orm:join-table/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:element-collection name="xMLNSPrefixMap">
-        <orm:collection-table name="DocumentRoot_xMLNSPrefixMap"/>
-      </orm:element-collection>
-      <orm:element-collection name="xSISchemaLocation">
-        <orm:collection-table name="DocumentRoot_xSISchemaLocation"/>
-      </orm:element-collection>
-    </orm:attributes>
-  </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyTypeMixedFeatureGroup" name="LetterBodyType_mixed">
     <orm:attributes>
-      <orm:basic name="quantity" optional="false"/>
-      <orm:basic name="productName" optional="false"/>
-      <orm:basic name="shipDate" optional="true">
+      <orm:basic access="PROPERTY" name="quantity" optional="false"/>
+      <orm:basic access="PROPERTY" name="productName" optional="false"/>
+      <orm:basic access="PROPERTY" name="shipDate" optional="true">
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
       <orm:basic name="text" optional="true">
@@ -58,7 +25,7 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="salutation" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationType">
+      <orm:many-to-one access="PROPERTY" name="salutation" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationType">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
@@ -78,7 +45,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationTypeMixedFeatureGroup" name="SalutationType_mixed">
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic access="PROPERTY" name="name" optional="false"/>
       <orm:basic name="text" optional="true">
         <orm:lob/>
       </orm:basic>

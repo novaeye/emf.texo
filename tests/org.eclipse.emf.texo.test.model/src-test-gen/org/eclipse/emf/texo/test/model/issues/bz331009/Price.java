@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Price</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -8,7 +9,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "Price")
-public class Price {
+public class Price extends Identifiable {
 
   /**
    * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--

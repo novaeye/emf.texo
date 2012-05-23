@@ -4,30 +4,20 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class DocumentRoot {
+public class DocumentRoot extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = DocumentRootMixedFeatureGroup.class)
-  @JoinTable()
   private List<DocumentRootMixedFeatureGroup> mixed = new ArrayList<DocumentRootMixedFeatureGroup>();
 
   /**
@@ -35,8 +25,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
   /**
@@ -44,8 +32,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
@@ -53,8 +39,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ActType.class)
-  @JoinColumns({ @JoinColumn() })
   private ActType act = null;
 
   /**
@@ -62,8 +46,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = FmType.class)
-  @JoinColumns({ @JoinColumn() })
   private FmType fm = null;
 
   /**
@@ -71,7 +53,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String groupDescription = null;
 
   /**
@@ -79,7 +60,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String line = null;
 
   /**
@@ -87,7 +67,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String p = null;
 
   /**
@@ -95,7 +74,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String persona = null;
 
   /**
@@ -103,8 +81,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaeType.class)
-  @JoinColumns({ @JoinColumn() })
   private PersonaeType personae = null;
 
   /**
@@ -112,8 +88,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PersonaGroupType.class)
-  @JoinColumns({ @JoinColumn() })
   private PersonaGroupType personaGroup = null;
 
   /**
@@ -121,8 +95,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = PlayType.class)
-  @JoinColumns({ @JoinColumn() })
   private PlayType play = null;
 
   /**
@@ -130,7 +102,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String playSubTitle = null;
 
   /**
@@ -138,8 +109,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SceneType.class)
-  @JoinColumns({ @JoinColumn() })
   private SceneType scene = null;
 
   /**
@@ -147,7 +116,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String sceneDescription = null;
 
   /**
@@ -155,7 +123,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String speaker = null;
 
   /**
@@ -163,8 +130,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = SpeechType.class)
-  @JoinColumns({ @JoinColumn() })
   private SpeechType speech = null;
 
   /**
@@ -172,7 +137,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String stageDirections = null;
 
   /**
@@ -180,7 +144,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String title = null;
 
   /**

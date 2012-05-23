@@ -23,6 +23,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -31,9 +32,17 @@ import junit.framework.TestCase;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.generator.EclipseGeneratorUtils;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
+import org.eclipse.emf.texo.generator.ModelController;
+import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
+import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
 import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
 
@@ -58,6 +67,8 @@ public class ORMGeneratorTest extends TestCase {
   private static final String PERSISTENCE_XML_TEMPLATE = "template-persistence.xml"; //$NON-NLS-1$
   private static final String PERSISTENCE_UNIT_PARAM = "{persistenceUnitName}"; //$NON-NLS-1$
   private static final String MAPPING_FILE_PARAM = "{mappingFile}"; //$NON-NLS-1$
+  private static final String DBNAME_PARAM = "{dbname}"; //$NON-NLS-1$
+  private static final String CLASS_PARAM = "{class}"; //$NON-NLS-1$
 
   private static final EPackage.Registry SHARED_REGISTRY = GeneratorUtils.createEPackageRegistry();
 
@@ -108,17 +119,19 @@ public class ORMGeneratorTest extends TestCase {
 
       final URI uri = URI.createFileURI(ormFile.getAbsolutePath());
       final ORMGenerator ormGenerator = new ORMGenerator();
-      ormGenerator.generateStoreORM(ePackages, uri);
+      final ModelController modelController = ormGenerator.generateStoreORM(ePackages, uri);
 
+      // store for each eclass the java class name
+      final List<String> clzNames = collectClassNames(modelController, ePackages);
       // generate the persistence xml
-      generatePersistenceXML(ormMetaInfDir, modelMetaInfDir, ormFile, ePackages.get(0).getName());
+      generatePersistenceXML(ormMetaInfDir, modelMetaInfDir, ormFile, ePackages.get(0).getName(), clzNames);
     } catch (final Exception e) {
       throw new IllegalStateException(e);
     }
   }
 
-  private void generatePersistenceXML(File ormMetaInfDir, File modelMetaInfDir, File mappingFile, String ePackageName)
-      throws IOException {
+  private void generatePersistenceXML(File ormMetaInfDir, File modelMetaInfDir, File mappingFile, String ePackageName,
+      List<String> classNames) throws IOException {
     final File persistenceXMLFile = new File(modelMetaInfDir, ePackageName + PERSISTENCE_SUFFIX);
     if (persistenceXMLFile.exists()) {
       persistenceXMLFile.delete();
@@ -133,9 +146,46 @@ public class ORMGeneratorTest extends TestCase {
     // strip the first part
     final String relativeMappingFileLocation = mappingFileLocation.substring(mappingFileLocation.indexOf(META_INF));
     persistenceXMLTemplate = persistenceXMLTemplate.replace(MAPPING_FILE_PARAM, relativeMappingFileLocation);
+    persistenceXMLTemplate = persistenceXMLTemplate.replace(DBNAME_PARAM, ePackageName);
+
+    final StringBuilder sb = new StringBuilder();
+    for (String clzName : classNames) {
+      sb.append("\t\t<class>" + clzName + "</class>\n");
+    }
+    persistenceXMLTemplate = persistenceXMLTemplate.replace(CLASS_PARAM, sb.toString());
     final FileWriter fileWriter = new FileWriter(persistenceXMLFile);
     fileWriter.write(persistenceXMLTemplate);
     fileWriter.close();
+  }
+
+  private List<String> collectClassNames(ModelController modelController, List<EPackage> ePackages) {
+    final List<String> result = new ArrayList<String>();
+    for (EPackage ePackage : ePackages) {
+      for (EClassifier eClassifier : ePackage.getEClassifiers()) {
+        if (eClassifier instanceof EClass) {
+          final EClass eClass = (EClass) eClassifier;
+
+          if (eClass.isInterface()) {
+            continue;
+          }
+          if (GenUtils.isDocumentRoot(eClass)) {
+            continue;
+          }
+
+          EClassModelGenAnnotation eClassAnnotation = (EClassModelGenAnnotation) modelController.getAnnotation(eClass,
+              ModelcodegeneratorPackage.eNS_URI);
+          result.add(eClassAnnotation.getQualifiedClassName());
+          for (EStructuralFeature eFeature : eClass.getEAllStructuralFeatures()) {
+            EStructuralFeatureModelGenAnnotation eFeatureAnnotation = (EStructuralFeatureModelGenAnnotation) modelController
+                .getAnnotation(eFeature, ModelcodegeneratorPackage.eNS_URI);
+            if (eFeatureAnnotation.getFeatureMapQualifiedClassName() != null) {
+              result.add(eFeatureAnnotation.getFeatureMapQualifiedClassName());
+            }
+          }
+        }
+      }
+    }
+    return result;
   }
 
   private static String readFileAsString(String filePath) throws java.io.IOException {

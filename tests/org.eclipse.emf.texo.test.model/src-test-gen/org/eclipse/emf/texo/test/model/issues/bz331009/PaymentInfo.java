@@ -2,6 +2,8 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -10,6 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>PaymentInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,7 +21,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "PaymentInfo")
-public class PaymentInfo {
+public class PaymentInfo extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тариф <!-- end-model-doc -->
@@ -37,6 +40,7 @@ public class PaymentInfo {
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PaymentItem.class)
   @OrderColumn()
   @JoinTable(name = "PaymentInfo_factPayments")
+  @Access(AccessType.FIELD)
   private List<PaymentItem> factPayments = new ArrayList<PaymentItem>();
 
   /**
@@ -65,9 +69,7 @@ public class PaymentInfo {
   }
 
   /**
-   * Returns the value of '<em><b>factPayments</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToFactPayments(org.eclipse.emf.texo.test.model.issues.bz331009.PaymentItem value)} and
-   * {@link #removeFromFactPayments(PaymentItem value)} methods to modify this feature.
+   * Returns the value of '<em><b>factPayments</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Фактические платежи <!-- end-model-doc -->
    * 

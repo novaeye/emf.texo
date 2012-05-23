@@ -4,6 +4,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Formula</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -11,7 +12,7 @@ import javax.persistence.Enumerated;
  * @generated
  */
 @Entity(name = "Formula")
-public class Formula {
+public class Formula extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

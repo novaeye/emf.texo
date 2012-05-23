@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>ClaimLineCompositeKey</b></em>'. <!-- begin-user-doc --> <!--
@@ -14,7 +15,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "ClaimLineCompositeKey")
-public class ClaimLineCompositeKey {
+public class ClaimLineCompositeKey extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> A generated key to uniquely the parent <!--

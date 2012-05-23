@@ -208,12 +208,12 @@ public class PostUpdateImpl extends BaseOrmAnnotationImpl implements PostUpdate 
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     // add just any feature to force all eattributes to be ignored
     features.add(OrmPackage.eINSTANCE.getManyToOne_Cascade());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 
 } // PostUpdateImpl

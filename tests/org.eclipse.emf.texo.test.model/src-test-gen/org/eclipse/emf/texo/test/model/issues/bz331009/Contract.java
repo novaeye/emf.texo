@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -14,6 +16,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Contract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -22,7 +25,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "Contract")
-public class Contract {
+public class Contract extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата подписания <!-- end-model-doc -->
@@ -68,6 +71,7 @@ public class Contract {
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = SecretQuestion.class)
   @OrderColumn()
   @JoinTable(name = "Contract_secretQuestions")
+  @Access(AccessType.FIELD)
   private List<SecretQuestion> secretQuestions = new ArrayList<SecretQuestion>();
 
   /**
@@ -179,9 +183,7 @@ public class Contract {
   }
 
   /**
-   * Returns the value of '<em><b>secretQuestions</b></em>' feature. Note: the returned collection is Unmodifiable use
-   * the {#addToSecretQuestions(org.eclipse.emf.texo.test.model.issues.bz331009.SecretQuestion value)} and
-   * {@link #removeFromSecretQuestions(SecretQuestion value)} methods to modify this feature.
+   * Returns the value of '<em><b>secretQuestions</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Секретные вопросы <!-- end-model-doc -->
    * 

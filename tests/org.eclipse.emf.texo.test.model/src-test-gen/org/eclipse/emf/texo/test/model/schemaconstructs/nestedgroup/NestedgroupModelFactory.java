@@ -87,8 +87,8 @@ public class NestedgroupModelFactory implements ModelFactory {
     if (eFeature == NestedgroupModelPackage.INSTANCE.getElement_Mixed()) {
       return new ElementMixedFeatureGroup();
     }
-    if (eFeature == NestedgroupModelPackage.INSTANCE.getElement_True()) {
-      return new ElementTrueFeatureGroup();
+    if (eFeature == NestedgroupModelPackage.INSTANCE.getElement_True_()) {
+      return new ElementTrue_FeatureGroup();
     }
     throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
         + "' is not a valid feature map in this EPackage");
@@ -116,9 +116,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       entry.setTarget((ElementMixedFeatureGroup) adaptee);
       return entry;
     }
-    if (eFeature == NestedgroupModelPackage.INSTANCE.getElement_True()) {
-      final ElementTrueFeatureGroupModelFeatureMapEntry<ElementTrueFeatureGroup> entry = new ElementTrueFeatureGroupModelFeatureMapEntry<ElementTrueFeatureGroup>();
-      entry.setTarget((ElementTrueFeatureGroup) adaptee);
+    if (eFeature == NestedgroupModelPackage.INSTANCE.getElement_True_()) {
+      final ElementTrue_FeatureGroupModelFeatureMapEntry<ElementTrue_FeatureGroup> entry = new ElementTrue_FeatureGroupModelFeatureMapEntry<ElementTrue_FeatureGroup>();
+      entry.setTarget((ElementTrue_FeatureGroup) adaptee);
       return entry;
     }
     throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
@@ -387,8 +387,8 @@ public class NestedgroupModelFactory implements ModelFactory {
         return getTarget().getMixed();
       case NestedgroupModelPackage.ELEMENT_NAME_FEATURE_ID:
         return getTarget().getName();
-      case NestedgroupModelPackage.ELEMENT_TRUE_FEATURE_ID:
-        return getTarget().getTrue();
+      case NestedgroupModelPackage.ELEMENT_TRUE__FEATURE_ID:
+        return getTarget().getTrue_();
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
         return getTarget().getC();
       case NestedgroupModelPackage.ELEMENT_RECURSIVE_FEATURE_ID:
@@ -411,8 +411,8 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.ELEMENT_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
-      case NestedgroupModelPackage.ELEMENT_TRUE_FEATURE_ID:
-        getTarget().setTrue((List<ElementTrueFeatureGroup>) value);
+      case NestedgroupModelPackage.ELEMENT_TRUE__FEATURE_ID:
+        getTarget().setTrue_((List<ElementTrue_FeatureGroup>) value);
         return;
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
         getTarget().setC((List<CType>) value);
@@ -531,8 +531,8 @@ public class NestedgroupModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
       case NAME:
         return NestedgroupModelPackage.INSTANCE.getElement_Name();
-      case TRUE:
-        return NestedgroupModelPackage.INSTANCE.getElement_True();
+      case TRUE_:
+        return NestedgroupModelPackage.INSTANCE.getElement_True_();
       case C:
         return NestedgroupModelPackage.INSTANCE.getElement_C();
       case RECURSIVE:
@@ -561,8 +561,8 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.ELEMENT_NAME_FEATURE_ID:
         getTarget().setFeature(ElementMixedFeatureGroup.Feature.NAME);
         return;
-      case NestedgroupModelPackage.ELEMENT_TRUE_FEATURE_ID:
-        getTarget().setFeature(ElementMixedFeatureGroup.Feature.TRUE);
+      case NestedgroupModelPackage.ELEMENT_TRUE__FEATURE_ID:
+        getTarget().setFeature(ElementMixedFeatureGroup.Feature.TRUE_);
         return;
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
         getTarget().setFeature(ElementMixedFeatureGroup.Feature.C);
@@ -590,12 +590,12 @@ public class NestedgroupModelFactory implements ModelFactory {
   }
 
   /**
-   * The wrapper/adapter for the Feature Group '<em><b>Element.true</b></em>'.
+   * The wrapper/adapter for the Feature Group '<em><b>Element.true_</b></em>'.
    * 
    * @generated
    */
-  public static class ElementTrueFeatureGroupModelFeatureMapEntry<E extends ElementTrueFeatureGroup> extends
-      AbstractModelFeatureMapEntry<ElementTrueFeatureGroup> {
+  public static class ElementTrue_FeatureGroupModelFeatureMapEntry<E extends ElementTrue_FeatureGroup> extends
+      AbstractModelFeatureMapEntry<ElementTrue_FeatureGroup> {
 
     /**
      * @generated
@@ -616,7 +616,7 @@ public class NestedgroupModelFactory implements ModelFactory {
       final EClass eClass = NestedgroupModelPackage.INSTANCE.getElementEClass();
       switch (eClass.getFeatureID(eStructuralFeature)) {
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
-        getTarget().setFeature(ElementTrueFeatureGroup.Feature.C);
+        getTarget().setFeature(ElementTrue_FeatureGroup.Feature.C);
         return;
       }
       throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");

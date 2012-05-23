@@ -39,205 +39,205 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class AnnotatedEAttribute extends AnnotatedEStructuralFeature {
   /**
-   * The cached value of the '{@link #getEAttribute() <em>EAttribute</em>}' reference.
-   * <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getEAttribute() <em>EAttribute</em>}' reference.
+	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-   * @see #getEAttribute()
-   * @generated
-   * @ordered
-   */
+	 * @see #getEAttribute()
+	 * @generated
+	 * @ordered
+	 */
   protected EAttribute eAttribute;
 
   /**
-   * The cached value of the '{@link #getEAttributeAnnotations() <em>EAttribute Annotations</em>}' containment reference list.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @see #getEAttributeAnnotations()
-   * @generated
-   * @ordered
-   */
+	 * The cached value of the '{@link #getEAttributeAnnotations() <em>EAttribute Annotations</em>}' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #getEAttributeAnnotations()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<EAttributeAnnotation> eAttributeAnnotations;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected AnnotatedEAttribute() {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass() {
-    return AnnotationsmodelPackage.Literals.ANNOTATED_EATTRIBUTE;
-  }
+		return AnnotationsmodelPackage.Literals.ANNOTATED_EATTRIBUTE;
+	}
 
   /**
-   * Returns the value of the '<em><b>EAttribute</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>EAttribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>EAttribute</em>' reference isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>EAttribute</em>' reference.
-   * @see #setEAttribute(EAttribute)
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedEAttribute_EAttribute()
-   * @model required="true"
-   * @generated
-   */
+	 * @return the value of the '<em>EAttribute</em>' reference.
+	 * @see #setEAttribute(EAttribute)
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedEAttribute_EAttribute()
+	 * @model required="true"
+	 * @generated
+	 */
   public EAttribute getEAttribute() {
-    if (eAttribute != null && eAttribute.eIsProxy()) {
-      InternalEObject oldEAttribute = (InternalEObject)eAttribute;
-      eAttribute = (EAttribute)eResolveProxy(oldEAttribute);
-      if (eAttribute != oldEAttribute) {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE, oldEAttribute, eAttribute));
-      }
-    }
-    return eAttribute;
-  }
+		if (eAttribute != null && eAttribute.eIsProxy()) {
+			InternalEObject oldEAttribute = (InternalEObject)eAttribute;
+			eAttribute = (EAttribute)eResolveProxy(oldEAttribute);
+			if (eAttribute != oldEAttribute) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE, oldEAttribute, eAttribute));
+			}
+		}
+		return eAttribute;
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute basicGetEAttribute() {
-    return eAttribute;
-  }
+		return eAttribute;
+	}
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEAttribute#getEAttribute <em>EAttribute</em>}' reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>EAttribute</em>' reference.
-   * @see #getEAttribute()
-   * @generated
-   */
+	 * Sets the value of the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEAttribute#getEAttribute <em>EAttribute</em>}' reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>EAttribute</em>' reference.
+	 * @see #getEAttribute()
+	 * @generated
+	 */
   public void setEAttribute(EAttribute newEAttribute) {
-    EAttribute oldEAttribute = eAttribute;
-    eAttribute = newEAttribute;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE, oldEAttribute, eAttribute));
-  }
+		EAttribute oldEAttribute = eAttribute;
+		eAttribute = newEAttribute;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE, oldEAttribute, eAttribute));
+	}
 
   /**
-   * Returns the value of the '<em><b>EAttribute Annotations</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation}.
-   * It is bidirectional and its opposite is '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation#getAnnotatedEAttribute <em>Annotated EAttribute</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>EAttribute Annotations</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation#getAnnotatedEAttribute <em>Annotated EAttribute</em>}'.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>EAttribute Annotations</em>' containment reference list isn't clear, there really should
    * be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>EAttribute Annotations</em>' containment reference list.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedEAttribute_EAttributeAnnotations()
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation#getAnnotatedEAttribute
-   * @model opposite="annotatedEAttribute" containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>EAttribute Annotations</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedEAttribute_EAttributeAnnotations()
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation#getAnnotatedEAttribute
+	 * @model opposite="annotatedEAttribute" containment="true"
+	 * @generated
+	 */
   public EList<EAttributeAnnotation> getEAttributeAnnotations() {
-    if (eAttributeAnnotations == null) {
-      eAttributeAnnotations = new EObjectContainmentWithInverseEList<EAttributeAnnotation>(EAttributeAnnotation.class, this, AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS, AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__ANNOTATED_EATTRIBUTE);
-    }
-    return eAttributeAnnotations;
-  }
+		if (eAttributeAnnotations == null) {
+			eAttributeAnnotations = new EObjectContainmentWithInverseEList<EAttributeAnnotation>(EAttributeAnnotation.class, this, AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS, AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__ANNOTATED_EATTRIBUTE);
+		}
+		return eAttributeAnnotations;
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
-        return ((InternalEList<InternalEObject>)(InternalEList<?>)getEAttributeAnnotations()).basicAdd(otherEnd, msgs);
-    }
-    return super.eInverseAdd(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEAttributeAnnotations()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
-        return ((InternalEList<?>)getEAttributeAnnotations()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
+				return ((InternalEList<?>)getEAttributeAnnotations()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
-        if (resolve) return getEAttribute();
-        return basicGetEAttribute();
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
-        return getEAttributeAnnotations();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
+				if (resolve) return getEAttribute();
+				return basicGetEAttribute();
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
+				return getEAttributeAnnotations();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
-        setEAttribute((EAttribute)newValue);
-        return;
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
-        getEAttributeAnnotations().clear();
-        getEAttributeAnnotations().addAll((Collection<? extends EAttributeAnnotation>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
+				setEAttribute((EAttribute)newValue);
+				return;
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
+				getEAttributeAnnotations().clear();
+				getEAttributeAnnotations().addAll((Collection<? extends EAttributeAnnotation>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
-        setEAttribute((EAttribute)null);
-        return;
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
-        getEAttributeAnnotations().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
+				setEAttribute((EAttribute)null);
+				return;
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
+				getEAttributeAnnotations().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
-        return eAttribute != null;
-      case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
-        return eAttributeAnnotations != null && !eAttributeAnnotations.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE:
+				return eAttribute != null;
+			case AnnotationsmodelPackage.ANNOTATED_EATTRIBUTE__EATTRIBUTE_ANNOTATIONS:
+				return eAttributeAnnotations != null && !eAttributeAnnotations.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   @Override
   public EStructuralFeature basicGetEStructuralFeature() {

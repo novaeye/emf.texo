@@ -31,39 +31,39 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  */
 public abstract class AnnotatedENamedElement extends EObjectImpl implements EObject {
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected AnnotatedENamedElement() {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass() {
-    return AnnotationsmodelPackage.Literals.ANNOTATED_ENAMED_ELEMENT;
-  }
+		return AnnotationsmodelPackage.Literals.ANNOTATED_ENAMED_ELEMENT;
+	}
 
   /**
-   * Returns the value of the '<em><b>ENamed Element</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>ENamed Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>ENamed Element</em>' reference isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>ENamed Element</em>' reference.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedENamedElement_ENamedElement()
-   * @model transient="true" changeable="false" volatile="true"
-   * @generated
-   */
+	 * @return the value of the '<em>ENamed Element</em>' reference.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedENamedElement_ENamedElement()
+	 * @model transient="true" changeable="false" volatile="true"
+	 * @generated
+	 */
   public ENamedElement getENamedElement() {
-    ENamedElement eNamedElement = basicGetENamedElement();
-    return eNamedElement != null && eNamedElement.eIsProxy() ? (ENamedElement)eResolveProxy((InternalEObject)eNamedElement) : eNamedElement;
-  }
+		ENamedElement eNamedElement = basicGetENamedElement();
+		return eNamedElement != null && eNamedElement.eIsProxy() ? (ENamedElement)eResolveProxy((InternalEObject)eNamedElement) : eNamedElement;
+	}
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -73,31 +73,31 @@ public abstract class AnnotatedENamedElement extends EObjectImpl implements EObj
   public abstract ENamedElement basicGetENamedElement();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_ENAMED_ELEMENT__ENAMED_ELEMENT:
-        if (resolve) return getENamedElement();
-        return basicGetENamedElement();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_ENAMED_ELEMENT__ENAMED_ELEMENT:
+				if (resolve) return getENamedElement();
+				return basicGetENamedElement();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ANNOTATED_ENAMED_ELEMENT__ENAMED_ELEMENT:
-        return basicGetENamedElement() != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ANNOTATED_ENAMED_ELEMENT__ENAMED_ELEMENT:
+				return basicGetENamedElement() != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   public abstract List<ENamedElementAnnotation> getAllAnnotations();
 

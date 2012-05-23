@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.AType" name="AType">
     <orm:attributes>
@@ -16,50 +21,6 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-    </orm:attributes>
-  </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.DocumentRootMixedFeatureGroup" name="DocumentRoot_mixed">
-    <orm:attributes>
-      <orm:basic name="text" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="cDATA" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="comment" optional="true">
-        <orm:lob/>
-      </orm:basic>
-      <orm:basic name="feature" optional="false">
-        <orm:enumerated>STRING</orm:enumerated>
-      </orm:basic>
-      <orm:many-to-one name="a" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.AType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one name="r" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.RType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-    </orm:attributes>
-  </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.DocumentRoot" name="DocumentRoot">
-    <orm:attributes>
-      <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.DocumentRootMixedFeatureGroup">
-        <orm:join-table/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:element-collection name="xMLNSPrefixMap">
-        <orm:collection-table name="DocumentRoot_xMLNSPrefixMap"/>
-      </orm:element-collection>
-      <orm:element-collection name="xSISchemaLocation">
-        <orm:collection-table name="DocumentRoot_xSISchemaLocation"/>
-      </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.attributes.RType" name="RType">

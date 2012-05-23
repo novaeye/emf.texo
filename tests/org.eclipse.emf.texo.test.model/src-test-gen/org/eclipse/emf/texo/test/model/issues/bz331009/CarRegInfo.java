@@ -9,6 +9,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>CarRegInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -17,7 +18,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "CarRegInfo")
-public class CarRegInfo implements Document {
+public class CarRegInfo extends Identifiable implements Document {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -91,7 +92,6 @@ public class CarRegInfo implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String series = null;
 
   /**
@@ -99,7 +99,6 @@ public class CarRegInfo implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String number = null;
 
   /**
@@ -107,7 +106,6 @@ public class CarRegInfo implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String issueDate = null;
 
   /**
@@ -115,7 +113,6 @@ public class CarRegInfo implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String issued = null;
 
   /**

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,7 +14,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "Post")
-public class Post {
+public class Post extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

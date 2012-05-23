@@ -7,6 +7,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>SimpleAllMapType.allMap</b></em>'. <!-- begin-user-doc --> <!--
@@ -15,7 +16,7 @@ import javax.persistence.Enumerated;
  * @generated
  */
 @Entity(name = "SimpleAllMapType_allMap")
-public class SimpleAllMapTypeAllMapFeatureGroup {
+public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.

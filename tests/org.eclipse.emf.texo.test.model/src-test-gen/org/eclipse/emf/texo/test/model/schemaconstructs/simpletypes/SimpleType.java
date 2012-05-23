@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>SimpleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,7 +14,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "SimpleType")
-public class SimpleType {
+public class SimpleType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -228,20 +229,20 @@ public class SimpleType {
    * @return the value of '<em><b>float</b></em>' feature
    * @generated
    */
-  public float getFloat() {
+  public float getFloat_() {
     return float_;
   }
 
   /**
-   * Sets the '{@link SimpleType#getFloat() <em>float</em>}' feature.
+   * Sets the '{@link SimpleType#getFloat_() <em>float</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link SimpleType#getFloat() float}' feature.
+   *          new value of the '{@link SimpleType#getFloat_() float}' feature.
    * @generated
    */
-  public void setFloat(float newFloat_) {
+  public void setFloat_(float newFloat_) {
     float_ = newFloat_;
   }
 
@@ -454,7 +455,7 @@ public class SimpleType {
   @Override
   public String toString() {
     return "SimpleType " + " [code: " + getCode() + "]" + " [boo: " + isBoo() + "]" + " [byt: " + getByt() + "]"
-        + " [doubl: " + getDoubl() + "]" + " [float: " + getFloat() + "]" + " [inte: " + getInte() + "]" + " [lon: "
+        + " [doubl: " + getDoubl() + "]" + " [float_: " + getFloat_() + "]" + " [inte: " + getInte() + "]" + " [lon: "
         + getLon() + "]" + " [shor: " + getShor() + "]" + " [enu: " + getEnu() + "]" + " [dat: " + getDat() + "]"
         + " [limitedstring: " + getLimitedstring() + "]" + " [limitedDecimal: " + getLimitedDecimal() + "]"
         + " [extraLimitedString: " + getExtraLimitedString() + "]";

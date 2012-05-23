@@ -2044,10 +2044,8 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 
   @Override
   public String getJavaAnnotation(AnnotationProvider annotationProvider, String identifier) {
+
     if (FeatureMapUtil.isFeatureMap(getEStructuralFeature())) {
-      return ""; //$NON-NLS-1$
-    }
-    if (!identifier.equals("field")) { //$NON-NLS-1$
       return ""; //$NON-NLS-1$
     }
 
@@ -2056,7 +2054,6 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
     if (!ePackageORMAnnotation.isGenerateJavaAnnotations()) {
       return ""; //$NON-NLS-1$
     }
-    return ORMGenerator.generateJavaAnnotations(this, null, null);
+    return ORMGenerator.generateJavaAnnotations(this, null, null, identifier);
   }
-
 } // EReferenceORMAnnotation

@@ -25,10 +25,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.generator.Annotator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
+import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassifierModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Embedded;
@@ -66,6 +68,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
    * .ENamedElementAnnotation)
    */
   public void setAnnotationFeatures(EReferenceORMAnnotation annotation) {
+
     // don't do anything anymore if transient
     if (annotation.getTransient() != null) {
       if (GeneratorUtils.isEmptyOrNull(annotation.getTransient().getName())) {
@@ -75,6 +78,11 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
 
     final EReference eReference = annotation.getEReference();
+    final EClass eClass = eReference.getEContainingClass();
+    if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
+      return;
+    }
+
     final EPackage ePackage = eReference.getEContainingClass().getEPackage();
     final EPackageORMAnnotation ePackageORMAnnotation = (EPackageORMAnnotation) getAnnotationManager().getAnnotation(
         ePackage, OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
@@ -136,6 +144,14 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       oneToMany = OrmFactory.eINSTANCE.createOneToMany();
       annotation.setOneToMany(oneToMany);
     }
+
+    // make the access field if not changeable, as there won't be a setter
+    if (!eReference.isChangeable()) {
+      oneToMany.setAccess(AccessType.FIELD);
+    } else if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+      oneToMany.setAccess(AccessType.PROPERTY);
+    }
+
     if (oneToMany.getCascade() == null) {
       if (eReference.isContainment()) {
         oneToMany.setCascade(EcoreUtil.copy(ePackageORMAnnotation.getDefaultCascadeContainment()));
@@ -321,6 +337,13 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       generatedOneToOne = true;
     }
 
+    // make the access field if not changeable, as there won't be a setter
+    if (!eReference.isChangeable()) {
+      oneToOne.setAccess(AccessType.FIELD);
+    } else if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+      oneToOne.setAccess(AccessType.PROPERTY);
+    }
+
     if (GeneratorUtils.isEmptyOrNull(oneToOne.getName())) {
       oneToOne.setName(getName(eReference));
     }
@@ -382,6 +405,13 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
 
     if (GeneratorUtils.isEmptyOrNull(manyToOne.getName())) {
       manyToOne.setName(getName(eReference));
+    }
+
+    // make the access field if not changeable, as there won't be a setter
+    if (!eReference.isChangeable()) {
+      manyToOne.setAccess(AccessType.FIELD);
+    } else if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+      manyToOne.setAccess(AccessType.PROPERTY);
     }
 
     if (manyToOne.getCascade() == null) {
@@ -476,6 +506,13 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     } else {
       manyToMany = OrmFactory.eINSTANCE.createManyToMany();
       annotation.setManyToMany(manyToMany);
+    }
+
+    // make the access field if not changeable, as there won't be a setter
+    if (!eReference.isChangeable()) {
+      manyToMany.setAccess(AccessType.FIELD);
+    } else if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+      manyToMany.setAccess(AccessType.PROPERTY);
     }
 
     if (GeneratorUtils.isEmptyOrNull(manyToMany.getName())) {

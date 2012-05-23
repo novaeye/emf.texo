@@ -27,15 +27,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.persistence.Entity;
 import javax.persistence.Query;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
+import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * Tests persistence by:
@@ -51,9 +57,9 @@ import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.6 $
  */
-public class DataGenCompareModelJPATest extends ModelPackageJPATest {
-  public DataGenCompareModelJPATest(ModelPackage modelPackage) {
-    super(modelPackage);
+public class DataGenCompareModelJPATest extends JPATest {
+  public DataGenCompareModelJPATest(ModelPackage modelPackage, String postFix) {
+    super(modelPackage, postFix);
   }
 
   public DataGenCompareModelJPATest(List<ModelPackage> modelPackages) {
@@ -62,17 +68,18 @@ public class DataGenCompareModelJPATest extends ModelPackageJPATest {
 
   @Override
   public void runTest() {
-    final List<Object> testSet = generateTestSet(10, 10, 10, 1000);
+    final List<Object> testSet = generateTestSet(10, 10, 10, 4000);
+
+    // collect the objects
+    final Map<InstanceKey, Object> allObjects = collectObjects(testSet);
+
     {
       beginTransaction();
-      for (Object o : testSet) {
+      for (Object o : allObjects.values()) {
         getEntityManager().persist(o);
       }
       commitTransaction();
     }
-
-    // collect the objects
-    final Map<InstanceKey, Object> allObjects = collectObjects(testSet);
 
     reinitializeCachesAndEntityManager();
 
@@ -114,14 +121,14 @@ public class DataGenCompareModelJPATest extends ModelPackageJPATest {
     for (EClass eClass : eClassCount.keySet()) {
       // first a count query
       if (eClassCount.containsKey(eClass)) {
-        Query cntQuery = getEntityManager().createQuery("SELECT COUNT(e) FROM " + eClass.getName() + " e "); //$NON-NLS-1$//$NON-NLS-2$
+        Query cntQuery = getEntityManager().createQuery("SELECT COUNT(e) FROM " + getEntityName(eClass) + " e "); //$NON-NLS-1$//$NON-NLS-2$
         final int countResult = ((Number) cntQuery.getSingleResult()).intValue();
         final int compareCount = eClassCount.get(eClass);
         assertEquals(compareCount, countResult);
       }
 
       // then do a comparison query
-      Query selectQuery = getEntityManager().createQuery("SELECT e FROM " + eClass.getName() + " e "); //$NON-NLS-1$//$NON-NLS-2$
+      Query selectQuery = getEntityManager().createQuery("SELECT e FROM " + getEntityName(eClass) + " e "); //$NON-NLS-1$//$NON-NLS-2$
       for (Object o : selectQuery.getResultList()) {
         final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(o);
         final InstanceKey key = new InstanceKey(modelObject.eClass(), getDbId(o));
@@ -142,7 +149,22 @@ public class DataGenCompareModelJPATest extends ModelPackageJPATest {
     return instances;
   }
 
+  private String getEntityName(EClass eClass) {
+    final Class<?> clz = ModelResolver.getInstance().getImplementationClass(eClass);
+    if (clz == null) {
+      return eClass.getName();
+    }
+    final Entity entity = clz.getAnnotation(Entity.class);
+    if (entity == null) {
+      return eClass.getName();
+    }
+    return entity.name();
+  }
+
   private void collectObjects(Object object, Map<InstanceKey, Object> instances) {
+    if (object == null) {
+      return;
+    }
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
 
     final Long dbId = getDbId(object);
@@ -150,13 +172,34 @@ public class DataGenCompareModelJPATest extends ModelPackageJPATest {
       return;
     }
 
-    final InstanceKey instanceKey = new InstanceKey(modelObject.eClass(), dbId);
-    if (!instances.containsKey(instanceKey)) {
-      instances.put(instanceKey, object);
-    } else {
-      return;
+    // don't add doc roots to the overall objects
+    if (!GenUtils.isDocumentRoot(modelObject.eClass())) {
+      final InstanceKey instanceKey = new InstanceKey(modelObject.eClass(), dbId);
+      if (!instances.containsKey(instanceKey)) {
+        instances.put(instanceKey, object);
+      } else {
+        return;
+      }
     }
 
+    // do feature maps
+    for (EAttribute eAttribute : modelObject.eClass().getEAllAttributes()) {
+      if (FeatureMapUtil.isFeatureMap(eAttribute)) {
+        final Object manyValue = modelObject.eGet(eAttribute);
+        if (manyValue instanceof Collection<?>) {
+          final Collection<?> collection = (Collection<?>) manyValue;
+          for (Object child : collection) {
+            ModelFeatureMapEntry<?> fme = ModelResolver.getInstance().getModelFeatureMapEntry(eAttribute, child);
+            if (fme.getEStructuralFeature() instanceof EReference
+                && ((EReference) fme.getEStructuralFeature()).isContainment()) {
+              collectObjects(fme.getValue(), instances);
+            }
+          }
+        }
+      }
+    }
+
+    // do normal erefs
     for (EReference eReference : modelObject.eClass().getEAllReferences()) {
       if (eReference.isContainment()) {
         if (eReference.isMany()) {
@@ -459,8 +502,10 @@ public class DataGenCompareModelJPATest extends ModelPackageJPATest {
 
   }
 
-  // get the db id without casting to Identifiable
   private Long getDbId(Object object) {
+    if (object instanceof Identifiable) {
+      return ((Identifiable) object).getDb_Id();
+    }
     if (!ModelResolver.getInstance().isModelEnabled(object)) {
       return null;
     }

@@ -12,6 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
 
 /**
@@ -21,7 +22,7 @@ import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
  * @generated
  */
 @Entity(name = "MySerializableClass")
-public class MySerializableClass implements Serializable {
+public class MySerializableClass extends Identifiable implements Serializable {
 
   /**
    * @generated

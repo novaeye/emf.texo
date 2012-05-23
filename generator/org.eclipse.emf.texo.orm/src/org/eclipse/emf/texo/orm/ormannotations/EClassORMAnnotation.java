@@ -550,6 +550,6 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
     if (!ePackageORMAnnotation.isGenerateJavaAnnotations()) {
       return ""; //$NON-NLS-1$
     }
-    return ORMGenerator.generateJavaAnnotations(this, null, null);
+    return ORMGenerator.generateJavaAnnotations(this, null, null, identifier);
   }
 } // EClassORMAnnotation

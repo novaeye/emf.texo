@@ -20,6 +20,7 @@ package org.eclipse.emf.texo.orm.annotator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.texo.generator.Annotator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
+import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
@@ -50,6 +51,11 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
    */
   public void setAnnotationFeatures(EClassORMAnnotation annotation) {
     final EClass eClass = annotation.getEClass();
+
+    if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
+      return;
+    }
+
     final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eClass.getEPackage());
     if (annotation.getTransient() != null) {
       final Transient transnt = annotation.getTransient();

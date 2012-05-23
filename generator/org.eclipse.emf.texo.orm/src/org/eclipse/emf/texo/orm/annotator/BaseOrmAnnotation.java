@@ -28,5 +28,5 @@ import org.eclipse.emf.ecore.EObject;
 
 public interface BaseOrmAnnotation extends EObject {
 
-  public String getJavaAnnotation();
+  public String getJavaAnnotation(String identifier);
 }

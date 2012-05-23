@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel;
 import org.eclipse.emf.texo.generator.AnnotationManager;
+import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
@@ -46,10 +47,10 @@ public class StandardORMGenerator extends ORMGenerator {
   private static final String ECLIPSELINK_ORM_NS = "http://www.eclipse.org/eclipselink/xsds/persistence/orm"; //$NON-NLS-1$
 
   @Override
-  public void generateStoreORM(List<EPackage> ePackages, URI ormUri) {
+  public ModelController generateStoreORM(List<EPackage> ePackages, URI ormUri) {
     try {
       ORMGenerator.setInStandardsCompliantMode(true);
-      super.generateStoreORM(ePackages, ormUri);
+      return super.generateStoreORM(ePackages, ormUri);
     } finally {
       ORMGenerator.setInStandardsCompliantMode(null);
     }

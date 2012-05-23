@@ -26,7 +26,6 @@ public class DescribableConcrete extends Identifiable implements Describable {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String description = "";
 
   /**

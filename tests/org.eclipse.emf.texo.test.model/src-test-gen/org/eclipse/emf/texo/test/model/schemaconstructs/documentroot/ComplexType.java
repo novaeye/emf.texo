@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.documentroot;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>ComplexType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,7 +10,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "ComplexType")
-public class ComplexType {
+public class ComplexType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

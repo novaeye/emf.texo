@@ -8,6 +8,7 @@ import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
 import javax.xml.datatype.Duration;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>DurationTest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -15,7 +16,7 @@ import javax.xml.datatype.Duration;
  * @generated
  */
 @Entity(name = "DurationTest")
-public class DurationTest {
+public class DurationTest extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

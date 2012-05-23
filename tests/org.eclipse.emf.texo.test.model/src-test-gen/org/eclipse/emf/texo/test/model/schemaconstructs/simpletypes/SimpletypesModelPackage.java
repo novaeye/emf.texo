@@ -215,7 +215,7 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLELIST_LONG_FEATURE_ID = 6;
+  public static final int SIMPLELIST_LONG__FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -320,7 +320,7 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_FLOAT_FEATURE_ID = 4;
+  public static final int SIMPLETYPE_FLOAT__FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -418,7 +418,7 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_FLOAT_FEATURE_ID = 4;
+  public static final int SIMPLETYPEOBJECT_FLOAT__FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -622,8 +622,8 @@ public class SimpletypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleList.long</b></em>'.
    * @generated
    */
-  public EAttribute getSimpleList_Long() {
-    return (EAttribute) getSimpleListEClass().getEAllStructuralFeatures().get(SIMPLELIST_LONG_FEATURE_ID);
+  public EAttribute getSimpleList_Long_() {
+    return (EAttribute) getSimpleListEClass().getEAllStructuralFeatures().get(SIMPLELIST_LONG__FEATURE_ID);
   }
 
   /**
@@ -786,8 +786,8 @@ public class SimpletypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleType.float</b></em>'.
    * @generated
    */
-  public EAttribute getSimpleType_Float() {
-    return (EAttribute) getSimpleTypeEClass().getEAllStructuralFeatures().get(SIMPLETYPE_FLOAT_FEATURE_ID);
+  public EAttribute getSimpleType_Float_() {
+    return (EAttribute) getSimpleTypeEClass().getEAllStructuralFeatures().get(SIMPLETYPE_FLOAT__FEATURE_ID);
   }
 
   /**
@@ -939,8 +939,8 @@ public class SimpletypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleTypeObject.float</b></em>'.
    * @generated
    */
-  public EAttribute getSimpleTypeObject_Float() {
-    return (EAttribute) getSimpleTypeObjectEClass().getEAllStructuralFeatures().get(SIMPLETYPEOBJECT_FLOAT_FEATURE_ID);
+  public EAttribute getSimpleTypeObject_Float_() {
+    return (EAttribute) getSimpleTypeObjectEClass().getEAllStructuralFeatures().get(SIMPLETYPEOBJECT_FLOAT__FEATURE_ID);
   }
 
   /**

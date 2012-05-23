@@ -2,6 +2,8 @@ package org.eclipse.modisco.kdm.kdm;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
@@ -28,6 +30,7 @@ public abstract class KDMModel extends KDMFramework {
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
   @OrderColumn()
   @JoinTable(name = "KDMModel_ownedElement")
+  @Access(AccessType.FIELD)
   private List<KDMEntity> ownedElement = new ArrayList<KDMEntity>();
 
   /**

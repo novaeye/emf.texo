@@ -9,6 +9,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Message</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -17,7 +18,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "Message")
-public class Message {
+public class Message extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Текст сообщения <!-- end-model-doc -->

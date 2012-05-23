@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
+import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -47,6 +48,19 @@ import org.eclipse.xsd.util.XSDResourceImpl;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
 public class GeneratorUtils {
+
+  /**
+   * True if {@link EStructuralFeature#isDerived()} is true and the containing {@link EClass} is not a DocumentRoot.
+   */
+  public static boolean setPropertyAccess(AnnotatedEStructuralFeature aFeature) {
+    // if we are part of a total code generation then don't ever set
+    // property access, it is determined by the presence of a member
+    if (aFeature.getAnnotatedEClass().getAnnotatedEPackage().getAnnotatedModel().isGeneratingSources()) {
+      return false;
+    }
+    final EStructuralFeature eFeature = aFeature.getEStructuralFeature();
+    return !ExtendedMetaData.INSTANCE.isDocumentRoot(eFeature.getEContainingClass()) && eFeature.isDerived();
+  }
 
   /**
    * @param value
@@ -68,7 +82,10 @@ public class GeneratorUtils {
    * @return true if the passed EStructuralFeature is part of a group
    */
   public static boolean isPartOfGroup(EStructuralFeature eFeature) {
-    return null != ExtendedMetaData.INSTANCE.getGroup(eFeature);
+    // if the containing eclass is mixed then all efeatures are part
+    // of a group
+    return null != ExtendedMetaData.INSTANCE.getGroup(eFeature) || !ModelUtils.isMixed(eFeature)
+        && ModelUtils.hasMixedEFeature(eFeature.getEContainingClass());
   }
 
   /**

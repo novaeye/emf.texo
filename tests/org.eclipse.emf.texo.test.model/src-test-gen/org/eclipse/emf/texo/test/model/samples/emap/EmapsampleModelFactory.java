@@ -191,10 +191,6 @@ public class EmapsampleModelFactory implements ModelFactory {
         return getTarget().getTitle();
       case EmapsampleModelPackage.BOOK_WRITERS_FEATURE_ID:
         return getTarget().getWriters();
-      case EmapsampleModelPackage.BOOK_DB_ID_FEATURE_ID:
-        return getTarget().getDb_Id();
-      case EmapsampleModelPackage.BOOK_DB_VERSION_FEATURE_ID:
-        return getTarget().getDb_version();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -212,12 +208,6 @@ public class EmapsampleModelFactory implements ModelFactory {
         return;
       case EmapsampleModelPackage.BOOK_WRITERS_FEATURE_ID:
         getTarget().setWriters((Map<String, Writer>) value);
-        return;
-      case EmapsampleModelPackage.BOOK_DB_ID_FEATURE_ID:
-        getTarget().setDb_Id((Long) value);
-        return;
-      case EmapsampleModelPackage.BOOK_DB_VERSION_FEATURE_ID:
-        getTarget().setDb_version((Integer) value);
         return;
       }
       super.eSet(eStructuralFeature, value);

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder" name="PurchaseOrder">
     <orm:attributes>
@@ -8,18 +13,18 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.SupplierOrdersFeatureGroup" name="Supplier_orders">
     <orm:attributes>
-      <orm:basic name="hardCopyOrderReference" optional="true"/>
-      <orm:basic name="hardCopyOrderNumber" optional="true"/>
+      <orm:basic access="PROPERTY" name="hardCopyOrderReference" optional="true"/>
+      <orm:basic access="PROPERTY" name="hardCopyOrderNumber" optional="true"/>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="preferredOrders" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder">
+      <orm:many-to-one access="PROPERTY" name="preferredOrders" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="standardOrders" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder">
+      <orm:many-to-one access="PROPERTY" name="standardOrders" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder">
         <orm:join-column/>
         <orm:cascade>
           <orm:cascade-all/>

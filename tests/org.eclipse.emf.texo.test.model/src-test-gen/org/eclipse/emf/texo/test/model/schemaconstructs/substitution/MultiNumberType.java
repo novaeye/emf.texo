@@ -7,6 +7,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>MultiNumberType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,7 +15,7 @@ import javax.persistence.OneToMany;
  * @generated
  */
 @Entity(name = "MultiNumberType")
-public class MultiNumberType {
+public class MultiNumberType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

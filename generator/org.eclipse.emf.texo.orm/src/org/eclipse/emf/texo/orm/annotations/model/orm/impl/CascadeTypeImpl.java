@@ -415,7 +415,7 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final StringBuilder sb = new StringBuilder("{"); //$NON-NLS-1$
     if (getCascadeAll() != null) {
       sb.append("javax.persistence.CascadeType.ALL"); //$NON-NLS-1$

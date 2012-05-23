@@ -162,9 +162,9 @@ public abstract class ModelEStructuralFeatureAnnotator extends ModelENamedElemen
   // prevent name clashes in the generated FeatureGroup class for the case that
   // the name is value or feature or if the feature is part of a mixed type
   @Override
-  protected String getName(ENamedElement eNamedElement) {
+  public String getName(ENamedElement eNamedElement) {
     final EStructuralFeature eStructuralFeature = (EStructuralFeature) eNamedElement;
-    final String defaultName = super.getName(eStructuralFeature);
+    final String defaultName = GenUtils.getValidJavaMemberName(super.getName(eStructuralFeature));
 
     final boolean partOfFeatureMap = null != ExtendedMetaData.INSTANCE.getGroup(eStructuralFeature);
     final boolean partOfMix = null != GeneratorUtils.getMixedEStructuralFeature(eStructuralFeature

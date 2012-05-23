@@ -9,6 +9,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -16,7 +17,7 @@ import javax.persistence.OneToMany;
  * @generated
  */
 @Entity(name = "Book")
-public class Book {
+public class Book extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

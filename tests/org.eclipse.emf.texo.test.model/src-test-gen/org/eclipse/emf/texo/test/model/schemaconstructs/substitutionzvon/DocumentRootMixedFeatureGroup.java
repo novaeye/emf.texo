@@ -5,14 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
@@ -21,8 +17,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
-@Entity(name = "DocumentRoot_mixed")
-public class DocumentRootMixedFeatureGroup {
+public class DocumentRootMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -165,8 +160,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ComplexEvenType.class)
-  @JoinColumns({ @JoinColumn() })
   private ComplexEvenType complexEven;
 
   /**
@@ -174,8 +167,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ComplexAAA.class)
-  @JoinColumns({ @JoinColumn() })
   private ComplexAAA myComplexAbstract;
 
   /**
@@ -183,8 +174,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ComplexOddType.class)
-  @JoinColumns({ @JoinColumn() })
   private ComplexOddType complexOdd;
 
   /**
@@ -192,7 +181,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private EvenType even;
 
   /**
@@ -200,7 +188,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private BigInteger myAbstract;
 
   /**
@@ -208,7 +195,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private OddType odd;
 
   /**
@@ -216,8 +202,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = RootType.class)
-  @JoinColumns({ @JoinColumn() })
   private RootType root;
 
   /**

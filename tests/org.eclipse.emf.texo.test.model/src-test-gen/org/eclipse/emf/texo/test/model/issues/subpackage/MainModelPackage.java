@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.issues.subpackage.dao.MainTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -75,6 +77,10 @@ public class MainModelPackage extends ModelPackage {
 
     final MainModelPackage modelPackage = new MainModelPackage();
 
+    ModelResolver.getInstance().registerModelPackage(modelPackage);
+
+    isInitialized = true;
+
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method
     ModelUtils.readEPackagesFromFile(modelPackage);
@@ -83,9 +89,7 @@ public class MainModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(MainType.class, modelPackage.getMainTypeEClass(),
         modelPackage);
 
-    ModelResolver.getInstance().registerModelPackage(modelPackage);
-
-    isInitialized = true;
+    DaoRegistry.getInstance().registerDao(MainType.class, MainTypeDao.class);
 
     // and return ourselves
     return modelPackage;

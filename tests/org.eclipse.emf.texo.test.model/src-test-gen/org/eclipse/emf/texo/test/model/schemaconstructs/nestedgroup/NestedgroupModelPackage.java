@@ -128,7 +128,7 @@ public class NestedgroupModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ELEMENT_TRUE_FEATURE_ID = 2;
+  public static final int ELEMENT_TRUE__FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -342,8 +342,8 @@ public class NestedgroupModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>Element.true</b></em>'.
    * @generated
    */
-  public EAttribute getElement_True() {
-    return (EAttribute) getElementEClass().getEAllStructuralFeatures().get(ELEMENT_TRUE_FEATURE_ID);
+  public EAttribute getElement_True_() {
+    return (EAttribute) getElementEClass().getEAllStructuralFeatures().get(ELEMENT_TRUE__FEATURE_ID);
   }
 
   /**

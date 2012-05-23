@@ -651,13 +651,22 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION_FEATURE_COUNT + 7;
 
   /**
+	 * The feature id for the '<em><b>Many To One</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION_FEATURE_COUNT + 8;
+
+		/**
 	 * The number of structural features of the '<em>EAttribute ORM Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int EATTRIBUTE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION_FEATURE_COUNT + 8;
+  public static final int EATTRIBUTE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION_FEATURE_COUNT + 9;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation <em>EReference ORM Annotation</em>}' class.
@@ -1673,6 +1682,19 @@ public class OrmannotationsPackage extends EPackageImpl {
 	}
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation#getManyToOne <em>Many To One</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Many To One</em>'.
+	 * @see org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation#getManyToOne()
+	 * @see #getEAttributeORMAnnotation()
+	 * @generated
+	 */
+	public EReference getEAttributeORMAnnotation_ManyToOne() {
+		return (EReference)eAttributeORMAnnotationEClass.getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation <em>EReference ORM Annotation</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EReference ORM Annotation</em>'.
@@ -2139,6 +2161,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		createEReference(eAttributeORMAnnotationEClass, EATTRIBUTE_ORM_ANNOTATION__VERSION);
 		createEReference(eAttributeORMAnnotationEClass, EATTRIBUTE_ORM_ANNOTATION__ONE_TO_MANY);
 		createEReference(eAttributeORMAnnotationEClass, EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY);
+		createEReference(eAttributeORMAnnotationEClass, EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE);
 
 		eReferenceORMAnnotationEClass = createEClass(EREFERENCE_ORM_ANNOTATION);
 		createEReference(eReferenceORMAnnotationEClass, EREFERENCE_ORM_ANNOTATION__EMBEDDED);
@@ -2264,6 +2287,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEReference(getEAttributeORMAnnotation_Version(), theOrmPackage.getVersion(), null, "version", null, 0, 1, EAttributeORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEAttributeORMAnnotation_OneToMany(), theOrmPackage.getOneToMany(), null, "oneToMany", null, 0, 1, EAttributeORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEAttributeORMAnnotation_FeatureMapEntity(), theOrmPackage.getEntity(), null, "featureMapEntity", null, 0, 1, EAttributeORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttributeORMAnnotation_ManyToOne(), theOrmPackage.getManyToOne(), null, "manyToOne", null, 0, 1, EAttributeORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eReferenceORMAnnotationEClass, EReferenceORMAnnotation.class, "EReferenceORMAnnotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEReferenceORMAnnotation_Embedded(), theOrmPackage.getEmbedded(), null, "embedded", null, 0, 1, EReferenceORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2579,6 +2603,14 @@ public class OrmannotationsPackage extends EPackageImpl {
     public static final EReference EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY = eINSTANCE.getEAttributeORMAnnotation_FeatureMapEntity();
 
     /**
+		 * The meta object literal for the '<em><b>Many To One</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EReference EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE = eINSTANCE.getEAttributeORMAnnotation_ManyToOne();
+
+				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation <em>EReference ORM Annotation</em>}' class.
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
 		 * @see org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation

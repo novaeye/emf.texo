@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.samples.schemaprimerpo;
 import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -10,7 +11,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "USAddress")
-public class USAddress {
+public class USAddress extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

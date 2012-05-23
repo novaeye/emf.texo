@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.samples.catalog;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,7 +10,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "StringType")
-public class StringType {
+public class StringType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

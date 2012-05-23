@@ -4,10 +4,13 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>NumberType.mySimpleAbstractGroup</b></em>'. <!-- begin-user-doc -->
@@ -16,7 +19,7 @@ import javax.persistence.Enumerated;
  * @generated
  */
 @Entity(name = "NumberType_mySimpleAbstractGroup")
-public class NumberTypeMySimpleAbstractGroupFeatureGroup {
+public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -134,6 +137,7 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup {
    * @generated
    */
   @Basic(optional = false)
+  @Access(AccessType.FIELD)
   private BigInteger mySimpleAbstract;
 
   /**

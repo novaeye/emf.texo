@@ -63,6 +63,7 @@ public class GenerateCode extends BaseGenerateAction {
       final ModelController modelController = new ModelController();
       modelController.setEPackages(ePackages);
       monitor.subTask(Messages.getString("generate.Annotating")); //$NON-NLS-1$
+      modelController.getAnnotationManager().getAnnotatedModel().setGeneratingSources(true);
       modelController.annotate(new ArrayList<ModelAnnotator>());
 
       final ArtifactGenerator artifactGenerator = new ArtifactGenerator();

@@ -79,7 +79,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_LONG_FEATURE_ID = 3;
+  public static final int SINGLETYPES_LONG__FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -93,7 +93,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_DOUBLE_FEATURE_ID = 5;
+  public static final int SINGLETYPES_DOUBLE__FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -107,7 +107,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_FLOAT_FEATURE_ID = 7;
+  public static final int SINGLETYPES_FLOAT__FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -128,7 +128,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_CHAR_FEATURE_ID = 10;
+  public static final int SINGLETYPES_CHAR__FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -142,7 +142,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_BYTE_FEATURE_ID = 12;
+  public static final int SINGLETYPES_BYTE__FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -177,7 +177,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_ENUM_FEATURE_ID = 17;
+  public static final int SINGLETYPES_ENUM__FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -233,7 +233,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANYTYPES_LONG_FEATURE_ID = 2;
+  public static final int MANYTYPES_LONG__FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -296,7 +296,7 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANYTYPES_ENUM_FEATURE_ID = 11;
+  public static final int MANYTYPES_ENUM__FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -479,8 +479,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SingleTypes.long</b></em>'.
    * @generated
    */
-  public EAttribute getSingleTypes_Long() {
-    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_LONG_FEATURE_ID);
+  public EAttribute getSingleTypes_Long_() {
+    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_LONG__FEATURE_ID);
   }
 
   /**
@@ -501,8 +501,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SingleTypes.double</b></em>'.
    * @generated
    */
-  public EAttribute getSingleTypes_Double() {
-    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_DOUBLE_FEATURE_ID);
+  public EAttribute getSingleTypes_Double_() {
+    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_DOUBLE__FEATURE_ID);
   }
 
   /**
@@ -523,8 +523,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SingleTypes.float</b></em>'.
    * @generated
    */
-  public EAttribute getSingleTypes_Float() {
-    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_FLOAT_FEATURE_ID);
+  public EAttribute getSingleTypes_Float_() {
+    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_FLOAT__FEATURE_ID);
   }
 
   /**
@@ -556,8 +556,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SingleTypes.char</b></em>'.
    * @generated
    */
-  public EAttribute getSingleTypes_Char() {
-    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_CHAR_FEATURE_ID);
+  public EAttribute getSingleTypes_Char_() {
+    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_CHAR__FEATURE_ID);
   }
 
   /**
@@ -578,8 +578,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SingleTypes.byte</b></em>'.
    * @generated
    */
-  public EAttribute getSingleTypes_Byte() {
-    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_BYTE_FEATURE_ID);
+  public EAttribute getSingleTypes_Byte_() {
+    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_BYTE__FEATURE_ID);
   }
 
   /**
@@ -633,8 +633,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>SingleTypes.enum</b></em>'.
    * @generated
    */
-  public EAttribute getSingleTypes_Enum() {
-    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_ENUM_FEATURE_ID);
+  public EAttribute getSingleTypes_Enum_() {
+    return (EAttribute) getSingleTypesEClass().getEAllStructuralFeatures().get(SINGLETYPES_ENUM__FEATURE_ID);
   }
 
   /**
@@ -720,8 +720,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.long</b></em>'.
    * @generated
    */
-  public EAttribute getManyTypes_Long() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_LONG_FEATURE_ID);
+  public EAttribute getManyTypes_Long_() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_LONG__FEATURE_ID);
   }
 
   /**
@@ -819,8 +819,8 @@ public class TypesModelPackage extends ModelPackage {
    * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.enum</b></em>'.
    * @generated
    */
-  public EAttribute getManyTypes_Enum() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_ENUM_FEATURE_ID);
+  public EAttribute getManyTypes_Enum_() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_ENUM__FEATURE_ID);
   }
 
   /**

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Car</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -13,7 +14,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "Car")
-public class Car {
+public class Car extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Модель <!-- end-model-doc -->

@@ -33,39 +33,39 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class EReferenceAnnotation extends EStructuralFeatureAnnotation {
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EReferenceAnnotation() {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass() {
-    return AnnotationsmodelPackage.Literals.EREFERENCE_ANNOTATION;
-  }
+		return AnnotationsmodelPackage.Literals.EREFERENCE_ANNOTATION;
+	}
 
   /**
-   * Returns the value of the '<em><b>EReference</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>EReference</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>EReference</em>' reference isn't clear, there really should be more of a description
    * here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>EReference</em>' reference.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEReferenceAnnotation_EReference()
-   * @model required="true" transient="true" changeable="false" volatile="true"
-   * @generated
-   */
+	 * @return the value of the '<em>EReference</em>' reference.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEReferenceAnnotation_EReference()
+	 * @model required="true" transient="true" changeable="false" volatile="true"
+	 * @generated
+	 */
   public EReference getEReference() {
-    EReference eReference = basicGetEReference();
-    return eReference != null && eReference.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)eReference) : eReference;
-  }
+		EReference eReference = basicGetEReference();
+		return eReference != null && eReference.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)eReference) : eReference;
+	}
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -77,158 +77,158 @@ public class EReferenceAnnotation extends EStructuralFeatureAnnotation {
   }
 
   /**
-   * Returns the value of the '<em><b>Annotated EReference</b></em>' container reference.
-   * It is bidirectional and its opposite is '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEReference#getEReferenceAnnotations <em>EReference Annotations</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Annotated EReference</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEReference#getEReferenceAnnotations <em>EReference Annotations</em>}'.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Annotated EReference</em>' container reference isn't clear, there really should be more
    * of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Annotated EReference</em>' container reference.
-   * @see #setAnnotatedEReference(AnnotatedEReference)
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEReferenceAnnotation_AnnotatedEReference()
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEReference#getEReferenceAnnotations
-   * @model opposite="eReferenceAnnotations" transient="false"
-   * @generated
-   */
+	 * @return the value of the '<em>Annotated EReference</em>' container reference.
+	 * @see #setAnnotatedEReference(AnnotatedEReference)
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEReferenceAnnotation_AnnotatedEReference()
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEReference#getEReferenceAnnotations
+	 * @model opposite="eReferenceAnnotations" transient="false"
+	 * @generated
+	 */
   public AnnotatedEReference getAnnotatedEReference() {
-    if (eContainerFeatureID() != AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE) return null;
-    return (AnnotatedEReference)eContainer();
-  }
+		if (eContainerFeatureID() != AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE) return null;
+		return (AnnotatedEReference)eContainer();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public NotificationChain basicSetAnnotatedEReference(AnnotatedEReference newAnnotatedEReference,
       NotificationChain msgs) {
-    msgs = eBasicSetContainer((InternalEObject)newAnnotatedEReference, AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE, msgs);
-    return msgs;
-  }
+		msgs = eBasicSetContainer((InternalEObject)newAnnotatedEReference, AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE, msgs);
+		return msgs;
+	}
 
   /**
-   * Sets the value of the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation#getAnnotatedEReference <em>Annotated EReference</em>}' container reference.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param value the new value of the '<em>Annotated EReference</em>' container reference.
-   * @see #getAnnotatedEReference()
-   * @generated
-   */
+	 * Sets the value of the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation#getAnnotatedEReference <em>Annotated EReference</em>}' container reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Annotated EReference</em>' container reference.
+	 * @see #getAnnotatedEReference()
+	 * @generated
+	 */
   public void setAnnotatedEReference(AnnotatedEReference newAnnotatedEReference) {
-    if (newAnnotatedEReference != eInternalContainer() || (eContainerFeatureID() != AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE && newAnnotatedEReference != null)) {
-      if (EcoreUtil.isAncestor(this, newAnnotatedEReference))
-        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-      NotificationChain msgs = null;
-      if (eInternalContainer() != null)
-        msgs = eBasicRemoveFromContainer(msgs);
-      if (newAnnotatedEReference != null)
-        msgs = ((InternalEObject)newAnnotatedEReference).eInverseAdd(this, AnnotationsmodelPackage.ANNOTATED_EREFERENCE__EREFERENCE_ANNOTATIONS, AnnotatedEReference.class, msgs);
-      msgs = basicSetAnnotatedEReference(newAnnotatedEReference, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE, newAnnotatedEReference, newAnnotatedEReference));
-  }
+		if (newAnnotatedEReference != eInternalContainer() || (eContainerFeatureID() != AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE && newAnnotatedEReference != null)) {
+			if (EcoreUtil.isAncestor(this, newAnnotatedEReference))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newAnnotatedEReference != null)
+				msgs = ((InternalEObject)newAnnotatedEReference).eInverseAdd(this, AnnotationsmodelPackage.ANNOTATED_EREFERENCE__EREFERENCE_ANNOTATIONS, AnnotatedEReference.class, msgs);
+			msgs = basicSetAnnotatedEReference(newAnnotatedEReference, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE, newAnnotatedEReference, newAnnotatedEReference));
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        if (eInternalContainer() != null)
-          msgs = eBasicRemoveFromContainer(msgs);
-        return basicSetAnnotatedEReference((AnnotatedEReference)otherEnd, msgs);
-    }
-    return super.eInverseAdd(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetAnnotatedEReference((AnnotatedEReference)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        return basicSetAnnotatedEReference(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				return basicSetAnnotatedEReference(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-    switch (eContainerFeatureID()) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        return eInternalContainer().eInverseRemove(this, AnnotationsmodelPackage.ANNOTATED_EREFERENCE__EREFERENCE_ANNOTATIONS, AnnotatedEReference.class, msgs);
-    }
-    return super.eBasicRemoveFromContainerFeature(msgs);
-  }
+		switch (eContainerFeatureID()) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				return eInternalContainer().eInverseRemove(this, AnnotationsmodelPackage.ANNOTATED_EREFERENCE__EREFERENCE_ANNOTATIONS, AnnotatedEReference.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__EREFERENCE:
-        if (resolve) return getEReference();
-        return basicGetEReference();
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        return getAnnotatedEReference();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__EREFERENCE:
+				if (resolve) return getEReference();
+				return basicGetEReference();
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				return getAnnotatedEReference();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        setAnnotatedEReference((AnnotatedEReference)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				setAnnotatedEReference((AnnotatedEReference)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        setAnnotatedEReference((AnnotatedEReference)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				setAnnotatedEReference((AnnotatedEReference)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__EREFERENCE:
-        return basicGetEReference() != null;
-      case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
-        return getAnnotatedEReference() != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__EREFERENCE:
+				return basicGetEReference() != null;
+			case AnnotationsmodelPackage.EREFERENCE_ANNOTATION__ANNOTATED_EREFERENCE:
+				return getAnnotatedEReference() != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   @Override
   public AnnotatedEStructuralFeature basicGetAnnotatedEFeature() {

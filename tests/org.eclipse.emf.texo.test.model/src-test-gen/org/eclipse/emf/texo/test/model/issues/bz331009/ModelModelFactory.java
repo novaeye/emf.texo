@@ -5,7 +5,6 @@ import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
@@ -697,36 +696,6 @@ public class ModelModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: PhoneType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertPhoneTypeToString(PhoneType value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: PhoneType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public PhoneType createPhoneTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return PhoneType.get(value);
-  }
-
-  /**
    * Converts the EDataType: SecretQuestionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
@@ -815,6 +784,36 @@ public class ModelModelFactory implements ModelFactory {
       return null;
     }
     return EventType.get(value);
+  }
+
+  /**
+   * Converts the EDataType: PhoneType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertPhoneTypeToString(PhoneType value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: PhoneType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public PhoneType createPhoneTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return PhoneType.get(value);
   }
 
   /**
@@ -1168,10 +1167,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimTariffModelObject<E extends SimTariff> extends AbstractModelObject<E> {
+  public static class SimTariffModelObject<E extends SimTariff> extends TariffModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getSimTariffEClass();
     }
@@ -1179,6 +1179,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1190,18 +1191,6 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ModelModelPackage.SIMTARIFF_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case ModelModelPackage.SIMTARIFF_ACTIVE_FEATURE_ID:
-        return getTarget().isActive();
-      case ModelModelPackage.SIMTARIFF_VOLUMEPAYMENTS_FEATURE_ID:
-        return getTarget().getVolumePayments();
-      case ModelModelPackage.SIMTARIFF_PERIODICALPAYMENTS_FEATURE_ID:
-        return getTarget().getPeriodicalPayments();
-      case ModelModelPackage.SIMTARIFF_INITIALPAYMENT_FEATURE_ID:
-        return getTarget().getInitialPayment();
-      case ModelModelPackage.SIMTARIFF_SERVICES_FEATURE_ID:
-        return getTarget().getServices();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -1213,12 +1202,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ModelModelPackage.SIMTARIFF_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case ModelModelPackage.SIMTARIFF_ACTIVE_FEATURE_ID:
-        getTarget().setActive((Boolean) value);
-        return;
       }
       super.eSet(eStructuralFeature, value);
     }
@@ -1230,7 +1213,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -1242,7 +1224,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -1430,10 +1411,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class VolumePaymentModelObject<E extends VolumePayment> extends AbstractModelObject<E> {
+  public static class VolumePaymentModelObject<E extends VolumePayment> extends PaymentItemModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getVolumePaymentEClass();
     }
@@ -1441,6 +1423,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1458,16 +1441,6 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getUnit();
       case ModelModelPackage.VOLUMEPAYMENT_PRICE_FEATURE_ID:
         return getTarget().getPrice();
-      case ModelModelPackage.VOLUMEPAYMENT_SUM_FEATURE_ID:
-        return getTarget().getSum();
-      case ModelModelPackage.VOLUMEPAYMENT_CURRENCY_FEATURE_ID:
-        return getTarget().getCurrency();
-      case ModelModelPackage.VOLUMEPAYMENT_DATE_FEATURE_ID:
-        return getTarget().getDate();
-      case ModelModelPackage.VOLUMEPAYMENT_DESCRIPTION_FEATURE_ID:
-        return getTarget().getDescription();
-      case ModelModelPackage.VOLUMEPAYMENT_PAYMENTTYPE_FEATURE_ID:
-        return getTarget().getPaymentType();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -1487,21 +1460,6 @@ public class ModelModelFactory implements ModelFactory {
         return;
       case ModelModelPackage.VOLUMEPAYMENT_PRICE_FEATURE_ID:
         getTarget().setPrice((BigDecimal) value);
-        return;
-      case ModelModelPackage.VOLUMEPAYMENT_SUM_FEATURE_ID:
-        getTarget().setSum((BigDecimal) value);
-        return;
-      case ModelModelPackage.VOLUMEPAYMENT_CURRENCY_FEATURE_ID:
-        getTarget().setCurrency((Currency) value);
-        return;
-      case ModelModelPackage.VOLUMEPAYMENT_DATE_FEATURE_ID:
-        getTarget().setDate((Date) value);
-        return;
-      case ModelModelPackage.VOLUMEPAYMENT_DESCRIPTION_FEATURE_ID:
-        getTarget().setDescription((String) value);
-        return;
-      case ModelModelPackage.VOLUMEPAYMENT_PAYMENTTYPE_FEATURE_ID:
-        getTarget().setPaymentType((PaymentType) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -1538,10 +1496,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PeriodicalPaymentModelObject<E extends PeriodicalPayment> extends AbstractModelObject<E> {
+  public static class PeriodicalPaymentModelObject<E extends PeriodicalPayment> extends PaymentItemModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPeriodicalPaymentEClass();
     }
@@ -1549,6 +1508,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1562,16 +1522,6 @@ public class ModelModelFactory implements ModelFactory {
       switch (featureID) {
       case ModelModelPackage.PERIODICALPAYMENT_PERIODICITY_FEATURE_ID:
         return getTarget().getPeriodicity();
-      case ModelModelPackage.PERIODICALPAYMENT_SUM_FEATURE_ID:
-        return getTarget().getSum();
-      case ModelModelPackage.PERIODICALPAYMENT_CURRENCY_FEATURE_ID:
-        return getTarget().getCurrency();
-      case ModelModelPackage.PERIODICALPAYMENT_DATE_FEATURE_ID:
-        return getTarget().getDate();
-      case ModelModelPackage.PERIODICALPAYMENT_DESCRIPTION_FEATURE_ID:
-        return getTarget().getDescription();
-      case ModelModelPackage.PERIODICALPAYMENT_PAYMENTTYPE_FEATURE_ID:
-        return getTarget().getPaymentType();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -1585,21 +1535,6 @@ public class ModelModelFactory implements ModelFactory {
       switch (featureID) {
       case ModelModelPackage.PERIODICALPAYMENT_PERIODICITY_FEATURE_ID:
         getTarget().setPeriodicity((Periodicity) value);
-        return;
-      case ModelModelPackage.PERIODICALPAYMENT_SUM_FEATURE_ID:
-        getTarget().setSum((BigDecimal) value);
-        return;
-      case ModelModelPackage.PERIODICALPAYMENT_CURRENCY_FEATURE_ID:
-        getTarget().setCurrency((Currency) value);
-        return;
-      case ModelModelPackage.PERIODICALPAYMENT_DATE_FEATURE_ID:
-        getTarget().setDate((Date) value);
-        return;
-      case ModelModelPackage.PERIODICALPAYMENT_DESCRIPTION_FEATURE_ID:
-        getTarget().setDescription((String) value);
-        return;
-      case ModelModelPackage.PERIODICALPAYMENT_PAYMENTTYPE_FEATURE_ID:
-        getTarget().setPaymentType((PaymentType) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -1635,10 +1570,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class OneTimePaymentModelObject<E extends OneTimePayment> extends AbstractModelObject<E> {
+  public static class OneTimePaymentModelObject<E extends OneTimePayment> extends PaymentItemModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getOneTimePaymentEClass();
     }
@@ -1646,6 +1582,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1657,16 +1594,6 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ModelModelPackage.ONETIMEPAYMENT_SUM_FEATURE_ID:
-        return getTarget().getSum();
-      case ModelModelPackage.ONETIMEPAYMENT_CURRENCY_FEATURE_ID:
-        return getTarget().getCurrency();
-      case ModelModelPackage.ONETIMEPAYMENT_DATE_FEATURE_ID:
-        return getTarget().getDate();
-      case ModelModelPackage.ONETIMEPAYMENT_DESCRIPTION_FEATURE_ID:
-        return getTarget().getDescription();
-      case ModelModelPackage.ONETIMEPAYMENT_PAYMENTTYPE_FEATURE_ID:
-        return getTarget().getPaymentType();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -1678,21 +1605,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ModelModelPackage.ONETIMEPAYMENT_SUM_FEATURE_ID:
-        getTarget().setSum((BigDecimal) value);
-        return;
-      case ModelModelPackage.ONETIMEPAYMENT_CURRENCY_FEATURE_ID:
-        getTarget().setCurrency((Currency) value);
-        return;
-      case ModelModelPackage.ONETIMEPAYMENT_DATE_FEATURE_ID:
-        getTarget().setDate((Date) value);
-        return;
-      case ModelModelPackage.ONETIMEPAYMENT_DESCRIPTION_FEATURE_ID:
-        getTarget().setDescription((String) value);
-        return;
-      case ModelModelPackage.ONETIMEPAYMENT_PAYMENTTYPE_FEATURE_ID:
-        getTarget().setPaymentType((PaymentType) value);
-        return;
       }
       super.eSet(eStructuralFeature, value);
     }
@@ -1704,7 +1616,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -1716,7 +1627,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -3136,10 +3046,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ClientTariffModelObject<E extends ClientTariff> extends AbstractModelObject<E> {
+  public static class ClientTariffModelObject<E extends ClientTariff> extends TariffModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getClientTariffEClass();
     }
@@ -3147,6 +3058,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3158,18 +3070,6 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ModelModelPackage.CLIENTTARIFF_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case ModelModelPackage.CLIENTTARIFF_ACTIVE_FEATURE_ID:
-        return getTarget().isActive();
-      case ModelModelPackage.CLIENTTARIFF_VOLUMEPAYMENTS_FEATURE_ID:
-        return getTarget().getVolumePayments();
-      case ModelModelPackage.CLIENTTARIFF_PERIODICALPAYMENTS_FEATURE_ID:
-        return getTarget().getPeriodicalPayments();
-      case ModelModelPackage.CLIENTTARIFF_INITIALPAYMENT_FEATURE_ID:
-        return getTarget().getInitialPayment();
-      case ModelModelPackage.CLIENTTARIFF_SERVICES_FEATURE_ID:
-        return getTarget().getServices();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -3181,12 +3081,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ModelModelPackage.CLIENTTARIFF_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case ModelModelPackage.CLIENTTARIFF_ACTIVE_FEATURE_ID:
-        getTarget().setActive((Boolean) value);
-        return;
       }
       super.eSet(eStructuralFeature, value);
     }
@@ -3198,7 +3092,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -3210,7 +3103,6 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-
       }
       super.eAddTo(eStructuralFeature, value);
     }

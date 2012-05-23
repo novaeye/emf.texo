@@ -40,174 +40,174 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.EStructuralFeatureAnnot
  */
 public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
   /**
-   * The cached model package.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * The cached model package.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected static AnnotationsmodelPackage modelPackage;
 
   /**
-   * Creates an instance of the adapter factory.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public AnnotationsmodelAdapterFactory() {
-    if (modelPackage == null) {
-      modelPackage = AnnotationsmodelPackage.eINSTANCE;
-    }
-  }
+		if (modelPackage == null) {
+			modelPackage = AnnotationsmodelPackage.eINSTANCE;
+		}
+	}
 
   /**
-   * Returns whether this factory is applicable for the type of the object.
-   * <!-- begin-user-doc --> This implementation
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc --> This implementation
    * returns <code>true</code> if the object is either the model's package or is an instance object of the model. <!--
    * end-user-doc -->
-   * @return whether this factory is applicable for the type of the object.
-   * @generated
-   */
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
   @Override
   public boolean isFactoryForType(Object object) {
-    if (object == modelPackage) {
-      return true;
-    }
-    if (object instanceof EObject) {
-      return ((EObject)object).eClass().getEPackage() == modelPackage;
-    }
-    return false;
-  }
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
 
   /**
-   * The switch that delegates to the <code>createXXX</code> methods.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected AnnotationsmodelSwitch<Adapter> modelSwitch = new AnnotationsmodelSwitch<Adapter>() {
-      @Override
-      public Adapter caseENamedElementAnnotation(ENamedElementAnnotation object) {
-        return createENamedElementAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEClassifierAnnotation(EClassifierAnnotation object) {
-        return createEClassifierAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEClassAnnotation(EClassAnnotation object) {
-        return createEClassAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEDataTypeAnnotation(EDataTypeAnnotation object) {
-        return createEDataTypeAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEStructuralFeatureAnnotation(EStructuralFeatureAnnotation object) {
-        return createEStructuralFeatureAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEPackageAnnotation(EPackageAnnotation object) {
-        return createEPackageAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEReferenceAnnotation(EReferenceAnnotation object) {
-        return createEReferenceAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEAttributeAnnotation(EAttributeAnnotation object) {
-        return createEAttributeAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEEnumAnnotation(EEnumAnnotation object) {
-        return createEEnumAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseEEnumLiteralAnnotation(EEnumLiteralAnnotation object) {
-        return createEEnumLiteralAnnotationAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEClass(AnnotatedEClass object) {
-        return createAnnotatedEClassAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEStructuralFeature(AnnotatedEStructuralFeature object) {
-        return createAnnotatedEStructuralFeatureAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEPackage(AnnotatedEPackage object) {
-        return createAnnotatedEPackageAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEClassifier(AnnotatedEClassifier object) {
-        return createAnnotatedEClassifierAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEDataType(AnnotatedEDataType object) {
-        return createAnnotatedEDataTypeAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedModel(AnnotatedModel object) {
-        return createAnnotatedModelAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedENamedElement(AnnotatedENamedElement object) {
-        return createAnnotatedENamedElementAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEEnum(AnnotatedEEnum object) {
-        return createAnnotatedEEnumAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEReference(AnnotatedEReference object) {
-        return createAnnotatedEReferenceAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEAttribute(AnnotatedEAttribute object) {
-        return createAnnotatedEAttributeAdapter();
-      }
-      @Override
-      public Adapter caseAnnotatedEEnumLiteral(AnnotatedEEnumLiteral object) {
-        return createAnnotatedEEnumLiteralAdapter();
-      }
-      @Override
-      public Adapter defaultCase(EObject object) {
-        return createEObjectAdapter();
-      }
-    };
+			@Override
+			public Adapter caseENamedElementAnnotation(ENamedElementAnnotation object) {
+				return createENamedElementAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEClassifierAnnotation(EClassifierAnnotation object) {
+				return createEClassifierAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEClassAnnotation(EClassAnnotation object) {
+				return createEClassAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEDataTypeAnnotation(EDataTypeAnnotation object) {
+				return createEDataTypeAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEStructuralFeatureAnnotation(EStructuralFeatureAnnotation object) {
+				return createEStructuralFeatureAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEPackageAnnotation(EPackageAnnotation object) {
+				return createEPackageAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEReferenceAnnotation(EReferenceAnnotation object) {
+				return createEReferenceAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEAttributeAnnotation(EAttributeAnnotation object) {
+				return createEAttributeAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEEnumAnnotation(EEnumAnnotation object) {
+				return createEEnumAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseEEnumLiteralAnnotation(EEnumLiteralAnnotation object) {
+				return createEEnumLiteralAnnotationAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEClass(AnnotatedEClass object) {
+				return createAnnotatedEClassAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEStructuralFeature(AnnotatedEStructuralFeature object) {
+				return createAnnotatedEStructuralFeatureAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEPackage(AnnotatedEPackage object) {
+				return createAnnotatedEPackageAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEClassifier(AnnotatedEClassifier object) {
+				return createAnnotatedEClassifierAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEDataType(AnnotatedEDataType object) {
+				return createAnnotatedEDataTypeAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedModel(AnnotatedModel object) {
+				return createAnnotatedModelAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedENamedElement(AnnotatedENamedElement object) {
+				return createAnnotatedENamedElementAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEEnum(AnnotatedEEnum object) {
+				return createAnnotatedEEnumAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEReference(AnnotatedEReference object) {
+				return createAnnotatedEReferenceAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEAttribute(AnnotatedEAttribute object) {
+				return createAnnotatedEAttributeAdapter();
+			}
+			@Override
+			public Adapter caseAnnotatedEEnumLiteral(AnnotatedEEnumLiteral object) {
+				return createAnnotatedEEnumLiteralAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
 
   /**
-   * Creates an adapter for the <code>target</code>.
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param target the object to adapt.
-   * @return the adapter for the <code>target</code>.
-   * @generated
-   */
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
   @Override
   public Adapter createAdapter(Notifier target) {
-    return modelSwitch.doSwitch((EObject)target);
-  }
+		return modelSwitch.doSwitch((EObject)target);
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation <em>ENamed Element Annotation</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation <em>ENamed Element Annotation</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we
    * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
    * end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation
+	 * @generated
+	 */
   public Adapter createENamedElementAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation <em>EClassifier Annotation</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation <em>EClassifier Annotation</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation
+	 * @generated
+	 */
   public Adapter createEClassifierAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -220,8 +220,8 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createEClassAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -234,21 +234,21 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createEDataTypeAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EStructuralFeatureAnnotation <em>EStructural Feature Annotation</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EStructuralFeatureAnnotation <em>EStructural Feature Annotation</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that
    * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
    * end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.EStructuralFeatureAnnotation
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.EStructuralFeatureAnnotation
+	 * @generated
+	 */
   public Adapter createEStructuralFeatureAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -261,32 +261,32 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createEPackageAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation <em>EReference Annotation</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation <em>EReference Annotation</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation
+	 * @generated
+	 */
   public Adapter createEReferenceAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation <em>EAttribute Annotation</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation <em>EAttribute Annotation</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.EAttributeAnnotation
+	 * @generated
+	 */
   public Adapter createEAttributeAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -299,20 +299,20 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createEEnumAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EEnumLiteralAnnotation <em>EEnum Literal Annotation</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EEnumLiteralAnnotation <em>EEnum Literal Annotation</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
    * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.EEnumLiteralAnnotation
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.EEnumLiteralAnnotation
+	 * @generated
+	 */
   public Adapter createEEnumLiteralAnnotationAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -325,21 +325,21 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedEClassAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature <em>Annotated EStructural Feature</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature <em>Annotated EStructural Feature</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that
    * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
    * end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature
+	 * @generated
+	 */
   public Adapter createAnnotatedEStructuralFeatureAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -352,20 +352,20 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedEPackageAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEClassifier <em>Annotated EClassifier</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEClassifier <em>Annotated EClassifier</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEClassifier
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEClassifier
+	 * @generated
+	 */
   public Adapter createAnnotatedEClassifierAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -378,8 +378,8 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedEDataTypeAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -392,20 +392,20 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedModelAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedENamedElement <em>Annotated ENamed Element</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedENamedElement <em>Annotated ENamed Element</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
    * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedENamedElement
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedENamedElement
+	 * @generated
+	 */
   public Adapter createAnnotatedENamedElementAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -418,8 +418,8 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedEEnumAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -432,8 +432,8 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedEReferenceAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
    * Creates a new adapter for an object of class '
@@ -446,30 +446,30 @@ public class AnnotationsmodelAdapterFactory extends AdapterFactoryImpl {
    * @generated
    */
   public Adapter createAnnotatedEAttributeAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEEnumLiteral <em>Annotated EEnum Literal</em>}'.
-   * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEEnumLiteral <em>Annotated EEnum Literal</em>}'.
+	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEEnumLiteral
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEEnumLiteral
+	 * @generated
+	 */
   public Adapter createAnnotatedEEnumLiteralAdapter() {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for the default case.
-   * <!-- begin-user-doc --> This default implementation returns null. <!--
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc --> This default implementation returns null. <!--
    * end-user-doc -->
-   * @return the new adapter.
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @generated
+	 */
   public Adapter createEObjectAdapter() {
-    return null;
-  }
+		return null;
+	}
 
 } // AnnotationsmodelAdapterFactory

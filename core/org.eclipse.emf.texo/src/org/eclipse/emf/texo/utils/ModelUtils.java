@@ -374,6 +374,16 @@ public class ModelUtils {
         && name.compareTo(":mixed") == 0; //$NON-NLS-1$
   }
 
+  /** Returns true if the eclass has a mixed efeature */
+  public static boolean hasMixedEFeature(EClass eClass) {
+    for (EStructuralFeature eFeature : eClass.getEAllStructuralFeatures()) {
+      if (isMixed(eFeature)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   /**
    * Returns true if the {@link EModelElement} has an {@link EAnnotation} with source
    * {@link ModelConstants#EANNOTATION_SOURCE} and the passed in annotionKey.

@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -11,6 +13,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>RootType.myComplexAbstractGroup</b></em>'. <!-- begin-user-doc -->
@@ -19,7 +22,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "RootType_myComplexAbstractGroup")
-public class RootTypeMyComplexAbstractGroupFeatureGroup {
+public class RootTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -138,6 +141,7 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ComplexAAA.class)
   @JoinColumns({ @JoinColumn() })
+  @Access(AccessType.FIELD)
   private ComplexAAA myComplexAbstract;
 
   /**

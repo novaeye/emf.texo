@@ -6,11 +6,13 @@
  */
 package org.eclipse.emf.texo.annotations.annotationsmodel;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.ENamedElement;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object ' <em><b>EStructural Feature Annotation</b></em>'. <!--
@@ -29,21 +31,21 @@ import org.eclipse.emf.ecore.InternalEObject;
  */
 public abstract class EStructuralFeatureAnnotation extends ENamedElementAnnotation {
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   protected EStructuralFeatureAnnotation() {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass() {
-    return AnnotationsmodelPackage.Literals.ESTRUCTURAL_FEATURE_ANNOTATION;
-  }
+		return AnnotationsmodelPackage.Literals.ESTRUCTURAL_FEATURE_ANNOTATION;
+	}
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -56,22 +58,22 @@ public abstract class EStructuralFeatureAnnotation extends ENamedElementAnnotati
   }
 
   /**
-   * Returns the value of the '<em><b>EStructural Feature</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>EStructural Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>EStructural Feature</em>' reference isn't clear, there really should be more of a
    * description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>EStructural Feature</em>' reference.
-   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEStructuralFeatureAnnotation_EStructuralFeature()
-   * @model required="true" transient="true" changeable="false" volatile="true"
-   * @generated
-   */
+	 * @return the value of the '<em>EStructural Feature</em>' reference.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getEStructuralFeatureAnnotation_EStructuralFeature()
+	 * @model required="true" transient="true" changeable="false" volatile="true"
+	 * @generated
+	 */
   public EStructuralFeature getEStructuralFeature() {
-    EStructuralFeature eStructuralFeature = basicGetEStructuralFeature();
-    return eStructuralFeature != null && eStructuralFeature.eIsProxy() ? (EStructuralFeature)eResolveProxy((InternalEObject)eStructuralFeature) : eStructuralFeature;
-  }
+		EStructuralFeature eStructuralFeature = basicGetEStructuralFeature();
+		return eStructuralFeature != null && eStructuralFeature.eIsProxy() ? (EStructuralFeature)eResolveProxy((InternalEObject)eStructuralFeature) : eStructuralFeature;
+	}
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -109,29 +111,29 @@ public abstract class EStructuralFeatureAnnotation extends ENamedElementAnnotati
   public abstract AnnotatedEStructuralFeature basicGetAnnotatedEFeature();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ESTRUCTURAL_FEATURE_ANNOTATION__ESTRUCTURAL_FEATURE:
-        if (resolve) return getEStructuralFeature();
-        return basicGetEStructuralFeature();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ESTRUCTURAL_FEATURE_ANNOTATION__ESTRUCTURAL_FEATURE:
+				if (resolve) return getEStructuralFeature();
+				return basicGetEStructuralFeature();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @generated
-   */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID) {
-    switch (featureID) {
-      case AnnotationsmodelPackage.ESTRUCTURAL_FEATURE_ANNOTATION__ESTRUCTURAL_FEATURE:
-        return basicGetEStructuralFeature() != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case AnnotationsmodelPackage.ESTRUCTURAL_FEATURE_ANNOTATION__ESTRUCTURAL_FEATURE:
+				return basicGetEStructuralFeature() != null;
+		}
+		return super.eIsSet(featureID);
+	}
 } // EStructuralFeatureAnnotation

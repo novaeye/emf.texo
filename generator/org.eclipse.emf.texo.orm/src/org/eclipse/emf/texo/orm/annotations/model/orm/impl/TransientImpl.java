@@ -155,12 +155,12 @@ public class TransientImpl extends BaseOrmAnnotationImpl implements Transient {
 	}
 
   @Override
-  public String getJavaAnnotation() {
+  public String getJavaAnnotation(String identifier) {
     final List<EStructuralFeature> features = new ArrayList<EStructuralFeature>();
     // add any other feature to prevent other stuff from being exported
     features.add(OrmPackage.eINSTANCE.getBasic_Fetch());
 
-    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true);
+    return ORMJavaAnnotationGenerator.getInstance().generateJavaAnnotation(this, features, true, identifier);
   }
 
 } // TransientImpl

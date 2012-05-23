@@ -7,6 +7,7 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,7 +15,7 @@ import javax.persistence.TemporalType;
  * @generated
  */
 @Entity(name = "Item")
-public class Item {
+public class Item extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

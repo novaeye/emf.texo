@@ -81,6 +81,7 @@ public class TestModel {
     urls.add("schemaconstructs/EcoreAttrs.xsd");//$NON-NLS-1$
     urls.add("schemaconstructs/emap.xsd");//$NON-NLS-1$
     urls.add("schemaconstructs/GroupAll.xsd");//$NON-NLS-1$
+    urls.add("schemaconstructs/include.xsd");//$NON-NLS-1$
     urls.add("schemaconstructs/List.xsd");//$NON-NLS-1$
     urls.add("schemaconstructs/ListUnion.xsd");//$NON-NLS-1$
     urls.add("schemaconstructs/Mixed.xsd");//$NON-NLS-1$
@@ -105,6 +106,7 @@ public class TestModel {
     urls.add("issues/bz378642.xsd"); //$NON-NLS-1$
     urls.add("issues/bz379796.xsd"); //$NON-NLS-1$
     urls.add("issues/bz379815.ecore"); //$NON-NLS-1$
+    urls.add("issues/SubPackage.ecore"); //$NON-NLS-1$
 
     urls.add("texo/TexoDataRequest.xsd");//$NON-NLS-1$
     urls.add("texo/TexoDataResponse.xsd");//$NON-NLS-1$

@@ -229,20 +229,20 @@ public class ManyTypes extends Identifiable {
    * @return the value of '<em><b>long</b></em>' feature
    * @generated
    */
-  public Set<Long> getLong() {
+  public Set<Long> getLong_() {
     return long_;
   }
 
   /**
-   * Sets the '{@link ManyTypes#getLong() <em>long</em>}' feature.
+   * Sets the '{@link ManyTypes#getLong_() <em>long</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link ManyTypes#getLong() long}' feature.
+   *          new value of the '{@link ManyTypes#getLong_() long}' feature.
    * @generated
    */
-  public void setLong(Set<Long> newLong_) {
+  public void setLong_(Set<Long> newLong_) {
     long_ = newLong_;
   }
 
@@ -454,20 +454,20 @@ public class ManyTypes extends Identifiable {
    * @return the value of '<em><b>enum</b></em>' feature
    * @generated
    */
-  public List<TestEnum> getEnum() {
+  public List<TestEnum> getEnum_() {
     return enum_;
   }
 
   /**
-   * Sets the '{@link ManyTypes#getEnum() <em>enum</em>}' feature.
+   * Sets the '{@link ManyTypes#getEnum_() <em>enum</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link ManyTypes#getEnum() enum}' feature.
+   *          new value of the '{@link ManyTypes#getEnum_() enum}' feature.
    * @generated
    */
-  public void setEnum(List<TestEnum> newEnum_) {
+  public void setEnum_(List<TestEnum> newEnum_) {
     enum_ = newEnum_;
   }
 

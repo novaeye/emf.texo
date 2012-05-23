@@ -29,8 +29,10 @@ import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.generator.Annotator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
+import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EAttributeModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Column;
@@ -39,6 +41,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Id;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Lob;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
@@ -69,6 +72,12 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
   public void setAnnotationFeatures(EAttributeORMAnnotation annotation) {
 
     final EAttribute eAttribute = annotation.getEAttribute();
+
+    final EClass eClass = eAttribute.getEContainingClass();
+    if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
+      return;
+    }
+
     final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eAttribute.getEContainingClass().getEPackage());
     if (eAttribute.getEAttributeType() instanceof EEnum) {
       copyAnnotationsFromEEnum(annotation);
@@ -91,6 +100,10 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         id.setName(getName(eAttribute));
       }
 
+      if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+        id.setAccess(AccessType.PROPERTY);
+      }
+
       return;
     }
 
@@ -100,6 +113,11 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       if (GeneratorUtils.isEmptyOrNull(version.getName())) {
         version.setName(getName(eAttribute));
       }
+
+      if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+        version.setAccess(AccessType.PROPERTY);
+      }
+
       return;
     }
 
@@ -116,14 +134,13 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
 
     if (FeatureMapUtil.isFeatureMap(eAttribute)) {
-      if (annotation.getOneToMany() == null) {
-        annotation.setOneToMany(OrmFactory.eINSTANCE.createOneToMany());
-      }
 
       if (annotation.getFeatureMapEntity() == null) {
         annotation.setFeatureMapEntity(OrmFactory.eINSTANCE.createEntity());
       }
+
       final Entity featureMapEntity = annotation.getFeatureMapEntity();
+
       if (GeneratorUtils.isEmptyOrNull(featureMapEntity.getClass_())) {
         featureMapEntity.setClass(eAttributeModelGen.getFeatureMapQualifiedClassName());
       }
@@ -131,14 +148,28 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         featureMapEntity.setName(namingStrategy.getFeatureMapEntityName(eAttribute));
       }
 
-      final OneToMany oneToMany = annotation.getOneToMany();
-      oneToMany.setTargetEntity(eAttributeModelGen.getFeatureMapQualifiedClassName());
-      oneToMany.setCascade(OrmFactory.eINSTANCE.createCascadeType());
-      oneToMany.setOrphanRemoval(true);
-      oneToMany.getCascade().setCascadeAll(OrmFactory.eINSTANCE.createEmptyType());
-      oneToMany.setJoinTable(OrmFactory.eINSTANCE.createJoinTable());
-      oneToMany.setOrphanRemoval(true);
-      oneToMany.setName(getName(eAttribute));
+      if (isPartOfFeatureMap && FeatureMapUtil.isFeatureMap(eAttribute)) {
+        if (annotation.getManyToOne() == null) {
+          annotation.setManyToOne(OrmFactory.eINSTANCE.createManyToOne());
+        }
+        final ManyToOne ManyToOne = annotation.getManyToOne();
+        ManyToOne.setTargetEntity(eAttributeModelGen.getFeatureMapQualifiedClassName());
+        ManyToOne.setCascade(OrmFactory.eINSTANCE.createCascadeType());
+        ManyToOne.getCascade().setCascadeAll(OrmFactory.eINSTANCE.createEmptyType());
+        ManyToOne.setName(getName(eAttribute));
+      } else {
+        if (annotation.getOneToMany() == null) {
+          annotation.setOneToMany(OrmFactory.eINSTANCE.createOneToMany());
+        }
+        final OneToMany OneToMany = annotation.getOneToMany();
+        OneToMany.setTargetEntity(eAttributeModelGen.getFeatureMapQualifiedClassName());
+        OneToMany.setCascade(OrmFactory.eINSTANCE.createCascadeType());
+        OneToMany.setOrphanRemoval(true);
+        OneToMany.getCascade().setCascadeAll(OrmFactory.eINSTANCE.createEmptyType());
+        OneToMany.setJoinTable(OrmFactory.eINSTANCE.createJoinTable());
+        OneToMany.setName(getName(eAttribute));
+      }
+
       return;
     }
 
@@ -221,6 +252,12 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       if (GeneratorUtils.isEmptyOrNull(elementCollection.getName())) {
         elementCollection.setName(getName(eAttribute));
       }
+
+      // make the access field if not changeable, as there won't be a setter
+      if (!eAttribute.isChangeable()) {
+        elementCollection.setAccess(AccessType.FIELD);
+      }
+
       return;
     }
 
@@ -230,6 +267,13 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       annotation.setBasic(OrmFactory.eINSTANCE.createBasic());
     }
     final Basic basic = annotation.getBasic();
+
+    // make the access field if not changeable, as there won't be a setter
+    if (!eAttribute.isChangeable()) {
+      basic.setAccess(AccessType.FIELD);
+    } else if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+      basic.setAccess(AccessType.PROPERTY);
+    }
 
     if (GeneratorUtils.isEmptyOrNull(basic.getName())) {
       basic.setName(getName(eAttribute));
