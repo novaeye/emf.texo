@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz379796.PriceType" name="PriceType">
+    <orm:attributes>
+      <orm:basic name="valueElement" optional="true"/>
+      <orm:basic name="nillableValueElement" optional="false"/>
+      <orm:basic name="requiredValueElement" optional="false"/>
+      <orm:basic name="comparisonElement" optional="true"/>
+      <orm:basic name="requiredComparisonElement" optional="false"/>
+      <orm:basic name="comparison" optional="true"/>
+      <orm:basic name="requiredComparison" optional="false"/>
+      <orm:basic name="requiredValue" optional="false"/>
+      <orm:basic name="value" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

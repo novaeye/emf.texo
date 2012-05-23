@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.subpackage.MainType" name="MainType">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.subpackage.sub1.Sub1Type" name="Sub1Type">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.subpackage.sub2.Sub2Type" name="Sub2Type">
+    <orm:attributes>
+      <orm:basic name="name" optional="true"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include1" name="Include1">
+    <orm:attributes>
+      <orm:basic name="code" optional="false"/>
+      <orm:many-to-one name="include2" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include2">
+        <orm:join-column/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include2" name="Include2">
+    <orm:attributes>
+      <orm:basic name="code" optional="false"/>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>
