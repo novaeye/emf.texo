@@ -26,7 +26,7 @@ public class RentalCar extends RentalUnit {
    * 
    * @generated
    */
-  @OneToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalCarDriver.class)
+  @OneToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private RentalCarDriver currentDriver = null;
 
   /**

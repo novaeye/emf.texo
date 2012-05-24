@@ -19,7 +19,7 @@ public class SimCard extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String phoneNumber = null;
 
   /**
@@ -27,7 +27,7 @@ public class SimCard extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String number = null;
 
   /**

@@ -132,7 +132,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String speaker;
 
   /**
@@ -140,7 +140,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String line;
 
   /**
@@ -148,7 +148,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String stageDirections;
 
   /**

@@ -7,19 +7,26 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexAAA" name="ComplexAAA">
+    <orm:table name="ComplexAAA"/>
     <orm:attributes>
-      <orm:basic name="value" optional="false"/>
+      <orm:basic name="value" optional="false">
+        <orm:column name="value"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType" name="ComplexEvenType">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexOddType" name="ComplexOddType">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="RootType_myAbstractGroup">
     <orm:attributes>
-      <orm:basic access="FIELD" name="myAbstract" optional="false"/>
+      <orm:basic access="FIELD" name="myAbstract" optional="false">
+        <orm:column name="myAbstract"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
@@ -30,8 +37,8 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexAAA">
-        <orm:join-column/>
+      <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false">
+        <orm:join-column name="myComplexAbstract"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -39,6 +46,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootType" name="RootType">
+    <orm:table name="RootType"/>
     <orm:attributes>
       <orm:one-to-many name="myAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup">
         <orm:join-table/>

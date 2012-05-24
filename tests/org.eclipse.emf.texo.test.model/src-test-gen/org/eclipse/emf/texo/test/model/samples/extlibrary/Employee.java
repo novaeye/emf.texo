@@ -2,8 +2,6 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
 /**
@@ -19,8 +17,7 @@ public class Employee extends Person {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Employee.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Employee manager = null;
 
   /**

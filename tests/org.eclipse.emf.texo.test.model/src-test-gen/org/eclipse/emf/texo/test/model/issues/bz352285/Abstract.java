@@ -17,7 +17,7 @@ public class Abstract extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**

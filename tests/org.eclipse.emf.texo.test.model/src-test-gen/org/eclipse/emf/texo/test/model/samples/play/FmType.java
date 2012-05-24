@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -22,7 +21,6 @@ public class FmType extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "FmType_p")
   private List<String> p = new ArrayList<String>();
 

@@ -10,7 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -28,9 +27,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Item.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<Item> items = new ArrayList<Item>();
 
   /**
@@ -38,8 +35,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = Address.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Address billTo = null;
 
   /**
@@ -47,8 +43,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Address.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL })
   private Address shipTo = null;
 
   /**
@@ -56,7 +51,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String comment = null;
 
   /**
@@ -64,7 +59,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date orderDate = null;
 
@@ -73,7 +68,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private OrderStatus status = OrderStatus.PENDING;
 
   /**
@@ -81,7 +76,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Customer.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn() })
   private Customer customer = null;
 
@@ -90,8 +85,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = PurchaseOrder.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private PurchaseOrder previousOrder = null;
 
   /**

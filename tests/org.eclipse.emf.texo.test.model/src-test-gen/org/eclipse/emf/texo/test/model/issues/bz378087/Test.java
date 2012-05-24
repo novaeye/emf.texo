@@ -17,7 +17,7 @@ public class Test extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String class_ = null;
 
   /**

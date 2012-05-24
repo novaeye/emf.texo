@@ -4,8 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
@@ -23,8 +21,7 @@ public abstract class AbstractBuildElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractBuildRelationship.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractBuildRelationship> buildRelation = new HashSet<AbstractBuildRelationship>();
 
   /**

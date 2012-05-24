@@ -5,8 +5,6 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.Element;
 
@@ -23,8 +21,7 @@ public class Stereotype extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = TagDefinition.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<TagDefinition> tag = new HashSet<TagDefinition>();
 
   /**
@@ -32,7 +29,7 @@ public class Stereotype extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -40,7 +37,7 @@ public class Stereotype extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String type = null;
 
   /**

@@ -10,7 +10,6 @@ import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -42,7 +41,7 @@ public class Topic extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Member.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn() })
   private Member creator = null;
 
@@ -51,9 +50,8 @@ public class Topic extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Post.class)
-  @OrderColumn()
-  @JoinTable(name = "Topic_posts")
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinTable()
   private List<Post> posts = new ArrayList<Post>();
 
   /**

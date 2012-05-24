@@ -6,12 +6,8 @@ import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.action.EntryFlow;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 import org.eclipse.modisco.kdm.source.SourceRef;
@@ -30,8 +26,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
   /**
@@ -39,8 +34,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = CommentUnit.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<CommentUnit> comment = new HashSet<CommentUnit>();
 
   /**
@@ -48,8 +42,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeRelationship.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractCodeRelationship> codeRelation = new HashSet<AbstractCodeRelationship>();
 
   /**
@@ -57,9 +50,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = EntryFlow.class)
-  @OrderColumn()
-  @JoinTable(name = "AbstractCodeElement_entryFlow")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private List<EntryFlow> entryFlow = new ArrayList<EntryFlow>();
 
   /**

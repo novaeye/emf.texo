@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>CompositeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -22,9 +19,7 @@ public class CompositeType extends Datatype {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ItemUnit.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<ItemUnit> itemUnit = new ArrayList<ItemUnit>();
 
   /**

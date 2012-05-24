@@ -7,18 +7,21 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.AuthorsType" name="AuthorsType">
+    <orm:table name="AuthorsType"/>
     <orm:attributes>
       <orm:element-collection name="authorName">
-        <orm:order-column/>
-        <orm:collection-table name="AuthorsType_authorName"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="AuthorsType_authorName">
+          <orm:join-column name="AuthorsType_id"/>
+        </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.BooksType" name="BooksType">
+    <orm:table name="BooksType"/>
     <orm:attributes>
-      <orm:one-to-many name="book" target-entity="org.eclipse.emf.texo.test.model.samples.sunbooks.BookType">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="book">
+        <orm:join-column name="BooksType_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -26,24 +29,38 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.BookType" name="BookType">
+    <orm:table name="BookType"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
-      <orm:basic name="iSBN" optional="false"/>
-      <orm:basic name="price" optional="false"/>
-      <orm:basic name="description" optional="true"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="iSBN" optional="false">
+        <orm:column name="iSBN"/>
+      </orm:basic>
+      <orm:basic name="price" optional="false">
+        <orm:column name="price"/>
+      </orm:basic>
+      <orm:basic name="description">
+        <orm:column name="description"/>
+      </orm:basic>
       <orm:basic name="publicationDate" optional="false">
+        <orm:column name="publicationDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="bookCategory" optional="false"/>
-      <orm:basic name="itemId" optional="true"/>
-      <orm:many-to-one name="authors" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.sunbooks.AuthorsType">
-        <orm:join-column/>
+      <orm:basic name="bookCategory" optional="false">
+        <orm:column name="bookCategory"/>
+      </orm:basic>
+      <orm:basic name="itemId">
+        <orm:column name="itemId"/>
+      </orm:basic>
+      <orm:many-to-one name="authors" optional="false">
+        <orm:join-column name="authors"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="promotion" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.sunbooks.PromotionType">
-        <orm:join-column/>
+      <orm:many-to-one name="promotion" optional="false">
+        <orm:join-column name="promotion"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -51,15 +68,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.PromotionType" name="PromotionType">
+    <orm:table name="PromotionType"/>
     <orm:attributes>
-      <orm:basic name="discount" optional="true"/>
-      <orm:basic name="none" optional="true"/>
+      <orm:basic name="discount">
+        <orm:column name="discount"/>
+      </orm:basic>
+      <orm:basic name="none">
+        <orm:column name="none"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.CollectionType" name="CollectionType">
+    <orm:table name="CollectionType"/>
     <orm:attributes>
-      <orm:many-to-one name="books" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.sunbooks.BooksType">
-        <orm:join-column/>
+      <orm:many-to-one name="books" optional="false">
+        <orm:join-column name="books"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

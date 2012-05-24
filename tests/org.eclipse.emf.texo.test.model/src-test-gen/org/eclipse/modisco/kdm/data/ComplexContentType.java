@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>ComplexContentType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -23,9 +20,7 @@ public class ComplexContentType extends AbstractContentElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractContentElement.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<AbstractContentElement> contentElement = new ArrayList<AbstractContentElement>();
 
   /**

@@ -5,9 +5,6 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.action.ActionElement;
@@ -25,7 +22,7 @@ public class DataAction extends AbstractDataElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**
@@ -33,8 +30,7 @@ public class DataAction extends AbstractDataElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ActionElement.class)
-  @JoinTable(name = "DataAction_implementation")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<ActionElement> implementation = new HashSet<ActionElement>();
 
   /**
@@ -42,8 +38,7 @@ public class DataAction extends AbstractDataElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DataEvent.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<DataEvent> dataElement = new HashSet<DataEvent>();
 
   /**

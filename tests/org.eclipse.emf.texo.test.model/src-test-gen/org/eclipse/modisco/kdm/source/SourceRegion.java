@@ -3,8 +3,6 @@ package org.eclipse.modisco.kdm.source;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.modisco.kdm.core.Element;
 
@@ -21,8 +19,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = SourceFile.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private SourceFile file = null;
 
   /**
@@ -30,7 +27,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer startLine = null;
 
   /**
@@ -38,7 +35,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer startPosition = null;
 
   /**
@@ -46,7 +43,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer endLine = null;
 
   /**
@@ -54,7 +51,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer endPosition = null;
 
   /**
@@ -62,7 +59,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String language = null;
 
   /**
@@ -70,7 +67,7 @@ public class SourceRegion extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String path = null;
 
   /**

@@ -7,11 +7,14 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.datetime.TestDate" name="TestDate">
+    <orm:table name="TestDate"/>
     <orm:attributes>
       <orm:basic name="date" optional="false">
+        <orm:column name="date"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
       <orm:basic name="datetime" optional="false">
+        <orm:column name="datetime"/>
         <orm:temporal>TIMESTAMP</orm:temporal>
       </orm:basic>
     </orm:attributes>

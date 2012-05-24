@@ -7,19 +7,24 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.instanceclassset.MySerializableClass" name="MySerializableClass">
+    <orm:table name="MySerializableClass"/>
     <orm:attributes>
-      <orm:basic name="somethingInteresting" optional="true"/>
-      <orm:many-to-one name="nonEMF" optional="true" target-entity="org.eclipse.emf.texo.test.model.instanceclassset.NonEMF">
-        <orm:join-column/>
+      <orm:basic name="somethingInteresting">
+        <orm:column name="somethingInteresting"/>
+      </orm:basic>
+      <orm:many-to-one name="nonEMF">
+        <orm:join-column name="nonEMF"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-many name="nonEMFs" target-entity="org.eclipse.emf.texo.test.model.instanceclassset.NonEMF">
-        <orm:order-column/>
-        <orm:join-table name="MySerializableClass_nonEMFs"/>
+      <orm:many-to-many name="nonEMFs">
+        <orm:join-table name="MySerializableClass_nonEMFs">
+          <orm:join-column name="MySerializableClass_id"/>
+          <orm:inverse-join-column name="NonEMF_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -29,6 +34,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.instanceclassset.NonEMF" name="NonEMF">
+    <orm:table name="NonEMF"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

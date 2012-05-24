@@ -2,8 +2,6 @@ package org.eclipse.modisco.kdm.event;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 
@@ -21,8 +19,7 @@ public class EventRelationship extends AbstractEventRelationship {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = KDMEntity.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   private KDMEntity to = null;
 
   /**
@@ -30,8 +27,7 @@ public class EventRelationship extends AbstractEventRelationship {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = AbstractEventElement.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   private AbstractEventElement from = null;
 
   /**

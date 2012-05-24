@@ -7,18 +7,30 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard" name="SimCard">
+    <orm:table name="SimCard"/>
     <orm:attributes>
-      <orm:basic name="phoneNumber" optional="true"/>
-      <orm:basic name="number" optional="true"/>
+      <orm:basic name="phoneNumber">
+        <orm:column name="phoneNumber"/>
+      </orm:basic>
+      <orm:basic name="number">
+        <orm:column name="number"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimContract" name="SimContract">
+    <orm:table name="SimContract"/>
     <orm:attributes>
-      <orm:basic name="contractNumber" optional="true"/>
-      <orm:basic name="name" optional="true"/>
-      <orm:basic name="descritpion" optional="true"/>
-      <orm:many-to-one name="paymentInfo" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentInfo">
-        <orm:join-column/>
+      <orm:basic name="contractNumber">
+        <orm:column name="contractNumber"/>
+      </orm:basic>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="descritpion">
+        <orm:column name="descritpion"/>
+      </orm:basic>
+      <orm:many-to-one name="paymentInfo">
+        <orm:join-column name="paymentInfo"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -28,18 +40,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentInfo" name="PaymentInfo">
+    <orm:table name="PaymentInfo"/>
     <orm:attributes>
-      <orm:many-to-one name="tariff" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Tariff">
-        <orm:join-column/>
+      <orm:many-to-one name="tariff">
+        <orm:join-column name="tariff"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-many access="FIELD" name="factPayments" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentItem">
-        <orm:order-column/>
-        <orm:join-table name="PaymentInfo_factPayments"/>
+      <orm:many-to-many access="FIELD" name="factPayments">
+        <orm:join-table name="PaymentInfo_factPayments">
+          <orm:join-column name="PaymentInfo_id"/>
+          <orm:inverse-join-column name="PaymentItem_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -49,17 +64,18 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimCardXSimContract" name="SimCardXSimContract">
+    <orm:table name="SimCardXSimContract"/>
     <orm:attributes>
-      <orm:many-to-one name="simCard" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard">
-        <orm:join-column/>
+      <orm:many-to-one name="simCard">
+        <orm:join-column name="simCard"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="simContract" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.SimContract">
-        <orm:join-column/>
+      <orm:many-to-one name="simContract">
+        <orm:join-column name="simContract"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -69,42 +85,56 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimTariff" name="SimTariff">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Tariff" name="Tariff">
+    <orm:table name="Tariff"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
-      <orm:basic name="active" optional="true"/>
-      <orm:many-to-many access="FIELD" name="volumePayments" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.VolumePayment">
-        <orm:order-column/>
-        <orm:join-table name="Tariff_volumePayments"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="active">
+        <orm:column name="active"/>
+      </orm:basic>
+      <orm:many-to-many access="FIELD" name="volumePayments">
+        <orm:join-table name="Tariff_volumePayments">
+          <orm:join-column name="Tariff_id"/>
+          <orm:inverse-join-column name="VolumePayment_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many access="FIELD" name="periodicalPayments" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.PeriodicalPayment">
-        <orm:order-column/>
-        <orm:join-table name="Tariff_periodicalPayments"/>
+      <orm:many-to-many access="FIELD" name="periodicalPayments">
+        <orm:join-table name="Tariff_periodicalPayments">
+          <orm:join-column name="Tariff_id"/>
+          <orm:inverse-join-column name="PeriodicalPayment_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many access="FIELD" name="initialPayment" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.OneTimePayment">
-        <orm:order-column/>
-        <orm:join-table name="Tariff_initialPayment"/>
+      <orm:many-to-many access="FIELD" name="initialPayment">
+        <orm:join-table name="Tariff_initialPayment">
+          <orm:join-column name="Tariff_id"/>
+          <orm:inverse-join-column name="OneTimePayment_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many access="FIELD" name="services" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Service">
-        <orm:order-column/>
-        <orm:join-table name="Tariff_services"/>
+      <orm:many-to-many access="FIELD" name="services">
+        <orm:join-table name="Tariff_services">
+          <orm:join-column name="Tariff_id"/>
+          <orm:inverse-join-column name="Service_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -114,22 +144,37 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentItem" name="PaymentItem">
+    <orm:table name="PaymentItem"/>
     <orm:attributes>
-      <orm:basic name="sum" optional="true"/>
-      <orm:basic name="currency" optional="true"/>
-      <orm:basic name="date" optional="true">
+      <orm:basic name="sum">
+        <orm:column name="sum"/>
+      </orm:basic>
+      <orm:basic name="currency">
+        <orm:column name="currency"/>
+      </orm:basic>
+      <orm:basic name="date">
+        <orm:column name="date"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="description" optional="true"/>
-      <orm:basic name="paymentType" optional="true"/>
+      <orm:basic name="description">
+        <orm:column name="description"/>
+      </orm:basic>
+      <orm:basic name="paymentType">
+        <orm:column name="paymentType"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.VolumePayment" name="VolumePayment">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:basic name="volume" optional="true"/>
-      <orm:basic name="price" optional="true"/>
-      <orm:many-to-one name="unit" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Units">
-        <orm:join-column/>
+      <orm:basic name="volume">
+        <orm:column name="volume"/>
+      </orm:basic>
+      <orm:basic name="price">
+        <orm:column name="price"/>
+      </orm:basic>
+      <orm:many-to-one name="unit">
+        <orm:join-column name="unit"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -139,35 +184,44 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PeriodicalPayment" name="PeriodicalPayment">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:basic name="periodicity" optional="true"/>
+      <orm:basic name="periodicity">
+        <orm:column name="periodicity"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.OneTimePayment" name="OneTimePayment">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Service" name="Service">
+    <orm:table name="Service"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
-      <orm:basic name="active" optional="true"/>
-      <orm:many-to-one name="initialPayment" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.OneTimePayment">
-        <orm:join-column/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="active">
+        <orm:column name="active"/>
+      </orm:basic>
+      <orm:many-to-one name="initialPayment">
+        <orm:join-column name="initialPayment"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="periodicalPayment" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.PeriodicalPayment">
-        <orm:join-column/>
+      <orm:many-to-one name="periodicalPayment">
+        <orm:join-column name="periodicalPayment"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="volumePayment" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.VolumePayment">
-        <orm:join-column/>
+      <orm:many-to-one name="volumePayment">
+        <orm:join-column name="volumePayment"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -177,23 +231,33 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Units" name="Units">
+    <orm:table name="Units"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Price" name="Price">
+    <orm:table name="Price"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarProducer" name="CarProducer">
+    <orm:table name="CarProducer"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarModel" name="CarModel">
+    <orm:table name="CarModel"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
-      <orm:many-to-one name="producer" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.CarProducer">
-        <orm:join-column/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:many-to-one name="producer">
+        <orm:join-column name="producer"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -203,18 +267,32 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarRegInfo" name="CarRegInfo">
+    <orm:table name="CarRegInfo"/>
     <orm:attributes>
-      <orm:basic name="regNumber" optional="true"/>
-      <orm:basic name="vin" optional="true"/>
-      <orm:basic name="releaseYear" optional="true">
+      <orm:basic name="regNumber">
+        <orm:column name="regNumber"/>
+      </orm:basic>
+      <orm:basic name="vin">
+        <orm:column name="vin"/>
+      </orm:basic>
+      <orm:basic name="releaseYear">
+        <orm:column name="releaseYear"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="engineNumber" optional="true"/>
-      <orm:basic name="chassisNumber" optional="true"/>
-      <orm:basic name="bodyNumber" optional="true"/>
-      <orm:basic name="color" optional="true"/>
-      <orm:many-to-one name="owner" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Person">
-        <orm:join-column/>
+      <orm:basic name="engineNumber">
+        <orm:column name="engineNumber"/>
+      </orm:basic>
+      <orm:basic name="chassisNumber">
+        <orm:column name="chassisNumber"/>
+      </orm:basic>
+      <orm:basic name="bodyNumber">
+        <orm:column name="bodyNumber"/>
+      </orm:basic>
+      <orm:basic name="color">
+        <orm:column name="color"/>
+      </orm:basic>
+      <orm:many-to-one name="owner">
+        <orm:join-column name="owner"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -224,48 +302,58 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Person" name="Person">
+    <orm:table name="Person"/>
     <orm:attributes>
-      <orm:basic name="surname" optional="true"/>
-      <orm:basic name="name" optional="true"/>
-      <orm:basic name="patronimic" optional="true"/>
-      <orm:basic name="birthday" optional="true">
+      <orm:basic name="surname">
+        <orm:column name="surname"/>
+      </orm:basic>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="patronimic">
+        <orm:column name="patronimic"/>
+      </orm:basic>
+      <orm:basic name="birthday">
+        <orm:column name="birthday"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:many-to-one name="registrationAddress" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Address">
-        <orm:join-column/>
+      <orm:many-to-one name="registrationAddress">
+        <orm:join-column name="registrationAddress"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="factAddress" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Address">
-        <orm:join-column/>
+      <orm:many-to-one name="factAddress">
+        <orm:join-column name="factAddress"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="passport" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Passport">
-        <orm:join-column/>
+      <orm:many-to-one name="passport">
+        <orm:join-column name="passport"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="drivingLicense" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.DrivingLicense">
-        <orm:join-column/>
+      <orm:many-to-one name="drivingLicense">
+        <orm:join-column name="drivingLicense"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-many access="FIELD" name="phones" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Phone">
-        <orm:order-column/>
-        <orm:join-table name="Person_phones"/>
+      <orm:many-to-many access="FIELD" name="phones">
+        <orm:join-table name="Person_phones">
+          <orm:join-column name="Person_id"/>
+          <orm:inverse-join-column name="Phone_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -275,25 +363,26 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Car" name="Car">
+    <orm:table name="Car"/>
     <orm:attributes>
-      <orm:many-to-one name="model" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.CarModel">
-        <orm:join-column/>
+      <orm:many-to-one name="model">
+        <orm:join-column name="model"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="regInfo" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.CarRegInfo">
-        <orm:join-column/>
+      <orm:many-to-one name="regInfo">
+        <orm:join-column name="regInfo"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="carPassport" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.CarPassport">
-        <orm:join-column/>
+      <orm:many-to-one name="carPassport">
+        <orm:join-column name="carPassport"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -303,64 +392,93 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarPassport" name="CarPassport">
+    <orm:table name="CarPassport"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Phone" name="Phone">
+    <orm:table name="Phone"/>
     <orm:attributes>
-      <orm:basic name="number" optional="true"/>
-      <orm:basic name="description" optional="true"/>
+      <orm:basic name="number">
+        <orm:column name="number"/>
+      </orm:basic>
+      <orm:basic name="description">
+        <orm:column name="description"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Address" name="Address">
+    <orm:table name="Address"/>
     <orm:attributes>
-      <orm:basic name="zipCode" optional="true"/>
-      <orm:basic name="country" optional="true"/>
-      <orm:basic name="region" optional="true"/>
-      <orm:basic name="city" optional="true"/>
-      <orm:basic name="street" optional="true"/>
-      <orm:basic name="building" optional="true"/>
-      <orm:basic name="flat" optional="true"/>
+      <orm:basic name="zipCode">
+        <orm:column name="zipCode"/>
+      </orm:basic>
+      <orm:basic name="country">
+        <orm:column name="country"/>
+      </orm:basic>
+      <orm:basic name="region">
+        <orm:column name="region"/>
+      </orm:basic>
+      <orm:basic name="city">
+        <orm:column name="city"/>
+      </orm:basic>
+      <orm:basic name="street">
+        <orm:column name="street"/>
+      </orm:basic>
+      <orm:basic name="building">
+        <orm:column name="building"/>
+      </orm:basic>
+      <orm:basic name="flat">
+        <orm:column name="flat"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Passport" name="Passport">
+    <orm:table name="Passport"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.DrivingLicense" name="DrivingLicense">
+    <orm:table name="DrivingLicense"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Contract" name="Contract">
+    <orm:table name="Contract"/>
     <orm:attributes>
-      <orm:basic name="signDate" optional="true">
+      <orm:basic name="signDate">
+        <orm:column name="signDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="number" optional="true"/>
-      <orm:many-to-one name="simCard" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard">
-        <orm:join-column/>
+      <orm:basic name="number">
+        <orm:column name="number"/>
+      </orm:basic>
+      <orm:many-to-one name="simCard">
+        <orm:join-column name="simCard"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="paymentInfo" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentInfo">
-        <orm:join-column/>
+      <orm:many-to-one name="paymentInfo">
+        <orm:join-column name="paymentInfo"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="car" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Car">
-        <orm:join-column/>
+      <orm:many-to-one name="car">
+        <orm:join-column name="car"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-many access="FIELD" name="secretQuestions" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.SecretQuestion">
-        <orm:order-column/>
-        <orm:join-table name="Contract_secretQuestions"/>
+      <orm:many-to-many access="FIELD" name="secretQuestions">
+        <orm:join-table name="Contract_secretQuestions">
+          <orm:join-column name="Contract_id"/>
+          <orm:inverse-join-column name="SecretQuestion_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -370,38 +488,53 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SecretQuestion" name="SecretQuestion">
+    <orm:table name="SecretQuestion"/>
     <orm:attributes>
-      <orm:basic name="question" optional="true"/>
-      <orm:basic name="correctAnswer" optional="true"/>
-      <orm:basic name="alarmAnswer" optional="true"/>
-      <orm:basic name="active" optional="true"/>
-      <orm:basic name="type" optional="true"/>
+      <orm:basic name="question">
+        <orm:column name="question"/>
+      </orm:basic>
+      <orm:basic name="correctAnswer">
+        <orm:column name="correctAnswer"/>
+      </orm:basic>
+      <orm:basic name="alarmAnswer">
+        <orm:column name="alarmAnswer"/>
+      </orm:basic>
+      <orm:basic name="active">
+        <orm:column name="active"/>
+      </orm:basic>
+      <orm:basic name="type">
+        <orm:column name="type"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ClientTariff" name="ClientTariff">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ContractPackage" name="ContractPackage">
+    <orm:table name="ContractPackage"/>
     <orm:attributes>
-      <orm:many-to-one name="client" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Person">
-        <orm:join-column/>
+      <orm:many-to-one name="client">
+        <orm:join-column name="client"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="user" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.User">
-        <orm:join-column/>
+      <orm:many-to-one name="user">
+        <orm:join-column name="user"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-many access="FIELD" name="contracts" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Contract">
-        <orm:order-column/>
-        <orm:join-table name="ContractPackage_contracts"/>
+      <orm:many-to-many access="FIELD" name="contracts">
+        <orm:join-table name="ContractPackage_contracts">
+          <orm:join-column name="ContractPackage_id"/>
+          <orm:inverse-join-column name="Contract_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -411,11 +544,16 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.User" name="User">
+    <orm:table name="User"/>
     <orm:attributes>
-      <orm:basic name="login" optional="true"/>
-      <orm:basic name="password" optional="true"/>
-      <orm:many-to-one name="group" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.UserGroup">
-        <orm:join-column/>
+      <orm:basic name="login">
+        <orm:column name="login"/>
+      </orm:basic>
+      <orm:basic name="password">
+        <orm:column name="password"/>
+      </orm:basic>
+      <orm:many-to-one name="group">
+        <orm:join-column name="group"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -425,25 +563,32 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.UserGroup" name="UserGroup">
+    <orm:table name="UserGroup"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Message" name="Message">
+    <orm:table name="Message"/>
     <orm:attributes>
-      <orm:basic name="text" optional="true"/>
-      <orm:basic name="type" optional="true"/>
-      <orm:basic name="dateTime" optional="true">
+      <orm:basic name="text">
+        <orm:column name="text"/>
+      </orm:basic>
+      <orm:basic name="type">
+        <orm:column name="type"/>
+      </orm:basic>
+      <orm:basic name="dateTime">
+        <orm:column name="dateTime"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:many-to-one name="from" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard">
-        <orm:join-column/>
+      <orm:many-to-one name="from">
+        <orm:join-column name="from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="to" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard">
-        <orm:join-column/>
+      <orm:many-to-one name="to">
+        <orm:join-column name="to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -453,18 +598,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Event" name="Event">
+    <orm:table name="Event"/>
     <orm:attributes>
-      <orm:basic name="eventType" optional="true"/>
-      <orm:many-to-one name="message" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Message">
-        <orm:join-column/>
+      <orm:basic name="eventType">
+        <orm:column name="eventType"/>
+      </orm:basic>
+      <orm:many-to-one name="message">
+        <orm:join-column name="message"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="coordinates" optional="true" target-entity="org.eclipse.emf.texo.test.model.issues.bz331009.Coordinates">
-        <orm:join-column/>
+      <orm:many-to-one name="coordinates">
+        <orm:join-column name="coordinates"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -474,9 +622,14 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Coordinates" name="Coordinates">
+    <orm:table name="Coordinates"/>
     <orm:attributes>
-      <orm:basic name="x" optional="true"/>
-      <orm:basic name="y" optional="true"/>
+      <orm:basic name="x">
+        <orm:column name="x"/>
+      </orm:basic>
+      <orm:basic name="y">
+        <orm:column name="y"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

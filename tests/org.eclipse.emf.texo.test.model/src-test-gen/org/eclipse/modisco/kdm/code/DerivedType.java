@@ -2,8 +2,6 @@ package org.eclipse.modisco.kdm.code;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
 /**
@@ -19,8 +17,7 @@ public class DerivedType extends Datatype {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ItemUnit.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private ItemUnit itemUnit = null;
 
   /**

@@ -8,7 +8,6 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
-import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -37,7 +36,6 @@ public class BookStore extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
-  @MapKeyClass(Writer.class)
   @MapKeyColumn(table = "BookStore_booksByWriter")
   @JoinTable(name = "BookStore_booksByWriter")
   private Map<Writer, Book> booksByWriter = new LinkedHashMap<Writer, Book>();

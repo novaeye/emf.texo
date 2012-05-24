@@ -19,7 +19,7 @@ public class Coordinates extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigDecimal x = null;
 
   /**
@@ -27,7 +27,7 @@ public class Coordinates extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigDecimal y = null;
 
   /**

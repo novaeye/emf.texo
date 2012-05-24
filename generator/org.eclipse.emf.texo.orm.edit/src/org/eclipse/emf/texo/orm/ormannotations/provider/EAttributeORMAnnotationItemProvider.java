@@ -77,6 +77,7 @@ public class EAttributeORMAnnotationItemProvider extends EAttributeAnnotationIte
 			childrenFeatures.add(OrmannotationsPackage.Literals.EATTRIBUTE_ORM_ANNOTATION__VERSION);
 			childrenFeatures.add(OrmannotationsPackage.Literals.EATTRIBUTE_ORM_ANNOTATION__ONE_TO_MANY);
 			childrenFeatures.add(OrmannotationsPackage.Literals.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY);
+			childrenFeatures.add(OrmannotationsPackage.Literals.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE);
 		}
 		return childrenFeatures;
 	}
@@ -135,6 +136,7 @@ public class EAttributeORMAnnotationItemProvider extends EAttributeAnnotationIte
 			case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__VERSION:
 			case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__ONE_TO_MANY:
 			case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY:
+			case OrmannotationsPackage.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -190,6 +192,11 @@ public class EAttributeORMAnnotationItemProvider extends EAttributeAnnotationIte
 			(createChildParameter
 				(OrmannotationsPackage.Literals.EATTRIBUTE_ORM_ANNOTATION__FEATURE_MAP_ENTITY,
 				 OrmFactory.eINSTANCE.createEntity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmannotationsPackage.Literals.EATTRIBUTE_ORM_ANNOTATION__MANY_TO_ONE,
+				 OrmFactory.eINSTANCE.createManyToOne()));
 	}
 
   /**

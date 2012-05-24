@@ -4,8 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.modisco.kdm.kdm.Annotation;
@@ -27,8 +25,7 @@ public abstract class Element extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Attribute.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<Attribute> attribute = new HashSet<Attribute>();
 
   /**
@@ -37,8 +34,7 @@ public abstract class Element extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Annotation.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<Annotation> annotation = new HashSet<Annotation>();
 
   /**

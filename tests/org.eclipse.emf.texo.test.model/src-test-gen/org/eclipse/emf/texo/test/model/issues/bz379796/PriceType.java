@@ -17,7 +17,7 @@ public class PriceType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer valueElement = null;
 
   /**
@@ -41,7 +41,7 @@ public class PriceType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private ComparisonType comparisonElement = null;
 
   /**
@@ -57,7 +57,7 @@ public class PriceType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private ComparisonType comparison = null;
 
   /**
@@ -81,7 +81,7 @@ public class PriceType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer value = null;
 
   /**

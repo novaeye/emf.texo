@@ -17,7 +17,7 @@ public class Attribute extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String tag = null;
 
   /**
@@ -25,7 +25,7 @@ public class Attribute extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String value = null;
 
   /**

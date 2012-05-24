@@ -22,7 +22,7 @@ public class RentalContractLine extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalContract.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @JoinColumns({ @JoinColumn() })
   private RentalContract rentalContract = null;
 
@@ -31,7 +31,7 @@ public class RentalContractLine extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private long number = 0;
 
   /**
@@ -39,8 +39,7 @@ public class RentalContractLine extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = RentalUnit.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private RentalUnit rentalUnit = null;
 
   /**

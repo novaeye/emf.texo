@@ -8,12 +8,14 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.AGroupFeatureGroup" name="A_group">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="b" optional="true"/>
+      <orm:basic name="b">
+        <orm:column name="b"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="PROPERTY" name="c" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType">
-        <orm:join-column/>
+      <orm:many-to-one name="c">
+        <orm:join-column name="c"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -21,8 +23,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.A" name="A">
+    <orm:table name="A"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.AGroupFeatureGroup">
         <orm:join-table/>
         <orm:cascade>
@@ -32,9 +37,14 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType" name="CType">
+    <orm:table name="CType"/>
     <orm:attributes>
-      <orm:basic name="cname" optional="false"/>
-      <orm:basic name="cvalue" optional="false"/>
+      <orm:basic name="cname" optional="false">
+        <orm:column name="cname"/>
+      </orm:basic>
+      <orm:basic name="cvalue" optional="false">
+        <orm:column name="cvalue"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementTrue_FeatureGroup" name="Element_true">
@@ -42,8 +52,8 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="PROPERTY" name="c" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType">
-        <orm:join-column/>
+      <orm:many-to-one name="c" optional="false">
+        <orm:join-column name="c"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -52,7 +62,9 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup" name="Element_mixed">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
       <orm:basic name="text" optional="true">
         <orm:lob/>
       </orm:basic>
@@ -70,14 +82,8 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one access="PROPERTY" name="c" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
-      <orm:many-to-one access="PROPERTY" name="recursive" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.Element">
-        <orm:join-column/>
+      <orm:many-to-one name="recursive" optional="false">
+        <orm:join-column name="recursive"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -85,6 +91,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.Element" name="Element">
+    <orm:table name="Element"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup">
         <orm:join-table/>

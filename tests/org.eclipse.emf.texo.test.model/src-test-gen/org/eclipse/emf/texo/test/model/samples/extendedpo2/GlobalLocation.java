@@ -17,7 +17,7 @@ public class GlobalLocation extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int countryCode = 0;
 
   /**

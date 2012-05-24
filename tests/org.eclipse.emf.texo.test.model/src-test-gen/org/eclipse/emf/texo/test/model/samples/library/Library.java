@@ -29,7 +29,7 @@ public class Library extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Column(name = "name")
   private String name = null;
 
@@ -38,9 +38,9 @@ public class Library extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Writer.class)
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
   @OrderColumn(name = "ind")
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(name = "Library_id") })
   private List<Writer> writers = new ArrayList<Writer>();
 
   /**
@@ -48,9 +48,9 @@ public class Library extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = Book.class)
+  @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
   @OrderColumn(name = "ind")
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(name = "Library_id") })
   private List<Book> books = new ArrayList<Book>();
 
   /**

@@ -5,8 +5,6 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.ModelElement;
 
@@ -23,8 +21,7 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Audit.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<Audit> audit = new HashSet<Audit>();
 
   /**
@@ -32,8 +29,7 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ExtensionFamily.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<ExtensionFamily> extension = new HashSet<ExtensionFamily>();
 
   /**
@@ -41,7 +37,7 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**

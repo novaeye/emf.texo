@@ -3,8 +3,6 @@ package org.eclipse.modisco.kdm.code;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
 /**
@@ -20,7 +18,7 @@ public class ArrayType extends DerivedType {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer size = null;
 
   /**
@@ -28,8 +26,7 @@ public class ArrayType extends DerivedType {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = IndexUnit.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private IndexUnit indexUnit = null;
 
   /**

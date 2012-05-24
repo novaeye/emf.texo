@@ -13,7 +13,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
 /**
@@ -37,7 +36,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -46,7 +45,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = KDMModel.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @JoinColumns({ @JoinColumn() })
   @Access(AccessType.FIELD)
   private KDMModel model = null;
@@ -61,7 +60,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = KDMEntity.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @JoinColumns({ @JoinColumn() })
   @Access(AccessType.FIELD)
   private KDMEntity owner = null;
@@ -72,9 +71,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = KDMEntity.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   @Access(AccessType.FIELD)
   private List<KDMEntity> ownedElement = new ArrayList<KDMEntity>();
 
@@ -84,9 +81,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
-  @OrderColumn()
-  @JoinTable(name = "KDMEntity_outbound")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<KDMRelationship> outbound = new ArrayList<KDMRelationship>();
 
@@ -96,9 +91,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMRelationship.class)
-  @OrderColumn()
-  @JoinTable(name = "KDMEntity_inbound")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<KDMRelationship> inbound = new ArrayList<KDMRelationship>();
 
@@ -108,9 +101,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = KDMRelationship.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   @Access(AccessType.FIELD)
   private List<KDMRelationship> ownedRelation = new ArrayList<KDMRelationship>();
 
@@ -124,9 +115,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
-  @OrderColumn()
-  @JoinTable(name = "KDMEntity_group")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<KDMEntity> group = new ArrayList<KDMEntity>();
 
@@ -136,9 +125,7 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
-  @OrderColumn()
-  @JoinTable(name = "KDMEntity_groupedElement")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<KDMEntity> groupedElement = new ArrayList<KDMEntity>();
 
@@ -148,9 +135,8 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AggregatedRelationship.class)
-  @OrderColumn()
-  @JoinTable(name = "KDMEntity_inAggregated")
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinTable()
   @Access(AccessType.FIELD)
   private List<AggregatedRelationship> inAggregated = new ArrayList<AggregatedRelationship>();
 
@@ -160,9 +146,8 @@ public abstract class KDMEntity extends ModelElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AggregatedRelationship.class)
-  @OrderColumn()
-  @JoinTable(name = "KDMEntity_outAggregated")
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinTable()
   @Access(AccessType.FIELD)
   private List<AggregatedRelationship> outAggregated = new ArrayList<AggregatedRelationship>();
 

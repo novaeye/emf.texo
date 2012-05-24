@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import org.eclipse.modisco.kdm.code.ItemUnit;
 
@@ -21,8 +20,7 @@ public class IndexElement extends DataResource {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ItemUnit.class)
-  @JoinTable(name = "IndexElement_implementation")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<ItemUnit> implementation = new HashSet<ItemUnit>();
 
   /**

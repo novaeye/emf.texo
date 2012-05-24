@@ -11,7 +11,6 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
-import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -31,7 +30,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_string")
   private List<String> string = new ArrayList<String>();
 
@@ -41,7 +39,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_integerObject")
   private List<Integer> integerObject = new ArrayList<Integer>();
 
@@ -69,7 +66,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_floatObject")
   private List<Float> floatObject = new ArrayList<Float>();
 
@@ -87,7 +83,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_charObject")
   private List<Character> charObject = new ArrayList<Character>();
 
@@ -97,7 +92,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_byteObject")
   private List<Byte> byteObject = new ArrayList<Byte>();
 
@@ -107,7 +101,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @Lob()
   @CollectionTable(name = "ManyTypes_byteArray")
   private List<byte[]> byteArray = new ArrayList<byte[]>();
@@ -118,7 +111,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_bigDecimal")
   private List<BigDecimal> bigDecimal = new ArrayList<BigDecimal>();
 
@@ -137,7 +129,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_enum")
   private List<TestEnum> enum_ = new ArrayList<TestEnum>();
 
@@ -157,7 +148,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_stringArray")
   private List<String[]> stringArray = new ArrayList<String[]>();
 
@@ -167,7 +157,6 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "ManyTypes_longArray")
   private List<long[]> longArray = new ArrayList<long[]>();
 

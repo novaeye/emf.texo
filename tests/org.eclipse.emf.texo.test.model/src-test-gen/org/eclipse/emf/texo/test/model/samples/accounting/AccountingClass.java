@@ -6,11 +6,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -38,9 +35,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AccountGroup.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<AccountGroup> accountGroup = new ArrayList<AccountGroup>();
 
   /**
@@ -48,9 +43,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Vat.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<Vat> vat = new ArrayList<Vat>();
 
   /**
@@ -58,8 +51,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = BalanceAccount.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private BalanceAccount vatAccount = null;
 
   /**
@@ -67,8 +59,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = Report.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL })
   private Report report = null;
 
   /**
@@ -76,9 +67,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = JournalGroup.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<JournalGroup> journalGroup = new ArrayList<JournalGroup>();
 
   /**

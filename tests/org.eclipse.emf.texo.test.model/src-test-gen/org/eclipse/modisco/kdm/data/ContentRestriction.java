@@ -17,7 +17,7 @@ public class ContentRestriction extends AbstractContentElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**
@@ -25,7 +25,7 @@ public class ContentRestriction extends AbstractContentElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String value = null;
 
   /**

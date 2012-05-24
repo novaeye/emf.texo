@@ -7,7 +7,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -23,7 +22,7 @@ public class Customer extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int customerID = 0;
 
   /**
@@ -31,9 +30,8 @@ public class Customer extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PurchaseOrder.class)
-  @OrderColumn()
-  @JoinTable(name = "Customer_orders")
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinTable()
   private List<PurchaseOrder> orders = new ArrayList<PurchaseOrder>();
 
   /**

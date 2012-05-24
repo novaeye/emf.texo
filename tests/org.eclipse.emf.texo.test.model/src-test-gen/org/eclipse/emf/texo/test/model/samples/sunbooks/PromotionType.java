@@ -17,7 +17,7 @@ public class PromotionType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String discount = null;
 
   /**
@@ -25,7 +25,7 @@ public class PromotionType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String none = null;
 
   /**

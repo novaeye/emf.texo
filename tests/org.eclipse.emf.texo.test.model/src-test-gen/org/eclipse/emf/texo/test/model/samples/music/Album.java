@@ -8,13 +8,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -32,7 +28,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private long id = 0;
 
   /**
@@ -40,7 +36,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Long version = null;
 
   /**
@@ -48,7 +44,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -56,8 +52,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Artist.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Artist artist = null;
 
   /**
@@ -65,7 +60,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date releaseDate = null;
 
@@ -74,9 +69,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Genre.class)
-  @OrderColumn()
-  @JoinTable(name = "Album_genres")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private List<Genre> genres = new ArrayList<Genre>();
 
   /**
@@ -84,9 +77,7 @@ public class Album extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Song.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<Song> songs = new ArrayList<Song>();
 
   /**
@@ -95,7 +86,6 @@ public class Album extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "Album_ratings")
   private List<Rating> ratings = new ArrayList<Rating>();
 

@@ -7,24 +7,34 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Artist" name="Artist">
+    <orm:table name="Artist"/>
     <orm:attributes>
-      <orm:basic name="id" optional="true"/>
-      <orm:basic name="version" optional="true"/>
-      <orm:basic name="firstName" optional="true"/>
-      <orm:basic name="lastName" optional="true"/>
-      <orm:basic name="birthDate" optional="true">
+      <orm:basic name="id">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:basic name="version">
+        <orm:column name="version"/>
+      </orm:basic>
+      <orm:basic name="firstName">
+        <orm:column name="firstName"/>
+      </orm:basic>
+      <orm:basic name="lastName">
+        <orm:column name="lastName"/>
+      </orm:basic>
+      <orm:basic name="birthDate">
+        <orm:column name="birthDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:many-to-one name="country" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.music.Country">
-        <orm:join-column/>
+      <orm:many-to-one name="country">
+        <orm:join-column name="country"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="genre" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.music.Genre">
-        <orm:join-column/>
+      <orm:many-to-one name="genre">
+        <orm:join-column name="genre"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -34,45 +44,68 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Country" name="Country">
+    <orm:table name="Country"/>
     <orm:attributes>
-      <orm:basic name="code" optional="false"/>
-      <orm:basic name="version" optional="true"/>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="code" optional="false">
+        <orm:column name="code"/>
+      </orm:basic>
+      <orm:basic name="version">
+        <orm:column name="version"/>
+      </orm:basic>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Genre" name="Genre">
+    <orm:table name="Genre"/>
     <orm:attributes>
-      <orm:basic name="id" optional="true"/>
-      <orm:basic name="version" optional="true"/>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="id">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:basic name="version">
+        <orm:column name="version"/>
+      </orm:basic>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Album" name="Album">
+    <orm:table name="Album"/>
     <orm:attributes>
-      <orm:basic name="id" optional="true"/>
-      <orm:basic name="version" optional="true"/>
-      <orm:basic name="name" optional="true"/>
-      <orm:basic name="releaseDate" optional="true">
+      <orm:basic name="id">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:basic name="version">
+        <orm:column name="version"/>
+      </orm:basic>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="releaseDate">
+        <orm:column name="releaseDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:many-to-one name="artist" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.music.Artist">
-        <orm:join-column/>
+      <orm:many-to-one name="artist">
+        <orm:join-column name="artist"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="songs" target-entity="org.eclipse.emf.texo.test.model.samples.music.Song">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="songs">
+        <orm:join-column name="Album_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:many-to-many name="genres" target-entity="org.eclipse.emf.texo.test.model.samples.music.Genre">
-        <orm:order-column/>
-        <orm:join-table name="Album_genres"/>
+      <orm:many-to-many name="genres">
+        <orm:join-table name="Album_genres">
+          <orm:join-column name="Album_id"/>
+          <orm:inverse-join-column name="Genre_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -80,17 +113,28 @@
         </orm:cascade>
       </orm:many-to-many>
       <orm:element-collection name="ratings">
-        <orm:order-column/>
-        <orm:collection-table name="Album_ratings"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="Album_ratings">
+          <orm:join-column name="Album_id"/>
+        </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Song" name="Song">
+    <orm:table name="Song"/>
     <orm:attributes>
-      <orm:basic name="id" optional="true"/>
-      <orm:basic name="version" optional="true"/>
-      <orm:basic name="track" optional="true"/>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="id">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:basic name="version">
+        <orm:column name="version"/>
+      </orm:basic>
+      <orm:basic name="track">
+        <orm:column name="track"/>
+      </orm:basic>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

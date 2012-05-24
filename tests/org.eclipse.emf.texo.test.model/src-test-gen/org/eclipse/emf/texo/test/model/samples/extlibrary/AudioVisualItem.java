@@ -16,7 +16,7 @@ public abstract class AudioVisualItem extends CirculatingItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String title = null;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -30,7 +30,7 @@ public abstract class AudioVisualItem extends CirculatingItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private boolean damaged = false;
 
   /**

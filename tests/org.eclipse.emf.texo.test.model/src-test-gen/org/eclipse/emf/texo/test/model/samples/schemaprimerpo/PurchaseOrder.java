@@ -6,11 +6,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -28,8 +25,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = USAddress.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL })
   private USAddress shipTo = null;
 
   /**
@@ -37,8 +33,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = USAddress.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private USAddress billTo = null;
 
   /**
@@ -46,7 +41,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String comment = null;
 
   /**
@@ -54,9 +49,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Item.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<Item> items = new ArrayList<Item>();
 
   /**
@@ -64,7 +57,7 @@ public class PurchaseOrder extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date orderDate = null;
 

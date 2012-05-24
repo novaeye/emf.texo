@@ -4,8 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 
 /**
@@ -21,8 +19,7 @@ public class Machine extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DeployedComponent.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<DeployedComponent> deployedComponent = new HashSet<DeployedComponent>();
 
   /**
@@ -30,8 +27,7 @@ public class Machine extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = DeployedResource.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<DeployedResource> deployedResource = new HashSet<DeployedResource>();
 
   /**

@@ -17,7 +17,7 @@ public class Song extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private long id = 0;
 
   /**
@@ -25,7 +25,7 @@ public class Song extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Long version = null;
 
   /**
@@ -33,7 +33,7 @@ public class Song extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int track = 0;
 
   /**
@@ -41,7 +41,7 @@ public class Song extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**

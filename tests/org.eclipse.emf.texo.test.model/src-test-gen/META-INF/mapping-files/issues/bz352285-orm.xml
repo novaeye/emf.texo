@@ -7,8 +7,11 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz352285.Abstract" name="Abstract">
+    <orm:table name="Abstract"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

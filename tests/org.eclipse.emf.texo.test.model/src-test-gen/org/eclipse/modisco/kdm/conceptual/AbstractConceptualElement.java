@@ -4,9 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.action.ActionElement;
@@ -27,8 +24,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
   /**
@@ -36,8 +32,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
-  @JoinTable(name = "AbstractConceptualElement_implementation")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
   /**
@@ -45,8 +40,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractConceptualRelationship.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractConceptualRelationship> conceptualRelation = new HashSet<AbstractConceptualRelationship>();
 
   /**
@@ -54,8 +48,7 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActionElement.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<ActionElement> abstraction = new HashSet<ActionElement>();
 
   /**

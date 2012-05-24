@@ -16,7 +16,7 @@ public class RangeType extends DerivedType {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer lower = null;
 
   /**
@@ -24,7 +24,7 @@ public class RangeType extends DerivedType {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer upper = null;
 
   /**

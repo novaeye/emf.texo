@@ -130,7 +130,7 @@ public class PersonGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer age;
 
   /**
@@ -138,7 +138,7 @@ public class PersonGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer length;
 
   /**

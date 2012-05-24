@@ -3,8 +3,6 @@ package org.eclipse.emf.texo.test.model.samples.capa;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -21,8 +19,7 @@ public class Task extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = CapacityEntry.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private CapacityEntry capacityEntry = null;
 
   /**
@@ -30,8 +27,7 @@ public class Task extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = Production.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Production production = null;
 
   /**
@@ -39,7 +35,7 @@ public class Task extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -47,7 +43,7 @@ public class Task extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String taskId = null;
 
   /**
@@ -55,7 +51,7 @@ public class Task extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Float timePerPice = null;
 
   /**
@@ -63,7 +59,7 @@ public class Task extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Float timePerPreperation = null;
 
   /**

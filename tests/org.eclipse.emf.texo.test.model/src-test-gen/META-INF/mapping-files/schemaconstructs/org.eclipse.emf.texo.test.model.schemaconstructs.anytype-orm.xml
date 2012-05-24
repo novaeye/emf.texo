@@ -7,12 +7,19 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.A" name="A">
+    <orm:table name="A"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
-      <orm:basic name="doub" optional="false"/>
-      <orm:basic name="lon" optional="false"/>
-      <orm:many-to-one name="myB" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.B">
-        <orm:join-column/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="doub" optional="false">
+        <orm:column name="doub"/>
+      </orm:basic>
+      <orm:basic name="lon" optional="false">
+        <orm:column name="lon"/>
+      </orm:basic>
+      <orm:many-to-one name="myB" optional="false">
+        <orm:join-column name="myB"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -22,11 +29,15 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.B" name="B">
+    <orm:table name="B"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.C" name="C">
+    <orm:table name="C"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyMyAnyFeatureGroup" name="TestAny_myAny">
@@ -44,11 +55,16 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAny" name="TestAny">
+    <orm:table name="TestAny"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
-      <orm:basic name="a" optional="false"/>
-      <orm:many-to-one name="singleAnyType" optional="false" target-entity="org.eclipse.emf.ecore.EObject">
-        <orm:join-column/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="a" optional="false">
+        <orm:column name="a"/>
+      </orm:basic>
+      <orm:many-to-one name="singleAnyType" optional="false">
+        <orm:join-column name="singleAnyType"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -65,9 +81,8 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="multiAnyType" target-entity="org.eclipse.emf.ecore.EObject">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="multiAnyType">
+        <orm:join-column name="TestAny_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

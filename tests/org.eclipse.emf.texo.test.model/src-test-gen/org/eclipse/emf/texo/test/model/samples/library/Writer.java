@@ -30,7 +30,7 @@ public class Writer extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Column(name = "name")
   private String name = null;
 
@@ -39,7 +39,7 @@ public class Writer extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Book.class)
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "ind")
   @JoinTable(joinColumns = { @JoinColumn(name = "Writer_id") }, inverseJoinColumns = { @JoinColumn(name = "Book_id") }, name = "Writer_books")
   private List<Book> books = new ArrayList<Book>();

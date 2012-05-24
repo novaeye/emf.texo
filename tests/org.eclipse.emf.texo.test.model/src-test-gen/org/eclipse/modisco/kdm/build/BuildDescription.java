@@ -5,8 +5,6 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
@@ -24,8 +22,7 @@ public class BuildDescription extends BuildResource {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
   /**
@@ -33,7 +30,7 @@ public class BuildDescription extends BuildResource {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String text = null;
 
   /**

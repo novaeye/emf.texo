@@ -5,8 +5,6 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -23,8 +21,7 @@ public class DataElement extends ComputationalObject {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Datatype.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   private Datatype type = null;
 
   /**
@@ -32,7 +29,7 @@ public class DataElement extends ComputationalObject {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String ext = null;
 
   /**
@@ -40,7 +37,7 @@ public class DataElement extends ComputationalObject {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer size = null;
 
   /**
@@ -48,8 +45,7 @@ public class DataElement extends ComputationalObject {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = Datatype.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<Datatype> codeElement = new HashSet<Datatype>();
 
   /**

@@ -25,7 +25,7 @@ public class Country extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Long version = null;
 
   /**
@@ -33,7 +33,7 @@ public class Country extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**

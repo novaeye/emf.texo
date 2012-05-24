@@ -7,8 +7,10 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz369931.Formula" name="Formula">
+    <orm:table name="Formula"/>
     <orm:attributes>
       <orm:basic name="formulaType">
+        <orm:column name="formulaType"/>
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>

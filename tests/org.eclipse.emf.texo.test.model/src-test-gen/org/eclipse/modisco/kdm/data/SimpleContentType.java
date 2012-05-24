@@ -5,7 +5,6 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 /**
@@ -22,8 +21,7 @@ public class SimpleContentType extends ComplexContentType {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ComplexContentType.class)
-  @JoinTable(name = "SimpleContentType_type")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<ComplexContentType> type = new HashSet<ComplexContentType>();
 
   /**
@@ -31,7 +29,7 @@ public class SimpleContentType extends ComplexContentType {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**

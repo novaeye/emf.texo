@@ -24,7 +24,7 @@ public class VarInputType extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = VarConditionType.class)
+  @ManyToOne(cascade = { CascadeType.ALL })
   @JoinColumns({ @JoinColumn(name = "_condition") })
   private VarConditionType condition = null;
 

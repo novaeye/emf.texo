@@ -17,7 +17,7 @@ public class SchoolBook extends Book {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private float value = 0.0f;
 
   /**

@@ -9,26 +9,32 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.featuremaptest.PurchaseOrder" name="PurchaseOrder">
     <orm:table name="PUR_ORDER"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.featuremaptest.SupplierOrdersFeatureGroup" name="Supplier_orders">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="hardCopyOrderReference" optional="true"/>
-      <orm:basic access="PROPERTY" name="hardCopyOrderNumber" optional="true"/>
+      <orm:basic name="hardCopyOrderReference">
+        <orm:column name="hardCopyOrderReference"/>
+      </orm:basic>
+      <orm:basic name="hardCopyOrderNumber">
+        <orm:column name="hardCopyOrderNumber"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="preferredOrders" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.featuremaptest.PurchaseOrder">
-        <orm:join-column/>
+      <orm:many-to-one name="preferredOrders">
+        <orm:join-column name="preferredOrders"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="standardOrders" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.featuremaptest.PurchaseOrder">
-        <orm:join-column/>
+      <orm:many-to-one name="standardOrders">
+        <orm:join-column name="standardOrders"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -40,7 +46,9 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.featuremaptest.Supplier" name="Supplier">
     <orm:table name="SUP_TABLE"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
       <orm:one-to-many name="orders" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.featuremaptest.SupplierOrdersFeatureGroup">
         <orm:join-table/>
         <orm:cascade>

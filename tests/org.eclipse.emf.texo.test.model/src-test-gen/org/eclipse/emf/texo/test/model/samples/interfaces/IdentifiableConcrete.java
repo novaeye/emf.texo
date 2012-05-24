@@ -18,7 +18,7 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = "";
 
   /**

@@ -17,7 +17,7 @@ public class Contact extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String value = null;
 
   /**
@@ -25,7 +25,7 @@ public class Contact extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private ContactType type = ContactType.PHONE;
 
   /**

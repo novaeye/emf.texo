@@ -20,7 +20,7 @@ public abstract class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date publicationDate = null;
 

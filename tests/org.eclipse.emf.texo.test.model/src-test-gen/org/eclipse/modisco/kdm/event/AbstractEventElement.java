@@ -6,12 +6,8 @@ import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.action.ActionElement;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 import org.eclipse.modisco.kdm.core.KDMEntity;
@@ -31,8 +27,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRef.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<SourceRef> source = new HashSet<SourceRef>();
 
   /**
@@ -40,8 +35,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractEventRelationship.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractEventRelationship> eventRelation = new HashSet<AbstractEventRelationship>();
 
   /**
@@ -49,9 +43,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ActionElement.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<ActionElement> abstraction = new ArrayList<ActionElement>();
 
   /**
@@ -59,8 +51,7 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractCodeElement.class)
-  @JoinTable(name = "AbstractEventElement_implementation")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<AbstractCodeElement> implementation = new HashSet<AbstractCodeElement>();
 
   /**

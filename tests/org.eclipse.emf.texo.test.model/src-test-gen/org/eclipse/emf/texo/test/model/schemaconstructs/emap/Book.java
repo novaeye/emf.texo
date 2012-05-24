@@ -6,7 +6,6 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
-import javax.persistence.MapKeyClass;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -33,7 +32,6 @@ public class Book extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
-  @MapKeyClass(String.class)
   @MapKeyColumn(table = "Book_writers")
   @JoinTable(name = "Book_writers")
   private Map<String, Writer> writers = new LinkedHashMap<String, Writer>();

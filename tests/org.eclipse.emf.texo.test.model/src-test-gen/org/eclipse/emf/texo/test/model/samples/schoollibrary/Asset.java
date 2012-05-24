@@ -17,7 +17,7 @@ public class Asset extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private float value = 0.0f;
 
   /**

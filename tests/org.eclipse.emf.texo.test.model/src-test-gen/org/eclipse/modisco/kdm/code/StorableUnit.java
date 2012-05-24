@@ -16,7 +16,7 @@ public class StorableUnit extends DataElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private StorableKind kind = StorableKind.GLOBAL;
 
   /**

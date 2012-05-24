@@ -7,16 +7,23 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schoollibrary.Asset" name="Asset">
+    <orm:table name="Asset"/>
     <orm:attributes>
-      <orm:basic name="value" optional="true"/>
+      <orm:basic name="value">
+        <orm:column name="value"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoolBook" name="SchoolBook">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoolLibrary" name="SchoolLibrary">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:basic name="location" optional="true"/>
+      <orm:basic name="location">
+        <orm:column name="location"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

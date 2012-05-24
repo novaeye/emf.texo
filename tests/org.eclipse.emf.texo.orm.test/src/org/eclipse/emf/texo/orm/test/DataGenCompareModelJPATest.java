@@ -236,9 +236,6 @@ public class DataGenCompareModelJPATest extends JPATest {
     final ModelObject<?> m2 = ModelResolver.getInstance().getModelObject(o2);
     assertTrue(m1.eClass() == m2.eClass());
     for (EStructuralFeature eFeature : m1.eClass().getEAllStructuralFeatures()) {
-      if (eFeature.isVolatile()) {
-        continue;
-      }
       final Object v1 = m1.eGet(eFeature);
       final Object v2 = m2.eGet(eFeature);
       if (eFeature.isMany()) {

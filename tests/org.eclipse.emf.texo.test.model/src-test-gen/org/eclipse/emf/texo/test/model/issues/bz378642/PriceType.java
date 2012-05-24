@@ -17,7 +17,7 @@ public class PriceType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer value = null;
 
   /**

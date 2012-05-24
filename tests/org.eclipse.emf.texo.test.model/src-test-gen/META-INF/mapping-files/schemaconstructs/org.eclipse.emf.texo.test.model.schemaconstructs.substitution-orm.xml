@@ -7,12 +7,18 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber" name="ComplexNumber">
+    <orm:table name="ComplexNumber"/>
     <orm:attributes>
-      <orm:basic name="value" optional="false"/>
-      <orm:basic name="unit" optional="false"/>
+      <orm:basic name="value" optional="false">
+        <orm:column name="value"/>
+      </orm:basic>
+      <orm:basic name="unit" optional="false">
+        <orm:column name="unit"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.EvenComplexNumberType" name="EvenComplexNumberType">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup" name="MultiNumberType_myComplexAbstractGroup">
@@ -20,8 +26,8 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
-        <orm:join-column/>
+      <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false">
+        <orm:join-column name="myComplexAbstract"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -29,8 +35,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberType" name="MultiNumberType">
+    <orm:table name="MultiNumberType"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
       <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup">
         <orm:join-table/>
         <orm:cascade>
@@ -41,7 +50,9 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup" name="NumberType_mySimpleAbstractGroup">
     <orm:attributes>
-      <orm:basic access="FIELD" name="mySimpleAbstract" optional="false"/>
+      <orm:basic access="FIELD" name="mySimpleAbstract" optional="false">
+        <orm:column name="mySimpleAbstract"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
@@ -52,8 +63,8 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber">
-        <orm:join-column/>
+      <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false">
+        <orm:join-column name="myComplexAbstract"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -61,8 +72,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberType" name="NumberType">
+    <orm:table name="NumberType"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
       <orm:one-to-many name="mySimpleAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup">
         <orm:join-table/>
         <orm:cascade>
@@ -78,6 +92,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.OddComplexNumberType" name="OddComplexNumberType">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

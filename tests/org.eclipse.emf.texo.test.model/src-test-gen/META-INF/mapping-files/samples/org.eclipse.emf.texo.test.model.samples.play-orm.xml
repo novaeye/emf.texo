@@ -7,12 +7,16 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.ActType" name="ActType">
+    <orm:table name="ActType"/>
     <orm:attributes>
-      <orm:basic name="pindex" optional="false"/>
-      <orm:basic name="title" optional="false"/>
-      <orm:one-to-many name="scene" target-entity="org.eclipse.emf.texo.test.model.samples.play.SceneType">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:basic name="pindex" optional="false">
+        <orm:column name="pindex"/>
+      </orm:basic>
+      <orm:basic name="title" optional="false">
+        <orm:column name="title"/>
+      </orm:basic>
+      <orm:one-to-many name="scene">
+        <orm:join-column name="ActType_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -21,12 +25,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SceneTypeGroupFeatureGroup" name="SceneType_group">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="stageDirections" optional="true"/>
+      <orm:basic name="stageDirections">
+        <orm:column name="stageDirections"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="PROPERTY" name="speech" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SpeechType">
-        <orm:join-column/>
+      <orm:many-to-one name="speech">
+        <orm:join-column name="speech"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -34,9 +40,14 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SceneType" name="SceneType">
+    <orm:table name="SceneType"/>
     <orm:attributes>
-      <orm:basic name="pindex" optional="false"/>
-      <orm:basic name="title" optional="false"/>
+      <orm:basic name="pindex" optional="false">
+        <orm:column name="pindex"/>
+      </orm:basic>
+      <orm:basic name="title" optional="false">
+        <orm:column name="title"/>
+      </orm:basic>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SceneTypeGroupFeatureGroup">
         <orm:join-table/>
         <orm:cascade>
@@ -46,22 +57,29 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.FmType" name="FmType">
+    <orm:table name="FmType"/>
     <orm:attributes>
       <orm:element-collection name="p">
-        <orm:order-column/>
-        <orm:collection-table name="FmType_p"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="FmType_p">
+          <orm:join-column name="FmType_id"/>
+        </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PersonaeTypeGroupFeatureGroup" name="PersonaeType_group">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="title" optional="true"/>
-      <orm:basic access="PROPERTY" name="persona" optional="true"/>
+      <orm:basic name="title">
+        <orm:column name="title"/>
+      </orm:basic>
+      <orm:basic name="persona">
+        <orm:column name="persona"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="PROPERTY" name="personaGroup" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaGroupType">
-        <orm:join-column/>
+      <orm:many-to-one name="personaGroup">
+        <orm:join-column name="personaGroup"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -69,6 +87,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PersonaeType" name="PersonaeType">
+    <orm:table name="PersonaeType"/>
     <orm:attributes>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaeTypeGroupFeatureGroup">
         <orm:join-table/>
@@ -79,34 +98,45 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PersonaGroupType" name="PersonaGroupType">
+    <orm:table name="PersonaGroupType"/>
     <orm:attributes>
-      <orm:basic name="groupDescription" optional="false"/>
+      <orm:basic name="groupDescription" optional="false">
+        <orm:column name="groupDescription"/>
+      </orm:basic>
       <orm:element-collection name="persona">
-        <orm:order-column/>
-        <orm:collection-table name="PersonaGroupType_persona"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="PersonaGroupType_persona">
+          <orm:join-column name="PersonaGroupType_id"/>
+        </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PlayType" name="PlayType">
+    <orm:table name="PlayType"/>
     <orm:attributes>
-      <orm:basic name="title" optional="false"/>
-      <orm:basic name="sceneDescription" optional="false"/>
-      <orm:basic name="playSubTitle" optional="false"/>
-      <orm:many-to-one name="fm" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.play.FmType">
-        <orm:join-column/>
+      <orm:basic name="title" optional="false">
+        <orm:column name="title"/>
+      </orm:basic>
+      <orm:basic name="sceneDescription" optional="false">
+        <orm:column name="sceneDescription"/>
+      </orm:basic>
+      <orm:basic name="playSubTitle" optional="false">
+        <orm:column name="playSubTitle"/>
+      </orm:basic>
+      <orm:many-to-one name="fm" optional="false">
+        <orm:join-column name="fm"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="personae" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaeType">
-        <orm:join-column/>
+      <orm:many-to-one name="personae" optional="false">
+        <orm:join-column name="personae"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="act" target-entity="org.eclipse.emf.texo.test.model.samples.play.ActType">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="act">
+        <orm:join-column name="PlayType_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -115,15 +145,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SpeechTypeGroupFeatureGroup" name="SpeechType_group">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="speaker" optional="true"/>
-      <orm:basic access="PROPERTY" name="line" optional="true"/>
-      <orm:basic access="PROPERTY" name="stageDirections" optional="true"/>
+      <orm:basic name="speaker">
+        <orm:column name="speaker"/>
+      </orm:basic>
+      <orm:basic name="line">
+        <orm:column name="line"/>
+      </orm:basic>
+      <orm:basic name="stageDirections">
+        <orm:column name="stageDirections"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SpeechType" name="SpeechType">
+    <orm:table name="SpeechType"/>
     <orm:attributes>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SpeechTypeGroupFeatureGroup">
         <orm:join-table/>

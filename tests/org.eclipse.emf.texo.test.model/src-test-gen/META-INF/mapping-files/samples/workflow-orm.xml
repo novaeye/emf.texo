@@ -7,6 +7,7 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalOutputPort" name="ConditionalOutputPort">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="condition">
         <orm:column name="COND"/>
@@ -14,24 +15,22 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Workflow" name="Workflow">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:one-to-many name="nodes" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="nodes">
+        <orm:join-column name="Workflow_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="edges" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Edge">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="edges">
+        <orm:join-column name="Workflow_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="comments" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Comment">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="comments">
+        <orm:join-column name="Workflow_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -39,37 +38,53 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowElement" name="WorkflowElement">
+    <orm:table name="WorkflowElement"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
-      <orm:basic name="comment" optional="true"/>
-      <orm:basic name="x" optional="true"/>
-      <orm:basic name="y" optional="true"/>
-      <orm:basic name="width" optional="true"/>
-      <orm:basic name="height" optional="true"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="comment">
+        <orm:column name="comment"/>
+      </orm:basic>
+      <orm:basic name="x">
+        <orm:column name="x"/>
+      </orm:basic>
+      <orm:basic name="y">
+        <orm:column name="y"/>
+      </orm:basic>
+      <orm:basic name="width">
+        <orm:column name="width"/>
+      </orm:basic>
+      <orm:basic name="height">
+        <orm:column name="height"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode" name="WorkflowNode">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:basic name="isStart" optional="false"/>
-      <orm:basic name="isFinish" optional="false"/>
-      <orm:many-to-one name="workflow" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Workflow">
-        <orm:join-column/>
+      <orm:basic name="isStart" optional="false">
+        <orm:column name="isStart"/>
+      </orm:basic>
+      <orm:basic name="isFinish" optional="false">
+        <orm:column name="isFinish"/>
+      </orm:basic>
+      <orm:many-to-one name="workflow" optional="false">
+        <orm:join-column name="workflow"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="outputs" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="outputs">
+        <orm:join-column name="WorkflowNode_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="inputs" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.InputPort">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="inputs">
+        <orm:join-column name="WorkflowNode_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -77,25 +92,26 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Edge" name="Edge">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:many-to-one name="workflow" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Workflow">
-        <orm:join-column/>
+      <orm:many-to-one name="workflow" optional="false">
+        <orm:join-column name="workflow"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="target" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.InputPort">
-        <orm:join-column/>
+      <orm:many-to-one name="target" optional="false">
+        <orm:join-column name="target"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="source" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort">
-        <orm:join-column/>
+      <orm:many-to-one name="source" optional="false">
+        <orm:join-column name="source"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -105,9 +121,10 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Comment" name="Comment">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:many-to-one name="workflow" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Workflow">
-        <orm:join-column/>
+      <orm:many-to-one name="workflow" optional="false">
+        <orm:join-column name="workflow"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -117,18 +134,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort" name="OutputPort">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:many-to-one name="node" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode">
-        <orm:join-column/>
+      <orm:many-to-one name="node" optional="false">
+        <orm:join-column name="node"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="edges" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Edge">
-        <orm:order-column/>
-        <orm:join-table name="OutputPort_edges"/>
+      <orm:one-to-many name="edges">
+        <orm:join-table name="OutputPort_edges">
+          <orm:join-column name="OutputPort_id"/>
+          <orm:inverse-join-column name="Edge_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -138,21 +158,25 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Port" name="Port">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.InputPort" name="InputPort">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:many-to-one name="node" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode">
-        <orm:join-column/>
+      <orm:many-to-one name="node" optional="false">
+        <orm:join-column name="node"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="edges" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Edge">
-        <orm:order-column/>
-        <orm:join-table name="InputPort_edges"/>
+      <orm:one-to-many name="edges">
+        <orm:join-table name="InputPort_edges">
+          <orm:join-column name="InputPort_id"/>
+          <orm:inverse-join-column name="Edge_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -162,12 +186,14 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Fault" name="Fault">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.CompoundTask" name="CompoundTask">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:many-to-one name="subworkflow" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.workflow.Workflow">
-        <orm:join-column/>
+      <orm:many-to-one name="subworkflow" optional="false">
+        <orm:join-column name="subworkflow"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -177,19 +203,27 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.TransformationTask" name="TransformationTask">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:basic name="transformExpression" optional="true"/>
+      <orm:basic name="transformExpression">
+        <orm:column name="transformExpression"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalTask" name="ConditionalTask">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.LoopTask" name="LoopTask">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
-      <orm:basic name="whileCondition" optional="false"/>
+      <orm:basic name="whileCondition" optional="false">
+        <orm:column name="whileCondition"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Task" name="Task">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

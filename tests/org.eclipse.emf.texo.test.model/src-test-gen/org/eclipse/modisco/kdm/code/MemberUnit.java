@@ -16,7 +16,7 @@ public class MemberUnit extends DataElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private ExportKind export = ExportKind.PUBLIC;
 
   /**

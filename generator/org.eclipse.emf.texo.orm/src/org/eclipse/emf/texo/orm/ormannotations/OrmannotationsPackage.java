@@ -83,6 +83,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EPACKAGE_ORM_ANNOTATION__DESCRIPTION = AnnotationsmodelPackage.EPACKAGE_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EPACKAGE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
 	 * The feature id for the '<em><b>EPackage</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -223,13 +232,22 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 13;
 
   /**
+	 * The feature id for the '<em><b>Add Order Column To List Mappings</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 14;
+
+		/**
 	 * The number of structural features of the '<em>EPackage ORM Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 14;
+  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 15;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.ormannotations.ENamedElementORMAnnotation <em>ENamed Element ORM Annotation</em>}' class.
@@ -329,6 +347,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int ECLASS_ORM_ANNOTATION__DESCRIPTION = AnnotationsmodelPackage.ECLASS_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASS_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.ECLASS_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -433,6 +460,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EDATA_TYPE_ORM_ANNOTATION_DEFINITION__DESCRIPTION = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_ORM_ANNOTATION_DEFINITION__LAST_IDENTIFIER = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -555,6 +591,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EATTRIBUTE_ORM_ANNOTATION__DESCRIPTION = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EATTRIBUTE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -694,6 +739,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EREFERENCE_ORM_ANNOTATION__DESCRIPTION = AnnotationsmodelPackage.EREFERENCE_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EREFERENCE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EREFERENCE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -950,6 +1004,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EENUM_ORM_ANNOTATION__DESCRIPTION = AnnotationsmodelPackage.EENUM_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EENUM_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EENUM_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -1078,6 +1141,15 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EDATA_TYPE_ORM_ANNOTATION__DESCRIPTION = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__DESCRIPTION;
 
   /**
+	 * The feature id for the '<em><b>Last Identifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -1472,6 +1544,19 @@ public class OrmannotationsPackage extends EPackageImpl {
 	}
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isAddOrderColumnToListMappings <em>Add Order Column To List Mappings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Add Order Column To List Mappings</em>'.
+	 * @see org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isAddOrderColumnToListMappings()
+	 * @see #getEPackageORMAnnotation()
+	 * @generated
+	 */
+	public EAttribute getEPackageORMAnnotation_AddOrderColumnToListMappings() {
+		return (EAttribute)ePackageORMAnnotationEClass.getEStructuralFeatures().get(14);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EType Element ORM Annotation</em>'.
@@ -2138,6 +2223,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		createEReference(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__DEFAULT_CASCADE_NON_CONTAINMENT);
 		createEReference(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__ENTITY_MAPPINGS);
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS);
+		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS);
 
 		eTypeElementORMAnnotationEClass = createEClass(ETYPE_ELEMENT_ORM_ANNOTATION);
 		createEReference(eTypeElementORMAnnotationEClass, ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT);
@@ -2264,6 +2350,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEReference(getEPackageORMAnnotation_DefaultCascadeNonContainment(), theOrmPackage.getCascadeType(), null, "defaultCascadeNonContainment", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEPackageORMAnnotation_EntityMappings(), theOrmPackage.getEntityMappingsType(), null, "entityMappings", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_GenerateJavaAnnotations(), theEcorePackage.getEBoolean(), "generateJavaAnnotations", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageORMAnnotation_AddOrderColumnToListMappings(), theEcorePackage.getEBoolean(), "addOrderColumnToListMappings", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eTypeElementORMAnnotationEClass, ETypeElementORMAnnotation.class, "ETypeElementORMAnnotation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getETypeElementORMAnnotation_Transient(), theOrmPackage.getTransient(), null, "transient", null, 0, 1, ETypeElementORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2461,6 +2548,14 @@ public class OrmannotationsPackage extends EPackageImpl {
     public static final EAttribute EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS = eINSTANCE.getEPackageORMAnnotation_GenerateJavaAnnotations();
 
     /**
+		 * The meta object literal for the '<em><b>Add Order Column To List Mappings</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS = eINSTANCE.getEPackageORMAnnotation_AddOrderColumnToListMappings();
+
+				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}' class.
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
 		 * @see org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation

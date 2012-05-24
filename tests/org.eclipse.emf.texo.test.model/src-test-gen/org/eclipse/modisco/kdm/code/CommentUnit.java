@@ -17,7 +17,7 @@ public class CommentUnit extends ModelElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String text = null;
 
   /**

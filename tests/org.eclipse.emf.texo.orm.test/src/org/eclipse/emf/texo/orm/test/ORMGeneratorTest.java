@@ -45,6 +45,7 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureMo
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
 import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
+import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 
 /**
  * Generates the ORM for specified models. The generated orm files are stored in the src/META-INF folder.
@@ -73,6 +74,10 @@ public class ORMGeneratorTest extends TestCase {
   private static final EPackage.Registry SHARED_REGISTRY = GeneratorUtils.createEPackageRegistry();
 
   public void testGenerateModels() throws Exception {
+
+    // generate all the db names for the orms
+    EPackageORMAnnotation.setGenerateAllDbSchemaNames(true);
+
     final IProject modelTestProject = EclipseGeneratorUtils.getProject(TEST_MODEL_PROJECT);
     final IPath projectPath = modelTestProject.getLocation();
     final File modelTestProjectDir = projectPath.toFile();

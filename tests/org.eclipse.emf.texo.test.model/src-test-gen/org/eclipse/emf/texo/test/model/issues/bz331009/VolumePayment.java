@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 
 /**
@@ -22,7 +20,7 @@ public class VolumePayment extends PaymentItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigDecimal volume = null;
 
   /**
@@ -30,8 +28,7 @@ public class VolumePayment extends PaymentItem {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Units.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Units unit = null;
 
   /**
@@ -39,7 +36,7 @@ public class VolumePayment extends PaymentItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigDecimal price = null;
 
   /**

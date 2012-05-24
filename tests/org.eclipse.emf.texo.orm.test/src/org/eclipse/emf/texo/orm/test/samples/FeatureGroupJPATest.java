@@ -40,7 +40,7 @@ import org.junit.Test;
 public class FeatureGroupJPATest extends JPATest {
 
   public FeatureGroupJPATest() {
-    super(JpamixedModelPackage.INSTANCE, "-hsqldb");
+    super(JpamixedModelPackage.INSTANCE, "-class-hsqldb");
   }
 
   @Test
@@ -91,10 +91,10 @@ public class FeatureGroupJPATest extends JPATest {
       for (int i = 0; i < 50; i++) {
         LetterBodyTypeMixedFeatureGroup fm1 = lb1.getMixed().get(i);
         LetterBodyTypeMixedFeatureGroup fm2 = letterBody.getMixed().get(i);
-        assertTrue(fm1.getFeature() == fm2.getFeature());
         if (!ModelResolver.getInstance().isModelEnabled(fm1.getValue())) {
           assertTrue(fm1.getValue().equals(fm2.getValue()));
         }
+        assertTrue(fm1.getFeature() == fm2.getFeature());
       }
       json2 = toJsonConverter.convert(letterBody).toString();
       commitTransaction();

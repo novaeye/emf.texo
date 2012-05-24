@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import org.eclipse.modisco.kdm.code.Module;
 
@@ -22,8 +21,7 @@ public class DeployedComponent extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Module.class)
-  @JoinTable(name = "DeployedComponent_groupedCode")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<Module> groupedCode = new HashSet<Module>();
 
   /**

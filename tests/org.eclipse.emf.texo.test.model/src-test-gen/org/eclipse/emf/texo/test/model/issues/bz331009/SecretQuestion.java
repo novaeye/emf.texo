@@ -18,7 +18,7 @@ public class SecretQuestion extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String question = null;
 
   /**
@@ -26,7 +26,7 @@ public class SecretQuestion extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String correctAnswer = null;
 
   /**
@@ -35,7 +35,7 @@ public class SecretQuestion extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String alarmAnswer = null;
 
   /**
@@ -43,7 +43,7 @@ public class SecretQuestion extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private boolean active = false;
 
   /**
@@ -51,7 +51,7 @@ public class SecretQuestion extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private SecretQuestionType type = SecretQuestionType.REGULAR;
 
   /**

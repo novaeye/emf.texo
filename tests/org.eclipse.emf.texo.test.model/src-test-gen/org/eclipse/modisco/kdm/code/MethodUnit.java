@@ -16,7 +16,7 @@ public class MethodUnit extends ControlElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private MethodKind kind = MethodKind.METHOD;
 
   /**
@@ -24,7 +24,7 @@ public class MethodUnit extends ControlElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private ExportKind export = ExportKind.PUBLIC;
 
   /**

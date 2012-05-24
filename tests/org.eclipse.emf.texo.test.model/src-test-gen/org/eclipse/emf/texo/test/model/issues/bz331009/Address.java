@@ -18,7 +18,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String zipCode = null;
 
   /**
@@ -26,7 +26,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String country = null;
 
   /**
@@ -34,7 +34,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String region = null;
 
   /**
@@ -42,7 +42,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String city = null;
 
   /**
@@ -50,7 +50,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String street = null;
 
   /**
@@ -58,7 +58,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String building = null;
 
   /**
@@ -66,7 +66,7 @@ public class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String flat = null;
 
   /**

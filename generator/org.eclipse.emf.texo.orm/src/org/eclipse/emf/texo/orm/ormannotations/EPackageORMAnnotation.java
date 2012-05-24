@@ -16,6 +16,7 @@ import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
 import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategy;
+import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategyProvider;
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>EPackage ORM Annotation</b></em>'. <!--
@@ -38,6 +39,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategy;
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#getDefaultCascadeNonContainment <em>Default Cascade Non Containment</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#getEntityMappings <em>Entity Mappings</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isGenerateJavaAnnotations <em>Generate Java Annotations</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isAddOrderColumnToListMappings <em>Add Order Column To List Mappings</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +48,15 @@ import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategy;
  * @generated
  */
 public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedElementORMAnnotation {
+
+  private static boolean generateAllDBSchemaNames = false;
+
+  /**
+   * Used during testing
+   */
+  public static void setGenerateAllDbSchemaNames(boolean generateAll) {
+    generateAllDBSchemaNames = generateAll;
+  }
 
   /**
 	 * The default value of the '{@link #isGenerateFullDbSchemaNames() <em>Generate Full Db Schema Names</em>}' attribute.
@@ -265,7 +276,25 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
    * @ordered
    */
   protected boolean generateJavaAnnotations = GENERATE_JAVA_ANNOTATIONS_EDEFAULT;
-  private ORMNamingStrategy namingStrategy = new ORMNamingStrategy();
+  /**
+	 * The default value of the '{@link #isAddOrderColumnToListMappings() <em>Add Order Column To List Mappings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAddOrderColumnToListMappings()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ADD_ORDER_COLUMN_TO_LIST_MAPPINGS_EDEFAULT = false;
+		/**
+	 * The cached value of the '{@link #isAddOrderColumnToListMappings() <em>Add Order Column To List Mappings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAddOrderColumnToListMappings()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean addOrderColumnToListMappings = ADD_ORDER_COLUMN_TO_LIST_MAPPINGS_EDEFAULT;
+		private final ORMNamingStrategy namingStrategy;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -274,9 +303,11 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
    */
   protected EPackageORMAnnotation() {
     super();
-    namingStrategy.setePackageORMAnnotation(this);
+    namingStrategy = ORMNamingStrategyProvider.getInstance().createORMNamingStrategy(this);
     generateJavaAnnotations = AnnotationManager.isAnnotationSystemEnabled("jpa"); //$NON-NLS-1$
-    ;
+    if (generateAllDBSchemaNames) {
+      generateFullDbSchemaNames = generateAllDBSchemaNames;
+    }
   }
 
   public ORMNamingStrategy getNamingStrategy() {
@@ -816,6 +847,40 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 	}
 
   /**
+	 * Returns the value of the '<em><b>Add Order Column To List Mappings</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Add Order Column To List Mappings</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Order Column To List Mappings</em>' attribute.
+	 * @see #setAddOrderColumnToListMappings(boolean)
+	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEPackageORMAnnotation_AddOrderColumnToListMappings()
+	 * @model default="false"
+	 * @generated
+	 */
+	public boolean isAddOrderColumnToListMappings() {
+		return addOrderColumnToListMappings;
+	}
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isAddOrderColumnToListMappings <em>Add Order Column To List Mappings</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Order Column To List Mappings</em>' attribute.
+	 * @see #isAddOrderColumnToListMappings()
+	 * @generated
+	 */
+	public void setAddOrderColumnToListMappings(boolean newAddOrderColumnToListMappings) {
+		boolean oldAddOrderColumnToListMappings = addOrderColumnToListMappings;
+		addOrderColumnToListMappings = newAddOrderColumnToListMappings;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS, oldAddOrderColumnToListMappings, addOrderColumnToListMappings));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -867,6 +932,8 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 				return getEntityMappings();
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS:
 				return isGenerateJavaAnnotations();
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
+				return isAddOrderColumnToListMappings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -919,6 +986,9 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 				return;
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS:
 				setGenerateJavaAnnotations((Boolean)newValue);
+				return;
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
+				setAddOrderColumnToListMappings((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -973,6 +1043,9 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS:
 				setGenerateJavaAnnotations(GENERATE_JAVA_ANNOTATIONS_EDEFAULT);
 				return;
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
+				setAddOrderColumnToListMappings(ADD_ORDER_COLUMN_TO_LIST_MAPPINGS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1012,6 +1085,8 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 				return entityMappings != null;
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS:
 				return generateJavaAnnotations != GENERATE_JAVA_ANNOTATIONS_EDEFAULT;
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
+				return addOrderColumnToListMappings != ADD_ORDER_COLUMN_TO_LIST_MAPPINGS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1047,6 +1122,8 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 		result.append(useJoinTablesForNonContainment);
 		result.append(", generateJavaAnnotations: ");
 		result.append(generateJavaAnnotations);
+		result.append(", addOrderColumnToListMappings: ");
+		result.append(addOrderColumnToListMappings);
 		result.append(')');
 		return result.toString();
 	}

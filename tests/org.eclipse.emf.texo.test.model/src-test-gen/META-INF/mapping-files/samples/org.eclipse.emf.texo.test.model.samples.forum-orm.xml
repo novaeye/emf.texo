@@ -7,18 +7,19 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Forum" name="Forum">
+    <orm:table name="Forum"/>
     <orm:attributes>
-      <orm:basic name="title" optional="false"/>
-      <orm:one-to-many name="members" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Member">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:basic name="title" optional="false">
+        <orm:column name="title"/>
+      </orm:basic>
+      <orm:one-to-many name="members">
+        <orm:join-column name="Forum_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="topics" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Topic">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="topics">
+        <orm:join-column name="Forum_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -26,20 +27,27 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Member" name="Member">
+    <orm:table name="Member"/>
     <orm:attributes>
-      <orm:basic name="nickname" optional="false"/>
-      <orm:one-to-many name="posts" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Post">
-        <orm:order-column/>
-        <orm:join-table name="Member_posts"/>
+      <orm:basic name="nickname" optional="false">
+        <orm:column name="nickname"/>
+      </orm:basic>
+      <orm:one-to-many name="posts">
+        <orm:join-table name="Member_posts">
+          <orm:join-column name="Member_id"/>
+          <orm:inverse-join-column name="Post_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="created" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Topic">
-        <orm:order-column/>
-        <orm:join-table name="Member_created"/>
+      <orm:one-to-many name="created">
+        <orm:join-table name="Member_created">
+          <orm:join-column name="Member_id"/>
+          <orm:inverse-join-column name="Topic_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -49,20 +57,27 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Topic" name="Topic">
+    <orm:table name="Topic"/>
     <orm:attributes>
-      <orm:basic name="title" optional="false"/>
-      <orm:basic name="category" optional="false"/>
-      <orm:many-to-one name="creator" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Member">
-        <orm:join-column/>
+      <orm:basic name="title" optional="false">
+        <orm:column name="title"/>
+      </orm:basic>
+      <orm:basic name="category" optional="false">
+        <orm:column name="category"/>
+      </orm:basic>
+      <orm:many-to-one name="creator" optional="false">
+        <orm:join-column name="creator"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="posts" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Post">
-        <orm:order-column/>
-        <orm:join-table name="Topic_posts"/>
+      <orm:one-to-many name="posts">
+        <orm:join-table name="Topic_posts">
+          <orm:join-column name="Topic_id"/>
+          <orm:inverse-join-column name="Post_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -72,18 +87,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Post" name="Post">
+    <orm:table name="Post"/>
     <orm:attributes>
-      <orm:basic name="comment" optional="false"/>
-      <orm:many-to-one name="author" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Member">
-        <orm:join-column/>
+      <orm:basic name="comment" optional="false">
+        <orm:column name="comment"/>
+      </orm:basic>
+      <orm:many-to-one name="author" optional="false">
+        <orm:join-column name="author"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="topic" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.forum.Topic">
-        <orm:join-column/>
+      <orm:many-to-one name="topic" optional="false">
+        <orm:join-column name="topic"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>

@@ -24,7 +24,7 @@ public class ClaimLine extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Claim.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn() })
   private Claim claim = null;
 
@@ -33,8 +33,7 @@ public class ClaimLine extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ClaimLineCompositeKey.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private ClaimLineCompositeKey claimLineCompositeKey = null;
 
   /**

@@ -7,16 +7,35 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz379796.PriceType" name="PriceType">
+    <orm:table name="PriceType"/>
     <orm:attributes>
-      <orm:basic name="valueElement" optional="true"/>
-      <orm:basic name="nillableValueElement" optional="false"/>
-      <orm:basic name="requiredValueElement" optional="false"/>
-      <orm:basic name="comparisonElement" optional="true"/>
-      <orm:basic name="requiredComparisonElement" optional="false"/>
-      <orm:basic name="comparison" optional="true"/>
-      <orm:basic name="requiredComparison" optional="false"/>
-      <orm:basic name="requiredValue" optional="false"/>
-      <orm:basic name="value" optional="true"/>
+      <orm:basic name="valueElement">
+        <orm:column name="valueElement"/>
+      </orm:basic>
+      <orm:basic name="nillableValueElement" optional="false">
+        <orm:column name="nillableValueElement"/>
+      </orm:basic>
+      <orm:basic name="requiredValueElement" optional="false">
+        <orm:column name="requiredValueElement"/>
+      </orm:basic>
+      <orm:basic name="comparisonElement">
+        <orm:column name="comparisonElement"/>
+      </orm:basic>
+      <orm:basic name="requiredComparisonElement" optional="false">
+        <orm:column name="requiredComparisonElement"/>
+      </orm:basic>
+      <orm:basic name="comparison">
+        <orm:column name="comparison"/>
+      </orm:basic>
+      <orm:basic name="requiredComparison" optional="false">
+        <orm:column name="requiredComparison"/>
+      </orm:basic>
+      <orm:basic name="requiredValue" optional="false">
+        <orm:column name="requiredValue"/>
+      </orm:basic>
+      <orm:basic name="value">
+        <orm:column name="value"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

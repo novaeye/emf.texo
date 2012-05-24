@@ -16,7 +16,7 @@ public class DataEvent extends DataResource {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**

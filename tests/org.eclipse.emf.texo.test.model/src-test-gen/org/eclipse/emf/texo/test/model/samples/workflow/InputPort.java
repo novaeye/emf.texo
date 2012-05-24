@@ -9,7 +9,6 @@ import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -24,7 +23,7 @@ public class InputPort extends Port {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = WorkflowNode.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn() })
   private WorkflowNode node = null;
 
@@ -33,9 +32,8 @@ public class InputPort extends Port {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Edge.class)
-  @OrderColumn()
-  @JoinTable(name = "InputPort_edges")
+  @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinTable()
   private List<Edge> edges = new ArrayList<Edge>();
 
   /**

@@ -16,7 +16,7 @@ public class PlatformEvent extends ResourceType {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**

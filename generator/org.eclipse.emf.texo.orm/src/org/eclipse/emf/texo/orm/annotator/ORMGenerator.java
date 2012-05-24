@@ -412,6 +412,11 @@ public class ORMGenerator extends BaseGenerateAction {
     final List<EAttribute> eAttributes = new ArrayList<EAttribute>();
     final List<EReference> eReferences = new ArrayList<EReference>();
     for (EStructuralFeatureModelGenAnnotation modelGenFeature : modelGenFeatures) {
+      // only ORM map the features which are directly part this efeature
+      if (modelGenFeature.getFeatureMapFeature() != null
+          && modelGenFeature.getFeatureMapFeature().getEStructuralFeature() != eAttribute) {
+        continue;
+      }
       if (modelGenFeature.getEStructuralFeature() instanceof EAttribute) {
         eAttributes.add((EAttribute) modelGenFeature.getEStructuralFeature());
       } else {

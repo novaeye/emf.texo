@@ -6,7 +6,6 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>GlobalAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -22,7 +21,6 @@ public class GlobalAddress extends Address {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "GlobalAddress_location")
   private List<String> location = new ArrayList<String>();
 
@@ -31,7 +29,7 @@ public class GlobalAddress extends Address {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int countryCode = 0;
 
   /**

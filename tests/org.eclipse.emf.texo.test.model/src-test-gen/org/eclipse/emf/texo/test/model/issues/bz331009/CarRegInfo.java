@@ -4,8 +4,6 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,8 +23,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = Person.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Person owner = null;
 
   /**
@@ -34,7 +31,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String regNumber = null;
 
   /**
@@ -43,7 +40,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String vin = null;
 
   /**
@@ -51,7 +48,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date releaseYear = null;
 
@@ -60,7 +57,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String engineNumber = null;
 
   /**
@@ -68,7 +65,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String chassisNumber = null;
 
   /**
@@ -76,7 +73,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String bodyNumber = null;
 
   /**
@@ -84,7 +81,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String color = null;
 
   /**

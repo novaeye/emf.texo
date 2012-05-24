@@ -58,7 +58,12 @@ public class GeneratorUtils {
     if (aFeature.getAnnotatedEClass().getAnnotatedEPackage().getAnnotatedModel().isGeneratingSources()) {
       return false;
     }
+    // neither set it in case the feature is part of a feature map, if the ORM would access through the getter/setter
+    // then the featuremap entry would always be forced to the same feature (the setter sets the feature)
     final EStructuralFeature eFeature = aFeature.getEStructuralFeature();
+    if (isPartOfGroup(eFeature)) {
+      return false;
+    }
     return !ExtendedMetaData.INSTANCE.isDocumentRoot(eFeature.getEContainingClass()) && eFeature.isDerived();
   }
 

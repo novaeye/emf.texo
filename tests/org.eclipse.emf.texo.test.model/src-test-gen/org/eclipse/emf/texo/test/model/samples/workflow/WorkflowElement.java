@@ -17,7 +17,7 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -25,7 +25,7 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String comment = null;
 
   /**
@@ -33,7 +33,7 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int x = 0;
 
   /**
@@ -41,7 +41,7 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int y = 0;
 
   /**
@@ -49,7 +49,7 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int width = -1;
 
   /**
@@ -57,7 +57,7 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int height = -1;
 
   /**

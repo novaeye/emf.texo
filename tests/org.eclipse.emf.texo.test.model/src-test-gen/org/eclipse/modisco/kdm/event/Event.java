@@ -16,7 +16,7 @@ public class Event extends AbstractEventElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**

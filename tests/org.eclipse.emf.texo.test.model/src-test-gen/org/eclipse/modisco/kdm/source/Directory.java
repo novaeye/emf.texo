@@ -16,7 +16,7 @@ public class Directory extends InventoryContainer {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String path = null;
 
   /**

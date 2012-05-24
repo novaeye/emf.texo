@@ -16,7 +16,7 @@ public class ParameterUnit extends DataElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private ParameterKind kind = ParameterKind.BYVALUE;
 
   /**
@@ -24,7 +24,7 @@ public class ParameterUnit extends DataElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer pos = null;
 
   /**

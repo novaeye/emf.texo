@@ -24,7 +24,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = PurchaseOrder.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn() })
   private PurchaseOrder order = null;
 
@@ -33,7 +33,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String productName = null;
 
   /**
@@ -41,7 +41,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int quantity = 0;
 
   /**
@@ -49,7 +49,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int uSPrice = 0;
 
   /**
@@ -57,7 +57,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String comment = null;
 
   /**
@@ -65,7 +65,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date shipDate = null;
 
@@ -74,7 +74,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String partNum = null;
 
   /**

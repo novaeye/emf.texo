@@ -17,7 +17,7 @@ public abstract class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -25,7 +25,7 @@ public abstract class Address extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String country = null;
 
   /**

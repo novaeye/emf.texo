@@ -16,7 +16,7 @@ public class InventoryItem extends AbstractInventoryElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String version = null;
 
   /**
@@ -24,7 +24,7 @@ public class InventoryItem extends AbstractInventoryElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String path = null;
 
   /**

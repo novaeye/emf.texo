@@ -6,7 +6,6 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -55,7 +54,6 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "statesByCountry_zipUnions")
   private List<String> zipUnions = new ArrayList<String>();
 
@@ -73,7 +71,6 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "statesByCountry_simpleUnions")
   private List<Object> simpleUnions = new ArrayList<Object>();
 
@@ -91,7 +88,6 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "statesByCountry_simpleStringUnions")
   private List<String> simpleStringUnions = new ArrayList<String>();
 

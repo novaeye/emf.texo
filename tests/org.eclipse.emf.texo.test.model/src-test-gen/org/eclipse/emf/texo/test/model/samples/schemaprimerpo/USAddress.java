@@ -58,7 +58,7 @@ public class USAddress extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String country = "US";
 
   /**

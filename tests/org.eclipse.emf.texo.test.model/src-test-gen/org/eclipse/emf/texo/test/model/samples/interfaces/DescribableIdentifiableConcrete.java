@@ -18,7 +18,7 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = "";
 
   /**

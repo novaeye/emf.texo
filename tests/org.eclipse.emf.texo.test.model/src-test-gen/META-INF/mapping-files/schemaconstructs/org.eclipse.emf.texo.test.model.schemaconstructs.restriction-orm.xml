@@ -7,17 +7,28 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.restriction.Member" name="Member">
+    <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.restriction.XMLDeviant" name="XMLDeviant">
+    <orm:table name="XMLDeviant"/>
     <orm:attributes>
-      <orm:basic name="numPosts" optional="true"/>
-      <orm:basic name="signature" optional="false"/>
-      <orm:basic name="email" optional="true"/>
-      <orm:basic name="firstSubscribed" optional="true">
+      <orm:basic name="numPosts">
+        <orm:column name="numPosts"/>
+      </orm:basic>
+      <orm:basic name="signature" optional="false">
+        <orm:column name="signature"/>
+      </orm:basic>
+      <orm:basic name="email">
+        <orm:column name="email"/>
+      </orm:basic>
+      <orm:basic name="firstSubscribed">
+        <orm:column name="firstSubscribed"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="mailReader" optional="true"/>
+      <orm:basic name="mailReader">
+        <orm:column name="mailReader"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

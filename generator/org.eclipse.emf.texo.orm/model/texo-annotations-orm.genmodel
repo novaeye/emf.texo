@@ -23,6 +23,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EPackageORMAnnotation/defaultCascadeNonContainment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EPackageORMAnnotation/entityMappings"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-orm.ecore#//EPackageORMAnnotation/generateJavaAnnotations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-orm.ecore#//EPackageORMAnnotation/addOrderColumnToListMappings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="texo-annotations-orm.ecore#//ETypeElementORMAnnotation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//ETypeElementORMAnnotation/transient"/>

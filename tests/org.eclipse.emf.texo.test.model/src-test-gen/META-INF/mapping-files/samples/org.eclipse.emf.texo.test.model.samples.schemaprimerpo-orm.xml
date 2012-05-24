@@ -7,26 +7,29 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schemaprimerpo.PurchaseOrder" name="PurchaseOrder">
+    <orm:table name="PurchaseOrder"/>
     <orm:attributes>
-      <orm:basic name="comment" optional="true"/>
-      <orm:basic name="orderDate" optional="true">
+      <orm:basic name="comment">
+        <orm:column name="comment"/>
+      </orm:basic>
+      <orm:basic name="orderDate">
+        <orm:column name="orderDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:many-to-one name="shipTo" optional="true" target-entity="org.eclipse.emf.texo.test.model.samples.schemaprimerpo.USAddress">
-        <orm:join-column/>
+      <orm:many-to-one name="shipTo">
+        <orm:join-column name="shipTo"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="billTo" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.schemaprimerpo.USAddress">
-        <orm:join-column/>
+      <orm:many-to-one name="billTo" optional="false">
+        <orm:join-column name="billTo"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="items" target-entity="org.eclipse.emf.texo.test.model.samples.schemaprimerpo.Item">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="items">
+        <orm:join-column name="PurchaseOrder_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -34,25 +37,50 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schemaprimerpo.Item" name="Item">
+    <orm:table name="Item"/>
     <orm:attributes>
-      <orm:basic name="productName" optional="false"/>
-      <orm:basic name="quantity" optional="false"/>
-      <orm:basic name="uSPrice" optional="false"/>
-      <orm:basic name="comment" optional="true"/>
-      <orm:basic name="shipDate" optional="true">
+      <orm:basic name="productName" optional="false">
+        <orm:column name="productName"/>
+      </orm:basic>
+      <orm:basic name="quantity" optional="false">
+        <orm:column name="quantity"/>
+      </orm:basic>
+      <orm:basic name="uSPrice" optional="false">
+        <orm:column name="uSPrice"/>
+      </orm:basic>
+      <orm:basic name="comment">
+        <orm:column name="comment"/>
+      </orm:basic>
+      <orm:basic name="shipDate">
+        <orm:column name="shipDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="partNum" optional="false"/>
+      <orm:basic name="partNum" optional="false">
+        <orm:column name="partNum"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schemaprimerpo.USAddress" name="USAddress">
+    <orm:table name="USAddress"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
-      <orm:basic name="street" optional="false"/>
-      <orm:basic name="city" optional="false"/>
-      <orm:basic name="state" optional="false"/>
-      <orm:basic name="zip" optional="false"/>
-      <orm:basic name="country" optional="true"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="street" optional="false">
+        <orm:column name="street"/>
+      </orm:basic>
+      <orm:basic name="city" optional="false">
+        <orm:column name="city"/>
+      </orm:basic>
+      <orm:basic name="state" optional="false">
+        <orm:column name="state"/>
+      </orm:basic>
+      <orm:basic name="zip" optional="false">
+        <orm:column name="zip"/>
+      </orm:basic>
+      <orm:basic name="country">
+        <orm:column name="country"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

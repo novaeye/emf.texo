@@ -34,6 +34,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateJavaAnnotations"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="addOrderColumnToListMappings"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ETypeElementORMAnnotation" abstract="true"
       interface="true" eSuperTypes="#//ENamedElementORMAnnotation">

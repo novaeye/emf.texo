@@ -8,7 +8,7 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Book" eSuperTypes="identifiable.ecore#//Identifiable">
     <eAnnotations source="texo.java.annotation">
-      <details key="value" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;test&quot;)"/>
+      <details key="type" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;test&quot;)"/>
     </eAnnotations>
     <eAnnotations source="org.eclipse.emf.texo">
       <details key="title" value="${title} (${pages}) - ${category}"/>

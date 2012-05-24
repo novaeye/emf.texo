@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 /**
@@ -21,8 +20,7 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = DeployedComponent.class)
-  @JoinTable(name = "DeployedSoftwareSystem_groupedComponent")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<DeployedComponent> groupedComponent = new HashSet<DeployedComponent>();
 
   /**

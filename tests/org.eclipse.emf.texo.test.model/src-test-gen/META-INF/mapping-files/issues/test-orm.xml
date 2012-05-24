@@ -7,20 +7,27 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Person" name="Person">
+    <orm:table name="Person"/>
     <orm:attributes>
-      <orm:basic name="firstname" optional="true"/>
-      <orm:basic name="lastname" optional="true"/>
-      <orm:many-to-one name="address" optional="false" target-entity="org.eclipse.emf.texo.test.model.issues.bz325429_test.Address">
-        <orm:join-column/>
+      <orm:basic name="firstname">
+        <orm:column name="firstname"/>
+      </orm:basic>
+      <orm:basic name="lastname">
+        <orm:column name="lastname"/>
+      </orm:basic>
+      <orm:many-to-one name="address" optional="false">
+        <orm:join-column name="address"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-many name="contacts" target-entity="org.eclipse.emf.texo.test.model.issues.bz325429_test.Contact">
-        <orm:order-column/>
-        <orm:join-table name="Person_contacts"/>
+      <orm:many-to-many name="contacts">
+        <orm:join-table name="Person_contacts">
+          <orm:join-column name="Person_id"/>
+          <orm:inverse-join-column name="Contact_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -30,15 +37,25 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Address" name="Address">
+    <orm:table name="Address"/>
     <orm:attributes>
-      <orm:basic name="street" optional="true"/>
-      <orm:basic name="city" optional="true"/>
+      <orm:basic name="street">
+        <orm:column name="street"/>
+      </orm:basic>
+      <orm:basic name="city">
+        <orm:column name="city"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Contact" name="Contact">
+    <orm:table name="Contact"/>
     <orm:attributes>
-      <orm:basic name="value" optional="true"/>
-      <orm:basic name="type" optional="true"/>
+      <orm:basic name="value">
+        <orm:column name="value"/>
+      </orm:basic>
+      <orm:basic name="type">
+        <orm:column name="type"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

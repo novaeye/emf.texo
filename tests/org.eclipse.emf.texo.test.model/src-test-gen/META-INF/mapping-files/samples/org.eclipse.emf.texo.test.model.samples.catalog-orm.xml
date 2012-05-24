@@ -7,21 +7,30 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.catalog.CatalogType" name="CatalogType">
+    <orm:table name="CatalogType"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
-      <orm:basic name="description" optional="false"/>
-      <orm:many-to-many name="subCatalog" target-entity="org.eclipse.emf.texo.test.model.samples.catalog.CatalogType">
-        <orm:order-column/>
-        <orm:join-table name="CatalogType_subCatalog"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="description" optional="false">
+        <orm:column name="description"/>
+      </orm:basic>
+      <orm:many-to-many name="subCatalog">
+        <orm:join-table name="CatalogType_subCatalog">
+          <orm:join-column name="CatalogType_id"/>
+          <orm:inverse-join-column name="CatalogType_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-many>
-      <orm:many-to-many name="product" target-entity="org.eclipse.emf.texo.test.model.samples.catalog.ProductType">
-        <orm:order-column/>
-        <orm:join-table name="CatalogType_product"/>
+      <orm:many-to-many name="product">
+        <orm:join-table name="CatalogType_product">
+          <orm:join-column name="CatalogType_id"/>
+          <orm:inverse-join-column name="ProductType_id"/>
+        </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -31,18 +40,22 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.catalog.ProductType" name="ProductType">
+    <orm:table name="ProductType"/>
     <orm:attributes>
-      <orm:basic name="code" optional="false"/>
-      <orm:basic name="description" optional="false"/>
-      <orm:many-to-one name="price" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.catalog.PriceType">
-        <orm:join-column/>
+      <orm:basic name="code" optional="false">
+        <orm:column name="code"/>
+      </orm:basic>
+      <orm:basic name="description" optional="false">
+        <orm:column name="description"/>
+      </orm:basic>
+      <orm:many-to-one name="price" optional="false">
+        <orm:join-column name="price"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:one-to-many name="remark" target-entity="org.eclipse.emf.texo.test.model.samples.catalog.StringType">
-        <orm:order-column/>
-        <orm:join-column/>
+      <orm:one-to-many name="remark">
+        <orm:join-column name="ProductType_id"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -50,11 +63,16 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.catalog.PriceType" name="PriceType">
+    <orm:table name="PriceType"/>
     <orm:attributes>
-      <orm:basic name="price" optional="false"/>
-      <orm:basic name="quantityTo" optional="false"/>
-      <orm:many-to-one name="supplier" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.catalog.SupplierType">
-        <orm:join-column/>
+      <orm:basic name="price" optional="false">
+        <orm:column name="price"/>
+      </orm:basic>
+      <orm:basic name="quantityTo" optional="false">
+        <orm:column name="quantityTo"/>
+      </orm:basic>
+      <orm:many-to-one name="supplier" optional="false">
+        <orm:join-column name="supplier"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -64,14 +82,22 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.catalog.SupplierType" name="SupplierType">
+    <orm:table name="SupplierType"/>
     <orm:attributes>
-      <orm:basic name="name" optional="false"/>
-      <orm:basic name="noOfEmployees" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="noOfEmployees" optional="false">
+        <orm:column name="noOfEmployees"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.catalog.StringType" name="StringType">
+    <orm:table name="StringType"/>
     <orm:attributes>
-      <orm:basic name="value" optional="false"/>
+      <orm:basic name="value" optional="false">
+        <orm:column name="value"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

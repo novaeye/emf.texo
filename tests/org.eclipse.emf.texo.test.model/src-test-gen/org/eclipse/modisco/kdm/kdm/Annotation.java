@@ -17,7 +17,7 @@ public class Annotation extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String text = null;
 
   /**

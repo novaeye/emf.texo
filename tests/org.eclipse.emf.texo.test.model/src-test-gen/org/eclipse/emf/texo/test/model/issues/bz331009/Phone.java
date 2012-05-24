@@ -18,7 +18,7 @@ public class Phone extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String number = null;
 
   /**
@@ -26,7 +26,7 @@ public class Phone extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String description = null;
 
   /**

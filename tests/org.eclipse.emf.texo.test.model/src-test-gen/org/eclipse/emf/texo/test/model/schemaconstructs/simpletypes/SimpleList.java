@@ -8,7 +8,6 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
-import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -35,7 +34,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_boo")
   private List<Boolean> boo = new ArrayList<Boolean>();
 
@@ -45,7 +43,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_byt")
   private List<Byte> byt = new ArrayList<Byte>();
 
@@ -55,7 +52,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_doubl")
   private List<Double> doubl = new ArrayList<Double>();
 
@@ -65,7 +61,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_floa")
   private List<Float> floa = new ArrayList<Float>();
 
@@ -75,7 +70,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_inte")
   private List<Integer> inte = new ArrayList<Integer>();
 
@@ -85,7 +79,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_long")
   private List<Long> long_ = new ArrayList<Long>();
 
@@ -95,7 +88,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_shor")
   private List<Short> shor = new ArrayList<Short>();
 
@@ -105,7 +97,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_enu")
   private List<SimpleEnum> enu = new ArrayList<SimpleEnum>();
 
@@ -115,7 +106,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @Temporal(TemporalType.DATE)
   @CollectionTable(name = "SimpleList_dat")
   private List<Date> dat = new ArrayList<Date>();
@@ -126,7 +116,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_limitedstring")
   private List<String> limitedstring = new ArrayList<String>();
 
@@ -136,7 +125,6 @@ public class SimpleList extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   @CollectionTable(name = "SimpleList_stri")
   private List<String> stri = new ArrayList<String>();
 

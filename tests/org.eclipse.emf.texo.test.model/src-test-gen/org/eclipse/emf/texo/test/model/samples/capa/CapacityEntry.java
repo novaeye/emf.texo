@@ -17,7 +17,7 @@ public class CapacityEntry extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String capacityEntryId = null;
 
   /**
@@ -25,7 +25,7 @@ public class CapacityEntry extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**

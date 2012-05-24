@@ -6,12 +6,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
 
@@ -34,7 +30,7 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String somethingInteresting = null;
 
   /**
@@ -42,8 +38,7 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true, targetEntity = NonEMF.class)
-  @JoinColumns({ @JoinColumn() })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private NonEMF nonEMF = null;
 
   /**
@@ -51,9 +46,7 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = NonEMF.class)
-  @OrderColumn()
-  @JoinTable(name = "MySerializableClass_nonEMFs")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private List<NonEMF> nonEMFs = new ArrayList<NonEMF>();
 
   /**

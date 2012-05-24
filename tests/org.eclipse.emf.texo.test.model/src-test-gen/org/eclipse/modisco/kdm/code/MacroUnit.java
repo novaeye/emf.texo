@@ -16,7 +16,7 @@ public class MacroUnit extends PreprocessorDirective {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private MacroKind kind = MacroKind.REGULAR;
 
   /**

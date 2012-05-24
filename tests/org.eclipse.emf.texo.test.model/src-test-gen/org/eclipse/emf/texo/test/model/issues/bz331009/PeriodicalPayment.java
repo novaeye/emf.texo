@@ -17,7 +17,7 @@ public class PeriodicalPayment extends PaymentItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Periodicity periodicity = Periodicity.DAILY;
 
   /**

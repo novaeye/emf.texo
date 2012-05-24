@@ -20,28 +20,28 @@ public class Book extends CirculatingItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String title = null;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int pages = 100;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BookCategory category = null;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Writer.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn() })
   private Writer author = null;
 

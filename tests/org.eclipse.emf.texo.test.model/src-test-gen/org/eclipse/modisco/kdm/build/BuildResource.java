@@ -4,9 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.KDMEntity;
@@ -24,8 +21,7 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
-  @JoinTable(name = "BuildResource_implementation")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
   /**
@@ -33,8 +29,7 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = AbstractBuildElement.class)
-  @JoinTable(name = "BuildResource_groupedBuild")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<AbstractBuildElement> groupedBuild = new HashSet<AbstractBuildElement>();
 
   /**
@@ -42,8 +37,7 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractBuildElement.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractBuildElement> buildElement = new HashSet<AbstractBuildElement>();
 
   /**

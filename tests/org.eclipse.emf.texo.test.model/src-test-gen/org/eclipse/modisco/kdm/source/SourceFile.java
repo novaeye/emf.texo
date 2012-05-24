@@ -16,7 +16,7 @@ public class SourceFile extends InventoryItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String language = null;
 
   /**
@@ -24,7 +24,7 @@ public class SourceFile extends InventoryItem {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String encoding = null;
 
   /**

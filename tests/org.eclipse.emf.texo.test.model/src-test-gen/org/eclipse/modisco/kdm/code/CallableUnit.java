@@ -16,7 +16,7 @@ public class CallableUnit extends ControlElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private CallableKind kind = CallableKind.EXTERNAL;
 
   /**

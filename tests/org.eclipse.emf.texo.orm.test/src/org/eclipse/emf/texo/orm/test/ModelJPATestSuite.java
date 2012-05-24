@@ -47,7 +47,9 @@ public class ModelJPATestSuite {
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
     // modelPackages.clear();
+    // modelPackages.add(EmapsampleModelPackage.INSTANCE);
     // modelPackages.add(JpamixedModelPackage.INSTANCE);
+    // modelPackages.add(NestedgroupModelPackage.INSTANCE);
 
     // anytype is not supported, result in Object as item/target entity
     modelPackages.remove(AttributesModelPackage.INSTANCE);

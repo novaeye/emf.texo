@@ -17,7 +17,7 @@ public class TransformationTask extends WorkflowNode {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String transformExpression = null;
 
   /**

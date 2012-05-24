@@ -22,7 +22,7 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigDecimal sum = null;
 
   /**
@@ -30,7 +30,7 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Currency currency = Currency.ROUBLES;
 
   /**
@@ -38,7 +38,7 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date date = null;
 
@@ -47,7 +47,7 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String description = null;
 
   /**
@@ -55,7 +55,7 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private PaymentType paymentType = PaymentType.REQUIRED;
 
   /**

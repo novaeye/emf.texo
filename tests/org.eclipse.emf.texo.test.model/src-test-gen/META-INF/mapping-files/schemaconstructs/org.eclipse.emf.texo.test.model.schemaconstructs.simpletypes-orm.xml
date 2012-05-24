@@ -7,92 +7,170 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleList" name="SimpleList">
+    <orm:table name="SimpleList"/>
     <orm:attributes>
-      <orm:basic name="code" optional="false"/>
-      <orm:basic name="intArray" optional="false"/>
-      <orm:basic name="doubleArray" optional="false"/>
-      <orm:basic name="stringArray" optional="false"/>
+      <orm:basic name="code" optional="false">
+        <orm:column name="code"/>
+      </orm:basic>
+      <orm:basic name="intArray" optional="false">
+        <orm:column name="intArray"/>
+      </orm:basic>
+      <orm:basic name="doubleArray" optional="false">
+        <orm:column name="doubleArray"/>
+      </orm:basic>
+      <orm:basic name="stringArray" optional="false">
+        <orm:column name="stringArray"/>
+      </orm:basic>
       <orm:basic name="byteArray" optional="false">
+        <orm:column name="byteArray"/>
         <orm:lob/>
       </orm:basic>
       <orm:element-collection name="boo">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_boo"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_boo">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="byt">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_byt"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_byt">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="doubl">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_doubl"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_doubl">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="floa">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_floa"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_floa">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="inte">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_inte"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_inte">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="long_">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_long"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_long">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="shor">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_shor"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_shor">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="enu">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_enu"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_enu">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="dat">
-        <orm:order-column/>
+        <orm:column name="element"/>
         <orm:temporal>DATE</orm:temporal>
-        <orm:collection-table name="SimpleList_dat"/>
+        <orm:collection-table name="SimpleList_dat">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="limitedstring">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_limitedstring"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_limitedstring">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="stri">
-        <orm:order-column/>
-        <orm:collection-table name="SimpleList_stri"/>
+        <orm:column name="element"/>
+        <orm:collection-table name="SimpleList_stri">
+          <orm:join-column name="SimpleList_id"/>
+        </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleType" name="SimpleType">
+    <orm:table name="SimpleType"/>
     <orm:attributes>
-      <orm:basic name="code" optional="false"/>
-      <orm:basic name="boo" optional="false"/>
-      <orm:basic name="byt" optional="false"/>
-      <orm:basic name="doubl" optional="false"/>
-      <orm:basic name="float_" optional="false"/>
-      <orm:basic name="inte" optional="false"/>
-      <orm:basic name="lon" optional="false"/>
-      <orm:basic name="shor" optional="false"/>
-      <orm:basic name="enu" optional="false"/>
+      <orm:basic name="code" optional="false">
+        <orm:column name="code"/>
+      </orm:basic>
+      <orm:basic name="boo" optional="false">
+        <orm:column name="boo"/>
+      </orm:basic>
+      <orm:basic name="byt" optional="false">
+        <orm:column name="byt"/>
+      </orm:basic>
+      <orm:basic name="doubl" optional="false">
+        <orm:column name="doubl"/>
+      </orm:basic>
+      <orm:basic name="float_" optional="false">
+        <orm:column name="float"/>
+      </orm:basic>
+      <orm:basic name="inte" optional="false">
+        <orm:column name="inte"/>
+      </orm:basic>
+      <orm:basic name="lon" optional="false">
+        <orm:column name="lon"/>
+      </orm:basic>
+      <orm:basic name="shor" optional="false">
+        <orm:column name="shor"/>
+      </orm:basic>
+      <orm:basic name="enu" optional="false">
+        <orm:column name="enu"/>
+      </orm:basic>
       <orm:basic name="dat" optional="false">
+        <orm:column name="dat"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
-      <orm:basic name="limitedstring" optional="false"/>
-      <orm:basic name="limitedDecimal" optional="false"/>
-      <orm:basic name="extraLimitedString" optional="false"/>
+      <orm:basic name="limitedstring" optional="false">
+        <orm:column name="limitedstring"/>
+      </orm:basic>
+      <orm:basic name="limitedDecimal" optional="false">
+        <orm:column name="limitedDecimal"/>
+      </orm:basic>
+      <orm:basic name="extraLimitedString" optional="false">
+        <orm:column name="extraLimitedString"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleTypeObject" name="SimpleTypeObject">
+    <orm:table name="SimpleTypeObject"/>
     <orm:attributes>
-      <orm:basic name="code" optional="false"/>
-      <orm:basic name="boo" optional="false"/>
-      <orm:basic name="byt" optional="false"/>
-      <orm:basic name="doubl" optional="false"/>
-      <orm:basic name="float_" optional="false"/>
-      <orm:basic name="inte" optional="false"/>
-      <orm:basic name="lon" optional="false"/>
-      <orm:basic name="shor" optional="false"/>
-      <orm:basic name="enu" optional="false"/>
+      <orm:basic name="code" optional="false">
+        <orm:column name="code"/>
+      </orm:basic>
+      <orm:basic name="boo" optional="false">
+        <orm:column name="boo"/>
+      </orm:basic>
+      <orm:basic name="byt" optional="false">
+        <orm:column name="byt"/>
+      </orm:basic>
+      <orm:basic name="doubl" optional="false">
+        <orm:column name="doubl"/>
+      </orm:basic>
+      <orm:basic name="float_" optional="false">
+        <orm:column name="float"/>
+      </orm:basic>
+      <orm:basic name="inte" optional="false">
+        <orm:column name="inte"/>
+      </orm:basic>
+      <orm:basic name="lon" optional="false">
+        <orm:column name="lon"/>
+      </orm:basic>
+      <orm:basic name="shor" optional="false">
+        <orm:column name="shor"/>
+      </orm:basic>
+      <orm:basic name="enu" optional="false">
+        <orm:column name="enu"/>
+      </orm:basic>
       <orm:basic name="dat" optional="false">
+        <orm:column name="dat"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
     </orm:attributes>

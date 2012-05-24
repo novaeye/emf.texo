@@ -7,6 +7,7 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz369476.Test" name="Test">
+    <orm:table name="Test"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

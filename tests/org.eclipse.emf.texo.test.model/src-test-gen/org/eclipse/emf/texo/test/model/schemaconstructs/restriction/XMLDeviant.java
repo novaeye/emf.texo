@@ -21,7 +21,7 @@ public class XMLDeviant extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigInteger numPosts = null;
 
   /**
@@ -37,7 +37,7 @@ public class XMLDeviant extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String email = null;
 
   /**
@@ -45,7 +45,7 @@ public class XMLDeviant extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date firstSubscribed = null;
 
@@ -54,7 +54,7 @@ public class XMLDeviant extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String mailReader = null;
 
   /**

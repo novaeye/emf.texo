@@ -5,10 +5,7 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.core.Element;
 
 /**
@@ -24,9 +21,7 @@ public class SourceRef extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = SourceRegion.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<SourceRegion> region = new ArrayList<SourceRegion>();
 
   /**
@@ -34,7 +29,7 @@ public class SourceRef extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String language = null;
 
   /**
@@ -42,7 +37,7 @@ public class SourceRef extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String snippet = null;
 
   /**

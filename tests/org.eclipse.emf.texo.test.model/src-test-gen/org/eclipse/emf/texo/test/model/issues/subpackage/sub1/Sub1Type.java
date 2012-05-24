@@ -17,7 +17,7 @@ public class Sub1Type extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**

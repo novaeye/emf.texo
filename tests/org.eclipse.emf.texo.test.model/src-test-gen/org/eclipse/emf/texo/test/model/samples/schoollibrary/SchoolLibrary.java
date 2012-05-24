@@ -17,7 +17,7 @@ public class SchoolLibrary extends Library {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String location = null;
 
   /**

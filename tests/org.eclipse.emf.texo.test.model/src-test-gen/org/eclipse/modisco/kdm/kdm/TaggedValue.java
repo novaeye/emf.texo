@@ -16,7 +16,7 @@ public class TaggedValue extends ExtendedValue {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String value = null;
 
   /**

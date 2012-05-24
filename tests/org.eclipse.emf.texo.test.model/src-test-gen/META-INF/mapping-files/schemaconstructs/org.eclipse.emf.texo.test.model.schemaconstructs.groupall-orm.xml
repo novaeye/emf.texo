@@ -7,17 +7,22 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressGroupType" name="AddressGroupType">
+    <orm:table name="AddressGroupType"/>
     <orm:attributes>
-      <orm:basic name="groupName" optional="false"/>
-      <orm:basic name="simpleAddress" optional="true"/>
-      <orm:many-to-one name="shipTo" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressType">
-        <orm:join-column/>
+      <orm:basic name="groupName" optional="false">
+        <orm:column name="groupName"/>
+      </orm:basic>
+      <orm:basic name="simpleAddress">
+        <orm:column name="simpleAddress"/>
+      </orm:basic>
+      <orm:many-to-one name="shipTo">
+        <orm:join-column name="shipTo"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="billTo" optional="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressType">
-        <orm:join-column/>
+      <orm:many-to-one name="billTo">
+        <orm:join-column name="billTo"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -26,14 +31,19 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressTypeGroupFeatureGroup" name="AddressType_group">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="name" optional="false"/>
-      <orm:basic access="PROPERTY" name="longName" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
+      <orm:basic name="longName" optional="false">
+        <orm:column name="longName"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressType" name="AddressType">
+    <orm:table name="AddressType"/>
     <orm:attributes>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressTypeGroupFeatureGroup">
         <orm:join-table/>
@@ -48,14 +58,14 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="PROPERTY" name="shipTo" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressType">
-        <orm:join-column/>
+      <orm:many-to-one name="shipTo" optional="false">
+        <orm:join-column name="shipTo"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one access="PROPERTY" name="billTo" optional="false" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressType">
-        <orm:join-column/>
+      <orm:many-to-one name="billTo" optional="false">
+        <orm:join-column name="billTo"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -63,8 +73,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressList" name="AddressList">
+    <orm:table name="AddressList"/>
     <orm:attributes>
-      <orm:basic name="groupName" optional="false"/>
+      <orm:basic name="groupName" optional="false">
+        <orm:column name="groupName"/>
+      </orm:basic>
       <orm:one-to-many name="addrs" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressListAddrsFeatureGroup">
         <orm:join-table/>
         <orm:cascade>
@@ -74,23 +87,37 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllType" name="SimpleAllType">
+    <orm:table name="SimpleAllType"/>
     <orm:attributes>
-      <orm:basic name="aaa" optional="false"/>
-      <orm:basic name="bbb" optional="false"/>
-      <orm:basic name="ccc" optional="false"/>
+      <orm:basic name="aaa" optional="false">
+        <orm:column name="aaa"/>
+      </orm:basic>
+      <orm:basic name="bbb" optional="false">
+        <orm:column name="bbb"/>
+      </orm:basic>
+      <orm:basic name="ccc" optional="false">
+        <orm:column name="ccc"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllMapTypeAllMapFeatureGroup" name="SimpleAllMapType_allMap">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="aaa" optional="false"/>
-      <orm:basic access="PROPERTY" name="bbb" optional="false"/>
-      <orm:basic access="PROPERTY" name="ccc" optional="false"/>
+      <orm:basic name="aaa" optional="false">
+        <orm:column name="aaa"/>
+      </orm:basic>
+      <orm:basic name="bbb" optional="false">
+        <orm:column name="bbb"/>
+      </orm:basic>
+      <orm:basic name="ccc" optional="false">
+        <orm:column name="ccc"/>
+      </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllMapType" name="SimpleAllMapType">
+    <orm:table name="SimpleAllMapType"/>
     <orm:attributes>
       <orm:one-to-many name="allMap" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllMapTypeAllMapFeatureGroup">
         <orm:join-table/>

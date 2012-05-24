@@ -17,7 +17,7 @@ public class Audit extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String description = null;
 
   /**
@@ -25,7 +25,7 @@ public class Audit extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String author = null;
 
   /**
@@ -33,7 +33,7 @@ public class Audit extends Element {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String date = null;
 
   /**

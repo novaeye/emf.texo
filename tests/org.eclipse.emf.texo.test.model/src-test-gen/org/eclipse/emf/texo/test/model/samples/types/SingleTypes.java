@@ -26,7 +26,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String string = "test\"test";
 
   /**
@@ -34,7 +34,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int integer = 100;
 
   /**
@@ -42,7 +42,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer integerObject = new Integer((int) 100);
 
   /**
@@ -50,7 +50,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private long long_ = 200;
 
   /**
@@ -58,7 +58,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Long longObject = new Long((long) 100);
 
   /**
@@ -66,7 +66,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private double double_ = 100.0;
 
   /**
@@ -74,7 +74,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Double doubleObject = new Double((double) 100.0);
 
   /**
@@ -82,7 +82,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private float float_ = 0.0f;
 
   /**
@@ -90,7 +90,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Float floatObject = new Float(10.0f);
 
   /**
@@ -106,7 +106,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private char char_ = 'z';
 
   /**
@@ -114,7 +114,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Character charObject = new Character('z');
 
   /**
@@ -122,7 +122,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private byte byte_ = 5;
 
   /**
@@ -130,7 +130,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Byte byteObject = new Byte((byte) 5);
 
   /**
@@ -138,7 +138,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Lob()
   private byte[] byteArray = new byte[] {};
 
@@ -147,7 +147,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigDecimal bigDecimal = new BigDecimal("5");
 
   /**
@@ -155,7 +155,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private BigInteger bigInteger = new BigInteger("5");
 
   /**
@@ -163,7 +163,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private TestEnum enum_ = TestEnum.ENUM0;
 
   /**
@@ -171,7 +171,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date date = (Date) EcoreFactory.eINSTANCE.createFromString(EcorePackage.eINSTANCE.getEDate(), null);
 
@@ -188,7 +188,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private long[] longArray = (long[]) TypesModelPackage.MODELFACTORY.createFromString(
       TypesModelPackage.INSTANCE.getLongArrayEDataType(), null);
 
@@ -197,7 +197,7 @@ public class SingleTypes extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private TestNextEnum nextEnum = TestNextEnum.ENUM2;
 
   /**

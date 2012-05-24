@@ -20,7 +20,7 @@ public class Production extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String article = null;
 
   /**
@@ -28,7 +28,7 @@ public class Production extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date dueTime = null;
 
@@ -37,7 +37,7 @@ public class Production extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Float missingAmount = null;
 
   /**
@@ -45,7 +45,7 @@ public class Production extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String productionId = null;
 
   /**
@@ -53,7 +53,7 @@ public class Production extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date startTime = null;
 
@@ -62,7 +62,7 @@ public class Production extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Float totalAmount = null;
 
   /**

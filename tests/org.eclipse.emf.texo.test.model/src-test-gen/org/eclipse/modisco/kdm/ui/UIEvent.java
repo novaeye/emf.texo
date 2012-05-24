@@ -16,7 +16,7 @@ public class UIEvent extends AbstractUIElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**

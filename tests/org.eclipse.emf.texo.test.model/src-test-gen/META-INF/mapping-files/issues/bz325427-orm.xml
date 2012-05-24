@@ -7,13 +7,19 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325427.EClassB" name="EClassB">
+    <orm:table name="EClassB"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325427.EClassA" name="EClassA">
+    <orm:table name="EClassA"/>
     <orm:attributes>
-      <orm:basic name="name" optional="true"/>
+      <orm:basic name="name">
+        <orm:column name="name"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

@@ -4,9 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.kdm.ExtendedValue;
@@ -30,8 +27,7 @@ public abstract class ModelElement extends Element {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Stereotype.class)
-  @JoinTable(name = "ModelElement_stereotype")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<Stereotype> stereotype = new HashSet<Stereotype>();
 
   /**
@@ -40,8 +36,7 @@ public abstract class ModelElement extends Element {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = ExtendedValue.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<ExtendedValue> taggedValue = new HashSet<ExtendedValue>();
 
   /**

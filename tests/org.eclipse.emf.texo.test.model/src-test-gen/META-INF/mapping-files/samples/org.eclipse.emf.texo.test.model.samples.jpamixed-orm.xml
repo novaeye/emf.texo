@@ -8,9 +8,14 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyTypeMixedFeatureGroup" name="LetterBodyType_mixed">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="quantity" optional="false"/>
-      <orm:basic access="PROPERTY" name="productName" optional="false"/>
-      <orm:basic access="PROPERTY" name="shipDate" optional="true">
+      <orm:basic name="quantity" optional="false">
+        <orm:column name="quantity"/>
+      </orm:basic>
+      <orm:basic name="productName" optional="false">
+        <orm:column name="productName"/>
+      </orm:basic>
+      <orm:basic name="shipDate">
+        <orm:column name="shipDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
       <orm:basic name="text" optional="true">
@@ -25,8 +30,8 @@
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one access="PROPERTY" name="salutation" optional="false" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationType">
-        <orm:join-column/>
+      <orm:many-to-one name="salutation" optional="false">
+        <orm:join-column name="salutation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -34,6 +39,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyType" name="LetterBodyType">
+    <orm:table name="LetterBodyType"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyTypeMixedFeatureGroup">
         <orm:join-table/>
@@ -45,7 +51,9 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationTypeMixedFeatureGroup" name="SalutationType_mixed">
     <orm:attributes>
-      <orm:basic access="PROPERTY" name="name" optional="false"/>
+      <orm:basic name="name" optional="false">
+        <orm:column name="name"/>
+      </orm:basic>
       <orm:basic name="text" optional="true">
         <orm:lob/>
       </orm:basic>
@@ -61,6 +69,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationType" name="SalutationType">
+    <orm:table name="SalutationType"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationTypeMixedFeatureGroup">
         <orm:join-table/>

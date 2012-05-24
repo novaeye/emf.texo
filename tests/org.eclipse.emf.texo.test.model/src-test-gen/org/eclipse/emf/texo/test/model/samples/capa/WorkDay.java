@@ -17,7 +17,7 @@ public class WorkDay extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer dayOfWeek = null;
 
   /**
@@ -25,7 +25,7 @@ public class WorkDay extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer duration = null;
 
   /**
@@ -33,7 +33,7 @@ public class WorkDay extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer startTime = null;
 
   /**

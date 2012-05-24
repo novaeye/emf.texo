@@ -5,9 +5,7 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -39,9 +37,7 @@ public class CatalogType extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = CatalogType.class)
-  @OrderColumn()
-  @JoinTable(name = "CatalogType_subCatalog")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private List<CatalogType> subCatalog = new ArrayList<CatalogType>();
 
   /**
@@ -50,9 +46,7 @@ public class CatalogType extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = ProductType.class)
-  @OrderColumn()
-  @JoinTable(name = "CatalogType_product")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private List<ProductType> product = new ArrayList<ProductType>();
 
   /**

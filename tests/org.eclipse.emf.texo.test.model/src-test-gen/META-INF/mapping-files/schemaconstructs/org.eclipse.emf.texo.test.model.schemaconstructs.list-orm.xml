@@ -7,11 +7,20 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.list.StatesByCountry" name="statesByCountry">
+    <orm:table name="statesByCountry"/>
     <orm:attributes>
-      <orm:basic name="country" optional="false"/>
-      <orm:basic name="index" optional="false"/>
-      <orm:basic name="allStates" optional="false"/>
-      <orm:basic name="sixImportantStates" optional="false"/>
+      <orm:basic name="country" optional="false">
+        <orm:column name="country"/>
+      </orm:basic>
+      <orm:basic name="index" optional="false">
+        <orm:column name="index"/>
+      </orm:basic>
+      <orm:basic name="allStates" optional="false">
+        <orm:column name="allStates"/>
+      </orm:basic>
+      <orm:basic name="sixImportantStates" optional="false">
+        <orm:column name="sixImportantStates"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

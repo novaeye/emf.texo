@@ -7,9 +7,7 @@ import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -26,7 +24,7 @@ public abstract class Tariff extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String name = null;
 
   /**
@@ -34,7 +32,7 @@ public abstract class Tariff extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private boolean active = false;
 
   /**
@@ -42,9 +40,7 @@ public abstract class Tariff extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = VolumePayment.class)
-  @OrderColumn()
-  @JoinTable(name = "Tariff_volumePayments")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<VolumePayment> volumePayments = new ArrayList<VolumePayment>();
 
@@ -53,9 +49,7 @@ public abstract class Tariff extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = PeriodicalPayment.class)
-  @OrderColumn()
-  @JoinTable(name = "Tariff_periodicalPayments")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<PeriodicalPayment> periodicalPayments = new ArrayList<PeriodicalPayment>();
 
@@ -65,9 +59,7 @@ public abstract class Tariff extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = OneTimePayment.class)
-  @OrderColumn()
-  @JoinTable(name = "Tariff_initialPayment")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<OneTimePayment> initialPayment = new ArrayList<OneTimePayment>();
 
@@ -76,9 +68,7 @@ public abstract class Tariff extends Identifiable {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = Service.class)
-  @OrderColumn()
-  @JoinTable(name = "Tariff_services")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @Access(AccessType.FIELD)
   private List<Service> services = new ArrayList<Service>();
 

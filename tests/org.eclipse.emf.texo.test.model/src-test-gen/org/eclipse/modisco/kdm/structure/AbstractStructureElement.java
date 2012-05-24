@@ -4,9 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import org.eclipse.modisco.kdm.core.AggregatedRelationship;
@@ -26,8 +23,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AggregatedRelationship.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AggregatedRelationship> aggregated = new HashSet<AggregatedRelationship>();
 
   /**
@@ -35,8 +31,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, targetEntity = KDMEntity.class)
-  @JoinTable(name = "AbstractStructureElement_implementation")
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   private Set<KDMEntity> implementation = new HashSet<KDMEntity>();
 
   /**
@@ -44,8 +39,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractStructureElement.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractStructureElement> structureElement = new HashSet<AbstractStructureElement>();
 
   /**
@@ -53,8 +47,7 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractStructureRelationship.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractStructureRelationship> structureRelationship = new HashSet<AbstractStructureRelationship>();
 
   /**

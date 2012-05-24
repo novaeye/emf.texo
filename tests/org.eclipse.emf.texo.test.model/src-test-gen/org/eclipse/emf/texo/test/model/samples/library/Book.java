@@ -31,7 +31,7 @@ public class Book extends Identifiable {
    */
   @TestAnnotationOne("field")
   @TestAnnotationTwo("field")
-  @Basic(optional = true)
+  @Basic()
   @Column(name = "title")
   private String title = null;
 
@@ -40,8 +40,7 @@ public class Book extends Identifiable {
    * 
    * @generated
    */
-  @TestAnnotationOne("test")
-  @Basic(optional = true)
+  @Basic()
   @Column(name = "pages")
   private int pages = 100;
 
@@ -50,8 +49,7 @@ public class Book extends Identifiable {
    * 
    * @generated
    */
-  @TestAnnotationOne("test")
-  @Basic(optional = true)
+  @Basic()
   @Column(name = "category")
   private BookCategory category = BookCategory.SCIENCEFICTION;
 
@@ -60,8 +58,7 @@ public class Book extends Identifiable {
    * 
    * @generated
    */
-  @TestAnnotationOne("test")
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false, targetEntity = Writer.class)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   @JoinColumns({ @JoinColumn(name = "author") })
   private Writer author = null;
 
@@ -98,6 +95,7 @@ public class Book extends Identifiable {
    * @return the value of '<em><b>pages</b></em>' feature
    * @generated
    */
+  @TestAnnotationOne("getter")
   public int getPages() {
     return pages;
   }
@@ -161,6 +159,7 @@ public class Book extends Identifiable {
    *          new value of the '{@link Book#getAuthor() author}' feature.
    * @generated
    */
+  @TestAnnotationOne("setter")
   public void setAuthor(Writer newAuthor) {
     author = newAuthor;
   }

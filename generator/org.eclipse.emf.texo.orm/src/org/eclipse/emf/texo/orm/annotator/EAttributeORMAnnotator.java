@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
@@ -51,6 +52,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EEnumORMAnnotation;
+import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage;
 
 /**
@@ -72,13 +74,16 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
   public void setAnnotationFeatures(EAttributeORMAnnotation annotation) {
 
     final EAttribute eAttribute = annotation.getEAttribute();
+    final EPackage ePackage = eAttribute.getEContainingClass().getEPackage();
+    final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(ePackage);
+    final EPackageORMAnnotation ePackageORMAnnotation = (EPackageORMAnnotation) getAnnotationManager().getAnnotation(
+        ePackage, OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
 
     final EClass eClass = eAttribute.getEContainingClass();
     if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
       return;
     }
 
-    final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eAttribute.getEContainingClass().getEPackage());
     if (eAttribute.getEAttributeType() instanceof EEnum) {
       copyAnnotationsFromEEnum(annotation);
     } else {
@@ -238,8 +243,8 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       final EAttributeModelGenAnnotation eAttributeModelGenAnnotation = (EAttributeModelGenAnnotation) getAnnotationManager()
           .getAnnotation(eAttribute, ModelcodegeneratorPackage.eINSTANCE.getEAttributeModelGenAnnotation());
       OrderColumn orderColumn = elementCollection.getOrderColumn();
-      if (eAttributeModelGenAnnotation.isUseList() && elementCollection.getOrderBy() == null
-          && elementCollection.getOrderColumn() == null) {
+      if (ePackageORMAnnotation.isAddOrderColumnToListMappings() && eAttributeModelGenAnnotation.isUseList()
+          && elementCollection.getOrderBy() == null && elementCollection.getOrderColumn() == null) {
         orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
         elementCollection.setOrderColumn(orderColumn);
       }
@@ -288,7 +293,7 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       basic.setTemporal(Temporal.DATE);
     }
 
-    if (!basicSet) {
+    if (!basicSet && eAttribute.isRequired()) {
       basic.setOptional(!eAttribute.isRequired());
     }
 

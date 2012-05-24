@@ -16,7 +16,7 @@ public class USAddress extends Address {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String street = null;
 
   /**
@@ -24,7 +24,7 @@ public class USAddress extends Address {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String city = null;
 
   /**
@@ -32,7 +32,7 @@ public class USAddress extends Address {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String state = null;
 
   /**
@@ -40,7 +40,7 @@ public class USAddress extends Address {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private int zip = 0;
 
   /**

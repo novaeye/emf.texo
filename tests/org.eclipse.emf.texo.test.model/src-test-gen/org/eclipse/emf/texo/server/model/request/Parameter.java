@@ -33,7 +33,7 @@ public class Parameter extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String type = null;
 
   /**

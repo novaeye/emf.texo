@@ -16,7 +16,7 @@ public class SetType extends DerivedType {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private Integer size = null;
 
   /**

@@ -7,10 +7,7 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 
 /**
@@ -26,7 +23,7 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String kind = null;
 
   /**
@@ -34,8 +31,7 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractCodeElement.class)
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private Set<AbstractCodeElement> codeElement = new HashSet<AbstractCodeElement>();
 
   /**
@@ -43,9 +39,7 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = AbstractActionRelationship.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
+  @OneToMany(cascade = { CascadeType.ALL })
   private List<AbstractActionRelationship> actionRelation = new ArrayList<AbstractActionRelationship>();
 
   /**

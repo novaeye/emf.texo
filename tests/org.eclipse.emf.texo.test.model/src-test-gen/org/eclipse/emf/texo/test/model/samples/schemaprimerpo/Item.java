@@ -46,7 +46,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   private String comment = null;
 
   /**
@@ -54,7 +54,7 @@ public class Item extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = true)
+  @Basic()
   @Temporal(TemporalType.DATE)
   private Date shipDate = null;
 
