@@ -14,7 +14,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "DataAction")
+@Entity(name = "data_DataAction")
 public class DataAction extends AbstractDataElement {
 
   /**

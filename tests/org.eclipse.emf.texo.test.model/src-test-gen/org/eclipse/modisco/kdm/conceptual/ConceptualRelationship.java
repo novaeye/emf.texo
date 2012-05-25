@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "ConceptualRelationship")
+@Entity(name = "conceptual_ConceptualRelationship")
 public class ConceptualRelationship extends AbstractConceptualRelationship {
 
   /**

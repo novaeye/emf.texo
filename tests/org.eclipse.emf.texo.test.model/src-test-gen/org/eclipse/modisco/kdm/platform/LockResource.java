@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "LockResource")
+@Entity(name = "platform_LockResource")
 public class LockResource extends ResourceType {
 
   /**

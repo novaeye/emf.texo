@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "IntegerType")
+@Entity(name = "code_IntegerType")
 public class IntegerType extends PrimitiveType {
 
   /**

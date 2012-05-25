@@ -9,7 +9,7 @@ import org.eclipse.modisco.kdm.core.KDMRelationship;
  * 
  * @generated
  */
-@Entity(name = "AbstractEventRelationship")
+@Entity(name = "event_AbstractEventRelationship")
 public abstract class AbstractEventRelationship extends KDMRelationship {
 
   /**

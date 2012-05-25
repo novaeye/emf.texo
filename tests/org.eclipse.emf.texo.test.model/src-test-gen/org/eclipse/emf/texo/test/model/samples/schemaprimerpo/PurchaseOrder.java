@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -17,7 +18,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PurchaseOrder")
+@Entity(name = "schemaprimerpo_PurchaseOrder")
 public class PurchaseOrder extends Identifiable {
 
   /**
@@ -50,6 +51,7 @@ public class PurchaseOrder extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Item> items = new ArrayList<Item>();
 
   /**

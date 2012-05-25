@@ -10,7 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ClaimCompositeKey")
+@Entity(name = "claim_ClaimCompositeKey")
 public class ClaimCompositeKey extends Identifiable {
 
   /**

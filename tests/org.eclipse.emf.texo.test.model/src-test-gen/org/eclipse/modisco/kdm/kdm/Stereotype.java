@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "Stereotype")
+@Entity(name = "kdm_Stereotype")
 public class Stereotype extends Element {
 
   /**

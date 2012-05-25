@@ -9,6 +9,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.schoollibrary.dao.AssetDao;
 import org.eclipse.emf.texo.test.model.samples.schoollibrary.dao.SchoolBookDao;
@@ -58,7 +59,7 @@ public class SchoollibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ASSET_VALUE_FEATURE_ID = 0;
+  public static final int ASSET_VALUE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -72,7 +73,7 @@ public class SchoollibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SCHOOLBOOK_VALUE_FEATURE_ID = 6;
+  public static final int SCHOOLBOOK_VALUE_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -112,6 +113,7 @@ public class SchoollibraryModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    IdentifiableModelPackage.initialize();
     LibraryModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry

@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
     nsURI="http://www.eclipse.org/emf/texo/test/model/issues/bz331009" nsPrefix="m">
-  <eClassifiers xsi:type="ecore:EClass" name="SimCard">
+  <eClassifiers xsi:type="ecore:EClass" name="SimCard" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о сим-карте"/>
     </eAnnotations>
@@ -25,7 +25,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimContract">
+  <eClassifiers xsi:type="ecore:EClass" name="SimContract" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о контракте с оператором сотовой связи"/>
     </eAnnotations>
@@ -62,7 +62,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimCardXSimContract">
+  <eClassifiers xsi:type="ecore:EClass" name="SimCardXSimContract" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Привязка сим-карты к контракту"/>
     </eAnnotations>
@@ -88,7 +88,7 @@
       <details key="documentation" value="Тариф оператора сотовой связи"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PaymentInfo">
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentInfo" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Платежная информация"/>
     </eAnnotations>
@@ -110,7 +110,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PaymentItem" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="PaymentItem" abstract="true" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о платеже"/>
     </eAnnotations>
@@ -152,7 +152,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tariff" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Tariff" abstract="true" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о тарифе"/>
     </eAnnotations>
@@ -250,7 +250,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Units">
+  <eClassifiers xsi:type="ecore:EClass" name="Units" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Величины объема оказываемых услуг"/>
     </eAnnotations>
@@ -260,8 +260,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Price"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CarProducer">
+  <eClassifiers xsi:type="ecore:EClass" name="Price" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CarProducer" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Марка ТС"/>
     </eAnnotations>
@@ -274,7 +274,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CarModel">
+  <eClassifiers xsi:type="ecore:EClass" name="CarModel" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Модель ТС"/>
     </eAnnotations>
@@ -295,7 +295,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CarRegInfo" eSuperTypes="#//Document">
+  <eClassifiers xsi:type="ecore:EClass" name="CarRegInfo" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Document">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Свидетельство о регистрации"/>
     </eAnnotations>
@@ -361,7 +361,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Car">
+  <eClassifiers xsi:type="ecore:EClass" name="Car" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="ТС"/>
     </eAnnotations>
@@ -390,12 +390,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CarPassport" eSuperTypes="#//Document">
+  <eClassifiers xsi:type="ecore:EClass" name="CarPassport" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Document">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="ПТС"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Phone">
+  <eClassifiers xsi:type="ecore:EClass" name="Phone" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Телефон"/>
     </eAnnotations>
@@ -416,7 +416,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Address">
+  <eClassifiers xsi:type="ecore:EClass" name="Address" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Адрес"/>
     </eAnnotations>
@@ -477,12 +477,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Passport" eSuperTypes="#//Document">
+  <eClassifiers xsi:type="ecore:EClass" name="Passport" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Document">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Паспортные данные"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="surname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Фамилия"/>
@@ -554,12 +554,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DrivingLicense" eSuperTypes="#//Document">
+  <eClassifiers xsi:type="ecore:EClass" name="DrivingLicense" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Document">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Водительское удостоверение"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Contract">
+  <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Информация о договоре"/>
     </eAnnotations>
@@ -611,7 +611,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SecretQuestion">
+  <eClassifiers xsi:type="ecore:EClass" name="SecretQuestion" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Секретный авторизационный ворпос"/>
     </eAnnotations>
@@ -656,7 +656,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Service">
+  <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Услуга"/>
     </eAnnotations>
@@ -702,7 +702,7 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClientTariff" eSuperTypes="#//Tariff"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ContractPackage">
+  <eClassifiers xsi:type="ecore:EClass" name="ContractPackage" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Пакет контрактов"/>
     </eAnnotations>
@@ -763,7 +763,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="User">
+  <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Пользователь"/>
     </eAnnotations>
@@ -792,12 +792,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="UserGroup" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Группа пользователей"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Message">
+  <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Сообщения обмена командами"/>
     </eAnnotations>
@@ -842,7 +842,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Event">
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Событие"/>
     </eAnnotations>
@@ -865,7 +865,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Coordinates">
+  <eClassifiers xsi:type="ecore:EClass" name="Coordinates" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Координаты"/>
     </eAnnotations>

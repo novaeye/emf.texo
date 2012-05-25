@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.core.ModelElement;
  * 
  * @generated
  */
-@Entity(name = "TaggedRef")
+@Entity(name = "kdm_TaggedRef")
 public class TaggedRef extends ExtendedValue {
 
   /**

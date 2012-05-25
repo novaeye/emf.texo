@@ -10,7 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "DescribableIdentifiableConcrete")
+@Entity(name = "interfaces_DescribableIdentifiableConcrete")
 public class DescribableIdentifiableConcrete extends Identifiable implements Describable, IdentifiedType {
 
   /**

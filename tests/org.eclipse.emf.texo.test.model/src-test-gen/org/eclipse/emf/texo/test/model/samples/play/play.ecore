@@ -9,7 +9,7 @@
   <eAnnotations source="http://java.sun.com/xml/ns/jaxb">
     <details key="version" value="1.0"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="ActType">
+  <eClassifiers xsi:type="ecore:EClass" name="ActType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="act_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -45,7 +45,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
       <details key="kind" value="mixed"/>
@@ -272,7 +272,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FmType">
+  <eClassifiers xsi:type="ecore:EClass" name="FmType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="fm_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -289,7 +289,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PersonaeType">
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaeType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="personae_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -344,7 +344,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PersonaGroupType">
+  <eClassifiers xsi:type="ecore:EClass" name="PersonaGroupType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="personaGroup_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -372,7 +372,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PlayType">
+  <eClassifiers xsi:type="ecore:EClass" name="PlayType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="play_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -443,7 +443,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SceneType">
+  <eClassifiers xsi:type="ecore:EClass" name="SceneType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="scene_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -504,7 +504,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SpeechType">
+  <eClassifiers xsi:type="ecore:EClass" name="SpeechType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="speech_._type"/>
       <details key="kind" value="elementOnly"/>

@@ -6,13 +6,14 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>ControlElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ControlElement")
+@Entity(name = "code_ControlElement")
 public class ControlElement extends ComputationalObject {
 
   /**
@@ -29,6 +30,7 @@ public class ControlElement extends ComputationalObject {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<AbstractCodeElement> codeElement = new ArrayList<AbstractCodeElement>();
 
   /**

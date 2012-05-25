@@ -5,13 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>Signature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Signature")
+@Entity(name = "code_Signature")
 public class Signature extends Datatype {
 
   /**
@@ -20,6 +21,7 @@ public class Signature extends Datatype {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<ParameterUnit> parameterUnit = new ArrayList<ParameterUnit>();
 
   /**

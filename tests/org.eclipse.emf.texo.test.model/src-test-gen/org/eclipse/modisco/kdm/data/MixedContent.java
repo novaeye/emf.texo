@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "MixedContent")
+@Entity(name = "data_MixedContent")
 public class MixedContent extends ComplexContentType {
 
   /**

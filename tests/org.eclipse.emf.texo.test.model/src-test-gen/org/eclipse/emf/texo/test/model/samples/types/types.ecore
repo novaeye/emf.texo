@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="types"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/types" nsPrefix="types">
-  <eClassifiers xsi:type="ecore:EClass" name="SingleTypes">
+  <eClassifiers xsi:type="ecore:EClass" name="SingleTypes" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="test&quot;test">
       <eAnnotations source="org.eclipse.emf.texo">
@@ -142,7 +142,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ManyTypes">
+  <eClassifiers xsi:type="ecore:EClass" name="ManyTypes" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="test&quot;test">
       <eAnnotations source="org.eclipse.emf.texo">

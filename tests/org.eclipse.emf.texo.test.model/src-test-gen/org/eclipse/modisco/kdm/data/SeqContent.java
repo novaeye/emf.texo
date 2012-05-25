@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SeqContent")
+@Entity(name = "data_SeqContent")
 public class SeqContent extends ComplexContentType {
 
   /**

@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.ControlElement;
  * 
  * @generated
  */
-@Entity(name = "Calls")
+@Entity(name = "action_Calls")
 public class Calls extends AbstractActionRelationship {
 
   /**

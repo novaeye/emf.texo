@@ -83,14 +83,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ENTRYFLOW_TO_FEATURE_ID = 4;
+  public static final int ENTRYFLOW_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ENTRYFLOW_FROM_FEATURE_ID = 5;
+  public static final int ENTRYFLOW_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -111,21 +111,21 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACTIONELEMENT_KIND_FEATURE_ID = 19;
+  public static final int ACTIONELEMENT_KIND_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTIONELEMENT_CODEELEMENT_FEATURE_ID = 20;
+  public static final int ACTIONELEMENT_CODEELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTIONELEMENT_ACTIONRELATION_FEATURE_ID = 21;
+  public static final int ACTIONELEMENT_ACTIONRELATION_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -146,14 +146,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTROLFLOW_TO_FEATURE_ID = 4;
+  public static final int CONTROLFLOW_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTROLFLOW_FROM_FEATURE_ID = 5;
+  public static final int CONTROLFLOW_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -195,14 +195,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CALLS_TO_FEATURE_ID = 4;
+  public static final int CALLS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CALLS_FROM_FEATURE_ID = 5;
+  public static final int CALLS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -216,14 +216,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DISPATCHES_TO_FEATURE_ID = 4;
+  public static final int DISPATCHES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DISPATCHES_FROM_FEATURE_ID = 5;
+  public static final int DISPATCHES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -237,14 +237,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int READS_TO_FEATURE_ID = 4;
+  public static final int READS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int READS_FROM_FEATURE_ID = 5;
+  public static final int READS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -258,14 +258,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITES_TO_FEATURE_ID = 4;
+  public static final int WRITES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITES_FROM_FEATURE_ID = 5;
+  public static final int WRITES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -279,14 +279,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ADDRESSES_TO_FEATURE_ID = 4;
+  public static final int ADDRESSES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESSES_FROM_FEATURE_ID = 5;
+  public static final int ADDRESSES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -300,14 +300,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CREATES_TO_FEATURE_ID = 4;
+  public static final int CREATES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CREATES_FROM_FEATURE_ID = 5;
+  public static final int CREATES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -349,14 +349,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXITFLOW_TO_FEATURE_ID = 4;
+  public static final int EXITFLOW_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EXITFLOW_FROM_FEATURE_ID = 5;
+  public static final int EXITFLOW_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -370,14 +370,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXCEPTIONFLOW_TO_FEATURE_ID = 4;
+  public static final int EXCEPTIONFLOW_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EXCEPTIONFLOW_FROM_FEATURE_ID = 5;
+  public static final int EXCEPTIONFLOW_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -391,14 +391,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int THROWS_TO_FEATURE_ID = 4;
+  public static final int THROWS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int THROWS_FROM_FEATURE_ID = 5;
+  public static final int THROWS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -412,14 +412,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMPLIESTO_TO_FEATURE_ID = 4;
+  public static final int COMPLIESTO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int COMPLIESTO_FROM_FEATURE_ID = 5;
+  public static final int COMPLIESTO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -433,14 +433,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int USESTYPE_TO_FEATURE_ID = 4;
+  public static final int USESTYPE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USESTYPE_FROM_FEATURE_ID = 5;
+  public static final int USESTYPE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -454,14 +454,14 @@ public class ActionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACTIONRELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int ACTIONRELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTIONRELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int ACTIONRELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -488,10 +488,10 @@ public class ActionModelPackage extends ModelPackage {
     isInitialized = true;
 
     SourceModelPackage.initialize();
+    CoreModelPackage.initialize();
     CodeModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(EntryFlow.class, modelPackage.getEntryFlowEClass(),

@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.CommentDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.CompoundTaskDao;
 import org.eclipse.emf.texo.test.model.samples.workflow.dao.ConditionalOutputPortDao;
@@ -70,21 +71,21 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WORKFLOW_NODES_FEATURE_ID = 7;
+  public static final int WORKFLOW_NODES_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOW_EDGES_FEATURE_ID = 8;
+  public static final int WORKFLOW_EDGES_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOW_COMMENTS_FEATURE_ID = 9;
+  public static final int WORKFLOW_COMMENTS_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -98,35 +99,35 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WORKFLOWNODE_WORKFLOW_FEATURE_ID = 7;
+  public static final int WORKFLOWNODE_WORKFLOW_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWNODE_OUTPUTS_FEATURE_ID = 8;
+  public static final int WORKFLOWNODE_OUTPUTS_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWNODE_INPUTS_FEATURE_ID = 9;
+  public static final int WORKFLOWNODE_INPUTS_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWNODE_ISSTART_FEATURE_ID = 10;
+  public static final int WORKFLOWNODE_ISSTART_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWNODE_ISFINISH_FEATURE_ID = 11;
+  public static final int WORKFLOWNODE_ISFINISH_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -140,21 +141,21 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EDGE_WORKFLOW_FEATURE_ID = 7;
+  public static final int EDGE_WORKFLOW_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EDGE_TARGET_FEATURE_ID = 8;
+  public static final int EDGE_TARGET_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EDGE_SOURCE_FEATURE_ID = 9;
+  public static final int EDGE_SOURCE_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -168,14 +169,14 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INPUTPORT_NODE_FEATURE_ID = 7;
+  public static final int INPUTPORT_NODE_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int INPUTPORT_EDGES_FEATURE_ID = 8;
+  public static final int INPUTPORT_EDGES_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -189,14 +190,14 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int OUTPUTPORT_NODE_FEATURE_ID = 7;
+  public static final int OUTPUTPORT_NODE_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int OUTPUTPORT_EDGES_FEATURE_ID = 8;
+  public static final int OUTPUTPORT_EDGES_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -217,7 +218,7 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMPOUNDTASK_SUBWORKFLOW_FEATURE_ID = 12;
+  public static final int COMPOUNDTASK_SUBWORKFLOW_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -238,7 +239,7 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TRANSFORMATIONTASK_TRANSFORMEXPRESSION_FEATURE_ID = 12;
+  public static final int TRANSFORMATIONTASK_TRANSFORMEXPRESSION_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -259,7 +260,7 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int LOOPTASK_WHILECONDITION_FEATURE_ID = 13;
+  public static final int LOOPTASK_WHILECONDITION_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -273,49 +274,49 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_NAME_FEATURE_ID = 0;
+  public static final int WORKFLOWELEMENT_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_COMMENT_FEATURE_ID = 1;
+  public static final int WORKFLOWELEMENT_COMMENT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_X_FEATURE_ID = 2;
+  public static final int WORKFLOWELEMENT_X_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_Y_FEATURE_ID = 3;
+  public static final int WORKFLOWELEMENT_Y_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_WIDTH_FEATURE_ID = 4;
+  public static final int WORKFLOWELEMENT_WIDTH_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_HEIGHT_FEATURE_ID = 5;
+  public static final int WORKFLOWELEMENT_HEIGHT_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID = 6;
+  public static final int WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -329,7 +330,7 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID = 9;
+  public static final int CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -343,7 +344,7 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMMENT_WORKFLOW_FEATURE_ID = 7;
+  public static final int COMMENT_WORKFLOW_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -375,6 +376,8 @@ public class WorkflowModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

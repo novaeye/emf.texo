@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -9,7 +11,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Vat")
+@Entity(name = "accounting_Vat")
+@Table(name = "accounting_Vat")
 public class Vat extends Identifiable {
 
   /**
@@ -18,6 +21,7 @@ public class Vat extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -26,6 +30,7 @@ public class Vat extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "rate")
   private float rate = 0.0f;
 
   /**

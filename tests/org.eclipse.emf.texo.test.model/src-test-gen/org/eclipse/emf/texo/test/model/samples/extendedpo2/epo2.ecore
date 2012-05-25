@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="epo2"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/extendedpo2" nsPrefix="com.example.epo2">
-  <eClassifiers xsi:type="ecore:EClass" name="Item">
+  <eClassifiers xsi:type="ecore:EClass" name="Item" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="order" lowerBound="1" eType="#//PurchaseOrder"
         transient="true" eOpposite="#//PurchaseOrder/items">
       <eAnnotations source="org.eclipse.emf.texo">
@@ -63,7 +63,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PurchaseOrder">
+  <eClassifiers xsi:type="ecore:EClass" name="PurchaseOrder" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
         eType="#//Item" containment="true" eOpposite="#//Item/order">
       <eAnnotations source="org.eclipse.emf.texo">
@@ -116,7 +116,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Address" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Address" abstract="true" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="name"/>
@@ -128,7 +128,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Supplier">
+  <eClassifiers xsi:type="ecore:EClass" name="Supplier" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="name"/>
@@ -161,7 +161,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Customer">
+  <eClassifiers xsi:type="ecore:EClass" name="Customer" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="customerID"/>
@@ -182,7 +182,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GlobalLocation">
+  <eClassifiers xsi:type="ecore:EClass" name="GlobalLocation" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="countryCode"/>

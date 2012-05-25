@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PromotionType")
+@Entity(name = "sunBooks_PromotionType")
 public class PromotionType extends Identifiable {
 
   /**

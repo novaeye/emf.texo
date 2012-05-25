@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.issues.bz369931.dao.FormulaDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -63,7 +64,7 @@ public class Bz369931ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int FORMULA_FORMULATYPE_FEATURE_ID = 0;
+  public static final int FORMULA_FORMULATYPE_FEATURE_ID = 2;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -88,6 +89,8 @@ public class Bz369931ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

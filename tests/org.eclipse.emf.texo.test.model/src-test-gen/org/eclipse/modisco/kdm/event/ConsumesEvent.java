@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ConsumesEvent")
+@Entity(name = "event_ConsumesEvent")
 public class ConsumesEvent extends AbstractEventRelationship {
 
   /**

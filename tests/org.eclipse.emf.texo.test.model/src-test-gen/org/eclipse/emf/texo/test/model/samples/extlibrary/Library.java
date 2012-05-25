@@ -13,6 +13,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -20,7 +21,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Library")
+@Entity(name = "extlib_Library")
 public class Library extends Identifiable implements Addressable {
 
   /**
@@ -53,6 +54,7 @@ public class Library extends Identifiable implements Addressable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Library> branches = new ArrayList<Library>();
 
   /**

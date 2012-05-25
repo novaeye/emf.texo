@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "DataContainer")
+@Entity(name = "data_DataContainer")
 public class DataContainer extends DataResource {
 
   /**

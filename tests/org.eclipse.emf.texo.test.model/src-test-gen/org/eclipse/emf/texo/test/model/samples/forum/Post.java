@@ -13,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Post")
+@Entity(name = "forum_Post")
 public class Post extends Identifiable {
 
   /**

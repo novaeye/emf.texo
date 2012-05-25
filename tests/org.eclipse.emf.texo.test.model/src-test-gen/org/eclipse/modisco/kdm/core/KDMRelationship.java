@@ -11,7 +11,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "KDMRelationship")
+@Entity(name = "core_KDMRelationship")
 public abstract class KDMRelationship extends ModelElement {
 
   /**

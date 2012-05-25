@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "BinaryFile")
+@Entity(name = "source_BinaryFile")
 public class BinaryFile extends InventoryItem {
 
   /**

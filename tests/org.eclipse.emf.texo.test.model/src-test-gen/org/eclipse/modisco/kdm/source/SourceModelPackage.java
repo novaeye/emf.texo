@@ -74,7 +74,7 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INVENTORYMODEL_INVENTORYELEMENT_FEATURE_ID = 8;
+  public static final int INVENTORYMODEL_INVENTORYELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -88,7 +88,7 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTINVENTORYELEMENT_INVENTORYRELATIONSHIP_FEATURE_ID = 15;
+  public static final int ABSTRACTINVENTORYELEMENT_INVENTORYRELATIONSHIP_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -109,14 +109,14 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INVENTORYITEM_VERSION_FEATURE_ID = 16;
+  public static final int INVENTORYITEM_VERSION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int INVENTORYITEM_PATH_FEATURE_ID = 17;
+  public static final int INVENTORYITEM_PATH_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -130,14 +130,14 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SOURCEFILE_LANGUAGE_FEATURE_ID = 18;
+  public static final int SOURCEFILE_LANGUAGE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEFILE_ENCODING_FEATURE_ID = 19;
+  public static final int SOURCEFILE_ENCODING_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -186,7 +186,7 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INVENTORYCONTAINER_INVENTORYELEMENT_FEATURE_ID = 16;
+  public static final int INVENTORYCONTAINER_INVENTORYELEMENT_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -200,7 +200,7 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DIRECTORY_PATH_FEATURE_ID = 17;
+  public static final int DIRECTORY_PATH_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -221,14 +221,14 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DEPENDSON_TO_FEATURE_ID = 4;
+  public static final int DEPENDSON_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DEPENDSON_FROM_FEATURE_ID = 5;
+  public static final int DEPENDSON_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -242,21 +242,21 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SOURCEREF_REGION_FEATURE_ID = 2;
+  public static final int SOURCEREF_REGION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREF_LANGUAGE_FEATURE_ID = 3;
+  public static final int SOURCEREF_LANGUAGE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREF_SNIPPET_FEATURE_ID = 4;
+  public static final int SOURCEREF_SNIPPET_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -270,49 +270,49 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SOURCEREGION_FILE_FEATURE_ID = 2;
+  public static final int SOURCEREGION_FILE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREGION_STARTLINE_FEATURE_ID = 3;
+  public static final int SOURCEREGION_STARTLINE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREGION_STARTPOSITION_FEATURE_ID = 4;
+  public static final int SOURCEREGION_STARTPOSITION_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREGION_ENDLINE_FEATURE_ID = 5;
+  public static final int SOURCEREGION_ENDLINE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREGION_ENDPOSITION_FEATURE_ID = 6;
+  public static final int SOURCEREGION_ENDPOSITION_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREGION_LANGUAGE_FEATURE_ID = 7;
+  public static final int SOURCEREGION_LANGUAGE_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SOURCEREGION_PATH_FEATURE_ID = 8;
+  public static final int SOURCEREGION_PATH_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -333,14 +333,14 @@ public class SourceModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INVENTORYRELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int INVENTORYRELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int INVENTORYRELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int INVENTORYRELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -366,9 +366,9 @@ public class SourceModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
     KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(InventoryModel.class, modelPackage.getInventoryModelEClass(),

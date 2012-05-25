@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>ComplexContentType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -12,7 +13,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "ComplexContentType")
+@Entity(name = "data_ComplexContentType")
 public class ComplexContentType extends AbstractContentElement {
 
   /**
@@ -21,6 +22,7 @@ public class ComplexContentType extends AbstractContentElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<AbstractContentElement> contentElement = new ArrayList<AbstractContentElement>();
 
   /**

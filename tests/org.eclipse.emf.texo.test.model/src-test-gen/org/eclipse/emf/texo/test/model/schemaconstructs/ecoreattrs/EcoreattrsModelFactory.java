@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -205,10 +205,11 @@ public class EcoreattrsModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ElementModelObject<E extends Element> extends AbstractModelObject<E> {
+  public static class ElementModelObject<E extends Element> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EcoreattrsModelPackage.INSTANCE.getElementEClass();
     }
@@ -216,6 +217,7 @@ public class EcoreattrsModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EcoreattrsModelPackage.INSTANCE;
     }
@@ -261,6 +263,10 @@ public class EcoreattrsModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case EcoreattrsModelPackage.ELEMENT_NAMEMAP_FEATURE_ID:
+        getTarget().getNameMap().add((ElementNameMapFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -283,10 +289,11 @@ public class EcoreattrsModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class FeatureModelObject<E extends Feature> extends AbstractModelObject<E> {
+  public static class FeatureModelObject<E extends Feature> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EcoreattrsModelPackage.INSTANCE.getFeatureEClass();
     }
@@ -294,6 +301,7 @@ public class EcoreattrsModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EcoreattrsModelPackage.INSTANCE;
     }
@@ -344,6 +352,10 @@ public class EcoreattrsModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case EcoreattrsModelPackage.FEATURE_AMAP_FEATURE_ID:
+        getTarget().getAMap().add((FeatureAMapFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -366,10 +378,11 @@ public class EcoreattrsModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MixedModelObject<E extends Mixed> extends AbstractModelObject<E> {
+  public static class MixedModelObject<E extends Mixed> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EcoreattrsModelPackage.INSTANCE.getMixedEClass();
     }
@@ -377,6 +390,7 @@ public class EcoreattrsModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EcoreattrsModelPackage.INSTANCE;
     }
@@ -426,6 +440,10 @@ public class EcoreattrsModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case EcoreattrsModelPackage.MIXED_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((MixedMixedFeatureGroup) value);
+        return;
 
       }
       super.eAddTo(eStructuralFeature, value);
@@ -619,10 +637,12 @@ public class EcoreattrsModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class NameListModelObject<E extends NameList> extends AbstractModelObject<E> {
+  public static class NameListModelObject<E extends NameList> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EcoreattrsModelPackage.INSTANCE.getNameListEClass();
     }
@@ -630,6 +650,7 @@ public class EcoreattrsModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EcoreattrsModelPackage.INSTANCE;
     }

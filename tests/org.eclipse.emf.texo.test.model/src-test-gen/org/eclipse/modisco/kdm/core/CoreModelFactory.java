@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.modisco.kdm.kdm.Annotation;
 import org.eclipse.modisco.kdm.kdm.Attribute;
 import org.eclipse.modisco.kdm.kdm.ExtendedValue;
@@ -255,10 +255,11 @@ public class CoreModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ElementModelObject<E extends Element> extends AbstractModelObject<E> {
+  public static class ElementModelObject<E extends Element> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CoreModelPackage.INSTANCE.getElementEClass();
     }
@@ -266,6 +267,7 @@ public class CoreModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CoreModelPackage.INSTANCE;
     }

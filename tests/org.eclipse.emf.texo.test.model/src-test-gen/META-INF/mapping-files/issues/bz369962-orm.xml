@@ -6,8 +6,8 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz369962.Mother" name="Mother">
-    <orm:table name="Mother"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz369962.Mother" name="bz369962_Mother">
+    <orm:table name="bz369962_Mother"/>
     <orm:inheritance strategy="SINGLE_TABLE"/>
     <orm:attributes/>
   </orm:entity>

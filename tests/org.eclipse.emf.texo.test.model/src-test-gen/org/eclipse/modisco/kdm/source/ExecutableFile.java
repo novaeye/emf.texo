@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ExecutableFile")
+@Entity(name = "source_ExecutableFile")
 public class ExecutableFile extends InventoryItem {
 
   /**

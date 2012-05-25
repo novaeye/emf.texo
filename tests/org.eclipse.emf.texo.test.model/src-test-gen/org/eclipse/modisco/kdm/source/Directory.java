@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Directory")
+@Entity(name = "source_Directory")
 public class Directory extends InventoryContainer {
 
   /**

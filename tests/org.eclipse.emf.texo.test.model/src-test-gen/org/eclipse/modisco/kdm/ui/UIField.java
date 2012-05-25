@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "UIField")
+@Entity(name = "ui_UIField")
 public class UIField extends UIResource {
 
   /**

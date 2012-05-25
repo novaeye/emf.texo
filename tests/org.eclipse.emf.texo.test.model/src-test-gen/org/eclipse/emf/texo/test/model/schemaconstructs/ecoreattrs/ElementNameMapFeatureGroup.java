@@ -8,6 +8,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -17,7 +19,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Element_nameMap")
+@Entity(name = "ecoreattrs_Element_nameMap")
 public class ElementNameMapFeatureGroup extends Identifiable {
 
   /**
@@ -135,6 +137,7 @@ public class ElementNameMapFeatureGroup extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
+  @JoinColumns({ @JoinColumn(name = "ecoreattrs_Element_names") })
   private NameList names;
 
   /**

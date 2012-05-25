@@ -6,27 +6,27 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.AGroupFeatureGroup" name="A_group">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.AGroupFeatureGroup" name="nestedgroup_A_group">
     <orm:attributes>
-      <orm:basic name="b">
+      <orm:basic name="b" optional="false">
         <orm:column name="b"/>
       </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="c">
-        <orm:join-column name="c"/>
+      <orm:many-to-one name="c" optional="false">
+        <orm:join-column name="nestedgroup_A_c"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.A" name="A">
-    <orm:table name="A"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.A" name="nestedgroup_A">
+    <orm:table name="nestedgroup_A"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.AGroupFeatureGroup">
         <orm:join-table/>
@@ -36,8 +36,8 @@
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType" name="CType">
-    <orm:table name="CType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType" name="nestedgroup_CType">
+    <orm:table name="nestedgroup_CType"/>
     <orm:attributes>
       <orm:basic name="cname" optional="false">
         <orm:column name="cname"/>
@@ -47,23 +47,23 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementTrue_FeatureGroup" name="Element_true">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementTrue_FeatureGroup" name="nestedgroup_Element_true">
     <orm:attributes>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:many-to-one name="c" optional="false">
-        <orm:join-column name="c"/>
+        <orm:join-column name="nestedgroup_Element_c"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup" name="Element_mixed">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup" name="nestedgroup_Element_mixed">
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="text" optional="true">
         <orm:lob/>
@@ -83,15 +83,15 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="recursive" optional="false">
-        <orm:join-column name="recursive"/>
+        <orm:join-column name="nestedgroup_Element_recursive"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.Element" name="Element">
-    <orm:table name="Element"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.Element" name="nestedgroup_Element">
+    <orm:table name="nestedgroup_Element"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup">
         <orm:join-table/>

@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -13,7 +18,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "AccountGroup")
+@Entity(name = "accounting_AccountGroup")
+@Table(name = "accounting_AccountGroup")
 public class AccountGroup extends Identifiable {
 
   /**
@@ -22,6 +28,7 @@ public class AccountGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -30,6 +37,8 @@ public class AccountGroup extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_AccountGroup_account_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_AccountGroup_account") })
   private List<Account> account = new ArrayList<Account>();
 
   /**

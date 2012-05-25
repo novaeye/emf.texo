@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Transition")
+@Entity(name = "event_Transition")
 public class Transition extends EventResource {
 
   /**

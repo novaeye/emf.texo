@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.ComputationalObject;
  * 
  * @generated
  */
-@Entity(name = "Addresses")
+@Entity(name = "action_Addresses")
 public class Addresses extends AbstractActionRelationship {
 
   /**

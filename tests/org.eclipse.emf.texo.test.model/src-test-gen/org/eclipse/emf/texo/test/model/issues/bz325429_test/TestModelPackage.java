@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.issues.bz325429_test.dao.AddressDao;
 import org.eclipse.emf.texo.test.model.issues.bz325429_test.dao.ContactDao;
 import org.eclipse.emf.texo.test.model.issues.bz325429_test.dao.PersonDao;
@@ -66,28 +67,28 @@ public class TestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERSON_FIRSTNAME_FEATURE_ID = 0;
+  public static final int PERSON_FIRSTNAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_LASTNAME_FEATURE_ID = 1;
+  public static final int PERSON_LASTNAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_ADDRESS_FEATURE_ID = 2;
+  public static final int PERSON_ADDRESS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_CONTACTS_FEATURE_ID = 3;
+  public static final int PERSON_CONTACTS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -101,14 +102,14 @@ public class TestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ADDRESS_STREET_FEATURE_ID = 0;
+  public static final int ADDRESS_STREET_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_CITY_FEATURE_ID = 1;
+  public static final int ADDRESS_CITY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -122,14 +123,14 @@ public class TestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTACT_VALUE_FEATURE_ID = 0;
+  public static final int CONTACT_VALUE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTACT_TYPE_FEATURE_ID = 1;
+  public static final int CONTACT_TYPE_FEATURE_ID = 3;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -154,6 +155,8 @@ public class TestModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

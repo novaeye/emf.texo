@@ -9,7 +9,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "TagDefinition")
+@Entity(name = "kdm_TagDefinition")
 public class TagDefinition extends Element {
 
   /**

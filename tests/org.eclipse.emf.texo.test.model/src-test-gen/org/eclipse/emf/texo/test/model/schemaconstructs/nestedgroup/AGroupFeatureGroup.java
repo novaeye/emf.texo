@@ -16,7 +16,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "A_group")
+@Entity(name = "nestedgroup_A_group")
 public class AGroupFeatureGroup extends Identifiable {
 
   /**
@@ -131,7 +131,7 @@ public class AGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String b;
 
   /**
@@ -139,7 +139,7 @@ public class AGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private CType c;
 
   /**

@@ -6,14 +6,14 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.list.StatesByCountry" name="statesByCountry">
-    <orm:table name="statesByCountry"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.list.StatesByCountry" name="list_statesByCountry">
+    <orm:table name="list_statesByCountry"/>
     <orm:attributes>
       <orm:basic name="country" optional="false">
         <orm:column name="country"/>
       </orm:basic>
       <orm:basic name="index" optional="false">
-        <orm:column name="index"/>
+        <orm:column name="T_index"/>
       </orm:basic>
       <orm:basic name="allStates" optional="false">
         <orm:column name="allStates"/>

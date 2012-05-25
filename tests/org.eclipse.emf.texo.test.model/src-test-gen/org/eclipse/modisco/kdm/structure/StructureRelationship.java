@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "StructureRelationship")
+@Entity(name = "structure_StructureRelationship")
 public class StructureRelationship extends AbstractStructureRelationship {
 
   /**

@@ -11,6 +11,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
+import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -21,7 +22,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ManyTypes")
+@Entity(name = "types_ManyTypes")
 public class ManyTypes extends Identifiable {
 
   /**
@@ -30,7 +31,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_string")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_string")
   private List<String> string = new ArrayList<String>();
 
   /**
@@ -39,7 +41,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_integerObject")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_integerObject")
   private List<Integer> integerObject = new ArrayList<Integer>();
 
   /**
@@ -48,7 +51,7 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_long")
+  @CollectionTable(name = "types_ManyTypes_long")
   private Set<Long> long_ = new HashSet<Long>();
 
   /**
@@ -57,7 +60,7 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_doubleObject")
+  @CollectionTable(name = "types_ManyTypes_doubleObject")
   private Set<Double> doubleObject = new HashSet<Double>();
 
   /**
@@ -66,7 +69,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_floatObject")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_floatObject")
   private List<Float> floatObject = new ArrayList<Float>();
 
   /**
@@ -83,7 +87,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_charObject")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_charObject")
   private List<Character> charObject = new ArrayList<Character>();
 
   /**
@@ -92,7 +97,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_byteObject")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_byteObject")
   private List<Byte> byteObject = new ArrayList<Byte>();
 
   /**
@@ -101,8 +107,9 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
+  @OrderColumn()
   @Lob()
-  @CollectionTable(name = "ManyTypes_byteArray")
+  @CollectionTable(name = "types_ManyTypes_byteArray")
   private List<byte[]> byteArray = new ArrayList<byte[]>();
 
   /**
@@ -111,7 +118,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_bigDecimal")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_bigDecimal")
   private List<BigDecimal> bigDecimal = new ArrayList<BigDecimal>();
 
   /**
@@ -120,7 +128,7 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_bigInteger")
+  @CollectionTable(name = "types_ManyTypes_bigInteger")
   private Set<BigInteger> bigInteger = new HashSet<BigInteger>();
 
   /**
@@ -129,7 +137,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_enum")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_enum")
   private List<TestEnum> enum_ = new ArrayList<TestEnum>();
 
   /**
@@ -139,7 +148,7 @@ public class ManyTypes extends Identifiable {
    */
   @ElementCollection()
   @Temporal(TemporalType.DATE)
-  @CollectionTable(name = "ManyTypes_date")
+  @CollectionTable(name = "types_ManyTypes_date")
   private Set<Date> date = new HashSet<Date>();
 
   /**
@@ -148,7 +157,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_stringArray")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_stringArray")
   private List<String[]> stringArray = new ArrayList<String[]>();
 
   /**
@@ -157,7 +167,8 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "ManyTypes_longArray")
+  @OrderColumn()
+  @CollectionTable(name = "types_ManyTypes_longArray")
   private List<long[]> longArray = new ArrayList<long[]>();
 
   /**

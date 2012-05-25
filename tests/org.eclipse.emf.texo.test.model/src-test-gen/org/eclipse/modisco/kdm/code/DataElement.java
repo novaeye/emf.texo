@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "DataElement")
+@Entity(name = "code_DataElement")
 public class DataElement extends ComputationalObject {
 
   /**

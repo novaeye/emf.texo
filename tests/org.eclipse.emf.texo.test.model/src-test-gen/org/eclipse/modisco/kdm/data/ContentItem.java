@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "ContentItem")
+@Entity(name = "data_ContentItem")
 public class ContentItem extends AbstractContentElement {
 
   /**

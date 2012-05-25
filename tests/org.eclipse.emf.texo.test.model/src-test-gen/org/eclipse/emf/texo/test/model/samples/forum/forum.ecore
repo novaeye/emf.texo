@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.samples.forum"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/forum" nsPrefix="forum">
-  <eClassifiers xsi:type="ecore:EClass" name="Forum">
+  <eClassifiers xsi:type="ecore:EClass" name="Forum" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Forum"/>
       <details key="kind" value="elementOnly"/>
@@ -38,7 +38,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Member">
+  <eClassifiers xsi:type="ecore:EClass" name="Member" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Member"/>
       <details key="kind" value="elementOnly"/>
@@ -74,7 +74,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Post">
+  <eClassifiers xsi:type="ecore:EClass" name="Post" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Post"/>
       <details key="kind" value="elementOnly"/>
@@ -110,7 +110,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Topic">
+  <eClassifiers xsi:type="ecore:EClass" name="Topic" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Topic"/>
       <details key="kind" value="elementOnly"/>

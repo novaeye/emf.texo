@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "StringType")
+@Entity(name = "code_StringType")
 public class StringType extends PrimitiveType {
 
   /**

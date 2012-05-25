@@ -6,8 +6,8 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleList" name="SimpleList">
-    <orm:table name="SimpleList"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleList" name="simpletypes_SimpleList">
+    <orm:table name="simpletypes_SimpleList"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
         <orm:column name="code"/>
@@ -26,76 +26,87 @@
         <orm:lob/>
       </orm:basic>
       <orm:element-collection name="boo">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_boo">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_boo_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_boo">
+          <orm:join-column name="simpletypes_SimpleList_boo"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="byt">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_byt">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_byt_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_byt">
+          <orm:join-column name="simpletypes_SimpleList_byt"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="doubl">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_doubl">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_doubl_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_doubl">
+          <orm:join-column name="simpletypes_SimpleList_doubl"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="floa">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_floa">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_floa_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_floa">
+          <orm:join-column name="simpletypes_SimpleList_floa"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="inte">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_inte">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_inte_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_inte">
+          <orm:join-column name="simpletypes_SimpleList_inte"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="long_">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_long">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_long_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_long">
+          <orm:join-column name="simpletypes_SimpleList_long"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="shor">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_shor">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_shor_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_shor">
+          <orm:join-column name="simpletypes_SimpleList_shor"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="enu">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_enu">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_enu_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_enu">
+          <orm:join-column name="simpletypes_SimpleList_enu"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="dat">
-        <orm:column name="element"/>
+        <orm:order-column name="simpletypes_SimpleList_dat_ind"/>
+        <orm:column name="T_element"/>
         <orm:temporal>DATE</orm:temporal>
-        <orm:collection-table name="SimpleList_dat">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:collection-table name="simpletypes_SimpleList_dat">
+          <orm:join-column name="simpletypes_SimpleList_dat"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="limitedstring">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_limitedstring">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_limitedstring_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_limitedstring">
+          <orm:join-column name="simpletypes_SimpleList_limitedstring"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="stri">
-        <orm:column name="element"/>
-        <orm:collection-table name="SimpleList_stri">
-          <orm:join-column name="SimpleList_id"/>
+        <orm:order-column name="simpletypes_SimpleList_stri_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="simpletypes_SimpleList_stri">
+          <orm:join-column name="simpletypes_SimpleList_stri"/>
         </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleType" name="SimpleType">
-    <orm:table name="SimpleType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleType" name="simpletypes_SimpleType">
+    <orm:table name="simpletypes_SimpleType"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
         <orm:column name="code"/>
@@ -110,7 +121,7 @@
         <orm:column name="doubl"/>
       </orm:basic>
       <orm:basic name="float_" optional="false">
-        <orm:column name="float"/>
+        <orm:column name="T_float"/>
       </orm:basic>
       <orm:basic name="inte" optional="false">
         <orm:column name="inte"/>
@@ -139,8 +150,8 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleTypeObject" name="SimpleTypeObject">
-    <orm:table name="SimpleTypeObject"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleTypeObject" name="simpletypes_SimpleTypeObject">
+    <orm:table name="simpletypes_SimpleTypeObject"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
         <orm:column name="code"/>
@@ -155,7 +166,7 @@
         <orm:column name="doubl"/>
       </orm:basic>
       <orm:basic name="float_" optional="false">
-        <orm:column name="float"/>
+        <orm:column name="T_float"/>
       </orm:basic>
       <orm:basic name="inte" optional="false">
         <orm:column name="inte"/>

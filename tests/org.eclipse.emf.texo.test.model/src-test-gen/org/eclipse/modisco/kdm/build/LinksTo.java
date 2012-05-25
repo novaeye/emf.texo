@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "LinksTo")
+@Entity(name = "build_LinksTo")
 public class LinksTo extends AbstractBuildRelationship {
 
   /**

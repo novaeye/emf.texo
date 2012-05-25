@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Supplier")
+@Entity(name = "build_Supplier")
 public class Supplier extends AbstractBuildElement {
 
   /**

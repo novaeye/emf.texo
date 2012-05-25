@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Package")
+@Entity(name = "code_Package")
 public class Package extends Module {
 
   /**

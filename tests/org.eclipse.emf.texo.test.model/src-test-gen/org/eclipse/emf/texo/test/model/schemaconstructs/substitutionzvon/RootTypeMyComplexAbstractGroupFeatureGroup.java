@@ -19,7 +19,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RootType_myComplexAbstractGroup")
+@Entity(name = "substitutionzvon_RootType_myComplexAbstractGroup")
 public class RootTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
 
   /**

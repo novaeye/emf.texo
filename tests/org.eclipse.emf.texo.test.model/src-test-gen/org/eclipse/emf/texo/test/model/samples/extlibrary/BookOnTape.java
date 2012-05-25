@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "BookOnTape")
+@Entity(name = "extlib_BookOnTape")
 public class BookOnTape extends AudioVisualItem {
 
   /**

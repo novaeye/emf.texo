@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountGroupDao;
 import org.eclipse.emf.texo.test.model.samples.accounting.dao.AccountingClassDao;
@@ -69,7 +70,7 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACCOUNT_NAME_FEATURE_ID = 0;
+  public static final int ACCOUNT_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -83,14 +84,14 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACCOUNTGROUP_NAME_FEATURE_ID = 0;
+  public static final int ACCOUNTGROUP_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACCOUNTGROUP_ACCOUNT_FEATURE_ID = 1;
+  public static final int ACCOUNTGROUP_ACCOUNT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -104,42 +105,42 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACCOUNTING_NAME_FEATURE_ID = 0;
+  public static final int ACCOUNTING_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACCOUNTING_ACCOUNTGROUP_FEATURE_ID = 1;
+  public static final int ACCOUNTING_ACCOUNTGROUP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACCOUNTING_VAT_FEATURE_ID = 2;
+  public static final int ACCOUNTING_VAT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACCOUNTING_VATACCOUNT_FEATURE_ID = 3;
+  public static final int ACCOUNTING_VATACCOUNT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACCOUNTING_REPORT_FEATURE_ID = 4;
+  public static final int ACCOUNTING_REPORT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACCOUNTING_JOURNALGROUP_FEATURE_ID = 5;
+  public static final int ACCOUNTING_JOURNALGROUP_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -153,7 +154,7 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BALANCEACCOUNT_REPORT_FEATURE_ID = 1;
+  public static final int BALANCEACCOUNT_REPORT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -174,21 +175,21 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int JOURNALGROUP_NAME_FEATURE_ID = 0;
+  public static final int JOURNALGROUP_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALGROUP_JOURNALGROUPS_FEATURE_ID = 1;
+  public static final int JOURNALGROUP_JOURNALGROUPS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID = 2;
+  public static final int JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -202,42 +203,42 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int JOURNALSTATEMENT_DESCRIPTION_FEATURE_ID = 0;
+  public static final int JOURNALSTATEMENT_DESCRIPTION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALSTATEMENT_DATE_FEATURE_ID = 1;
+  public static final int JOURNALSTATEMENT_DATE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALSTATEMENT_AMOUNT_FEATURE_ID = 2;
+  public static final int JOURNALSTATEMENT_AMOUNT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALSTATEMENT_DEBITACCOUNT_FEATURE_ID = 3;
+  public static final int JOURNALSTATEMENT_DEBITACCOUNT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALSTATEMENT_CREDITACCOUNT_FEATURE_ID = 4;
+  public static final int JOURNALSTATEMENT_CREDITACCOUNT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int JOURNALSTATEMENT_VAT_FEATURE_ID = 5;
+  public static final int JOURNALSTATEMENT_VAT_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -258,21 +259,21 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int REPORT_NAME_FEATURE_ID = 0;
+  public static final int REPORT_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REPORT_DEBITREPORTGROUP_FEATURE_ID = 1;
+  public static final int REPORT_DEBITREPORTGROUP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REPORT_CREDITREPORTGROUP_FEATURE_ID = 2;
+  public static final int REPORT_CREDITREPORTGROUP_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -286,21 +287,21 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int REPORTGROUP_NAME_FEATURE_ID = 0;
+  public static final int REPORTGROUP_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REPORTGROUP_REPORTGROUP_FEATURE_ID = 1;
+  public static final int REPORTGROUP_REPORTGROUP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REPORTGROUP_ACCOUNT_FEATURE_ID = 2;
+  public static final int REPORTGROUP_ACCOUNT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -314,14 +315,14 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VAT_NAME_FEATURE_ID = 0;
+  public static final int VAT_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int VAT_RATE_FEATURE_ID = 1;
+  public static final int VAT_RATE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -353,6 +354,8 @@ public class AccountingModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

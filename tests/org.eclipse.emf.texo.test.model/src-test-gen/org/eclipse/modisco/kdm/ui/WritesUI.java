@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "WritesUI")
+@Entity(name = "ui_WritesUI")
 public class WritesUI extends AbstractActionRelationship {
 
   /**

@@ -95,8 +95,8 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
 			«REM»
 				The check !featureAnnotation.itemType.contains(",") prevents maps to be handled here
 			«ENDREM»		
-			«IF featureAnnotation.reference && featureAnnotation.EStructuralFeature.changeable && featureAnnotation.many && !featureAnnotation.itemType.contains(",")»		
-			«IF featureAnnotation.featureMapFeature == null && ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess-»
+			«IF featureAnnotation.EStructuralFeature.changeable && featureAnnotation.many && !featureAnnotation.itemType.contains(",")»		
+			«IF featureAnnotation.reference && featureAnnotation.featureMapFeature == null && ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess-»
 			case «ePackageAnnotation.qualifiedClassName».«toUpperCase(this.name)»_«toUpperCase(featureAnnotation.name)»_FEATURE_ID:
 				getTarget().addTo«toFirstUpper(featureAnnotation.validJavaMemberName)»((«featureAnnotation.itemType»)value);
 				return;
@@ -122,8 +122,8 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
 			«REM»
 				The check !featureAnnotation.itemType.contains(",") prevents maps to be handled here
 			«ENDREM»
-			«IF featureAnnotation.reference && featureAnnotation.EStructuralFeature.changeable && featureAnnotation.many && !featureAnnotation.itemType.contains(",")»		
-			«IF featureAnnotation.featureMapFeature == null && ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess-»
+			«IF featureAnnotation.EStructuralFeature.changeable && featureAnnotation.many && !featureAnnotation.itemType.contains(",")»		
+			«IF featureAnnotation.reference && featureAnnotation.featureMapFeature == null && ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess-»
 			case «ePackageAnnotation.qualifiedClassName».«toUpperCase(this.name)»_«toUpperCase(featureAnnotation.name)»_FEATURE_ID:
 				getTarget().removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»((«featureAnnotation.itemType»)value);
 				return;

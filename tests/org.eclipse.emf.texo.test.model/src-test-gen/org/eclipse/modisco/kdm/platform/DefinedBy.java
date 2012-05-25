@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.code.CodeItem;
  * 
  * @generated
  */
-@Entity(name = "DefinedBy")
+@Entity(name = "platform_DefinedBy")
 public class DefinedBy extends AbstractActionRelationship {
 
   /**

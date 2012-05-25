@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.AddressDao;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.CustomerDao;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.dao.GlobalAddressDao;
@@ -66,49 +67,49 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ITEM_ORDER_FEATURE_ID = 0;
+  public static final int ITEM_ORDER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_PRODUCTNAME_FEATURE_ID = 1;
+  public static final int ITEM_PRODUCTNAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_QUANTITY_FEATURE_ID = 2;
+  public static final int ITEM_QUANTITY_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_USPRICE_FEATURE_ID = 3;
+  public static final int ITEM_USPRICE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_COMMENT_FEATURE_ID = 4;
+  public static final int ITEM_COMMENT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_SHIPDATE_FEATURE_ID = 5;
+  public static final int ITEM_SHIPDATE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_PARTNUM_FEATURE_ID = 6;
+  public static final int ITEM_PARTNUM_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -122,28 +123,28 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int USADDRESS_STREET_FEATURE_ID = 2;
+  public static final int USADDRESS_STREET_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_CITY_FEATURE_ID = 3;
+  public static final int USADDRESS_CITY_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_STATE_FEATURE_ID = 4;
+  public static final int USADDRESS_STATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_ZIP_FEATURE_ID = 5;
+  public static final int USADDRESS_ZIP_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -171,63 +172,63 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_ITEMS_FEATURE_ID = 0;
+  public static final int PURCHASEORDER_ITEMS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_BILLTO_FEATURE_ID = 1;
+  public static final int PURCHASEORDER_BILLTO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_SHIPTO_FEATURE_ID = 2;
+  public static final int PURCHASEORDER_SHIPTO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_COMMENT_FEATURE_ID = 3;
+  public static final int PURCHASEORDER_COMMENT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_ORDERDATE_FEATURE_ID = 4;
+  public static final int PURCHASEORDER_ORDERDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_STATUS_FEATURE_ID = 5;
+  public static final int PURCHASEORDER_STATUS_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_TOTALAMOUNT_FEATURE_ID = 6;
+  public static final int PURCHASEORDER_TOTALAMOUNT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_CUSTOMER_FEATURE_ID = 7;
+  public static final int PURCHASEORDER_CUSTOMER_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_PREVIOUSORDER_FEATURE_ID = 8;
+  public static final int PURCHASEORDER_PREVIOUSORDER_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -241,14 +242,14 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ADDRESS_NAME_FEATURE_ID = 0;
+  public static final int ADDRESS_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_COUNTRY_FEATURE_ID = 1;
+  public static final int ADDRESS_COUNTRY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -269,35 +270,35 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SUPPLIER_NAME_FEATURE_ID = 0;
+  public static final int SUPPLIER_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUPPLIER_CUSTOMERS_FEATURE_ID = 1;
+  public static final int SUPPLIER_CUSTOMERS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUPPLIER_ORDERS_FEATURE_ID = 2;
+  public static final int SUPPLIER_ORDERS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUPPLIER_PENDINGORDERS_FEATURE_ID = 3;
+  public static final int SUPPLIER_PENDINGORDERS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUPPLIER_SHIPPEDORDERS_FEATURE_ID = 4;
+  public static final int SUPPLIER_SHIPPEDORDERS_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -311,14 +312,14 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CUSTOMER_CUSTOMERID_FEATURE_ID = 0;
+  public static final int CUSTOMER_CUSTOMERID_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CUSTOMER_ORDERS_FEATURE_ID = 1;
+  public static final int CUSTOMER_ORDERS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -332,14 +333,14 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int GLOBALADDRESS_LOCATION_FEATURE_ID = 3;
+  public static final int GLOBALADDRESS_LOCATION_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int GLOBALADDRESS_COUNTRYCODE_FEATURE_ID = 2;
+  public static final int GLOBALADDRESS_COUNTRYCODE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -353,7 +354,7 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int GLOBALLOCATION_COUNTRYCODE_FEATURE_ID = 0;
+  public static final int GLOBALLOCATION_COUNTRYCODE_FEATURE_ID = 2;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -378,6 +379,8 @@ public class Epo2ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

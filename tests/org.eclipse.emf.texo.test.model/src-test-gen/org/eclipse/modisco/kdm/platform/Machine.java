@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "Machine")
+@Entity(name = "platform_Machine")
 public class Machine extends AbstractPlatformElement {
 
   /**

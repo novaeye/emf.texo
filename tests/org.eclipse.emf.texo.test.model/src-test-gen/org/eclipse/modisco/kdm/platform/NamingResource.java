@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "NamingResource")
+@Entity(name = "platform_NamingResource")
 public class NamingResource extends ResourceType {
 
   /**

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "StructureElement")
+@Entity(name = "structure_StructureElement")
 public class StructureElement extends AbstractStructureElement {
 
   /**

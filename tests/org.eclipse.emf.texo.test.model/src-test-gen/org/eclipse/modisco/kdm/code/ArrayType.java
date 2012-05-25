@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ArrayType")
+@Entity(name = "code_ArrayType")
 public class ArrayType extends DerivedType {
 
   /**

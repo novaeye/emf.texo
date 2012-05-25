@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "UIResource")
+@Entity(name = "ui_UIResource")
 public class UIResource extends AbstractUIElement {
 
   /**

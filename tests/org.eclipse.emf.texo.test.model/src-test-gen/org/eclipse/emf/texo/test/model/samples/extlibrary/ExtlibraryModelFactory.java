@@ -12,6 +12,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: extlibrary. It contains code to create instances
@@ -392,10 +393,11 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class LibraryModelObject<E extends Library> extends AbstractModelObject<E> {
+  public static class LibraryModelObject<E extends Library> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ExtlibraryModelPackage.INSTANCE.getLibraryEClass();
     }
@@ -403,6 +405,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ExtlibraryModelPackage.INSTANCE;
     }
@@ -510,6 +513,10 @@ public class ExtlibraryModelFactory implements ModelFactory {
 
       case ExtlibraryModelPackage.LIBRARY_BRANCHES_FEATURE_ID:
         getTarget().getBranches().add((Library) value);
+        return;
+
+      case ExtlibraryModelPackage.LIBRARY_PEOPLE_FEATURE_ID:
+        getTarget().getPeople().add((LibraryPeopleFeatureGroup) value);
         return;
 
       }
@@ -646,10 +653,11 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ItemModelObject<E extends Item> extends AbstractModelObject<E> {
+  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ExtlibraryModelPackage.INSTANCE.getItemEClass();
     }
@@ -657,6 +665,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ExtlibraryModelPackage.INSTANCE;
     }
@@ -1360,10 +1369,11 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PersonModelObject<E extends Person> extends AbstractModelObject<E> {
+  public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ExtlibraryModelPackage.INSTANCE.getPersonEClass();
     }
@@ -1371,6 +1381,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ExtlibraryModelPackage.INSTANCE;
     }

@@ -2,7 +2,9 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -10,7 +12,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Account")
+@Entity(name = "accounting_Account")
+@Table(name = "accounting_Account")
 public abstract class Account extends Identifiable implements Serializable {
 
   /**
@@ -23,6 +26,7 @@ public abstract class Account extends Identifiable implements Serializable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name = null;
 
   /**

@@ -3,6 +3,7 @@
   <annotatedEPackages>
     <ePackage href="accounting.ecore#/"/>
     <ePackageAnnotations xsi:type="modelannotations:EPackageModelGenAnnotation"  rootClassExtends="org.eclipse.emf.texo.test.model.base.identifiable.Identifiable"/>
+    <ePackageAnnotations xsi:type="ormannotations:EPackageORMAnnotation" generateFullDbSchemaNames="true" />
     <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
       <eClass href="accounting.ecore#//Accounting"/>
       <eClassAnnotations xsi:type="modelannotations:EClassModelGenAnnotation" qualifiedClassName="org.eclipse.emf.texo.test.model.samples.accounting.AccountingClass" serializable="true"/>

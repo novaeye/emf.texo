@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "MethodUnit")
+@Entity(name = "code_MethodUnit")
 public class MethodUnit extends ControlElement {
 
   /**

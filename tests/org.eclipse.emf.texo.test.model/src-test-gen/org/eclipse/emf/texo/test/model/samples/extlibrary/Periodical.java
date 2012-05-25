@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Periodical")
+@Entity(name = "extlib_Periodical")
 public abstract class Periodical extends Item {
 
   /**

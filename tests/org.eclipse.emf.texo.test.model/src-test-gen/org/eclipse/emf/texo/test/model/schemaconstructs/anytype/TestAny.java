@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "TestAny")
+@Entity(name = "anytype_TestAny")
 public class TestAny extends Identifiable {
 
   /**
@@ -40,6 +41,7 @@ public class TestAny extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Object> multiAnyType = new ArrayList<Object>();
 
   /**

@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.Datatype;
  * 
  * @generated
  */
-@Entity(name = "UsesType")
+@Entity(name = "action_UsesType")
 public class UsesType extends AbstractActionRelationship {
 
   /**

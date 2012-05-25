@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.core.ModelElement;
  * 
  * @generated
  */
-@Entity(name = "KDMFramework")
+@Entity(name = "kdm_KDMFramework")
 public abstract class KDMFramework extends ModelElement {
 
   /**

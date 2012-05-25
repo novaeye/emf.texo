@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="interfaces"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/interfaces" nsPrefix="interfaces">
-  <eClassifiers xsi:type="ecore:EClass" name="DescribableIdentifiableConcrete" eSuperTypes="#//Describable #//IdentifiedType">
+  <eClassifiers xsi:type="ecore:EClass" name="DescribableIdentifiableConcrete" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Describable #//IdentifiedType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="">
       <eAnnotations source="org.eclipse.emf.texo">
@@ -27,7 +27,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DescribableConcrete" eSuperTypes="#//Describable">
+  <eClassifiers xsi:type="ecore:EClass" name="DescribableConcrete" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Describable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="">
       <eAnnotations source="org.eclipse.emf.texo">
@@ -35,7 +35,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IdentifiableConcrete" eSuperTypes="#//IdentifiedType">
+  <eClassifiers xsi:type="ecore:EClass" name="IdentifiableConcrete" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//IdentifiedType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="">
       <eAnnotations source="org.eclipse.emf.texo">

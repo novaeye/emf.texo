@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "Segment")
+@Entity(name = "kdm_Segment")
 public class Segment extends KDMFramework {
 
   /**

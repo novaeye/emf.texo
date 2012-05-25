@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "FileResource")
+@Entity(name = "platform_FileResource")
 public class FileResource extends ResourceType {
 
   /**

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "IncludeDirective")
+@Entity(name = "code_IncludeDirective")
 public class IncludeDirective extends PreprocessorDirective {
 
   /**

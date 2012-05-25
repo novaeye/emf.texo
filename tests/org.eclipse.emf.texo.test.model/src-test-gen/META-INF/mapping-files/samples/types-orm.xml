@@ -6,130 +6,140 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.ManyTypes" name="ManyTypes">
-    <orm:table name="ManyTypes"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.ManyTypes" name="types_ManyTypes">
+    <orm:table name="types_ManyTypes"/>
     <orm:attributes>
       <orm:element-collection name="string">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_string">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_string_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_string">
+          <orm:join-column name="types_ManyTypes_string"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="integerObject">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_integerObject">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_integerObject_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_integerObject">
+          <orm:join-column name="types_ManyTypes_integerObject"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="long_">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_long">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_long">
+          <orm:join-column name="types_ManyTypes_long"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="doubleObject">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_doubleObject">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_doubleObject">
+          <orm:join-column name="types_ManyTypes_doubleObject"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="floatObject">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_floatObject">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_floatObject_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_floatObject">
+          <orm:join-column name="types_ManyTypes_floatObject"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="charObject">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_charObject">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_charObject_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_charObject">
+          <orm:join-column name="types_ManyTypes_charObject"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="byteObject">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_byteObject">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_byteObject_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_byteObject">
+          <orm:join-column name="types_ManyTypes_byteObject"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="byteArray">
-        <orm:column name="element"/>
+        <orm:order-column name="types_ManyTypes_byteArray_ind"/>
+        <orm:column name="T_element"/>
         <orm:lob/>
-        <orm:collection-table name="ManyTypes_byteArray">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:collection-table name="types_ManyTypes_byteArray">
+          <orm:join-column name="types_ManyTypes_byteArray"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="bigDecimal">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_bigDecimal">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_bigDecimal_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_bigDecimal">
+          <orm:join-column name="types_ManyTypes_bigDecimal"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="bigInteger">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_bigInteger">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_bigInteger">
+          <orm:join-column name="types_ManyTypes_bigInteger"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="enum_">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_enum">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_enum_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_enum">
+          <orm:join-column name="types_ManyTypes_enum"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="date">
-        <orm:column name="element"/>
+        <orm:column name="T_element"/>
         <orm:temporal>DATE</orm:temporal>
-        <orm:collection-table name="ManyTypes_date">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:collection-table name="types_ManyTypes_date">
+          <orm:join-column name="types_ManyTypes_date"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="stringArray">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_stringArray">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_stringArray_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_stringArray">
+          <orm:join-column name="types_ManyTypes_stringArray"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="longArray">
-        <orm:column name="element"/>
-        <orm:collection-table name="ManyTypes_longArray">
-          <orm:join-column name="ManyTypes_id"/>
+        <orm:order-column name="types_ManyTypes_longArray_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="types_ManyTypes_longArray">
+          <orm:join-column name="types_ManyTypes_longArray"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:transient name="clazz"/>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.SingleTypes" name="SingleTypes">
-    <orm:table name="SingleTypes"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.SingleTypes" name="types_SingleTypes">
+    <orm:table name="types_SingleTypes"/>
     <orm:attributes>
       <orm:basic name="string">
-        <orm:column name="string"/>
+        <orm:column name="T_string"/>
       </orm:basic>
       <orm:basic name="integer">
-        <orm:column name="integer"/>
+        <orm:column name="T_integer"/>
       </orm:basic>
       <orm:basic name="integerObject">
         <orm:column name="integerObject"/>
       </orm:basic>
       <orm:basic name="long_">
-        <orm:column name="long"/>
+        <orm:column name="T_long"/>
       </orm:basic>
       <orm:basic name="longObject">
         <orm:column name="longObject"/>
       </orm:basic>
       <orm:basic name="double_">
-        <orm:column name="double"/>
+        <orm:column name="T_double"/>
       </orm:basic>
       <orm:basic name="doubleObject">
         <orm:column name="doubleObject"/>
       </orm:basic>
       <orm:basic name="float_">
-        <orm:column name="float"/>
+        <orm:column name="T_float"/>
       </orm:basic>
       <orm:basic name="floatObject">
         <orm:column name="floatObject"/>
       </orm:basic>
       <orm:basic name="char_">
-        <orm:column name="char"/>
+        <orm:column name="T_char"/>
       </orm:basic>
       <orm:basic name="charObject">
         <orm:column name="charObject"/>
@@ -151,10 +161,10 @@
         <orm:column name="bigInteger"/>
       </orm:basic>
       <orm:basic name="enum_">
-        <orm:column name="enum"/>
+        <orm:column name="T_enum"/>
       </orm:basic>
       <orm:basic name="date">
-        <orm:column name="date"/>
+        <orm:column name="T_date"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
       <orm:basic name="stringArray">

@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -10,7 +12,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SimCard")
+@Entity(name = "m_SimCard")
+@Table(name = "m_SimCard")
 public class SimCard extends Identifiable {
 
   /**
@@ -20,6 +23,7 @@ public class SimCard extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "phoneNumber")
   private String phoneNumber = null;
 
   /**
@@ -28,6 +32,7 @@ public class SimCard extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_number")
   private String number = null;
 
   /**

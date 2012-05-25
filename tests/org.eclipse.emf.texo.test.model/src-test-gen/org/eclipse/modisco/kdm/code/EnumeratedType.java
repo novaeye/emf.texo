@@ -5,13 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>EnumeratedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "EnumeratedType")
+@Entity(name = "code_EnumeratedType")
 public class EnumeratedType extends Datatype {
 
   /**
@@ -20,6 +21,7 @@ public class EnumeratedType extends Datatype {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Value> value = new ArrayList<Value>();
 
   /**
@@ -28,6 +30,7 @@ public class EnumeratedType extends Datatype {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<CodeItem> codeElement = new ArrayList<CodeItem>();
 
   /**

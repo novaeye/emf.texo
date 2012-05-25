@@ -43,6 +43,10 @@ import org.junit.Assert;
  */
 public class JSONEMFTest extends BaseJSONTest {
 
+  public JSONEMFTest(String name) {
+    super(name);
+  }
+
   public void runTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
 
@@ -51,10 +55,13 @@ public class JSONEMFTest extends BaseJSONTest {
     final EMFJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
     toJsonConverter.setObjectResolver(memObjectStore);
     toJsonConverter.setConvertNonContainedReferencedObjects(true);
+    toJsonConverter.setMaxChildLevelsToConvert(-1);
+
+    final Object json1 = toJsonConverter.convert(m1.get(0));
+
     final JSONEMFConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
     fromJsonConverter.setObjectResolver(memObjectStore);
 
-    final Object json1 = toJsonConverter.convert(m1.get(0));
     final EObject m2 = fromJsonConverter.convert((JSONObject) json1);
 
     final Object json2 = toJsonConverter.convert(m2);

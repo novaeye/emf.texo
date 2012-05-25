@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "EvenComplexNumberType")
+@Entity(name = "substitution_EvenComplexNumberType")
 public class EvenComplexNumberType extends ComplexNumber {
 
   /**

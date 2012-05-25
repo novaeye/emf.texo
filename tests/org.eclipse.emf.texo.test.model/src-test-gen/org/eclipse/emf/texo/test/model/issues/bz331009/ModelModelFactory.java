@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: model. It contains code to create instances
@@ -851,10 +852,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimCardModelObject<E extends SimCard> extends AbstractModelObject<E> {
+  public static class SimCardModelObject<E extends SimCard> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getSimCardEClass();
     }
@@ -862,6 +864,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -928,10 +931,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimContractModelObject<E extends SimContract> extends AbstractModelObject<E> {
+  public static class SimContractModelObject<E extends SimContract> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getSimContractEClass();
     }
@@ -939,6 +944,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1015,10 +1021,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PaymentInfoModelObject<E extends PaymentInfo> extends AbstractModelObject<E> {
+  public static class PaymentInfoModelObject<E extends PaymentInfo> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPaymentInfoEClass();
     }
@@ -1026,6 +1034,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1090,10 +1099,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimCardXSimContractModelObject<E extends SimCardXSimContract> extends AbstractModelObject<E> {
+  public static class SimCardXSimContractModelObject<E extends SimCardXSimContract> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getSimCardXSimContractEClass();
     }
@@ -1101,6 +1112,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1234,10 +1246,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class TariffModelObject<E extends Tariff> extends AbstractModelObject<E> {
+  public static class TariffModelObject<E extends Tariff> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getTariffEClass();
     }
@@ -1245,6 +1258,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1319,10 +1333,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PaymentItemModelObject<E extends PaymentItem> extends AbstractModelObject<E> {
+  public static class PaymentItemModelObject<E extends PaymentItem> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPaymentItemEClass();
     }
@@ -1330,6 +1346,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1637,10 +1654,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ServiceModelObject<E extends Service> extends AbstractModelObject<E> {
+  public static class ServiceModelObject<E extends Service> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getServiceEClass();
     }
@@ -1648,6 +1666,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1729,10 +1748,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class UnitsModelObject<E extends Units> extends AbstractModelObject<E> {
+  public static class UnitsModelObject<E extends Units> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getUnitsEClass();
     }
@@ -1740,6 +1760,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1801,10 +1822,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PriceModelObject<E extends Price> extends AbstractModelObject<E> {
+  public static class PriceModelObject<E extends Price> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPriceEClass();
     }
@@ -1812,6 +1834,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1866,10 +1889,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CarProducerModelObject<E extends CarProducer> extends AbstractModelObject<E> {
+  public static class CarProducerModelObject<E extends CarProducer> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getCarProducerEClass();
     }
@@ -1877,6 +1902,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -1938,10 +1964,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CarModelModelObject<E extends CarModel> extends AbstractModelObject<E> {
+  public static class CarModelModelObject<E extends CarModel> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getCarModelEClass();
     }
@@ -1949,6 +1977,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2015,10 +2044,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CarRegInfoModelObject<E extends CarRegInfo> extends AbstractModelObject<E> {
+  public static class CarRegInfoModelObject<E extends CarRegInfo> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getCarRegInfoEClass();
     }
@@ -2026,6 +2057,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2229,10 +2261,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PersonModelObject<E extends Person> extends AbstractModelObject<E> {
+  public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPersonEClass();
     }
@@ -2240,6 +2273,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2338,10 +2372,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CarModelObject<E extends Car> extends AbstractModelObject<E> {
+  public static class CarModelObject<E extends Car> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getCarEClass();
     }
@@ -2349,6 +2384,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2420,10 +2456,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CarPassportModelObject<E extends CarPassport> extends AbstractModelObject<E> {
+  public static class CarPassportModelObject<E extends CarPassport> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getCarPassportEClass();
     }
@@ -2431,6 +2469,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2507,10 +2546,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PhoneModelObject<E extends Phone> extends AbstractModelObject<E> {
+  public static class PhoneModelObject<E extends Phone> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPhoneEClass();
     }
@@ -2518,6 +2558,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2584,10 +2625,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AddressModelObject<E extends Address> extends AbstractModelObject<E> {
+  public static class AddressModelObject<E extends Address> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getAddressEClass();
     }
@@ -2595,6 +2637,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2686,10 +2729,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PassportModelObject<E extends Passport> extends AbstractModelObject<E> {
+  public static class PassportModelObject<E extends Passport> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getPassportEClass();
     }
@@ -2697,6 +2742,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2773,10 +2819,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DrivingLicenseModelObject<E extends DrivingLicense> extends AbstractModelObject<E> {
+  public static class DrivingLicenseModelObject<E extends DrivingLicense> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getDrivingLicenseEClass();
     }
@@ -2784,6 +2832,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2860,10 +2909,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ContractModelObject<E extends Contract> extends AbstractModelObject<E> {
+  public static class ContractModelObject<E extends Contract> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getContractEClass();
     }
@@ -2871,6 +2922,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -2954,10 +3006,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SecretQuestionModelObject<E extends SecretQuestion> extends AbstractModelObject<E> {
+  public static class SecretQuestionModelObject<E extends SecretQuestion> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getSecretQuestionEClass();
     }
@@ -2965,6 +3019,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3113,10 +3168,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ContractPackageModelObject<E extends ContractPackage> extends AbstractModelObject<E> {
+  public static class ContractPackageModelObject<E extends ContractPackage> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getContractPackageEClass();
     }
@@ -3124,6 +3181,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3192,10 +3250,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class UserModelObject<E extends User> extends AbstractModelObject<E> {
+  public static class UserModelObject<E extends User> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getUserEClass();
     }
@@ -3203,6 +3262,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3274,10 +3334,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class UserGroupModelObject<E extends UserGroup> extends AbstractModelObject<E> {
+  public static class UserGroupModelObject<E extends UserGroup> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getUserGroupEClass();
     }
@@ -3285,6 +3347,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3339,10 +3402,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MessageModelObject<E extends Message> extends AbstractModelObject<E> {
+  public static class MessageModelObject<E extends Message> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getMessageEClass();
     }
@@ -3350,6 +3414,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3431,10 +3496,11 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class EventModelObject<E extends Event> extends AbstractModelObject<E> {
+  public static class EventModelObject<E extends Event> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getEventEClass();
     }
@@ -3442,6 +3508,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }
@@ -3513,10 +3580,12 @@ public class ModelModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CoordinatesModelObject<E extends Coordinates> extends AbstractModelObject<E> {
+  public static class CoordinatesModelObject<E extends Coordinates> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ModelModelPackage.INSTANCE.getCoordinatesEClass();
     }
@@ -3524,6 +3593,7 @@ public class ModelModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ModelModelPackage.INSTANCE;
     }

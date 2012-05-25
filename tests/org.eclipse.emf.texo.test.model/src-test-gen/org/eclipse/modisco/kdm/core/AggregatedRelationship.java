@@ -20,7 +20,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "AggregatedRelationship")
+@Entity(name = "core_AggregatedRelationship")
 public class AggregatedRelationship extends ModelElement {
 
   /**

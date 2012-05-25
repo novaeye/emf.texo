@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Artist")
+@Entity(name = "org_elver_music_Artist")
 public class Artist extends Identifiable {
 
   /**

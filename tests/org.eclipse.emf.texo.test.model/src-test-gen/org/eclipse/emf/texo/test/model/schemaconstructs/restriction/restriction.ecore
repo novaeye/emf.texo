@@ -10,7 +10,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="XMLDeviant">
+  <eClassifiers xsi:type="ecore:EClass" name="XMLDeviant" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="XML-Deviant"/>
       <details key="kind" value="elementOnly"/>

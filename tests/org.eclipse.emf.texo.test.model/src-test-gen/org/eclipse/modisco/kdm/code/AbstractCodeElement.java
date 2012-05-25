@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.action.EntryFlow;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 import org.eclipse.modisco.kdm.source.SourceRef;
@@ -18,7 +19,7 @@ import org.eclipse.modisco.kdm.source.SourceRef;
  * 
  * @generated
  */
-@Entity(name = "AbstractCodeElement")
+@Entity(name = "code_AbstractCodeElement")
 public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
@@ -51,6 +52,7 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   private List<EntryFlow> entryFlow = new ArrayList<EntryFlow>();
 
   /**

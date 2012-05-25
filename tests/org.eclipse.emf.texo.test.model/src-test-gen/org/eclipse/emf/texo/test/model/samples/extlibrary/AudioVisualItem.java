@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "AudioVisualItem")
+@Entity(name = "extlib_AudioVisualItem")
 public abstract class AudioVisualItem extends CirculatingItem {
 
   /**

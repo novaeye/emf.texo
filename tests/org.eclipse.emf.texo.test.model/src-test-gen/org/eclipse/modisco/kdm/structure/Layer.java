@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Layer")
+@Entity(name = "structure_Layer")
 public class Layer extends AbstractStructureElement {
 
   /**

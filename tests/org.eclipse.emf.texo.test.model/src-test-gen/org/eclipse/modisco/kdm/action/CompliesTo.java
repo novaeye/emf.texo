@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.CodeItem;
  * 
  * @generated
  */
-@Entity(name = "CompliesTo")
+@Entity(name = "action_CompliesTo")
 public class CompliesTo extends AbstractActionRelationship {
 
   /**

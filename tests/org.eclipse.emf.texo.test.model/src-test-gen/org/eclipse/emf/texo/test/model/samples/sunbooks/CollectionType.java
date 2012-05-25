@@ -10,7 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "CollectionType")
+@Entity(name = "sunBooks_CollectionType")
 public class CollectionType extends Identifiable {
 
   /**

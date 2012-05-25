@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SequenceType")
+@Entity(name = "code_SequenceType")
 public class SequenceType extends DerivedType {
 
   /**

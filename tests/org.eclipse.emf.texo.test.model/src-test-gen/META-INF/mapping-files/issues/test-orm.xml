@@ -6,8 +6,8 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Person" name="Person">
-    <orm:table name="Person"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Person" name="test_Person">
+    <orm:table name="test_Person"/>
     <orm:attributes>
       <orm:basic name="firstname">
         <orm:column name="firstname"/>
@@ -16,7 +16,7 @@
         <orm:column name="lastname"/>
       </orm:basic>
       <orm:many-to-one name="address" optional="false">
-        <orm:join-column name="address"/>
+        <orm:join-column name="test_Person_address"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -24,9 +24,10 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-many name="contacts">
-        <orm:join-table name="Person_contacts">
-          <orm:join-column name="Person_id"/>
-          <orm:inverse-join-column name="Contact_id"/>
+        <orm:order-column name="test_Person_contacts_ind"/>
+        <orm:join-table name="test_Person_contacts">
+          <orm:join-column name="test_Person_contacts"/>
+          <orm:inverse-join-column name="test_Contact_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -36,8 +37,8 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Address" name="Address">
-    <orm:table name="Address"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Address" name="test_Address">
+    <orm:table name="test_Address"/>
     <orm:attributes>
       <orm:basic name="street">
         <orm:column name="street"/>
@@ -47,14 +48,14 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Contact" name="Contact">
-    <orm:table name="Contact"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325429_test.Contact" name="test_Contact">
+    <orm:table name="test_Contact"/>
     <orm:attributes>
       <orm:basic name="value">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
       <orm:basic name="type">
-        <orm:column name="type"/>
+        <orm:column name="T_type"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

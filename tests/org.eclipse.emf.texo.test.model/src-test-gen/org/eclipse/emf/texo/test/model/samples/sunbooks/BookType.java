@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "BookType")
+@Entity(name = "sunBooks_BookType")
 public class BookType extends Identifiable {
 
   /**

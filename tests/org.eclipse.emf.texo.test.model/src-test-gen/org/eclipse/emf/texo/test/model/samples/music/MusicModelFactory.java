@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: music. It contains code to create instances
@@ -229,13 +229,14 @@ public class MusicModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ArtistModelObject<E extends Artist> extends AbstractModelObject<E> {
+  public static class ArtistModelObject<E extends Artist> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MusicModelPackage.INSTANCE.getArtistEClass();
     }
@@ -243,6 +244,7 @@ public class MusicModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MusicModelPackage.INSTANCE;
     }
@@ -346,13 +348,14 @@ public class MusicModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AlbumModelObject<E extends Album> extends AbstractModelObject<E> {
+  public static class AlbumModelObject<E extends Album> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MusicModelPackage.INSTANCE.getAlbumEClass();
     }
@@ -360,6 +363,7 @@ public class MusicModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MusicModelPackage.INSTANCE;
     }
@@ -454,6 +458,9 @@ public class MusicModelFactory implements ModelFactory {
         getTarget().getSongs().add((Song) value);
         return;
 
+      case MusicModelPackage.ALBUM_RATINGS_FEATURE_ID:
+        getTarget().getRatings().add((Rating) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -484,13 +491,14 @@ public class MusicModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CountryModelObject<E extends Country> extends AbstractModelObject<E> {
+  public static class CountryModelObject<E extends Country> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MusicModelPackage.INSTANCE.getCountryEClass();
     }
@@ -498,6 +506,7 @@ public class MusicModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MusicModelPackage.INSTANCE;
     }
@@ -581,13 +590,14 @@ public class MusicModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class GenreModelObject<E extends Genre> extends AbstractModelObject<E> {
+  public static class GenreModelObject<E extends Genre> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MusicModelPackage.INSTANCE.getGenreEClass();
     }
@@ -595,6 +605,7 @@ public class MusicModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MusicModelPackage.INSTANCE;
     }
@@ -678,13 +689,14 @@ public class MusicModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SongModelObject<E extends Song> extends AbstractModelObject<E> {
+  public static class SongModelObject<E extends Song> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MusicModelPackage.INSTANCE.getSongEClass();
     }
@@ -692,6 +704,7 @@ public class MusicModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MusicModelPackage.INSTANCE;
     }

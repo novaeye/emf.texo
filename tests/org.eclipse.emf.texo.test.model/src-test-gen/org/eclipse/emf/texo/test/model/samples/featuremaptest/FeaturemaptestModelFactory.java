@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.featuremaptest.
@@ -157,10 +157,12 @@ public class FeaturemaptestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends AbstractModelObject<E> {
+  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return FeaturemaptestModelPackage.INSTANCE.getPurchaseOrderEClass();
     }
@@ -168,6 +170,7 @@ public class FeaturemaptestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return FeaturemaptestModelPackage.INSTANCE;
     }
@@ -229,10 +232,12 @@ public class FeaturemaptestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SupplierModelObject<E extends Supplier> extends AbstractModelObject<E> {
+  public static class SupplierModelObject<E extends Supplier> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return FeaturemaptestModelPackage.INSTANCE.getSupplierEClass();
     }
@@ -240,6 +245,7 @@ public class FeaturemaptestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return FeaturemaptestModelPackage.INSTANCE;
     }
@@ -304,6 +310,18 @@ public class FeaturemaptestModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case FeaturemaptestModelPackage.SUPPLIER_ORDERS_FEATURE_ID:
+        getTarget().getOrders().add((SupplierOrdersFeatureGroup) value);
+        return;
+
+      case FeaturemaptestModelPackage.SUPPLIER_HARDCOPYORDERREFERENCE_FEATURE_ID:
+        getTarget().getHardCopyOrderReference().add((String) value);
+        return;
+
+      case FeaturemaptestModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
+        getTarget().getHardCopyOrderNumber().add((Long) value);
+        return;
 
       case FeaturemaptestModelPackage.SUPPLIER_PREFERREDORDERS_FEATURE_ID:
         getTarget().getPreferredOrders().add((PurchaseOrder) value);

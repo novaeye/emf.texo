@@ -414,8 +414,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       }
     }
 
-    if (eReference.isRequired()) {
-      oneToOne.setOptional(!eReference.isRequired());
+    if (!GeneratorUtils.isOptional(eReference)) {
+      oneToOne.setOptional(false);
     }
   }
 
@@ -471,8 +471,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     // manyToOne.setTargetEntity(getTargetEntity(eReference));
     // }
 
-    if (eReference.isRequired()) {
-      manyToOne.setOptional(!eReference.isRequired());
+    if (!GeneratorUtils.isOptional(eReference)) {
+      manyToOne.setOptional(false);
     }
 
     // copy any join columns over

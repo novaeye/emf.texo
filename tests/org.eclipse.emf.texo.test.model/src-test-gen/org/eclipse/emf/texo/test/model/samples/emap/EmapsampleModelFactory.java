@@ -5,7 +5,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -165,10 +164,11 @@ public class EmapsampleModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BookModelObject<E extends Book> extends AbstractModelObject<E> {
+  public static class BookModelObject<E extends Book> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EmapsampleModelPackage.INSTANCE.getBookEClass();
     }
@@ -176,6 +176,7 @@ public class EmapsampleModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EmapsampleModelPackage.INSTANCE;
     }

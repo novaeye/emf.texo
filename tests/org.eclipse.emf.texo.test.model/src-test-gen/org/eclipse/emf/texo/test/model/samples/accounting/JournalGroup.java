@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -13,7 +18,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "JournalGroup")
+@Entity(name = "accounting_JournalGroup")
+@Table(name = "accounting_JournalGroup")
 public class JournalGroup extends Identifiable {
 
   /**
@@ -22,6 +28,7 @@ public class JournalGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -30,6 +37,8 @@ public class JournalGroup extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_JournalGroup_journalGroups_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_JournalGroup_journalGroups") })
   private List<JournalGroup> journalGroups = new ArrayList<JournalGroup>();
 
   /**
@@ -38,6 +47,8 @@ public class JournalGroup extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_JournalGroup_journalStatements_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_JournalGroup_journalStatements") })
   private List<JournalStatement> journalStatements = new ArrayList<JournalStatement>();
 
   /**

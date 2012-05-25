@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "UIEvent")
+@Entity(name = "ui_UIEvent")
 public class UIEvent extends AbstractUIElement {
 
   /**

@@ -91,7 +91,7 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PLATFORMMODEL_PLATFORMELEMENT_FEATURE_ID = 8;
+  public static final int PLATFORMMODEL_PLATFORMELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -105,28 +105,28 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTPLATFORMELEMENT_SOURCE_FEATURE_ID = 15;
+  public static final int ABSTRACTPLATFORMELEMENT_SOURCE_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTPLATFORMELEMENT_PLATFORMRELATION_FEATURE_ID = 16;
+  public static final int ABSTRACTPLATFORMELEMENT_PLATFORMRELATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTPLATFORMELEMENT_ABSTRACTION_FEATURE_ID = 17;
+  public static final int ABSTRACTPLATFORMELEMENT_ABSTRACTION_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTPLATFORMELEMENT_IMPLEMENTATION_FEATURE_ID = 18;
+  public static final int ABSTRACTPLATFORMELEMENT_IMPLEMENTATION_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -147,7 +147,7 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RESOURCETYPE_PLATFORMELEMENT_FEATURE_ID = 19;
+  public static final int RESOURCETYPE_PLATFORMELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -217,7 +217,7 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PLATFORMEVENT_KIND_FEATURE_ID = 20;
+  public static final int PLATFORMEVENT_KIND_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -231,14 +231,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PLATFORMACTION_KIND_FEATURE_ID = 19;
+  public static final int PLATFORMACTION_KIND_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLATFORMACTION_PLATFORMELEMENT_FEATURE_ID = 20;
+  public static final int PLATFORMACTION_PLATFORMELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -259,14 +259,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BINDSTO_TO_FEATURE_ID = 4;
+  public static final int BINDSTO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BINDSTO_FROM_FEATURE_ID = 5;
+  public static final int BINDSTO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -280,14 +280,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int REQUIRES_TO_FEATURE_ID = 4;
+  public static final int REQUIRES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REQUIRES_FROM_FEATURE_ID = 5;
+  public static final int REQUIRES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -301,7 +301,7 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DEPLOYEDCOMPONENT_GROUPEDCODE_FEATURE_ID = 19;
+  public static final int DEPLOYEDCOMPONENT_GROUPEDCODE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -315,14 +315,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANAGESRESOURCE_TO_FEATURE_ID = 4;
+  public static final int MANAGESRESOURCE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANAGESRESOURCE_FROM_FEATURE_ID = 5;
+  public static final int MANAGESRESOURCE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -336,14 +336,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int READSRESOURCE_TO_FEATURE_ID = 4;
+  public static final int READSRESOURCE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int READSRESOURCE_FROM_FEATURE_ID = 5;
+  public static final int READSRESOURCE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -357,14 +357,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITESRESOURCE_TO_FEATURE_ID = 4;
+  public static final int WRITESRESOURCE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITESRESOURCE_FROM_FEATURE_ID = 5;
+  public static final int WRITESRESOURCE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -378,14 +378,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DEFINEDBY_TO_FEATURE_ID = 4;
+  public static final int DEFINEDBY_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DEFINEDBY_FROM_FEATURE_ID = 5;
+  public static final int DEFINEDBY_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -399,7 +399,7 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DEPLOYEDSOFTWARESYSTEM_GROUPEDCOMPONENT_FEATURE_ID = 19;
+  public static final int DEPLOYEDSOFTWARESYSTEM_GROUPEDCOMPONENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -413,14 +413,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MACHINE_DEPLOYEDCOMPONENT_FEATURE_ID = 19;
+  public static final int MACHINE_DEPLOYEDCOMPONENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MACHINE_DEPLOYEDRESOURCE_FEATURE_ID = 20;
+  public static final int MACHINE_DEPLOYEDRESOURCE_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -434,7 +434,7 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DEPLOYEDRESOURCE_PLATFORMELEMENT_FEATURE_ID = 19;
+  public static final int DEPLOYEDRESOURCE_PLATFORMELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -469,14 +469,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int LOADS_TO_FEATURE_ID = 4;
+  public static final int LOADS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LOADS_FROM_FEATURE_ID = 5;
+  public static final int LOADS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -490,14 +490,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SPAWNS_TO_FEATURE_ID = 4;
+  public static final int SPAWNS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SPAWNS_FROM_FEATURE_ID = 5;
+  public static final int SPAWNS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -518,14 +518,14 @@ public class PlatformModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PLATFORMRELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int PLATFORMRELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLATFORMRELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int PLATFORMRELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -551,12 +551,12 @@ public class PlatformModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(PlatformModel.class, modelPackage.getPlatformModelEClass(),

@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "ConceptualContainer")
+@Entity(name = "conceptual_ConceptualContainer")
 public class ConceptualContainer extends AbstractConceptualElement {
 
   /**

@@ -6,25 +6,26 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.employee.Department" name="Department">
-    <orm:table name="Department"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.employee.Department" name="employee_Department">
+    <orm:table name="employee_Department"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-many name="employees">
-        <orm:join-column name="Department_id"/>
+        <orm:order-column name="employee_Department_employees_ind"/>
+        <orm:join-column name="employee_Department_employees"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.employee.Employee" name="Employee">
-    <orm:table name="Employee"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.employee.Employee" name="employee_Employee">
+    <orm:table name="employee_Employee"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="salary" optional="false">
         <orm:column name="salary"/>

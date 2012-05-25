@@ -12,6 +12,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.play.dao.ActTypeDao;
 import org.eclipse.emf.texo.test.model.samples.play.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.samples.play.dao.FmTypeDao;
@@ -65,21 +66,21 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACTTYPE_SCENE_FEATURE_ID = 0;
+  public static final int ACTTYPE_SCENE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTTYPE_PINDEX_FEATURE_ID = 1;
+  public static final int ACTTYPE_PINDEX_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTTYPE_TITLE_FEATURE_ID = 2;
+  public static final int ACTTYPE_TITLE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -93,133 +94,133 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
+  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
+  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
+  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ACT_FEATURE_ID = 3;
+  public static final int DOCUMENTROOT_ACT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_FM_FEATURE_ID = 4;
+  public static final int DOCUMENTROOT_FM_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_GROUPDESCRIPTION_FEATURE_ID = 5;
+  public static final int DOCUMENTROOT_GROUPDESCRIPTION_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_LINE_FEATURE_ID = 6;
+  public static final int DOCUMENTROOT_LINE_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_P_FEATURE_ID = 7;
+  public static final int DOCUMENTROOT_P_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_PERSONA_FEATURE_ID = 8;
+  public static final int DOCUMENTROOT_PERSONA_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_PERSONAE_FEATURE_ID = 9;
+  public static final int DOCUMENTROOT_PERSONAE_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_PERSONAGROUP_FEATURE_ID = 10;
+  public static final int DOCUMENTROOT_PERSONAGROUP_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_PLAY_FEATURE_ID = 11;
+  public static final int DOCUMENTROOT_PLAY_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_PLAYSUBTITLE_FEATURE_ID = 12;
+  public static final int DOCUMENTROOT_PLAYSUBTITLE_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_SCENE_FEATURE_ID = 13;
+  public static final int DOCUMENTROOT_SCENE_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_SCENEDESCRIPTION_FEATURE_ID = 14;
+  public static final int DOCUMENTROOT_SCENEDESCRIPTION_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_SPEAKER_FEATURE_ID = 15;
+  public static final int DOCUMENTROOT_SPEAKER_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_SPEECH_FEATURE_ID = 16;
+  public static final int DOCUMENTROOT_SPEECH_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_STAGEDIRECTIONS_FEATURE_ID = 17;
+  public static final int DOCUMENTROOT_STAGEDIRECTIONS_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_TITLE_FEATURE_ID = 18;
+  public static final int DOCUMENTROOT_TITLE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -233,7 +234,7 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int FMTYPE_P_FEATURE_ID = 0;
+  public static final int FMTYPE_P_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -247,28 +248,28 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERSONAETYPE_GROUP_FEATURE_ID = 0;
+  public static final int PERSONAETYPE_GROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSONAETYPE_TITLE_FEATURE_ID = 1;
+  public static final int PERSONAETYPE_TITLE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSONAETYPE_PERSONA_FEATURE_ID = 2;
+  public static final int PERSONAETYPE_PERSONA_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSONAETYPE_PERSONAGROUP_FEATURE_ID = 3;
+  public static final int PERSONAETYPE_PERSONAGROUP_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -282,14 +283,14 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERSONAGROUPTYPE_PERSONA_FEATURE_ID = 0;
+  public static final int PERSONAGROUPTYPE_PERSONA_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSONAGROUPTYPE_GROUPDESCRIPTION_FEATURE_ID = 1;
+  public static final int PERSONAGROUPTYPE_GROUPDESCRIPTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -317,42 +318,42 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PLAYTYPE_TITLE_FEATURE_ID = 0;
+  public static final int PLAYTYPE_TITLE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLAYTYPE_FM_FEATURE_ID = 1;
+  public static final int PLAYTYPE_FM_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLAYTYPE_PERSONAE_FEATURE_ID = 2;
+  public static final int PLAYTYPE_PERSONAE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLAYTYPE_SCENEDESCRIPTION_FEATURE_ID = 3;
+  public static final int PLAYTYPE_SCENEDESCRIPTION_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLAYTYPE_PLAYSUBTITLE_FEATURE_ID = 4;
+  public static final int PLAYTYPE_PLAYSUBTITLE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PLAYTYPE_ACT_FEATURE_ID = 5;
+  public static final int PLAYTYPE_ACT_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -366,35 +367,35 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SCENETYPE_GROUP_FEATURE_ID = 0;
+  public static final int SCENETYPE_GROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SCENETYPE_STAGEDIRECTIONS_FEATURE_ID = 1;
+  public static final int SCENETYPE_STAGEDIRECTIONS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SCENETYPE_SPEECH_FEATURE_ID = 2;
+  public static final int SCENETYPE_SPEECH_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SCENETYPE_PINDEX_FEATURE_ID = 3;
+  public static final int SCENETYPE_PINDEX_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SCENETYPE_TITLE_FEATURE_ID = 4;
+  public static final int SCENETYPE_TITLE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -408,28 +409,28 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SPEECHTYPE_GROUP_FEATURE_ID = 0;
+  public static final int SPEECHTYPE_GROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SPEECHTYPE_SPEAKER_FEATURE_ID = 1;
+  public static final int SPEECHTYPE_SPEAKER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SPEECHTYPE_LINE_FEATURE_ID = 2;
+  public static final int SPEECHTYPE_LINE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID = 3;
+  public static final int SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID = 5;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -454,6 +455,8 @@ public class PlayModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

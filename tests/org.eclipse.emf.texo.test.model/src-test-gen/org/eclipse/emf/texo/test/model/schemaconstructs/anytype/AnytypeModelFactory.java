@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -196,10 +196,11 @@ public class AnytypeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AModelObject<E extends A> extends AbstractModelObject<E> {
+  public static class AModelObject<E extends A> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AnytypeModelPackage.INSTANCE.getAEClass();
     }
@@ -207,6 +208,7 @@ public class AnytypeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AnytypeModelPackage.INSTANCE;
     }
@@ -283,10 +285,11 @@ public class AnytypeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BModelObject<E extends B> extends AbstractModelObject<E> {
+  public static class BModelObject<E extends B> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AnytypeModelPackage.INSTANCE.getBEClass();
     }
@@ -294,6 +297,7 @@ public class AnytypeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AnytypeModelPackage.INSTANCE;
     }
@@ -355,10 +359,11 @@ public class AnytypeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CModelObject<E extends C> extends AbstractModelObject<E> {
+  public static class CModelObject<E extends C> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AnytypeModelPackage.INSTANCE.getCEClass();
     }
@@ -366,6 +371,7 @@ public class AnytypeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AnytypeModelPackage.INSTANCE;
     }
@@ -420,10 +426,11 @@ public class AnytypeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class TestAnyModelObject<E extends TestAny> extends AbstractModelObject<E> {
+  public static class TestAnyModelObject<E extends TestAny> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AnytypeModelPackage.INSTANCE.getTestAnyEClass();
     }
@@ -431,6 +438,7 @@ public class AnytypeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AnytypeModelPackage.INSTANCE;
     }
@@ -500,6 +508,13 @@ public class AnytypeModelFactory implements ModelFactory {
         getTarget().getMultiAnyType().add((Object) value);
         return;
 
+      case AnytypeModelPackage.TESTANY_MYANY_FEATURE_ID:
+        getTarget().getMyAny().add((TestAnyMyAnyFeatureGroup) value);
+        return;
+
+      case AnytypeModelPackage.TESTANY_ANY_FEATURE_ID:
+        getTarget().getAny().add((TestAnyAnyFeatureGroup) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

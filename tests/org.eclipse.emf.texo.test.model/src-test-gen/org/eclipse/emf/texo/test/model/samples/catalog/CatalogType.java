@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -13,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "CatalogType")
+@Entity(name = "catalog_CatalogType")
 public class CatalogType extends Identifiable {
 
   /**
@@ -38,6 +39,7 @@ public class CatalogType extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   private List<CatalogType> subCatalog = new ArrayList<CatalogType>();
 
   /**
@@ -47,6 +49,7 @@ public class CatalogType extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   private List<ProductType> product = new ArrayList<ProductType>();
 
   /**

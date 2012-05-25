@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "CharType")
+@Entity(name = "code_CharType")
 public class CharType extends PrimitiveType {
 
   /**

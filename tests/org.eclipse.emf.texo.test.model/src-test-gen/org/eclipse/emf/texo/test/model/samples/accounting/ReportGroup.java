@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -15,7 +20,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ReportGroup")
+@Entity(name = "accounting_ReportGroup")
+@Table(name = "accounting_ReportGroup")
 public class ReportGroup extends Identifiable {
 
   /**
@@ -24,6 +30,7 @@ public class ReportGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -32,6 +39,8 @@ public class ReportGroup extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_ReportGroup_reportGroup_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_ReportGroup_reportGroup") })
   private List<ReportGroup> reportGroup = new ArrayList<ReportGroup>();
 
   /**
@@ -40,7 +49,8 @@ public class ReportGroup extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinTable()
+  @OrderColumn(name = "accounting_ReportGroup_account_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "accounting_ReportGroup_account") }, inverseJoinColumns = { @JoinColumn(name = "accounting_BalanceAccount_report") }, name = "accounting_ReportGroup_account")
   private List<BalanceAccount> account = new ArrayList<BalanceAccount>();
 
   /**

@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ControlFlow")
+@Entity(name = "action_ControlFlow")
 public class ControlFlow extends AbstractActionRelationship {
 
   /**

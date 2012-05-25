@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "AllContent")
+@Entity(name = "data_AllContent")
 public class AllContent extends ComplexContentType {
 
   /**

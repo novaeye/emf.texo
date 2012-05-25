@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.samples.catalog"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/catalog" nsPrefix="catalog">
-  <eClassifiers xsi:type="ecore:EClass" name="CatalogType">
+  <eClassifiers xsi:type="ecore:EClass" name="CatalogType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CatalogType"/>
       <details key="kind" value="elementOnly"/>
@@ -52,7 +52,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PriceType">
+  <eClassifiers xsi:type="ecore:EClass" name="PriceType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Price_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -88,7 +88,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ProductType">
+  <eClassifiers xsi:type="ecore:EClass" name="ProductType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="My producttype documentation"/>
     </eAnnotations>
@@ -140,7 +140,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringType">
+  <eClassifiers xsi:type="ecore:EClass" name="StringType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="StringType"/>
       <details key="kind" value="elementOnly"/>
@@ -155,7 +155,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SupplierType">
+  <eClassifiers xsi:type="ecore:EClass" name="SupplierType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="SupplierType"/>
       <details key="kind" value="elementOnly"/>

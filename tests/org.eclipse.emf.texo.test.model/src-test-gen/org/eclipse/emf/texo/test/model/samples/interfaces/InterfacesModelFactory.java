@@ -9,6 +9,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: interfaces. It contains code to create instances
@@ -171,13 +172,14 @@ public class InterfacesModelFactory implements ModelFactory {
    * @generated
    */
   public static class DescribableIdentifiableConcreteModelObject<E extends DescribableIdentifiableConcrete> extends
-      AbstractModelObject<E> {
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return InterfacesModelPackage.INSTANCE.getDescribableIdentifiableConcreteEClass();
     }
@@ -185,6 +187,7 @@ public class InterfacesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return InterfacesModelPackage.INSTANCE;
     }
@@ -428,13 +431,15 @@ public class InterfacesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DescribableConcreteModelObject<E extends DescribableConcrete> extends AbstractModelObject<E> {
+  public static class DescribableConcreteModelObject<E extends DescribableConcrete> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return InterfacesModelPackage.INSTANCE.getDescribableConcreteEClass();
     }
@@ -442,6 +447,7 @@ public class InterfacesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return InterfacesModelPackage.INSTANCE;
     }
@@ -521,13 +527,15 @@ public class InterfacesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class IdentifiableConcreteModelObject<E extends IdentifiableConcrete> extends AbstractModelObject<E> {
+  public static class IdentifiableConcreteModelObject<E extends IdentifiableConcrete> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return InterfacesModelPackage.INSTANCE.getIdentifiableConcreteEClass();
     }
@@ -535,6 +543,7 @@ public class InterfacesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return InterfacesModelPackage.INSTANCE;
     }

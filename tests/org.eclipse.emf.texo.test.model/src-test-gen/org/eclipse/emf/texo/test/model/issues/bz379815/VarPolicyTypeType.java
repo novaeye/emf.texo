@@ -22,7 +22,7 @@ public class VarPolicyTypeType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "type")
+  @Column(name = "T_type")
   private TypeType type = TypeType.EROSION;
 
   /**

@@ -6,13 +6,14 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Writer")
+@Entity(name = "extlib_Writer")
 public class Writer extends Person {
 
   /**
@@ -21,6 +22,7 @@ public class Writer extends Person {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   @JoinTable()
   private List<Book> books = new ArrayList<Book>();
 

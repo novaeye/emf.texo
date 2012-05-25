@@ -10,7 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "statesByCountry")
+@Entity(name = "list_statesByCountry")
 public class StatesByCountry extends Identifiable {
 
   /**

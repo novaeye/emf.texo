@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.schemaconstructs.anytype"
     nsURI="http://www.eclipse.org/emf/texo/test/model/schemaconstructs/anytype" nsPrefix="anytype">
-  <eClassifiers xsi:type="ecore:EClass" name="A">
+  <eClassifiers xsi:type="ecore:EClass" name="A" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="myA"/>
       <details key="kind" value="elementOnly"/>
@@ -48,7 +48,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="B">
+  <eClassifiers xsi:type="ecore:EClass" name="B" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="B"/>
       <details key="kind" value="elementOnly"/>
@@ -63,13 +63,13 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="C">
+  <eClassifiers xsi:type="ecore:EClass" name="C" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="C"/>
       <details key="kind" value="empty"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TestAny">
+  <eClassifiers xsi:type="ecore:EClass" name="TestAny" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="testAny"/>
       <details key="kind" value="elementOnly"/>

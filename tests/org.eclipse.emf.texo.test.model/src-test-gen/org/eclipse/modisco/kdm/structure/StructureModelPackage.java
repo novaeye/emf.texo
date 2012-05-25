@@ -65,28 +65,28 @@ public class StructureModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTSTRUCTUREELEMENT_AGGREGATED_FEATURE_ID = 15;
+  public static final int ABSTRACTSTRUCTUREELEMENT_AGGREGATED_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTSTRUCTUREELEMENT_IMPLEMENTATION_FEATURE_ID = 16;
+  public static final int ABSTRACTSTRUCTUREELEMENT_IMPLEMENTATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTSTRUCTUREELEMENT_STRUCTUREELEMENT_FEATURE_ID = 17;
+  public static final int ABSTRACTSTRUCTUREELEMENT_STRUCTUREELEMENT_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTSTRUCTUREELEMENT_STRUCTURERELATIONSHIP_FEATURE_ID = 18;
+  public static final int ABSTRACTSTRUCTUREELEMENT_STRUCTURERELATIONSHIP_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -121,7 +121,7 @@ public class StructureModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STRUCTUREMODEL_STRUCTUREELEMENT_FEATURE_ID = 8;
+  public static final int STRUCTUREMODEL_STRUCTUREELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -149,14 +149,14 @@ public class StructureModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STRUCTURERELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int STRUCTURERELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STRUCTURERELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int STRUCTURERELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -196,9 +196,9 @@ public class StructureModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
     KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractStructureElement.class,

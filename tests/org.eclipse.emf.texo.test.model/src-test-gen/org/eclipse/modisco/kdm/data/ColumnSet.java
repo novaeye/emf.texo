@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.code.ItemUnit;
 
 /**
@@ -12,7 +13,7 @@ import org.eclipse.modisco.kdm.code.ItemUnit;
  * 
  * @generated
  */
-@Entity(name = "ColumnSet")
+@Entity(name = "data_ColumnSet")
 public class ColumnSet extends DataContainer {
 
   /**
@@ -21,6 +22,7 @@ public class ColumnSet extends DataContainer {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<ItemUnit> itemUnit = new ArrayList<ItemUnit>();
 
   /**

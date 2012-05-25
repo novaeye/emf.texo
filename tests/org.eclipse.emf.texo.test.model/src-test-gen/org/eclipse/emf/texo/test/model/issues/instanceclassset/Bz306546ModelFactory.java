@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
 
 /**
@@ -202,10 +203,12 @@ public class Bz306546ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MySerializableClassModelObject<E extends MySerializableClass> extends AbstractModelObject<E> {
+  public static class MySerializableClassModelObject<E extends MySerializableClass> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz306546ModelPackage.INSTANCE.getMySerializableClassEClass();
     }
@@ -213,6 +216,7 @@ public class Bz306546ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz306546ModelPackage.INSTANCE;
     }
@@ -291,10 +295,11 @@ public class Bz306546ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class NonEMFModelObject<E extends NonEMF> extends AbstractModelObject<E> {
+  public static class NonEMFModelObject<E extends NonEMF> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz306546ModelPackage.INSTANCE.getNonEMFEClass();
     }
@@ -302,6 +307,7 @@ public class Bz306546ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz306546ModelPackage.INSTANCE;
     }

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "UniqueKey")
+@Entity(name = "data_UniqueKey")
 public class UniqueKey extends IndexElement {
 
   /**

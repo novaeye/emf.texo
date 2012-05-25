@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.play. It
@@ -341,13 +341,14 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ActTypeModelObject<E extends ActType> extends AbstractModelObject<E> {
+  public static class ActTypeModelObject<E extends ActType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getActTypeEClass();
     }
@@ -355,6 +356,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -446,13 +448,15 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -460,6 +464,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -601,6 +606,10 @@ public class PlayModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case PlayModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -623,13 +632,14 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class FmTypeModelObject<E extends FmType> extends AbstractModelObject<E> {
+  public static class FmTypeModelObject<E extends FmType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getFmTypeEClass();
     }
@@ -637,6 +647,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -688,6 +699,9 @@ public class PlayModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case PlayModelPackage.FMTYPE_P_FEATURE_ID:
+        getTarget().getP().add((String) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -710,13 +724,15 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PersonaeTypeModelObject<E extends PersonaeType> extends AbstractModelObject<E> {
+  public static class PersonaeTypeModelObject<E extends PersonaeType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getPersonaeTypeEClass();
     }
@@ -724,6 +740,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -790,6 +807,18 @@ public class PlayModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case PlayModelPackage.PERSONAETYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((PersonaeTypeGroupFeatureGroup) value);
+        return;
+
+      case PlayModelPackage.PERSONAETYPE_TITLE_FEATURE_ID:
+        getTarget().getTitle().add((String) value);
+        return;
+
+      case PlayModelPackage.PERSONAETYPE_PERSONA_FEATURE_ID:
+        getTarget().getPersona().add((String) value);
+        return;
+
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
         getTarget().getPersonaGroup().add((PersonaGroupType) value);
         return;
@@ -819,13 +848,15 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PersonaGroupTypeModelObject<E extends PersonaGroupType> extends AbstractModelObject<E> {
+  public static class PersonaGroupTypeModelObject<E extends PersonaGroupType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getPersonaGroupTypeEClass();
     }
@@ -833,6 +864,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -889,6 +921,10 @@ public class PlayModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case PlayModelPackage.PERSONAGROUPTYPE_PERSONA_FEATURE_ID:
+        getTarget().getPersona().add((String) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -911,13 +947,15 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PlayTypeModelObject<E extends PlayType> extends AbstractModelObject<E> {
+  public static class PlayTypeModelObject<E extends PlayType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getPlayTypeEClass();
     }
@@ -925,6 +963,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -1029,13 +1068,15 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SceneTypeModelObject<E extends SceneType> extends AbstractModelObject<E> {
+  public static class SceneTypeModelObject<E extends SceneType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getSceneTypeEClass();
     }
@@ -1043,6 +1084,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -1114,6 +1156,14 @@ public class PlayModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((SceneTypeGroupFeatureGroup) value);
+        return;
+
+      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+        getTarget().getStageDirections().add((String) value);
+        return;
+
       case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
         getTarget().getSpeech().add((SpeechType) value);
         return;
@@ -1144,13 +1194,15 @@ public class PlayModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SpeechTypeModelObject<E extends SpeechType> extends AbstractModelObject<E> {
+  public static class SpeechTypeModelObject<E extends SpeechType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return PlayModelPackage.INSTANCE.getSpeechTypeEClass();
     }
@@ -1158,6 +1210,7 @@ public class PlayModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return PlayModelPackage.INSTANCE;
     }
@@ -1224,6 +1277,21 @@ public class PlayModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case PlayModelPackage.SPEECHTYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((SpeechTypeGroupFeatureGroup) value);
+        return;
+
+      case PlayModelPackage.SPEECHTYPE_SPEAKER_FEATURE_ID:
+        getTarget().getSpeaker().add((String) value);
+        return;
+
+      case PlayModelPackage.SPEECHTYPE_LINE_FEATURE_ID:
+        getTarget().getLine().add((String) value);
+        return;
+
+      case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
+        getTarget().getStageDirections().add((String) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

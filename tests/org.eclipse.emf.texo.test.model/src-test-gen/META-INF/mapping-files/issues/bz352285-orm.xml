@@ -6,11 +6,11 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz352285.Abstract" name="Abstract">
-    <orm:table name="Abstract"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz352285.Abstract" name="bz352285_Abstract">
+    <orm:table name="bz352285_Abstract"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

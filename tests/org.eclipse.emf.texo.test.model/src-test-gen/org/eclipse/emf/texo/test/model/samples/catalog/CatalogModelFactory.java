@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.catalog. It
@@ -194,10 +194,12 @@ public class CatalogModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CatalogTypeModelObject<E extends CatalogType> extends AbstractModelObject<E> {
+  public static class CatalogTypeModelObject<E extends CatalogType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CatalogModelPackage.INSTANCE.getCatalogTypeEClass();
     }
@@ -205,6 +207,7 @@ public class CatalogModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CatalogModelPackage.INSTANCE;
     }
@@ -296,10 +299,12 @@ public class CatalogModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PriceTypeModelObject<E extends PriceType> extends AbstractModelObject<E> {
+  public static class PriceTypeModelObject<E extends PriceType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CatalogModelPackage.INSTANCE.getPriceTypeEClass();
     }
@@ -307,6 +312,7 @@ public class CatalogModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CatalogModelPackage.INSTANCE;
     }
@@ -378,10 +384,12 @@ public class CatalogModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ProductTypeModelObject<E extends ProductType> extends AbstractModelObject<E> {
+  public static class ProductTypeModelObject<E extends ProductType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CatalogModelPackage.INSTANCE.getProductTypeEClass();
     }
@@ -389,6 +397,7 @@ public class CatalogModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CatalogModelPackage.INSTANCE;
     }
@@ -474,10 +483,12 @@ public class CatalogModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class StringTypeModelObject<E extends StringType> extends AbstractModelObject<E> {
+  public static class StringTypeModelObject<E extends StringType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CatalogModelPackage.INSTANCE.getStringTypeEClass();
     }
@@ -485,6 +496,7 @@ public class CatalogModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CatalogModelPackage.INSTANCE;
     }
@@ -546,10 +558,12 @@ public class CatalogModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SupplierTypeModelObject<E extends SupplierType> extends AbstractModelObject<E> {
+  public static class SupplierTypeModelObject<E extends SupplierType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CatalogModelPackage.INSTANCE.getSupplierTypeEClass();
     }
@@ -557,6 +571,7 @@ public class CatalogModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CatalogModelPackage.INSTANCE;
     }

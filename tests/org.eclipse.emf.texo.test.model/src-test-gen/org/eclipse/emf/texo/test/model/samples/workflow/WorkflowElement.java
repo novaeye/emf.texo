@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.samples.workflow;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -9,7 +11,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "WorkflowElement")
+@Entity(name = "workflow_WorkflowElement")
+@Table(name = "workflow_WorkflowElement")
 public abstract class WorkflowElement extends Identifiable {
 
   /**
@@ -18,6 +21,7 @@ public abstract class WorkflowElement extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -26,6 +30,7 @@ public abstract class WorkflowElement extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_comment")
   private String comment = null;
 
   /**
@@ -34,6 +39,7 @@ public abstract class WorkflowElement extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "x")
   private int x = 0;
 
   /**
@@ -42,6 +48,7 @@ public abstract class WorkflowElement extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "y")
   private int y = 0;
 
   /**
@@ -50,6 +57,7 @@ public abstract class WorkflowElement extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "width")
   private int width = -1;
 
   /**
@@ -58,6 +66,7 @@ public abstract class WorkflowElement extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "height")
   private int height = -1;
 
   /**

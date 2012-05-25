@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.server.model.request. It contains
@@ -189,10 +189,12 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ActionTypeModelObject<E extends ActionType> extends AbstractModelObject<E> {
+  public static class ActionTypeModelObject<E extends ActionType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getActionTypeEClass();
     }
@@ -200,6 +202,7 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -294,10 +297,12 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -305,6 +310,7 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -365,6 +371,10 @@ public class RequestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case RequestModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -387,10 +397,12 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class QueryTypeModelObject<E extends QueryType> extends AbstractModelObject<E> {
+  public static class QueryTypeModelObject<E extends QueryType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getQueryTypeEClass();
     }
@@ -398,6 +410,7 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -476,10 +489,12 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ParameterModelObject<E extends Parameter> extends AbstractModelObject<E> {
+  public static class ParameterModelObject<E extends Parameter> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getParameterEClass();
     }
@@ -487,6 +502,7 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }

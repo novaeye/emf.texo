@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: inv. It contains code to create instances
@@ -150,10 +150,11 @@ public class InvModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PTypeModelObject<E extends PType> extends AbstractModelObject<E> {
+  public static class PTypeModelObject<E extends PType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return InvModelPackage.INSTANCE.getPTypeEClass();
     }
@@ -161,6 +162,7 @@ public class InvModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return InvModelPackage.INSTANCE;
     }
@@ -270,10 +272,12 @@ public class InvModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PDeclarationModelObject<E extends PDeclaration> extends AbstractModelObject<E> {
+  public static class PDeclarationModelObject<E extends PDeclaration> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return InvModelPackage.INSTANCE.getPDeclarationEClass();
     }
@@ -281,6 +285,7 @@ public class InvModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return InvModelPackage.INSTANCE;
     }

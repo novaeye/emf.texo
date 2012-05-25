@@ -12,7 +12,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "AddressGroupType")
+@Entity(name = "groupall_AddressGroupType")
 public class AddressGroupType extends Identifiable {
 
   /**

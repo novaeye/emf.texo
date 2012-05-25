@@ -19,7 +19,9 @@ package org.eclipse.emf.texo.orm.annotator;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashSet;
 import java.util.Properties;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
@@ -43,6 +45,32 @@ public class ORMNamingStrategy {
 
   private EPackageORMAnnotation ePackageORMAnnotation = null;
   private Properties nameDictionary = null;
+  private Set<String> sqlReservedWords = null;
+
+  protected String renameReservedWord(String name) {
+    if (sqlReservedWords == null) {
+      try {
+        sqlReservedWords = new HashSet<String>();
+        final InputStream is = this.getClass().getResourceAsStream("reserved-sql-words.txt");
+        final Properties props = new Properties();
+        props.load(is);
+        is.close();
+        for (Object key : props.keySet()) {
+          sqlReservedWords.add((String) key);
+        }
+      } catch (Exception e) {
+        throw new IllegalStateException(e);
+      }
+    }
+    if (sqlReservedWords.contains(name.toUpperCase())) {
+      return getRenamePrefix() + name;
+    }
+    return name;
+  }
+
+  protected String getRenamePrefix() {
+    return "T_";
+  }
 
   /**
    * @return true if the orm generation should fill in table and column names
@@ -61,7 +89,7 @@ public class ORMNamingStrategy {
    * @see EPackage#getNsPrefix()
    */
   public String getEntityName(EClass eClass) {
-    return getUniqueMakingPrefix(eClass) + eClass.getName();
+    return makeSafe(getUniqueMakingPrefix(eClass) + eClass.getName());
   }
 
   /**
@@ -122,7 +150,11 @@ public class ORMNamingStrategy {
   public String getIndexColumnName(EStructuralFeature eFeature) {
     String localName = getDictionariedName(eFeature, "index"); //$NON-NLS-1$
     if (localName == null) {
-      localName = "ind"; //$NON-NLS-1$
+      if (ePackageORMAnnotation.isEnforceUniqueNames()) {
+        localName = getEntityName(eFeature.getEContainingClass()) + "_" + eFeature.getName() + "_ind"; //$NON-NLS-1$
+      } else {
+        localName = eFeature.getName() + "_ind"; //$NON-NLS-1$
+      }
     }
     return processName(localName, ePackageORMAnnotation.getColumnNamePrefix());
   }
@@ -153,7 +185,11 @@ public class ORMNamingStrategy {
   public String getForeignKeyColumnName(EStructuralFeature eFeature) {
     String localName = getDictionariedName(eFeature, "foreignKeyColumn"); //$NON-NLS-1$
     if (localName == null) {
-      localName = eFeature.getName();
+      if (ePackageORMAnnotation.isEnforceUniqueNames()) {
+        localName = getEntityName(eFeature.getEContainingClass()) + "_" + eFeature.getName();
+      } else {
+        localName = eFeature.getName();
+      }
     }
     return processName(localName, ePackageORMAnnotation.getColumnNamePrefix());
   }
@@ -170,7 +206,11 @@ public class ORMNamingStrategy {
   public String getJoinColumnName(EStructuralFeature eFeature) {
     String localName = getDictionariedName(eFeature, "joinColumn"); //$NON-NLS-1$
     if (localName == null) {
-      localName = getEntityName(eFeature.getEContainingClass()) + "_id"; //$NON-NLS-1$
+      if (ePackageORMAnnotation.isEnforceUniqueNames()) {
+        localName = getEntityName(eFeature.getEContainingClass()) + "_" + eFeature.getName();
+      } else {
+        localName = getEntityName(eFeature.getEContainingClass()) + "_id";
+      }
     }
     return processName(localName, ePackageORMAnnotation.getColumnNamePrefix());
   }
@@ -187,6 +227,9 @@ public class ORMNamingStrategy {
   public String getInverseJoinColumnName(EReference eReference) {
     String localName = getDictionariedName(eReference, "inverseJoinColumn"); //$NON-NLS-1$
     if (localName == null) {
+      if (eReference.getEOpposite() != null) {
+        return getJoinColumnName(eReference.getEOpposite());
+      }
       localName = getEntityName(eReference.getEReferenceType()) + "_id"; //$NON-NLS-1$
     }
     return processName(localName, ePackageORMAnnotation.getColumnNamePrefix());
@@ -221,6 +264,27 @@ public class ORMNamingStrategy {
       return eClass.getEPackage().getNsPrefix() + "_"; //$NON-NLS-1$
     }
     return ""; //$NON-NLS-1$
+  }
+
+  // prevent illegal characters in table names and such
+  protected String makeSafe(String toBeMadeSafe) {
+    char[] chrs = toBeMadeSafe.toCharArray();
+    char[] targetChrs = new char[chrs.length];
+    int i = 0;
+    for (char chr : chrs) {
+      if (i > 0 && '0' <= chr && chr <= '9') {
+        targetChrs[i++] = chr;
+      } else if ('a' <= chr && chr <= 'z') {
+        targetChrs[i++] = chr;
+      } else if ('A' <= chr && chr <= 'Z') {
+        targetChrs[i++] = chr;
+      } else if (chr == '_') {
+        targetChrs[i++] = chr;
+      } else {
+        targetChrs[i++] = '_';
+      }
+    }
+    return new String(targetChrs);
   }
 
   public EPackageORMAnnotation getePackageORMAnnotation() {
@@ -265,7 +329,6 @@ public class ORMNamingStrategy {
       } catch (IOException e) {
         // just ignore
         System.err.println(e);
-        ;
       }
     }
     return nameDictionary;
@@ -290,7 +353,13 @@ public class ORMNamingStrategy {
 
   protected String processName(String name, String prefix) {
     String localPrefix = getSafePrefixStr(prefix);
-    String localName = name;
+    String localName = makeSafe(name);
+
+    // assume that with a prefix no rename is needed
+    if (localPrefix.trim().length() == 0) {
+      localName = renameReservedWord(localName);
+    }
+
     if (getePackageORMAnnotation().isLowerCasedNames()) {
       localName = localName.toLowerCase();
       localPrefix = localPrefix.toLowerCase();

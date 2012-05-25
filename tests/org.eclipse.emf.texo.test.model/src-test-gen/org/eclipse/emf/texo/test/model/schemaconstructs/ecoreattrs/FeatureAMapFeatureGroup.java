@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -14,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Feature_aMap")
+@Entity(name = "ecoreattrs_Feature_aMap")
 public class FeatureAMapFeatureGroup extends Identifiable {
 
   /**
@@ -131,6 +132,7 @@ public class FeatureAMapFeatureGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name;
 
   /**
@@ -139,6 +141,7 @@ public class FeatureAMapFeatureGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_value")
   private Double value_;
 
   /**

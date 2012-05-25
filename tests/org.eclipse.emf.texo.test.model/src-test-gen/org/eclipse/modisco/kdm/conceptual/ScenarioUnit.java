@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ScenarioUnit")
+@Entity(name = "conceptual_ScenarioUnit")
 public class ScenarioUnit extends ConceptualContainer {
 
   /**

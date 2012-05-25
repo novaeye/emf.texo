@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ContentRestriction")
+@Entity(name = "data_ContentRestriction")
 public class ContentRestriction extends AbstractContentElement {
 
   /**

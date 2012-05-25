@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationTwo;
  * 
  * @generated
  */
-@Entity(name = "Employee")
+@Entity(name = "employee_Employee")
 public class Employee extends Identifiable {
 
   /**

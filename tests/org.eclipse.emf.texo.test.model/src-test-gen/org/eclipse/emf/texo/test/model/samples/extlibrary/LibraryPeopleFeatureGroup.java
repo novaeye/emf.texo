@@ -17,7 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Library_people")
+@Entity(name = "extlib_Library_people")
 public class LibraryPeopleFeatureGroup extends Identifiable {
 
   /**
@@ -134,7 +134,7 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Writer writers;
 
   /**
@@ -142,7 +142,7 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Employee employees;
 
   /**
@@ -150,7 +150,7 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Borrower borrowers;
 
   /**

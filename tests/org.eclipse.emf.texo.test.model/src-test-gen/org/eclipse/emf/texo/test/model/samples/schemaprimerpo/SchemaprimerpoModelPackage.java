@@ -12,6 +12,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.DocumentRootDao;
 import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.ItemDao;
 import org.eclipse.emf.texo.test.model.samples.schemaprimerpo.dao.PurchaseOrderDao;
@@ -61,35 +62,35 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
+  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
+  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
+  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_COMMENT__FEATURE_ID = 3;
+  public static final int DOCUMENTROOT_COMMENT__FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ORDER_FEATURE_ID = 4;
+  public static final int DOCUMENTROOT_ORDER_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -103,42 +104,42 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ITEM_PRODUCTNAME_FEATURE_ID = 0;
+  public static final int ITEM_PRODUCTNAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_QUANTITY_FEATURE_ID = 1;
+  public static final int ITEM_QUANTITY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_USPRICE_FEATURE_ID = 2;
+  public static final int ITEM_USPRICE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_COMMENT_FEATURE_ID = 3;
+  public static final int ITEM_COMMENT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_SHIPDATE_FEATURE_ID = 4;
+  public static final int ITEM_SHIPDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ITEM_PARTNUM_FEATURE_ID = 5;
+  public static final int ITEM_PARTNUM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -152,35 +153,35 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_SHIPTO_FEATURE_ID = 0;
+  public static final int PURCHASEORDER_SHIPTO_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_BILLTO_FEATURE_ID = 1;
+  public static final int PURCHASEORDER_BILLTO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_COMMENT_FEATURE_ID = 2;
+  public static final int PURCHASEORDER_COMMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_ITEMS_FEATURE_ID = 3;
+  public static final int PURCHASEORDER_ITEMS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PURCHASEORDER_ORDERDATE_FEATURE_ID = 4;
+  public static final int PURCHASEORDER_ORDERDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -208,42 +209,42 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int USADDRESS_NAME_FEATURE_ID = 0;
+  public static final int USADDRESS_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_STREET_FEATURE_ID = 1;
+  public static final int USADDRESS_STREET_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_CITY_FEATURE_ID = 2;
+  public static final int USADDRESS_CITY_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_STATE_FEATURE_ID = 3;
+  public static final int USADDRESS_STATE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_ZIP_FEATURE_ID = 4;
+  public static final int USADDRESS_ZIP_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USADDRESS_COUNTRY_FEATURE_ID = 5;
+  public static final int USADDRESS_COUNTRY_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -268,6 +269,8 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

@@ -15,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ClaimLine")
+@Entity(name = "claim_ClaimLine")
 public class ClaimLine extends Identifiable {
 
   /**

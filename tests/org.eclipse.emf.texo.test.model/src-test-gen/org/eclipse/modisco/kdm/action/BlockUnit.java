@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "BlockUnit")
+@Entity(name = "action_BlockUnit")
 public class BlockUnit extends ActionElement {
 
   /**

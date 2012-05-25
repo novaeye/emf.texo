@@ -9,13 +9,17 @@ import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>OutputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "OutputPort")
+@Entity(name = "workflow_OutputPort")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class OutputPort extends Port {
 
   /**
@@ -24,7 +28,7 @@ public class OutputPort extends Port {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(name = "workflow_OutputPort_node") })
   private WorkflowNode node = null;
 
   /**
@@ -33,7 +37,8 @@ public class OutputPort extends Port {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinTable()
+  @OrderColumn(name = "workflow_OutputPort_edges_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "workflow_OutputPort_edges") }, inverseJoinColumns = { @JoinColumn(name = "workflow_Edge_source") }, name = "workflow_OutputPort_edges")
   private List<Edge> edges = new ArrayList<Edge>();
 
   /**

@@ -16,7 +16,7 @@ import org.eclipse.modisco.kdm.source.SourceRef;
  * 
  * @generated
  */
-@Entity(name = "AbstractConceptualElement")
+@Entity(name = "conceptual_AbstractConceptualElement")
 public abstract class AbstractConceptualElement extends KDMEntity {
 
   /**

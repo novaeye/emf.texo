@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -10,7 +12,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Phone")
+@Entity(name = "m_Phone")
+@Table(name = "m_Phone")
 public class Phone extends Identifiable {
 
   /**
@@ -19,6 +22,7 @@ public class Phone extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_number")
   private String number = null;
 
   /**
@@ -27,6 +31,7 @@ public class Phone extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "description")
   private String description = null;
 
   /**

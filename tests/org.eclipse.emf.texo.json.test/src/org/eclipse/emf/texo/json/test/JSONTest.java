@@ -46,6 +46,14 @@ import org.junit.Assert;
  */
 public class JSONTest extends BaseJSONTest {
 
+  public JSONTest() {
+    super("JSONTest");
+  }
+
+  public JSONTest(String name) {
+    super(name);
+  }
+
   public void runTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
 
@@ -57,6 +65,7 @@ public class JSONTest extends BaseJSONTest {
 
     final ModelJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
     toJsonConverter.setObjectResolver(memObjectStore);
+    toJsonConverter.setMaxChildLevelsToConvert(-1);
     final JSONModelConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
     fromJsonConverter.setObjectResolver(memObjectStore);
 
@@ -70,9 +79,9 @@ public class JSONTest extends BaseJSONTest {
 
     final Object json2 = toJsonConverter.convert(m2);
 
-    // System.err.println(json1);
-    // System.err.println("---------------------------------------------");
-    // System.err.println(json2);
+    System.err.println(json1);
+    System.err.println("---------------------------------------------");
+    System.err.println(json2);
 
     Assert.assertEquals(json1.toString(), json2.toString());
 

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ConditionalDirective")
+@Entity(name = "code_ConditionalDirective")
 public class ConditionalDirective extends PreprocessorDirective {
 
   /**

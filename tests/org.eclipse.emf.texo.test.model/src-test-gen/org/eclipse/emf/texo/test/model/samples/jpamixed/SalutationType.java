@@ -13,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SalutationType")
+@Entity(name = "jpamixed_SalutationType")
 public class SalutationType extends Identifiable {
 
   /**

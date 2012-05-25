@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -143,10 +143,11 @@ public class SimplechoiceModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PersonModelObject<E extends Person> extends AbstractModelObject<E> {
+  public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SimplechoiceModelPackage.INSTANCE.getPersonEClass();
     }
@@ -154,6 +155,7 @@ public class SimplechoiceModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SimplechoiceModelPackage.INSTANCE;
     }
@@ -209,6 +211,17 @@ public class SimplechoiceModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SimplechoiceModelPackage.PERSON_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((PersonGroupFeatureGroup) value);
+        return;
+
+      case SimplechoiceModelPackage.PERSON_AGE_FEATURE_ID:
+        getTarget().getAge().add((Integer) value);
+        return;
+
+      case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
+        getTarget().getLength().add((Integer) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

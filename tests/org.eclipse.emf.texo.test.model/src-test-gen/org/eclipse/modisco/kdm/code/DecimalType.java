@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "DecimalType")
+@Entity(name = "code_DecimalType")
 public class DecimalType extends PrimitiveType {
 
   /**

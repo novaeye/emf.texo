@@ -8,11 +8,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.sunBooks. It
@@ -359,10 +359,12 @@ public class SunBooksModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AuthorsTypeModelObject<E extends AuthorsType> extends AbstractModelObject<E> {
+  public static class AuthorsTypeModelObject<E extends AuthorsType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SunBooksModelPackage.INSTANCE.getAuthorsTypeEClass();
     }
@@ -370,6 +372,7 @@ public class SunBooksModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SunBooksModelPackage.INSTANCE;
     }
@@ -410,6 +413,9 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SunBooksModelPackage.AUTHORSTYPE_AUTHORNAME_FEATURE_ID:
+        getTarget().getAuthorName().add((String) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -432,10 +438,12 @@ public class SunBooksModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BooksTypeModelObject<E extends BooksType> extends AbstractModelObject<E> {
+  public static class BooksTypeModelObject<E extends BooksType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SunBooksModelPackage.INSTANCE.getBooksTypeEClass();
     }
@@ -443,6 +451,7 @@ public class SunBooksModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SunBooksModelPackage.INSTANCE;
     }
@@ -511,10 +520,12 @@ public class SunBooksModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BookTypeModelObject<E extends BookType> extends AbstractModelObject<E> {
+  public static class BookTypeModelObject<E extends BookType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SunBooksModelPackage.INSTANCE.getBookTypeEClass();
     }
@@ -522,6 +533,7 @@ public class SunBooksModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SunBooksModelPackage.INSTANCE;
     }
@@ -623,10 +635,12 @@ public class SunBooksModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CollectionTypeModelObject<E extends CollectionType> extends AbstractModelObject<E> {
+  public static class CollectionTypeModelObject<E extends CollectionType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SunBooksModelPackage.INSTANCE.getCollectionTypeEClass();
     }
@@ -634,6 +648,7 @@ public class SunBooksModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SunBooksModelPackage.INSTANCE;
     }
@@ -695,10 +710,12 @@ public class SunBooksModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SunBooksModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -706,6 +723,7 @@ public class SunBooksModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SunBooksModelPackage.INSTANCE;
     }
@@ -760,6 +778,10 @@ public class SunBooksModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case SunBooksModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
 
       }
       super.eAddTo(eStructuralFeature, value);
@@ -847,10 +869,12 @@ public class SunBooksModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PromotionTypeModelObject<E extends PromotionType> extends AbstractModelObject<E> {
+  public static class PromotionTypeModelObject<E extends PromotionType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SunBooksModelPackage.INSTANCE.getPromotionTypeEClass();
     }
@@ -858,6 +882,7 @@ public class SunBooksModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SunBooksModelPackage.INSTANCE;
     }

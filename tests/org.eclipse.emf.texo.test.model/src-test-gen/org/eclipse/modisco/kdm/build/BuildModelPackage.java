@@ -77,7 +77,7 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTBUILDELEMENT_BUILDRELATION_FEATURE_ID = 15;
+  public static final int ABSTRACTBUILDELEMENT_BUILDRELATION_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -98,21 +98,21 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BUILDRESOURCE_IMPLEMENTATION_FEATURE_ID = 16;
+  public static final int BUILDRESOURCE_IMPLEMENTATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BUILDRESOURCE_GROUPEDBUILD_FEATURE_ID = 17;
+  public static final int BUILDRESOURCE_GROUPEDBUILD_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BUILDRESOURCE_BUILDELEMENT_FEATURE_ID = 18;
+  public static final int BUILDRESOURCE_BUILDELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -126,14 +126,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BUILDDESCRIPTION_SOURCE_FEATURE_ID = 19;
+  public static final int BUILDDESCRIPTION_SOURCE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BUILDDESCRIPTION_TEXT_FEATURE_ID = 20;
+  public static final int BUILDDESCRIPTION_TEXT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -154,14 +154,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int LINKSTO_TO_FEATURE_ID = 4;
+  public static final int LINKSTO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LINKSTO_FROM_FEATURE_ID = 5;
+  public static final int LINKSTO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -175,14 +175,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONSUMES_TO_FEATURE_ID = 4;
+  public static final int CONSUMES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONSUMES_FROM_FEATURE_ID = 5;
+  public static final int CONSUMES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -203,7 +203,7 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BUILDMODEL_BUILDELEMENT_FEATURE_ID = 8;
+  public static final int BUILDMODEL_BUILDELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -245,14 +245,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BUILDRELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int BUILDRELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BUILDRELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int BUILDRELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -266,14 +266,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SUPPLIEDBY_TO_FEATURE_ID = 4;
+  public static final int SUPPLIEDBY_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUPPLIEDBY_FROM_FEATURE_ID = 5;
+  public static final int SUPPLIEDBY_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -294,14 +294,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRODUCES_TO_FEATURE_ID = 4;
+  public static final int PRODUCES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCES_FROM_FEATURE_ID = 5;
+  public static final int PRODUCES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -315,14 +315,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SUPPORTEDBY_TO_FEATURE_ID = 4;
+  public static final int SUPPORTEDBY_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUPPORTEDBY_FROM_FEATURE_ID = 5;
+  public static final int SUPPORTEDBY_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -343,14 +343,14 @@ public class BuildModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DESCRIBEDBY_TO_FEATURE_ID = 4;
+  public static final int DESCRIBEDBY_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DESCRIBEDBY_FROM_FEATURE_ID = 5;
+  public static final int DESCRIBEDBY_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -377,9 +377,9 @@ public class BuildModelPackage extends ModelPackage {
     isInitialized = true;
 
     SourceModelPackage.initialize();
-    KdmModelPackage.initialize();
     CoreModelPackage.initialize();
     KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractBuildElement.class,

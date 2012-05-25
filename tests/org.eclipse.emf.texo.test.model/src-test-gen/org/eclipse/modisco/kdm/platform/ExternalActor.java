@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ExternalActor")
+@Entity(name = "platform_ExternalActor")
 public class ExternalActor extends PlatformAction {
 
   /**

@@ -50,6 +50,19 @@ import org.eclipse.xsd.util.XSDResourceImpl;
 public class GeneratorUtils {
 
   /**
+   * Determine if a property should be optional or not, if it is part of a featuremap then it may not be optional.
+   */
+  public static boolean isOptional(EStructuralFeature eFeature) {
+    if (eFeature.isMany()) {
+      return false;
+    }
+    if (isPartOfGroup(eFeature)) {
+      return false;
+    }
+    return !eFeature.isRequired();
+  }
+
+  /**
    * True if {@link EStructuralFeature#isDerived()} is true and the containing {@link EClass} is not a DocumentRoot.
    */
   public static boolean setPropertyAccess(AnnotatedEStructuralFeature aFeature) {

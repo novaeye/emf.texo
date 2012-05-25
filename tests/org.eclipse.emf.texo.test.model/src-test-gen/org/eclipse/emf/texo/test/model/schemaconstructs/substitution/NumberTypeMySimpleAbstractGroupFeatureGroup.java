@@ -18,7 +18,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "NumberType_mySimpleAbstractGroup")
+@Entity(name = "substitution_NumberType_mySimpleAbstractGroup")
 public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
 
   /**

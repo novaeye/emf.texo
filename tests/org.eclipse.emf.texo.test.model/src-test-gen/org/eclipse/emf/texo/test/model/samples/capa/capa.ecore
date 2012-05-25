@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.samples.capa"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/capa" nsPrefix="capa">
-  <eClassifiers xsi:type="ecore:EClass" name="CapacityEntry">
+  <eClassifiers xsi:type="ecore:EClass" name="CapacityEntry" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="CapacityEntry"/>
       <details key="kind" value="empty"/>
@@ -27,7 +27,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Machine">
+  <eClassifiers xsi:type="ecore:EClass" name="Machine" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Machine"/>
       <details key="kind" value="elementOnly"/>
@@ -93,7 +93,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MachineList">
+  <eClassifiers xsi:type="ecore:EClass" name="MachineList" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="MachineList"/>
       <details key="kind" value="elementOnly"/>
@@ -109,7 +109,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Production">
+  <eClassifiers xsi:type="ecore:EClass" name="Production" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Production"/>
       <details key="kind" value="empty"/>
@@ -171,7 +171,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Task">
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Task"/>
       <details key="kind" value="elementOnly"/>
@@ -235,7 +235,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WorkDay">
+  <eClassifiers xsi:type="ecore:EClass" name="WorkDay" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="WorkDay"/>
       <details key="kind" value="empty"/>
@@ -271,7 +271,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WorkWeek">
+  <eClassifiers xsi:type="ecore:EClass" name="WorkWeek" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="WorkWeek"/>
       <details key="kind" value="elementOnly"/>

@@ -104,7 +104,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATAMODEL_DATAELEMENT_FEATURE_ID = 8;
+  public static final int DATAMODEL_DATAELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -118,21 +118,21 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTDATAELEMENT_SOURCE_FEATURE_ID = 15;
+  public static final int ABSTRACTDATAELEMENT_SOURCE_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTDATAELEMENT_DATARELATION_FEATURE_ID = 16;
+  public static final int ABSTRACTDATAELEMENT_DATARELATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTDATAELEMENT_ABSTRACTION_FEATURE_ID = 17;
+  public static final int ABSTRACTDATAELEMENT_ABSTRACTION_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -160,7 +160,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INDEXELEMENT_IMPLEMENTATION_FEATURE_ID = 18;
+  public static final int INDEXELEMENT_IMPLEMENTATION_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -188,14 +188,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int KEYRELATION_TO_FEATURE_ID = 4;
+  public static final int KEYRELATION_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KEYRELATION_FROM_FEATURE_ID = 5;
+  public static final int KEYRELATION_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -216,7 +216,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATACONTAINER_DATAELEMENT_FEATURE_ID = 18;
+  public static final int DATACONTAINER_DATAELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -237,7 +237,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RELATIONALSCHEMA_CODEELEMENT_FEATURE_ID = 19;
+  public static final int RELATIONALSCHEMA_CODEELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -251,7 +251,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COLUMNSET_ITEMUNIT_FEATURE_ID = 19;
+  public static final int COLUMNSET_ITEMUNIT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -286,7 +286,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATAEVENT_KIND_FEATURE_ID = 18;
+  public static final int DATAEVENT_KIND_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -300,7 +300,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int XMLSCHEMA_CONTENTELEMENT_FEATURE_ID = 18;
+  public static final int XMLSCHEMA_CONTENTELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -321,7 +321,7 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMPLEXCONTENTTYPE_CONTENTELEMENT_FEATURE_ID = 18;
+  public static final int COMPLEXCONTENTTYPE_CONTENTELEMENT_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -356,14 +356,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTENTITEM_TYPE_FEATURE_ID = 18;
+  public static final int CONTENTITEM_TYPE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTENTITEM_CONTENTELEMENT_FEATURE_ID = 19;
+  public static final int CONTENTITEM_CONTENTELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -384,14 +384,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTENTRESTRICTION_KIND_FEATURE_ID = 18;
+  public static final int CONTENTRESTRICTION_KIND_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTENTRESTRICTION_VALUE_FEATURE_ID = 19;
+  public static final int CONTENTRESTRICTION_VALUE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -405,14 +405,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLECONTENTTYPE_TYPE_FEATURE_ID = 19;
+  public static final int SIMPLECONTENTTYPE_TYPE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLECONTENTTYPE_KIND_FEATURE_ID = 20;
+  public static final int SIMPLECONTENTTYPE_KIND_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -433,14 +433,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATARELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int DATARELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATARELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int DATARELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -468,21 +468,21 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATAACTION_KIND_FEATURE_ID = 18;
+  public static final int DATAACTION_KIND_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATAACTION_IMPLEMENTATION_FEATURE_ID = 19;
+  public static final int DATAACTION_IMPLEMENTATION_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATAACTION_DATAELEMENT_FEATURE_ID = 20;
+  public static final int DATAACTION_DATAELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -496,14 +496,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int READSCOLUMNSET_TO_FEATURE_ID = 4;
+  public static final int READSCOLUMNSET_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int READSCOLUMNSET_FROM_FEATURE_ID = 5;
+  public static final int READSCOLUMNSET_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -524,14 +524,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TYPEDBY_TO_FEATURE_ID = 4;
+  public static final int TYPEDBY_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TYPEDBY_FROM_FEATURE_ID = 5;
+  public static final int TYPEDBY_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -545,14 +545,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int REFERENCETO_TO_FEATURE_ID = 4;
+  public static final int REFERENCETO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REFERENCETO_FROM_FEATURE_ID = 5;
+  public static final int REFERENCETO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -566,14 +566,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RESTRICTIONOF_TO_FEATURE_ID = 4;
+  public static final int RESTRICTIONOF_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESTRICTIONOF_FROM_FEATURE_ID = 5;
+  public static final int RESTRICTIONOF_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -587,14 +587,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXTENSIONTO_TO_FEATURE_ID = 4;
+  public static final int EXTENSIONTO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EXTENSIONTO_FROM_FEATURE_ID = 5;
+  public static final int EXTENSIONTO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -608,14 +608,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATATYPEOF_TO_FEATURE_ID = 4;
+  public static final int DATATYPEOF_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATATYPEOF_FROM_FEATURE_ID = 5;
+  public static final int DATATYPEOF_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -629,14 +629,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int HASCONTENT_TO_FEATURE_ID = 4;
+  public static final int HASCONTENT_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int HASCONTENT_FROM_FEATURE_ID = 5;
+  public static final int HASCONTENT_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -650,14 +650,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITESCOLUMNSET_TO_FEATURE_ID = 4;
+  public static final int WRITESCOLUMNSET_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITESCOLUMNSET_FROM_FEATURE_ID = 5;
+  public static final int WRITESCOLUMNSET_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -671,14 +671,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRODUCESDATAEVENT_TO_FEATURE_ID = 4;
+  public static final int PRODUCESDATAEVENT_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCESDATAEVENT_FROM_FEATURE_ID = 5;
+  public static final int PRODUCESDATAEVENT_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -706,14 +706,14 @@ public class DataModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANAGESDATA_TO_FEATURE_ID = 4;
+  public static final int MANAGESDATA_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANAGESDATA_FROM_FEATURE_ID = 5;
+  public static final int MANAGESDATA_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -739,12 +739,12 @@ public class DataModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(DataModel.class, modelPackage.getDataModelEClass(),

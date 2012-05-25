@@ -11,7 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PriceType")
+@Entity(name = "catalog_PriceType")
 public class PriceType extends Identifiable {
 
   /**

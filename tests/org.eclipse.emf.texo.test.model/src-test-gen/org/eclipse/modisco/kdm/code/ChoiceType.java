@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ChoiceType")
+@Entity(name = "code_ChoiceType")
 public class ChoiceType extends CompositeType {
 
   /**

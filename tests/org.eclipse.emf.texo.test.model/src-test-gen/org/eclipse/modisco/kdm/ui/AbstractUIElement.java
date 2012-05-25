@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.action.ActionElement;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 import org.eclipse.modisco.kdm.core.KDMEntity;
@@ -19,7 +20,7 @@ import org.eclipse.modisco.kdm.source.SourceRef;
  * 
  * @generated
  */
-@Entity(name = "AbstractUIElement")
+@Entity(name = "ui_AbstractUIElement")
 public abstract class AbstractUIElement extends KDMEntity {
 
   /**
@@ -52,6 +53,7 @@ public abstract class AbstractUIElement extends KDMEntity {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<ActionElement> abstraction = new ArrayList<ActionElement>();
 
   /**

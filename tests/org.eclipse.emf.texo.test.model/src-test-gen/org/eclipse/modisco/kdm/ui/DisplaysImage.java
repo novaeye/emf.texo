@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.source.Image;
  * 
  * @generated
  */
-@Entity(name = "DisplaysImage")
+@Entity(name = "ui_DisplaysImage")
 public class DisplaysImage extends AbstractUIRelationship {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "RelationalView")
+@Entity(name = "data_RelationalView")
 public class RelationalView extends ColumnSet {
 
   /**

@@ -6,19 +6,20 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.qname.Mytest" name="Mytest">
-    <orm:table name="Mytest"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.qname.Mytest" name="qname_Mytest">
+    <orm:table name="qname_Mytest"/>
     <orm:attributes>
       <orm:basic name="description" optional="false">
         <orm:column name="description"/>
       </orm:basic>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:element-collection name="names">
-        <orm:column name="element"/>
-        <orm:collection-table name="Mytest_names">
-          <orm:join-column name="Mytest_id"/>
+        <orm:order-column name="qname_Mytest_names_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="qname_Mytest_names">
+          <orm:join-column name="qname_Mytest_names"/>
         </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Screen")
+@Entity(name = "ui_Screen")
 public class Screen extends UIDisplay {
 
   /**

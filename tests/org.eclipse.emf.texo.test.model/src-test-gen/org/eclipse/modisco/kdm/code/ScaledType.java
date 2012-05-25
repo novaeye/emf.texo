@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ScaledType")
+@Entity(name = "code_ScaledType")
 public class ScaledType extends PrimitiveType {
 
   /**

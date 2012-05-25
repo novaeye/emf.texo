@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "DerivedType")
+@Entity(name = "code_DerivedType")
 public class DerivedType extends Datatype {
 
   /**

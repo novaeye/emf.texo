@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -652,10 +652,12 @@ public class ListunionModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class StatesByCountryModelObject<E extends StatesByCountry> extends AbstractModelObject<E> {
+  public static class StatesByCountryModelObject<E extends StatesByCountry> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ListunionModelPackage.INSTANCE.getStatesByCountryEClass();
     }
@@ -663,6 +665,7 @@ public class ListunionModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ListunionModelPackage.INSTANCE;
     }
@@ -743,6 +746,25 @@ public class ListunionModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case ListunionModelPackage.STATESBYCOUNTRY_ALLSTATES_FEATURE_ID:
+        getTarget().getAllStates().add((List<String>) value);
+        return;
+
+      case ListunionModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
+        getTarget().getSixImportantStates().add((List<String>) value);
+        return;
+
+      case ListunionModelPackage.STATESBYCOUNTRY_ZIPUNIONS_FEATURE_ID:
+        getTarget().getZipUnions().add((String) value);
+        return;
+
+      case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
+        getTarget().getSimpleUnions().add((Object) value);
+        return;
+
+      case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
+        getTarget().getSimpleStringUnions().add((String) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

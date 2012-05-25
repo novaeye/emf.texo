@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "RestrictionOf")
+@Entity(name = "data_RestrictionOf")
 public class RestrictionOf extends AbstractDataRelationship {
 
   /**

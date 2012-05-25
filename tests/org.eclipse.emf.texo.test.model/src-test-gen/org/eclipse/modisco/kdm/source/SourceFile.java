@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SourceFile")
+@Entity(name = "source_SourceFile")
 public class SourceFile extends InventoryItem {
 
   /**

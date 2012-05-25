@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "CodeItem")
+@Entity(name = "code_CodeItem")
 public abstract class CodeItem extends AbstractCodeElement {
 
   /**

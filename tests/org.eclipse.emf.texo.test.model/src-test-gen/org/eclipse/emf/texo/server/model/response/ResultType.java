@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -12,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ResultType")
+@Entity(name = "response_ResultType")
 public class ResultType extends Identifiable {
 
   /**
@@ -21,6 +22,7 @@ public class ResultType extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Object> updated = new ArrayList<Object>();
 
   /**
@@ -29,6 +31,7 @@ public class ResultType extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Object> inserted = new ArrayList<Object>();
 
   /**
@@ -37,6 +40,7 @@ public class ResultType extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Object> deleted = new ArrayList<Object>();
 
   /**

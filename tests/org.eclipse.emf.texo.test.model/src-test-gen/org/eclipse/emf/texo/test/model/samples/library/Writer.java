@@ -21,7 +21,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
  * @generated
  */
 @TestAnnotationOne("type")
-@Entity(name = "Writer")
+@Entity(name = "library_Writer")
 @PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Writer extends Identifiable {
 
@@ -31,7 +31,7 @@ public class Writer extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "name")
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -40,8 +40,8 @@ public class Writer extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @OrderColumn(name = "ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "Writer_id") }, inverseJoinColumns = { @JoinColumn(name = "Book_id") }, name = "Writer_books")
+  @OrderColumn(name = "library_Writer_books_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "library_Writer_books") }, inverseJoinColumns = { @JoinColumn(name = "library_Book_author") }, name = "library_Writer_books")
   private List<Book> books = new ArrayList<Book>();
 
   /**

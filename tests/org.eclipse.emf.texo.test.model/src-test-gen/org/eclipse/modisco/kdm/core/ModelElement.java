@@ -18,7 +18,7 @@ import org.eclipse.modisco.kdm.kdm.Stereotype;
  * 
  * @generated
  */
-@Entity(name = "ModelElement")
+@Entity(name = "core_ModelElement")
 public abstract class ModelElement extends Element {
 
   /**

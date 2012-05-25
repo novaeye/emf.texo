@@ -6,19 +6,20 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.duration.DurationTest" name="DurationTest">
-    <orm:table name="DurationTest"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.duration.DurationTest" name="duration_DurationTest">
+    <orm:table name="duration_DurationTest"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="duration" optional="false">
         <orm:column name="duration"/>
       </orm:basic>
       <orm:element-collection name="durations">
-        <orm:column name="element"/>
-        <orm:collection-table name="DurationTest_durations">
-          <orm:join-column name="DurationTest_id"/>
+        <orm:order-column name="duration_DurationTest_durations_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="duration_DurationTest_durations">
+          <orm:join-column name="duration_DurationTest_durations"/>
         </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>

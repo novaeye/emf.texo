@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "InventoryContainer")
+@Entity(name = "source_InventoryContainer")
 public class InventoryContainer extends AbstractInventoryElement {
 
   /**

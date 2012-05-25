@@ -3,7 +3,9 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -14,7 +16,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PaymentItem")
+@Entity(name = "m_PaymentItem")
+@Table(name = "m_PaymentItem")
 public abstract class PaymentItem extends Identifiable {
 
   /**
@@ -23,6 +26,7 @@ public abstract class PaymentItem extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_sum")
   private BigDecimal sum = null;
 
   /**
@@ -31,6 +35,7 @@ public abstract class PaymentItem extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "currency")
   private Currency currency = Currency.ROUBLES;
 
   /**
@@ -39,6 +44,7 @@ public abstract class PaymentItem extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_date")
   @Temporal(TemporalType.DATE)
   private Date date = null;
 
@@ -48,6 +54,7 @@ public abstract class PaymentItem extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "description")
   private String description = null;
 
   /**
@@ -56,6 +63,7 @@ public abstract class PaymentItem extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "paymentType")
   private PaymentType paymentType = PaymentType.REQUIRED;
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Thread")
+@Entity(name = "platform_Thread")
 public class Thread extends RuntimeResource {
 
   /**

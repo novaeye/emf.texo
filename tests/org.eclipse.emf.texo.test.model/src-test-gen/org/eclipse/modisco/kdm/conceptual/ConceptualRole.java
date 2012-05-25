@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ConceptualRole")
+@Entity(name = "conceptual_ConceptualRole")
 public class ConceptualRole extends AbstractConceptualElement {
 
   /**

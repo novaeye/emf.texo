@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -158,10 +158,12 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends AbstractModelObject<E> {
+  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SimplefeaturemapModelPackage.INSTANCE.getPurchaseOrderEClass();
     }
@@ -169,6 +171,7 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SimplefeaturemapModelPackage.INSTANCE;
     }
@@ -230,10 +233,12 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SupplierModelObject<E extends Supplier> extends AbstractModelObject<E> {
+  public static class SupplierModelObject<E extends Supplier> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SimplefeaturemapModelPackage.INSTANCE.getSupplierEClass();
     }
@@ -241,6 +246,7 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SimplefeaturemapModelPackage.INSTANCE;
     }
@@ -306,6 +312,10 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SimplefeaturemapModelPackage.SUPPLIER_ORDERS_FEATURE_ID:
+        getTarget().getOrders().add((SupplierOrdersFeatureGroup) value);
+        return;
+
       case SimplefeaturemapModelPackage.SUPPLIER_PREFERREDORDERS_FEATURE_ID:
         getTarget().getPreferredOrders().add((PurchaseOrder) value);
         return;
@@ -314,6 +324,13 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
         getTarget().getStandardOrders().add((PurchaseOrder) value);
         return;
 
+      case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERREFERENCE_FEATURE_ID:
+        getTarget().getHardCopyOrderReference().add((String) value);
+        return;
+
+      case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
+        getTarget().getHardCopyOrderNumber().add((Long) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

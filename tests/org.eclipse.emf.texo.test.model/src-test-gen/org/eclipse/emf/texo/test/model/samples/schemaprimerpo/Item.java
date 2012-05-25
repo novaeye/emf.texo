@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Item")
+@Entity(name = "schemaprimerpo_Item")
 public class Item extends Identifiable {
 
   /**

@@ -18,7 +18,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
-@Entity(name = "Element_mixed")
+@Entity(name = "nestedgroup_Element_mixed")
 public class ElementMixedFeatureGroup extends Identifiable {
 
   /**

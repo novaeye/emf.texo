@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "ConceptualModel")
+@Entity(name = "conceptual_ConceptualModel")
 public class ConceptualModel extends KDMModel {
 
   /**

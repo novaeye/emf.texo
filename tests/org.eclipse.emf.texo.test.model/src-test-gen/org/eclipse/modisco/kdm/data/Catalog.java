@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Catalog")
+@Entity(name = "data_Catalog")
 public class Catalog extends DataContainer {
 
   /**

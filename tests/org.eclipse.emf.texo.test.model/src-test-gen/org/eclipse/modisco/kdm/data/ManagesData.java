@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "ManagesData")
+@Entity(name = "data_ManagesData")
 public class ManagesData extends AbstractActionRelationship {
 
   /**

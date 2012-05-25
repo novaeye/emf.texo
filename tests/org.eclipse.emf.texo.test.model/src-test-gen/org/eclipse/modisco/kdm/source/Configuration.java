@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Configuration")
+@Entity(name = "source_Configuration")
 public class Configuration extends InventoryItem {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Library")
+@Entity(name = "build_Library")
 public class Library extends BuildResource {
 
   /**

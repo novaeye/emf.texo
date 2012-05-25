@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ComplexOddType")
+@Entity(name = "substitutionzvon_ComplexOddType")
 public class ComplexOddType extends ComplexAAA {
 
   /**

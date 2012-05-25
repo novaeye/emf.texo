@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "BuildResource")
+@Entity(name = "build_BuildResource")
 public class BuildResource extends AbstractBuildElement {
 
   /**

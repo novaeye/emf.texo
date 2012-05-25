@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -9,7 +11,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "NameList")
+@Entity(name = "ecoreattrs_NameList")
+@Table(name = "ecoreattrs_NameList")
 public class NameList extends Identifiable {
 
   /**
@@ -18,6 +21,7 @@ public class NameList extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "firstName")
   private String firstName = null;
 
   /**
@@ -26,6 +30,7 @@ public class NameList extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "middleName")
   private String middleName = null;
 
   /**
@@ -34,6 +39,7 @@ public class NameList extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "lastName")
   private String lastName = null;
 
   /**

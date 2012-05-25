@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.code.ItemUnit;
  * 
  * @generated
  */
-@Entity(name = "IndexElement")
+@Entity(name = "data_IndexElement")
 public class IndexElement extends DataResource {
 
   /**

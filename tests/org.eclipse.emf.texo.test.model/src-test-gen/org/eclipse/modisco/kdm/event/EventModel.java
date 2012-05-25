@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "EventModel")
+@Entity(name = "event_EventModel")
 public class EventModel extends KDMModel {
 
   /**

@@ -4,7 +4,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.schemaconstructs.substitution"
     nsURI="http://www.eclipse.org/emf/texo/test/model/schemaconstructs/substitution"
     nsPrefix="substitution">
-  <eClassifiers xsi:type="ecore:EClass" name="ComplexNumber">
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexNumber" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="complexNumber"/>
       <details key="kind" value="elementOnly"/>
@@ -28,7 +28,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
       <details key="kind" value="mixed"/>
@@ -170,7 +170,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MultiNumberType">
+  <eClassifiers xsi:type="ecore:EClass" name="MultiNumberType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="multiNumber_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -209,7 +209,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NumberType">
+  <eClassifiers xsi:type="ecore:EClass" name="NumberType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="number_._type"/>
       <details key="kind" value="elementOnly"/>

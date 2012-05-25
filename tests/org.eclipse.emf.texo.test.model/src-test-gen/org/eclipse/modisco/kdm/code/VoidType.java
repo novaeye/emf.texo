@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "VoidType")
+@Entity(name = "code_VoidType")
 public class VoidType extends PrimitiveType {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "PlatformElement")
+@Entity(name = "platform_PlatformElement")
 public class PlatformElement extends AbstractPlatformElement {
 
   /**

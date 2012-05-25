@@ -14,7 +14,7 @@ import org.eclipse.modisco.kdm.source.SourceRef;
  * 
  * @generated
  */
-@Entity(name = "BuildDescription")
+@Entity(name = "build_BuildDescription")
 public class BuildDescription extends BuildResource {
 
   /**

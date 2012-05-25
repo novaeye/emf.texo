@@ -15,7 +15,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "AbstractStructureElement")
+@Entity(name = "structure_AbstractStructureElement")
 public abstract class AbstractStructureElement extends KDMEntity {
 
   /**

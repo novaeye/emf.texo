@@ -4,14 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Workflow")
+@Entity(name = "workflow_Workflow")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Workflow extends WorkflowElement {
 
   /**
@@ -20,6 +26,8 @@ public class Workflow extends WorkflowElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "workflow_Workflow_nodes_ind")
+  @JoinColumns({ @JoinColumn(name = "workflow_Workflow_nodes") })
   private List<WorkflowNode> nodes = new ArrayList<WorkflowNode>();
 
   /**
@@ -28,6 +36,8 @@ public class Workflow extends WorkflowElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "workflow_Workflow_edges_ind")
+  @JoinColumns({ @JoinColumn(name = "workflow_Workflow_edges") })
   private List<Edge> edges = new ArrayList<Edge>();
 
   /**
@@ -36,6 +46,8 @@ public class Workflow extends WorkflowElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "workflow_Workflow_comments_ind")
+  @JoinColumns({ @JoinColumn(name = "workflow_Workflow_comments") })
   private List<Comment> comments = new ArrayList<Comment>();
 
   /**

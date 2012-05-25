@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
  * 
  * @generated
  */
-@Entity(name = "SimpleContentType")
+@Entity(name = "data_SimpleContentType")
 public class SimpleContentType extends ComplexContentType {
 
   /**

@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "SupportedBy")
+@Entity(name = "build_SupportedBy")
 public class SupportedBy extends AbstractBuildRelationship {
 
   /**

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "MessagingResource")
+@Entity(name = "platform_MessagingResource")
 public class MessagingResource extends ResourceType {
 
   /**

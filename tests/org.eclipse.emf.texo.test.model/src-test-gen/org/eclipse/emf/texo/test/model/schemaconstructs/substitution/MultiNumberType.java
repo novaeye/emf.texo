@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "MultiNumberType")
+@Entity(name = "substitution_MultiNumberType")
 public class MultiNumberType extends Identifiable {
 
   /**

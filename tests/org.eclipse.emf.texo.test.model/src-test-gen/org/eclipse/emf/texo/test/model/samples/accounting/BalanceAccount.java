@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>BalanceAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "BalanceAccount")
+@Entity(name = "accounting_BalanceAccount")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class BalanceAccount extends Account {
 
   /**
@@ -25,7 +30,8 @@ public class BalanceAccount extends Account {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinTable()
+  @OrderColumn(name = "accounting_BalanceAccount_report_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "accounting_BalanceAccount_report") }, inverseJoinColumns = { @JoinColumn(name = "accounting_ReportGroup_account") }, name = "accounting_BalanceAccount_report")
   private List<ReportGroup> report = new ArrayList<ReportGroup>();
 
   /**

@@ -6,31 +6,34 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.server.model.request.ActionType" name="ActionType">
-    <orm:table name="ActionType"/>
+  <orm:entity class="org.eclipse.emf.texo.server.model.request.ActionType" name="request_ActionType">
+    <orm:table name="request_ActionType"/>
     <orm:attributes>
       <orm:one-to-many name="update">
-        <orm:join-column name="ActionType_id"/>
+        <orm:order-column name="request_ActionType_update_ind"/>
+        <orm:join-column name="request_ActionType_update"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="insert">
-        <orm:join-column name="ActionType_id"/>
+        <orm:order-column name="request_ActionType_insert_ind"/>
+        <orm:join-column name="request_ActionType_insert"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="delete">
-        <orm:join-column name="ActionType_id"/>
+        <orm:order-column name="request_ActionType_delete_ind"/>
+        <orm:join-column name="request_ActionType_delete"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.server.model.request.QueryType" name="QueryType">
-    <orm:table name="QueryType"/>
+  <orm:entity class="org.eclipse.emf.texo.server.model.request.QueryType" name="request_QueryType">
+    <orm:table name="request_QueryType"/>
     <orm:attributes>
       <orm:basic name="namedQuery">
         <orm:column name="namedQuery"/>
@@ -39,24 +42,25 @@
         <orm:column name="query"/>
       </orm:basic>
       <orm:one-to-many name="parameters">
-        <orm:join-column name="QueryType_id"/>
+        <orm:order-column name="request_QueryType_parameters_ind"/>
+        <orm:join-column name="request_QueryType_parameters"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.server.model.request.Parameter" name="Parameter">
-    <orm:table name="Parameter"/>
+  <orm:entity class="org.eclipse.emf.texo.server.model.request.Parameter" name="request_Parameter">
+    <orm:table name="request_Parameter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="value" optional="false">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
       <orm:basic name="type">
-        <orm:column name="type"/>
+        <orm:column name="T_type"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

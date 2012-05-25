@@ -5,13 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>ValueList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ValueList")
+@Entity(name = "code_ValueList")
 public class ValueList extends ValueElement {
 
   /**
@@ -20,6 +21,7 @@ public class ValueList extends ValueElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<ValueElement> valueElement = new ArrayList<ValueElement>();
 
   /**

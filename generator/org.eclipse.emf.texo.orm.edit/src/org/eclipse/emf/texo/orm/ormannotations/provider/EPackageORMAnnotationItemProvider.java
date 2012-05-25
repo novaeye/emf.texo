@@ -67,6 +67,7 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
       addUseJoinTablesForNonContainmentPropertyDescriptor(object);
       addGenerateJavaAnnotationsPropertyDescriptor(object);
       addAddOrderColumnToListMappingsPropertyDescriptor(object);
+      addRenameSQLReservedNamesPropertyDescriptor(object);
     }
     return itemPropertyDescriptors;
   }
@@ -271,6 +272,23 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
   }
 
   /**
+   * This adds a property descriptor for the Rename SQL Reserved Names feature. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @generated
+   */
+  protected void addRenameSQLReservedNamesPropertyDescriptor(Object object) {
+    itemPropertyDescriptors.add(createItemPropertyDescriptor(
+        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+        getResourceLocator(),
+        getString("_UI_EPackageORMAnnotation_renameSQLReservedNames_feature"),
+        getString("_UI_PropertyDescriptor_description", "_UI_EPackageORMAnnotation_renameSQLReservedNames_feature",
+            "_UI_EPackageORMAnnotation_type"),
+        OrmannotationsPackage.Literals.EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES, true, false, false,
+        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+  }
+
+  /**
    * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
    * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
    * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!-- begin-user-doc --> <!--
@@ -319,9 +337,8 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
    */
   @Override
   public String getText(Object object) {
-    String label = ((EPackageORMAnnotation) object).getDescription();
-    return label == null || label.length() == 0 ? getString("_UI_EClassORMAnnotation_type")
-        : getString("_UI_EClassORMAnnotation_type") + " " + label;
+    EPackageORMAnnotation ePackageORMAnnotation = (EPackageORMAnnotation) object;
+    return getString("_UI_EPackageORMAnnotation_type") + " " + ePackageORMAnnotation.isGenerateFullDbSchemaNames();
   }
 
   /**
@@ -347,6 +364,7 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__USE_JOIN_TABLES_FOR_NON_CONTAINMENT:
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS:
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
+    case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES:
       fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
       return;
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__DEFAULT_CASCADE_CONTAINMENT:

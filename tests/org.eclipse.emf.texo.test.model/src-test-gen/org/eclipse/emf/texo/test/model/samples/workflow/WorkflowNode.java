@@ -4,18 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>WorkflowNode</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "WorkflowNode")
+@Entity(name = "workflow_WorkflowNode")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public abstract class WorkflowNode extends WorkflowElement {
 
   /**
@@ -24,7 +29,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(name = "workflow_WorkflowNode_workflow") })
   private Workflow workflow = null;
 
   /**
@@ -33,6 +38,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "workflow_WorkflowNode_outputs_ind")
+  @JoinColumns({ @JoinColumn(name = "workflow_WorkflowNode_outputs") })
   private List<OutputPort> outputs = new ArrayList<OutputPort>();
 
   /**
@@ -41,6 +48,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "workflow_WorkflowNode_inputs_ind")
+  @JoinColumns({ @JoinColumn(name = "workflow_WorkflowNode_inputs") })
   private List<InputPort> inputs = new ArrayList<InputPort>();
 
   /**
@@ -49,6 +58,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "isStart")
   private boolean isStart = false;
 
   /**
@@ -57,6 +67,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "isFinish")
   private boolean isFinish = false;
 
   /**

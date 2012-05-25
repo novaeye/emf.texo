@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.forum. It
@@ -248,13 +248,14 @@ public class ForumModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ForumModelObject<E extends Forum> extends AbstractModelObject<E> {
+  public static class ForumModelObject<E extends Forum> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ForumModelPackage.INSTANCE.getForumEClass();
     }
@@ -262,6 +263,7 @@ public class ForumModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ForumModelPackage.INSTANCE;
     }
@@ -359,13 +361,14 @@ public class ForumModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MemberModelObject<E extends Member> extends AbstractModelObject<E> {
+  public static class MemberModelObject<E extends Member> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ForumModelPackage.INSTANCE.getMemberEClass();
     }
@@ -373,6 +376,7 @@ public class ForumModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ForumModelPackage.INSTANCE;
     }
@@ -470,13 +474,14 @@ public class ForumModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PostModelObject<E extends Post> extends AbstractModelObject<E> {
+  public static class PostModelObject<E extends Post> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ForumModelPackage.INSTANCE.getPostEClass();
     }
@@ -484,6 +489,7 @@ public class ForumModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ForumModelPackage.INSTANCE;
     }
@@ -567,13 +573,14 @@ public class ForumModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class TopicModelObject<E extends Topic> extends AbstractModelObject<E> {
+  public static class TopicModelObject<E extends Topic> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ForumModelPackage.INSTANCE.getTopicEClass();
     }
@@ -581,6 +588,7 @@ public class ForumModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ForumModelPackage.INSTANCE;
     }

@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "PlatformModel")
+@Entity(name = "platform_PlatformModel")
 public class PlatformModel extends KDMModel {
 
   /**

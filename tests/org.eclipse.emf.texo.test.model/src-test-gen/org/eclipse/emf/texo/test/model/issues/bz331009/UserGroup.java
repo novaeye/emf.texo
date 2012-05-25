@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -9,7 +10,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "UserGroup")
+@Entity(name = "m_UserGroup")
+@Table(name = "m_UserGroup")
 public class UserGroup extends Identifiable {
 
   /**

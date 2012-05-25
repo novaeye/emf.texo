@@ -20,7 +20,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
  * @generated
  */
 @TestAnnotationOne("test")
-@Entity(name = "Book")
+@Entity(name = "library_Book")
 @PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Book extends Identifiable {
 
@@ -59,7 +59,7 @@ public class Book extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "author") })
+  @JoinColumns({ @JoinColumn(name = "library_Book_author") })
   private Writer author = null;
 
   /**

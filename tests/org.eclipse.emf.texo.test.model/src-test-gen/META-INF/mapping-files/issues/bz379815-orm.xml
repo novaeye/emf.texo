@@ -24,7 +24,7 @@
     <orm:table name="DPL_bz379815_VarConditionType"/>
     <orm:attributes>
       <orm:many-to-one name="policyType">
-        <orm:join-column name="policyType"/>
+        <orm:join-column name="bz379815_VarConditionType_policyType"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -35,7 +35,7 @@
     <orm:table name="DPL_bz379815_VarPolicyTypeType"/>
     <orm:attributes>
       <orm:basic name="type" optional="false">
-        <orm:column name="type"/>
+        <orm:column name="T_type"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

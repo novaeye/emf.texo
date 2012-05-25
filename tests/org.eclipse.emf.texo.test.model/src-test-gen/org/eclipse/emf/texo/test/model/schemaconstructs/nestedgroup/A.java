@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "A")
+@Entity(name = "nestedgroup_A")
 public class A extends Identifiable {
 
   /**

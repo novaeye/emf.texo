@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "CodeElement")
+@Entity(name = "code_CodeElement")
 public class CodeElement extends CodeItem {
 
   /**

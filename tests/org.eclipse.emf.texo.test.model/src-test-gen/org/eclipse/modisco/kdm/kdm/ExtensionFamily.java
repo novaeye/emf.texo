@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "ExtensionFamily")
+@Entity(name = "kdm_ExtensionFamily")
 public class ExtensionFamily extends Element {
 
   /**

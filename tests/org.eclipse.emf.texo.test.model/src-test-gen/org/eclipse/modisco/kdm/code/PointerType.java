@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "PointerType")
+@Entity(name = "code_PointerType")
 public class PointerType extends DerivedType {
 
   /**

@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.samples.employee"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/Employee" nsPrefix="employee">
-  <eClassifiers xsi:type="ecore:EClass" name="Department">
+  <eClassifiers xsi:type="ecore:EClass" name="Department" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Department"/>
       <details key="kind" value="elementOnly"/>
@@ -28,7 +28,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Employee">
+  <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Employee"/>
       <details key="kind" value="elementOnly"/>

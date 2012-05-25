@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -17,7 +18,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "EClass1")
+@Entity(name = "test_EClass1")
 public class EClass1 extends Identifiable {
 
   /**
@@ -34,6 +35,7 @@ public class EClass1 extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   @JoinTable()
   private List<EClass0> many = new ArrayList<EClass0>();
 

@@ -9,7 +9,7 @@ import org.eclipse.modisco.kdm.core.KDMRelationship;
  * 
  * @generated
  */
-@Entity(name = "AbstractInventoryRelationship")
+@Entity(name = "source_AbstractInventoryRelationship")
 public abstract class AbstractInventoryRelationship extends KDMRelationship {
 
   /**

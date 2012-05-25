@@ -6,36 +6,36 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.modisco.kdm.core.Element" name="Element">
-    <orm:table name="Element"/>
+  <orm:entity class="org.eclipse.modisco.kdm.core.Element" name="core_Element">
+    <orm:table name="core_Element"/>
     <orm:attributes>
       <orm:one-to-many name="attribute">
-        <orm:join-column name="Element_id"/>
+        <orm:join-column name="core_Element_attribute"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="annotation">
-        <orm:join-column name="Element_id"/>
+        <orm:join-column name="core_Element_annotation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.core.ModelElement" name="ModelElement">
+  <orm:entity class="org.eclipse.modisco.kdm.core.ModelElement" name="core_ModelElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="taggedValue">
-        <orm:join-column name="ModelElement_id"/>
+        <orm:join-column name="core_ModelElement_taggedValue"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="stereotype">
-        <orm:join-table name="ModelElement_stereotype">
-          <orm:join-column name="ModelElement_id"/>
-          <orm:inverse-join-column name="Stereotype_id"/>
+        <orm:join-table name="core_ModelElement_stereotype">
+          <orm:join-column name="core_ModelElement_stereotype"/>
+          <orm:inverse-join-column name="kdm_Stereotype_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -45,14 +45,14 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.core.KDMEntity" name="KDMEntity">
+  <orm:entity class="org.eclipse.modisco.kdm.core.KDMEntity" name="core_KDMEntity">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:many-to-one access="FIELD" name="model">
-        <orm:join-column name="model"/>
+        <orm:join-column name="core_KDMEntity_model"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -60,7 +60,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one access="FIELD" name="owner">
-        <orm:join-column name="owner"/>
+        <orm:join-column name="core_KDMEntity_owner"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -68,21 +68,24 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:one-to-many access="FIELD" name="ownedElement">
-        <orm:join-column name="KDMEntity_id"/>
+        <orm:order-column name="core_KDMEntity_ownedElement_ind"/>
+        <orm:join-column name="core_KDMEntity_ownedElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many access="FIELD" name="ownedRelation">
-        <orm:join-column name="KDMEntity_id"/>
+        <orm:order-column name="core_KDMEntity_ownedRelation_ind"/>
+        <orm:join-column name="core_KDMEntity_ownedRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many access="FIELD" name="inAggregated">
-        <orm:join-table name="KDMEntity_inAggregated">
-          <orm:join-column name="KDMEntity_id"/>
-          <orm:inverse-join-column name="AggregatedRelationship_id"/>
+        <orm:order-column name="core_KDMEntity_inAggregated_ind"/>
+        <orm:join-table name="core_KDMEntity_inAggregated">
+          <orm:join-column name="core_KDMEntity_inAggregated"/>
+          <orm:inverse-join-column name="core_AggregatedRelationship_to"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -91,9 +94,10 @@
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many access="FIELD" name="outAggregated">
-        <orm:join-table name="KDMEntity_outAggregated">
-          <orm:join-column name="KDMEntity_id"/>
-          <orm:inverse-join-column name="AggregatedRelationship_id"/>
+        <orm:order-column name="core_KDMEntity_outAggregated_ind"/>
+        <orm:join-table name="core_KDMEntity_outAggregated">
+          <orm:join-column name="core_KDMEntity_outAggregated"/>
+          <orm:inverse-join-column name="core_AggregatedRelationship_from"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -102,9 +106,10 @@
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many access="FIELD" name="outbound">
-        <orm:join-table name="KDMEntity_outbound">
-          <orm:join-column name="KDMEntity_id"/>
-          <orm:inverse-join-column name="KDMRelationship_id"/>
+        <orm:order-column name="core_KDMEntity_outbound_ind"/>
+        <orm:join-table name="core_KDMEntity_outbound">
+          <orm:join-column name="core_KDMEntity_outbound"/>
+          <orm:inverse-join-column name="core_KDMRelationship_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -113,9 +118,10 @@
         </orm:cascade>
       </orm:many-to-many>
       <orm:many-to-many access="FIELD" name="inbound">
-        <orm:join-table name="KDMEntity_inbound">
-          <orm:join-column name="KDMEntity_id"/>
-          <orm:inverse-join-column name="KDMRelationship_id"/>
+        <orm:order-column name="core_KDMEntity_inbound_ind"/>
+        <orm:join-table name="core_KDMEntity_inbound">
+          <orm:join-column name="core_KDMEntity_inbound"/>
+          <orm:inverse-join-column name="core_KDMRelationship_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -124,9 +130,10 @@
         </orm:cascade>
       </orm:many-to-many>
       <orm:many-to-many access="FIELD" name="group">
-        <orm:join-table name="KDMEntity_group">
-          <orm:join-column name="KDMEntity_id"/>
-          <orm:inverse-join-column name="KDMEntity_id"/>
+        <orm:order-column name="core_KDMEntity_group_ind"/>
+        <orm:join-table name="core_KDMEntity_group">
+          <orm:join-column name="core_KDMEntity_group"/>
+          <orm:inverse-join-column name="core_KDMEntity_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -135,9 +142,10 @@
         </orm:cascade>
       </orm:many-to-many>
       <orm:many-to-many access="FIELD" name="groupedElement">
-        <orm:join-table name="KDMEntity_groupedElement">
-          <orm:join-column name="KDMEntity_id"/>
-          <orm:inverse-join-column name="KDMEntity_id"/>
+        <orm:order-column name="core_KDMEntity_groupedElement_ind"/>
+        <orm:join-table name="core_KDMEntity_groupedElement">
+          <orm:join-column name="core_KDMEntity_groupedElement"/>
+          <orm:inverse-join-column name="core_KDMEntity_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -147,18 +155,18 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.core.KDMRelationship" name="KDMRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.core.KDMRelationship" name="core_KDMRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.core.AggregatedRelationship" name="AggregatedRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.core.AggregatedRelationship" name="core_AggregatedRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="density">
         <orm:column name="density"/>
       </orm:basic>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="core_AggregatedRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -166,7 +174,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="core_AggregatedRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -174,9 +182,9 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-many name="relation">
-        <orm:join-table name="AggregatedRelationship_relation">
-          <orm:join-column name="AggregatedRelationship_id"/>
-          <orm:inverse-join-column name="KDMRelationship_id"/>
+        <orm:join-table name="core_AggregatedRelationship_relation">
+          <orm:join-column name="core_AggregatedRelationship_relation"/>
+          <orm:inverse-join-column name="core_KDMRelationship_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -186,47 +194,47 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.Attribute" name="Attribute">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.Attribute" name="kdm_Attribute">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="tag">
         <orm:column name="tag"/>
       </orm:basic>
       <orm:basic name="value">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.Annotation" name="Annotation">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.Annotation" name="kdm_Annotation">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="text">
-        <orm:column name="text"/>
+        <orm:column name="T_text"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.Stereotype" name="Stereotype">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.Stereotype" name="kdm_Stereotype">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="type">
-        <orm:column name="type"/>
+        <orm:column name="T_type"/>
       </orm:basic>
       <orm:one-to-many name="tag">
-        <orm:join-column name="Stereotype_id"/>
+        <orm:join-column name="kdm_Stereotype_tag"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtendedValue" name="ExtendedValue">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtendedValue" name="kdm_ExtendedValue">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="tag" optional="false">
-        <orm:join-column name="tag"/>
+        <orm:join-column name="kdm_ExtendedValue_tag"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -235,13 +243,14 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMModel" name="KDMModel">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMModel" name="kdm_KDMModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many access="FIELD" name="ownedElement">
-        <orm:join-table name="KDMModel_ownedElement">
-          <orm:join-column name="KDMModel_id"/>
-          <orm:inverse-join-column name="KDMEntity_id"/>
+        <orm:order-column name="kdm_KDMModel_ownedElement_ind"/>
+        <orm:join-table name="kdm_KDMModel_ownedElement">
+          <orm:join-column name="kdm_KDMModel_ownedElement"/>
+          <orm:inverse-join-column name="core_KDMEntity_model"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -251,27 +260,27 @@
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMFramework" name="KDMFramework">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMFramework" name="kdm_KDMFramework">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-many name="audit">
-        <orm:join-column name="KDMFramework_id"/>
+        <orm:join-column name="kdm_KDMFramework_audit"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="extension">
-        <orm:join-column name="KDMFramework_id"/>
+        <orm:join-column name="kdm_KDMFramework_extension"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.Audit" name="Audit">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.Audit" name="kdm_Audit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="description">
@@ -281,65 +290,65 @@
         <orm:column name="author"/>
       </orm:basic>
       <orm:basic name="date">
-        <orm:column name="date"/>
+        <orm:column name="T_date"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtensionFamily" name="ExtensionFamily">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtensionFamily" name="kdm_ExtensionFamily">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-many name="stereotype">
-        <orm:join-column name="ExtensionFamily_id"/>
+        <orm:join-column name="kdm_ExtensionFamily_stereotype"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.Segment" name="Segment">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.Segment" name="kdm_Segment">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="segment">
-        <orm:join-column name="Segment_id"/>
+        <orm:join-column name="kdm_Segment_segment"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="model">
-        <orm:join-column name="Segment_id"/>
+        <orm:join-column name="kdm_Segment_model"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.TagDefinition" name="TagDefinition">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.TagDefinition" name="kdm_TagDefinition">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="tag">
         <orm:column name="tag"/>
       </orm:basic>
       <orm:basic name="type">
-        <orm:column name="type"/>
+        <orm:column name="T_type"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.TaggedValue" name="TaggedValue">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.TaggedValue" name="kdm_TaggedValue">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="value">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.kdm.TaggedRef" name="TaggedRef">
+  <orm:entity class="org.eclipse.modisco.kdm.kdm.TaggedRef" name="kdm_TaggedRef">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="ref" optional="false">
-        <orm:join-column name="ref"/>
+        <orm:join-column name="kdm_TaggedRef_ref"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -348,102 +357,102 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryModel" name="InventoryModel">
+  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryModel" name="source_InventoryModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="inventoryElement">
-        <orm:join-column name="InventoryModel_id"/>
+        <orm:join-column name="source_InventoryModel_inventoryElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryElement" name="AbstractInventoryElement">
+  <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryElement" name="source_AbstractInventoryElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="inventoryRelationship">
-        <orm:join-column name="AbstractInventoryElement_id"/>
+        <orm:join-column name="source_AbstractInventoryElement_inventoryRelationship"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryRelationship" name="AbstractInventoryRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryRelationship" name="source_AbstractInventoryRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryItem" name="InventoryItem">
+  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryItem" name="source_InventoryItem">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="version">
         <orm:column name="version"/>
       </orm:basic>
       <orm:basic name="path">
-        <orm:column name="path"/>
+        <orm:column name="T_path"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.SourceFile" name="SourceFile">
+  <orm:entity class="org.eclipse.modisco.kdm.source.SourceFile" name="source_SourceFile">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="language">
-        <orm:column name="language"/>
+        <orm:column name="T_language"/>
       </orm:basic>
       <orm:basic name="encoding">
-        <orm:column name="encoding"/>
+        <orm:column name="T_encoding"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.Image" name="Image">
+  <orm:entity class="org.eclipse.modisco.kdm.source.Image" name="source_Image">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.Configuration" name="Configuration">
+  <orm:entity class="org.eclipse.modisco.kdm.source.Configuration" name="source_Configuration">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.ResourceDescription" name="ResourceDescription">
+  <orm:entity class="org.eclipse.modisco.kdm.source.ResourceDescription" name="source_ResourceDescription">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.BinaryFile" name="BinaryFile">
+  <orm:entity class="org.eclipse.modisco.kdm.source.BinaryFile" name="source_BinaryFile">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.ExecutableFile" name="ExecutableFile">
+  <orm:entity class="org.eclipse.modisco.kdm.source.ExecutableFile" name="source_ExecutableFile">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryContainer" name="InventoryContainer">
+  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryContainer" name="source_InventoryContainer">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="inventoryElement">
-        <orm:join-column name="InventoryContainer_id"/>
+        <orm:join-column name="source_InventoryContainer_inventoryElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.Directory" name="Directory">
+  <orm:entity class="org.eclipse.modisco.kdm.source.Directory" name="source_Directory">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="path">
-        <orm:column name="path"/>
+        <orm:column name="T_path"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.Project" name="Project">
+  <orm:entity class="org.eclipse.modisco.kdm.source.Project" name="source_Project">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.DependsOn" name="DependsOn">
+  <orm:entity class="org.eclipse.modisco.kdm.source.DependsOn" name="source_DependsOn">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="source_DependsOn_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -451,7 +460,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="source_DependsOn_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -460,24 +469,25 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.SourceRef" name="SourceRef">
+  <orm:entity class="org.eclipse.modisco.kdm.source.SourceRef" name="source_SourceRef">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="language">
-        <orm:column name="language"/>
+        <orm:column name="T_language"/>
       </orm:basic>
       <orm:basic name="snippet">
         <orm:column name="snippet"/>
       </orm:basic>
       <orm:one-to-many name="region">
-        <orm:join-column name="SourceRef_id"/>
+        <orm:order-column name="source_SourceRef_region_ind"/>
+        <orm:join-column name="source_SourceRef_region"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.SourceRegion" name="SourceRegion">
+  <orm:entity class="org.eclipse.modisco.kdm.source.SourceRegion" name="source_SourceRegion">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="startLine">
@@ -493,13 +503,13 @@
         <orm:column name="endPosition"/>
       </orm:basic>
       <orm:basic name="language">
-        <orm:column name="language"/>
+        <orm:column name="T_language"/>
       </orm:basic>
       <orm:basic name="path">
-        <orm:column name="path"/>
+        <orm:column name="T_path"/>
       </orm:basic>
       <orm:many-to-one name="file">
-        <orm:join-column name="file"/>
+        <orm:join-column name="source_SourceRegion_file"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -508,15 +518,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryElement" name="InventoryElement">
+  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryElement" name="source_InventoryElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryRelationship" name="InventoryRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.source.InventoryRelationship" name="source_InventoryRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="source_InventoryRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -524,7 +534,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="source_InventoryRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -533,42 +543,44 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CodeModel" name="CodeModel">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CodeModel" name="code_CodeModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="CodeModel_id"/>
+        <orm:order-column name="code_CodeModel_codeElement_ind"/>
+        <orm:join-column name="code_CodeModel_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeElement" name="AbstractCodeElement">
+  <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeElement" name="code_AbstractCodeElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="source">
-        <orm:join-column name="AbstractCodeElement_id"/>
+        <orm:join-column name="code_AbstractCodeElement_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="comment">
-        <orm:join-column name="AbstractCodeElement_id"/>
+        <orm:join-column name="code_AbstractCodeElement_comment"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="codeRelation">
-        <orm:join-column name="AbstractCodeElement_id"/>
+        <orm:join-column name="code_AbstractCodeElement_codeRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="entryFlow">
-        <orm:join-table name="AbstractCodeElement_entryFlow">
-          <orm:join-column name="AbstractCodeElement_id"/>
-          <orm:inverse-join-column name="EntryFlow_id"/>
+        <orm:order-column name="code_AbstractCodeElement_entryFlow_ind"/>
+        <orm:join-table name="code_AbstractCodeElement_entryFlow">
+          <orm:join-column name="code_AbstractCodeElement_entryFlow"/>
+          <orm:inverse-join-column name="action_EntryFlow_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -578,66 +590,67 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CommentUnit" name="CommentUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CommentUnit" name="code_CommentUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="text">
-        <orm:column name="text"/>
+        <orm:column name="T_text"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeRelationship" name="AbstractCodeRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeRelationship" name="code_AbstractCodeRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CodeItem" name="CodeItem">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CodeItem" name="code_CodeItem">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ComputationalObject" name="ComputationalObject">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ComputationalObject" name="code_ComputationalObject">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Datatype" name="Datatype">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Datatype" name="code_Datatype">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Module" name="Module">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Module" name="code_Module">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="Module_id"/>
+        <orm:order-column name="code_Module_codeElement_ind"/>
+        <orm:join-column name="code_Module_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CompilationUnit" name="CompilationUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CompilationUnit" name="code_CompilationUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.SharedUnit" name="SharedUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.SharedUnit" name="code_SharedUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.LanguageUnit" name="LanguageUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.LanguageUnit" name="code_LanguageUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CodeAssembly" name="CodeAssembly">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CodeAssembly" name="code_CodeAssembly">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Package" name="Package">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Package" name="code_Package">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ControlElement" name="ControlElement">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ControlElement" name="code_ControlElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="type">
-        <orm:join-column name="type"/>
+        <orm:join-column name="code_ControlElement_type"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -645,14 +658,15 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="ControlElement_id"/>
+        <orm:order-column name="code_ControlElement_codeElement_ind"/>
+        <orm:join-column name="code_ControlElement_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CallableUnit" name="CallableUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CallableUnit" name="code_CallableUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -660,7 +674,7 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.MethodUnit" name="MethodUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.MethodUnit" name="code_MethodUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -671,17 +685,17 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.DataElement" name="DataElement">
+  <orm:entity class="org.eclipse.modisco.kdm.code.DataElement" name="code_DataElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="ext">
         <orm:column name="ext"/>
       </orm:basic>
       <orm:basic name="size">
-        <orm:column name="size"/>
+        <orm:column name="T_size"/>
       </orm:basic>
       <orm:many-to-one name="type" optional="false">
-        <orm:join-column name="type"/>
+        <orm:join-column name="code_DataElement_type"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -689,14 +703,14 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="DataElement_id"/>
+        <orm:join-column name="code_DataElement_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.StorableUnit" name="StorableUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.StorableUnit" name="code_StorableUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -704,15 +718,15 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ItemUnit" name="ItemUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ItemUnit" name="code_ItemUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.IndexUnit" name="IndexUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.IndexUnit" name="code_IndexUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.MemberUnit" name="MemberUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.MemberUnit" name="code_MemberUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="export">
@@ -720,7 +734,7 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ParameterUnit" name="ParameterUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ParameterUnit" name="code_ParameterUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -731,205 +745,210 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ValueElement" name="ValueElement">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ValueElement" name="code_ValueElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Value" name="Value">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Value" name="code_Value">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ValueList" name="ValueList">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ValueList" name="code_ValueList">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="valueElement">
-        <orm:join-column name="ValueList_id"/>
+        <orm:order-column name="code_ValueList_valueElement_ind"/>
+        <orm:join-column name="code_ValueList_valueElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.PrimitiveType" name="PrimitiveType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.PrimitiveType" name="code_PrimitiveType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.BooleanType" name="BooleanType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.BooleanType" name="code_BooleanType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CharType" name="CharType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CharType" name="code_CharType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.OrdinalType" name="OrdinalType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.OrdinalType" name="code_OrdinalType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.DateType" name="DateType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.DateType" name="code_DateType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.TimeType" name="TimeType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.TimeType" name="code_TimeType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.IntegerType" name="IntegerType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.IntegerType" name="code_IntegerType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.DecimalType" name="DecimalType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.DecimalType" name="code_DecimalType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ScaledType" name="ScaledType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ScaledType" name="code_ScaledType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.FloatType" name="FloatType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.FloatType" name="code_FloatType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.VoidType" name="VoidType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.VoidType" name="code_VoidType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.StringType" name="StringType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.StringType" name="code_StringType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.BitType" name="BitType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.BitType" name="code_BitType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.BitstringType" name="BitstringType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.BitstringType" name="code_BitstringType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.OctetType" name="OctetType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.OctetType" name="code_OctetType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.OctetstringType" name="OctetstringType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.OctetstringType" name="code_OctetstringType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.EnumeratedType" name="EnumeratedType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.EnumeratedType" name="code_EnumeratedType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="value">
-        <orm:join-column name="EnumeratedType_id"/>
+        <orm:order-column name="code_EnumeratedType_value_ind"/>
+        <orm:join-column name="code_EnumeratedType_value"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="EnumeratedType_id"/>
+        <orm:order-column name="code_EnumeratedType_codeElement_ind"/>
+        <orm:join-column name="code_EnumeratedType_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CompositeType" name="CompositeType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CompositeType" name="code_CompositeType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="itemUnit">
-        <orm:join-column name="CompositeType_id"/>
+        <orm:order-column name="code_CompositeType_itemUnit_ind"/>
+        <orm:join-column name="code_CompositeType_itemUnit"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ChoiceType" name="ChoiceType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ChoiceType" name="code_ChoiceType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.RecordType" name="RecordType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.RecordType" name="code_RecordType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.DerivedType" name="DerivedType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.DerivedType" name="code_DerivedType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="itemUnit" optional="false">
-        <orm:join-column name="itemUnit"/>
+        <orm:join-column name="code_DerivedType_itemUnit"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ArrayType" name="ArrayType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ArrayType" name="code_ArrayType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="size">
-        <orm:column name="size"/>
+        <orm:column name="T_size"/>
       </orm:basic>
       <orm:many-to-one name="indexUnit" optional="false">
-        <orm:join-column name="indexUnit"/>
+        <orm:join-column name="code_ArrayType_indexUnit"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.PointerType" name="PointerType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.PointerType" name="code_PointerType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.RangeType" name="RangeType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.RangeType" name="code_RangeType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="lower">
-        <orm:column name="lower"/>
+        <orm:column name="T_lower"/>
       </orm:basic>
       <orm:basic name="upper">
-        <orm:column name="upper"/>
+        <orm:column name="T_upper"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.BagType" name="BagType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.BagType" name="code_BagType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="size">
-        <orm:column name="size"/>
+        <orm:column name="T_size"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.SetType" name="SetType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.SetType" name="code_SetType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="size">
-        <orm:column name="size"/>
+        <orm:column name="T_size"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.SequenceType" name="SequenceType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.SequenceType" name="code_SequenceType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="size">
-        <orm:column name="size"/>
+        <orm:column name="T_size"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Signature" name="Signature">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Signature" name="code_Signature">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="parameterUnit">
-        <orm:join-column name="Signature_id"/>
+        <orm:order-column name="code_Signature_parameterUnit_ind"/>
+        <orm:join-column name="code_Signature_parameterUnit"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.DefinedType" name="DefinedType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.DefinedType" name="code_DefinedType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="type" optional="false">
-        <orm:join-column name="type"/>
+        <orm:join-column name="code_DefinedType_type"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -937,70 +956,73 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="codeElement">
-        <orm:join-column name="codeElement"/>
+        <orm:join-column name="code_DefinedType_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.TypeUnit" name="TypeUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.TypeUnit" name="code_TypeUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.SynonymUnit" name="SynonymUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.SynonymUnit" name="code_SynonymUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ClassUnit" name="ClassUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ClassUnit" name="code_ClassUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="isAbstract">
         <orm:column name="isAbstract"/>
       </orm:basic>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="ClassUnit_id"/>
+        <orm:order-column name="code_ClassUnit_codeElement_ind"/>
+        <orm:join-column name="code_ClassUnit_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.InterfaceUnit" name="InterfaceUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.InterfaceUnit" name="code_InterfaceUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="InterfaceUnit_id"/>
+        <orm:order-column name="code_InterfaceUnit_codeElement_ind"/>
+        <orm:join-column name="code_InterfaceUnit_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.TemplateUnit" name="TemplateUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.TemplateUnit" name="code_TemplateUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="TemplateUnit_id"/>
+        <orm:order-column name="code_TemplateUnit_codeElement_ind"/>
+        <orm:join-column name="code_TemplateUnit_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.TemplateParameter" name="TemplateParameter">
+  <orm:entity class="org.eclipse.modisco.kdm.code.TemplateParameter" name="code_TemplateParameter">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.TemplateType" name="TemplateType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.TemplateType" name="code_TemplateType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.InstanceOf" name="InstanceOf">
+  <orm:entity class="org.eclipse.modisco.kdm.code.InstanceOf" name="code_InstanceOf">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_InstanceOf_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1008,7 +1030,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_InstanceOf_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1017,11 +1039,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ParameterTo" name="ParameterTo">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ParameterTo" name="code_ParameterTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_ParameterTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1029,7 +1051,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_ParameterTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1038,11 +1060,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Implements" name="Implements">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Implements" name="code_Implements">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_Implements_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1050,7 +1072,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_Implements_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1059,11 +1081,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ImplementationOf" name="ImplementationOf">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ImplementationOf" name="code_ImplementationOf">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_ImplementationOf_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1071,7 +1093,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_ImplementationOf_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1080,11 +1102,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.HasType" name="HasType">
+  <orm:entity class="org.eclipse.modisco.kdm.code.HasType" name="code_HasType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_HasType_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1092,7 +1114,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_HasType_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1101,11 +1123,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.HasValue" name="HasValue">
+  <orm:entity class="org.eclipse.modisco.kdm.code.HasValue" name="code_HasValue">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_HasValue_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1113,7 +1135,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_HasValue_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1122,11 +1144,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Extends" name="Extends">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Extends" name="code_Extends">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_Extends_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1134,7 +1156,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_Extends_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1143,18 +1165,18 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.PreprocessorDirective" name="PreprocessorDirective">
+  <orm:entity class="org.eclipse.modisco.kdm.code.PreprocessorDirective" name="code_PreprocessorDirective">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="PreprocessorDirective_id"/>
+        <orm:join-column name="code_PreprocessorDirective_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.MacroUnit" name="MacroUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.code.MacroUnit" name="code_MacroUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -1162,23 +1184,23 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.MacroDirective" name="MacroDirective">
+  <orm:entity class="org.eclipse.modisco.kdm.code.MacroDirective" name="code_MacroDirective">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.IncludeDirective" name="IncludeDirective">
+  <orm:entity class="org.eclipse.modisco.kdm.code.IncludeDirective" name="code_IncludeDirective">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.ConditionalDirective" name="ConditionalDirective">
+  <orm:entity class="org.eclipse.modisco.kdm.code.ConditionalDirective" name="code_ConditionalDirective">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Expands" name="Expands">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Expands" name="code_Expands">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_Expands_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1186,7 +1208,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_Expands_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1195,11 +1217,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.GeneratedFrom" name="GeneratedFrom">
+  <orm:entity class="org.eclipse.modisco.kdm.code.GeneratedFrom" name="code_GeneratedFrom">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_GeneratedFrom_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1207,7 +1229,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_GeneratedFrom_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1216,11 +1238,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Includes" name="Includes">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Includes" name="code_Includes">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_Includes_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1228,7 +1250,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_Includes_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1237,11 +1259,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.VariantTo" name="VariantTo">
+  <orm:entity class="org.eclipse.modisco.kdm.code.VariantTo" name="code_VariantTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_VariantTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1249,7 +1271,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_VariantTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1258,11 +1280,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Redefines" name="Redefines">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Redefines" name="code_Redefines">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_Redefines_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1270,7 +1292,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_Redefines_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1279,13 +1301,13 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Namespace" name="Namespace">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Namespace" name="code_Namespace">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-many name="groupedCode">
-        <orm:join-table name="Namespace_groupedCode">
-          <orm:join-column name="Namespace_id"/>
-          <orm:inverse-join-column name="CodeItem_id"/>
+        <orm:join-table name="code_Namespace_groupedCode">
+          <orm:join-column name="code_Namespace_groupedCode"/>
+          <orm:inverse-join-column name="code_CodeItem_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1295,11 +1317,11 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.VisibleIn" name="VisibleIn">
+  <orm:entity class="org.eclipse.modisco.kdm.code.VisibleIn" name="code_VisibleIn">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_VisibleIn_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1307,7 +1329,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_VisibleIn_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1316,11 +1338,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.Imports" name="Imports">
+  <orm:entity class="org.eclipse.modisco.kdm.code.Imports" name="code_Imports">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_Imports_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1328,7 +1350,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_Imports_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1337,15 +1359,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CodeElement" name="CodeElement">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CodeElement" name="code_CodeElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.code.CodeRelationship" name="CodeRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.code.CodeRelationship" name="code_CodeRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="code_CodeRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1353,7 +1375,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="code_CodeRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1362,11 +1384,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.EntryFlow" name="EntryFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.EntryFlow" name="action_EntryFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_EntryFlow_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1374,7 +1396,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_EntryFlow_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1383,39 +1405,40 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.AbstractActionRelationship" name="AbstractActionRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.action.AbstractActionRelationship" name="action_AbstractActionRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.ActionElement" name="ActionElement">
+  <orm:entity class="org.eclipse.modisco.kdm.action.ActionElement" name="action_ActionElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="ActionElement_id"/>
+        <orm:join-column name="action_ActionElement_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="actionRelation">
-        <orm:join-column name="ActionElement_id"/>
+        <orm:order-column name="action_ActionElement_actionRelation_ind"/>
+        <orm:join-column name="action_ActionElement_actionRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.BlockUnit" name="BlockUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.action.BlockUnit" name="action_BlockUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.ControlFlow" name="ControlFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.ControlFlow" name="action_ControlFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_ControlFlow_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1423,7 +1446,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_ControlFlow_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1432,27 +1455,27 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Flow" name="Flow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Flow" name="action_Flow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.TrueFlow" name="TrueFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.TrueFlow" name="action_TrueFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.FalseFlow" name="FalseFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.FalseFlow" name="action_FalseFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.GuardedFlow" name="GuardedFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.GuardedFlow" name="action_GuardedFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Calls" name="Calls">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Calls" name="action_Calls">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Calls_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1460,7 +1483,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Calls_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1469,11 +1492,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Dispatches" name="Dispatches">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Dispatches" name="action_Dispatches">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Dispatches_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1481,7 +1504,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Dispatches_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1490,11 +1513,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Reads" name="Reads">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Reads" name="action_Reads">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Reads_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1502,7 +1525,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Reads_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1511,11 +1534,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Writes" name="Writes">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Writes" name="action_Writes">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Writes_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1523,7 +1546,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Writes_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1532,11 +1555,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Addresses" name="Addresses">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Addresses" name="action_Addresses">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Addresses_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1544,7 +1567,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Addresses_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1553,11 +1576,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Creates" name="Creates">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Creates" name="action_Creates">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Creates_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1565,7 +1588,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Creates_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1574,27 +1597,27 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.ExceptionUnit" name="ExceptionUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.action.ExceptionUnit" name="action_ExceptionUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.TryUnit" name="TryUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.action.TryUnit" name="action_TryUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.CatchUnit" name="CatchUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.action.CatchUnit" name="action_CatchUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.FinallyUnit" name="FinallyUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.action.FinallyUnit" name="action_FinallyUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.ExitFlow" name="ExitFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.ExitFlow" name="action_ExitFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_ExitFlow_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1602,7 +1625,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_ExitFlow_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1611,11 +1634,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.ExceptionFlow" name="ExceptionFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.action.ExceptionFlow" name="action_ExceptionFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_ExceptionFlow_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1623,7 +1646,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_ExceptionFlow_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1632,11 +1655,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.Throws" name="Throws">
+  <orm:entity class="org.eclipse.modisco.kdm.action.Throws" name="action_Throws">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_Throws_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1644,7 +1667,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_Throws_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1653,11 +1676,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.CompliesTo" name="CompliesTo">
+  <orm:entity class="org.eclipse.modisco.kdm.action.CompliesTo" name="action_CompliesTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_CompliesTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1665,7 +1688,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_CompliesTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1674,11 +1697,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.UsesType" name="UsesType">
+  <orm:entity class="org.eclipse.modisco.kdm.action.UsesType" name="action_UsesType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_UsesType_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1686,7 +1709,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_UsesType_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1695,11 +1718,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.action.ActionRelationship" name="ActionRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.action.ActionRelationship" name="action_ActionRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="action_ActionRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1707,7 +1730,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="action_ActionRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1716,42 +1739,43 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformModel" name="PlatformModel">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformModel" name="platform_PlatformModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="platformElement">
-        <orm:join-column name="PlatformModel_id"/>
+        <orm:join-column name="platform_PlatformModel_platformElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformElement" name="AbstractPlatformElement">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformElement" name="platform_AbstractPlatformElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="source">
-        <orm:join-column name="AbstractPlatformElement_id"/>
+        <orm:join-column name="platform_AbstractPlatformElement_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="platformRelation">
-        <orm:join-column name="AbstractPlatformElement_id"/>
+        <orm:join-column name="platform_AbstractPlatformElement_platformRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="abstraction">
-        <orm:join-column name="AbstractPlatformElement_id"/>
+        <orm:order-column name="platform_AbstractPlatformElement_abstraction_ind"/>
+        <orm:join-column name="platform_AbstractPlatformElement_abstraction"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="AbstractPlatformElement_implementation">
-          <orm:join-column name="AbstractPlatformElement_id"/>
-          <orm:inverse-join-column name="AbstractCodeElement_id"/>
+        <orm:join-table name="platform_AbstractPlatformElement_implementation">
+          <orm:join-column name="platform_AbstractPlatformElement_implementation"/>
+          <orm:inverse-join-column name="code_AbstractCodeElement_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1761,54 +1785,54 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformRelationship" name="AbstractPlatformRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformRelationship" name="platform_AbstractPlatformRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.ResourceType" name="ResourceType">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.ResourceType" name="platform_ResourceType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="platformElement">
-        <orm:join-column name="ResourceType_id"/>
+        <orm:join-column name="platform_ResourceType_platformElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.NamingResource" name="NamingResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.NamingResource" name="platform_NamingResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.MarshalledResource" name="MarshalledResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.MarshalledResource" name="platform_MarshalledResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.MessagingResource" name="MessagingResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.MessagingResource" name="platform_MessagingResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.FileResource" name="FileResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.FileResource" name="platform_FileResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.ExecutionResource" name="ExecutionResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.ExecutionResource" name="platform_ExecutionResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.LockResource" name="LockResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.LockResource" name="platform_LockResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.StreamResource" name="StreamResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.StreamResource" name="platform_StreamResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.DataManager" name="DataManager">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.DataManager" name="platform_DataManager">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformEvent" name="PlatformEvent">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformEvent" name="platform_PlatformEvent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -1816,29 +1840,29 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformAction" name="PlatformAction">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformAction" name="platform_PlatformAction">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:one-to-many name="platformElement">
-        <orm:join-column name="PlatformAction_id"/>
+        <orm:join-column name="platform_PlatformAction_platformElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.ExternalActor" name="ExternalActor">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.ExternalActor" name="platform_ExternalActor">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.BindsTo" name="BindsTo">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.BindsTo" name="platform_BindsTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_BindsTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1846,7 +1870,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_BindsTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1855,11 +1879,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.Requires" name="Requires">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.Requires" name="platform_Requires">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_Requires_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1867,7 +1891,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_Requires_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1876,13 +1900,13 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedComponent" name="DeployedComponent">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedComponent" name="platform_DeployedComponent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-many name="groupedCode">
-        <orm:join-table name="DeployedComponent_groupedCode">
-          <orm:join-column name="DeployedComponent_id"/>
-          <orm:inverse-join-column name="Module_id"/>
+        <orm:join-table name="platform_DeployedComponent_groupedCode">
+          <orm:join-column name="platform_DeployedComponent_groupedCode"/>
+          <orm:inverse-join-column name="code_Module_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1892,11 +1916,11 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.ManagesResource" name="ManagesResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.ManagesResource" name="platform_ManagesResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_ManagesResource_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1904,7 +1928,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_ManagesResource_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1913,11 +1937,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.ReadsResource" name="ReadsResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.ReadsResource" name="platform_ReadsResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_ReadsResource_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1925,7 +1949,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_ReadsResource_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1934,11 +1958,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.WritesResource" name="WritesResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.WritesResource" name="platform_WritesResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_WritesResource_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1946,7 +1970,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_WritesResource_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1955,11 +1979,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.DefinedBy" name="DefinedBy">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.DefinedBy" name="platform_DefinedBy">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_DefinedBy_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1967,7 +1991,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_DefinedBy_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -1976,13 +2000,13 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedSoftwareSystem" name="DeployedSoftwareSystem">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedSoftwareSystem" name="platform_DeployedSoftwareSystem">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-many name="groupedComponent">
-        <orm:join-table name="DeployedSoftwareSystem_groupedComponent">
-          <orm:join-column name="DeployedSoftwareSystem_id"/>
-          <orm:inverse-join-column name="DeployedComponent_id"/>
+        <orm:join-table name="platform_DeployedSoftwareSystem_groupedComponent">
+          <orm:join-column name="platform_DeployedSoftwareSystem_groupedComponent"/>
+          <orm:inverse-join-column name="platform_DeployedComponent_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1992,51 +2016,51 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.Machine" name="Machine">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.Machine" name="platform_Machine">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="deployedComponent">
-        <orm:join-column name="Machine_id"/>
+        <orm:join-column name="platform_Machine_deployedComponent"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="deployedResource">
-        <orm:join-column name="Machine_id"/>
+        <orm:join-column name="platform_Machine_deployedResource"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedResource" name="DeployedResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedResource" name="platform_DeployedResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="platformElement">
-        <orm:join-column name="DeployedResource_id"/>
+        <orm:join-column name="platform_DeployedResource_platformElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.RuntimeResource" name="RuntimeResource">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.RuntimeResource" name="platform_RuntimeResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.Process" name="Process">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.Process" name="platform_Process">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.Thread" name="Thread">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.Thread" name="platform_Thread">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.Loads" name="Loads">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.Loads" name="platform_Loads">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_Loads_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2044,7 +2068,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_Loads_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2053,11 +2077,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.Spawns" name="Spawns">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.Spawns" name="platform_Spawns">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_Spawns_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2065,7 +2089,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_Spawns_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2074,15 +2098,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformElement" name="PlatformElement">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformElement" name="platform_PlatformElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformRelationship" name="PlatformRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformRelationship" name="platform_PlatformRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="platform_PlatformRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2090,7 +2114,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="platform_PlatformRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2099,34 +2123,34 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildElement" name="AbstractBuildElement">
+  <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildElement" name="build_AbstractBuildElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="buildRelation">
-        <orm:join-column name="AbstractBuildElement_id"/>
+        <orm:join-column name="build_AbstractBuildElement_buildRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildRelationship" name="AbstractBuildRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildRelationship" name="build_AbstractBuildRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildResource" name="BuildResource">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildResource" name="build_BuildResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="buildElement">
-        <orm:join-column name="BuildResource_id"/>
+        <orm:join-column name="build_BuildResource_buildElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="BuildResource_implementation">
-          <orm:join-column name="BuildResource_id"/>
-          <orm:inverse-join-column name="KDMEntity_id"/>
+        <orm:join-table name="build_BuildResource_implementation">
+          <orm:join-column name="build_BuildResource_implementation"/>
+          <orm:inverse-join-column name="core_KDMEntity_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2135,9 +2159,9 @@
         </orm:cascade>
       </orm:many-to-many>
       <orm:many-to-many name="groupedBuild">
-        <orm:join-table name="BuildResource_groupedBuild">
-          <orm:join-column name="BuildResource_id"/>
-          <orm:inverse-join-column name="AbstractBuildElement_id"/>
+        <orm:join-table name="build_BuildResource_groupedBuild">
+          <orm:join-column name="build_BuildResource_groupedBuild"/>
+          <orm:inverse-join-column name="build_AbstractBuildElement_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2147,29 +2171,29 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildDescription" name="BuildDescription">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildDescription" name="build_BuildDescription">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="text">
-        <orm:column name="text"/>
+        <orm:column name="T_text"/>
       </orm:basic>
       <orm:one-to-many name="source">
-        <orm:join-column name="BuildDescription_id"/>
+        <orm:join-column name="build_BuildDescription_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.SymbolicLink" name="SymbolicLink">
+  <orm:entity class="org.eclipse.modisco.kdm.build.SymbolicLink" name="build_SymbolicLink">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.LinksTo" name="LinksTo">
+  <orm:entity class="org.eclipse.modisco.kdm.build.LinksTo" name="build_LinksTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_LinksTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2177,7 +2201,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_LinksTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2186,11 +2210,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.Consumes" name="Consumes">
+  <orm:entity class="org.eclipse.modisco.kdm.build.Consumes" name="build_Consumes">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_Consumes_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2198,7 +2222,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_Consumes_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2207,42 +2231,42 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildStep" name="BuildStep">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildStep" name="build_BuildStep">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildModel" name="BuildModel">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildModel" name="build_BuildModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="buildElement">
-        <orm:join-column name="BuildModel_id"/>
+        <orm:join-column name="build_BuildModel_buildElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildComponent" name="BuildComponent">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildComponent" name="build_BuildComponent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.Supplier" name="Supplier">
+  <orm:entity class="org.eclipse.modisco.kdm.build.Supplier" name="build_Supplier">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.Tool" name="Tool">
+  <orm:entity class="org.eclipse.modisco.kdm.build.Tool" name="build_Tool">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildElement" name="BuildElement">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildElement" name="build_BuildElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildRelationship" name="BuildRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildRelationship" name="build_BuildRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_BuildRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2250,7 +2274,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_BuildRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2259,11 +2283,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.SuppliedBy" name="SuppliedBy">
+  <orm:entity class="org.eclipse.modisco.kdm.build.SuppliedBy" name="build_SuppliedBy">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_SuppliedBy_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2271,7 +2295,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_SuppliedBy_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2280,15 +2304,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.Library" name="Library">
+  <orm:entity class="org.eclipse.modisco.kdm.build.Library" name="build_Library">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.Produces" name="Produces">
+  <orm:entity class="org.eclipse.modisco.kdm.build.Produces" name="build_Produces">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_Produces_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2296,7 +2320,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_Produces_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2305,11 +2329,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.SupportedBy" name="SupportedBy">
+  <orm:entity class="org.eclipse.modisco.kdm.build.SupportedBy" name="build_SupportedBy">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_SupportedBy_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2317,7 +2341,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_SupportedBy_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2326,15 +2350,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.BuildProduct" name="BuildProduct">
+  <orm:entity class="org.eclipse.modisco.kdm.build.BuildProduct" name="build_BuildProduct">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.build.DescribedBy" name="DescribedBy">
+  <orm:entity class="org.eclipse.modisco.kdm.build.DescribedBy" name="build_DescribedBy">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="build_DescribedBy_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2342,7 +2366,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="build_DescribedBy_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2351,42 +2375,42 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualModel" name="ConceptualModel">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualModel" name="conceptual_ConceptualModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="conceptualElement">
-        <orm:join-column name="ConceptualModel_id"/>
+        <orm:join-column name="conceptual_ConceptualModel_conceptualElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement" name="AbstractConceptualElement">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement" name="conceptual_AbstractConceptualElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="source">
-        <orm:join-column name="AbstractConceptualElement_id"/>
+        <orm:join-column name="conceptual_AbstractConceptualElement_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="conceptualRelation">
-        <orm:join-column name="AbstractConceptualElement_id"/>
+        <orm:join-column name="conceptual_AbstractConceptualElement_conceptualRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="abstraction">
-        <orm:join-column name="AbstractConceptualElement_id"/>
+        <orm:join-column name="conceptual_AbstractConceptualElement_abstraction"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="AbstractConceptualElement_implementation">
-          <orm:join-column name="AbstractConceptualElement_id"/>
-          <orm:inverse-join-column name="KDMEntity_id"/>
+        <orm:join-table name="conceptual_AbstractConceptualElement_implementation">
+          <orm:join-column name="conceptual_AbstractConceptualElement_implementation"/>
+          <orm:inverse-join-column name="core_KDMEntity_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2396,34 +2420,34 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualRelationship" name="AbstractConceptualRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualRelationship" name="conceptual_AbstractConceptualRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.TermUnit" name="TermUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.TermUnit" name="conceptual_TermUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualContainer" name="ConceptualContainer">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualContainer" name="conceptual_ConceptualContainer">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="conceptualElement">
-        <orm:join-column name="ConceptualContainer_id"/>
+        <orm:join-column name="conceptual_ConceptualContainer_conceptualElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.FactUnit" name="FactUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.FactUnit" name="conceptual_FactUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualRelationship" name="ConceptualRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualRelationship" name="conceptual_ConceptualRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="conceptual_ConceptualRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2431,7 +2455,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="conceptual_ConceptualRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2440,23 +2464,23 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.BehaviorUnit" name="BehaviorUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.BehaviorUnit" name="conceptual_BehaviorUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.RuleUnit" name="RuleUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.RuleUnit" name="conceptual_RuleUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ScenarioUnit" name="ScenarioUnit">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ScenarioUnit" name="conceptual_ScenarioUnit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualFlow" name="ConceptualFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualFlow" name="conceptual_ConceptualFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="conceptual_ConceptualFlow_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2464,7 +2488,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="conceptual_ConceptualFlow_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2473,15 +2497,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualElement" name="ConceptualElement">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualElement" name="conceptual_ConceptualElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualRole" name="ConceptualRole">
+  <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualRole" name="conceptual_ConceptualRole">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="conceptualElement" optional="false">
-        <orm:join-column name="conceptualElement"/>
+        <orm:join-column name="conceptual_ConceptualRole_conceptualElement"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2490,55 +2514,56 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataModel" name="DataModel">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataModel" name="data_DataModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="dataElement">
-        <orm:join-column name="DataModel_id"/>
+        <orm:join-column name="data_DataModel_dataElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataElement" name="AbstractDataElement">
+  <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataElement" name="data_AbstractDataElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="source">
-        <orm:join-column name="AbstractDataElement_id"/>
+        <orm:join-column name="data_AbstractDataElement_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="dataRelation">
-        <orm:join-column name="AbstractDataElement_id"/>
+        <orm:join-column name="data_AbstractDataElement_dataRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="abstraction">
-        <orm:join-column name="AbstractDataElement_id"/>
+        <orm:order-column name="data_AbstractDataElement_abstraction_ind"/>
+        <orm:join-column name="data_AbstractDataElement_abstraction"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataRelationship" name="AbstractDataRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataRelationship" name="data_AbstractDataRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataResource" name="DataResource">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataResource" name="data_DataResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.IndexElement" name="IndexElement">
+  <orm:entity class="org.eclipse.modisco.kdm.data.IndexElement" name="data_IndexElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="IndexElement_implementation">
-          <orm:join-column name="IndexElement_id"/>
-          <orm:inverse-join-column name="ItemUnit_id"/>
+        <orm:join-table name="data_IndexElement_implementation">
+          <orm:join-column name="data_IndexElement_implementation"/>
+          <orm:inverse-join-column name="code_ItemUnit_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2548,19 +2573,19 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.UniqueKey" name="UniqueKey">
+  <orm:entity class="org.eclipse.modisco.kdm.data.UniqueKey" name="data_UniqueKey">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.Index" name="Index">
+  <orm:entity class="org.eclipse.modisco.kdm.data.Index" name="data_Index">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.KeyRelation" name="KeyRelation">
+  <orm:entity class="org.eclipse.modisco.kdm.data.KeyRelation" name="data_KeyRelation">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_KeyRelation_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2568,7 +2593,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_KeyRelation_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2577,60 +2602,61 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ReferenceKey" name="ReferenceKey">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ReferenceKey" name="data_ReferenceKey">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataContainer" name="DataContainer">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataContainer" name="data_DataContainer">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="dataElement">
-        <orm:join-column name="DataContainer_id"/>
+        <orm:join-column name="data_DataContainer_dataElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.Catalog" name="Catalog">
+  <orm:entity class="org.eclipse.modisco.kdm.data.Catalog" name="data_Catalog">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.RelationalSchema" name="RelationalSchema">
+  <orm:entity class="org.eclipse.modisco.kdm.data.RelationalSchema" name="data_RelationalSchema">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
-        <orm:join-column name="RelationalSchema_id"/>
+        <orm:join-column name="data_RelationalSchema_codeElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ColumnSet" name="ColumnSet">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ColumnSet" name="data_ColumnSet">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="itemUnit">
-        <orm:join-column name="ColumnSet_id"/>
+        <orm:order-column name="data_ColumnSet_itemUnit_ind"/>
+        <orm:join-column name="data_ColumnSet_itemUnit"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.RelationalTable" name="RelationalTable">
+  <orm:entity class="org.eclipse.modisco.kdm.data.RelationalTable" name="data_RelationalTable">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.RelationalView" name="RelationalView">
+  <orm:entity class="org.eclipse.modisco.kdm.data.RelationalView" name="data_RelationalView">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.RecordFile" name="RecordFile">
+  <orm:entity class="org.eclipse.modisco.kdm.data.RecordFile" name="data_RecordFile">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataEvent" name="DataEvent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataEvent" name="data_DataEvent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -2638,49 +2664,50 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.XMLSchema" name="XMLSchema">
+  <orm:entity class="org.eclipse.modisco.kdm.data.XMLSchema" name="data_XMLSchema">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="contentElement">
-        <orm:join-column name="XMLSchema_id"/>
+        <orm:join-column name="data_XMLSchema_contentElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.AbstractContentElement" name="AbstractContentElement">
+  <orm:entity class="org.eclipse.modisco.kdm.data.AbstractContentElement" name="data_AbstractContentElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ComplexContentType" name="ComplexContentType">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ComplexContentType" name="data_ComplexContentType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="contentElement">
-        <orm:join-column name="ComplexContentType_id"/>
+        <orm:order-column name="data_ComplexContentType_contentElement_ind"/>
+        <orm:join-column name="data_ComplexContentType_contentElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.AllContent" name="AllContent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.AllContent" name="data_AllContent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.SeqContent" name="SeqContent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.SeqContent" name="data_SeqContent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ChoiceContent" name="ChoiceContent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ChoiceContent" name="data_ChoiceContent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ContentItem" name="ContentItem">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ContentItem" name="data_ContentItem">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="type">
-        <orm:join-column name="type"/>
+        <orm:join-column name="data_ContentItem_type"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2688,38 +2715,38 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:one-to-many name="contentElement">
-        <orm:join-column name="ContentItem_id"/>
+        <orm:join-column name="data_ContentItem_contentElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.GroupContent" name="GroupContent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.GroupContent" name="data_GroupContent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ContentRestriction" name="ContentRestriction">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ContentRestriction" name="data_ContentRestriction">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:basic name="value">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.SimpleContentType" name="SimpleContentType">
+  <orm:entity class="org.eclipse.modisco.kdm.data.SimpleContentType" name="data_SimpleContentType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:many-to-many name="type">
-        <orm:join-table name="SimpleContentType_type">
-          <orm:join-column name="SimpleContentType_id"/>
-          <orm:inverse-join-column name="ComplexContentType_id"/>
+        <orm:join-table name="data_SimpleContentType_type">
+          <orm:join-column name="data_SimpleContentType_type"/>
+          <orm:inverse-join-column name="data_ComplexContentType_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2729,15 +2756,15 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ExtendedDataElement" name="ExtendedDataElement">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ExtendedDataElement" name="data_ExtendedDataElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataRelationship" name="DataRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataRelationship" name="data_DataRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_DataRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2745,7 +2772,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_DataRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2754,30 +2781,30 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.MixedContent" name="MixedContent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.MixedContent" name="data_MixedContent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ContentReference" name="ContentReference">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ContentReference" name="data_ContentReference">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataAction" name="DataAction">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataAction" name="data_DataAction">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:one-to-many name="dataElement">
-        <orm:join-column name="DataAction_id"/>
+        <orm:join-column name="data_DataAction_dataElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="DataAction_implementation">
-          <orm:join-column name="DataAction_id"/>
-          <orm:inverse-join-column name="ActionElement_id"/>
+        <orm:join-table name="data_DataAction_implementation">
+          <orm:join-column name="data_DataAction_implementation"/>
+          <orm:inverse-join-column name="action_ActionElement_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2787,11 +2814,11 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ReadsColumnSet" name="ReadsColumnSet">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ReadsColumnSet" name="data_ReadsColumnSet">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_ReadsColumnSet_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2799,7 +2826,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_ReadsColumnSet_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2808,15 +2835,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ContentAttribute" name="ContentAttribute">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ContentAttribute" name="data_ContentAttribute">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.TypedBy" name="TypedBy">
+  <orm:entity class="org.eclipse.modisco.kdm.data.TypedBy" name="data_TypedBy">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_TypedBy_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2824,7 +2851,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_TypedBy_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2833,11 +2860,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ReferenceTo" name="ReferenceTo">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ReferenceTo" name="data_ReferenceTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_ReferenceTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2845,7 +2872,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_ReferenceTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2854,11 +2881,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.RestrictionOf" name="RestrictionOf">
+  <orm:entity class="org.eclipse.modisco.kdm.data.RestrictionOf" name="data_RestrictionOf">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_RestrictionOf_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2866,7 +2893,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_RestrictionOf_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2875,11 +2902,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ExtensionTo" name="ExtensionTo">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ExtensionTo" name="data_ExtensionTo">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_ExtensionTo_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2887,7 +2914,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_ExtensionTo_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2896,11 +2923,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DatatypeOf" name="DatatypeOf">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DatatypeOf" name="data_DatatypeOf">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_DatatypeOf_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2908,7 +2935,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_DatatypeOf_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2917,11 +2944,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.HasContent" name="HasContent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.HasContent" name="data_HasContent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_HasContent_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2929,7 +2956,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_HasContent_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2938,11 +2965,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.WritesColumnSet" name="WritesColumnSet">
+  <orm:entity class="org.eclipse.modisco.kdm.data.WritesColumnSet" name="data_WritesColumnSet">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_WritesColumnSet_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2950,7 +2977,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_WritesColumnSet_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2959,11 +2986,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ProducesDataEvent" name="ProducesDataEvent">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ProducesDataEvent" name="data_ProducesDataEvent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_ProducesDataEvent_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2971,7 +2998,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_ProducesDataEvent_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -2980,19 +3007,19 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.DataSegment" name="DataSegment">
+  <orm:entity class="org.eclipse.modisco.kdm.data.DataSegment" name="data_DataSegment">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ContentElement" name="ContentElement">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ContentElement" name="data_ContentElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.data.ManagesData" name="ManagesData">
+  <orm:entity class="org.eclipse.modisco.kdm.data.ManagesData" name="data_ManagesData">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="data_ManagesData_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3000,7 +3027,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="data_ManagesData_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3009,42 +3036,43 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.EventModel" name="EventModel">
+  <orm:entity class="org.eclipse.modisco.kdm.event.EventModel" name="event_EventModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="eventElement">
-        <orm:join-column name="EventModel_id"/>
+        <orm:join-column name="event_EventModel_eventElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventElement" name="AbstractEventElement">
+  <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventElement" name="event_AbstractEventElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="source">
-        <orm:join-column name="AbstractEventElement_id"/>
+        <orm:join-column name="event_AbstractEventElement_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="eventRelation">
-        <orm:join-column name="AbstractEventElement_id"/>
+        <orm:join-column name="event_AbstractEventElement_eventRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="abstraction">
-        <orm:join-column name="AbstractEventElement_id"/>
+        <orm:order-column name="event_AbstractEventElement_abstraction_ind"/>
+        <orm:join-column name="event_AbstractEventElement_abstraction"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="AbstractEventElement_implementation">
-          <orm:join-column name="AbstractEventElement_id"/>
-          <orm:inverse-join-column name="AbstractCodeElement_id"/>
+        <orm:join-table name="event_AbstractEventElement_implementation">
+          <orm:join-column name="event_AbstractEventElement_implementation"/>
+          <orm:inverse-join-column name="code_AbstractCodeElement_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -3054,11 +3082,11 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventRelationship" name="AbstractEventRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventRelationship" name="event_AbstractEventRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.Event" name="Event">
+  <orm:entity class="org.eclipse.modisco.kdm.event.Event" name="event_Event">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -3066,11 +3094,11 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.EventRelationship" name="EventRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.event.EventRelationship" name="event_EventRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="event_EventRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3078,7 +3106,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="event_EventRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3087,52 +3115,52 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.EventResource" name="EventResource">
+  <orm:entity class="org.eclipse.modisco.kdm.event.EventResource" name="event_EventResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="eventElement">
-        <orm:join-column name="EventResource_id"/>
+        <orm:join-column name="event_EventResource_eventElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.State" name="State">
+  <orm:entity class="org.eclipse.modisco.kdm.event.State" name="event_State">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.Transition" name="Transition">
+  <orm:entity class="org.eclipse.modisco.kdm.event.Transition" name="event_Transition">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.OnEntry" name="OnEntry">
+  <orm:entity class="org.eclipse.modisco.kdm.event.OnEntry" name="event_OnEntry">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.OnExit" name="OnExit">
+  <orm:entity class="org.eclipse.modisco.kdm.event.OnExit" name="event_OnExit">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.EventAction" name="EventAction">
+  <orm:entity class="org.eclipse.modisco.kdm.event.EventAction" name="event_EventAction">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:one-to-many name="eventElement">
-        <orm:join-column name="EventAction_id"/>
+        <orm:join-column name="event_EventAction_eventElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.ReadsState" name="ReadsState">
+  <orm:entity class="org.eclipse.modisco.kdm.event.ReadsState" name="event_ReadsState">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="event_ReadsState_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3140,7 +3168,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="event_ReadsState_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3149,11 +3177,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.ProducesEvent" name="ProducesEvent">
+  <orm:entity class="org.eclipse.modisco.kdm.event.ProducesEvent" name="event_ProducesEvent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="event_ProducesEvent_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3161,7 +3189,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="event_ProducesEvent_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3170,11 +3198,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.ConsumesEvent" name="ConsumesEvent">
+  <orm:entity class="org.eclipse.modisco.kdm.event.ConsumesEvent" name="event_ConsumesEvent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="event_ConsumesEvent_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3182,7 +3210,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="event_ConsumesEvent_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3191,11 +3219,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.NextState" name="NextState">
+  <orm:entity class="org.eclipse.modisco.kdm.event.NextState" name="event_NextState">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="event_NextState_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3203,7 +3231,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="event_NextState_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3212,19 +3240,19 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.InitialState" name="InitialState">
+  <orm:entity class="org.eclipse.modisco.kdm.event.InitialState" name="event_InitialState">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.EventElement" name="EventElement">
+  <orm:entity class="org.eclipse.modisco.kdm.event.EventElement" name="event_EventElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.event.HasState" name="HasState">
+  <orm:entity class="org.eclipse.modisco.kdm.event.HasState" name="event_HasState">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="event_HasState_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3232,7 +3260,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="event_HasState_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3241,31 +3269,31 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureElement" name="AbstractStructureElement">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureElement" name="structure_AbstractStructureElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="aggregated">
-        <orm:join-column name="AbstractStructureElement_id"/>
+        <orm:join-column name="structure_AbstractStructureElement_aggregated"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="structureElement">
-        <orm:join-column name="AbstractStructureElement_id"/>
+        <orm:join-column name="structure_AbstractStructureElement_structureElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="structureRelationship">
-        <orm:join-column name="AbstractStructureElement_id"/>
+        <orm:join-column name="structure_AbstractStructureElement_structureRelationship"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="AbstractStructureElement_implementation">
-          <orm:join-column name="AbstractStructureElement_id"/>
-          <orm:inverse-join-column name="KDMEntity_id"/>
+        <orm:join-table name="structure_AbstractStructureElement_implementation">
+          <orm:join-column name="structure_AbstractStructureElement_implementation"/>
+          <orm:inverse-join-column name="core_KDMEntity_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -3275,42 +3303,42 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureRelationship" name="AbstractStructureRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureRelationship" name="structure_AbstractStructureRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.Subsystem" name="Subsystem">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.Subsystem" name="structure_Subsystem">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.Layer" name="Layer">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.Layer" name="structure_Layer">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.StructureModel" name="StructureModel">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.StructureModel" name="structure_StructureModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="structureElement">
-        <orm:join-column name="StructureModel_id"/>
+        <orm:join-column name="structure_StructureModel_structureElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.Component" name="Component">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.Component" name="structure_Component">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.SoftwareSystem" name="SoftwareSystem">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.SoftwareSystem" name="structure_SoftwareSystem">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.StructureRelationship" name="StructureRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.StructureRelationship" name="structure_StructureRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="structure_StructureRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3318,7 +3346,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="structure_StructureRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3327,39 +3355,40 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.ArchitectureView" name="ArchitectureView">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.ArchitectureView" name="structure_ArchitectureView">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.structure.StructureElement" name="StructureElement">
+  <orm:entity class="org.eclipse.modisco.kdm.structure.StructureElement" name="structure_StructureElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIElement" name="AbstractUIElement">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIElement" name="ui_AbstractUIElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="source">
-        <orm:join-column name="AbstractUIElement_id"/>
+        <orm:join-column name="ui_AbstractUIElement_source"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="uIRelation">
-        <orm:join-column name="AbstractUIElement_id"/>
+        <orm:join-column name="ui_AbstractUIElement_UIRelation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="abstraction">
-        <orm:join-column name="AbstractUIElement_id"/>
+        <orm:order-column name="ui_AbstractUIElement_abstraction_ind"/>
+        <orm:join-column name="ui_AbstractUIElement_abstraction"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:many-to-many name="implementation">
-        <orm:join-table name="AbstractUIElement_implementation">
-          <orm:join-column name="AbstractUIElement_id"/>
-          <orm:inverse-join-column name="AbstractCodeElement_id"/>
+        <orm:join-table name="ui_AbstractUIElement_implementation">
+          <orm:join-column name="ui_AbstractUIElement_implementation"/>
+          <orm:inverse-join-column name="code_AbstractCodeElement_id"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -3369,49 +3398,49 @@
       </orm:many-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIRelationship" name="AbstractUIRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIRelationship" name="ui_AbstractUIRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIResource" name="UIResource">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIResource" name="ui_UIResource">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="uIElement">
-        <orm:join-column name="UIResource_id"/>
+        <orm:join-column name="ui_UIResource_UIElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIDisplay" name="UIDisplay">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIDisplay" name="ui_UIDisplay">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.Screen" name="Screen">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.Screen" name="ui_Screen">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.Report" name="Report">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.Report" name="ui_Report">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIModel" name="UIModel">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIModel" name="ui_UIModel">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="uIElement">
-        <orm:join-column name="UIModel_id"/>
+        <orm:join-column name="ui_UIModel_UIElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UILayout" name="UILayout">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UILayout" name="ui_UILayout">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_UILayout_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3419,7 +3448,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_UILayout_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3428,15 +3457,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIField" name="UIField">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIField" name="ui_UIField">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.DisplaysImage" name="DisplaysImage">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.DisplaysImage" name="ui_DisplaysImage">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_DisplaysImage_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3444,7 +3473,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_DisplaysImage_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3453,11 +3482,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.Displays" name="Displays">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.Displays" name="ui_Displays">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_Displays_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3465,7 +3494,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_Displays_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3474,11 +3503,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIFlow" name="UIFlow">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIFlow" name="ui_UIFlow">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_UIFlow_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3486,7 +3515,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_UIFlow_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3495,15 +3524,15 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIElement" name="UIElement">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIElement" name="ui_UIElement">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIRelationship" name="UIRelationship">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIRelationship" name="ui_UIRelationship">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_UIRelationship_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3511,7 +3540,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_UIRelationship_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3520,21 +3549,21 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIAction" name="UIAction">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIAction" name="ui_UIAction">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind"/>
       </orm:basic>
       <orm:one-to-many name="uIElement">
-        <orm:join-column name="UIAction_id"/>
+        <orm:join-column name="ui_UIAction_UIElement"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.UIEvent" name="UIEvent">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.UIEvent" name="ui_UIEvent">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="kind">
@@ -3542,11 +3571,11 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.ReadsUI" name="ReadsUI">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.ReadsUI" name="ui_ReadsUI">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_ReadsUI_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3554,7 +3583,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_ReadsUI_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3563,11 +3592,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.WritesUI" name="WritesUI">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.WritesUI" name="ui_WritesUI">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_WritesUI_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3575,7 +3604,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_WritesUI_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3584,11 +3613,11 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.modisco.kdm.ui.ManagesUI" name="ManagesUI">
+  <orm:entity class="org.eclipse.modisco.kdm.ui.ManagesUI" name="ui_ManagesUI">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
-        <orm:join-column name="to"/>
+        <orm:join-column name="ui_ManagesUI_to"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -3596,7 +3625,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="from" optional="false">
-        <orm:join-column name="from"/>
+        <orm:join-column name="ui_ManagesUI_from"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>

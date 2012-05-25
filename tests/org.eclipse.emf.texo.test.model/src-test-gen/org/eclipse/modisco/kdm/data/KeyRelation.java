@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "KeyRelation")
+@Entity(name = "data_KeyRelation")
 public class KeyRelation extends AbstractDataRelationship {
 
   /**

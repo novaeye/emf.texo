@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Tool")
+@Entity(name = "build_Tool")
 public class Tool extends AbstractBuildElement {
 
   /**

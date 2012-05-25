@@ -12,7 +12,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "TestDate")
+@Entity(name = "datetime_TestDate")
 public class TestDate extends Identifiable {
 
   /**

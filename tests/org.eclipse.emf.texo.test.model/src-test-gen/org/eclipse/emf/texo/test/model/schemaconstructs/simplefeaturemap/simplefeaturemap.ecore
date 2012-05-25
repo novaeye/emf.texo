@@ -4,7 +4,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap"
     nsURI="http://www.eclipse.org/emf/texo/test/model/schemaconstructs/simplefeaturemap"
     nsPrefix="simplefeaturemap">
-  <eClassifiers xsi:type="ecore:EClass" name="PurchaseOrder">
+  <eClassifiers xsi:type="ecore:EClass" name="PurchaseOrder" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="PurchaseOrder"/>
       <details key="kind" value="elementOnly"/>
@@ -19,7 +19,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Supplier">
+  <eClassifiers xsi:type="ecore:EClass" name="Supplier" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Supplier"/>
       <details key="kind" value="elementOnly"/>

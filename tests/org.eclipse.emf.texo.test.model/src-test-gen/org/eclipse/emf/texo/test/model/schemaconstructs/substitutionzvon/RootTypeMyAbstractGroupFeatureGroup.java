@@ -18,7 +18,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RootType_myAbstractGroup")
+@Entity(name = "substitutionzvon_RootType_myAbstractGroup")
 public class RootTypeMyAbstractGroupFeatureGroup extends Identifiable {
 
   /**

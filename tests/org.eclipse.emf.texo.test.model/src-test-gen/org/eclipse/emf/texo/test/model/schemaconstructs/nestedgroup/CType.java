@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "CType")
+@Entity(name = "nestedgroup_CType")
 public class CType extends Identifiable {
 
   /**

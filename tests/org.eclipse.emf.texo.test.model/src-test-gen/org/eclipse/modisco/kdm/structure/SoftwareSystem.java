@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SoftwareSystem")
+@Entity(name = "structure_SoftwareSystem")
 public class SoftwareSystem extends AbstractStructureElement {
 
   /**

@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.AddressableDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.AudioVisualItemDao;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.dao.BookDao;
@@ -70,28 +71,28 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOK_TITLE_FEATURE_ID = 3;
+  public static final int BOOK_TITLE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOK_PAGES_FEATURE_ID = 4;
+  public static final int BOOK_PAGES_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOK_CATEGORY_FEATURE_ID = 5;
+  public static final int BOOK_CATEGORY_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOK_AUTHOR_FEATURE_ID = 6;
+  public static final int BOOK_AUTHOR_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -105,70 +106,70 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int LIBRARY_NAME_FEATURE_ID = 1;
+  public static final int LIBRARY_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_WRITERS_FEATURE_ID = 2;
+  public static final int LIBRARY_WRITERS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_EMPLOYEES_FEATURE_ID = 3;
+  public static final int LIBRARY_EMPLOYEES_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_BORROWERS_FEATURE_ID = 4;
+  public static final int LIBRARY_BORROWERS_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_STOCK_FEATURE_ID = 5;
+  public static final int LIBRARY_STOCK_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_BOOKS_FEATURE_ID = 6;
+  public static final int LIBRARY_BOOKS_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_BRANCHES_FEATURE_ID = 7;
+  public static final int LIBRARY_BRANCHES_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_PARENTBRANCH_FEATURE_ID = 8;
+  public static final int LIBRARY_PARENTBRANCH_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_PEOPLE_FEATURE_ID = 9;
+  public static final int LIBRARY_PEOPLE_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int LIBRARY_ADDRESS_FEATURE_ID = 0;
+  public static final int LIBRARY_ADDRESS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -182,14 +183,14 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITER_NAME_FEATURE_ID = 3;
+  public static final int WRITER_NAME_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITER_BOOKS_FEATURE_ID = 4;
+  public static final int WRITER_BOOKS_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -210,7 +211,7 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ITEM_PUBLICATIONDATE_FEATURE_ID = 0;
+  public static final int ITEM_PUBLICATIONDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -245,14 +246,14 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CIRCULATINGITEM_COPIES_FEATURE_ID = 1;
+  public static final int CIRCULATINGITEM_COPIES_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CIRCULATINGITEM_BORROWERS_FEATURE_ID = 2;
+  public static final int CIRCULATINGITEM_BORROWERS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -266,14 +267,14 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERIODICAL_TITLE_FEATURE_ID = 1;
+  public static final int PERIODICAL_TITLE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERIODICAL_ISSUESPERYEAR_FEATURE_ID = 2;
+  public static final int PERIODICAL_ISSUESPERYEAR_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -287,21 +288,21 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int AUDIOVISUALITEM_TITLE_FEATURE_ID = 3;
+  public static final int AUDIOVISUALITEM_TITLE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AUDIOVISUALITEM_MINUTESLENGTH_FEATURE_ID = 4;
+  public static final int AUDIOVISUALITEM_MINUTESLENGTH_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AUDIOVISUALITEM_DAMAGED_FEATURE_ID = 5;
+  public static final int AUDIOVISUALITEM_DAMAGED_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -315,14 +316,14 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOKONTAPE_READER_FEATURE_ID = 6;
+  public static final int BOOKONTAPE_READER_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOKONTAPE_AUTHOR_FEATURE_ID = 7;
+  public static final int BOOKONTAPE_AUTHOR_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -336,7 +337,7 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VIDEOCASSETTE_CAST_FEATURE_ID = 6;
+  public static final int VIDEOCASSETTE_CAST_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -350,7 +351,7 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BORROWER_BORROWED_FEATURE_ID = 3;
+  public static final int BORROWER_BORROWED_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -364,21 +365,21 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERSON_FIRSTNAME_FEATURE_ID = 1;
+  public static final int PERSON_FIRSTNAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_LASTNAME_FEATURE_ID = 2;
+  public static final int PERSON_LASTNAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_ADDRESS_FEATURE_ID = 0;
+  public static final int PERSON_ADDRESS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -392,7 +393,7 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EMPLOYEE_MANAGER_FEATURE_ID = 3;
+  public static final int EMPLOYEE_MANAGER_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -431,6 +432,8 @@ public class ExtlibraryModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

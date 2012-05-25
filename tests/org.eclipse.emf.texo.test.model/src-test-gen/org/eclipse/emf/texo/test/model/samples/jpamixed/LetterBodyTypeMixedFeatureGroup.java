@@ -22,7 +22,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "LetterBodyType_mixed")
+@Entity(name = "jpamixed_LetterBodyType_mixed")
 public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
 
   /**
@@ -191,7 +191,7 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   @Temporal(TemporalType.DATE)
   private Date shipDate;
 

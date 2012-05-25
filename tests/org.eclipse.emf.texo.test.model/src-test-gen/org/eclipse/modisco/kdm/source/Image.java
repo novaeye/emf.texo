@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Image")
+@Entity(name = "source_Image")
 public class Image extends InventoryItem {
 
   /**

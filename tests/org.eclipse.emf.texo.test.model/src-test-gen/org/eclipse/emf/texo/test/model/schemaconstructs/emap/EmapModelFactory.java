@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.schemaconstructs.emap.
@@ -164,13 +164,14 @@ public class EmapModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BookModelObject<E extends Book> extends AbstractModelObject<E> {
+  public static class BookModelObject<E extends Book> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EmapModelPackage.INSTANCE.getBookEClass();
     }
@@ -178,6 +179,7 @@ public class EmapModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EmapModelPackage.INSTANCE;
     }
@@ -256,13 +258,15 @@ public class EmapModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BookStoreModelObject<E extends BookStore> extends AbstractModelObject<E> {
+  public static class BookStoreModelObject<E extends BookStore> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EmapModelPackage.INSTANCE.getBookStoreEClass();
     }
@@ -270,6 +274,7 @@ public class EmapModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EmapModelPackage.INSTANCE;
     }
@@ -348,13 +353,14 @@ public class EmapModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class WriterModelObject<E extends Writer> extends AbstractModelObject<E> {
+  public static class WriterModelObject<E extends Writer> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EmapModelPackage.INSTANCE.getWriterEClass();
     }
@@ -362,6 +368,7 @@ public class EmapModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EmapModelPackage.INSTANCE;
     }

@@ -9,7 +9,7 @@ import org.eclipse.modisco.kdm.core.ModelElement;
  * 
  * @generated
  */
-@Entity(name = "CommentUnit")
+@Entity(name = "code_CommentUnit")
 public class CommentUnit extends ModelElement {
 
   /**

@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SimpleAllMapType")
+@Entity(name = "groupall_SimpleAllMapType")
 public class SimpleAllMapType extends Identifiable {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "DataManager")
+@Entity(name = "platform_DataManager")
 public class DataManager extends ResourceType {
 
   /**

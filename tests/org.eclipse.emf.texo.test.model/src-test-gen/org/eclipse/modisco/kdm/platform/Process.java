@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Process")
+@Entity(name = "platform_Process")
 public class Process extends RuntimeResource {
 
   /**

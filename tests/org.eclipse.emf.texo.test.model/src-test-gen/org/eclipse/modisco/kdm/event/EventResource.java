@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "EventResource")
+@Entity(name = "event_EventResource")
 public class EventResource extends AbstractEventElement {
 
   /**

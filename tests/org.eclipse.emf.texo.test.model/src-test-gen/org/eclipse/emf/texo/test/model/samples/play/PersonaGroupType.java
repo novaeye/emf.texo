@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -14,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PersonaGroupType")
+@Entity(name = "play_PersonaGroupType")
 public class PersonaGroupType extends Identifiable {
 
   /**
@@ -23,7 +24,8 @@ public class PersonaGroupType extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "PersonaGroupType_persona")
+  @OrderColumn()
+  @CollectionTable(name = "play_PersonaGroupType_persona")
   private List<String> persona = new ArrayList<String>();
 
   /**

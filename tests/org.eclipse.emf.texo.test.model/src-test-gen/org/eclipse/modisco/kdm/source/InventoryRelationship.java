@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "InventoryRelationship")
+@Entity(name = "source_InventoryRelationship")
 public class InventoryRelationship extends AbstractInventoryRelationship {
 
   /**

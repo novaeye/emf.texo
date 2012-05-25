@@ -7,6 +7,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -16,7 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RentalContract")
+@Entity(name = "rental_RentalContract")
 public class RentalContract extends Identifiable {
 
   /**
@@ -59,6 +60,7 @@ public class RentalContract extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<RentalContractLine> rentalContractLines = new ArrayList<RentalContractLine>();
 
   /**

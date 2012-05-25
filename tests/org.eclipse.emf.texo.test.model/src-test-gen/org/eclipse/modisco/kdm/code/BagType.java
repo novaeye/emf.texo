@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "BagType")
+@Entity(name = "code_BagType")
 public class BagType extends DerivedType {
 
   /**

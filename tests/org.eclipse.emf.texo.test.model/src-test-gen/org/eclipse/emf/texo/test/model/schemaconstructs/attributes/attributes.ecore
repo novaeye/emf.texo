@@ -7,7 +7,7 @@
   <eAnnotations source="texo.test">
     <details key="appinfo" value="@NoXMLCompare"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="AType">
+  <eClassifiers xsi:type="ecore:EClass" name="AType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="A_._type"/>
       <details key="kind" value="elementOnly"/>
@@ -71,7 +71,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
       <details key="kind" value="mixed"/>
@@ -131,7 +131,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RType">
+  <eClassifiers xsi:type="ecore:EClass" name="RType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="R_._type"/>
       <details key="kind" value="elementOnly"/>

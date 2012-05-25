@@ -5,13 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>Module</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Module")
+@Entity(name = "code_Module")
 public class Module extends CodeItem {
 
   /**
@@ -20,6 +21,7 @@ public class Module extends CodeItem {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<AbstractCodeElement> codeElement = new ArrayList<AbstractCodeElement>();
 
   /**

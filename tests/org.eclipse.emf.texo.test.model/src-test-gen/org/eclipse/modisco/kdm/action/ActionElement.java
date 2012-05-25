@@ -8,6 +8,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.modisco.kdm.code.AbstractCodeElement;
  * 
  * @generated
  */
-@Entity(name = "ActionElement")
+@Entity(name = "action_ActionElement")
 public class ActionElement extends AbstractCodeElement {
 
   /**
@@ -40,6 +41,7 @@ public class ActionElement extends AbstractCodeElement {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<AbstractActionRelationship> actionRelation = new ArrayList<AbstractActionRelationship>();
 
   /**

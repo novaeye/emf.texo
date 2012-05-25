@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -13,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Supplier")
+@Entity(name = "com_example_epo2_Supplier")
 public class Supplier extends Identifiable {
 
   /**
@@ -30,6 +31,7 @@ public class Supplier extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Customer> customers = new ArrayList<Customer>();
 
   /**
@@ -38,6 +40,7 @@ public class Supplier extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<PurchaseOrder> orders = new ArrayList<PurchaseOrder>();
 
   /**

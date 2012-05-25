@@ -16,7 +16,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Element_true")
+@Entity(name = "nestedgroup_Element_true")
 public class ElementTrue_FeatureGroup extends Identifiable {
 
   /**

@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.samples.inventory;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -9,7 +11,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PDeclaration")
+@Entity(name = "inv_PDeclaration")
+@Table(name = "inv_PDeclaration")
 public class PDeclaration extends Identifiable {
 
   /**
@@ -18,6 +21,7 @@ public class PDeclaration extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "id")
   private long id = 0;
 
   /**
@@ -26,6 +30,7 @@ public class PDeclaration extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_name")
   private String name = null;
 
   /**

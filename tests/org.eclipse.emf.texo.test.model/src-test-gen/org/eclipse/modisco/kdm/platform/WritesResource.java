@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "WritesResource")
+@Entity(name = "platform_WritesResource")
 public class WritesResource extends AbstractActionRelationship {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "BuildComponent")
+@Entity(name = "build_BuildComponent")
 public class BuildComponent extends BuildResource {
 
   /**

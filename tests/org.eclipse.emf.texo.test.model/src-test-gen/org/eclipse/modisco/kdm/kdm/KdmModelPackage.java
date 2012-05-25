@@ -67,14 +67,14 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ATTRIBUTE_TAG_FEATURE_ID = 2;
+  public static final int ATTRIBUTE_TAG_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ATTRIBUTE_VALUE_FEATURE_ID = 3;
+  public static final int ATTRIBUTE_VALUE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -88,7 +88,7 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ANNOTATION_TEXT_FEATURE_ID = 2;
+  public static final int ANNOTATION_TEXT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -102,21 +102,21 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STEREOTYPE_TAG_FEATURE_ID = 2;
+  public static final int STEREOTYPE_TAG_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STEREOTYPE_NAME_FEATURE_ID = 3;
+  public static final int STEREOTYPE_NAME_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STEREOTYPE_TYPE_FEATURE_ID = 4;
+  public static final int STEREOTYPE_TYPE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -130,7 +130,7 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXTENDEDVALUE_TAG_FEATURE_ID = 2;
+  public static final int EXTENDEDVALUE_TAG_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -144,7 +144,7 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int KDMMODEL_OWNEDELEMENT_FEATURE_ID = 7;
+  public static final int KDMMODEL_OWNEDELEMENT_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -158,21 +158,21 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int KDMFRAMEWORK_AUDIT_FEATURE_ID = 4;
+  public static final int KDMFRAMEWORK_AUDIT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMFRAMEWORK_EXTENSION_FEATURE_ID = 5;
+  public static final int KDMFRAMEWORK_EXTENSION_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMFRAMEWORK_NAME_FEATURE_ID = 6;
+  public static final int KDMFRAMEWORK_NAME_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -186,21 +186,21 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int AUDIT_DESCRIPTION_FEATURE_ID = 2;
+  public static final int AUDIT_DESCRIPTION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AUDIT_AUTHOR_FEATURE_ID = 3;
+  public static final int AUDIT_AUTHOR_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AUDIT_DATE_FEATURE_ID = 4;
+  public static final int AUDIT_DATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -214,14 +214,14 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXTENSIONFAMILY_STEREOTYPE_FEATURE_ID = 2;
+  public static final int EXTENSIONFAMILY_STEREOTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EXTENSIONFAMILY_NAME_FEATURE_ID = 3;
+  public static final int EXTENSIONFAMILY_NAME_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -235,14 +235,14 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SEGMENT_SEGMENT_FEATURE_ID = 7;
+  public static final int SEGMENT_SEGMENT_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SEGMENT_MODEL_FEATURE_ID = 8;
+  public static final int SEGMENT_MODEL_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -256,14 +256,14 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TAGDEFINITION_TAG_FEATURE_ID = 2;
+  public static final int TAGDEFINITION_TAG_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TAGDEFINITION_TYPE_FEATURE_ID = 3;
+  public static final int TAGDEFINITION_TYPE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -277,7 +277,7 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TAGGEDVALUE_VALUE_FEATURE_ID = 3;
+  public static final int TAGGEDVALUE_VALUE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -291,7 +291,7 @@ public class KdmModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TAGGEDREF_REF_FEATURE_ID = 3;
+  public static final int TAGGEDREF_REF_FEATURE_ID = 5;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->

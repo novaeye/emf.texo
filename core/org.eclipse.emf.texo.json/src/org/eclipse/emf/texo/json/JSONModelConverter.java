@@ -95,7 +95,7 @@ public class JSONModelConverter extends BaseJSONModelConverter<Object> {
       }
 
       mEntry.setValue(convertedValue);
-      return mEntry;
+      return mEntry.getTarget();
     } catch (JSONException e) {
       throw new IllegalStateException(e);
     }

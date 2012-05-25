@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ChoiceContent")
+@Entity(name = "data_ChoiceContent")
 public class ChoiceContent extends ComplexContentType {
 
   /**

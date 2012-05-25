@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ValueElement")
+@Entity(name = "code_ValueElement")
 public abstract class ValueElement extends DataElement {
 
   /**

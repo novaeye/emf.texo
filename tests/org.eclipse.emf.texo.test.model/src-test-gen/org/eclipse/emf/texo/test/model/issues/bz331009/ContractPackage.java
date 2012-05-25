@@ -6,8 +6,13 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -16,7 +21,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ContractPackage")
+@Entity(name = "m_ContractPackage")
+@Table(name = "m_ContractPackage")
 public class ContractPackage extends Identifiable {
 
   /**
@@ -25,6 +31,7 @@ public class ContractPackage extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_ContractPackage_client") })
   private Person client = null;
 
   /**
@@ -33,6 +40,7 @@ public class ContractPackage extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_ContractPackage_user") })
   private User user = null;
 
   /**
@@ -41,6 +49,8 @@ public class ContractPackage extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_ContractPackage_contracts_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_ContractPackage_contracts") }, inverseJoinColumns = { @JoinColumn(name = "m_Contract_id") }, name = "m_ContractPackage_contracts")
   @Access(AccessType.FIELD)
   private List<Contract> contracts = new ArrayList<Contract>();
 

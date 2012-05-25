@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.modisco.kdm.KdmModelPackage;
 import org.eclipse.modisco.kdm.core.dao.AggregatedRelationshipDao;
 import org.eclipse.modisco.kdm.core.dao.ElementDao;
@@ -85,14 +86,14 @@ public class CoreModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ELEMENT_ATTRIBUTE_FEATURE_ID = 0;
+  public static final int ELEMENT_ATTRIBUTE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ELEMENT_ANNOTATION_FEATURE_ID = 1;
+  public static final int ELEMENT_ANNOTATION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -106,14 +107,14 @@ public class CoreModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MODELELEMENT_STEREOTYPE_FEATURE_ID = 2;
+  public static final int MODELELEMENT_STEREOTYPE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MODELELEMENT_TAGGEDVALUE_FEATURE_ID = 3;
+  public static final int MODELELEMENT_TAGGEDVALUE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -127,77 +128,77 @@ public class CoreModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int KDMENTITY_NAME_FEATURE_ID = 4;
+  public static final int KDMENTITY_NAME_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_MODEL_FEATURE_ID = 5;
+  public static final int KDMENTITY_MODEL_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_OWNER_FEATURE_ID = 6;
+  public static final int KDMENTITY_OWNER_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_OWNEDELEMENT_FEATURE_ID = 7;
+  public static final int KDMENTITY_OWNEDELEMENT_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_OUTBOUND_FEATURE_ID = 8;
+  public static final int KDMENTITY_OUTBOUND_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_INBOUND_FEATURE_ID = 9;
+  public static final int KDMENTITY_INBOUND_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_OWNEDRELATION_FEATURE_ID = 10;
+  public static final int KDMENTITY_OWNEDRELATION_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_GROUP_FEATURE_ID = 11;
+  public static final int KDMENTITY_GROUP_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_GROUPEDELEMENT_FEATURE_ID = 12;
+  public static final int KDMENTITY_GROUPEDELEMENT_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_INAGGREGATED_FEATURE_ID = 13;
+  public static final int KDMENTITY_INAGGREGATED_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int KDMENTITY_OUTAGGREGATED_FEATURE_ID = 14;
+  public static final int KDMENTITY_OUTAGGREGATED_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -218,28 +219,28 @@ public class CoreModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int AGGREGATEDRELATIONSHIP_FROM_FEATURE_ID = 4;
+  public static final int AGGREGATEDRELATIONSHIP_FROM_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AGGREGATEDRELATIONSHIP_TO_FEATURE_ID = 5;
+  public static final int AGGREGATEDRELATIONSHIP_TO_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AGGREGATEDRELATIONSHIP_RELATION_FEATURE_ID = 6;
+  public static final int AGGREGATEDRELATIONSHIP_RELATION_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int AGGREGATEDRELATIONSHIP_DENSITY_FEATURE_ID = 7;
+  public static final int AGGREGATEDRELATIONSHIP_DENSITY_FEATURE_ID = 9;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -265,8 +266,9 @@ public class CoreModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    IdentifiableModelPackage.initialize();
     KdmModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Element.class, modelPackage.getElementEClass(), modelPackage);

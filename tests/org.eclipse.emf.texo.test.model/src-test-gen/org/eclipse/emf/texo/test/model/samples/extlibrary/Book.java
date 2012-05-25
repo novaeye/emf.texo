@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "Book")
+@Entity(name = "extlib_Book")
 public class Book extends CirculatingItem {
 
   /**

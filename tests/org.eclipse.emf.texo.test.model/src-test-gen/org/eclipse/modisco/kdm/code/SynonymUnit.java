@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SynonymUnit")
+@Entity(name = "code_SynonymUnit")
 public class SynonymUnit extends DefinedType {
 
   /**

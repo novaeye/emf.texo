@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "TypedBy")
+@Entity(name = "data_TypedBy")
 public class TypedBy extends AbstractDataRelationship {
 
   /**

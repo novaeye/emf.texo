@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "PlatformEvent")
+@Entity(name = "platform_PlatformEvent")
 public class PlatformEvent extends ResourceType {
 
   /**

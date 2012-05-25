@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.claim. It
@@ -180,10 +180,11 @@ public class ClaimModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ClaimModelObject<E extends Claim> extends AbstractModelObject<E> {
+  public static class ClaimModelObject<E extends Claim> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ClaimModelPackage.INSTANCE.getClaimEClass();
     }
@@ -191,6 +192,7 @@ public class ClaimModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ClaimModelPackage.INSTANCE;
     }
@@ -280,10 +282,12 @@ public class ClaimModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ClaimCompositeKeyModelObject<E extends ClaimCompositeKey> extends AbstractModelObject<E> {
+  public static class ClaimCompositeKeyModelObject<E extends ClaimCompositeKey> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ClaimModelPackage.INSTANCE.getClaimCompositeKeyEClass();
     }
@@ -291,6 +295,7 @@ public class ClaimModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ClaimModelPackage.INSTANCE;
     }
@@ -357,10 +362,12 @@ public class ClaimModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ClaimLineModelObject<E extends ClaimLine> extends AbstractModelObject<E> {
+  public static class ClaimLineModelObject<E extends ClaimLine> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ClaimModelPackage.INSTANCE.getClaimLineEClass();
     }
@@ -368,6 +375,7 @@ public class ClaimModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ClaimModelPackage.INSTANCE;
     }
@@ -450,10 +458,12 @@ public class ClaimModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ClaimLineCompositeKeyModelObject<E extends ClaimLineCompositeKey> extends AbstractModelObject<E> {
+  public static class ClaimLineCompositeKeyModelObject<E extends ClaimLineCompositeKey> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return ClaimModelPackage.INSTANCE.getClaimLineCompositeKeyEClass();
     }
@@ -461,6 +471,7 @@ public class ClaimModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return ClaimModelPackage.INSTANCE;
     }

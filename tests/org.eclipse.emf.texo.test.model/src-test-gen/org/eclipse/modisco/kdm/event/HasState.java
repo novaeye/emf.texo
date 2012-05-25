@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "HasState")
+@Entity(name = "event_HasState")
 public class HasState extends AbstractActionRelationship {
 
   /**

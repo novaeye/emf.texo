@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -8,7 +9,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Price")
+@Entity(name = "m_Price")
+@Table(name = "m_Price")
 public class Price extends Identifiable {
 
   /**

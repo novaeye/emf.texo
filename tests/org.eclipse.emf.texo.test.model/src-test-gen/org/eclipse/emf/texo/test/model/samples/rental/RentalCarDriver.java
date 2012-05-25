@@ -11,7 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RentalCarDriver")
+@Entity(name = "rental_RentalCarDriver")
 public class RentalCarDriver extends Identifiable {
 
   /**

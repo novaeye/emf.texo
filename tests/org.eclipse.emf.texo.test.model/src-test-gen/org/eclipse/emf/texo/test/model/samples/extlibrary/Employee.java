@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "Employee")
+@Entity(name = "extlib_Employee")
 public class Employee extends Person {
 
   /**

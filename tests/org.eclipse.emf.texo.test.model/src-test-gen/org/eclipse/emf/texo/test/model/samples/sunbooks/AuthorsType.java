@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -12,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "AuthorsType")
+@Entity(name = "sunBooks_AuthorsType")
 public class AuthorsType extends Identifiable {
 
   /**
@@ -21,7 +22,8 @@ public class AuthorsType extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "AuthorsType_authorName")
+  @OrderColumn()
+  @CollectionTable(name = "sunBooks_AuthorsType_authorName")
   private List<String> authorName = new ArrayList<String>();
 
   /**

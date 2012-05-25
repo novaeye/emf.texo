@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "ResourceType")
+@Entity(name = "platform_ResourceType")
 public class ResourceType extends AbstractPlatformElement {
 
   /**

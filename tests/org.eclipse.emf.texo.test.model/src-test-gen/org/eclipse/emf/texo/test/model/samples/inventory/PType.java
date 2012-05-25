@@ -6,11 +6,15 @@ import java.util.List;
 import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -18,7 +22,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PType")
+@Entity(name = "inv_PType")
+@Table(name = "inv_PType")
 public class PType extends Identifiable {
 
   /**
@@ -27,6 +32,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "id")
   private long id = 0;
 
   /**
@@ -35,6 +41,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -43,7 +50,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinTable()
+  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_base") }, inverseJoinColumns = { @JoinColumn(name = "inv_PType_subTypes") }, name = "inv_PType_base")
   private PType base = null;
 
   /**
@@ -60,6 +67,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_subNOTypes") }, inverseJoinColumns = { @JoinColumn(name = "inv_PType_id") }, name = "inv_PType_subNOTypes")
   private Set<PType> subNOTypes = new HashSet<PType>();
 
   /**
@@ -68,6 +76,8 @@ public class PType extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "inv_PType_infoReferences_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_infoReferences") }, inverseJoinColumns = { @JoinColumn(name = "inv_PDeclaration_id") }, name = "inv_PType_infoReferences")
   private List<PDeclaration> infoReferences = new ArrayList<PDeclaration>();
 
   /**

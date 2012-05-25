@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -20,7 +21,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Album")
+@Entity(name = "org_elver_music_Album")
 public class Album extends Identifiable {
 
   /**
@@ -70,6 +71,7 @@ public class Album extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   private List<Genre> genres = new ArrayList<Genre>();
 
   /**
@@ -78,6 +80,7 @@ public class Album extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Song> songs = new ArrayList<Song>();
 
   /**
@@ -86,7 +89,8 @@ public class Album extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "Album_ratings")
+  @OrderColumn()
+  @CollectionTable(name = "org_elver_music_Album_ratings")
   private List<Rating> ratings = new ArrayList<Rating>();
 
   /**

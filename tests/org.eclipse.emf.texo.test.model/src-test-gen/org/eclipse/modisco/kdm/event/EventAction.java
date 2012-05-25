@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "EventAction")
+@Entity(name = "event_EventAction")
 public class EventAction extends AbstractEventElement {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "OctetType")
+@Entity(name = "code_OctetType")
 public class OctetType extends PrimitiveType {
 
   /**

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ParameterUnit")
+@Entity(name = "code_ParameterUnit")
 public class ParameterUnit extends DataElement {
 
   /**

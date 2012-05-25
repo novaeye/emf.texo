@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ConceptualFlow")
+@Entity(name = "conceptual_ConceptualFlow")
 public class ConceptualFlow extends AbstractConceptualRelationship {
 
   /**

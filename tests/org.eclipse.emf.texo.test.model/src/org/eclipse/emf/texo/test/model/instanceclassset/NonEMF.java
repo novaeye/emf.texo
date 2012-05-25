@@ -16,11 +16,13 @@
  */
 package org.eclipse.emf.texo.test.model.instanceclassset;
 
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+
 /**
  * Used to test this issue: https://bugs.eclipse.org/bugs/show_bug.cgi?id=306546
  * 
  * @author mtaal
  */
-public class NonEMF {
+public class NonEMF extends Identifiable {
 
 }

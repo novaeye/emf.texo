@@ -16,7 +16,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SalutationType_mixed")
+@Entity(name = "mixed_SalutationType_mixed")
 public class SalutationTypeMixedFeatureGroup extends Identifiable {
 
   /**

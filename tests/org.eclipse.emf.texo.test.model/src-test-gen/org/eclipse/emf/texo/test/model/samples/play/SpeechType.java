@@ -13,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SpeechType")
+@Entity(name = "play_SpeechType")
 public class SpeechType extends Identifiable {
 
   /**

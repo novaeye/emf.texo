@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -10,7 +12,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Units")
+@Entity(name = "m_Units")
+@Table(name = "m_Units")
 public class Units extends Identifiable {
 
   /**
@@ -19,6 +22,7 @@ public class Units extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_name")
   private String name = null;
 
   /**

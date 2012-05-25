@@ -6,13 +6,14 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>ClassUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ClassUnit")
+@Entity(name = "code_ClassUnit")
 public class ClassUnit extends Datatype {
 
   /**
@@ -29,6 +30,7 @@ public class ClassUnit extends Datatype {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<CodeItem> codeElement = new ArrayList<CodeItem>();
 
   /**

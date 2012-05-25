@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "Imports")
+@Entity(name = "code_Imports")
 public class Imports extends AbstractCodeRelationship {
 
   /**

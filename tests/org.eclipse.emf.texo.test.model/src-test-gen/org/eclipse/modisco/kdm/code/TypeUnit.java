@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TypeUnit")
+@Entity(name = "code_TypeUnit")
 public class TypeUnit extends DefinedType {
 
   /**

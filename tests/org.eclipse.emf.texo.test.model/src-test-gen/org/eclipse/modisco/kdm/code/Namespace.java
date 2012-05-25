@@ -11,7 +11,7 @@ import javax.persistence.ManyToMany;
  * 
  * @generated
  */
-@Entity(name = "Namespace")
+@Entity(name = "code_Namespace")
 public class Namespace extends CodeItem {
 
   /**

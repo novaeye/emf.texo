@@ -20,10 +20,12 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelPackage;
@@ -165,6 +167,22 @@ public class ModelUtils {
         }
       }
     }
+    if (nameSpacePrefix != null) {
+      EPackage otherEPackage = null;
+      if (XMLTypePackage.eNS_PREFIX.equals(nameSpacePrefix)) {
+        otherEPackage = XMLTypePackage.eINSTANCE;
+      } else if (EcorePackage.eNS_PREFIX.equals(nameSpacePrefix)) {
+        otherEPackage = EcorePackage.eINSTANCE;
+      }
+      if (otherEPackage != null) {
+        for (EClassifier eClassifier : otherEPackage.getEClassifiers()) {
+          if (eClassifier.getName().equals(eClassName)) {
+            return (EClass) eClassifier;
+          }
+        }
+      }
+    }
+
     throw new IllegalArgumentException("No EClass found using name " + name); //$NON-NLS-1$
   }
 

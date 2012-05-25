@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "ManagesUI")
+@Entity(name = "ui_ManagesUI")
 public class ManagesUI extends AbstractActionRelationship {
 
   /**

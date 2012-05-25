@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "ProducesDataEvent")
+@Entity(name = "data_ProducesDataEvent")
 public class ProducesDataEvent extends AbstractActionRelationship {
 
   /**

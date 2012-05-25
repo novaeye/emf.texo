@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.samples.claim"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/claim" nsPrefix="claim">
-  <eClassifiers xsi:type="ecore:EClass" name="Claim">
+  <eClassifiers xsi:type="ecore:EClass" name="Claim" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Claim Information"/>
     </eAnnotations>
@@ -97,7 +97,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClaimCompositeKey">
+  <eClassifiers xsi:type="ecore:EClass" name="ClaimCompositeKey" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="teneo.jpa">
       <details key="appinfo" value="@Embeddable"/>
     </eAnnotations>
@@ -140,7 +140,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClaimLine">
+  <eClassifiers xsi:type="ecore:EClass" name="ClaimLine" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Claim Line Information"/>
     </eAnnotations>
@@ -235,7 +235,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClaimLineCompositeKey">
+  <eClassifiers xsi:type="ecore:EClass" name="ClaimLineCompositeKey" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="teneo.jpa">
       <details key="appinfo" value="@Embeddable"/>
     </eAnnotations>

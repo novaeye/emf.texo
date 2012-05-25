@@ -5,13 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>VideoCassette</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "VideoCassette")
+@Entity(name = "extlib_VideoCassette")
 public class VideoCassette extends AudioVisualItem {
 
   /**
@@ -20,6 +21,7 @@ public class VideoCassette extends AudioVisualItem {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   private List<Person> cast = new ArrayList<Person>();
 
   /**

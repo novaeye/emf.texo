@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RootType")
+@Entity(name = "substitutionzvon_RootType")
 public class RootType extends Identifiable {
 
   /**

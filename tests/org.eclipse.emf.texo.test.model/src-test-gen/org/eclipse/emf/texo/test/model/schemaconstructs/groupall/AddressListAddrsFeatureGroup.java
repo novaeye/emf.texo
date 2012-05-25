@@ -17,7 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "AddressList_addrs")
+@Entity(name = "groupall_AddressList_addrs")
 public class AddressListAddrsFeatureGroup extends Identifiable {
 
   /**

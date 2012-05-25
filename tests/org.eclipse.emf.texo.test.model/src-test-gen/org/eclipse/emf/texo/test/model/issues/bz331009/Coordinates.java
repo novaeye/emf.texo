@@ -2,7 +2,9 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import java.math.BigDecimal;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -11,7 +13,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Coordinates")
+@Entity(name = "m_Coordinates")
+@Table(name = "m_Coordinates")
 public class Coordinates extends Identifiable {
 
   /**
@@ -20,6 +23,7 @@ public class Coordinates extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "x")
   private BigDecimal x = null;
 
   /**
@@ -28,6 +32,7 @@ public class Coordinates extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "y")
   private BigDecimal y = null;
 
   /**

@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -10,7 +12,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SecretQuestion")
+@Entity(name = "m_SecretQuestion")
+@Table(name = "m_SecretQuestion")
 public class SecretQuestion extends Identifiable {
 
   /**
@@ -19,6 +22,7 @@ public class SecretQuestion extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "question")
   private String question = null;
 
   /**
@@ -27,6 +31,7 @@ public class SecretQuestion extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "correctAnswer")
   private String correctAnswer = null;
 
   /**
@@ -36,6 +41,7 @@ public class SecretQuestion extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "alarmAnswer")
   private String alarmAnswer = null;
 
   /**
@@ -44,6 +50,7 @@ public class SecretQuestion extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "active")
   private boolean active = false;
 
   /**
@@ -52,6 +59,7 @@ public class SecretQuestion extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_type")
   private SecretQuestionType type = SecretQuestionType.REGULAR;
 
   /**

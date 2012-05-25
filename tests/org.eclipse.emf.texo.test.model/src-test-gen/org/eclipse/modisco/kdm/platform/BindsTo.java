@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "BindsTo")
+@Entity(name = "platform_BindsTo")
 public class BindsTo extends AbstractPlatformRelationship {
 
   /**

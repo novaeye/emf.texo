@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Writer")
+@Entity(name = "emap_Writer")
 public class Writer extends Identifiable {
 
   /**

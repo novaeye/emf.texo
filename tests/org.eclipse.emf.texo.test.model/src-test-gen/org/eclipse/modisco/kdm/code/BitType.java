@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "BitType")
+@Entity(name = "code_BitType")
 public class BitType extends PrimitiveType {
 
   /**

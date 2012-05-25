@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "FinallyUnit")
+@Entity(name = "action_FinallyUnit")
 public class FinallyUnit extends ExceptionUnit {
 
   /**

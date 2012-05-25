@@ -9,7 +9,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "Attribute")
+@Entity(name = "kdm_Attribute")
 public class Attribute extends Element {
 
   /**

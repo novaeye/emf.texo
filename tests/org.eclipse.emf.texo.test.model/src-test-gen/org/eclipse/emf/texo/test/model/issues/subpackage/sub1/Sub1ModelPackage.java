@@ -9,6 +9,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.issues.subpackage.MainModelPackage;
 import org.eclipse.emf.texo.test.model.issues.subpackage.sub1.dao.Sub1TypeDao;
 
@@ -55,7 +56,7 @@ public class Sub1ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SUB1TYPE_NAME_FEATURE_ID = 0;
+  public static final int SUB1TYPE_NAME_FEATURE_ID = 2;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -82,6 +83,7 @@ public class Sub1ModelPackage extends ModelPackage {
     isInitialized = true;
 
     MainModelPackage.initialize();
+    IdentifiableModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Sub1Type.class, modelPackage.getSub1TypeEClass(),

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "LanguageUnit")
+@Entity(name = "code_LanguageUnit")
 public class LanguageUnit extends Module {
 
   /**

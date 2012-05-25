@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SetType")
+@Entity(name = "code_SetType")
 public class SetType extends DerivedType {
 
   /**

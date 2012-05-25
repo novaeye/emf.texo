@@ -15,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Supplier")
+@Entity(name = "featuremaptest_Supplier")
 @Table(name = "SUP_TABLE")
 public class Supplier extends Identifiable {
 

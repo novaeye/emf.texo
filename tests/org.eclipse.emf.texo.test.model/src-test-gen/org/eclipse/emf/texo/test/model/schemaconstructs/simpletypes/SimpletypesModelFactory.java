@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -767,10 +767,12 @@ public class SimpletypesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimpleListModelObject<E extends SimpleList> extends AbstractModelObject<E> {
+  public static class SimpleListModelObject<E extends SimpleList> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SimpletypesModelPackage.INSTANCE.getSimpleListEClass();
     }
@@ -778,6 +780,7 @@ public class SimpletypesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SimpletypesModelPackage.INSTANCE;
     }
@@ -893,6 +896,50 @@ public class SimpletypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
+        getTarget().getBoo().add((Boolean) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
+        getTarget().getByt().add((Byte) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
+        getTarget().getDoubl().add((Double) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
+        getTarget().getFloa().add((Float) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
+        getTarget().getInte().add((Integer) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        getTarget().getLong_().add((Long) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
+        getTarget().getShor().add((Short) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
+        getTarget().getEnu().add((SimpleEnum) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
+        getTarget().getDat().add((Date) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
+        getTarget().getLimitedstring().add((String) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
+        getTarget().getStri().add((String) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -915,10 +962,12 @@ public class SimpletypesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimpleTypeModelObject<E extends SimpleType> extends AbstractModelObject<E> {
+  public static class SimpleTypeModelObject<E extends SimpleType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SimpletypesModelPackage.INSTANCE.getSimpleTypeEClass();
     }
@@ -926,6 +975,7 @@ public class SimpletypesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SimpletypesModelPackage.INSTANCE;
     }
@@ -1048,10 +1098,12 @@ public class SimpletypesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimpleTypeObjectModelObject<E extends SimpleTypeObject> extends AbstractModelObject<E> {
+  public static class SimpleTypeObjectModelObject<E extends SimpleTypeObject> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SimpletypesModelPackage.INSTANCE.getSimpleTypeObjectEClass();
     }
@@ -1059,6 +1111,7 @@ public class SimpletypesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SimpletypesModelPackage.INSTANCE;
     }

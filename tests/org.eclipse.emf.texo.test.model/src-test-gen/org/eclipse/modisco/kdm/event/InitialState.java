@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "InitialState")
+@Entity(name = "event_InitialState")
 public class InitialState extends State {
 
   /**

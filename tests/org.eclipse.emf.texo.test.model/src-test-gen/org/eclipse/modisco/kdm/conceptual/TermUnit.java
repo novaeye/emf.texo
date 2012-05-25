@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TermUnit")
+@Entity(name = "conceptual_TermUnit")
 public class TermUnit extends AbstractConceptualElement {
 
   /**

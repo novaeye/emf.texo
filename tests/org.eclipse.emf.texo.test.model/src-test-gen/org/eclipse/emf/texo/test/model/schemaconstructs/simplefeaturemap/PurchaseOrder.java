@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PurchaseOrder")
+@Entity(name = "simplefeaturemap_PurchaseOrder")
 public class PurchaseOrder extends Identifiable {
 
   /**

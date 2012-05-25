@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ConceptualElement")
+@Entity(name = "conceptual_ConceptualElement")
 public class ConceptualElement extends AbstractConceptualElement {
 
   /**

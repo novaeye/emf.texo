@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RType")
+@Entity(name = "attributes_RType")
 public class RType extends Identifiable {
 
   /**

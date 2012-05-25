@@ -8,11 +8,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -392,10 +392,12 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ComplexAAAModelObject<E extends ComplexAAA> extends AbstractModelObject<E> {
+  public static class ComplexAAAModelObject<E extends ComplexAAA> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SubstitutionzvonModelPackage.INSTANCE.getComplexAAAEClass();
     }
@@ -403,6 +405,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SubstitutionzvonModelPackage.INSTANCE;
     }
@@ -598,10 +601,12 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SubstitutionzvonModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -609,6 +614,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SubstitutionzvonModelPackage.INSTANCE;
     }
@@ -688,6 +694,10 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SubstitutionzvonModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -710,10 +720,12 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class RootTypeModelObject<E extends RootType> extends AbstractModelObject<E> {
+  public static class RootTypeModelObject<E extends RootType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SubstitutionzvonModelPackage.INSTANCE.getRootTypeEClass();
     }
@@ -721,6 +733,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SubstitutionzvonModelPackage.INSTANCE;
     }
@@ -769,6 +782,14 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case SubstitutionzvonModelPackage.ROOTTYPE_MYABSTRACTGROUP_FEATURE_ID:
+        getTarget().getMyAbstractGroup().add((RootTypeMyAbstractGroupFeatureGroup) value);
+        return;
+
+      case SubstitutionzvonModelPackage.ROOTTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID:
+        getTarget().getMyComplexAbstractGroup().add((RootTypeMyComplexAbstractGroupFeatureGroup) value);
+        return;
 
       }
       super.eAddTo(eStructuralFeature, value);

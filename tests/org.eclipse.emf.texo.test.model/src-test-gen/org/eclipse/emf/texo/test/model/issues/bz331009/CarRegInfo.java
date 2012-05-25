@@ -3,8 +3,12 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -15,7 +19,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "CarRegInfo")
+@Entity(name = "m_CarRegInfo")
+@Table(name = "m_CarRegInfo")
 public class CarRegInfo extends Identifiable implements Document {
 
   /**
@@ -24,6 +29,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_CarRegInfo_owner") })
   private Person owner = null;
 
   /**
@@ -32,6 +38,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "regNumber")
   private String regNumber = null;
 
   /**
@@ -41,6 +48,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "vin")
   private String vin = null;
 
   /**
@@ -49,6 +57,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "releaseYear")
   @Temporal(TemporalType.DATE)
   private Date releaseYear = null;
 
@@ -58,6 +67,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "engineNumber")
   private String engineNumber = null;
 
   /**
@@ -66,6 +76,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "chassisNumber")
   private String chassisNumber = null;
 
   /**
@@ -74,6 +85,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "bodyNumber")
   private String bodyNumber = null;
 
   /**
@@ -82,6 +94,7 @@ public class CarRegInfo extends Identifiable implements Document {
    * @generated
    */
   @Basic()
+  @Column(name = "color")
   private String color = null;
 
   /**

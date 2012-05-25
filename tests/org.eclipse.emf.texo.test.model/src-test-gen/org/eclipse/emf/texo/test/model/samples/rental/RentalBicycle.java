@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "RentalBicycle")
+@Entity(name = "rental_RentalBicycle")
 public class RentalBicycle extends RentalUnit {
 
   /**

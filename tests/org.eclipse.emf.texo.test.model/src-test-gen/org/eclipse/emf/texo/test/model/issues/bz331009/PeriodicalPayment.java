@@ -1,7 +1,10 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>PeriodicalPayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -9,7 +12,8 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "PeriodicalPayment")
+@Entity(name = "m_PeriodicalPayment")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class PeriodicalPayment extends PaymentItem {
 
   /**
@@ -18,6 +22,7 @@ public class PeriodicalPayment extends PaymentItem {
    * @generated
    */
   @Basic()
+  @Column(name = "periodicity")
   private Periodicity periodicity = Periodicity.DAILY;
 
   /**

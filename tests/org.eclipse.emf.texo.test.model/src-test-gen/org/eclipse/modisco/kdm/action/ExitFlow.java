@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ExitFlow")
+@Entity(name = "action_ExitFlow")
 public class ExitFlow extends AbstractActionRelationship {
 
   /**

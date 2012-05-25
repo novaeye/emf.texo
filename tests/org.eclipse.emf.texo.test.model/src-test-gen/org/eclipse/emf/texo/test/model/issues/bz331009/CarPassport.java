@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -9,7 +10,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "CarPassport")
+@Entity(name = "m_CarPassport")
+@Table(name = "m_CarPassport")
 public class CarPassport extends Identifiable implements Document {
 
   /**

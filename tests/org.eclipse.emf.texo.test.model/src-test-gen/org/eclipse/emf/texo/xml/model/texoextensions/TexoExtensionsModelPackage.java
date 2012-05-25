@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.eclipse.emf.texo.xml.model.texoextensions.dao.DocumentRootDao;
 
@@ -56,42 +57,42 @@ public class TexoExtensionsModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
+  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
+  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
+  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ID_FEATURE_ID = 3;
+  public static final int DOCUMENTROOT_ID_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_TITLE_FEATURE_ID = 4;
+  public static final int DOCUMENTROOT_TITLE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_TYPE_FEATURE_ID = 5;
+  public static final int DOCUMENTROOT_TYPE_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -116,6 +117,8 @@ public class TexoExtensionsModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

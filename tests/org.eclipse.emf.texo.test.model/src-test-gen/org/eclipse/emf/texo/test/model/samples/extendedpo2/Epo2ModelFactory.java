@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -331,13 +331,14 @@ public class Epo2ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ItemModelObject<E extends Item> extends AbstractModelObject<E> {
+  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Epo2ModelPackage.INSTANCE.getItemEClass();
     }
@@ -345,6 +346,7 @@ public class Epo2ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Epo2ModelPackage.INSTANCE;
     }
@@ -554,13 +556,15 @@ public class Epo2ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends AbstractModelObject<E> {
+  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Epo2ModelPackage.INSTANCE.getPurchaseOrderEClass();
     }
@@ -568,6 +572,7 @@ public class Epo2ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Epo2ModelPackage.INSTANCE;
     }
@@ -686,13 +691,14 @@ public class Epo2ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AddressModelObject<E extends Address> extends AbstractModelObject<E> {
+  public static class AddressModelObject<E extends Address> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Epo2ModelPackage.INSTANCE.getAddressEClass();
     }
@@ -700,6 +706,7 @@ public class Epo2ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Epo2ModelPackage.INSTANCE;
     }
@@ -778,13 +785,15 @@ public class Epo2ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SupplierModelObject<E extends Supplier> extends AbstractModelObject<E> {
+  public static class SupplierModelObject<E extends Supplier> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Epo2ModelPackage.INSTANCE.getSupplierEClass();
     }
@@ -792,6 +801,7 @@ public class Epo2ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Epo2ModelPackage.INSTANCE;
     }
@@ -895,13 +905,15 @@ public class Epo2ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CustomerModelObject<E extends Customer> extends AbstractModelObject<E> {
+  public static class CustomerModelObject<E extends Customer> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Epo2ModelPackage.INSTANCE.getCustomerEClass();
     }
@@ -909,6 +921,7 @@ public class Epo2ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Epo2ModelPackage.INSTANCE;
     }
@@ -1067,6 +1080,10 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case Epo2ModelPackage.GLOBALADDRESS_LOCATION_FEATURE_ID:
+        getTarget().getLocation().add((String) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -1089,13 +1106,15 @@ public class Epo2ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class GlobalLocationModelObject<E extends GlobalLocation> extends AbstractModelObject<E> {
+  public static class GlobalLocationModelObject<E extends GlobalLocation> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Epo2ModelPackage.INSTANCE.getGlobalLocationEClass();
     }
@@ -1103,6 +1122,7 @@ public class Epo2ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Epo2ModelPackage.INSTANCE;
     }

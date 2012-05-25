@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "XMLSchema")
+@Entity(name = "data_XMLSchema")
 public class XMLSchema extends AbstractDataElement {
 
   /**

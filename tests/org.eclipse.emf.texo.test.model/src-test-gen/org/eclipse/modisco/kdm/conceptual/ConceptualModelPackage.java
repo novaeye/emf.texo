@@ -70,7 +70,7 @@ public class ConceptualModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONCEPTUALMODEL_CONCEPTUALELEMENT_FEATURE_ID = 8;
+  public static final int CONCEPTUALMODEL_CONCEPTUALELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -84,28 +84,28 @@ public class ConceptualModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTCONCEPTUALELEMENT_SOURCE_FEATURE_ID = 15;
+  public static final int ABSTRACTCONCEPTUALELEMENT_SOURCE_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTCONCEPTUALELEMENT_IMPLEMENTATION_FEATURE_ID = 16;
+  public static final int ABSTRACTCONCEPTUALELEMENT_IMPLEMENTATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTCONCEPTUALELEMENT_CONCEPTUALRELATION_FEATURE_ID = 17;
+  public static final int ABSTRACTCONCEPTUALELEMENT_CONCEPTUALRELATION_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTCONCEPTUALELEMENT_ABSTRACTION_FEATURE_ID = 18;
+  public static final int ABSTRACTCONCEPTUALELEMENT_ABSTRACTION_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -133,7 +133,7 @@ public class ConceptualModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONCEPTUALCONTAINER_CONCEPTUALELEMENT_FEATURE_ID = 19;
+  public static final int CONCEPTUALCONTAINER_CONCEPTUALELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -154,14 +154,14 @@ public class ConceptualModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONCEPTUALRELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int CONCEPTUALRELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONCEPTUALRELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int CONCEPTUALRELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -196,14 +196,14 @@ public class ConceptualModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONCEPTUALFLOW_TO_FEATURE_ID = 4;
+  public static final int CONCEPTUALFLOW_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONCEPTUALFLOW_FROM_FEATURE_ID = 5;
+  public static final int CONCEPTUALFLOW_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -224,7 +224,7 @@ public class ConceptualModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONCEPTUALROLE_CONCEPTUALELEMENT_FEATURE_ID = 19;
+  public static final int CONCEPTUALROLE_CONCEPTUALELEMENT_FEATURE_ID = 21;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -251,10 +251,10 @@ public class ConceptualModelPackage extends ModelPackage {
     isInitialized = true;
 
     SourceModelPackage.initialize();
+    CoreModelPackage.initialize();
     ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(ConceptualModel.class,

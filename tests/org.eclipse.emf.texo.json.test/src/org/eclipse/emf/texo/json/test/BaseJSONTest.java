@@ -20,6 +20,8 @@ package org.eclipse.emf.texo.json.test;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.TestCase;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.texo.datagenerator.DataGeneratorUtils;
@@ -32,10 +34,14 @@ import org.eclipse.emf.texo.model.ModelPackage;
  * @version $Revision: 1.13 $
  */
 
-public abstract class BaseJSONTest {
+public abstract class BaseJSONTest extends TestCase {
 
   private List<EPackage> ePackages;
   private List<EClass> eClasses;
+
+  public BaseJSONTest(String name) {
+    super(name);
+  }
 
   public void setModelPackages(List<ModelPackage> modelPackages) {
     ePackages = new ArrayList<EPackage>();
@@ -66,5 +72,4 @@ public abstract class BaseJSONTest {
   public void setEPackages(List<EPackage> ePackages) {
     this.ePackages = ePackages;
   }
-
 }

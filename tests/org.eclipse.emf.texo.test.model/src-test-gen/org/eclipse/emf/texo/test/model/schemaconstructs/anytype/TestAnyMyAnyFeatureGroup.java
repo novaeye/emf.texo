@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "TestAny_myAny")
+@Entity(name = "anytype_TestAny_myAny")
 public class TestAnyMyAnyFeatureGroup extends Identifiable {
 
   /**

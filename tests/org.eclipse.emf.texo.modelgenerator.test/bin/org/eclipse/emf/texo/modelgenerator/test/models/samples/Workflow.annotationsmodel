@@ -3,6 +3,7 @@
   <annotatedEPackages>
     <ePackage href="Workflow.ecore#/"/>
     <ePackageAnnotations xsi:type="modelannotations:EPackageModelGenAnnotation" rootClassExtends="org.eclipse.emf.texo.test.model.base.identifiable.Identifiable"/>
+    <ePackageAnnotations xsi:type="ormannotations:EPackageORMAnnotation" generateFullDbSchemaNames="true" />
     <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
       <eClass href="Workflow.ecore#//ConditionalOutputPort"/>
       <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEAttribute">

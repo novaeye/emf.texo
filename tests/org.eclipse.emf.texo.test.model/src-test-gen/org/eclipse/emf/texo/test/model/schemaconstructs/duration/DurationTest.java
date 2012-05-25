@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 import javax.xml.datatype.Duration;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -14,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "DurationTest")
+@Entity(name = "duration_DurationTest")
 public class DurationTest extends Identifiable {
 
   /**
@@ -39,7 +40,8 @@ public class DurationTest extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "DurationTest_durations")
+  @OrderColumn()
+  @CollectionTable(name = "duration_DurationTest_durations")
   private List<Duration> durations = new ArrayList<Duration>();
 
   /**

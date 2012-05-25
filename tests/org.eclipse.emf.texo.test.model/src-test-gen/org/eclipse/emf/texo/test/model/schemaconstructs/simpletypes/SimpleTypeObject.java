@@ -13,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SimpleTypeObject")
+@Entity(name = "simpletypes_SimpleTypeObject")
 public class SimpleTypeObject extends Identifiable {
 
   /**

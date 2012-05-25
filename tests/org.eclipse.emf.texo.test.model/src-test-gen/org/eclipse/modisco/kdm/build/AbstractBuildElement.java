@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "AbstractBuildElement")
+@Entity(name = "build_AbstractBuildElement")
 public abstract class AbstractBuildElement extends KDMEntity {
 
   /**

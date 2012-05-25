@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "UILayout")
+@Entity(name = "ui_UILayout")
 public class UILayout extends AbstractUIRelationship {
 
   /**

@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: duration. It contains code to create instances
@@ -135,10 +135,12 @@ public class DurationModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DurationTestModelObject<E extends DurationTest> extends AbstractModelObject<E> {
+  public static class DurationTestModelObject<E extends DurationTest> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return DurationModelPackage.INSTANCE.getDurationTestEClass();
     }
@@ -146,6 +148,7 @@ public class DurationModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return DurationModelPackage.INSTANCE;
     }
@@ -196,6 +199,9 @@ public class DurationModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case DurationModelPackage.DURATIONTEST_DURATIONS_FEATURE_ID:
+        getTarget().getDurations().add((Duration) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

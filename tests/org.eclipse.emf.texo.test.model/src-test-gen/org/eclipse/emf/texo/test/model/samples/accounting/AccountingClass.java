@@ -5,9 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -15,7 +20,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Accounting")
+@Entity(name = "accounting_Accounting")
+@Table(name = "accounting_Accounting")
 public class AccountingClass extends Identifiable implements Serializable {
   /**
    * @generated
@@ -28,6 +34,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -36,6 +43,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_Accounting_accountGroup_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_Accounting_accountGroup") })
   private List<AccountGroup> accountGroup = new ArrayList<AccountGroup>();
 
   /**
@@ -44,6 +53,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_Accounting_vat_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_Accounting_vat") })
   private List<Vat> vat = new ArrayList<Vat>();
 
   /**
@@ -52,6 +63,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "accounting_Accounting_vatAccount") })
   private BalanceAccount vatAccount = null;
 
   /**
@@ -60,6 +72,7 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL })
+  @JoinColumns({ @JoinColumn(name = "accounting_Accounting_report") })
   private Report report = null;
 
   /**
@@ -68,6 +81,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn(name = "accounting_Accounting_journalGroup_ind")
+  @JoinColumns({ @JoinColumn(name = "accounting_Accounting_journalGroup") })
   private List<JournalGroup> journalGroup = new ArrayList<JournalGroup>();
 
   /**

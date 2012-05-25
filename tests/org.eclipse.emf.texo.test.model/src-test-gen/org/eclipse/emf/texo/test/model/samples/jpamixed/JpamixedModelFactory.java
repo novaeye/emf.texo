@@ -261,6 +261,10 @@ public class JpamixedModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case JpamixedModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -357,6 +361,10 @@ public class JpamixedModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case JpamixedModelPackage.LETTERBODYTYPE_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((LetterBodyTypeMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -437,6 +445,10 @@ public class JpamixedModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case JpamixedModelPackage.SALUTATIONTYPE_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((SalutationTypeMixedFeatureGroup) value);
+        return;
 
       }
       super.eAddTo(eStructuralFeature, value);

@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.DataElement;
  * 
  * @generated
  */
-@Entity(name = "Writes")
+@Entity(name = "action_Writes")
 public class Writes extends AbstractActionRelationship {
 
   /**

@@ -6,22 +6,22 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include1" name="Include1">
-    <orm:table name="Include1"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include1" name="include_Include1">
+    <orm:table name="include_Include1"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
         <orm:column name="code"/>
       </orm:basic>
       <orm:many-to-one name="include2" optional="false">
-        <orm:join-column name="include2"/>
+        <orm:join-column name="include_Include1_include2"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include2" name="Include2">
-    <orm:table name="Include2"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.include.Include2" name="include_Include2">
+    <orm:table name="include_Include2"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
         <orm:column name="code"/>

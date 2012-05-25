@@ -184,7 +184,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CODEMODEL_CODEELEMENT_FEATURE_ID = 8;
+  public static final int CODEMODEL_CODEELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -198,28 +198,28 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTCODEELEMENT_SOURCE_FEATURE_ID = 15;
+  public static final int ABSTRACTCODEELEMENT_SOURCE_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTCODEELEMENT_COMMENT_FEATURE_ID = 16;
+  public static final int ABSTRACTCODEELEMENT_COMMENT_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTCODEELEMENT_CODERELATION_FEATURE_ID = 17;
+  public static final int ABSTRACTCODEELEMENT_CODERELATION_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTCODEELEMENT_ENTRYFLOW_FEATURE_ID = 18;
+  public static final int ABSTRACTCODEELEMENT_ENTRYFLOW_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -233,7 +233,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMMENTUNIT_TEXT_FEATURE_ID = 4;
+  public static final int COMMENTUNIT_TEXT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -275,7 +275,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MODULE_CODEELEMENT_FEATURE_ID = 19;
+  public static final int MODULE_CODEELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -324,14 +324,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTROLELEMENT_TYPE_FEATURE_ID = 19;
+  public static final int CONTROLELEMENT_TYPE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTROLELEMENT_CODEELEMENT_FEATURE_ID = 20;
+  public static final int CONTROLELEMENT_CODEELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -345,7 +345,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CALLABLEUNIT_KIND_FEATURE_ID = 21;
+  public static final int CALLABLEUNIT_KIND_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -359,14 +359,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int METHODUNIT_KIND_FEATURE_ID = 21;
+  public static final int METHODUNIT_KIND_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int METHODUNIT_EXPORT_FEATURE_ID = 22;
+  public static final int METHODUNIT_EXPORT_FEATURE_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -380,28 +380,28 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATAELEMENT_TYPE_FEATURE_ID = 19;
+  public static final int DATAELEMENT_TYPE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATAELEMENT_EXT_FEATURE_ID = 20;
+  public static final int DATAELEMENT_EXT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATAELEMENT_SIZE_FEATURE_ID = 21;
+  public static final int DATAELEMENT_SIZE_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DATAELEMENT_CODEELEMENT_FEATURE_ID = 22;
+  public static final int DATAELEMENT_CODEELEMENT_FEATURE_ID = 24;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -415,7 +415,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STORABLEUNIT_KIND_FEATURE_ID = 23;
+  public static final int STORABLEUNIT_KIND_FEATURE_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -443,7 +443,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MEMBERUNIT_EXPORT_FEATURE_ID = 23;
+  public static final int MEMBERUNIT_EXPORT_FEATURE_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -457,14 +457,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PARAMETERUNIT_KIND_FEATURE_ID = 23;
+  public static final int PARAMETERUNIT_KIND_FEATURE_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PARAMETERUNIT_POS_FEATURE_ID = 24;
+  public static final int PARAMETERUNIT_POS_FEATURE_ID = 26;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -492,7 +492,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VALUELIST_VALUEELEMENT_FEATURE_ID = 23;
+  public static final int VALUELIST_VALUEELEMENT_FEATURE_ID = 25;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -618,14 +618,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ENUMERATEDTYPE_VALUE_FEATURE_ID = 19;
+  public static final int ENUMERATEDTYPE_VALUE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ENUMERATEDTYPE_CODEELEMENT_FEATURE_ID = 20;
+  public static final int ENUMERATEDTYPE_CODEELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -639,7 +639,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMPOSITETYPE_ITEMUNIT_FEATURE_ID = 19;
+  public static final int COMPOSITETYPE_ITEMUNIT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -667,7 +667,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DERIVEDTYPE_ITEMUNIT_FEATURE_ID = 19;
+  public static final int DERIVEDTYPE_ITEMUNIT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -681,14 +681,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ARRAYTYPE_SIZE_FEATURE_ID = 20;
+  public static final int ARRAYTYPE_SIZE_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARRAYTYPE_INDEXUNIT_FEATURE_ID = 21;
+  public static final int ARRAYTYPE_INDEXUNIT_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -709,14 +709,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RANGETYPE_LOWER_FEATURE_ID = 20;
+  public static final int RANGETYPE_LOWER_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RANGETYPE_UPPER_FEATURE_ID = 21;
+  public static final int RANGETYPE_UPPER_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -730,7 +730,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BAGTYPE_SIZE_FEATURE_ID = 20;
+  public static final int BAGTYPE_SIZE_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -744,7 +744,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SETTYPE_SIZE_FEATURE_ID = 20;
+  public static final int SETTYPE_SIZE_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -758,7 +758,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SEQUENCETYPE_SIZE_FEATURE_ID = 20;
+  public static final int SEQUENCETYPE_SIZE_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -772,7 +772,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIGNATURE_PARAMETERUNIT_FEATURE_ID = 19;
+  public static final int SIGNATURE_PARAMETERUNIT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -786,14 +786,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DEFINEDTYPE_TYPE_FEATURE_ID = 19;
+  public static final int DEFINEDTYPE_TYPE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DEFINEDTYPE_CODEELEMENT_FEATURE_ID = 20;
+  public static final int DEFINEDTYPE_CODEELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -821,14 +821,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CLASSUNIT_ISABSTRACT_FEATURE_ID = 19;
+  public static final int CLASSUNIT_ISABSTRACT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CLASSUNIT_CODEELEMENT_FEATURE_ID = 20;
+  public static final int CLASSUNIT_CODEELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -842,7 +842,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INTERFACEUNIT_CODEELEMENT_FEATURE_ID = 19;
+  public static final int INTERFACEUNIT_CODEELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -856,7 +856,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TEMPLATEUNIT_CODEELEMENT_FEATURE_ID = 19;
+  public static final int TEMPLATEUNIT_CODEELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -884,14 +884,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INSTANCEOF_TO_FEATURE_ID = 4;
+  public static final int INSTANCEOF_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int INSTANCEOF_FROM_FEATURE_ID = 5;
+  public static final int INSTANCEOF_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -905,14 +905,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PARAMETERTO_TO_FEATURE_ID = 4;
+  public static final int PARAMETERTO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PARAMETERTO_FROM_FEATURE_ID = 5;
+  public static final int PARAMETERTO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -926,14 +926,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int IMPLEMENTS_TO_FEATURE_ID = 4;
+  public static final int IMPLEMENTS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int IMPLEMENTS_FROM_FEATURE_ID = 5;
+  public static final int IMPLEMENTS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -947,14 +947,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int IMPLEMENTATIONOF_TO_FEATURE_ID = 4;
+  public static final int IMPLEMENTATIONOF_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int IMPLEMENTATIONOF_FROM_FEATURE_ID = 5;
+  public static final int IMPLEMENTATIONOF_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -968,14 +968,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int HASTYPE_TO_FEATURE_ID = 4;
+  public static final int HASTYPE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int HASTYPE_FROM_FEATURE_ID = 5;
+  public static final int HASTYPE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -989,14 +989,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int HASVALUE_TO_FEATURE_ID = 4;
+  public static final int HASVALUE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int HASVALUE_FROM_FEATURE_ID = 5;
+  public static final int HASVALUE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1010,14 +1010,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXTENDS_TO_FEATURE_ID = 4;
+  public static final int EXTENDS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EXTENDS_FROM_FEATURE_ID = 5;
+  public static final int EXTENDS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1031,7 +1031,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PREPROCESSORDIRECTIVE_CODEELEMENT_FEATURE_ID = 19;
+  public static final int PREPROCESSORDIRECTIVE_CODEELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1045,7 +1045,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MACROUNIT_KIND_FEATURE_ID = 20;
+  public static final int MACROUNIT_KIND_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1080,14 +1080,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EXPANDS_TO_FEATURE_ID = 4;
+  public static final int EXPANDS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EXPANDS_FROM_FEATURE_ID = 5;
+  public static final int EXPANDS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1101,14 +1101,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int GENERATEDFROM_TO_FEATURE_ID = 4;
+  public static final int GENERATEDFROM_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int GENERATEDFROM_FROM_FEATURE_ID = 5;
+  public static final int GENERATEDFROM_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1122,14 +1122,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INCLUDES_TO_FEATURE_ID = 4;
+  public static final int INCLUDES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int INCLUDES_FROM_FEATURE_ID = 5;
+  public static final int INCLUDES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1143,14 +1143,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VARIANTTO_TO_FEATURE_ID = 4;
+  public static final int VARIANTTO_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int VARIANTTO_FROM_FEATURE_ID = 5;
+  public static final int VARIANTTO_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1164,14 +1164,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int REDEFINES_TO_FEATURE_ID = 4;
+  public static final int REDEFINES_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int REDEFINES_FROM_FEATURE_ID = 5;
+  public static final int REDEFINES_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1185,7 +1185,7 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int NAMESPACE_GROUPEDCODE_FEATURE_ID = 19;
+  public static final int NAMESPACE_GROUPEDCODE_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1199,14 +1199,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VISIBLEIN_TO_FEATURE_ID = 4;
+  public static final int VISIBLEIN_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int VISIBLEIN_FROM_FEATURE_ID = 5;
+  public static final int VISIBLEIN_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1220,14 +1220,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int IMPORTS_TO_FEATURE_ID = 4;
+  public static final int IMPORTS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int IMPORTS_FROM_FEATURE_ID = 5;
+  public static final int IMPORTS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1248,14 +1248,14 @@ public class CodeModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CODERELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int CODERELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CODERELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int CODERELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1282,10 +1282,10 @@ public class CodeModelPackage extends ModelPackage {
     isInitialized = true;
 
     SourceModelPackage.initialize();
+    CoreModelPackage.initialize();
     ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CodeModel.class, modelPackage.getCodeModelEClass(),

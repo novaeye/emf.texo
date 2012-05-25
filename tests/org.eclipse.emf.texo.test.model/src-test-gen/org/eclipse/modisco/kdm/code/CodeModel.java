@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.kdm.KDMModel;
 
 /**
@@ -12,7 +13,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "CodeModel")
+@Entity(name = "code_CodeModel")
 public class CodeModel extends KDMModel {
 
   /**
@@ -21,6 +22,7 @@ public class CodeModel extends KDMModel {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<AbstractCodeElement> codeElement = new ArrayList<AbstractCodeElement>();
 
   /**

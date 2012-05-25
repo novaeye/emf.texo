@@ -15,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "BookStore")
+@Entity(name = "emap_BookStore")
 public class BookStore extends Identifiable {
 
   /**
@@ -32,8 +32,8 @@ public class BookStore extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
-  @MapKeyColumn(table = "BookStore_writersByBook")
-  @JoinTable(name = "BookStore_writersByBook")
+  @MapKeyColumn(table = "emap_BookStore_writersByBook")
+  @JoinTable(name = "emap_BookStore_writersByBook")
   private Map<Writer, Book> writersByBook = new LinkedHashMap<Writer, Book>();
 
   /**

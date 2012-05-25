@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "InventoryItem")
+@Entity(name = "source_InventoryItem")
 public class InventoryItem extends AbstractInventoryElement {
 
   /**

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ArchitectureView")
+@Entity(name = "structure_ArchitectureView")
 public class ArchitectureView extends AbstractStructureElement {
 
   /**

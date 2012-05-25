@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.code.Module;
  * 
  * @generated
  */
-@Entity(name = "DeployedComponent")
+@Entity(name = "platform_DeployedComponent")
 public class DeployedComponent extends AbstractPlatformElement {
 
   /**

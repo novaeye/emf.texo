@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "UIModel")
+@Entity(name = "ui_UIModel")
 public class UIModel extends KDMModel {
 
   /**

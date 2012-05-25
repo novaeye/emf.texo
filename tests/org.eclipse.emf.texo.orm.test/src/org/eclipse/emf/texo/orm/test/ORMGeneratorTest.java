@@ -76,7 +76,8 @@ public class ORMGeneratorTest extends TestCase {
   public void testGenerateModels() throws Exception {
 
     // generate all the db names for the orms
-    EPackageORMAnnotation.setGenerateAllDbSchemaNames(true);
+    EPackageORMAnnotation.setInSafeMappingMode(true);
+    EPackageORMAnnotation.setInTestRun(true);
 
     final IProject modelTestProject = EclipseGeneratorUtils.getProject(TEST_MODEL_PROJECT);
     final IPath projectPath = modelTestProject.getLocation();

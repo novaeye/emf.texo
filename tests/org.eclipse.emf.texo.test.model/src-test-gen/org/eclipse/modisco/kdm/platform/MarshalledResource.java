@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "MarshalledResource")
+@Entity(name = "platform_MarshalledResource")
 public class MarshalledResource extends ResourceType {
 
   /**

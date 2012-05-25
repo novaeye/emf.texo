@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "GlobalLocation")
+@Entity(name = "com_example_epo2_GlobalLocation")
 public class GlobalLocation extends Identifiable {
 
   /**

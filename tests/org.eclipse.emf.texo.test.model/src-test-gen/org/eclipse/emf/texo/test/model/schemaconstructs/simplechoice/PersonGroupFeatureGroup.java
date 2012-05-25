@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Person_group")
+@Entity(name = "simplechoice_Person_group")
 public class PersonGroupFeatureGroup extends Identifiable {
 
   /**
@@ -130,7 +130,7 @@ public class PersonGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private Integer age;
 
   /**
@@ -138,7 +138,7 @@ public class PersonGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private Integer length;
 
   /**

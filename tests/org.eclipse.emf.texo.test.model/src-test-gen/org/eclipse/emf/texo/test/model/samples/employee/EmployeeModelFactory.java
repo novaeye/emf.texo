@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -185,10 +185,12 @@ public class EmployeeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DepartmentModelObject<E extends Department> extends AbstractModelObject<E> {
+  public static class DepartmentModelObject<E extends Department> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EmployeeModelPackage.INSTANCE.getDepartmentEClass();
     }
@@ -196,6 +198,7 @@ public class EmployeeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EmployeeModelPackage.INSTANCE;
     }
@@ -269,10 +272,12 @@ public class EmployeeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class EmployeeModelObject<E extends Employee> extends AbstractModelObject<E> {
+  public static class EmployeeModelObject<E extends Employee> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return EmployeeModelPackage.INSTANCE.getEmployeeEClass();
     }
@@ -280,6 +285,7 @@ public class EmployeeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return EmployeeModelPackage.INSTANCE;
     }

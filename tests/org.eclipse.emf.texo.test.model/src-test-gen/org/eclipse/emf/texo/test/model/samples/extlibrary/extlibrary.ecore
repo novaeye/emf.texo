@@ -31,7 +31,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="#//Addressable">
+  <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Addressable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="name"/>
@@ -115,7 +115,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Item" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Item" abstract="true" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="publicationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
       <eAnnotations source="org.eclipse.emf.texo">
         <details key="java.member" value="publicationDate"/>
@@ -195,7 +195,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Addressable">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Addressable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="org.eclipse.emf.texo">

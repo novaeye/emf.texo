@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "StringType")
+@Entity(name = "catalog_StringType")
 public class StringType extends Identifiable {
 
   /**

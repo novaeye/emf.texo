@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TrueFlow")
+@Entity(name = "action_TrueFlow")
 public class TrueFlow extends ControlFlow {
 
   /**

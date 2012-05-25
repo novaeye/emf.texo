@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.Datatype;
  * 
  * @generated
  */
-@Entity(name = "DatatypeOf")
+@Entity(name = "data_DatatypeOf")
 public class DatatypeOf extends AbstractDataRelationship {
 
   /**

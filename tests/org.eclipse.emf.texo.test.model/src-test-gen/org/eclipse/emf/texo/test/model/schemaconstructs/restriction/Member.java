@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Member")
+@Entity(name = "restriction_Member")
 public class Member extends XMLDeviant {
 
   /**

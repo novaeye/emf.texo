@@ -6,13 +6,14 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Borrower")
+@Entity(name = "extlib_Borrower")
 public class Borrower extends Person {
 
   /**
@@ -21,6 +22,7 @@ public class Borrower extends Person {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   @JoinTable()
   private List<Lendable> borrowed = new ArrayList<Lendable>();
 

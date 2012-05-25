@@ -11,7 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ErrorType")
+@Entity(name = "response_ErrorType")
 public class ErrorType extends Identifiable {
 
   /**

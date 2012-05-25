@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.list.dao.StatesByCountryDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -92,28 +93,28 @@ public class ListModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STATESBYCOUNTRY_COUNTRY_FEATURE_ID = 0;
+  public static final int STATESBYCOUNTRY_COUNTRY_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STATESBYCOUNTRY_INDEX_FEATURE_ID = 1;
+  public static final int STATESBYCOUNTRY_INDEX_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STATESBYCOUNTRY_ALLSTATES_FEATURE_ID = 2;
+  public static final int STATESBYCOUNTRY_ALLSTATES_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID = 3;
+  public static final int STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID = 5;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -138,6 +139,8 @@ public class ListModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "USAddress")
+@Entity(name = "com_example_epo2_USAddress")
 public class USAddress extends Address {
 
   /**

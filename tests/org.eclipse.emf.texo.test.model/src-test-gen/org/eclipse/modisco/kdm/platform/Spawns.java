@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "Spawns")
+@Entity(name = "platform_Spawns")
 public class Spawns extends AbstractPlatformRelationship {
 
   /**

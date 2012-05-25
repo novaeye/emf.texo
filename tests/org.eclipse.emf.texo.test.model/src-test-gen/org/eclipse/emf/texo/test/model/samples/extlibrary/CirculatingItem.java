@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "CirculatingItem")
+@Entity(name = "extlib_CirculatingItem")
 public abstract class CirculatingItem extends Item implements Lendable {
 
   /**

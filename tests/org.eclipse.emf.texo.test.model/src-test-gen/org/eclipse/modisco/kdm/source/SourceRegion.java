@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "SourceRegion")
+@Entity(name = "source_SourceRegion")
 public class SourceRegion extends Element {
 
   /**

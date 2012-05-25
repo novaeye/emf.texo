@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "BooleanType")
+@Entity(name = "code_BooleanType")
 public class BooleanType extends PrimitiveType {
 
   /**

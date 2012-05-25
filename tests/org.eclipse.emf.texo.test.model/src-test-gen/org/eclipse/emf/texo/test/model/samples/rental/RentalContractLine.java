@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "RentalContractLine")
+@Entity(name = "rental_RentalContractLine")
 public class RentalContractLine extends Identifiable {
 
   /**

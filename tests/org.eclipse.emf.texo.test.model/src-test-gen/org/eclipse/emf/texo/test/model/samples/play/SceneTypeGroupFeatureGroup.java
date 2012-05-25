@@ -17,7 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SceneType_group")
+@Entity(name = "play_SceneType_group")
 public class SceneTypeGroupFeatureGroup extends Identifiable {
 
   /**
@@ -134,7 +134,7 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String stageDirections;
 
   /**
@@ -142,7 +142,7 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private SpeechType speech;
 
   /**

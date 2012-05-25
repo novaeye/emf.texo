@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ComputationalObject")
+@Entity(name = "code_ComputationalObject")
 public class ComputationalObject extends CodeItem {
 
   /**

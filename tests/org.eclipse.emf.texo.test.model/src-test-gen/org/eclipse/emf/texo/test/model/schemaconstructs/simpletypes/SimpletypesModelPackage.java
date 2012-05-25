@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.dao.SimpleListDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.dao.SimpleTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.dao.SimpleTypeObjectDao;
@@ -173,112 +174,112 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLELIST_CODE_FEATURE_ID = 0;
+  public static final int SIMPLELIST_CODE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_BOO_FEATURE_ID = 1;
+  public static final int SIMPLELIST_BOO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_BYT_FEATURE_ID = 2;
+  public static final int SIMPLELIST_BYT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_DOUBL_FEATURE_ID = 3;
+  public static final int SIMPLELIST_DOUBL_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_FLOA_FEATURE_ID = 4;
+  public static final int SIMPLELIST_FLOA_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_INTE_FEATURE_ID = 5;
+  public static final int SIMPLELIST_INTE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_LONG__FEATURE_ID = 6;
+  public static final int SIMPLELIST_LONG__FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_SHOR_FEATURE_ID = 7;
+  public static final int SIMPLELIST_SHOR_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_ENU_FEATURE_ID = 8;
+  public static final int SIMPLELIST_ENU_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_DAT_FEATURE_ID = 9;
+  public static final int SIMPLELIST_DAT_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_LIMITEDSTRING_FEATURE_ID = 10;
+  public static final int SIMPLELIST_LIMITEDSTRING_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_STRI_FEATURE_ID = 11;
+  public static final int SIMPLELIST_STRI_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_INTARRAY_FEATURE_ID = 12;
+  public static final int SIMPLELIST_INTARRAY_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_DOUBLEARRAY_FEATURE_ID = 13;
+  public static final int SIMPLELIST_DOUBLEARRAY_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_STRINGARRAY_FEATURE_ID = 14;
+  public static final int SIMPLELIST_STRINGARRAY_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLELIST_BYTEARRAY_FEATURE_ID = 15;
+  public static final int SIMPLELIST_BYTEARRAY_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -292,91 +293,91 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_CODE_FEATURE_ID = 0;
+  public static final int SIMPLETYPE_CODE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_BOO_FEATURE_ID = 1;
+  public static final int SIMPLETYPE_BOO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_BYT_FEATURE_ID = 2;
+  public static final int SIMPLETYPE_BYT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_DOUBL_FEATURE_ID = 3;
+  public static final int SIMPLETYPE_DOUBL_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_FLOAT__FEATURE_ID = 4;
+  public static final int SIMPLETYPE_FLOAT__FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_INTE_FEATURE_ID = 5;
+  public static final int SIMPLETYPE_INTE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_LON_FEATURE_ID = 6;
+  public static final int SIMPLETYPE_LON_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_SHOR_FEATURE_ID = 7;
+  public static final int SIMPLETYPE_SHOR_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_ENU_FEATURE_ID = 8;
+  public static final int SIMPLETYPE_ENU_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_DAT_FEATURE_ID = 9;
+  public static final int SIMPLETYPE_DAT_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_LIMITEDSTRING_FEATURE_ID = 10;
+  public static final int SIMPLETYPE_LIMITEDSTRING_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_LIMITEDDECIMAL_FEATURE_ID = 11;
+  public static final int SIMPLETYPE_LIMITEDDECIMAL_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID = 12;
+  public static final int SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -390,70 +391,70 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_CODE_FEATURE_ID = 0;
+  public static final int SIMPLETYPEOBJECT_CODE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_BOO_FEATURE_ID = 1;
+  public static final int SIMPLETYPEOBJECT_BOO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_BYT_FEATURE_ID = 2;
+  public static final int SIMPLETYPEOBJECT_BYT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_DOUBL_FEATURE_ID = 3;
+  public static final int SIMPLETYPEOBJECT_DOUBL_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_FLOAT__FEATURE_ID = 4;
+  public static final int SIMPLETYPEOBJECT_FLOAT__FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_INTE_FEATURE_ID = 5;
+  public static final int SIMPLETYPEOBJECT_INTE_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_LON_FEATURE_ID = 6;
+  public static final int SIMPLETYPEOBJECT_LON_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_SHOR_FEATURE_ID = 7;
+  public static final int SIMPLETYPEOBJECT_SHOR_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_ENU_FEATURE_ID = 8;
+  public static final int SIMPLETYPEOBJECT_ENU_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLETYPEOBJECT_DAT_FEATURE_ID = 9;
+  public static final int SIMPLETYPEOBJECT_DAT_FEATURE_ID = 11;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -478,6 +479,8 @@ public class SimpletypesModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

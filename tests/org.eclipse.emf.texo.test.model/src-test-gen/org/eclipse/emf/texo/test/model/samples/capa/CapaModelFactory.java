@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.capa. It
@@ -225,10 +225,12 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CapacityEntryModelObject<E extends CapacityEntry> extends AbstractModelObject<E> {
+  public static class CapacityEntryModelObject<E extends CapacityEntry> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getCapacityEntryEClass();
     }
@@ -236,6 +238,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }
@@ -302,10 +305,11 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MachineModelObject<E extends Machine> extends AbstractModelObject<E> {
+  public static class MachineModelObject<E extends Machine> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getMachineEClass();
     }
@@ -313,6 +317,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }
@@ -408,10 +413,12 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MachineListModelObject<E extends MachineList> extends AbstractModelObject<E> {
+  public static class MachineListModelObject<E extends MachineList> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getMachineListEClass();
     }
@@ -419,6 +426,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }
@@ -487,10 +495,12 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ProductionModelObject<E extends Production> extends AbstractModelObject<E> {
+  public static class ProductionModelObject<E extends Production> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getProductionEClass();
     }
@@ -498,6 +508,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }
@@ -584,10 +595,11 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class TaskModelObject<E extends Task> extends AbstractModelObject<E> {
+  public static class TaskModelObject<E extends Task> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getTaskEClass();
     }
@@ -595,6 +607,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }
@@ -681,10 +694,11 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class WorkDayModelObject<E extends WorkDay> extends AbstractModelObject<E> {
+  public static class WorkDayModelObject<E extends WorkDay> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getWorkDayEClass();
     }
@@ -692,6 +706,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }
@@ -763,10 +778,12 @@ public class CapaModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class WorkWeekModelObject<E extends WorkWeek> extends AbstractModelObject<E> {
+  public static class WorkWeekModelObject<E extends WorkWeek> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return CapaModelPackage.INSTANCE.getWorkWeekEClass();
     }
@@ -774,6 +791,7 @@ public class CapaModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return CapaModelPackage.INSTANCE;
     }

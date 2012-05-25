@@ -3,11 +3,11 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.include;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -148,10 +148,12 @@ public class IncludeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class Include1ModelObject<E extends Include1> extends AbstractModelObject<E> {
+  public static class Include1ModelObject<E extends Include1> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return IncludeModelPackage.INSTANCE.getInclude1EClass();
     }
@@ -159,6 +161,7 @@ public class IncludeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return IncludeModelPackage.INSTANCE;
     }
@@ -225,10 +228,12 @@ public class IncludeModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class Include2ModelObject<E extends Include2> extends AbstractModelObject<E> {
+  public static class Include2ModelObject<E extends Include2> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return IncludeModelPackage.INSTANCE.getInclude2EClass();
     }
@@ -236,6 +241,7 @@ public class IncludeModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return IncludeModelPackage.INSTANCE;
     }

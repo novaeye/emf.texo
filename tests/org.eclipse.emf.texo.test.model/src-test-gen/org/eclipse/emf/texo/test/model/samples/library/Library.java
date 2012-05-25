@@ -20,7 +20,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @orgeclipseemftexo.OneDotAnnotation("test")
-@Entity(name = "Library")
+@Entity(name = "library_Library")
 @PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class Library extends Identifiable {
 
@@ -30,7 +30,7 @@ public class Library extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "name")
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -39,8 +39,8 @@ public class Library extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
-  @OrderColumn(name = "ind")
-  @JoinColumns({ @JoinColumn(name = "Library_id") })
+  @OrderColumn(name = "library_Library_writers_ind")
+  @JoinColumns({ @JoinColumn(name = "library_Library_writers") })
   private List<Writer> writers = new ArrayList<Writer>();
 
   /**
@@ -49,8 +49,8 @@ public class Library extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true)
-  @OrderColumn(name = "ind")
-  @JoinColumns({ @JoinColumn(name = "Library_id") })
+  @OrderColumn(name = "library_Library_books_ind")
+  @JoinColumns({ @JoinColumn(name = "library_Library_books") })
   private List<Book> books = new ArrayList<Book>();
 
   /**

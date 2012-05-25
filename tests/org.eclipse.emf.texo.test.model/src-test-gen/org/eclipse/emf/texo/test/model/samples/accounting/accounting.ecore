@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="accounting"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/accounting" nsPrefix="accounting">
-  <eClassifiers xsi:type="ecore:EClass" name="Account" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Account" abstract="true" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Account"/>
       <details key="kind" value="elementOnly"/>
@@ -19,7 +19,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AccountGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="AccountGroup" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="AccountGroup"/>
       <details key="kind" value="elementOnly"/>
@@ -45,7 +45,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Accounting" eSuperTypes="#//Serializable">
+  <eClassifiers xsi:type="ecore:EClass" name="Accounting" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable #//Serializable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Accounting"/>
       <details key="kind" value="elementOnly"/>
@@ -127,7 +127,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JournalGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="JournalGroup" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="JournalGroup"/>
       <details key="kind" value="elementOnly"/>
@@ -163,7 +163,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JournalStatement">
+  <eClassifiers xsi:type="ecore:EClass" name="JournalStatement" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="JournalStatement"/>
       <details key="kind" value="elementOnly"/>
@@ -236,7 +236,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Report">
+  <eClassifiers xsi:type="ecore:EClass" name="Report" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Report"/>
       <details key="kind" value="elementOnly"/>
@@ -272,7 +272,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReportGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="ReportGroup" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="ReportGroup"/>
       <details key="kind" value="elementOnly"/>
@@ -308,7 +308,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Vat">
+  <eClassifiers xsi:type="ecore:EClass" name="Vat" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Vat"/>
       <details key="kind" value="elementOnly"/>

@@ -15,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "NumberType")
+@Entity(name = "substitution_NumberType")
 public class NumberType extends Identifiable {
 
   /**

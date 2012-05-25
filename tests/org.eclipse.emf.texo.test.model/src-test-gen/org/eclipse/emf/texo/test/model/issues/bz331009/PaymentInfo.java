@@ -6,8 +6,13 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -16,7 +21,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PaymentInfo")
+@Entity(name = "m_PaymentInfo")
+@Table(name = "m_PaymentInfo")
 public class PaymentInfo extends Identifiable {
 
   /**
@@ -25,6 +31,7 @@ public class PaymentInfo extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_PaymentInfo_tariff") })
   private Tariff tariff = null;
 
   /**
@@ -33,6 +40,8 @@ public class PaymentInfo extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_PaymentInfo_factPayments_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_PaymentInfo_factPayments") }, inverseJoinColumns = { @JoinColumn(name = "m_PaymentItem_id") }, name = "m_PaymentInfo_factPayments")
   @Access(AccessType.FIELD)
   private List<PaymentItem> factPayments = new ArrayList<PaymentItem>();
 

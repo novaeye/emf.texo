@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -13,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "statesByCountry")
+@Entity(name = "listunion_statesByCountry")
 public class StatesByCountry extends Identifiable {
 
   /**
@@ -54,7 +55,8 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "statesByCountry_zipUnions")
+  @OrderColumn()
+  @CollectionTable(name = "listunion_statesByCountry_zipUnions")
   private List<String> zipUnions = new ArrayList<String>();
 
   /**
@@ -71,7 +73,8 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "statesByCountry_simpleUnions")
+  @OrderColumn()
+  @CollectionTable(name = "listunion_statesByCountry_simpleUnions")
   private List<Object> simpleUnions = new ArrayList<Object>();
 
   /**
@@ -88,7 +91,8 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "statesByCountry_simpleStringUnions")
+  @OrderColumn()
+  @CollectionTable(name = "listunion_statesByCountry_simpleStringUnions")
   private List<String> simpleStringUnions = new ArrayList<String>();
 
   /**

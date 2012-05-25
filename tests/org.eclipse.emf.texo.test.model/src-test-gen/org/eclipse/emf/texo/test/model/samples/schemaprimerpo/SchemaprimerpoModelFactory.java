@@ -10,11 +10,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.samples.schemaprimerpo.
@@ -260,13 +260,15 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SchemaprimerpoModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -274,6 +276,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SchemaprimerpoModelPackage.INSTANCE;
     }
@@ -345,6 +348,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SchemaprimerpoModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -367,13 +374,14 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ItemModelObject<E extends Item> extends AbstractModelObject<E> {
+  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SchemaprimerpoModelPackage.INSTANCE.getItemEClass();
     }
@@ -381,6 +389,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SchemaprimerpoModelPackage.INSTANCE;
     }
@@ -479,13 +488,15 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends AbstractModelObject<E> {
+  public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SchemaprimerpoModelPackage.INSTANCE.getPurchaseOrderEClass();
     }
@@ -493,6 +504,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SchemaprimerpoModelPackage.INSTANCE;
     }
@@ -594,13 +606,15 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class USAddressModelObject<E extends USAddress> extends AbstractModelObject<E> {
+  public static class USAddressModelObject<E extends USAddress> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return SchemaprimerpoModelPackage.INSTANCE.getUSAddressEClass();
     }
@@ -608,6 +622,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return SchemaprimerpoModelPackage.INSTANCE;
     }

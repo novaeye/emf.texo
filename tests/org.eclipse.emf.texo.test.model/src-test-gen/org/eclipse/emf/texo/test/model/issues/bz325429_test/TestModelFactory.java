@@ -5,11 +5,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: test. It contains code to create instances
@@ -198,10 +198,11 @@ public class TestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PersonModelObject<E extends Person> extends AbstractModelObject<E> {
+  public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return TestModelPackage.INSTANCE.getPersonEClass();
     }
@@ -209,6 +210,7 @@ public class TestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return TestModelPackage.INSTANCE;
     }
@@ -292,10 +294,11 @@ public class TestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AddressModelObject<E extends Address> extends AbstractModelObject<E> {
+  public static class AddressModelObject<E extends Address> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return TestModelPackage.INSTANCE.getAddressEClass();
     }
@@ -303,6 +306,7 @@ public class TestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return TestModelPackage.INSTANCE;
     }
@@ -369,10 +373,11 @@ public class TestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ContactModelObject<E extends Contact> extends AbstractModelObject<E> {
+  public static class ContactModelObject<E extends Contact> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return TestModelPackage.INSTANCE.getContactEClass();
     }
@@ -380,6 +385,7 @@ public class TestModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return TestModelPackage.INSTANCE;
     }

@@ -5,13 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 
 /**
  * A representation of the model object '<em><b>CompositeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "CompositeType")
+@Entity(name = "code_CompositeType")
 public class CompositeType extends Datatype {
 
   /**
@@ -20,6 +21,7 @@ public class CompositeType extends Datatype {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<ItemUnit> itemUnit = new ArrayList<ItemUnit>();
 
   /**

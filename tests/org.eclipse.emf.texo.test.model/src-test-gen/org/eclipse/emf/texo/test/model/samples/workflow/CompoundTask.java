@@ -2,14 +2,19 @@ package org.eclipse.emf.texo.test.model.samples.workflow;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>CompoundTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "CompoundTask")
+@Entity(name = "workflow_CompoundTask")
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
 public class CompoundTask extends WorkflowNode {
 
   /**
@@ -18,6 +23,7 @@ public class CompoundTask extends WorkflowNode {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @JoinColumns({ @JoinColumn(name = "workflow_CompoundTask_subworkflow") })
   private Workflow subworkflow = null;
 
   /**

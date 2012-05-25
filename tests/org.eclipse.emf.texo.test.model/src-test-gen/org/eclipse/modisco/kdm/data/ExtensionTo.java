@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ExtensionTo")
+@Entity(name = "data_ExtensionTo")
 public class ExtensionTo extends AbstractDataRelationship {
 
   /**

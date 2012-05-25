@@ -6,7 +6,7 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup" name="LetterBodyType_mixed">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup" name="mixed_LetterBodyType_mixed">
     <orm:attributes>
       <orm:basic name="quantity" optional="false">
         <orm:column name="quantity"/>
@@ -14,7 +14,7 @@
       <orm:basic name="productName" optional="false">
         <orm:column name="productName"/>
       </orm:basic>
-      <orm:basic name="shipDate">
+      <orm:basic name="shipDate" optional="false">
         <orm:column name="shipDate"/>
         <orm:temporal>DATE</orm:temporal>
       </orm:basic>
@@ -31,15 +31,15 @@
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:many-to-one name="salutation" optional="false">
-        <orm:join-column name="salutation"/>
+        <orm:join-column name="mixed_LetterBodyType_salutation"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType" name="LetterBodyType">
-    <orm:table name="LetterBodyType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType" name="mixed_LetterBodyType">
+    <orm:table name="mixed_LetterBodyType"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup">
         <orm:join-table/>
@@ -49,10 +49,10 @@
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup" name="SalutationType_mixed">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup" name="mixed_SalutationType_mixed">
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="text" optional="true">
         <orm:lob/>
@@ -68,8 +68,8 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationType" name="SalutationType">
-    <orm:table name="SalutationType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationType" name="mixed_SalutationType">
+    <orm:table name="mixed_SalutationType"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup">
         <orm:join-table/>

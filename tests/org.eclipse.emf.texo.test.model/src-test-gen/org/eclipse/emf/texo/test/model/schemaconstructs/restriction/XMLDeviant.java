@@ -13,7 +13,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "XMLDeviant")
+@Entity(name = "restriction_XMLDeviant")
 public class XMLDeviant extends Identifiable {
 
   /**

@@ -7,9 +7,15 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -20,7 +26,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Contract")
+@Entity(name = "m_Contract")
+@Table(name = "m_Contract")
 public class Contract extends Identifiable {
 
   /**
@@ -29,6 +36,7 @@ public class Contract extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "signDate")
   @Temporal(TemporalType.DATE)
   private Date signDate = null;
 
@@ -38,6 +46,7 @@ public class Contract extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Contract_simCard") })
   private SimCard simCard = null;
 
   /**
@@ -46,6 +55,7 @@ public class Contract extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Contract_paymentInfo") })
   private PaymentInfo paymentInfo = null;
 
   /**
@@ -54,6 +64,7 @@ public class Contract extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Contract_car") })
   private Car car = null;
 
   /**
@@ -62,6 +73,8 @@ public class Contract extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_Contract_secretQuestions_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Contract_secretQuestions") }, inverseJoinColumns = { @JoinColumn(name = "m_SecretQuestion_id") }, name = "m_Contract_secretQuestions")
   @Access(AccessType.FIELD)
   private List<SecretQuestion> secretQuestions = new ArrayList<SecretQuestion>();
 
@@ -71,6 +84,7 @@ public class Contract extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_number")
   private String number = null;
 
   /**

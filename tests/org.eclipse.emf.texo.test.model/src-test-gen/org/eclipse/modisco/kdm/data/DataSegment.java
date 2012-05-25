@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "DataSegment")
+@Entity(name = "data_DataSegment")
 public class DataSegment extends ColumnSet {
 
   /**

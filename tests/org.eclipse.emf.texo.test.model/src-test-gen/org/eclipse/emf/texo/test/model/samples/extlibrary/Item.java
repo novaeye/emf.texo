@@ -12,7 +12,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Item")
+@Entity(name = "extlib_Item")
 public abstract class Item extends Identifiable {
 
   /**

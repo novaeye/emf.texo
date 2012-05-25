@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SimpleAllType")
+@Entity(name = "groupall_SimpleAllType")
 public class SimpleAllType extends Identifiable {
 
   /**

@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "UIFlow")
+@Entity(name = "ui_UIFlow")
 public class UIFlow extends AbstractUIRelationship {
 
   /**

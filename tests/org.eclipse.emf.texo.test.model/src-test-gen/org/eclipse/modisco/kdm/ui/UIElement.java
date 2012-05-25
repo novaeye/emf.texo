@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "UIElement")
+@Entity(name = "ui_UIElement")
 public class UIElement extends AbstractUIElement {
 
   /**

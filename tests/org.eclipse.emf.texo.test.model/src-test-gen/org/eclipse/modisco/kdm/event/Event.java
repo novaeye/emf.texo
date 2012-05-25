@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Event")
+@Entity(name = "event_Event")
 public class Event extends AbstractEventElement {
 
   /**

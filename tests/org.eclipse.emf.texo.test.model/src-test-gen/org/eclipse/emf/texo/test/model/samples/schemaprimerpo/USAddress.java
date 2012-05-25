@@ -10,7 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "USAddress")
+@Entity(name = "schemaprimerpo_USAddress")
 public class USAddress extends Identifiable {
 
   /**

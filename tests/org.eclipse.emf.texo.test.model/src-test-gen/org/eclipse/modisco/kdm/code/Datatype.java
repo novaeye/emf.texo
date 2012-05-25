@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Datatype")
+@Entity(name = "code_Datatype")
 public class Datatype extends CodeItem {
 
   /**

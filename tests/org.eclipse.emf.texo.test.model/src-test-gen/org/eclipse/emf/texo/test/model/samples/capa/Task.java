@@ -11,7 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Task")
+@Entity(name = "capa_Task")
 public class Task extends Identifiable {
 
   /**

@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "PlatformAction")
+@Entity(name = "platform_PlatformAction")
 public class PlatformAction extends AbstractPlatformElement {
 
   /**

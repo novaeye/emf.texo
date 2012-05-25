@@ -12,7 +12,7 @@ import javax.persistence.ManyToMany;
  * 
  * @generated
  */
-@Entity(name = "DeployedSoftwareSystem")
+@Entity(name = "platform_DeployedSoftwareSystem")
 public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   /**

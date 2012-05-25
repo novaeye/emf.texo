@@ -3,11 +3,11 @@ package org.eclipse.emf.texo.test.model.issues.bz379796;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.issues.bz379796. It
@@ -201,10 +201,12 @@ public class Bz379796ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PriceTypeModelObject<E extends PriceType> extends AbstractModelObject<E> {
+  public static class PriceTypeModelObject<E extends PriceType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz379796ModelPackage.INSTANCE.getPriceTypeEClass();
     }
@@ -212,6 +214,7 @@ public class Bz379796ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz379796ModelPackage.INSTANCE;
     }

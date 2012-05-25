@@ -14,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SceneType")
+@Entity(name = "play_SceneType")
 public class SceneType extends Identifiable {
 
   /**

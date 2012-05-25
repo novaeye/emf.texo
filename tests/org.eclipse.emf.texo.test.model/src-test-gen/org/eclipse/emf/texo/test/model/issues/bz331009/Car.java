@@ -2,7 +2,10 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -11,7 +14,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Car")
+@Entity(name = "m_Car")
+@Table(name = "m_Car")
 public class Car extends Identifiable {
 
   /**
@@ -20,6 +24,7 @@ public class Car extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Car_model") })
   private CarModel model = null;
 
   /**
@@ -29,6 +34,7 @@ public class Car extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Car_regInfo") })
   private CarRegInfo regInfo = null;
 
   /**
@@ -39,6 +45,7 @@ public class Car extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Car_carPassport") })
   private CarPassport carPassport = null;
 
   /**

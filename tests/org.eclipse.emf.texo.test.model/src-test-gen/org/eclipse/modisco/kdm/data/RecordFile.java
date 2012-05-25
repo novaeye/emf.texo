@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "RecordFile")
+@Entity(name = "data_RecordFile")
 public class RecordFile extends ColumnSet {
 
   /**

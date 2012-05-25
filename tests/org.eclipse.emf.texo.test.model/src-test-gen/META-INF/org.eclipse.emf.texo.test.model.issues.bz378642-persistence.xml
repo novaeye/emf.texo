@@ -18,6 +18,10 @@
 
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+			<!-- property name="eclipselink.drop-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-drop.sql"/>
+			<property name="eclipselink.create-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-create.sql"/>
+			<property name="eclipselink.application-location" value="ddl/"/-->
+			<property name="eclipselink.logging.level" value="WARNING" />
 		</properties>
 	</persistence-unit>
 	
@@ -37,6 +41,10 @@
 
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+			<!-- property name="eclipselink.drop-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-drop.sql"/>
+			<property name="eclipselink.create-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-create.sql"/>
+			<property name="eclipselink.application-location" value="ddl/"/-->
+			<property name="eclipselink.logging.level" value="WARNING" />
 		</properties>
 	</persistence-unit>
 	
@@ -55,6 +63,10 @@
 
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+			<!-- property name="eclipselink.drop-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-drop.sql"/>
+			<property name="eclipselink.create-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-create.sql"/>
+			<property name="eclipselink.application-location" value="ddl/"/-->
+			<property name="eclipselink.logging.level" value="WARNING" />
 		</properties>
 	</persistence-unit>
 	
@@ -75,6 +87,10 @@
 
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+			<!-- property name="eclipselink.drop-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-drop.sql"/>
+			<property name="eclipselink.create-ddl-jdbc-file-name" value="org.eclipse.emf.texo.test.model.issues.bz378642-create.sql"/>
+			<property name="eclipselink.application-location" value="ddl/"/-->
+			<property name="eclipselink.logging.level" value="WARNING" />
 		</properties>
 	</persistence-unit>
 		

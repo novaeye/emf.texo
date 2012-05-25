@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
 
@@ -17,7 +18,7 @@ import org.eclipse.emf.texo.test.model.instanceclassset.NonEMF;
  * 
  * @generated
  */
-@Entity(name = "MySerializableClass")
+@Entity(name = "bz306546_MySerializableClass")
 public class MySerializableClass extends Identifiable implements Serializable {
 
   /**
@@ -47,6 +48,7 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn()
   private List<NonEMF> nonEMFs = new ArrayList<NonEMF>();
 
   /**

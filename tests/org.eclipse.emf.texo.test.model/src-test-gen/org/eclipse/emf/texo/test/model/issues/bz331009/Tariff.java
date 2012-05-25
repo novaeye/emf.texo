@@ -6,8 +6,13 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -16,7 +21,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Tariff")
+@Entity(name = "m_Tariff")
+@Table(name = "m_Tariff")
 public abstract class Tariff extends Identifiable {
 
   /**
@@ -25,6 +31,7 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -33,6 +40,7 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "active")
   private boolean active = false;
 
   /**
@@ -41,6 +49,8 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_Tariff_volumePayments_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Tariff_volumePayments") }, inverseJoinColumns = { @JoinColumn(name = "m_VolumePayment_id") }, name = "m_Tariff_volumePayments")
   @Access(AccessType.FIELD)
   private List<VolumePayment> volumePayments = new ArrayList<VolumePayment>();
 
@@ -50,6 +60,8 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_Tariff_periodicalPayments_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Tariff_periodicalPayments") }, inverseJoinColumns = { @JoinColumn(name = "m_PeriodicalPayment_id") }, name = "m_Tariff_periodicalPayments")
   @Access(AccessType.FIELD)
   private List<PeriodicalPayment> periodicalPayments = new ArrayList<PeriodicalPayment>();
 
@@ -60,6 +72,8 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_Tariff_initialPayment_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Tariff_initialPayment") }, inverseJoinColumns = { @JoinColumn(name = "m_OneTimePayment_id") }, name = "m_Tariff_initialPayment")
   @Access(AccessType.FIELD)
   private List<OneTimePayment> initialPayment = new ArrayList<OneTimePayment>();
 
@@ -69,6 +83,8 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_Tariff_services_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Tariff_services") }, inverseJoinColumns = { @JoinColumn(name = "m_Service_id") }, name = "m_Tariff_services")
   @Access(AccessType.FIELD)
   private List<Service> services = new ArrayList<Service>();
 

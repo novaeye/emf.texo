@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "OnEntry")
+@Entity(name = "event_OnEntry")
 public class OnEntry extends Transition {
 
   /**

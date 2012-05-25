@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -245,10 +245,12 @@ public class GroupallModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AddressGroupTypeModelObject<E extends AddressGroupType> extends AbstractModelObject<E> {
+  public static class AddressGroupTypeModelObject<E extends AddressGroupType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return GroupallModelPackage.INSTANCE.getAddressGroupTypeEClass();
     }
@@ -256,6 +258,7 @@ public class GroupallModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return GroupallModelPackage.INSTANCE;
     }
@@ -332,10 +335,12 @@ public class GroupallModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AddressListModelObject<E extends AddressList> extends AbstractModelObject<E> {
+  public static class AddressListModelObject<E extends AddressList> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return GroupallModelPackage.INSTANCE.getAddressListEClass();
     }
@@ -343,6 +348,7 @@ public class GroupallModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return GroupallModelPackage.INSTANCE;
     }
@@ -398,6 +404,10 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.ADDRESSLIST_ADDRS_FEATURE_ID:
+        getTarget().getAddrs().add((AddressListAddrsFeatureGroup) value);
+        return;
+
       case GroupallModelPackage.ADDRESSLIST_SHIPTO_FEATURE_ID:
         getTarget().getShipTo().add((AddressType) value);
         return;
@@ -434,10 +444,12 @@ public class GroupallModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AddressTypeModelObject<E extends AddressType> extends AbstractModelObject<E> {
+  public static class AddressTypeModelObject<E extends AddressType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return GroupallModelPackage.INSTANCE.getAddressTypeEClass();
     }
@@ -445,6 +457,7 @@ public class GroupallModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return GroupallModelPackage.INSTANCE;
     }
@@ -495,6 +508,17 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((AddressTypeGroupFeatureGroup) value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
+        getTarget().getName().add((String) value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
+        getTarget().getLongName().add((String) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -517,10 +541,12 @@ public class GroupallModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return GroupallModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -528,6 +554,7 @@ public class GroupallModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return GroupallModelPackage.INSTANCE;
     }
@@ -598,6 +625,10 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -621,10 +652,12 @@ public class GroupallModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimpleAllMapTypeModelObject<E extends SimpleAllMapType> extends AbstractModelObject<E> {
+  public static class SimpleAllMapTypeModelObject<E extends SimpleAllMapType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return GroupallModelPackage.INSTANCE.getSimpleAllMapTypeEClass();
     }
@@ -632,6 +665,7 @@ public class GroupallModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return GroupallModelPackage.INSTANCE;
     }
@@ -686,6 +720,10 @@ public class GroupallModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case GroupallModelPackage.SIMPLEALLMAPTYPE_ALLMAP_FEATURE_ID:
+        getTarget().getAllMap().add((SimpleAllMapTypeAllMapFeatureGroup) value);
+        return;
 
       }
       super.eAddTo(eStructuralFeature, value);
@@ -952,10 +990,12 @@ public class GroupallModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SimpleAllTypeModelObject<E extends SimpleAllType> extends AbstractModelObject<E> {
+  public static class SimpleAllTypeModelObject<E extends SimpleAllType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return GroupallModelPackage.INSTANCE.getSimpleAllTypeEClass();
     }
@@ -963,6 +1003,7 @@ public class GroupallModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return GroupallModelPackage.INSTANCE;
     }

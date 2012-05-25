@@ -8,11 +8,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.schemaconstructs.qname.
@@ -160,10 +160,12 @@ public class QnameModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return QnameModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -171,6 +173,7 @@ public class QnameModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return QnameModelPackage.INSTANCE;
     }
@@ -226,6 +229,10 @@ public class QnameModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case QnameModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -248,10 +255,11 @@ public class QnameModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class MytestModelObject<E extends Mytest> extends AbstractModelObject<E> {
+  public static class MytestModelObject<E extends Mytest> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return QnameModelPackage.INSTANCE.getMytestEClass();
     }
@@ -259,6 +267,7 @@ public class QnameModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return QnameModelPackage.INSTANCE;
     }
@@ -309,6 +318,9 @@ public class QnameModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case QnameModelPackage.MYTEST_NAMES_FEATURE_ID:
+        getTarget().getNames().add((QName) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }

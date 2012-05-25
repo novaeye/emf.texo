@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -16,7 +17,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
-@Entity(name = "Mixed_mixed")
+@Entity(name = "ecoreattrs_Mixed_mixed")
 public class MixedMixedFeatureGroup extends Identifiable {
 
   /**
@@ -160,6 +161,7 @@ public class MixedMixedFeatureGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_name")
   private String name;
 
   /**
@@ -168,6 +170,7 @@ public class MixedMixedFeatureGroup extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_value")
   private Double value_;
 
   /**

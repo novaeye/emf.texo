@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.dao.ElementDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.dao.FeatureDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.dao.MixedDao;
@@ -59,14 +60,14 @@ public class EcoreattrsModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ELEMENT_NAMEMAP_FEATURE_ID = 0;
+  public static final int ELEMENT_NAMEMAP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ELEMENT_NAMES_FEATURE_ID = 1;
+  public static final int ELEMENT_NAMES_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -80,21 +81,21 @@ public class EcoreattrsModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int FEATURE_AMAP_FEATURE_ID = 0;
+  public static final int FEATURE_AMAP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int FEATURE_NAME_FEATURE_ID = 1;
+  public static final int FEATURE_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int FEATURE_VALUE__FEATURE_ID = 2;
+  public static final int FEATURE_VALUE__FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -108,21 +109,21 @@ public class EcoreattrsModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MIXED_MIXED_FEATURE_ID = 0;
+  public static final int MIXED_MIXED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MIXED_NAME_FEATURE_ID = 1;
+  public static final int MIXED_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MIXED_VALUE__FEATURE_ID = 2;
+  public static final int MIXED_VALUE__FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -136,21 +137,21 @@ public class EcoreattrsModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int NAMELIST_FIRSTNAME_FEATURE_ID = 0;
+  public static final int NAMELIST_FIRSTNAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int NAMELIST_MIDDLENAME_FEATURE_ID = 1;
+  public static final int NAMELIST_MIDDLENAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int NAMELIST_LASTNAME_FEATURE_ID = 2;
+  public static final int NAMELIST_LASTNAME_FEATURE_ID = 4;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -175,6 +176,8 @@ public class EcoreattrsModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

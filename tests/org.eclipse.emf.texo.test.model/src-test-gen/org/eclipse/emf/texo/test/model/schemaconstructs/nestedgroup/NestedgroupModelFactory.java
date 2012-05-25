@@ -6,11 +6,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model:
@@ -190,10 +190,11 @@ public class NestedgroupModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AModelObject<E extends A> extends AbstractModelObject<E> {
+  public static class AModelObject<E extends A> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return NestedgroupModelPackage.INSTANCE.getAEClass();
     }
@@ -201,6 +202,7 @@ public class NestedgroupModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return NestedgroupModelPackage.INSTANCE;
     }
@@ -256,6 +258,14 @@ public class NestedgroupModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case NestedgroupModelPackage.A_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((AGroupFeatureGroup) value);
+        return;
+
+      case NestedgroupModelPackage.A_B_FEATURE_ID:
+        getTarget().getB().add((String) value);
+        return;
+
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         getTarget().getC().add((CType) value);
         return;
@@ -284,10 +294,11 @@ public class NestedgroupModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class CTypeModelObject<E extends CType> extends AbstractModelObject<E> {
+  public static class CTypeModelObject<E extends CType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return NestedgroupModelPackage.INSTANCE.getCTypeEClass();
     }
@@ -295,6 +306,7 @@ public class NestedgroupModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return NestedgroupModelPackage.INSTANCE;
     }
@@ -361,10 +373,11 @@ public class NestedgroupModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ElementModelObject<E extends Element> extends AbstractModelObject<E> {
+  public static class ElementModelObject<E extends Element> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return NestedgroupModelPackage.INSTANCE.getElementEClass();
     }
@@ -372,6 +385,7 @@ public class NestedgroupModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return NestedgroupModelPackage.INSTANCE;
     }
@@ -431,6 +445,14 @@ public class NestedgroupModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case NestedgroupModelPackage.ELEMENT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((ElementMixedFeatureGroup) value);
+        return;
+
+      case NestedgroupModelPackage.ELEMENT_TRUE__FEATURE_ID:
+        getTarget().getTrue_().add((ElementTrue_FeatureGroup) value);
+        return;
 
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
         getTarget().getC().add((CType) value);

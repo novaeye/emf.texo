@@ -4,7 +4,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup"
     nsURI="http://www.eclipse.org/emf/texo/test/model/schemaconstructs/nestedgroup"
     nsPrefix="nestedgroup">
-  <eClassifiers xsi:type="ecore:EClass" name="A">
+  <eClassifiers xsi:type="ecore:EClass" name="A" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="A"/>
       <details key="kind" value="elementOnly"/>
@@ -52,7 +52,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CType">
+  <eClassifiers xsi:type="ecore:EClass" name="CType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="cType"/>
       <details key="kind" value="elementOnly"/>
@@ -77,7 +77,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element">
+  <eClassifiers xsi:type="ecore:EClass" name="Element" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="element"/>
       <details key="kind" value="mixed"/>

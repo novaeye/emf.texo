@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "OrdinalType")
+@Entity(name = "code_OrdinalType")
 public class OrdinalType extends PrimitiveType {
 
   /**

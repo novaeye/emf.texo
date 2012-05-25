@@ -6,8 +6,8 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.ComplexType" name="ComplexType">
-    <orm:table name="ComplexType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.documentroot.ComplexType" name="documentroot_ComplexType">
+    <orm:table name="documentroot_ComplexType"/>
     <orm:attributes>
       <orm:basic name="test" optional="false">
         <orm:column name="test"/>

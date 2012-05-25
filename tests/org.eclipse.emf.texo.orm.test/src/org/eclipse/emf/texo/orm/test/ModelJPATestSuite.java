@@ -39,7 +39,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.listunion.ListunionModel
  */
 public class ModelJPATestSuite {
 
-  private static String[] persistenceUnitPostFixes = new String[] { "-hsqldb", "-class-hsqldb" }; //  {"-hsqldb", "-mysql"}; //$NON-NLS-1$
+  private static String[] persistenceUnitPostFixes = new String[] { "-hsqldb", "-class-hsqldb" }; //  , "-class-hsqldb"{"-hsqldb", "-mysql"}; //$NON-NLS-1$
 
   public static Test suite() {
     TestSuite suite = new TestSuite("Model JPA Test Suite"); //$NON-NLS-1$
@@ -47,9 +47,7 @@ public class ModelJPATestSuite {
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
     // modelPackages.clear();
-    // modelPackages.add(EmapsampleModelPackage.INSTANCE);
-    // modelPackages.add(JpamixedModelPackage.INSTANCE);
-    // modelPackages.add(NestedgroupModelPackage.INSTANCE);
+    // modelPackages.add(ModelModelPackage.INSTANCE);
 
     // anytype is not supported, result in Object as item/target entity
     modelPackages.remove(AttributesModelPackage.INSTANCE);

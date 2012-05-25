@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "PreprocessorDirective")
+@Entity(name = "code_PreprocessorDirective")
 public class PreprocessorDirective extends AbstractCodeElement {
 
   /**

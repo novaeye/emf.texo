@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.ComplexAAADao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.ComplexEvenTypeDao;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.dao.ComplexOddTypeDao;
@@ -98,7 +99,7 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COMPLEXAAA_VALUE_FEATURE_ID = 0;
+  public static final int COMPLEXAAA_VALUE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -126,70 +127,70 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
+  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
+  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
+  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_COMPLEXEVEN_FEATURE_ID = 3;
+  public static final int DOCUMENTROOT_COMPLEXEVEN_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MYCOMPLEXABSTRACT_FEATURE_ID = 4;
+  public static final int DOCUMENTROOT_MYCOMPLEXABSTRACT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_COMPLEXODD_FEATURE_ID = 5;
+  public static final int DOCUMENTROOT_COMPLEXODD_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_EVEN_FEATURE_ID = 6;
+  public static final int DOCUMENTROOT_EVEN_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MYABSTRACT_FEATURE_ID = 7;
+  public static final int DOCUMENTROOT_MYABSTRACT_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ODD_FEATURE_ID = 8;
+  public static final int DOCUMENTROOT_ODD_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ROOT_FEATURE_ID = 9;
+  public static final int DOCUMENTROOT_ROOT_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -203,28 +204,28 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ROOTTYPE_MYABSTRACTGROUP_FEATURE_ID = 0;
+  public static final int ROOTTYPE_MYABSTRACTGROUP_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ROOTTYPE_MYABSTRACT_FEATURE_ID = 1;
+  public static final int ROOTTYPE_MYABSTRACT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ROOTTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID = 2;
+  public static final int ROOTTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ROOTTYPE_MYCOMPLEXABSTRACT_FEATURE_ID = 3;
+  public static final int ROOTTYPE_MYCOMPLEXABSTRACT_FEATURE_ID = 5;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -249,6 +250,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

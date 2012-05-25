@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "StructureModel")
+@Entity(name = "structure_StructureModel")
 public class StructureModel extends KDMModel {
 
   /**

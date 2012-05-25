@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "NextState")
+@Entity(name = "event_NextState")
 public class NextState extends AbstractEventRelationship {
 
   /**

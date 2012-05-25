@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "SuppliedBy")
+@Entity(name = "build_SuppliedBy")
 public class SuppliedBy extends AbstractBuildRelationship {
 
   /**

@@ -16,7 +16,7 @@ import org.eclipse.modisco.kdm.kdm.Attribute;
  * 
  * @generated
  */
-@Entity(name = "Element")
+@Entity(name = "core_Element")
 public abstract class Element extends Identifiable {
 
   /**

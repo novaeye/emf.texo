@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "AbstractContentElement")
+@Entity(name = "data_AbstractContentElement")
 public abstract class AbstractContentElement extends AbstractDataElement {
 
   /**

@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TimeType")
+@Entity(name = "code_TimeType")
 public class TimeType extends PrimitiveType {
 
   /**

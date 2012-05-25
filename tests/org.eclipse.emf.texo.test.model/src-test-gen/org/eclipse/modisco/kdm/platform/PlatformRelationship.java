@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "PlatformRelationship")
+@Entity(name = "platform_PlatformRelationship")
 public class PlatformRelationship extends AbstractPlatformRelationship {
 
   /**

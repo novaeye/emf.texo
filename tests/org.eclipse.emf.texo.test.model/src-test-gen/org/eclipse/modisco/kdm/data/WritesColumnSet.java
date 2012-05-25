@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "WritesColumnSet")
+@Entity(name = "data_WritesColumnSet")
 public class WritesColumnSet extends AbstractActionRelationship {
 
   /**

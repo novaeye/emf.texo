@@ -16,7 +16,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "InventoryModel")
+@Entity(name = "source_InventoryModel")
 public class InventoryModel extends KDMModel {
 
   /**

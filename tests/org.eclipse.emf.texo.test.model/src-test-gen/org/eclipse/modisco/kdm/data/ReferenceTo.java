@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "ReferenceTo")
+@Entity(name = "data_ReferenceTo")
 public class ReferenceTo extends AbstractDataRelationship {
 
   /**

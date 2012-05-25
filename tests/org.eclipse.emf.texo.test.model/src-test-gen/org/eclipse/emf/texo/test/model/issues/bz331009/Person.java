@@ -7,9 +7,15 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -19,7 +25,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Person")
+@Entity(name = "m_Person")
+@Table(name = "m_Person")
 public class Person extends Identifiable {
 
   /**
@@ -28,6 +35,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "surname")
   private String surname = null;
 
   /**
@@ -36,6 +44,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_name")
   private String name = null;
 
   /**
@@ -44,6 +53,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "patronimic")
   private String patronimic = null;
 
   /**
@@ -52,6 +62,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "birthday")
   @Temporal(TemporalType.DATE)
   private Date birthday = null;
 
@@ -61,6 +72,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Person_registrationAddress") })
   private Address registrationAddress = null;
 
   /**
@@ -70,6 +82,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Person_factAddress") })
   private Address factAddress = null;
 
   /**
@@ -78,6 +91,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Person_passport") })
   private Passport passport = null;
 
   /**
@@ -86,6 +100,7 @@ public class Person extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Person_drivingLicense") })
   private DrivingLicense drivingLicense = null;
 
   /**
@@ -94,6 +109,8 @@ public class Person extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @OrderColumn(name = "m_Person_phones_ind")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Person_phones") }, inverseJoinColumns = { @JoinColumn(name = "m_Phone_id") }, name = "m_Person_phones")
   @Access(AccessType.FIELD)
   private List<Phone> phones = new ArrayList<Phone>();
 

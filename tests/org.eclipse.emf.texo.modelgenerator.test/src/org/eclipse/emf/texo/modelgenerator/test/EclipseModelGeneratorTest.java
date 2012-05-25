@@ -20,12 +20,16 @@ package org.eclipse.emf.texo.modelgenerator.test;
 import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import junit.framework.TestCase;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.generator.ArtifactGenerator;
 import org.eclipse.emf.texo.generator.EclipseGeneratorUtils;
@@ -36,6 +40,9 @@ import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.generator.TexoResourceManager;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
+import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
+import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.provider.TitleProvider;
 
 /**
  * Test the generation of model code through the Eclipse plugin. Needs to be run as a junit plugin test.
@@ -56,6 +63,7 @@ public class EclipseModelGeneratorTest extends TestCase {
   private static final EPackage.Registry SHARED_REGISTRY = GeneratorUtils.createEPackageRegistry();
 
   public void testGenerateModels() throws Exception {
+
     // force initialization
     ModelAnnotatorRegistry.getInstance().getModelAnnotators();
     // let everyone have orm annotations..
@@ -79,13 +87,26 @@ public class EclipseModelGeneratorTest extends TestCase {
 
   private void generate(final String[] ecoreFileNames) {
     try {
+      EPackageORMAnnotation.setInTestRun(true);
+      final List<String> safelyMappedModels = TestModel.getSafelyMappedModels();
+      for (String ecoreFileName : ecoreFileNames) {
+        if (safelyMappedModels.contains(ecoreFileName)) {
+          EPackageORMAnnotation.setInSafeMappingMode(true);
+          break;
+        }
+      }
+
       final List<URI> uris = new ArrayList<URI>();
       for (final String ecoreFileName : ecoreFileNames) {
         final URL url = TestModel.getModelUrl(ecoreFileName);
         uris.add(url.toURI());
       }
-      final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, useSharedEPackageRegistry() ? SHARED_REGISTRY
-          : GeneratorUtils.createEPackageRegistry());
+
+      final EPackage.Registry packageRegistry = useSharedEPackageRegistry() ? SHARED_REGISTRY : GeneratorUtils
+          .createEPackageRegistry();
+      final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, packageRegistry);
+
+      addSuperType(ePackages, packageRegistry);
 
       boolean hasIdentifiable = false;
       for (EPackage ePackage : ePackages) {
@@ -115,9 +136,61 @@ public class EclipseModelGeneratorTest extends TestCase {
       } finally {
         EPackageModelGenAnnotation.setDefaultExtends(null);
       }
-
     } catch (final Exception e) {
       throw new IllegalStateException(e);
+    } finally {
+      EPackageORMAnnotation.setInSafeMappingMode(false);
+      EPackageORMAnnotation.setInTestRun(false);
+    }
+  }
+
+  protected void addSuperType(final List<EPackage> ePackages, final EPackage.Registry packageRegistry) throws Exception {
+    final List<EPackage> identifiableEPackages = GeneratorUtils.readEPackages(
+        Collections.singletonList(TestModel.getModelUrl("base/identifiable.ecore").toURI()), packageRegistry); //$NON-NLS-1$
+
+    EClass identifiableEClass = null;
+    for (EPackage ePackage : identifiableEPackages) {
+      if (ePackage.getNsURI().equals("http://www.eclipse.org/emf/texo/test/model/base/identifiable")) { //$NON-NLS-1$
+        identifiableEClass = (EClass) ePackage.getEClassifier("Identifiable"); //$NON-NLS-1$
+      }
+    }
+
+    for (EPackage ePackage : ePackages) {
+      addSuperType(ePackage, identifiableEClass);
+    }
+    // reset the id and title providers
+    IdProvider.setInstance(ComponentProvider.getInstance().newInstance(IdProvider.class));
+    TitleProvider.setInstance(ComponentProvider.getInstance().newInstance(TitleProvider.class));
+  }
+
+  // add the identifiable super type to each ecore
+  protected void addSuperType(final EPackage ePackage, final EClass identifiableEClass) {
+
+    if (identifiableEClass.getEPackage() == ePackage) {
+      return;
+    }
+
+    for (EClassifier eClassifier : ePackage.getEClassifiers()) {
+      if (eClassifier instanceof EClass) {
+        final EClass eClass = (EClass) eClassifier;
+        if (eClass.isInterface()) {
+          continue;
+        }
+        boolean doContinue = false;
+        for (EClass eSuperClass : eClass.getESuperTypes()) {
+          if (!eSuperClass.isInterface()) {
+            doContinue = true;
+            break;
+          }
+        }
+        if (doContinue) {
+          continue;
+        }
+        eClass.getESuperTypes().add(0, identifiableEClass);
+      }
+    }
+    for (EPackage subEPackage : ePackage.getESubpackages()) {
+      addSuperType(subEPackage, identifiableEClass);
     }
   }
 

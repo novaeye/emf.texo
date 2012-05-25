@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.code.AbstractCodeElement;
  * 
  * @generated
  */
-@Entity(name = "EntryFlow")
+@Entity(name = "action_EntryFlow")
 public class EntryFlow extends AbstractActionRelationship {
 
   /**

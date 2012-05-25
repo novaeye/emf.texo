@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "RuntimeResource")
+@Entity(name = "platform_RuntimeResource")
 public class RuntimeResource extends ResourceType {
 
   /**

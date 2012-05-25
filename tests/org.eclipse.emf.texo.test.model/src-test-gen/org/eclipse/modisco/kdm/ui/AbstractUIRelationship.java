@@ -9,7 +9,7 @@ import org.eclipse.modisco.kdm.core.KDMRelationship;
  * 
  * @generated
  */
-@Entity(name = "AbstractUIRelationship")
+@Entity(name = "ui_AbstractUIRelationship")
 public abstract class AbstractUIRelationship extends KDMRelationship {
 
   /**

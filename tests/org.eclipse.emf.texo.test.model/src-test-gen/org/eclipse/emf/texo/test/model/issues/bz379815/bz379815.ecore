@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bz379815"
     nsURI="http://www.eclipse.org/emf/texo/test/model/issues/bz379815" nsPrefix="bz379815">
-  <eClassifiers xsi:type="ecore:EClass" name="VarConditionType">
+  <eClassifiers xsi:type="ecore:EClass" name="VarConditionType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="var_conditionType"/>
       <details key="kind" value="elementOnly"/>
@@ -20,7 +20,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VarInputType">
+  <eClassifiers xsi:type="ecore:EClass" name="VarInputType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="var_inputType"/>
       <details key="kind" value="elementOnly"/>
@@ -47,7 +47,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VarPolicyTypeType">
+  <eClassifiers xsi:type="ecore:EClass" name="VarPolicyTypeType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="var_policy_typeType"/>
       <details key="kind" value="empty"/>

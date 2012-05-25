@@ -236,20 +236,24 @@ public class DataGenCompareModelJPATest extends JPATest {
     final ModelObject<?> m2 = ModelResolver.getInstance().getModelObject(o2);
     assertTrue(m1.eClass() == m2.eClass());
     for (EStructuralFeature eFeature : m1.eClass().getEAllStructuralFeatures()) {
-      final Object v1 = m1.eGet(eFeature);
-      final Object v2 = m2.eGet(eFeature);
-      if (eFeature.isMany()) {
-        if (v1 instanceof List) {
-          compareLists(v1, v2);
-        } else if (v1 instanceof Map) {
-          compareMaps(v1, v2);
-        } else if (v1 instanceof Set) {
-          compareSets(v1, v2);
+      try {
+        final Object v1 = m1.eGet(eFeature);
+        final Object v2 = m2.eGet(eFeature);
+        if (eFeature.isMany()) {
+          if (v1 instanceof List) {
+            compareLists(v1, v2);
+          } else if (v1 instanceof Map) {
+            compareMaps(v1, v2);
+          } else if (v1 instanceof Set) {
+            compareSets(v1, v2);
+          } else {
+            throw new IllegalArgumentException("Class " + v1.getClass() + " not supported"); //$NON-NLS-1$//$NON-NLS-2$
+          }
         } else {
-          throw new IllegalArgumentException("Class " + v1.getClass() + " not supported"); //$NON-NLS-1$//$NON-NLS-2$
+          compareValues(v1, v2);
         }
-      } else {
-        compareValues(v1, v2);
+      } catch (UnsupportedOperationException e) {
+        // ignore
       }
     }
   }

@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.test.model.schemaconstructs.mixed.
@@ -192,10 +192,12 @@ public class MixedModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MixedModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -203,6 +205,7 @@ public class MixedModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MixedModelPackage.INSTANCE;
     }
@@ -258,6 +261,10 @@ public class MixedModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case MixedModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -280,10 +287,12 @@ public class MixedModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class LetterBodyTypeModelObject<E extends LetterBodyType> extends AbstractModelObject<E> {
+  public static class LetterBodyTypeModelObject<E extends LetterBodyType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MixedModelPackage.INSTANCE.getLetterBodyTypeEClass();
     }
@@ -291,6 +300,7 @@ public class MixedModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MixedModelPackage.INSTANCE;
     }
@@ -351,6 +361,10 @@ public class MixedModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case MixedModelPackage.LETTERBODYTYPE_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((LetterBodyTypeMixedFeatureGroup) value);
+        return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -373,10 +387,12 @@ public class MixedModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SalutationTypeModelObject<E extends SalutationType> extends AbstractModelObject<E> {
+  public static class SalutationTypeModelObject<E extends SalutationType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return MixedModelPackage.INSTANCE.getSalutationTypeEClass();
     }
@@ -384,6 +400,7 @@ public class MixedModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return MixedModelPackage.INSTANCE;
     }
@@ -428,6 +445,10 @@ public class MixedModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
+      case MixedModelPackage.SALUTATIONTYPE_MIXED_FEATURE_ID:
+        getTarget().getMixed().add((SalutationTypeMixedFeatureGroup) value);
+        return;
 
       }
       super.eAddTo(eStructuralFeature, value);

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "RangeType")
+@Entity(name = "code_RangeType")
 public class RangeType extends DerivedType {
 
   /**

@@ -10,6 +10,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.capa.dao.CapacityEntryDao;
 import org.eclipse.emf.texo.test.model.samples.capa.dao.MachineDao;
 import org.eclipse.emf.texo.test.model.samples.capa.dao.MachineListDao;
@@ -62,14 +63,14 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CAPACITYENTRY_CAPACITYENTRYID_FEATURE_ID = 0;
+  public static final int CAPACITYENTRY_CAPACITYENTRYID_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CAPACITYENTRY_NAME_FEATURE_ID = 1;
+  public static final int CAPACITYENTRY_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -83,42 +84,42 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MACHINE_WORKWEEK_FEATURE_ID = 0;
+  public static final int MACHINE_WORKWEEK_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MACHINE_TASKS_FEATURE_ID = 1;
+  public static final int MACHINE_TASKS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MACHINE_MACHINEID_FEATURE_ID = 2;
+  public static final int MACHINE_MACHINEID_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MACHINE_MACHINESEARCHSTRING_FEATURE_ID = 3;
+  public static final int MACHINE_MACHINESEARCHSTRING_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MACHINE_MULTIPLICITY_FEATURE_ID = 4;
+  public static final int MACHINE_MULTIPLICITY_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MACHINE_TASKSEARCHSTRING_FEATURE_ID = 5;
+  public static final int MACHINE_TASKSEARCHSTRING_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -132,7 +133,7 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MACHINELIST_MACHINES_FEATURE_ID = 0;
+  public static final int MACHINELIST_MACHINES_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -146,42 +147,42 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRODUCTION_ARTICLE_FEATURE_ID = 0;
+  public static final int PRODUCTION_ARTICLE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCTION_DUETIME_FEATURE_ID = 1;
+  public static final int PRODUCTION_DUETIME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCTION_MISSINGAMOUNT_FEATURE_ID = 2;
+  public static final int PRODUCTION_MISSINGAMOUNT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCTION_PRODUCTIONID_FEATURE_ID = 3;
+  public static final int PRODUCTION_PRODUCTIONID_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCTION_STARTTIME_FEATURE_ID = 4;
+  public static final int PRODUCTION_STARTTIME_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRODUCTION_TOTALAMOUNT_FEATURE_ID = 5;
+  public static final int PRODUCTION_TOTALAMOUNT_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -195,42 +196,42 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TASK_CAPACITYENTRY_FEATURE_ID = 0;
+  public static final int TASK_CAPACITYENTRY_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TASK_PRODUCTION_FEATURE_ID = 1;
+  public static final int TASK_PRODUCTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TASK_NAME_FEATURE_ID = 2;
+  public static final int TASK_NAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TASK_TASKID_FEATURE_ID = 3;
+  public static final int TASK_TASKID_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TASK_TIMEPERPICE_FEATURE_ID = 4;
+  public static final int TASK_TIMEPERPICE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TASK_TIMEPERPREPERATION_FEATURE_ID = 5;
+  public static final int TASK_TIMEPERPREPERATION_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -244,21 +245,21 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WORKDAY_DAYOFWEEK_FEATURE_ID = 0;
+  public static final int WORKDAY_DAYOFWEEK_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKDAY_DURATION_FEATURE_ID = 1;
+  public static final int WORKDAY_DURATION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKDAY_STARTTIME_FEATURE_ID = 2;
+  public static final int WORKDAY_STARTTIME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -272,14 +273,14 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WORKWEEK_DAYS_FEATURE_ID = 0;
+  public static final int WORKWEEK_DAYS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WORKWEEK_WORKWEEKID_FEATURE_ID = 1;
+  public static final int WORKWEEK_WORKWEEKID_FEATURE_ID = 3;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -304,6 +305,8 @@ public class CapaModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

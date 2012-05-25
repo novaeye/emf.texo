@@ -12,7 +12,7 @@ import org.eclipse.modisco.kdm.kdm.KDMModel;
  * 
  * @generated
  */
-@Entity(name = "BuildModel")
+@Entity(name = "build_BuildModel")
 public class BuildModel extends KDMModel {
 
   /**

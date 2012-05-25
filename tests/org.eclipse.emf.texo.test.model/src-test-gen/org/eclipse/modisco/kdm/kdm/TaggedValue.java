@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TaggedValue")
+@Entity(name = "kdm_TaggedValue")
 public class TaggedValue extends ExtendedValue {
 
   /**

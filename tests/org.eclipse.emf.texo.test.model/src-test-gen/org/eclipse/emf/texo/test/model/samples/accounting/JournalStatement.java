@@ -3,8 +3,12 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -15,7 +19,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "JournalStatement")
+@Entity(name = "accounting_JournalStatement")
+@Table(name = "accounting_JournalStatement")
 public class JournalStatement extends Identifiable {
 
   /**
@@ -24,6 +29,7 @@ public class JournalStatement extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "description")
   private String description = null;
 
   /**
@@ -32,6 +38,7 @@ public class JournalStatement extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "T_date")
   @Temporal(TemporalType.DATE)
   private Date date = null;
 
@@ -41,6 +48,7 @@ public class JournalStatement extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(name = "amount")
   private float amount = 0.0f;
 
   /**
@@ -49,6 +57,7 @@ public class JournalStatement extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @JoinColumns({ @JoinColumn(name = "accounting_JournalStatement_debitAccount") })
   private Account debitAccount = null;
 
   /**
@@ -57,6 +66,7 @@ public class JournalStatement extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @JoinColumns({ @JoinColumn(name = "accounting_JournalStatement_creditAccount") })
   private Account creditAccount = null;
 
   /**
@@ -65,6 +75,7 @@ public class JournalStatement extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "accounting_JournalStatement_vat") })
   private Vat vat = null;
 
   /**

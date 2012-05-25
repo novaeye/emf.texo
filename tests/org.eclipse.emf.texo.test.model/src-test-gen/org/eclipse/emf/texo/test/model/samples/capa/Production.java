@@ -12,7 +12,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Production")
+@Entity(name = "capa_Production")
 public class Production extends Identifiable {
 
   /**

@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.types.dao.ManyTypesDao;
 import org.eclipse.emf.texo.test.model.samples.types.dao.SingleTypesDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -58,154 +59,154 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SINGLETYPES_STRING_FEATURE_ID = 0;
+  public static final int SINGLETYPES_STRING_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_INTEGER_FEATURE_ID = 1;
+  public static final int SINGLETYPES_INTEGER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_INTEGEROBJECT_FEATURE_ID = 2;
+  public static final int SINGLETYPES_INTEGEROBJECT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_LONG__FEATURE_ID = 3;
+  public static final int SINGLETYPES_LONG__FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_LONGOBJECT_FEATURE_ID = 4;
+  public static final int SINGLETYPES_LONGOBJECT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_DOUBLE__FEATURE_ID = 5;
+  public static final int SINGLETYPES_DOUBLE__FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_DOUBLEOBJECT_FEATURE_ID = 6;
+  public static final int SINGLETYPES_DOUBLEOBJECT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_FLOAT__FEATURE_ID = 7;
+  public static final int SINGLETYPES_FLOAT__FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_FLOATOBJECT_FEATURE_ID = 8;
+  public static final int SINGLETYPES_FLOATOBJECT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_CLAZZ_FEATURE_ID = 9;
+  public static final int SINGLETYPES_CLAZZ_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_CHAR__FEATURE_ID = 10;
+  public static final int SINGLETYPES_CHAR__FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_CHAROBJECT_FEATURE_ID = 11;
+  public static final int SINGLETYPES_CHAROBJECT_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_BYTE__FEATURE_ID = 12;
+  public static final int SINGLETYPES_BYTE__FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_BYTEOBJECT_FEATURE_ID = 13;
+  public static final int SINGLETYPES_BYTEOBJECT_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_BYTEARRAY_FEATURE_ID = 14;
+  public static final int SINGLETYPES_BYTEARRAY_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_BIGDECIMAL_FEATURE_ID = 15;
+  public static final int SINGLETYPES_BIGDECIMAL_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_BIGINTEGER_FEATURE_ID = 16;
+  public static final int SINGLETYPES_BIGINTEGER_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_ENUM__FEATURE_ID = 17;
+  public static final int SINGLETYPES_ENUM__FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_DATE_FEATURE_ID = 18;
+  public static final int SINGLETYPES_DATE_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_STRINGARRAY_FEATURE_ID = 19;
+  public static final int SINGLETYPES_STRINGARRAY_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_LONGARRAY_FEATURE_ID = 20;
+  public static final int SINGLETYPES_LONGARRAY_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SINGLETYPES_NEXTENUM_FEATURE_ID = 21;
+  public static final int SINGLETYPES_NEXTENUM_FEATURE_ID = 23;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -219,105 +220,105 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANYTYPES_STRING_FEATURE_ID = 0;
+  public static final int MANYTYPES_STRING_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_INTEGEROBJECT_FEATURE_ID = 1;
+  public static final int MANYTYPES_INTEGEROBJECT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_LONG__FEATURE_ID = 2;
+  public static final int MANYTYPES_LONG__FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_DOUBLEOBJECT_FEATURE_ID = 3;
+  public static final int MANYTYPES_DOUBLEOBJECT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_FLOATOBJECT_FEATURE_ID = 4;
+  public static final int MANYTYPES_FLOATOBJECT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_CLAZZ_FEATURE_ID = 5;
+  public static final int MANYTYPES_CLAZZ_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_CHAROBJECT_FEATURE_ID = 6;
+  public static final int MANYTYPES_CHAROBJECT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_BYTEOBJECT_FEATURE_ID = 7;
+  public static final int MANYTYPES_BYTEOBJECT_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_BYTEARRAY_FEATURE_ID = 8;
+  public static final int MANYTYPES_BYTEARRAY_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_BIGDECIMAL_FEATURE_ID = 9;
+  public static final int MANYTYPES_BIGDECIMAL_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_BIGINTEGER_FEATURE_ID = 10;
+  public static final int MANYTYPES_BIGINTEGER_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_ENUM__FEATURE_ID = 11;
+  public static final int MANYTYPES_ENUM__FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_DATE_FEATURE_ID = 12;
+  public static final int MANYTYPES_DATE_FEATURE_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_STRINGARRAY_FEATURE_ID = 13;
+  public static final int MANYTYPES_STRINGARRAY_FEATURE_ID = 15;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANYTYPES_LONGARRAY_FEATURE_ID = 14;
+  public static final int MANYTYPES_LONGARRAY_FEATURE_ID = 16;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -370,6 +371,8 @@ public class TypesModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

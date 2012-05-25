@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "DataResource")
+@Entity(name = "data_DataResource")
 public class DataResource extends AbstractDataElement {
 
   /**

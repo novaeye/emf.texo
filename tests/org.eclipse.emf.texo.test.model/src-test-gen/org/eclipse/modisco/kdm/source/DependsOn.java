@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
  * 
  * @generated
  */
-@Entity(name = "DependsOn")
+@Entity(name = "source_DependsOn")
 public class DependsOn extends AbstractInventoryRelationship {
 
   /**

@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "ExtendedValue")
+@Entity(name = "kdm_ExtendedValue")
 public abstract class ExtendedValue extends Element {
 
   /**

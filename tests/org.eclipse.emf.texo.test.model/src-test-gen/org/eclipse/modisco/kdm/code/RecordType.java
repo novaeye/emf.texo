@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "RecordType")
+@Entity(name = "code_RecordType")
 public class RecordType extends CompositeType {
 
   /**

@@ -9,6 +9,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.interfaces.dao.DescribableConcreteDao;
 import org.eclipse.emf.texo.test.model.samples.interfaces.dao.DescribableDao;
 import org.eclipse.emf.texo.test.model.samples.interfaces.dao.DescribableIdentifiableConcreteDao;
@@ -59,21 +60,21 @@ public class InterfacesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DESCRIBABLEIDENTIFIABLECONCRETE_NAME_FEATURE_ID = 2;
+  public static final int DESCRIBABLEIDENTIFIABLECONCRETE_NAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DESCRIBABLEIDENTIFIABLECONCRETE_DESCRIPTION_FEATURE_ID = 0;
+  public static final int DESCRIBABLEIDENTIFIABLECONCRETE_DESCRIPTION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DESCRIBABLEIDENTIFIABLECONCRETE_IDENTIFIER_FEATURE_ID = 1;
+  public static final int DESCRIBABLEIDENTIFIABLECONCRETE_IDENTIFIER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -115,14 +116,14 @@ public class InterfacesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DESCRIBABLECONCRETE_NAME_FEATURE_ID = 1;
+  public static final int DESCRIBABLECONCRETE_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DESCRIBABLECONCRETE_DESCRIPTION_FEATURE_ID = 0;
+  public static final int DESCRIBABLECONCRETE_DESCRIPTION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -136,14 +137,14 @@ public class InterfacesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int IDENTIFIABLECONCRETE_NAME_FEATURE_ID = 1;
+  public static final int IDENTIFIABLECONCRETE_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int IDENTIFIABLECONCRETE_IDENTIFIER_FEATURE_ID = 0;
+  public static final int IDENTIFIABLECONCRETE_IDENTIFIER_FEATURE_ID = 2;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -168,6 +169,8 @@ public class InterfacesModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

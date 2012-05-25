@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ResourceDescription")
+@Entity(name = "source_ResourceDescription")
 public class ResourceDescription extends InventoryItem {
 
   /**

@@ -4,7 +4,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes"
     nsURI="http://www.eclipse.org/emf/texo/test/model/schemaconstructs/simpletypes"
     nsPrefix="simpletypes">
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleList">
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleList" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="SimpleList"/>
       <details key="kind" value="elementOnly"/>
@@ -173,7 +173,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleType">
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="SimpleType"/>
       <details key="kind" value="elementOnly"/>
@@ -308,7 +308,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleTypeObject">
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleTypeObject" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="SimpleTypeObject"/>
       <details key="kind" value="elementOnly"/>

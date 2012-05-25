@@ -293,8 +293,8 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       basic.setTemporal(Temporal.DATE);
     }
 
-    if (!basicSet && eAttribute.isRequired()) {
-      basic.setOptional(!eAttribute.isRequired());
+    if (!basicSet && !GeneratorUtils.isOptional(eAttribute)) {
+      basic.setOptional(false);
     }
 
     if (isEnum && basic.getEnumerated() == null) {

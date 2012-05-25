@@ -6,44 +6,44 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder" name="PurchaseOrder">
-    <orm:table name="PurchaseOrder"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder" name="simplefeaturemap_PurchaseOrder">
+    <orm:table name="simplefeaturemap_PurchaseOrder"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.SupplierOrdersFeatureGroup" name="Supplier_orders">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.SupplierOrdersFeatureGroup" name="simplefeaturemap_Supplier_orders">
     <orm:attributes>
-      <orm:basic name="hardCopyOrderReference">
+      <orm:basic name="hardCopyOrderReference" optional="false">
         <orm:column name="hardCopyOrderReference"/>
       </orm:basic>
-      <orm:basic name="hardCopyOrderNumber">
+      <orm:basic name="hardCopyOrderNumber" optional="false">
         <orm:column name="hardCopyOrderNumber"/>
       </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
-      <orm:many-to-one name="preferredOrders">
-        <orm:join-column name="preferredOrders"/>
+      <orm:many-to-one name="preferredOrders" optional="false">
+        <orm:join-column name="simplefeaturemap_Supplier_preferredOrders"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="standardOrders">
-        <orm:join-column name="standardOrders"/>
+      <orm:many-to-one name="standardOrders" optional="false">
+        <orm:join-column name="simplefeaturemap_Supplier_standardOrders"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.Supplier" name="Supplier">
-    <orm:table name="Supplier"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.Supplier" name="simplefeaturemap_Supplier">
+    <orm:table name="simplefeaturemap_Supplier"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-many name="orders" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.SupplierOrdersFeatureGroup">
         <orm:join-table/>

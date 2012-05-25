@@ -6,19 +6,19 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.CapacityEntry" name="CapacityEntry">
-    <orm:table name="CapacityEntry"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.CapacityEntry" name="capa_CapacityEntry">
+    <orm:table name="capa_CapacityEntry"/>
     <orm:attributes>
       <orm:basic name="capacityEntryId">
         <orm:column name="capacityEntryId"/>
       </orm:basic>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Machine" name="Machine">
-    <orm:table name="Machine"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Machine" name="capa_Machine">
+    <orm:table name="capa_Machine"/>
     <orm:attributes>
       <orm:basic name="machineId">
         <orm:column name="machineId"/>
@@ -33,38 +33,40 @@
         <orm:column name="taskSearchString"/>
       </orm:basic>
       <orm:many-to-one name="workWeek" optional="false">
-        <orm:join-column name="workWeek"/>
+        <orm:join-column name="capa_Machine_workWeek"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
       <orm:one-to-many name="tasks">
-        <orm:join-column name="Machine_id"/>
+        <orm:order-column name="capa_Machine_tasks_ind"/>
+        <orm:join-column name="capa_Machine_tasks"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.WorkWeek" name="WorkWeek">
-    <orm:table name="WorkWeek"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.WorkWeek" name="capa_WorkWeek">
+    <orm:table name="capa_WorkWeek"/>
     <orm:attributes>
       <orm:basic name="workWeekId">
         <orm:column name="workWeekId"/>
       </orm:basic>
       <orm:one-to-many name="days">
-        <orm:join-column name="WorkWeek_id"/>
+        <orm:order-column name="capa_WorkWeek_days_ind"/>
+        <orm:join-column name="capa_WorkWeek_days"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Task" name="Task">
-    <orm:table name="Task"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Task" name="capa_Task">
+    <orm:table name="capa_Task"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:basic name="taskId">
         <orm:column name="taskId"/>
@@ -76,32 +78,33 @@
         <orm:column name="timePerPreperation"/>
       </orm:basic>
       <orm:many-to-one name="capacityEntry" optional="false">
-        <orm:join-column name="capacityEntry"/>
+        <orm:join-column name="capa_Task_capacityEntry"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="production" optional="false">
-        <orm:join-column name="production"/>
+        <orm:join-column name="capa_Task_production"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.MachineList" name="MachineList">
-    <orm:table name="MachineList"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.MachineList" name="capa_MachineList">
+    <orm:table name="capa_MachineList"/>
     <orm:attributes>
       <orm:one-to-many name="machines">
-        <orm:join-column name="MachineList_id"/>
+        <orm:order-column name="capa_MachineList_machines_ind"/>
+        <orm:join-column name="capa_MachineList_machines"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Production" name="Production">
-    <orm:table name="Production"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Production" name="capa_Production">
+    <orm:table name="capa_Production"/>
     <orm:attributes>
       <orm:basic name="article">
         <orm:column name="article"/>
@@ -125,11 +128,11 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.WorkDay" name="WorkDay">
-    <orm:table name="WorkDay"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.WorkDay" name="capa_WorkDay">
+    <orm:table name="capa_WorkDay"/>
     <orm:attributes>
       <orm:basic name="dayOfWeek">
-        <orm:column name="dayOfWeek"/>
+        <orm:column name="T_dayOfWeek"/>
       </orm:basic>
       <orm:basic name="duration">
         <orm:column name="duration"/>

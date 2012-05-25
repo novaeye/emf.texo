@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TemplateParameter")
+@Entity(name = "code_TemplateParameter")
 public class TemplateParameter extends Datatype {
 
   /**

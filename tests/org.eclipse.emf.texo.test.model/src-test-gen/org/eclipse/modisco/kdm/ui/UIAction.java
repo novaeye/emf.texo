@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
  * 
  * @generated
  */
-@Entity(name = "UIAction")
+@Entity(name = "ui_UIAction")
 public class UIAction extends AbstractUIElement {
 
   /**

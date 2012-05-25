@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Sub1Type")
+@Entity(name = "sub1_Sub1Type")
 public class Sub1Type extends Identifiable {
 
   /**

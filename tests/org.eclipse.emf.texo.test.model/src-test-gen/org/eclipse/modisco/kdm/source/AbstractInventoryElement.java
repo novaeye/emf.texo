@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "AbstractInventoryElement")
+@Entity(name = "source_AbstractInventoryElement")
 public abstract class AbstractInventoryElement extends KDMEntity {
 
   /**

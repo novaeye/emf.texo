@@ -6,8 +6,8 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.listunion.StatesByCountry" name="statesByCountry">
-    <orm:table name="statesByCountry"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.listunion.StatesByCountry" name="listunion_statesByCountry">
+    <orm:table name="listunion_statesByCountry"/>
     <orm:attributes>
       <orm:basic name="country" optional="false">
         <orm:column name="country"/>
@@ -28,21 +28,24 @@
         <orm:column name="simpleStringUnion"/>
       </orm:basic>
       <orm:element-collection name="zipUnions">
-        <orm:column name="element"/>
-        <orm:collection-table name="statesByCountry_zipUnions">
-          <orm:join-column name="statesByCountry_id"/>
+        <orm:order-column name="listunion_statesByCountry_zipUnions_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="listunion_statesByCountry_zipUnions">
+          <orm:join-column name="listunion_statesByCountry_zipUnions"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="simpleUnions">
-        <orm:column name="element"/>
-        <orm:collection-table name="statesByCountry_simpleUnions">
-          <orm:join-column name="statesByCountry_id"/>
+        <orm:order-column name="listunion_statesByCountry_simpleUnions_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="listunion_statesByCountry_simpleUnions">
+          <orm:join-column name="listunion_statesByCountry_simpleUnions"/>
         </orm:collection-table>
       </orm:element-collection>
       <orm:element-collection name="simpleStringUnions">
-        <orm:column name="element"/>
-        <orm:collection-table name="statesByCountry_simpleStringUnions">
-          <orm:join-column name="statesByCountry_id"/>
+        <orm:order-column name="listunion_statesByCountry_simpleStringUnions_ind"/>
+        <orm:column name="T_element"/>
+        <orm:collection-table name="listunion_statesByCountry_simpleStringUnions">
+          <orm:join-column name="listunion_statesByCountry_simpleStringUnions"/>
         </orm:collection-table>
       </orm:element-collection>
     </orm:attributes>

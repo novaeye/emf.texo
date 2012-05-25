@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ContentElement")
+@Entity(name = "data_ContentElement")
 public class ContentElement extends ContentItem {
 
   /**

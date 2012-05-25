@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "GroupContent")
+@Entity(name = "data_GroupContent")
 public class GroupContent extends ContentItem {
 
   /**

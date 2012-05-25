@@ -13,7 +13,7 @@ import org.eclipse.modisco.kdm.code.CodeItem;
  * 
  * @generated
  */
-@Entity(name = "RelationalSchema")
+@Entity(name = "data_RelationalSchema")
 public class RelationalSchema extends DataContainer {
 
   /**

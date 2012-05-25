@@ -241,13 +241,22 @@ public class OrmannotationsPackage extends EPackageImpl {
 	public static final int EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 14;
 
 		/**
+	 * The feature id for the '<em><b>Rename SQL Reserved Names</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 15;
+
+		/**
 	 * The number of structural features of the '<em>EPackage ORM Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 15;
+  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 16;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.ormannotations.ENamedElementORMAnnotation <em>ENamed Element ORM Annotation</em>}' class.
@@ -1557,6 +1566,19 @@ public class OrmannotationsPackage extends EPackageImpl {
 	}
 
 		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isRenameSQLReservedNames <em>Rename SQL Reserved Names</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rename SQL Reserved Names</em>'.
+	 * @see org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isRenameSQLReservedNames()
+	 * @see #getEPackageORMAnnotation()
+	 * @generated
+	 */
+	public EAttribute getEPackageORMAnnotation_RenameSQLReservedNames() {
+		return (EAttribute)ePackageORMAnnotationEClass.getEStructuralFeatures().get(15);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EType Element ORM Annotation</em>'.
@@ -2224,6 +2246,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		createEReference(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__ENTITY_MAPPINGS);
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS);
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS);
+		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES);
 
 		eTypeElementORMAnnotationEClass = createEClass(ETYPE_ELEMENT_ORM_ANNOTATION);
 		createEReference(eTypeElementORMAnnotationEClass, ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT);
@@ -2336,14 +2359,14 @@ public class OrmannotationsPackage extends EPackageImpl {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(ePackageORMAnnotationEClass, EPackageORMAnnotation.class, "EPackageORMAnnotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEPackageORMAnnotation_GenerateFullDbSchemaNames(), theEcorePackage.getEBoolean(), "generateFullDbSchemaNames", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageORMAnnotation_GenerateFullDbSchemaNames(), theEcorePackage.getEBoolean(), "generateFullDbSchemaNames", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_NameDictionaryPropertyFile(), theEcorePackage.getEString(), "nameDictionaryPropertyFile", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_TableNamePrefix(), theEcorePackage.getEString(), "tableNamePrefix", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_ColumnNamePrefix(), theEcorePackage.getEString(), "columnNamePrefix", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_MaximumSqlNameLength(), theEcorePackage.getEInt(), "maximumSqlNameLength", "255", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_LowerCasedNames(), theEcorePackage.getEBoolean(), "lowerCasedNames", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_UpperCasedNames(), theEcorePackage.getEBoolean(), "upperCasedNames", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEPackageORMAnnotation_EnforceUniqueNames(), theEcorePackage.getEBoolean(), "enforceUniqueNames", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageORMAnnotation_EnforceUniqueNames(), theEcorePackage.getEBoolean(), "enforceUniqueNames", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_UseJoinTablesForContainment(), theEcorePackage.getEBoolean(), "useJoinTablesForContainment", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_UseJoinTablesForNonContainment(), theEcorePackage.getEBoolean(), "useJoinTablesForNonContainment", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEPackageORMAnnotation_DefaultCascadeContainment(), theOrmPackage.getCascadeType(), null, "defaultCascadeContainment", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2351,6 +2374,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEReference(getEPackageORMAnnotation_EntityMappings(), theOrmPackage.getEntityMappingsType(), null, "entityMappings", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_GenerateJavaAnnotations(), theEcorePackage.getEBoolean(), "generateJavaAnnotations", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_AddOrderColumnToListMappings(), theEcorePackage.getEBoolean(), "addOrderColumnToListMappings", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageORMAnnotation_RenameSQLReservedNames(), theEcorePackage.getEBoolean(), "renameSQLReservedNames", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eTypeElementORMAnnotationEClass, ETypeElementORMAnnotation.class, "ETypeElementORMAnnotation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getETypeElementORMAnnotation_Transient(), theOrmPackage.getTransient(), null, "transient", null, 0, 1, ETypeElementORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2554,6 +2578,14 @@ public class OrmannotationsPackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EAttribute EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS = eINSTANCE.getEPackageORMAnnotation_AddOrderColumnToListMappings();
+
+				/**
+		 * The meta object literal for the '<em><b>Rename SQL Reserved Names</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES = eINSTANCE.getEPackageORMAnnotation_RenameSQLReservedNames();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}' class.

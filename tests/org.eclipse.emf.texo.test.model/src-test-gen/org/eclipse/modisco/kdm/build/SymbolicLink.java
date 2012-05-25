@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "SymbolicLink")
+@Entity(name = "build_SymbolicLink")
 public class SymbolicLink extends AbstractBuildElement {
 
   /**

@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.issues.bz379796.dao.PriceTypeDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
@@ -71,63 +72,63 @@ public class Bz379796ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRICETYPE_VALUEELEMENT_FEATURE_ID = 0;
+  public static final int PRICETYPE_VALUEELEMENT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_NILLABLEVALUEELEMENT_FEATURE_ID = 1;
+  public static final int PRICETYPE_NILLABLEVALUEELEMENT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_REQUIREDVALUEELEMENT_FEATURE_ID = 2;
+  public static final int PRICETYPE_REQUIREDVALUEELEMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_COMPARISONELEMENT_FEATURE_ID = 3;
+  public static final int PRICETYPE_COMPARISONELEMENT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_REQUIREDCOMPARISONELEMENT_FEATURE_ID = 4;
+  public static final int PRICETYPE_REQUIREDCOMPARISONELEMENT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_COMPARISON_FEATURE_ID = 5;
+  public static final int PRICETYPE_COMPARISON_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_REQUIREDCOMPARISON_FEATURE_ID = 6;
+  public static final int PRICETYPE_REQUIREDCOMPARISON_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_REQUIREDVALUE_FEATURE_ID = 7;
+  public static final int PRICETYPE_REQUIREDVALUE_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PRICETYPE_VALUE_FEATURE_ID = 8;
+  public static final int PRICETYPE_VALUE_FEATURE_ID = 10;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -152,6 +153,8 @@ public class Bz379796ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

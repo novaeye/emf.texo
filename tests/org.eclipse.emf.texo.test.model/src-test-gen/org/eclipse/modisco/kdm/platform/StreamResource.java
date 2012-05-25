@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "StreamResource")
+@Entity(name = "platform_StreamResource")
 public class StreamResource extends ResourceType {
 
   /**

@@ -6,6 +6,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.modisco.kdm.core.Element;
 
 /**
@@ -13,7 +14,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * 
  * @generated
  */
-@Entity(name = "SourceRef")
+@Entity(name = "source_SourceRef")
 public class SourceRef extends Element {
 
   /**
@@ -22,6 +23,7 @@ public class SourceRef extends Element {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<SourceRegion> region = new ArrayList<SourceRegion>();
 
   /**

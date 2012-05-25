@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "MacroDirective")
+@Entity(name = "code_MacroDirective")
 public class MacroDirective extends PreprocessorDirective {
 
   /**

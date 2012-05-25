@@ -6,24 +6,24 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.PersonGroupFeatureGroup" name="Person_group">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.PersonGroupFeatureGroup" name="simplechoice_Person_group">
     <orm:attributes>
-      <orm:basic name="age">
+      <orm:basic name="age" optional="false">
         <orm:column name="age"/>
       </orm:basic>
-      <orm:basic name="length">
-        <orm:column name="length"/>
+      <orm:basic name="length" optional="false">
+        <orm:column name="T_length"/>
       </orm:basic>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.Person" name="Person">
-    <orm:table name="Person"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.Person" name="simplechoice_Person">
+    <orm:table name="simplechoice_Person"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.PersonGroupFeatureGroup">
         <orm:join-table/>

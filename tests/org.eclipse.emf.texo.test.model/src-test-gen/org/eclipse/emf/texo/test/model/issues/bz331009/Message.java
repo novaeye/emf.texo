@@ -3,8 +3,12 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -15,7 +19,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Message")
+@Entity(name = "m_Message")
+@Table(name = "m_Message")
 public class Message extends Identifiable {
 
   /**
@@ -24,6 +29,7 @@ public class Message extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_text")
   private String text = null;
 
   /**
@@ -32,6 +38,7 @@ public class Message extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_type")
   private MessageType type = MessageType.SERVICE;
 
   /**
@@ -40,6 +47,7 @@ public class Message extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Message_from") })
   private SimCard from = null;
 
   /**
@@ -48,6 +56,7 @@ public class Message extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_Message_to") })
   private SimCard to = null;
 
   /**
@@ -56,6 +65,7 @@ public class Message extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_dateTime")
   @Temporal(TemporalType.DATE)
   private Date dateTime = null;
 

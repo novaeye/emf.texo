@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.music.dao.AlbumDao;
 import org.eclipse.emf.texo.test.model.samples.music.dao.ArtistDao;
 import org.eclipse.emf.texo.test.model.samples.music.dao.CountryDao;
@@ -61,49 +62,49 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ARTIST_ID_FEATURE_ID = 0;
+  public static final int ARTIST_ID_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARTIST_VERSION_FEATURE_ID = 1;
+  public static final int ARTIST_VERSION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARTIST_FIRSTNAME_FEATURE_ID = 2;
+  public static final int ARTIST_FIRSTNAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARTIST_LASTNAME_FEATURE_ID = 3;
+  public static final int ARTIST_LASTNAME_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARTIST_BIRTHDATE_FEATURE_ID = 4;
+  public static final int ARTIST_BIRTHDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARTIST_COUNTRY_FEATURE_ID = 5;
+  public static final int ARTIST_COUNTRY_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ARTIST_GENRE_FEATURE_ID = 6;
+  public static final int ARTIST_GENRE_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -117,56 +118,56 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ALBUM_ID_FEATURE_ID = 0;
+  public static final int ALBUM_ID_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_VERSION_FEATURE_ID = 1;
+  public static final int ALBUM_VERSION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_NAME_FEATURE_ID = 2;
+  public static final int ALBUM_NAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_ARTIST_FEATURE_ID = 3;
+  public static final int ALBUM_ARTIST_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_RELEASEDATE_FEATURE_ID = 4;
+  public static final int ALBUM_RELEASEDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_GENRES_FEATURE_ID = 5;
+  public static final int ALBUM_GENRES_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_SONGS_FEATURE_ID = 6;
+  public static final int ALBUM_SONGS_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ALBUM_RATINGS_FEATURE_ID = 7;
+  public static final int ALBUM_RATINGS_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -180,21 +181,21 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COUNTRY_CODE_FEATURE_ID = 0;
+  public static final int COUNTRY_CODE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int COUNTRY_VERSION_FEATURE_ID = 1;
+  public static final int COUNTRY_VERSION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int COUNTRY_NAME_FEATURE_ID = 2;
+  public static final int COUNTRY_NAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -208,21 +209,21 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int GENRE_ID_FEATURE_ID = 0;
+  public static final int GENRE_ID_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int GENRE_VERSION_FEATURE_ID = 1;
+  public static final int GENRE_VERSION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int GENRE_NAME_FEATURE_ID = 2;
+  public static final int GENRE_NAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -243,28 +244,28 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SONG_ID_FEATURE_ID = 0;
+  public static final int SONG_ID_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SONG_VERSION_FEATURE_ID = 1;
+  public static final int SONG_VERSION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SONG_TRACK_FEATURE_ID = 2;
+  public static final int SONG_TRACK_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SONG_NAME_FEATURE_ID = 3;
+  public static final int SONG_NAME_FEATURE_ID = 5;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -289,6 +290,8 @@ public class MusicModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

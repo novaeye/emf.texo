@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "ReadsState")
+@Entity(name = "event_ReadsState")
 public class ReadsState extends AbstractActionRelationship {
 
   /**

@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Country")
+@Entity(name = "org_elver_music_Country")
 public class Country extends Identifiable {
 
   /**

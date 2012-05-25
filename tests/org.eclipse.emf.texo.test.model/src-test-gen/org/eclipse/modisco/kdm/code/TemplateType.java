@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TemplateType")
+@Entity(name = "code_TemplateType")
 public class TemplateType extends Datatype {
 
   /**

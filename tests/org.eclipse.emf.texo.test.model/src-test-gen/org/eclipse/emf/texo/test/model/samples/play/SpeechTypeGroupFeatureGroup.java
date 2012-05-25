@@ -15,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "SpeechType_group")
+@Entity(name = "play_SpeechType_group")
 public class SpeechTypeGroupFeatureGroup extends Identifiable {
 
   /**
@@ -132,7 +132,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String speaker;
 
   /**
@@ -140,7 +140,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String line;
 
   /**
@@ -148,7 +148,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String stageDirections;
 
   /**

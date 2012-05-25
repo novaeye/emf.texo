@@ -2,8 +2,12 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -12,7 +16,8 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "User")
+@Entity(name = "m_User")
+@Table(name = "m_User")
 public class User extends Identifiable {
 
   /**
@@ -21,6 +26,7 @@ public class User extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_login")
   private String login = null;
 
   /**
@@ -29,6 +35,7 @@ public class User extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(name = "T_password")
   private String password = null;
 
   /**
@@ -37,6 +44,7 @@ public class User extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @JoinColumns({ @JoinColumn(name = "m_User_group") })
   private UserGroup group = null;
 
   /**

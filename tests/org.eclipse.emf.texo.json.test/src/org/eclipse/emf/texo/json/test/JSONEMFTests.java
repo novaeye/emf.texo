@@ -32,6 +32,10 @@ import org.junit.Test;
 
 public class JSONEMFTests extends JSONEMFTest {
 
+  public JSONEMFTests() {
+    super("JSONEMFTests");
+  }
+
   @Test
   public void doLibraryJSONConversion() throws Exception {
     super.setEPackages(Collections.singletonList(LibraryModelPackage.INSTANCE.getEPackage()));

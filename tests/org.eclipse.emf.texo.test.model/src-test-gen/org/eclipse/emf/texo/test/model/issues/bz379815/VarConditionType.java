@@ -24,7 +24,7 @@ public class VarConditionType extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL })
-  @JoinColumns({ @JoinColumn(name = "policyType") })
+  @JoinColumns({ @JoinColumn(name = "bz379815_VarConditionType_policyType") })
   private VarPolicyTypeType policyType = null;
 
   /**

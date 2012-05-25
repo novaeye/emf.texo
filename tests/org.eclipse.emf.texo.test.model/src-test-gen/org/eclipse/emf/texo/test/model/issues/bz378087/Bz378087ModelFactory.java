@@ -3,11 +3,11 @@ package org.eclipse.emf.texo.test.model.issues.bz378087;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: bz378087. It contains code to create instances
@@ -132,10 +132,11 @@ public class Bz378087ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class TestModelObject<E extends Test> extends AbstractModelObject<E> {
+  public static class TestModelObject<E extends Test> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz378087ModelPackage.INSTANCE.getTestEClass();
     }
@@ -143,6 +144,7 @@ public class Bz378087ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz378087ModelPackage.INSTANCE;
     }

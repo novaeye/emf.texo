@@ -10,7 +10,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Mother")
+@Entity(name = "bz369962_Mother")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Mother extends Identifiable {
 

@@ -3,11 +3,11 @@ package org.eclipse.emf.texo.test.model.issues.bz379815;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: bz379815. It contains code to create instances
@@ -230,10 +230,12 @@ public class Bz379815ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class VarInputTypeModelObject<E extends VarInputType> extends AbstractModelObject<E> {
+  public static class VarInputTypeModelObject<E extends VarInputType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz379815ModelPackage.INSTANCE.getVarInputTypeEClass();
     }
@@ -241,6 +243,7 @@ public class Bz379815ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz379815ModelPackage.INSTANCE;
     }
@@ -308,10 +311,12 @@ public class Bz379815ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class VarConditionTypeModelObject<E extends VarConditionType> extends AbstractModelObject<E> {
+  public static class VarConditionTypeModelObject<E extends VarConditionType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz379815ModelPackage.INSTANCE.getVarConditionTypeEClass();
     }
@@ -319,6 +324,7 @@ public class Bz379815ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz379815ModelPackage.INSTANCE;
     }
@@ -381,10 +387,12 @@ public class Bz379815ModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class VarPolicyTypeTypeModelObject<E extends VarPolicyTypeType> extends AbstractModelObject<E> {
+  public static class VarPolicyTypeTypeModelObject<E extends VarPolicyTypeType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return Bz379815ModelPackage.INSTANCE.getVarPolicyTypeTypeEClass();
     }
@@ -392,6 +400,7 @@ public class Bz379815ModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return Bz379815ModelPackage.INSTANCE;
     }

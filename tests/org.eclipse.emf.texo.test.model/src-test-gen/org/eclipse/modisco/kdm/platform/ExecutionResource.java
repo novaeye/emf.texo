@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ExecutionResource")
+@Entity(name = "platform_ExecutionResource")
 public class ExecutionResource extends ResourceType {
 
   /**

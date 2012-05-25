@@ -15,7 +15,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "LetterBodyType")
+@Entity(name = "jpamixed_LetterBodyType")
 public class LetterBodyType extends Identifiable {
 
   /**

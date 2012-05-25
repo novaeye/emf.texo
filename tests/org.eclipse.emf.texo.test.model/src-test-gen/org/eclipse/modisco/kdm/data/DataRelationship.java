@@ -11,7 +11,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * 
  * @generated
  */
-@Entity(name = "DataRelationship")
+@Entity(name = "data_DataRelationship")
 public class DataRelationship extends AbstractDataRelationship {
 
   /**

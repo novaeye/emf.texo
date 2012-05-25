@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.samples.library.Library;
  * 
  * @generated
  */
-@Entity(name = "SchoolLibrary")
+@Entity(name = "schoollibrary_SchoolLibrary")
 public class SchoolLibrary extends Library {
 
   /**

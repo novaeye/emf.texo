@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "RuleUnit")
+@Entity(name = "conceptual_RuleUnit")
 public class RuleUnit extends ConceptualContainer {
 
   /**

@@ -12,6 +12,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -294,10 +295,12 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AccountingClassModelObject<E extends AccountingClass> extends AbstractModelObject<E> {
+  public static class AccountingClassModelObject<E extends AccountingClass> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getAccountingEClass();
     }
@@ -305,6 +308,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -414,13 +418,14 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AccountModelObject<E extends Account> extends AbstractModelObject<E> {
+  public static class AccountModelObject<E extends Account> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getAccountEClass();
     }
@@ -428,6 +433,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -501,13 +507,15 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AccountGroupModelObject<E extends AccountGroup> extends AbstractModelObject<E> {
+  public static class AccountGroupModelObject<E extends AccountGroup> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getAccountGroupEClass();
     }
@@ -515,6 +523,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -761,13 +770,15 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class JournalGroupModelObject<E extends JournalGroup> extends AbstractModelObject<E> {
+  public static class JournalGroupModelObject<E extends JournalGroup> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getJournalGroupEClass();
     }
@@ -775,6 +786,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -873,13 +885,15 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class JournalStatementModelObject<E extends JournalStatement> extends AbstractModelObject<E> {
+  public static class JournalStatementModelObject<E extends JournalStatement> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getJournalStatementEClass();
     }
@@ -887,6 +901,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -1069,13 +1084,14 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ReportModelObject<E extends Report> extends AbstractModelObject<E> {
+  public static class ReportModelObject<E extends Report> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getReportEClass();
     }
@@ -1083,6 +1099,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -1166,13 +1183,15 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ReportGroupModelObject<E extends ReportGroup> extends AbstractModelObject<E> {
+  public static class ReportGroupModelObject<E extends ReportGroup> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getReportGroupEClass();
     }
@@ -1180,6 +1199,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -1277,10 +1297,11 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class VatModelObject<E extends Vat> extends AbstractModelObject<E> {
+  public static class VatModelObject<E extends Vat> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
       return AccountingModelPackage.INSTANCE.getVatEClass();
     }
@@ -1288,6 +1309,7 @@ public class AccountingModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }

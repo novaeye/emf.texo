@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Include2")
+@Entity(name = "include_Include2")
 public class Include2 extends Identifiable {
 
   /**

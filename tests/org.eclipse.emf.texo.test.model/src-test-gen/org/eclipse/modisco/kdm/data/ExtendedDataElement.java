@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "ExtendedDataElement")
+@Entity(name = "data_ExtendedDataElement")
 public class ExtendedDataElement extends AbstractDataElement {
 
   /**

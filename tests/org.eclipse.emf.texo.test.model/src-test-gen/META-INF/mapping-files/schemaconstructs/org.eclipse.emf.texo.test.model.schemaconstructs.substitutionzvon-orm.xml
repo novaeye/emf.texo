@@ -6,23 +6,23 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexAAA" name="ComplexAAA">
-    <orm:table name="ComplexAAA"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexAAA" name="substitutionzvon_ComplexAAA">
+    <orm:table name="substitutionzvon_ComplexAAA"/>
     <orm:attributes>
       <orm:basic name="value" optional="false">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType" name="ComplexEvenType">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType" name="substitutionzvon_ComplexEvenType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexOddType" name="ComplexOddType">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexOddType" name="substitutionzvon_ComplexOddType">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes/>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="RootType_myAbstractGroup">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="substitutionzvon_RootType_myAbstractGroup">
     <orm:attributes>
       <orm:basic access="FIELD" name="myAbstract" optional="false">
         <orm:column name="myAbstract"/>
@@ -32,21 +32,21 @@
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyComplexAbstractGroupFeatureGroup" name="RootType_myComplexAbstractGroup">
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyComplexAbstractGroupFeatureGroup" name="substitutionzvon_RootType_myComplexAbstractGroup">
     <orm:attributes>
       <orm:basic name="feature" optional="false">
         <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:many-to-one access="FIELD" name="myComplexAbstract" optional="false">
-        <orm:join-column name="myComplexAbstract"/>
+        <orm:join-column name="substitutionzvon_RootType_myComplexAbstract"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootType" name="RootType">
-    <orm:table name="RootType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootType" name="substitutionzvon_RootType">
+    <orm:table name="substitutionzvon_RootType"/>
     <orm:attributes>
       <orm:one-to-many name="myAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup">
         <orm:join-table/>

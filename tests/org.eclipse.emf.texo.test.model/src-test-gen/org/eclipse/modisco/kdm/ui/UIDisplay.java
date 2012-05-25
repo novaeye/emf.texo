@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "UIDisplay")
+@Entity(name = "ui_UIDisplay")
 public class UIDisplay extends UIResource {
 
   /**

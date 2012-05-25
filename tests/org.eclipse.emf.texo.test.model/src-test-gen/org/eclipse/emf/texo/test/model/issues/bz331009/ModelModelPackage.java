@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.AddressDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.CarDao;
 import org.eclipse.emf.texo.test.model.issues.bz331009.dao.CarModelDao;
@@ -145,14 +146,14 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMCARD_PHONENUMBER_FEATURE_ID = 0;
+  public static final int SIMCARD_PHONENUMBER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMCARD_NUMBER_FEATURE_ID = 1;
+  public static final int SIMCARD_NUMBER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -166,28 +167,28 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMCONTRACT_CONTRACTNUMBER_FEATURE_ID = 0;
+  public static final int SIMCONTRACT_CONTRACTNUMBER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMCONTRACT_NAME_FEATURE_ID = 1;
+  public static final int SIMCONTRACT_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMCONTRACT_DESCRITPION_FEATURE_ID = 2;
+  public static final int SIMCONTRACT_DESCRITPION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMCONTRACT_PAYMENTINFO_FEATURE_ID = 3;
+  public static final int SIMCONTRACT_PAYMENTINFO_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -201,14 +202,14 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PAYMENTINFO_TARIFF_FEATURE_ID = 0;
+  public static final int PAYMENTINFO_TARIFF_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PAYMENTINFO_FACTPAYMENTS_FEATURE_ID = 1;
+  public static final int PAYMENTINFO_FACTPAYMENTS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -222,14 +223,14 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMCARDXSIMCONTRACT_SIMCARD_FEATURE_ID = 0;
+  public static final int SIMCARDXSIMCONTRACT_SIMCARD_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMCARDXSIMCONTRACT_SIMCONTRACT_FEATURE_ID = 1;
+  public static final int SIMCARDXSIMCONTRACT_SIMCONTRACT_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -250,42 +251,42 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TARIFF_NAME_FEATURE_ID = 0;
+  public static final int TARIFF_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TARIFF_ACTIVE_FEATURE_ID = 1;
+  public static final int TARIFF_ACTIVE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TARIFF_VOLUMEPAYMENTS_FEATURE_ID = 2;
+  public static final int TARIFF_VOLUMEPAYMENTS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TARIFF_PERIODICALPAYMENTS_FEATURE_ID = 3;
+  public static final int TARIFF_PERIODICALPAYMENTS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TARIFF_INITIALPAYMENT_FEATURE_ID = 4;
+  public static final int TARIFF_INITIALPAYMENT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TARIFF_SERVICES_FEATURE_ID = 5;
+  public static final int TARIFF_SERVICES_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -299,35 +300,35 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PAYMENTITEM_SUM_FEATURE_ID = 0;
+  public static final int PAYMENTITEM_SUM_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PAYMENTITEM_CURRENCY_FEATURE_ID = 1;
+  public static final int PAYMENTITEM_CURRENCY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PAYMENTITEM_DATE_FEATURE_ID = 2;
+  public static final int PAYMENTITEM_DATE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PAYMENTITEM_DESCRIPTION_FEATURE_ID = 3;
+  public static final int PAYMENTITEM_DESCRIPTION_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PAYMENTITEM_PAYMENTTYPE_FEATURE_ID = 4;
+  public static final int PAYMENTITEM_PAYMENTTYPE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -341,21 +342,21 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int VOLUMEPAYMENT_VOLUME_FEATURE_ID = 5;
+  public static final int VOLUMEPAYMENT_VOLUME_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int VOLUMEPAYMENT_UNIT_FEATURE_ID = 6;
+  public static final int VOLUMEPAYMENT_UNIT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int VOLUMEPAYMENT_PRICE_FEATURE_ID = 7;
+  public static final int VOLUMEPAYMENT_PRICE_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -369,7 +370,7 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERIODICALPAYMENT_PERIODICITY_FEATURE_ID = 5;
+  public static final int PERIODICALPAYMENT_PERIODICITY_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -390,35 +391,35 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SERVICE_NAME_FEATURE_ID = 0;
+  public static final int SERVICE_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SERVICE_ACTIVE_FEATURE_ID = 1;
+  public static final int SERVICE_ACTIVE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SERVICE_INITIALPAYMENT_FEATURE_ID = 2;
+  public static final int SERVICE_INITIALPAYMENT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SERVICE_PERIODICALPAYMENT_FEATURE_ID = 3;
+  public static final int SERVICE_PERIODICALPAYMENT_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SERVICE_VOLUMEPAYMENT_FEATURE_ID = 4;
+  public static final int SERVICE_VOLUMEPAYMENT_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -432,7 +433,7 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UNITS_NAME_FEATURE_ID = 0;
+  public static final int UNITS_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -453,7 +454,7 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CARPRODUCER_NAME_FEATURE_ID = 0;
+  public static final int CARPRODUCER_NAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -467,14 +468,14 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CARMODEL_PRODUCER_FEATURE_ID = 0;
+  public static final int CARMODEL_PRODUCER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARMODEL_NAME_FEATURE_ID = 1;
+  public static final int CARMODEL_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -488,84 +489,84 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CARREGINFO_OWNER_FEATURE_ID = 4;
+  public static final int CARREGINFO_OWNER_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_REGNUMBER_FEATURE_ID = 5;
+  public static final int CARREGINFO_REGNUMBER_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_VIN_FEATURE_ID = 6;
+  public static final int CARREGINFO_VIN_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_RELEASEYEAR_FEATURE_ID = 7;
+  public static final int CARREGINFO_RELEASEYEAR_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_ENGINENUMBER_FEATURE_ID = 8;
+  public static final int CARREGINFO_ENGINENUMBER_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_CHASSISNUMBER_FEATURE_ID = 9;
+  public static final int CARREGINFO_CHASSISNUMBER_FEATURE_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_BODYNUMBER_FEATURE_ID = 10;
+  public static final int CARREGINFO_BODYNUMBER_FEATURE_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_COLOR_FEATURE_ID = 11;
+  public static final int CARREGINFO_COLOR_FEATURE_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_SERIES_FEATURE_ID = 0;
+  public static final int CARREGINFO_SERIES_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_NUMBER_FEATURE_ID = 1;
+  public static final int CARREGINFO_NUMBER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_ISSUEDATE_FEATURE_ID = 2;
+  public static final int CARREGINFO_ISSUEDATE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARREGINFO_ISSUED_FEATURE_ID = 3;
+  public static final int CARREGINFO_ISSUED_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -614,63 +615,63 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PERSON_SURNAME_FEATURE_ID = 0;
+  public static final int PERSON_SURNAME_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_NAME_FEATURE_ID = 1;
+  public static final int PERSON_NAME_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_PATRONIMIC_FEATURE_ID = 2;
+  public static final int PERSON_PATRONIMIC_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_BIRTHDAY_FEATURE_ID = 3;
+  public static final int PERSON_BIRTHDAY_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_REGISTRATIONADDRESS_FEATURE_ID = 4;
+  public static final int PERSON_REGISTRATIONADDRESS_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_FACTADDRESS_FEATURE_ID = 5;
+  public static final int PERSON_FACTADDRESS_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_PASSPORT_FEATURE_ID = 6;
+  public static final int PERSON_PASSPORT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_DRIVINGLICENSE_FEATURE_ID = 7;
+  public static final int PERSON_DRIVINGLICENSE_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PERSON_PHONES_FEATURE_ID = 8;
+  public static final int PERSON_PHONES_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -684,21 +685,21 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CAR_MODEL_FEATURE_ID = 0;
+  public static final int CAR_MODEL_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CAR_REGINFO_FEATURE_ID = 1;
+  public static final int CAR_REGINFO_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CAR_CARPASSPORT_FEATURE_ID = 2;
+  public static final int CAR_CARPASSPORT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -712,28 +713,28 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CARPASSPORT_SERIES_FEATURE_ID = 0;
+  public static final int CARPASSPORT_SERIES_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARPASSPORT_NUMBER_FEATURE_ID = 1;
+  public static final int CARPASSPORT_NUMBER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARPASSPORT_ISSUEDATE_FEATURE_ID = 2;
+  public static final int CARPASSPORT_ISSUEDATE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CARPASSPORT_ISSUED_FEATURE_ID = 3;
+  public static final int CARPASSPORT_ISSUED_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -747,14 +748,14 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PHONE_NUMBER_FEATURE_ID = 0;
+  public static final int PHONE_NUMBER_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PHONE_DESCRIPTION_FEATURE_ID = 1;
+  public static final int PHONE_DESCRIPTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -768,49 +769,49 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ADDRESS_ZIPCODE_FEATURE_ID = 0;
+  public static final int ADDRESS_ZIPCODE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_COUNTRY_FEATURE_ID = 1;
+  public static final int ADDRESS_COUNTRY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_REGION_FEATURE_ID = 2;
+  public static final int ADDRESS_REGION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_CITY_FEATURE_ID = 3;
+  public static final int ADDRESS_CITY_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_STREET_FEATURE_ID = 4;
+  public static final int ADDRESS_STREET_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_BUILDING_FEATURE_ID = 5;
+  public static final int ADDRESS_BUILDING_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ADDRESS_FLAT_FEATURE_ID = 6;
+  public static final int ADDRESS_FLAT_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -824,28 +825,28 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PASSPORT_SERIES_FEATURE_ID = 0;
+  public static final int PASSPORT_SERIES_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PASSPORT_NUMBER_FEATURE_ID = 1;
+  public static final int PASSPORT_NUMBER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PASSPORT_ISSUEDATE_FEATURE_ID = 2;
+  public static final int PASSPORT_ISSUEDATE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PASSPORT_ISSUED_FEATURE_ID = 3;
+  public static final int PASSPORT_ISSUED_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -859,28 +860,28 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DRIVINGLICENSE_SERIES_FEATURE_ID = 0;
+  public static final int DRIVINGLICENSE_SERIES_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DRIVINGLICENSE_NUMBER_FEATURE_ID = 1;
+  public static final int DRIVINGLICENSE_NUMBER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DRIVINGLICENSE_ISSUEDATE_FEATURE_ID = 2;
+  public static final int DRIVINGLICENSE_ISSUEDATE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DRIVINGLICENSE_ISSUED_FEATURE_ID = 3;
+  public static final int DRIVINGLICENSE_ISSUED_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -894,42 +895,42 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTRACT_SIGNDATE_FEATURE_ID = 0;
+  public static final int CONTRACT_SIGNDATE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACT_SIMCARD_FEATURE_ID = 1;
+  public static final int CONTRACT_SIMCARD_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACT_PAYMENTINFO_FEATURE_ID = 2;
+  public static final int CONTRACT_PAYMENTINFO_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACT_CAR_FEATURE_ID = 3;
+  public static final int CONTRACT_CAR_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACT_SECRETQUESTIONS_FEATURE_ID = 4;
+  public static final int CONTRACT_SECRETQUESTIONS_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACT_NUMBER_FEATURE_ID = 5;
+  public static final int CONTRACT_NUMBER_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -943,35 +944,35 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SECRETQUESTION_QUESTION_FEATURE_ID = 0;
+  public static final int SECRETQUESTION_QUESTION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SECRETQUESTION_CORRECTANSWER_FEATURE_ID = 1;
+  public static final int SECRETQUESTION_CORRECTANSWER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SECRETQUESTION_ALARMANSWER_FEATURE_ID = 2;
+  public static final int SECRETQUESTION_ALARMANSWER_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SECRETQUESTION_ACTIVE_FEATURE_ID = 3;
+  public static final int SECRETQUESTION_ACTIVE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SECRETQUESTION_TYPE_FEATURE_ID = 4;
+  public static final int SECRETQUESTION_TYPE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -992,21 +993,21 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CONTRACTPACKAGE_CLIENT_FEATURE_ID = 0;
+  public static final int CONTRACTPACKAGE_CLIENT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACTPACKAGE_USER_FEATURE_ID = 1;
+  public static final int CONTRACTPACKAGE_USER_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int CONTRACTPACKAGE_CONTRACTS_FEATURE_ID = 2;
+  public static final int CONTRACTPACKAGE_CONTRACTS_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1020,21 +1021,21 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int USER_LOGIN_FEATURE_ID = 0;
+  public static final int USER_LOGIN_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USER_PASSWORD_FEATURE_ID = 1;
+  public static final int USER_PASSWORD_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int USER_GROUP_FEATURE_ID = 2;
+  public static final int USER_GROUP_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1055,35 +1056,35 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MESSAGE_TEXT_FEATURE_ID = 0;
+  public static final int MESSAGE_TEXT_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MESSAGE_TYPE_FEATURE_ID = 1;
+  public static final int MESSAGE_TYPE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MESSAGE_FROM_FEATURE_ID = 2;
+  public static final int MESSAGE_FROM_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MESSAGE_TO_FEATURE_ID = 3;
+  public static final int MESSAGE_TO_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MESSAGE_DATETIME_FEATURE_ID = 4;
+  public static final int MESSAGE_DATETIME_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1097,21 +1098,21 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EVENT_EVENTTYPE_FEATURE_ID = 0;
+  public static final int EVENT_EVENTTYPE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EVENT_MESSAGE_FEATURE_ID = 1;
+  public static final int EVENT_MESSAGE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int EVENT_COORDINATES_FEATURE_ID = 2;
+  public static final int EVENT_COORDINATES_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1125,14 +1126,14 @@ public class ModelModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COORDINATES_X_FEATURE_ID = 0;
+  public static final int COORDINATES_X_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int COORDINATES_Y_FEATURE_ID = 1;
+  public static final int COORDINATES_Y_FEATURE_ID = 3;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -1157,6 +1158,8 @@ public class ModelModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
+
+    IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method

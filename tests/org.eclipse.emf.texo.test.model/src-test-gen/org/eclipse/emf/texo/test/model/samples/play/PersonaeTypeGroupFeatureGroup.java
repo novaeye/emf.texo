@@ -17,7 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "PersonaeType_group")
+@Entity(name = "play_PersonaeType_group")
 public class PersonaeTypeGroupFeatureGroup extends Identifiable {
 
   /**
@@ -134,7 +134,7 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String title;
 
   /**
@@ -142,7 +142,7 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String persona;
 
   /**
@@ -150,7 +150,7 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private PersonaGroupType personaGroup;
 
   /**

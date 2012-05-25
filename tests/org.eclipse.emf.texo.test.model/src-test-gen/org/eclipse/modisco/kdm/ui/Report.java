@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "Report")
+@Entity(name = "ui_Report")
 public class Report extends UIDisplay {
 
   /**

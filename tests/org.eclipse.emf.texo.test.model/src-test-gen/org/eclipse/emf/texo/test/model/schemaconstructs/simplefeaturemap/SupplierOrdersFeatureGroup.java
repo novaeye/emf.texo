@@ -17,7 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Supplier_orders")
+@Entity(name = "simplefeaturemap_Supplier_orders")
 public class SupplierOrdersFeatureGroup extends Identifiable {
 
   /**
@@ -134,7 +134,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private PurchaseOrder preferredOrders;
 
   /**
@@ -142,7 +142,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private PurchaseOrder standardOrders;
 
   /**
@@ -150,7 +150,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private String hardCopyOrderReference;
 
   /**
@@ -158,7 +158,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
+  @Basic(optional = false)
   private Long hardCopyOrderNumber;
 
   /**

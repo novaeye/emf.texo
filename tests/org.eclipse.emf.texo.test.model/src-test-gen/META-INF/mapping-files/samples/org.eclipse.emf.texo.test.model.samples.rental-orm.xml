@@ -6,14 +6,14 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBicycle" name="RentalBicycle">
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBicycle" name="rental_RentalBicycle">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="type" optional="false">
-        <orm:column name="type"/>
+        <orm:column name="T_type"/>
       </orm:basic>
       <orm:many-to-one name="rentalCar">
-        <orm:join-column name="rentalCar"/>
+        <orm:join-column name="rental_RentalBicycle_rentalCar"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -22,22 +22,22 @@
       </orm:many-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalUnit" name="RentalUnit">
-    <orm:table name="RentalUnit"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalUnit" name="rental_RentalUnit">
+    <orm:table name="rental_RentalUnit"/>
     <orm:attributes>
       <orm:basic name="description" optional="false">
         <orm:column name="description"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCar" name="RentalCar">
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCar" name="rental_RentalCar">
     <orm:primary-key-join-column name="parent_id"/>
     <orm:attributes>
       <orm:basic name="size" optional="false">
-        <orm:column name="size"/>
+        <orm:column name="T_size"/>
       </orm:basic>
       <orm:one-to-one name="currentDriver">
-        <orm:join-column name="currentDriver"/>
+        <orm:join-column name="rental_RentalCar_currentDriver"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -46,22 +46,22 @@
       </orm:one-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBusiness" name="RentalBusiness">
-    <orm:table name="RentalBusiness"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBusiness" name="rental_RentalBusiness">
+    <orm:table name="rental_RentalBusiness"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCarDriver" name="RentalCarDriver">
-    <orm:table name="RentalCarDriver"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCarDriver" name="rental_RentalCarDriver">
+    <orm:table name="rental_RentalCarDriver"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="name"/>
+        <orm:column name="T_name"/>
       </orm:basic>
       <orm:one-to-one mapped-by="currentDriver" name="currentRentalCar">
-        <orm:join-column name="currentRentalCar"/>
+        <orm:join-column name="rental_RentalCarDriver_currentRentalCar"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -70,8 +70,8 @@
       </orm:one-to-one>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalContract" name="RentalContract">
-    <orm:table name="RentalContract"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalContract" name="rental_RentalContract">
+    <orm:table name="rental_RentalContract"/>
     <orm:attributes>
       <orm:basic name="rentToBusinessPartner" optional="false">
         <orm:column name="rentToBusinessPartner"/>
@@ -88,21 +88,22 @@
         <orm:column name="cost"/>
       </orm:basic>
       <orm:one-to-many name="rentalContractLines">
-        <orm:join-column name="RentalContract_id"/>
+        <orm:order-column name="rental_RentalContract_rentalContractLines_ind"/>
+        <orm:join-column name="rental_RentalContract_rentalContractLines"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalContractLine" name="RentalContractLine">
-    <orm:table name="RentalContractLine"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalContractLine" name="rental_RentalContractLine">
+    <orm:table name="rental_RentalContractLine"/>
     <orm:attributes>
       <orm:basic name="number">
-        <orm:column name="number"/>
+        <orm:column name="T_number"/>
       </orm:basic>
       <orm:many-to-one name="rentalContract">
-        <orm:join-column name="rentalContract"/>
+        <orm:join-column name="rental_RentalContractLine_rentalContract"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -110,7 +111,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="rentalUnit">
-        <orm:join-column name="rentalUnit"/>
+        <orm:join-column name="rental_RentalContractLine_rentalUnit"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>

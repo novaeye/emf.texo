@@ -120,6 +120,16 @@ public class TestModel {
   }
 
   /**
+   * These models are mapped with full JPA annotations to ensure correct mapping to the RDB.
+   */
+  public static List<String> getSafelyMappedModels() {
+    final List<String> urls = new ArrayList<String>();
+    urls.add("schemaconstructs/EcoreAttrs.xsd");//$NON-NLS-1$
+    urls.add("samples/inventory.ecore");//$NON-NLS-1$
+    return urls;
+  }
+
+  /**
    * @return all models located in the TestModel class package and below. The return path is relative from the TestModel
    *         class location.
    */

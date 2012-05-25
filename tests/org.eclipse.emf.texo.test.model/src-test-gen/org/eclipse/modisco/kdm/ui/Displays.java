@@ -10,7 +10,7 @@ import org.eclipse.modisco.kdm.action.ActionElement;
  * 
  * @generated
  */
-@Entity(name = "Displays")
+@Entity(name = "ui_Displays")
 public class Displays extends AbstractUIRelationship {
 
   /**

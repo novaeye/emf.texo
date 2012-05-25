@@ -78,28 +78,28 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ABSTRACTUIELEMENT_SOURCE_FEATURE_ID = 15;
+  public static final int ABSTRACTUIELEMENT_SOURCE_FEATURE_ID = 17;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTUIELEMENT_UIRELATION_FEATURE_ID = 16;
+  public static final int ABSTRACTUIELEMENT_UIRELATION_FEATURE_ID = 18;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTUIELEMENT_IMPLEMENTATION_FEATURE_ID = 17;
+  public static final int ABSTRACTUIELEMENT_IMPLEMENTATION_FEATURE_ID = 19;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ABSTRACTUIELEMENT_ABSTRACTION_FEATURE_ID = 18;
+  public static final int ABSTRACTUIELEMENT_ABSTRACTION_FEATURE_ID = 20;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -120,7 +120,7 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UIRESOURCE_UIELEMENT_FEATURE_ID = 19;
+  public static final int UIRESOURCE_UIELEMENT_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -155,7 +155,7 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UIMODEL_UIELEMENT_FEATURE_ID = 8;
+  public static final int UIMODEL_UIELEMENT_FEATURE_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -169,14 +169,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UILAYOUT_TO_FEATURE_ID = 4;
+  public static final int UILAYOUT_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int UILAYOUT_FROM_FEATURE_ID = 5;
+  public static final int UILAYOUT_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -197,14 +197,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DISPLAYSIMAGE_TO_FEATURE_ID = 4;
+  public static final int DISPLAYSIMAGE_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DISPLAYSIMAGE_FROM_FEATURE_ID = 5;
+  public static final int DISPLAYSIMAGE_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -218,14 +218,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DISPLAYS_TO_FEATURE_ID = 4;
+  public static final int DISPLAYS_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DISPLAYS_FROM_FEATURE_ID = 5;
+  public static final int DISPLAYS_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -239,14 +239,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UIFLOW_TO_FEATURE_ID = 4;
+  public static final int UIFLOW_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int UIFLOW_FROM_FEATURE_ID = 5;
+  public static final int UIFLOW_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -267,14 +267,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UIRELATIONSHIP_TO_FEATURE_ID = 4;
+  public static final int UIRELATIONSHIP_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int UIRELATIONSHIP_FROM_FEATURE_ID = 5;
+  public static final int UIRELATIONSHIP_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -288,14 +288,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UIACTION_KIND_FEATURE_ID = 19;
+  public static final int UIACTION_KIND_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int UIACTION_UIELEMENT_FEATURE_ID = 20;
+  public static final int UIACTION_UIELEMENT_FEATURE_ID = 22;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -309,7 +309,7 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int UIEVENT_KIND_FEATURE_ID = 19;
+  public static final int UIEVENT_KIND_FEATURE_ID = 21;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -323,14 +323,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int READSUI_TO_FEATURE_ID = 4;
+  public static final int READSUI_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int READSUI_FROM_FEATURE_ID = 5;
+  public static final int READSUI_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -344,14 +344,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITESUI_TO_FEATURE_ID = 4;
+  public static final int WRITESUI_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITESUI_FROM_FEATURE_ID = 5;
+  public static final int WRITESUI_FROM_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -365,14 +365,14 @@ public class UiModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANAGESUI_TO_FEATURE_ID = 4;
+  public static final int MANAGESUI_TO_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int MANAGESUI_FROM_FEATURE_ID = 5;
+  public static final int MANAGESUI_FROM_FEATURE_ID = 7;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -398,12 +398,12 @@ public class UiModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    CodeModelPackage.initialize();
     SourceModelPackage.initialize();
+    CoreModelPackage.initialize();
+    CodeModelPackage.initialize();
     ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    CoreModelPackage.initialize();
-    KdmModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractUIElement.class,

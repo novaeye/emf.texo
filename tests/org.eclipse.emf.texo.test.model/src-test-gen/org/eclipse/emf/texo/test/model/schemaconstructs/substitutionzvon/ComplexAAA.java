@@ -9,7 +9,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "ComplexAAA")
+@Entity(name = "substitutionzvon_ComplexAAA")
 public class ComplexAAA extends Identifiable {
 
   /**

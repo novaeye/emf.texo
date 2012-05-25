@@ -59,14 +59,14 @@ public class EmapsampleModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOK_TITLE_FEATURE_ID = 0;
+  public static final int BOOK_TITLE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOK_WRITERS_FEATURE_ID = 1;
+  public static final int BOOK_WRITERS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -129,14 +129,14 @@ public class EmapsampleModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STRINGTOWRITERMAPENTRY_KEY_FEATURE_ID = 0;
+  public static final int STRINGTOWRITERMAPENTRY_KEY_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STRINGTOWRITERMAPENTRY_VALUE_FEATURE_ID = 1;
+  public static final int STRINGTOWRITERMAPENTRY_VALUE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -150,14 +150,14 @@ public class EmapsampleModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITERTOBOOKMAPENTRY_KEY_FEATURE_ID = 0;
+  public static final int WRITERTOBOOKMAPENTRY_KEY_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITERTOBOOKMAPENTRY_VALUE_FEATURE_ID = 1;
+  public static final int WRITERTOBOOKMAPENTRY_VALUE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -171,14 +171,14 @@ public class EmapsampleModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITERTONAMEMAPENTRY_KEY_FEATURE_ID = 0;
+  public static final int WRITERTONAMEMAPENTRY_KEY_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITERTONAMEMAPENTRY_VALUE_FEATURE_ID = 1;
+  public static final int WRITERTONAMEMAPENTRY_VALUE_FEATURE_ID = 3;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -204,6 +204,7 @@ public class EmapsampleModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    IdentifiableModelPackage.initialize();
     IdentifiableModelPackage.initialize();
 
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry

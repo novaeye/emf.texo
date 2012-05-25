@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="music"
     nsURI="http://www.eclipse.org/emf/texo/test/model/samples/music" nsPrefix="org.elver.music">
-  <eClassifiers xsi:type="ecore:EClass" name="Artist">
+  <eClassifiers xsi:type="ecore:EClass" name="Artist" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="elver.org/displayLabel">
       <details key="value" value="${firstName} ${lastName}"/>
     </eAnnotations>
@@ -59,7 +59,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Album">
+  <eClassifiers xsi:type="ecore:EClass" name="Album" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="elver.org/displayLabel">
       <details key="value" value="${name}"/>
     </eAnnotations>
@@ -123,7 +123,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Country">
+  <eClassifiers xsi:type="ecore:EClass" name="Country" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="elver.org/displayLabel">
       <details key="value" value="${name}"/>
     </eAnnotations>
@@ -162,7 +162,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Genre">
+  <eClassifiers xsi:type="ecore:EClass" name="Genre" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="elver.org/displayLabel">
       <details key="value" value="${name}"/>
     </eAnnotations>
@@ -192,7 +192,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Song">
+  <eClassifiers xsi:type="ecore:EClass" name="Song" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
         iD="true">
       <eAnnotations source="teneo.jpa">

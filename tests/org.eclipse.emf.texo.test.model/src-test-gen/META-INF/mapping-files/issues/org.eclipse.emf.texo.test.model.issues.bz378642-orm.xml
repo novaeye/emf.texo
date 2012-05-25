@@ -6,11 +6,11 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz378642.PriceType" name="PriceType">
-    <orm:table name="PriceType"/>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz378642.PriceType" name="bz378642_PriceType">
+    <orm:table name="bz378642_PriceType"/>
     <orm:attributes>
       <orm:basic name="value">
-        <orm:column name="value"/>
+        <orm:column name="T_value"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

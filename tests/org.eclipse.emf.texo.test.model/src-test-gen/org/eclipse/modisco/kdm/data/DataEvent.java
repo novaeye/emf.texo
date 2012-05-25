@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "DataEvent")
+@Entity(name = "data_DataEvent")
 public class DataEvent extends DataResource {
 
   /**

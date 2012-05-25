@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * 
  * @generated
  */
-@Entity(name = "TryUnit")
+@Entity(name = "action_TryUnit")
 public class TryUnit extends ExceptionUnit {
 
   /**

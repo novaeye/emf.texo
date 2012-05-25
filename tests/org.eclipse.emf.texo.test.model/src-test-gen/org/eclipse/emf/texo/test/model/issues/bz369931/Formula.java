@@ -11,7 +11,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-@Entity(name = "Formula")
+@Entity(name = "bz369931_Formula")
 public class Formula extends Identifiable {
 
   /**

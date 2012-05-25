@@ -9,11 +9,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: types. It contains code to create instances
@@ -309,13 +309,15 @@ public class TypesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class SingleTypesModelObject<E extends SingleTypes> extends AbstractModelObject<E> {
+  public static class SingleTypesModelObject<E extends SingleTypes> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return TypesModelPackage.INSTANCE.getSingleTypesEClass();
     }
@@ -323,6 +325,7 @@ public class TypesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return TypesModelPackage.INSTANCE;
     }
@@ -501,13 +504,15 @@ public class TypesModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ManyTypesModelObject<E extends ManyTypes> extends AbstractModelObject<E> {
+  public static class ManyTypesModelObject<E extends ManyTypes> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the {@link EClass}
      * @generated
      */
+    @Override
     public EClass eClass() {
       return TypesModelPackage.INSTANCE.getManyTypesEClass();
     }
@@ -515,6 +520,7 @@ public class TypesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return TypesModelPackage.INSTANCE;
     }
@@ -636,6 +642,65 @@ public class TypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case TypesModelPackage.MANYTYPES_STRING_FEATURE_ID:
+        getTarget().getString().add((String) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_INTEGEROBJECT_FEATURE_ID:
+        getTarget().getIntegerObject().add((Integer) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_LONG__FEATURE_ID:
+        getTarget().getLong_().add((Long) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_DOUBLEOBJECT_FEATURE_ID:
+        getTarget().getDoubleObject().add((Double) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_FLOATOBJECT_FEATURE_ID:
+        getTarget().getFloatObject().add((Float) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_CLAZZ_FEATURE_ID:
+        getTarget().getClazz().add((Class<Object>) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_CHAROBJECT_FEATURE_ID:
+        getTarget().getCharObject().add((Character) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BYTEOBJECT_FEATURE_ID:
+        getTarget().getByteObject().add((Byte) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BYTEARRAY_FEATURE_ID:
+        getTarget().getByteArray().add((byte[]) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BIGDECIMAL_FEATURE_ID:
+        getTarget().getBigDecimal().add((BigDecimal) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BIGINTEGER_FEATURE_ID:
+        getTarget().getBigInteger().add((BigInteger) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_ENUM__FEATURE_ID:
+        getTarget().getEnum_().add((TestEnum) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
+        getTarget().getDate().add((Date) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
+        getTarget().getStringArray().add((String[]) value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_LONGARRAY_FEATURE_ID:
+        getTarget().getLongArray().add((long[]) value);
+        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
