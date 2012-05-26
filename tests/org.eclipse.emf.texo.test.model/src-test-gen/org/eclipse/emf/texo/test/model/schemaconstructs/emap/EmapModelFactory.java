@@ -249,7 +249,7 @@ public class EmapModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -344,7 +344,7 @@ public class EmapModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -433,7 +433,7 @@ public class EmapModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

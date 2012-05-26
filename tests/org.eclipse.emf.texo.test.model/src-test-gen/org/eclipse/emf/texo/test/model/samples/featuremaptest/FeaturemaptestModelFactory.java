@@ -223,7 +223,7 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -342,6 +342,18 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case FeaturemaptestModelPackage.SUPPLIER_ORDERS_FEATURE_ID:
+        getTarget().getOrders().remove(value);
+        return;
+
+      case FeaturemaptestModelPackage.SUPPLIER_HARDCOPYORDERREFERENCE_FEATURE_ID:
+        getTarget().getHardCopyOrderReference().remove(value);
+        return;
+
+      case FeaturemaptestModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
+        getTarget().getHardCopyOrderNumber().remove(value);
+        return;
+
       case FeaturemaptestModelPackage.SUPPLIER_PREFERREDORDERS_FEATURE_ID:
         getTarget().getPreferredOrders().remove(value);
         return;
@@ -350,7 +362,7 @@ public class FeaturemaptestModelFactory implements ModelFactory {
         getTarget().getStandardOrders().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

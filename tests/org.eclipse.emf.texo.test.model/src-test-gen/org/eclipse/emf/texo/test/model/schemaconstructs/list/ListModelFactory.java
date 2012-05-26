@@ -409,13 +409,6 @@ public class ListModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      case ListModelPackage.STATESBYCOUNTRY_ALLSTATES_FEATURE_ID:
-        getTarget().getAllStates().add((List<String>) value);
-        return;
-
-      case ListModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
-        getTarget().getSixImportantStates().add((List<String>) value);
-        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -429,7 +422,7 @@ public class ListModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

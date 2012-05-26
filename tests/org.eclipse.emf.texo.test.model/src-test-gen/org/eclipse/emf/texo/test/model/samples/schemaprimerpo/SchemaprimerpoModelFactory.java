@@ -364,8 +364,12 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SchemaprimerpoModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -479,7 +483,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -597,7 +601,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         return;
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -712,7 +716,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

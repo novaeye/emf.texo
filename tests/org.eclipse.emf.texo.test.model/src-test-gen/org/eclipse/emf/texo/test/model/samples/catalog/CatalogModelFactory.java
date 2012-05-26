@@ -290,7 +290,7 @@ public class CatalogModelFactory implements ModelFactory {
         getTarget().getProduct().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -375,7 +375,7 @@ public class CatalogModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -474,7 +474,7 @@ public class CatalogModelFactory implements ModelFactory {
         return;
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -549,7 +549,7 @@ public class CatalogModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -629,7 +629,7 @@ public class CatalogModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

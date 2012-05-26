@@ -245,8 +245,12 @@ public class QnameModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case QnameModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -333,8 +337,11 @@ public class QnameModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case QnameModelPackage.MYTEST_NAMES_FEATURE_ID:
+        getTarget().getNames().remove(value);
+        return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

@@ -234,8 +234,19 @@ public class SimplechoiceModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SimplechoiceModelPackage.PERSON_GROUP_FEATURE_ID:
+        getTarget().getGroup().remove(value);
+        return;
+
+      case SimplechoiceModelPackage.PERSON_AGE_FEATURE_ID:
+        getTarget().getAge().remove(value);
+        return;
+
+      case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
+        getTarget().getLength().remove(value);
+        return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

@@ -206,7 +206,7 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
   /** @return true if efeature isMany or {@link #isManyInstanceClass()} is true */
   @Override
   protected boolean isMany(EStructuralFeature eFeature) {
-    return eFeature.isMany() || isManyInstanceClass(eFeature);
+    return eFeature.isMany();// || isManyInstanceClass(eFeature);
   }
 
   /** Returns a default value for the feature */

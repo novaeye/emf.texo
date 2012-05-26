@@ -79,7 +79,7 @@ public class ManyTypes extends Identifiable {
    * @generated
    */
   @Transient()
-  private Set<Class<Object>> clazz = new HashSet<Class<Object>>();
+  private Set<Class> clazz = new HashSet<Class>();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -304,7 +304,7 @@ public class ManyTypes extends Identifiable {
    * @return the value of '<em><b>clazz</b></em>' feature
    * @generated
    */
-  public Set<Class<Object>> getClazz() {
+  public Set<Class> getClazz() {
     return clazz;
   }
 
@@ -317,7 +317,7 @@ public class ManyTypes extends Identifiable {
    *          new value of the '{@link ManyTypes#getClazz() clazz}' feature.
    * @generated
    */
-  public void setClazz(Set<Class<Object>> newClazz) {
+  public void setClazz(Set<Class> newClazz) {
     clazz = newClazz;
   }
 

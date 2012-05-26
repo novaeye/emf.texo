@@ -1283,9 +1283,9 @@ public class CodeModelPackage extends ModelPackage {
 
     SourceModelPackage.initialize();
     CoreModelPackage.initialize();
-    ActionModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
+    ActionModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CodeModel.class, modelPackage.getCodeModelEClass(),

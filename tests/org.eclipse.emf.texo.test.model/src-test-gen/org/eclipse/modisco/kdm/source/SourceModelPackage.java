@@ -368,7 +368,7 @@ public class SourceModelPackage extends ModelPackage {
 
     CoreModelPackage.initialize();
     KdmModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    KdmModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(InventoryModel.class, modelPackage.getInventoryModelEClass(),

@@ -284,8 +284,12 @@ public class ResponseModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case ResponseModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -375,7 +379,7 @@ public class ResponseModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -477,7 +481,7 @@ public class ResponseModelFactory implements ModelFactory {
         getTarget().getData().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -585,7 +589,7 @@ public class ResponseModelFactory implements ModelFactory {
         getTarget().getDeleted().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

@@ -326,7 +326,7 @@ public class GroupallModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -427,6 +427,10 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.ADDRESSLIST_ADDRS_FEATURE_ID:
+        getTarget().getAddrs().remove(value);
+        return;
+
       case GroupallModelPackage.ADDRESSLIST_SHIPTO_FEATURE_ID:
         getTarget().getShipTo().remove(value);
         return;
@@ -435,7 +439,7 @@ public class GroupallModelFactory implements ModelFactory {
         getTarget().getBillTo().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -531,8 +535,19 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().remove(value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
+        getTarget().getName().remove(value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
+        getTarget().getLongName().remove(value);
+        return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -641,8 +656,12 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -737,8 +756,12 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case GroupallModelPackage.SIMPLEALLMAPTYPE_ALLMAP_FEATURE_ID:
+        getTarget().getAllMap().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1066,7 +1089,7 @@ public class GroupallModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

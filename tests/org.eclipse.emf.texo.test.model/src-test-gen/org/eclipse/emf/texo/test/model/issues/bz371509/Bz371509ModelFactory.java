@@ -226,7 +226,7 @@ public class Bz371509ModelFactory implements ModelFactory {
         getTarget().removeFromMany((EClass1) value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -320,7 +320,7 @@ public class Bz371509ModelFactory implements ModelFactory {
         getTarget().removeFromMany((EClass0) value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

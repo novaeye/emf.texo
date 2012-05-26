@@ -281,11 +281,19 @@ public class NestedgroupModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case NestedgroupModelPackage.A_GROUP_FEATURE_ID:
+        getTarget().getGroup().remove(value);
+        return;
+
+      case NestedgroupModelPackage.A_B_FEATURE_ID:
+        getTarget().getB().remove(value);
+        return;
+
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         getTarget().getC().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -364,7 +372,7 @@ public class NestedgroupModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -470,12 +478,20 @@ public class NestedgroupModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case NestedgroupModelPackage.ELEMENT_MIXED_FEATURE_ID:
+        getTarget().getMixed().remove(value);
+        return;
+
+      case NestedgroupModelPackage.ELEMENT_TRUE__FEATURE_ID:
+        getTarget().getTrue_().remove(value);
+        return;
+
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
         getTarget().getC().remove(value);
         return;
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

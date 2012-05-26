@@ -233,7 +233,7 @@ public class WSMainTest extends BaseWSWebTest {
     {
       final String wsPartUrl = ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass())
           + "?query=" //$NON-NLS-1$
-          + URLEncoder.encode("select e from Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + URLEncoder.encode("select e from library_Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "&maxResults=5&childLevels=3&qp.name=" + URLEncoder.encode("name2%", "UTF-8"); //$NON-NLS-1$
       final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
       final ResponseType result = (ResponseType) deserialize(content).get(0);
@@ -250,7 +250,7 @@ public class WSMainTest extends BaseWSWebTest {
     if (!isXmlTest()) {
       final String wsPartUrl = ModelUtils.getQualifiedNameFromEClass(LibraryModelPackage.INSTANCE.getWriterEClass())
           + "?query=" //$NON-NLS-1$
-          + URLEncoder.encode("select e, e.name from Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+          + URLEncoder.encode("select e, e.name from library_Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           + "&maxResults=5&childLevels=3&qp.name=" + URLEncoder.encode("name2%", "UTF-8"); //$NON-NLS-1$
       final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
       final ResponseType result = (ResponseType) deserialize(content).get(0);
@@ -268,7 +268,7 @@ public class WSMainTest extends BaseWSWebTest {
     // test querytype
     if (!isXmlTest()) {
       final QueryType queryType = RequestModelPackage.INSTANCE.getModelFactory().createQueryType();
-      queryType.setQuery("select e, e.name from Writer e where e.name like :name");
+      queryType.setQuery("select e, e.name from library_Writer e where e.name like :name");
       // test named query, add this snippet to library-orm.xml:
       // <orm:named-query name="testWriter">
       // <orm:query>select e, e.name from Writer e where e.name like :name</orm:query>
@@ -298,7 +298,7 @@ public class WSMainTest extends BaseWSWebTest {
     // do not do the count, so the total rows should be equal to the maxResults
     {
       final String wsPartUrl = LibraryModelPackage.INSTANCE.getWriterEClass().getName()
-          + "?query=" + URLEncoder.encode("select e from Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+          + "?query=" + URLEncoder.encode("select e from library_Writer e where e.name like :name", "UTF-8") + "&firstResult=0" //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
           + "&maxResults=5&noCount=true&qp.name=" + URLEncoder.encode("name3%", "UTF-8"); //$NON-NLS-1$
       final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
       final ResponseType result = (ResponseType) deserialize(content).get(0);

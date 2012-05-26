@@ -245,7 +245,13 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
         }
         if (eFeature instanceof EAttribute) {
           final EDataType eDataType = ((EAttribute) eFeature).getEAttributeType();
-          sb.append(eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, value));
+          if (eFeature.isMany()) {
+            for (Object o : (Collection<?>) value) {
+              sb.append(eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, o));
+            }
+          } else {
+            sb.append(eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, value));
+          }
         } else if (nextStep) {
           if (eFeature.isMany()) {
             for (Object o : (Collection<?>) value) {

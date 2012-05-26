@@ -207,6 +207,13 @@ public class ModelResolver implements TexoStaticSingleton {
   }
 
   /**
+   * Is the {@link EClassifier} managed by the ModelResolver.
+   */
+  public boolean isModeledEClassifier(EClassifier eClassifier) {
+    return eClassifierToClassMapping.containsKey(eClassifier);
+  }
+
+  /**
    * @param modelObject
    *          the object to check if it is managed by a {@link ModelPackage}. Note if null is passed then false is
    *          returned.

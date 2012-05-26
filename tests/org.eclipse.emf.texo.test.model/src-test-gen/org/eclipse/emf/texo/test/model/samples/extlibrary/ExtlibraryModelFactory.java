@@ -384,7 +384,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -555,8 +555,12 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getBranches().remove(value);
         return;
 
+      case ExtlibraryModelPackage.LIBRARY_PEOPLE_FEATURE_ID:
+        getTarget().getPeople().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -644,7 +648,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getBooks().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -718,7 +722,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -802,7 +806,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getBorrowers().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -890,7 +894,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getBorrowers().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -971,7 +975,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1055,7 +1059,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1136,7 +1140,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1219,7 +1223,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getCast().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1360,7 +1364,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getBorrowed().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1444,7 +1448,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1520,7 +1524,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1592,7 +1596,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

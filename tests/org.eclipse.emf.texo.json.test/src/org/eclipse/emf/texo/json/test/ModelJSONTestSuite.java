@@ -24,7 +24,6 @@ import junit.framework.TestSuite;
 
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.test.model.TestModelPackageProvider;
-import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpletypesModelPackage;
 
 /**
  * Creates the {@link JSONEMFTest} for each {@link ModelPackage}.
@@ -38,8 +37,8 @@ public class ModelJSONTestSuite {
 
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
-    modelPackages.clear();
-    modelPackages.add(SimpletypesModelPackage.INSTANCE);
+    // modelPackages.clear();
+    // modelPackages.add(WorkflowModelPackage.INSTANCE);
     // modelPackages.add(JpamixedModelPackage.INSTANCE);
     // modelPackages.add(NestedgroupModelPackage.INSTANCE);
 
@@ -63,8 +62,8 @@ public class ModelJSONTestSuite {
   }
 
   private static void addTest(ModelPackage modelPackage, TestSuite suite) {
-    // final LocalJSONEMFTest jsonEMFTest = new LocalJSONEMFTest(modelPackage);
-    // suite.addTest(jsonEMFTest);
+    final LocalJSONEMFTest jsonEMFTest = new LocalJSONEMFTest(modelPackage);
+    suite.addTest(jsonEMFTest);
     final LocalJSONTest jsonTest = new LocalJSONTest(modelPackage);
     suite.addTest(jsonTest);
   }
@@ -76,9 +75,9 @@ public class ModelJSONTestSuite {
       super.setEPackages(Collections.singletonList(modelPackage.getEPackage()));
     }
 
-    @org.junit.Test
-    public void testJSONConversion() throws Exception {
-      runTest();
+    @Override
+    protected void runTest() throws Throwable {
+      doRunTest();
     }
   }
 
@@ -89,9 +88,10 @@ public class ModelJSONTestSuite {
       super.setModelPackages(Collections.singletonList(modelPackage));
     }
 
-    @org.junit.Test
-    public void testJSONConversion() throws Exception {
-      runTest();
+    @Override
+    protected void runTest() throws Throwable {
+      doRunTest();
     }
+
   }
 }

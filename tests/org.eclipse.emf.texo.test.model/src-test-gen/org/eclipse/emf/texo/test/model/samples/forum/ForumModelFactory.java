@@ -352,7 +352,7 @@ public class ForumModelFactory implements ModelFactory {
         getTarget().getTopics().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -465,7 +465,7 @@ public class ForumModelFactory implements ModelFactory {
         getTarget().getCreated().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -564,7 +564,7 @@ public class ForumModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -674,7 +674,7 @@ public class ForumModelFactory implements ModelFactory {
         getTarget().getPosts().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

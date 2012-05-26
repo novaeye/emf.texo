@@ -22,13 +22,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -58,7 +56,7 @@ public class JSONValueConverter implements TexoComponent {
    * @return the converted value
    */
   protected Object toJSON(Object target, final Object value, final EDataType eDataType) {
-    if (target instanceof EObject && eDataType instanceof EEnum) {
+    if (target instanceof EObject && ModelUtils.isEEnum(eDataType)) {
       return eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, value);
     }
 
@@ -108,9 +106,8 @@ public class JSONValueConverter implements TexoComponent {
    */
   @SuppressWarnings({ "unchecked", "rawtypes" })
   protected Object fromJSON(Object target, final Object value, final EDataType eDataType) {
-    if (eDataType instanceof EEnum) {
+    if (ModelUtils.isEEnum(eDataType)) {
       final EDataType enumDataType = getDataTypeOrBaseType(eDataType);
-      Check.isInstanceOf(enumDataType, EEnum.class);
       
       if (!(value instanceof String)) {
         // hopefully already the correct value...

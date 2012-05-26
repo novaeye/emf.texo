@@ -232,7 +232,8 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
   protected void convertSingleEReference(final JSONObject jsonObject, Object value, T target,
       final EReference eReference) {
     // bidirectional one-to-many are always set from the many side to preserve the order
-    if (!eReference.isMany() && eReference.getEOpposite() != null && eReference.getEOpposite().isMany()) {
+    // this only works if the other side is also part of this conversion thread, is it??
+    if (eReference.getEOpposite() != null && eReference.getEOpposite().isMany()) {
       return;
     }
     if (value == null || value == JSONObject.NULL) {
@@ -356,11 +357,18 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
           // add to the other side, this is needed because the bi-directional
           // api is not always generated
-          if (eReference.getEOpposite() != null && !eReference.getEOpposite().isMany()) {
+          if (eReference.getEOpposite() != null) {
             if (eReference.getEOpposite().isMany()) {
-              eAddTo(mValue, eReference.getEOpposite(), target);
+              final Collection<?> otherSide = (Collection<?>) eGet(mValue, eReference.getEOpposite());
+              if (!otherSide.contains(target)) {
+                eAddTo(mValue, eReference.getEOpposite(), target);
+              }
             } else {
-              eSet(mValue, eReference.getEOpposite(), target);
+              // first check if the otherside is already set
+              final Object otherSide = eGet(mValue, eReference.getEOpposite());
+              if (otherSide != target) {
+                eSet(mValue, eReference.getEOpposite(), target);
+              }
             }
           }
         } catch (JSONException e) {

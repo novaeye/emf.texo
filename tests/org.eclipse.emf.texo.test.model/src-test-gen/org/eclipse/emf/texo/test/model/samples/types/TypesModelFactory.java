@@ -495,7 +495,7 @@ public class TypesModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -601,7 +601,7 @@ public class TypesModelFactory implements ModelFactory {
         getTarget().setFloatObject((List<Float>) value);
         return;
       case TypesModelPackage.MANYTYPES_CLAZZ_FEATURE_ID:
-        getTarget().setClazz((Set<Class<Object>>) value);
+        getTarget().setClazz((Set<Class>) value);
         return;
       case TypesModelPackage.MANYTYPES_CHAROBJECT_FEATURE_ID:
         getTarget().setCharObject((List<Character>) value);
@@ -663,7 +663,7 @@ public class TypesModelFactory implements ModelFactory {
         return;
 
       case TypesModelPackage.MANYTYPES_CLAZZ_FEATURE_ID:
-        getTarget().getClazz().add((Class<Object>) value);
+        getTarget().getClazz().add((Class) value);
         return;
 
       case TypesModelPackage.MANYTYPES_CHAROBJECT_FEATURE_ID:
@@ -713,8 +713,67 @@ public class TypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case TypesModelPackage.MANYTYPES_STRING_FEATURE_ID:
+        getTarget().getString().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_INTEGEROBJECT_FEATURE_ID:
+        getTarget().getIntegerObject().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_LONG__FEATURE_ID:
+        getTarget().getLong_().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_DOUBLEOBJECT_FEATURE_ID:
+        getTarget().getDoubleObject().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_FLOATOBJECT_FEATURE_ID:
+        getTarget().getFloatObject().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_CLAZZ_FEATURE_ID:
+        getTarget().getClazz().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_CHAROBJECT_FEATURE_ID:
+        getTarget().getCharObject().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BYTEOBJECT_FEATURE_ID:
+        getTarget().getByteObject().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BYTEARRAY_FEATURE_ID:
+        getTarget().getByteArray().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BIGDECIMAL_FEATURE_ID:
+        getTarget().getBigDecimal().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_BIGINTEGER_FEATURE_ID:
+        getTarget().getBigInteger().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_ENUM__FEATURE_ID:
+        getTarget().getEnum_().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
+        getTarget().getDate().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
+        getTarget().getStringArray().remove(value);
+        return;
+
+      case TypesModelPackage.MANYTYPES_LONGARRAY_FEATURE_ID:
+        getTarget().getLongArray().remove(value);
+        return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

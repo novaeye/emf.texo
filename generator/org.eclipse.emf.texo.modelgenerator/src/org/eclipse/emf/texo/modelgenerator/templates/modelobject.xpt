@@ -135,7 +135,7 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
 			«ENDIF-»
 		«ENDFOREACH-»
 		}		
-		super.eAddTo(eStructuralFeature, value);
+		super.eRemoveFrom(eStructuralFeature, value);
 	}
 }
 «ENDLET-»

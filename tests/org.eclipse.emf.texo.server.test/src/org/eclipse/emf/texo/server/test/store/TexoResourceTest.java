@@ -108,8 +108,8 @@ public class TexoResourceTest extends BaseTest {
 
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       namedParams.put("name", "1_%");
-      final List<EObject> writers = resource
-          .query("select w from Writer w where w.name like :name", namedParams, 0, -1);
+      final List<EObject> writers = resource.query("select w from library_Writer w where w.name like :name",
+          namedParams, 0, -1);
       Assert.assertEquals(COUNT, writers.size());
 
       int i = 0;
@@ -131,12 +131,12 @@ public class TexoResourceTest extends BaseTest {
     // types parameter
     try {
       {
-        final EPersistenceTexoResource resource = createResource("jpa://jpa?types=Library");
+        final EPersistenceTexoResource resource = createResource("jpa://jpa?types=library_Library");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
       }
       {
-        final EPersistenceTexoResource resource = createResource("jpa://jpa?types=Library,Writer");
+        final EPersistenceTexoResource resource = createResource("jpa://jpa?types=library_Library,library_Writer");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
         // only libraries should be in the root
@@ -155,7 +155,7 @@ public class TexoResourceTest extends BaseTest {
       {
         final EPersistenceTexoResource resource = createResource();
         final Map<String, Object> namedParams = new HashMap<String, Object>();
-        final List<EObject> libs = resource.query("select l from Library l", namedParams, 0, -1);
+        final List<EObject> libs = resource.query("select l from library_Library l", namedParams, 0, -1);
 
         final EObject toDel = libs.get(4);
         final String delUriFragment = ModelUtils.getQualifiedNameFromEClass(LibraryPackage.eINSTANCE.getLibrary())
@@ -182,7 +182,7 @@ public class TexoResourceTest extends BaseTest {
       {
         final EPersistenceTexoResource resource = createResource();
         final Map<String, Object> namedParams = new HashMap<String, Object>();
-        final List<EObject> libs = resource.query("select l from Library l", namedParams, 0, -1);
+        final List<EObject> libs = resource.query("select l from library_Library l", namedParams, 0, -1);
         boolean foundNewName = true;
         boolean foundUpdatedName = true;
         for (EObject l : libs) {
@@ -207,8 +207,8 @@ public class TexoResourceTest extends BaseTest {
     {
       final EPersistenceTexoResource resource = createResource();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
-      final List<EObject> libs1 = resource.query("select l from Library l", namedParams, 0, -1);
-      final List<EObject> libs2 = resource.query("select l from Library l", namedParams, 0, -1);
+      final List<EObject> libs1 = resource.query("select l from library_Library l", namedParams, 0, -1);
+      final List<EObject> libs2 = resource.query("select l from library_Library l", namedParams, 0, -1);
       Iterator<EObject> it2 = libs2.iterator();
       for (EObject eObject : libs1) {
         Assert.assertTrue(eObject == it2.next());

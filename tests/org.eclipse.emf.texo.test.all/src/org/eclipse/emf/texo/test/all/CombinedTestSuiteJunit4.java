@@ -16,8 +16,7 @@
  */
 package org.eclipse.emf.texo.test.all;
 
-import org.eclipse.emf.texo.json.test.JSONEMFTests;
-import org.eclipse.emf.texo.json.test.JSONTests;
+import org.eclipse.emf.texo.json.test.ModelJSONTestSuite;
 import org.eclipse.emf.texo.server.test.AllServerTests;
 import org.eclipse.emf.texo.test.TestBz325427;
 import org.eclipse.emf.texo.test.TestBz363802;
@@ -33,7 +32,7 @@ import org.junit.runners.Suite;
  * @author mtaal
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ JSONEMFTests.class, JSONTests.class, TestBz363802.class, TestBz325427.class, TestBz379796.class,
+@Suite.SuiteClasses({ ModelJSONTestSuite.class, TestBz363802.class, TestBz325427.class, TestBz379796.class,
     CombinedTestSuite.class, AllServerTests.class })
 public class CombinedTestSuiteJunit4 {
 }

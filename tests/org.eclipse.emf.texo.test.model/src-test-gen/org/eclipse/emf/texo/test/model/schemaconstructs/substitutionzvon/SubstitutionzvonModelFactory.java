@@ -458,7 +458,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -525,7 +525,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -592,7 +592,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -710,8 +710,12 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SubstitutionzvonModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+        getTarget().getMixed().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -803,8 +807,16 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SubstitutionzvonModelPackage.ROOTTYPE_MYABSTRACTGROUP_FEATURE_ID:
+        getTarget().getMyAbstractGroup().remove(value);
+        return;
+
+      case SubstitutionzvonModelPackage.ROOTTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID:
+        getTarget().getMyComplexAbstractGroup().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

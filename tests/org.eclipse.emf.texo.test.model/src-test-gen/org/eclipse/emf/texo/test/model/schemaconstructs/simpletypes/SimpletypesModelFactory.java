@@ -952,8 +952,52 @@ public class SimpletypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
+        getTarget().getBoo().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
+        getTarget().getByt().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
+        getTarget().getDoubl().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
+        getTarget().getFloa().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
+        getTarget().getInte().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        getTarget().getLong_().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
+        getTarget().getShor().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
+        getTarget().getEnu().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
+        getTarget().getDat().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
+        getTarget().getLimitedstring().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
+        getTarget().getStri().remove(value);
+        return;
+
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1088,7 +1132,7 @@ public class SimpletypesModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -1209,7 +1253,7 @@ public class SimpletypesModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

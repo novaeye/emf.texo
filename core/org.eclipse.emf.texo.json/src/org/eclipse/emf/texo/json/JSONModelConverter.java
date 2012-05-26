@@ -21,6 +21,8 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.model.DynamicModelObject;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
@@ -56,8 +58,14 @@ public class JSONModelConverter extends BaseJSONModelConverter<Object> {
 
   @Override
   protected Object create(EClass eClass) {
-    return ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI()).getModelFactory()
-        .create(eClass);
+    if (ModelResolver.getInstance().isModeledEClassifier(eClass)) {
+      return ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI()).getModelFactory()
+          .create(eClass);
+    } else {
+      final DynamicModelObject dmo = ComponentProvider.getInstance().newInstance(DynamicModelObject.class);
+      dmo.setEClass(eClass);
+      return dmo;
+    }
   }
 
   @Override

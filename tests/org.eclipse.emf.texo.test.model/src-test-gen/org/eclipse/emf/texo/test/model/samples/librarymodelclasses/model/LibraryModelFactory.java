@@ -283,7 +283,7 @@ public class LibraryModelFactory implements ModelFactory {
       switch (featureID) {
 
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -369,7 +369,7 @@ public class LibraryModelFactory implements ModelFactory {
         getTarget().getBooks().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -468,7 +468,7 @@ public class LibraryModelFactory implements ModelFactory {
         getTarget().getBooks().remove(value);
         return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

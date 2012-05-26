@@ -79,6 +79,11 @@ public abstract class BaseModelConverter<T extends Object> implements TexoCompon
   @SuppressWarnings("unchecked")
   protected void traverseEReferencesForProxyDetermination(T object, int level) {
 
+    if (nonProxiedObjects.contains(object) || nonProxiedObjects.contains(object)) {
+      // been here, go away
+      return;
+    }
+
     // special case, a query can return an array, allows jsonizing this
     // to be send to the client
     if (object.getClass().isArray()) {

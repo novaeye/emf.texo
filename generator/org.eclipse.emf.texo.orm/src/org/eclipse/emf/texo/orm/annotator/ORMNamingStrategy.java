@@ -103,7 +103,7 @@ public class ORMNamingStrategy {
   public String getPrimaryKeyJoinColumn(EClass eClass) {
     String localName = getDictionariedName(eClass, "parent"); //$NON-NLS-1$
     if (localName == null) {
-      localName = "parent_id"; //$NON-NLS-1$
+      localName = getEntityName(eClass) + "_parent_id"; //$NON-NLS-1$
     }
     return processName(localName, ePackageORMAnnotation.getColumnNamePrefix());
   }

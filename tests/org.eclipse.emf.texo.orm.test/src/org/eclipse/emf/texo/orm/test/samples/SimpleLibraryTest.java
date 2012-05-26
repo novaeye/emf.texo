@@ -55,7 +55,7 @@ public class SimpleLibraryTest extends JPATest {
     {
       beginTransaction();
       final Writer writer = (Writer) getEntityManager()
-          .createQuery("select w from Writer w where w.name = :name").setParameter("name", "test") //$NON-NLS-3$  //$NON-NLS-2$  //$NON-NLS-1$
+          .createQuery("select w from library_Writer w where w.name = :name").setParameter("name", "test") //$NON-NLS-3$  //$NON-NLS-2$  //$NON-NLS-1$
           .getSingleResult();
       assertTrue(writer != null);
       commitTransaction();

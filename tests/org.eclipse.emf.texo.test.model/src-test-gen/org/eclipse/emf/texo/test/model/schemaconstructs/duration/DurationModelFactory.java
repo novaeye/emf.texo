@@ -214,8 +214,11 @@ public class DurationModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case DurationModelPackage.DURATIONTEST_DURATIONS_FEATURE_ID:
+        getTarget().getDurations().remove(value);
+        return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

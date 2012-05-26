@@ -54,40 +54,42 @@ public class JSONTest extends BaseJSONTest {
     super(name);
   }
 
-  public void runTest() throws Exception {
+  public void doRunTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
 
     final List<EObject> eObjects = TestUtils.generateTestSet(1, 3, 3, 10000, getEPackages(), getEClasses());
     final EMFModelConverter emfModelConverter = new EMFModelConverter();
     emfModelConverter.setUriResolver(memObjectStore);
-    final Object m1 = emfModelConverter.convert(eObjects).get(0);
-    memObjectStore.addData(emfModelConverter.getAllConvertedObjects());
+    for (Object m1 : emfModelConverter.convert(eObjects)) {
+      memObjectStore.addData(emfModelConverter.getAllConvertedObjects());
 
-    final ModelJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
-    toJsonConverter.setObjectResolver(memObjectStore);
-    toJsonConverter.setMaxChildLevelsToConvert(-1);
-    final JSONModelConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONModelConverter.class);
-    fromJsonConverter.setObjectResolver(memObjectStore);
+      final ModelJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(ModelJSONConverter.class);
+      toJsonConverter.setObjectResolver(memObjectStore);
+      toJsonConverter.setMaxChildLevelsToConvert(-1);
+      final JSONModelConverter fromJsonConverter = ComponentProvider.getInstance()
+          .newInstance(JSONModelConverter.class);
+      fromJsonConverter.setObjectResolver(memObjectStore);
 
-    final Object json1 = toJsonConverter.convert(m1);
-    final Object m2;
-    if (json1 instanceof JSONArray) {
-      m2 = fromJsonConverter.convert((JSONArray) json1);
-    } else {
-      m2 = fromJsonConverter.convert((JSONObject) json1);
+      final Object json1 = toJsonConverter.convert(m1);
+      final Object m2;
+      if (json1 instanceof JSONArray) {
+        m2 = fromJsonConverter.convert((JSONArray) json1);
+      } else {
+        m2 = fromJsonConverter.convert((JSONObject) json1);
+      }
+
+      final Object json2 = toJsonConverter.convert(m2);
+
+      System.err.println(json1);
+      System.err.println("---------------------------------------------");
+      System.err.println(json2);
+
+      Assert.assertEquals(json1.toString(), json2.toString());
+
+      final Object m3 = fromJsonConverter.convert((JSONObject) json2);
+      final Object json3 = toJsonConverter.convert(m3);
+
+      Assert.assertEquals(json2.toString(), json3.toString());
     }
-
-    final Object json2 = toJsonConverter.convert(m2);
-
-    System.err.println(json1);
-    System.err.println("---------------------------------------------");
-    System.err.println(json2);
-
-    Assert.assertEquals(json1.toString(), json2.toString());
-
-    final Object m3 = fromJsonConverter.convert((JSONObject) json2);
-    final Object json3 = toJsonConverter.convert(m3);
-
-    Assert.assertEquals(json2.toString(), json3.toString());
   }
 }

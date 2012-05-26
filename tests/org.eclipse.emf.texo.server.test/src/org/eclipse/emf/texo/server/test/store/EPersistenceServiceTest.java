@@ -28,6 +28,7 @@ import junit.framework.Assert;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.json.JSONEObjectStore;
 import org.eclipse.emf.texo.server.store.EPersistenceService;
 import org.eclipse.emf.texo.server.store.EntityManagerProvider;
 import org.eclipse.emf.texo.server.test.BaseTest;
@@ -104,7 +105,7 @@ public class EPersistenceServiceTest extends BaseTest {
       final EPersistenceService service = getEPersistenceService();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       namedParams.put("name", "1_%");
-      final long cnt = service.count("select count(w) from Writer w where w.name like :name", namedParams);
+      final long cnt = service.count("select count(w) from library_Writer w where w.name like :name", namedParams);
       Assert.assertEquals(COUNT, cnt);
     }
 
@@ -113,7 +114,8 @@ public class EPersistenceServiceTest extends BaseTest {
       final EPersistenceService service = getEPersistenceService();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       namedParams.put("name", "1_%");
-      final List<EObject> writers = service.query("select w from Writer w where w.name like :name", namedParams, 0, -1);
+      final List<EObject> writers = service.query("select w from library_Writer w where w.name like :name",
+          namedParams, 0, -1);
       Assert.assertEquals(COUNT, writers.size());
 
       int i = 0;
@@ -132,7 +134,8 @@ public class EPersistenceServiceTest extends BaseTest {
       final EPersistenceService service = getEPersistenceService();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       namedParams.put("name", "1_%");
-      final List<EObject> writers = service.query("select w from Writer w where w.name like :name", namedParams, 0, 2);
+      final List<EObject> writers = service.query("select w from library_Writer w where w.name like :name",
+          namedParams, 0, 2);
       Assert.assertEquals(2, writers.size());
     }
 
@@ -141,7 +144,8 @@ public class EPersistenceServiceTest extends BaseTest {
       final EPersistenceService service = getEPersistenceService();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       namedParams.put("name", "1_%");
-      final List<EObject> writers = service.query("select w from Writer w where w.name like :name", namedParams, 3, -1);
+      final List<EObject> writers = service.query("select w from library_Writer w where w.name like :name",
+          namedParams, 3, -1);
       Assert.assertEquals(2, writers.size());
     }
 
@@ -173,7 +177,7 @@ public class EPersistenceServiceTest extends BaseTest {
     {
       final EPersistenceService service = getEPersistenceService();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
-      final List<EObject> libs = service.query("select l from Library l", namedParams, 0, -1);
+      final List<EObject> libs = service.query("select l from library_Library l", namedParams, 0, -1);
       final EObject toDel = libs.remove(4);
       final Library lib = factory.createLibrary();
       lib.setName("name10"); //$NON-NLS-1$
@@ -189,8 +193,8 @@ public class EPersistenceServiceTest extends BaseTest {
       final EPersistenceService service = getEPersistenceService();
       service.setCacheEObjects(true);
       final Map<String, Object> namedParams = new HashMap<String, Object>();
-      final List<EObject> libs1 = service.query("select l from Library l", namedParams, 0, -1);
-      final List<EObject> libs2 = service.query("select l from Library l", namedParams, 0, -1);
+      final List<EObject> libs1 = service.query("select l from library_Library l", namedParams, 0, -1);
+      final List<EObject> libs2 = service.query("select l from library_Library l", namedParams, 0, -1);
       final Iterator<EObject> it2 = libs2.iterator();
       for (EObject eObject : libs1) {
         Assert.assertTrue(eObject == it2.next());

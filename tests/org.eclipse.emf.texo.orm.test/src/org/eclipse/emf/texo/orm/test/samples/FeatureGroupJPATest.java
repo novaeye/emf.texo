@@ -83,7 +83,7 @@ public class FeatureGroupJPATest extends JPATest {
       getEntityManager();
       beginTransaction();
       final LetterBodyType letterBody = (LetterBodyType) getEntityManager().createQuery(
-          "select l from LetterBodyType l") //$NON-NLS-1$
+          "select l from jpamixed_LetterBodyType l") //$NON-NLS-1$
           .getSingleResult();
       assertTrue(letterBody != null);
       assertTrue(letterBody != lb1);

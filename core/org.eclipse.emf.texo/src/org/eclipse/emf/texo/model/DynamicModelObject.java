@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.component.TexoComponent;
@@ -146,4 +147,24 @@ public class DynamicModelObject implements ModelObject<DynamicModelObject>, Texo
       values.add(null);
     }
   }
+
+  @Override
+  public String toString() {
+    final StringBuilder sb = new StringBuilder();
+    sb.append(eClass.getName());
+    sb.append("{"); //$NON-NLS-1$
+    boolean added = false;
+    for (EAttribute eAttribute : eClass.getEAllAttributes()) {
+      final int featureId = eClass().getFeatureID(eAttribute);
+      if (values.size() > featureId && values.get(featureId) != null) {
+        if (added) {
+          sb.append(", "); //$NON-NLS-1$
+        }
+        sb.append(eAttribute.getName() + ": " + values.get(featureId)); //$NON-NLS-1$
+      }
+    }
+    sb.append("}"); //$NON-NLS-1$
+    return sb.toString();
+  }
+
 }

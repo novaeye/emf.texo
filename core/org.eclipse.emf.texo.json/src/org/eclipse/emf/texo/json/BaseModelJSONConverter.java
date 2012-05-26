@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.converter.BaseModelConverter;
+import org.eclipse.emf.texo.model.DynamicModelObject;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.provider.TitleProvider;
@@ -193,7 +194,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
 
   protected void setObjectProperties(T object, JSONObject jsonObject) {
     try {
-      if (!isModelEnabled(object)) {
+      if (!isModelEnabled(object) && object.getClass() != DynamicModelObject.class) {
         return;
       }
       if (IdProvider.getInstance().hasIdEAttribute(eClass(object))) {

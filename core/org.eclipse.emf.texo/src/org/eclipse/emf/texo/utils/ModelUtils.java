@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
@@ -362,6 +363,13 @@ public class ModelUtils {
       throw new IllegalArgumentException("No EPackage registered using the nsuri: " + nsuri); //$NON-NLS-1$
     }
     return epackage;
+  }
+
+  /**
+   * True if the eDataType is an EEnum or has as instance class the {@link Enumerator}.
+   */
+  public static boolean isEEnum(EDataType eDataType) {
+    return eDataType instanceof EEnum || Enumerator.class.getName().equals(eDataType.getInstanceClassName());
   }
 
   /** @return true if the eClass represents a Map.Entry */

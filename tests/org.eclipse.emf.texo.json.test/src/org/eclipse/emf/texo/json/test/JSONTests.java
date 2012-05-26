@@ -22,7 +22,6 @@ import java.util.Collections;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
-import org.junit.Test;
 
 /**
  * Tests json conversion with several models.
@@ -33,16 +32,14 @@ import org.junit.Test;
 
 public class JSONTests extends JSONTest {
 
-  @Test
-  public void doLibraryJSONConversion() throws Exception {
+  public void testLibraryJSONConversion() throws Exception {
     super.setModelPackages(Collections.singletonList((ModelPackage) LibraryModelPackage.INSTANCE));
-    runTest();
+    doRunTest();
   }
 
-  @Test
-  public void doRentalModelPackage() throws Exception {
+  public void testRentalModelPackage() throws Exception {
     super.setModelPackages(Collections.singletonList((ModelPackage) RentalModelPackage.INSTANCE));
-    runTest();
+    doRunTest();
   }
 
 }

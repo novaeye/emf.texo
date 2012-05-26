@@ -104,8 +104,6 @@ public class ModelEDataTypeAnnotator extends ModelEClassifierAnnotator implement
     if (itemDataType != null) {
       final EDataTypeModelGenAnnotationDefinition itemDataTypeAnnotation = getEDataTypeModelGenAnnotation(itemDataType);
       annotation.setItemType(itemDataTypeAnnotation.getInstanceClassName());
-    } else {
-      annotation.setItemType(Object.class.getName());
     }
 
     if (GeneratorUtils.isEmptyOrNull(annotation.getObjectClassName())) {
@@ -121,6 +119,11 @@ public class ModelEDataTypeAnnotator extends ModelEClassifierAnnotator implement
       } else {
         annotation.setObjectClassName(GenUtils.getObjectClassName(eDataType, instanceClassName));
       }
+    }
+
+    // set the item type equal to the object classname for safety reason
+    if (GeneratorUtils.isEmptyOrNull(annotation.getItemType())) {
+      annotation.setItemType(annotation.getObjectClassName());
     }
 
     if (GeneratorUtils.isEmptyOrNull(annotation.getQualifiedClassName())) {

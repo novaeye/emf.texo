@@ -82,8 +82,8 @@ public class Sub2ModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    MainModelPackage.initialize();
     IdentifiableModelPackage.initialize();
+    MainModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Sub2Type.class, modelPackage.getSub2TypeEClass(),

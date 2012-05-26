@@ -746,14 +746,6 @@ public class ListunionModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      case ListunionModelPackage.STATESBYCOUNTRY_ALLSTATES_FEATURE_ID:
-        getTarget().getAllStates().add((List<String>) value);
-        return;
-
-      case ListunionModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
-        getTarget().getSixImportantStates().add((List<String>) value);
-        return;
-
       case ListunionModelPackage.STATESBYCOUNTRY_ZIPUNIONS_FEATURE_ID:
         getTarget().getZipUnions().add((String) value);
         return;
@@ -777,8 +769,19 @@ public class ListunionModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      case ListunionModelPackage.STATESBYCOUNTRY_ZIPUNIONS_FEATURE_ID:
+        getTarget().getZipUnions().remove(value);
+        return;
+
+      case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
+        getTarget().getSimpleUnions().remove(value);
+        return;
+
+      case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
+        getTarget().getSimpleStringUnions().remove(value);
+        return;
       }
-      super.eAddTo(eStructuralFeature, value);
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
