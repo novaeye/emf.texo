@@ -23,6 +23,7 @@ import java.util.Date;
 
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelPackage;
@@ -63,36 +64,49 @@ public class JSONValueConverter implements TexoComponent {
     if (value instanceof Enum<?>) {
       return ((Enum<?>) value).name();
     }
-    if (value instanceof Date && eDataType == XMLTypePackage.eINSTANCE.getDate()) {
-      return convertDateTimeToJSON(value, true, false, false);
-    }
 
-    if (value instanceof Date && eDataType == XMLTypePackage.eINSTANCE.getDateTime()) {
-      return convertDateTimeToJSON(value, false, true, false);
-    }
+    if (usePlainDate()) {
+      if (value instanceof Date && eDataType == XMLTypePackage.eINSTANCE.getDate()) {
+        return convertDateToJSON(value);
+      }
 
-    if (value instanceof Date && eDataType == XMLTypePackage.eINSTANCE.getTime()) {
-      return convertDateTimeToJSON(value, false, false, true);
+      if (value instanceof Date && eDataType == XMLTypePackage.eINSTANCE.getDateTime()) {
+        return convertDateTimeToJSON(value);
+      }
+
+      if (value instanceof Date && eDataType == XMLTypePackage.eINSTANCE.getTime()) {
+        return convertTimeToJSON(value);
+      }
     }
 
     if (value instanceof Date) {
-      return convertDateTimeToJSON(value, false, true, false);
+      return convertDateTimeToJSON(value);
+    }
+
+    if (eDataType.getEPackage() == XMLTypePackage.eINSTANCE) {
+      return XMLTypeFactory.eINSTANCE.convertToString(eDataType, value);
     }
 
     return value;
   }
 
-  public String convertDateTimeToJSON(Object value, boolean isDate, boolean isDateTime, boolean isTime) {
-    if (isDate) {
-      return dateFormat.format((Date) value);
-    }
-    if (isDateTime) {
-      return dateTimeFormat.format((Date) value);
-    }
-    if (isTime) {
-      return timeFormat.format((Date) value);
-    }
-    throw new IllegalArgumentException("The value must be a date, a datetime or a time");
+  /**
+   * Return true it the {@link Date} type should be used for DateTime values.
+   */
+  protected boolean usePlainDate() {
+    return true;
+  }
+
+  public String convertDateToJSON(Object value) {
+    return dateFormat.format((Date) value);
+  }
+
+  public String convertDateTimeToJSON(Object value) {
+    return dateTimeFormat.format((Date) value);
+  }
+
+  public String convertTimeToJSON(Object value) {
+    return timeFormat.format((Date) value);
   }
 
   /**
@@ -108,7 +122,7 @@ public class JSONValueConverter implements TexoComponent {
   protected Object fromJSON(Object target, final Object value, final EDataType eDataType) {
     if (ModelUtils.isEEnum(eDataType)) {
       final EDataType enumDataType = getDataTypeOrBaseType(eDataType);
-      
+
       if (!(value instanceof String)) {
         // hopefully already the correct value...
         return value;
@@ -125,20 +139,23 @@ public class JSONValueConverter implements TexoComponent {
       return Enum.valueOf(enumClass, (String) value);
     }
 
-    if (eDataType == XMLTypePackage.eINSTANCE.getDate()) {
-      return convertDateTimeFromJSON(value, true, false, false);
+    if (usePlainDate()) {
+      if (eDataType == XMLTypePackage.eINSTANCE.getDate()) {
+        return createDateFromJSON(value);
+      }
+
+      if (eDataType == XMLTypePackage.eINSTANCE.getDateTime()) {
+        return createDateTimeFromJSON(value);
+      }
+
+      if (eDataType == XMLTypePackage.eINSTANCE.getTime()) {
+        return createTimeFromJSON(value);
+      }
     }
 
-    if (eDataType == XMLTypePackage.eINSTANCE.getDateTime()) {
-      return convertDateTimeFromJSON(value, false, true, false);
-    }
-
-    if (eDataType == XMLTypePackage.eINSTANCE.getTime()) {
-      return convertDateTimeFromJSON(value, false, false, true);
-    }
 
     if (eDataType.getInstanceClass() != null && Date.class.isAssignableFrom(eDataType.getInstanceClass())) {
-      return convertDateTimeFromJSON(value, false, true, false);
+      return createDateTimeFromJSON(value);
     }
 
     if (value instanceof Integer) {
@@ -154,24 +171,35 @@ public class JSONValueConverter implements TexoComponent {
       }
     }
 
+    if (value instanceof String && eDataType.getEPackage() == XMLTypePackage.eINSTANCE) {
+      return XMLTypeFactory.eINSTANCE.createFromString(eDataType, (String) value);
+    }
+
     return value;
   }
 
-  public Date convertDateTimeFromJSON(Object value, boolean isDate, boolean isDateTime, boolean isTime) {
+  public Date createDateTimeFromJSON(Object value) {
     try {
-      if (isDate) {
-        return dateFormat.parse((String) value);
-      }
-      if (isDateTime) {
-        return dateTimeFormat.parse((String) value);
-      }
-      if (isTime) {
-        return timeFormat.parse((String) value);
-      }
+      return dateTimeFormat.parse((String) value);
     } catch (ParseException e) {
       throw new RuntimeException(e);
     }
-    throw new IllegalArgumentException("The value must be a date, a datetime or a time");
+  }
+
+  public Date createDateFromJSON(Object value) {
+    try {
+      return dateFormat.parse((String) value);
+    } catch (ParseException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  public Date createTimeFromJSON(Object value) {
+    try {
+      return timeFormat.parse((String) value);
+    } catch (ParseException e) {
+      throw new RuntimeException(e);
+    }
   }
 
   /**

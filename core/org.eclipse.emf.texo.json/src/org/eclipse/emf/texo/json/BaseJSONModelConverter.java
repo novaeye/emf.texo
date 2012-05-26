@@ -55,7 +55,12 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
   private ObjectResolver objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
 
-  private JSONValueConverter jsonValueConverter = ComponentProvider.getInstance().newInstance(JSONValueConverter.class);
+  private JSONValueConverter jsonValueConverter = (JSONValueConverter) ComponentProvider.getInstance()
+      .newInstance(getValueConversionClass());
+
+  protected Class<?> getValueConversionClass() {
+    return JSONValueConverter.class;
+  }
 
   /**
    * Converts a JSONArray to a list of equivalent model objects.

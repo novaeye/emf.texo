@@ -57,7 +57,8 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
 
   private final HashSet<T> hasConverted = new HashSet<T>();
 
-  private JSONValueConverter jsonValueConverter = ComponentProvider.getInstance().newInstance(JSONValueConverter.class);
+  private JSONValueConverter jsonValueConverter = (JSONValueConverter) ComponentProvider.getInstance()
+      .newInstance(getValueConversionClass());
 
   /**
    * Converts an object to a json object.
@@ -72,6 +73,10 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
     hasConverted.clear();
 
     return doConvert(object);
+  }
+
+  protected Class<?> getValueConversionClass() {
+    return JSONValueConverter.class;
   }
 
   @SuppressWarnings("unchecked")
@@ -90,7 +95,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
           if (isModelEnabled(value)) {
             jsonArray.put(i, doConvert((T) value));
           } else if (value instanceof Date) {
-            jsonArray.put(i, jsonValueConverter.convertDateTimeToJSON(value, false, true, false));
+            jsonArray.put(i, jsonValueConverter.convertDateTimeToJSON(value));
           } else {
             jsonArray.put(i, value);
           }
@@ -110,7 +115,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
           if (isModelEnabled(value)) {
             jsonArray.put(i, doConvert((T) value));
           } else if (value instanceof Date) {
-            jsonArray.put(i, jsonValueConverter.convertDateTimeToJSON(value, false, true, false));
+            jsonArray.put(i, jsonValueConverter.convertDateTimeToJSON(value));
           } else {
             jsonArray.put(i, value);
           }

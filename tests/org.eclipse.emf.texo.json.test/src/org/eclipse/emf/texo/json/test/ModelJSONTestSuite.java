@@ -38,7 +38,7 @@ public class ModelJSONTestSuite {
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
     // modelPackages.clear();
-    // modelPackages.add(WorkflowModelPackage.INSTANCE);
+    // modelPackages.add(PlayModelPackage.INSTANCE);
     // modelPackages.add(JpamixedModelPackage.INSTANCE);
     // modelPackages.add(NestedgroupModelPackage.INSTANCE);
 

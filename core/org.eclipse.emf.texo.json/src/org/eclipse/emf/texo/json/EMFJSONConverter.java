@@ -32,6 +32,11 @@ import org.eclipse.emf.texo.model.ModelObject;
 public class EMFJSONConverter extends BaseModelJSONConverter<EObject> {
 
   @Override
+  protected Class<?> getValueConversionClass() {
+    return JSONEMFValueConverter.class;
+  }
+
+  @Override
   protected EClass eClass(EObject target) {
     return target.eClass();
   }

@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
@@ -201,14 +202,28 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
       }
       final StringBuilder sb = new StringBuilder();
       for (EStructuralFeature eFeature : eFeatures) {
+        if (FeatureMapUtil.isFeatureMap(eFeature)) {
+          continue;
+        }
+
         if (sb.length() > 0) {
           sb.append(ModelConstants.TITLE_SEPARATOR);
         }
-        final Object value = modelObject.eGet(eFeature);
+
+        Object value = modelObject.eGet(eFeature);
         if (value == null) {
           continue;
         }
         if (eFeature instanceof EAttribute) {
+          if (value instanceof Collection<?>) {
+            if (((Collection<?>) value).isEmpty()) {
+              continue;
+            }
+            value = ((Collection<?>) value).iterator().next();
+            if (value == null) {
+              continue;
+            }
+          }
           final EDataType eDataType = ((EAttribute) eFeature).getEAttributeType();
           sb.append(eDataType.getEPackage().getEFactoryInstance().convertToString(eDataType, value));
         } else if (nextStep) {

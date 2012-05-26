@@ -40,6 +40,11 @@ import org.json.JSONObject;
 public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
   @Override
+  protected Class<?> getValueConversionClass() {
+    return JSONEMFValueConverter.class;
+  }
+
+  @Override
   protected EObject fromUri(String uriString) {
     return getUriResolver().getEObject(URI.createURI(uriString));
   }
