@@ -208,11 +208,11 @@ public class RetrieveModelOperation extends ModelOperation {
       Object value = parameter.getValue();
       if (type != null) {
         if ("date".equals(type)) { //$NON-NLS-1$
-          value = converter.convertDateTimeFromJSON(value, true, false, false);
+          value = converter.createDateFromJSON(value);
         } else if ("dateTime".equals(type)) { //$NON-NLS-1$
-          value = converter.convertDateTimeFromJSON(value, false, true, false);
+          value = converter.createDateTimeFromJSON(value);
         } else {
-          value = converter.convertDateTimeFromJSON(value, false, false, true);
+          value = converter.createTimeFromJSON(value);
         }
       }
       result.put(parameter.getName(), value);
