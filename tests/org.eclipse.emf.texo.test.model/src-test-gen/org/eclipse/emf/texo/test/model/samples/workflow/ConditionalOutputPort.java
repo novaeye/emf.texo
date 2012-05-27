@@ -13,7 +13,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_ConditionalOutputPort")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_ConditionalOutputPort_parent_id") })
 public class ConditionalOutputPort extends OutputPort {
 
   /**

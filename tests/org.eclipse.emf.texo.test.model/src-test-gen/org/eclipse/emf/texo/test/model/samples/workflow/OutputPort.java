@@ -19,7 +19,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_OutputPort")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_OutputPort_parent_id") })
 public class OutputPort extends Port {
 
   /**

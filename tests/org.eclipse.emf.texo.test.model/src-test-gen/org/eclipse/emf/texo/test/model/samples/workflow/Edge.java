@@ -14,7 +14,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_Edge")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_Edge_parent_id") })
 public class Edge extends WorkflowElement {
 
   /**

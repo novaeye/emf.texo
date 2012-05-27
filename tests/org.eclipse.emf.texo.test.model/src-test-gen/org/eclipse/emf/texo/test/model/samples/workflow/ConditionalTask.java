@@ -10,7 +10,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_ConditionalTask")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_ConditionalTask_parent_id") })
 public class ConditionalTask extends WorkflowNode {
 
   /**

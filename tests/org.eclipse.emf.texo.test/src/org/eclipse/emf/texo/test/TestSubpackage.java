@@ -51,7 +51,9 @@ public class TestSubpackage extends TestCase {
     assertSame(mainModelPackage.getEPackage().getEClassifiers().get(0), mainModelPackage.getMainTypeEClass());
 
     // test same eattribute
+    // note that the model generation adds the Identifiable super EClass which adds
+    // 2 eattributes, therefore name is the third
     assertSame(sub1ModelPackage.getSub1Type_Name(), ((EClass) sub1EPackage.getEClassifiers().get(0))
-        .getEAllAttributes().get(0));
+        .getEAllAttributes().get(2));
   }
 }

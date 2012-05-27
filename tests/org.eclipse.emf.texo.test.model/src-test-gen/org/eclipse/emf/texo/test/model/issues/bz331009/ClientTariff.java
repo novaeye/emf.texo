@@ -10,7 +10,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "m_ClientTariff")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "m_ClientTariff_parent_id") })
 public class ClientTariff extends Tariff {
 
   /**

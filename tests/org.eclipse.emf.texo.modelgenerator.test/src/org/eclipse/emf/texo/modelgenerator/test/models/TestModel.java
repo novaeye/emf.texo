@@ -107,6 +107,7 @@ public class TestModel {
     urls.add("issues/bz379796.xsd"); //$NON-NLS-1$
     urls.add("issues/bz379815.ecore"); //$NON-NLS-1$
     urls.add("issues/SubPackage.ecore"); //$NON-NLS-1$
+    urls.add("issues/NotRequiredSerialization.ecore"); //$NON-NLS-1$
 
     urls.add("texo/TexoDataRequest.xsd");//$NON-NLS-1$
     urls.add("texo/TexoDataResponse.xsd");//$NON-NLS-1$

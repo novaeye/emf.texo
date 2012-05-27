@@ -21,7 +21,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  */
 @orgeclipseemftexo.OneDotAnnotation("test")
 @Entity(name = "library_Library")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "library_Library_parent_id") })
 public class Library extends Identifiable {
 
   /**

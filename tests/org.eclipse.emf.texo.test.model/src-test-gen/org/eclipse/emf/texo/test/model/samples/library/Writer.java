@@ -22,7 +22,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
  */
 @TestAnnotationOne("type")
 @Entity(name = "library_Writer")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "library_Writer_parent_id") })
 public class Writer extends Identifiable {
 
   /**

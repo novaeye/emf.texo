@@ -17,7 +17,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "accounting_BalanceAccount")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "accounting_BalanceAccount_parent_id") })
 public class BalanceAccount extends Account {
 
   /**

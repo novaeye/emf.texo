@@ -18,7 +18,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "m_VolumePayment")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "m_VolumePayment_parent_id") })
 public class VolumePayment extends PaymentItem {
 
   /**

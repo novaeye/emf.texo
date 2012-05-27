@@ -13,7 +13,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "m_PeriodicalPayment")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "m_PeriodicalPayment_parent_id") })
 public class PeriodicalPayment extends PaymentItem {
 
   /**

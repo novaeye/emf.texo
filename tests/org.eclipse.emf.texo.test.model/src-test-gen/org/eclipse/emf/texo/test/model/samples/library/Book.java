@@ -21,7 +21,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
  */
 @TestAnnotationOne("test")
 @Entity(name = "library_Book")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "library_Book_parent_id") })
 public class Book extends Identifiable {
 
   /**

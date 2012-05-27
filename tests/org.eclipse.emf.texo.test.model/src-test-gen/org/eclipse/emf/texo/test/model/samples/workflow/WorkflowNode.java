@@ -20,7 +20,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_WorkflowNode")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_WorkflowNode_parent_id") })
 public abstract class WorkflowNode extends WorkflowElement {
 
   /**

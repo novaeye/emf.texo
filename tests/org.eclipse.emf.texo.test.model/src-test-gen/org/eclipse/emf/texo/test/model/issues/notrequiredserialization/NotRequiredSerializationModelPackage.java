@@ -1,4 +1,4 @@
-package org.eclipse.emf.texo.test.model.issues.subpackage.sub1;
+package org.eclipse.emf.texo.test.model.issues.notrequiredserialization;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -10,18 +10,18 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
-import org.eclipse.emf.texo.test.model.issues.subpackage.MainModelPackage;
-import org.eclipse.emf.texo.test.model.issues.subpackage.sub1.dao.Sub1TypeDao;
+import org.eclipse.emf.texo.test.model.issues.notrequiredserialization.dao.SerializationTestDao;
+import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
- * The <b>Package</b> for the model '<em><b>sub1</b></em>'. It contains initialization code and access to the Factory to
- * instantiate types of this package.
+ * The <b>Package</b> for the model '<em><b>NotRequiredSerialization</b></em>'. It contains initialization code and
+ * access to the Factory to instantiate types of this package.
  * 
  * <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class Sub1ModelPackage extends ModelPackage {
+public class NotRequiredSerializationModelPackage extends ModelPackage {
 
   /**
    * Is set when the package has been initialized.
@@ -35,61 +35,64 @@ public class Sub1ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/issues/subpackage/sub1";
+  public static final String NS_URI = "http://www.eclipse.org/emf/texo/test/model/issues/NotRequiredSerialization";
 
   /**
    * The {@link ModelFactory} for this package. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final Sub1ModelFactory MODELFACTORY = new Sub1ModelFactory();
+  public static final NotRequiredSerializationModelFactory MODELFACTORY = new NotRequiredSerializationModelFactory();
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUB1TYPE_CLASSIFIER_ID = 0;
+  public static final int SERIALIZATIONTEST_CLASSIFIER_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SUB1TYPE_NAME_FEATURE_ID = 2;
+  public static final int SERIALIZATIONTEST_NAME_FEATURE_ID = 2;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final Sub1ModelPackage INSTANCE = initialize();
+  public static final NotRequiredSerializationModelPackage INSTANCE = initialize();
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static Sub1ModelPackage initialize() {
+  public static NotRequiredSerializationModelPackage initialize() {
 
     if (isInitialized) {
-      return (Sub1ModelPackage) ModelResolver.getInstance().getModelPackage(NS_URI);
+      return (NotRequiredSerializationModelPackage) ModelResolver.getInstance().getModelPackage(NS_URI);
     }
 
-    final Sub1ModelPackage modelPackage = new Sub1ModelPackage();
+    final NotRequiredSerializationModelPackage modelPackage = new NotRequiredSerializationModelPackage();
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
     isInitialized = true;
 
-    MainModelPackage.initialize();
     IdentifiableModelPackage.initialize();
 
-    // register the relation between a Class and its EClassifier
-    ModelResolver.getInstance().registerClassModelMapping(Sub1Type.class, modelPackage.getSub1TypeEClass(),
-        modelPackage);
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
 
-    DaoRegistry.getInstance().registerDao(Sub1Type.class, Sub1TypeDao.class);
+    // register the relation between a Class and its EClassifier
+    ModelResolver.getInstance().registerClassModelMapping(SerializationTest.class,
+        modelPackage.getSerializationTestEClass(), modelPackage);
+
+    DaoRegistry.getInstance().registerDao(SerializationTest.class, SerializationTestDao.class);
 
     // and return ourselves
     return modelPackage;
@@ -98,11 +101,11 @@ public class Sub1ModelPackage extends ModelPackage {
   /**
    * Returns the {@link ModelFactory} of this ModelPackage. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the {@link Sub1ModelFactory} instance.
+   * @return the {@link NotRequiredSerializationModelFactory} instance.
    * @generated
    */
   @Override
-  public Sub1ModelFactory getModelFactory() {
+  public NotRequiredSerializationModelFactory getModelFactory() {
     return MODELFACTORY;
   }
 
@@ -127,28 +130,28 @@ public class Sub1ModelPackage extends ModelPackage {
    */
   @Override
   public String getEcoreFileName() {
-    return "sub1.ecore";
+    return "NotRequiredSerialization.ecore";
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Sub1Type</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>SerializationTest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>Sub1Type</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>SerializationTest</b></em>'
    * @generated
    */
-  public EClass getSub1TypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(SUB1TYPE_CLASSIFIER_ID);
+  public EClass getSerializationTestEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(SERIALIZATIONTEST_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Sub1Type.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
+   * Returns the {@link EStructuralFeature} '<em><b>SerializationTest.name</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Sub1Type.name</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SerializationTest.name</b></em>'.
    * @generated
    */
-  public EAttribute getSub1Type_Name() {
-    return (EAttribute) getSub1TypeEClass().getEAllStructuralFeatures().get(SUB1TYPE_NAME_FEATURE_ID);
+  public EAttribute getSerializationTest_Name() {
+    return (EAttribute) getSerializationTestEClass().getEAllStructuralFeatures().get(SERIALIZATIONTEST_NAME_FEATURE_ID);
   }
 
   /**
@@ -162,8 +165,8 @@ public class Sub1ModelPackage extends ModelPackage {
   @Override
   public Class<?> getEClassifierClass(EClassifier eClassifier) {
     switch (eClassifier.getClassifierID()) {
-    case SUB1TYPE_CLASSIFIER_ID:
-      return Sub1Type.class;
+    case SERIALIZATIONTEST_CLASSIFIER_ID:
+      return SerializationTest.class;
     }
     throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }

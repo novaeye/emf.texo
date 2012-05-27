@@ -11,7 +11,7 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "m_OneTimePayment")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "parent_id") })
+@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "m_OneTimePayment_parent_id") })
 public class OneTimePayment extends PaymentItem {
 
   /**

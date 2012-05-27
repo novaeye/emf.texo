@@ -197,8 +197,8 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
     @Override
     protected String getTitle(EObject modelObject, boolean nextStep) {
       if (eFeatures.isEmpty()) {
-        // just do toString
-        return modelObject.toString();
+        // only return the type name
+        return modelObject.eClass().getName();
       }
       final StringBuilder sb = new StringBuilder();
       for (EStructuralFeature eFeature : eFeatures) {
@@ -246,8 +246,8 @@ public class TitleProvider implements TexoComponent, TexoStaticSingleton {
     @Override
     protected String getTitle(ModelObject<?> modelObject, boolean nextStep) {
       if (eFeatures.isEmpty()) {
-        // just do toString
-        return modelObject.getTarget().toString();
+        // just return the type name
+        return modelObject.eClass().getName();
       }
       final StringBuilder sb = new StringBuilder();
       for (EStructuralFeature eFeature : eFeatures) {
