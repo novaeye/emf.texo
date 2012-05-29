@@ -190,6 +190,37 @@ public class ModelResolver implements TexoStaticSingleton {
   }
 
   /**
+   * Removes the artifacts of the {@link ModelPackage} and its sub packages from the internal data structures.
+   */
+  public void deregister(ModelPackage modelPackage) {
+    deregister(modelPackage.getEPackage());
+  }
+
+  /**
+   * @see #deregister(ModelPackage)
+   */
+  public void deregister(EPackage ePackage) {
+    nsuriToModelPackages.remove(ePackage.getNsURI());
+    ePackageRegistry.remove(ePackage.getNsURI());
+    final List<Class<?>> toRemove = new ArrayList<Class<?>>();
+    for (Class<?> clz : classToModelMapping.keySet()) {
+      final ModelDescriptor modelDescriptor = classToModelMapping.get(clz);
+      if (modelDescriptor.getModelPackage().getEPackage() == ePackage) {
+        toRemove.add(clz);
+      }
+    }
+    for (Class<?> clz : toRemove) {
+      classToModelMapping.remove(clz);
+    }
+    for (EClassifier eClassifier : ePackage.getEClassifiers()) {
+      eClassifierToClassMapping.remove(eClassifier);
+    }
+    for (EPackage subEPackage : ePackage.getESubpackages()) {
+      deregister(subEPackage);
+    }
+  }
+
+  /**
    * Returns the implementation class for a certain EClassifier, can be a normal java class or an enum class.
    * 
    * @param eClassifier
@@ -464,6 +495,18 @@ public class ModelResolver implements TexoStaticSingleton {
     public String toString() {
       return eClassifier + " " + modelPackage; //$NON-NLS-1$
     }
+  }
+
+  protected Map<Class<?>, ModelDescriptor> getClassToModelMapping() {
+    return classToModelMapping;
+  }
+
+  protected Map<EClassifier, Class<?>> getEClassifierToClassMapping() {
+    return eClassifierToClassMapping;
+  }
+
+  protected Map<String, ModelPackage> getNsuriToModelPackages() {
+    return nsuriToModelPackages;
   }
 
 }

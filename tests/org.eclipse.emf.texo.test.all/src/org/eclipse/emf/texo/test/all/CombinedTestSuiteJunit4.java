@@ -21,6 +21,7 @@ import org.eclipse.emf.texo.server.test.AllServerTests;
 import org.eclipse.emf.texo.test.TestBz325427;
 import org.eclipse.emf.texo.test.TestBz363802;
 import org.eclipse.emf.texo.test.TestBz379796;
+import org.eclipse.emf.texo.test.TestBz380279;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -33,6 +34,6 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ ModelJSONTestSuite.class, TestBz363802.class, TestBz325427.class, TestBz379796.class,
-    CombinedTestSuite.class, AllServerTests.class })
+    TestBz380279.class, CombinedTestSuite.class, AllServerTests.class })
 public class CombinedTestSuiteJunit4 {
 }

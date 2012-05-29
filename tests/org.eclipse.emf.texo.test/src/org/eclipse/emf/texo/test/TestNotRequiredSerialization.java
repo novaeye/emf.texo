@@ -36,7 +36,7 @@ public class TestNotRequiredSerialization {
       {
         SerializationTest test = NotRequiredSerializationModelPackage.INSTANCE.getModelFactory()
             .createSerializationTest();
-        test.setName("");
+        test.setName(""); //$NON-NLS-1$
         ModelXMLSaver modelXMLSaver = new ModelXMLSaver();
         final StringWriter sw = new StringWriter();
         modelXMLSaver.setWriter(sw);

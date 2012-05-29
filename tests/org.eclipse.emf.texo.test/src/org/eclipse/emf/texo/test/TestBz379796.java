@@ -33,10 +33,10 @@ public class TestBz379796 {
 
   @Test
   public void test() throws Exception {
-    final String val1 = "5";
-    final String val2 = "6";
+    final String val1 = "5"; //$NON-NLS-1$
+    final String val2 = "6"; //$NON-NLS-1$
     final PriceType priceType = Bz379796ModelPackage.INSTANCE.getModelFactory().createPriceType();
-    Assert.assertTrue(priceType.getValue().equals(""));
+    Assert.assertTrue(priceType.getValue().equals("")); //$NON-NLS-1$
     priceType.setValue(val1);
     Assert.assertTrue(priceType.getValue().equals(val1));
     priceType.setValue(val2);
