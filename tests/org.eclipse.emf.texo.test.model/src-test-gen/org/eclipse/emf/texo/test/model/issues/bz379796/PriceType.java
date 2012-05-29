@@ -74,7 +74,7 @@ public class PriceType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
-  private int requiredValue = 0;
+  private String requiredValue = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -82,7 +82,7 @@ public class PriceType extends Identifiable {
    * @generated
    */
   @Basic()
-  private Integer value = null;
+  private String value = "";
 
   /**
    * Returns the value of '<em><b>valueElement</b></em>' feature.
@@ -267,7 +267,7 @@ public class PriceType extends Identifiable {
    * @return the value of '<em><b>requiredValue</b></em>' feature
    * @generated
    */
-  public int getRequiredValue() {
+  public String getRequiredValue() {
     return requiredValue;
   }
 
@@ -280,7 +280,7 @@ public class PriceType extends Identifiable {
    *          new value of the '{@link PriceType#getRequiredValue() requiredValue}' feature.
    * @generated
    */
-  public void setRequiredValue(int newRequiredValue) {
+  public void setRequiredValue(String newRequiredValue) {
     requiredValue = newRequiredValue;
   }
 
@@ -292,7 +292,7 @@ public class PriceType extends Identifiable {
    * @return the value of '<em><b>value</b></em>' feature
    * @generated
    */
-  public Integer getValue() {
+  public String getValue() {
     return value;
   }
 
@@ -305,7 +305,7 @@ public class PriceType extends Identifiable {
    *          new value of the '{@link PriceType#getValue() value}' feature.
    * @generated
    */
-  public void setValue(Integer newValue) {
+  public void setValue(String newValue) {
     value = newValue;
   }
 

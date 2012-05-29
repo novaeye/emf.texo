@@ -33,23 +33,16 @@ public class TestBz379796 {
 
   @Test
   public void test() throws Exception {
+    final String val1 = "5";
+    final String val2 = "6";
     final PriceType priceType = Bz379796ModelPackage.INSTANCE.getModelFactory().createPriceType();
-    Assert.assertTrue(priceType.getValue() == null);
-    priceType.setValue(5);
-    Assert.assertTrue(priceType.getValue() == 5);
-    final Integer newInteger = new Integer(6);
-    priceType.setValue(newInteger);
-    Assert.assertTrue(priceType.getValue() == newInteger);
+    Assert.assertTrue(priceType.getValue().equals(""));
+    priceType.setValue(val1);
+    Assert.assertTrue(priceType.getValue().equals(val1));
+    priceType.setValue(val2);
+    Assert.assertTrue(priceType.getValue().equals(val2));
     priceType.setValue(null);
     Assert.assertTrue(priceType.getValue() == null);
-
-    try {
-      Integer test = null;
-      priceType.setRequiredValue(test);
-      Assert.fail();
-    } catch (Exception e) {
-      // correct
-    }
 
     {
       PriceType priceType2 = Bz379796ModelPackage.INSTANCE.getModelFactory().createPriceType();
@@ -64,8 +57,10 @@ public class TestBz379796 {
         modelXMLSaver.write();
 
         final String xml1 = sw.toString();
+        System.err.println(xml1);
         for (EAttribute eattr : Bz379796ModelPackage.INSTANCE.getPriceTypeEClass().getEAllAttributes()) {
-          if (ModelUtils.isUnsettable(eattr)) {
+          System.err.println(eattr.getName());
+          if (ModelUtils.isUnsettable(eattr) || !eattr.isRequired() && eattr.getDefaultValue() == null) {
             Assert.assertTrue(!xml1.contains(eattr.getName()));
           } else {
             Assert.assertTrue(xml1.contains(eattr.getName()));
@@ -76,7 +71,9 @@ public class TestBz379796 {
         // now set everything
         priceType2.setComparison(ComparisonType.GREATER);
         priceType2.setComparisonElement(ComparisonType.GREATEROREQUAL);
-        priceType2.setValue(5);
+        priceType2.setValue(val1);
+        priceType2.setDb_Id(new Long(1));
+        priceType2.setDb_version(2);
         priceType2.setValueElement(5);
 
         final List<Object> objects = new ArrayList<Object>();

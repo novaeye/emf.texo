@@ -50,6 +50,9 @@ public class ModelUtils {
   /**
    * Replaces the standard {@link EFactory} for an {@link EPackage} with the special {@link ModelEFactory} which handles
    * creation of dynamic eobjects in a better way.
+   * 
+   * @param modelPackage
+   * @param ePackage
    */
   public static void setEFactoryProxy(ModelPackage modelPackage, EPackage ePackage) {
 

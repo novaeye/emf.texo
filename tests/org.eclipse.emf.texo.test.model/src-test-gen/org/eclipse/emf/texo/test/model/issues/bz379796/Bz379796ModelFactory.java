@@ -277,10 +277,10 @@ public class Bz379796ModelFactory implements ModelFactory {
         getTarget().setRequiredComparison((ComparisonType) value);
         return;
       case Bz379796ModelPackage.PRICETYPE_REQUIREDVALUE_FEATURE_ID:
-        getTarget().setRequiredValue((Integer) value);
+        getTarget().setRequiredValue((String) value);
         return;
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
-        getTarget().setValue((Integer) value);
+        getTarget().setValue((String) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
