@@ -190,7 +190,7 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
         }
       }
     }
-    annotation.setEcoreFileContent(getEcoreFileContent(ePackage, annotation.getDependsOn()));
+    annotation.setEcoreFileContent(getEcoreFileContent(ePackage, getAllDependsOn(annotation)));
   }
 
   private String getSimpleClassName(EPackage ePackage) {
@@ -304,6 +304,22 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
       subEPackages.add(eSubPackage);
       collectAllSubEPackages(eSubPackage, subEPackages);
     }
+  }
+
+  // collects all depends on of subpackages
+  private List<EPackageModelGenAnnotation> getAllDependsOn(EPackageModelGenAnnotation annotation) {
+    final List<EPackageModelGenAnnotation> dependsOn = getDependsOn(annotation.getEPackage());
+    final List<EPackage> subPackages = new ArrayList<EPackage>();
+    collectAllSubEPackages(annotation.getEPackage(), subPackages);
+    for (EPackage ePackage : subPackages) {
+      final List<EPackageModelGenAnnotation> subDependsOns = getDependsOn(ePackage);
+      for (EPackageModelGenAnnotation subDepends : subDependsOns) {
+        if (!dependsOn.contains(subDepends) && !isDescendant(annotation.getEPackage(), subDepends.getEPackage())) {
+          dependsOn.add(subDepends);
+        }
+      }
+    }
+    return dependsOn;
   }
 
   public String getEcoreFileContent(EPackage ePackage, List<EPackageModelGenAnnotation> dependsOn) {

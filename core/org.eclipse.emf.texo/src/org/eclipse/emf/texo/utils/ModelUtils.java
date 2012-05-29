@@ -47,6 +47,10 @@ public class ModelUtils {
 
   private static SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
 
+  /**
+   * Replaces the standard {@link EFactory} for an {@link EPackage} with the special {@link ModelEFactory} which handles
+   * creation of dynamic eobjects in a better way.
+   */
   public static void setEFactoryProxy(ModelPackage modelPackage, EPackage ePackage) {
 
     // use a java proxy to ensure that the correct class is used in case of
