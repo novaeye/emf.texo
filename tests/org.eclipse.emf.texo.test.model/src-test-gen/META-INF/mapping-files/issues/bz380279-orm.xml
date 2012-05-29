@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz380279.BZ380279" name="bz380279_BZ380279">
+    <orm:table name="bz380279_BZ380279"/>
+    <orm:attributes>
+      <orm:basic name="firstName">
+        <orm:column name="firstName"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

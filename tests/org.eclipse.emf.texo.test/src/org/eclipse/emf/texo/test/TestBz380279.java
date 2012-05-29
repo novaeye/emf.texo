@@ -17,8 +17,8 @@
 package org.eclipse.emf.texo.test;
 
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.test.model.samples.library.Book;
-import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz380279.BZ380279;
+import org.eclipse.emf.texo.test.model.issues.bz380279.Bz380279ModelPackage;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,30 +26,23 @@ public class TestBz380279 {
 
   @Test
   public void test() throws Exception {
-    LibraryModelPackage.initialize();
+    Bz380279ModelPackage.initialize();
 
     Assert.assertNotNull(ModelResolver.getInstance().getImplementationClass(
-        LibraryModelPackage.INSTANCE.getBookEClass()));
-    Assert.assertNotNull(ModelResolver.getInstance().getImplementationClass(
-        LibraryModelPackage.INSTANCE.getLibraryEClass()));
-    Assert.assertNotNull(ModelResolver.getInstance().getModelDescriptor(Book.class, false));
-    Assert.assertNotNull(ModelResolver.getInstance().getModelPackage(LibraryModelPackage.NS_URI));
-    Assert.assertNotNull(ModelResolver.getInstance().getEPackageRegistry().get(LibraryModelPackage.NS_URI));
+        Bz380279ModelPackage.INSTANCE.getBZ380279EClass()));
+    Assert.assertNotNull(ModelResolver.getInstance().getModelDescriptor(BZ380279.class, false));
+    Assert.assertNotNull(ModelResolver.getInstance().getModelPackage(Bz380279ModelPackage.NS_URI));
+    Assert.assertNotNull(ModelResolver.getInstance().getEPackageRegistry().get(Bz380279ModelPackage.NS_URI));
 
-    ModelResolver.getInstance().deregister(LibraryModelPackage.INSTANCE);
+    ModelResolver.getInstance().deregister(Bz380279ModelPackage.INSTANCE);
 
     try {
-      ModelResolver.getInstance().getImplementationClass(LibraryModelPackage.INSTANCE.getBookEClass());
+      ModelResolver.getInstance().getImplementationClass(Bz380279ModelPackage.INSTANCE.getBZ380279EClass());
       Assert.fail();
     } catch (IllegalArgumentException e) {
     }
-    try {
-      ModelResolver.getInstance().getImplementationClass(LibraryModelPackage.INSTANCE.getLibraryEClass());
-      Assert.fail();
-    } catch (IllegalArgumentException e) {
-    }
-    Assert.assertNull(ModelResolver.getInstance().getModelDescriptor(Book.class, false));
-    Assert.assertNull(ModelResolver.getInstance().getModelPackage(LibraryModelPackage.NS_URI));
-    Assert.assertNull(ModelResolver.getInstance().getEPackageRegistry().get(LibraryModelPackage.NS_URI));
+    Assert.assertNull(ModelResolver.getInstance().getModelDescriptor(BZ380279.class, false));
+    Assert.assertNull(ModelResolver.getInstance().getModelPackage(Bz380279ModelPackage.NS_URI));
+    Assert.assertNull(ModelResolver.getInstance().getEPackageRegistry().get(Bz380279ModelPackage.NS_URI));
   }
 }
