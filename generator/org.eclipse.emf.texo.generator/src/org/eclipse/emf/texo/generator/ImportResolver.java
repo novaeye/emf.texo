@@ -162,7 +162,44 @@ public class ImportResolver {
       newImports.add(importDeclaration);
     }
     try {
-      final String newSource = updateSource(namesToImport, newImports, ast, importReferenceCollector.getPackageName());
+      String newSource = updateSource(namesToImport, newImports, ast, importReferenceCollector.getPackageName());
+
+      // DIRTY HACK: solve an issue that if an EPackage has a sub package with the same
+      // name that the import resolving of the subpackage goes wrong
+      // for example the KdmModelPackage has a subpackage with the same name: KdmModelPackage
+      // this results in this line in the source code:
+      // kdm.KdmModelPackage.initialize();
+      // which is incorrect
+      for (String qualifiedName : cleanedQualifedNames) {
+        // find the last two segments
+        if (!qualifiedName.contains(DOT)) {
+          continue;
+        }
+        final String[] parts = DOT_PATTERN.split(qualifiedName);
+        if (parts.length > 1) {
+          final String part1 = parts[parts.length - 2];
+          final String part2 = parts[parts.length - 1];
+          {
+            final String searchString = "\t" + part1 + DOT + part2 + ".initialize();"; //$NON-NLS-1$ //$NON-NLS-2$
+            if (newSource.contains(searchString)) {
+              newSource = newSource.replace(searchString, "\t" + qualifiedName + ".initialize();"); //$NON-NLS-1$ //$NON-NLS-2$
+            }
+          }
+          {
+            final String searchString = " " + part1 + DOT + part2 + ".initialize();"; //$NON-NLS-1$ //$NON-NLS-2$
+            if (newSource.contains(searchString)) {
+              newSource = newSource.replace(searchString, " " + qualifiedName + ".initialize();"); //$NON-NLS-1$ //$NON-NLS-2$
+            }
+          }
+          {
+            final String searchString = "\n" + part1 + DOT + part2 + ".initialize();"; //$NON-NLS-1$ //$NON-NLS-2$
+            if (newSource.contains(searchString)) {
+              newSource = newSource.replace(searchString, "\n" + qualifiedName + ".initialize();"); //$NON-NLS-1$ //$NON-NLS-2$
+            }
+          }
+        }
+      }
+
       return newSource;
     } catch (final Exception e) {
       throw new IllegalStateException(e);

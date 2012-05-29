@@ -400,10 +400,13 @@ public class UiModelPackage extends ModelPackage {
 
     KdmModelPackage.initialize();
     CoreModelPackage.initialize();
-    SourceModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
-    ActionModelPackage.initialize();
+    SourceModelPackage.initialize();
     CodeModelPackage.initialize();
+    ActionModelPackage.initialize();
+
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractUIElement.class,

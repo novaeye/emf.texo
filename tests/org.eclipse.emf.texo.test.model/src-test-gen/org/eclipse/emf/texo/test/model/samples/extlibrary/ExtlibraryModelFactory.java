@@ -204,36 +204,6 @@ public class ExtlibraryModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Borrower
-   * @generated
-   */
-  public Borrower createBorrower() {
-    return new Borrower();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Person
-   * @generated
-   */
-  public Person createPerson() {
-    return new Person();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Employee
-   * @generated
-   */
-  public Employee createEmployee() {
-    return new Employee();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -265,6 +235,36 @@ public class ExtlibraryModelFactory implements ModelFactory {
       return convertBookCategoryToString((BookCategory) value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Borrower
+   * @generated
+   */
+  public Borrower createBorrower() {
+    return new Borrower();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Person
+   * @generated
+   */
+  public Person createPerson() {
+    return new Person();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Employee
+   * @generated
+   */
+  public Employee createEmployee() {
+    return new Employee();
   }
 
   /**

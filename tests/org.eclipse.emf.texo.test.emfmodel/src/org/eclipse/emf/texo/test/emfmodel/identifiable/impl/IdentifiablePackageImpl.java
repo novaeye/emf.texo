@@ -93,16 +93,19 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 		isInited = true;
 
 		// Obtain or create and register interdependencies
+		IdentifiablePackageImpl theIdentifiablePackage_1 = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
 		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) instanceof LibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) : LibraryPackage.eINSTANCE);
 		SchoollibraryPackageImpl theSchoollibraryPackage = (SchoollibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) instanceof SchoollibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) : SchoollibraryPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theIdentifiablePackage.createPackageContents();
+		theIdentifiablePackage_1.createPackageContents();
 		theLibraryPackage.createPackageContents();
 		theSchoollibraryPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theIdentifiablePackage.initializePackageContents();
+		theIdentifiablePackage_1.initializePackageContents();
 		theLibraryPackage.initializePackageContents();
 		theSchoollibraryPackage.initializePackageContents();
 

@@ -34,9 +34,7 @@ public abstract class KDMModel extends KDMFramework {
   private List<KDMEntity> ownedElement = new ArrayList<KDMEntity>();
 
   /**
-   * Returns the value of '<em><b>ownedElement</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToOwnedElement(org.eclipse.modisco.kdm.core.KDMEntity value)} and
-   * {@link #removeFromOwnedElement(KDMEntity value)} methods to modify this feature.
+   * Returns the value of '<em><b>ownedElement</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Instances of KDM entities owned by the
    * model. Each KDM model defines specific subclasses of KDMEntity class. <!-- end-model-doc -->

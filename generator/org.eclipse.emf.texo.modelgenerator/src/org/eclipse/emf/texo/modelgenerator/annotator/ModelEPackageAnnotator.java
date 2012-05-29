@@ -22,9 +22,7 @@ import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
@@ -154,6 +152,14 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
     if (annotation.getDependsOn().isEmpty()) {
       annotation.getDependsOn().addAll(dependsOn);
     }
+
+    // force initialization of the subpackages
+    final List<EPackage> subEPackages = new ArrayList<EPackage>();
+    collectAllSubEPackages(ePackage, subEPackages);
+    for (EPackage subEPackage : subEPackages) {
+      final EPackageModelGenAnnotation genAnnotation = getEPackageModelGenAnnotation(subEPackage, false);
+      annotation.getSubPackageModelGens().add(genAnnotation);
+    }
   }
 
   /*
@@ -233,7 +239,13 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
    * @return the list of {@link ModelEPackageAnnotator} on which this one depends.
    */
   private List<EPackageModelGenAnnotation> getDependsOn(EPackage ePackage) {
-    final Set<EPackage> epacks = new HashSet<EPackage>();
+    final List<EPackage> epacks = new ArrayList<EPackage>();
+
+    // initialize the main package first
+    if (ePackage.getESuperPackage() != null && !epacks.contains(ePackage.getESuperPackage())) {
+      epacks.add(ePackage.getESuperPackage());
+    }
+
     // get the epackage of the supertypes of each eclass
     for (final EClassifier eClassifier : ePackage.getEClassifiers()) {
       if (eClassifier instanceof EClass) {
@@ -265,10 +277,6 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
       }
     }
 
-    if (ePackage.getESuperPackage() != null) {
-      epacks.add(ePackage.getESuperPackage());
-    }
-
     // now the set of dependent epackages is found, get the CodeGenEPackage
     final List<EPackageModelGenAnnotation> dependsOn = new ArrayList<EPackageModelGenAnnotation>();
     for (final EPackage depEPackage : epacks) {
@@ -277,7 +285,25 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
       }
       dependsOn.add(getEPackageModelGenAnnotation(depEPackage, false));
     }
+
     return dependsOn;
+  }
+
+  protected boolean isDescendant(EPackage currentEPackage, EPackage descendantPackage) {
+    if (currentEPackage == descendantPackage) {
+      return true;
+    }
+    if (descendantPackage.getESuperPackage() != null) {
+      return isDescendant(currentEPackage, descendantPackage.getESuperPackage());
+    }
+    return false;
+  }
+
+  protected void collectAllSubEPackages(EPackage ePackage, List<EPackage> subEPackages) {
+    for (EPackage eSubPackage : ePackage.getESubpackages()) {
+      subEPackages.add(eSubPackage);
+      collectAllSubEPackages(eSubPackage, subEPackages);
+    }
   }
 
   public String getEcoreFileContent(EPackage ePackage, List<EPackageModelGenAnnotation> dependsOn) {

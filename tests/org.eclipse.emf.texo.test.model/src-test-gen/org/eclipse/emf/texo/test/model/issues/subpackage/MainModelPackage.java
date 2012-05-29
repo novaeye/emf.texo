@@ -11,6 +11,8 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.issues.subpackage.dao.MainTypeDao;
+import org.eclipse.emf.texo.test.model.issues.subpackage.sub1.Sub1ModelPackage;
+import org.eclipse.emf.texo.test.model.issues.subpackage.sub2.Sub2ModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -80,13 +82,19 @@ public class MainModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
+
+    Sub1ModelPackage.initialize();
+    Sub2ModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(MainType.class, modelPackage.getMainTypeEClass(),

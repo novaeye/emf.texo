@@ -4,7 +4,6 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;

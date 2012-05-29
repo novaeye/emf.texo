@@ -270,6 +270,9 @@ public class CoreModelPackage extends ModelPackage {
     IdentifiableModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
+
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Element.class, modelPackage.getElementEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(ModelElement.class, modelPackage.getModelElementEClass(),

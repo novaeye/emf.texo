@@ -60,22 +60,11 @@ public class SchoollibraryFactoryImpl extends EFactoryImpl implements Schoollibr
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case SchoollibraryPackage.ASSET: return createAsset();
 			case SchoollibraryPackage.SCHOOL_BOOK: return createSchoolBook();
 			case SchoollibraryPackage.SCHOOL_LIBRARY: return createSchoolLibrary();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Asset createAsset() {
-		AssetImpl asset = new AssetImpl();
-		return asset;
 	}
 
 	/**

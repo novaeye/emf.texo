@@ -100,6 +100,12 @@ public class «this.simpleClassName» extends org.eclipse.emf.texo.model.ModelPa
 		final «this.simpleClassName» modelPackage = new «this.simpleClassName»();
 
 		org.eclipse.emf.texo.model.ModelResolver.getInstance().registerModelPackage(modelPackage);
+
+		«IF this.handleEcoreFile-»
+		// read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+		// see the ModelResolver getEPackageRegistry method
+		org.eclipse.emf.texo.utils.ModelUtils.readEPackagesFromFile(modelPackage);
+		«ENDIF-»
 	
 		isInitialized = true;
 
@@ -109,11 +115,14 @@ public class «this.simpleClassName» extends org.eclipse.emf.texo.model.ModelPa
 		«ENDLET-»
 		«ENDFOREACH-»
 
-		«IF this.handleEcoreFile-»
-		// read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-		// see the ModelResolver getEPackageRegistry method
-		org.eclipse.emf.texo.utils.ModelUtils.readEPackagesFromFile(modelPackage);
-		«ENDIF-»
+		// force the initialization of the EFactory proxy
+		modelPackage.getEPackage();
+
+		«FOREACH this.subPackageModelGens AS p-»
+		«LET ((EPackageModelGenAnnotation)p) AS sub-»
+		«sub.qualifiedClassName».initialize();
+		«ENDLET-»
+		«ENDFOREACH-»
 
 		// register the relation between a Class and its EClassifier
 	«FOREACH this.EClassModelGenAnnotations AS eClassAnnotation-»

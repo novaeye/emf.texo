@@ -197,36 +197,6 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Report
-   * @generated
-   */
-  public Report createReport() {
-    return new Report();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass ReportGroup
-   * @generated
-   */
-  public ReportGroup createReportGroup() {
-    return new ReportGroup();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Vat
-   * @generated
-   */
-  public Vat createVat() {
-    return new Vat();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -273,6 +243,36 @@ public class AccountingModelFactory implements ModelFactory {
       return null;
     }
     return ModelUtils.convertToXML(value);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Report
+   * @generated
+   */
+  public Report createReport() {
+    return new Report();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass ReportGroup
+   * @generated
+   */
+  public ReportGroup createReportGroup() {
+    return new ReportGroup();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Vat
+   * @generated
+   */
+  public Vat createVat() {
+    return new Vat();
   }
 
   /**
@@ -439,11 +439,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -457,15 +452,8 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -529,11 +517,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -549,12 +532,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -696,11 +673,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -714,12 +686,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -792,11 +758,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -814,12 +775,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -907,11 +862,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -935,15 +885,8 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -1023,11 +966,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -1039,15 +977,8 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -1105,11 +1036,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -1127,15 +1053,8 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -1205,11 +1124,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -1227,12 +1141,6 @@ public class AccountingModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")

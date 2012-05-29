@@ -109,16 +109,6 @@ public class TypesModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass ManyTypes
-   * @generated
-   */
-  public ManyTypes createManyTypes() {
-    return new ManyTypes();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -162,6 +152,16 @@ public class TypesModelFactory implements ModelFactory {
       return convertTestNextEnumToString((TestNextEnum) value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass ManyTypes
+   * @generated
+   */
+  public ManyTypes createManyTypes() {
+    return new ManyTypes();
   }
 
   /**
@@ -331,11 +331,6 @@ public class TypesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -391,15 +386,8 @@ public class TypesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -526,11 +514,6 @@ public class TypesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -572,12 +555,6 @@ public class TypesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")

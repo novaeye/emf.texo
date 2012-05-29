@@ -268,13 +268,16 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(DocumentRoot.class, modelPackage.getDocumentRootEClass(),
@@ -560,6 +563,33 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case DOCUMENTROOT_CLASSIFIER_ID:
+      return DocumentRoot.class;
+    case PURCHASEORDER_CLASSIFIER_ID:
+      return PurchaseOrder.class;
+    case ITEM_CLASSIFIER_ID:
+      return Item.class;
+    case USADDRESS_CLASSIFIER_ID:
+      return USAddress.class;
+    case QUANTITYTYPE_CLASSIFIER_ID:
+      return BigInteger.class;
+    case SKU_CLASSIFIER_ID:
+      return String.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>USAddress</b></em>'
@@ -633,32 +663,5 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    */
   public EAttribute getUSAddress_Country() {
     return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_COUNTRY_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case DOCUMENTROOT_CLASSIFIER_ID:
-      return DocumentRoot.class;
-    case PURCHASEORDER_CLASSIFIER_ID:
-      return PurchaseOrder.class;
-    case ITEM_CLASSIFIER_ID:
-      return Item.class;
-    case USADDRESS_CLASSIFIER_ID:
-      return USAddress.class;
-    case QUANTITYTYPE_CLASSIFIER_ID:
-      return BigInteger.class;
-    case SKU_CLASSIFIER_ID:
-      return String.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

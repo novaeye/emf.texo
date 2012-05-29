@@ -29,9 +29,7 @@ public class InventoryModel extends KDMModel {
   private Set<AbstractInventoryElement> inventoryElement = new HashSet<AbstractInventoryElement>();
 
   /**
-   * Returns the value of '<em><b>inventoryElement</b></em>' feature. Note: the returned collection is Unmodifiable use
-   * the {#addToInventoryElement(org.eclipse.modisco.kdm.source.AbstractInventoryElement value)} and
-   * {@link #removeFromInventoryElement(AbstractInventoryElement value)} methods to modify this feature.
+   * Returns the value of '<em><b>inventoryElement</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of inventory elements owned by the
    * inventory model. <!-- end-model-doc -->

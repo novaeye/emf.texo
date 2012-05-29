@@ -61,10 +61,10 @@ public interface SchoollibraryPackage extends EPackage {
 	SchoollibraryPackage eINSTANCE = org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.SchoollibraryPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.AssetImpl <em>Asset</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.emf.texo.test.emfmodel.schoollibrary.Asset <em>Asset</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.AssetImpl
+	 * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.Asset
 	 * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.SchoollibraryPackageImpl#getAsset()
 	 * @generated
 	 */
@@ -319,10 +319,10 @@ public interface SchoollibraryPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.AssetImpl <em>Asset</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.emf.texo.test.emfmodel.schoollibrary.Asset <em>Asset</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.AssetImpl
+		 * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.Asset
 		 * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.SchoollibraryPackageImpl#getAsset()
 		 * @generated
 		 */

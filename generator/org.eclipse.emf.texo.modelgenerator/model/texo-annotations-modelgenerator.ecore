@@ -69,6 +69,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="daoRootClass" unique="false"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subPackageModelGens" unique="false"
+        upperBound="-1" eType="#//EPackageModelGenAnnotation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ENamedElementModelGenAnnotation" abstract="true"
       interface="true">

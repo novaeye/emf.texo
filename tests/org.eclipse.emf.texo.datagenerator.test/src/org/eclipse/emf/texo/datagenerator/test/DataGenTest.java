@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.test.model.samples.accounting.AccountingModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extendedpo2.Epo2ModelPackage;
 import org.eclipse.emf.texo.test.model.samples.extlibrary.ExtlibraryModelPackage;
@@ -69,6 +70,7 @@ public class DataGenTest extends TestCase {
   }
 
   public void testKDM() throws Exception {
+    IdentifiableModelPackage.initialize();
     final List<EPackage> ePackages = new ArrayList<EPackage>();
     ePackages.add(KdmModelPackage.INSTANCE.getEPackage());
     final List<EClass> eClasses = new ArrayList<EClass>();
@@ -84,7 +86,7 @@ public class DataGenTest extends TestCase {
       }
     }
 
-    final List<EObject> eObjects = generateTestSet(ePackages, eClasses, 10, 10, 10, 100000);
+    final List<EObject> eObjects = generateTestSet(ePackages, eClasses, 3, 3, 3, 100000);
     validate(eObjects, true);
   }
 

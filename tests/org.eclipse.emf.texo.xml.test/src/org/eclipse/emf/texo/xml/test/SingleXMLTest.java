@@ -20,7 +20,7 @@ package org.eclipse.emf.texo.xml.test;
 import java.util.Collections;
 
 import org.eclipse.emf.texo.model.ModelPackage;
-import org.eclipse.emf.texo.test.model.schemaconstructs.emap.EmapModelPackage;
+import org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoollibraryModelPackage;
 
 /**
  * Tests a single model.
@@ -35,7 +35,7 @@ public class SingleXMLTest extends XMLTest {
 
   public SingleXMLTest() {
     // super.setModelPackages(Collections.singletonList((ModelPackage) ListunionModelPackage.INSTANCE));
-    super.setModelPackages(Collections.singletonList((ModelPackage) EmapModelPackage.INSTANCE));
+    super.setModelPackages(Collections.singletonList((ModelPackage) SchoollibraryModelPackage.INSTANCE));
     // super.setModelPackages(Collections.singletonList((ModelPackage) ListModelPackage.INSTANCE));
     // super.setEClasses(Collections.singletonList(MixedModelPackage.INSTANCE
     // .getLetterBodyTypeEClass()));

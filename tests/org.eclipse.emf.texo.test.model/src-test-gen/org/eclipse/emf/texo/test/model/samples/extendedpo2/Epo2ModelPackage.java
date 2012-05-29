@@ -378,13 +378,16 @@ public class Epo2ModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Item.class, modelPackage.getItemEClass(), modelPackage);
@@ -773,6 +776,43 @@ public class Epo2ModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ITEM_CLASSIFIER_ID:
+      return Item.class;
+    case PURCHASEORDER_CLASSIFIER_ID:
+      return PurchaseOrder.class;
+    case USADDRESS_CLASSIFIER_ID:
+      return USAddress.class;
+    case ADDRESS_CLASSIFIER_ID:
+      return Address.class;
+    case CUSTOMER_CLASSIFIER_ID:
+      return Customer.class;
+    case SUPPLIER_CLASSIFIER_ID:
+      return Supplier.class;
+    case GLOBALADDRESS_CLASSIFIER_ID:
+      return GlobalAddress.class;
+    case GLOBALLOCATION_CLASSIFIER_ID:
+      return GlobalLocation.class;
+    case DATE_CLASSIFIER_ID:
+      return Date.class;
+    case SKU_CLASSIFIER_ID:
+      return String.class;
+    case ORDERSTATUS_CLASSIFIER_ID:
+      return OrderStatus.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Supplier</b></em>'
@@ -921,42 +961,5 @@ public class Epo2ModelPackage extends ModelPackage {
   public EAttribute getGlobalLocation_CountryCode() {
     return (EAttribute) getGlobalLocationEClass().getEAllStructuralFeatures()
         .get(GLOBALLOCATION_COUNTRYCODE_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ITEM_CLASSIFIER_ID:
-      return Item.class;
-    case PURCHASEORDER_CLASSIFIER_ID:
-      return PurchaseOrder.class;
-    case USADDRESS_CLASSIFIER_ID:
-      return USAddress.class;
-    case ADDRESS_CLASSIFIER_ID:
-      return Address.class;
-    case CUSTOMER_CLASSIFIER_ID:
-      return Customer.class;
-    case SUPPLIER_CLASSIFIER_ID:
-      return Supplier.class;
-    case GLOBALADDRESS_CLASSIFIER_ID:
-      return GlobalAddress.class;
-    case GLOBALLOCATION_CLASSIFIER_ID:
-      return GlobalLocation.class;
-    case DATE_CLASSIFIER_ID:
-      return Date.class;
-    case SKU_CLASSIFIER_ID:
-      return String.class;
-    case ORDERSTATUS_CLASSIFIER_ID:
-      return OrderStatus.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

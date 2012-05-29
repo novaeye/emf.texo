@@ -7,6 +7,17 @@ import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
+import org.eclipse.modisco.kdm.action.ActionModelPackage;
+import org.eclipse.modisco.kdm.build.BuildModelPackage;
+import org.eclipse.modisco.kdm.code.CodeModelPackage;
+import org.eclipse.modisco.kdm.conceptual.ConceptualModelPackage;
+import org.eclipse.modisco.kdm.core.CoreModelPackage;
+import org.eclipse.modisco.kdm.data.DataModelPackage;
+import org.eclipse.modisco.kdm.event.EventModelPackage;
+import org.eclipse.modisco.kdm.platform.PlatformModelPackage;
+import org.eclipse.modisco.kdm.source.SourceModelPackage;
+import org.eclipse.modisco.kdm.structure.StructureModelPackage;
+import org.eclipse.modisco.kdm.ui.UiModelPackage;
 
 /**
  * The <b>Package</b> for the model '<em><b>kdm</b></em>'. It contains initialization code and access to the Factory to
@@ -61,11 +72,27 @@ public class KdmModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
-    isInitialized = true;
-
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method
     ModelUtils.readEPackagesFromFile(modelPackage);
+
+    isInitialized = true;
+
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
+
+    CoreModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    SourceModelPackage.initialize();
+    CodeModelPackage.initialize();
+    ActionModelPackage.initialize();
+    PlatformModelPackage.initialize();
+    BuildModelPackage.initialize();
+    ConceptualModelPackage.initialize();
+    DataModelPackage.initialize();
+    EventModelPackage.initialize();
+    StructureModelPackage.initialize();
+    UiModelPackage.initialize();
 
     // register the relation between a Class and its EClassifier
 

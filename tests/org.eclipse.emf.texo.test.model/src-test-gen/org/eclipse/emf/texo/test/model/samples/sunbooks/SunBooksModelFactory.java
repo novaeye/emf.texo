@@ -176,16 +176,6 @@ public class SunBooksModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass PromotionType
-   * @generated
-   */
-  public PromotionType createPromotionType() {
-    return new PromotionType();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -229,6 +219,16 @@ public class SunBooksModelFactory implements ModelFactory {
       return convertBookCategoryTypeObject1ToString((BookCategoryType1) value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass PromotionType
+   * @generated
+   */
+  public PromotionType createPromotionType() {
+    return new PromotionType();
   }
 
   /**

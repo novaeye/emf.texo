@@ -193,11 +193,6 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -215,15 +210,8 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -290,11 +278,6 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -308,15 +291,8 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -453,11 +429,6 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -473,15 +444,8 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -549,11 +513,6 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -569,15 +528,8 @@ public class InterfacesModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);

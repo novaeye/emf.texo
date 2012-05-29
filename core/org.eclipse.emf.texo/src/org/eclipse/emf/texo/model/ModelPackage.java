@@ -17,14 +17,9 @@
 
 package org.eclipse.emf.texo.model;
 
-import java.lang.reflect.Proxy;
-
 import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -47,28 +42,13 @@ public abstract class ModelPackage {
   public EPackage getEPackage() {
     if (ePackage == null) {
       ePackage = ModelUtils.getEPackage(getNsURI());
-
-      // use a java proxy to ensure that the correct class is used in case of
-      // generated code
-      final ModelEFactory modelEFactory = ComponentProvider.getInstance().newInstance(ModelEFactory.class);
-      modelEFactory.setEPackage(ePackage);
-      modelEFactory.setModelFactory(getModelFactory());
-
-      final Class<?> factoryClass = ePackage.getEFactoryInstance().getClass();
-      final ModelEFactory.EFactoryInvocationHandler handler = new ModelEFactory.EFactoryInvocationHandler(modelEFactory);
-
-      final Class<?>[] interfaces = new Class<?>[factoryClass.getInterfaces().length + 1];
-      int i = 0;
-      for (Class<?> clz : factoryClass.getInterfaces()) {
-        interfaces[i] = clz;
-        i++;
-      }
-      interfaces[i] = InternalEObject.class;
-
-      final EFactory eFactory = (EFactory) Proxy.newProxyInstance(factoryClass.getClassLoader(), interfaces, handler);
-      ePackage.setEFactoryInstance(eFactory);
+      ModelUtils.setEFactoryProxy(this, ePackage);
     }
     return ePackage;
+  }
+
+  protected void setEPackage(EPackage ePackage) {
+    this.ePackage = ePackage;
   }
 
   /**

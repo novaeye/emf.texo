@@ -272,13 +272,16 @@ public class RentalModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(RentalBicycle.class, modelPackage.getRentalBicycleEClass(),
@@ -524,6 +527,45 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case RENTALBICYCLE_CLASSIFIER_ID:
+      return RentalBicycle.class;
+    case RENTALUNIT_CLASSIFIER_ID:
+      return RentalUnit.class;
+    case RENTALCAR_CLASSIFIER_ID:
+      return RentalCar.class;
+    case RENTALBUSINESS_CLASSIFIER_ID:
+      return RentalBusiness.class;
+    case RENTALCARDRIVER_CLASSIFIER_ID:
+      return RentalCarDriver.class;
+    case RENTALCONTRACT_CLASSIFIER_ID:
+      return RentalContract.class;
+    case RENTALCONTRACTLINE_CLASSIFIER_ID:
+      return RentalContractLine.class;
+    case RENTALBICYCLETYPE_CLASSIFIER_ID:
+      return RentalBicycleType.class;
+    case RENTALCARSIZE_CLASSIFIER_ID:
+      return RentalCarSize.class;
+    case DATE_CLASSIFIER_ID:
+      return Date.class;
+    case RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID:
+      return RentalBicycleType.class;
+    case RENTALCARSIZEOBJECT_CLASSIFIER_ID:
+      return RentalCarSize.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>RentalContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>RentalContract</b></em>'
@@ -655,44 +697,5 @@ public class RentalModelPackage extends ModelPackage {
    */
   public EAttribute getRentalUnit_Description() {
     return (EAttribute) getRentalUnitEClass().getEAllStructuralFeatures().get(RENTALUNIT_DESCRIPTION_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case RENTALBICYCLE_CLASSIFIER_ID:
-      return RentalBicycle.class;
-    case RENTALUNIT_CLASSIFIER_ID:
-      return RentalUnit.class;
-    case RENTALCAR_CLASSIFIER_ID:
-      return RentalCar.class;
-    case RENTALBUSINESS_CLASSIFIER_ID:
-      return RentalBusiness.class;
-    case RENTALCARDRIVER_CLASSIFIER_ID:
-      return RentalCarDriver.class;
-    case RENTALCONTRACT_CLASSIFIER_ID:
-      return RentalContract.class;
-    case RENTALCONTRACTLINE_CLASSIFIER_ID:
-      return RentalContractLine.class;
-    case RENTALBICYCLETYPE_CLASSIFIER_ID:
-      return RentalBicycleType.class;
-    case RENTALCARSIZE_CLASSIFIER_ID:
-      return RentalCarSize.class;
-    case DATE_CLASSIFIER_ID:
-      return Date.class;
-    case RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID:
-      return RentalBicycleType.class;
-    case RENTALCARSIZEOBJECT_CLASSIFIER_ID:
-      return RentalCarSize.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

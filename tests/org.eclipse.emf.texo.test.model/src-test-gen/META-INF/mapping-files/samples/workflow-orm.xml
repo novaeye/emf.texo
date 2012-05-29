@@ -7,7 +7,7 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalOutputPort" name="workflow_ConditionalOutputPort">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_ConditionalOutputPort_parent_id"/>
     <orm:attributes>
       <orm:basic name="condition">
         <orm:column name="COND"/>
@@ -15,7 +15,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Workflow" name="workflow_Workflow">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_Workflow_parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="nodes">
         <orm:order-column name="workflow_Workflow_nodes_ind"/>
@@ -64,7 +64,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode" name="workflow_WorkflowNode">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_WorkflowNode_parent_id"/>
     <orm:attributes>
       <orm:basic name="isStart" optional="false">
         <orm:column name="isStart"/>
@@ -97,7 +97,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Edge" name="workflow_Edge">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_Edge_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="workflow" optional="false">
         <orm:join-column name="workflow_Edge_workflow"/>
@@ -126,7 +126,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Comment" name="workflow_Comment">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_Comment_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="workflow" optional="false">
         <orm:join-column name="workflow_Comment_workflow"/>
@@ -139,7 +139,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort" name="workflow_OutputPort">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_OutputPort_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="node" optional="false">
         <orm:join-column name="workflow_OutputPort_node"/>
@@ -164,11 +164,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Port" name="workflow_Port">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_Port_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.InputPort" name="workflow_InputPort">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_InputPort_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="node" optional="false">
         <orm:join-column name="workflow_InputPort_node"/>
@@ -193,11 +193,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Fault" name="workflow_Fault">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_Fault_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.CompoundTask" name="workflow_CompoundTask">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_CompoundTask_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="subworkflow" optional="false">
         <orm:join-column name="workflow_CompoundTask_subworkflow"/>
@@ -210,7 +210,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.TransformationTask" name="workflow_TransformationTask">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_TransformationTask_parent_id"/>
     <orm:attributes>
       <orm:basic name="transformExpression">
         <orm:column name="transformExpression"/>
@@ -218,11 +218,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalTask" name="workflow_ConditionalTask">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_ConditionalTask_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.LoopTask" name="workflow_LoopTask">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_LoopTask_parent_id"/>
     <orm:attributes>
       <orm:basic name="whileCondition" optional="false">
         <orm:column name="whileCondition"/>
@@ -230,7 +230,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Task" name="workflow_Task">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="workflow_Task_parent_id"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

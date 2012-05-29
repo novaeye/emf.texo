@@ -43,6 +43,7 @@ import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.provider.TitleProvider;
+import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
  * Test the generation of model code through the Eclipse plugin. Needs to be run as a junit plugin test.
@@ -152,6 +153,9 @@ public class EclipseModelGeneratorTest extends TestCase {
     for (EPackage ePackage : identifiableEPackages) {
       if (ePackage.getNsURI().equals("http://www.eclipse.org/emf/texo/test/model/base/identifiable")) { //$NON-NLS-1$
         identifiableEClass = (EClass) ePackage.getEClassifier("Identifiable"); //$NON-NLS-1$
+        // if (ePackage.eResource() != null) {
+        // ePackage.eResource().setURI(org.eclipse.emf.common.util.URI.createURI(ePackage.getNsURI()));
+        // }
       }
     }
 
@@ -173,7 +177,7 @@ public class EclipseModelGeneratorTest extends TestCase {
     for (EClassifier eClassifier : ePackage.getEClassifiers()) {
       if (eClassifier instanceof EClass) {
         final EClass eClass = (EClass) eClassifier;
-        if (eClass.isInterface()) {
+        if (eClass.isInterface() || ModelUtils.isEMap(eClass)) {
           continue;
         }
         boolean doContinue = false;

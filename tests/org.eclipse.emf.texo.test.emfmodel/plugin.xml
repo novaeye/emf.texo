@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/texo/test/model/base/identifiable"
+            class="org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/texo/test/model/samples/library"
+            class="org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/texo/test/model/samples/schoollibrary"
+            class="org.eclipse.emf.texo.test.emfmodel.schoollibrary.SchoollibraryPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/texo/test/model/base/identifiable"
+            class="org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage"/>
+   </extension>
+
+</plugin>

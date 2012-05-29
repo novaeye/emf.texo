@@ -135,16 +135,6 @@ public class ForumModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Topic
-   * @generated
-   */
-  public Topic createTopic() {
-    return new Topic();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -180,6 +170,16 @@ public class ForumModelFactory implements ModelFactory {
       return convertTopicCategoryObjectToString((TopicCategory) value);
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Topic
+   * @generated
+   */
+  public Topic createTopic() {
+    return new Topic();
   }
 
   /**
@@ -269,11 +269,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -291,12 +286,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -382,11 +371,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -404,12 +388,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -495,11 +473,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -517,15 +490,8 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -594,11 +560,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -618,12 +579,6 @@ public class ForumModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")

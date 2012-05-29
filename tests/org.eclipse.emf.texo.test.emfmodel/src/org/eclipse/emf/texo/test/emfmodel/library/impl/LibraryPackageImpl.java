@@ -113,16 +113,19 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		// Obtain or create and register interdependencies
 		IdentifiablePackageImpl theIdentifiablePackage = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
 		SchoollibraryPackageImpl theSchoollibraryPackage = (SchoollibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) instanceof SchoollibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) : SchoollibraryPackage.eINSTANCE);
+		IdentifiablePackageImpl theIdentifiablePackage_1 = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theLibraryPackage.createPackageContents();
 		theIdentifiablePackage.createPackageContents();
 		theSchoollibraryPackage.createPackageContents();
+		theIdentifiablePackage_1.createPackageContents();
 
 		// Initialize created meta-data
 		theLibraryPackage.initializePackageContents();
 		theIdentifiablePackage.initializePackageContents();
 		theSchoollibraryPackage.initializePackageContents();
+		theIdentifiablePackage_1.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theLibraryPackage.freeze();
@@ -382,7 +385,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		  (bookEClass, 
 		   source, 
 		   new String[] {
-			 "value", "@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(\"test\")"
+			 "type", "@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(\"test\")"
 		   });			
 		addAnnotation
 		  (getBook_Title(), 

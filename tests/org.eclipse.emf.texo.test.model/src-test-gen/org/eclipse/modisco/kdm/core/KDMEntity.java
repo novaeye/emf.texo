@@ -218,9 +218,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>ownedElement</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToOwnedElement(org.eclipse.modisco.kdm.core.KDMEntity value)} and
-   * {@link #removeFromOwnedElement(KDMEntity value)} methods to modify this feature.
+   * Returns the value of '<em><b>ownedElement</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of KDM entities that are owned by
    * the current KDM Entity. Only KDM containers can own other entities. <!-- end-model-doc -->
@@ -233,9 +231,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>outbound</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToOutbound(org.eclipse.modisco.kdm.core.KDMRelationship value)} and
-   * {@link #removeFromOutbound(KDMRelationship value)} methods to modify this feature.
+   * Returns the value of '<em><b>outbound</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of relationships such that the
    * current KDMEntity is the from-endpoint of these relationships. <!-- end-model-doc -->
@@ -248,9 +244,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>inbound</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToInbound(org.eclipse.modisco.kdm.core.KDMRelationship value)} and
-   * {@link #removeFromInbound(KDMRelationship value)} methods to modify this feature.
+   * Returns the value of '<em><b>inbound</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of relationships such that the
    * current KDMEntity is the to-endpoint of these relations. <!-- end-model-doc -->
@@ -263,9 +257,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>ownedRelation</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToOwnedRelation(org.eclipse.modisco.kdm.core.KDMRelationship value)} and
-   * {@link #removeFromOwnedRelation(KDMRelationship value)} methods to modify this feature.
+   * Returns the value of '<em><b>ownedRelation</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of relationships such that the
    * current KDMEntity owns these relationships. <!-- end-model-doc -->
@@ -278,9 +270,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>group</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToGroup(org.eclipse.modisco.kdm.core.KDMEntity value)} and {@link #removeFromGroup(KDMEntity value)} methods
-   * to modify this feature.
+   * Returns the value of '<em><b>group</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Set of KDM entities with which the current
    * element is associated. This property determines a meta-level interface to KDM entities. This property is a derived
@@ -297,9 +287,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>groupedElement</b></em>' feature. Note: the returned collection is Unmodifiable use
-   * the {#addToGroupedElement(org.eclipse.modisco.kdm.core.KDMEntity value)} and
-   * {@link #removeFromGroupedElement(KDMEntity value)} methods to modify this feature.
+   * Returns the value of '<em><b>groupedElement</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of KDM entities that are “grouped”
    * by the current KDM entity. Only KDM groups can have group associations to other entities. <!-- end-model-doc -->
@@ -312,9 +300,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>inAggregated</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToInAggregated(org.eclipse.modisco.kdm.core.AggregatedRelationship value)} and
-   * {@link #removeFromInAggregated(AggregatedRelationship value)} methods to modify this feature.
+   * Returns the value of '<em><b>inAggregated</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of AggregatedRelationship for which
    * the target is the current KDM Entity. <!-- end-model-doc -->
@@ -327,9 +313,7 @@ public abstract class KDMEntity extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>outAggregated</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToOutAggregated(org.eclipse.modisco.kdm.core.AggregatedRelationship value)} and
-   * {@link #removeFromOutAggregated(AggregatedRelationship value)} methods to modify this feature.
+   * Returns the value of '<em><b>outAggregated</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> the set of AggregatedRelationship for which
    * the origin is the current KDM Entity. <!-- end-model-doc -->

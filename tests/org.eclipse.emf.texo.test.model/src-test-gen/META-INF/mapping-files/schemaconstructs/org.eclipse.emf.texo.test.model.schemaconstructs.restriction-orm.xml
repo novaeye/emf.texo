@@ -7,7 +7,7 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.restriction.Member" name="restriction_Member">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="restriction_Member_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.restriction.XMLDeviant" name="restriction_XMLDeviant">

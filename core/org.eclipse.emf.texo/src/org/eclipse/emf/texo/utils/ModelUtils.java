@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Proxy;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,16 +19,20 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.model.ModelConstants;
+import org.eclipse.emf.texo.model.ModelEFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
@@ -41,6 +46,30 @@ public class ModelUtils {
   public static final String QUALIFIERSEPARATOR = "|"; //$NON-NLS-1$
 
   private static SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+
+  public static void setEFactoryProxy(ModelPackage modelPackage, EPackage ePackage) {
+
+    // use a java proxy to ensure that the correct class is used in case of
+    // generated code
+    final ModelEFactory modelEFactory = ComponentProvider.getInstance().newInstance(ModelEFactory.class);
+    modelEFactory.setEPackage(ePackage);
+    modelEFactory.setModelFactory(modelPackage.getModelFactory());
+
+    final Class<?> factoryClass = ePackage.getEFactoryInstance().getClass();
+    final ModelEFactory.EFactoryInvocationHandler handler = new ModelEFactory.EFactoryInvocationHandler(modelEFactory);
+
+    final Class<?>[] interfaces = new Class<?>[factoryClass.getInterfaces().length + 1];
+    int i = 0;
+    for (Class<?> clz : factoryClass.getInterfaces()) {
+      interfaces[i] = clz;
+      i++;
+    }
+    interfaces[i] = InternalEObject.class;
+
+    final EFactory eFactory = (EFactory) Proxy.newProxyInstance(factoryClass.getClassLoader(), interfaces, handler);
+    ePackage.setEFactoryInstance(eFactory);
+
+  }
 
   /**
    * Override the default xml dateformat with your own settings.

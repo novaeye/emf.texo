@@ -204,13 +204,16 @@ public class CatalogModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CatalogType.class, modelPackage.getCatalogTypeEClass(),
@@ -446,6 +449,31 @@ public class CatalogModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case CATALOGTYPE_CLASSIFIER_ID:
+      return CatalogType.class;
+    case PRODUCTTYPE_CLASSIFIER_ID:
+      return ProductType.class;
+    case PRICETYPE_CLASSIFIER_ID:
+      return PriceType.class;
+    case SUPPLIERTYPE_CLASSIFIER_ID:
+      return SupplierType.class;
+    case STRINGTYPE_CLASSIFIER_ID:
+      return StringType.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>SupplierType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>SupplierType</b></em>'
@@ -475,30 +503,5 @@ public class CatalogModelPackage extends ModelPackage {
    */
   public EAttribute getSupplierType_NoOfEmployees() {
     return (EAttribute) getSupplierTypeEClass().getEAllStructuralFeatures().get(SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case CATALOGTYPE_CLASSIFIER_ID:
-      return CatalogType.class;
-    case PRODUCTTYPE_CLASSIFIER_ID:
-      return ProductType.class;
-    case PRICETYPE_CLASSIFIER_ID:
-      return PriceType.class;
-    case SUPPLIERTYPE_CLASSIFIER_ID:
-      return SupplierType.class;
-    case STRINGTYPE_CLASSIFIER_ID:
-      return StringType.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

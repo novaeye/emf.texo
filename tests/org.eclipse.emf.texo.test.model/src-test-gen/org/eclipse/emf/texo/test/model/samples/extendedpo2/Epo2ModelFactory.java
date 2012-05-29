@@ -237,6 +237,21 @@ public class Epo2ModelFactory implements ModelFactory {
   }
 
   /**
+   * Converts the EDataType: Date to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertDateToString(Date value) {
+    if (value == null) {
+      return null;
+    }
+    return ModelUtils.convertToXML(value);
+  }
+
+  /**
    * Converts the EDataType: SKU to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
@@ -264,21 +279,6 @@ public class Epo2ModelFactory implements ModelFactory {
       return null;
     }
     return value;
-  }
-
-  /**
-   * Converts the EDataType: Date to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertDateToString(Date value) {
-    if (value == null) {
-      return null;
-    }
-    return ModelUtils.convertToXML(value);
   }
 
   /**
@@ -352,11 +352,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -382,15 +377,8 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -473,11 +461,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -497,15 +480,8 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -578,11 +554,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -612,12 +583,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -712,11 +677,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -732,15 +692,8 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -807,11 +760,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -833,12 +781,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -927,11 +869,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -947,12 +884,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1029,11 +960,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -1049,12 +975,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1132,11 +1052,6 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -1150,15 +1065,8 @@ public class Epo2ModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);

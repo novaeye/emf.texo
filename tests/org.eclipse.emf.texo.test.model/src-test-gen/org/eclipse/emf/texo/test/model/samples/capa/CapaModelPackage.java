@@ -304,13 +304,16 @@ public class CapaModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(CapacityEntry.class, modelPackage.getCapacityEntryEClass(),
@@ -702,6 +705,35 @@ public class CapaModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case CAPACITYENTRY_CLASSIFIER_ID:
+      return CapacityEntry.class;
+    case MACHINE_CLASSIFIER_ID:
+      return Machine.class;
+    case WORKWEEK_CLASSIFIER_ID:
+      return WorkWeek.class;
+    case TASK_CLASSIFIER_ID:
+      return Task.class;
+    case MACHINELIST_CLASSIFIER_ID:
+      return MachineList.class;
+    case PRODUCTION_CLASSIFIER_ID:
+      return Production.class;
+    case WORKDAY_CLASSIFIER_ID:
+      return WorkDay.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>WorkWeek</b></em>'
@@ -731,34 +763,5 @@ public class CapaModelPackage extends ModelPackage {
    */
   public EAttribute getWorkWeek_WorkWeekId() {
     return (EAttribute) getWorkWeekEClass().getEAllStructuralFeatures().get(WORKWEEK_WORKWEEKID_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case CAPACITYENTRY_CLASSIFIER_ID:
-      return CapacityEntry.class;
-    case MACHINE_CLASSIFIER_ID:
-      return Machine.class;
-    case WORKWEEK_CLASSIFIER_ID:
-      return WorkWeek.class;
-    case TASK_CLASSIFIER_ID:
-      return Task.class;
-    case MACHINELIST_CLASSIFIER_ID:
-      return MachineList.class;
-    case PRODUCTION_CLASSIFIER_ID:
-      return Production.class;
-    case WORKDAY_CLASSIFIER_ID:
-      return WorkDay.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -131,13 +131,16 @@ public class FeaturemaptestModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(PurchaseOrder.class, modelPackage.getPurchaseOrderEClass(),
@@ -264,6 +267,25 @@ public class FeaturemaptestModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case PURCHASEORDER_CLASSIFIER_ID:
+      return PurchaseOrder.class;
+    case SUPPLIER_CLASSIFIER_ID:
+      return Supplier.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EStructuralFeature} '<em><b>Supplier.hardCopyOrderReference</b></em>'. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * 
@@ -283,24 +305,5 @@ public class FeaturemaptestModelPackage extends ModelPackage {
    */
   public EAttribute getSupplier_HardCopyOrderNumber() {
     return (EAttribute) getSupplierEClass().getEAllStructuralFeatures().get(SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case PURCHASEORDER_CLASSIFIER_ID:
-      return PurchaseOrder.class;
-    case SUPPLIER_CLASSIFIER_ID:
-      return Supplier.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

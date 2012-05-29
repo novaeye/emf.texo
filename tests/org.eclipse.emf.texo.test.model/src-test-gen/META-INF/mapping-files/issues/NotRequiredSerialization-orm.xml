@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.notrequiredserialization.SerializationTest" name="NotRequiredSerialization_SerializationTest">
+    <orm:table name="NotRequiredSerialization_SerializationTest"/>
+    <orm:attributes>
+      <orm:basic name="name" optional="false">
+        <orm:column name="T_name"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

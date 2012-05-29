@@ -103,16 +103,19 @@ public class SchoollibraryPackageImpl extends EPackageImpl implements Schoollibr
 		// Obtain or create and register interdependencies
 		IdentifiablePackageImpl theIdentifiablePackage = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
 		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) instanceof LibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) : LibraryPackage.eINSTANCE);
+		IdentifiablePackageImpl theIdentifiablePackage_1 = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theSchoollibraryPackage.createPackageContents();
 		theIdentifiablePackage.createPackageContents();
 		theLibraryPackage.createPackageContents();
+		theIdentifiablePackage_1.createPackageContents();
 
 		// Initialize created meta-data
 		theSchoollibraryPackage.initializePackageContents();
 		theIdentifiablePackage.initializePackageContents();
 		theLibraryPackage.initializePackageContents();
+		theIdentifiablePackage_1.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theSchoollibraryPackage.freeze();
@@ -241,7 +244,7 @@ public class SchoollibraryPackageImpl extends EPackageImpl implements Schoollibr
 		schoolLibraryEClass.getESuperTypes().add(theLibraryPackage.getLibrary());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(assetEClass, Asset.class, "Asset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(assetEClass, Asset.class, "Asset", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAsset_Value(), ecorePackage.getEFloat(), "value", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(schoolBookEClass, SchoolBook.class, "SchoolBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

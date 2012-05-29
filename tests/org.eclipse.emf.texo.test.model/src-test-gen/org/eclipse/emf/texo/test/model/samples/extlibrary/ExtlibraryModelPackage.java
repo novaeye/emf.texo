@@ -431,13 +431,16 @@ public class ExtlibraryModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Book.class, modelPackage.getBookEClass(), modelPackage);
@@ -744,6 +747,51 @@ public class ExtlibraryModelPackage extends ModelPackage {
    */
   public EEnum getBookCategoryEEnum() {
     return (EEnum) getEPackage().getEClassifiers().get(BOOKCATEGORY_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case BOOK_CLASSIFIER_ID:
+      return Book.class;
+    case ITEM_CLASSIFIER_ID:
+      return Item.class;
+    case LENDABLE_CLASSIFIER_ID:
+      return Lendable.class;
+    case CIRCULATINGITEM_CLASSIFIER_ID:
+      return CirculatingItem.class;
+    case WRITER_CLASSIFIER_ID:
+      return Writer.class;
+    case ADDRESSABLE_CLASSIFIER_ID:
+      return Addressable.class;
+    case PERSON_CLASSIFIER_ID:
+      return Person.class;
+    case LIBRARY_CLASSIFIER_ID:
+      return Library.class;
+    case EMPLOYEE_CLASSIFIER_ID:
+      return Employee.class;
+    case BORROWER_CLASSIFIER_ID:
+      return Borrower.class;
+    case PERIODICAL_CLASSIFIER_ID:
+      return Periodical.class;
+    case AUDIOVISUALITEM_CLASSIFIER_ID:
+      return AudioVisualItem.class;
+    case BOOKONTAPE_CLASSIFIER_ID:
+      return BookOnTape.class;
+    case VIDEOCASSETTE_CLASSIFIER_ID:
+      return VideoCassette.class;
+    case BOOKCATEGORY_CLASSIFIER_ID:
+      return BookCategory.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 
   /**
@@ -1065,50 +1113,5 @@ public class ExtlibraryModelPackage extends ModelPackage {
    */
   public EAttribute getAddressable_Address() {
     return (EAttribute) getAddressableEClass().getEAllStructuralFeatures().get(ADDRESSABLE_ADDRESS_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case BOOK_CLASSIFIER_ID:
-      return Book.class;
-    case ITEM_CLASSIFIER_ID:
-      return Item.class;
-    case LENDABLE_CLASSIFIER_ID:
-      return Lendable.class;
-    case CIRCULATINGITEM_CLASSIFIER_ID:
-      return CirculatingItem.class;
-    case WRITER_CLASSIFIER_ID:
-      return Writer.class;
-    case ADDRESSABLE_CLASSIFIER_ID:
-      return Addressable.class;
-    case PERSON_CLASSIFIER_ID:
-      return Person.class;
-    case LIBRARY_CLASSIFIER_ID:
-      return Library.class;
-    case EMPLOYEE_CLASSIFIER_ID:
-      return Employee.class;
-    case BORROWER_CLASSIFIER_ID:
-      return Borrower.class;
-    case PERIODICAL_CLASSIFIER_ID:
-      return Periodical.class;
-    case AUDIOVISUALITEM_CLASSIFIER_ID:
-      return AudioVisualItem.class;
-    case BOOKONTAPE_CLASSIFIER_ID:
-      return BookOnTape.class;
-    case VIDEOCASSETTE_CLASSIFIER_ID:
-      return VideoCassette.class;
-    case BOOKCATEGORY_CLASSIFIER_ID:
-      return BookCategory.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

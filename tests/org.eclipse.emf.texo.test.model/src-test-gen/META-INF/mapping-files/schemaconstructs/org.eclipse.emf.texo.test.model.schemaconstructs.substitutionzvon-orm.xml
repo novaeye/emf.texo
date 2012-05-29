@@ -15,11 +15,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType" name="substitutionzvon_ComplexEvenType">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="substitutionzvon_ComplexEvenType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexOddType" name="substitutionzvon_ComplexOddType">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="substitutionzvon_ComplexOddType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="substitutionzvon_RootType_myAbstractGroup">

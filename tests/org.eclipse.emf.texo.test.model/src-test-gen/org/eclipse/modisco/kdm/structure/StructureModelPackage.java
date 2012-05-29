@@ -200,6 +200,9 @@ public class StructureModelPackage extends ModelPackage {
     CoreModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
+
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractStructureElement.class,
         modelPackage.getAbstractStructureElementEClass(), modelPackage);

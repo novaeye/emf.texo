@@ -40,9 +40,7 @@ public abstract class ModelElement extends Element {
   private Set<ExtendedValue> taggedValue = new HashSet<ExtendedValue>();
 
   /**
-   * Returns the value of '<em><b>stereotype</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToStereotype(org.eclipse.modisco.kdm.kdm.Stereotype value)} and {@link #removeFromStereotype(Stereotype value)}
-   * methods to modify this feature.
+   * Returns the value of '<em><b>stereotype</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of stereotype applied to current
    * element. <!-- end-model-doc -->
@@ -102,9 +100,7 @@ public abstract class ModelElement extends Element {
   }
 
   /**
-   * Returns the value of '<em><b>taggedValue</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToTaggedValue(org.eclipse.modisco.kdm.kdm.ExtendedValue value)} and
-   * {@link #removeFromTaggedValue(ExtendedValue value)} methods to modify this feature.
+   * Returns the value of '<em><b>taggedValue</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of tagged values determined by the
    * stereotype. <!-- end-model-doc -->

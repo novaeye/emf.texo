@@ -378,8 +378,11 @@ public class BuildModelPackage extends ModelPackage {
 
     KdmModelPackage.initialize();
     CoreModelPackage.initialize();
-    SourceModelPackage.initialize();
     org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
+    SourceModelPackage.initialize();
+
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AbstractBuildElement.class,

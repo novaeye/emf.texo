@@ -53,8 +53,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringToWriterMapEntry" instanceClassName="java.util.Map$Entry"
-      eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="StringToWriterMapEntry" instanceClassName="java.util.Map$Entry">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="StringToWriterMapEntry"/>
       <details key="kind" value="elementOnly"/>
@@ -94,8 +93,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WriterToBookMapEntry" instanceClassName="java.util.Map$Entry"
-      eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
+  <eClassifiers xsi:type="ecore:EClass" name="WriterToBookMapEntry" instanceClassName="java.util.Map$Entry">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="WriterToBookMapEntry"/>
       <details key="kind" value="elementOnly"/>

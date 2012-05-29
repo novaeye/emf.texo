@@ -85,6 +85,9 @@ public class Sub1ModelPackage extends ModelPackage {
     MainModelPackage.initialize();
     IdentifiableModelPackage.initialize();
 
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
+
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Sub1Type.class, modelPackage.getSub1TypeEClass(),
         modelPackage);

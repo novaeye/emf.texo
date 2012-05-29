@@ -101,14 +101,14 @@ public class EmapModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STRINGTOWRITERMAPENTRY_KEY_FEATURE_ID = 2;
+  public static final int STRINGTOWRITERMAPENTRY_KEY_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STRINGTOWRITERMAPENTRY_VALUE_FEATURE_ID = 3;
+  public static final int STRINGTOWRITERMAPENTRY_VALUE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -136,14 +136,14 @@ public class EmapModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITERTOBOOKMAPENTRY_KEY_FEATURE_ID = 2;
+  public static final int WRITERTOBOOKMAPENTRY_KEY_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITERTOBOOKMAPENTRY_VALUE_FEATURE_ID = 3;
+  public static final int WRITERTOBOOKMAPENTRY_VALUE_FEATURE_ID = 1;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -167,13 +167,16 @@ public class EmapModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Book.class, modelPackage.getBookEClass(), modelPackage);

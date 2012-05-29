@@ -150,16 +150,6 @@ public class CatalogModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass SupplierType
-   * @generated
-   */
-  public SupplierType createSupplierType() {
-    return new SupplierType();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -187,6 +177,16 @@ public class CatalogModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     }
     throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass SupplierType
+   * @generated
+   */
+  public SupplierType createSupplierType() {
+    return new SupplierType();
   }
 
   /**

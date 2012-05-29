@@ -86,7 +86,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimTariff" name="m_SimTariff">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="m_SimTariff_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Tariff" name="m_Tariff">
@@ -170,7 +170,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.VolumePayment" name="m_VolumePayment">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="m_VolumePayment_parent_id"/>
     <orm:attributes>
       <orm:basic name="volume">
         <orm:column name="volume"/>
@@ -189,7 +189,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PeriodicalPayment" name="m_PeriodicalPayment">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="m_PeriodicalPayment_parent_id"/>
     <orm:attributes>
       <orm:basic name="periodicity">
         <orm:column name="periodicity"/>
@@ -197,7 +197,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.OneTimePayment" name="m_OneTimePayment">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="m_OneTimePayment_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Service" name="m_Service">
@@ -515,7 +515,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ClientTariff" name="m_ClientTariff">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="m_ClientTariff_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ContractPackage" name="m_ContractPackage">

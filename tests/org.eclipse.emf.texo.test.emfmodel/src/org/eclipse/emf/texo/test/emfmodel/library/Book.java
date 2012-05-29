@@ -24,7 +24,7 @@ import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
  * </p>
  *
  * @see org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage#getBook()
- * @model annotation="texo.java.annotation value='@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(\"test\")'"
+ * @model annotation="texo.java.annotation type='@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(\"test\")'"
  *        annotation="org.eclipse.emf.texo title='${title} (${pages}) - ${category}'"
  * @generated
  */

@@ -38,9 +38,7 @@ public abstract class Element extends Identifiable {
   private Set<Annotation> annotation = new HashSet<Annotation>();
 
   /**
-   * Returns the value of '<em><b>attribute</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToAttribute(org.eclipse.modisco.kdm.kdm.Attribute value)} and {@link #removeFromAttribute(Attribute value)}
-   * methods to modify this feature.
+   * Returns the value of '<em><b>attribute</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of attributes owned by the given
    * element. <!-- end-model-doc -->
@@ -100,9 +98,7 @@ public abstract class Element extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>annotation</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToAnnotation(org.eclipse.modisco.kdm.kdm.Annotation value)} and {@link #removeFromAnnotation(Annotation value)}
-   * methods to modify this feature.
+   * Returns the value of '<em><b>annotation</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of annotations owned by the given
    * element. <!-- end-model-doc -->

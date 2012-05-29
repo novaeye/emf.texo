@@ -18,7 +18,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.EvenComplexNumberType" name="substitution_EvenComplexNumberType">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="substitution_EvenComplexNumberType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup" name="substitution_MultiNumberType_myComplexAbstractGroup">
@@ -92,7 +92,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.OddComplexNumberType" name="substitution_OddComplexNumberType">
-    <orm:primary-key-join-column name="parent_id"/>
+    <orm:primary-key-join-column name="substitution_OddComplexNumberType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

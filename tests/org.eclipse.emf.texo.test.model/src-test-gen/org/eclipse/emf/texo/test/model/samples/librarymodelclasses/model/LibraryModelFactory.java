@@ -125,16 +125,6 @@ public class LibraryModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Library
-   * @generated
-   */
-  public Library createLibrary() {
-    return new Library();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -181,6 +171,16 @@ public class LibraryModelFactory implements ModelFactory {
       return null;
     }
     return value.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Library
+   * @generated
+   */
+  public Library createLibrary() {
+    return new Library();
   }
 
   /**

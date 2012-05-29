@@ -353,13 +353,16 @@ public class AccountingModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(AccountingClass.class, modelPackage.getAccountingEClass(),
@@ -601,6 +604,45 @@ public class AccountingModelPackage extends ModelPackage {
    */
   public EDataType getDateEDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ACCOUNTING_CLASSIFIER_ID:
+      return AccountingClass.class;
+    case SERIALIZABLE_CLASSIFIER_ID:
+      return Serializable.class;
+    case ACCOUNT_CLASSIFIER_ID:
+      return Account.class;
+    case ACCOUNTGROUP_CLASSIFIER_ID:
+      return AccountGroup.class;
+    case VAT_CLASSIFIER_ID:
+      return Vat.class;
+    case BALANCEACCOUNT_CLASSIFIER_ID:
+      return BalanceAccount.class;
+    case REPORT_CLASSIFIER_ID:
+      return Report.class;
+    case JOURNALGROUP_CLASSIFIER_ID:
+      return JournalGroup.class;
+    case REPORTGROUP_CLASSIFIER_ID:
+      return ReportGroup.class;
+    case JOURNALSTATEMENT_CLASSIFIER_ID:
+      return JournalStatement.class;
+    case PLACCOUNT_CLASSIFIER_ID:
+      return PLAccount.class;
+    case DATE_CLASSIFIER_ID:
+      return Date.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 
   /**
@@ -859,44 +901,5 @@ public class AccountingModelPackage extends ModelPackage {
    */
   public EClass getSerializableEClass() {
     return (EClass) getEPackage().getEClassifiers().get(SERIALIZABLE_CLASSIFIER_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ACCOUNTING_CLASSIFIER_ID:
-      return AccountingClass.class;
-    case SERIALIZABLE_CLASSIFIER_ID:
-      return Serializable.class;
-    case ACCOUNT_CLASSIFIER_ID:
-      return Account.class;
-    case ACCOUNTGROUP_CLASSIFIER_ID:
-      return AccountGroup.class;
-    case VAT_CLASSIFIER_ID:
-      return Vat.class;
-    case BALANCEACCOUNT_CLASSIFIER_ID:
-      return BalanceAccount.class;
-    case REPORT_CLASSIFIER_ID:
-      return Report.class;
-    case JOURNALGROUP_CLASSIFIER_ID:
-      return JournalGroup.class;
-    case REPORTGROUP_CLASSIFIER_ID:
-      return ReportGroup.class;
-    case JOURNALSTATEMENT_CLASSIFIER_ID:
-      return JournalStatement.class;
-    case PLACCOUNT_CLASSIFIER_ID:
-      return PLAccount.class;
-    case DATE_CLASSIFIER_ID:
-      return Date.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see org.eclipse.emf.texo.test.emfmodel.schoollibrary.SchoollibraryPackage#getAsset()
- * @model
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface Asset extends EObject {

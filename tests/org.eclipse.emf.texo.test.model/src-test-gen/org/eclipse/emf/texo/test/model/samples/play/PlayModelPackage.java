@@ -454,13 +454,16 @@ public class PlayModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(ActType.class, modelPackage.getActTypeEClass(), modelPackage);
@@ -931,6 +934,41 @@ public class PlayModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ACTTYPE_CLASSIFIER_ID:
+      return ActType.class;
+    case SCENETYPE_CLASSIFIER_ID:
+      return SceneType.class;
+    case DOCUMENTROOT_CLASSIFIER_ID:
+      return DocumentRoot.class;
+    case FMTYPE_CLASSIFIER_ID:
+      return FmType.class;
+    case PERSONAETYPE_CLASSIFIER_ID:
+      return PersonaeType.class;
+    case PERSONAGROUPTYPE_CLASSIFIER_ID:
+      return PersonaGroupType.class;
+    case PLAYTYPE_CLASSIFIER_ID:
+      return PlayType.class;
+    case SPEECHTYPE_CLASSIFIER_ID:
+      return SpeechType.class;
+    case PINDEXTYPE_CLASSIFIER_ID:
+      return PindexType.class;
+    case PINDEXTYPEOBJECT_CLASSIFIER_ID:
+      return PindexType.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>PlayType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>PlayType</b></em>'
@@ -1122,40 +1160,5 @@ public class PlayModelPackage extends ModelPackage {
    */
   public EAttribute getSpeechType_StageDirections() {
     return (EAttribute) getSpeechTypeEClass().getEAllStructuralFeatures().get(SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ACTTYPE_CLASSIFIER_ID:
-      return ActType.class;
-    case SCENETYPE_CLASSIFIER_ID:
-      return SceneType.class;
-    case DOCUMENTROOT_CLASSIFIER_ID:
-      return DocumentRoot.class;
-    case FMTYPE_CLASSIFIER_ID:
-      return FmType.class;
-    case PERSONAETYPE_CLASSIFIER_ID:
-      return PersonaeType.class;
-    case PERSONAGROUPTYPE_CLASSIFIER_ID:
-      return PersonaGroupType.class;
-    case PLAYTYPE_CLASSIFIER_ID:
-      return PlayType.class;
-    case SPEECHTYPE_CLASSIFIER_ID:
-      return SpeechType.class;
-    case PINDEXTYPE_CLASSIFIER_ID:
-      return PindexType.class;
-    case PINDEXTYPEOBJECT_CLASSIFIER_ID:
-      return PindexType.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

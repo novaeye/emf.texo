@@ -122,9 +122,7 @@ public class AggregatedRelationship extends ModelElement {
   }
 
   /**
-   * Returns the value of '<em><b>relation</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToRelation(org.eclipse.modisco.kdm.core.KDMRelationship value)} and
-   * {@link #removeFromRelation(KDMRelationship value)} methods to modify this feature.
+   * Returns the value of '<em><b>relation</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of primitive KDM relationships
    * represented by the aggregated relationship. <!-- end-model-doc -->

@@ -26,15 +26,6 @@ public interface SchoollibraryFactory extends EFactory {
 	SchoollibraryFactory eINSTANCE = org.eclipse.emf.texo.test.emfmodel.schoollibrary.impl.SchoollibraryFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Asset</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Asset</em>'.
-	 * @generated
-	 */
-	Asset createAsset();
-
-	/**
 	 * Returns a new object of class '<em>School Book</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

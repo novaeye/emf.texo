@@ -289,13 +289,16 @@ public class MusicModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
+    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
+    // see the ModelResolver getEPackageRegistry method
+    ModelUtils.readEPackagesFromFile(modelPackage);
+
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
 
-    // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
-    // see the ModelResolver getEPackageRegistry method
-    ModelUtils.readEPackagesFromFile(modelPackage);
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Artist.class, modelPackage.getArtistEClass(), modelPackage);
@@ -631,6 +634,33 @@ public class MusicModelPackage extends ModelPackage {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ARTIST_CLASSIFIER_ID:
+      return Artist.class;
+    case COUNTRY_CLASSIFIER_ID:
+      return Country.class;
+    case GENRE_CLASSIFIER_ID:
+      return Genre.class;
+    case ALBUM_CLASSIFIER_ID:
+      return Album.class;
+    case SONG_CLASSIFIER_ID:
+      return Song.class;
+    case RATING_CLASSIFIER_ID:
+      return Rating.class;
+    }
+    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Song</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Song</b></em>'
@@ -679,32 +709,5 @@ public class MusicModelPackage extends ModelPackage {
    */
   public EAttribute getSong_Name() {
     return (EAttribute) getSongEClass().getEAllStructuralFeatures().get(SONG_NAME_FEATURE_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ARTIST_CLASSIFIER_ID:
-      return Artist.class;
-    case COUNTRY_CLASSIFIER_ID:
-      return Country.class;
-    case GENRE_CLASSIFIER_ID:
-      return Genre.class;
-    case ALBUM_CLASSIFIER_ID:
-      return Album.class;
-    case SONG_CLASSIFIER_ID:
-      return Song.class;
-    case RATING_CLASSIFIER_ID:
-      return Rating.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

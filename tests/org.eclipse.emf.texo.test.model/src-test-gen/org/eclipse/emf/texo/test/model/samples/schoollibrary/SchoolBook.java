@@ -1,6 +1,5 @@
 package org.eclipse.emf.texo.test.model.samples.schoollibrary;
 
-import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.samples.library.Book;
 
@@ -10,14 +9,13 @@ import org.eclipse.emf.texo.test.model.samples.library.Book;
  * @generated
  */
 @Entity(name = "schoollibrary_SchoolBook")
-public class SchoolBook extends Book {
+public class SchoolBook extends Book implements Asset {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic()
   private float value = 0.0f;
 
   /**

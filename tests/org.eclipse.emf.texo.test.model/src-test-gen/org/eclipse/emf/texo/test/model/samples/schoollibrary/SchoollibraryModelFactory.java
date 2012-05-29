@@ -4,11 +4,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
+import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
-import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelFactory;
 
 /**
@@ -30,8 +30,6 @@ public class SchoollibraryModelFactory implements ModelFactory {
    */
   public Object create(EClass eClass) {
     switch (eClass.getClassifierID()) {
-    case SchoollibraryModelPackage.ASSET_CLASSIFIER_ID:
-      return createAsset();
     case SchoollibraryModelPackage.SCHOOLBOOK_CLASSIFIER_ID:
       return createSchoolBook();
     case SchoollibraryModelPackage.SCHOOLLIBRARY_CLASSIFIER_ID:
@@ -102,16 +100,6 @@ public class SchoollibraryModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass Asset
-   * @generated
-   */
-  public Asset createAsset() {
-    return new Asset();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass SchoolBook
    * @generated
    */
@@ -164,11 +152,10 @@ public class SchoollibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class AssetModelObject<E extends Asset> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class AssetModelObject<E extends Asset> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return SchoollibraryModelPackage.INSTANCE.getAssetEClass();
     }
@@ -176,7 +163,6 @@ public class SchoollibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return SchoollibraryModelPackage.INSTANCE;
     }

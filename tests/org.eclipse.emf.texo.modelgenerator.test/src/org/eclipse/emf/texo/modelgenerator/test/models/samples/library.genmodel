@@ -51,4 +51,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute schoollibrary.ecore#//SchoolLibrary/location"/>
     </genClasses>
   </genPackages>
+  <genPackages prefix="Identifiable" basePackage="org.eclipse.emf.texo.test.emfmodel"
+      disposableProviderFactory="true" ecorePackage="identifiable.ecore#/">
+    <genClasses image="false" ecoreClass="identifiable.ecore#//Identifiable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifiable.ecore#//Identifiable/db_Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifiable.ecore#//Identifiable/db_version"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="identifiable.ecore#//IdentifiableInterface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifiable.ecore#//IdentifiableInterface/db_Id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifiable.ecore#//IdentifiableInterface/db_version"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>
