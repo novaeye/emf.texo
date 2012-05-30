@@ -245,8 +245,11 @@ public class EMFModelConverter implements TexoComponent {
         if (eReference.getEOpposite() != null && !eReference.getEOpposite().isMany()) {
           final ModelObject<?> modelObjectTarget = ModelResolver.getInstance().getModelObject(target);
           if (eReference.getEOpposite().isMany()) {
-            modelObjectTarget.eAddTo(eReference.getEOpposite(), modelObject.getTarget());
-          } else {
+            final Collection<?> oppositeCollection = (Collection<?>) modelObjectTarget.eGet(eReference.getEOpposite());
+            if (!oppositeCollection.contains(modelObject.getTarget())) {
+              modelObjectTarget.eAddTo(eReference.getEOpposite(), modelObject.getTarget());
+            }
+          } else if (modelObjectTarget.eGet(eReference.getEOpposite()) != modelObject.getTarget()) {
             modelObjectTarget.eSet(eReference.getEOpposite(), modelObject.getTarget());
           }
         }
@@ -401,7 +404,7 @@ public class EMFModelConverter implements TexoComponent {
   }
 
   public void setUriResolver(ObjectResolver uriResolver) {
-    this.objectResolver = uriResolver;
+    objectResolver = uriResolver;
   }
 
   public List<EObject> getAllConvertedEObjects() {

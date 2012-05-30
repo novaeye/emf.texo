@@ -38,7 +38,7 @@ public class ModelJSONTestSuite {
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
     // modelPackages.clear();
-    // modelPackages.add(PlayModelPackage.INSTANCE);
+    // modelPackages.add(AccountingModelPackage.INSTANCE);
     // modelPackages.add(JpamixedModelPackage.INSTANCE);
     // modelPackages.add(NestedgroupModelPackage.INSTANCE);
 
@@ -71,7 +71,7 @@ public class ModelJSONTestSuite {
   public static class LocalJSONEMFTest extends JSONEMFTest {
 
     public LocalJSONEMFTest(ModelPackage modelPackage) {
-      super(modelPackage.getNsURI());
+      super("EMF --> " + modelPackage.getNsURI());
       super.setEPackages(Collections.singletonList(modelPackage.getEPackage()));
     }
 

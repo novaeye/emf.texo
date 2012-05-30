@@ -94,6 +94,13 @@ public class TestUtils {
    */
   public static List<EObject> generateTestSet(final int dataSize, final int collectionSize, final int maxDepth,
       final int maxObjects, List<EPackage> ePackages, List<EClass> eClasses) {
+    final ModelDataGenerator generator = generateTestSetModelGenerator(dataSize, collectionSize, maxDepth, maxObjects,
+        ePackages, eClasses);
+    return generator.getResult();
+  }
+
+  public static ModelDataGenerator generateTestSetModelGenerator(final int dataSize, final int collectionSize,
+      final int maxDepth, final int maxObjects, List<EPackage> ePackages, List<EClass> eClasses) {
     final ModelDataGenerator modelDataGenerator = new ModelDataGenerator();
     modelDataGenerator.setStartEClasses(eClasses);
     modelDataGenerator.setMaxDepth(maxDepth);
@@ -103,8 +110,7 @@ public class TestUtils {
     modelDataGenerator.setEPackages(ePackages);
     modelDataGenerator.generateTestData();
     System.err.println(modelDataGenerator.getTotalObjectCount());
-    final List<EObject> list = modelDataGenerator.getResult();
-    return list;
+    return modelDataGenerator;
   }
 
   /**

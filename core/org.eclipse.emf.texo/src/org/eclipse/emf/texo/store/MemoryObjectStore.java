@@ -197,8 +197,11 @@ public class MemoryObjectStore extends ObjectStore {
     EObject eObject = super.getEObject(objectUri);
     if (eObject == null) {
       final TypeIdTuple tuple = getTypeAndIdFromUri(objectUri);
-      eObject = EcoreUtil.create(tuple.getEClass());
-      eObject.eSet(IdProvider.getInstance().getIdEAttribute(tuple.getEClass()), tuple.getId());
+      eObject = (EObject) get(tuple.getEClass(), tuple.getId());
+      if (eObject == null) {
+        eObject = EcoreUtil.create(tuple.getEClass());
+        eObject.eSet(IdProvider.getInstance().getIdEAttribute(tuple.getEClass()), tuple.getId());
+      }
     }
     return eObject;
   }

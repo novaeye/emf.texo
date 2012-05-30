@@ -17,10 +17,12 @@
 
 package org.eclipse.emf.texo.json.test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
 import org.eclipse.emf.texo.json.EMFJSONConverter;
 import org.eclipse.emf.texo.json.JSONEMFConverter;
 import org.eclipse.emf.texo.store.MemoryObjectStore;
@@ -50,21 +52,16 @@ public class JSONEMFTest extends BaseJSONTest {
   public void doRunTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
 
-    final List<EObject> m1 = TestUtils.generateTestSet(1, 3, 3, 10000, getEPackages(), getEClasses());
+    final ModelDataGenerator dataGenerator = TestUtils.generateTestSetModelGenerator(1, 3, 3, 10000, getEPackages(),
+        getEClasses());
+    final List<EObject> m1 = dataGenerator.getResult();
+    memObjectStore.addData(new ArrayList<Object>(dataGenerator.getAllEObjects()));
 
-    final EMFJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
-    toJsonConverter.setObjectResolver(memObjectStore);
-    toJsonConverter.setConvertNonContainedReferencedObjects(true);
-    toJsonConverter.setMaxChildLevelsToConvert(-1);
+    final Object json1 = getToJsonConverter(memObjectStore).convert(m1.get(0));
 
-    final Object json1 = toJsonConverter.convert(m1.get(0));
+    final EObject m2 = getFromJsonConverter(memObjectStore).convert((JSONObject) json1);
 
-    final JSONEMFConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
-    fromJsonConverter.setObjectResolver(memObjectStore);
-
-    final EObject m2 = fromJsonConverter.convert((JSONObject) json1);
-
-    final Object json2 = toJsonConverter.convert(m2);
+    final Object json2 = getToJsonConverter(memObjectStore).convert(m2);
 
     System.err.println(json1);
     System.err.println("---------------------------------------------");
@@ -72,9 +69,26 @@ public class JSONEMFTest extends BaseJSONTest {
 
     Assert.assertEquals(json1.toString(), json2.toString());
 
-    final EObject m3 = fromJsonConverter.convert((JSONObject) json2);
-    final Object json3 = toJsonConverter.convert(m3);
+    final EObject m3 = getFromJsonConverter(memObjectStore).convert((JSONObject) json2);
+    final Object json3 = getToJsonConverter(memObjectStore).convert(m3);
 
     Assert.assertEquals(json2.toString(), json3.toString());
   }
+
+  private EMFJSONConverter getToJsonConverter(MemoryObjectStore store) {
+    final EMFJSONConverter toJsonConverter = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
+    toJsonConverter.setObjectResolver(store);
+    toJsonConverter.setConvertNonContainedReferencedObjects(false);
+    toJsonConverter.setMaxChildLevelsToConvert(1);
+    toJsonConverter.setPreSortManyValues(true);
+    toJsonConverter.setSerializeTitleProperty(false);
+    return toJsonConverter;
+  }
+
+  private JSONEMFConverter getFromJsonConverter(MemoryObjectStore store) {
+    final JSONEMFConverter fromJsonConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
+    fromJsonConverter.setObjectResolver(store);
+    return fromJsonConverter;
+  }
+
 }

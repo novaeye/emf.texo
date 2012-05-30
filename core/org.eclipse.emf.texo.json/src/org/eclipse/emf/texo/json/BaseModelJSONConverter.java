@@ -22,6 +22,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -57,8 +58,14 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
 
   private final HashSet<T> hasConverted = new HashSet<T>();
 
-  private JSONValueConverter jsonValueConverter = (JSONValueConverter) ComponentProvider.getInstance()
-      .newInstance(getValueConversionClass());
+  private JSONValueConverter jsonValueConverter = (JSONValueConverter) ComponentProvider.getInstance().newInstance(
+      getValueConversionClass());
+
+  /**
+   * Is a setting used during test cases where also unsorted values need to be comparable
+   */
+  private boolean preSortManyValues = false;
+  private boolean serializeTitleProperty = true;
 
   /**
    * Converts an object to a json object.
@@ -128,9 +135,11 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
     }
 
     // if there are cycles then use proxies
-    if (hasConverted.contains(object) && !getProxyObjects().contains(object)) {
-      getProxyObjects().add(object);
-      getNonProxiedObjects().remove(object);
+    if (hasConverted.contains(object)) {
+      if (!getProxyObjects().contains(object)) {
+        getProxyObjects().add(object);
+        getNonProxiedObjects().remove(object);
+      }
       // just continue
     } else {
       hasConverted.add(object);
@@ -203,7 +212,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
         return;
       }
       if (IdProvider.getInstance().hasIdEAttribute(eClass(object))) {
-        final String idAsString  = IdProvider.getInstance().getIdAsString(object);
+        final String idAsString = IdProvider.getInstance().getIdAsString(object);
         if (idAsString != null && idAsString.trim().length() > 0) {
           final EAttribute idEAttribute = IdProvider.getInstance().getIdEAttribute(eClass(object));
           jsonObject.put(ModelJSONConstants.ID_PROPERTY, idAsString);
@@ -211,7 +220,9 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
               jsonValueConverter.toJSON(object, eGet(object, idEAttribute), idEAttribute.getEAttributeType()));
         }
       }
-      jsonObject.put(ModelJSONConstants.TITLE_PROPERTY, TitleProvider.getInstance().getTitle(object));
+      if (isSerializeTitleProperty()) {
+        jsonObject.put(ModelJSONConstants.TITLE_PROPERTY, TitleProvider.getInstance().getTitle(object));
+      }
       jsonObject.put(ModelJSONConstants.ECLASS_PROPERTY, ModelUtils.getQualifiedNameFromEClass(eClass(object)));
     } catch (JSONException e) {
       throw new RuntimeException(e);
@@ -230,8 +241,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
    *          the eFeature which is converted
    */
   @SuppressWarnings("unchecked")
-  protected void convertFeatureMap(T source, final JSONObject target,
-      final EStructuralFeature eFeature) {
+  protected void convertFeatureMap(T source, final JSONObject target, final EStructuralFeature eFeature) {
     try {
       final Collection<?> mValues = (Collection<?>) eGet(source, eFeature);
 
@@ -274,8 +284,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
    * @param eReference
    *          the eReference which is converted
    */
-  protected void convertSingleEReference(T source, final JSONObject target,
-      final EReference eReference) {
+  protected void convertSingleEReference(T source, final JSONObject target, final EReference eReference) {
     try {
 
       final String jsonPropName = getJSONPropertyName(eReference);
@@ -312,8 +321,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
    *          the eReference which is converted
    */
   @SuppressWarnings("unchecked")
-  protected void convertManyEReference(T source, final JSONObject target,
-      final EReference eReference) {
+  protected void convertManyEReference(T source, final JSONObject target, final EReference eReference) {
 
     try {
       final String jsonPropName = getJSONPropertyName(eReference);
@@ -390,7 +398,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
         final Collection<T> sourceValues = (Collection<T>) manyValue;
         final List<Object> targetValues = new ArrayList<Object>();
 
-        for (final T value : sourceValues) {
+        for (final T value : sortedValues(sourceValues)) {
           if (value == null) {
             targetValues.add(JSONObject.NULL);
           } else {
@@ -402,6 +410,57 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
     } catch (JSONException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  // sorting is important for testcases which assume a fixed
+  // ordering, some java examples use Set instead of List
+  private Collection<T> sortedValues(Collection<T> values) {
+    if (!preSortManyValues) {
+      return values;
+    }
+    final List<T> sortedValues = new ArrayList<T>(values);
+    Collections.sort(sortedValues, new Comparator<Object>() {
+      public int compare(Object o1, Object o2) {
+        try {
+          if (IdProvider.getInstance().hasIdEAttribute(o1) && IdProvider.getInstance().hasIdEAttribute(o2)) {
+            final Object id1 = IdProvider.getInstance().getId(o1);
+            final Object id2 = IdProvider.getInstance().getId(o2);
+            if (id1 != null && id2 != null) {
+              return id1.toString().compareTo(id2.toString());
+            }
+          }
+          return o1.toString().compareTo(o2.toString());
+        } catch (UnsupportedOperationException e) {
+          // sometimes volatile efeatures are part of the toString
+          return o1.hashCode() - o2.hashCode();
+        }
+      }
+    });
+    return sortedValues;
+  }
+
+  private Collection<?> sortedEAttributeValues(Collection<?> values) {
+    if (!preSortManyValues) {
+      return values;
+    }
+    final List<Object> sortedValues = new ArrayList<Object>(values);
+    Collections.sort(sortedValues, new Comparator<Object>() {
+      public int compare(Object o1, Object o2) {
+        if (o1 instanceof Date) {
+          final long t1 = ((Date) o1).getTime();
+          final long t2 = ((Date) o2).getTime();
+          if (t1 < t2) {
+            return -1;
+          } else if (t1 > t2) {
+            return 1;
+          } else {
+            return 0;
+          }
+        }
+        return o1.toString().compareTo(o2.toString());
+      }
+    });
+    return sortedValues;
   }
 
   /**
@@ -416,8 +475,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
    *          the EAttribute which is converted
    * @see #convertPrimitiveValue(Object, EDataType)
    */
-  protected void convertSingleEAttribute(T source, final JSONObject target,
-      final EAttribute eAttribute) {
+  protected void convertSingleEAttribute(T source, final JSONObject target, final EAttribute eAttribute) {
     try {
       final Object value = eGet(source, eAttribute);
       final String propName = getJSONPropertyName(eAttribute);
@@ -444,8 +502,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
    *          the EAttribute which is converted
    * @see #convertPrimitiveValue(Object, EDataType)
    */
-  protected void convertManyEAttribute(T source, final JSONObject target,
-      final EAttribute eAttribute) {
+  protected void convertManyEAttribute(T source, final JSONObject target, final EAttribute eAttribute) {
     try {
       final Collection<?> values = (Collection<?>) eGet(source, eAttribute);
       final EDataType eDataType = eAttribute.getEAttributeType();
@@ -453,14 +510,14 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
       final List<Object> targetValues = new ArrayList<Object>();
 
       boolean bigDecimalsPresent = false;
-      for (final Object value : values) {
+      for (final Object value : sortedEAttributeValues(values)) {
         bigDecimalsPresent |= value instanceof BigDecimal;
         targetValues.add(jsonValueConverter.toJSON(source, value, eDataType));
       }
       target.put(getJSONPropertyName(eAttribute), targetValues);
       if (bigDecimalsPresent) {
         final List<Object> bdValues = new ArrayList<Object>();
-        for (final Object value : values) {
+        for (final Object value : sortedEAttributeValues(values)) {
           bigDecimalsPresent |= value instanceof BigDecimal;
           if (value == null) {
             bdValues.add("");
@@ -473,6 +530,28 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
     } catch (JSONException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  /**
+   * @see #preSortManyValues
+   */
+  public boolean isPreSortManyValues() {
+    return preSortManyValues;
+  }
+
+  /**
+   * @see #preSortManyValues
+   */
+  public void setPreSortManyValues(boolean preSortManyValues) {
+    this.preSortManyValues = preSortManyValues;
+  }
+
+  public boolean isSerializeTitleProperty() {
+    return serializeTitleProperty;
+  }
+
+  public void setSerializeTitleProperty(boolean serializeTitleProperty) {
+    this.serializeTitleProperty = serializeTitleProperty;
   }
 
 }

@@ -26,9 +26,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoStaticSingleton;
 import org.eclipse.emf.texo.utils.Check;
 
@@ -267,6 +269,12 @@ public class ModelResolver implements TexoStaticSingleton {
 
     if (target instanceof ModelObject<?>) {
       return (ModelObject<?>) target;
+    }
+
+    if (target instanceof EObject) {
+      final ModelEObject modelEObject = ComponentProvider.getInstance().newInstance(ModelEObject.class);
+      modelEObject.setTarget((EObject) target);
+      return modelEObject;
     }
 
     final ModelDescriptor modelDescriptor = getModelDescriptor(target.getClass(), true);
