@@ -33,7 +33,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
-import org.eclipse.emf.texo.utils.Check;
 
 /**
  * The default naming strategy for entity and database schema naming.
@@ -42,7 +41,7 @@ import org.eclipse.emf.texo.utils.Check;
  */
 public class ORMNamingStrategy {
 
-  private static String[] removables = new String[] { "u", "o", "a", "e", "i" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
+  private static char[] removables = new char[] { 'u', 'o', 'a', 'e', 'i', 'U', 'O', 'A', 'E', 'I' };
 
   private EPackageORMAnnotation ePackageORMAnnotation = null;
   private Properties nameDictionary = null;
@@ -52,7 +51,7 @@ public class ORMNamingStrategy {
     if (sqlReservedWords == null) {
       try {
         sqlReservedWords = new HashSet<String>();
-        final InputStream is = this.getClass().getResourceAsStream("reserved-sql-words.txt");
+        final InputStream is = ORMNamingStrategy.class.getResourceAsStream("reserved-sql-words.txt");
         final Properties props = new Properties();
         props.load(is);
         is.close();
@@ -380,31 +379,37 @@ public class ORMNamingStrategy {
     // now do vowel truncation preserving the first character, and starting from the end
     char correctedNameFirstChar = correctedName.charAt(0);
     String correctedNameTail = correctedName.substring(1);
-    for (String vowel : getRemovableCharacters()) {
-      while (correctedNameTail.indexOf(vowel) != -1 || correctedNameTail.indexOf(vowel.toUpperCase()) != -1) {
-        if (correctedNameTail.indexOf(vowel) != -1) {
-          correctedNameTail = stripLastOccurrence(correctedNameTail, vowel);
-        } else {
-          correctedNameTail = stripLastOccurrence(correctedNameTail, vowel.toUpperCase());
-        }
-        correctedNameTail = correctedNameTail.replaceAll("__", "_"); //$NON-NLS-1$ //$NON-NLS-2$
-        if (correctedNameTail.length() + 1 <= targetLength) {
-          return correctedNameFirstChar + correctedNameTail;
+    int truncSize = 1 + correctedNameTail.length() - targetLength;
+    if (truncSize <= 0) {
+      return name;
+    }
+    final StringBuilder sb = new StringBuilder();
+    final char[] chrs = correctedNameTail.toCharArray();
+    final char[] removes = getRemovableCharacters();
+    for (int i = chrs.length - 1; i >= 0; i--) {
+      final char chr = chrs[i];
+      boolean add = true;
+      if (truncSize > 0) {
+        for (char vowel : removes) {
+          if (vowel == chr) {
+            add = false;
+            break;
+          }
         }
       }
+      if (add) {
+        sb.insert(0, chr);
+      } else {
+        truncSize--;
+      }
+    }
+
+    if (truncSize == 0) {
+      return correctedNameFirstChar + sb.toString();
     }
 
     // still failed do length truncation
     return doLengthTruncation(correctedNameFirstChar + correctedNameTail, targetLength);
-  }
-
-  private String stripLastOccurrence(String value, String toReplace) {
-    final int index = value.lastIndexOf(toReplace);
-    Check.isTrue(index != -1, "Search string " + toReplace + " not found in " + value);
-    if (value.endsWith(toReplace)) {
-      return value.substring(0, index);
-    }
-    return value.substring(0, index) + value.substring(index + toReplace.length());
   }
 
   protected String doLengthTruncation(String correctedName, int targetLength) {
@@ -456,7 +461,7 @@ public class ORMNamingStrategy {
    * Return the characters to remove, the character removal is done in order of the returned array. This method is
    * provided to be overridden to pass a custom set of removable characters.
    */
-  protected String[] getRemovableCharacters() {
+  protected char[] getRemovableCharacters() {
     return removables;
   }
 }

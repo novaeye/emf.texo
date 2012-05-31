@@ -40,9 +40,8 @@ public class AllJPATests {
     suite.addTestSuite(FeatureGroupJPATest.class);
     suite.addTestSuite(SimpleLibraryTest.class);
     suite.addTestSuite(DataGenLibraryTest.class);
-
+    suite.addTestSuite(ORMNameTruncationTest.class);
     // $JUnit-END$
     return suite;
   }
-
 }
