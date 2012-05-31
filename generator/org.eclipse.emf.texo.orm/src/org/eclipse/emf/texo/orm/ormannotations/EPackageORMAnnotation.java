@@ -16,6 +16,7 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.EPackageAnnotation;
 import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
+import org.eclipse.emf.texo.orm.annotator.ORMMappingOptions;
 import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategy;
 import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategyProvider;
 
@@ -65,25 +66,6 @@ import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategyProvider;
  * @generated
  */
 public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedElementORMAnnotation {
-
-  private static boolean inTestRun = false;
-  private static boolean inSafeMappingMode = false;
-
-  public static boolean isInSafeMappingMode() {
-    return inSafeMappingMode;
-  }
-
-  public static void setInSafeMappingMode(boolean inSafeMappingMode) {
-    EPackageORMAnnotation.inSafeMappingMode = inSafeMappingMode;
-  }
-
-  public static boolean isInTestRun() {
-    return inTestRun;
-  }
-
-  public static void setInTestRun(boolean inTestRun) {
-    EPackageORMAnnotation.inTestRun = inTestRun;
-  }
 
   /**
    * The default value of the '{@link #isGenerateFullDbSchemaNames() <em>Generate Full Db Schema Names</em>}' attribute.
@@ -359,15 +341,18 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
    */
   protected EPackageORMAnnotation() {
     super();
-    // restore some old defaults which help to run
-    // different testcases
-    if (inTestRun) {
+    // set some defaults which help to run
+    // different testcases or are read from the project
+    // properties
+    if (ORMMappingOptions.getDefaultOptions() != null) {
+      final ORMMappingOptions options = ORMMappingOptions.getDefaultOptions();
       // otherwise order of lists is not maintained
-      addOrderColumnToListMappings = true;
-      enforceUniqueNames = true;
-      if (!inSafeMappingMode) {
-        renameSQLReservedNames = false;
-        generateFullDbSchemaNames = false;
+      addOrderColumnToListMappings = options.isAddOrderColumnToListMappings();
+      enforceUniqueNames = options.isEnforceUniqueNames();
+      renameSQLReservedNames = options.isRenameSQLReservedNames();
+      generateFullDbSchemaNames = options.isGenerateFullDbSchemaNames();
+      if (options.getMaximumSqlNameLength() > 0) {
+        maximumSqlNameLength = options.getMaximumSqlNameLength();
       }
     }
 

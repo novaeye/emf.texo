@@ -40,7 +40,7 @@ import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.generator.TexoResourceManager;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
-import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
+import org.eclipse.emf.texo.orm.annotator.ORMMappingOptions;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.provider.TitleProvider;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -63,7 +63,18 @@ public class EclipseModelGeneratorTest extends TestCase {
 
   private static final EPackage.Registry SHARED_REGISTRY = GeneratorUtils.createEPackageRegistry();
 
+  private ORMMappingOptions testORMOptions = new ORMMappingOptions();
+  private ORMMappingOptions safeORMOptions = new ORMMappingOptions();
+
   public void testGenerateModels() throws Exception {
+
+    testORMOptions.setAddOrderColumnToListMappings(true);
+    testORMOptions.setEnforceUniqueNames(true);
+
+    safeORMOptions.setAddOrderColumnToListMappings(true);
+    safeORMOptions.setRenameSQLReservedNames(true);
+    safeORMOptions.setEnforceUniqueNames(true);
+    safeORMOptions.setGenerateFullDbSchemaNames(true);
 
     // force initialization
     ModelAnnotatorRegistry.getInstance().getModelAnnotators();
@@ -88,11 +99,11 @@ public class EclipseModelGeneratorTest extends TestCase {
 
   private void generate(final String[] ecoreFileNames) {
     try {
-      EPackageORMAnnotation.setInTestRun(true);
+      ORMMappingOptions.setDefaultOptions(testORMOptions);
       final List<String> safelyMappedModels = TestModel.getSafelyMappedModels();
       for (String ecoreFileName : ecoreFileNames) {
         if (safelyMappedModels.contains(ecoreFileName)) {
-          EPackageORMAnnotation.setInSafeMappingMode(true);
+          ORMMappingOptions.setDefaultOptions(safeORMOptions);
           break;
         }
       }
@@ -140,8 +151,7 @@ public class EclipseModelGeneratorTest extends TestCase {
     } catch (final Exception e) {
       throw new IllegalStateException(e);
     } finally {
-      EPackageORMAnnotation.setInSafeMappingMode(false);
-      EPackageORMAnnotation.setInTestRun(false);
+      ORMMappingOptions.setDefaultOptions(null);
     }
   }
 

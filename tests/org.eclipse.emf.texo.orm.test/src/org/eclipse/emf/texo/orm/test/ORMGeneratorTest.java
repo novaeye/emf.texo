@@ -45,7 +45,7 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureMo
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
 import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
-import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
+import org.eclipse.emf.texo.orm.annotator.ORMMappingOptions;
 
 /**
  * Generates the ORM for specified models. The generated orm files are stored in the src/META-INF folder.
@@ -72,12 +72,16 @@ public class ORMGeneratorTest extends TestCase {
   private static final String CLASS_PARAM = "{class}"; //$NON-NLS-1$
 
   private static final EPackage.Registry SHARED_REGISTRY = GeneratorUtils.createEPackageRegistry();
+  private ORMMappingOptions testORMOptions = new ORMMappingOptions();
 
   public void testGenerateModels() throws Exception {
 
     // generate all the db names for the orms
-    EPackageORMAnnotation.setInSafeMappingMode(true);
-    EPackageORMAnnotation.setInTestRun(true);
+    testORMOptions.setAddOrderColumnToListMappings(true);
+    testORMOptions.setRenameSQLReservedNames(true);
+    testORMOptions.setEnforceUniqueNames(true);
+    testORMOptions.setGenerateFullDbSchemaNames(true);
+    ORMMappingOptions.setDefaultOptions(testORMOptions);
 
     final IProject modelTestProject = EclipseGeneratorUtils.getProject(TEST_MODEL_PROJECT);
     final IPath projectPath = modelTestProject.getLocation();
