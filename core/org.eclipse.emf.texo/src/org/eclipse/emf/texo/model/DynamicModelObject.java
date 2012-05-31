@@ -36,14 +36,19 @@ public class DynamicModelObject implements ModelObject<DynamicModelObject>, Texo
   private EClass eClass;
   private List<Object> values = new ArrayList<Object>();
 
+  public void setData(DynamicModelObject source) {
+    eClass = source.eClass;
+    values.addAll(source.values);
+  }
+
   /*
    * (non-Javadoc)
    * 
    * @see org.eclipse.emf.texo.model.ModelObject#getModelPackage()
    */
   public ModelPackage getModelPackage() {
-    // TODO: maybe auto-create dynamic packages?
-    throw new UnsupportedOperationException();
+    // // TODO: maybe auto-create dynamic packages?
+    return ModelResolver.getInstance().getModelPackage(eClass().getEPackage().getNsURI());
   }
 
   /*

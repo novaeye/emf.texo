@@ -28,7 +28,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
+import org.eclipse.emf.texo.model.DynamicModelObject;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
@@ -50,7 +52,7 @@ public class ObjectCopier implements TexoComponent {
   private boolean copyChildren = false;
   private boolean copyReferences = false;
 
-  public List<Object> copy(List<Object> sourceList) {
+  public List<Object> copyAll(List<Object> sourceList) {
     final List<Object> result = new ArrayList<Object>();
     for (Object source : sourceList) {
       result.add(copy(source));
@@ -59,8 +61,18 @@ public class ObjectCopier implements TexoComponent {
   }
 
   public Object copy(Object source) {
+    if (source == null) {
+      return null;
+    }
     if (sourceTargetMap.containsKey(source)) {
       return sourceTargetMap.get(source);
+    }
+
+    if (source instanceof DynamicModelObject) {
+      final DynamicModelObject target = ComponentProvider.getInstance().newInstance(DynamicModelObject.class);
+      target.setData((DynamicModelObject) source);
+      sourceTargetMap.put(source, target);
+      return target;
     }
 
     @SuppressWarnings("unchecked")
@@ -76,7 +88,7 @@ public class ObjectCopier implements TexoComponent {
     sourceTargetMap.put(source, target);
 
     for (EStructuralFeature eFeature : sourceModelObject.eClass().getEAllStructuralFeatures()) {
-      if (eFeature.isVolatile() || eFeature.isDerived()) {
+      if (eFeature.isVolatile()) {
         continue;
       }
       if (FeatureMapUtil.isFeatureMap(eFeature)) {
