@@ -2,7 +2,6 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;

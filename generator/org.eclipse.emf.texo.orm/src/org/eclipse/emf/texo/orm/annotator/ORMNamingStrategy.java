@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
+import org.eclipse.emf.texo.utils.Check;
 
 /**
  * The default naming strategy for entity and database schema naming.
@@ -376,15 +377,15 @@ public class ORMNamingStrategy {
 
   protected String trunc(String name, int targetLength) {
     String correctedName = name;
-    // now do vowel truncation preserving the first character
+    // now do vowel truncation preserving the first character, and starting from the end
     char correctedNameFirstChar = correctedName.charAt(0);
     String correctedNameTail = correctedName.substring(1);
     for (String vowel : getRemovableCharacters()) {
       while (correctedNameTail.indexOf(vowel) != -1 || correctedNameTail.indexOf(vowel.toUpperCase()) != -1) {
         if (correctedNameTail.indexOf(vowel) != -1) {
-          correctedNameTail = correctedNameTail.replaceFirst(vowel, ""); //$NON-NLS-1$
+          correctedNameTail = stripLastOccurrence(correctedNameTail, vowel);
         } else {
-          correctedNameTail = correctedNameTail.replaceFirst(vowel.toUpperCase(), ""); //$NON-NLS-1$
+          correctedNameTail = stripLastOccurrence(correctedNameTail, vowel.toUpperCase());
         }
         correctedNameTail = correctedNameTail.replaceAll("__", "_"); //$NON-NLS-1$ //$NON-NLS-2$
         if (correctedNameTail.length() + 1 <= targetLength) {
@@ -395,6 +396,15 @@ public class ORMNamingStrategy {
 
     // still failed do length truncation
     return doLengthTruncation(correctedNameFirstChar + correctedNameTail, targetLength);
+  }
+
+  private String stripLastOccurrence(String value, String toReplace) {
+    final int index = value.lastIndexOf(toReplace);
+    Check.isTrue(index != -1, "Search string " + toReplace + " not found in " + value);
+    if (value.endsWith(toReplace)) {
+      return value.substring(0, index);
+    }
+    return value.substring(0, index) + value.substring(index + toReplace.length());
   }
 
   protected String doLengthTruncation(String correctedName, int targetLength) {
