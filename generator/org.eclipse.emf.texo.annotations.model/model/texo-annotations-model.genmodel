@@ -12,6 +12,7 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference texo-annotations-model.ecore#//ENamedElementAnnotation/eNamedElement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-model.ecore#//ENamedElementAnnotation/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-model.ecore#//ENamedElementAnnotation/lastIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-model.ecore#//ENamedElementAnnotation/generated"/>
       <genOperations ecoreOperation="texo-annotations-model.ecore#//ENamedElementAnnotation/getJavaAnnotation">
         <genParameters ecoreParameter="texo-annotations-model.ecore#//ENamedElementAnnotation/getJavaAnnotation/identifier"/>
       </genOperations>

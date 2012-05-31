@@ -70,11 +70,13 @@ public class EclipseModelGeneratorTest extends TestCase {
 
     testORMOptions.setAddOrderColumnToListMappings(true);
     testORMOptions.setEnforceUniqueNames(true);
+    testORMOptions.setTestRun(true);
 
     safeORMOptions.setAddOrderColumnToListMappings(true);
     safeORMOptions.setRenameSQLReservedNames(true);
     safeORMOptions.setEnforceUniqueNames(true);
     safeORMOptions.setGenerateFullDbSchemaNames(true);
+    safeORMOptions.setTestRun(true);
 
     // force initialization
     ModelAnnotatorRegistry.getInstance().getModelAnnotators();

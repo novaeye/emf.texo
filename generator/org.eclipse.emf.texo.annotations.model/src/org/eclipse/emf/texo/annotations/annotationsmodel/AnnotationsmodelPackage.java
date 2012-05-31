@@ -91,13 +91,22 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	public static final int ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER = 2;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENAMED_ELEMENT_ANNOTATION__GENERATED = 3;
+
+		/**
 	 * The number of structural features of the '<em>ENamed Element Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int ENAMED_ELEMENT_ANNOTATION_FEATURE_COUNT = 3;
+  public static final int ENAMED_ELEMENT_ANNOTATION_FEATURE_COUNT = 4;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation <em>EClassifier Annotation</em>}' class.
@@ -132,6 +141,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int ECLASSIFIER_ANNOTATION__LAST_IDENTIFIER = ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASSIFIER_ANNOTATION__GENERATED = ENAMED_ELEMENT_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -192,6 +210,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int ECLASS_ANNOTATION__LAST_IDENTIFIER = ECLASSIFIER_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASS_ANNOTATION__GENERATED = ECLASSIFIER_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -271,6 +298,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	public static final int EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER = ECLASSIFIER_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_ANNOTATION__GENERATED = ECLASSIFIER_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -348,6 +384,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	public static final int ESTRUCTURAL_FEATURE_ANNOTATION__LAST_IDENTIFIER = ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ESTRUCTURAL_FEATURE_ANNOTATION__GENERATED = ENAMED_ELEMENT_ANNOTATION__GENERATED;
+
+		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -398,6 +443,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EPACKAGE_ANNOTATION__LAST_IDENTIFIER = ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ANNOTATION__GENERATED = ENAMED_ELEMENT_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EPackage</b></em>' reference.
@@ -458,6 +512,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EREFERENCE_ANNOTATION__LAST_IDENTIFIER = ESTRUCTURAL_FEATURE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EREFERENCE_ANNOTATION__GENERATED = ESTRUCTURAL_FEATURE_ANNOTATION__GENERATED;
 
 		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -529,6 +592,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	public static final int EATTRIBUTE_ANNOTATION__LAST_IDENTIFIER = ESTRUCTURAL_FEATURE_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EATTRIBUTE_ANNOTATION__GENERATED = ESTRUCTURAL_FEATURE_ANNOTATION__GENERATED;
+
+		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -596,6 +668,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EENUM_ANNOTATION__LAST_IDENTIFIER = ECLASSIFIER_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EENUM_ANNOTATION__GENERATED = ECLASSIFIER_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -673,6 +754,15 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EENUM_LITERAL_ANNOTATION__LAST_IDENTIFIER = ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EENUM_LITERAL_ANNOTATION__GENERATED = ENAMED_ELEMENT_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EEnum Literal</b></em>' reference.
@@ -1536,6 +1626,19 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 	}
 
 		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation#isGenerated <em>Generated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generated</em>'.
+	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation#isGenerated()
+	 * @see #getENamedElementAnnotation()
+	 * @generated
+	 */
+	public EAttribute getENamedElementAnnotation_Generated() {
+		return (EAttribute)eNamedElementAnnotationEClass.getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation <em>EClassifier Annotation</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EClassifier Annotation</em>'.
@@ -2315,6 +2418,7 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 		createEReference(eNamedElementAnnotationEClass, ENAMED_ELEMENT_ANNOTATION__ENAMED_ELEMENT);
 		createEAttribute(eNamedElementAnnotationEClass, ENAMED_ELEMENT_ANNOTATION__DESCRIPTION);
 		createEAttribute(eNamedElementAnnotationEClass, ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER);
+		createEAttribute(eNamedElementAnnotationEClass, ENAMED_ELEMENT_ANNOTATION__GENERATED);
 
 		eClassifierAnnotationEClass = createEClass(ECLASSIFIER_ANNOTATION);
 		createEReference(eClassifierAnnotationEClass, ECLASSIFIER_ANNOTATION__ECLASSIFIER);
@@ -2453,6 +2557,7 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 		initEReference(getENamedElementAnnotation_ENamedElement(), theEcorePackage.getENamedElement(), null, "eNamedElement", null, 0, 1, ENamedElementAnnotation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getENamedElementAnnotation_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ENamedElementAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getENamedElementAnnotation_LastIdentifier(), theEcorePackage.getEString(), "lastIdentifier", null, 0, 1, ENamedElementAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getENamedElementAnnotation_Generated(), theEcorePackage.getEBoolean(), "generated", null, 0, 1, ENamedElementAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(eNamedElementAnnotationEClass, theEcorePackage.getEString(), "getJavaAnnotation", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "identifier", 1, 1, IS_UNIQUE, IS_ORDERED);
@@ -2588,6 +2693,14 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 		 * @generated
 		 */
 		public static final EAttribute ENAMED_ELEMENT_ANNOTATION__LAST_IDENTIFIER = eINSTANCE.getENamedElementAnnotation_LastIdentifier();
+
+				/**
+		 * The meta object literal for the '<em><b>Generated</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute ENAMED_ELEMENT_ANNOTATION__GENERATED = eINSTANCE.getENamedElementAnnotation_Generated();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.EClassifierAnnotation <em>EClassifier Annotation</em>}' class.

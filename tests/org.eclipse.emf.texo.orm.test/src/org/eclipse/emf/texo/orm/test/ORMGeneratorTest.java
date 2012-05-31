@@ -81,6 +81,7 @@ public class ORMGeneratorTest extends TestCase {
     testORMOptions.setRenameSQLReservedNames(true);
     testORMOptions.setEnforceUniqueNames(true);
     testORMOptions.setGenerateFullDbSchemaNames(true);
+    testORMOptions.setTestRun(true);
     ORMMappingOptions.setDefaultOptions(testORMOptions);
 
     final IProject modelTestProject = EclipseGeneratorUtils.getProject(TEST_MODEL_PROJECT);

@@ -451,7 +451,7 @@ public class PlayModelFactory implements ModelFactory {
 				return;
 
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -533,6 +533,14 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+				getTarget().getGroup().add((SceneTypeGroupFeatureGroup) value);
+				return;
+
+			case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+				getTarget().getStageDirections().add((String) value);
+				return;
+
 			case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
 				getTarget().getSpeech().add((SpeechType) value);
 				return;
@@ -550,12 +558,20 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+				getTarget().getGroup().remove(value);
+				return;
+
+			case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+				getTarget().getStageDirections().remove(value);
+				return;
+
 			case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
 				getTarget().getSpeech().remove(value);
 				return;
 
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -708,6 +724,11 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+				getTarget().getMixed().add(
+						(DocumentRootMixedFeatureGroup) value);
+				return;
+
 			}
 			super.eAddTo(eStructuralFeature, value);
 		}
@@ -721,8 +742,12 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
+				getTarget().getMixed().remove(value);
+				return;
+
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -784,6 +809,9 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.FMTYPE_P_FEATURE_ID:
+				getTarget().getP().add((String) value);
+				return;
 			}
 			super.eAddTo(eStructuralFeature, value);
 		}
@@ -797,8 +825,11 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.FMTYPE_P_FEATURE_ID:
+				getTarget().getP().remove(value);
+				return;
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -876,6 +907,19 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.PERSONAETYPE_GROUP_FEATURE_ID:
+				getTarget().getGroup().add(
+						(PersonaeTypeGroupFeatureGroup) value);
+				return;
+
+			case PlayModelPackage.PERSONAETYPE_TITLE_FEATURE_ID:
+				getTarget().getTitle().add((String) value);
+				return;
+
+			case PlayModelPackage.PERSONAETYPE_PERSONA_FEATURE_ID:
+				getTarget().getPersona().add((String) value);
+				return;
+
 			case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
 				getTarget().getPersonaGroup().add((PersonaGroupType) value);
 				return;
@@ -892,11 +936,23 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.PERSONAETYPE_GROUP_FEATURE_ID:
+				getTarget().getGroup().remove(value);
+				return;
+
+			case PlayModelPackage.PERSONAETYPE_TITLE_FEATURE_ID:
+				getTarget().getTitle().remove(value);
+				return;
+
+			case PlayModelPackage.PERSONAETYPE_PERSONA_FEATURE_ID:
+				getTarget().getPersona().remove(value);
+				return;
+
 			case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
 				getTarget().getPersonaGroup().remove(value);
 				return;
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -963,6 +1019,10 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.PERSONAGROUPTYPE_PERSONA_FEATURE_ID:
+				getTarget().getPersona().add((String) value);
+				return;
+
 			}
 			super.eAddTo(eStructuralFeature, value);
 		}
@@ -976,8 +1036,12 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.PERSONAGROUPTYPE_PERSONA_FEATURE_ID:
+				getTarget().getPersona().remove(value);
+				return;
+
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -1084,7 +1148,7 @@ public class PlayModelFactory implements ModelFactory {
 				getTarget().getAct().remove(value);
 				return;
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -1161,6 +1225,21 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.SPEECHTYPE_GROUP_FEATURE_ID:
+				getTarget().getGroup().add((SpeechTypeGroupFeatureGroup) value);
+				return;
+
+			case PlayModelPackage.SPEECHTYPE_SPEAKER_FEATURE_ID:
+				getTarget().getSpeaker().add((String) value);
+				return;
+
+			case PlayModelPackage.SPEECHTYPE_LINE_FEATURE_ID:
+				getTarget().getLine().add((String) value);
+				return;
+
+			case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
+				getTarget().getStageDirections().add((String) value);
+				return;
 			}
 			super.eAddTo(eStructuralFeature, value);
 		}
@@ -1174,8 +1253,23 @@ public class PlayModelFactory implements ModelFactory {
 			final int featureID = eClass().getFeatureID(eStructuralFeature);
 			switch (featureID) {
 
+			case PlayModelPackage.SPEECHTYPE_GROUP_FEATURE_ID:
+				getTarget().getGroup().remove(value);
+				return;
+
+			case PlayModelPackage.SPEECHTYPE_SPEAKER_FEATURE_ID:
+				getTarget().getSpeaker().remove(value);
+				return;
+
+			case PlayModelPackage.SPEECHTYPE_LINE_FEATURE_ID:
+				getTarget().getLine().remove(value);
+				return;
+
+			case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
+				getTarget().getStageDirections().remove(value);
+				return;
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 

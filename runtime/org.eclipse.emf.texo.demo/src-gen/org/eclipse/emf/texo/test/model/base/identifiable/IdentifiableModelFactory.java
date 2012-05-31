@@ -206,7 +206,7 @@ public class IdentifiableModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 
@@ -287,7 +287,7 @@ public class IdentifiableModelFactory implements ModelFactory {
 			switch (featureID) {
 
 			}
-			super.eAddTo(eStructuralFeature, value);
+			super.eRemoveFrom(eStructuralFeature, value);
 		}
 	}
 

@@ -107,6 +107,7 @@ public class AnnotationManager {
       // create a new annotation
       eNamedElementAnnotation = (ENamedElementAnnotation) annotationEClass.getEPackage().getEFactoryInstance()
           .create(annotationEClass);
+      eNamedElementAnnotation.setGenerated(true);
 
       // add the new annotation to the annotatedModel
       addAnnotation(eModelElement, eNamedElementAnnotation);

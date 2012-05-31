@@ -34,6 +34,7 @@ public class ORMMappingOptions {
     ORMMappingOptions.defaultOptions = defaultOptions;
   }
 
+  private boolean testRun = false;
   private boolean addOrderColumnToListMappings = false;
   private boolean enforceUniqueNames = false;
   private boolean renameSQLReservedNames = false;
@@ -78,6 +79,14 @@ public class ORMMappingOptions {
 
   public void setMaximumSqlNameLength(int maximumSqlNameLength) {
     this.maximumSqlNameLength = maximumSqlNameLength;
+  }
+
+  public boolean isTestRun() {
+    return testRun;
+  }
+
+  public void setTestRun(boolean testRun) {
+    this.testRun = testRun;
   }
 
 }

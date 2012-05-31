@@ -1,11 +1,19 @@
 package org.eclipse.emf.texo.test.model.issues.bz377606;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * A representation of the model object '<em><b>Customer</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
+@Entity(name = "Customer")
+@Table(name = "Order_Customer")
 public class Customer {
 
 	/**
@@ -13,6 +21,8 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
+	@Basic(optional = true)
+	@Column(name = "firstName")
 	private String firstName = null;
 
 	/**
@@ -20,6 +30,8 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
+	@Basic(optional = true)
+	@Column(name = "lastName")
 	private String lastName = null;
 
 	/**
@@ -27,6 +39,7 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
+	@Embedded()
 	private Address address = null;
 
 	/**
@@ -34,6 +47,8 @@ public class Customer {
 	 * 
 	 * @generated
 	 */
+	@Basic(optional = true)
+	@Column(name = "id")
 	private Double id = null;
 
 	/**

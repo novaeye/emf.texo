@@ -1,11 +1,18 @@
 package org.eclipse.emf.texo.test.model.issues.bz377606;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * A representation of the model object '<em><b>Address</b></em>'. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
+@Entity(name = "Order_Address")
+@Table(name = "Order_Address")
 public class Address {
 
 	/**
@@ -13,6 +20,8 @@ public class Address {
 	 * 
 	 * @generated
 	 */
+	@Basic(optional = true)
+	@Column(name = "city")
 	private String city = null;
 
 	/**
@@ -20,6 +29,8 @@ public class Address {
 	 * 
 	 * @generated
 	 */
+	@Basic(optional = true)
+	@Column(name = "street")
 	private String street = null;
 
 	/**

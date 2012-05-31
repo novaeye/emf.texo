@@ -34,9 +34,11 @@ public class GenerateModelJPACode extends GenerateCode {
   @Override
   protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
     try {
+      ORMUtils.setORMMappingOptionsFromProjectProperties(project);
       AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
       super.generateFromUris(monitor, project, uris);
     } finally {
+      ORMMappingOptions.setDefaultOptions(null);
       AnnotationManager.removeEnabledAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
   }

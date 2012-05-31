@@ -174,13 +174,20 @@ public class ORMGenerator extends BaseGenerateAction {
   }
 
   protected void generateFromURI(IProgressMonitor monitor, IProject project, java.net.URI uri) {
-    // always start with a fresh epackage registry
-    final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
-        GeneratorUtils.createEPackageRegistry());
 
-    final URI parentUri = URI.createURI(uri.toString()).trimSegments(1);
-    final URI ormUri = parentUri.appendSegment(ORM_FILE_NAME);
-    generateStoreORM(ePackages, ormUri);
+    ORMUtils.setORMMappingOptionsFromProjectProperties(project);
+
+    try {
+      // always start with a fresh epackage registry
+      final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
+          GeneratorUtils.createEPackageRegistry());
+
+      final URI parentUri = URI.createURI(uri.toString()).trimSegments(1);
+      final URI ormUri = parentUri.appendSegment(ORM_FILE_NAME);
+      generateStoreORM(ePackages, ormUri);
+    } finally {
+      ORMMappingOptions.setDefaultOptions(null);
+    }
   }
 
   public ModelController generateStoreORM(List<EPackage> ePackages, URI ormUri) {

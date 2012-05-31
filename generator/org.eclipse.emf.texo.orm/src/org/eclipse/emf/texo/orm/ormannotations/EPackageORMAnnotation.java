@@ -344,20 +344,34 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
     // set some defaults which help to run
     // different testcases or are read from the project
     // properties
-    if (ORMMappingOptions.getDefaultOptions() != null) {
+    if (ORMMappingOptions.getDefaultOptions() != null && ORMMappingOptions.getDefaultOptions().isTestRun()) {
       final ORMMappingOptions options = ORMMappingOptions.getDefaultOptions();
-      // otherwise order of lists is not maintained
-      addOrderColumnToListMappings = options.isAddOrderColumnToListMappings();
-      enforceUniqueNames = options.isEnforceUniqueNames();
-      renameSQLReservedNames = options.isRenameSQLReservedNames();
-      generateFullDbSchemaNames = options.isGenerateFullDbSchemaNames();
-      if (options.getMaximumSqlNameLength() > 0) {
-        maximumSqlNameLength = options.getMaximumSqlNameLength();
-      }
+      applyMappingOptions(options);
     }
 
     namingStrategy = ORMNamingStrategyProvider.getInstance().createORMNamingStrategy(this);
     generateJavaAnnotations = AnnotationManager.isAnnotationSystemEnabled("jpa"); //$NON-NLS-1$
+  }
+
+  @Override
+  public void setGenerated(boolean newGenerated) {
+    if (newGenerated && ORMMappingOptions.getDefaultOptions() != null) {
+      final ORMMappingOptions options = ORMMappingOptions.getDefaultOptions();
+      applyMappingOptions(options);
+    }
+
+    super.setGenerated(newGenerated);
+  }
+
+  public void applyMappingOptions(ORMMappingOptions options) {
+    // otherwise order of lists is not maintained
+    addOrderColumnToListMappings = options.isAddOrderColumnToListMappings();
+    enforceUniqueNames = options.isEnforceUniqueNames();
+    renameSQLReservedNames = options.isRenameSQLReservedNames();
+    generateFullDbSchemaNames = options.isGenerateFullDbSchemaNames();
+    if (options.getMaximumSqlNameLength() > 0) {
+      maximumSqlNameLength = options.getMaximumSqlNameLength();
+    }
   }
 
   public ORMNamingStrategy getNamingStrategy() {
