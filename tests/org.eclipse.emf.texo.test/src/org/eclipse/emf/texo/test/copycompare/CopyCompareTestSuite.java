@@ -37,7 +37,7 @@ public class CopyCompareTestSuite {
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
     // modelPackages.clear();
-    // modelPackages.add(ExtlibraryModelPackage.INSTANCE);
+    // modelPackages.add(AttributesModelPackage.INSTANCE);
     // modelPackages.add(JpamixedModelPackage.INSTANCE);
     // modelPackages.add(NestedgroupModelPackage.INSTANCE);
 

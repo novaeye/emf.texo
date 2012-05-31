@@ -41,6 +41,9 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * Compares {@link ModelObject} objects and reports the first encountered difference as a
  * {@link ObjectComparatorException}.
  * 
+ * This is just a simple comparison class, for extensive comparison consider converting objects to EMF objects using the
+ * {@link ModelEMFConverter} and then use EMF Compare.
+ * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @see ModelObject
  */
@@ -58,6 +61,9 @@ public class ObjectComparator implements TexoComponent {
     compared.clear();
   }
 
+  /**
+   * Compare two objects and throw an {@link ObjectComparatorException} if there are differences.
+   */
   public void compare(Object o1, Object o2) {
     if (o1 == o2) {
       return;

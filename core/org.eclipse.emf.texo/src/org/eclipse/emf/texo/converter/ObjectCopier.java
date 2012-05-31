@@ -40,7 +40,17 @@ import org.eclipse.emf.texo.utils.ModelUtils;
 /**
  * Capable of copying objects and their children and references.
  * 
- * This object can be used for subsequent copy actions, internal data structures can be cleaned using the clear method.
+ * This object can be used for subsequent copy actions, internal data structures can/should be cleaned using the clear
+ * method in between copy actions.
+ * 
+ * As a default referenced objects are not copied, use the {@link #setCopyChildren(boolean)} or
+ * {@link #setCopyReferences(boolean)} methods to enable copying of contained and not contained objects.
+ * 
+ * If referenced objects are also copied then these referenced objects are at most copied once, so if multiple objects
+ * refer to another object (and that other object is also copied) then that other object is only copied once.
+ * 
+ * The complete set of copied objects (including copied referenced objects) can be obtained through the
+ * {@link #getAllCopiedObjects()} method.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @see ModelObject
@@ -52,6 +62,12 @@ public class ObjectCopier implements TexoComponent {
   private boolean copyChildren = false;
   private boolean copyReferences = false;
 
+  /**
+   * Copy all objects in the sourceList,
+   * 
+   * @param sourceList
+   * @return
+   */
   public List<Object> copyAll(List<Object> sourceList) {
     final List<Object> result = new ArrayList<Object>();
     for (Object source : sourceList) {
@@ -205,6 +221,10 @@ public class ObjectCopier implements TexoComponent {
     this.sourceTargetMap = sourceTargetMap;
   }
 
+  /**
+   * If true then also children (referenced using an {@link EReference} with {@link EReference#isContainment()} true)
+   * are also copied.
+   */
   public boolean isCopyChildren() {
     return copyChildren;
   }
@@ -213,6 +233,10 @@ public class ObjectCopier implements TexoComponent {
     this.copyChildren = copyChildren;
   }
 
+  /**
+   * If true then also non-containment references (referenced using an {@link EReference} with
+   * {@link EReference#isContainment()} false) are also copied.
+   */
   public boolean isCopyReferences() {
     return copyReferences;
   }
