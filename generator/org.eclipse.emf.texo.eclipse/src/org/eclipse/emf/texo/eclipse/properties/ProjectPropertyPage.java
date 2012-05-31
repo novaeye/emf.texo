@@ -38,8 +38,12 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.TabFolder;
+import org.eclipse.swt.widgets.TabItem;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ElementTreeSelectionDialog;
 import org.eclipse.ui.dialogs.PropertyPage;
@@ -65,6 +69,12 @@ public class ProjectPropertyPage extends PropertyPage {
   private Button autoGenButton;
   private Button daoGenButton;
   private Button jpaGenButton;
+
+  private Button addOrderColumnToListMappingsButton;
+  private Button enforceUniqueNamesButton;
+  private Button renameSQLReservedNamesButton;
+  private Button generateFullDbSchemaNamesButton;
+  private Text maximumSqlNameLengthScale;
 
   private Text modelFolderText;
   private Button modelFolderButton;
@@ -122,6 +132,84 @@ public class ProjectPropertyPage extends PropertyPage {
    */
   @Override
   protected Control createContents(Composite parent) {
+    final TabFolder tabFolder = new TabFolder(parent, SWT.BORDER);
+    TabItem mainTab = new TabItem(tabFolder, SWT.NULL);
+    mainTab.setText(Messages.getString("tab.title.generate")); //$NON-NLS-1$
+    mainTab.setControl(createMainTabContent(tabFolder));
+
+    TabItem ormMappingTab = new TabItem(tabFolder, SWT.NULL);
+    ormMappingTab.setText(Messages.getString("tab.title.ormMapping")); //$NON-NLS-1$
+    ormMappingTab.setControl(createORMMappingTabContent(tabFolder));
+    return tabFolder;
+  }
+
+  protected Composite createORMMappingTabContent(Composite parent) {
+    // private boolean addOrderColumnToListMappings = false;
+    // private boolean enforceUniqueNames = false;
+    // private boolean renameSQLReservedNames = false;
+    // private boolean generateFullDbSchemaNames = false;
+    // private int maximumSqlNameLength = -1;
+    Composite mainComposite = createDefaultComposite(parent, 1);
+
+    Composite composite = createDefaultComposite(mainComposite, 2);
+
+    final Properties projectProps = ProjectPropertyUtil.getProjectProperties(project);
+
+    addOrderColumnToListMappingsButton = createCheckBox(projectProps, composite,
+        ProjectPropertyUtil.ORM_ADD_ORDER_COLUMN, "orm.option.add.order.column");
+    enforceUniqueNamesButton = createCheckBox(projectProps, composite, ProjectPropertyUtil.ORM_ENFORCE_UNIQUE_NAMES,
+        "orm.option.enforce.unique.names");
+    renameSQLReservedNamesButton = createCheckBox(projectProps, composite,
+        ProjectPropertyUtil.ORM_RENAME_SQL_RESERVED_NAMES, "orm.option.rename.sql.reserved.names");
+    generateFullDbSchemaNamesButton = createCheckBox(projectProps, composite,
+        ProjectPropertyUtil.ORM_GENERATE_FULL_DB_SCHEMA_NAMES, "orm.option.generate.full.db.schema.names");
+
+    final Label maxSQLLabel = new Label(composite, SWT.LEFT);
+    maxSQLLabel.setText(Messages.getString("orm.option.max.sql.name.length")); //$NON-NLS-1$
+
+    maximumSqlNameLengthScale = new Text(composite, SWT.BORDER | SWT.LEFT | SWT.SINGLE);
+    final GridData gridData = new GridData();
+    gridData.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
+    maximumSqlNameLengthScale.setLayoutData(gridData);
+    maximumSqlNameLengthScale.setEditable(true);
+
+    maximumSqlNameLengthScale.setText(getSafeValue(projectProps
+        .getProperty(ProjectPropertyUtil.ORM_MAX_SQL_NAME_LENGTH)));
+    maximumSqlNameLengthScale.addModifyListener(listener);
+    maximumSqlNameLengthScale.addListener(SWT.Verify, new Listener() {
+      public void handleEvent(Event e) {
+        String string = e.text;
+        char[] chars = new char[string.length()];
+        string.getChars(0, chars.length, chars, 0);
+        for (int i = 0; i < chars.length; i++) {
+          if (!('0' <= chars[i] && chars[i] <= '9')) {
+            e.doit = false;
+            return;
+          }
+        }
+      }
+    });
+
+    return mainComposite;
+  }
+
+  private Button createCheckBox(Properties projectProps, Composite parent, String propName, String label) {
+    final Object val = projectProps.getProperty(propName);
+    Button button = new Button(parent, SWT.CHECK);
+    button.setText(Messages.getString(label));
+    button.setSelection(val != null && val.equals("true"));
+    button.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, true, 3, 1));
+    button.addSelectionListener(new SelectionAdapter() {
+      @Override
+      public void widgetSelected(SelectionEvent e) {
+        getApplyButton().setEnabled(true);
+      }
+    });
+
+    return button;
+  }
+
+  protected Composite createMainTabContent(Composite parent) {
     project = ProjectPropertyUtil.getProject(getElement());
 
     Composite composite = new Composite(parent, SWT.NONE);
@@ -153,7 +241,7 @@ public class ProjectPropertyPage extends PropertyPage {
     projectGd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
     targetProjectText.setLayoutData(projectGd);
     targetProjectText.setEditable(true);
-    targetProjectText.setText(projectProps.getProperty(ProjectPropertyUtil.TARGET_PROJECT_PROPERTY));
+    targetProjectText.setText(getSafeValue(projectProps.getProperty(ProjectPropertyUtil.TARGET_PROJECT_PROPERTY)));
     targetProjectText.addModifyListener(listener);
 
     targetProjectButton = new Button(composite, SWT.PUSH);
@@ -173,7 +261,7 @@ public class ProjectPropertyPage extends PropertyPage {
     folderGd.widthHint = convertWidthInCharsToPixels(TEXT_FIELD_WIDTH);
     outputFolderText.setLayoutData(folderGd);
     outputFolderText.setEditable(true);
-    outputFolderText.setText(projectProps.getProperty(ProjectPropertyUtil.OUTPUT_LOCATION_PROPERTY));
+    outputFolderText.setText(getSafeValue(projectProps.getProperty(ProjectPropertyUtil.OUTPUT_LOCATION_PROPERTY)));
     outputFolderText.addModifyListener(listener);
 
     outputFolderButton = new Button(composite, SWT.PUSH);
@@ -383,6 +471,24 @@ public class ProjectPropertyPage extends PropertyPage {
       setProperty(props, ProjectPropertyUtil.ENABLE_AUTOGEN_PROPERTY, autoGenButton.getSelection() ? "true" : null);
       setProperty(props, ProjectPropertyUtil.ENABLE_DAO_PROPERTY, daoGenButton.getSelection() ? "true" : null);
       setProperty(props, ProjectPropertyUtil.ENABLE_JPA_PROPERTY, jpaGenButton.getSelection() ? "true" : null);
+
+      setProperty(props, ProjectPropertyUtil.ORM_ADD_ORDER_COLUMN,
+          addOrderColumnToListMappingsButton.getSelection() ? "true" : "false");
+
+      setProperty(props, ProjectPropertyUtil.ORM_ADD_ORDER_COLUMN,
+          addOrderColumnToListMappingsButton.getSelection() ? "true" : "false");
+
+      setProperty(props, ProjectPropertyUtil.ORM_ENFORCE_UNIQUE_NAMES, enforceUniqueNamesButton.getSelection() ? "true"
+          : "false");
+
+      setProperty(props, ProjectPropertyUtil.ORM_GENERATE_FULL_DB_SCHEMA_NAMES,
+          generateFullDbSchemaNamesButton.getSelection() ? "true" : "false");
+
+      setProperty(props, ProjectPropertyUtil.ORM_RENAME_SQL_RESERVED_NAMES,
+          renameSQLReservedNamesButton.getSelection() ? "true" : "false");
+
+      setProperty(props, ProjectPropertyUtil.ORM_MAX_SQL_NAME_LENGTH,
+          getNullForEmptyString(maximumSqlNameLengthScale.getText()));
 
       ProjectPropertyUtil.setProjectProperties(project, props);
 

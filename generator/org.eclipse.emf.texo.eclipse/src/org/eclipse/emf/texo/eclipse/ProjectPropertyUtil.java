@@ -48,6 +48,11 @@ public class ProjectPropertyUtil {
   public static final String ENABLE_AUTOGEN_PROPERTY = "ENABLE_AUTOGEN_PROPERTY"; //$NON-NLS-1$
   public static final String ENABLE_JPA_PROPERTY = "ENABLE_JPA_PROPERTY"; //$NON-NLS-1$
   public static final String ENABLE_DAO_PROPERTY = "ENABLE_DAO_PROPERTY"; //$NON-NLS-1$
+  public static final String ORM_ADD_ORDER_COLUMN = "ORM_ADD_ORDER_COLUMN"; //$NON-NLS-1$
+  public static final String ORM_ENFORCE_UNIQUE_NAMES = "ORM_ENFORCE_UNIQUE_NAMES"; //$NON-NLS-1$
+  public static final String ORM_RENAME_SQL_RESERVED_NAMES = "ORM_RENAME_SQL_RESERVED_NAMES"; //$NON-NLS-1$
+  public static final String ORM_GENERATE_FULL_DB_SCHEMA_NAMES = "ORM_GENERATE_FULL_DB_SCHEMA_NAMES"; //$NON-NLS-1$
+  public static final String ORM_MAX_SQL_NAME_LENGTH = "ORM_MAX_SQL_NAME_LENGTH"; //$NON-NLS-1$
 
   public static final QualifiedName GEN_OUTPUT_FOLDER_PROPERTY = new QualifiedName(TexoEclipsePlugin.PLUGIN_ID,
       "GEN_OUTPUT_FOLDER"); //$NON-NLS-1$
