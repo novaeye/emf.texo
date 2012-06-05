@@ -1,0 +1,60 @@
+package org.eclipse.graphiti.mm.algorithms.styles;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+
+/**
+ * A representation of the model object '<em><b>RenderingStyle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+ * 
+ * @generated
+ */
+@Entity(name = "st_RenderingStyle")
+public class RenderingStyle extends Identifiable {
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @ManyToOne(cascade = { CascadeType.ALL })
+  private AdaptedGradientColoredAreas adaptedGradientColoredAreas = null;
+
+  /**
+   * Returns the value of '<em><b>adaptedGradientColoredAreas</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>adaptedGradientColoredAreas</b></em>' feature
+   * @generated
+   */
+  public AdaptedGradientColoredAreas getAdaptedGradientColoredAreas() {
+    return adaptedGradientColoredAreas;
+  }
+
+  /**
+   * Sets the '{@link RenderingStyle#getAdaptedGradientColoredAreas() <em>adaptedGradientColoredAreas</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link RenderingStyle#getAdaptedGradientColoredAreas() adaptedGradientColoredAreas}'
+   *          feature.
+   * @generated
+   */
+  public void setAdaptedGradientColoredAreas(AdaptedGradientColoredAreas newAdaptedGradientColoredAreas) {
+    adaptedGradientColoredAreas = newAdaptedGradientColoredAreas;
+  }
+
+  /**
+   * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @generated
+   */
+  @Override
+  public String toString() {
+    return "RenderingStyle ";
+  }
+}

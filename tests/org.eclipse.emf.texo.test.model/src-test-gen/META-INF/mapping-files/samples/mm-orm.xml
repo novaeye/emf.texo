@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="ASCII"?>
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+  <orm:persistence-unit-metadata>
+    <orm:persistence-unit-defaults>
+      <orm:delimited-identifiers/>
+    </orm:persistence-unit-defaults>
+  </orm:persistence-unit-metadata>
+  <orm:access>FIELD</orm:access>
+  <orm:entity class="org.eclipse.graphiti.mm.Property" name="mm_Property">
+    <orm:table name="mm_Property"/>
+    <orm:attributes>
+      <orm:basic name="key" optional="false">
+        <orm:column name="T_key"/>
+      </orm:basic>
+      <orm:basic name="value" optional="false">
+        <orm:column name="T_value"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.PropertyContainer" name="mm_PropertyContainer">
+    <orm:table name="mm_PropertyContainer"/>
+    <orm:attributes>
+      <orm:one-to-many name="properties">
+        <orm:join-column name="mm_PropertyContainer_properties"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.GraphicsAlgorithmContainer" name="mm_GraphicsAlgorithmContainer">
+    <orm:primary-key-join-column name="mm_GraphicsAlgorithmContainer_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.StyleContainer" name="mm_StyleContainer">
+    <orm:table name="mm_StyleContainer"/>
+    <orm:attributes>
+      <orm:one-to-many mapped-by="styleContainer" name="styles">
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.Shape" name="pi_Shape">
+    <orm:primary-key-join-column name="pi_Shape_parent_id"/>
+    <orm:attributes>
+      <orm:many-to-one name="container">
+        <orm:join-column name="pi_Shape_container"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.PictogramElement" name="pi_PictogramElement">
+    <orm:primary-key-join-column name="pi_PictogramElement_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="visible" optional="false">
+        <orm:column name="visible"/>
+      </orm:basic>
+      <orm:basic name="active" optional="false">
+        <orm:column name="active"/>
+      </orm:basic>
+      <orm:one-to-one name="graphicsAlgorithm">
+        <orm:join-column name="pi_PictogramElement_graphicsAlgorithm"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-one>
+      <orm:one-to-one name="link">
+        <orm:join-column name="pi_PictogramElement_link"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.AnchorContainer" name="pi_AnchorContainer">
+    <orm:primary-key-join-column name="pi_AnchorContainer_parent_id"/>
+    <orm:attributes>
+      <orm:one-to-many mapped-by="parent" name="anchors">
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.ContainerShape" name="pi_ContainerShape">
+    <orm:primary-key-join-column name="pi_ContainerShape_parent_id"/>
+    <orm:attributes>
+      <orm:one-to-many name="children">
+        <orm:order-column name="pi_ContainerShape_children_ind"/>
+        <orm:join-column name="pi_ContainerShape_children"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.Diagram" name="pi_Diagram">
+    <orm:primary-key-join-column name="pi_Diagram_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="gridUnit" optional="false">
+        <orm:column name="gridUnit"/>
+      </orm:basic>
+      <orm:basic name="diagramTypeId" optional="false">
+        <orm:column name="diagramTypeId"/>
+      </orm:basic>
+      <orm:basic name="name" optional="false">
+        <orm:column name="T_name"/>
+      </orm:basic>
+      <orm:basic name="snapToGrid" optional="false">
+        <orm:column name="snapToGrid"/>
+      </orm:basic>
+      <orm:basic name="showGuides" optional="false">
+        <orm:column name="showGuides"/>
+      </orm:basic>
+      <orm:basic name="verticalGridUnit">
+        <orm:column name="verticalGridUnit"/>
+      </orm:basic>
+      <orm:basic name="version">
+        <orm:column name="version"/>
+      </orm:basic>
+      <orm:one-to-many mapped-by="parent" name="connections">
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:one-to-many name="colors">
+        <orm:join-column name="pi_Diagram_colors"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:one-to-many name="fonts">
+        <orm:join-column name="pi_Diagram_fonts"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:many-to-many name="pictogramLinks">
+        <orm:join-table name="pi_Diagram_pictogramLinks">
+          <orm:join-column name="pi_Diagram_pictogramLinks"/>
+          <orm:inverse-join-column name="pi_PictogramLink_id"/>
+        </orm:join-table>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.Connection" name="pi_Connection">
+    <orm:primary-key-join-column name="pi_Connection_parent_id"/>
+    <orm:attributes>
+      <orm:many-to-one name="start" optional="false">
+        <orm:join-table name="pi_Connection_start">
+          <orm:join-column name="pi_Connection_start"/>
+          <orm:inverse-join-column name="pi_Anchor_outgoingConnections"/>
+        </orm:join-table>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="end" optional="false">
+        <orm:join-table name="pi_Connection_end">
+          <orm:join-column name="pi_Connection_end"/>
+          <orm:inverse-join-column name="pi_Anchor_incomingConnections"/>
+        </orm:join-table>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="parent" optional="false">
+        <orm:join-column name="pi_Connection_parent"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:one-to-many name="connectionDecorators">
+        <orm:order-column name="pi_Connection_connectionDecorators_ind"/>
+        <orm:join-column name="pi_Connection_connectionDecorators"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.PictogramLink" name="pi_PictogramLink">
+    <orm:primary-key-join-column name="pi_PictogramLink_parent_id"/>
+    <orm:attributes>
+      <orm:one-to-one mapped-by="link" name="pictogramElement">
+        <orm:join-column name="pi_PictogramLink_pictogramElement"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:one-to-one>
+      <orm:many-to-many name="businessObjects">
+        <orm:order-column name="pi_PictogramLink_businessObjects_ind"/>
+        <orm:join-table name="pi_PictogramLink_businessObjects">
+          <orm:join-column name="pi_PictogramLink_businessObjects"/>
+          <orm:inverse-join-column name="ecore_EObject_id"/>
+        </orm:join-table>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.Anchor" name="pi_Anchor">
+    <orm:primary-key-join-column name="pi_Anchor_parent_id"/>
+    <orm:attributes>
+      <orm:many-to-one name="parent" optional="false">
+        <orm:join-column name="pi_Anchor_parent"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="referencedGraphicsAlgorithm">
+        <orm:join-column name="pi_Anchor_referencedGraphicsAlgorithm"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:one-to-many mapped-by="start" name="outgoingConnections">
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:one-to-many mapped-by="end" name="incomingConnections">
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.ConnectionDecorator" name="pi_ConnectionDecorator">
+    <orm:primary-key-join-column name="pi_ConnectionDecorator_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="locationRelative" optional="false">
+        <orm:column name="locationRelative"/>
+      </orm:basic>
+      <orm:basic name="location" optional="false">
+        <orm:column name="T_location"/>
+      </orm:basic>
+      <orm:many-to-one name="connection" optional="false">
+        <orm:join-column name="pi_ConnectionDecorator_connection"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.FixPointAnchor" name="pi_FixPointAnchor">
+    <orm:primary-key-join-column name="pi_FixPointAnchor_parent_id"/>
+    <orm:attributes>
+      <orm:many-to-one name="location" optional="false">
+        <orm:join-column name="pi_FixPointAnchor_location"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.AdvancedAnchor" name="pi_AdvancedAnchor">
+    <orm:primary-key-join-column name="pi_AdvancedAnchor_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="useAnchorLocationAsConnectionEndpoint" optional="false">
+        <orm:column name="useAnchorLocationAsConnectionEndpoint"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor" name="pi_BoxRelativeAnchor">
+    <orm:primary-key-join-column name="pi_BoxRelativeAnchor_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="relativeWidth" optional="false">
+        <orm:column name="relativeWidth"/>
+      </orm:basic>
+      <orm:basic name="relativeHeight" optional="false">
+        <orm:column name="relativeHeight"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.ChopboxAnchor" name="pi_ChopboxAnchor">
+    <orm:primary-key-join-column name="pi_ChopboxAnchor_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.FreeFormConnection" name="pi_FreeFormConnection">
+    <orm:primary-key-join-column name="pi_FreeFormConnection_parent_id"/>
+    <orm:attributes>
+      <orm:one-to-many name="bendpoints">
+        <orm:order-column name="pi_FreeFormConnection_bendpoints_ind"/>
+        <orm:join-column name="pi_FreeFormConnection_bendpoints"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.ManhattanConnection" name="pi_ManhattanConnection">
+    <orm:primary-key-join-column name="pi_ManhattanConnection_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.CurvedConnection" name="pi_CurvedConnection">
+    <orm:primary-key-join-column name="pi_CurvedConnection_parent_id"/>
+    <orm:attributes>
+      <orm:one-to-many name="controlPoints">
+        <orm:order-column name="pi_CurvedConnection_controlPoints_ind"/>
+        <orm:join-column name="pi_CurvedConnection_controlPoints"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.pictograms.CompositeConnection" name="pi_CompositeConnection">
+    <orm:primary-key-join-column name="pi_CompositeConnection_parent_id"/>
+    <orm:attributes>
+      <orm:many-to-many name="children">
+        <orm:order-column name="pi_CompositeConnection_children_ind"/>
+        <orm:join-table name="pi_CompositeConnection_children">
+          <orm:join-column name="pi_CompositeConnection_children"/>
+          <orm:inverse-join-column name="pi_CurvedConnection_id"/>
+        </orm:join-table>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm" name="al_GraphicsAlgorithm">
+    <orm:primary-key-join-column name="al_GraphicsAlgorithm_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="width" optional="false">
+        <orm:column name="width"/>
+      </orm:basic>
+      <orm:basic name="height" optional="false">
+        <orm:column name="height"/>
+      </orm:basic>
+      <orm:basic name="x" optional="false">
+        <orm:column name="x"/>
+      </orm:basic>
+      <orm:basic name="y" optional="false">
+        <orm:column name="y"/>
+      </orm:basic>
+      <orm:many-to-one name="parentGraphicsAlgorithm">
+        <orm:join-column name="al_GraphicsAlgorithm_parentGraphicsAlgorithm"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="style">
+        <orm:join-column name="al_GraphicsAlgorithm_style"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:one-to-many name="graphicsAlgorithmChildren">
+        <orm:order-column name="al_GraphicsAlgorithm_graphicsAlgorithmChildren_ind"/>
+        <orm:join-column name="al_GraphicsAlgorithm_graphicsAlgorithmChildren"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+      <orm:one-to-one mapped-by="graphicsAlgorithm" name="pictogramElement">
+        <orm:join-column name="al_GraphicsAlgorithm_pictogramElement"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:one-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.Polyline" name="al_Polyline">
+    <orm:primary-key-join-column name="al_Polyline_parent_id"/>
+    <orm:attributes>
+      <orm:one-to-many name="points">
+        <orm:order-column name="al_Polyline_points_ind"/>
+        <orm:join-column name="al_Polyline_points"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.Ellipse" name="al_Ellipse">
+    <orm:primary-key-join-column name="al_Ellipse_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.Text" name="al_Text">
+    <orm:primary-key-join-column name="al_Text_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.AbstractText" name="al_AbstractText">
+    <orm:primary-key-join-column name="al_AbstractText_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="horizontalAlignment">
+        <orm:column name="horizontalAlignment"/>
+      </orm:basic>
+      <orm:basic name="verticalAlignment">
+        <orm:column name="verticalAlignment"/>
+      </orm:basic>
+      <orm:basic name="angle">
+        <orm:column name="angle"/>
+      </orm:basic>
+      <orm:basic name="value" optional="false">
+        <orm:column name="T_value"/>
+      </orm:basic>
+      <orm:many-to-one name="font">
+        <orm:join-column name="al_AbstractText_font"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.Polygon" name="al_Polygon">
+    <orm:primary-key-join-column name="al_Polygon_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.Rectangle" name="al_Rectangle">
+    <orm:primary-key-join-column name="al_Rectangle_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.RoundedRectangle" name="al_RoundedRectangle">
+    <orm:primary-key-join-column name="al_RoundedRectangle_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="cornerHeight" optional="false">
+        <orm:column name="cornerHeight"/>
+      </orm:basic>
+      <orm:basic name="cornerWidth" optional="false">
+        <orm:column name="cornerWidth"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.Image" name="al_Image">
+    <orm:primary-key-join-column name="al_Image_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="id" optional="false">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:basic name="stretchH">
+        <orm:column name="stretchH"/>
+      </orm:basic>
+      <orm:basic name="stretchV">
+        <orm:column name="stretchV"/>
+      </orm:basic>
+      <orm:basic name="proportional">
+        <orm:column name="proportional"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.PlatformGraphicsAlgorithm" name="al_PlatformGraphicsAlgorithm">
+    <orm:primary-key-join-column name="al_PlatformGraphicsAlgorithm_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="id" optional="false">
+        <orm:column name="id"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.MultiText" name="al_MultiText">
+    <orm:primary-key-join-column name="al_MultiText_parent_id"/>
+    <orm:attributes/>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Style" name="st_Style">
+    <orm:primary-key-join-column name="st_Style_parent_id"/>
+    <orm:attributes>
+      <orm:basic name="id" optional="false">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:basic name="description">
+        <orm:column name="description"/>
+      </orm:basic>
+      <orm:basic name="horizontalAlignment">
+        <orm:column name="horizontalAlignment"/>
+      </orm:basic>
+      <orm:basic name="verticalAlignment">
+        <orm:column name="verticalAlignment"/>
+      </orm:basic>
+      <orm:basic name="angle">
+        <orm:column name="angle"/>
+      </orm:basic>
+      <orm:basic name="stretchH">
+        <orm:column name="stretchH"/>
+      </orm:basic>
+      <orm:basic name="stretchV">
+        <orm:column name="stretchV"/>
+      </orm:basic>
+      <orm:basic name="proportional">
+        <orm:column name="proportional"/>
+      </orm:basic>
+      <orm:many-to-one name="font">
+        <orm:join-column name="st_Style_font"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="styleContainer" optional="false">
+        <orm:join-column name="st_Style_styleContainer"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.AbstractStyle" name="st_AbstractStyle">
+    <orm:table name="st_AbstractStyle"/>
+    <orm:attributes>
+      <orm:basic name="lineWidth">
+        <orm:column name="lineWidth"/>
+      </orm:basic>
+      <orm:basic name="lineStyle">
+        <orm:column name="lineStyle"/>
+      </orm:basic>
+      <orm:basic name="filled">
+        <orm:column name="filled"/>
+      </orm:basic>
+      <orm:basic name="lineVisible">
+        <orm:column name="lineVisible"/>
+      </orm:basic>
+      <orm:basic name="transparency">
+        <orm:column name="transparency"/>
+      </orm:basic>
+      <orm:many-to-one name="background">
+        <orm:join-column name="st_AbstractStyle_background"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="foreground">
+        <orm:join-column name="st_AbstractStyle_foreground"/>
+        <orm:cascade>
+          <orm:cascade-persist/>
+          <orm:cascade-merge/>
+          <orm:cascade-refresh/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="renderingStyle">
+        <orm:join-column name="st_AbstractStyle_renderingStyle"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Color" name="st_Color">
+    <orm:table name="st_Color"/>
+    <orm:attributes>
+      <orm:basic name="red" optional="false">
+        <orm:column name="red"/>
+      </orm:basic>
+      <orm:basic name="green" optional="false">
+        <orm:column name="green"/>
+      </orm:basic>
+      <orm:basic name="blue" optional="false">
+        <orm:column name="blue"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Font" name="st_Font">
+    <orm:table name="st_Font"/>
+    <orm:attributes>
+      <orm:basic name="name" optional="false">
+        <orm:column name="T_name"/>
+      </orm:basic>
+      <orm:basic name="size" optional="false">
+        <orm:column name="T_size"/>
+      </orm:basic>
+      <orm:basic name="italic" optional="false">
+        <orm:column name="italic"/>
+      </orm:basic>
+      <orm:basic name="bold" optional="false">
+        <orm:column name="bold"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Point" name="st_Point">
+    <orm:table name="st_Point"/>
+    <orm:attributes>
+      <orm:basic name="x" optional="false">
+        <orm:column name="x"/>
+      </orm:basic>
+      <orm:basic name="y" optional="false">
+        <orm:column name="y"/>
+      </orm:basic>
+      <orm:basic name="before" optional="false">
+        <orm:column name="T_before"/>
+      </orm:basic>
+      <orm:basic name="after" optional="false">
+        <orm:column name="T_after"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.PrecisionPoint" name="st_PrecisionPoint">
+    <orm:table name="st_PrecisionPoint"/>
+    <orm:attributes>
+      <orm:basic name="x" optional="false">
+        <orm:column name="x"/>
+      </orm:basic>
+      <orm:basic name="y" optional="false">
+        <orm:column name="y"/>
+      </orm:basic>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.RenderingStyle" name="st_RenderingStyle">
+    <orm:table name="st_RenderingStyle"/>
+    <orm:attributes>
+      <orm:many-to-one name="adaptedGradientColoredAreas">
+        <orm:join-column name="st_RenderingStyle_adaptedGradientColoredAreas"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.AdaptedGradientColoredAreas" name="st_AdaptedGradientColoredAreas">
+    <orm:table name="st_AdaptedGradientColoredAreas"/>
+    <orm:attributes>
+      <orm:basic name="definedStyleId">
+        <orm:column name="definedStyleId"/>
+      </orm:basic>
+      <orm:basic name="gradientType">
+        <orm:column name="gradientType"/>
+      </orm:basic>
+      <orm:one-to-many name="adaptedGradientColoredAreas">
+        <orm:order-column name="st_AdaptedGradientColoredAreas_adaptedGradientColoredAreas_ind"/>
+        <orm:join-column name="st_AdaptedGradientColoredAreas_adaptedGradientColoredAreas"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.GradientColoredLocation" name="st_GradientColoredLocation">
+    <orm:table name="st_GradientColoredLocation"/>
+    <orm:attributes>
+      <orm:basic name="locationType" optional="false">
+        <orm:column name="locationType"/>
+      </orm:basic>
+      <orm:basic name="locationValue" optional="false">
+        <orm:column name="locationValue"/>
+      </orm:basic>
+      <orm:many-to-one name="color" optional="false">
+        <orm:join-column name="st_GradientColoredLocation_color"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.GradientColoredArea" name="st_GradientColoredArea">
+    <orm:table name="st_GradientColoredArea"/>
+    <orm:attributes>
+      <orm:many-to-one name="start">
+        <orm:join-column name="st_GradientColoredArea_start"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+      <orm:many-to-one name="end">
+        <orm:join-column name="st_GradientColoredArea_end"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:many-to-one>
+    </orm:attributes>
+  </orm:entity>
+  <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.GradientColoredAreas" name="st_GradientColoredAreas">
+    <orm:table name="st_GradientColoredAreas"/>
+    <orm:attributes>
+      <orm:basic name="styleAdaption">
+        <orm:column name="styleAdaption"/>
+      </orm:basic>
+      <orm:one-to-many name="gradientColor">
+        <orm:order-column name="st_GradientColoredAreas_gradientColor_ind"/>
+        <orm:join-column name="st_GradientColoredAreas_gradientColor"/>
+        <orm:cascade>
+          <orm:cascade-all/>
+        </orm:cascade>
+      </orm:one-to-many>
+    </orm:attributes>
+  </orm:entity>
+</orm:entity-mappings>

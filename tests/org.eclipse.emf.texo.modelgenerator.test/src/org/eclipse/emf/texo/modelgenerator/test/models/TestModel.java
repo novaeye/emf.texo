@@ -59,6 +59,7 @@ public class TestModel {
     urls.add("samples/employee.xsd");//$NON-NLS-1$
     urls.add("samples/epo2.ecore");//$NON-NLS-1$
     urls.add("samples/extlibrary.ecore");//$NON-NLS-1$
+    urls.add("samples/graphiti.ecore");//$NON-NLS-1$
     urls.add("samples/interfaces.ecore");//$NON-NLS-1$
     urls.add("samples/inventory.ecore");//$NON-NLS-1$
     urls.add("samples/kdm.ecore");//$NON-NLS-1$
