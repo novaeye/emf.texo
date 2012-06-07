@@ -5,7 +5,7 @@
     modelPluginID="org.eclipse.emf.texo.orm" modelName="Eclipselink_orm_2_0" rootExtendsInterface="org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation"
     rootExtendsClass="org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl" importerID="org.eclipse.xsd.ecore.importer"
     complianceLevel="5.0" copyrightFields="false">
-  <foreignModel>eclipselink_orm_2_0.xsd</foreignModel>
+  <foreignModel>eclipselink_orm.xsd</foreignModel>
   <genPackages prefix="Orm" basePackage="org.eclipse.emf.texo.orm.annotations.model"
       resource="XML" disposableProviderFactory="true" loadInitialization="true" literalsInterface="false"
       ecorePackage="orm.ecore#/">
