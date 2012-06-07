@@ -16,13 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface PrimaryKeyJoinColumn {
- * 				String name() default "";
- * 				String referencedColumnName() default "";
- * 				String columnDefinition()
- * 				default "";
- * 				}
+ *         @Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface PrimaryKeyJoinColumn {
+ *           String name() default "";
+ *           String referencedColumnName() default "";
+ *           String columnDefinition() default "";
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

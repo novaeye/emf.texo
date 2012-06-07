@@ -19,7 +19,7 @@ public class PlatformRelationship extends AbstractPlatformRelationship {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private KDMEntity to = null;
 
   /**
@@ -27,7 +27,7 @@ public class PlatformRelationship extends AbstractPlatformRelationship {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private AbstractPlatformElement from = null;
 
   /**

@@ -10,6 +10,8 @@ import java.util.Set;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
@@ -138,6 +140,7 @@ public class ManyTypes extends Identifiable {
    */
   @ElementCollection()
   @OrderColumn()
+  @Enumerated(EnumType.STRING)
   @CollectionTable(name = "types_ManyTypes_enum")
   private List<TestEnum> enum_ = new ArrayList<TestEnum>();
 

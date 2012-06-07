@@ -17,13 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({}) @Retention(RUNTIME)
- * 				public @interface
- * 				EntityResult {
- * 				Class entityClass();
- * 				FieldResult[] fields() default {};
- * 				String discriminatorColumn() default "";
- * 				}
+ *         @Target({}) @Retention(RUNTIME)
+ *         public @interface EntityResult {
+ *           Class entityClass();
+ *           FieldResult[] fields() default {};
+ *           String discriminatorColumn() default "";
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

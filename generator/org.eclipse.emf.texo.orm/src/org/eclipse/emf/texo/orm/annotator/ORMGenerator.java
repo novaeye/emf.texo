@@ -59,11 +59,12 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
-import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata;
+import org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceFactoryImpl;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
@@ -244,7 +245,11 @@ public class ORMGenerator extends BaseGenerateAction {
       }
     }
 
-    entityMappings.setVersion("2.1"); //$NON-NLS-1$
+    if (ORMGenerator.areInStandardsCompliantMode()) {
+      entityMappings.setVersion(SupportedVersionsType._20);
+    } else {
+      entityMappings.setVersion(SupportedVersionsType._23);
+    }
 
     entityMappings.setAccess(AccessType.FIELD);
     for (EPackage ePackage : ePackages) {
@@ -444,7 +449,7 @@ public class ORMGenerator extends BaseGenerateAction {
 
     {
       final Basic featureBasic = OrmFactory.eINSTANCE.createBasic();
-      featureBasic.setEnumerated(Enumerated.STRING);
+      featureBasic.setEnumerated(EnumType.STRING);
       featureBasic.setName("feature");
       featureBasic.setOptional(false);
       attributes.getBasic().add(featureBasic);

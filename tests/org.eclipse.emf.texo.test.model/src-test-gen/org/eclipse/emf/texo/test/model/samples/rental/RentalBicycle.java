@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.samples.rental;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 
 /**
@@ -19,6 +21,7 @@ public class RentalBicycle extends RentalUnit {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private RentalBicycleType type = RentalBicycleType.STANDARD;
 
   /**
@@ -26,7 +29,7 @@ public class RentalBicycle extends RentalUnit {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private RentalCar rentalCar = null;
 
   /**

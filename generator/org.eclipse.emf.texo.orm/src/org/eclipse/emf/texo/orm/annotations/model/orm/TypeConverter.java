@@ -15,35 +15,29 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE, METHOD, FIELD})
- * 				@Retention(RUNTIME)
- * 				public @interface TypeConverter {
- * 				*
- * 				* (Required) Name this converter.
- * 				The name should be unique
- * 				* across the whole persistence unit.
- * 				*
- * 				String name();
+ *         @Target({TYPE, METHOD, FIELD})
+ *         @Retention(RUNTIME)
+ *         public @interface TypeConverter {
+ *           /**
+ *            * (Required) Name this converter. The name should be unique
+ *            * across the whole persistence unit.
+ *            **
+ *            String name();
  * 
- * 				*
- * 				* (Optional) Specify the type stored on the database.
- * 				The
- * 				* default is inferred from the type of the persistence field
- * 				* or
- * 				property.
- * 				*
- * 				Class dataType() default void.class;
+ *           /**
+ *            * (Optional) Specify the type stored on the database. The
+ *            * default is inferred from the type of the persistence field 
+ *            * or property.
+ *            **
+ *           Class dataType() default void.class;
  * 
- * 				*
- * 				* (Optional) Specify
- * 				the type stored on the entity. The
- * 				* default is inferred from the
- * 				type of the persistent field
- * 				* or property.
- * 				*
- * 				Class objectType()
- * 				default void.class;
- * 				}
+ *           /**
+ *            * (Optional) Specify the type stored on the entity. The
+ *            * default is inferred from the type of the persistent field 
+ *            * or property.
+ *            **
+ *           Class objectType() default void.class;
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

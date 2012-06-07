@@ -34,6 +34,7 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl#getUniqueConstraint <em>Unique Constraint</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl#getCatalog <em>Catalog</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl#getCreationSuffix <em>Creation Suffix</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl#getSchema <em>Schema</em>}</li>
  * </ul>
@@ -72,6 +73,26 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CREATION_SUFFIX_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String creationSuffix = CREATION_SUFFIX_EDEFAULT;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -158,6 +179,27 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCreationSuffix() {
+		return creationSuffix;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationSuffix(String newCreationSuffix) {
+		String oldCreationSuffix = creationSuffix;
+		creationSuffix = newCreationSuffix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -219,6 +261,8 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 				return getUniqueConstraint();
 			case OrmPackage.TABLE__CATALOG:
 				return getCatalog();
+			case OrmPackage.TABLE__CREATION_SUFFIX:
+				return getCreationSuffix();
 			case OrmPackage.TABLE__NAME:
 				return getName();
 			case OrmPackage.TABLE__SCHEMA:
@@ -241,6 +285,9 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 				return;
 			case OrmPackage.TABLE__CATALOG:
 				setCatalog((String)newValue);
+				return;
+			case OrmPackage.TABLE__CREATION_SUFFIX:
+				setCreationSuffix((String)newValue);
 				return;
 			case OrmPackage.TABLE__NAME:
 				setName((String)newValue);
@@ -265,6 +312,9 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 			case OrmPackage.TABLE__CATALOG:
 				setCatalog(CATALOG_EDEFAULT);
 				return;
+			case OrmPackage.TABLE__CREATION_SUFFIX:
+				setCreationSuffix(CREATION_SUFFIX_EDEFAULT);
+				return;
 			case OrmPackage.TABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -286,6 +336,8 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 				return uniqueConstraint != null && !uniqueConstraint.isEmpty();
 			case OrmPackage.TABLE__CATALOG:
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+			case OrmPackage.TABLE__CREATION_SUFFIX:
+				return CREATION_SUFFIX_EDEFAULT == null ? creationSuffix != null : !CREATION_SUFFIX_EDEFAULT.equals(creationSuffix);
 			case OrmPackage.TABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrmPackage.TABLE__SCHEMA:
@@ -305,6 +357,8 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (catalog: ");
 		result.append(catalog);
+		result.append(", creationSuffix: ");
+		result.append(creationSuffix);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", schema: ");

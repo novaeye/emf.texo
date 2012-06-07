@@ -31,6 +31,24 @@ public interface OrmFactory extends EFactory {
   AccessMethods createAccessMethods();
 
   /**
+	 * Returns a new object of class '<em>Additional Criteria</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Additional Criteria</em>'.
+	 * @generated
+	 */
+	AdditionalCriteria createAdditionalCriteria();
+
+		/**
+	 * Returns a new object of class '<em>Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Array</em>'.
+	 * @generated
+	 */
+	Array createArray();
+
+		/**
 	 * Returns a new object of class '<em>Association Override</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Association Override</em>'.
@@ -79,6 +97,15 @@ public interface OrmFactory extends EFactory {
   BasicMap createBasicMap();
 
   /**
+	 * Returns a new object of class '<em>Batch Fetch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Batch Fetch</em>'.
+	 * @generated
+	 */
+	BatchFetch createBatchFetch();
+
+		/**
 	 * Returns a new object of class '<em>Cache</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Cache</em>'.
@@ -111,6 +138,15 @@ public interface OrmFactory extends EFactory {
   ChangeTracking createChangeTracking();
 
   /**
+	 * Returns a new object of class '<em>Class Extractor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Class Extractor</em>'.
+	 * @generated
+	 */
+	ClassExtractor createClassExtractor();
+
+		/**
 	 * Returns a new object of class '<em>Clone Copy Policy</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Clone Copy Policy</em>'.
@@ -288,6 +324,24 @@ public interface OrmFactory extends EFactory {
   EntityResult createEntityResult();
 
   /**
+	 * Returns a new object of class '<em>Fetch Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fetch Attribute</em>'.
+	 * @generated
+	 */
+	FetchAttribute createFetchAttribute();
+
+		/**
+	 * Returns a new object of class '<em>Fetch Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fetch Group</em>'.
+	 * @generated
+	 */
+	FetchGroup createFetchGroup();
+
+		/**
 	 * Returns a new object of class '<em>Field Result</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Field Result</em>'.
@@ -304,6 +358,15 @@ public interface OrmFactory extends EFactory {
   GeneratedValue createGeneratedValue();
 
   /**
+	 * Returns a new object of class '<em>Hash Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hash Partitioning</em>'.
+	 * @generated
+	 */
+	HashPartitioning createHashPartitioning();
+
+		/**
 	 * Returns a new object of class '<em>Id</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Id</em>'.
@@ -320,6 +383,15 @@ public interface OrmFactory extends EFactory {
   IdClass createIdClass();
 
   /**
+	 * Returns a new object of class '<em>Index</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Index</em>'.
+	 * @generated
+	 */
+	Index createIndex();
+
+		/**
 	 * Returns a new object of class '<em>Inheritance</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Inheritance</em>'.
@@ -416,6 +488,15 @@ public interface OrmFactory extends EFactory {
   MappedSuperclass createMappedSuperclass();
 
   /**
+	 * Returns a new object of class '<em>Multitenant</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Multitenant</em>'.
+	 * @generated
+	 */
+	Multitenant createMultitenant();
+
+		/**
 	 * Returns a new object of class '<em>Named Native Query</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Named Native Query</em>'.
@@ -424,6 +505,24 @@ public interface OrmFactory extends EFactory {
   NamedNativeQuery createNamedNativeQuery();
 
   /**
+	 * Returns a new object of class '<em>Named Plsql Stored Function Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Named Plsql Stored Function Query</em>'.
+	 * @generated
+	 */
+	NamedPlsqlStoredFunctionQuery createNamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns a new object of class '<em>Named Plsql Stored Procedure Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Named Plsql Stored Procedure Query</em>'.
+	 * @generated
+	 */
+	NamedPlsqlStoredProcedureQuery createNamedPlsqlStoredProcedureQuery();
+
+		/**
 	 * Returns a new object of class '<em>Named Query</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Named Query</em>'.
@@ -432,6 +531,15 @@ public interface OrmFactory extends EFactory {
   NamedQuery createNamedQuery();
 
   /**
+	 * Returns a new object of class '<em>Named Stored Function Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Named Stored Function Query</em>'.
+	 * @generated
+	 */
+	NamedStoredFunctionQuery createNamedStoredFunctionQuery();
+
+		/**
    * Returns a new object of class '<em>Named Stored Procedure Query</em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -481,6 +589,15 @@ public interface OrmFactory extends EFactory {
   OrderColumn createOrderColumn();
 
   /**
+	 * Returns a new object of class '<em>Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Partitioning</em>'.
+	 * @generated
+	 */
+	Partitioning createPartitioning();
+
+		/**
 	 * Returns a new object of class '<em>Persistence Unit Defaults</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Persistence Unit Defaults</em>'.
@@ -497,6 +614,42 @@ public interface OrmFactory extends EFactory {
   PersistenceUnitMetadata createPersistenceUnitMetadata();
 
   /**
+	 * Returns a new object of class '<em>Pinned Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pinned Partitioning</em>'.
+	 * @generated
+	 */
+	PinnedPartitioning createPinnedPartitioning();
+
+		/**
+	 * Returns a new object of class '<em>Plsql Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Plsql Parameter</em>'.
+	 * @generated
+	 */
+	PlsqlParameter createPlsqlParameter();
+
+		/**
+	 * Returns a new object of class '<em>Plsql Record</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Plsql Record</em>'.
+	 * @generated
+	 */
+	PlsqlRecord createPlsqlRecord();
+
+		/**
+	 * Returns a new object of class '<em>Plsql Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Plsql Table</em>'.
+	 * @generated
+	 */
+	PlsqlTable createPlsqlTable();
+
+		/**
 	 * Returns a new object of class '<em>Post Load</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Post Load</em>'.
@@ -593,6 +746,24 @@ public interface OrmFactory extends EFactory {
   QueryRedirectors createQueryRedirectors();
 
   /**
+	 * Returns a new object of class '<em>Range Partition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Range Partition</em>'.
+	 * @generated
+	 */
+	RangePartition createRangePartition();
+
+		/**
+	 * Returns a new object of class '<em>Range Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Range Partitioning</em>'.
+	 * @generated
+	 */
+	RangePartitioning createRangePartitioning();
+
+		/**
 	 * Returns a new object of class '<em>Read Transformer</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Read Transformer</em>'.
@@ -601,6 +772,33 @@ public interface OrmFactory extends EFactory {
   ReadTransformer createReadTransformer();
 
   /**
+	 * Returns a new object of class '<em>Replication Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Replication Partitioning</em>'.
+	 * @generated
+	 */
+	ReplicationPartitioning createReplicationPartitioning();
+
+		/**
+	 * Returns a new object of class '<em>Return Insert</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Return Insert</em>'.
+	 * @generated
+	 */
+	ReturnInsert createReturnInsert();
+
+		/**
+	 * Returns a new object of class '<em>Round Robin Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Round Robin Partitioning</em>'.
+	 * @generated
+	 */
+	RoundRobinPartitioning createRoundRobinPartitioning();
+
+		/**
 	 * Returns a new object of class '<em>Secondary Table</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Secondary Table</em>'.
@@ -633,6 +831,15 @@ public interface OrmFactory extends EFactory {
   StoredProcedureParameter createStoredProcedureParameter();
 
   /**
+	 * Returns a new object of class '<em>Struct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Struct</em>'.
+	 * @generated
+	 */
+	Struct createStruct();
+
+		/**
 	 * Returns a new object of class '<em>Struct Converter</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Struct Converter</em>'.
@@ -641,6 +848,15 @@ public interface OrmFactory extends EFactory {
   StructConverter createStructConverter();
 
   /**
+	 * Returns a new object of class '<em>Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure</em>'.
+	 * @generated
+	 */
+	Structure createStructure();
+
+		/**
 	 * Returns a new object of class '<em>Table</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Table</em>'.
@@ -657,6 +873,15 @@ public interface OrmFactory extends EFactory {
   TableGenerator createTableGenerator();
 
   /**
+	 * Returns a new object of class '<em>Tenant Discriminator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tenant Discriminator</em>'.
+	 * @generated
+	 */
+	TenantDiscriminator createTenantDiscriminator();
+
+		/**
 	 * Returns a new object of class '<em>Time Of Day</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Time Of Day</em>'.
@@ -689,6 +914,15 @@ public interface OrmFactory extends EFactory {
   TypeConverter createTypeConverter();
 
   /**
+	 * Returns a new object of class '<em>Union Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Union Partitioning</em>'.
+	 * @generated
+	 */
+	UnionPartitioning createUnionPartitioning();
+
+		/**
 	 * Returns a new object of class '<em>Unique Constraint</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Unique Constraint</em>'.
@@ -697,6 +931,24 @@ public interface OrmFactory extends EFactory {
   UniqueConstraint createUniqueConstraint();
 
   /**
+	 * Returns a new object of class '<em>Value Partition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Value Partition</em>'.
+	 * @generated
+	 */
+	ValuePartition createValuePartition();
+
+		/**
+	 * Returns a new object of class '<em>Value Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Value Partitioning</em>'.
+	 * @generated
+	 */
+	ValuePartitioning createValuePartitioning();
+
+		/**
 	 * Returns a new object of class '<em>Variable One To One</em>'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return a new object of class '<em>Variable One To One</em>'.

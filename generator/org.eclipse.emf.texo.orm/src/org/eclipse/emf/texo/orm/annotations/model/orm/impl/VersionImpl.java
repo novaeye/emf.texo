@@ -23,10 +23,12 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Column;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Converter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Index;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Property;
 import org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Temporal;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
@@ -39,6 +41,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getTemporal <em>Temporal</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getConvert <em>Convert</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getConverter <em>Converter</em>}</li>
@@ -48,6 +51,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#isMutable <em>Mutable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -67,6 +71,16 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
   protected Column column;
 
   /**
+	 * The cached value of the '{@link #getIndex() <em>Index</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected Index index;
+
+		/**
 	 * The default value of the '{@link #getTemporal() <em>Temporal</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -74,7 +88,7 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Temporal TEMPORAL_EDEFAULT = Temporal.DATE;
+  protected static final TemporalType TEMPORAL_EDEFAULT = null;
 
   /**
 	 * The cached value of the '{@link #getTemporal() <em>Temporal</em>}' attribute.
@@ -84,15 +98,7 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 	 * @generated
 	 * @ordered
 	 */
-  protected Temporal temporal = TEMPORAL_EDEFAULT;
-
-  /**
-	 * This is true if the Temporal attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  protected boolean temporalESet;
+  protected TemporalType temporal = TEMPORAL_EDEFAULT;
 
   /**
 	 * The default value of the '{@link #getConvert() <em>Convert</em>}' attribute.
@@ -181,7 +187,7 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -202,6 +208,26 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
   protected boolean accessESet;
 
   /**
+	 * The default value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTRIBUTE_TYPE_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attributeType = ATTRIBUTE_TYPE_EDEFAULT;
+
+		/**
 	 * The default value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -306,48 +332,69 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Index getIndex() {
+		return index;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIndex(Index newIndex, NotificationChain msgs) {
+		Index oldIndex = index;
+		index = newIndex;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.VERSION__INDEX, oldIndex, newIndex);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIndex(Index newIndex) {
+		if (newIndex != index) {
+			NotificationChain msgs = null;
+			if (index != null)
+				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.VERSION__INDEX, null, msgs);
+			if (newIndex != null)
+				msgs = ((InternalEObject)newIndex).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.VERSION__INDEX, null, msgs);
+			msgs = basicSetIndex(newIndex, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.VERSION__INDEX, newIndex, newIndex));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Temporal getTemporal() {
+  public TemporalType getTemporal() {
 		return temporal;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setTemporal(Temporal newTemporal) {
-		Temporal oldTemporal = temporal;
-		temporal = newTemporal == null ? TEMPORAL_EDEFAULT : newTemporal;
-		boolean oldTemporalESet = temporalESet;
-		temporalESet = true;
+	public void setTemporal(TemporalType newTemporal) {
+		TemporalType oldTemporal = temporal;
+		temporal = newTemporal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.VERSION__TEMPORAL, oldTemporal, temporal, !oldTemporalESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.VERSION__TEMPORAL, oldTemporal, temporal));
 	}
 
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void unsetTemporal() {
-		Temporal oldTemporal = temporal;
-		boolean oldTemporalESet = temporalESet;
-		temporal = TEMPORAL_EDEFAULT;
-		temporalESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.VERSION__TEMPORAL, oldTemporal, TEMPORAL_EDEFAULT, oldTemporalESet));
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public boolean isSetTemporal() {
-		return temporalESet;
-	}
-
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -621,6 +668,27 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttributeType() {
+		return attributeType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttributeType(String newAttributeType) {
+		String oldAttributeType = attributeType;
+		attributeType = newAttributeType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.VERSION__ATTRIBUTE_TYPE, oldAttributeType, attributeType));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -690,6 +758,8 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 		switch (featureID) {
 			case OrmPackage.VERSION__COLUMN:
 				return basicSetColumn(null, msgs);
+			case OrmPackage.VERSION__INDEX:
+				return basicSetIndex(null, msgs);
 			case OrmPackage.VERSION__CONVERTER:
 				return basicSetConverter(null, msgs);
 			case OrmPackage.VERSION__TYPE_CONVERTER:
@@ -715,6 +785,8 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 		switch (featureID) {
 			case OrmPackage.VERSION__COLUMN:
 				return getColumn();
+			case OrmPackage.VERSION__INDEX:
+				return getIndex();
 			case OrmPackage.VERSION__TEMPORAL:
 				return getTemporal();
 			case OrmPackage.VERSION__CONVERT:
@@ -733,6 +805,8 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 				return getAccessMethods();
 			case OrmPackage.VERSION__ACCESS:
 				return getAccess();
+			case OrmPackage.VERSION__ATTRIBUTE_TYPE:
+				return getAttributeType();
 			case OrmPackage.VERSION__MUTABLE:
 				return isMutable();
 			case OrmPackage.VERSION__NAME:
@@ -752,8 +826,11 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 			case OrmPackage.VERSION__COLUMN:
 				setColumn((Column)newValue);
 				return;
+			case OrmPackage.VERSION__INDEX:
+				setIndex((Index)newValue);
+				return;
 			case OrmPackage.VERSION__TEMPORAL:
-				setTemporal((Temporal)newValue);
+				setTemporal((TemporalType)newValue);
 				return;
 			case OrmPackage.VERSION__CONVERT:
 				setConvert((String)newValue);
@@ -780,6 +857,9 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 			case OrmPackage.VERSION__ACCESS:
 				setAccess((AccessType)newValue);
 				return;
+			case OrmPackage.VERSION__ATTRIBUTE_TYPE:
+				setAttributeType((String)newValue);
+				return;
 			case OrmPackage.VERSION__MUTABLE:
 				setMutable((Boolean)newValue);
 				return;
@@ -800,8 +880,11 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 			case OrmPackage.VERSION__COLUMN:
 				setColumn((Column)null);
 				return;
+			case OrmPackage.VERSION__INDEX:
+				setIndex((Index)null);
+				return;
 			case OrmPackage.VERSION__TEMPORAL:
-				unsetTemporal();
+				setTemporal(TEMPORAL_EDEFAULT);
 				return;
 			case OrmPackage.VERSION__CONVERT:
 				setConvert(CONVERT_EDEFAULT);
@@ -827,6 +910,9 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 			case OrmPackage.VERSION__ACCESS:
 				unsetAccess();
 				return;
+			case OrmPackage.VERSION__ATTRIBUTE_TYPE:
+				setAttributeType(ATTRIBUTE_TYPE_EDEFAULT);
+				return;
 			case OrmPackage.VERSION__MUTABLE:
 				unsetMutable();
 				return;
@@ -846,8 +932,10 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 		switch (featureID) {
 			case OrmPackage.VERSION__COLUMN:
 				return column != null;
+			case OrmPackage.VERSION__INDEX:
+				return index != null;
 			case OrmPackage.VERSION__TEMPORAL:
-				return isSetTemporal();
+				return TEMPORAL_EDEFAULT == null ? temporal != null : !TEMPORAL_EDEFAULT.equals(temporal);
 			case OrmPackage.VERSION__CONVERT:
 				return CONVERT_EDEFAULT == null ? convert != null : !CONVERT_EDEFAULT.equals(convert);
 			case OrmPackage.VERSION__CONVERTER:
@@ -864,6 +952,8 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 				return accessMethods != null;
 			case OrmPackage.VERSION__ACCESS:
 				return isSetAccess();
+			case OrmPackage.VERSION__ATTRIBUTE_TYPE:
+				return ATTRIBUTE_TYPE_EDEFAULT == null ? attributeType != null : !ATTRIBUTE_TYPE_EDEFAULT.equals(attributeType);
 			case OrmPackage.VERSION__MUTABLE:
 				return isSetMutable();
 			case OrmPackage.VERSION__NAME:
@@ -882,11 +972,13 @@ public class VersionImpl extends BaseOrmAnnotationImpl implements Version {
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (temporal: ");
-		if (temporalESet) result.append(temporal); else result.append("<unset>");
+		result.append(temporal);
 		result.append(", convert: ");
 		result.append(convert);
 		result.append(", access: ");
 		if (accessESet) result.append(access); else result.append("<unset>");
+		result.append(", attributeType: ");
+		result.append(attributeType);
 		result.append(", mutable: ");
 		if (mutableESet) result.append(mutable); else result.append("<unset>");
 		result.append(", name: ");

@@ -17,60 +17,42 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* Transformation is an optional annotation for
- * 				*
- * 				org.eclipse.persistence.mappings.TransformationMapping.
- * 				*
- * 				TransformationMapping allows to map an attribute to one or more
- * 				*
- * 				database columns.
- * 				*
- * 				* Transformation annotation is an optional part of
- * 				* TransformationMapping definition. Unless the TransformationMapping
- * 				is
- * 				* write-only, it should have a ReadTransformer, it defines
- * 				*
- * 				transformation of database column(s) value(s)into attribute value.
- * 				*
- * 				Also unless it's a read-only mapping, either WriteTransformer
- * 				*
- * 				annotation or WriteTransformers annotation should be specified.
- * 				Each
- * 				* WriteTransformer defines transformation of the attribute value to
- * 				a
- * 				* single database column value (column is specified in the
- * 				*
- * 				WriteTransformer).
- * 				*
- * 				@Target({METHOD, FIELD})
- * 				@Retention(RUNTIME)
- * 				public @interface Transformation {
- * 				*
- * 				* (Optional) Defines whether the
- * 				value of the field or property
- * 				* should be lazily loaded or must be
- * 				eagerly fetched. The EAGER
- * 				* strategy is a requirement on the
- * 				persistence provider runtime
- * 				* that the value must be eagerly
- * 				fetched. The LAZY strategy is a
- * 				* hint to the persistence provider
- * 				runtime. If not specified,
- * 				* defaults to EAGER.
- * 				*
- * 				FetchType fetch()
- * 				default EAGER;
+ *         /**
+ *          * Transformation is an optional annotation for 
+ *          * org.eclipse.persistence.mappings.TransformationMapping.
+ *          * TransformationMapping allows to map an attribute to one or more 
+ *          * database columns.
+ *          * 
+ *          * Transformation annotation is an optional part of 
+ *          * TransformationMapping definition. Unless the TransformationMapping is 
+ *          * write-only, it should have a ReadTransformer, it defines 
+ *          * transformation of database column(s) value(s)into attribute value.
+ *          * Also unless it's a read-only mapping, either WriteTransformer 
+ *          * annotation or WriteTransformers annotation should be specified. Each 
+ *          * WriteTransformer defines transformation of the attribute value to a 
+ *          * single database column value (column is specified in the 
+ *          * WriteTransformer). 
+ *          ** 
+ *         @Target({METHOD, FIELD})
+ *         @Retention(RUNTIME)
+ *         public @interface Transformation {
+ *             /**
+ *              * (Optional) Defines whether the value of the field or property 
+ *              * should be lazily loaded or must be eagerly fetched. The EAGER 
+ *              * strategy is a requirement on the persistence provider runtime 
+ *              * that the value must be eagerly fetched. The LAZY strategy is a 
+ *              * hint to the persistence provider runtime. If not specified, 
+ *              * defaults to EAGER.
+ *              **
+ *             FetchType fetch() default EAGER;
  * 
- * 				*
- * 				* (Optional) The optional element is a hint as to
- * 				whether the value
- * 				* of the field or property may be null. It is
- * 				disregarded
- * 				* for primitive types, which are considered non-optional.
- * 				*
- * 				boolean optional() default true;
- * 				}
+ *             /**
+ *              * (Optional) The optional element is a hint as to whether the value
+ *              *  of the field or property may be null. It is disregarded
+ *              *  for primitive types, which are considered non-optional.
+ *              **
+ *             boolean optional() default true;
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -80,10 +62,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getReadTransformer <em>Read Transformer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getWriteTransformer <em>Write Transformer</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess <em>Access</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccessMethods <em>Access Methods</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess1 <em>Access1</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getFetch <em>Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#isMutable <em>Mutable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getName <em>Name</em>}</li>
@@ -155,7 +137,7 @@ public interface Transformation extends BaseOrmAnnotation {
 	 * @see #setAccess(AccessType)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getTransformation_Access()
 	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='access' namespace='##targetNamespace'"
+	 *        extendedMetaData="kind='attribute' name='access'"
 	 * @generated
 	 */
   AccessType getAccess();
@@ -194,6 +176,33 @@ public interface Transformation extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
+	 * Returns the value of the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attribute Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attribute Type</em>' attribute.
+	 * @see #setAttributeType(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getTransformation_AttributeType()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='attribute-type'"
+	 * @generated
+	 */
+	String getAttributeType();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAttributeType <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attribute Type</em>' attribute.
+	 * @see #getAttributeType()
+	 * @generated
+	 */
+	void setAttributeType(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
 	 * <!-- begin-user-doc -->
@@ -235,60 +244,6 @@ public interface Transformation extends BaseOrmAnnotation {
 	 * @generated
 	 */
   void setAccessMethods(AccessMethods value);
-
-  /**
-	 * Returns the value of the '<em><b>Access1</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Access1</em>' attribute isn't clear, there really should be more of a description
-   * here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Access1</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
-	 * @see #isSetAccess1()
-	 * @see #unsetAccess1()
-	 * @see #setAccess1(AccessType)
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getTransformation_Access1()
-	 * @model unsettable="true"
-	 *        extendedMetaData="kind='attribute' name='access'"
-	 * @generated
-	 */
-  AccessType getAccess1();
-
-  /**
-	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess1 <em>Access1</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Access1</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.AccessType
-	 * @see #isSetAccess1()
-	 * @see #unsetAccess1()
-	 * @see #getAccess1()
-	 * @generated
-	 */
-  void setAccess1(AccessType value);
-
-  /**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess1 <em>Access1</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isSetAccess1()
-	 * @see #getAccess1()
-	 * @see #setAccess1(AccessType)
-	 * @generated
-	 */
-  void unsetAccess1();
-
-  /**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess1 <em>Access1</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Access1</em>' attribute is set.
-	 * @see #unsetAccess1()
-	 * @see #getAccess1()
-	 * @see #setAccess1(AccessType)
-	 * @generated
-	 */
-  boolean isSetAccess1();
 
   /**
 	 * Returns the value of the '<em><b>Fetch</b></em>' attribute.

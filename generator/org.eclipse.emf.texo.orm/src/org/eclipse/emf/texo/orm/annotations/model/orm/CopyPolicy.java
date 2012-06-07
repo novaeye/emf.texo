@@ -14,37 +14,29 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <!-- begin-model-doc -->
  * 
- * 				*
- * 				* A CopyPolicy is used to set a
- * 				*
- * 				org.eclipse.persistence.descriptors.copying.CopyPolicy on an
- * 				Entity.
- * 				* It is required that a class that implements
- * 				*
- * 				org.eclipse.persistence.descriptors.copying.CopyPolicy be specified
- * 				* as the argument.
- * 				*
- * 				* A CopyPolicy should be specified on an Entity,
- * 				MappedSuperclass or
- * 				* Embeddable.
- * 				*
- * 				* For instance:
- * 				* @Entity
- * 				*
- * 				@CopyPolicy("example.MyCopyPolicy")
- * 				*
- * 				public @interface CopyPolicy {
+ *         /**
+ *          * A CopyPolicy is used to set a 
+ *          * org.eclipse.persistence.descriptors.copying.CopyPolicy on an Entity.
+ *          * It is required that a class that implements 
+ *          * org.eclipse.persistence.descriptors.copying.CopyPolicy be specified 
+ *          * as the argument.
+ *          * 
+ *          * A CopyPolicy should be specified on an Entity, MappedSuperclass or 
+ *          * Embeddable.
+ *          * 
+ *          * For instance:
+ *          * @Entity
+ *          * @CopyPolicy("example.MyCopyPolicy")
+ *          **
+ *         public @interface CopyPolicy {
  * 
- * 				/*
- * 				* (Required)
- * 				* This defines the class of the copy policy. It must
- * 				specify a class
- * 				* that implements
- * 				org.eclipse.persistence.descriptors.copying.CopyPolicy
- * 				*
- * 				Class
- * 				value();
- * 				}
+ *         /*
+ *         * (Required)
+ *         * This defines the class of the copy policy. It must specify a class 
+ *         * that implements org.eclipse.persistence.descriptors.copying.CopyPolicy
+ *         **
+ *         Class value();
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

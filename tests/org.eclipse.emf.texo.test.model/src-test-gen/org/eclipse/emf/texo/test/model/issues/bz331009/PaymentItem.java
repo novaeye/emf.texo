@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -36,6 +38,7 @@ public abstract class PaymentItem extends Identifiable {
    */
   @Basic()
   @Column(name = "currency")
+  @Enumerated(EnumType.STRING)
   private Currency currency = Currency.ROUBLES;
 
   /**
@@ -64,6 +67,7 @@ public abstract class PaymentItem extends Identifiable {
    */
   @Basic()
   @Column(name = "paymentType")
+  @Enumerated(EnumType.STRING)
   private PaymentType paymentType = PaymentType.REQUIRED;
 
   /**

@@ -19,7 +19,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Attributes;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Cache;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CacheInterceptor;
@@ -31,12 +35,25 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.Customizer;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup;
+import org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.IdClass;
 import org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy;
 import org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLocking;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PostPersist;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PostRemove;
@@ -46,8 +63,17 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.PreRemove;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PreUpdate;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Property;
+import org.eclipse.emf.texo.orm.annotations.model.orm.QueryRedirectors;
+import org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator;
+import org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping;
 import org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
 import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
 
@@ -143,6 +169,36 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
+	 * The cached value of the '{@link #getAccessMethods() <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccessMethods()
+	 * @generated
+	 * @ordered
+	 */
+	protected AccessMethods accessMethods;
+
+		/**
+	 * The cached value of the '{@link #getMultitenant() <em>Multitenant</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMultitenant()
+	 * @generated
+	 * @ordered
+	 */
+	protected Multitenant multitenant;
+
+		/**
+	 * The cached value of the '{@link #getAdditionalCriteria() <em>Additional Criteria</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdditionalCriteria()
+	 * @generated
+	 * @ordered
+	 */
+	protected AdditionalCriteria additionalCriteria;
+
+		/**
 	 * The cached value of the '{@link #getCustomizer() <em>Customizer</em>}' containment reference.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -213,6 +269,16 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   protected CacheInterceptor cacheInterceptor;
 
   /**
+	 * The cached value of the '{@link #getFetchGroup() <em>Fetch Group</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFetchGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FetchGroup> fetchGroup;
+
+		/**
    * The cached value of the '{@link #getConverter() <em>Converter</em>}' containment reference list. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -281,6 +347,226 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   protected CloneCopyPolicy cloneCopyPolicy;
 
   /**
+	 * The cached value of the '{@link #getSequenceGenerator() <em>Sequence Generator</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSequenceGenerator()
+	 * @generated
+	 * @ordered
+	 */
+	protected SequenceGenerator sequenceGenerator;
+
+		/**
+	 * The cached value of the '{@link #getTableGenerator() <em>Table Generator</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTableGenerator()
+	 * @generated
+	 * @ordered
+	 */
+	protected TableGenerator tableGenerator;
+
+		/**
+	 * The cached value of the '{@link #getPartitioning() <em>Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected Partitioning partitioning;
+
+		/**
+	 * The cached value of the '{@link #getReplicationPartitioning() <em>Replication Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected ReplicationPartitioning replicationPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getRoundRobinPartitioning() <em>Round Robin Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected RoundRobinPartitioning roundRobinPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getPinnedPartitioning() <em>Pinned Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected PinnedPartitioning pinnedPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getRangePartitioning() <em>Range Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRangePartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected RangePartitioning rangePartitioning;
+
+		/**
+	 * The cached value of the '{@link #getValuePartitioning() <em>Value Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValuePartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected ValuePartitioning valuePartitioning;
+
+		/**
+	 * The cached value of the '{@link #getHashPartitioning() <em>Hash Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHashPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected HashPartitioning hashPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getUnionPartitioning() <em>Union Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected UnionPartitioning unionPartitioning;
+
+		/**
+	 * The default value of the '{@link #getPartitioned() <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioned()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARTITIONED_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getPartitioned() <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioned()
+	 * @generated
+	 * @ordered
+	 */
+	protected String partitioned = PARTITIONED_EDEFAULT;
+
+		/**
+	 * The cached value of the '{@link #getNamedQuery() <em>Named Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedQuery> namedQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedNativeQuery() <em>Named Native Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedNativeQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedNativeQuery> namedNativeQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedStoredProcedureQuery() <em>Named Stored Procedure Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedStoredProcedureQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedStoredProcedureQuery> namedStoredProcedureQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedStoredFunctionQuery() <em>Named Stored Function Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedStoredFunctionQuery> namedStoredFunctionQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedPlsqlStoredProcedureQuery() <em>Named Plsql Stored Procedure Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedPlsqlStoredProcedureQuery> namedPlsqlStoredProcedureQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedPlsqlStoredFunctionQuery() <em>Named Plsql Stored Function Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedPlsqlStoredFunctionQuery> namedPlsqlStoredFunctionQuery;
+
+		/**
+	 * The cached value of the '{@link #getPlsqlRecord() <em>Plsql Record</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PlsqlRecord> plsqlRecord;
+
+		/**
+	 * The cached value of the '{@link #getPlsqlTable() <em>Plsql Table</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlsqlTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PlsqlTable> plsqlTable;
+
+		/**
+	 * The cached value of the '{@link #getSqlResultSetMapping() <em>Sql Result Set Mapping</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSqlResultSetMapping()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SqlResultSetMapping> sqlResultSetMapping;
+
+		/**
+	 * The cached value of the '{@link #getQueryRedirectors() <em>Query Redirectors</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQueryRedirectors()
+	 * @generated
+	 * @ordered
+	 */
+	protected QueryRedirectors queryRedirectors;
+
+		/**
 	 * The cached value of the '{@link #getExcludeDefaultListeners() <em>Exclude Default Listeners</em>}' containment reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getExcludeDefaultListeners()
@@ -389,6 +675,26 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   protected EList<Property> property;
 
   /**
+	 * The cached value of the '{@link #getAttributeOverride() <em>Attribute Override</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AttributeOverride> attributeOverride;
+
+		/**
+	 * The cached value of the '{@link #getAssociationOverride() <em>Association Override</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssociationOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AssociationOverride> associationOverride;
+
+		/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -406,7 +712,7 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -559,6 +865,26 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   protected boolean metadataCompleteESet;
 
   /**
+	 * The default value of the '{@link #getParentClass() <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARENT_CLASS_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getParentClass() <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String parentClass = PARENT_CLASS_EDEFAULT;
+
+		/**
 	 * The default value of the '{@link #isReadOnly() <em>Read Only</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -623,6 +949,135 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccessMethods getAccessMethods() {
+		return accessMethods;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAccessMethods(AccessMethods newAccessMethods, NotificationChain msgs) {
+		AccessMethods oldAccessMethods = accessMethods;
+		accessMethods = newAccessMethods;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAccessMethods(AccessMethods newAccessMethods) {
+		if (newAccessMethods != accessMethods) {
+			NotificationChain msgs = null;
+			if (accessMethods != null)
+				msgs = ((InternalEObject)accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS, null, msgs);
+			if (newAccessMethods != null)
+				msgs = ((InternalEObject)newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS, null, msgs);
+			msgs = basicSetAccessMethods(newAccessMethods, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS, newAccessMethods, newAccessMethods));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Multitenant getMultitenant() {
+		return multitenant;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMultitenant(Multitenant newMultitenant, NotificationChain msgs) {
+		Multitenant oldMultitenant = multitenant;
+		multitenant = newMultitenant;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__MULTITENANT, oldMultitenant, newMultitenant);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMultitenant(Multitenant newMultitenant) {
+		if (newMultitenant != multitenant) {
+			NotificationChain msgs = null;
+			if (multitenant != null)
+				msgs = ((InternalEObject)multitenant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__MULTITENANT, null, msgs);
+			if (newMultitenant != null)
+				msgs = ((InternalEObject)newMultitenant).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__MULTITENANT, null, msgs);
+			msgs = basicSetMultitenant(newMultitenant, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__MULTITENANT, newMultitenant, newMultitenant));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AdditionalCriteria getAdditionalCriteria() {
+		return additionalCriteria;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAdditionalCriteria(AdditionalCriteria newAdditionalCriteria, NotificationChain msgs) {
+		AdditionalCriteria oldAdditionalCriteria = additionalCriteria;
+		additionalCriteria = newAdditionalCriteria;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA, oldAdditionalCriteria, newAdditionalCriteria);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAdditionalCriteria(AdditionalCriteria newAdditionalCriteria) {
+		if (newAdditionalCriteria != additionalCriteria) {
+			NotificationChain msgs = null;
+			if (additionalCriteria != null)
+				msgs = ((InternalEObject)additionalCriteria).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA, null, msgs);
+			if (newAdditionalCriteria != null)
+				msgs = ((InternalEObject)newAdditionalCriteria).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA, null, msgs);
+			msgs = basicSetAdditionalCriteria(newAdditionalCriteria, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA, newAdditionalCriteria, newAdditionalCriteria));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -903,6 +1358,18 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<FetchGroup> getFetchGroup() {
+		if (fetchGroup == null) {
+			fetchGroup = new EObjectContainmentEList<FetchGroup>(FetchGroup.class, this, OrmPackage.MAPPED_SUPERCLASS__FETCH_GROUP);
+		}
+		return fetchGroup;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1068,6 +1535,608 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SequenceGenerator getSequenceGenerator() {
+		return sequenceGenerator;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSequenceGenerator(SequenceGenerator newSequenceGenerator, NotificationChain msgs) {
+		SequenceGenerator oldSequenceGenerator = sequenceGenerator;
+		sequenceGenerator = newSequenceGenerator;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR, oldSequenceGenerator, newSequenceGenerator);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSequenceGenerator(SequenceGenerator newSequenceGenerator) {
+		if (newSequenceGenerator != sequenceGenerator) {
+			NotificationChain msgs = null;
+			if (sequenceGenerator != null)
+				msgs = ((InternalEObject)sequenceGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR, null, msgs);
+			if (newSequenceGenerator != null)
+				msgs = ((InternalEObject)newSequenceGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR, null, msgs);
+			msgs = basicSetSequenceGenerator(newSequenceGenerator, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR, newSequenceGenerator, newSequenceGenerator));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableGenerator getTableGenerator() {
+		return tableGenerator;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTableGenerator(TableGenerator newTableGenerator, NotificationChain msgs) {
+		TableGenerator oldTableGenerator = tableGenerator;
+		tableGenerator = newTableGenerator;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR, oldTableGenerator, newTableGenerator);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTableGenerator(TableGenerator newTableGenerator) {
+		if (newTableGenerator != tableGenerator) {
+			NotificationChain msgs = null;
+			if (tableGenerator != null)
+				msgs = ((InternalEObject)tableGenerator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR, null, msgs);
+			if (newTableGenerator != null)
+				msgs = ((InternalEObject)newTableGenerator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR, null, msgs);
+			msgs = basicSetTableGenerator(newTableGenerator, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR, newTableGenerator, newTableGenerator));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Partitioning getPartitioning() {
+		return partitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPartitioning(Partitioning newPartitioning, NotificationChain msgs) {
+		Partitioning oldPartitioning = partitioning;
+		partitioning = newPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PARTITIONING, oldPartitioning, newPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPartitioning(Partitioning newPartitioning) {
+		if (newPartitioning != partitioning) {
+			NotificationChain msgs = null;
+			if (partitioning != null)
+				msgs = ((InternalEObject)partitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__PARTITIONING, null, msgs);
+			if (newPartitioning != null)
+				msgs = ((InternalEObject)newPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__PARTITIONING, null, msgs);
+			msgs = basicSetPartitioning(newPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PARTITIONING, newPartitioning, newPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReplicationPartitioning getReplicationPartitioning() {
+		return replicationPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReplicationPartitioning(ReplicationPartitioning newReplicationPartitioning, NotificationChain msgs) {
+		ReplicationPartitioning oldReplicationPartitioning = replicationPartitioning;
+		replicationPartitioning = newReplicationPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING, oldReplicationPartitioning, newReplicationPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReplicationPartitioning(ReplicationPartitioning newReplicationPartitioning) {
+		if (newReplicationPartitioning != replicationPartitioning) {
+			NotificationChain msgs = null;
+			if (replicationPartitioning != null)
+				msgs = ((InternalEObject)replicationPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING, null, msgs);
+			if (newReplicationPartitioning != null)
+				msgs = ((InternalEObject)newReplicationPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING, null, msgs);
+			msgs = basicSetReplicationPartitioning(newReplicationPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING, newReplicationPartitioning, newReplicationPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoundRobinPartitioning getRoundRobinPartitioning() {
+		return roundRobinPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRoundRobinPartitioning(RoundRobinPartitioning newRoundRobinPartitioning, NotificationChain msgs) {
+		RoundRobinPartitioning oldRoundRobinPartitioning = roundRobinPartitioning;
+		roundRobinPartitioning = newRoundRobinPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING, oldRoundRobinPartitioning, newRoundRobinPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoundRobinPartitioning(RoundRobinPartitioning newRoundRobinPartitioning) {
+		if (newRoundRobinPartitioning != roundRobinPartitioning) {
+			NotificationChain msgs = null;
+			if (roundRobinPartitioning != null)
+				msgs = ((InternalEObject)roundRobinPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING, null, msgs);
+			if (newRoundRobinPartitioning != null)
+				msgs = ((InternalEObject)newRoundRobinPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING, null, msgs);
+			msgs = basicSetRoundRobinPartitioning(newRoundRobinPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING, newRoundRobinPartitioning, newRoundRobinPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PinnedPartitioning getPinnedPartitioning() {
+		return pinnedPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPinnedPartitioning(PinnedPartitioning newPinnedPartitioning, NotificationChain msgs) {
+		PinnedPartitioning oldPinnedPartitioning = pinnedPartitioning;
+		pinnedPartitioning = newPinnedPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING, oldPinnedPartitioning, newPinnedPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPinnedPartitioning(PinnedPartitioning newPinnedPartitioning) {
+		if (newPinnedPartitioning != pinnedPartitioning) {
+			NotificationChain msgs = null;
+			if (pinnedPartitioning != null)
+				msgs = ((InternalEObject)pinnedPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING, null, msgs);
+			if (newPinnedPartitioning != null)
+				msgs = ((InternalEObject)newPinnedPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING, null, msgs);
+			msgs = basicSetPinnedPartitioning(newPinnedPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING, newPinnedPartitioning, newPinnedPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RangePartitioning getRangePartitioning() {
+		return rangePartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRangePartitioning(RangePartitioning newRangePartitioning, NotificationChain msgs) {
+		RangePartitioning oldRangePartitioning = rangePartitioning;
+		rangePartitioning = newRangePartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING, oldRangePartitioning, newRangePartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRangePartitioning(RangePartitioning newRangePartitioning) {
+		if (newRangePartitioning != rangePartitioning) {
+			NotificationChain msgs = null;
+			if (rangePartitioning != null)
+				msgs = ((InternalEObject)rangePartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING, null, msgs);
+			if (newRangePartitioning != null)
+				msgs = ((InternalEObject)newRangePartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING, null, msgs);
+			msgs = basicSetRangePartitioning(newRangePartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING, newRangePartitioning, newRangePartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ValuePartitioning getValuePartitioning() {
+		return valuePartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetValuePartitioning(ValuePartitioning newValuePartitioning, NotificationChain msgs) {
+		ValuePartitioning oldValuePartitioning = valuePartitioning;
+		valuePartitioning = newValuePartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING, oldValuePartitioning, newValuePartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValuePartitioning(ValuePartitioning newValuePartitioning) {
+		if (newValuePartitioning != valuePartitioning) {
+			NotificationChain msgs = null;
+			if (valuePartitioning != null)
+				msgs = ((InternalEObject)valuePartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING, null, msgs);
+			if (newValuePartitioning != null)
+				msgs = ((InternalEObject)newValuePartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING, null, msgs);
+			msgs = basicSetValuePartitioning(newValuePartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING, newValuePartitioning, newValuePartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HashPartitioning getHashPartitioning() {
+		return hashPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetHashPartitioning(HashPartitioning newHashPartitioning, NotificationChain msgs) {
+		HashPartitioning oldHashPartitioning = hashPartitioning;
+		hashPartitioning = newHashPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING, oldHashPartitioning, newHashPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHashPartitioning(HashPartitioning newHashPartitioning) {
+		if (newHashPartitioning != hashPartitioning) {
+			NotificationChain msgs = null;
+			if (hashPartitioning != null)
+				msgs = ((InternalEObject)hashPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING, null, msgs);
+			if (newHashPartitioning != null)
+				msgs = ((InternalEObject)newHashPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING, null, msgs);
+			msgs = basicSetHashPartitioning(newHashPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING, newHashPartitioning, newHashPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnionPartitioning getUnionPartitioning() {
+		return unionPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUnionPartitioning(UnionPartitioning newUnionPartitioning, NotificationChain msgs) {
+		UnionPartitioning oldUnionPartitioning = unionPartitioning;
+		unionPartitioning = newUnionPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING, oldUnionPartitioning, newUnionPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnionPartitioning(UnionPartitioning newUnionPartitioning) {
+		if (newUnionPartitioning != unionPartitioning) {
+			NotificationChain msgs = null;
+			if (unionPartitioning != null)
+				msgs = ((InternalEObject)unionPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING, null, msgs);
+			if (newUnionPartitioning != null)
+				msgs = ((InternalEObject)newUnionPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING, null, msgs);
+			msgs = basicSetUnionPartitioning(newUnionPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING, newUnionPartitioning, newUnionPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPartitioned() {
+		return partitioned;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPartitioned(String newPartitioned) {
+		String oldPartitioned = partitioned;
+		partitioned = newPartitioned;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PARTITIONED, oldPartitioned, partitioned));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedQuery> getNamedQuery() {
+		if (namedQuery == null) {
+			namedQuery = new EObjectContainmentEList<NamedQuery>(NamedQuery.class, this, OrmPackage.MAPPED_SUPERCLASS__NAMED_QUERY);
+		}
+		return namedQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedNativeQuery> getNamedNativeQuery() {
+		if (namedNativeQuery == null) {
+			namedNativeQuery = new EObjectContainmentEList<NamedNativeQuery>(NamedNativeQuery.class, this, OrmPackage.MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY);
+		}
+		return namedNativeQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedStoredProcedureQuery> getNamedStoredProcedureQuery() {
+		if (namedStoredProcedureQuery == null) {
+			namedStoredProcedureQuery = new EObjectContainmentEList<NamedStoredProcedureQuery>(NamedStoredProcedureQuery.class, this, OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY);
+		}
+		return namedStoredProcedureQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedStoredFunctionQuery> getNamedStoredFunctionQuery() {
+		if (namedStoredFunctionQuery == null) {
+			namedStoredFunctionQuery = new EObjectContainmentEList<NamedStoredFunctionQuery>(NamedStoredFunctionQuery.class, this, OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY);
+		}
+		return namedStoredFunctionQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedPlsqlStoredProcedureQuery> getNamedPlsqlStoredProcedureQuery() {
+		if (namedPlsqlStoredProcedureQuery == null) {
+			namedPlsqlStoredProcedureQuery = new EObjectContainmentEList<NamedPlsqlStoredProcedureQuery>(NamedPlsqlStoredProcedureQuery.class, this, OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY);
+		}
+		return namedPlsqlStoredProcedureQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedPlsqlStoredFunctionQuery> getNamedPlsqlStoredFunctionQuery() {
+		if (namedPlsqlStoredFunctionQuery == null) {
+			namedPlsqlStoredFunctionQuery = new EObjectContainmentEList<NamedPlsqlStoredFunctionQuery>(NamedPlsqlStoredFunctionQuery.class, this, OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY);
+		}
+		return namedPlsqlStoredFunctionQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PlsqlRecord> getPlsqlRecord() {
+		if (plsqlRecord == null) {
+			plsqlRecord = new EObjectContainmentEList<PlsqlRecord>(PlsqlRecord.class, this, OrmPackage.MAPPED_SUPERCLASS__PLSQL_RECORD);
+		}
+		return plsqlRecord;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PlsqlTable> getPlsqlTable() {
+		if (plsqlTable == null) {
+			plsqlTable = new EObjectContainmentEList<PlsqlTable>(PlsqlTable.class, this, OrmPackage.MAPPED_SUPERCLASS__PLSQL_TABLE);
+		}
+		return plsqlTable;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SqlResultSetMapping> getSqlResultSetMapping() {
+		if (sqlResultSetMapping == null) {
+			sqlResultSetMapping = new EObjectContainmentEList<SqlResultSetMapping>(SqlResultSetMapping.class, this, OrmPackage.MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING);
+		}
+		return sqlResultSetMapping;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QueryRedirectors getQueryRedirectors() {
+		return queryRedirectors;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetQueryRedirectors(QueryRedirectors newQueryRedirectors, NotificationChain msgs) {
+		QueryRedirectors oldQueryRedirectors = queryRedirectors;
+		queryRedirectors = newQueryRedirectors;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS, oldQueryRedirectors, newQueryRedirectors);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQueryRedirectors(QueryRedirectors newQueryRedirectors) {
+		if (newQueryRedirectors != queryRedirectors) {
+			NotificationChain msgs = null;
+			if (queryRedirectors != null)
+				msgs = ((InternalEObject)queryRedirectors).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS, null, msgs);
+			if (newQueryRedirectors != null)
+				msgs = ((InternalEObject)newQueryRedirectors).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS, null, msgs);
+			msgs = basicSetQueryRedirectors(newQueryRedirectors, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS, newQueryRedirectors, newQueryRedirectors));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1480,6 +2549,30 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AttributeOverride> getAttributeOverride() {
+		if (attributeOverride == null) {
+			attributeOverride = new EObjectContainmentEList<AttributeOverride>(AttributeOverride.class, this, OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE);
+		}
+		return attributeOverride;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AssociationOverride> getAssociationOverride() {
+		if (associationOverride == null) {
+			associationOverride = new EObjectContainmentEList<AssociationOverride>(AssociationOverride.class, this, OrmPackage.MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE);
+		}
+		return associationOverride;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1749,6 +2842,27 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getParentClass() {
+		return parentClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentClass(String newParentClass) {
+		String oldParentClass = parentClass;
+		parentClass = newParentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.MAPPED_SUPERCLASS__PARENT_CLASS, oldParentClass, parentClass));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1797,6 +2911,12 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS:
+				return basicSetAccessMethods(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__MULTITENANT:
+				return basicSetMultitenant(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA:
+				return basicSetAdditionalCriteria(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER:
 				return basicSetCustomizer(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING:
@@ -1811,6 +2931,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return basicSetCache(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR:
 				return basicSetCacheInterceptor(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__FETCH_GROUP:
+				return ((InternalEList<?>)getFetchGroup()).basicRemove(otherEnd, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__CONVERTER:
 				return ((InternalEList<?>)getConverter()).basicRemove(otherEnd, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__TYPE_CONVERTER:
@@ -1825,6 +2947,46 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return basicSetInstantiationCopyPolicy(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY:
 				return basicSetCloneCopyPolicy(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR:
+				return basicSetSequenceGenerator(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR:
+				return basicSetTableGenerator(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONING:
+				return basicSetPartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING:
+				return basicSetReplicationPartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING:
+				return basicSetRoundRobinPartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING:
+				return basicSetPinnedPartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING:
+				return basicSetRangePartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING:
+				return basicSetValuePartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING:
+				return basicSetHashPartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING:
+				return basicSetUnionPartitioning(null, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_QUERY:
+				return ((InternalEList<?>)getNamedQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY:
+				return ((InternalEList<?>)getNamedNativeQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY:
+				return ((InternalEList<?>)getNamedStoredProcedureQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY:
+				return ((InternalEList<?>)getNamedStoredFunctionQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return ((InternalEList<?>)getNamedPlsqlStoredProcedureQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return ((InternalEList<?>)getNamedPlsqlStoredFunctionQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_RECORD:
+				return ((InternalEList<?>)getPlsqlRecord()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_TABLE:
+				return ((InternalEList<?>)getPlsqlTable()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING:
+				return ((InternalEList<?>)getSqlResultSetMapping()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS:
+				return basicSetQueryRedirectors(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS:
 				return basicSetExcludeDefaultListeners(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS:
@@ -1847,6 +3009,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return basicSetPostLoad(null, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE:
+				return ((InternalEList<?>)getAttributeOverride()).basicRemove(otherEnd, msgs);
+			case OrmPackage.MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE:
+				return ((InternalEList<?>)getAssociationOverride()).basicRemove(otherEnd, msgs);
 			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES:
 				return basicSetAttributes(null, msgs);
 		}
@@ -1862,6 +3028,12 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 		switch (featureID) {
 			case OrmPackage.MAPPED_SUPERCLASS__DESCRIPTION:
 				return getDescription();
+			case OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS:
+				return getAccessMethods();
+			case OrmPackage.MAPPED_SUPERCLASS__MULTITENANT:
+				return getMultitenant();
+			case OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA:
+				return getAdditionalCriteria();
 			case OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER:
 				return getCustomizer();
 			case OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING:
@@ -1876,6 +3048,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return getCache();
 			case OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR:
 				return getCacheInterceptor();
+			case OrmPackage.MAPPED_SUPERCLASS__FETCH_GROUP:
+				return getFetchGroup();
 			case OrmPackage.MAPPED_SUPERCLASS__CONVERTER:
 				return getConverter();
 			case OrmPackage.MAPPED_SUPERCLASS__TYPE_CONVERTER:
@@ -1890,6 +3064,48 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return getInstantiationCopyPolicy();
 			case OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY:
 				return getCloneCopyPolicy();
+			case OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR:
+				return getSequenceGenerator();
+			case OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR:
+				return getTableGenerator();
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONING:
+				return getPartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING:
+				return getReplicationPartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING:
+				return getRoundRobinPartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING:
+				return getPinnedPartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING:
+				return getRangePartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING:
+				return getValuePartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING:
+				return getHashPartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING:
+				return getUnionPartitioning();
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONED:
+				return getPartitioned();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_QUERY:
+				return getNamedQuery();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY:
+				return getNamedNativeQuery();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY:
+				return getNamedStoredProcedureQuery();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY:
+				return getNamedStoredFunctionQuery();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return getNamedPlsqlStoredProcedureQuery();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return getNamedPlsqlStoredFunctionQuery();
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_RECORD:
+				return getPlsqlRecord();
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_TABLE:
+				return getPlsqlTable();
+			case OrmPackage.MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING:
+				return getSqlResultSetMapping();
+			case OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS:
+				return getQueryRedirectors();
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS:
 				return getExcludeDefaultListeners();
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS:
@@ -1912,6 +3128,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return getPostLoad();
 			case OrmPackage.MAPPED_SUPERCLASS__PROPERTY:
 				return getProperty();
+			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE:
+				return getAttributeOverride();
+			case OrmPackage.MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE:
+				return getAssociationOverride();
 			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES:
 				return getAttributes();
 			case OrmPackage.MAPPED_SUPERCLASS__ACCESS:
@@ -1926,6 +3146,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return getExistenceChecking();
 			case OrmPackage.MAPPED_SUPERCLASS__METADATA_COMPLETE:
 				return isMetadataComplete();
+			case OrmPackage.MAPPED_SUPERCLASS__PARENT_CLASS:
+				return getParentClass();
 			case OrmPackage.MAPPED_SUPERCLASS__READ_ONLY:
 				return isReadOnly();
 		}
@@ -1942,6 +3164,15 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 		switch (featureID) {
 			case OrmPackage.MAPPED_SUPERCLASS__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__MULTITENANT:
+				setMultitenant((Multitenant)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA:
+				setAdditionalCriteria((AdditionalCriteria)newValue);
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER:
 				setCustomizer((Customizer)newValue);
@@ -1963,6 +3194,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR:
 				setCacheInterceptor((CacheInterceptor)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__FETCH_GROUP:
+				getFetchGroup().clear();
+				getFetchGroup().addAll((Collection<? extends FetchGroup>)newValue);
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CONVERTER:
 				getConverter().clear();
@@ -1988,6 +3223,78 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY:
 				setCloneCopyPolicy((CloneCopyPolicy)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR:
+				setSequenceGenerator((SequenceGenerator)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR:
+				setTableGenerator((TableGenerator)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONING:
+				setPartitioning((Partitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING:
+				setReplicationPartitioning((ReplicationPartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING:
+				setRoundRobinPartitioning((RoundRobinPartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING:
+				setPinnedPartitioning((PinnedPartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING:
+				setRangePartitioning((RangePartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING:
+				setValuePartitioning((ValuePartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING:
+				setHashPartitioning((HashPartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING:
+				setUnionPartitioning((UnionPartitioning)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONED:
+				setPartitioned((String)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_QUERY:
+				getNamedQuery().clear();
+				getNamedQuery().addAll((Collection<? extends NamedQuery>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY:
+				getNamedNativeQuery().clear();
+				getNamedNativeQuery().addAll((Collection<? extends NamedNativeQuery>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY:
+				getNamedStoredProcedureQuery().clear();
+				getNamedStoredProcedureQuery().addAll((Collection<? extends NamedStoredProcedureQuery>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY:
+				getNamedStoredFunctionQuery().clear();
+				getNamedStoredFunctionQuery().addAll((Collection<? extends NamedStoredFunctionQuery>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				getNamedPlsqlStoredProcedureQuery().clear();
+				getNamedPlsqlStoredProcedureQuery().addAll((Collection<? extends NamedPlsqlStoredProcedureQuery>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				getNamedPlsqlStoredFunctionQuery().clear();
+				getNamedPlsqlStoredFunctionQuery().addAll((Collection<? extends NamedPlsqlStoredFunctionQuery>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_RECORD:
+				getPlsqlRecord().clear();
+				getPlsqlRecord().addAll((Collection<? extends PlsqlRecord>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_TABLE:
+				getPlsqlTable().clear();
+				getPlsqlTable().addAll((Collection<? extends PlsqlTable>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING:
+				getSqlResultSetMapping().clear();
+				getSqlResultSetMapping().addAll((Collection<? extends SqlResultSetMapping>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS:
+				setQueryRedirectors((QueryRedirectors)newValue);
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS:
 				setExcludeDefaultListeners((EmptyType)newValue);
@@ -2023,6 +3330,14 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				getProperty().clear();
 				getProperty().addAll((Collection<? extends Property>)newValue);
 				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE:
+				getAttributeOverride().clear();
+				getAttributeOverride().addAll((Collection<? extends AttributeOverride>)newValue);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE:
+				getAssociationOverride().clear();
+				getAssociationOverride().addAll((Collection<? extends AssociationOverride>)newValue);
+				return;
 			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES:
 				setAttributes((Attributes)newValue);
 				return;
@@ -2044,6 +3359,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 			case OrmPackage.MAPPED_SUPERCLASS__METADATA_COMPLETE:
 				setMetadataComplete((Boolean)newValue);
 				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PARENT_CLASS:
+				setParentClass((String)newValue);
+				return;
 			case OrmPackage.MAPPED_SUPERCLASS__READ_ONLY:
 				setReadOnly((Boolean)newValue);
 				return;
@@ -2060,6 +3378,15 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 		switch (featureID) {
 			case OrmPackage.MAPPED_SUPERCLASS__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__MULTITENANT:
+				setMultitenant((Multitenant)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA:
+				setAdditionalCriteria((AdditionalCriteria)null);
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER:
 				setCustomizer((Customizer)null);
@@ -2082,6 +3409,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 			case OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR:
 				setCacheInterceptor((CacheInterceptor)null);
 				return;
+			case OrmPackage.MAPPED_SUPERCLASS__FETCH_GROUP:
+				getFetchGroup().clear();
+				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CONVERTER:
 				getConverter().clear();
 				return;
@@ -2102,6 +3432,69 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY:
 				setCloneCopyPolicy((CloneCopyPolicy)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR:
+				setSequenceGenerator((SequenceGenerator)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR:
+				setTableGenerator((TableGenerator)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONING:
+				setPartitioning((Partitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING:
+				setReplicationPartitioning((ReplicationPartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING:
+				setRoundRobinPartitioning((RoundRobinPartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING:
+				setPinnedPartitioning((PinnedPartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING:
+				setRangePartitioning((RangePartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING:
+				setValuePartitioning((ValuePartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING:
+				setHashPartitioning((HashPartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING:
+				setUnionPartitioning((UnionPartitioning)null);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONED:
+				setPartitioned(PARTITIONED_EDEFAULT);
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_QUERY:
+				getNamedQuery().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY:
+				getNamedNativeQuery().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY:
+				getNamedStoredProcedureQuery().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY:
+				getNamedStoredFunctionQuery().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				getNamedPlsqlStoredProcedureQuery().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				getNamedPlsqlStoredFunctionQuery().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_RECORD:
+				getPlsqlRecord().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_TABLE:
+				getPlsqlTable().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING:
+				getSqlResultSetMapping().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS:
+				setQueryRedirectors((QueryRedirectors)null);
 				return;
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS:
 				setExcludeDefaultListeners((EmptyType)null);
@@ -2136,6 +3529,12 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 			case OrmPackage.MAPPED_SUPERCLASS__PROPERTY:
 				getProperty().clear();
 				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE:
+				getAttributeOverride().clear();
+				return;
+			case OrmPackage.MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE:
+				getAssociationOverride().clear();
+				return;
 			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES:
 				setAttributes((Attributes)null);
 				return;
@@ -2157,6 +3556,9 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 			case OrmPackage.MAPPED_SUPERCLASS__METADATA_COMPLETE:
 				unsetMetadataComplete();
 				return;
+			case OrmPackage.MAPPED_SUPERCLASS__PARENT_CLASS:
+				setParentClass(PARENT_CLASS_EDEFAULT);
+				return;
 			case OrmPackage.MAPPED_SUPERCLASS__READ_ONLY:
 				unsetReadOnly();
 				return;
@@ -2173,6 +3575,12 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 		switch (featureID) {
 			case OrmPackage.MAPPED_SUPERCLASS__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case OrmPackage.MAPPED_SUPERCLASS__ACCESS_METHODS:
+				return accessMethods != null;
+			case OrmPackage.MAPPED_SUPERCLASS__MULTITENANT:
+				return multitenant != null;
+			case OrmPackage.MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA:
+				return additionalCriteria != null;
 			case OrmPackage.MAPPED_SUPERCLASS__CUSTOMIZER:
 				return customizer != null;
 			case OrmPackage.MAPPED_SUPERCLASS__CHANGE_TRACKING:
@@ -2187,6 +3595,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return cache != null;
 			case OrmPackage.MAPPED_SUPERCLASS__CACHE_INTERCEPTOR:
 				return cacheInterceptor != null;
+			case OrmPackage.MAPPED_SUPERCLASS__FETCH_GROUP:
+				return fetchGroup != null && !fetchGroup.isEmpty();
 			case OrmPackage.MAPPED_SUPERCLASS__CONVERTER:
 				return converter != null && !converter.isEmpty();
 			case OrmPackage.MAPPED_SUPERCLASS__TYPE_CONVERTER:
@@ -2201,6 +3611,48 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return instantiationCopyPolicy != null;
 			case OrmPackage.MAPPED_SUPERCLASS__CLONE_COPY_POLICY:
 				return cloneCopyPolicy != null;
+			case OrmPackage.MAPPED_SUPERCLASS__SEQUENCE_GENERATOR:
+				return sequenceGenerator != null;
+			case OrmPackage.MAPPED_SUPERCLASS__TABLE_GENERATOR:
+				return tableGenerator != null;
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONING:
+				return partitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__REPLICATION_PARTITIONING:
+				return replicationPartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING:
+				return roundRobinPartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__PINNED_PARTITIONING:
+				return pinnedPartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__RANGE_PARTITIONING:
+				return rangePartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__VALUE_PARTITIONING:
+				return valuePartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__HASH_PARTITIONING:
+				return hashPartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__UNION_PARTITIONING:
+				return unionPartitioning != null;
+			case OrmPackage.MAPPED_SUPERCLASS__PARTITIONED:
+				return PARTITIONED_EDEFAULT == null ? partitioned != null : !PARTITIONED_EDEFAULT.equals(partitioned);
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_QUERY:
+				return namedQuery != null && !namedQuery.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY:
+				return namedNativeQuery != null && !namedNativeQuery.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY:
+				return namedStoredProcedureQuery != null && !namedStoredProcedureQuery.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY:
+				return namedStoredFunctionQuery != null && !namedStoredFunctionQuery.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return namedPlsqlStoredProcedureQuery != null && !namedPlsqlStoredProcedureQuery.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return namedPlsqlStoredFunctionQuery != null && !namedPlsqlStoredFunctionQuery.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_RECORD:
+				return plsqlRecord != null && !plsqlRecord.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__PLSQL_TABLE:
+				return plsqlTable != null && !plsqlTable.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING:
+				return sqlResultSetMapping != null && !sqlResultSetMapping.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__QUERY_REDIRECTORS:
+				return queryRedirectors != null;
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS:
 				return excludeDefaultListeners != null;
 			case OrmPackage.MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS:
@@ -2223,6 +3675,10 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return postLoad != null;
 			case OrmPackage.MAPPED_SUPERCLASS__PROPERTY:
 				return property != null && !property.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE:
+				return attributeOverride != null && !attributeOverride.isEmpty();
+			case OrmPackage.MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE:
+				return associationOverride != null && !associationOverride.isEmpty();
 			case OrmPackage.MAPPED_SUPERCLASS__ATTRIBUTES:
 				return attributes != null;
 			case OrmPackage.MAPPED_SUPERCLASS__ACCESS:
@@ -2237,6 +3693,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 				return isSetExistenceChecking();
 			case OrmPackage.MAPPED_SUPERCLASS__METADATA_COMPLETE:
 				return isSetMetadataComplete();
+			case OrmPackage.MAPPED_SUPERCLASS__PARENT_CLASS:
+				return PARENT_CLASS_EDEFAULT == null ? parentClass != null : !PARENT_CLASS_EDEFAULT.equals(parentClass);
 			case OrmPackage.MAPPED_SUPERCLASS__READ_ONLY:
 				return isSetReadOnly();
 		}
@@ -2254,6 +3712,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (description: ");
 		result.append(description);
+		result.append(", partitioned: ");
+		result.append(partitioned);
 		result.append(", access: ");
 		if (accessESet) result.append(access); else result.append("<unset>");
 		result.append(", cacheable: ");
@@ -2266,6 +3726,8 @@ public class MappedSuperclassImpl extends BaseOrmAnnotationImpl implements Mappe
 		if (existenceCheckingESet) result.append(existenceChecking); else result.append("<unset>");
 		result.append(", metadataComplete: ");
 		if (metadataCompleteESet) result.append(metadataComplete); else result.append("<unset>");
+		result.append(", parentClass: ");
+		result.append(parentClass);
 		result.append(", readOnly: ");
 		if (readOnlyESet) result.append(readOnly); else result.append("<unset>");
 		result.append(')');

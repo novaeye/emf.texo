@@ -17,7 +17,7 @@ public class ConceptualRole extends AbstractConceptualElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private AbstractConceptualElement conceptualElement = null;
 
   /**

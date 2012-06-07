@@ -15,11 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				Defines an entity listener to be invoked at
- * 				lifecycle events
- * 				for the entities that list this listener.
+ *         Defines an entity listener to be invoked at lifecycle events
+ *         for the entities that list this listener.
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>

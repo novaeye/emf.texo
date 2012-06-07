@@ -111,13 +111,213 @@ public interface OrmPackage extends EPackage {
   int ACCESS_METHODS_FEATURE_COUNT = 2;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AdditionalCriteriaImpl <em>Additional Criteria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.AdditionalCriteriaImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAdditionalCriteria()
+	 * @generated
+	 */
+	int ADDITIONAL_CRITERIA = 1;
+
+		/**
+	 * The feature id for the '<em><b>Criteria</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_CRITERIA__CRITERIA = 0;
+
+		/**
+	 * The number of structural features of the '<em>Additional Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDITIONAL_CRITERIA_FEATURE_COUNT = 1;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ArrayImpl <em>Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ArrayImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getArray()
+	 * @generated
+	 */
+	int ARRAY = 2;
+
+		/**
+	 * The feature id for the '<em><b>Column</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__COLUMN = 0;
+
+		/**
+	 * The feature id for the '<em><b>Temporal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__TEMPORAL = 1;
+
+		/**
+	 * The feature id for the '<em><b>Enumerated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__ENUMERATED = 2;
+
+		/**
+	 * The feature id for the '<em><b>Lob</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__LOB = 3;
+
+		/**
+	 * The feature id for the '<em><b>Convert</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__CONVERT = 4;
+
+		/**
+	 * The feature id for the '<em><b>Group</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__GROUP = 5;
+
+		/**
+	 * The feature id for the '<em><b>Converter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__CONVERTER = 6;
+
+		/**
+	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__TYPE_CONVERTER = 7;
+
+		/**
+	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__OBJECT_TYPE_CONVERTER = 8;
+
+		/**
+	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__STRUCT_CONVERTER = 9;
+
+		/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__PROPERTY = 10;
+
+		/**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__ACCESS_METHODS = 11;
+
+		/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__ACCESS = 12;
+
+		/**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__ATTRIBUTE_TYPE = 13;
+
+		/**
+	 * The feature id for the '<em><b>Database Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__DATABASE_TYPE = 14;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__NAME = 15;
+
+		/**
+	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__TARGET_CLASS = 16;
+
+		/**
+	 * The number of structural features of the '<em>Array</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FEATURE_COUNT = 17;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AssociationOverrideImpl <em>Association Override</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.AssociationOverrideImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAssociationOverride()
 	 * @generated
 	 */
-  int ASSOCIATION_OVERRIDE = 1;
+  int ASSOCIATION_OVERRIDE = 3;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -169,7 +369,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAttributeOverride()
 	 * @generated
 	 */
-  int ATTRIBUTE_OVERRIDE = 2;
+  int ATTRIBUTE_OVERRIDE = 4;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -212,7 +412,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAttributes()
 	 * @generated
 	 */
-  int ATTRIBUTES = 3;
+  int ATTRIBUTES = 5;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -358,12 +558,30 @@ public interface OrmPackage extends EPackage {
   int ATTRIBUTES__TRANSIENT = 15;
 
   /**
+	 * The feature id for the '<em><b>Structure</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTES__STRUCTURE = 16;
+
+		/**
+	 * The feature id for the '<em><b>Array</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTES__ARRAY = 17;
+
+		/**
 	 * The number of structural features of the '<em>Attributes</em>' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ATTRIBUTES_FEATURE_COUNT = 16;
+  int ATTRIBUTES_FEATURE_COUNT = 18;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicImpl <em>Basic</em>}' class.
@@ -372,7 +590,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBasic()
 	 * @generated
 	 */
-  int BASIC = 4;
+  int BASIC = 6;
 
   /**
    * The feature id for the '<em><b>Column</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -384,13 +602,22 @@ public interface OrmPackage extends EPackage {
   int BASIC__COLUMN = 0;
 
   /**
+	 * The feature id for the '<em><b>Index</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC__INDEX = 1;
+
+		/**
 	 * The feature id for the '<em><b>Generated Value</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__GENERATED_VALUE = 1;
+  int BASIC__GENERATED_VALUE = 2;
 
   /**
 	 * The feature id for the '<em><b>Lob</b></em>' containment reference.
@@ -398,7 +625,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__LOB = 2;
+  int BASIC__LOB = 3;
 
   /**
 	 * The feature id for the '<em><b>Temporal</b></em>' attribute.
@@ -406,7 +633,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__TEMPORAL = 3;
+  int BASIC__TEMPORAL = 4;
 
   /**
 	 * The feature id for the '<em><b>Enumerated</b></em>' attribute.
@@ -414,7 +641,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__ENUMERATED = 4;
+  int BASIC__ENUMERATED = 5;
 
   /**
 	 * The feature id for the '<em><b>Convert</b></em>' attribute.
@@ -422,7 +649,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__CONVERT = 5;
+  int BASIC__CONVERT = 6;
 
   /**
    * The feature id for the '<em><b>Converter</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -431,7 +658,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int BASIC__CONVERTER = 6;
+  int BASIC__CONVERTER = 7;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
@@ -440,7 +667,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__TYPE_CONVERTER = 7;
+  int BASIC__TYPE_CONVERTER = 8;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
@@ -449,7 +676,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__OBJECT_TYPE_CONVERTER = 8;
+  int BASIC__OBJECT_TYPE_CONVERTER = 9;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
@@ -458,7 +685,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__STRUCT_CONVERTER = 9;
+  int BASIC__STRUCT_CONVERTER = 10;
 
   /**
 	 * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
@@ -467,7 +694,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__TABLE_GENERATOR = 10;
+  int BASIC__TABLE_GENERATOR = 11;
 
   /**
 	 * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
@@ -476,7 +703,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__SEQUENCE_GENERATOR = 11;
+  int BASIC__SEQUENCE_GENERATOR = 12;
 
   /**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -485,7 +712,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__PROPERTY = 12;
+  int BASIC__PROPERTY = 13;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -494,23 +721,50 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__ACCESS_METHODS = 13;
+  int BASIC__ACCESS_METHODS = 14;
 
   /**
+	 * The feature id for the '<em><b>Return Insert</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC__RETURN_INSERT = 15;
+
+		/**
+	 * The feature id for the '<em><b>Return Update</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC__RETURN_UPDATE = 16;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__ACCESS = 14;
+  int BASIC__ACCESS = 17;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC__ATTRIBUTE_TYPE = 18;
+
+		/**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__FETCH = 15;
+  int BASIC__FETCH = 19;
 
   /**
 	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
@@ -518,7 +772,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__MUTABLE = 16;
+  int BASIC__MUTABLE = 20;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -526,7 +780,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__NAME = 17;
+  int BASIC__NAME = 21;
 
   /**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -534,7 +788,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC__OPTIONAL = 18;
+  int BASIC__OPTIONAL = 22;
 
   /**
 	 * The number of structural features of the '<em>Basic</em>' class.
@@ -542,7 +796,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_FEATURE_COUNT = 19;
+  int BASIC_FEATURE_COUNT = 23;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicCollectionImpl <em>Basic Collection</em>}' class.
@@ -551,7 +805,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBasicCollection()
 	 * @generated
 	 */
-  int BASIC_COLLECTION = 5;
+  int BASIC_COLLECTION = 7;
 
   /**
 	 * The feature id for the '<em><b>Value Column</b></em>' containment reference.
@@ -624,13 +878,22 @@ public interface OrmPackage extends EPackage {
   int BASIC_COLLECTION__JOIN_FETCH = 7;
 
   /**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_COLLECTION__BATCH_FETCH = 8;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_COLLECTION__PROPERTY = 8;
+  int BASIC_COLLECTION__PROPERTY = 9;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -639,15 +902,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_COLLECTION__ACCESS_METHODS = 9;
+  int BASIC_COLLECTION__ACCESS_METHODS = 10;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_COLLECTION__NONCACHEABLE = 11;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_COLLECTION__ACCESS = 10;
+  int BASIC_COLLECTION__ACCESS = 12;
 
   /**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
@@ -655,7 +927,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_COLLECTION__FETCH = 11;
+  int BASIC_COLLECTION__FETCH = 13;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -663,7 +935,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_COLLECTION__NAME = 12;
+  int BASIC_COLLECTION__NAME = 14;
 
   /**
 	 * The number of structural features of the '<em>Basic Collection</em>' class.
@@ -672,7 +944,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_COLLECTION_FEATURE_COUNT = 13;
+  int BASIC_COLLECTION_FEATURE_COUNT = 15;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BasicMapImpl <em>Basic Map</em>}' class.
@@ -681,7 +953,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBasicMap()
 	 * @generated
 	 */
-  int BASIC_MAP = 6;
+  int BASIC_MAP = 8;
 
   /**
 	 * The feature id for the '<em><b>Key Column</b></em>' containment reference.
@@ -779,13 +1051,22 @@ public interface OrmPackage extends EPackage {
   int BASIC_MAP__JOIN_FETCH = 10;
 
   /**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_MAP__BATCH_FETCH = 11;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_MAP__PROPERTY = 11;
+  int BASIC_MAP__PROPERTY = 12;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -794,15 +1075,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_MAP__ACCESS_METHODS = 12;
+  int BASIC_MAP__ACCESS_METHODS = 13;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_MAP__NONCACHEABLE = 14;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_MAP__ACCESS = 13;
+  int BASIC_MAP__ACCESS = 15;
 
   /**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
@@ -810,7 +1100,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_MAP__FETCH = 14;
+  int BASIC_MAP__FETCH = 16;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -818,7 +1108,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_MAP__NAME = 15;
+  int BASIC_MAP__NAME = 17;
 
   /**
 	 * The number of structural features of the '<em>Basic Map</em>' class.
@@ -826,16 +1116,53 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int BASIC_MAP_FEATURE_COUNT = 16;
+  int BASIC_MAP_FEATURE_COUNT = 18;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.BatchFetchImpl <em>Batch Fetch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.BatchFetchImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBatchFetch()
+	 * @generated
+	 */
+	int BATCH_FETCH = 9;
+
+		/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BATCH_FETCH__SIZE = 0;
+
+		/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BATCH_FETCH__TYPE = 1;
+
+		/**
+	 * The number of structural features of the '<em>Batch Fetch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BATCH_FETCH_FEATURE_COUNT = 2;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl <em>Cache</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCache()
 	 * @generated
 	 */
-  int CACHE = 7;
+  int CACHE = 10;
 
   /**
 	 * The feature id for the '<em><b>Expiry</b></em>' attribute.
@@ -879,13 +1206,22 @@ public interface OrmPackage extends EPackage {
   int CACHE__DISABLE_HITS = 4;
 
   /**
+	 * The feature id for the '<em><b>Isolation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CACHE__ISOLATION = 5;
+
+		/**
    * The feature id for the '<em><b>Refresh Only If Newer</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
    * @generated
    * @ordered
    */
-  int CACHE__REFRESH_ONLY_IF_NEWER = 5;
+  int CACHE__REFRESH_ONLY_IF_NEWER = 6;
 
   /**
 	 * The feature id for the '<em><b>Shared</b></em>' attribute.
@@ -893,7 +1229,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int CACHE__SHARED = 6;
+  int CACHE__SHARED = 7;
 
   /**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -901,7 +1237,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int CACHE__SIZE = 7;
+  int CACHE__SIZE = 8;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -909,7 +1245,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int CACHE__TYPE = 8;
+  int CACHE__TYPE = 9;
 
   /**
 	 * The number of structural features of the '<em>Cache</em>' class.
@@ -917,7 +1253,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int CACHE_FEATURE_COUNT = 9;
+  int CACHE_FEATURE_COUNT = 10;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheInterceptorImpl <em>Cache Interceptor</em>}' class.
@@ -926,7 +1262,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheInterceptor()
 	 * @generated
 	 */
-  int CACHE_INTERCEPTOR = 8;
+  int CACHE_INTERCEPTOR = 11;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -952,7 +1288,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCascadeType()
 	 * @generated
 	 */
-  int CASCADE_TYPE = 9;
+  int CASCADE_TYPE = 12;
 
   /**
 	 * The feature id for the '<em><b>Cascade All</b></em>' containment reference.
@@ -1000,13 +1336,22 @@ public interface OrmPackage extends EPackage {
   int CASCADE_TYPE__CASCADE_REFRESH = 4;
 
   /**
+	 * The feature id for the '<em><b>Cascade Detach</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASCADE_TYPE__CASCADE_DETACH = 5;
+
+		/**
    * The number of structural features of the '<em>Cascade Type</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
    * @generated
    * @ordered
    */
-  int CASCADE_TYPE_FEATURE_COUNT = 5;
+  int CASCADE_TYPE_FEATURE_COUNT = 6;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ChangeTrackingImpl <em>Change Tracking</em>}' class.
@@ -1015,7 +1360,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getChangeTracking()
 	 * @generated
 	 */
-  int CHANGE_TRACKING = 10;
+  int CHANGE_TRACKING = 13;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1035,13 +1380,41 @@ public interface OrmPackage extends EPackage {
   int CHANGE_TRACKING_FEATURE_COUNT = 1;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ClassExtractorImpl <em>Class Extractor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ClassExtractorImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getClassExtractor()
+	 * @generated
+	 */
+	int CLASS_EXTRACTOR = 14;
+
+		/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_EXTRACTOR__CLASS = 0;
+
+		/**
+	 * The number of structural features of the '<em>Class Extractor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_EXTRACTOR_FEATURE_COUNT = 1;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CloneCopyPolicyImpl <em>Clone Copy Policy</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.CloneCopyPolicyImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCloneCopyPolicy()
 	 * @generated
 	 */
-  int CLONE_COPY_POLICY = 11;
+  int CLONE_COPY_POLICY = 15;
 
   /**
 	 * The feature id for the '<em><b>Method</b></em>' attribute.
@@ -1076,7 +1449,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCollectionTable()
 	 * @generated
 	 */
-  int COLLECTION_TABLE = 12;
+  int COLLECTION_TABLE = 16;
 
   /**
 	 * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
@@ -1105,12 +1478,21 @@ public interface OrmPackage extends EPackage {
   int COLLECTION_TABLE__CATALOG = 2;
 
   /**
+	 * The feature id for the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_TABLE__CREATION_SUFFIX = 3;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int COLLECTION_TABLE__NAME = 3;
+  int COLLECTION_TABLE__NAME = 4;
 
   /**
 	 * The feature id for the '<em><b>Schema</b></em>' attribute.
@@ -1118,7 +1500,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int COLLECTION_TABLE__SCHEMA = 4;
+  int COLLECTION_TABLE__SCHEMA = 5;
 
   /**
 	 * The number of structural features of the '<em>Collection Table</em>' class.
@@ -1127,7 +1509,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int COLLECTION_TABLE_FEATURE_COUNT = 5;
+  int COLLECTION_TABLE_FEATURE_COUNT = 6;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ColumnImpl <em>Column</em>}' class.
@@ -1136,7 +1518,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getColumn()
 	 * @generated
 	 */
-  int COLUMN = 13;
+  int COLUMN = 17;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -1233,7 +1615,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getColumnResult()
 	 * @generated
 	 */
-  int COLUMN_RESULT = 14;
+  int COLUMN_RESULT = 18;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1259,7 +1641,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getConversionValue()
 	 * @generated
 	 */
-  int CONVERSION_VALUE = 15;
+  int CONVERSION_VALUE = 19;
 
   /**
 	 * The feature id for the '<em><b>Data Value</b></em>' attribute.
@@ -1293,7 +1675,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getConverter()
 	 * @generated
 	 */
-  int CONVERTER = 16;
+  int CONVERTER = 20;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -1326,7 +1708,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCopyPolicy()
 	 * @generated
 	 */
-  int COPY_POLICY = 17;
+  int COPY_POLICY = 21;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -1352,7 +1734,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCustomizer()
 	 * @generated
 	 */
-  int CUSTOMIZER = 18;
+  int CUSTOMIZER = 22;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -1377,7 +1759,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorClass()
 	 * @generated
 	 */
-  int DISCRIMINATOR_CLASS = 19;
+  int DISCRIMINATOR_CLASS = 23;
 
   /**
 	 * The feature id for the '<em><b>Discriminator</b></em>' attribute.
@@ -1411,7 +1793,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorColumn()
 	 * @generated
 	 */
-  int DISCRIMINATOR_COLUMN = 20;
+  int DISCRIMINATOR_COLUMN = 24;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -1462,7 +1844,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDocumentRoot()
 	 * @generated
 	 */
-  int DOCUMENT_ROOT = 21;
+  int DOCUMENT_ROOT = 25;
 
   /**
 	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -1513,7 +1895,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEclipselinkCollectionTable()
 	 * @generated
 	 */
-  int ECLIPSELINK_COLLECTION_TABLE = 22;
+  int ECLIPSELINK_COLLECTION_TABLE = 26;
 
   /**
 	 * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
@@ -1542,12 +1924,21 @@ public interface OrmPackage extends EPackage {
   int ECLIPSELINK_COLLECTION_TABLE__CATALOG = 2;
 
   /**
+	 * The feature id for the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECLIPSELINK_COLLECTION_TABLE__CREATION_SUFFIX = 3;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ECLIPSELINK_COLLECTION_TABLE__NAME = 3;
+  int ECLIPSELINK_COLLECTION_TABLE__NAME = 4;
 
   /**
 	 * The feature id for the '<em><b>Schema</b></em>' attribute.
@@ -1555,7 +1946,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ECLIPSELINK_COLLECTION_TABLE__SCHEMA = 4;
+  int ECLIPSELINK_COLLECTION_TABLE__SCHEMA = 5;
 
   /**
 	 * The number of structural features of the '<em>Eclipselink Collection Table</em>' class.
@@ -1564,7 +1955,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ECLIPSELINK_COLLECTION_TABLE_FEATURE_COUNT = 5;
+  int ECLIPSELINK_COLLECTION_TABLE_FEATURE_COUNT = 6;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ElementCollectionImpl <em>Element Collection</em>}' class.
@@ -1573,7 +1964,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getElementCollection()
 	 * @generated
 	 */
-  int ELEMENT_COLLECTION = 23;
+  int ELEMENT_COLLECTION = 27;
 
   /**
 	 * The feature id for the '<em><b>Order By</b></em>' attribute.
@@ -1784,13 +2175,40 @@ public interface OrmPackage extends EPackage {
   int ELEMENT_COLLECTION__COLLECTION_TABLE = 23;
 
   /**
+	 * The feature id for the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__CASCADE_ON_DELETE = 24;
+
+		/**
+	 * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__JOIN_FETCH = 25;
+
+		/**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__BATCH_FETCH = 26;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION__PROPERTY = 24;
+  int ELEMENT_COLLECTION__PROPERTY = 27;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -1799,23 +2217,131 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION__ACCESS_METHODS = 25;
+  int ELEMENT_COLLECTION__ACCESS_METHODS = 28;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__NONCACHEABLE = 29;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__PARTITIONING = 30;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__REPLICATION_PARTITIONING = 31;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__ROUND_ROBIN_PARTITIONING = 32;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__PINNED_PARTITIONING = 33;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__RANGE_PARTITIONING = 34;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__VALUE_PARTITIONING = 35;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__HASH_PARTITIONING = 36;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__UNION_PARTITIONING = 37;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__PARTITIONED = 38;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION__ACCESS = 26;
+  int ELEMENT_COLLECTION__ACCESS = 39;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__ATTRIBUTE_TYPE = 40;
+
+		/**
+	 * The feature id for the '<em><b>Composite Member</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT_COLLECTION__COMPOSITE_MEMBER = 41;
+
+		/**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION__FETCH = 27;
+  int ELEMENT_COLLECTION__FETCH = 42;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1823,7 +2349,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION__NAME = 28;
+  int ELEMENT_COLLECTION__NAME = 43;
 
   /**
 	 * The feature id for the '<em><b>Target Class</b></em>' attribute.
@@ -1831,7 +2357,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION__TARGET_CLASS = 29;
+  int ELEMENT_COLLECTION__TARGET_CLASS = 44;
 
   /**
 	 * The number of structural features of the '<em>Element Collection</em>' class.
@@ -1840,7 +2366,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ELEMENT_COLLECTION_FEATURE_COUNT = 30;
+  int ELEMENT_COLLECTION_FEATURE_COUNT = 45;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl <em>Embeddable</em>}' class.
@@ -1849,7 +2375,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmbeddable()
 	 * @generated
 	 */
-  int EMBEDDABLE = 24;
+  int EMBEDDABLE = 28;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1860,13 +2386,22 @@ public interface OrmPackage extends EPackage {
   int EMBEDDABLE__DESCRIPTION = 0;
 
   /**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__ACCESS_METHODS = 1;
+
+		/**
 	 * The feature id for the '<em><b>Customizer</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__CUSTOMIZER = 1;
+  int EMBEDDABLE__CUSTOMIZER = 2;
 
   /**
 	 * The feature id for the '<em><b>Change Tracking</b></em>' containment reference.
@@ -1875,16 +2410,25 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__CHANGE_TRACKING = 2;
+  int EMBEDDABLE__CHANGE_TRACKING = 3;
 
   /**
+	 * The feature id for the '<em><b>Struct</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__STRUCT = 4;
+
+		/**
 	 * The feature id for the '<em><b>Converter</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__CONVERTER = 3;
+  int EMBEDDABLE__CONVERTER = 5;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
@@ -1893,7 +2437,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__TYPE_CONVERTER = 4;
+  int EMBEDDABLE__TYPE_CONVERTER = 6;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
@@ -1902,7 +2446,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__OBJECT_TYPE_CONVERTER = 5;
+  int EMBEDDABLE__OBJECT_TYPE_CONVERTER = 7;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
@@ -1911,25 +2455,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__STRUCT_CONVERTER = 6;
-
-  /**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int EMBEDDABLE__PROPERTY = 7;
-
-  /**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
-	 * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int EMBEDDABLE__ATTRIBUTES = 8;
+  int EMBEDDABLE__STRUCT_CONVERTER = 8;
 
   /**
 	 * The feature id for the '<em><b>Copy Policy</b></em>' containment reference.
@@ -1959,12 +2485,66 @@ public interface OrmPackage extends EPackage {
   int EMBEDDABLE__CLONE_COPY_POLICY = 11;
 
   /**
+	 * The feature id for the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__PLSQL_RECORD = 12;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__PLSQL_TABLE = 13;
+
+		/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int EMBEDDABLE__PROPERTY = 14;
+
+		/**
+	 * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__ATTRIBUTE_OVERRIDE = 15;
+
+		/**
+	 * The feature id for the '<em><b>Association Override</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__ASSOCIATION_OVERRIDE = 16;
+
+		/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
+	 * <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+  int EMBEDDABLE__ATTRIBUTES = 17;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__ACCESS = 12;
+  int EMBEDDABLE__ACCESS = 18;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -1972,7 +2552,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__CLASS = 13;
+  int EMBEDDABLE__CLASS = 19;
 
   /**
 	 * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute.
@@ -1981,7 +2561,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__EXCLUDE_DEFAULT_MAPPINGS = 14;
+  int EMBEDDABLE__EXCLUDE_DEFAULT_MAPPINGS = 20;
 
   /**
 	 * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
@@ -1989,15 +2569,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE__METADATA_COMPLETE = 15;
+  int EMBEDDABLE__METADATA_COMPLETE = 21;
 
   /**
+	 * The feature id for the '<em><b>Parent Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDABLE__PARENT_CLASS = 22;
+
+		/**
 	 * The number of structural features of the '<em>Embeddable</em>' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDABLE_FEATURE_COUNT = 16;
+  int EMBEDDABLE_FEATURE_COUNT = 23;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl <em>Embedded</em>}' class.
@@ -2006,7 +2595,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmbedded()
 	 * @generated
 	 */
-  int EMBEDDED = 25;
+  int EMBEDDED = 29;
 
   /**
 	 * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
@@ -2053,12 +2642,21 @@ public interface OrmPackage extends EPackage {
   int EMBEDDED__ACCESS = 4;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED__ATTRIBUTE_TYPE = 5;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDED__NAME = 5;
+  int EMBEDDED__NAME = 6;
 
   /**
 	 * The number of structural features of the '<em>Embedded</em>' class.
@@ -2066,7 +2664,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDED_FEATURE_COUNT = 6;
+  int EMBEDDED_FEATURE_COUNT = 7;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedIdImpl <em>Embedded Id</em>}' class.
@@ -2075,7 +2673,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmbeddedId()
 	 * @generated
 	 */
-  int EMBEDDED_ID = 26;
+  int EMBEDDED_ID = 30;
 
   /**
 	 * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
@@ -2113,12 +2711,21 @@ public interface OrmPackage extends EPackage {
   int EMBEDDED_ID__ACCESS = 3;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_ID__ATTRIBUTE_TYPE = 4;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMBEDDED_ID__NAME = 4;
+  int EMBEDDED_ID__NAME = 5;
 
   /**
    * The number of structural features of the '<em>Embedded Id</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
@@ -2127,7 +2734,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int EMBEDDED_ID_FEATURE_COUNT = 5;
+  int EMBEDDED_ID_FEATURE_COUNT = 6;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmptyTypeImpl <em>Empty Type</em>}' class.
@@ -2136,7 +2743,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEmptyType()
 	 * @generated
 	 */
-  int EMPTY_TYPE = 27;
+  int EMPTY_TYPE = 31;
 
   /**
 	 * The number of structural features of the '<em>Empty Type</em>' class.
@@ -2153,7 +2760,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntity()
 	 * @generated
 	 */
-  int ENTITY = 28;
+  int ENTITY = 32;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2164,13 +2771,40 @@ public interface OrmPackage extends EPackage {
   int ENTITY__DESCRIPTION = 0;
 
   /**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ACCESS_METHODS = 1;
+
+		/**
+	 * The feature id for the '<em><b>Multitenant</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__MULTITENANT = 2;
+
+		/**
+	 * The feature id for the '<em><b>Additional Criteria</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ADDITIONAL_CRITERIA = 3;
+
+		/**
 	 * The feature id for the '<em><b>Customizer</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CUSTOMIZER = 1;
+  int ENTITY__CUSTOMIZER = 4;
 
   /**
 	 * The feature id for the '<em><b>Change Tracking</b></em>' containment reference.
@@ -2179,7 +2813,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CHANGE_TRACKING = 2;
+  int ENTITY__CHANGE_TRACKING = 5;
 
   /**
 	 * The feature id for the '<em><b>Table</b></em>' containment reference.
@@ -2187,7 +2821,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__TABLE = 3;
+  int ENTITY__TABLE = 6;
 
   /**
 	 * The feature id for the '<em><b>Secondary Table</b></em>' containment reference list.
@@ -2196,25 +2830,52 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__SECONDARY_TABLE = 4;
+  int ENTITY__SECONDARY_TABLE = 7;
 
   /**
+	 * The feature id for the '<em><b>Struct</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__STRUCT = 8;
+
+		/**
 	 * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__PRIMARY_KEY_JOIN_COLUMN = 5;
+  int ENTITY__PRIMARY_KEY_JOIN_COLUMN = 9;
 
   /**
+	 * The feature id for the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__CASCADE_ON_DELETE = 10;
+
+		/**
+	 * The feature id for the '<em><b>Index</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__INDEX = 11;
+
+		/**
    * The feature id for the '<em><b>Id Class</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
    * @generated
    * @ordered
    */
-  int ENTITY__ID_CLASS = 6;
+  int ENTITY__ID_CLASS = 12;
 
   /**
 	 * The feature id for the '<em><b>Primary Key</b></em>' containment reference.
@@ -2223,7 +2884,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__PRIMARY_KEY = 7;
+  int ENTITY__PRIMARY_KEY = 13;
 
   /**
 	 * The feature id for the '<em><b>Inheritance</b></em>' containment reference.
@@ -2232,7 +2893,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__INHERITANCE = 8;
+  int ENTITY__INHERITANCE = 14;
 
   /**
    * The feature id for the '<em><b>Discriminator Value</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -2241,7 +2902,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ENTITY__DISCRIMINATOR_VALUE = 9;
+  int ENTITY__DISCRIMINATOR_VALUE = 15;
 
   /**
 	 * The feature id for the '<em><b>Discriminator Column</b></em>' containment reference.
@@ -2250,16 +2911,25 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__DISCRIMINATOR_COLUMN = 10;
+  int ENTITY__DISCRIMINATOR_COLUMN = 16;
 
   /**
+	 * The feature id for the '<em><b>Class Extractor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__CLASS_EXTRACTOR = 17;
+
+		/**
 	 * The feature id for the '<em><b>Optimistic Locking</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__OPTIMISTIC_LOCKING = 11;
+  int ENTITY__OPTIMISTIC_LOCKING = 18;
 
   /**
 	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
@@ -2267,7 +2937,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CACHE = 12;
+  int ENTITY__CACHE = 19;
 
   /**
 	 * The feature id for the '<em><b>Cache Interceptor</b></em>' containment reference.
@@ -2276,16 +2946,25 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CACHE_INTERCEPTOR = 13;
+  int ENTITY__CACHE_INTERCEPTOR = 20;
 
   /**
+	 * The feature id for the '<em><b>Fetch Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__FETCH_GROUP = 21;
+
+		/**
 	 * The feature id for the '<em><b>Converter</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CONVERTER = 14;
+  int ENTITY__CONVERTER = 22;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
@@ -2294,7 +2973,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__TYPE_CONVERTER = 15;
+  int ENTITY__TYPE_CONVERTER = 23;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
@@ -2303,7 +2982,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__OBJECT_TYPE_CONVERTER = 16;
+  int ENTITY__OBJECT_TYPE_CONVERTER = 24;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
@@ -2312,7 +2991,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__STRUCT_CONVERTER = 17;
+  int ENTITY__STRUCT_CONVERTER = 25;
 
   /**
 	 * The feature id for the '<em><b>Copy Policy</b></em>' containment reference.
@@ -2321,7 +3000,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__COPY_POLICY = 18;
+  int ENTITY__COPY_POLICY = 26;
 
   /**
 	 * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference.
@@ -2330,7 +3009,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__INSTANTIATION_COPY_POLICY = 19;
+  int ENTITY__INSTANTIATION_COPY_POLICY = 27;
 
   /**
 	 * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference.
@@ -2339,7 +3018,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CLONE_COPY_POLICY = 20;
+  int ENTITY__CLONE_COPY_POLICY = 28;
 
   /**
 	 * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
@@ -2348,7 +3027,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__SEQUENCE_GENERATOR = 21;
+  int ENTITY__SEQUENCE_GENERATOR = 29;
 
   /**
 	 * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
@@ -2357,16 +3036,97 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__TABLE_GENERATOR = 22;
+  int ENTITY__TABLE_GENERATOR = 30;
 
   /**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PARTITIONING = 31;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__REPLICATION_PARTITIONING = 32;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ROUND_ROBIN_PARTITIONING = 33;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PINNED_PARTITIONING = 34;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__RANGE_PARTITIONING = 35;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__VALUE_PARTITIONING = 36;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__HASH_PARTITIONING = 37;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__UNION_PARTITIONING = 38;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PARTITIONED = 39;
+
+		/**
 	 * The feature id for the '<em><b>Named Query</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__NAMED_QUERY = 23;
+  int ENTITY__NAMED_QUERY = 40;
 
   /**
 	 * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list.
@@ -2375,7 +3135,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__NAMED_NATIVE_QUERY = 24;
+  int ENTITY__NAMED_NATIVE_QUERY = 41;
 
   /**
    * The feature id for the '<em><b>Named Stored Procedure Query</b></em>' containment reference list. <!--
@@ -2384,16 +3144,61 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ENTITY__NAMED_STORED_PROCEDURE_QUERY = 25;
+  int ENTITY__NAMED_STORED_PROCEDURE_QUERY = 42;
 
   /**
+	 * The feature id for the '<em><b>Named Stored Function Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__NAMED_STORED_FUNCTION_QUERY = 43;
+
+		/**
+	 * The feature id for the '<em><b>Named Plsql Stored Procedure Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__NAMED_PLSQL_STORED_PROCEDURE_QUERY = 44;
+
+		/**
+	 * The feature id for the '<em><b>Named Plsql Stored Function Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__NAMED_PLSQL_STORED_FUNCTION_QUERY = 45;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PLSQL_RECORD = 46;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PLSQL_TABLE = 47;
+
+		/**
 	 * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__SQL_RESULT_SET_MAPPING = 26;
+  int ENTITY__SQL_RESULT_SET_MAPPING = 48;
 
   /**
 	 * The feature id for the '<em><b>Query Redirectors</b></em>' containment reference.
@@ -2402,7 +3207,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__QUERY_REDIRECTORS = 27;
+  int ENTITY__QUERY_REDIRECTORS = 49;
 
   /**
 	 * The feature id for the '<em><b>Exclude Default Listeners</b></em>' containment reference.
@@ -2411,7 +3216,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__EXCLUDE_DEFAULT_LISTENERS = 28;
+  int ENTITY__EXCLUDE_DEFAULT_LISTENERS = 50;
 
   /**
 	 * The feature id for the '<em><b>Exclude Superclass Listeners</b></em>' containment reference.
@@ -2420,7 +3225,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__EXCLUDE_SUPERCLASS_LISTENERS = 29;
+  int ENTITY__EXCLUDE_SUPERCLASS_LISTENERS = 51;
 
   /**
 	 * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference.
@@ -2429,16 +3234,79 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__ENTITY_LISTENERS = 30;
+  int ENTITY__ENTITY_LISTENERS = 52;
 
   /**
+	 * The feature id for the '<em><b>Pre Persist</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PRE_PERSIST = 53;
+
+		/**
+	 * The feature id for the '<em><b>Post Persist</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__POST_PERSIST = 54;
+
+		/**
+	 * The feature id for the '<em><b>Pre Remove</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PRE_REMOVE = 55;
+
+		/**
+	 * The feature id for the '<em><b>Post Remove</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__POST_REMOVE = 56;
+
+		/**
+	 * The feature id for the '<em><b>Pre Update</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PRE_UPDATE = 57;
+
+		/**
+	 * The feature id for the '<em><b>Post Update</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__POST_UPDATE = 58;
+
+		/**
+	 * The feature id for the '<em><b>Post Load</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__POST_LOAD = 59;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__PROPERTY = 31;
+  int ENTITY__PROPERTY = 60;
 
   /**
 	 * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
@@ -2447,7 +3315,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__ATTRIBUTE_OVERRIDE = 32;
+  int ENTITY__ATTRIBUTE_OVERRIDE = 61;
 
   /**
 	 * The feature id for the '<em><b>Association Override</b></em>' containment reference list.
@@ -2456,7 +3324,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__ASSOCIATION_OVERRIDE = 33;
+  int ENTITY__ASSOCIATION_OVERRIDE = 62;
 
   /**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
@@ -2465,7 +3333,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__ATTRIBUTES = 34;
+  int ENTITY__ATTRIBUTES = 63;
 
   /**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
@@ -2473,7 +3341,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__ACCESS = 35;
+  int ENTITY__ACCESS = 64;
 
   /**
 	 * The feature id for the '<em><b>Cacheable</b></em>' attribute.
@@ -2481,7 +3349,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CACHEABLE = 36;
+  int ENTITY__CACHEABLE = 65;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -2489,7 +3357,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__CLASS = 37;
+  int ENTITY__CLASS = 66;
 
   /**
 	 * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute.
@@ -2498,7 +3366,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__EXCLUDE_DEFAULT_MAPPINGS = 38;
+  int ENTITY__EXCLUDE_DEFAULT_MAPPINGS = 67;
 
   /**
    * The feature id for the '<em><b>Existence Checking</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -2507,7 +3375,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ENTITY__EXISTENCE_CHECKING = 39;
+  int ENTITY__EXISTENCE_CHECKING = 68;
 
   /**
 	 * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
@@ -2515,7 +3383,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__METADATA_COMPLETE = 40;
+  int ENTITY__METADATA_COMPLETE = 69;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2523,15 +3391,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__NAME = 41;
+  int ENTITY__NAME = 70;
 
   /**
+	 * The feature id for the '<em><b>Parent Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__PARENT_CLASS = 71;
+
+		/**
 	 * The feature id for the '<em><b>Read Only</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY__READ_ONLY = 42;
+  int ENTITY__READ_ONLY = 72;
 
   /**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -2539,7 +3416,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_FEATURE_COUNT = 43;
+  int ENTITY_FEATURE_COUNT = 73;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityListenerImpl <em>Entity Listener</em>}' class.
@@ -2548,7 +3425,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityListener()
 	 * @generated
 	 */
-  int ENTITY_LISTENER = 29;
+  int ENTITY_LISTENER = 33;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2645,7 +3522,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityListeners()
 	 * @generated
 	 */
-  int ENTITY_LISTENERS = 30;
+  int ENTITY_LISTENERS = 34;
 
   /**
 	 * The feature id for the '<em><b>Entity Listener</b></em>' containment reference list.
@@ -2672,7 +3549,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityMappingsType()
 	 * @generated
 	 */
-  int ENTITY_MAPPINGS_TYPE = 31;
+  int ENTITY_MAPPINGS_TYPE = 35;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2724,13 +3601,31 @@ public interface OrmPackage extends EPackage {
   int ENTITY_MAPPINGS_TYPE__ACCESS = 5;
 
   /**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__ACCESS_METHODS = 6;
+
+		/**
+	 * The feature id for the '<em><b>Tenant Discriminator</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR = 7;
+
+		/**
 	 * The feature id for the '<em><b>Converter</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__CONVERTER = 6;
+  int ENTITY_MAPPINGS_TYPE__CONVERTER = 8;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
@@ -2739,7 +3634,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER = 7;
+  int ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER = 9;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
@@ -2748,7 +3643,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER = 8;
+  int ENTITY_MAPPINGS_TYPE__OBJECT_TYPE_CONVERTER = 10;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
@@ -2757,7 +3652,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER = 9;
+  int ENTITY_MAPPINGS_TYPE__STRUCT_CONVERTER = 11;
 
   /**
 	 * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference list.
@@ -2766,7 +3661,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR = 10;
+  int ENTITY_MAPPINGS_TYPE__SEQUENCE_GENERATOR = 12;
 
   /**
 	 * The feature id for the '<em><b>Table Generator</b></em>' containment reference list.
@@ -2775,16 +3670,88 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR = 11;
+  int ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR = 13;
 
   /**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__PARTITIONING = 14;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING = 15;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING = 16;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING = 17;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING = 18;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING = 19;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING = 20;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING = 21;
+
+		/**
 	 * The feature id for the '<em><b>Named Query</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__NAMED_QUERY = 12;
+  int ENTITY_MAPPINGS_TYPE__NAMED_QUERY = 22;
 
   /**
 	 * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list.
@@ -2793,7 +3760,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY = 13;
+  int ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY = 23;
 
   /**
    * The feature id for the '<em><b>Named Stored Procedure Query</b></em>' containment reference list. <!--
@@ -2802,16 +3769,61 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY = 14;
+  int ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY = 24;
 
   /**
+	 * The feature id for the '<em><b>Named Stored Function Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY = 25;
+
+		/**
+	 * The feature id for the '<em><b>Named Plsql Stored Procedure Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY = 26;
+
+		/**
+	 * The feature id for the '<em><b>Named Plsql Stored Function Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY = 27;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__PLSQL_RECORD = 28;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_MAPPINGS_TYPE__PLSQL_TABLE = 29;
+
+		/**
 	 * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING = 15;
+  int ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING = 30;
 
   /**
 	 * The feature id for the '<em><b>Mapped Superclass</b></em>' containment reference list.
@@ -2820,7 +3832,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS = 16;
+  int ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS = 31;
 
   /**
 	 * The feature id for the '<em><b>Entity</b></em>' containment reference list.
@@ -2829,7 +3841,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__ENTITY = 17;
+  int ENTITY_MAPPINGS_TYPE__ENTITY = 32;
 
   /**
 	 * The feature id for the '<em><b>Embeddable</b></em>' containment reference list.
@@ -2838,7 +3850,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__EMBEDDABLE = 18;
+  int ENTITY_MAPPINGS_TYPE__EMBEDDABLE = 33;
 
   /**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -2846,7 +3858,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE__VERSION = 19;
+  int ENTITY_MAPPINGS_TYPE__VERSION = 34;
 
   /**
 	 * The number of structural features of the '<em>Entity Mappings Type</em>' class.
@@ -2855,7 +3867,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ENTITY_MAPPINGS_TYPE_FEATURE_COUNT = 20;
+  int ENTITY_MAPPINGS_TYPE_FEATURE_COUNT = 35;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityResultImpl <em>Entity Result</em>}' class.
@@ -2864,7 +3876,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEntityResult()
 	 * @generated
 	 */
-  int ENTITY_RESULT = 32;
+  int ENTITY_RESULT = 36;
 
   /**
 	 * The feature id for the '<em><b>Field Result</b></em>' containment reference list.
@@ -2902,13 +3914,87 @@ public interface OrmPackage extends EPackage {
   int ENTITY_RESULT_FEATURE_COUNT = 3;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FetchAttributeImpl <em>Fetch Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.FetchAttributeImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFetchAttribute()
+	 * @generated
+	 */
+	int FETCH_ATTRIBUTE = 37;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH_ATTRIBUTE__NAME = 0;
+
+		/**
+	 * The number of structural features of the '<em>Fetch Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH_ATTRIBUTE_FEATURE_COUNT = 1;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FetchGroupImpl <em>Fetch Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.FetchGroupImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFetchGroup()
+	 * @generated
+	 */
+	int FETCH_GROUP = 38;
+
+		/**
+	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH_GROUP__ATTRIBUTE = 0;
+
+		/**
+	 * The feature id for the '<em><b>Load</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH_GROUP__LOAD = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH_GROUP__NAME = 2;
+
+		/**
+	 * The number of structural features of the '<em>Fetch Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FETCH_GROUP_FEATURE_COUNT = 3;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl <em>Field Result</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.FieldResultImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFieldResult()
 	 * @generated
 	 */
-  int FIELD_RESULT = 33;
+  int FIELD_RESULT = 39;
 
   /**
 	 * The feature id for the '<em><b>Column</b></em>' attribute.
@@ -2942,7 +4028,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getGeneratedValue()
 	 * @generated
 	 */
-  int GENERATED_VALUE = 34;
+  int GENERATED_VALUE = 40;
 
   /**
 	 * The feature id for the '<em><b>Generator</b></em>' attribute.
@@ -2970,13 +4056,68 @@ public interface OrmPackage extends EPackage {
   int GENERATED_VALUE_FEATURE_COUNT = 2;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.HashPartitioningImpl <em>Hash Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.HashPartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getHashPartitioning()
+	 * @generated
+	 */
+	int HASH_PARTITIONING = 41;
+
+		/**
+	 * The feature id for the '<em><b>Partition Column</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASH_PARTITIONING__PARTITION_COLUMN = 0;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASH_PARTITIONING__CONNECTION_POOL = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASH_PARTITIONING__NAME = 2;
+
+		/**
+	 * The feature id for the '<em><b>Union Unpartitionable Queries</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASH_PARTITIONING__UNION_UNPARTITIONABLE_QUERIES = 3;
+
+		/**
+	 * The number of structural features of the '<em>Hash Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HASH_PARTITIONING_FEATURE_COUNT = 4;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl <em>Id</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getId()
 	 * @generated
 	 */
-  int ID = 35;
+  int ID = 42;
 
   /**
    * The feature id for the '<em><b>Column</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -2988,13 +4129,22 @@ public interface OrmPackage extends EPackage {
   int ID__COLUMN = 0;
 
   /**
+	 * The feature id for the '<em><b>Index</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID__INDEX = 1;
+
+		/**
 	 * The feature id for the '<em><b>Generated Value</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ID__GENERATED_VALUE = 1;
+  int ID__GENERATED_VALUE = 2;
 
   /**
 	 * The feature id for the '<em><b>Temporal</b></em>' attribute.
@@ -3002,15 +4152,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__TEMPORAL = 2;
+  int ID__TEMPORAL = 3;
 
   /**
+	 * The feature id for the '<em><b>Enumerated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID__ENUMERATED = 4;
+
+		/**
 	 * The feature id for the '<em><b>Convert</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ID__CONVERT = 3;
+  int ID__CONVERT = 5;
 
   /**
    * The feature id for the '<em><b>Converter</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -3019,7 +4178,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ID__CONVERTER = 4;
+  int ID__CONVERTER = 6;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
@@ -3028,7 +4187,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__TYPE_CONVERTER = 5;
+  int ID__TYPE_CONVERTER = 7;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
@@ -3037,7 +4196,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__OBJECT_TYPE_CONVERTER = 6;
+  int ID__OBJECT_TYPE_CONVERTER = 8;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
@@ -3046,7 +4205,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__STRUCT_CONVERTER = 7;
+  int ID__STRUCT_CONVERTER = 9;
 
   /**
 	 * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
@@ -3055,7 +4214,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__TABLE_GENERATOR = 8;
+  int ID__TABLE_GENERATOR = 10;
 
   /**
 	 * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
@@ -3064,7 +4223,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__SEQUENCE_GENERATOR = 9;
+  int ID__SEQUENCE_GENERATOR = 11;
 
   /**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -3073,7 +4232,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__PROPERTY = 10;
+  int ID__PROPERTY = 12;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -3082,7 +4241,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__ACCESS_METHODS = 11;
+  int ID__ACCESS_METHODS = 13;
 
   /**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
@@ -3090,15 +4249,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__ACCESS = 12;
+  int ID__ACCESS = 14;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ID__ATTRIBUTE_TYPE = 15;
+
+		/**
 	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ID__MUTABLE = 13;
+  int ID__MUTABLE = 16;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3106,7 +4274,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID__NAME = 14;
+  int ID__NAME = 17;
 
   /**
 	 * The number of structural features of the '<em>Id</em>' class.
@@ -3114,7 +4282,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ID_FEATURE_COUNT = 15;
+  int ID_FEATURE_COUNT = 18;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdClassImpl <em>Id Class</em>}' class.
@@ -3123,7 +4291,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIdClass()
 	 * @generated
 	 */
-  int ID_CLASS = 36;
+  int ID_CLASS = 43;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -3142,13 +4310,86 @@ public interface OrmPackage extends EPackage {
   int ID_CLASS_FEATURE_COUNT = 1;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IndexImpl <em>Index</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.IndexImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIndex()
+	 * @generated
+	 */
+	int INDEX = 44;
+
+		/**
+	 * The feature id for the '<em><b>Column Name</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__COLUMN_NAME = 0;
+
+		/**
+	 * The feature id for the '<em><b>Catalog</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__CATALOG = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__NAME = 2;
+
+		/**
+	 * The feature id for the '<em><b>Schema</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__SCHEMA = 3;
+
+		/**
+	 * The feature id for the '<em><b>Table</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__TABLE = 4;
+
+		/**
+	 * The feature id for the '<em><b>Unique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__UNIQUE = 5;
+
+		/**
+	 * The number of structural features of the '<em>Index</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_FEATURE_COUNT = 6;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.InheritanceImpl <em>Inheritance</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.InheritanceImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInheritance()
 	 * @generated
 	 */
-  int INHERITANCE = 37;
+  int INHERITANCE = 45;
 
   /**
 	 * The feature id for the '<em><b>Strategy</b></em>' attribute.
@@ -3174,7 +4415,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInstantiationCopyPolicy()
 	 * @generated
 	 */
-  int INSTANTIATION_COPY_POLICY = 38;
+  int INSTANTIATION_COPY_POLICY = 46;
 
   /**
 	 * The number of structural features of the '<em>Instantiation Copy Policy</em>' class.
@@ -3192,7 +4433,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinColumn()
 	 * @generated
 	 */
-  int JOIN_COLUMN = 39;
+  int JOIN_COLUMN = 47;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -3275,7 +4516,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinTable()
 	 * @generated
 	 */
-  int JOIN_TABLE = 40;
+  int JOIN_TABLE = 48;
 
   /**
 	 * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
@@ -3313,12 +4554,21 @@ public interface OrmPackage extends EPackage {
   int JOIN_TABLE__CATALOG = 3;
 
   /**
+	 * The feature id for the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JOIN_TABLE__CREATION_SUFFIX = 4;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int JOIN_TABLE__NAME = 4;
+  int JOIN_TABLE__NAME = 5;
 
   /**
 	 * The feature id for the '<em><b>Schema</b></em>' attribute.
@@ -3326,7 +4576,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int JOIN_TABLE__SCHEMA = 5;
+  int JOIN_TABLE__SCHEMA = 6;
 
   /**
 	 * The number of structural features of the '<em>Join Table</em>' class.
@@ -3334,7 +4584,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int JOIN_TABLE_FEATURE_COUNT = 6;
+  int JOIN_TABLE_FEATURE_COUNT = 7;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.LobImpl <em>Lob</em>}' class.
@@ -3343,7 +4593,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getLob()
 	 * @generated
 	 */
-  int LOB = 41;
+  int LOB = 49;
 
   /**
 	 * The number of structural features of the '<em>Lob</em>' class.
@@ -3360,7 +4610,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getManyToMany()
 	 * @generated
 	 */
-  int MANY_TO_MANY = 42;
+  int MANY_TO_MANY = 50;
 
   /**
 	 * The feature id for the '<em><b>Order By</b></em>' attribute.
@@ -3513,21 +4763,39 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_MANY__CASCADE = 16;
 
   /**
+	 * The feature id for the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__CASCADE_ON_DELETE = 17;
+
+		/**
 	 * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__JOIN_FETCH = 17;
+  int MANY_TO_MANY__JOIN_FETCH = 18;
 
   /**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__BATCH_FETCH = 19;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__PROPERTY = 18;
+  int MANY_TO_MANY__PROPERTY = 20;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -3536,23 +4804,122 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__ACCESS_METHODS = 19;
+  int MANY_TO_MANY__ACCESS_METHODS = 21;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__NONCACHEABLE = 22;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__PARTITIONING = 23;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__REPLICATION_PARTITIONING = 24;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__ROUND_ROBIN_PARTITIONING = 25;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__PINNED_PARTITIONING = 26;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__RANGE_PARTITIONING = 27;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__VALUE_PARTITIONING = 28;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__HASH_PARTITIONING = 29;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__UNION_PARTITIONING = 30;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__PARTITIONED = 31;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__ACCESS = 20;
+  int MANY_TO_MANY__ACCESS = 32;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_MANY__ATTRIBUTE_TYPE = 33;
+
+		/**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__FETCH = 21;
+  int MANY_TO_MANY__FETCH = 34;
 
   /**
 	 * The feature id for the '<em><b>Mapped By</b></em>' attribute.
@@ -3560,7 +4927,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__MAPPED_BY = 22;
+  int MANY_TO_MANY__MAPPED_BY = 35;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3568,7 +4935,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__NAME = 23;
+  int MANY_TO_MANY__NAME = 36;
 
   /**
 	 * The feature id for the '<em><b>Target Entity</b></em>' attribute.
@@ -3576,7 +4943,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_MANY__TARGET_ENTITY = 24;
+  int MANY_TO_MANY__TARGET_ENTITY = 37;
 
   /**
    * The number of structural features of the '<em>Many To Many</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
@@ -3585,7 +4952,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MANY_TO_MANY_FEATURE_COUNT = 25;
+  int MANY_TO_MANY_FEATURE_COUNT = 38;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ManyToOneImpl <em>Many To One</em>}' class.
@@ -3594,7 +4961,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getManyToOne()
 	 * @generated
 	 */
-  int MANY_TO_ONE = 43;
+  int MANY_TO_ONE = 51;
 
   /**
 	 * The feature id for the '<em><b>Join Column</b></em>' containment reference list.
@@ -3632,13 +4999,22 @@ public interface OrmPackage extends EPackage {
   int MANY_TO_ONE__JOIN_FETCH = 3;
 
   /**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__BATCH_FETCH = 4;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__PROPERTY = 4;
+  int MANY_TO_ONE__PROPERTY = 5;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -3647,15 +5023,105 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__ACCESS_METHODS = 5;
+  int MANY_TO_ONE__ACCESS_METHODS = 6;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__NONCACHEABLE = 7;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__PARTITIONING = 8;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__REPLICATION_PARTITIONING = 9;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__ROUND_ROBIN_PARTITIONING = 10;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__PINNED_PARTITIONING = 11;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__RANGE_PARTITIONING = 12;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__VALUE_PARTITIONING = 13;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__HASH_PARTITIONING = 14;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__UNION_PARTITIONING = 15;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANY_TO_ONE__PARTITIONED = 16;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__ACCESS = 6;
+  int MANY_TO_ONE__ACCESS = 17;
 
   /**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
@@ -3663,7 +5129,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__FETCH = 7;
+  int MANY_TO_ONE__FETCH = 18;
 
   /**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3671,7 +5137,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__ID = 8;
+  int MANY_TO_ONE__ID = 19;
 
   /**
 	 * The feature id for the '<em><b>Maps Id</b></em>' attribute.
@@ -3679,7 +5145,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__MAPS_ID = 9;
+  int MANY_TO_ONE__MAPS_ID = 20;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3687,7 +5153,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__NAME = 10;
+  int MANY_TO_ONE__NAME = 21;
 
   /**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -3695,7 +5161,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__OPTIONAL = 11;
+  int MANY_TO_ONE__OPTIONAL = 22;
 
   /**
 	 * The feature id for the '<em><b>Target Entity</b></em>' attribute.
@@ -3703,7 +5169,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MANY_TO_ONE__TARGET_ENTITY = 12;
+  int MANY_TO_ONE__TARGET_ENTITY = 23;
 
   /**
    * The number of structural features of the '<em>Many To One</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
@@ -3712,7 +5178,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MANY_TO_ONE_FEATURE_COUNT = 13;
+  int MANY_TO_ONE_FEATURE_COUNT = 24;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MapKeyImpl <em>Map Key</em>}' class.
@@ -3721,7 +5187,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKey()
 	 * @generated
 	 */
-  int MAP_KEY = 44;
+  int MAP_KEY = 52;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3746,7 +5212,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKeyClass()
 	 * @generated
 	 */
-  int MAP_KEY_CLASS = 45;
+  int MAP_KEY_CLASS = 53;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -3772,7 +5238,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKeyColumn()
 	 * @generated
 	 */
-  int MAP_KEY_COLUMN = 46;
+  int MAP_KEY_COLUMN = 54;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -3870,7 +5336,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMapKeyJoinColumn()
 	 * @generated
 	 */
-  int MAP_KEY_JOIN_COLUMN = 47;
+  int MAP_KEY_JOIN_COLUMN = 55;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -3953,7 +5419,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMappedSuperclass()
 	 * @generated
 	 */
-  int MAPPED_SUPERCLASS = 48;
+  int MAPPED_SUPERCLASS = 56;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3964,13 +5430,40 @@ public interface OrmPackage extends EPackage {
   int MAPPED_SUPERCLASS__DESCRIPTION = 0;
 
   /**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__ACCESS_METHODS = 1;
+
+		/**
+	 * The feature id for the '<em><b>Multitenant</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__MULTITENANT = 2;
+
+		/**
+	 * The feature id for the '<em><b>Additional Criteria</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__ADDITIONAL_CRITERIA = 3;
+
+		/**
 	 * The feature id for the '<em><b>Customizer</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CUSTOMIZER = 1;
+  int MAPPED_SUPERCLASS__CUSTOMIZER = 4;
 
   /**
 	 * The feature id for the '<em><b>Change Tracking</b></em>' containment reference.
@@ -3979,7 +5472,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CHANGE_TRACKING = 2;
+  int MAPPED_SUPERCLASS__CHANGE_TRACKING = 5;
 
   /**
    * The feature id for the '<em><b>Id Class</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -3988,7 +5481,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MAPPED_SUPERCLASS__ID_CLASS = 3;
+  int MAPPED_SUPERCLASS__ID_CLASS = 6;
 
   /**
 	 * The feature id for the '<em><b>Primary Key</b></em>' containment reference.
@@ -3997,7 +5490,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__PRIMARY_KEY = 4;
+  int MAPPED_SUPERCLASS__PRIMARY_KEY = 7;
 
   /**
 	 * The feature id for the '<em><b>Optimistic Locking</b></em>' containment reference.
@@ -4006,7 +5499,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING = 5;
+  int MAPPED_SUPERCLASS__OPTIMISTIC_LOCKING = 8;
 
   /**
 	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
@@ -4014,7 +5507,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CACHE = 6;
+  int MAPPED_SUPERCLASS__CACHE = 9;
 
   /**
 	 * The feature id for the '<em><b>Cache Interceptor</b></em>' containment reference.
@@ -4023,16 +5516,25 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CACHE_INTERCEPTOR = 7;
+  int MAPPED_SUPERCLASS__CACHE_INTERCEPTOR = 10;
 
   /**
+	 * The feature id for the '<em><b>Fetch Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__FETCH_GROUP = 11;
+
+		/**
 	 * The feature id for the '<em><b>Converter</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CONVERTER = 8;
+  int MAPPED_SUPERCLASS__CONVERTER = 12;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference list.
@@ -4041,7 +5543,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__TYPE_CONVERTER = 9;
+  int MAPPED_SUPERCLASS__TYPE_CONVERTER = 13;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference list.
@@ -4050,7 +5552,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__OBJECT_TYPE_CONVERTER = 10;
+  int MAPPED_SUPERCLASS__OBJECT_TYPE_CONVERTER = 14;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference list.
@@ -4059,7 +5561,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__STRUCT_CONVERTER = 11;
+  int MAPPED_SUPERCLASS__STRUCT_CONVERTER = 15;
 
   /**
 	 * The feature id for the '<em><b>Copy Policy</b></em>' containment reference.
@@ -4068,7 +5570,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__COPY_POLICY = 12;
+  int MAPPED_SUPERCLASS__COPY_POLICY = 16;
 
   /**
 	 * The feature id for the '<em><b>Instantiation Copy Policy</b></em>' containment reference.
@@ -4077,7 +5579,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY = 13;
+  int MAPPED_SUPERCLASS__INSTANTIATION_COPY_POLICY = 17;
 
   /**
 	 * The feature id for the '<em><b>Clone Copy Policy</b></em>' containment reference.
@@ -4086,16 +5588,205 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CLONE_COPY_POLICY = 14;
+  int MAPPED_SUPERCLASS__CLONE_COPY_POLICY = 18;
 
   /**
+	 * The feature id for the '<em><b>Sequence Generator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__SEQUENCE_GENERATOR = 19;
+
+		/**
+	 * The feature id for the '<em><b>Table Generator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__TABLE_GENERATOR = 20;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__PARTITIONING = 21;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__REPLICATION_PARTITIONING = 22;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__ROUND_ROBIN_PARTITIONING = 23;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__PINNED_PARTITIONING = 24;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__RANGE_PARTITIONING = 25;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__VALUE_PARTITIONING = 26;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__HASH_PARTITIONING = 27;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__UNION_PARTITIONING = 28;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__PARTITIONED = 29;
+
+		/**
+	 * The feature id for the '<em><b>Named Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__NAMED_QUERY = 30;
+
+		/**
+	 * The feature id for the '<em><b>Named Native Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__NAMED_NATIVE_QUERY = 31;
+
+		/**
+	 * The feature id for the '<em><b>Named Stored Procedure Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__NAMED_STORED_PROCEDURE_QUERY = 32;
+
+		/**
+	 * The feature id for the '<em><b>Named Stored Function Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__NAMED_STORED_FUNCTION_QUERY = 33;
+
+		/**
+	 * The feature id for the '<em><b>Named Plsql Stored Procedure Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_PROCEDURE_QUERY = 34;
+
+		/**
+	 * The feature id for the '<em><b>Named Plsql Stored Function Query</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__NAMED_PLSQL_STORED_FUNCTION_QUERY = 35;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__PLSQL_RECORD = 36;
+
+		/**
+	 * The feature id for the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__PLSQL_TABLE = 37;
+
+		/**
+	 * The feature id for the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__SQL_RESULT_SET_MAPPING = 38;
+
+		/**
+	 * The feature id for the '<em><b>Query Redirectors</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__QUERY_REDIRECTORS = 39;
+
+		/**
 	 * The feature id for the '<em><b>Exclude Default Listeners</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS = 15;
+  int MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_LISTENERS = 40;
 
   /**
 	 * The feature id for the '<em><b>Exclude Superclass Listeners</b></em>' containment reference.
@@ -4104,7 +5795,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS = 16;
+  int MAPPED_SUPERCLASS__EXCLUDE_SUPERCLASS_LISTENERS = 41;
 
   /**
 	 * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference.
@@ -4113,7 +5804,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__ENTITY_LISTENERS = 17;
+  int MAPPED_SUPERCLASS__ENTITY_LISTENERS = 42;
 
   /**
 	 * The feature id for the '<em><b>Pre Persist</b></em>' containment reference.
@@ -4122,7 +5813,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__PRE_PERSIST = 18;
+  int MAPPED_SUPERCLASS__PRE_PERSIST = 43;
 
   /**
 	 * The feature id for the '<em><b>Post Persist</b></em>' containment reference.
@@ -4131,7 +5822,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__POST_PERSIST = 19;
+  int MAPPED_SUPERCLASS__POST_PERSIST = 44;
 
   /**
 	 * The feature id for the '<em><b>Pre Remove</b></em>' containment reference.
@@ -4140,7 +5831,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__PRE_REMOVE = 20;
+  int MAPPED_SUPERCLASS__PRE_REMOVE = 45;
 
   /**
 	 * The feature id for the '<em><b>Post Remove</b></em>' containment reference.
@@ -4149,7 +5840,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__POST_REMOVE = 21;
+  int MAPPED_SUPERCLASS__POST_REMOVE = 46;
 
   /**
 	 * The feature id for the '<em><b>Pre Update</b></em>' containment reference.
@@ -4158,7 +5849,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__PRE_UPDATE = 22;
+  int MAPPED_SUPERCLASS__PRE_UPDATE = 47;
 
   /**
 	 * The feature id for the '<em><b>Post Update</b></em>' containment reference.
@@ -4167,7 +5858,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__POST_UPDATE = 23;
+  int MAPPED_SUPERCLASS__POST_UPDATE = 48;
 
   /**
    * The feature id for the '<em><b>Post Load</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -4176,7 +5867,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MAPPED_SUPERCLASS__POST_LOAD = 24;
+  int MAPPED_SUPERCLASS__POST_LOAD = 49;
 
   /**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -4185,16 +5876,34 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__PROPERTY = 25;
+  int MAPPED_SUPERCLASS__PROPERTY = 50;
 
   /**
+	 * The feature id for the '<em><b>Attribute Override</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__ATTRIBUTE_OVERRIDE = 51;
+
+		/**
+	 * The feature id for the '<em><b>Association Override</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__ASSOCIATION_OVERRIDE = 52;
+
+		/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__ATTRIBUTES = 26;
+  int MAPPED_SUPERCLASS__ATTRIBUTES = 53;
 
   /**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
@@ -4202,7 +5911,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__ACCESS = 27;
+  int MAPPED_SUPERCLASS__ACCESS = 54;
 
   /**
 	 * The feature id for the '<em><b>Cacheable</b></em>' attribute.
@@ -4210,7 +5919,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CACHEABLE = 28;
+  int MAPPED_SUPERCLASS__CACHEABLE = 55;
 
   /**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -4218,7 +5927,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__CLASS = 29;
+  int MAPPED_SUPERCLASS__CLASS = 56;
 
   /**
 	 * The feature id for the '<em><b>Exclude Default Mappings</b></em>' attribute.
@@ -4227,7 +5936,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_MAPPINGS = 30;
+  int MAPPED_SUPERCLASS__EXCLUDE_DEFAULT_MAPPINGS = 57;
 
   /**
    * The feature id for the '<em><b>Existence Checking</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -4236,7 +5945,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int MAPPED_SUPERCLASS__EXISTENCE_CHECKING = 31;
+  int MAPPED_SUPERCLASS__EXISTENCE_CHECKING = 58;
 
   /**
 	 * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
@@ -4244,15 +5953,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__METADATA_COMPLETE = 32;
+  int MAPPED_SUPERCLASS__METADATA_COMPLETE = 59;
 
   /**
+	 * The feature id for the '<em><b>Parent Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_SUPERCLASS__PARENT_CLASS = 60;
+
+		/**
 	 * The feature id for the '<em><b>Read Only</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS__READ_ONLY = 33;
+  int MAPPED_SUPERCLASS__READ_ONLY = 61;
 
   /**
 	 * The number of structural features of the '<em>Mapped Superclass</em>' class.
@@ -4261,16 +5979,53 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int MAPPED_SUPERCLASS_FEATURE_COUNT = 34;
+  int MAPPED_SUPERCLASS_FEATURE_COUNT = 62;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.MultitenantImpl <em>Multitenant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.MultitenantImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMultitenant()
+	 * @generated
+	 */
+	int MULTITENANT = 57;
+
+		/**
+	 * The feature id for the '<em><b>Tenant Discriminator</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTITENANT__TENANT_DISCRIMINATOR = 0;
+
+		/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTITENANT__TYPE = 1;
+
+		/**
+	 * The number of structural features of the '<em>Multitenant</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MULTITENANT_FEATURE_COUNT = 2;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedNativeQueryImpl <em>Named Native Query</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedNativeQueryImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedNativeQuery()
 	 * @generated
 	 */
-  int NAMED_NATIVE_QUERY = 49;
+  int NAMED_NATIVE_QUERY = 58;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4332,13 +6087,159 @@ public interface OrmPackage extends EPackage {
   int NAMED_NATIVE_QUERY_FEATURE_COUNT = 6;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedPlsqlStoredFunctionQueryImpl <em>Named Plsql Stored Function Query</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedPlsqlStoredFunctionQueryImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY = 59;
+
+		/**
+	 * The feature id for the '<em><b>Hint</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY__HINT = 0;
+
+		/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY__PARAMETER = 1;
+
+		/**
+	 * The feature id for the '<em><b>Return Parameter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY__RETURN_PARAMETER = 2;
+
+		/**
+	 * The feature id for the '<em><b>Function Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY__FUNCTION_NAME = 3;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY__NAME = 4;
+
+		/**
+	 * The feature id for the '<em><b>Result Set Mapping</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY__RESULT_SET_MAPPING = 5;
+
+		/**
+	 * The number of structural features of the '<em>Named Plsql Stored Function Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_FUNCTION_QUERY_FEATURE_COUNT = 6;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedPlsqlStoredProcedureQueryImpl <em>Named Plsql Stored Procedure Query</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedPlsqlStoredProcedureQueryImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY = 60;
+
+		/**
+	 * The feature id for the '<em><b>Hint</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY__HINT = 0;
+
+		/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY__PARAMETER = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY__NAME = 2;
+
+		/**
+	 * The feature id for the '<em><b>Procedure Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY__PROCEDURE_NAME = 3;
+
+		/**
+	 * The feature id for the '<em><b>Result Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY__RESULT_CLASS = 4;
+
+		/**
+	 * The feature id for the '<em><b>Result Set Mapping</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING = 5;
+
+		/**
+	 * The number of structural features of the '<em>Named Plsql Stored Procedure Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_PLSQL_STORED_PROCEDURE_QUERY_FEATURE_COUNT = 6;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl <em>Named Query</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedQueryImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedQuery()
 	 * @generated
 	 */
-  int NAMED_QUERY = 50;
+  int NAMED_QUERY = 61;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4391,13 +6292,95 @@ public interface OrmPackage extends EPackage {
   int NAMED_QUERY_FEATURE_COUNT = 5;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredFunctionQueryImpl <em>Named Stored Function Query</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredFunctionQueryImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	int NAMED_STORED_FUNCTION_QUERY = 62;
+
+		/**
+	 * The feature id for the '<em><b>Hint</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__HINT = 0;
+
+		/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__PARAMETER = 1;
+
+		/**
+	 * The feature id for the '<em><b>Return Parameter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__RETURN_PARAMETER = 2;
+
+		/**
+	 * The feature id for the '<em><b>Call By Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__CALL_BY_INDEX = 3;
+
+		/**
+	 * The feature id for the '<em><b>Function Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__FUNCTION_NAME = 4;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__NAME = 5;
+
+		/**
+	 * The feature id for the '<em><b>Result Set Mapping</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY__RESULT_SET_MAPPING = 6;
+
+		/**
+	 * The number of structural features of the '<em>Named Stored Function Query</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_FUNCTION_QUERY_FEATURE_COUNT = 7;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl <em>Named Stored Procedure Query</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getNamedStoredProcedureQuery()
 	 * @generated
 	 */
-  int NAMED_STORED_PROCEDURE_QUERY = 51;
+  int NAMED_STORED_PROCEDURE_QUERY = 63;
 
   /**
    * The feature id for the '<em><b>Hint</b></em>' containment reference list. <!-- begin-user-doc --> <!-- end-user-doc
@@ -4418,12 +6401,30 @@ public interface OrmPackage extends EPackage {
   int NAMED_STORED_PROCEDURE_QUERY__PARAMETER = 1;
 
   /**
+	 * The feature id for the '<em><b>Call By Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX = 2;
+
+		/**
+	 * The feature id for the '<em><b>Multiple Result Sets</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS = 3;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int NAMED_STORED_PROCEDURE_QUERY__NAME = 2;
+  int NAMED_STORED_PROCEDURE_QUERY__NAME = 4;
 
   /**
 	 * The feature id for the '<em><b>Procedure Name</b></em>' attribute.
@@ -4431,7 +6432,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME = 3;
+  int NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME = 5;
 
   /**
 	 * The feature id for the '<em><b>Result Class</b></em>' attribute.
@@ -4439,7 +6440,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS = 4;
+  int NAMED_STORED_PROCEDURE_QUERY__RESULT_CLASS = 6;
 
   /**
    * The feature id for the '<em><b>Result Set Mapping</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -4448,7 +6449,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING = 5;
+  int NAMED_STORED_PROCEDURE_QUERY__RESULT_SET_MAPPING = 7;
 
   /**
    * The feature id for the '<em><b>Returns Result Set</b></em>' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -4457,7 +6458,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET = 6;
+  int NAMED_STORED_PROCEDURE_QUERY__RETURNS_RESULT_SET = 8;
 
   /**
 	 * The number of structural features of the '<em>Named Stored Procedure Query</em>' class.
@@ -4466,7 +6467,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int NAMED_STORED_PROCEDURE_QUERY_FEATURE_COUNT = 7;
+  int NAMED_STORED_PROCEDURE_QUERY_FEATURE_COUNT = 9;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ObjectTypeConverterImpl <em>Object Type Converter</em>}' class.
@@ -4475,7 +6476,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getObjectTypeConverter()
 	 * @generated
 	 */
-  int OBJECT_TYPE_CONVERTER = 52;
+  int OBJECT_TYPE_CONVERTER = 64;
 
   /**
 	 * The feature id for the '<em><b>Conversion Value</b></em>' containment reference list.
@@ -4535,7 +6536,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOneToMany()
 	 * @generated
 	 */
-  int ONE_TO_MANY = 53;
+  int ONE_TO_MANY = 65;
 
   /**
 	 * The feature id for the '<em><b>Order By</b></em>' attribute.
@@ -4697,13 +6698,22 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_MANY__CASCADE = 17;
 
   /**
+	 * The feature id for the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__CASCADE_ON_DELETE = 18;
+
+		/**
 	 * The feature id for the '<em><b>Private Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__PRIVATE_OWNED = 18;
+  int ONE_TO_MANY__PRIVATE_OWNED = 19;
 
   /**
 	 * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
@@ -4711,16 +6721,25 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__JOIN_FETCH = 19;
+  int ONE_TO_MANY__JOIN_FETCH = 20;
 
   /**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__BATCH_FETCH = 21;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__PROPERTY = 20;
+  int ONE_TO_MANY__PROPERTY = 22;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -4729,23 +6748,122 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__ACCESS_METHODS = 21;
+  int ONE_TO_MANY__ACCESS_METHODS = 23;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__NONCACHEABLE = 24;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__PARTITIONING = 25;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__REPLICATION_PARTITIONING = 26;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__ROUND_ROBIN_PARTITIONING = 27;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__PINNED_PARTITIONING = 28;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__RANGE_PARTITIONING = 29;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__VALUE_PARTITIONING = 30;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__HASH_PARTITIONING = 31;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__UNION_PARTITIONING = 32;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__PARTITIONED = 33;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__ACCESS = 22;
+  int ONE_TO_MANY__ACCESS = 34;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_MANY__ATTRIBUTE_TYPE = 35;
+
+		/**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__FETCH = 23;
+  int ONE_TO_MANY__FETCH = 36;
 
   /**
 	 * The feature id for the '<em><b>Mapped By</b></em>' attribute.
@@ -4753,7 +6871,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__MAPPED_BY = 24;
+  int ONE_TO_MANY__MAPPED_BY = 37;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4761,7 +6879,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__NAME = 25;
+  int ONE_TO_MANY__NAME = 38;
 
   /**
 	 * The feature id for the '<em><b>Orphan Removal</b></em>' attribute.
@@ -4769,7 +6887,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__ORPHAN_REMOVAL = 26;
+  int ONE_TO_MANY__ORPHAN_REMOVAL = 39;
 
   /**
 	 * The feature id for the '<em><b>Target Entity</b></em>' attribute.
@@ -4777,7 +6895,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_MANY__TARGET_ENTITY = 27;
+  int ONE_TO_MANY__TARGET_ENTITY = 40;
 
   /**
    * The number of structural features of the '<em>One To Many</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
@@ -4786,7 +6904,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int ONE_TO_MANY_FEATURE_COUNT = 28;
+  int ONE_TO_MANY_FEATURE_COUNT = 41;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToOneImpl <em>One To One</em>}' class.
@@ -4795,7 +6913,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOneToOne()
 	 * @generated
 	 */
-  int ONE_TO_ONE = 54;
+  int ONE_TO_ONE = 66;
 
   /**
 	 * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
@@ -4834,13 +6952,22 @@ public interface OrmPackage extends EPackage {
   int ONE_TO_ONE__CASCADE = 3;
 
   /**
+	 * The feature id for the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__CASCADE_ON_DELETE = 4;
+
+		/**
 	 * The feature id for the '<em><b>Private Owned</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__PRIVATE_OWNED = 4;
+  int ONE_TO_ONE__PRIVATE_OWNED = 5;
 
   /**
 	 * The feature id for the '<em><b>Join Fetch</b></em>' attribute.
@@ -4848,16 +6975,25 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__JOIN_FETCH = 5;
+  int ONE_TO_ONE__JOIN_FETCH = 6;
 
   /**
+	 * The feature id for the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__BATCH_FETCH = 7;
+
+		/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__PROPERTY = 6;
+  int ONE_TO_ONE__PROPERTY = 8;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -4866,15 +7002,105 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__ACCESS_METHODS = 7;
+  int ONE_TO_ONE__ACCESS_METHODS = 9;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__NONCACHEABLE = 10;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__PARTITIONING = 11;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__REPLICATION_PARTITIONING = 12;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__ROUND_ROBIN_PARTITIONING = 13;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__PINNED_PARTITIONING = 14;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__RANGE_PARTITIONING = 15;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__VALUE_PARTITIONING = 16;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__HASH_PARTITIONING = 17;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__UNION_PARTITIONING = 18;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ONE_TO_ONE__PARTITIONED = 19;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__ACCESS = 8;
+  int ONE_TO_ONE__ACCESS = 20;
 
   /**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
@@ -4882,7 +7108,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__FETCH = 9;
+  int ONE_TO_ONE__FETCH = 21;
 
   /**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4890,7 +7116,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__ID = 10;
+  int ONE_TO_ONE__ID = 22;
 
   /**
 	 * The feature id for the '<em><b>Mapped By</b></em>' attribute.
@@ -4898,7 +7124,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__MAPPED_BY = 11;
+  int ONE_TO_ONE__MAPPED_BY = 23;
 
   /**
 	 * The feature id for the '<em><b>Maps Id</b></em>' attribute.
@@ -4906,7 +7132,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__MAPS_ID = 12;
+  int ONE_TO_ONE__MAPS_ID = 24;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4914,7 +7140,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__NAME = 13;
+  int ONE_TO_ONE__NAME = 25;
 
   /**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -4922,7 +7148,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__OPTIONAL = 14;
+  int ONE_TO_ONE__OPTIONAL = 26;
 
   /**
 	 * The feature id for the '<em><b>Orphan Removal</b></em>' attribute.
@@ -4930,7 +7156,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__ORPHAN_REMOVAL = 15;
+  int ONE_TO_ONE__ORPHAN_REMOVAL = 27;
 
   /**
 	 * The feature id for the '<em><b>Target Entity</b></em>' attribute.
@@ -4938,7 +7164,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE__TARGET_ENTITY = 16;
+  int ONE_TO_ONE__TARGET_ENTITY = 28;
 
   /**
 	 * The number of structural features of the '<em>One To One</em>' class.
@@ -4946,7 +7172,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int ONE_TO_ONE_FEATURE_COUNT = 17;
+  int ONE_TO_ONE_FEATURE_COUNT = 29;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OptimisticLockingImpl <em>Optimistic Locking</em>}' class.
@@ -4955,7 +7181,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOptimisticLocking()
 	 * @generated
 	 */
-  int OPTIMISTIC_LOCKING = 55;
+  int OPTIMISTIC_LOCKING = 67;
 
   /**
 	 * The feature id for the '<em><b>Selected Column</b></em>' containment reference list.
@@ -4998,7 +7224,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderColumn()
 	 * @generated
 	 */
-  int ORDER_COLUMN = 56;
+  int ORDER_COLUMN = 68;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -5058,13 +7284,50 @@ public interface OrmPackage extends EPackage {
   int ORDER_COLUMN_FEATURE_COUNT = 6;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PartitioningImpl <em>Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPartitioning()
+	 * @generated
+	 */
+	int PARTITIONING = 69;
+
+		/**
+	 * The feature id for the '<em><b>Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTITIONING__CLASS = 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTITIONING__NAME = 1;
+
+		/**
+	 * The number of structural features of the '<em>Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARTITIONING_FEATURE_COUNT = 2;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl <em>Persistence Unit Defaults</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPersistenceUnitDefaults()
 	 * @generated
 	 */
-  int PERSISTENCE_UNIT_DEFAULTS = 57;
+  int PERSISTENCE_UNIT_DEFAULTS = 70;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5108,22 +7371,40 @@ public interface OrmPackage extends EPackage {
   int PERSISTENCE_UNIT_DEFAULTS__ACCESS = 4;
 
   /**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS = 5;
+
+		/**
 	 * The feature id for the '<em><b>Cascade Persist</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST = 5;
+  int PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST = 6;
 
   /**
+	 * The feature id for the '<em><b>Tenant Discriminator</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR = 7;
+
+		/**
 	 * The feature id for the '<em><b>Entity Listeners</b></em>' containment reference.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS = 6;
+  int PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS = 8;
 
   /**
 	 * The number of structural features of the '<em>Persistence Unit Defaults</em>' class.
@@ -5132,7 +7413,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int PERSISTENCE_UNIT_DEFAULTS_FEATURE_COUNT = 7;
+  int PERSISTENCE_UNIT_DEFAULTS_FEATURE_COUNT = 9;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitMetadataImpl <em>Persistence Unit Metadata</em>}' class.
@@ -5141,7 +7422,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPersistenceUnitMetadata()
 	 * @generated
 	 */
-  int PERSISTENCE_UNIT_METADATA = 58;
+  int PERSISTENCE_UNIT_METADATA = 71;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5188,13 +7469,251 @@ public interface OrmPackage extends EPackage {
   int PERSISTENCE_UNIT_METADATA_FEATURE_COUNT = 4;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PinnedPartitioningImpl <em>Pinned Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PinnedPartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPinnedPartitioning()
+	 * @generated
+	 */
+	int PINNED_PARTITIONING = 72;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PINNED_PARTITIONING__CONNECTION_POOL = 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PINNED_PARTITIONING__NAME = 1;
+
+		/**
+	 * The number of structural features of the '<em>Pinned Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PINNED_PARTITIONING_FEATURE_COUNT = 2;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PlsqlParameterImpl <em>Plsql Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PlsqlParameterImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPlsqlParameter()
+	 * @generated
+	 */
+	int PLSQL_PARAMETER = 73;
+
+		/**
+	 * The feature id for the '<em><b>Database Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__DATABASE_TYPE = 0;
+
+		/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__DIRECTION = 1;
+
+		/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__LENGTH = 2;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__NAME = 3;
+
+		/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__OPTIONAL = 4;
+
+		/**
+	 * The feature id for the '<em><b>Precision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__PRECISION = 5;
+
+		/**
+	 * The feature id for the '<em><b>Query Parameter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__QUERY_PARAMETER = 6;
+
+		/**
+	 * The feature id for the '<em><b>Scale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER__SCALE = 7;
+
+		/**
+	 * The number of structural features of the '<em>Plsql Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_PARAMETER_FEATURE_COUNT = 8;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PlsqlRecordImpl <em>Plsql Record</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PlsqlRecordImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPlsqlRecord()
+	 * @generated
+	 */
+	int PLSQL_RECORD = 74;
+
+		/**
+	 * The feature id for the '<em><b>Field</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_RECORD__FIELD = 0;
+
+		/**
+	 * The feature id for the '<em><b>Compatible Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_RECORD__COMPATIBLE_TYPE = 1;
+
+		/**
+	 * The feature id for the '<em><b>Java Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_RECORD__JAVA_TYPE = 2;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_RECORD__NAME = 3;
+
+		/**
+	 * The number of structural features of the '<em>Plsql Record</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_RECORD_FEATURE_COUNT = 4;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PlsqlTableImpl <em>Plsql Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PlsqlTableImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPlsqlTable()
+	 * @generated
+	 */
+	int PLSQL_TABLE = 75;
+
+		/**
+	 * The feature id for the '<em><b>Compatible Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_TABLE__COMPATIBLE_TYPE = 0;
+
+		/**
+	 * The feature id for the '<em><b>Java Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_TABLE__JAVA_TYPE = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_TABLE__NAME = 2;
+
+		/**
+	 * The feature id for the '<em><b>Nested Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_TABLE__NESTED_TYPE = 3;
+
+		/**
+	 * The number of structural features of the '<em>Plsql Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLSQL_TABLE_FEATURE_COUNT = 4;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostLoadImpl <em>Post Load</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.PostLoadImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostLoad()
 	 * @generated
 	 */
-  int POST_LOAD = 59;
+  int POST_LOAD = 76;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5227,7 +7746,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostPersist()
 	 * @generated
 	 */
-  int POST_PERSIST = 60;
+  int POST_PERSIST = 77;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5261,7 +7780,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostRemove()
 	 * @generated
 	 */
-  int POST_REMOVE = 61;
+  int POST_REMOVE = 78;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5295,7 +7814,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPostUpdate()
 	 * @generated
 	 */
-  int POST_UPDATE = 62;
+  int POST_UPDATE = 79;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5329,7 +7848,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPrePersist()
 	 * @generated
 	 */
-  int PRE_PERSIST = 63;
+  int PRE_PERSIST = 80;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5363,7 +7882,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPreRemove()
 	 * @generated
 	 */
-  int PRE_REMOVE = 64;
+  int PRE_REMOVE = 81;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5396,7 +7915,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPreUpdate()
 	 * @generated
 	 */
-  int PRE_UPDATE = 65;
+  int PRE_UPDATE = 82;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5429,7 +7948,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPrimaryKey()
 	 * @generated
 	 */
-  int PRIMARY_KEY = 66;
+  int PRIMARY_KEY = 83;
 
   /**
 	 * The feature id for the '<em><b>Column</b></em>' containment reference list.
@@ -5441,12 +7960,21 @@ public interface OrmPackage extends EPackage {
   int PRIMARY_KEY__COLUMN = 0;
 
   /**
+	 * The feature id for the '<em><b>Cache Key Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMARY_KEY__CACHE_KEY_TYPE = 1;
+
+		/**
 	 * The feature id for the '<em><b>Validation</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PRIMARY_KEY__VALIDATION = 1;
+  int PRIMARY_KEY__VALIDATION = 2;
 
   /**
    * The number of structural features of the '<em>Primary Key</em>' class. <!-- begin-user-doc --> <!-- end-user-doc
@@ -5455,7 +7983,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int PRIMARY_KEY_FEATURE_COUNT = 2;
+  int PRIMARY_KEY_FEATURE_COUNT = 3;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyJoinColumnImpl <em>Primary Key Join Column</em>}' class.
@@ -5464,7 +7992,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getPrimaryKeyJoinColumn()
 	 * @generated
 	 */
-  int PRIMARY_KEY_JOIN_COLUMN = 67;
+  int PRIMARY_KEY_JOIN_COLUMN = 84;
 
   /**
 	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
@@ -5507,7 +8035,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getProperty()
 	 * @generated
 	 */
-  int PROPERTY = 68;
+  int PROPERTY = 85;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5548,7 +8076,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getQueryHint()
 	 * @generated
 	 */
-  int QUERY_HINT = 69;
+  int QUERY_HINT = 86;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5589,7 +8117,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getQueryRedirectors()
 	 * @generated
 	 */
-  int QUERY_REDIRECTORS = 70;
+  int QUERY_REDIRECTORS = 87;
 
   /**
 	 * The feature id for the '<em><b>All Queries</b></em>' attribute.
@@ -5657,13 +8185,123 @@ public interface OrmPackage extends EPackage {
   int QUERY_REDIRECTORS_FEATURE_COUNT = 7;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.RangePartitionImpl <em>Range Partition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.RangePartitionImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getRangePartition()
+	 * @generated
+	 */
+	int RANGE_PARTITION = 88;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITION__CONNECTION_POOL = 0;
+
+		/**
+	 * The feature id for the '<em><b>End Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITION__END_VALUE = 1;
+
+		/**
+	 * The feature id for the '<em><b>Start Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITION__START_VALUE = 2;
+
+		/**
+	 * The number of structural features of the '<em>Range Partition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITION_FEATURE_COUNT = 3;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.RangePartitioningImpl <em>Range Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.RangePartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getRangePartitioning()
+	 * @generated
+	 */
+	int RANGE_PARTITIONING = 89;
+
+		/**
+	 * The feature id for the '<em><b>Partition Column</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITIONING__PARTITION_COLUMN = 0;
+
+		/**
+	 * The feature id for the '<em><b>Partition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITIONING__PARTITION = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITIONING__NAME = 2;
+
+		/**
+	 * The feature id for the '<em><b>Partition Value Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITIONING__PARTITION_VALUE_TYPE = 3;
+
+		/**
+	 * The feature id for the '<em><b>Union Unpartitionable Queries</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITIONING__UNION_UNPARTITIONABLE_QUERIES = 4;
+
+		/**
+	 * The number of structural features of the '<em>Range Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RANGE_PARTITIONING_FEATURE_COUNT = 5;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReadTransformerImpl <em>Read Transformer</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReadTransformerImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getReadTransformer()
 	 * @generated
 	 */
-  int READ_TRANSFORMER = 71;
+  int READ_TRANSFORMER = 90;
 
   /**
 	 * The feature id for the '<em><b>Method</b></em>' attribute.
@@ -5691,13 +8329,124 @@ public interface OrmPackage extends EPackage {
   int READ_TRANSFORMER_FEATURE_COUNT = 2;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReplicationPartitioningImpl <em>Replication Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReplicationPartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getReplicationPartitioning()
+	 * @generated
+	 */
+	int REPLICATION_PARTITIONING = 91;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPLICATION_PARTITIONING__CONNECTION_POOL = 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPLICATION_PARTITIONING__NAME = 1;
+
+		/**
+	 * The number of structural features of the '<em>Replication Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPLICATION_PARTITIONING_FEATURE_COUNT = 2;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReturnInsertImpl <em>Return Insert</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ReturnInsertImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getReturnInsert()
+	 * @generated
+	 */
+	int RETURN_INSERT = 92;
+
+		/**
+	 * The feature id for the '<em><b>Return Only</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_INSERT__RETURN_ONLY = 0;
+
+		/**
+	 * The number of structural features of the '<em>Return Insert</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_INSERT_FEATURE_COUNT = 1;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.RoundRobinPartitioningImpl <em>Round Robin Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.RoundRobinPartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getRoundRobinPartitioning()
+	 * @generated
+	 */
+	int ROUND_ROBIN_PARTITIONING = 93;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUND_ROBIN_PARTITIONING__CONNECTION_POOL = 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUND_ROBIN_PARTITIONING__NAME = 1;
+
+		/**
+	 * The feature id for the '<em><b>Replicate Writes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUND_ROBIN_PARTITIONING__REPLICATE_WRITES = 2;
+
+		/**
+	 * The number of structural features of the '<em>Round Robin Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROUND_ROBIN_PARTITIONING_FEATURE_COUNT = 3;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SecondaryTableImpl <em>Secondary Table</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.SecondaryTableImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSecondaryTable()
 	 * @generated
 	 */
-  int SECONDARY_TABLE = 72;
+  int SECONDARY_TABLE = 94;
 
   /**
 	 * The feature id for the '<em><b>Primary Key Join Column</b></em>' containment reference list.
@@ -5726,12 +8475,21 @@ public interface OrmPackage extends EPackage {
   int SECONDARY_TABLE__CATALOG = 2;
 
   /**
+	 * The feature id for the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECONDARY_TABLE__CREATION_SUFFIX = 3;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SECONDARY_TABLE__NAME = 3;
+  int SECONDARY_TABLE__NAME = 4;
 
   /**
 	 * The feature id for the '<em><b>Schema</b></em>' attribute.
@@ -5739,7 +8497,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int SECONDARY_TABLE__SCHEMA = 4;
+  int SECONDARY_TABLE__SCHEMA = 5;
 
   /**
 	 * The number of structural features of the '<em>Secondary Table</em>' class.
@@ -5748,7 +8506,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int SECONDARY_TABLE_FEATURE_COUNT = 5;
+  int SECONDARY_TABLE_FEATURE_COUNT = 6;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.SequenceGeneratorImpl <em>Sequence Generator</em>}' class.
@@ -5757,7 +8515,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSequenceGenerator()
 	 * @generated
 	 */
-  int SEQUENCE_GENERATOR = 73;
+  int SEQUENCE_GENERATOR = 95;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5831,7 +8589,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSqlResultSetMapping()
 	 * @generated
 	 */
-  int SQL_RESULT_SET_MAPPING = 74;
+  int SQL_RESULT_SET_MAPPING = 96;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5883,7 +8641,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getStoredProcedureParameter()
 	 * @generated
 	 */
-  int STORED_PROCEDURE_PARAMETER = 75;
+  int STORED_PROCEDURE_PARAMETER = 97;
 
   /**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
@@ -5918,12 +8676,21 @@ public interface OrmPackage extends EPackage {
   int STORED_PROCEDURE_PARAMETER__NAME = 3;
 
   /**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STORED_PROCEDURE_PARAMETER__OPTIONAL = 4;
+
+		/**
 	 * The feature id for the '<em><b>Query Parameter</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER = 4;
+  int STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER = 5;
 
   /**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -5931,7 +8698,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int STORED_PROCEDURE_PARAMETER__TYPE = 5;
+  int STORED_PROCEDURE_PARAMETER__TYPE = 6;
 
   /**
 	 * The number of structural features of the '<em>Stored Procedure Parameter</em>' class.
@@ -5940,16 +8707,53 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int STORED_PROCEDURE_PARAMETER_FEATURE_COUNT = 6;
+  int STORED_PROCEDURE_PARAMETER_FEATURE_COUNT = 7;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructImpl <em>Struct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getStruct()
+	 * @generated
+	 */
+	int STRUCT = 98;
+
+		/**
+	 * The feature id for the '<em><b>Field</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCT__FIELD = 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCT__NAME = 1;
+
+		/**
+	 * The number of structural features of the '<em>Struct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCT_FEATURE_COUNT = 2;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructConverterImpl <em>Struct Converter</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructConverterImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getStructConverter()
 	 * @generated
 	 */
-  int STRUCT_CONVERTER = 76;
+  int STRUCT_CONVERTER = 99;
 
   /**
 	 * The feature id for the '<em><b>Converter</b></em>' attribute.
@@ -5977,13 +8781,77 @@ public interface OrmPackage extends EPackage {
   int STRUCT_CONVERTER_FEATURE_COUNT = 2;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructureImpl <em>Structure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.StructureImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getStructure()
+	 * @generated
+	 */
+	int STRUCTURE = 100;
+
+		/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__PROPERTY = 0;
+
+		/**
+	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__ACCESS_METHODS = 1;
+
+		/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__ACCESS = 2;
+
+		/**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__ATTRIBUTE_TYPE = 3;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__NAME = 4;
+
+		/**
+	 * The number of structural features of the '<em>Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_FEATURE_COUNT = 5;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl <em>Table</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTable()
 	 * @generated
 	 */
-  int TABLE = 77;
+  int TABLE = 101;
 
   /**
 	 * The feature id for the '<em><b>Unique Constraint</b></em>' containment reference list.
@@ -6003,12 +8871,21 @@ public interface OrmPackage extends EPackage {
   int TABLE__CATALOG = 1;
 
   /**
+	 * The feature id for the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__CREATION_SUFFIX = 2;
+
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE__NAME = 2;
+  int TABLE__NAME = 3;
 
   /**
 	 * The feature id for the '<em><b>Schema</b></em>' attribute.
@@ -6016,7 +8893,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE__SCHEMA = 3;
+  int TABLE__SCHEMA = 4;
 
   /**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -6024,7 +8901,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_FEATURE_COUNT = 4;
+  int TABLE_FEATURE_COUNT = 5;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TableGeneratorImpl <em>Table Generator</em>}' class.
@@ -6033,7 +8910,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTableGenerator()
 	 * @generated
 	 */
-  int TABLE_GENERATOR = 78;
+  int TABLE_GENERATOR = 102;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -6069,12 +8946,21 @@ public interface OrmPackage extends EPackage {
   int TABLE_GENERATOR__CATALOG = 3;
 
   /**
+	 * The feature id for the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_GENERATOR__CREATION_SUFFIX = 4;
+
+		/**
 	 * The feature id for the '<em><b>Initial Value</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__INITIAL_VALUE = 4;
+  int TABLE_GENERATOR__INITIAL_VALUE = 5;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6082,7 +8968,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__NAME = 5;
+  int TABLE_GENERATOR__NAME = 6;
 
   /**
 	 * The feature id for the '<em><b>Pk Column Name</b></em>' attribute.
@@ -6090,7 +8976,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__PK_COLUMN_NAME = 6;
+  int TABLE_GENERATOR__PK_COLUMN_NAME = 7;
 
   /**
 	 * The feature id for the '<em><b>Pk Column Value</b></em>' attribute.
@@ -6098,7 +8984,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__PK_COLUMN_VALUE = 7;
+  int TABLE_GENERATOR__PK_COLUMN_VALUE = 8;
 
   /**
 	 * The feature id for the '<em><b>Schema</b></em>' attribute.
@@ -6106,7 +8992,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__SCHEMA = 8;
+  int TABLE_GENERATOR__SCHEMA = 9;
 
   /**
 	 * The feature id for the '<em><b>Table</b></em>' attribute.
@@ -6114,7 +9000,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__TABLE = 9;
+  int TABLE_GENERATOR__TABLE = 10;
 
   /**
 	 * The feature id for the '<em><b>Value Column Name</b></em>' attribute.
@@ -6122,7 +9008,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR__VALUE_COLUMN_NAME = 10;
+  int TABLE_GENERATOR__VALUE_COLUMN_NAME = 11;
 
   /**
 	 * The number of structural features of the '<em>Table Generator</em>' class.
@@ -6131,16 +9017,98 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TABLE_GENERATOR_FEATURE_COUNT = 11;
+  int TABLE_GENERATOR_FEATURE_COUNT = 12;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TenantDiscriminatorImpl <em>Tenant Discriminator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TenantDiscriminatorImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTenantDiscriminator()
+	 * @generated
+	 */
+	int TENANT_DISCRIMINATOR = 103;
+
+		/**
+	 * The feature id for the '<em><b>Column Definition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__COLUMN_DEFINITION = 0;
+
+		/**
+	 * The feature id for the '<em><b>Column Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__COLUMN_NAME = 1;
+
+		/**
+	 * The feature id for the '<em><b>Discriminator Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__DISCRIMINATOR_TYPE = 2;
+
+		/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__LENGTH = 3;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__NAME = 4;
+
+		/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__PRIMARY_KEY = 5;
+
+		/**
+	 * The feature id for the '<em><b>Table</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR__TABLE = 6;
+
+		/**
+	 * The number of structural features of the '<em>Tenant Discriminator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TENANT_DISCRIMINATOR_FEATURE_COUNT = 7;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl <em>Time Of Day</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.TimeOfDayImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTimeOfDay()
 	 * @generated
 	 */
-  int TIME_OF_DAY = 79;
+  int TIME_OF_DAY = 104;
 
   /**
 	 * The feature id for the '<em><b>Hour</b></em>' attribute.
@@ -6190,7 +9158,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTransformation()
 	 * @generated
 	 */
-  int TRANSFORMATION = 80;
+  int TRANSFORMATION = 105;
 
   /**
 	 * The feature id for the '<em><b>Read Transformer</b></em>' containment reference.
@@ -6211,21 +9179,13 @@ public interface OrmPackage extends EPackage {
   int TRANSFORMATION__WRITE_TRANSFORMER = 1;
 
   /**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int TRANSFORMATION__ACCESS = 2;
-
-  /**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TRANSFORMATION__PROPERTY = 3;
+  int TRANSFORMATION__PROPERTY = 2;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -6234,15 +9194,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int TRANSFORMATION__ACCESS_METHODS = 4;
+  int TRANSFORMATION__ACCESS_METHODS = 3;
 
-  /**
-	 * The feature id for the '<em><b>Access1</b></em>' attribute.
+		/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TRANSFORMATION__ACCESS1 = 5;
+  int TRANSFORMATION__ACCESS = 4;
+
+		/**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSFORMATION__ATTRIBUTE_TYPE = 5;
 
   /**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
@@ -6292,7 +9261,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTransient()
 	 * @generated
 	 */
-  int TRANSIENT = 81;
+  int TRANSIENT = 106;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6317,7 +9286,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTypeConverter()
 	 * @generated
 	 */
-  int TYPE_CONVERTER = 82;
+  int TYPE_CONVERTER = 107;
 
   /**
 	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
@@ -6353,13 +9322,59 @@ public interface OrmPackage extends EPackage {
   int TYPE_CONVERTER_FEATURE_COUNT = 3;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.UnionPartitioningImpl <em>Union Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.UnionPartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getUnionPartitioning()
+	 * @generated
+	 */
+	int UNION_PARTITIONING = 108;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_PARTITIONING__CONNECTION_POOL = 0;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_PARTITIONING__NAME = 1;
+
+		/**
+	 * The feature id for the '<em><b>Replicate Writes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_PARTITIONING__REPLICATE_WRITES = 2;
+
+		/**
+	 * The number of structural features of the '<em>Union Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNION_PARTITIONING_FEATURE_COUNT = 3;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.UniqueConstraintImpl <em>Unique Constraint</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.UniqueConstraintImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getUniqueConstraint()
 	 * @generated
 	 */
-  int UNIQUE_CONSTRAINT = 83;
+  int UNIQUE_CONSTRAINT = 109;
 
   /**
 	 * The feature id for the '<em><b>Column Name</b></em>' attribute list.
@@ -6387,13 +9402,123 @@ public interface OrmPackage extends EPackage {
   int UNIQUE_CONSTRAINT_FEATURE_COUNT = 2;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ValuePartitionImpl <em>Value Partition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ValuePartitionImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getValuePartition()
+	 * @generated
+	 */
+	int VALUE_PARTITION = 110;
+
+		/**
+	 * The feature id for the '<em><b>Connection Pool</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITION__CONNECTION_POOL = 0;
+
+		/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITION__VALUE = 1;
+
+		/**
+	 * The number of structural features of the '<em>Value Partition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITION_FEATURE_COUNT = 2;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.ValuePartitioningImpl <em>Value Partitioning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.ValuePartitioningImpl
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getValuePartitioning()
+	 * @generated
+	 */
+	int VALUE_PARTITIONING = 111;
+
+		/**
+	 * The feature id for the '<em><b>Partition Column</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING__PARTITION_COLUMN = 0;
+
+		/**
+	 * The feature id for the '<em><b>Partition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING__PARTITION = 1;
+
+		/**
+	 * The feature id for the '<em><b>Default Connection Pool</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING__DEFAULT_CONNECTION_POOL = 2;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING__NAME = 3;
+
+		/**
+	 * The feature id for the '<em><b>Partition Value Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING__PARTITION_VALUE_TYPE = 4;
+
+		/**
+	 * The feature id for the '<em><b>Union Unpartitionable Queries</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING__UNION_UNPARTITIONABLE_QUERIES = 5;
+
+		/**
+	 * The number of structural features of the '<em>Value Partitioning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_PARTITIONING_FEATURE_COUNT = 6;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VariableOneToOneImpl <em>Variable One To One</em>}' class.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.VariableOneToOneImpl
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getVariableOneToOne()
 	 * @generated
 	 */
-  int VARIABLE_ONE_TO_ONE = 84;
+  int VARIABLE_ONE_TO_ONE = 112;
 
   /**
    * The feature id for the '<em><b>Cascade</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6459,12 +9584,102 @@ public interface OrmPackage extends EPackage {
   int VARIABLE_ONE_TO_ONE__ACCESS_METHODS = 6;
 
   /**
+	 * The feature id for the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__NONCACHEABLE = 7;
+
+		/**
+	 * The feature id for the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__PARTITIONING = 8;
+
+		/**
+	 * The feature id for the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__REPLICATION_PARTITIONING = 9;
+
+		/**
+	 * The feature id for the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__ROUND_ROBIN_PARTITIONING = 10;
+
+		/**
+	 * The feature id for the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__PINNED_PARTITIONING = 11;
+
+		/**
+	 * The feature id for the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__RANGE_PARTITIONING = 12;
+
+		/**
+	 * The feature id for the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__VALUE_PARTITIONING = 13;
+
+		/**
+	 * The feature id for the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__HASH_PARTITIONING = 14;
+
+		/**
+	 * The feature id for the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__UNION_PARTITIONING = 15;
+
+		/**
+	 * The feature id for the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_ONE_TO_ONE__PARTITIONED = 16;
+
+		/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE__ACCESS = 7;
+  int VARIABLE_ONE_TO_ONE__ACCESS = 17;
 
   /**
 	 * The feature id for the '<em><b>Fetch</b></em>' attribute.
@@ -6472,7 +9687,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE__FETCH = 8;
+  int VARIABLE_ONE_TO_ONE__FETCH = 18;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6480,7 +9695,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE__NAME = 9;
+  int VARIABLE_ONE_TO_ONE__NAME = 19;
 
   /**
 	 * The feature id for the '<em><b>Optional</b></em>' attribute.
@@ -6488,7 +9703,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE__OPTIONAL = 10;
+  int VARIABLE_ONE_TO_ONE__OPTIONAL = 20;
 
   /**
 	 * The feature id for the '<em><b>Orphan Removal</b></em>' attribute.
@@ -6496,7 +9711,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE__ORPHAN_REMOVAL = 11;
+  int VARIABLE_ONE_TO_ONE__ORPHAN_REMOVAL = 21;
 
   /**
 	 * The feature id for the '<em><b>Target Interface</b></em>' attribute.
@@ -6504,7 +9719,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE__TARGET_INTERFACE = 12;
+  int VARIABLE_ONE_TO_ONE__TARGET_INTERFACE = 22;
 
   /**
 	 * The number of structural features of the '<em>Variable One To One</em>' class.
@@ -6513,7 +9728,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VARIABLE_ONE_TO_ONE_FEATURE_COUNT = 13;
+  int VARIABLE_ONE_TO_ONE_FEATURE_COUNT = 23;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.VersionImpl <em>Version</em>}' class.
@@ -6522,7 +9737,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getVersion()
 	 * @generated
 	 */
-  int VERSION = 85;
+  int VERSION = 113;
 
   /**
    * The feature id for the '<em><b>Column</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6534,12 +9749,21 @@ public interface OrmPackage extends EPackage {
   int VERSION__COLUMN = 0;
 
   /**
+	 * The feature id for the '<em><b>Index</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSION__INDEX = 1;
+
+		/**
 	 * The feature id for the '<em><b>Temporal</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__TEMPORAL = 1;
+  int VERSION__TEMPORAL = 2;
 
   /**
 	 * The feature id for the '<em><b>Convert</b></em>' attribute.
@@ -6547,7 +9771,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__CONVERT = 2;
+  int VERSION__CONVERT = 3;
 
   /**
    * The feature id for the '<em><b>Converter</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6556,7 +9780,7 @@ public interface OrmPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int VERSION__CONVERTER = 3;
+  int VERSION__CONVERTER = 4;
 
   /**
 	 * The feature id for the '<em><b>Type Converter</b></em>' containment reference.
@@ -6565,7 +9789,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__TYPE_CONVERTER = 4;
+  int VERSION__TYPE_CONVERTER = 5;
 
   /**
 	 * The feature id for the '<em><b>Object Type Converter</b></em>' containment reference.
@@ -6574,7 +9798,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__OBJECT_TYPE_CONVERTER = 5;
+  int VERSION__OBJECT_TYPE_CONVERTER = 6;
 
   /**
 	 * The feature id for the '<em><b>Struct Converter</b></em>' containment reference.
@@ -6583,7 +9807,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__STRUCT_CONVERTER = 6;
+  int VERSION__STRUCT_CONVERTER = 7;
 
   /**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -6592,7 +9816,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__PROPERTY = 7;
+  int VERSION__PROPERTY = 8;
 
   /**
 	 * The feature id for the '<em><b>Access Methods</b></em>' containment reference.
@@ -6601,7 +9825,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__ACCESS_METHODS = 8;
+  int VERSION__ACCESS_METHODS = 9;
 
   /**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
@@ -6609,15 +9833,24 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__ACCESS = 9;
+  int VERSION__ACCESS = 10;
 
   /**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSION__ATTRIBUTE_TYPE = 11;
+
+		/**
 	 * The feature id for the '<em><b>Mutable</b></em>' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__MUTABLE = 10;
+  int VERSION__MUTABLE = 12;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6625,7 +9858,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION__NAME = 11;
+  int VERSION__NAME = 13;
 
   /**
 	 * The number of structural features of the '<em>Version</em>' class.
@@ -6633,7 +9866,7 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-  int VERSION_FEATURE_COUNT = 12;
+  int VERSION_FEATURE_COUNT = 14;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.WriteTransformerImpl <em>Write Transformer</em>}' class.
@@ -6642,7 +9875,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getWriteTransformer()
 	 * @generated
 	 */
-  int WRITE_TRANSFORMER = 86;
+  int WRITE_TRANSFORMER = 114;
 
   /**
    * The feature id for the '<em><b>Column</b></em>' containment reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6685,25 +9918,55 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAccessType()
 	 * @generated
 	 */
-  int ACCESS_TYPE = 87;
+  int ACCESS_TYPE = 115;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType <em>Batch Fetch Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBatchFetchType()
+	 * @generated
+	 */
+	int BATCH_FETCH_TYPE = 116;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType <em>Cache Coordination Type</em>}' enum.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheCoordinationType()
 	 * @generated
 	 */
-  int CACHE_COORDINATION_TYPE = 88;
+  int CACHE_COORDINATION_TYPE = 117;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType <em>Cache Isolation Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheIsolationType()
+	 * @generated
+	 */
+	int CACHE_ISOLATION_TYPE = 118;
+
+		/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType <em>Cache Key Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheKeyType()
+	 * @generated
+	 */
+	int CACHE_KEY_TYPE = 119;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type</em>}' enum.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheType()
 	 * @generated
 	 */
-  int CACHE_TYPE = 89;
+  int CACHE_TYPE = 120;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTrackingType <em>Change Tracking Type</em>}' enum.
@@ -6712,7 +9975,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getChangeTrackingType()
 	 * @generated
 	 */
-  int CHANGE_TRACKING_TYPE = 90;
+  int CHANGE_TRACKING_TYPE = 121;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DirectionType <em>Direction Type</em>}' enum.
@@ -6721,7 +9984,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDirectionType()
 	 * @generated
 	 */
-  int DIRECTION_TYPE = 91;
+  int DIRECTION_TYPE = 122;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorType <em>Discriminator Type</em>}' enum.
@@ -6730,7 +9993,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorType()
 	 * @generated
 	 */
-  int DISCRIMINATOR_TYPE = 92;
+  int DISCRIMINATOR_TYPE = 123;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enum Type</em>}' enum.
@@ -6739,7 +10002,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumType()
 	 * @generated
 	 */
-  int ENUM_TYPE = 94;
+  int ENUM_TYPE = 124;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ExistenceType <em>Existence Type</em>}' enum.
@@ -6748,7 +10011,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getExistenceType()
 	 * @generated
 	 */
-  int EXISTENCE_TYPE = 95;
+  int EXISTENCE_TYPE = 125;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType <em>Fetch Type</em>}' enum.
@@ -6757,7 +10020,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFetchType()
 	 * @generated
 	 */
-  int FETCH_TYPE = 96;
+  int FETCH_TYPE = 126;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.GenerationType <em>Generation Type</em>}' enum.
@@ -6766,7 +10029,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getGenerationType()
 	 * @generated
 	 */
-  int GENERATION_TYPE = 97;
+  int GENERATION_TYPE = 127;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation <em>Id Validation</em>}' enum.
@@ -6775,7 +10038,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIdValidation()
 	 * @generated
 	 */
-  int ID_VALIDATION = 98;
+  int ID_VALIDATION = 128;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType <em>Inheritance Type</em>}' enum.
@@ -6784,7 +10047,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInheritanceType()
 	 * @generated
 	 */
-  int INHERITANCE_TYPE = 99;
+  int INHERITANCE_TYPE = 129;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType <em>Join Fetch Type</em>}' enum.
@@ -6793,7 +10056,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinFetchType()
 	 * @generated
 	 */
-  int JOIN_FETCH_TYPE = 100;
+  int JOIN_FETCH_TYPE = 130;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.LockModeType <em>Lock Mode Type</em>}' enum.
@@ -6802,16 +10065,26 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getLockModeType()
 	 * @generated
 	 */
-  int LOCK_MODE_TYPE = 101;
+  int LOCK_MODE_TYPE = 131;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType <em>Multitenant Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMultitenantType()
+	 * @generated
+	 */
+	int MULTITENANT_TYPE = 132;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType <em>Optimistic Locking Type</em>}' enum.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOptimisticLockingType()
 	 * @generated
 	 */
-  int OPTIMISTIC_LOCKING_TYPE = 102;
+  int OPTIMISTIC_LOCKING_TYPE = 133;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumnCorrectionType <em>Order Column Correction Type</em>}' enum.
@@ -6820,16 +10093,26 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderColumnCorrectionType()
 	 * @generated
 	 */
-  int ORDER_COLUMN_CORRECTION_TYPE = 103;
+  int ORDER_COLUMN_CORRECTION_TYPE = 134;
 
   /**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType <em>Supported Versions Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSupportedVersionsType()
+	 * @generated
+	 */
+	int SUPPORTED_VERSIONS_TYPE = 135;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal Type</em>}' enum.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporalType()
 	 * @generated
 	 */
-  int TEMPORAL_TYPE = 105;
+  int TEMPORAL_TYPE = 136;
 
   /**
 	 * The meta object id for the '<em>Access Type Object</em>' data type.
@@ -6838,9 +10121,19 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getAccessTypeObject()
 	 * @generated
 	 */
-  int ACCESS_TYPE_OBJECT = 106;
+  int ACCESS_TYPE_OBJECT = 137;
 
   /**
+	 * The meta object id for the '<em>Batch Fetch Type Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getBatchFetchTypeObject()
+	 * @generated
+	 */
+	int BATCH_FETCH_TYPE_OBJECT = 138;
+
+		/**
 	 * The meta object id for the '<em>Cache Coordination Type Object</em>' data type.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -6848,16 +10141,36 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheCoordinationTypeObject()
 	 * @generated
 	 */
-  int CACHE_COORDINATION_TYPE_OBJECT = 107;
+  int CACHE_COORDINATION_TYPE_OBJECT = 139;
 
   /**
+	 * The meta object id for the '<em>Cache Isolation Type Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheIsolationTypeObject()
+	 * @generated
+	 */
+	int CACHE_ISOLATION_TYPE_OBJECT = 140;
+
+		/**
+	 * The meta object id for the '<em>Cache Key Type Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheKeyTypeObject()
+	 * @generated
+	 */
+	int CACHE_KEY_TYPE_OBJECT = 141;
+
+		/**
 	 * The meta object id for the '<em>Cache Type Object</em>' data type.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getCacheTypeObject()
 	 * @generated
 	 */
-  int CACHE_TYPE_OBJECT = 108;
+  int CACHE_TYPE_OBJECT = 142;
 
   /**
 	 * The meta object id for the '<em>Change Tracking Type Object</em>' data type.
@@ -6867,7 +10180,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getChangeTrackingTypeObject()
 	 * @generated
 	 */
-  int CHANGE_TRACKING_TYPE_OBJECT = 109;
+  int CHANGE_TRACKING_TYPE_OBJECT = 143;
 
   /**
    * The meta object id for the '<em>Direction Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6877,7 +10190,7 @@ public interface OrmPackage extends EPackage {
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDirectionTypeObject()
    * @generated
    */
-  int DIRECTION_TYPE_OBJECT = 110;
+  int DIRECTION_TYPE_OBJECT = 144;
 
   /**
 	 * The meta object id for the '<em>Discriminator Type Object</em>' data type.
@@ -6887,7 +10200,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorTypeObject()
 	 * @generated
 	 */
-  int DISCRIMINATOR_TYPE_OBJECT = 111;
+  int DISCRIMINATOR_TYPE_OBJECT = 145;
 
   /**
 	 * The meta object id for the '<em>Discriminator Value</em>' data type.
@@ -6896,25 +10209,16 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getDiscriminatorValue()
 	 * @generated
 	 */
-  int DISCRIMINATOR_VALUE = 112;
+  int DISCRIMINATOR_VALUE = 146;
 
   /**
-	 * The meta object id for the '<em>Enumerated Object</em>' data type.
+	 * The meta object id for the '<em>Enumerated</em>' data type.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumeratedObject()
-	 * @generated
-	 */
-  int ENUMERATED_OBJECT = 113;
-
-  /**
-	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated</em>}' enum.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumerated()
 	 * @generated
 	 */
-  int ENUMERATED = 93;
+  int ENUMERATED = 147;
 
   /**
 	 * The meta object id for the '<em>Enum Type Object</em>' data type.
@@ -6923,7 +10227,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getEnumTypeObject()
 	 * @generated
 	 */
-  int ENUM_TYPE_OBJECT = 114;
+  int ENUM_TYPE_OBJECT = 148;
 
   /**
    * The meta object id for the '<em>Existence Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6933,7 +10237,7 @@ public interface OrmPackage extends EPackage {
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getExistenceTypeObject()
    * @generated
    */
-  int EXISTENCE_TYPE_OBJECT = 115;
+  int EXISTENCE_TYPE_OBJECT = 149;
 
   /**
 	 * The meta object id for the '<em>Fetch Type Object</em>' data type.
@@ -6942,7 +10246,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getFetchTypeObject()
 	 * @generated
 	 */
-  int FETCH_TYPE_OBJECT = 116;
+  int FETCH_TYPE_OBJECT = 150;
 
   /**
    * The meta object id for the '<em>Generation Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6952,7 +10256,7 @@ public interface OrmPackage extends EPackage {
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getGenerationTypeObject()
    * @generated
    */
-  int GENERATION_TYPE_OBJECT = 117;
+  int GENERATION_TYPE_OBJECT = 151;
 
   /**
 	 * The meta object id for the '<em>Id Validation Object</em>' data type.
@@ -6961,7 +10265,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getIdValidationObject()
 	 * @generated
 	 */
-  int ID_VALIDATION_OBJECT = 118;
+  int ID_VALIDATION_OBJECT = 152;
 
   /**
    * The meta object id for the '<em>Inheritance Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6971,7 +10275,7 @@ public interface OrmPackage extends EPackage {
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getInheritanceTypeObject()
    * @generated
    */
-  int INHERITANCE_TYPE_OBJECT = 119;
+  int INHERITANCE_TYPE_OBJECT = 153;
 
   /**
    * The meta object id for the '<em>Join Fetch Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6981,7 +10285,7 @@ public interface OrmPackage extends EPackage {
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getJoinFetchTypeObject()
    * @generated
    */
-  int JOIN_FETCH_TYPE_OBJECT = 120;
+  int JOIN_FETCH_TYPE_OBJECT = 154;
 
   /**
    * The meta object id for the '<em>Lock Mode Type Object</em>' data type. <!-- begin-user-doc --> <!-- end-user-doc
@@ -6991,9 +10295,19 @@ public interface OrmPackage extends EPackage {
    * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getLockModeTypeObject()
    * @generated
    */
-  int LOCK_MODE_TYPE_OBJECT = 121;
+  int LOCK_MODE_TYPE_OBJECT = 155;
 
   /**
+	 * The meta object id for the '<em>Multitenant Type Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getMultitenantTypeObject()
+	 * @generated
+	 */
+	int MULTITENANT_TYPE_OBJECT = 156;
+
+		/**
 	 * The meta object id for the '<em>Optimistic Locking Type Object</em>' data type.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -7001,7 +10315,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOptimisticLockingTypeObject()
 	 * @generated
 	 */
-  int OPTIMISTIC_LOCKING_TYPE_OBJECT = 122;
+  int OPTIMISTIC_LOCKING_TYPE_OBJECT = 157;
 
   /**
 	 * The meta object id for the '<em>Order By</em>' data type.
@@ -7010,7 +10324,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderBy()
 	 * @generated
 	 */
-  int ORDER_BY = 123;
+  int ORDER_BY = 158;
 
   /**
 	 * The meta object id for the '<em>Order Column Correction Type Object</em>' data type.
@@ -7020,25 +10334,26 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getOrderColumnCorrectionTypeObject()
 	 * @generated
 	 */
-  int ORDER_COLUMN_CORRECTION_TYPE_OBJECT = 124;
+  int ORDER_COLUMN_CORRECTION_TYPE_OBJECT = 159;
 
   /**
-	 * The meta object id for the '<em>Temporal Object</em>' data type.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporalObject()
+	 * The meta object id for the '<em>Supported Versions Type Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getSupportedVersionsTypeObject()
 	 * @generated
 	 */
-  int TEMPORAL_OBJECT = 125;
+	int SUPPORTED_VERSIONS_TYPE_OBJECT = 160;
 
-  /**
-	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal</em>}' enum.
+		/**
+	 * The meta object id for the '<em>Temporal</em>' data type.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporal()
 	 * @generated
 	 */
-  int TEMPORAL = 104;
+  int TEMPORAL = 161;
 
   /**
 	 * The meta object id for the '<em>Temporal Type Object</em>' data type.
@@ -7047,7 +10362,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getTemporalTypeObject()
 	 * @generated
 	 */
-  int TEMPORAL_TYPE_OBJECT = 126;
+  int TEMPORAL_TYPE_OBJECT = 162;
 
   /**
 	 * The meta object id for the '<em>Version Type</em>' data type.
@@ -7056,7 +10371,7 @@ public interface OrmPackage extends EPackage {
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.impl.OrmPackageImpl#getVersionType()
 	 * @generated
 	 */
-  int VERSION_TYPE = 127;
+  int VERSION_TYPE = 163;
 
   /**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods <em>Access Methods</em>}'.
@@ -7092,6 +10407,224 @@ public interface OrmPackage extends EPackage {
   EAttribute getAccessMethods_SetMethod();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria <em>Additional Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Additional Criteria</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria
+	 * @generated
+	 */
+	EClass getAdditionalCriteria();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria#getCriteria <em>Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Criteria</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria#getCriteria()
+	 * @see #getAdditionalCriteria()
+	 * @generated
+	 */
+	EAttribute getAdditionalCriteria_Criteria();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array
+	 * @generated
+	 */
+	EClass getArray();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getColumn <em>Column</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Column</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getColumn()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Column();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getTemporal <em>Temporal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temporal</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getTemporal()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Temporal();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getEnumerated <em>Enumerated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Enumerated</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getEnumerated()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Enumerated();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getLob <em>Lob</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Lob</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getLob()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Lob();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getConvert <em>Convert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Convert</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getConvert()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Convert();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getGroup <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Group</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getGroup()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Group();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getConverter <em>Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Converter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getConverter()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Converter();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getTypeConverter <em>Type Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Type Converter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getTypeConverter()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_TypeConverter();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getObjectTypeConverter <em>Object Type Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Object Type Converter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getObjectTypeConverter()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_ObjectTypeConverter();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getStructConverter <em>Struct Converter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Struct Converter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getStructConverter()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_StructConverter();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getProperty <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Property</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getProperty()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_Property();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getAccessMethods()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EReference getArray_AccessMethods();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Access</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getAccess()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Access();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getAttributeType()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_AttributeType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getDatabaseType <em>Database Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Database Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getDatabaseType()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_DatabaseType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getName()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array#getTargetClass <em>Target Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array#getTargetClass()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_TargetClass();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride <em>Association Override</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Association Override</em>'.
@@ -7382,6 +10915,28 @@ public interface OrmPackage extends EPackage {
   EReference getAttributes_Transient();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getStructure <em>Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Structure</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getStructure()
+	 * @see #getAttributes()
+	 * @generated
+	 */
+	EReference getAttributes_Structure();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getArray <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Array</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getArray()
+	 * @see #getAttributes()
+	 * @generated
+	 */
+	EReference getAttributes_Array();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic <em>Basic</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Basic</em>'.
@@ -7402,6 +10957,17 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_Column();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getIndex()
+	 * @see #getBasic()
+	 * @generated
+	 */
+	EReference getBasic_Index();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getGeneratedValue <em>Generated Value</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -7547,6 +11113,28 @@ public interface OrmPackage extends EPackage {
   EReference getBasic_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnInsert <em>Return Insert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Return Insert</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnInsert()
+	 * @see #getBasic()
+	 * @generated
+	 */
+	EReference getBasic_ReturnInsert();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnUpdate <em>Return Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Return Update</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnUpdate()
+	 * @see #getBasic()
+	 * @generated
+	 */
+	EReference getBasic_ReturnUpdate();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Access</em>'.
@@ -7557,6 +11145,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasic_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAttributeType()
+	 * @see #getBasic()
+	 * @generated
+	 */
+	EAttribute getBasic_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getFetch <em>Fetch</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Fetch</em>'.
@@ -7694,6 +11293,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicCollection_JoinFetch();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getBatchFetch()
+	 * @see #getBasicCollection()
+	 * @generated
+	 */
+	EReference getBasicCollection_BatchFetch();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getProperty <em>Property</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -7716,6 +11326,17 @@ public interface OrmPackage extends EPackage {
   EReference getBasicCollection_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getNoncacheable()
+	 * @see #getBasicCollection()
+	 * @generated
+	 */
+	EReference getBasicCollection_Noncacheable();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getAccess <em>Access</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -7889,6 +11510,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicMap_JoinFetch();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getBatchFetch()
+	 * @see #getBasicMap()
+	 * @generated
+	 */
+	EReference getBasicMap_BatchFetch();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getProperty <em>Property</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -7912,6 +11544,17 @@ public interface OrmPackage extends EPackage {
   EReference getBasicMap_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getNoncacheable()
+	 * @see #getBasicMap()
+	 * @generated
+	 */
+	EReference getBasicMap_Noncacheable();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7943,6 +11586,38 @@ public interface OrmPackage extends EPackage {
   EAttribute getBasicMap_Name();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch
+	 * @generated
+	 */
+	EClass getBatchFetch();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch#getSize()
+	 * @see #getBatchFetch()
+	 * @generated
+	 */
+	EAttribute getBatchFetch_Size();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch#getType()
+	 * @see #getBatchFetch()
+	 * @generated
+	 */
+	EAttribute getBatchFetch_Type();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache <em>Cache</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cache</em>'.
@@ -8010,6 +11685,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getCache_DisableHits();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getIsolation <em>Isolation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Isolation</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getIsolation()
+	 * @see #getCache()
+	 * @generated
+	 */
+	EAttribute getCache_Isolation();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isRefreshOnlyIfNewer <em>Refresh Only If Newer</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Refresh Only If Newer</em>'.
@@ -8136,6 +11822,17 @@ public interface OrmPackage extends EPackage {
   EReference getCascadeType_CascadeRefresh();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeDetach <em>Cascade Detach</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cascade Detach</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeDetach()
+	 * @see #getCascadeType()
+	 * @generated
+	 */
+	EReference getCascadeType_CascadeDetach();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking <em>Change Tracking</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Change Tracking</em>'.
@@ -8156,6 +11853,27 @@ public interface OrmPackage extends EPackage {
   EAttribute getChangeTracking_Type();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ClassExtractor <em>Class Extractor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Class Extractor</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ClassExtractor
+	 * @generated
+	 */
+	EClass getClassExtractor();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ClassExtractor#getClass_ <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ClassExtractor#getClass_()
+	 * @see #getClassExtractor()
+	 * @generated
+	 */
+	EAttribute getClassExtractor_Class();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy <em>Clone Copy Policy</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Clone Copy Policy</em>'.
@@ -8230,6 +11948,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getCollectionTable_Catalog();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getCreationSuffix <em>Creation Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Suffix</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getCreationSuffix()
+	 * @see #getCollectionTable()
+	 * @generated
+	 */
+	EAttribute getCollectionTable_CreationSuffix();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -8664,6 +12393,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getEclipselinkCollectionTable_Catalog();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getCreationSuffix <em>Creation Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Suffix</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getCreationSuffix()
+	 * @see #getEclipselinkCollectionTable()
+	 * @generated
+	 */
+	EAttribute getEclipselinkCollectionTable_CreationSuffix();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable#getName <em>Name</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -8954,6 +12694,39 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_CollectionTable();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#isCascadeOnDelete <em>Cascade On Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cascade On Delete</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#isCascadeOnDelete()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EAttribute getElementCollection_CascadeOnDelete();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getJoinFetch <em>Join Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Join Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getJoinFetch()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EAttribute getElementCollection_JoinFetch();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getBatchFetch()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_BatchFetch();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getProperty <em>Property</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -8976,6 +12749,116 @@ public interface OrmPackage extends EPackage {
   EReference getElementCollection_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getNoncacheable()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_Noncacheable();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getPartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getReplicationPartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getRoundRobinPartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getPinnedPartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getRangePartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getValuePartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getHashPartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getUnionPartitioning()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EReference getElementCollection_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getPartitioned()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EAttribute getElementCollection_Partitioned();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAccess <em>Access</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -8988,6 +12871,28 @@ public interface OrmPackage extends EPackage {
   EAttribute getElementCollection_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getAttributeType()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EAttribute getElementCollection_AttributeType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getCompositeMember <em>Composite Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Composite Member</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getCompositeMember()
+	 * @see #getElementCollection()
+	 * @generated
+	 */
+	EAttribute getElementCollection_CompositeMember();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection#getFetch <em>Fetch</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -9043,6 +12948,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddable_Description();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccessMethods()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EReference getEmbeddable_AccessMethods();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCustomizer <em>Customizer</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -9067,6 +12983,17 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_ChangeTracking();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStruct <em>Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Struct</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStruct()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EReference getEmbeddable_Struct();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getConverter <em>Converter</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -9123,6 +13050,28 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_Property();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAttributeOverride <em>Attribute Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attribute Override</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAttributeOverride()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EReference getEmbeddable_AttributeOverride();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAssociationOverride <em>Association Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Association Override</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAssociationOverride()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EReference getEmbeddable_AssociationOverride();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAttributes <em>Attributes</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -9167,6 +13116,28 @@ public interface OrmPackage extends EPackage {
   EReference getEmbeddable_CloneCopyPolicy();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getPlsqlRecord <em>Plsql Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Record</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getPlsqlRecord()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EReference getEmbeddable_PlsqlRecord();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getPlsqlTable <em>Plsql Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getPlsqlTable()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EReference getEmbeddable_PlsqlTable();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -9209,6 +13180,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddable_MetadataComplete();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getParentClass <em>Parent Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Parent Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getParentClass()
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	EAttribute getEmbeddable_ParentClass();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded <em>Embedded</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Embedded</em>'.
@@ -9272,6 +13254,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbedded_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getAttributeType()
+	 * @see #getEmbedded()
+	 * @generated
+	 */
+	EAttribute getEmbedded_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embedded#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
@@ -9336,6 +13329,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getEmbeddedId_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getAttributeType()
+	 * @see #getEmbeddedId()
+	 * @generated
+	 */
+	EAttribute getEmbeddedId_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EmbeddedId#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -9377,6 +13381,39 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_Description();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccessMethods()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_AccessMethods();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getMultitenant <em>Multitenant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Multitenant</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getMultitenant()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Multitenant();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAdditionalCriteria <em>Additional Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Additional Criteria</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAdditionalCriteria()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_AdditionalCriteria();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCustomizer <em>Customizer</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -9424,6 +13461,17 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_SecondaryTable();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getStruct <em>Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Struct</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getStruct()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Struct();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Primary Key Join Column</em>'.
@@ -9434,6 +13482,28 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_PrimaryKeyJoinColumn();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCascadeOnDelete <em>Cascade On Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cascade On Delete</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCascadeOnDelete()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_CascadeOnDelete();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIndex()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Index();
+
+		/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIdClass <em>Id Class</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -9489,6 +13559,17 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_DiscriminatorColumn();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClassExtractor <em>Class Extractor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Class Extractor</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClassExtractor()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_ClassExtractor();
+
+		/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getOptimisticLocking <em>Optimistic Locking</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Optimistic Locking</em>'.
@@ -9522,6 +13603,17 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_CacheInterceptor();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getFetchGroup <em>Fetch Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Fetch Group</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getFetchGroup()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_FetchGroup();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getConverter <em>Converter</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -9623,6 +13715,105 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_TableGenerator();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getReplicationPartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRoundRobinPartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPinnedPartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRangePartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getValuePartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getHashPartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getUnionPartitioning()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioned()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_Partitioned();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedQuery <em>Named Query</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -9655,6 +13846,61 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_NamedStoredProcedureQuery();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredFunctionQuery <em>Named Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredFunctionQuery()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_NamedStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Plsql Stored Procedure Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedPlsqlStoredProcedureQuery()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_NamedPlsqlStoredProcedureQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Plsql Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedPlsqlStoredFunctionQuery()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_NamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPlsqlRecord <em>Plsql Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Record</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPlsqlRecord()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PlsqlRecord();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPlsqlTable <em>Plsql Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPlsqlTable()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PlsqlTable();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Sql Result Set Mapping</em>'.
@@ -9709,6 +13955,83 @@ public interface OrmPackage extends EPackage {
   EReference getEntity_EntityListeners();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrePersist <em>Pre Persist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pre Persist</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrePersist()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PrePersist();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostPersist <em>Post Persist</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Post Persist</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostPersist()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PostPersist();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreRemove <em>Pre Remove</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pre Remove</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreRemove()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PreRemove();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostRemove <em>Post Remove</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Post Remove</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostRemove()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PostRemove();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreUpdate <em>Pre Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pre Update</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreUpdate()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PreUpdate();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostUpdate <em>Post Update</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Post Update</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostUpdate()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PostUpdate();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostLoad <em>Post Load</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Post Load</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostLoad()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_PostLoad();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getProperty <em>Property</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -9825,6 +14148,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntity_Name();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getParentClass <em>Parent Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Parent Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getParentClass()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EAttribute getEntity_ParentClass();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isReadOnly <em>Read Only</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Read Only</em>'.
@@ -10048,6 +14382,28 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntityMappingsType_Access();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getAccessMethods()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_AccessMethods();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTenantDiscriminator <em>Tenant Discriminator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tenant Discriminator</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getTenantDiscriminator()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_TenantDiscriminator();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getConverter <em>Converter</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -10110,6 +14466,94 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_TableGenerator();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getReplicationPartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getRoundRobinPartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPinnedPartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getRangePartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getValuePartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getHashPartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getUnionPartitioning()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_UnionPartitioning();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedQuery <em>Named Query</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -10142,6 +14586,61 @@ public interface OrmPackage extends EPackage {
   EReference getEntityMappingsType_NamedStoredProcedureQuery();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedStoredFunctionQuery <em>Named Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedStoredFunctionQuery()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_NamedStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Plsql Stored Procedure Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedPlsqlStoredProcedureQuery()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_NamedPlsqlStoredProcedureQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Plsql Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getNamedPlsqlStoredFunctionQuery()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_NamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPlsqlRecord <em>Plsql Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Record</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPlsqlRecord()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_PlsqlRecord();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPlsqlTable <em>Plsql Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getPlsqlTable()
+	 * @see #getEntityMappingsType()
+	 * @generated
+	 */
+	EReference getEntityMappingsType_PlsqlTable();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Sql Result Set Mapping</em>'.
@@ -10241,6 +14740,70 @@ public interface OrmPackage extends EPackage {
   EAttribute getEntityResult_EntityClass();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchAttribute <em>Fetch Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fetch Attribute</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchAttribute
+	 * @generated
+	 */
+	EClass getFetchAttribute();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchAttribute#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchAttribute#getName()
+	 * @see #getFetchAttribute()
+	 * @generated
+	 */
+	EAttribute getFetchAttribute_Name();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup <em>Fetch Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fetch Group</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup
+	 * @generated
+	 */
+	EClass getFetchGroup();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attribute</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup#getAttribute()
+	 * @see #getFetchGroup()
+	 * @generated
+	 */
+	EReference getFetchGroup_Attribute();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup#isLoad <em>Load</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Load</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup#isLoad()
+	 * @see #getFetchGroup()
+	 * @generated
+	 */
+	EAttribute getFetchGroup_Load();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup#getName()
+	 * @see #getFetchGroup()
+	 * @generated
+	 */
+	EAttribute getFetchGroup_Name();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult <em>Field Result</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Field Result</em>'.
@@ -10305,6 +14868,60 @@ public interface OrmPackage extends EPackage {
   EAttribute getGeneratedValue_Strategy();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning
+	 * @generated
+	 */
+	EClass getHashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#getPartitionColumn <em>Partition Column</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partition Column</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#getPartitionColumn()
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	EReference getHashPartitioning_PartitionColumn();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#getConnectionPool()
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	EAttribute getHashPartitioning_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#getName()
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	EAttribute getHashPartitioning_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#isUnionUnpartitionableQueries <em>Union Unpartitionable Queries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Union Unpartitionable Queries</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning#isUnionUnpartitionableQueries()
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	EAttribute getHashPartitioning_UnionUnpartitionableQueries();
+
+		/**
    * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id <em>Id</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -10326,6 +14943,17 @@ public interface OrmPackage extends EPackage {
   EReference getId_Column();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getIndex()
+	 * @see #getId()
+	 * @generated
+	 */
+	EReference getId_Index();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getGeneratedValue <em>Generated Value</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -10348,6 +14976,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Temporal();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getEnumerated <em>Enumerated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Enumerated</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getEnumerated()
+	 * @see #getId()
+	 * @generated
+	 */
+	EAttribute getId_Enumerated();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getConvert <em>Convert</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Convert</em>'.
@@ -10460,6 +15099,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getId_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Id#getAttributeType()
+	 * @see #getId()
+	 * @generated
+	 */
+	EAttribute getId_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id#isMutable <em>Mutable</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mutable</em>'.
@@ -10499,6 +15149,82 @@ public interface OrmPackage extends EPackage {
   EAttribute getIdClass_Class();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index
+	 * @generated
+	 */
+	EClass getIndex();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index#getColumnName <em>Column Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Column Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index#getColumnName()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EAttribute getIndex_ColumnName();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index#getCatalog <em>Catalog</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Catalog</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index#getCatalog()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EAttribute getIndex_Catalog();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index#getName()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EAttribute getIndex_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index#getSchema <em>Schema</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Schema</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index#getSchema()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EAttribute getIndex_Schema();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index#getTable <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index#getTable()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EAttribute getIndex_Table();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index#isUnique <em>Unique</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unique</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index#isUnique()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EAttribute getIndex_Unique();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance <em>Inheritance</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Inheritance</em>'.
@@ -10679,6 +15405,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getJoinTable_Catalog();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCreationSuffix <em>Creation Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Suffix</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCreationSuffix()
+	 * @see #getJoinTable()
+	 * @generated
+	 */
+	EAttribute getJoinTable_CreationSuffix();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
@@ -10907,6 +15644,17 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_Cascade();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#isCascadeOnDelete <em>Cascade On Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cascade On Delete</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#isCascadeOnDelete()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EAttribute getManyToMany_CascadeOnDelete();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -10919,6 +15667,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_JoinFetch();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getBatchFetch()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_BatchFetch();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getProperty <em>Property</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -10943,6 +15702,116 @@ public interface OrmPackage extends EPackage {
   EReference getManyToMany_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getNoncacheable()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_Noncacheable();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getReplicationPartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRoundRobinPartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPinnedPartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRangePartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getValuePartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getHashPartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getUnionPartitioning()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EReference getManyToMany_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioned()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EAttribute getManyToMany_Partitioned();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -10954,6 +15823,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToMany_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAttributeType()
+	 * @see #getManyToMany()
+	 * @generated
+	 */
+	EAttribute getManyToMany_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -11056,6 +15936,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getManyToOne_JoinFetch();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getBatchFetch()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_BatchFetch();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getProperty <em>Property</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -11080,6 +15971,116 @@ public interface OrmPackage extends EPackage {
   EReference getManyToOne_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getNoncacheable()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_Noncacheable();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getPartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getReplicationPartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getRoundRobinPartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getPinnedPartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getRangePartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getValuePartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getHashPartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getUnionPartitioning()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EReference getManyToOne_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getPartitioned()
+	 * @see #getManyToOne()
+	 * @generated
+	 */
+	EAttribute getManyToOne_Partitioned();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -11438,6 +16439,39 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_Description();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccessMethods()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_AccessMethods();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getMultitenant <em>Multitenant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Multitenant</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getMultitenant()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_Multitenant();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAdditionalCriteria <em>Additional Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Additional Criteria</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAdditionalCriteria()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_AdditionalCriteria();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getCustomizer <em>Customizer</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -11516,6 +16550,17 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_CacheInterceptor();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getFetchGroup <em>Fetch Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Fetch Group</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getFetchGroup()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_FetchGroup();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getConverter <em>Converter</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -11590,6 +16635,237 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_CloneCopyPolicy();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getSequenceGenerator <em>Sequence Generator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sequence Generator</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getSequenceGenerator()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_SequenceGenerator();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getTableGenerator <em>Table Generator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Table Generator</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getTableGenerator()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_TableGenerator();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getReplicationPartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getRoundRobinPartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPinnedPartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getRangePartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getValuePartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getHashPartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getUnionPartitioning()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPartitioned()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EAttribute getMappedSuperclass_Partitioned();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedQuery <em>Named Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedQuery()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_NamedQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedNativeQuery <em>Named Native Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Native Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedNativeQuery()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_NamedNativeQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Stored Procedure Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedStoredProcedureQuery()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_NamedStoredProcedureQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedStoredFunctionQuery <em>Named Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedStoredFunctionQuery()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_NamedStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Plsql Stored Procedure Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedPlsqlStoredProcedureQuery()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_NamedPlsqlStoredProcedureQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Named Plsql Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getNamedPlsqlStoredFunctionQuery()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_NamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPlsqlRecord <em>Plsql Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Record</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPlsqlRecord()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_PlsqlRecord();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPlsqlTable <em>Plsql Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Plsql Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPlsqlTable()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_PlsqlTable();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sql Result Set Mapping</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getSqlResultSetMapping()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_SqlResultSetMapping();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getQueryRedirectors <em>Query Redirectors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Query Redirectors</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getQueryRedirectors()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_QueryRedirectors();
+
+		/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getExcludeDefaultListeners <em>Exclude Default Listeners</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Exclude Default Listeners</em>'.
@@ -11716,6 +16992,28 @@ public interface OrmPackage extends EPackage {
   EReference getMappedSuperclass_Property();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAttributeOverride <em>Attribute Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attribute Override</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAttributeOverride()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_AttributeOverride();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAssociationOverride <em>Association Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Association Override</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAssociationOverride()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EReference getMappedSuperclass_AssociationOverride();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAttributes <em>Attributes</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -11794,6 +17092,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_MetadataComplete();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getParentClass <em>Parent Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Parent Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getParentClass()
+	 * @see #getMappedSuperclass()
+	 * @generated
+	 */
+	EAttribute getMappedSuperclass_ParentClass();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#isReadOnly <em>Read Only</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -11806,6 +17115,38 @@ public interface OrmPackage extends EPackage {
   EAttribute getMappedSuperclass_ReadOnly();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant <em>Multitenant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Multitenant</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant
+	 * @generated
+	 */
+	EClass getMultitenant();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant#getTenantDiscriminator <em>Tenant Discriminator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tenant Discriminator</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant#getTenantDiscriminator()
+	 * @see #getMultitenant()
+	 * @generated
+	 */
+	EReference getMultitenant_TenantDiscriminator();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant#getType()
+	 * @see #getMultitenant()
+	 * @generated
+	 */
+	EAttribute getMultitenant_Type();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery <em>Named Native Query</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Named Native Query</em>'.
@@ -11883,6 +17224,158 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedNativeQuery_ResultSetMapping();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Plsql Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery
+	 * @generated
+	 */
+	EClass getNamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getHint <em>Hint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hint</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getHint()
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	EReference getNamedPlsqlStoredFunctionQuery_Hint();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getParameter()
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	EReference getNamedPlsqlStoredFunctionQuery_Parameter();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getReturnParameter <em>Return Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Return Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getReturnParameter()
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	EReference getNamedPlsqlStoredFunctionQuery_ReturnParameter();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getFunctionName <em>Function Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Function Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getFunctionName()
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredFunctionQuery_FunctionName();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getName()
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredFunctionQuery_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getResultSetMapping <em>Result Set Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Set Mapping</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery#getResultSetMapping()
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredFunctionQuery_ResultSetMapping();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Plsql Stored Procedure Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery
+	 * @generated
+	 */
+	EClass getNamedPlsqlStoredProcedureQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getHint <em>Hint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hint</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getHint()
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	EReference getNamedPlsqlStoredProcedureQuery_Hint();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getParameter()
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	EReference getNamedPlsqlStoredProcedureQuery_Parameter();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getName()
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredProcedureQuery_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getProcedureName <em>Procedure Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Procedure Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getProcedureName()
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredProcedureQuery_ProcedureName();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getResultClass <em>Result Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getResultClass()
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredProcedureQuery_ResultClass();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getResultSetMapping <em>Result Set Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Set Mapping</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery#getResultSetMapping()
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 */
+	EAttribute getNamedPlsqlStoredProcedureQuery_ResultSetMapping();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery <em>Named Query</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Named Query</em>'.
@@ -11949,6 +17442,93 @@ public interface OrmPackage extends EPackage {
   EAttribute getNamedQuery_Name();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery <em>Named Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Stored Function Query</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery
+	 * @generated
+	 */
+	EClass getNamedStoredFunctionQuery();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getHint <em>Hint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hint</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getHint()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EReference getNamedStoredFunctionQuery_Hint();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getParameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getParameter()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EReference getNamedStoredFunctionQuery_Parameter();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getReturnParameter <em>Return Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Return Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getReturnParameter()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EReference getNamedStoredFunctionQuery_ReturnParameter();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#isCallByIndex <em>Call By Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Call By Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#isCallByIndex()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedStoredFunctionQuery_CallByIndex();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getFunctionName <em>Function Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Function Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getFunctionName()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedStoredFunctionQuery_FunctionName();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getName()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedStoredFunctionQuery_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getResultSetMapping <em>Result Set Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result Set Mapping</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery#getResultSetMapping()
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 */
+	EAttribute getNamedStoredFunctionQuery_ResultSetMapping();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Named Stored Procedure Query</em>'.
@@ -11980,6 +17560,28 @@ public interface OrmPackage extends EPackage {
   EReference getNamedStoredProcedureQuery_Parameter();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isCallByIndex <em>Call By Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Call By Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isCallByIndex()
+	 * @see #getNamedStoredProcedureQuery()
+	 * @generated
+	 */
+	EAttribute getNamedStoredProcedureQuery_CallByIndex();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isMultipleResultSets <em>Multiple Result Sets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiple Result Sets</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isMultipleResultSets()
+	 * @see #getNamedStoredProcedureQuery()
+	 * @generated
+	 */
+	EAttribute getNamedStoredProcedureQuery_MultipleResultSets();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getName <em>Name</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -12305,6 +17907,17 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_Cascade();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#isCascadeOnDelete <em>Cascade On Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cascade On Delete</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#isCascadeOnDelete()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EAttribute getOneToMany_CascadeOnDelete();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPrivateOwned <em>Private Owned</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -12329,6 +17942,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_JoinFetch();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getBatchFetch()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_BatchFetch();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getProperty <em>Property</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -12353,6 +17977,116 @@ public interface OrmPackage extends EPackage {
   EReference getOneToMany_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getNoncacheable()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_Noncacheable();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getReplicationPartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getRoundRobinPartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPinnedPartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getRangePartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getValuePartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getHashPartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getUnionPartitioning()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EReference getOneToMany_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getPartitioned()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EAttribute getOneToMany_Partitioned();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -12364,6 +18098,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToMany_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getAttributeType()
+	 * @see #getOneToMany()
+	 * @generated
+	 */
+	EAttribute getOneToMany_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany#getFetch <em>Fetch</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -12475,6 +18220,17 @@ public interface OrmPackage extends EPackage {
   EReference getOneToOne_Cascade();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isCascadeOnDelete <em>Cascade On Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cascade On Delete</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#isCascadeOnDelete()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EAttribute getOneToOne_CascadeOnDelete();
+
+		/**
    * Returns the meta object for the containment reference '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPrivateOwned <em>Private Owned</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -12499,6 +18255,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getOneToOne_JoinFetch();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getBatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Batch Fetch</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getBatchFetch()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_BatchFetch();
+
+		/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getProperty <em>Property</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -12522,6 +18289,116 @@ public interface OrmPackage extends EPackage {
   EReference getOneToOne_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getNoncacheable()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_Noncacheable();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getReplicationPartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getRoundRobinPartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPinnedPartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getRangePartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getValuePartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getHashPartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getUnionPartitioning()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EReference getOneToOne_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getPartitioned()
+	 * @see #getOneToOne()
+	 * @generated
+	 */
+	EAttribute getOneToOne_Partitioned();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -12740,6 +18617,38 @@ public interface OrmPackage extends EPackage {
   EAttribute getOrderColumn_Updatable();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning
+	 * @generated
+	 */
+	EClass getPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning#getClass_ <em>Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Class</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning#getClass_()
+	 * @see #getPartitioning()
+	 * @generated
+	 */
+	EAttribute getPartitioning_Class();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning#getName()
+	 * @see #getPartitioning()
+	 * @generated
+	 */
+	EAttribute getPartitioning_Name();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults <em>Persistence Unit Defaults</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Persistence Unit Defaults</em>'.
@@ -12805,6 +18714,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getPersistenceUnitDefaults_Access();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getAccessMethods()
+	 * @see #getPersistenceUnitDefaults()
+	 * @generated
+	 */
+	EReference getPersistenceUnitDefaults_AccessMethods();
+
+		/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getCascadePersist <em>Cascade Persist</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Cascade Persist</em>'.
@@ -12815,6 +18735,17 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitDefaults_CascadePersist();
 
   /**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getTenantDiscriminator <em>Tenant Discriminator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tenant Discriminator</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getTenantDiscriminator()
+	 * @see #getPersistenceUnitDefaults()
+	 * @generated
+	 */
+	EReference getPersistenceUnitDefaults_TenantDiscriminator();
+
+		/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getEntityListeners <em>Entity Listeners</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Entity Listeners</em>'.
@@ -12874,6 +18805,244 @@ public interface OrmPackage extends EPackage {
   EReference getPersistenceUnitMetadata_PersistenceUnitDefaults();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning
+	 * @generated
+	 */
+	EClass getPinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning#getConnectionPool()
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 */
+	EAttribute getPinnedPartitioning_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning#getName()
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 */
+	EAttribute getPinnedPartitioning_Name();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter <em>Plsql Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Plsql Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter
+	 * @generated
+	 */
+	EClass getPlsqlParameter();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getDatabaseType <em>Database Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Database Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getDatabaseType()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_DatabaseType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getDirection <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direction</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getDirection()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_Direction();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getLength()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_Length();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getName()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#isOptional <em>Optional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Optional</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#isOptional()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_Optional();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getPrecision <em>Precision</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Precision</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getPrecision()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_Precision();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getQueryParameter <em>Query Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Query Parameter</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getQueryParameter()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_QueryParameter();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getScale <em>Scale</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Scale</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter#getScale()
+	 * @see #getPlsqlParameter()
+	 * @generated
+	 */
+	EAttribute getPlsqlParameter_Scale();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord <em>Plsql Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Plsql Record</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord
+	 * @generated
+	 */
+	EClass getPlsqlRecord();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getField <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Field</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getField()
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 */
+	EReference getPlsqlRecord_Field();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getCompatibleType <em>Compatible Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Compatible Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getCompatibleType()
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 */
+	EAttribute getPlsqlRecord_CompatibleType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getJavaType <em>Java Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Java Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getJavaType()
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 */
+	EAttribute getPlsqlRecord_JavaType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord#getName()
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 */
+	EAttribute getPlsqlRecord_Name();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable <em>Plsql Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Plsql Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable
+	 * @generated
+	 */
+	EClass getPlsqlTable();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getCompatibleType <em>Compatible Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Compatible Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getCompatibleType()
+	 * @see #getPlsqlTable()
+	 * @generated
+	 */
+	EAttribute getPlsqlTable_CompatibleType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getJavaType <em>Java Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Java Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getJavaType()
+	 * @see #getPlsqlTable()
+	 * @generated
+	 */
+	EAttribute getPlsqlTable_JavaType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getName()
+	 * @see #getPlsqlTable()
+	 * @generated
+	 */
+	EAttribute getPlsqlTable_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getNestedType <em>Nested Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nested Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable#getNestedType()
+	 * @see #getPlsqlTable()
+	 * @generated
+	 */
+	EAttribute getPlsqlTable_NestedType();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad <em>Post Load</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Post Load</em>'.
@@ -13125,6 +19294,17 @@ public interface OrmPackage extends EPackage {
   EReference getPrimaryKey_Column();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey#getCacheKeyType <em>Cache Key Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cache Key Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey#getCacheKeyType()
+	 * @see #getPrimaryKey()
+	 * @generated
+	 */
+	EAttribute getPrimaryKey_CacheKeyType();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKey#getValidation <em>Validation</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -13354,6 +19534,114 @@ public interface OrmPackage extends EPackage {
   EAttribute getQueryRedirectors_Update();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition <em>Range Partition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Range Partition</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition
+	 * @generated
+	 */
+	EClass getRangePartition();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition#getConnectionPool()
+	 * @see #getRangePartition()
+	 * @generated
+	 */
+	EAttribute getRangePartition_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition#getEndValue <em>End Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>End Value</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition#getEndValue()
+	 * @see #getRangePartition()
+	 * @generated
+	 */
+	EAttribute getRangePartition_EndValue();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition#getStartValue <em>Start Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Value</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition#getStartValue()
+	 * @see #getRangePartition()
+	 * @generated
+	 */
+	EAttribute getRangePartition_StartValue();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning
+	 * @generated
+	 */
+	EClass getRangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getPartitionColumn <em>Partition Column</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partition Column</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getPartitionColumn()
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	EReference getRangePartitioning_PartitionColumn();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getPartition <em>Partition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Partition</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getPartition()
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	EReference getRangePartitioning_Partition();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getName()
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	EAttribute getRangePartitioning_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getPartitionValueType <em>Partition Value Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partition Value Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#getPartitionValueType()
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	EAttribute getRangePartitioning_PartitionValueType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#isUnionUnpartitionableQueries <em>Union Unpartitionable Queries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Union Unpartitionable Queries</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning#isUnionUnpartitionableQueries()
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	EAttribute getRangePartitioning_UnionUnpartitionableQueries();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer <em>Read Transformer</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Read Transformer</em>'.
@@ -13385,6 +19673,102 @@ public interface OrmPackage extends EPackage {
   EAttribute getReadTransformer_TransformerClass();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning
+	 * @generated
+	 */
+	EClass getReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning#getConnectionPool()
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 */
+	EAttribute getReplicationPartitioning_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning#getName()
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 */
+	EAttribute getReplicationPartitioning_Name();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReturnInsert <em>Return Insert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Return Insert</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReturnInsert
+	 * @generated
+	 */
+	EClass getReturnInsert();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReturnInsert#isReturnOnly <em>Return Only</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Return Only</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReturnInsert#isReturnOnly()
+	 * @see #getReturnInsert()
+	 * @generated
+	 */
+	EAttribute getReturnInsert_ReturnOnly();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning
+	 * @generated
+	 */
+	EClass getRoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning#getConnectionPool()
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	EAttribute getRoundRobinPartitioning_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning#getName()
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	EAttribute getRoundRobinPartitioning_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning#isReplicateWrites <em>Replicate Writes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Replicate Writes</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning#isReplicateWrites()
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	EAttribute getRoundRobinPartitioning_ReplicateWrites();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable <em>Secondary Table</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Secondary Table</em>'.
@@ -13426,6 +19810,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getSecondaryTable_Catalog();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getCreationSuffix <em>Creation Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Suffix</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getCreationSuffix()
+	 * @see #getSecondaryTable()
+	 * @generated
+	 */
+	EAttribute getSecondaryTable_CreationSuffix();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -13638,6 +20033,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getStoredProcedureParameter_Name();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#isOptional <em>Optional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Optional</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#isOptional()
+	 * @see #getStoredProcedureParameter()
+	 * @generated
+	 */
+	EAttribute getStoredProcedureParameter_Optional();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter <em>Query Parameter</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Query Parameter</em>'.
@@ -13660,6 +20066,38 @@ public interface OrmPackage extends EPackage {
   EAttribute getStoredProcedureParameter_Type();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Struct <em>Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Struct</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Struct
+	 * @generated
+	 */
+	EClass getStruct();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Struct#getField <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Field</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Struct#getField()
+	 * @see #getStruct()
+	 * @generated
+	 */
+	EAttribute getStruct_Field();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Struct#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Struct#getName()
+	 * @see #getStruct()
+	 * @generated
+	 */
+	EAttribute getStruct_Name();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter <em>Struct Converter</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Struct Converter</em>'.
@@ -13692,6 +20130,71 @@ public interface OrmPackage extends EPackage {
   EAttribute getStructConverter_Name();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure <em>Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure
+	 * @generated
+	 */
+	EClass getStructure();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getProperty <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Property</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getProperty()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EReference getStructure_Property();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getAccessMethods <em>Access Methods</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Access Methods</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getAccessMethods()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EReference getStructure_AccessMethods();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Access</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getAccess()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EAttribute getStructure_Access();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getAttributeType()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EAttribute getStructure_AttributeType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure#getName()
+	 * @see #getStructure()
+	 * @generated
+	 */
+	EAttribute getStructure_Name();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Table</em>'.
@@ -13723,6 +20226,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getTable_Catalog();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getCreationSuffix <em>Creation Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Suffix</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Table#getCreationSuffix()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EAttribute getTable_CreationSuffix();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
@@ -13796,6 +20310,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_Catalog();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCreationSuffix <em>Creation Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Suffix</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCreationSuffix()
+	 * @see #getTableGenerator()
+	 * @generated
+	 */
+	EAttribute getTableGenerator_CreationSuffix();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getInitialValue <em>Initial Value</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -13872,6 +20397,93 @@ public interface OrmPackage extends EPackage {
   EAttribute getTableGenerator_ValueColumnName();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator <em>Tenant Discriminator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tenant Discriminator</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator
+	 * @generated
+	 */
+	EClass getTenantDiscriminator();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getColumnDefinition <em>Column Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Column Definition</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getColumnDefinition()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_ColumnDefinition();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getColumnName <em>Column Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Column Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getColumnName()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_ColumnName();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getDiscriminatorType <em>Discriminator Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Discriminator Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getDiscriminatorType()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_DiscriminatorType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getLength()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_Length();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getName()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#isPrimaryKey <em>Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Primary Key</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#isPrimaryKey()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_PrimaryKey();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getTable <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Table</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator#getTable()
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 */
+	EAttribute getTenantDiscriminator_Table();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay <em>Time Of Day</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Time Of Day</em>'.
@@ -13966,6 +20578,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getTransformation_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAttributeType()
+	 * @see #getTransformation()
+	 * @generated
+	 */
+	EAttribute getTransformation_AttributeType();
+
+		/**
    * Returns the meta object for the containment reference list '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getProperty <em>Property</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -13986,18 +20609,6 @@ public interface OrmPackage extends EPackage {
 	 * @generated
 	 */
   EReference getTransformation_AccessMethods();
-
-  /**
-   * Returns the meta object for the attribute '
-   * {@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess1 <em>Access1</em>}'. <!--
-   * begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the meta object for the attribute '<em>Access1</em>'.
-   * @see org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getAccess1()
-   * @see #getTransformation()
-   * @generated
-   */
-  EAttribute getTransformation_Access1();
 
   /**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Transformation#getFetch <em>Fetch</em>}'.
@@ -14109,6 +20720,49 @@ public interface OrmPackage extends EPackage {
   EAttribute getTypeConverter_ObjectType();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning
+	 * @generated
+	 */
+	EClass getUnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning#getConnectionPool()
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	EAttribute getUnionPartitioning_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning#getName()
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	EAttribute getUnionPartitioning_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning#isReplicateWrites <em>Replicate Writes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Replicate Writes</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning#isReplicateWrites()
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	EAttribute getUnionPartitioning_ReplicateWrites();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint <em>Unique Constraint</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Unique Constraint</em>'.
@@ -14141,6 +20795,114 @@ public interface OrmPackage extends EPackage {
   EAttribute getUniqueConstraint_Name();
 
   /**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition <em>Value Partition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Value Partition</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition
+	 * @generated
+	 */
+	EClass getValuePartition();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition#getConnectionPool <em>Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition#getConnectionPool()
+	 * @see #getValuePartition()
+	 * @generated
+	 */
+	EAttribute getValuePartition_ConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition#getValue()
+	 * @see #getValuePartition()
+	 * @generated
+	 */
+	EAttribute getValuePartition_Value();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning
+	 * @generated
+	 */
+	EClass getValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getPartitionColumn <em>Partition Column</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partition Column</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getPartitionColumn()
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	EReference getValuePartitioning_PartitionColumn();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getPartition <em>Partition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Partition</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getPartition()
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	EReference getValuePartitioning_Partition();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getDefaultConnectionPool <em>Default Connection Pool</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Connection Pool</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getDefaultConnectionPool()
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	EAttribute getValuePartitioning_DefaultConnectionPool();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getName()
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	EAttribute getValuePartitioning_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getPartitionValueType <em>Partition Value Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partition Value Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#getPartitionValueType()
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	EAttribute getValuePartitioning_PartitionValueType();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#isUnionUnpartitionableQueries <em>Union Unpartitionable Queries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Union Unpartitionable Queries</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning#isUnionUnpartitionableQueries()
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	EAttribute getValuePartitioning_UnionUnpartitionableQueries();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne <em>Variable One To One</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Variable One To One</em>'.
@@ -14226,6 +20988,116 @@ public interface OrmPackage extends EPackage {
   EReference getVariableOneToOne_AccessMethods();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getNoncacheable <em>Noncacheable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Noncacheable</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getNoncacheable()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_Noncacheable();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPartitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_Partitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Replication Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getReplicationPartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_ReplicationPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Round Robin Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getRoundRobinPartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_RoundRobinPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pinned Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPinnedPartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_PinnedPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getRangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Range Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getRangePartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_RangePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getValuePartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_ValuePartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getHashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Hash Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getHashPartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_HashPartitioning();
+
+		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getUnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Union Partitioning</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getUnionPartitioning()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EReference getVariableOneToOne_UnionPartitioning();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPartitioned <em>Partitioned</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Partitioned</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPartitioned()
+	 * @see #getVariableOneToOne()
+	 * @generated
+	 */
+	EAttribute getVariableOneToOne_Partitioned();
+
+		/**
    * Returns the meta object for the attribute '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getAccess <em>Access</em>}'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
@@ -14313,6 +21185,17 @@ public interface OrmPackage extends EPackage {
   EReference getVersion_Column();
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getIndex <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Index</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getIndex()
+	 * @see #getVersion()
+	 * @generated
+	 */
+	EReference getVersion_Index();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}'.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -14414,6 +21297,17 @@ public interface OrmPackage extends EPackage {
   EAttribute getVersion_Access();
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attribute Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAttributeType()
+	 * @see #getVersion()
+	 * @generated
+	 */
+	EAttribute getVersion_AttributeType();
+
+		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#isMutable <em>Mutable</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mutable</em>'.
@@ -14486,6 +21380,16 @@ public interface OrmPackage extends EPackage {
   EEnum getAccessType();
 
   /**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType <em>Batch Fetch Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Batch Fetch Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType
+	 * @generated
+	 */
+	EEnum getBatchFetchType();
+
+		/**
 	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType <em>Cache Coordination Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Cache Coordination Type</em>'.
@@ -14495,6 +21399,26 @@ public interface OrmPackage extends EPackage {
   EEnum getCacheCoordinationType();
 
   /**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType <em>Cache Isolation Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Cache Isolation Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType
+	 * @generated
+	 */
+	EEnum getCacheIsolationType();
+
+		/**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType <em>Cache Key Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Cache Key Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType
+	 * @generated
+	 */
+	EEnum getCacheKeyType();
+
+		/**
 	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Cache Type</em>'.
@@ -14603,6 +21527,16 @@ public interface OrmPackage extends EPackage {
   EEnum getLockModeType();
 
   /**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType <em>Multitenant Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Multitenant Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType
+	 * @generated
+	 */
+	EEnum getMultitenantType();
+
+		/**
 	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType <em>Optimistic Locking Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Optimistic Locking Type</em>'.
@@ -14621,6 +21555,16 @@ public interface OrmPackage extends EPackage {
   EEnum getOrderColumnCorrectionType();
 
   /**
+	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType <em>Supported Versions Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Supported Versions Type</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType
+	 * @generated
+	 */
+	EEnum getSupportedVersionsType();
+
+		/**
 	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal Type</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Temporal Type</em>'.
@@ -14641,6 +21585,18 @@ public interface OrmPackage extends EPackage {
   EDataType getAccessTypeObject();
 
   /**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType <em>Batch Fetch Type Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Batch Fetch Type Object</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetchType"
+	 *        extendedMetaData="name='batch-fetch-type:Object' baseType='batch-fetch-type'"
+	 * @generated
+	 */
+	EDataType getBatchFetchTypeObject();
+
+		/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType <em>Cache Coordination Type Object</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Cache Coordination Type Object</em>'.
@@ -14652,6 +21608,30 @@ public interface OrmPackage extends EPackage {
   EDataType getCacheCoordinationTypeObject();
 
   /**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType <em>Cache Isolation Type Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Cache Isolation Type Object</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType"
+	 *        extendedMetaData="name='cache-isolation-type:Object' baseType='cache-isolation-type'"
+	 * @generated
+	 */
+	EDataType getCacheIsolationTypeObject();
+
+		/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType <em>Cache Key Type Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Cache Key Type Object</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType"
+	 *        extendedMetaData="name='cache-key-type:Object' baseType='cache-key-type'"
+	 * @generated
+	 */
+	EDataType getCacheKeyTypeObject();
+
+		/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheType <em>Cache Type Object</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Cache Type Object</em>'.
@@ -14708,24 +21688,15 @@ public interface OrmPackage extends EPackage {
   EDataType getDiscriminatorValue();
 
   /**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated Object</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enumerated</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Enumerated Object</em>'.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated"
-	 *        extendedMetaData="name='enumerated:Object' baseType='enumerated'"
+	 * @return the meta object for data type '<em>Enumerated</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.EnumType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.EnumType"
+	 *        extendedMetaData="name='enumerated' baseType='enum-type'"
 	 * @generated
 	 */
-  EDataType getEnumeratedObject();
-
-  /**
-	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated <em>Enumerated</em>}'.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Enumerated</em>'.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @generated
-	 */
-  EEnum getEnumerated();
+  EDataType getEnumerated();
 
   /**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.EnumType <em>Enum Type Object</em>}'.
@@ -14816,6 +21787,18 @@ public interface OrmPackage extends EPackage {
   EDataType getLockModeTypeObject();
 
   /**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType <em>Multitenant Type Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Multitenant Type Object</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.MultitenantType"
+	 *        extendedMetaData="name='multitenant-type:Object' baseType='multitenant-type'"
+	 * @generated
+	 */
+	EDataType getMultitenantTypeObject();
+
+		/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.OptimisticLockingType <em>Optimistic Locking Type Object</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Optimistic Locking Type Object</em>'.
@@ -14850,24 +21833,27 @@ public interface OrmPackage extends EPackage {
   EDataType getOrderColumnCorrectionTypeObject();
 
   /**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal Object</em>}'.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Temporal Object</em>'.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.Temporal"
-	 *        extendedMetaData="name='temporal:Object' baseType='temporal'"
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType <em>Supported Versions Type Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Supported Versions Type Object</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType"
+	 *        extendedMetaData="name='supported-versions-type:Object' baseType='supported-versions-type'"
 	 * @generated
 	 */
-  EDataType getTemporalObject();
+	EDataType getSupportedVersionsTypeObject();
 
-  /**
-	 * Returns the meta object for enum '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal <em>Temporal</em>}'.
+		/**
+	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Temporal</em>'.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
+	 * @return the meta object for data type '<em>Temporal</em>'.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType
+	 * @model instanceClass="org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType"
+	 *        extendedMetaData="name='temporal' baseType='temporal-type'"
 	 * @generated
 	 */
-  EEnum getTemporal();
+  EDataType getTemporal();
 
   /**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType <em>Temporal Type Object</em>}'.

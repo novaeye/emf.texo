@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
@@ -71,6 +73,7 @@ public class PurchaseOrder extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private OrderStatus status = OrderStatus.PENDING;
 
   /**

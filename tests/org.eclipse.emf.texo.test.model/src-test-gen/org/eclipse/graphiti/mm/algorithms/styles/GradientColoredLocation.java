@@ -3,6 +3,8 @@ package org.eclipse.graphiti.mm.algorithms.styles;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -21,6 +23,7 @@ public class GradientColoredLocation extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private LocationType locationType = LocationType.LOCATION_TYPE_RELATIVE;
 
   /**

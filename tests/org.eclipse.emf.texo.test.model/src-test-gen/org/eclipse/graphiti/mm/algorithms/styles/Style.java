@@ -3,6 +3,8 @@ package org.eclipse.graphiti.mm.algorithms.styles;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import org.eclipse.graphiti.mm.StyleContainer;
 
@@ -35,7 +37,7 @@ public class Style extends StyleContainer {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private Font font = null;
 
   /**
@@ -44,6 +46,7 @@ public class Style extends StyleContainer {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private Orientation horizontalAlignment = Orientation.ALIGNMENT_CENTER;
 
   /**
@@ -52,6 +55,7 @@ public class Style extends StyleContainer {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private Orientation verticalAlignment = Orientation.ALIGNMENT_CENTER;
 
   /**
@@ -91,7 +95,7 @@ public class Style extends StyleContainer {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private StyleContainer styleContainer = null;
 
   /**
@@ -124,6 +128,7 @@ public class Style extends StyleContainer {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private LineStyle lineStyle = LineStyle.SOLID;
 
   /**

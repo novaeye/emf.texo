@@ -17,24 +17,18 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				Defines the settings and mappings for an entity.
- * 				Is allowed to be
- * 				sparsely populated and used in conjunction with the
- * 				annotations.
- * 				Alternatively, the metadata-complete attribute can be
- * 				used to
- * 				indicate that no annotations on the entity class (and its
- * 				fields
- * 				or properties) are to be processed. If this is the case then
- * 				the defaulting rules for the entity and its sub-elements will
- * 				be
- * 				recursively applied.
+ *         Defines the settings and mappings for an entity. Is allowed to be
+ *         sparsely populated and used in conjunction with the annotations.
+ *         Alternatively, the metadata-complete attribute can be used to 
+ *         indicate that no annotations on the entity class (and its fields
+ *         or properties) are to be processed. If this is the case then 
+ *         the defaulting rules for the entity and its subelements will 
+ *         be recursively applied.
  * 
- * 				@Target(TYPE) @Retention(RUNTIME)
- * 				public
- * 				@interface Entity {
- * 				String name() default "";
- * 				}
+ *         @Target(TYPE) @Retention(RUNTIME)
+ *           public @interface Entity {
+ *           String name() default "";
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -43,19 +37,27 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccessMethods <em>Access Methods</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getMultitenant <em>Multitenant</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAdditionalCriteria <em>Additional Criteria</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCustomizer <em>Customizer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getChangeTracking <em>Change Tracking</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getTable <em>Table</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSecondaryTable <em>Secondary Table</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getStruct <em>Struct</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCascadeOnDelete <em>Cascade On Delete</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIndex <em>Index</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getIdClass <em>Id Class</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrimaryKey <em>Primary Key</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getInheritance <em>Inheritance</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorValue <em>Discriminator Value</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getDiscriminatorColumn <em>Discriminator Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClassExtractor <em>Class Extractor</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getOptimisticLocking <em>Optimistic Locking</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCache <em>Cache</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCacheInterceptor <em>Cache Interceptor</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getFetchGroup <em>Fetch Group</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getConverter <em>Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getTypeConverter <em>Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getObjectTypeConverter <em>Object Type Converter</em>}</li>
@@ -65,14 +67,35 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getCloneCopyPolicy <em>Clone Copy Policy</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSequenceGenerator <em>Sequence Generator</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getTableGenerator <em>Table Generator</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioning <em>Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getReplicationPartitioning <em>Replication Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPinnedPartitioning <em>Pinned Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRangePartitioning <em>Range Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getValuePartitioning <em>Value Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getHashPartitioning <em>Hash Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getUnionPartitioning <em>Union Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioned <em>Partitioned</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedQuery <em>Named Query</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedNativeQuery <em>Named Native Query</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedStoredFunctionQuery <em>Named Stored Function Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getNamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPlsqlRecord <em>Plsql Record</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPlsqlTable <em>Plsql Table</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getQueryRedirectors <em>Query Redirectors</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeDefaultListeners <em>Exclude Default Listeners</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExcludeSuperclassListeners <em>Exclude Superclass Listeners</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getEntityListeners <em>Entity Listeners</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrePersist <em>Pre Persist</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostPersist <em>Post Persist</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreRemove <em>Pre Remove</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostRemove <em>Post Remove</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreUpdate <em>Pre Update</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostUpdate <em>Post Update</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostLoad <em>Post Load</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAttributeOverride <em>Attribute Override</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAssociationOverride <em>Association Override</em>}</li>
@@ -84,6 +107,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getExistenceChecking <em>Existence Checking</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isMetadataComplete <em>Metadata Complete</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getParentClass <em>Parent Class</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isReadOnly <em>Read Only</em>}</li>
  * </ul>
  * </p>
@@ -121,6 +145,87 @@ public interface Entity extends BaseOrmAnnotation {
   void setDescription(String value);
 
   /**
+	 * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Access Methods</em>' containment reference.
+	 * @see #setAccessMethods(AccessMethods)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_AccessMethods()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AccessMethods getAccessMethods();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAccessMethods <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Access Methods</em>' containment reference.
+	 * @see #getAccessMethods()
+	 * @generated
+	 */
+	void setAccessMethods(AccessMethods value);
+
+		/**
+	 * Returns the value of the '<em><b>Multitenant</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Multitenant</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Multitenant</em>' containment reference.
+	 * @see #setMultitenant(Multitenant)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_Multitenant()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='multitenant' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Multitenant getMultitenant();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getMultitenant <em>Multitenant</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Multitenant</em>' containment reference.
+	 * @see #getMultitenant()
+	 * @generated
+	 */
+	void setMultitenant(Multitenant value);
+
+		/**
+	 * Returns the value of the '<em><b>Additional Criteria</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Additional Criteria</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Additional Criteria</em>' containment reference.
+	 * @see #setAdditionalCriteria(AdditionalCriteria)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_AdditionalCriteria()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='additional-criteria' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AdditionalCriteria getAdditionalCriteria();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getAdditionalCriteria <em>Additional Criteria</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Additional Criteria</em>' containment reference.
+	 * @see #getAdditionalCriteria()
+	 * @generated
+	 */
+	void setAdditionalCriteria(AdditionalCriteria value);
+
+		/**
 	 * Returns the value of the '<em><b>Customizer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -216,6 +321,33 @@ public interface Entity extends BaseOrmAnnotation {
   EList<SecondaryTable> getSecondaryTable();
 
   /**
+	 * Returns the value of the '<em><b>Struct</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Struct</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Struct</em>' containment reference.
+	 * @see #setStruct(Struct)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_Struct()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='struct' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Struct getStruct();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getStruct <em>Struct</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Struct</em>' containment reference.
+	 * @see #getStruct()
+	 * @generated
+	 */
+	void setStruct(Struct value);
+
+		/**
 	 * Returns the value of the '<em><b>Primary Key Join Column</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PrimaryKeyJoinColumn}.
 	 * <!-- begin-user-doc -->
@@ -233,6 +365,77 @@ public interface Entity extends BaseOrmAnnotation {
   EList<PrimaryKeyJoinColumn> getPrimaryKeyJoinColumn();
 
   /**
+	 * Returns the value of the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cascade On Delete</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cascade On Delete</em>' attribute.
+	 * @see #isSetCascadeOnDelete()
+	 * @see #unsetCascadeOnDelete()
+	 * @see #setCascadeOnDelete(boolean)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_CascadeOnDelete()
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 *        extendedMetaData="kind='element' name='cascade-on-delete' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	boolean isCascadeOnDelete();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCascadeOnDelete <em>Cascade On Delete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cascade On Delete</em>' attribute.
+	 * @see #isSetCascadeOnDelete()
+	 * @see #unsetCascadeOnDelete()
+	 * @see #isCascadeOnDelete()
+	 * @generated
+	 */
+	void setCascadeOnDelete(boolean value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCascadeOnDelete <em>Cascade On Delete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCascadeOnDelete()
+	 * @see #isCascadeOnDelete()
+	 * @see #setCascadeOnDelete(boolean)
+	 * @generated
+	 */
+	void unsetCascadeOnDelete();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#isCascadeOnDelete <em>Cascade On Delete</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Cascade On Delete</em>' attribute is set.
+	 * @see #unsetCascadeOnDelete()
+	 * @see #isCascadeOnDelete()
+	 * @see #setCascadeOnDelete(boolean)
+	 * @generated
+	 */
+	boolean isSetCascadeOnDelete();
+
+		/**
+	 * Returns the value of the '<em><b>Index</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Index}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Index</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Index</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_Index()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='index' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<Index> getIndex();
+
+		/**
 	 * Returns the value of the '<em><b>Id Class</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -363,6 +566,33 @@ public interface Entity extends BaseOrmAnnotation {
   void setDiscriminatorColumn(DiscriminatorColumn value);
 
   /**
+	 * Returns the value of the '<em><b>Class Extractor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Class Extractor</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Class Extractor</em>' containment reference.
+	 * @see #setClassExtractor(ClassExtractor)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_ClassExtractor()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='class-extractor' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ClassExtractor getClassExtractor();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getClassExtractor <em>Class Extractor</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Class Extractor</em>' containment reference.
+	 * @see #getClassExtractor()
+	 * @generated
+	 */
+	void setClassExtractor(ClassExtractor value);
+
+		/**
 	 * Returns the value of the '<em><b>Optimistic Locking</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -441,6 +671,23 @@ public interface Entity extends BaseOrmAnnotation {
   void setCacheInterceptor(CacheInterceptor value);
 
   /**
+	 * Returns the value of the '<em><b>Fetch Group</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fetch Group</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fetch Group</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_FetchGroup()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='fetch-group' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<FetchGroup> getFetchGroup();
+
+		/**
 	 * Returns the value of the '<em><b>Converter</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter}.
 	 * <!-- begin-user-doc -->
@@ -639,6 +886,249 @@ public interface Entity extends BaseOrmAnnotation {
   void setTableGenerator(TableGenerator value);
 
   /**
+	 * Returns the value of the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioning</em>' containment reference.
+	 * @see #setPartitioning(Partitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_Partitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Partitioning getPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioning <em>Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioning</em>' containment reference.
+	 * @see #getPartitioning()
+	 * @generated
+	 */
+	void setPartitioning(Partitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Replication Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #setReplicationPartitioning(ReplicationPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_ReplicationPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='replication-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ReplicationPartitioning getReplicationPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getReplicationPartitioning <em>Replication Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 */
+	void setReplicationPartitioning(ReplicationPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Round Robin Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #setRoundRobinPartitioning(RoundRobinPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_RoundRobinPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='round-robin-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RoundRobinPartitioning getRoundRobinPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	void setRoundRobinPartitioning(RoundRobinPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pinned Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #setPinnedPartitioning(PinnedPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PinnedPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pinned-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PinnedPartitioning getPinnedPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPinnedPartitioning <em>Pinned Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 */
+	void setPinnedPartitioning(PinnedPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Range Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #setRangePartitioning(RangePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_RangePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='range-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RangePartitioning getRangePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getRangePartitioning <em>Range Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	void setRangePartitioning(RangePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #setValuePartitioning(ValuePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_ValuePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='value-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ValuePartitioning getValuePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getValuePartitioning <em>Value Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	void setValuePartitioning(ValuePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hash Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #setHashPartitioning(HashPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_HashPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='hash-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	HashPartitioning getHashPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getHashPartitioning <em>Hash Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	void setHashPartitioning(HashPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Union Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #setUnionPartitioning(UnionPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_UnionPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='union-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UnionPartitioning getUnionPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getUnionPartitioning <em>Union Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	void setUnionPartitioning(UnionPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioned</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioned</em>' attribute.
+	 * @see #setPartitioned(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_Partitioned()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='partitioned' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getPartitioned();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPartitioned <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioned</em>' attribute.
+	 * @see #getPartitioned()
+	 * @generated
+	 */
+	void setPartitioned(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Named Query</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery}.
 	 * <!-- begin-user-doc -->
@@ -691,6 +1181,91 @@ public interface Entity extends BaseOrmAnnotation {
   EList<NamedStoredProcedureQuery> getNamedStoredProcedureQuery();
 
   /**
+	 * Returns the value of the '<em><b>Named Stored Function Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Stored Function Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Stored Function Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_NamedStoredFunctionQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-stored-function-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedStoredFunctionQuery> getNamedStoredFunctionQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Plsql Stored Procedure Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Plsql Stored Procedure Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Plsql Stored Procedure Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_NamedPlsqlStoredProcedureQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-plsql-stored-procedure-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedPlsqlStoredProcedureQuery> getNamedPlsqlStoredProcedureQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Plsql Stored Function Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Plsql Stored Function Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Plsql Stored Function Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_NamedPlsqlStoredFunctionQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-plsql-stored-function-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedPlsqlStoredFunctionQuery> getNamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Plsql Record</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plsql Record</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PlsqlRecord()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='plsql-record' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<PlsqlRecord> getPlsqlRecord();
+
+		/**
+	 * Returns the value of the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Plsql Table</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plsql Table</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PlsqlTable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='plsql-table' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<PlsqlTable> getPlsqlTable();
+
+		/**
 	 * Returns the value of the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping}.
 	 * <!-- begin-user-doc -->
@@ -813,6 +1388,195 @@ public interface Entity extends BaseOrmAnnotation {
   void setEntityListeners(EntityListeners value);
 
   /**
+	 * Returns the value of the '<em><b>Pre Persist</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pre Persist</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pre Persist</em>' containment reference.
+	 * @see #setPrePersist(PrePersist)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PrePersist()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pre-persist' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PrePersist getPrePersist();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPrePersist <em>Pre Persist</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pre Persist</em>' containment reference.
+	 * @see #getPrePersist()
+	 * @generated
+	 */
+	void setPrePersist(PrePersist value);
+
+		/**
+	 * Returns the value of the '<em><b>Post Persist</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Post Persist</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Post Persist</em>' containment reference.
+	 * @see #setPostPersist(PostPersist)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PostPersist()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='post-persist' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PostPersist getPostPersist();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostPersist <em>Post Persist</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Post Persist</em>' containment reference.
+	 * @see #getPostPersist()
+	 * @generated
+	 */
+	void setPostPersist(PostPersist value);
+
+		/**
+	 * Returns the value of the '<em><b>Pre Remove</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pre Remove</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pre Remove</em>' containment reference.
+	 * @see #setPreRemove(PreRemove)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PreRemove()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pre-remove' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PreRemove getPreRemove();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreRemove <em>Pre Remove</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pre Remove</em>' containment reference.
+	 * @see #getPreRemove()
+	 * @generated
+	 */
+	void setPreRemove(PreRemove value);
+
+		/**
+	 * Returns the value of the '<em><b>Post Remove</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Post Remove</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Post Remove</em>' containment reference.
+	 * @see #setPostRemove(PostRemove)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PostRemove()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='post-remove' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PostRemove getPostRemove();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostRemove <em>Post Remove</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Post Remove</em>' containment reference.
+	 * @see #getPostRemove()
+	 * @generated
+	 */
+	void setPostRemove(PostRemove value);
+
+		/**
+	 * Returns the value of the '<em><b>Pre Update</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pre Update</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pre Update</em>' containment reference.
+	 * @see #setPreUpdate(PreUpdate)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PreUpdate()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pre-update' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PreUpdate getPreUpdate();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPreUpdate <em>Pre Update</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pre Update</em>' containment reference.
+	 * @see #getPreUpdate()
+	 * @generated
+	 */
+	void setPreUpdate(PreUpdate value);
+
+		/**
+	 * Returns the value of the '<em><b>Post Update</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Post Update</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Post Update</em>' containment reference.
+	 * @see #setPostUpdate(PostUpdate)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PostUpdate()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='post-update' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PostUpdate getPostUpdate();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostUpdate <em>Post Update</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Post Update</em>' containment reference.
+	 * @see #getPostUpdate()
+	 * @generated
+	 */
+	void setPostUpdate(PostUpdate value);
+
+		/**
+	 * Returns the value of the '<em><b>Post Load</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Post Load</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Post Load</em>' containment reference.
+	 * @see #setPostLoad(PostLoad)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_PostLoad()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='post-load' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PostLoad getPostLoad();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getPostLoad <em>Post Load</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Post Load</em>' containment reference.
+	 * @see #getPostLoad()
+	 * @generated
+	 */
+	void setPostLoad(PostLoad value);
+
+		/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
 	 * <!-- begin-user-doc -->
@@ -1200,6 +1964,33 @@ public interface Entity extends BaseOrmAnnotation {
   void setName(String value);
 
   /**
+	 * Returns the value of the '<em><b>Parent Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Class</em>' attribute.
+	 * @see #setParentClass(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEntity_ParentClass()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='parent-class'"
+	 * @generated
+	 */
+	String getParentClass();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Entity#getParentClass <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent Class</em>' attribute.
+	 * @see #getParentClass()
+	 * @generated
+	 */
+	void setParentClass(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Read Only</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

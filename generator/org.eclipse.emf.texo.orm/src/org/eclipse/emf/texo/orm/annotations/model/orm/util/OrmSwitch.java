@@ -69,6 +69,18 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.ADDITIONAL_CRITERIA: {
+				AdditionalCriteria additionalCriteria = (AdditionalCriteria)theEObject;
+				T result = caseAdditionalCriteria(additionalCriteria);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.ARRAY: {
+				Array array = (Array)theEObject;
+				T result = caseArray(array);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.ASSOCIATION_OVERRIDE: {
 				AssociationOverride associationOverride = (AssociationOverride)theEObject;
 				T result = caseAssociationOverride(associationOverride);
@@ -105,6 +117,12 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.BATCH_FETCH: {
+				BatchFetch batchFetch = (BatchFetch)theEObject;
+				T result = caseBatchFetch(batchFetch);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.CACHE: {
 				Cache cache = (Cache)theEObject;
 				T result = caseCache(cache);
@@ -126,6 +144,12 @@ public class OrmSwitch<T> extends Switch<T> {
 			case OrmPackage.CHANGE_TRACKING: {
 				ChangeTracking changeTracking = (ChangeTracking)theEObject;
 				T result = caseChangeTracking(changeTracking);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.CLASS_EXTRACTOR: {
+				ClassExtractor classExtractor = (ClassExtractor)theEObject;
+				T result = caseClassExtractor(classExtractor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -261,6 +285,18 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.FETCH_ATTRIBUTE: {
+				FetchAttribute fetchAttribute = (FetchAttribute)theEObject;
+				T result = caseFetchAttribute(fetchAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.FETCH_GROUP: {
+				FetchGroup fetchGroup = (FetchGroup)theEObject;
+				T result = caseFetchGroup(fetchGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.FIELD_RESULT: {
 				FieldResult fieldResult = (FieldResult)theEObject;
 				T result = caseFieldResult(fieldResult);
@@ -273,6 +309,12 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.HASH_PARTITIONING: {
+				HashPartitioning hashPartitioning = (HashPartitioning)theEObject;
+				T result = caseHashPartitioning(hashPartitioning);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.ID: {
 				Id id = (Id)theEObject;
 				T result = caseId(id);
@@ -282,6 +324,12 @@ public class OrmSwitch<T> extends Switch<T> {
 			case OrmPackage.ID_CLASS: {
 				IdClass idClass = (IdClass)theEObject;
 				T result = caseIdClass(idClass);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.INDEX: {
+				Index index = (Index)theEObject;
+				T result = caseIndex(index);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -357,15 +405,39 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.MULTITENANT: {
+				Multitenant multitenant = (Multitenant)theEObject;
+				T result = caseMultitenant(multitenant);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.NAMED_NATIVE_QUERY: {
 				NamedNativeQuery namedNativeQuery = (NamedNativeQuery)theEObject;
 				T result = caseNamedNativeQuery(namedNativeQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.NAMED_PLSQL_STORED_FUNCTION_QUERY: {
+				NamedPlsqlStoredFunctionQuery namedPlsqlStoredFunctionQuery = (NamedPlsqlStoredFunctionQuery)theEObject;
+				T result = caseNamedPlsqlStoredFunctionQuery(namedPlsqlStoredFunctionQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.NAMED_PLSQL_STORED_PROCEDURE_QUERY: {
+				NamedPlsqlStoredProcedureQuery namedPlsqlStoredProcedureQuery = (NamedPlsqlStoredProcedureQuery)theEObject;
+				T result = caseNamedPlsqlStoredProcedureQuery(namedPlsqlStoredProcedureQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.NAMED_QUERY: {
 				NamedQuery namedQuery = (NamedQuery)theEObject;
 				T result = caseNamedQuery(namedQuery);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.NAMED_STORED_FUNCTION_QUERY: {
+				NamedStoredFunctionQuery namedStoredFunctionQuery = (NamedStoredFunctionQuery)theEObject;
+				T result = caseNamedStoredFunctionQuery(namedStoredFunctionQuery);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -405,6 +477,12 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.PARTITIONING: {
+				Partitioning partitioning = (Partitioning)theEObject;
+				T result = casePartitioning(partitioning);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS: {
 				PersistenceUnitDefaults persistenceUnitDefaults = (PersistenceUnitDefaults)theEObject;
 				T result = casePersistenceUnitDefaults(persistenceUnitDefaults);
@@ -414,6 +492,30 @@ public class OrmSwitch<T> extends Switch<T> {
 			case OrmPackage.PERSISTENCE_UNIT_METADATA: {
 				PersistenceUnitMetadata persistenceUnitMetadata = (PersistenceUnitMetadata)theEObject;
 				T result = casePersistenceUnitMetadata(persistenceUnitMetadata);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.PINNED_PARTITIONING: {
+				PinnedPartitioning pinnedPartitioning = (PinnedPartitioning)theEObject;
+				T result = casePinnedPartitioning(pinnedPartitioning);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.PLSQL_PARAMETER: {
+				PlsqlParameter plsqlParameter = (PlsqlParameter)theEObject;
+				T result = casePlsqlParameter(plsqlParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.PLSQL_RECORD: {
+				PlsqlRecord plsqlRecord = (PlsqlRecord)theEObject;
+				T result = casePlsqlRecord(plsqlRecord);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.PLSQL_TABLE: {
+				PlsqlTable plsqlTable = (PlsqlTable)theEObject;
+				T result = casePlsqlTable(plsqlTable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -489,9 +591,39 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.RANGE_PARTITION: {
+				RangePartition rangePartition = (RangePartition)theEObject;
+				T result = caseRangePartition(rangePartition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.RANGE_PARTITIONING: {
+				RangePartitioning rangePartitioning = (RangePartitioning)theEObject;
+				T result = caseRangePartitioning(rangePartitioning);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.READ_TRANSFORMER: {
 				ReadTransformer readTransformer = (ReadTransformer)theEObject;
 				T result = caseReadTransformer(readTransformer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.REPLICATION_PARTITIONING: {
+				ReplicationPartitioning replicationPartitioning = (ReplicationPartitioning)theEObject;
+				T result = caseReplicationPartitioning(replicationPartitioning);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.RETURN_INSERT: {
+				ReturnInsert returnInsert = (ReturnInsert)theEObject;
+				T result = caseReturnInsert(returnInsert);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.ROUND_ROBIN_PARTITIONING: {
+				RoundRobinPartitioning roundRobinPartitioning = (RoundRobinPartitioning)theEObject;
+				T result = caseRoundRobinPartitioning(roundRobinPartitioning);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -519,9 +651,21 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.STRUCT: {
+				Struct struct = (Struct)theEObject;
+				T result = caseStruct(struct);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.STRUCT_CONVERTER: {
 				StructConverter structConverter = (StructConverter)theEObject;
 				T result = caseStructConverter(structConverter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.STRUCTURE: {
+				Structure structure = (Structure)theEObject;
+				T result = caseStructure(structure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -534,6 +678,12 @@ public class OrmSwitch<T> extends Switch<T> {
 			case OrmPackage.TABLE_GENERATOR: {
 				TableGenerator tableGenerator = (TableGenerator)theEObject;
 				T result = caseTableGenerator(tableGenerator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.TENANT_DISCRIMINATOR: {
+				TenantDiscriminator tenantDiscriminator = (TenantDiscriminator)theEObject;
+				T result = caseTenantDiscriminator(tenantDiscriminator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -561,9 +711,27 @@ public class OrmSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case OrmPackage.UNION_PARTITIONING: {
+				UnionPartitioning unionPartitioning = (UnionPartitioning)theEObject;
+				T result = caseUnionPartitioning(unionPartitioning);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case OrmPackage.UNIQUE_CONSTRAINT: {
 				UniqueConstraint uniqueConstraint = (UniqueConstraint)theEObject;
 				T result = caseUniqueConstraint(uniqueConstraint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.VALUE_PARTITION: {
+				ValuePartition valuePartition = (ValuePartition)theEObject;
+				T result = caseValuePartition(valuePartition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case OrmPackage.VALUE_PARTITIONING: {
+				ValuePartitioning valuePartitioning = (ValuePartitioning)theEObject;
+				T result = caseValuePartitioning(valuePartitioning);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -603,6 +771,36 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Additional Criteria</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Additional Criteria</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAdditionalCriteria(AdditionalCriteria object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Array</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Array</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArray(Array object) {
+		return null;
+	}
+
+		/**
    * Returns the result of interpreting the object as an instance of '<em>Association Override</em>'. <!--
    * begin-user-doc --> This implementation returns null; returning a non-null result will terminate the switch. <!--
    * end-user-doc -->
@@ -683,6 +881,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Batch Fetch</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Batch Fetch</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBatchFetch(BatchFetch object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Cache</em>'.
 	 * <!-- begin-user-doc --> This
    * implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -735,6 +948,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Class Extractor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Class Extractor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClassExtractor(ClassExtractor object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Clone Copy Policy</em>'.
 	 * <!-- begin-user-doc
    * --> This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1027,6 +1255,36 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Fetch Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fetch Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFetchAttribute(FetchAttribute object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fetch Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fetch Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFetchGroup(FetchGroup object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Field Result</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1053,6 +1311,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Hash Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Hash Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHashPartitioning(HashPartitioning object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Id</em>'.
 	 * <!-- begin-user-doc --> This
    * implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1079,6 +1352,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Index</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Index</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIndex(Index object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Inheritance</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1237,6 +1525,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Multitenant</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Multitenant</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMultitenant(Multitenant object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Named Native Query</em>'.
 	 * <!-- begin-user-doc
    * --> This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1250,6 +1553,36 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Plsql Stored Function Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Plsql Stored Function Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedPlsqlStoredFunctionQuery(NamedPlsqlStoredFunctionQuery object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Plsql Stored Procedure Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Plsql Stored Procedure Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedPlsqlStoredProcedureQuery(NamedPlsqlStoredProcedureQuery object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Named Query</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1263,6 +1596,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Stored Function Query</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Stored Function Query</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedStoredFunctionQuery(NamedStoredFunctionQuery object) {
+		return null;
+	}
+
+		/**
    * Returns the result of interpreting the object as an instance of '<em>Named Stored Procedure Query</em>'. <!--
    * begin-user-doc --> This implementation returns null; returning a non-null result will terminate the switch. <!--
    * end-user-doc -->
@@ -1345,6 +1693,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePartitioning(Partitioning object) {
+		return null;
+	}
+
+		/**
    * Returns the result of interpreting the object as an instance of '<em>Persistence Unit Defaults</em>'. <!--
    * begin-user-doc --> This implementation returns null; returning a non-null result will terminate the switch. <!--
    * end-user-doc -->
@@ -1375,6 +1738,66 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Pinned Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pinned Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePinnedPartitioning(PinnedPartitioning object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Plsql Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Plsql Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePlsqlParameter(PlsqlParameter object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Plsql Record</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Plsql Record</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePlsqlRecord(PlsqlRecord object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Plsql Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Plsql Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePlsqlTable(PlsqlTable object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Post Load</em>'.
 	 * <!-- begin-user-doc --> This
    * implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1533,6 +1956,36 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Range Partition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Range Partition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRangePartition(RangePartition object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Range Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Range Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRangePartitioning(RangePartitioning object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Read Transformer</em>'.
 	 * <!-- begin-user-doc
    * --> This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1546,6 +1999,51 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Replication Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Replication Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReplicationPartitioning(ReplicationPartitioning object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Return Insert</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Return Insert</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReturnInsert(ReturnInsert object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Round Robin Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Round Robin Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRoundRobinPartitioning(RoundRobinPartitioning object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Secondary Table</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1602,6 +2100,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Struct</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Struct</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStruct(Struct object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Struct Converter</em>'.
 	 * <!-- begin-user-doc
    * --> This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1615,6 +2128,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Structure</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStructure(Structure object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
 	 * <!-- begin-user-doc --> This
    * implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1641,6 +2169,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Tenant Discriminator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tenant Discriminator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTenantDiscriminator(TenantDiscriminator object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Time Of Day</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1693,6 +2236,21 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Union Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Union Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnionPartitioning(UnionPartitioning object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Unique Constraint</em>'.
 	 * <!-- begin-user-doc
    * --> This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->
@@ -1706,6 +2264,36 @@ public class OrmSwitch<T> extends Switch<T> {
 	}
 
   /**
+	 * Returns the result of interpreting the object as an instance of '<em>Value Partition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Value Partition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseValuePartition(ValuePartition object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Value Partitioning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Value Partitioning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseValuePartitioning(ValuePartitioning object) {
+		return null;
+	}
+
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Variable One To One</em>'.
 	 * <!-- begin-user-doc
    * --> This implementation returns null; returning a non-null result will terminate the switch. <!-- end-user-doc -->

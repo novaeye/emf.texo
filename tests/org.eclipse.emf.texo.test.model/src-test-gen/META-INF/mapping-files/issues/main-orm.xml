@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -10,7 +10,7 @@
     <orm:table name="main_MainType"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -18,7 +18,7 @@
     <orm:table name="sub1_Sub1Type"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -26,7 +26,7 @@
     <orm:table name="sub2_Sub2Type"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

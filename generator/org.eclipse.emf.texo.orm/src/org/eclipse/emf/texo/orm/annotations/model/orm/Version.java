@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface Version {}
+ *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface Version {}
  * 
  *       
  * <!-- end-model-doc -->
@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getIndex <em>Index</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getConvert <em>Convert</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getConverter <em>Converter</em>}</li>
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#isMutable <em>Mutable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getName <em>Name</em>}</li>
  * </ul>
@@ -74,8 +76,34 @@ public interface Version extends BaseOrmAnnotation {
   void setColumn(Column value);
 
   /**
+	 * Returns the value of the '<em><b>Index</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Index</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Index</em>' containment reference.
+	 * @see #setIndex(Index)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVersion_Index()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='index' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Index getIndex();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getIndex <em>Index</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Index</em>' containment reference.
+	 * @see #getIndex()
+	 * @generated
+	 */
+	void setIndex(Index value);
+
+		/**
 	 * Returns the value of the '<em><b>Temporal</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Temporal</em>' attribute isn't clear, there really should be more of a description
@@ -83,51 +111,25 @@ public interface Version extends BaseOrmAnnotation {
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Temporal</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see #isSetTemporal()
-	 * @see #unsetTemporal()
-	 * @see #setTemporal(Temporal)
+	 * @see #setTemporal(TemporalType)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVersion_Temporal()
-	 * @model unsettable="true"
+	 * @model dataType="org.eclipse.emf.texo.orm.annotations.model.orm.Temporal"
 	 *        extendedMetaData="kind='element' name='temporal' namespace='##targetNamespace'"
 	 * @generated
 	 */
-  Temporal getTemporal();
+  TemporalType getTemporal();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Temporal</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see #isSetTemporal()
-	 * @see #unsetTemporal()
 	 * @see #getTemporal()
 	 * @generated
 	 */
-  void setTemporal(Temporal value);
+	void setTemporal(TemporalType value);
 
-  /**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isSetTemporal()
-	 * @see #getTemporal()
-	 * @see #setTemporal(Temporal)
-	 * @generated
-	 */
-  void unsetTemporal();
-
-  /**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getTemporal <em>Temporal</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Temporal</em>' attribute is set.
-	 * @see #unsetTemporal()
-	 * @see #getTemporal()
-	 * @see #setTemporal(Temporal)
-	 * @generated
-	 */
-  boolean isSetTemporal();
-
-  /**
+		/**
 	 * Returns the value of the '<em><b>Convert</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -354,6 +356,33 @@ public interface Version extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
+	 * Returns the value of the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attribute Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attribute Type</em>' attribute.
+	 * @see #setAttributeType(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVersion_AttributeType()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='attribute-type'"
+	 * @generated
+	 */
+	String getAttributeType();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Version#getAttributeType <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attribute Type</em>' attribute.
+	 * @see #getAttributeType()
+	 * @generated
+	 */
+	void setAttributeType(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Mutable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

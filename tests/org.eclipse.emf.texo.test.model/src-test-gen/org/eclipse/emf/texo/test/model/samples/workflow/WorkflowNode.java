@@ -11,8 +11,6 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>WorkflowNode</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -20,7 +18,6 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_WorkflowNode")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_WorkflowNode_parent_id") })
 public abstract class WorkflowNode extends WorkflowElement {
 
   /**
@@ -29,7 +26,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "workflow_WorkflowNode_workflow") })
+  @JoinColumns({ @JoinColumn(name = "workflow_WorkflowNode_workflow", nullable = true) })
   private Workflow workflow = null;
 
   /**
@@ -58,7 +55,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "isStart")
+  @Column(name = "isStart", nullable = true)
   private boolean isStart = false;
 
   /**
@@ -67,7 +64,7 @@ public abstract class WorkflowNode extends WorkflowElement {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "isFinish")
+  @Column(name = "isFinish", nullable = true)
   private boolean isFinish = false;
 
   /**

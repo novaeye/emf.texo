@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -86,6 +88,7 @@ public class SimpleType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private SimpleEnum enu = SimpleEnum.ENUM1;
 
   /**

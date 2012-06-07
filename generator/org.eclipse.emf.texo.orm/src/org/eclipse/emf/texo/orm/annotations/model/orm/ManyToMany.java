@@ -17,16 +17,14 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface ManyToMany {
- * 				Class targetEntity() default
- * 				void.class;
- * 				CascadeType[] cascade() default {};
- * 				FetchType fetch()
- * 				default LAZY;
- * 				String mappedBy() default "";
- * 				}
- *         
+ *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface ManyToMany {
+ *           Class targetEntity() default void.class;
+ *           CascadeType[] cascade() default {};
+ *           FetchType fetch() default LAZY;
+ *           String mappedBy() default "";
+ *         }
+ * 
  *       
  * <!-- end-model-doc -->
  *
@@ -50,10 +48,23 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getStructConverter <em>Struct Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinTable <em>Join Table</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getCascade <em>Cascade</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#isCascadeOnDelete <em>Cascade On Delete</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getJoinFetch <em>Join Fetch</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getBatchFetch <em>Batch Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccessMethods <em>Access Methods</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getNoncacheable <em>Noncacheable</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioning <em>Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getReplicationPartitioning <em>Replication Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPinnedPartitioning <em>Pinned Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRangePartitioning <em>Range Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getValuePartitioning <em>Value Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getHashPartitioning <em>Hash Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getUnionPartitioning <em>Union Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioned <em>Partitioned</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getFetch <em>Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMappedBy <em>Mapped By</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getName <em>Name</em>}</li>
@@ -173,7 +184,6 @@ public interface ManyToMany extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Map Key Temporal</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Temporal</em>' attribute isn't clear, there really should be more of a
@@ -181,53 +191,26 @@ public interface ManyToMany extends BaseOrmAnnotation {
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Key Temporal</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see #isSetMapKeyTemporal()
-	 * @see #unsetMapKeyTemporal()
-	 * @see #setMapKeyTemporal(Temporal)
+	 * @see #setMapKeyTemporal(TemporalType)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyTemporal()
-	 * @model unsettable="true"
+	 * @model dataType="org.eclipse.emf.texo.orm.annotations.model.orm.Temporal"
 	 *        extendedMetaData="kind='element' name='map-key-temporal' namespace='##targetNamespace'"
 	 * @generated
 	 */
-  Temporal getMapKeyTemporal();
+  TemporalType getMapKeyTemporal();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Map Key Temporal</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see #isSetMapKeyTemporal()
-	 * @see #unsetMapKeyTemporal()
 	 * @see #getMapKeyTemporal()
 	 * @generated
 	 */
-  void setMapKeyTemporal(Temporal value);
+	void setMapKeyTemporal(TemporalType value);
 
-  /**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isSetMapKeyTemporal()
-	 * @see #getMapKeyTemporal()
-	 * @see #setMapKeyTemporal(Temporal)
-	 * @generated
-	 */
-  void unsetMapKeyTemporal();
-
-  /**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyTemporal <em>Map Key Temporal</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Map Key Temporal</em>' attribute is set.
-	 * @see #unsetMapKeyTemporal()
-	 * @see #getMapKeyTemporal()
-	 * @see #setMapKeyTemporal(Temporal)
-	 * @generated
-	 */
-  boolean isSetMapKeyTemporal();
-
-  /**
+		/**
 	 * Returns the value of the '<em><b>Map Key Enumerated</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Map Key Enumerated</em>' attribute isn't clear, there really should be more of a
@@ -235,51 +218,25 @@ public interface ManyToMany extends BaseOrmAnnotation {
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Key Enumerated</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @see #isSetMapKeyEnumerated()
-	 * @see #unsetMapKeyEnumerated()
-	 * @see #setMapKeyEnumerated(Enumerated)
+	 * @see #setMapKeyEnumerated(EnumType)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_MapKeyEnumerated()
-	 * @model unsettable="true"
+	 * @model dataType="org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated"
 	 *        extendedMetaData="kind='element' name='map-key-enumerated' namespace='##targetNamespace'"
 	 * @generated
 	 */
-  Enumerated getMapKeyEnumerated();
+  EnumType getMapKeyEnumerated();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Map Key Enumerated</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @see #isSetMapKeyEnumerated()
-	 * @see #unsetMapKeyEnumerated()
 	 * @see #getMapKeyEnumerated()
 	 * @generated
 	 */
-  void setMapKeyEnumerated(Enumerated value);
+	void setMapKeyEnumerated(EnumType value);
 
-  /**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isSetMapKeyEnumerated()
-	 * @see #getMapKeyEnumerated()
-	 * @see #setMapKeyEnumerated(Enumerated)
-	 * @generated
-	 */
-  void unsetMapKeyEnumerated();
-
-  /**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getMapKeyEnumerated <em>Map Key Enumerated</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Map Key Enumerated</em>' attribute is set.
-	 * @see #unsetMapKeyEnumerated()
-	 * @see #getMapKeyEnumerated()
-	 * @see #setMapKeyEnumerated(Enumerated)
-	 * @generated
-	 */
-  boolean isSetMapKeyEnumerated();
-
-  /**
+		/**
 	 * Returns the value of the '<em><b>Map Key Convert</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -540,6 +497,60 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setCascade(CascadeType value);
 
   /**
+	 * Returns the value of the '<em><b>Cascade On Delete</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cascade On Delete</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cascade On Delete</em>' attribute.
+	 * @see #isSetCascadeOnDelete()
+	 * @see #unsetCascadeOnDelete()
+	 * @see #setCascadeOnDelete(boolean)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_CascadeOnDelete()
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 *        extendedMetaData="kind='element' name='cascade-on-delete' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	boolean isCascadeOnDelete();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#isCascadeOnDelete <em>Cascade On Delete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cascade On Delete</em>' attribute.
+	 * @see #isSetCascadeOnDelete()
+	 * @see #unsetCascadeOnDelete()
+	 * @see #isCascadeOnDelete()
+	 * @generated
+	 */
+	void setCascadeOnDelete(boolean value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#isCascadeOnDelete <em>Cascade On Delete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCascadeOnDelete()
+	 * @see #isCascadeOnDelete()
+	 * @see #setCascadeOnDelete(boolean)
+	 * @generated
+	 */
+	void unsetCascadeOnDelete();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#isCascadeOnDelete <em>Cascade On Delete</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Cascade On Delete</em>' attribute is set.
+	 * @see #unsetCascadeOnDelete()
+	 * @see #isCascadeOnDelete()
+	 * @see #setCascadeOnDelete(boolean)
+	 * @generated
+	 */
+	boolean isSetCascadeOnDelete();
+
+		/**
 	 * Returns the value of the '<em><b>Join Fetch</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType}.
 	 * <!-- begin-user-doc -->
@@ -594,6 +605,33 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetJoinFetch();
 
   /**
+	 * Returns the value of the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Batch Fetch</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Batch Fetch</em>' containment reference.
+	 * @see #setBatchFetch(BatchFetch)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_BatchFetch()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='batch-fetch' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	BatchFetch getBatchFetch();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getBatchFetch <em>Batch Fetch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Batch Fetch</em>' containment reference.
+	 * @see #getBatchFetch()
+	 * @generated
+	 */
+	void setBatchFetch(BatchFetch value);
+
+		/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
 	 * <!-- begin-user-doc -->
@@ -637,6 +675,276 @@ public interface ManyToMany extends BaseOrmAnnotation {
   void setAccessMethods(AccessMethods value);
 
   /**
+	 * Returns the value of the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Noncacheable</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #setNoncacheable(EmptyType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Noncacheable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='noncacheable' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EmptyType getNoncacheable();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getNoncacheable <em>Noncacheable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #getNoncacheable()
+	 * @generated
+	 */
+	void setNoncacheable(EmptyType value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioning</em>' containment reference.
+	 * @see #setPartitioning(Partitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Partitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Partitioning getPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioning <em>Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioning</em>' containment reference.
+	 * @see #getPartitioning()
+	 * @generated
+	 */
+	void setPartitioning(Partitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Replication Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #setReplicationPartitioning(ReplicationPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_ReplicationPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='replication-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ReplicationPartitioning getReplicationPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getReplicationPartitioning <em>Replication Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 */
+	void setReplicationPartitioning(ReplicationPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Round Robin Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #setRoundRobinPartitioning(RoundRobinPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_RoundRobinPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='round-robin-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RoundRobinPartitioning getRoundRobinPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	void setRoundRobinPartitioning(RoundRobinPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pinned Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #setPinnedPartitioning(PinnedPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_PinnedPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pinned-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PinnedPartitioning getPinnedPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPinnedPartitioning <em>Pinned Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 */
+	void setPinnedPartitioning(PinnedPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Range Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #setRangePartitioning(RangePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_RangePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='range-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RangePartitioning getRangePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getRangePartitioning <em>Range Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	void setRangePartitioning(RangePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #setValuePartitioning(ValuePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_ValuePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='value-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ValuePartitioning getValuePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getValuePartitioning <em>Value Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	void setValuePartitioning(ValuePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hash Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #setHashPartitioning(HashPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_HashPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='hash-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	HashPartitioning getHashPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getHashPartitioning <em>Hash Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	void setHashPartitioning(HashPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Union Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #setUnionPartitioning(UnionPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_UnionPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='union-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UnionPartitioning getUnionPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getUnionPartitioning <em>Union Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	void setUnionPartitioning(UnionPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioned</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioned</em>' attribute.
+	 * @see #setPartitioned(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_Partitioned()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='partitioned' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getPartitioned();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getPartitioned <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioned</em>' attribute.
+	 * @see #getPartitioned()
+	 * @generated
+	 */
+	void setPartitioned(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
 	 * <!-- begin-user-doc -->
@@ -690,6 +998,33 @@ public interface ManyToMany extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
+	 * Returns the value of the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attribute Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attribute Type</em>' attribute.
+	 * @see #setAttributeType(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getManyToMany_AttributeType()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='attribute-type'"
+	 * @generated
+	 */
+	String getAttributeType();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ManyToMany#getAttributeType <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attribute Type</em>' attribute.
+	 * @see #getAttributeType()
+	 * @generated
+	 */
+	void setAttributeType(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Fetch</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}.
 	 * <!-- begin-user-doc -->

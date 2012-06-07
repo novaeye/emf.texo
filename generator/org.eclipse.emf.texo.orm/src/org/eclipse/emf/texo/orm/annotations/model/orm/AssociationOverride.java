@@ -18,15 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface AssociationOverride {
- * 				String name();
- * 				JoinColumn[]
- * 				joinColumns() default{};
- * 				JoinTable joinTable() default @JoinTable;
- * 				}
+ *         @Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface AssociationOverride {
+ *           String name();
+ *           JoinColumn[] joinColumns() default{};
+ *           JoinTable joinTable() default @JoinTable;
+ *         }
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>

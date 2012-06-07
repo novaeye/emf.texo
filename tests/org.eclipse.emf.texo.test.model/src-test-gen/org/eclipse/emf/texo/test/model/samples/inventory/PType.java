@@ -41,7 +41,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "T_name")
+  @Column(name = "name")
   private String name = null;
 
   /**

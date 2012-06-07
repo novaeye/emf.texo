@@ -3,6 +3,8 @@ package org.eclipse.graphiti.mm.algorithms;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import org.eclipse.graphiti.mm.algorithms.styles.Font;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
@@ -20,7 +22,7 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private Font font = null;
 
   /**
@@ -29,6 +31,7 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private Orientation horizontalAlignment = Orientation.ALIGNMENT_LEFT;
 
   /**
@@ -37,6 +40,7 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private Orientation verticalAlignment = Orientation.ALIGNMENT_CENTER;
 
   /**

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -10,7 +10,7 @@
     <orm:table name="catalog_CatalogType"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="description" optional="false">
         <orm:column name="description"/>
@@ -88,7 +88,7 @@
     <orm:table name="catalog_SupplierType"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="noOfEmployees" optional="false">
         <orm:column name="noOfEmployees"/>

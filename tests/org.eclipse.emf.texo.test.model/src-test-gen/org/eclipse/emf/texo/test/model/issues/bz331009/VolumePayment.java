@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>VolumePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -18,7 +16,6 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "m_VolumePayment")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "m_VolumePayment_parent_id") })
 public class VolumePayment extends PaymentItem {
 
   /**
@@ -27,7 +24,7 @@ public class VolumePayment extends PaymentItem {
    * @generated
    */
   @Basic()
-  @Column(name = "volume")
+  @Column(name = "volume", nullable = true)
   private BigDecimal volume = null;
 
   /**
@@ -36,7 +33,7 @@ public class VolumePayment extends PaymentItem {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinColumns({ @JoinColumn(name = "m_VolumePayment_unit") })
+  @JoinColumns({ @JoinColumn(name = "m_VolumePayment_unit", nullable = true) })
   private Units unit = null;
 
   /**
@@ -45,7 +42,7 @@ public class VolumePayment extends PaymentItem {
    * @generated
    */
   @Basic()
-  @Column(name = "price")
+  @Column(name = "price", nullable = true)
   private BigDecimal price = null;
 
   /**

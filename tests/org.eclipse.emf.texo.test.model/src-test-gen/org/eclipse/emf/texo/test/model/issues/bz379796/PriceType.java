@@ -2,6 +2,8 @@ package org.eclipse.emf.texo.test.model.issues.bz379796;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -42,6 +44,7 @@ public class PriceType extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private ComparisonType comparisonElement = null;
 
   /**
@@ -50,6 +53,7 @@ public class PriceType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private ComparisonType requiredComparisonElement = ComparisonType.LESS;
 
   /**
@@ -58,6 +62,7 @@ public class PriceType extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private ComparisonType comparison = null;
 
   /**
@@ -66,6 +71,7 @@ public class PriceType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private ComparisonType requiredComparison = ComparisonType.LESS;
 
   /**

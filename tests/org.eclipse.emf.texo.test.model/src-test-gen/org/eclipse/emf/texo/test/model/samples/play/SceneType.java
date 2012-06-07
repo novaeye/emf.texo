@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -32,6 +34,7 @@ public class SceneType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private PindexType pindex = PindexType._1;
 
   /**

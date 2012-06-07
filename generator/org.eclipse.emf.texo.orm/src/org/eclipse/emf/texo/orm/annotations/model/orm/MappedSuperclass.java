@@ -131,6 +131,87 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setDescription(String value);
 
   /**
+	 * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Access Methods</em>' containment reference.
+	 * @see #setAccessMethods(AccessMethods)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_AccessMethods()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AccessMethods getAccessMethods();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAccessMethods <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Access Methods</em>' containment reference.
+	 * @see #getAccessMethods()
+	 * @generated
+	 */
+	void setAccessMethods(AccessMethods value);
+
+		/**
+	 * Returns the value of the '<em><b>Multitenant</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Multitenant</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Multitenant</em>' containment reference.
+	 * @see #setMultitenant(Multitenant)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Multitenant()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='multitenant' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Multitenant getMultitenant();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getMultitenant <em>Multitenant</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Multitenant</em>' containment reference.
+	 * @see #getMultitenant()
+	 * @generated
+	 */
+	void setMultitenant(Multitenant value);
+
+		/**
+	 * Returns the value of the '<em><b>Additional Criteria</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Additional Criteria</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Additional Criteria</em>' containment reference.
+	 * @see #setAdditionalCriteria(AdditionalCriteria)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_AdditionalCriteria()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='additional-criteria' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AdditionalCriteria getAdditionalCriteria();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getAdditionalCriteria <em>Additional Criteria</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Additional Criteria</em>' containment reference.
+	 * @see #getAdditionalCriteria()
+	 * @generated
+	 */
+	void setAdditionalCriteria(AdditionalCriteria value);
+
+		/**
 	 * Returns the value of the '<em><b>Customizer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -313,6 +394,23 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setCacheInterceptor(CacheInterceptor value);
 
   /**
+	 * Returns the value of the '<em><b>Fetch Group</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fetch Group</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fetch Group</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_FetchGroup()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='fetch-group' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<FetchGroup> getFetchGroup();
+
+		/**
 	 * Returns the value of the '<em><b>Converter</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter}.
 	 * <!-- begin-user-doc -->
@@ -459,6 +557,483 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   void setCloneCopyPolicy(CloneCopyPolicy value);
 
   /**
+	 * Returns the value of the '<em><b>Sequence Generator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sequence Generator</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sequence Generator</em>' containment reference.
+	 * @see #setSequenceGenerator(SequenceGenerator)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_SequenceGenerator()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='sequence-generator' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	SequenceGenerator getSequenceGenerator();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getSequenceGenerator <em>Sequence Generator</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Sequence Generator</em>' containment reference.
+	 * @see #getSequenceGenerator()
+	 * @generated
+	 */
+	void setSequenceGenerator(SequenceGenerator value);
+
+		/**
+	 * Returns the value of the '<em><b>Table Generator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Table Generator</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Table Generator</em>' containment reference.
+	 * @see #setTableGenerator(TableGenerator)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_TableGenerator()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='table-generator' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	TableGenerator getTableGenerator();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getTableGenerator <em>Table Generator</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Table Generator</em>' containment reference.
+	 * @see #getTableGenerator()
+	 * @generated
+	 */
+	void setTableGenerator(TableGenerator value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioning</em>' containment reference.
+	 * @see #setPartitioning(Partitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Partitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Partitioning getPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPartitioning <em>Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioning</em>' containment reference.
+	 * @see #getPartitioning()
+	 * @generated
+	 */
+	void setPartitioning(Partitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Replication Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #setReplicationPartitioning(ReplicationPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ReplicationPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='replication-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ReplicationPartitioning getReplicationPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getReplicationPartitioning <em>Replication Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 */
+	void setReplicationPartitioning(ReplicationPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Round Robin Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #setRoundRobinPartitioning(RoundRobinPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_RoundRobinPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='round-robin-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RoundRobinPartitioning getRoundRobinPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	void setRoundRobinPartitioning(RoundRobinPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pinned Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #setPinnedPartitioning(PinnedPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PinnedPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pinned-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PinnedPartitioning getPinnedPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPinnedPartitioning <em>Pinned Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 */
+	void setPinnedPartitioning(PinnedPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Range Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #setRangePartitioning(RangePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_RangePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='range-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RangePartitioning getRangePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getRangePartitioning <em>Range Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	void setRangePartitioning(RangePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #setValuePartitioning(ValuePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ValuePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='value-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ValuePartitioning getValuePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getValuePartitioning <em>Value Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	void setValuePartitioning(ValuePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hash Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #setHashPartitioning(HashPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_HashPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='hash-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	HashPartitioning getHashPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getHashPartitioning <em>Hash Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	void setHashPartitioning(HashPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Union Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #setUnionPartitioning(UnionPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_UnionPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='union-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UnionPartitioning getUnionPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getUnionPartitioning <em>Union Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	void setUnionPartitioning(UnionPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioned</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioned</em>' attribute.
+	 * @see #setPartitioned(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_Partitioned()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='partitioned' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getPartitioned();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getPartitioned <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioned</em>' attribute.
+	 * @see #getPartitioned()
+	 * @generated
+	 */
+	void setPartitioned(String value);
+
+		/**
+	 * Returns the value of the '<em><b>Named Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_NamedQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedQuery> getNamedQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Native Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Native Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Native Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_NamedNativeQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-native-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedNativeQuery> getNamedNativeQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Stored Procedure Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Stored Procedure Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Stored Procedure Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_NamedStoredProcedureQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-stored-procedure-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedStoredProcedureQuery> getNamedStoredProcedureQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Stored Function Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Stored Function Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Stored Function Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_NamedStoredFunctionQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-stored-function-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedStoredFunctionQuery> getNamedStoredFunctionQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Plsql Stored Procedure Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Plsql Stored Procedure Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Plsql Stored Procedure Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_NamedPlsqlStoredProcedureQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-plsql-stored-procedure-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedPlsqlStoredProcedureQuery> getNamedPlsqlStoredProcedureQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Named Plsql Stored Function Query</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Named Plsql Stored Function Query</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Named Plsql Stored Function Query</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_NamedPlsqlStoredFunctionQuery()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='named-plsql-stored-function-query' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<NamedPlsqlStoredFunctionQuery> getNamedPlsqlStoredFunctionQuery();
+
+		/**
+	 * Returns the value of the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Plsql Record</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plsql Record</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PlsqlRecord()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='plsql-record' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<PlsqlRecord> getPlsqlRecord();
+
+		/**
+	 * Returns the value of the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Plsql Table</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plsql Table</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_PlsqlTable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='plsql-table' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<PlsqlTable> getPlsqlTable();
+
+		/**
+	 * Returns the value of the '<em><b>Sql Result Set Mapping</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sql Result Set Mapping</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sql Result Set Mapping</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_SqlResultSetMapping()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='sql-result-set-mapping' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<SqlResultSetMapping> getSqlResultSetMapping();
+
+		/**
+	 * Returns the value of the '<em><b>Query Redirectors</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Query Redirectors</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Query Redirectors</em>' containment reference.
+	 * @see #setQueryRedirectors(QueryRedirectors)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_QueryRedirectors()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='query-redirectors' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	QueryRedirectors getQueryRedirectors();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getQueryRedirectors <em>Query Redirectors</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Query Redirectors</em>' containment reference.
+	 * @see #getQueryRedirectors()
+	 * @generated
+	 */
+	void setQueryRedirectors(QueryRedirectors value);
+
+		/**
 	 * Returns the value of the '<em><b>Exclude Default Listeners</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -737,6 +1312,40 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   EList<Property> getProperty();
 
   /**
+	 * Returns the value of the '<em><b>Attribute Override</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attribute Override</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attribute Override</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_AttributeOverride()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='attribute-override' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<AttributeOverride> getAttributeOverride();
+
+		/**
+	 * Returns the value of the '<em><b>Association Override</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Association Override</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Association Override</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_AssociationOverride()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='association-override' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<AssociationOverride> getAssociationOverride();
+
+		/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -1048,6 +1657,33 @@ public interface MappedSuperclass extends BaseOrmAnnotation {
   boolean isSetMetadataComplete();
 
   /**
+	 * Returns the value of the '<em><b>Parent Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Class</em>' attribute.
+	 * @see #setParentClass(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMappedSuperclass_ParentClass()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='parent-class'"
+	 * @generated
+	 */
+	String getParentClass();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass#getParentClass <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent Class</em>' attribute.
+	 * @see #getParentClass()
+	 * @generated
+	 */
+	void setParentClass(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Read Only</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

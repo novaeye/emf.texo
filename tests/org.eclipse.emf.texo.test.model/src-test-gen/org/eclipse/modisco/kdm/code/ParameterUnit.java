@@ -2,6 +2,8 @@ package org.eclipse.modisco.kdm.code;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 /**
  * A representation of the model object '<em><b>ParameterUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,6 +19,7 @@ public class ParameterUnit extends DataElement {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private ParameterKind kind = ParameterKind.BYVALUE;
 
   /**

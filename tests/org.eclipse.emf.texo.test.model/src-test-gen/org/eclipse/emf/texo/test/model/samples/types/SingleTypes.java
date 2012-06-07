@@ -5,6 +5,8 @@ import java.math.BigInteger;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -164,6 +166,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private TestEnum enum_ = TestEnum.ENUM0;
 
   /**
@@ -198,6 +201,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private TestNextEnum nextEnum = TestNextEnum.ENUM2;
 
   /**

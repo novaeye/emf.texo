@@ -102,6 +102,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "series")
   private String series = null;
 
   /**
@@ -109,6 +111,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "T_number")
   private String number = null;
 
   /**
@@ -116,6 +120,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "issueDate")
   private String issueDate = null;
 
   /**
@@ -123,6 +129,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "issued")
   private String issued = null;
 
   /**

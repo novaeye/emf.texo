@@ -2,6 +2,8 @@ package org.eclipse.modisco.kdm.code;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 /**
  * A representation of the model object '<em><b>MethodUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,6 +19,7 @@ public class MethodUnit extends ControlElement {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private MethodKind kind = MethodKind.METHOD;
 
   /**
@@ -25,6 +28,7 @@ public class MethodUnit extends ControlElement {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private ExportKind export = ExportKind.PUBLIC;
 
   /**

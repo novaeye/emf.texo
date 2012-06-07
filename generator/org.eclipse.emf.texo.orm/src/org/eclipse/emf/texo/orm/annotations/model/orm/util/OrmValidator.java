@@ -97,6 +97,10 @@ public class OrmValidator extends EObjectValidator {
 		switch (classifierID) {
 			case OrmPackage.ACCESS_METHODS:
 				return validateAccessMethods((AccessMethods)value, diagnostics, context);
+			case OrmPackage.ADDITIONAL_CRITERIA:
+				return validateAdditionalCriteria((AdditionalCriteria)value, diagnostics, context);
+			case OrmPackage.ARRAY:
+				return validateArray((Array)value, diagnostics, context);
 			case OrmPackage.ASSOCIATION_OVERRIDE:
 				return validateAssociationOverride((AssociationOverride)value, diagnostics, context);
 			case OrmPackage.ATTRIBUTE_OVERRIDE:
@@ -109,6 +113,8 @@ public class OrmValidator extends EObjectValidator {
 				return validateBasicCollection((BasicCollection)value, diagnostics, context);
 			case OrmPackage.BASIC_MAP:
 				return validateBasicMap((BasicMap)value, diagnostics, context);
+			case OrmPackage.BATCH_FETCH:
+				return validateBatchFetch((BatchFetch)value, diagnostics, context);
 			case OrmPackage.CACHE:
 				return validateCache((Cache)value, diagnostics, context);
 			case OrmPackage.CACHE_INTERCEPTOR:
@@ -117,6 +123,8 @@ public class OrmValidator extends EObjectValidator {
 				return validateCascadeType((CascadeType)value, diagnostics, context);
 			case OrmPackage.CHANGE_TRACKING:
 				return validateChangeTracking((ChangeTracking)value, diagnostics, context);
+			case OrmPackage.CLASS_EXTRACTOR:
+				return validateClassExtractor((ClassExtractor)value, diagnostics, context);
 			case OrmPackage.CLONE_COPY_POLICY:
 				return validateCloneCopyPolicy((CloneCopyPolicy)value, diagnostics, context);
 			case OrmPackage.COLLECTION_TABLE:
@@ -161,14 +169,22 @@ public class OrmValidator extends EObjectValidator {
 				return validateEntityMappingsType((EntityMappingsType)value, diagnostics, context);
 			case OrmPackage.ENTITY_RESULT:
 				return validateEntityResult((EntityResult)value, diagnostics, context);
+			case OrmPackage.FETCH_ATTRIBUTE:
+				return validateFetchAttribute((FetchAttribute)value, diagnostics, context);
+			case OrmPackage.FETCH_GROUP:
+				return validateFetchGroup((FetchGroup)value, diagnostics, context);
 			case OrmPackage.FIELD_RESULT:
 				return validateFieldResult((FieldResult)value, diagnostics, context);
 			case OrmPackage.GENERATED_VALUE:
 				return validateGeneratedValue((GeneratedValue)value, diagnostics, context);
+			case OrmPackage.HASH_PARTITIONING:
+				return validateHashPartitioning((HashPartitioning)value, diagnostics, context);
 			case OrmPackage.ID:
 				return validateId((Id)value, diagnostics, context);
 			case OrmPackage.ID_CLASS:
 				return validateIdClass((IdClass)value, diagnostics, context);
+			case OrmPackage.INDEX:
+				return validateIndex((Index)value, diagnostics, context);
 			case OrmPackage.INHERITANCE:
 				return validateInheritance((Inheritance)value, diagnostics, context);
 			case OrmPackage.INSTANTIATION_COPY_POLICY:
@@ -193,10 +209,18 @@ public class OrmValidator extends EObjectValidator {
 				return validateMapKeyJoinColumn((MapKeyJoinColumn)value, diagnostics, context);
 			case OrmPackage.MAPPED_SUPERCLASS:
 				return validateMappedSuperclass((MappedSuperclass)value, diagnostics, context);
+			case OrmPackage.MULTITENANT:
+				return validateMultitenant((Multitenant)value, diagnostics, context);
 			case OrmPackage.NAMED_NATIVE_QUERY:
 				return validateNamedNativeQuery((NamedNativeQuery)value, diagnostics, context);
+			case OrmPackage.NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return validateNamedPlsqlStoredFunctionQuery((NamedPlsqlStoredFunctionQuery)value, diagnostics, context);
+			case OrmPackage.NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return validateNamedPlsqlStoredProcedureQuery((NamedPlsqlStoredProcedureQuery)value, diagnostics, context);
 			case OrmPackage.NAMED_QUERY:
 				return validateNamedQuery((NamedQuery)value, diagnostics, context);
+			case OrmPackage.NAMED_STORED_FUNCTION_QUERY:
+				return validateNamedStoredFunctionQuery((NamedStoredFunctionQuery)value, diagnostics, context);
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY:
 				return validateNamedStoredProcedureQuery((NamedStoredProcedureQuery)value, diagnostics, context);
 			case OrmPackage.OBJECT_TYPE_CONVERTER:
@@ -209,10 +233,20 @@ public class OrmValidator extends EObjectValidator {
 				return validateOptimisticLocking((OptimisticLocking)value, diagnostics, context);
 			case OrmPackage.ORDER_COLUMN:
 				return validateOrderColumn((OrderColumn)value, diagnostics, context);
+			case OrmPackage.PARTITIONING:
+				return validatePartitioning((Partitioning)value, diagnostics, context);
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS:
 				return validatePersistenceUnitDefaults((PersistenceUnitDefaults)value, diagnostics, context);
 			case OrmPackage.PERSISTENCE_UNIT_METADATA:
 				return validatePersistenceUnitMetadata((PersistenceUnitMetadata)value, diagnostics, context);
+			case OrmPackage.PINNED_PARTITIONING:
+				return validatePinnedPartitioning((PinnedPartitioning)value, diagnostics, context);
+			case OrmPackage.PLSQL_PARAMETER:
+				return validatePlsqlParameter((PlsqlParameter)value, diagnostics, context);
+			case OrmPackage.PLSQL_RECORD:
+				return validatePlsqlRecord((PlsqlRecord)value, diagnostics, context);
+			case OrmPackage.PLSQL_TABLE:
+				return validatePlsqlTable((PlsqlTable)value, diagnostics, context);
 			case OrmPackage.POST_LOAD:
 				return validatePostLoad((PostLoad)value, diagnostics, context);
 			case OrmPackage.POST_PERSIST:
@@ -237,8 +271,18 @@ public class OrmValidator extends EObjectValidator {
 				return validateQueryHint((QueryHint)value, diagnostics, context);
 			case OrmPackage.QUERY_REDIRECTORS:
 				return validateQueryRedirectors((QueryRedirectors)value, diagnostics, context);
+			case OrmPackage.RANGE_PARTITION:
+				return validateRangePartition((RangePartition)value, diagnostics, context);
+			case OrmPackage.RANGE_PARTITIONING:
+				return validateRangePartitioning((RangePartitioning)value, diagnostics, context);
 			case OrmPackage.READ_TRANSFORMER:
 				return validateReadTransformer((ReadTransformer)value, diagnostics, context);
+			case OrmPackage.REPLICATION_PARTITIONING:
+				return validateReplicationPartitioning((ReplicationPartitioning)value, diagnostics, context);
+			case OrmPackage.RETURN_INSERT:
+				return validateReturnInsert((ReturnInsert)value, diagnostics, context);
+			case OrmPackage.ROUND_ROBIN_PARTITIONING:
+				return validateRoundRobinPartitioning((RoundRobinPartitioning)value, diagnostics, context);
 			case OrmPackage.SECONDARY_TABLE:
 				return validateSecondaryTable((SecondaryTable)value, diagnostics, context);
 			case OrmPackage.SEQUENCE_GENERATOR:
@@ -247,12 +291,18 @@ public class OrmValidator extends EObjectValidator {
 				return validateSqlResultSetMapping((SqlResultSetMapping)value, diagnostics, context);
 			case OrmPackage.STORED_PROCEDURE_PARAMETER:
 				return validateStoredProcedureParameter((StoredProcedureParameter)value, diagnostics, context);
+			case OrmPackage.STRUCT:
+				return validateStruct((Struct)value, diagnostics, context);
 			case OrmPackage.STRUCT_CONVERTER:
 				return validateStructConverter((StructConverter)value, diagnostics, context);
+			case OrmPackage.STRUCTURE:
+				return validateStructure((Structure)value, diagnostics, context);
 			case OrmPackage.TABLE:
 				return validateTable((Table)value, diagnostics, context);
 			case OrmPackage.TABLE_GENERATOR:
 				return validateTableGenerator((TableGenerator)value, diagnostics, context);
+			case OrmPackage.TENANT_DISCRIMINATOR:
+				return validateTenantDiscriminator((TenantDiscriminator)value, diagnostics, context);
 			case OrmPackage.TIME_OF_DAY:
 				return validateTimeOfDay((TimeOfDay)value, diagnostics, context);
 			case OrmPackage.TRANSFORMATION:
@@ -261,8 +311,14 @@ public class OrmValidator extends EObjectValidator {
 				return validateTransient((Transient)value, diagnostics, context);
 			case OrmPackage.TYPE_CONVERTER:
 				return validateTypeConverter((TypeConverter)value, diagnostics, context);
+			case OrmPackage.UNION_PARTITIONING:
+				return validateUnionPartitioning((UnionPartitioning)value, diagnostics, context);
 			case OrmPackage.UNIQUE_CONSTRAINT:
 				return validateUniqueConstraint((UniqueConstraint)value, diagnostics, context);
+			case OrmPackage.VALUE_PARTITION:
+				return validateValuePartition((ValuePartition)value, diagnostics, context);
+			case OrmPackage.VALUE_PARTITIONING:
+				return validateValuePartitioning((ValuePartitioning)value, diagnostics, context);
 			case OrmPackage.VARIABLE_ONE_TO_ONE:
 				return validateVariableOneToOne((VariableOneToOne)value, diagnostics, context);
 			case OrmPackage.VERSION:
@@ -271,8 +327,14 @@ public class OrmValidator extends EObjectValidator {
 				return validateWriteTransformer((WriteTransformer)value, diagnostics, context);
 			case OrmPackage.ACCESS_TYPE:
 				return validateAccessType((AccessType)value, diagnostics, context);
+			case OrmPackage.BATCH_FETCH_TYPE:
+				return validateBatchFetchType((BatchFetchType)value, diagnostics, context);
 			case OrmPackage.CACHE_COORDINATION_TYPE:
 				return validateCacheCoordinationType((CacheCoordinationType)value, diagnostics, context);
+			case OrmPackage.CACHE_ISOLATION_TYPE:
+				return validateCacheIsolationType((CacheIsolationType)value, diagnostics, context);
+			case OrmPackage.CACHE_KEY_TYPE:
+				return validateCacheKeyType((CacheKeyType)value, diagnostics, context);
 			case OrmPackage.CACHE_TYPE:
 				return validateCacheType((CacheType)value, diagnostics, context);
 			case OrmPackage.CHANGE_TRACKING_TYPE:
@@ -281,8 +343,6 @@ public class OrmValidator extends EObjectValidator {
 				return validateDirectionType((DirectionType)value, diagnostics, context);
 			case OrmPackage.DISCRIMINATOR_TYPE:
 				return validateDiscriminatorType((DiscriminatorType)value, diagnostics, context);
-			case OrmPackage.ENUMERATED:
-				return validateEnumerated((Enumerated)value, diagnostics, context);
 			case OrmPackage.ENUM_TYPE:
 				return validateEnumType((EnumType)value, diagnostics, context);
 			case OrmPackage.EXISTENCE_TYPE:
@@ -299,18 +359,26 @@ public class OrmValidator extends EObjectValidator {
 				return validateJoinFetchType((JoinFetchType)value, diagnostics, context);
 			case OrmPackage.LOCK_MODE_TYPE:
 				return validateLockModeType((LockModeType)value, diagnostics, context);
+			case OrmPackage.MULTITENANT_TYPE:
+				return validateMultitenantType((MultitenantType)value, diagnostics, context);
 			case OrmPackage.OPTIMISTIC_LOCKING_TYPE:
 				return validateOptimisticLockingType((OptimisticLockingType)value, diagnostics, context);
 			case OrmPackage.ORDER_COLUMN_CORRECTION_TYPE:
 				return validateOrderColumnCorrectionType((OrderColumnCorrectionType)value, diagnostics, context);
-			case OrmPackage.TEMPORAL:
-				return validateTemporal((Temporal)value, diagnostics, context);
+			case OrmPackage.SUPPORTED_VERSIONS_TYPE:
+				return validateSupportedVersionsType((SupportedVersionsType)value, diagnostics, context);
 			case OrmPackage.TEMPORAL_TYPE:
 				return validateTemporalType((TemporalType)value, diagnostics, context);
 			case OrmPackage.ACCESS_TYPE_OBJECT:
 				return validateAccessTypeObject((AccessType)value, diagnostics, context);
+			case OrmPackage.BATCH_FETCH_TYPE_OBJECT:
+				return validateBatchFetchTypeObject((BatchFetchType)value, diagnostics, context);
 			case OrmPackage.CACHE_COORDINATION_TYPE_OBJECT:
 				return validateCacheCoordinationTypeObject((CacheCoordinationType)value, diagnostics, context);
+			case OrmPackage.CACHE_ISOLATION_TYPE_OBJECT:
+				return validateCacheIsolationTypeObject((CacheIsolationType)value, diagnostics, context);
+			case OrmPackage.CACHE_KEY_TYPE_OBJECT:
+				return validateCacheKeyTypeObject((CacheKeyType)value, diagnostics, context);
 			case OrmPackage.CACHE_TYPE_OBJECT:
 				return validateCacheTypeObject((CacheType)value, diagnostics, context);
 			case OrmPackage.CHANGE_TRACKING_TYPE_OBJECT:
@@ -321,8 +389,8 @@ public class OrmValidator extends EObjectValidator {
 				return validateDiscriminatorTypeObject((DiscriminatorType)value, diagnostics, context);
 			case OrmPackage.DISCRIMINATOR_VALUE:
 				return validateDiscriminatorValue((String)value, diagnostics, context);
-			case OrmPackage.ENUMERATED_OBJECT:
-				return validateEnumeratedObject((Enumerated)value, diagnostics, context);
+			case OrmPackage.ENUMERATED:
+				return validateEnumerated((EnumType)value, diagnostics, context);
 			case OrmPackage.ENUM_TYPE_OBJECT:
 				return validateEnumTypeObject((EnumType)value, diagnostics, context);
 			case OrmPackage.EXISTENCE_TYPE_OBJECT:
@@ -339,14 +407,18 @@ public class OrmValidator extends EObjectValidator {
 				return validateJoinFetchTypeObject((JoinFetchType)value, diagnostics, context);
 			case OrmPackage.LOCK_MODE_TYPE_OBJECT:
 				return validateLockModeTypeObject((LockModeType)value, diagnostics, context);
+			case OrmPackage.MULTITENANT_TYPE_OBJECT:
+				return validateMultitenantTypeObject((MultitenantType)value, diagnostics, context);
 			case OrmPackage.OPTIMISTIC_LOCKING_TYPE_OBJECT:
 				return validateOptimisticLockingTypeObject((OptimisticLockingType)value, diagnostics, context);
 			case OrmPackage.ORDER_BY:
 				return validateOrderBy((String)value, diagnostics, context);
 			case OrmPackage.ORDER_COLUMN_CORRECTION_TYPE_OBJECT:
 				return validateOrderColumnCorrectionTypeObject((OrderColumnCorrectionType)value, diagnostics, context);
-			case OrmPackage.TEMPORAL_OBJECT:
-				return validateTemporalObject((Temporal)value, diagnostics, context);
+			case OrmPackage.SUPPORTED_VERSIONS_TYPE_OBJECT:
+				return validateSupportedVersionsTypeObject((SupportedVersionsType)value, diagnostics, context);
+			case OrmPackage.TEMPORAL:
+				return validateTemporal((TemporalType)value, diagnostics, context);
 			case OrmPackage.TEMPORAL_TYPE_OBJECT:
 				return validateTemporalTypeObject((TemporalType)value, diagnostics, context);
 			case OrmPackage.VERSION_TYPE:
@@ -366,6 +438,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAdditionalCriteria(AdditionalCriteria additionalCriteria, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)additionalCriteria, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateArray(Array array, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)array, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -417,6 +507,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBatchFetch(BatchFetch batchFetch, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)batchFetch, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -451,6 +550,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateClassExtractor(ClassExtractor classExtractor, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)classExtractor, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -640,6 +748,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFetchAttribute(FetchAttribute fetchAttribute, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)fetchAttribute, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFetchGroup(FetchGroup fetchGroup, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)fetchGroup, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -657,6 +783,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateHashPartitioning(HashPartitioning hashPartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)hashPartitioning, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -673,6 +808,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateIndex(Index index, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)index, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -773,6 +917,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMultitenant(Multitenant multitenant, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)multitenant, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -782,6 +935,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNamedPlsqlStoredFunctionQuery(NamedPlsqlStoredFunctionQuery namedPlsqlStoredFunctionQuery, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)namedPlsqlStoredFunctionQuery, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNamedPlsqlStoredProcedureQuery(NamedPlsqlStoredProcedureQuery namedPlsqlStoredProcedureQuery, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)namedPlsqlStoredProcedureQuery, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -790,6 +961,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNamedStoredFunctionQuery(NamedStoredFunctionQuery namedStoredFunctionQuery, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)namedStoredFunctionQuery, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -841,6 +1021,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePartitioning(Partitioning partitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)partitioning, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -859,6 +1048,42 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePinnedPartitioning(PinnedPartitioning pinnedPartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)pinnedPartitioning, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePlsqlParameter(PlsqlParameter plsqlParameter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)plsqlParameter, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePlsqlRecord(PlsqlRecord plsqlRecord, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)plsqlRecord, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePlsqlTable(PlsqlTable plsqlTable, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)plsqlTable, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -957,6 +1182,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRangePartition(RangePartition rangePartition, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)rangePartition, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRangePartitioning(RangePartitioning rangePartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)rangePartitioning, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -966,6 +1209,33 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateReplicationPartitioning(ReplicationPartitioning replicationPartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)replicationPartitioning, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateReturnInsert(ReturnInsert returnInsert, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)returnInsert, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateRoundRobinPartitioning(RoundRobinPartitioning roundRobinPartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)roundRobinPartitioning, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1002,6 +1272,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStruct(Struct struct, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)struct, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1011,6 +1290,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStructure(Structure structure, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)structure, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1028,6 +1316,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTenantDiscriminator(TenantDiscriminator tenantDiscriminator, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)tenantDiscriminator, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1062,6 +1359,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUnionPartitioning(UnionPartitioning unionPartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)unionPartitioning, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1071,6 +1377,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateValuePartition(ValuePartition valuePartition, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)valuePartition, diagnostics, context);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateValuePartitioning(ValuePartitioning valuePartitioning, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint((EObject)valuePartitioning, diagnostics, context);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1105,6 +1429,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBatchFetchType(BatchFetchType batchFetchType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1114,6 +1447,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCacheIsolationType(CacheIsolationType cacheIsolationType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCacheKeyType(CacheKeyType cacheKeyType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1145,14 +1496,6 @@ public class OrmValidator extends EObjectValidator {
 	 */
   public boolean validateDiscriminatorType(DiscriminatorType discriminatorType, DiagnosticChain diagnostics,
       Map<Object, Object> context) {
-		return true;
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public boolean validateEnumerated(Enumerated enumerated, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
@@ -1227,6 +1570,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMultitenantType(MultitenantType multitenantType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1245,14 +1597,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public boolean validateTemporal(Temporal temporal, DiagnosticChain diagnostics, Map<Object, Object> context) {
+	public boolean validateSupportedVersionsType(SupportedVersionsType supportedVersionsType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1271,6 +1624,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBatchFetchTypeObject(BatchFetchType batchFetchTypeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1280,6 +1642,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCacheIsolationTypeObject(CacheIsolationType cacheIsolationTypeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCacheKeyTypeObject(CacheKeyType cacheKeyTypeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1325,15 +1705,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public boolean validateEnumeratedObject(Enumerated enumeratedObject, DiagnosticChain diagnostics,
-      Map<Object, Object> context) {
+	public boolean validateEnumerated(EnumType enumerated, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1406,6 +1786,15 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMultitenantTypeObject(MultitenantType multitenantTypeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1432,15 +1821,24 @@ public class OrmValidator extends EObjectValidator {
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public boolean validateTemporalObject(Temporal temporalObject, DiagnosticChain diagnostics,
-      Map<Object, Object> context) {
+	public boolean validateSupportedVersionsTypeObject(SupportedVersionsType supportedVersionsTypeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTemporal(TemporalType temporal, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */

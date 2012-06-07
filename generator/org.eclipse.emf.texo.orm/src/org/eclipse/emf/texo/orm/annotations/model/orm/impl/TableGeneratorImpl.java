@@ -135,6 +135,26 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CREATION_SUFFIX_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String creationSuffix = CREATION_SUFFIX_EDEFAULT;
+
+		/**
 	 * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -390,6 +410,27 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCreationSuffix() {
+		return creationSuffix;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationSuffix(String newCreationSuffix) {
+		String oldCreationSuffix = creationSuffix;
+		creationSuffix = newCreationSuffix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE_GENERATOR__CREATION_SUFFIX, oldCreationSuffix, creationSuffix));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -573,6 +614,8 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 				return getAllocationSize();
 			case OrmPackage.TABLE_GENERATOR__CATALOG:
 				return getCatalog();
+			case OrmPackage.TABLE_GENERATOR__CREATION_SUFFIX:
+				return getCreationSuffix();
 			case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
 				return getInitialValue();
 			case OrmPackage.TABLE_GENERATOR__NAME:
@@ -611,6 +654,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 				return;
 			case OrmPackage.TABLE_GENERATOR__CATALOG:
 				setCatalog((String)newValue);
+				return;
+			case OrmPackage.TABLE_GENERATOR__CREATION_SUFFIX:
+				setCreationSuffix((String)newValue);
 				return;
 			case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
 				setInitialValue((Integer)newValue);
@@ -656,6 +702,9 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 			case OrmPackage.TABLE_GENERATOR__CATALOG:
 				setCatalog(CATALOG_EDEFAULT);
 				return;
+			case OrmPackage.TABLE_GENERATOR__CREATION_SUFFIX:
+				setCreationSuffix(CREATION_SUFFIX_EDEFAULT);
+				return;
 			case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
 				unsetInitialValue();
 				return;
@@ -696,6 +745,8 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 				return isSetAllocationSize();
 			case OrmPackage.TABLE_GENERATOR__CATALOG:
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+			case OrmPackage.TABLE_GENERATOR__CREATION_SUFFIX:
+				return CREATION_SUFFIX_EDEFAULT == null ? creationSuffix != null : !CREATION_SUFFIX_EDEFAULT.equals(creationSuffix);
 			case OrmPackage.TABLE_GENERATOR__INITIAL_VALUE:
 				return isSetInitialValue();
 			case OrmPackage.TABLE_GENERATOR__NAME:
@@ -729,6 +780,8 @@ public class TableGeneratorImpl extends BaseOrmAnnotationImpl implements TableGe
 		if (allocationSizeESet) result.append(allocationSize); else result.append("<unset>");
 		result.append(", catalog: ");
 		result.append(catalog);
+		result.append(", creationSuffix: ");
+		result.append(creationSuffix);
 		result.append(", initialValue: ");
 		if (initialValueESet) result.append(initialValue); else result.append("<unset>");
 		result.append(", name: ");

@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>Edge</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,7 +12,6 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_Edge")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_Edge_parent_id") })
 public class Edge extends WorkflowElement {
 
   /**
@@ -23,7 +20,7 @@ public class Edge extends WorkflowElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "workflow_Edge_workflow") })
+  @JoinColumns({ @JoinColumn(name = "workflow_Edge_workflow", nullable = true) })
   private Workflow workflow = null;
 
   /**
@@ -32,7 +29,7 @@ public class Edge extends WorkflowElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "workflow_Edge_target") })
+  @JoinColumns({ @JoinColumn(name = "workflow_Edge_target", nullable = true) })
   private InputPort target = null;
 
   /**
@@ -41,7 +38,7 @@ public class Edge extends WorkflowElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "workflow_Edge_source") })
+  @JoinColumns({ @JoinColumn(name = "workflow_Edge_source", nullable = true) })
   private OutputPort source = null;
 
   /**

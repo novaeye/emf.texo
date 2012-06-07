@@ -2,7 +2,10 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 
 /**
  * A representation of the model object '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,12 +20,14 @@ public abstract class CirculatingItem extends Item implements Lendable {
    * 
    * @generated
    */
+  @Basic(optional = false)
   private int copies = 0;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, mappedBy = "borrowed")
   private Set<Borrower> borrowers = new HashSet<Borrower>();
 
   /**

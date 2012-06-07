@@ -18,63 +18,65 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* A NamedStoredProcedureQuery annotation allows
- * 				the definition of
- * 				* queries that call stored procedures as named
- * 				queries.
- * 				* A NamedStoredProcedureQuery annotation may be defined on
- * 				an Entity
- * 				or
- * 				* MappedSuperclass.
- * 				*
- * 				@Target({TYPE})
- * 				@Retention(RUNTIME)
- * 				public @interface NamedStoredProcedureQuery {
- * 				*
- * 				* (Required) Unique
- * 				name that references this stored procedure query.
- * 				*
- * 				String name();
+ *         /** 
+ *          * A NamedStoredProcedureQuery annotation allows the definition of 
+ *          * queries that call stored procedures as named queries.
+ *          * A NamedStoredProcedureQuery annotation may be defined on an Entity or
+ *          * MappedSuperclass. 
+ *          ** 
+ *         @Target({TYPE})
+ *         @Retention(RUNTIME)
+ *         public @interface NamedStoredProcedureQuery {
+ *           /**
+ *            * (Required) Unique name that references this stored procedure query.
+ *            **
+ *           String name();
  * 
- * 				*
- * 				*
- * 				(Optional) Query hints.
- * 				*
- * 				QueryHint[] hints() default {};
+ *           /**
+ *            * (Optional) Query hints.
+ *            **
+ *           QueryHint[] hints() default {};
  * 
- * 				*
- * 				* (Optional)
- * 				Refers to the class of the result.
- * 				*
- * 				Class resultClass() default
- * 				void.class;
+ *           /**
+ *            * (Optional) Refers to the class of the result.
+ *            **
+ *           Class resultClass() default void.class;
  * 
- * 				*
- * 				* (Optional) The name of the SQLResultMapping.
- * 				*
- * 				String
- * 				resultSetMapping() default "";
+ *           /**
+ *            * (Optional) The name of the SQLResultMapping.
+ *            **
+ *           String resultSetMapping() default "";
  * 
- * 				*
- * 				* (Required) The name of the stored
- * 				procedure.
- * 				*
- * 				String procedureName();
+ *           /**
+ *            * (Required) The name of the stored procedure.
+ *            **
+ *           String procedureName();
  * 
- * 				*
- * 				* (Optional) Whether the query
- * 				should return a result set.
- * 				*
- * 				boolean returnsResultSet() default true;
+ *           /**
+ *            * (Optional) Whether the query should return a result set.
+ *            **
+ *           boolean returnsResultSet() default true; 
  * 
- * 				*
- * 				* (Optional) Defines arguments to the stored procedure.
- * 				*
- * 				StoredProcedureParameter[] parameters() default {};
- * 				}
+ *           /**
+ *            * (Optional) Defines if the stored procedure returns multiple result sets.
+ *            * This is only relevant on databases that support multiple result sets from stored procedures.
+ *            **
+ *           boolean multipleResultSets() default false;
+ *           
+ *           /**
+ *            * (Optional) Defines if the stored procedure should be called by index or by name.
+ *            * By index requires that the StoredProcedureParameter are defined in the same order as the procedure on the database.
+ *            * By name requires the database platform support naming procedure parameters.
+ *            **
+ *           boolean callByIndex() default false;
+ *     
+ *           /**
+ *            * (Optional) Defines arguments to the stored procedure.
+ *            **
+ *           StoredProcedureParameter[] parameters() default {};
+ *         }
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>
@@ -82,6 +84,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getHint <em>Hint</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isCallByIndex <em>Call By Index</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isMultipleResultSets <em>Multiple Result Sets</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getProcedureName <em>Procedure Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#getResultClass <em>Result Class</em>}</li>
@@ -131,6 +135,114 @@ public interface NamedStoredProcedureQuery extends BaseOrmAnnotation {
   EList<StoredProcedureParameter> getParameter();
 
   /**
+	 * Returns the value of the '<em><b>Call By Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Call By Index</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Call By Index</em>' attribute.
+	 * @see #isSetCallByIndex()
+	 * @see #unsetCallByIndex()
+	 * @see #setCallByIndex(boolean)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_CallByIndex()
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 *        extendedMetaData="kind='attribute' name='call-by-index'"
+	 * @generated
+	 */
+	boolean isCallByIndex();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isCallByIndex <em>Call By Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Call By Index</em>' attribute.
+	 * @see #isSetCallByIndex()
+	 * @see #unsetCallByIndex()
+	 * @see #isCallByIndex()
+	 * @generated
+	 */
+	void setCallByIndex(boolean value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isCallByIndex <em>Call By Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCallByIndex()
+	 * @see #isCallByIndex()
+	 * @see #setCallByIndex(boolean)
+	 * @generated
+	 */
+	void unsetCallByIndex();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isCallByIndex <em>Call By Index</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Call By Index</em>' attribute is set.
+	 * @see #unsetCallByIndex()
+	 * @see #isCallByIndex()
+	 * @see #setCallByIndex(boolean)
+	 * @generated
+	 */
+	boolean isSetCallByIndex();
+
+		/**
+	 * Returns the value of the '<em><b>Multiple Result Sets</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Multiple Result Sets</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Multiple Result Sets</em>' attribute.
+	 * @see #isSetMultipleResultSets()
+	 * @see #unsetMultipleResultSets()
+	 * @see #setMultipleResultSets(boolean)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getNamedStoredProcedureQuery_MultipleResultSets()
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 *        extendedMetaData="kind='attribute' name='multiple-result-sets'"
+	 * @generated
+	 */
+	boolean isMultipleResultSets();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isMultipleResultSets <em>Multiple Result Sets</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Multiple Result Sets</em>' attribute.
+	 * @see #isSetMultipleResultSets()
+	 * @see #unsetMultipleResultSets()
+	 * @see #isMultipleResultSets()
+	 * @generated
+	 */
+	void setMultipleResultSets(boolean value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isMultipleResultSets <em>Multiple Result Sets</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetMultipleResultSets()
+	 * @see #isMultipleResultSets()
+	 * @see #setMultipleResultSets(boolean)
+	 * @generated
+	 */
+	void unsetMultipleResultSets();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery#isMultipleResultSets <em>Multiple Result Sets</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Multiple Result Sets</em>' attribute is set.
+	 * @see #unsetMultipleResultSets()
+	 * @see #isMultipleResultSets()
+	 * @see #setMultipleResultSets(boolean)
+	 * @generated
+	 */
+	boolean isSetMultipleResultSets();
+
+		/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

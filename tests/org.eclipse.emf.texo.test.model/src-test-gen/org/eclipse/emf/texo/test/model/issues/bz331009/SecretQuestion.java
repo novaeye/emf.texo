@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -60,6 +62,7 @@ public class SecretQuestion extends Identifiable {
    */
   @Basic()
   @Column(name = "T_type")
+  @Enumerated(EnumType.STRING)
   private SecretQuestionType type = SecretQuestionType.REGULAR;
 
   /**

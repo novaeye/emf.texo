@@ -15,25 +15,21 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE, METHOD, FIELD})
- * 				@Retention(RUNTIME)
- * 				public @interface Converter {
- * 				*
- * 				* (Required) Name this converter. The
- * 				name should be unique across
- * 				* the whole persistence unit.
- * 				*
- * 				String
- * 				name();
+ *         @Target({TYPE, METHOD, FIELD})
+ *         @Retention(RUNTIME)
+ *         public @interface Converter {
+ *           /**
+ *            * (Required) Name this converter. The name should be unique across 
+ *            * the whole persistence unit.
+ *            **
+ *           String name();
  * 
- * 				*
- * 				* (Required) The converter class to be used. This class must
- * 				implement
- * 				* the org.eclipse.persistence.mappings.converters.Converter
- * 				interface.
- * 				*
- * 				Class converterClass();
- * 				}
+ *           /**
+ *            * (Required) The converter class to be used. This class must implement
+ *            * the org.eclipse.persistence.mappings.converters.Converter interface.
+ *            **
+ *           Class converterClass(); 
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

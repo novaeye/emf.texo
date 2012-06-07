@@ -2,6 +2,8 @@ package org.eclipse.emf.texo.test.model.issues.bz325429_test;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -26,6 +28,7 @@ public class Contact extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private ContactType type = ContactType.PHONE;
 
   /**

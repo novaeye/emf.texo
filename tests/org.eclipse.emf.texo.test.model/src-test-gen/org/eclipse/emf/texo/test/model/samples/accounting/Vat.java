@@ -21,7 +21,7 @@ public class Vat extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "T_name")
+  @Column(name = "name")
   private String name = null;
 
   /**

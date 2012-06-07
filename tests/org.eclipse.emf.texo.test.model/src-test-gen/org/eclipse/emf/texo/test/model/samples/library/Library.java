@@ -10,8 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
@@ -21,7 +19,6 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  */
 @orgeclipseemftexo.OneDotAnnotation("test")
 @Entity(name = "library_Library")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "library_Library_parent_id") })
 public class Library extends Identifiable {
 
   /**
@@ -30,7 +27,7 @@ public class Library extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "T_name")
+  @Column(name = "name", nullable = true)
   private String name = null;
 
   /**

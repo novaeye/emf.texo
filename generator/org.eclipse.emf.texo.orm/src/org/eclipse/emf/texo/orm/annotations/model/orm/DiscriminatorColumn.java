@@ -16,17 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE}) @Retention(RUNTIME)
- * 				public
- * 				@interface DiscriminatorColumn {
- * 				String name() default "DTYPE";
- * 				DiscriminatorType discriminatorType() default STRING;
- * 				String
- * 				columnDefinition() default "";
- * 				int length() default 31;
- * 				}
+ *         @Target({TYPE}) @Retention(RUNTIME)
+ *         public @interface DiscriminatorColumn {
+ *           String name() default "DTYPE";
+ *           DiscriminatorType discriminatorType() default STRING;
+ *           String columnDefinition() default "";
+ *           int length() default 31;
+ *         }
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -18,7 +18,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.EvenComplexNumberType" name="substitution_EvenComplexNumberType">
-    <orm:primary-key-join-column name="substitution_EvenComplexNumberType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup" name="substitution_MultiNumberType_myComplexAbstractGroup">
@@ -38,7 +37,7 @@
     <orm:table name="substitution_MultiNumberType"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup">
         <orm:join-table/>
@@ -75,7 +74,7 @@
     <orm:table name="substitution_NumberType"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="mySimpleAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup">
         <orm:join-table/>
@@ -92,7 +91,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.OddComplexNumberType" name="substitution_OddComplexNumberType">
-    <orm:primary-key-join-column name="substitution_OddComplexNumberType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

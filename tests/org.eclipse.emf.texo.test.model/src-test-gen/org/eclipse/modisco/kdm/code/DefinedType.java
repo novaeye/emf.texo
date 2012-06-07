@@ -17,7 +17,7 @@ public abstract class DefinedType extends Datatype {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private Datatype type = null;
 
   /**
@@ -25,7 +25,7 @@ public abstract class DefinedType extends Datatype {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL })
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = true)
   private Datatype codeElement = null;
 
   /**

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -53,7 +53,7 @@
         <orm:column name="version"/>
       </orm:basic>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -67,7 +67,7 @@
         <orm:column name="version"/>
       </orm:basic>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -81,7 +81,7 @@
         <orm:column name="version"/>
       </orm:basic>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="releaseDate">
         <orm:column name="releaseDate"/>
@@ -117,6 +117,7 @@
       <orm:element-collection name="ratings">
         <orm:order-column name="org_elver_music_Album_ratings_ind"/>
         <orm:column name="T_element"/>
+        <orm:enumerated>STRING</orm:enumerated>
         <orm:collection-table name="org_elver_music_Album_ratings">
           <orm:join-column name="org_elver_music_Album_ratings"/>
         </orm:collection-table>
@@ -136,7 +137,7 @@
         <orm:column name="track"/>
       </orm:basic>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

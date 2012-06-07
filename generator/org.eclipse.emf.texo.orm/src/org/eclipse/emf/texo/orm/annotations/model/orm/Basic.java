@@ -17,12 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface Basic {
- * 				FetchType fetch() default EAGER;
- * 				boolean
- * 				optional() default true;
- * 				}
+ *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface Basic {
+ *           FetchType fetch() default EAGER;
+ *           boolean optional() default true;
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -31,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getIndex <em>Index</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getGeneratedValue <em>Generated Value</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getLob <em>Lob</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal <em>Temporal</em>}</li>
@@ -44,7 +44,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getSequenceGenerator <em>Sequence Generator</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAccessMethods <em>Access Methods</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnInsert <em>Return Insert</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnUpdate <em>Return Update</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getFetch <em>Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#isMutable <em>Mutable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getName <em>Name</em>}</li>
@@ -85,6 +88,33 @@ public interface Basic extends BaseOrmAnnotation {
   void setColumn(Column value);
 
   /**
+	 * Returns the value of the '<em><b>Index</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Index</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Index</em>' containment reference.
+	 * @see #setIndex(Index)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_Index()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='index' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Index getIndex();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getIndex <em>Index</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Index</em>' containment reference.
+	 * @see #getIndex()
+	 * @generated
+	 */
+	void setIndex(Index value);
+
+		/**
 	 * Returns the value of the '<em><b>Generated Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -138,7 +168,6 @@ public interface Basic extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Temporal</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Temporal}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Temporal</em>' attribute isn't clear, there really should be more of a description
@@ -146,53 +175,26 @@ public interface Basic extends BaseOrmAnnotation {
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Temporal</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see #isSetTemporal()
-	 * @see #unsetTemporal()
-	 * @see #setTemporal(Temporal)
+	 * @see #setTemporal(TemporalType)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_Temporal()
-	 * @model unsettable="true"
+	 * @model dataType="org.eclipse.emf.texo.orm.annotations.model.orm.Temporal"
 	 *        extendedMetaData="kind='element' name='temporal' namespace='##targetNamespace'"
 	 * @generated
 	 */
-  Temporal getTemporal();
+  TemporalType getTemporal();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal <em>Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Temporal</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Temporal
-	 * @see #isSetTemporal()
-	 * @see #unsetTemporal()
 	 * @see #getTemporal()
 	 * @generated
 	 */
-  void setTemporal(Temporal value);
+	void setTemporal(TemporalType value);
 
-  /**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal <em>Temporal</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isSetTemporal()
-	 * @see #getTemporal()
-	 * @see #setTemporal(Temporal)
-	 * @generated
-	 */
-  void unsetTemporal();
-
-  /**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getTemporal <em>Temporal</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Temporal</em>' attribute is set.
-	 * @see #unsetTemporal()
-	 * @see #getTemporal()
-	 * @see #setTemporal(Temporal)
-	 * @generated
-	 */
-  boolean isSetTemporal();
-
-  /**
+		/**
 	 * Returns the value of the '<em><b>Enumerated</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Enumerated</em>' attribute isn't clear, there really should be more of a description
@@ -200,51 +202,25 @@ public interface Basic extends BaseOrmAnnotation {
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enumerated</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @see #isSetEnumerated()
-	 * @see #unsetEnumerated()
-	 * @see #setEnumerated(Enumerated)
+	 * @see #setEnumerated(EnumType)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_Enumerated()
-	 * @model unsettable="true"
+	 * @model dataType="org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated"
 	 *        extendedMetaData="kind='element' name='enumerated' namespace='##targetNamespace'"
 	 * @generated
 	 */
-  Enumerated getEnumerated();
+  EnumType getEnumerated();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getEnumerated <em>Enumerated</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Enumerated</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @see #isSetEnumerated()
-	 * @see #unsetEnumerated()
 	 * @see #getEnumerated()
 	 * @generated
 	 */
-  void setEnumerated(Enumerated value);
+	void setEnumerated(EnumType value);
 
-  /**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getEnumerated <em>Enumerated</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #isSetEnumerated()
-	 * @see #getEnumerated()
-	 * @see #setEnumerated(Enumerated)
-	 * @generated
-	 */
-  void unsetEnumerated();
-
-  /**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getEnumerated <em>Enumerated</em>}' attribute is set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Enumerated</em>' attribute is set.
-	 * @see #unsetEnumerated()
-	 * @see #getEnumerated()
-	 * @see #setEnumerated(Enumerated)
-	 * @generated
-	 */
-  boolean isSetEnumerated();
-
-  /**
+		/**
 	 * Returns the value of the '<em><b>Convert</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -470,6 +446,60 @@ public interface Basic extends BaseOrmAnnotation {
   void setAccessMethods(AccessMethods value);
 
   /**
+	 * Returns the value of the '<em><b>Return Insert</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Return Insert</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Return Insert</em>' containment reference.
+	 * @see #setReturnInsert(ReturnInsert)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_ReturnInsert()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='return-insert' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ReturnInsert getReturnInsert();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnInsert <em>Return Insert</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Return Insert</em>' containment reference.
+	 * @see #getReturnInsert()
+	 * @generated
+	 */
+	void setReturnInsert(ReturnInsert value);
+
+		/**
+	 * Returns the value of the '<em><b>Return Update</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Return Update</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Return Update</em>' containment reference.
+	 * @see #setReturnUpdate(EmptyType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_ReturnUpdate()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='return-update' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EmptyType getReturnUpdate();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getReturnUpdate <em>Return Update</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Return Update</em>' containment reference.
+	 * @see #getReturnUpdate()
+	 * @generated
+	 */
+	void setReturnUpdate(EmptyType value);
+
+		/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
 	 * <!-- begin-user-doc -->
@@ -523,6 +553,33 @@ public interface Basic extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
+	 * Returns the value of the '<em><b>Attribute Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attribute Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attribute Type</em>' attribute.
+	 * @see #setAttributeType(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_AttributeType()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='attribute-type'"
+	 * @generated
+	 */
+	String getAttributeType();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Basic#getAttributeType <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attribute Type</em>' attribute.
+	 * @see #getAttributeType()
+	 * @generated
+	 */
+	void setAttributeType(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Fetch</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchType}.
 	 * <!-- begin-user-doc -->
@@ -653,7 +710,6 @@ public interface Basic extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Optional</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Optional</em>' attribute isn't clear, there really should be more of a description
@@ -665,7 +721,7 @@ public interface Basic extends BaseOrmAnnotation {
 	 * @see #unsetOptional()
 	 * @see #setOptional(boolean)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasic_Optional()
-	 * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='optional'"
 	 * @generated
 	 */

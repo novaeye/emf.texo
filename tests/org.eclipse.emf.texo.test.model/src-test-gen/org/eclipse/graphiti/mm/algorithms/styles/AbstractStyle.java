@@ -3,6 +3,8 @@ package org.eclipse.graphiti.mm.algorithms.styles;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -44,6 +46,7 @@ public abstract class AbstractStyle extends Identifiable {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private LineStyle lineStyle = LineStyle.SOLID;
 
   /**

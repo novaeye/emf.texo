@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.samples.rental;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.OneToOne;
 
 /**
@@ -19,6 +21,7 @@ public class RentalCar extends RentalUnit {
    * @generated
    */
   @Basic(optional = false)
+  @Enumerated(EnumType.STRING)
   private RentalCarSize size = RentalCarSize.SMALL;
 
   /**

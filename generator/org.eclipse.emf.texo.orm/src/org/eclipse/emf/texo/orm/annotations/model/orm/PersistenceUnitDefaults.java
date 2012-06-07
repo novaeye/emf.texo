@@ -6,6 +6,7 @@
  */
 package org.eclipse.emf.texo.orm.annotations.model.orm;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
 import org.eclipse.emf.ecore.EObject;
 
@@ -16,30 +17,24 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				These defaults are applied to the persistence unit
- * 				as a whole
- * 				unless they are overridden by local annotation or XML
- * 				element settings.
- * 
- * 				schema - Used as the schema for all tables,
- * 				secondary tables,
- * 				collection tables, sequence generators, and table
- * 				generators
- * 				that apply to the persistence unit
- * 				catalog - Used as the
- * 				catalog for all tables, secondary tables,
- * 				collection tables, sequence
- * 				generators, and table generators
- * 				that apply to the persistence unit
- * 				access - Used as the access type for all managed classes in
- * 				the
- * 				persistence unit
- * 				cascade-persist - Adds cascade-persist to the set of
- * 				cascade options
- * 				in all entity relationships of the persistence unit
- * 				entity-listeners - List of default entity listeners to be invoked
- * 				on
- * 				each entity in the persistence unit.
+ *         These defaults are applied to the persistence unit as a whole 
+ *         unless they are overridden by local annotation or XML 
+ *         element settings. 
+ *         
+ *         schema - Used as the schema for all tables, secondary tables, join
+ *             tables, collection tables, sequence generators, and table 
+ *             generators that apply to the persistence unit
+ *         catalog - Used as the catalog for all tables, secondary tables, join
+ *             tables, collection tables, sequence generators, and table 
+ *             generators that apply to the persistence unit
+ *         delimited-identifiers - Used to treat database identifiers as
+ *             delimited identifiers.
+ *         access - Used as the access type for all managed classes in
+ *             the persistence unit
+ *         cascade-persist - Adds cascade-persist to the set of cascade options
+ *             in all entity relationships of the persistence unit
+ *         entity-listeners - List of default entity listeners to be invoked 
+ *             on each entity in the persistence unit. 
  * 
  *       
  * <!-- end-model-doc -->
@@ -52,7 +47,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getCatalog <em>Catalog</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getDelimitedIdentifiers <em>Delimited Identifiers</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getCascadePersist <em>Cascade Persist</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getTenantDiscriminator <em>Tenant Discriminator</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getEntityListeners <em>Entity Listeners</em>}</li>
  * </ul>
  * </p>
@@ -220,6 +217,33 @@ public interface PersistenceUnitDefaults extends BaseOrmAnnotation {
   boolean isSetAccess();
 
   /**
+	 * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Access Methods</em>' containment reference.
+	 * @see #setAccessMethods(AccessMethods)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPersistenceUnitDefaults_AccessMethods()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AccessMethods getAccessMethods();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults#getAccessMethods <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Access Methods</em>' containment reference.
+	 * @see #getAccessMethods()
+	 * @generated
+	 */
+	void setAccessMethods(AccessMethods value);
+
+		/**
 	 * Returns the value of the '<em><b>Cascade Persist</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -246,6 +270,23 @@ public interface PersistenceUnitDefaults extends BaseOrmAnnotation {
   void setCascadePersist(EmptyType value);
 
   /**
+	 * Returns the value of the '<em><b>Tenant Discriminator</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tenant Discriminator</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tenant Discriminator</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getPersistenceUnitDefaults_TenantDiscriminator()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='tenant-discriminator' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<TenantDiscriminator> getTenantDiscriminator();
+
+		/**
 	 * Returns the value of the '<em><b>Entity Listeners</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>

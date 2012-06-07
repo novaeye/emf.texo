@@ -70,6 +70,14 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createAccessMethodsAdapter();
 			}
 			@Override
+			public Adapter caseAdditionalCriteria(AdditionalCriteria object) {
+				return createAdditionalCriteriaAdapter();
+			}
+			@Override
+			public Adapter caseArray(Array object) {
+				return createArrayAdapter();
+			}
+			@Override
 			public Adapter caseAssociationOverride(AssociationOverride object) {
 				return createAssociationOverrideAdapter();
 			}
@@ -94,6 +102,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createBasicMapAdapter();
 			}
 			@Override
+			public Adapter caseBatchFetch(BatchFetch object) {
+				return createBatchFetchAdapter();
+			}
+			@Override
 			public Adapter caseCache(Cache object) {
 				return createCacheAdapter();
 			}
@@ -108,6 +120,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseChangeTracking(ChangeTracking object) {
 				return createChangeTrackingAdapter();
+			}
+			@Override
+			public Adapter caseClassExtractor(ClassExtractor object) {
+				return createClassExtractorAdapter();
 			}
 			@Override
 			public Adapter caseCloneCopyPolicy(CloneCopyPolicy object) {
@@ -198,6 +214,14 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createEntityResultAdapter();
 			}
 			@Override
+			public Adapter caseFetchAttribute(FetchAttribute object) {
+				return createFetchAttributeAdapter();
+			}
+			@Override
+			public Adapter caseFetchGroup(FetchGroup object) {
+				return createFetchGroupAdapter();
+			}
+			@Override
 			public Adapter caseFieldResult(FieldResult object) {
 				return createFieldResultAdapter();
 			}
@@ -206,12 +230,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createGeneratedValueAdapter();
 			}
 			@Override
+			public Adapter caseHashPartitioning(HashPartitioning object) {
+				return createHashPartitioningAdapter();
+			}
+			@Override
 			public Adapter caseId(Id object) {
 				return createIdAdapter();
 			}
 			@Override
 			public Adapter caseIdClass(IdClass object) {
 				return createIdClassAdapter();
+			}
+			@Override
+			public Adapter caseIndex(Index object) {
+				return createIndexAdapter();
 			}
 			@Override
 			public Adapter caseInheritance(Inheritance object) {
@@ -262,12 +294,28 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createMappedSuperclassAdapter();
 			}
 			@Override
+			public Adapter caseMultitenant(Multitenant object) {
+				return createMultitenantAdapter();
+			}
+			@Override
 			public Adapter caseNamedNativeQuery(NamedNativeQuery object) {
 				return createNamedNativeQueryAdapter();
 			}
 			@Override
+			public Adapter caseNamedPlsqlStoredFunctionQuery(NamedPlsqlStoredFunctionQuery object) {
+				return createNamedPlsqlStoredFunctionQueryAdapter();
+			}
+			@Override
+			public Adapter caseNamedPlsqlStoredProcedureQuery(NamedPlsqlStoredProcedureQuery object) {
+				return createNamedPlsqlStoredProcedureQueryAdapter();
+			}
+			@Override
 			public Adapter caseNamedQuery(NamedQuery object) {
 				return createNamedQueryAdapter();
+			}
+			@Override
+			public Adapter caseNamedStoredFunctionQuery(NamedStoredFunctionQuery object) {
+				return createNamedStoredFunctionQueryAdapter();
 			}
 			@Override
 			public Adapter caseNamedStoredProcedureQuery(NamedStoredProcedureQuery object) {
@@ -294,12 +342,32 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createOrderColumnAdapter();
 			}
 			@Override
+			public Adapter casePartitioning(Partitioning object) {
+				return createPartitioningAdapter();
+			}
+			@Override
 			public Adapter casePersistenceUnitDefaults(PersistenceUnitDefaults object) {
 				return createPersistenceUnitDefaultsAdapter();
 			}
 			@Override
 			public Adapter casePersistenceUnitMetadata(PersistenceUnitMetadata object) {
 				return createPersistenceUnitMetadataAdapter();
+			}
+			@Override
+			public Adapter casePinnedPartitioning(PinnedPartitioning object) {
+				return createPinnedPartitioningAdapter();
+			}
+			@Override
+			public Adapter casePlsqlParameter(PlsqlParameter object) {
+				return createPlsqlParameterAdapter();
+			}
+			@Override
+			public Adapter casePlsqlRecord(PlsqlRecord object) {
+				return createPlsqlRecordAdapter();
+			}
+			@Override
+			public Adapter casePlsqlTable(PlsqlTable object) {
+				return createPlsqlTableAdapter();
 			}
 			@Override
 			public Adapter casePostLoad(PostLoad object) {
@@ -350,8 +418,28 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createQueryRedirectorsAdapter();
 			}
 			@Override
+			public Adapter caseRangePartition(RangePartition object) {
+				return createRangePartitionAdapter();
+			}
+			@Override
+			public Adapter caseRangePartitioning(RangePartitioning object) {
+				return createRangePartitioningAdapter();
+			}
+			@Override
 			public Adapter caseReadTransformer(ReadTransformer object) {
 				return createReadTransformerAdapter();
+			}
+			@Override
+			public Adapter caseReplicationPartitioning(ReplicationPartitioning object) {
+				return createReplicationPartitioningAdapter();
+			}
+			@Override
+			public Adapter caseReturnInsert(ReturnInsert object) {
+				return createReturnInsertAdapter();
+			}
+			@Override
+			public Adapter caseRoundRobinPartitioning(RoundRobinPartitioning object) {
+				return createRoundRobinPartitioningAdapter();
 			}
 			@Override
 			public Adapter caseSecondaryTable(SecondaryTable object) {
@@ -370,8 +458,16 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createStoredProcedureParameterAdapter();
 			}
 			@Override
+			public Adapter caseStruct(Struct object) {
+				return createStructAdapter();
+			}
+			@Override
 			public Adapter caseStructConverter(StructConverter object) {
 				return createStructConverterAdapter();
+			}
+			@Override
+			public Adapter caseStructure(Structure object) {
+				return createStructureAdapter();
 			}
 			@Override
 			public Adapter caseTable(Table object) {
@@ -380,6 +476,10 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTableGenerator(TableGenerator object) {
 				return createTableGeneratorAdapter();
+			}
+			@Override
+			public Adapter caseTenantDiscriminator(TenantDiscriminator object) {
+				return createTenantDiscriminatorAdapter();
 			}
 			@Override
 			public Adapter caseTimeOfDay(TimeOfDay object) {
@@ -398,8 +498,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 				return createTypeConverterAdapter();
 			}
 			@Override
+			public Adapter caseUnionPartitioning(UnionPartitioning object) {
+				return createUnionPartitioningAdapter();
+			}
+			@Override
 			public Adapter caseUniqueConstraint(UniqueConstraint object) {
 				return createUniqueConstraintAdapter();
+			}
+			@Override
+			public Adapter caseValuePartition(ValuePartition object) {
+				return createValuePartitionAdapter();
+			}
+			@Override
+			public Adapter caseValuePartitioning(ValuePartitioning object) {
+				return createValuePartitioningAdapter();
 			}
 			@Override
 			public Adapter caseVariableOneToOne(VariableOneToOne object) {
@@ -444,6 +556,34 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria <em>Additional Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.AdditionalCriteria
+	 * @generated
+	 */
+	public Adapter createAdditionalCriteriaAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Array <em>Array</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Array
+	 * @generated
+	 */
+	public Adapter createArrayAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride <em>Association Override</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -522,6 +662,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch <em>Batch Fetch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch
+	 * @generated
+	 */
+	public Adapter createBatchFetchAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache <em>Cache</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -574,6 +728,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ClassExtractor <em>Class Extractor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ClassExtractor
+	 * @generated
+	 */
+	public Adapter createClassExtractorAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy <em>Clone Copy Policy</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -857,6 +1025,34 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchAttribute <em>Fetch Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchAttribute
+	 * @generated
+	 */
+	public Adapter createFetchAttributeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup <em>Fetch Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.FetchGroup
+	 * @generated
+	 */
+	public Adapter createFetchGroupAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.FieldResult <em>Field Result</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -883,6 +1079,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning <em>Hash Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning
+	 * @generated
+	 */
+	public Adapter createHashPartitioningAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Id <em>Id</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful
    * to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -907,6 +1117,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Index <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Index
+	 * @generated
+	 */
+	public Adapter createIndexAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance <em>Inheritance</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -1055,6 +1279,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant <em>Multitenant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Multitenant
+	 * @generated
+	 */
+	public Adapter createMultitenantAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery <em>Named Native Query</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -1069,6 +1307,34 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery
+	 * @generated
+	 */
+	public Adapter createNamedPlsqlStoredFunctionQueryAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery
+	 * @generated
+	 */
+	public Adapter createNamedPlsqlStoredProcedureQueryAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery <em>Named Query</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -1081,6 +1347,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery <em>Named Stored Function Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery
+	 * @generated
+	 */
+	public Adapter createNamedStoredFunctionQueryAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that
    * we can easily ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
@@ -1158,6 +1438,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning <em>Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning
+	 * @generated
+	 */
+	public Adapter createPartitioningAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults <em>Persistence Unit Defaults</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
    * ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -1182,6 +1476,62 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning <em>Pinned Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning
+	 * @generated
+	 */
+	public Adapter createPinnedPartitioningAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter <em>Plsql Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlParameter
+	 * @generated
+	 */
+	public Adapter createPlsqlParameterAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord <em>Plsql Record</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord
+	 * @generated
+	 */
+	public Adapter createPlsqlRecordAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable <em>Plsql Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable
+	 * @generated
+	 */
+	public Adapter createPlsqlTableAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.PostLoad <em>Post Load</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -1330,6 +1680,34 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition <em>Range Partition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartition
+	 * @generated
+	 */
+	public Adapter createRangePartitionAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning <em>Range Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning
+	 * @generated
+	 */
+	public Adapter createRangePartitioningAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.ReadTransformer <em>Read Transformer</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -1344,6 +1722,48 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning <em>Replication Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning
+	 * @generated
+	 */
+	public Adapter createReplicationPartitioningAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ReturnInsert <em>Return Insert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ReturnInsert
+	 * @generated
+	 */
+	public Adapter createReturnInsertAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning <em>Round Robin Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning
+	 * @generated
+	 */
+	public Adapter createRoundRobinPartitioningAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable <em>Secondary Table</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -1398,6 +1818,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Struct <em>Struct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Struct
+	 * @generated
+	 */
+	public Adapter createStructAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter <em>Struct Converter</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -1412,6 +1846,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure <em>Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Structure
+	 * @generated
+	 */
+	public Adapter createStructureAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Table <em>Table</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
    * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -1438,6 +1886,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator <em>Tenant Discriminator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator
+	 * @generated
+	 */
+	public Adapter createTenantDiscriminatorAdapter() {
+		return null;
+	}
+
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay <em>Time Of Day</em>}'.
 	 * <!-- begin-user-doc --> This default implementation returns null so that we can easily
    * ignore cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!-- end-user-doc -->
@@ -1486,6 +1948,20 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning <em>Union Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning
+	 * @generated
+	 */
+	public Adapter createUnionPartitioningAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint <em>Unique Constraint</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to
@@ -1500,6 +1976,34 @@ public class OrmAdapterFactory extends AdapterFactoryImpl {
 	}
 
   /**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition <em>Value Partition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartition
+	 * @generated
+	 */
+	public Adapter createValuePartitionAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning <em>Value Partitioning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning
+	 * @generated
+	 */
+	public Adapter createValuePartitioningAdapter() {
+		return null;
+	}
+
+		/**
    * Creates a new adapter for an object of class '
    * {@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne <em>Variable One To One</em>}'. <!--
    * begin-user-doc --> This default implementation returns null so that we can easily ignore cases; it's useful to

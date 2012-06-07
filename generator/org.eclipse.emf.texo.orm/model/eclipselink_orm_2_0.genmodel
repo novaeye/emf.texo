@@ -10,14 +10,30 @@
       resource="XML" disposableProviderFactory="true" loadInitialization="true" literalsInterface="false"
       ecorePackage="orm.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//AccessType">
-      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//AccessType/FIELD"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//AccessType/PROPERTY"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//AccessType/FIELD"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//AccessType/VIRTUAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//BatchFetchType">
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//BatchFetchType/JOIN"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//BatchFetchType/EXISTS"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//BatchFetchType/IN"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//CacheCoordinationType">
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheCoordinationType/SENDOBJECTCHANGES"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheCoordinationType/INVALIDATECHANGEDOBJECTS"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheCoordinationType/SENDNEWOBJECTSWITHCHANGES"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheCoordinationType/NONE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//CacheIsolationType">
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheIsolationType/SHARED"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheIsolationType/PROTECTED"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheIsolationType/ISOLATED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//CacheKeyType">
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheKeyType/IDVALUE"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheKeyType/CACHEKEY"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheKeyType/AUTO"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//CacheType">
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//CacheType/FULL"/>
@@ -44,10 +60,6 @@
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//DiscriminatorType/STRING"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//DiscriminatorType/CHAR"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//DiscriminatorType/INTEGER"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//Enumerated">
-      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//Enumerated/ORDINAL"/>
-      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//Enumerated/STRING"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//EnumType">
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//EnumType/ORDINAL"/>
@@ -93,6 +105,10 @@
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//LockModeType/PESSIMISTICFORCEINCREMENT"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//LockModeType/NONE"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//MultitenantType">
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//MultitenantType/SINGLETABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//MultitenantType/TABLEPERTENANT"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//OptimisticLockingType">
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//OptimisticLockingType/ALLCOLUMNS"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//OptimisticLockingType/CHANGEDCOLUMNS"/>
@@ -104,10 +120,11 @@
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//OrderColumnCorrectionType/READWRITE"/>
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//OrderColumnCorrectionType/EXCEPTION"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//Temporal">
-      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//Temporal/DATE"/>
-      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//Temporal/TIME"/>
-      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//Temporal/TIMESTAMP"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//SupportedVersionsType">
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//SupportedVersionsType/_20"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//SupportedVersionsType/_21"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//SupportedVersionsType/_22"/>
+      <genEnumLiterals ecoreEnumLiteral="orm.ecore#//SupportedVersionsType/_23"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="orm.ecore#//TemporalType">
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//TemporalType/DATE"/>
@@ -115,13 +132,16 @@
       <genEnumLiterals ecoreEnumLiteral="orm.ecore#//TemporalType/TIMESTAMP"/>
     </genEnums>
     <genDataTypes ecoreDataType="orm.ecore#//AccessTypeObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//BatchFetchTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//CacheCoordinationTypeObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//CacheIsolationTypeObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//CacheKeyTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//CacheTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//ChangeTrackingTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//DirectionTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//DiscriminatorTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//DiscriminatorValue"/>
-    <genDataTypes ecoreDataType="orm.ecore#//EnumeratedObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//Enumerated"/>
     <genDataTypes ecoreDataType="orm.ecore#//EnumTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//ExistenceTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//FetchTypeObject"/>
@@ -130,15 +150,39 @@
     <genDataTypes ecoreDataType="orm.ecore#//InheritanceTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//JoinFetchTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//LockModeTypeObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//MultitenantTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//OptimisticLockingTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//OrderBy"/>
     <genDataTypes ecoreDataType="orm.ecore#//OrderColumnCorrectionTypeObject"/>
-    <genDataTypes ecoreDataType="orm.ecore#//TemporalObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//SupportedVersionsTypeObject"/>
+    <genDataTypes ecoreDataType="orm.ecore#//Temporal"/>
     <genDataTypes ecoreDataType="orm.ecore#//TemporalTypeObject"/>
     <genDataTypes ecoreDataType="orm.ecore#//VersionType"/>
     <genClasses ecoreClass="orm.ecore#//AccessMethods">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//AccessMethods/getMethod"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//AccessMethods/setMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//AdditionalCriteria">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//AdditionalCriteria/criteria"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//Array">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Array/column"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/temporal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/enumerated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Array/lob"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/convert"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute orm.ecore#//Array/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//Array/converter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//Array/typeConverter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//Array/objectTypeConverter"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//Array/structConverter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Array/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Array/accessMethods"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/attributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/databaseType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Array/targetClass"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//AssociationOverride">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//AssociationOverride/description"/>
@@ -168,9 +212,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Attributes/embedded"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Attributes/transformation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Attributes/transient"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Attributes/structure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Attributes/array"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//Basic">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/column"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/index"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/generatedValue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/lob"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Basic/temporal"/>
@@ -184,7 +231,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/sequenceGenerator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/returnInsert"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Basic/returnUpdate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Basic/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Basic/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Basic/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Basic/mutable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Basic/name"/>
@@ -199,8 +249,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicCollection/structConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicCollection/collectionTable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicCollection/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicCollection/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicCollection/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicCollection/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicCollection/noncacheable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicCollection/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicCollection/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicCollection/name"/>
@@ -217,11 +269,17 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//BasicMap/structConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicMap/collectionTable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicMap/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicMap/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicMap/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicMap/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//BasicMap/noncacheable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicMap/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicMap/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BasicMap/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//BatchFetch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BatchFetch/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//BatchFetch/type"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//Cache">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/expiry"/>
@@ -229,6 +287,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/alwaysRefresh"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/coordinationType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/disableHits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/isolation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/refreshOnlyIfNewer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/shared"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Cache/size"/>
@@ -243,9 +302,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//CascadeType/cascadeMerge"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//CascadeType/cascadeRemove"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//CascadeType/cascadeRefresh"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//CascadeType/cascadeDetach"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//ChangeTracking">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ChangeTracking/type"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//ClassExtractor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ClassExtractor/class"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//CloneCopyPolicy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//CloneCopyPolicy/method"/>
@@ -255,6 +318,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//CollectionTable/joinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//CollectionTable/uniqueConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//CollectionTable/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//CollectionTable/creationSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//CollectionTable/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//CollectionTable/schema"/>
     </genClasses>
@@ -307,6 +371,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EclipselinkCollectionTable/primaryKeyJoinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EclipselinkCollectionTable/uniqueConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EclipselinkCollectionTable/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EclipselinkCollectionTable/creationSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EclipselinkCollectionTable/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EclipselinkCollectionTable/schema"/>
     </genClasses>
@@ -335,30 +400,52 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/objectTypeConverter"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/structConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/collectionTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/cascadeOnDelete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/noncacheable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ElementCollection/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/partitioned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/attributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/compositeMember"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ElementCollection/targetClass"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//Embeddable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embeddable/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/accessMethods"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/customizer"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/changeTracking"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/struct"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/converter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/typeConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/objectTypeConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/structConverter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/property"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/attributes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/copyPolicy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/instantiationCopyPolicy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/cloneCopyPolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/plsqlRecord"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/plsqlTable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/attributeOverride"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/associationOverride"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embeddable/attributes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embeddable/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embeddable/class"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embeddable/excludeDefaultMappings"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embeddable/metadataComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embeddable/parentClass"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//Embedded">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embedded/attributeOverride"/>
@@ -366,6 +453,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embedded/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Embedded/accessMethods"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embedded/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embedded/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Embedded/name"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//EmbeddedId">
@@ -373,24 +461,33 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EmbeddedId/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EmbeddedId/accessMethods"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EmbeddedId/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EmbeddedId/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EmbeddedId/name"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//EmptyType"/>
     <genClasses ecoreClass="orm.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/multitenant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/additionalCriteria"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/customizer"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/changeTracking"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/table"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/secondaryTable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/struct"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/primaryKeyJoinColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/cascadeOnDelete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/index"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/idClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/primaryKey"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/inheritance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/discriminatorValue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/discriminatorColumn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/classExtractor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/optimisticLocking"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/cache"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/cacheInterceptor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/fetchGroup"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/converter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/typeConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/objectTypeConverter"/>
@@ -400,14 +497,35 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/cloneCopyPolicy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/sequenceGenerator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/tableGenerator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/partitioned"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/namedQuery"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/namedNativeQuery"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/namedStoredProcedureQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/namedStoredFunctionQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/namedPlsqlStoredProcedureQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/namedPlsqlStoredFunctionQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/plsqlRecord"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/plsqlTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/sqlResultSetMapping"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/queryRedirectors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/excludeDefaultListeners"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/excludeSuperclassListeners"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/entityListeners"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/prePersist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/postPersist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/preRemove"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/postRemove"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/preUpdate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/postUpdate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/postLoad"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/attributeOverride"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Entity/associationOverride"/>
@@ -419,6 +537,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/existenceChecking"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/metadataComplete"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/parentClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Entity/readOnly"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//EntityListener">
@@ -442,15 +561,30 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EntityMappingsType/schema"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EntityMappingsType/catalog"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EntityMappingsType/access"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/tenantDiscriminator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/converter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/typeConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/objectTypeConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/structConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/sequenceGenerator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/tableGenerator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/unionPartitioning"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/namedQuery"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/namedNativeQuery"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/namedStoredProcedureQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/namedStoredFunctionQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/namedPlsqlStoredProcedureQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/namedPlsqlStoredFunctionQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/plsqlRecord"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/plsqlTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/sqlResultSetMapping"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/mappedSuperclass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//EntityMappingsType/entity"/>
@@ -462,6 +596,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EntityResult/discriminatorColumn"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//EntityResult/entityClass"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//FetchAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//FetchAttribute/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//FetchGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//FetchGroup/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//FetchGroup/load"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//FetchGroup/name"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//FieldResult">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//FieldResult/column"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//FieldResult/name"/>
@@ -470,10 +612,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//GeneratedValue/generator"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//GeneratedValue/strategy"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//HashPartitioning">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//HashPartitioning/partitionColumn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//HashPartitioning/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//HashPartitioning/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//HashPartitioning/unionUnpartitionableQueries"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//Id">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/column"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/index"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/generatedValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/temporal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/enumerated"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/convert"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/converter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/typeConverter"/>
@@ -484,11 +634,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Id/accessMethods"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/mutable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Id/name"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//IdClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//IdClass/class"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//Index">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Index/columnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Index/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Index/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Index/schema"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Index/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Index/unique"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//Inheritance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Inheritance/strategy"/>
@@ -509,6 +668,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//JoinTable/inverseJoinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//JoinTable/uniqueConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//JoinTable/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//JoinTable/creationSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//JoinTable/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//JoinTable/schema"/>
     </genClasses>
@@ -531,10 +691,23 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/structConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/joinTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/cascade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/cascadeOnDelete"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/noncacheable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToMany/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/partitioned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/mappedBy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToMany/name"/>
@@ -545,8 +718,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/joinTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/cascade"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToOne/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/noncacheable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ManyToOne/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToOne/partitioned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToOne/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToOne/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ManyToOne/id"/>
@@ -585,6 +769,9 @@
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//MappedSuperclass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/multitenant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/additionalCriteria"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/customizer"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/changeTracking"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/idClass"/>
@@ -592,6 +779,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/optimisticLocking"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/cache"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/cacheInterceptor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/fetchGroup"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/converter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/typeConverter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/objectTypeConverter"/>
@@ -599,6 +787,27 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/copyPolicy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/instantiationCopyPolicy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/cloneCopyPolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/sequenceGenerator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/tableGenerator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/partitioned"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/namedQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/namedNativeQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/namedStoredProcedureQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/namedStoredFunctionQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/namedPlsqlStoredProcedureQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/namedPlsqlStoredFunctionQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/plsqlRecord"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/plsqlTable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/sqlResultSetMapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/queryRedirectors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/excludeDefaultListeners"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/excludeSuperclassListeners"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/entityListeners"/>
@@ -610,6 +819,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/postUpdate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/postLoad"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/attributeOverride"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/associationOverride"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//MappedSuperclass/attributes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/cacheable"/>
@@ -617,7 +828,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/excludeDefaultMappings"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/existenceChecking"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/metadataComplete"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/parentClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MappedSuperclass/readOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//Multitenant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Multitenant/tenantDiscriminator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Multitenant/type"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//NamedNativeQuery">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedNativeQuery/description"/>
@@ -627,6 +843,22 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedNativeQuery/resultClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedNativeQuery/resultSetMapping"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//NamedPlsqlStoredFunctionQuery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedPlsqlStoredFunctionQuery/hint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedPlsqlStoredFunctionQuery/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedPlsqlStoredFunctionQuery/returnParameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredFunctionQuery/functionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredFunctionQuery/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredFunctionQuery/resultSetMapping"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//NamedPlsqlStoredProcedureQuery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedPlsqlStoredProcedureQuery/hint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedPlsqlStoredProcedureQuery/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredProcedureQuery/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredProcedureQuery/procedureName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredProcedureQuery/resultClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedPlsqlStoredProcedureQuery/resultSetMapping"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//NamedQuery">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedQuery/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedQuery/query"/>
@@ -634,9 +866,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedQuery/hint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedQuery/name"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//NamedStoredFunctionQuery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedStoredFunctionQuery/hint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedStoredFunctionQuery/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedStoredFunctionQuery/returnParameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredFunctionQuery/callByIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredFunctionQuery/functionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredFunctionQuery/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredFunctionQuery/resultSetMapping"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//NamedStoredProcedureQuery">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedStoredProcedureQuery/hint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//NamedStoredProcedureQuery/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredProcedureQuery/callByIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredProcedureQuery/multipleResultSets"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredProcedureQuery/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredProcedureQuery/procedureName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//NamedStoredProcedureQuery/resultClass"/>
@@ -669,11 +912,24 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/joinTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/joinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/cascade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/cascadeOnDelete"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/privateOwned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/noncacheable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToMany/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/partitioned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/mappedBy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToMany/name"/>
@@ -685,10 +941,22 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/joinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/joinTable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/cascade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToOne/cascadeOnDelete"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/privateOwned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToOne/joinFetch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/batchFetch"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/noncacheable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//OneToOne/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToOne/partitioned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToOne/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToOne/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OneToOne/id"/>
@@ -712,13 +980,19 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OrderColumn/nullable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//OrderColumn/updatable"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//Partitioning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Partitioning/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Partitioning/name"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//PersistenceUnitDefaults">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PersistenceUnitDefaults/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PersistenceUnitDefaults/schema"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PersistenceUnitDefaults/catalog"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitDefaults/delimitedIdentifiers"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PersistenceUnitDefaults/access"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitDefaults/accessMethods"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitDefaults/cascadePersist"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitDefaults/tenantDiscriminator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitDefaults/entityListeners"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//PersistenceUnitMetadata">
@@ -726,6 +1000,32 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitMetadata/xmlMappingMetadataComplete"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitMetadata/excludeDefaultMappings"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PersistenceUnitMetadata/persistenceUnitDefaults"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//PinnedPartitioning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PinnedPartitioning/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PinnedPartitioning/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//PlsqlParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/databaseType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/direction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/optional"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/queryParameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlParameter/scale"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//PlsqlRecord">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PlsqlRecord/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlRecord/compatibleType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlRecord/javaType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlRecord/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//PlsqlTable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlTable/compatibleType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlTable/javaType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlTable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PlsqlTable/nestedType"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//PostLoad">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PostLoad/description"/>
@@ -757,6 +1057,7 @@
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//PrimaryKey">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//PrimaryKey/column"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PrimaryKey/cacheKeyType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//PrimaryKey/validation"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//PrimaryKeyJoinColumn">
@@ -783,14 +1084,39 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//QueryRedirectors/report"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//QueryRedirectors/update"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//RangePartition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RangePartition/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RangePartition/endValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RangePartition/startValue"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//RangePartitioning">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//RangePartitioning/partitionColumn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//RangePartitioning/partition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RangePartitioning/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RangePartitioning/partitionValueType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RangePartitioning/unionUnpartitionableQueries"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//ReadTransformer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ReadTransformer/method"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ReadTransformer/transformerClass"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//ReplicationPartitioning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ReplicationPartitioning/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ReplicationPartitioning/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//ReturnInsert">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ReturnInsert/returnOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//RoundRobinPartitioning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RoundRobinPartitioning/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RoundRobinPartitioning/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//RoundRobinPartitioning/replicateWrites"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//SecondaryTable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//SecondaryTable/primaryKeyJoinColumn"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//SecondaryTable/uniqueConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//SecondaryTable/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//SecondaryTable/creationSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//SecondaryTable/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//SecondaryTable/schema"/>
     </genClasses>
@@ -814,16 +1140,29 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StoredProcedureParameter/jdbcType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StoredProcedureParameter/jdbcTypeName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StoredProcedureParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StoredProcedureParameter/optional"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StoredProcedureParameter/queryParameter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StoredProcedureParameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//Struct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Struct/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Struct/name"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//StructConverter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StructConverter/converter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//StructConverter/name"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//Structure">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Structure/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Structure/accessMethods"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Structure/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Structure/attributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Structure/name"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Table/uniqueConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Table/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Table/creationSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Table/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Table/schema"/>
     </genClasses>
@@ -832,6 +1171,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//TableGenerator/uniqueConstraint"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/allocationSize"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/creationSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/initialValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/pkColumnName"/>
@@ -839,6 +1179,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/schema"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/table"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TableGenerator/valueColumnName"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//TenantDiscriminator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/columnDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/columnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/discriminatorType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/primaryKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TenantDiscriminator/table"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//TimeOfDay">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TimeOfDay/hour"/>
@@ -849,10 +1198,10 @@
     <genClasses ecoreClass="orm.ecore#//Transformation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Transformation/readTransformer"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Transformation/writeTransformer"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/access"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Transformation/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Transformation/accessMethods"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/access1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/mutable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Transformation/name"/>
@@ -866,9 +1215,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TypeConverter/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//TypeConverter/objectType"/>
     </genClasses>
+    <genClasses ecoreClass="orm.ecore#//UnionPartitioning">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//UnionPartitioning/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//UnionPartitioning/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//UnionPartitioning/replicateWrites"/>
+    </genClasses>
     <genClasses ecoreClass="orm.ecore#//UniqueConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//UniqueConstraint/columnName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//UniqueConstraint/name"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//ValuePartition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ValuePartition/connectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ValuePartition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="orm.ecore#//ValuePartitioning">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ValuePartitioning/partitionColumn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ValuePartitioning/partition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ValuePartitioning/defaultConnectionPool"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ValuePartitioning/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ValuePartitioning/partitionValueType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ValuePartitioning/unionUnpartitionableQueries"/>
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//VariableOneToOne">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/cascade"/>
@@ -878,6 +1244,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/privateOwned"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/accessMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/noncacheable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/partitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/replicationPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/roundRobinPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/pinnedPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/rangePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/valuePartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/hashPartitioning"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//VariableOneToOne/unionPartitioning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//VariableOneToOne/partitioned"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//VariableOneToOne/access"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//VariableOneToOne/fetch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//VariableOneToOne/name"/>
@@ -887,6 +1263,7 @@
     </genClasses>
     <genClasses ecoreClass="orm.ecore#//Version">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Version/column"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Version/index"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Version/temporal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Version/convert"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Version/converter"/>
@@ -896,6 +1273,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Version/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Version/accessMethods"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Version/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Version/attributeType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Version/mutable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Version/name"/>
     </genClasses>

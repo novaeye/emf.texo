@@ -30,6 +30,7 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getJdbcType <em>Jdbc Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getJdbcTypeName <em>Jdbc Type Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#isOptional <em>Optional</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getQueryParameter <em>Query Parameter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.StoredProcedureParameterImpl#getType <em>Type</em>}</li>
  * </ul>
@@ -126,6 +127,35 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
   protected String name = NAME_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #isOptional() <em>Optional</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOptional()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean OPTIONAL_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isOptional() <em>Optional</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOptional()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean optional = OPTIONAL_EDEFAULT;
+
+		/**
+	 * This is true if the Optional attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean optionalESet;
+
+		/**
 	 * The default value of the '{@link #getQueryParameter() <em>Query Parameter</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -281,6 +311,52 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isOptional() {
+		return optional;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOptional(boolean newOptional) {
+		boolean oldOptional = optional;
+		optional = newOptional;
+		boolean oldOptionalESet = optionalESet;
+		optionalESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.STORED_PROCEDURE_PARAMETER__OPTIONAL, oldOptional, optional, !oldOptionalESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetOptional() {
+		boolean oldOptional = optional;
+		boolean oldOptionalESet = optionalESet;
+		optional = OPTIONAL_EDEFAULT;
+		optionalESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.STORED_PROCEDURE_PARAMETER__OPTIONAL, oldOptional, OPTIONAL_EDEFAULT, oldOptionalESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetOptional() {
+		return optionalESet;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -333,6 +409,8 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 				return getJdbcTypeName();
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
 				return getName();
+			case OrmPackage.STORED_PROCEDURE_PARAMETER__OPTIONAL:
+				return isOptional();
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
 				return getQueryParameter();
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
@@ -359,6 +437,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 				return;
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
 				setName((String)newValue);
+				return;
+			case OrmPackage.STORED_PROCEDURE_PARAMETER__OPTIONAL:
+				setOptional((Boolean)newValue);
 				return;
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
 				setQueryParameter((String)newValue);
@@ -389,6 +470,9 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case OrmPackage.STORED_PROCEDURE_PARAMETER__OPTIONAL:
+				unsetOptional();
+				return;
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
 				setQueryParameter(QUERY_PARAMETER_EDEFAULT);
 				return;
@@ -414,6 +498,8 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 				return JDBC_TYPE_NAME_EDEFAULT == null ? jdbcTypeName != null : !JDBC_TYPE_NAME_EDEFAULT.equals(jdbcTypeName);
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case OrmPackage.STORED_PROCEDURE_PARAMETER__OPTIONAL:
+				return isSetOptional();
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__QUERY_PARAMETER:
 				return QUERY_PARAMETER_EDEFAULT == null ? queryParameter != null : !QUERY_PARAMETER_EDEFAULT.equals(queryParameter);
 			case OrmPackage.STORED_PROCEDURE_PARAMETER__TYPE:
@@ -439,6 +525,8 @@ public class StoredProcedureParameterImpl extends BaseOrmAnnotationImpl implemen
 		result.append(jdbcTypeName);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", optional: ");
+		if (optionalESet) result.append(optional); else result.append("<unset>");
 		result.append(", queryParameter: ");
 		result.append(queryParameter);
 		result.append(", type: ");

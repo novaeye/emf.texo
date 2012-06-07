@@ -6,13 +6,18 @@
  */
 package org.eclipse.emf.texo.orm.annotations.model.orm.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
@@ -20,6 +25,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityListeners;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
 
 /**
@@ -33,7 +39,9 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getCatalog <em>Catalog</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getDelimitedIdentifiers <em>Delimited Identifiers</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getCascadePersist <em>Cascade Persist</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getTenantDiscriminator <em>Tenant Discriminator</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PersistenceUnitDefaultsImpl#getEntityListeners <em>Entity Listeners</em>}</li>
  * </ul>
  * </p>
@@ -118,7 +126,7 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -139,6 +147,16 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
   protected boolean accessESet;
 
   /**
+	 * The cached value of the '{@link #getAccessMethods() <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccessMethods()
+	 * @generated
+	 * @ordered
+	 */
+	protected AccessMethods accessMethods;
+
+		/**
    * The cached value of the '{@link #getCascadePersist() <em>Cascade Persist</em>}' containment reference. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -149,6 +167,16 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
   protected EmptyType cascadePersist;
 
   /**
+	 * The cached value of the '{@link #getTenantDiscriminator() <em>Tenant Discriminator</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TenantDiscriminator> tenantDiscriminator;
+
+		/**
    * The cached value of the '{@link #getEntityListeners() <em>Entity Listeners</em>}' containment reference. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -315,6 +343,49 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccessMethods getAccessMethods() {
+		return accessMethods;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAccessMethods(AccessMethods newAccessMethods, NotificationChain msgs) {
+		AccessMethods oldAccessMethods = accessMethods;
+		accessMethods = newAccessMethods;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAccessMethods(AccessMethods newAccessMethods) {
+		if (newAccessMethods != accessMethods) {
+			NotificationChain msgs = null;
+			if (accessMethods != null)
+				msgs = ((InternalEObject)accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS, null, msgs);
+			if (newAccessMethods != null)
+				msgs = ((InternalEObject)newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS, null, msgs);
+			msgs = basicSetAccessMethods(newAccessMethods, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS, newAccessMethods, newAccessMethods));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -355,6 +426,18 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TenantDiscriminator> getTenantDiscriminator() {
+		if (tenantDiscriminator == null) {
+			tenantDiscriminator = new EObjectContainmentEList<TenantDiscriminator>(TenantDiscriminator.class, this, OrmPackage.PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR);
+		}
+		return tenantDiscriminator;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -403,8 +486,12 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 		switch (featureID) {
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__DELIMITED_IDENTIFIERS:
 				return basicSetDelimitedIdentifiers(null, msgs);
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS:
+				return basicSetAccessMethods(null, msgs);
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST:
 				return basicSetCascadePersist(null, msgs);
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR:
+				return ((InternalEList<?>)getTenantDiscriminator()).basicRemove(otherEnd, msgs);
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS:
 				return basicSetEntityListeners(null, msgs);
 		}
@@ -428,8 +515,12 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 				return getDelimitedIdentifiers();
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS:
 				return getAccess();
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS:
+				return getAccessMethods();
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST:
 				return getCascadePersist();
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR:
+				return getTenantDiscriminator();
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS:
 				return getEntityListeners();
 		}
@@ -440,7 +531,8 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
+  @SuppressWarnings("unchecked")
+		@Override
   public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__DESCRIPTION:
@@ -458,8 +550,15 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS:
 				setAccess((AccessType)newValue);
 				return;
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)newValue);
+				return;
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST:
 				setCascadePersist((EmptyType)newValue);
+				return;
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR:
+				getTenantDiscriminator().clear();
+				getTenantDiscriminator().addAll((Collection<? extends TenantDiscriminator>)newValue);
 				return;
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS:
 				setEntityListeners((EntityListeners)newValue);
@@ -490,8 +589,14 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS:
 				unsetAccess();
 				return;
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)null);
+				return;
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST:
 				setCascadePersist((EmptyType)null);
+				return;
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR:
+				getTenantDiscriminator().clear();
 				return;
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS:
 				setEntityListeners((EntityListeners)null);
@@ -517,8 +622,12 @@ public class PersistenceUnitDefaultsImpl extends BaseOrmAnnotationImpl implement
 				return delimitedIdentifiers != null;
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS:
 				return isSetAccess();
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ACCESS_METHODS:
+				return accessMethods != null;
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__CASCADE_PERSIST:
 				return cascadePersist != null;
+			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__TENANT_DISCRIMINATOR:
+				return tenantDiscriminator != null && !tenantDiscriminator.isEmpty();
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS__ENTITY_LISTENERS:
 				return entityListeners != null;
 		}

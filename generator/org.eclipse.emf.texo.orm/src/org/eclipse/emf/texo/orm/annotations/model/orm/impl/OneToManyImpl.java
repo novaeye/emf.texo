@@ -23,11 +23,14 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride;
+import org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Converter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
 import org.eclipse.emf.texo.orm.annotations.model.orm.FetchType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.JoinColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable;
@@ -39,10 +42,18 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Property;
+import org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Temporal;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
 import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
 
@@ -69,11 +80,24 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getJoinTable <em>Join Table</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getJoinColumn <em>Join Column</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getCascade <em>Cascade</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#isCascadeOnDelete <em>Cascade On Delete</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getPrivateOwned <em>Private Owned</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getJoinFetch <em>Join Fetch</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getBatchFetch <em>Batch Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getAccessMethods <em>Access Methods</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getNoncacheable <em>Noncacheable</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getPartitioning <em>Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getReplicationPartitioning <em>Replication Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getPinnedPartitioning <em>Pinned Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getRangePartitioning <em>Range Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getValuePartitioning <em>Value Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getHashPartitioning <em>Hash Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getUnionPartitioning <em>Union Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getPartitioned <em>Partitioned</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getFetch <em>Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getMappedBy <em>Mapped By</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.OneToManyImpl#getName <em>Name</em>}</li>
@@ -143,7 +167,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Temporal MAP_KEY_TEMPORAL_EDEFAULT = Temporal.DATE;
+  protected static final TemporalType MAP_KEY_TEMPORAL_EDEFAULT = null;
 
   /**
 	 * The cached value of the '{@link #getMapKeyTemporal() <em>Map Key Temporal</em>}' attribute.
@@ -153,15 +177,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	 * @generated
 	 * @ordered
 	 */
-  protected Temporal mapKeyTemporal = MAP_KEY_TEMPORAL_EDEFAULT;
-
-  /**
-	 * This is true if the Map Key Temporal attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  protected boolean mapKeyTemporalESet;
+  protected TemporalType mapKeyTemporal = MAP_KEY_TEMPORAL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getMapKeyEnumerated() <em>Map Key Enumerated</em>}' attribute. <!--
@@ -171,7 +187,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
    * @generated
    * @ordered
    */
-  protected static final Enumerated MAP_KEY_ENUMERATED_EDEFAULT = Enumerated.ORDINAL;
+  protected static final EnumType MAP_KEY_ENUMERATED_EDEFAULT = null;
 
   /**
 	 * The cached value of the '{@link #getMapKeyEnumerated() <em>Map Key Enumerated</em>}' attribute.
@@ -181,15 +197,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	 * @generated
 	 * @ordered
 	 */
-  protected Enumerated mapKeyEnumerated = MAP_KEY_ENUMERATED_EDEFAULT;
-
-  /**
-	 * This is true if the Map Key Enumerated attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  protected boolean mapKeyEnumeratedESet;
+  protected EnumType mapKeyEnumerated = MAP_KEY_ENUMERATED_EDEFAULT;
 
   /**
 	 * The default value of the '{@link #getMapKeyConvert() <em>Map Key Convert</em>}' attribute.
@@ -318,6 +326,35 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
   protected CascadeType cascade;
 
   /**
+	 * The default value of the '{@link #isCascadeOnDelete() <em>Cascade On Delete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCascadeOnDelete()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CASCADE_ON_DELETE_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isCascadeOnDelete() <em>Cascade On Delete</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCascadeOnDelete()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean cascadeOnDelete = CASCADE_ON_DELETE_EDEFAULT;
+
+		/**
+	 * This is true if the Cascade On Delete attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean cascadeOnDeleteESet;
+
+		/**
    * The cached value of the '{@link #getPrivateOwned() <em>Private Owned</em>}' containment reference. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -356,6 +393,16 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
   protected boolean joinFetchESet;
 
   /**
+	 * The cached value of the '{@link #getBatchFetch() <em>Batch Fetch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBatchFetch()
+	 * @generated
+	 * @ordered
+	 */
+	protected BatchFetch batchFetch;
+
+		/**
 	 * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -376,6 +423,116 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
   protected AccessMethods accessMethods;
 
   /**
+	 * The cached value of the '{@link #getNoncacheable() <em>Noncacheable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNoncacheable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EmptyType noncacheable;
+
+		/**
+	 * The cached value of the '{@link #getPartitioning() <em>Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected Partitioning partitioning;
+
+		/**
+	 * The cached value of the '{@link #getReplicationPartitioning() <em>Replication Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected ReplicationPartitioning replicationPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getRoundRobinPartitioning() <em>Round Robin Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected RoundRobinPartitioning roundRobinPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getPinnedPartitioning() <em>Pinned Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected PinnedPartitioning pinnedPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getRangePartitioning() <em>Range Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRangePartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected RangePartitioning rangePartitioning;
+
+		/**
+	 * The cached value of the '{@link #getValuePartitioning() <em>Value Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValuePartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected ValuePartitioning valuePartitioning;
+
+		/**
+	 * The cached value of the '{@link #getHashPartitioning() <em>Hash Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHashPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected HashPartitioning hashPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getUnionPartitioning() <em>Union Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected UnionPartitioning unionPartitioning;
+
+		/**
+	 * The default value of the '{@link #getPartitioned() <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioned()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARTITIONED_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getPartitioned() <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioned()
+	 * @generated
+	 * @ordered
+	 */
+	protected String partitioned = PARTITIONED_EDEFAULT;
+
+		/**
 	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -383,7 +540,7 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -404,6 +561,26 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
   protected boolean accessESet;
 
   /**
+	 * The default value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTRIBUTE_TYPE_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attributeType = ATTRIBUTE_TYPE_EDEFAULT;
+
+		/**
    * The default value of the '{@link #getFetch() <em>Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -678,87 +855,43 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Temporal getMapKeyTemporal() {
+  public TemporalType getMapKeyTemporal() {
 		return mapKeyTemporal;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setMapKeyTemporal(Temporal newMapKeyTemporal) {
-		Temporal oldMapKeyTemporal = mapKeyTemporal;
-		mapKeyTemporal = newMapKeyTemporal == null ? MAP_KEY_TEMPORAL_EDEFAULT : newMapKeyTemporal;
-		boolean oldMapKeyTemporalESet = mapKeyTemporalESet;
-		mapKeyTemporalESet = true;
+	public void setMapKeyTemporal(TemporalType newMapKeyTemporal) {
+		TemporalType oldMapKeyTemporal = mapKeyTemporal;
+		mapKeyTemporal = newMapKeyTemporal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL, oldMapKeyTemporal, mapKeyTemporal, !oldMapKeyTemporalESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL, oldMapKeyTemporal, mapKeyTemporal));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void unsetMapKeyTemporal() {
-		Temporal oldMapKeyTemporal = mapKeyTemporal;
-		boolean oldMapKeyTemporalESet = mapKeyTemporalESet;
-		mapKeyTemporal = MAP_KEY_TEMPORAL_EDEFAULT;
-		mapKeyTemporalESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL, oldMapKeyTemporal, MAP_KEY_TEMPORAL_EDEFAULT, oldMapKeyTemporalESet));
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public boolean isSetMapKeyTemporal() {
-		return mapKeyTemporalESet;
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public Enumerated getMapKeyEnumerated() {
+  public EnumType getMapKeyEnumerated() {
 		return mapKeyEnumerated;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setMapKeyEnumerated(Enumerated newMapKeyEnumerated) {
-		Enumerated oldMapKeyEnumerated = mapKeyEnumerated;
-		mapKeyEnumerated = newMapKeyEnumerated == null ? MAP_KEY_ENUMERATED_EDEFAULT : newMapKeyEnumerated;
-		boolean oldMapKeyEnumeratedESet = mapKeyEnumeratedESet;
-		mapKeyEnumeratedESet = true;
+	public void setMapKeyEnumerated(EnumType newMapKeyEnumerated) {
+		EnumType oldMapKeyEnumerated = mapKeyEnumerated;
+		mapKeyEnumerated = newMapKeyEnumerated;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED, oldMapKeyEnumerated, mapKeyEnumerated, !oldMapKeyEnumeratedESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED, oldMapKeyEnumerated, mapKeyEnumerated));
 	}
 
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void unsetMapKeyEnumerated() {
-		Enumerated oldMapKeyEnumerated = mapKeyEnumerated;
-		boolean oldMapKeyEnumeratedESet = mapKeyEnumeratedESet;
-		mapKeyEnumerated = MAP_KEY_ENUMERATED_EDEFAULT;
-		mapKeyEnumeratedESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED, oldMapKeyEnumerated, MAP_KEY_ENUMERATED_EDEFAULT, oldMapKeyEnumeratedESet));
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public boolean isSetMapKeyEnumerated() {
-		return mapKeyEnumeratedESet;
-	}
-
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1103,6 +1236,52 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCascadeOnDelete() {
+		return cascadeOnDelete;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCascadeOnDelete(boolean newCascadeOnDelete) {
+		boolean oldCascadeOnDelete = cascadeOnDelete;
+		cascadeOnDelete = newCascadeOnDelete;
+		boolean oldCascadeOnDeleteESet = cascadeOnDeleteESet;
+		cascadeOnDeleteESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__CASCADE_ON_DELETE, oldCascadeOnDelete, cascadeOnDelete, !oldCascadeOnDeleteESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCascadeOnDelete() {
+		boolean oldCascadeOnDelete = cascadeOnDelete;
+		boolean oldCascadeOnDeleteESet = cascadeOnDeleteESet;
+		cascadeOnDelete = CASCADE_ON_DELETE_EDEFAULT;
+		cascadeOnDeleteESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ONE_TO_MANY__CASCADE_ON_DELETE, oldCascadeOnDelete, CASCADE_ON_DELETE_EDEFAULT, oldCascadeOnDeleteESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCascadeOnDelete() {
+		return cascadeOnDeleteESet;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1185,6 +1364,49 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BatchFetch getBatchFetch() {
+		return batchFetch;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBatchFetch(BatchFetch newBatchFetch, NotificationChain msgs) {
+		BatchFetch oldBatchFetch = batchFetch;
+		batchFetch = newBatchFetch;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__BATCH_FETCH, oldBatchFetch, newBatchFetch);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBatchFetch(BatchFetch newBatchFetch) {
+		if (newBatchFetch != batchFetch) {
+			NotificationChain msgs = null;
+			if (batchFetch != null)
+				msgs = ((InternalEObject)batchFetch).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__BATCH_FETCH, null, msgs);
+			if (newBatchFetch != null)
+				msgs = ((InternalEObject)newBatchFetch).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__BATCH_FETCH, null, msgs);
+			msgs = basicSetBatchFetch(newBatchFetch, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__BATCH_FETCH, newBatchFetch, newBatchFetch));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1236,6 +1458,414 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmptyType getNoncacheable() {
+		return noncacheable;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNoncacheable(EmptyType newNoncacheable, NotificationChain msgs) {
+		EmptyType oldNoncacheable = noncacheable;
+		noncacheable = newNoncacheable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__NONCACHEABLE, oldNoncacheable, newNoncacheable);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoncacheable(EmptyType newNoncacheable) {
+		if (newNoncacheable != noncacheable) {
+			NotificationChain msgs = null;
+			if (noncacheable != null)
+				msgs = ((InternalEObject)noncacheable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__NONCACHEABLE, null, msgs);
+			if (newNoncacheable != null)
+				msgs = ((InternalEObject)newNoncacheable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__NONCACHEABLE, null, msgs);
+			msgs = basicSetNoncacheable(newNoncacheable, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__NONCACHEABLE, newNoncacheable, newNoncacheable));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Partitioning getPartitioning() {
+		return partitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPartitioning(Partitioning newPartitioning, NotificationChain msgs) {
+		Partitioning oldPartitioning = partitioning;
+		partitioning = newPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__PARTITIONING, oldPartitioning, newPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPartitioning(Partitioning newPartitioning) {
+		if (newPartitioning != partitioning) {
+			NotificationChain msgs = null;
+			if (partitioning != null)
+				msgs = ((InternalEObject)partitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__PARTITIONING, null, msgs);
+			if (newPartitioning != null)
+				msgs = ((InternalEObject)newPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__PARTITIONING, null, msgs);
+			msgs = basicSetPartitioning(newPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__PARTITIONING, newPartitioning, newPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReplicationPartitioning getReplicationPartitioning() {
+		return replicationPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReplicationPartitioning(ReplicationPartitioning newReplicationPartitioning, NotificationChain msgs) {
+		ReplicationPartitioning oldReplicationPartitioning = replicationPartitioning;
+		replicationPartitioning = newReplicationPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING, oldReplicationPartitioning, newReplicationPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReplicationPartitioning(ReplicationPartitioning newReplicationPartitioning) {
+		if (newReplicationPartitioning != replicationPartitioning) {
+			NotificationChain msgs = null;
+			if (replicationPartitioning != null)
+				msgs = ((InternalEObject)replicationPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING, null, msgs);
+			if (newReplicationPartitioning != null)
+				msgs = ((InternalEObject)newReplicationPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING, null, msgs);
+			msgs = basicSetReplicationPartitioning(newReplicationPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING, newReplicationPartitioning, newReplicationPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoundRobinPartitioning getRoundRobinPartitioning() {
+		return roundRobinPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRoundRobinPartitioning(RoundRobinPartitioning newRoundRobinPartitioning, NotificationChain msgs) {
+		RoundRobinPartitioning oldRoundRobinPartitioning = roundRobinPartitioning;
+		roundRobinPartitioning = newRoundRobinPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING, oldRoundRobinPartitioning, newRoundRobinPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoundRobinPartitioning(RoundRobinPartitioning newRoundRobinPartitioning) {
+		if (newRoundRobinPartitioning != roundRobinPartitioning) {
+			NotificationChain msgs = null;
+			if (roundRobinPartitioning != null)
+				msgs = ((InternalEObject)roundRobinPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING, null, msgs);
+			if (newRoundRobinPartitioning != null)
+				msgs = ((InternalEObject)newRoundRobinPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING, null, msgs);
+			msgs = basicSetRoundRobinPartitioning(newRoundRobinPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING, newRoundRobinPartitioning, newRoundRobinPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PinnedPartitioning getPinnedPartitioning() {
+		return pinnedPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPinnedPartitioning(PinnedPartitioning newPinnedPartitioning, NotificationChain msgs) {
+		PinnedPartitioning oldPinnedPartitioning = pinnedPartitioning;
+		pinnedPartitioning = newPinnedPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING, oldPinnedPartitioning, newPinnedPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPinnedPartitioning(PinnedPartitioning newPinnedPartitioning) {
+		if (newPinnedPartitioning != pinnedPartitioning) {
+			NotificationChain msgs = null;
+			if (pinnedPartitioning != null)
+				msgs = ((InternalEObject)pinnedPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING, null, msgs);
+			if (newPinnedPartitioning != null)
+				msgs = ((InternalEObject)newPinnedPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING, null, msgs);
+			msgs = basicSetPinnedPartitioning(newPinnedPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING, newPinnedPartitioning, newPinnedPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RangePartitioning getRangePartitioning() {
+		return rangePartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRangePartitioning(RangePartitioning newRangePartitioning, NotificationChain msgs) {
+		RangePartitioning oldRangePartitioning = rangePartitioning;
+		rangePartitioning = newRangePartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING, oldRangePartitioning, newRangePartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRangePartitioning(RangePartitioning newRangePartitioning) {
+		if (newRangePartitioning != rangePartitioning) {
+			NotificationChain msgs = null;
+			if (rangePartitioning != null)
+				msgs = ((InternalEObject)rangePartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING, null, msgs);
+			if (newRangePartitioning != null)
+				msgs = ((InternalEObject)newRangePartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING, null, msgs);
+			msgs = basicSetRangePartitioning(newRangePartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING, newRangePartitioning, newRangePartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ValuePartitioning getValuePartitioning() {
+		return valuePartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetValuePartitioning(ValuePartitioning newValuePartitioning, NotificationChain msgs) {
+		ValuePartitioning oldValuePartitioning = valuePartitioning;
+		valuePartitioning = newValuePartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING, oldValuePartitioning, newValuePartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValuePartitioning(ValuePartitioning newValuePartitioning) {
+		if (newValuePartitioning != valuePartitioning) {
+			NotificationChain msgs = null;
+			if (valuePartitioning != null)
+				msgs = ((InternalEObject)valuePartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING, null, msgs);
+			if (newValuePartitioning != null)
+				msgs = ((InternalEObject)newValuePartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING, null, msgs);
+			msgs = basicSetValuePartitioning(newValuePartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING, newValuePartitioning, newValuePartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HashPartitioning getHashPartitioning() {
+		return hashPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetHashPartitioning(HashPartitioning newHashPartitioning, NotificationChain msgs) {
+		HashPartitioning oldHashPartitioning = hashPartitioning;
+		hashPartitioning = newHashPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__HASH_PARTITIONING, oldHashPartitioning, newHashPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHashPartitioning(HashPartitioning newHashPartitioning) {
+		if (newHashPartitioning != hashPartitioning) {
+			NotificationChain msgs = null;
+			if (hashPartitioning != null)
+				msgs = ((InternalEObject)hashPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__HASH_PARTITIONING, null, msgs);
+			if (newHashPartitioning != null)
+				msgs = ((InternalEObject)newHashPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__HASH_PARTITIONING, null, msgs);
+			msgs = basicSetHashPartitioning(newHashPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__HASH_PARTITIONING, newHashPartitioning, newHashPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnionPartitioning getUnionPartitioning() {
+		return unionPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUnionPartitioning(UnionPartitioning newUnionPartitioning, NotificationChain msgs) {
+		UnionPartitioning oldUnionPartitioning = unionPartitioning;
+		unionPartitioning = newUnionPartitioning;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__UNION_PARTITIONING, oldUnionPartitioning, newUnionPartitioning);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnionPartitioning(UnionPartitioning newUnionPartitioning) {
+		if (newUnionPartitioning != unionPartitioning) {
+			NotificationChain msgs = null;
+			if (unionPartitioning != null)
+				msgs = ((InternalEObject)unionPartitioning).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__UNION_PARTITIONING, null, msgs);
+			if (newUnionPartitioning != null)
+				msgs = ((InternalEObject)newUnionPartitioning).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ONE_TO_MANY__UNION_PARTITIONING, null, msgs);
+			msgs = basicSetUnionPartitioning(newUnionPartitioning, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__UNION_PARTITIONING, newUnionPartitioning, newUnionPartitioning));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPartitioned() {
+		return partitioned;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPartitioned(String newPartitioned) {
+		String oldPartitioned = partitioned;
+		partitioned = newPartitioned;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__PARTITIONED, oldPartitioned, partitioned));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1278,6 +1908,27 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttributeType() {
+		return attributeType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttributeType(String newAttributeType) {
+		String oldAttributeType = attributeType;
+		attributeType = newAttributeType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ONE_TO_MANY__ATTRIBUTE_TYPE, oldAttributeType, attributeType));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1455,10 +2106,30 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 				return basicSetCascade(null, msgs);
 			case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
 				return basicSetPrivateOwned(null, msgs);
+			case OrmPackage.ONE_TO_MANY__BATCH_FETCH:
+				return basicSetBatchFetch(null, msgs);
 			case OrmPackage.ONE_TO_MANY__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
 				return basicSetAccessMethods(null, msgs);
+			case OrmPackage.ONE_TO_MANY__NONCACHEABLE:
+				return basicSetNoncacheable(null, msgs);
+			case OrmPackage.ONE_TO_MANY__PARTITIONING:
+				return basicSetPartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING:
+				return basicSetReplicationPartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING:
+				return basicSetRoundRobinPartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING:
+				return basicSetPinnedPartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING:
+				return basicSetRangePartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING:
+				return basicSetValuePartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__HASH_PARTITIONING:
+				return basicSetHashPartitioning(null, msgs);
+			case OrmPackage.ONE_TO_MANY__UNION_PARTITIONING:
+				return basicSetUnionPartitioning(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1506,16 +2177,42 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 				return getJoinColumn();
 			case OrmPackage.ONE_TO_MANY__CASCADE:
 				return getCascade();
+			case OrmPackage.ONE_TO_MANY__CASCADE_ON_DELETE:
+				return isCascadeOnDelete();
 			case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
 				return getPrivateOwned();
 			case OrmPackage.ONE_TO_MANY__JOIN_FETCH:
 				return getJoinFetch();
+			case OrmPackage.ONE_TO_MANY__BATCH_FETCH:
+				return getBatchFetch();
 			case OrmPackage.ONE_TO_MANY__PROPERTY:
 				return getProperty();
 			case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
 				return getAccessMethods();
+			case OrmPackage.ONE_TO_MANY__NONCACHEABLE:
+				return getNoncacheable();
+			case OrmPackage.ONE_TO_MANY__PARTITIONING:
+				return getPartitioning();
+			case OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING:
+				return getReplicationPartitioning();
+			case OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING:
+				return getRoundRobinPartitioning();
+			case OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING:
+				return getPinnedPartitioning();
+			case OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING:
+				return getRangePartitioning();
+			case OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING:
+				return getValuePartitioning();
+			case OrmPackage.ONE_TO_MANY__HASH_PARTITIONING:
+				return getHashPartitioning();
+			case OrmPackage.ONE_TO_MANY__UNION_PARTITIONING:
+				return getUnionPartitioning();
+			case OrmPackage.ONE_TO_MANY__PARTITIONED:
+				return getPartitioned();
 			case OrmPackage.ONE_TO_MANY__ACCESS:
 				return getAccess();
+			case OrmPackage.ONE_TO_MANY__ATTRIBUTE_TYPE:
+				return getAttributeType();
 			case OrmPackage.ONE_TO_MANY__FETCH:
 				return getFetch();
 			case OrmPackage.ONE_TO_MANY__MAPPED_BY:
@@ -1551,10 +2248,10 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 				setMapKeyClass((MapKeyClass)newValue);
 				return;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL:
-				setMapKeyTemporal((Temporal)newValue);
+				setMapKeyTemporal((TemporalType)newValue);
 				return;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED:
-				setMapKeyEnumerated((Enumerated)newValue);
+				setMapKeyEnumerated((EnumType)newValue);
 				return;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_CONVERT:
 				setMapKeyConvert((String)newValue);
@@ -1596,11 +2293,17 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 			case OrmPackage.ONE_TO_MANY__CASCADE:
 				setCascade((CascadeType)newValue);
 				return;
+			case OrmPackage.ONE_TO_MANY__CASCADE_ON_DELETE:
+				setCascadeOnDelete((Boolean)newValue);
+				return;
 			case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
 				setPrivateOwned((EmptyType)newValue);
 				return;
 			case OrmPackage.ONE_TO_MANY__JOIN_FETCH:
 				setJoinFetch((JoinFetchType)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__BATCH_FETCH:
+				setBatchFetch((BatchFetch)newValue);
 				return;
 			case OrmPackage.ONE_TO_MANY__PROPERTY:
 				getProperty().clear();
@@ -1609,8 +2312,41 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 			case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
 				setAccessMethods((AccessMethods)newValue);
 				return;
+			case OrmPackage.ONE_TO_MANY__NONCACHEABLE:
+				setNoncacheable((EmptyType)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__PARTITIONING:
+				setPartitioning((Partitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING:
+				setReplicationPartitioning((ReplicationPartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING:
+				setRoundRobinPartitioning((RoundRobinPartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING:
+				setPinnedPartitioning((PinnedPartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING:
+				setRangePartitioning((RangePartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING:
+				setValuePartitioning((ValuePartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__HASH_PARTITIONING:
+				setHashPartitioning((HashPartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__UNION_PARTITIONING:
+				setUnionPartitioning((UnionPartitioning)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__PARTITIONED:
+				setPartitioned((String)newValue);
+				return;
 			case OrmPackage.ONE_TO_MANY__ACCESS:
 				setAccess((AccessType)newValue);
+				return;
+			case OrmPackage.ONE_TO_MANY__ATTRIBUTE_TYPE:
+				setAttributeType((String)newValue);
 				return;
 			case OrmPackage.ONE_TO_MANY__FETCH:
 				setFetch((FetchType)newValue);
@@ -1651,10 +2387,10 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 				setMapKeyClass((MapKeyClass)null);
 				return;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL:
-				unsetMapKeyTemporal();
+				setMapKeyTemporal(MAP_KEY_TEMPORAL_EDEFAULT);
 				return;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED:
-				unsetMapKeyEnumerated();
+				setMapKeyEnumerated(MAP_KEY_ENUMERATED_EDEFAULT);
 				return;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_CONVERT:
 				setMapKeyConvert(MAP_KEY_CONVERT_EDEFAULT);
@@ -1692,11 +2428,17 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 			case OrmPackage.ONE_TO_MANY__CASCADE:
 				setCascade((CascadeType)null);
 				return;
+			case OrmPackage.ONE_TO_MANY__CASCADE_ON_DELETE:
+				unsetCascadeOnDelete();
+				return;
 			case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
 				setPrivateOwned((EmptyType)null);
 				return;
 			case OrmPackage.ONE_TO_MANY__JOIN_FETCH:
 				unsetJoinFetch();
+				return;
+			case OrmPackage.ONE_TO_MANY__BATCH_FETCH:
+				setBatchFetch((BatchFetch)null);
 				return;
 			case OrmPackage.ONE_TO_MANY__PROPERTY:
 				getProperty().clear();
@@ -1704,8 +2446,41 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 			case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
 				setAccessMethods((AccessMethods)null);
 				return;
+			case OrmPackage.ONE_TO_MANY__NONCACHEABLE:
+				setNoncacheable((EmptyType)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__PARTITIONING:
+				setPartitioning((Partitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING:
+				setReplicationPartitioning((ReplicationPartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING:
+				setRoundRobinPartitioning((RoundRobinPartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING:
+				setPinnedPartitioning((PinnedPartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING:
+				setRangePartitioning((RangePartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING:
+				setValuePartitioning((ValuePartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__HASH_PARTITIONING:
+				setHashPartitioning((HashPartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__UNION_PARTITIONING:
+				setUnionPartitioning((UnionPartitioning)null);
+				return;
+			case OrmPackage.ONE_TO_MANY__PARTITIONED:
+				setPartitioned(PARTITIONED_EDEFAULT);
+				return;
 			case OrmPackage.ONE_TO_MANY__ACCESS:
 				unsetAccess();
+				return;
+			case OrmPackage.ONE_TO_MANY__ATTRIBUTE_TYPE:
+				setAttributeType(ATTRIBUTE_TYPE_EDEFAULT);
 				return;
 			case OrmPackage.ONE_TO_MANY__FETCH:
 				unsetFetch();
@@ -1742,9 +2517,9 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_CLASS:
 				return mapKeyClass != null;
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_TEMPORAL:
-				return isSetMapKeyTemporal();
+				return MAP_KEY_TEMPORAL_EDEFAULT == null ? mapKeyTemporal != null : !MAP_KEY_TEMPORAL_EDEFAULT.equals(mapKeyTemporal);
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_ENUMERATED:
-				return isSetMapKeyEnumerated();
+				return MAP_KEY_ENUMERATED_EDEFAULT == null ? mapKeyEnumerated != null : !MAP_KEY_ENUMERATED_EDEFAULT.equals(mapKeyEnumerated);
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_CONVERT:
 				return MAP_KEY_CONVERT_EDEFAULT == null ? mapKeyConvert != null : !MAP_KEY_CONVERT_EDEFAULT.equals(mapKeyConvert);
 			case OrmPackage.ONE_TO_MANY__MAP_KEY_ATTRIBUTE_OVERRIDE:
@@ -1769,16 +2544,42 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 				return joinColumn != null && !joinColumn.isEmpty();
 			case OrmPackage.ONE_TO_MANY__CASCADE:
 				return cascade != null;
+			case OrmPackage.ONE_TO_MANY__CASCADE_ON_DELETE:
+				return isSetCascadeOnDelete();
 			case OrmPackage.ONE_TO_MANY__PRIVATE_OWNED:
 				return privateOwned != null;
 			case OrmPackage.ONE_TO_MANY__JOIN_FETCH:
 				return isSetJoinFetch();
+			case OrmPackage.ONE_TO_MANY__BATCH_FETCH:
+				return batchFetch != null;
 			case OrmPackage.ONE_TO_MANY__PROPERTY:
 				return property != null && !property.isEmpty();
 			case OrmPackage.ONE_TO_MANY__ACCESS_METHODS:
 				return accessMethods != null;
+			case OrmPackage.ONE_TO_MANY__NONCACHEABLE:
+				return noncacheable != null;
+			case OrmPackage.ONE_TO_MANY__PARTITIONING:
+				return partitioning != null;
+			case OrmPackage.ONE_TO_MANY__REPLICATION_PARTITIONING:
+				return replicationPartitioning != null;
+			case OrmPackage.ONE_TO_MANY__ROUND_ROBIN_PARTITIONING:
+				return roundRobinPartitioning != null;
+			case OrmPackage.ONE_TO_MANY__PINNED_PARTITIONING:
+				return pinnedPartitioning != null;
+			case OrmPackage.ONE_TO_MANY__RANGE_PARTITIONING:
+				return rangePartitioning != null;
+			case OrmPackage.ONE_TO_MANY__VALUE_PARTITIONING:
+				return valuePartitioning != null;
+			case OrmPackage.ONE_TO_MANY__HASH_PARTITIONING:
+				return hashPartitioning != null;
+			case OrmPackage.ONE_TO_MANY__UNION_PARTITIONING:
+				return unionPartitioning != null;
+			case OrmPackage.ONE_TO_MANY__PARTITIONED:
+				return PARTITIONED_EDEFAULT == null ? partitioned != null : !PARTITIONED_EDEFAULT.equals(partitioned);
 			case OrmPackage.ONE_TO_MANY__ACCESS:
 				return isSetAccess();
+			case OrmPackage.ONE_TO_MANY__ATTRIBUTE_TYPE:
+				return ATTRIBUTE_TYPE_EDEFAULT == null ? attributeType != null : !ATTRIBUTE_TYPE_EDEFAULT.equals(attributeType);
 			case OrmPackage.ONE_TO_MANY__FETCH:
 				return isSetFetch();
 			case OrmPackage.ONE_TO_MANY__MAPPED_BY:
@@ -1805,15 +2606,21 @@ public class OneToManyImpl extends BaseOrmAnnotationImpl implements OneToMany {
 		result.append(" (orderBy: ");
 		result.append(orderBy);
 		result.append(", mapKeyTemporal: ");
-		if (mapKeyTemporalESet) result.append(mapKeyTemporal); else result.append("<unset>");
+		result.append(mapKeyTemporal);
 		result.append(", mapKeyEnumerated: ");
-		if (mapKeyEnumeratedESet) result.append(mapKeyEnumerated); else result.append("<unset>");
+		result.append(mapKeyEnumerated);
 		result.append(", mapKeyConvert: ");
 		result.append(mapKeyConvert);
+		result.append(", cascadeOnDelete: ");
+		if (cascadeOnDeleteESet) result.append(cascadeOnDelete); else result.append("<unset>");
 		result.append(", joinFetch: ");
 		if (joinFetchESet) result.append(joinFetch); else result.append("<unset>");
+		result.append(", partitioned: ");
+		result.append(partitioned);
 		result.append(", access: ");
 		if (accessESet) result.append(access); else result.append("<unset>");
+		result.append(", attributeType: ");
+		result.append(attributeType);
 		result.append(", fetch: ");
 		if (fetchESet) result.append(fetch); else result.append("<unset>");
 		result.append(", mappedBy: ");

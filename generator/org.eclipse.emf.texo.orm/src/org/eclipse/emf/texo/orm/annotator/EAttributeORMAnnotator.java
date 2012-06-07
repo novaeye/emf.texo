@@ -39,14 +39,14 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Column;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
-import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Id;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Lob;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrderColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
-import org.eclipse.emf.texo.orm.annotations.model.orm.Temporal;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
@@ -206,14 +206,14 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       if (isLob) {
         final Lob lob = OrmFactory.eINSTANCE.createLob();
         elementCollection.setLob(lob);
-      } else if (isTime && !elementCollection.isSetTemporal()) {
-        elementCollection.setTemporal(Temporal.TIMESTAMP);
-      } else if (!elementCollection.isSetTemporal() && isDate) {
-        elementCollection.setTemporal(Temporal.DATE);
+      } else if (isTime) {
+        elementCollection.setTemporal(TemporalType.TIMESTAMP);
+      } else if (isDate) {
+        elementCollection.setTemporal(TemporalType.DATE);
       }
 
       if (isEnum && elementCollection.getEnumerated() == null) {
-        elementCollection.setEnumerated(Enumerated.STRING);
+        elementCollection.setEnumerated(EnumType.STRING);
       }
 
       if (elementCollection.getCollectionTable() == null) {
@@ -291,10 +291,10 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
     if (isLob) {
       final Lob lob = OrmFactory.eINSTANCE.createLob();
       basic.setLob(lob);
-    } else if (isTime && !basic.isSetTemporal()) {
-      basic.setTemporal(Temporal.TIMESTAMP);
-    } else if (!basic.isSetTemporal() && isDate) {
-      basic.setTemporal(Temporal.DATE);
+    } else if (isTime) {
+      basic.setTemporal(TemporalType.TIMESTAMP);
+    } else if (isDate) {
+      basic.setTemporal(TemporalType.DATE);
     }
 
     if (!basicSet && !GeneratorUtils.isOptional(eAttribute)) {
@@ -302,7 +302,7 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
     }
 
     if (isEnum && basic.getEnumerated() == null) {
-      basic.setEnumerated(Enumerated.STRING);
+      basic.setEnumerated(EnumType.STRING);
     }
 
     if (namingStrategy.isGenerateAllDBSchemaNames()) {

@@ -18,56 +18,51 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* A StoredProcedureParameter annotation is used
- * 				within a
- * 				* NamedStoredProcedureQuery annotation.
- * 				*
- * 				@Target({})
- * 				@Retention(RUNTIME)
- * 				public @interface StoredProcedureParameter {
- * 				*
- * 				*
- * 				(Optional) The direction of the stored procedure parameter.
- * 				*
- * 				Direction direction() default IN;
+ *         /** 
+ *          * A StoredProcedureParameter annotation is used within a 
+ *          * NamedStoredProcedureQuery annotation. 
+ *          ** 
+ *         @Target({})
+ *         @Retention(RUNTIME)
+ *         public @interface StoredProcedureParameter {
+ *           /**
+ *            * (Optional) The direction of the stored procedure parameter.
+ *            **
+ *           Direction direction() default IN;
  * 
- * 				*
- * 				* (Optional) Stored procedure
- * 				parameter name.
- * 				*
- * 				String name() default "";
+ *           /**
+ *            * (Optional) Stored procedure parameter name.
+ *            **
+ *           String name() default "";
  * 
- * 				*
- * 				* (Required) The query
- * 				parameter name.
- * 				*
- * 				String queryParameter();
+ *           /**
+ *            * (Required) The query parameter name.
+ *            **
+ *           String queryParameter();
+ *     
+ *           /**
+ *            * (Optional) Define if the parameter is required, or optional and defaulted by the procedure.
+ *            **
+ *           boolean optional() default false;
  * 
- * 				*
- * 				* (Optional) The type of
- * 				Java class desired back from the procedure,
- * 				* this is dependent on
- * 				the type returned from the procedure.
- * 				*
- * 				Class type() default
- * 				void.class;
+ *           /**
+ *            * (Optional) The type of Java class desired back from the procedure, 
+ *            * this is dependent on the type returned from the procedure.
+ *            **
+ *           Class type() default void.class;
  * 
- * 				*
- * 				* (Optional) The JDBC type code, this dependent on the
- * 				type returned
- * 				* from the procedure.
- * 				*
- * 				int jdbcType() default -1;
+ *           /**
+ *            * (Optional) The JDBC type code, this dependent on the type returned 
+ *            * from the procedure.
+ *            **
+ *           int jdbcType() default -1;
  * 
- * 				*
- * 				*
- * 				(Optional) The JDBC type name, this may be required for ARRAY or
- * 				*
- * 				STRUCT types.
- * 				*
- * 				String jdbcTypeName() default "";
- * 				}
+ *           /**
+ *            * (Optional) The JDBC type name, this may be required for ARRAY or 
+ *            * STRUCT types.
+ *            **
+ *           String jdbcTypeName() default "";
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -79,6 +74,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcType <em>Jdbc Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getJdbcTypeName <em>Jdbc Type Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#isOptional <em>Optional</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getQueryParameter <em>Query Parameter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#getType <em>Type</em>}</li>
  * </ul>
@@ -222,6 +218,60 @@ public interface StoredProcedureParameter extends BaseOrmAnnotation {
   void setName(String value);
 
   /**
+	 * Returns the value of the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Optional</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Optional</em>' attribute.
+	 * @see #isSetOptional()
+	 * @see #unsetOptional()
+	 * @see #setOptional(boolean)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getStoredProcedureParameter_Optional()
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 *        extendedMetaData="kind='attribute' name='optional'"
+	 * @generated
+	 */
+	boolean isOptional();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#isOptional <em>Optional</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Optional</em>' attribute.
+	 * @see #isSetOptional()
+	 * @see #unsetOptional()
+	 * @see #isOptional()
+	 * @generated
+	 */
+	void setOptional(boolean value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#isOptional <em>Optional</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetOptional()
+	 * @see #isOptional()
+	 * @see #setOptional(boolean)
+	 * @generated
+	 */
+	void unsetOptional();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.StoredProcedureParameter#isOptional <em>Optional</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Optional</em>' attribute is set.
+	 * @see #unsetOptional()
+	 * @see #isOptional()
+	 * @see #setOptional(boolean)
+	 * @generated
+	 */
+	boolean isSetOptional();
+
+		/**
 	 * Returns the value of the '<em><b>Query Parameter</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

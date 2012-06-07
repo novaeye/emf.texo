@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface Lob {}
+ *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface Lob {}
  * 
  *       
  * <!-- end-model-doc -->

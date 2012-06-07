@@ -19,62 +19,46 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD})
- * 				@Retention(RUNTIME)
- * 				public
- * 				@interface BasicMap {
- * 				*
- * 				* (Optional) Defines whether the value of the
- * 				field or property
- * 				* should be lazily loaded or must be eagerly
- * 				fetched. The EAGER
- * 				* strategy is a requirement on the persistence
- * 				provider runtime that
- * 				* the value must be eagerly fetched. The LAZY
- * 				strategy is a hint to
- * 				* the persistence provider runtime. If not
- * 				specified, defaults to
- * 				* LAZY.
- * 				*
- * 				FetchType fetch() default LAZY;
+ *         @Target({METHOD, FIELD})
+ *         @Retention(RUNTIME)
+ *         public @interface BasicMap {
+ *           /**
+ *            * (Optional) Defines whether the value of the field or property 
+ *            * should be lazily loaded or must be eagerly fetched. The EAGER 
+ *            * strategy is a requirement on the persistence provider runtime that 
+ *            * the value must be eagerly fetched. The LAZY strategy is a hint to 
+ *            * the persistence provider runtime. If not specified, defaults to 
+ *            * LAZY.
+ *            **
+ *           FetchType fetch() default LAZY;
  * 
- * 				*
- * 				*
- * 				(Optional) The name of the data column that holds the direct map
- * 				*
- * 				key. If the name on te key column is "", the name will default to:
- * 				*
- * 				the name of the property or field; "_KEY".
- * 				*
- * 				Column keyColumn()
- * 				default @Column;
+ *           /**
+ *            * (Optional) The name of the data column that holds the direct map 
+ *            * key. If the name on te key column is "", the name will default to:
+ *            * the name of the property or field; "_KEY".
+ *            **
+ *           Column keyColumn() default @Column;
  * 
- * 				*
- * 				* (Optional) Specify the key converter. Default is
- * 				equivalent to
- * 				* specifying @Convert("none"), meaning no converter
- * 				will be added to
- * 				* the direct map key.
- * 				*
- * 				Convert keyConverter() default
- * 				@Convert;
+ *           /**
+ *            * (Optional) Specify the key converter. Default is equivalent to 
+ *            * specifying @Convert("none"), meaning no converter will be added to 
+ *            * the direct map key.
+ *            **
+ *           Convert keyConverter() default @Convert;
  * 
- * 				*
- * 				* (Optional) The name of the data column that holds the
- * 				direct
- * 				* collection data. Defaults to the property or field name.
- * 				*
- * 				Column valueColumn() default @Column;
+ *           /**
+ *            * (Optional) The name of the data column that holds the direct 
+ *            * collection data. Defaults to the property or field name.
+ *            **
+ *           Column valueColumn() default @Column;
  * 
- * 				*
- * 				* (Optional) Specify the value
- * 				converter. Default is equivalent to
- * 				* specifying @Convert("none"),
- * 				meaning no converter will be added to
- * 				* the value column mapping.
- * 				*
- * 				Convert valueConverter() default @Convert;
- * 				}
+ *           /**
+ *            * (Optional) Specify the value converter. Default is equivalent to 
+ *            * specifying @Convert("none"), meaning no converter will be added to 
+ *            * the value column mapping.
+ *            **
+ *           Convert valueConverter() default @Convert;
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -93,8 +77,10 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getStructConverter <em>Struct Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getCollectionTable <em>Collection Table</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getJoinFetch <em>Join Fetch</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getBatchFetch <em>Batch Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getAccessMethods <em>Access Methods</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getNoncacheable <em>Noncacheable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getAccess <em>Access</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getFetch <em>Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getName <em>Name</em>}</li>
@@ -377,6 +363,33 @@ public interface BasicMap extends BaseOrmAnnotation {
   boolean isSetJoinFetch();
 
   /**
+	 * Returns the value of the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Batch Fetch</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Batch Fetch</em>' containment reference.
+	 * @see #setBatchFetch(BatchFetch)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicMap_BatchFetch()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='batch-fetch' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	BatchFetch getBatchFetch();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getBatchFetch <em>Batch Fetch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Batch Fetch</em>' containment reference.
+	 * @see #getBatchFetch()
+	 * @generated
+	 */
+	void setBatchFetch(BatchFetch value);
+
+		/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
 	 * <!-- begin-user-doc -->
@@ -420,6 +433,33 @@ public interface BasicMap extends BaseOrmAnnotation {
   void setAccessMethods(AccessMethods value);
 
   /**
+	 * Returns the value of the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Noncacheable</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #setNoncacheable(EmptyType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicMap_Noncacheable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='noncacheable' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EmptyType getNoncacheable();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap#getNoncacheable <em>Noncacheable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #getNoncacheable()
+	 * @generated
+	 */
+	void setNoncacheable(EmptyType value);
+
+		/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
 	 * <!-- begin-user-doc -->

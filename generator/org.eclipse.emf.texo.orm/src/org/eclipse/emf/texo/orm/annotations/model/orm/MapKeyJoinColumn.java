@@ -77,7 +77,6 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Insertable</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Insertable</em>' attribute isn't clear, there really should be more of a description
@@ -89,7 +88,7 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
 	 * @see #unsetInsertable()
 	 * @see #setInsertable(boolean)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_Insertable()
-	 * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='insertable'"
 	 * @generated
 	 */
@@ -154,7 +153,6 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Nullable</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nullable</em>' attribute isn't clear, there really should be more of a description
@@ -166,7 +164,7 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
 	 * @see #unsetNullable()
 	 * @see #setNullable(boolean)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_Nullable()
-	 * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='nullable'"
 	 * @generated
 	 */
@@ -307,7 +305,6 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Updatable</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Updatable</em>' attribute isn't clear, there really should be more of a description
@@ -319,7 +316,7 @@ public interface MapKeyJoinColumn extends BaseOrmAnnotation {
 	 * @see #unsetUpdatable()
 	 * @see #setUpdatable(boolean)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMapKeyJoinColumn_Updatable()
-	 * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='updatable'"
 	 * @generated
 	 */

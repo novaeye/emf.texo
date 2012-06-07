@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.test.model.samples.schoollibrary;
 
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.model.samples.library.Book;
 
@@ -16,6 +17,7 @@ public class SchoolBook extends Book implements Asset {
    * 
    * @generated
    */
+  @Basic()
   private float value = 0.0f;
 
   /**

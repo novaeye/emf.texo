@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
@@ -42,7 +44,7 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(nullable = true) })
   private GraphicsAlgorithm parentGraphicsAlgorithm = null;
 
   /**
@@ -90,7 +92,7 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private Style style = null;
 
   /**
@@ -123,6 +125,7 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private LineStyle lineStyle = LineStyle.SOLID;
 
   /**

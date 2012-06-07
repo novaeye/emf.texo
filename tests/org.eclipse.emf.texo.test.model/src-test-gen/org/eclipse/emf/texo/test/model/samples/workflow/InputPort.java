@@ -10,8 +10,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -19,7 +17,6 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_InputPort")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_InputPort_parent_id") })
 public class InputPort extends Port {
 
   /**
@@ -28,7 +25,7 @@ public class InputPort extends Port {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "workflow_InputPort_node") })
+  @JoinColumns({ @JoinColumn(name = "workflow_InputPort_node", nullable = true) })
   private WorkflowNode node = null;
 
   /**

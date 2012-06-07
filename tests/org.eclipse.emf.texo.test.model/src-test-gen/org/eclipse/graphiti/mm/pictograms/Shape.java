@@ -20,7 +20,7 @@ public class Shape extends AnchorContainer {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(nullable = true) })
   private ContainerShape container = null;
 
   /**

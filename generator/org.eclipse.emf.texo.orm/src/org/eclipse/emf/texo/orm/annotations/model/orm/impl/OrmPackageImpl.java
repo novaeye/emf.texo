@@ -53,6 +53,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass accessMethodsEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass additionalCriteriaEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -89,6 +103,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass basicMapEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass batchFetchEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -113,6 +134,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass changeTrackingEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass classExtractorEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -245,6 +273,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass entityResultEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fetchAttributeEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fetchGroupEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -257,6 +299,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass generatedValueEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hashPartitioningEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -269,6 +318,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass idClassEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass indexEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -341,18 +397,46 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass mappedSuperclassEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass multitenantEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EClass namedNativeQueryEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedPlsqlStoredFunctionQueryEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedPlsqlStoredProcedureQueryEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EClass namedQueryEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedStoredFunctionQueryEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -389,6 +473,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass orderColumnEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass partitioningEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -401,6 +492,34 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass persistenceUnitMetadataEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pinnedPartitioningEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass plsqlParameterEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass plsqlRecordEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass plsqlTableEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -473,12 +592,47 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass queryRedirectorsEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rangePartitionEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rangePartitioningEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EClass readTransformerEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass replicationPartitioningEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass returnInsertEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass roundRobinPartitioningEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -503,12 +657,26 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass storedProcedureParameterEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EClass structConverterEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -521,6 +689,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass tableGeneratorEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tenantDiscriminatorEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -545,12 +720,33 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EClass typeConverterEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unionPartitioningEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EClass uniqueConstraintEClass = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass valuePartitionEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass valuePartitioningEClass = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -575,12 +771,33 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EEnum accessTypeEEnum = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum batchFetchTypeEEnum = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EEnum cacheCoordinationTypeEEnum = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum cacheIsolationTypeEEnum = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum cacheKeyTypeEEnum = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -603,12 +820,6 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   private EEnum discriminatorTypeEEnum = null;
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  private EEnum enumeratedEEnum = null;
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -659,6 +870,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EEnum lockModeTypeEEnum = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum multitenantTypeEEnum = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -671,12 +889,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EEnum orderColumnCorrectionTypeEEnum = null;
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EEnum temporalEEnum = null;
+	private EEnum supportedVersionsTypeEEnum = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -689,12 +908,33 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EDataType accessTypeObjectEDataType = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType batchFetchTypeObjectEDataType = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   private EDataType cacheCoordinationTypeObjectEDataType = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType cacheIsolationTypeObjectEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType cacheKeyTypeObjectEDataType = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -725,12 +965,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EDataType discriminatorValueEDataType = null;
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType enumeratedObjectEDataType = null;
+	private EDataType enumeratedEDataType = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -779,6 +1020,13 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EDataType lockModeTypeObjectEDataType = null;
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType multitenantTypeObjectEDataType = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -797,12 +1045,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
   private EDataType orderColumnCorrectionTypeObjectEDataType = null;
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EDataType temporalObjectEDataType = null;
+	private EDataType supportedVersionsTypeObjectEDataType = null;
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType temporalEDataType = null;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -910,12 +1166,198 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAdditionalCriteria() {
+		if (additionalCriteriaEClass == null) {
+			additionalCriteriaEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(3);
+		}
+		return additionalCriteriaEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAdditionalCriteria_Criteria() {
+        return (EAttribute)getAdditionalCriteria().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArray() {
+		if (arrayEClass == null) {
+			arrayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(4);
+		}
+		return arrayEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_Column() {
+        return (EReference)getArray().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_Temporal() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_Enumerated() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_Lob() {
+        return (EReference)getArray().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_Convert() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_Group() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_Converter() {
+        return (EReference)getArray().getEStructuralFeatures().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_TypeConverter() {
+        return (EReference)getArray().getEStructuralFeatures().get(7);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_ObjectTypeConverter() {
+        return (EReference)getArray().getEStructuralFeatures().get(8);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_StructConverter() {
+        return (EReference)getArray().getEStructuralFeatures().get(9);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_Property() {
+        return (EReference)getArray().getEStructuralFeatures().get(10);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArray_AccessMethods() {
+        return (EReference)getArray().getEStructuralFeatures().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_Access() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(12);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_AttributeType() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(13);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_DatabaseType() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_Name() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArray_TargetClass() {
+        return (EAttribute)getArray().getEStructuralFeatures().get(16);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getAssociationOverride() {
 		if (associationOverrideEClass == null) {
-			associationOverrideEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(3);
+			associationOverrideEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(5);
 		}
 		return associationOverrideEClass;
 	}
@@ -958,7 +1400,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getAttributeOverride() {
 		if (attributeOverrideEClass == null) {
-			attributeOverrideEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(4);
+			attributeOverrideEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(6);
 		}
 		return attributeOverrideEClass;
 	}
@@ -993,7 +1435,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getAttributes() {
 		if (attributesEClass == null) {
-			attributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(5);
+			attributesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(7);
 		}
 		return attributesEClass;
 	}
@@ -1127,12 +1569,30 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAttributes_Structure() {
+        return (EReference)getAttributes().getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAttributes_Array() {
+        return (EReference)getAttributes().getEStructuralFeatures().get(17);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getBasic() {
 		if (basicEClass == null) {
-			basicEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(6);
+			basicEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(8);
 		}
 		return basicEClass;
 	}
@@ -1146,18 +1606,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasic_Index() {
+        return (EReference)getBasic().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getBasic_GeneratedValue() {
-        return (EReference)getBasic().getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getBasic_Lob() {
         return (EReference)getBasic().getEStructuralFeatures().get(2);
 	}
 
@@ -1165,15 +1626,15 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getBasic_Temporal() {
-        return (EAttribute)getBasic().getEStructuralFeatures().get(3);
+  public EReference getBasic_Lob() {
+        return (EReference)getBasic().getEStructuralFeatures().get(3);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getBasic_Enumerated() {
+  public EAttribute getBasic_Temporal() {
         return (EAttribute)getBasic().getEStructuralFeatures().get(4);
 	}
 
@@ -1181,7 +1642,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getBasic_Convert() {
+  public EAttribute getBasic_Enumerated() {
         return (EAttribute)getBasic().getEStructuralFeatures().get(5);
 	}
 
@@ -1189,15 +1650,15 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_Converter() {
-        return (EReference)getBasic().getEStructuralFeatures().get(6);
+  public EAttribute getBasic_Convert() {
+        return (EAttribute)getBasic().getEStructuralFeatures().get(6);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_TypeConverter() {
+  public EReference getBasic_Converter() {
         return (EReference)getBasic().getEStructuralFeatures().get(7);
 	}
 
@@ -1205,7 +1666,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_ObjectTypeConverter() {
+  public EReference getBasic_TypeConverter() {
         return (EReference)getBasic().getEStructuralFeatures().get(8);
 	}
 
@@ -1213,7 +1674,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_StructConverter() {
+  public EReference getBasic_ObjectTypeConverter() {
         return (EReference)getBasic().getEStructuralFeatures().get(9);
 	}
 
@@ -1221,7 +1682,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_TableGenerator() {
+  public EReference getBasic_StructConverter() {
         return (EReference)getBasic().getEStructuralFeatures().get(10);
 	}
 
@@ -1229,7 +1690,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_SequenceGenerator() {
+  public EReference getBasic_TableGenerator() {
         return (EReference)getBasic().getEStructuralFeatures().get(11);
 	}
 
@@ -1237,7 +1698,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_Property() {
+  public EReference getBasic_SequenceGenerator() {
         return (EReference)getBasic().getEStructuralFeatures().get(12);
 	}
 
@@ -1245,7 +1706,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBasic_AccessMethods() {
+  public EReference getBasic_Property() {
         return (EReference)getBasic().getEStructuralFeatures().get(13);
 	}
 
@@ -1253,16 +1714,51 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getBasic_Access() {
-        return (EAttribute)getBasic().getEStructuralFeatures().get(14);
+  public EReference getBasic_AccessMethods() {
+        return (EReference)getBasic().getEStructuralFeatures().get(14);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasic_ReturnInsert() {
+        return (EReference)getBasic().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasic_ReturnUpdate() {
+        return (EReference)getBasic().getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getBasic_Access() {
+        return (EAttribute)getBasic().getEStructuralFeatures().get(17);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBasic_AttributeType() {
+        return (EAttribute)getBasic().getEStructuralFeatures().get(18);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getBasic_Fetch() {
-        return (EAttribute)getBasic().getEStructuralFeatures().get(15);
+        return (EAttribute)getBasic().getEStructuralFeatures().get(19);
 	}
 
   /**
@@ -1270,7 +1766,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getBasic_Mutable() {
-        return (EAttribute)getBasic().getEStructuralFeatures().get(16);
+        return (EAttribute)getBasic().getEStructuralFeatures().get(20);
 	}
 
   /**
@@ -1278,7 +1774,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getBasic_Name() {
-        return (EAttribute)getBasic().getEStructuralFeatures().get(17);
+        return (EAttribute)getBasic().getEStructuralFeatures().get(21);
 	}
 
   /**
@@ -1286,7 +1782,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getBasic_Optional() {
-        return (EAttribute)getBasic().getEStructuralFeatures().get(18);
+        return (EAttribute)getBasic().getEStructuralFeatures().get(22);
 	}
 
   /**
@@ -1295,7 +1791,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getBasicCollection() {
 		if (basicCollectionEClass == null) {
-			basicCollectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(7);
+			basicCollectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(9);
 		}
 		return basicCollectionEClass;
 	}
@@ -1365,18 +1861,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasicCollection_BatchFetch() {
+        return (EReference)getBasicCollection().getEStructuralFeatures().get(8);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getBasicCollection_Property() {
-        return (EReference)getBasicCollection().getEStructuralFeatures().get(8);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getBasicCollection_AccessMethods() {
         return (EReference)getBasicCollection().getEStructuralFeatures().get(9);
 	}
 
@@ -1384,8 +1881,25 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getBasicCollection_AccessMethods() {
+        return (EReference)getBasicCollection().getEStructuralFeatures().get(10);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasicCollection_Noncacheable() {
+        return (EReference)getBasicCollection().getEStructuralFeatures().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute getBasicCollection_Access() {
-        return (EAttribute)getBasicCollection().getEStructuralFeatures().get(10);
+        return (EAttribute)getBasicCollection().getEStructuralFeatures().get(12);
 	}
 
   /**
@@ -1393,7 +1907,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getBasicCollection_Fetch() {
-        return (EAttribute)getBasicCollection().getEStructuralFeatures().get(11);
+        return (EAttribute)getBasicCollection().getEStructuralFeatures().get(13);
 	}
 
   /**
@@ -1401,7 +1915,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getBasicCollection_Name() {
-        return (EAttribute)getBasicCollection().getEStructuralFeatures().get(12);
+        return (EAttribute)getBasicCollection().getEStructuralFeatures().get(14);
 	}
 
   /**
@@ -1410,7 +1924,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getBasicMap() {
 		if (basicMapEClass == null) {
-			basicMapEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(8);
+			basicMapEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(10);
 		}
 		return basicMapEClass;
 	}
@@ -1504,18 +2018,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasicMap_BatchFetch() {
+        return (EReference)getBasicMap().getEStructuralFeatures().get(11);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getBasicMap_Property() {
-        return (EReference)getBasicMap().getEStructuralFeatures().get(11);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getBasicMap_AccessMethods() {
         return (EReference)getBasicMap().getEStructuralFeatures().get(12);
 	}
 
@@ -1523,23 +2038,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getBasicMap_AccessMethods() {
+        return (EReference)getBasicMap().getEStructuralFeatures().get(13);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBasicMap_Noncacheable() {
+        return (EReference)getBasicMap().getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute getBasicMap_Access() {
-        return (EAttribute)getBasicMap().getEStructuralFeatures().get(13);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getBasicMap_Fetch() {
-        return (EAttribute)getBasicMap().getEStructuralFeatures().get(14);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getBasicMap_Name() {
         return (EAttribute)getBasicMap().getEStructuralFeatures().get(15);
 	}
 
@@ -1547,9 +2063,55 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EAttribute getBasicMap_Fetch() {
+        return (EAttribute)getBasicMap().getEStructuralFeatures().get(16);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getBasicMap_Name() {
+        return (EAttribute)getBasicMap().getEStructuralFeatures().get(17);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBatchFetch() {
+		if (batchFetchEClass == null) {
+			batchFetchEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(11);
+		}
+		return batchFetchEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBatchFetch_Size() {
+        return (EAttribute)getBatchFetch().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBatchFetch_Type() {
+        return (EAttribute)getBatchFetch().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EClass getCache() {
 		if (cacheEClass == null) {
-			cacheEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(9);
+			cacheEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(14);
 		}
 		return cacheEClass;
 	}
@@ -1595,18 +2157,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCache_Isolation() {
+        return (EAttribute)getCache().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getCache_RefreshOnlyIfNewer() {
-        return (EAttribute)getCache().getEStructuralFeatures().get(5);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getCache_Shared() {
         return (EAttribute)getCache().getEStructuralFeatures().get(6);
 	}
 
@@ -1614,7 +2177,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getCache_Size() {
+  public EAttribute getCache_Shared() {
         return (EAttribute)getCache().getEStructuralFeatures().get(7);
 	}
 
@@ -1622,8 +2185,16 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getCache_Type() {
+  public EAttribute getCache_Size() {
         return (EAttribute)getCache().getEStructuralFeatures().get(8);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getCache_Type() {
+        return (EAttribute)getCache().getEStructuralFeatures().get(9);
 	}
 
   /**
@@ -1632,7 +2203,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getCacheInterceptor() {
 		if (cacheInterceptorEClass == null) {
-			cacheInterceptorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(12);
+			cacheInterceptorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(17);
 		}
 		return cacheInterceptorEClass;
 	}
@@ -1651,7 +2222,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getCascadeType() {
 		if (cascadeTypeEClass == null) {
-			cascadeTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(15);
+			cascadeTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(24);
 		}
 		return cascadeTypeEClass;
 	}
@@ -1697,12 +2268,21 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCascadeType_CascadeDetach() {
+        return (EReference)getCascadeType().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getChangeTracking() {
 		if (changeTrackingEClass == null) {
-			changeTrackingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(16);
+			changeTrackingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(25);
 		}
 		return changeTrackingEClass;
 	}
@@ -1716,12 +2296,33 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClassExtractor() {
+		if (classExtractorEClass == null) {
+			classExtractorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(28);
+		}
+		return classExtractorEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClassExtractor_Class() {
+        return (EAttribute)getClassExtractor().getEStructuralFeatures().get(0);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getCloneCopyPolicy() {
 		if (cloneCopyPolicyEClass == null) {
-			cloneCopyPolicyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(19);
+			cloneCopyPolicyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(29);
 		}
 		return cloneCopyPolicyEClass;
 	}
@@ -1748,7 +2349,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getCollectionTable() {
 		if (collectionTableEClass == null) {
-			collectionTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(20);
+			collectionTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(30);
 		}
 		return collectionTableEClass;
 	}
@@ -1778,11 +2379,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCollectionTable_CreationSuffix() {
+        return (EAttribute)getCollectionTable().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getCollectionTable_Name() {
-        return (EAttribute)getCollectionTable().getEStructuralFeatures().get(3);
+        return (EAttribute)getCollectionTable().getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -1790,7 +2400,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getCollectionTable_Schema() {
-        return (EAttribute)getCollectionTable().getEStructuralFeatures().get(4);
+        return (EAttribute)getCollectionTable().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -1799,7 +2409,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getColumn() {
 		if (columnEClass == null) {
-			columnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(21);
+			columnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(31);
 		}
 		return columnEClass;
 	}
@@ -1890,7 +2500,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getColumnResult() {
 		if (columnResultEClass == null) {
-			columnResultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(22);
+			columnResultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(32);
 		}
 		return columnResultEClass;
 	}
@@ -1909,7 +2519,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getConversionValue() {
 		if (conversionValueEClass == null) {
-			conversionValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(23);
+			conversionValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(33);
 		}
 		return conversionValueEClass;
 	}
@@ -1936,7 +2546,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getConverter() {
 		if (converterEClass == null) {
-			converterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(24);
+			converterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(34);
 		}
 		return converterEClass;
 	}
@@ -1963,7 +2573,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getCopyPolicy() {
 		if (copyPolicyEClass == null) {
-			copyPolicyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(25);
+			copyPolicyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(35);
 		}
 		return copyPolicyEClass;
 	}
@@ -1982,7 +2592,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getCustomizer() {
 		if (customizerEClass == null) {
-			customizerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(26);
+			customizerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(36);
 		}
 		return customizerEClass;
 	}
@@ -2001,7 +2611,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getDiscriminatorClass() {
 		if (discriminatorClassEClass == null) {
-			discriminatorClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(29);
+			discriminatorClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(39);
 		}
 		return discriminatorClassEClass;
 	}
@@ -2028,7 +2638,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getDiscriminatorColumn() {
 		if (discriminatorColumnEClass == null) {
-			discriminatorColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(30);
+			discriminatorColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(40);
 		}
 		return discriminatorColumnEClass;
 	}
@@ -2071,7 +2681,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getDocumentRoot() {
 		if (documentRootEClass == null) {
-			documentRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(34);
+			documentRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(44);
 		}
 		return documentRootEClass;
 	}
@@ -2114,7 +2724,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEclipselinkCollectionTable() {
 		if (eclipselinkCollectionTableEClass == null) {
-			eclipselinkCollectionTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(35);
+			eclipselinkCollectionTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(45);
 		}
 		return eclipselinkCollectionTableEClass;
 	}
@@ -2144,11 +2754,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEclipselinkCollectionTable_CreationSuffix() {
+        return (EAttribute)getEclipselinkCollectionTable().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getEclipselinkCollectionTable_Name() {
-        return (EAttribute)getEclipselinkCollectionTable().getEStructuralFeatures().get(3);
+        return (EAttribute)getEclipselinkCollectionTable().getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -2156,7 +2775,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEclipselinkCollectionTable_Schema() {
-        return (EAttribute)getEclipselinkCollectionTable().getEStructuralFeatures().get(4);
+        return (EAttribute)getEclipselinkCollectionTable().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -2165,7 +2784,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getElementCollection() {
 		if (elementCollectionEClass == null) {
-			elementCollectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(36);
+			elementCollectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(46);
 		}
 		return elementCollectionEClass;
 	}
@@ -2363,11 +2982,38 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementCollection_CascadeOnDelete() {
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(24);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementCollection_JoinFetch() {
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(25);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_BatchFetch() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(26);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getElementCollection_Property() {
-        return (EReference)getElementCollection().getEStructuralFeatures().get(24);
+        return (EReference)getElementCollection().getEStructuralFeatures().get(27);
 	}
 
   /**
@@ -2375,23 +3021,131 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getElementCollection_AccessMethods() {
-        return (EReference)getElementCollection().getEStructuralFeatures().get(25);
+        return (EReference)getElementCollection().getEStructuralFeatures().get(28);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_Noncacheable() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(29);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_Partitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(30);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_ReplicationPartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(31);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_RoundRobinPartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(32);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_PinnedPartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(33);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_RangePartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(34);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_ValuePartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(35);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_HashPartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementCollection_UnionPartitioning() {
+        return (EReference)getElementCollection().getEStructuralFeatures().get(37);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementCollection_Partitioned() {
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(38);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getElementCollection_Access() {
-        return (EAttribute)getElementCollection().getEStructuralFeatures().get(26);
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(39);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementCollection_AttributeType() {
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(40);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementCollection_CompositeMember() {
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(41);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getElementCollection_Fetch() {
-        return (EAttribute)getElementCollection().getEStructuralFeatures().get(27);
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(42);
 	}
 
   /**
@@ -2399,7 +3153,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getElementCollection_Name() {
-        return (EAttribute)getElementCollection().getEStructuralFeatures().get(28);
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(43);
 	}
 
   /**
@@ -2407,7 +3161,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getElementCollection_TargetClass() {
-        return (EAttribute)getElementCollection().getEStructuralFeatures().get(29);
+        return (EAttribute)getElementCollection().getEStructuralFeatures().get(44);
 	}
 
   /**
@@ -2416,7 +3170,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEmbeddable() {
 		if (embeddableEClass == null) {
-			embeddableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(37);
+			embeddableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(47);
 		}
 		return embeddableEClass;
 	}
@@ -2430,18 +3184,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEmbeddable_AccessMethods() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getEmbeddable_Customizer() {
-        return (EReference)getEmbeddable().getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getEmbeddable_ChangeTracking() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(2);
 	}
 
@@ -2449,23 +3204,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEmbeddable_Converter() {
+  public EReference getEmbeddable_ChangeTracking() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(3);
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEmbeddable_TypeConverter() {
+	public EReference getEmbeddable_Struct() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(4);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEmbeddable_ObjectTypeConverter() {
+  public EReference getEmbeddable_Converter() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(5);
 	}
 
@@ -2473,7 +3229,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEmbeddable_StructConverter() {
+  public EReference getEmbeddable_TypeConverter() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(6);
 	}
 
@@ -2481,7 +3237,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEmbeddable_Property() {
+  public EReference getEmbeddable_ObjectTypeConverter() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(7);
 	}
 
@@ -2489,8 +3245,42 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEmbeddable_Attributes() {
+  public EReference getEmbeddable_StructConverter() {
         return (EReference)getEmbeddable().getEStructuralFeatures().get(8);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEmbeddable_Property() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(14);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEmbeddable_AttributeOverride() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEmbeddable_AssociationOverride() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEmbeddable_Attributes() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(17);
 	}
 
   /**
@@ -2518,11 +3308,29 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEmbeddable_PlsqlRecord() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(12);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEmbeddable_PlsqlTable() {
+        return (EReference)getEmbeddable().getEStructuralFeatures().get(13);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getEmbeddable_Access() {
-        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(12);
+        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(18);
 	}
 
   /**
@@ -2530,7 +3338,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEmbeddable_Class() {
-        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(13);
+        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(19);
 	}
 
   /**
@@ -2538,7 +3346,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEmbeddable_ExcludeDefaultMappings() {
-        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(14);
+        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(20);
 	}
 
   /**
@@ -2546,16 +3354,25 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEmbeddable_MetadataComplete() {
-        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(15);
+        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(21);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEmbeddable_ParentClass() {
+        return (EAttribute)getEmbeddable().getEStructuralFeatures().get(22);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getEmbedded() {
 		if (embeddedEClass == null) {
-			embeddedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(38);
+			embeddedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(48);
 		}
 		return embeddedEClass;
 	}
@@ -2601,11 +3418,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEmbedded_AttributeType() {
+        return (EAttribute)getEmbedded().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getEmbedded_Name() {
-        return (EAttribute)getEmbedded().getEStructuralFeatures().get(5);
+        return (EAttribute)getEmbedded().getEStructuralFeatures().get(6);
 	}
 
   /**
@@ -2614,7 +3440,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEmbeddedId() {
 		if (embeddedIdEClass == null) {
-			embeddedIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(39);
+			embeddedIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(49);
 		}
 		return embeddedIdEClass;
 	}
@@ -2652,11 +3478,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEmbeddedId_AttributeType() {
+        return (EAttribute)getEmbeddedId().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getEmbeddedId_Name() {
-        return (EAttribute)getEmbeddedId().getEStructuralFeatures().get(4);
+        return (EAttribute)getEmbeddedId().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -2665,7 +3500,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEmptyType() {
 		if (emptyTypeEClass == null) {
-			emptyTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(40);
+			emptyTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(50);
 		}
 		return emptyTypeEClass;
 	}
@@ -2676,7 +3511,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEntity() {
 		if (entityEClass == null) {
-			entityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(41);
+			entityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(51);
 		}
 		return entityEClass;
 	}
@@ -2690,34 +3525,37 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_AccessMethods() {
+        return (EReference)getEntity().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_Multitenant() {
+        return (EReference)getEntity().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_AdditionalCriteria() {
+        return (EReference)getEntity().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getEntity_Customizer() {
-        return (EReference)getEntity().getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getEntity_ChangeTracking() {
-        return (EReference)getEntity().getEStructuralFeatures().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getEntity_Table() {
-        return (EReference)getEntity().getEStructuralFeatures().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getEntity_SecondaryTable() {
         return (EReference)getEntity().getEStructuralFeatures().get(4);
 	}
 
@@ -2725,7 +3563,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_PrimaryKeyJoinColumn() {
+  public EReference getEntity_ChangeTracking() {
         return (EReference)getEntity().getEStructuralFeatures().get(5);
 	}
 
@@ -2733,7 +3571,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_IdClass() {
+  public EReference getEntity_Table() {
         return (EReference)getEntity().getEStructuralFeatures().get(6);
 	}
 
@@ -2741,47 +3579,50 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_PrimaryKey() {
+  public EReference getEntity_SecondaryTable() {
         return (EReference)getEntity().getEStructuralFeatures().get(7);
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_Inheritance() {
+	public EReference getEntity_Struct() {
         return (EReference)getEntity().getEStructuralFeatures().get(8);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getEntity_DiscriminatorValue() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(9);
+  public EReference getEntity_PrimaryKeyJoinColumn() {
+        return (EReference)getEntity().getEStructuralFeatures().get(9);
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_DiscriminatorColumn() {
-        return (EReference)getEntity().getEStructuralFeatures().get(10);
+	public EAttribute getEntity_CascadeOnDelete() {
+        return (EAttribute)getEntity().getEStructuralFeatures().get(10);
 	}
 
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_OptimisticLocking() {
+	public EReference getEntity_Index() {
         return (EReference)getEntity().getEStructuralFeatures().get(11);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_Cache() {
+  public EReference getEntity_IdClass() {
         return (EReference)getEntity().getEStructuralFeatures().get(12);
 	}
 
@@ -2789,7 +3630,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_CacheInterceptor() {
+  public EReference getEntity_PrimaryKey() {
         return (EReference)getEntity().getEStructuralFeatures().get(13);
 	}
 
@@ -2797,7 +3638,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_Converter() {
+  public EReference getEntity_Inheritance() {
         return (EReference)getEntity().getEStructuralFeatures().get(14);
 	}
 
@@ -2805,31 +3646,32 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_TypeConverter() {
-        return (EReference)getEntity().getEStructuralFeatures().get(15);
+  public EAttribute getEntity_DiscriminatorValue() {
+        return (EAttribute)getEntity().getEStructuralFeatures().get(15);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_ObjectTypeConverter() {
+  public EReference getEntity_DiscriminatorColumn() {
         return (EReference)getEntity().getEStructuralFeatures().get(16);
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_StructConverter() {
+	public EReference getEntity_ClassExtractor() {
         return (EReference)getEntity().getEStructuralFeatures().get(17);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_CopyPolicy() {
+  public EReference getEntity_OptimisticLocking() {
         return (EReference)getEntity().getEStructuralFeatures().get(18);
 	}
 
@@ -2837,7 +3679,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_InstantiationCopyPolicy() {
+  public EReference getEntity_Cache() {
         return (EReference)getEntity().getEStructuralFeatures().get(19);
 	}
 
@@ -2845,23 +3687,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_CloneCopyPolicy() {
+  public EReference getEntity_CacheInterceptor() {
         return (EReference)getEntity().getEStructuralFeatures().get(20);
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_SequenceGenerator() {
+	public EReference getEntity_FetchGroup() {
         return (EReference)getEntity().getEStructuralFeatures().get(21);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_TableGenerator() {
+  public EReference getEntity_Converter() {
         return (EReference)getEntity().getEStructuralFeatures().get(22);
 	}
 
@@ -2869,7 +3712,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_NamedQuery() {
+  public EReference getEntity_TypeConverter() {
         return (EReference)getEntity().getEStructuralFeatures().get(23);
 	}
 
@@ -2877,7 +3720,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_NamedNativeQuery() {
+  public EReference getEntity_ObjectTypeConverter() {
         return (EReference)getEntity().getEStructuralFeatures().get(24);
 	}
 
@@ -2885,7 +3728,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_NamedStoredProcedureQuery() {
+  public EReference getEntity_StructConverter() {
         return (EReference)getEntity().getEStructuralFeatures().get(25);
 	}
 
@@ -2893,7 +3736,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_SqlResultSetMapping() {
+  public EReference getEntity_CopyPolicy() {
         return (EReference)getEntity().getEStructuralFeatures().get(26);
 	}
 
@@ -2901,7 +3744,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_QueryRedirectors() {
+  public EReference getEntity_InstantiationCopyPolicy() {
         return (EReference)getEntity().getEStructuralFeatures().get(27);
 	}
 
@@ -2909,7 +3752,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_ExcludeDefaultListeners() {
+  public EReference getEntity_CloneCopyPolicy() {
         return (EReference)getEntity().getEStructuralFeatures().get(28);
 	}
 
@@ -2917,7 +3760,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_ExcludeSuperclassListeners() {
+  public EReference getEntity_SequenceGenerator() {
         return (EReference)getEntity().getEStructuralFeatures().get(29);
 	}
 
@@ -2925,16 +3768,269 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntity_EntityListeners() {
+  public EReference getEntity_TableGenerator() {
         return (EReference)getEntity().getEStructuralFeatures().get(30);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_Partitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(31);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_ReplicationPartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(32);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_RoundRobinPartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(33);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PinnedPartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(34);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_RangePartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(35);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_ValuePartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_HashPartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(37);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_UnionPartitioning() {
+        return (EReference)getEntity().getEStructuralFeatures().get(38);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEntity_Partitioned() {
+        return (EAttribute)getEntity().getEStructuralFeatures().get(39);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_NamedQuery() {
+        return (EReference)getEntity().getEStructuralFeatures().get(40);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getEntity_NamedNativeQuery() {
+        return (EReference)getEntity().getEStructuralFeatures().get(41);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_NamedStoredProcedureQuery() {
+        return (EReference)getEntity().getEStructuralFeatures().get(42);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_NamedStoredFunctionQuery() {
+        return (EReference)getEntity().getEStructuralFeatures().get(43);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_NamedPlsqlStoredProcedureQuery() {
+        return (EReference)getEntity().getEStructuralFeatures().get(44);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_NamedPlsqlStoredFunctionQuery() {
+        return (EReference)getEntity().getEStructuralFeatures().get(45);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PlsqlRecord() {
+        return (EReference)getEntity().getEStructuralFeatures().get(46);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PlsqlTable() {
+        return (EReference)getEntity().getEStructuralFeatures().get(47);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_SqlResultSetMapping() {
+        return (EReference)getEntity().getEStructuralFeatures().get(48);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_QueryRedirectors() {
+        return (EReference)getEntity().getEStructuralFeatures().get(49);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_ExcludeDefaultListeners() {
+        return (EReference)getEntity().getEStructuralFeatures().get(50);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_ExcludeSuperclassListeners() {
+        return (EReference)getEntity().getEStructuralFeatures().get(51);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntity_EntityListeners() {
+        return (EReference)getEntity().getEStructuralFeatures().get(52);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PrePersist() {
+        return (EReference)getEntity().getEStructuralFeatures().get(53);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PostPersist() {
+        return (EReference)getEntity().getEStructuralFeatures().get(54);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PreRemove() {
+        return (EReference)getEntity().getEStructuralFeatures().get(55);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PostRemove() {
+        return (EReference)getEntity().getEStructuralFeatures().get(56);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PreUpdate() {
+        return (EReference)getEntity().getEStructuralFeatures().get(57);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PostUpdate() {
+        return (EReference)getEntity().getEStructuralFeatures().get(58);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntity_PostLoad() {
+        return (EReference)getEntity().getEStructuralFeatures().get(59);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EReference getEntity_Property() {
-        return (EReference)getEntity().getEStructuralFeatures().get(31);
+        return (EReference)getEntity().getEStructuralFeatures().get(60);
 	}
 
   /**
@@ -2942,7 +4038,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntity_AttributeOverride() {
-        return (EReference)getEntity().getEStructuralFeatures().get(32);
+        return (EReference)getEntity().getEStructuralFeatures().get(61);
 	}
 
   /**
@@ -2950,7 +4046,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntity_AssociationOverride() {
-        return (EReference)getEntity().getEStructuralFeatures().get(33);
+        return (EReference)getEntity().getEStructuralFeatures().get(62);
 	}
 
   /**
@@ -2958,7 +4054,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntity_Attributes() {
-        return (EReference)getEntity().getEStructuralFeatures().get(34);
+        return (EReference)getEntity().getEStructuralFeatures().get(63);
 	}
 
   /**
@@ -2966,7 +4062,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_Access() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(35);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(64);
 	}
 
   /**
@@ -2974,7 +4070,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_Cacheable() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(36);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(65);
 	}
 
   /**
@@ -2982,7 +4078,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_Class() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(37);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(66);
 	}
 
   /**
@@ -2990,7 +4086,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_ExcludeDefaultMappings() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(38);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(67);
 	}
 
   /**
@@ -2998,7 +4094,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_ExistenceChecking() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(39);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(68);
 	}
 
   /**
@@ -3006,7 +4102,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_MetadataComplete() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(40);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(69);
 	}
 
   /**
@@ -3014,15 +4110,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntity_Name() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(41);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(70);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEntity_ParentClass() {
+        return (EAttribute)getEntity().getEStructuralFeatures().get(71);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getEntity_ReadOnly() {
-        return (EAttribute)getEntity().getEStructuralFeatures().get(42);
+        return (EAttribute)getEntity().getEStructuralFeatures().get(72);
 	}
 
   /**
@@ -3031,7 +4136,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEntityListener() {
 		if (entityListenerEClass == null) {
-			entityListenerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(42);
+			entityListenerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(52);
 		}
 		return entityListenerEClass;
 	}
@@ -3114,7 +4219,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEntityListeners() {
 		if (entityListenersEClass == null) {
-			entityListenersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(43);
+			entityListenersEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(53);
 		}
 		return entityListenersEClass;
 	}
@@ -3133,7 +4238,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEntityMappingsType() {
 		if (entityMappingsTypeEClass == null) {
-			entityMappingsTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(44);
+			entityMappingsTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(54);
 		}
 		return entityMappingsTypeEClass;
 	}
@@ -3187,26 +4292,28 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_AccessMethods() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_TenantDiscriminator() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(7);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getEntityMappingsType_Converter() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(6);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getEntityMappingsType_TypeConverter() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(7);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getEntityMappingsType_ObjectTypeConverter() {
         return (EReference)getEntityMappingsType().getEStructuralFeatures().get(8);
 	}
 
@@ -3214,7 +4321,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntityMappingsType_StructConverter() {
+  public EReference getEntityMappingsType_TypeConverter() {
         return (EReference)getEntityMappingsType().getEStructuralFeatures().get(9);
 	}
 
@@ -3222,7 +4329,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntityMappingsType_SequenceGenerator() {
+  public EReference getEntityMappingsType_ObjectTypeConverter() {
         return (EReference)getEntityMappingsType().getEStructuralFeatures().get(10);
 	}
 
@@ -3230,7 +4337,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntityMappingsType_TableGenerator() {
+  public EReference getEntityMappingsType_StructConverter() {
         return (EReference)getEntityMappingsType().getEStructuralFeatures().get(11);
 	}
 
@@ -3238,7 +4345,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntityMappingsType_NamedQuery() {
+  public EReference getEntityMappingsType_SequenceGenerator() {
         return (EReference)getEntityMappingsType().getEStructuralFeatures().get(12);
 	}
 
@@ -3246,8 +4353,96 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getEntityMappingsType_NamedNativeQuery() {
+  public EReference getEntityMappingsType_TableGenerator() {
         return (EReference)getEntityMappingsType().getEStructuralFeatures().get(13);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_Partitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_ReplicationPartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_RoundRobinPartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_PinnedPartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(17);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_RangePartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(18);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_ValuePartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(19);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_HashPartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(20);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_UnionPartitioning() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(21);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntityMappingsType_NamedQuery() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(22);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getEntityMappingsType_NamedNativeQuery() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(23);
 	}
 
   /**
@@ -3255,15 +4450,60 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntityMappingsType_NamedStoredProcedureQuery() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(14);
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(24);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_NamedStoredFunctionQuery() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(25);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_NamedPlsqlStoredProcedureQuery() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(26);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_NamedPlsqlStoredFunctionQuery() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(27);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_PlsqlRecord() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(28);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntityMappingsType_PlsqlTable() {
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(29);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getEntityMappingsType_SqlResultSetMapping() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(15);
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(30);
 	}
 
   /**
@@ -3271,7 +4511,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntityMappingsType_MappedSuperclass() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(16);
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(31);
 	}
 
   /**
@@ -3279,7 +4519,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntityMappingsType_Entity() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(17);
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(32);
 	}
 
   /**
@@ -3287,7 +4527,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getEntityMappingsType_Embeddable() {
-        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(18);
+        return (EReference)getEntityMappingsType().getEStructuralFeatures().get(33);
 	}
 
   /**
@@ -3295,7 +4535,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getEntityMappingsType_Version() {
-        return (EAttribute)getEntityMappingsType().getEStructuralFeatures().get(19);
+        return (EAttribute)getEntityMappingsType().getEStructuralFeatures().get(34);
 	}
 
   /**
@@ -3304,7 +4544,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getEntityResult() {
 		if (entityResultEClass == null) {
-			entityResultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(45);
+			entityResultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(55);
 		}
 		return entityResultEClass;
 	}
@@ -3334,12 +4574,72 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFetchAttribute() {
+		if (fetchAttributeEClass == null) {
+			fetchAttributeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(61);
+		}
+		return fetchAttributeEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFetchAttribute_Name() {
+        return (EAttribute)getFetchAttribute().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFetchGroup() {
+		if (fetchGroupEClass == null) {
+			fetchGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(62);
+		}
+		return fetchGroupEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFetchGroup_Attribute() {
+        return (EReference)getFetchGroup().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFetchGroup_Load() {
+        return (EAttribute)getFetchGroup().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFetchGroup_Name() {
+        return (EAttribute)getFetchGroup().getEStructuralFeatures().get(2);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getFieldResult() {
 		if (fieldResultEClass == null) {
-			fieldResultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(54);
+			fieldResultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(65);
 		}
 		return fieldResultEClass;
 	}
@@ -3366,7 +4666,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getGeneratedValue() {
 		if (generatedValueEClass == null) {
-			generatedValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(55);
+			generatedValueEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(66);
 		}
 		return generatedValueEClass;
 	}
@@ -3388,12 +4688,60 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHashPartitioning() {
+		if (hashPartitioningEClass == null) {
+			hashPartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(69);
+		}
+		return hashPartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHashPartitioning_PartitionColumn() {
+        return (EReference)getHashPartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHashPartitioning_ConnectionPool() {
+        return (EAttribute)getHashPartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHashPartitioning_Name() {
+        return (EAttribute)getHashPartitioning().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHashPartitioning_UnionUnpartitionableQueries() {
+        return (EAttribute)getHashPartitioning().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getId() {
 		if (idEClass == null) {
-			idEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(58);
+			idEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(70);
 		}
 		return idEClass;
 	}
@@ -3407,11 +4755,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getId_Index() {
+        return (EReference)getId().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getId_GeneratedValue() {
-        return (EReference)getId().getEStructuralFeatures().get(1);
+        return (EReference)getId().getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -3419,15 +4776,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getId_Temporal() {
-        return (EAttribute)getId().getEStructuralFeatures().get(2);
+        return (EAttribute)getId().getEStructuralFeatures().get(3);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getId_Enumerated() {
+        return (EAttribute)getId().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getId_Convert() {
-        return (EAttribute)getId().getEStructuralFeatures().get(3);
+        return (EAttribute)getId().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -3435,22 +4801,6 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getId_Converter() {
-        return (EReference)getId().getEStructuralFeatures().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getId_TypeConverter() {
-        return (EReference)getId().getEStructuralFeatures().get(5);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getId_ObjectTypeConverter() {
         return (EReference)getId().getEStructuralFeatures().get(6);
 	}
 
@@ -3458,7 +4808,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getId_StructConverter() {
+  public EReference getId_TypeConverter() {
         return (EReference)getId().getEStructuralFeatures().get(7);
 	}
 
@@ -3466,7 +4816,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getId_TableGenerator() {
+  public EReference getId_ObjectTypeConverter() {
         return (EReference)getId().getEStructuralFeatures().get(8);
 	}
 
@@ -3474,7 +4824,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getId_SequenceGenerator() {
+  public EReference getId_StructConverter() {
         return (EReference)getId().getEStructuralFeatures().get(9);
 	}
 
@@ -3482,7 +4832,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getId_Property() {
+  public EReference getId_TableGenerator() {
         return (EReference)getId().getEStructuralFeatures().get(10);
 	}
 
@@ -3490,7 +4840,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getId_AccessMethods() {
+  public EReference getId_SequenceGenerator() {
         return (EReference)getId().getEStructuralFeatures().get(11);
 	}
 
@@ -3498,16 +4848,41 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getId_Access() {
-        return (EAttribute)getId().getEStructuralFeatures().get(12);
+  public EReference getId_Property() {
+        return (EReference)getId().getEStructuralFeatures().get(12);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getId_AccessMethods() {
+        return (EReference)getId().getEStructuralFeatures().get(13);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getId_Access() {
+        return (EAttribute)getId().getEStructuralFeatures().get(14);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getId_AttributeType() {
+        return (EAttribute)getId().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute getId_Mutable() {
-        return (EAttribute)getId().getEStructuralFeatures().get(13);
+        return (EAttribute)getId().getEStructuralFeatures().get(16);
 	}
 
   /**
@@ -3515,7 +4890,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getId_Name() {
-        return (EAttribute)getId().getEStructuralFeatures().get(14);
+        return (EAttribute)getId().getEStructuralFeatures().get(17);
 	}
 
   /**
@@ -3524,7 +4899,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getIdClass() {
 		if (idClassEClass == null) {
-			idClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(59);
+			idClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(71);
 		}
 		return idClassEClass;
 	}
@@ -3538,12 +4913,78 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIndex() {
+		if (indexEClass == null) {
+			indexEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(74);
+		}
+		return indexEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIndex_ColumnName() {
+        return (EAttribute)getIndex().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIndex_Catalog() {
+        return (EAttribute)getIndex().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIndex_Name() {
+        return (EAttribute)getIndex().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIndex_Schema() {
+        return (EAttribute)getIndex().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIndex_Table() {
+        return (EAttribute)getIndex().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIndex_Unique() {
+        return (EAttribute)getIndex().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getInheritance() {
 		if (inheritanceEClass == null) {
-			inheritanceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(62);
+			inheritanceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(75);
 		}
 		return inheritanceEClass;
 	}
@@ -3562,7 +5003,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getInstantiationCopyPolicy() {
 		if (instantiationCopyPolicyEClass == null) {
-			instantiationCopyPolicyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(65);
+			instantiationCopyPolicyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(78);
 		}
 		return instantiationCopyPolicyEClass;
 	}
@@ -3573,7 +5014,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getJoinColumn() {
 		if (joinColumnEClass == null) {
-			joinColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(66);
+			joinColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(79);
 		}
 		return joinColumnEClass;
 	}
@@ -3648,7 +5089,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getJoinTable() {
 		if (joinTableEClass == null) {
-			joinTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(69);
+			joinTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(82);
 		}
 		return joinTableEClass;
 	}
@@ -3686,11 +5127,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJoinTable_CreationSuffix() {
+        return (EAttribute)getJoinTable().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getJoinTable_Name() {
-        return (EAttribute)getJoinTable().getEStructuralFeatures().get(4);
+        return (EAttribute)getJoinTable().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -3698,7 +5148,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getJoinTable_Schema() {
-        return (EAttribute)getJoinTable().getEStructuralFeatures().get(5);
+        return (EAttribute)getJoinTable().getEStructuralFeatures().get(6);
 	}
 
   /**
@@ -3707,7 +5157,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getLob() {
 		if (lobEClass == null) {
-			lobEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(70);
+			lobEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(83);
 		}
 		return lobEClass;
 	}
@@ -3718,7 +5168,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getManyToMany() {
 		if (manyToManyEClass == null) {
-			manyToManyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(73);
+			manyToManyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(86);
 		}
 		return manyToManyEClass;
 	}
@@ -3860,19 +5310,37 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getManyToMany_CascadeOnDelete() {
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(17);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getManyToMany_JoinFetch() {
-        return (EAttribute)getManyToMany().getEStructuralFeatures().get(17);
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(18);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_BatchFetch() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(19);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getManyToMany_Property() {
-        return (EReference)getManyToMany().getEStructuralFeatures().get(18);
+        return (EReference)getManyToMany().getEStructuralFeatures().get(20);
 	}
 
   /**
@@ -3880,23 +5348,122 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getManyToMany_AccessMethods() {
-        return (EReference)getManyToMany().getEStructuralFeatures().get(19);
+        return (EReference)getManyToMany().getEStructuralFeatures().get(21);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_Noncacheable() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(22);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_Partitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(23);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_ReplicationPartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(24);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_RoundRobinPartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(25);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_PinnedPartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(26);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_RangePartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(27);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_ValuePartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(28);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_HashPartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(29);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToMany_UnionPartitioning() {
+        return (EReference)getManyToMany().getEStructuralFeatures().get(30);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getManyToMany_Partitioned() {
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(31);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getManyToMany_Access() {
-        return (EAttribute)getManyToMany().getEStructuralFeatures().get(20);
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(32);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getManyToMany_AttributeType() {
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(33);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getManyToMany_Fetch() {
-        return (EAttribute)getManyToMany().getEStructuralFeatures().get(21);
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(34);
 	}
 
   /**
@@ -3904,7 +5471,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToMany_MappedBy() {
-        return (EAttribute)getManyToMany().getEStructuralFeatures().get(22);
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(35);
 	}
 
   /**
@@ -3912,7 +5479,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToMany_Name() {
-        return (EAttribute)getManyToMany().getEStructuralFeatures().get(23);
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(36);
 	}
 
   /**
@@ -3920,7 +5487,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToMany_TargetEntity() {
-        return (EAttribute)getManyToMany().getEStructuralFeatures().get(24);
+        return (EAttribute)getManyToMany().getEStructuralFeatures().get(37);
 	}
 
   /**
@@ -3929,7 +5496,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getManyToOne() {
 		if (manyToOneEClass == null) {
-			manyToOneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(74);
+			manyToOneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(87);
 		}
 		return manyToOneEClass;
 	}
@@ -3967,18 +5534,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_BatchFetch() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getManyToOne_Property() {
-        return (EReference)getManyToOne().getEStructuralFeatures().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getManyToOne_AccessMethods() {
         return (EReference)getManyToOne().getEStructuralFeatures().get(5);
 	}
 
@@ -3986,8 +5554,106 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EReference getManyToOne_AccessMethods() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(6);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_Noncacheable() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(7);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_Partitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(8);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_ReplicationPartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(9);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_RoundRobinPartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(10);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_PinnedPartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_RangePartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(12);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_ValuePartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(13);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_HashPartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getManyToOne_UnionPartitioning() {
+        return (EReference)getManyToOne().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getManyToOne_Partitioned() {
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EAttribute getManyToOne_Access() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(6);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(17);
 	}
 
   /**
@@ -3995,7 +5661,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToOne_Fetch() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(7);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(18);
 	}
 
   /**
@@ -4003,7 +5669,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToOne_Id() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(8);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(19);
 	}
 
   /**
@@ -4011,7 +5677,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToOne_MapsId() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(9);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(20);
 	}
 
   /**
@@ -4019,7 +5685,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToOne_Name() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(10);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(21);
 	}
 
   /**
@@ -4027,7 +5693,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToOne_Optional() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(11);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(22);
 	}
 
   /**
@@ -4035,7 +5701,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getManyToOne_TargetEntity() {
-        return (EAttribute)getManyToOne().getEStructuralFeatures().get(12);
+        return (EAttribute)getManyToOne().getEStructuralFeatures().get(23);
 	}
 
   /**
@@ -4044,7 +5710,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getMapKey() {
 		if (mapKeyEClass == null) {
-			mapKeyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(75);
+			mapKeyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(88);
 		}
 		return mapKeyEClass;
 	}
@@ -4063,7 +5729,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getMapKeyClass() {
 		if (mapKeyClassEClass == null) {
-			mapKeyClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(76);
+			mapKeyClassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(89);
 		}
 		return mapKeyClassEClass;
 	}
@@ -4082,7 +5748,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getMapKeyColumn() {
 		if (mapKeyColumnEClass == null) {
-			mapKeyColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(77);
+			mapKeyColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(90);
 		}
 		return mapKeyColumnEClass;
 	}
@@ -4173,7 +5839,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getMapKeyJoinColumn() {
 		if (mapKeyJoinColumnEClass == null) {
-			mapKeyJoinColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(78);
+			mapKeyJoinColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(91);
 		}
 		return mapKeyJoinColumnEClass;
 	}
@@ -4248,7 +5914,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getMappedSuperclass() {
 		if (mappedSuperclassEClass == null) {
-			mappedSuperclassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(79);
+			mappedSuperclassEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(92);
 		}
 		return mappedSuperclassEClass;
 	}
@@ -4262,34 +5928,37 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_AccessMethods() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_Multitenant() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_AdditionalCriteria() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getMappedSuperclass_Customizer() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getMappedSuperclass_ChangeTracking() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getMappedSuperclass_IdClass() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EReference getMappedSuperclass_PrimaryKey() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(4);
 	}
 
@@ -4297,7 +5966,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_OptimisticLocking() {
+  public EReference getMappedSuperclass_ChangeTracking() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(5);
 	}
 
@@ -4305,7 +5974,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_Cache() {
+  public EReference getMappedSuperclass_IdClass() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(6);
 	}
 
@@ -4313,7 +5982,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_CacheInterceptor() {
+  public EReference getMappedSuperclass_PrimaryKey() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(7);
 	}
 
@@ -4321,7 +5990,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_Converter() {
+  public EReference getMappedSuperclass_OptimisticLocking() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(8);
 	}
 
@@ -4329,7 +5998,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_TypeConverter() {
+  public EReference getMappedSuperclass_Cache() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(9);
 	}
 
@@ -4337,23 +6006,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_ObjectTypeConverter() {
+  public EReference getMappedSuperclass_CacheInterceptor() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(10);
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_StructConverter() {
+	public EReference getMappedSuperclass_FetchGroup() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(11);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_CopyPolicy() {
+  public EReference getMappedSuperclass_Converter() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(12);
 	}
 
@@ -4361,7 +6031,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_InstantiationCopyPolicy() {
+  public EReference getMappedSuperclass_TypeConverter() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(13);
 	}
 
@@ -4369,7 +6039,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_CloneCopyPolicy() {
+  public EReference getMappedSuperclass_ObjectTypeConverter() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(14);
 	}
 
@@ -4377,7 +6047,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_ExcludeDefaultListeners() {
+  public EReference getMappedSuperclass_StructConverter() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(15);
 	}
 
@@ -4385,7 +6055,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_ExcludeSuperclassListeners() {
+  public EReference getMappedSuperclass_CopyPolicy() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(16);
 	}
 
@@ -4393,7 +6063,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_EntityListeners() {
+  public EReference getMappedSuperclass_InstantiationCopyPolicy() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(17);
 	}
 
@@ -4401,8 +6071,229 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getMappedSuperclass_PrePersist() {
+  public EReference getMappedSuperclass_CloneCopyPolicy() {
         return (EReference)getMappedSuperclass().getEStructuralFeatures().get(18);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_SequenceGenerator() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(19);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_TableGenerator() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(20);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_Partitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(21);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_ReplicationPartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(22);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_RoundRobinPartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(23);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_PinnedPartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(24);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_RangePartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(25);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_ValuePartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(26);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_HashPartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(27);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_UnionPartitioning() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(28);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMappedSuperclass_Partitioned() {
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(29);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_NamedQuery() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(30);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_NamedNativeQuery() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(31);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_NamedStoredProcedureQuery() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(32);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_NamedStoredFunctionQuery() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(33);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_NamedPlsqlStoredProcedureQuery() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(34);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_NamedPlsqlStoredFunctionQuery() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(35);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_PlsqlRecord() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_PlsqlTable() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(37);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_SqlResultSetMapping() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(38);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_QueryRedirectors() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(39);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getMappedSuperclass_ExcludeDefaultListeners() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(40);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getMappedSuperclass_ExcludeSuperclassListeners() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(41);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getMappedSuperclass_EntityListeners() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(42);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EReference getMappedSuperclass_PrePersist() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(43);
 	}
 
   /**
@@ -4410,7 +6301,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_PostPersist() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(19);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(44);
 	}
 
   /**
@@ -4418,7 +6309,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_PreRemove() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(20);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(45);
 	}
 
   /**
@@ -4426,7 +6317,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_PostRemove() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(21);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(46);
 	}
 
   /**
@@ -4434,7 +6325,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_PreUpdate() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(22);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(47);
 	}
 
   /**
@@ -4442,7 +6333,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_PostUpdate() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(23);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(48);
 	}
 
   /**
@@ -4450,7 +6341,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_PostLoad() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(24);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(49);
 	}
 
   /**
@@ -4458,15 +6349,33 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getMappedSuperclass_Property() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(25);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(50);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_AttributeOverride() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(51);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedSuperclass_AssociationOverride() {
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(52);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getMappedSuperclass_Attributes() {
-        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(26);
+        return (EReference)getMappedSuperclass().getEStructuralFeatures().get(53);
 	}
 
   /**
@@ -4474,7 +6383,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_Access() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(27);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(54);
 	}
 
   /**
@@ -4482,7 +6391,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_Cacheable() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(28);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(55);
 	}
 
   /**
@@ -4490,7 +6399,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_Class() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(29);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(56);
 	}
 
   /**
@@ -4498,7 +6407,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_ExcludeDefaultMappings() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(30);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(57);
 	}
 
   /**
@@ -4506,7 +6415,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_ExistenceChecking() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(31);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(58);
 	}
 
   /**
@@ -4514,24 +6423,63 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_MetadataComplete() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(32);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(59);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMappedSuperclass_ParentClass() {
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(60);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getMappedSuperclass_ReadOnly() {
-        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(33);
+        return (EAttribute)getMappedSuperclass().getEStructuralFeatures().get(61);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMultitenant() {
+		if (multitenantEClass == null) {
+			multitenantEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(93);
+		}
+		return multitenantEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMultitenant_TenantDiscriminator() {
+        return (EReference)getMultitenant().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMultitenant_Type() {
+        return (EAttribute)getMultitenant().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getNamedNativeQuery() {
 		if (namedNativeQueryEClass == null) {
-			namedNativeQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(80);
+			namedNativeQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(96);
 		}
 		return namedNativeQueryEClass;
 	}
@@ -4585,12 +6533,144 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNamedPlsqlStoredFunctionQuery() {
+		if (namedPlsqlStoredFunctionQueryEClass == null) {
+			namedPlsqlStoredFunctionQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(97);
+		}
+		return namedPlsqlStoredFunctionQueryEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedPlsqlStoredFunctionQuery_Hint() {
+        return (EReference)getNamedPlsqlStoredFunctionQuery().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedPlsqlStoredFunctionQuery_Parameter() {
+        return (EReference)getNamedPlsqlStoredFunctionQuery().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedPlsqlStoredFunctionQuery_ReturnParameter() {
+        return (EReference)getNamedPlsqlStoredFunctionQuery().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredFunctionQuery_FunctionName() {
+        return (EAttribute)getNamedPlsqlStoredFunctionQuery().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredFunctionQuery_Name() {
+        return (EAttribute)getNamedPlsqlStoredFunctionQuery().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredFunctionQuery_ResultSetMapping() {
+        return (EAttribute)getNamedPlsqlStoredFunctionQuery().getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNamedPlsqlStoredProcedureQuery() {
+		if (namedPlsqlStoredProcedureQueryEClass == null) {
+			namedPlsqlStoredProcedureQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(98);
+		}
+		return namedPlsqlStoredProcedureQueryEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedPlsqlStoredProcedureQuery_Hint() {
+        return (EReference)getNamedPlsqlStoredProcedureQuery().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedPlsqlStoredProcedureQuery_Parameter() {
+        return (EReference)getNamedPlsqlStoredProcedureQuery().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredProcedureQuery_Name() {
+        return (EAttribute)getNamedPlsqlStoredProcedureQuery().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredProcedureQuery_ProcedureName() {
+        return (EAttribute)getNamedPlsqlStoredProcedureQuery().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredProcedureQuery_ResultClass() {
+        return (EAttribute)getNamedPlsqlStoredProcedureQuery().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedPlsqlStoredProcedureQuery_ResultSetMapping() {
+        return (EAttribute)getNamedPlsqlStoredProcedureQuery().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getNamedQuery() {
 		if (namedQueryEClass == null) {
-			namedQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(81);
+			namedQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(99);
 		}
 		return namedQueryEClass;
 	}
@@ -4636,12 +6716,87 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNamedStoredFunctionQuery() {
+		if (namedStoredFunctionQueryEClass == null) {
+			namedStoredFunctionQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(100);
+		}
+		return namedStoredFunctionQueryEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedStoredFunctionQuery_Hint() {
+        return (EReference)getNamedStoredFunctionQuery().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedStoredFunctionQuery_Parameter() {
+        return (EReference)getNamedStoredFunctionQuery().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNamedStoredFunctionQuery_ReturnParameter() {
+        return (EReference)getNamedStoredFunctionQuery().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedStoredFunctionQuery_CallByIndex() {
+        return (EAttribute)getNamedStoredFunctionQuery().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedStoredFunctionQuery_FunctionName() {
+        return (EAttribute)getNamedStoredFunctionQuery().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedStoredFunctionQuery_Name() {
+        return (EAttribute)getNamedStoredFunctionQuery().getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedStoredFunctionQuery_ResultSetMapping() {
+        return (EAttribute)getNamedStoredFunctionQuery().getEStructuralFeatures().get(6);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getNamedStoredProcedureQuery() {
 		if (namedStoredProcedureQueryEClass == null) {
-			namedStoredProcedureQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(82);
+			namedStoredProcedureQueryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(101);
 		}
 		return namedStoredProcedureQueryEClass;
 	}
@@ -4663,26 +6818,28 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedStoredProcedureQuery_CallByIndex() {
+        return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedStoredProcedureQuery_MultipleResultSets() {
+        return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getNamedStoredProcedureQuery_Name() {
-        return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getNamedStoredProcedureQuery_ProcedureName() {
-        return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getNamedStoredProcedureQuery_ResultClass() {
         return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(4);
 	}
 
@@ -4690,7 +6847,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNamedStoredProcedureQuery_ResultSetMapping() {
+  public EAttribute getNamedStoredProcedureQuery_ProcedureName() {
         return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(5);
 	}
 
@@ -4698,8 +6855,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getNamedStoredProcedureQuery_ReturnsResultSet() {
+  public EAttribute getNamedStoredProcedureQuery_ResultClass() {
         return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(6);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getNamedStoredProcedureQuery_ResultSetMapping() {
+        return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(7);
+	}
+
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getNamedStoredProcedureQuery_ReturnsResultSet() {
+        return (EAttribute)getNamedStoredProcedureQuery().getEStructuralFeatures().get(8);
 	}
 
   /**
@@ -4708,7 +6881,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getObjectTypeConverter() {
 		if (objectTypeConverterEClass == null) {
-			objectTypeConverterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(83);
+			objectTypeConverterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(102);
 		}
 		return objectTypeConverterEClass;
 	}
@@ -4759,7 +6932,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getOneToMany() {
 		if (oneToManyEClass == null) {
-			oneToManyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(84);
+			oneToManyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(103);
 		}
 		return oneToManyEClass;
 	}
@@ -4909,11 +7082,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOneToMany_CascadeOnDelete() {
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(18);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getOneToMany_PrivateOwned() {
-        return (EReference)getOneToMany().getEStructuralFeatures().get(18);
+        return (EReference)getOneToMany().getEStructuralFeatures().get(19);
 	}
 
   /**
@@ -4921,15 +7103,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToMany_JoinFetch() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(19);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(20);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_BatchFetch() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(21);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getOneToMany_Property() {
-        return (EReference)getOneToMany().getEStructuralFeatures().get(20);
+        return (EReference)getOneToMany().getEStructuralFeatures().get(22);
 	}
 
   /**
@@ -4937,23 +7128,122 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getOneToMany_AccessMethods() {
-        return (EReference)getOneToMany().getEStructuralFeatures().get(21);
+        return (EReference)getOneToMany().getEStructuralFeatures().get(23);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_Noncacheable() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(24);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_Partitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(25);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_ReplicationPartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(26);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_RoundRobinPartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(27);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_PinnedPartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(28);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_RangePartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(29);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_ValuePartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(30);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_HashPartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(31);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToMany_UnionPartitioning() {
+        return (EReference)getOneToMany().getEStructuralFeatures().get(32);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOneToMany_Partitioned() {
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(33);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getOneToMany_Access() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(22);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(34);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOneToMany_AttributeType() {
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(35);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getOneToMany_Fetch() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(23);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(36);
 	}
 
   /**
@@ -4961,7 +7251,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToMany_MappedBy() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(24);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(37);
 	}
 
   /**
@@ -4969,7 +7259,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToMany_Name() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(25);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(38);
 	}
 
   /**
@@ -4977,7 +7267,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToMany_OrphanRemoval() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(26);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(39);
 	}
 
   /**
@@ -4985,7 +7275,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToMany_TargetEntity() {
-        return (EAttribute)getOneToMany().getEStructuralFeatures().get(27);
+        return (EAttribute)getOneToMany().getEStructuralFeatures().get(40);
 	}
 
   /**
@@ -4994,7 +7284,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getOneToOne() {
 		if (oneToOneEClass == null) {
-			oneToOneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(85);
+			oneToOneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(104);
 		}
 		return oneToOneEClass;
 	}
@@ -5032,11 +7322,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOneToOne_CascadeOnDelete() {
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getOneToOne_PrivateOwned() {
-        return (EReference)getOneToOne().getEStructuralFeatures().get(4);
+        return (EReference)getOneToOne().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -5044,15 +7343,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_JoinFetch() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(5);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(6);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_BatchFetch() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(7);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getOneToOne_Property() {
-        return (EReference)getOneToOne().getEStructuralFeatures().get(6);
+        return (EReference)getOneToOne().getEStructuralFeatures().get(8);
 	}
 
   /**
@@ -5060,15 +7368,105 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getOneToOne_AccessMethods() {
-        return (EReference)getOneToOne().getEStructuralFeatures().get(7);
+        return (EReference)getOneToOne().getEStructuralFeatures().get(9);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_Noncacheable() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(10);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_Partitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_ReplicationPartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(12);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_RoundRobinPartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(13);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_PinnedPartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_RangePartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_ValuePartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_HashPartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(17);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOneToOne_UnionPartitioning() {
+        return (EReference)getOneToOne().getEStructuralFeatures().get(18);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOneToOne_Partitioned() {
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(19);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getOneToOne_Access() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(8);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(20);
 	}
 
   /**
@@ -5076,7 +7474,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_Fetch() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(9);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(21);
 	}
 
   /**
@@ -5084,7 +7482,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_Id() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(10);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(22);
 	}
 
   /**
@@ -5092,7 +7490,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_MappedBy() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(11);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(23);
 	}
 
   /**
@@ -5100,7 +7498,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_MapsId() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(12);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(24);
 	}
 
   /**
@@ -5108,7 +7506,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_Name() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(13);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(25);
 	}
 
   /**
@@ -5116,7 +7514,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_Optional() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(14);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(26);
 	}
 
   /**
@@ -5124,7 +7522,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_OrphanRemoval() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(15);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(27);
 	}
 
   /**
@@ -5132,7 +7530,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getOneToOne_TargetEntity() {
-        return (EAttribute)getOneToOne().getEStructuralFeatures().get(16);
+        return (EAttribute)getOneToOne().getEStructuralFeatures().get(28);
 	}
 
   /**
@@ -5141,7 +7539,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getOptimisticLocking() {
 		if (optimisticLockingEClass == null) {
-			optimisticLockingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(86);
+			optimisticLockingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(105);
 		}
 		return optimisticLockingEClass;
 	}
@@ -5176,7 +7574,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getOrderColumn() {
 		if (orderColumnEClass == null) {
-			orderColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(90);
+			orderColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(109);
 		}
 		return orderColumnEClass;
 	}
@@ -5230,12 +7628,42 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPartitioning() {
+		if (partitioningEClass == null) {
+			partitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(112);
+		}
+		return partitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPartitioning_Class() {
+        return (EAttribute)getPartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPartitioning_Name() {
+        return (EAttribute)getPartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getPersistenceUnitDefaults() {
 		if (persistenceUnitDefaultsEClass == null) {
-			persistenceUnitDefaultsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(93);
+			persistenceUnitDefaultsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(113);
 		}
 		return persistenceUnitDefaultsEClass;
 	}
@@ -5281,19 +7709,37 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPersistenceUnitDefaults_AccessMethods() {
+        return (EReference)getPersistenceUnitDefaults().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getPersistenceUnitDefaults_CascadePersist() {
-        return (EReference)getPersistenceUnitDefaults().getEStructuralFeatures().get(5);
+        return (EReference)getPersistenceUnitDefaults().getEStructuralFeatures().get(6);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPersistenceUnitDefaults_TenantDiscriminator() {
+        return (EReference)getPersistenceUnitDefaults().getEStructuralFeatures().get(7);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getPersistenceUnitDefaults_EntityListeners() {
-        return (EReference)getPersistenceUnitDefaults().getEStructuralFeatures().get(6);
+        return (EReference)getPersistenceUnitDefaults().getEStructuralFeatures().get(8);
 	}
 
   /**
@@ -5302,7 +7748,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPersistenceUnitMetadata() {
 		if (persistenceUnitMetadataEClass == null) {
-			persistenceUnitMetadataEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(94);
+			persistenceUnitMetadataEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(114);
 		}
 		return persistenceUnitMetadataEClass;
 	}
@@ -5340,12 +7786,222 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPinnedPartitioning() {
+		if (pinnedPartitioningEClass == null) {
+			pinnedPartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(115);
+		}
+		return pinnedPartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPinnedPartitioning_ConnectionPool() {
+        return (EAttribute)getPinnedPartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPinnedPartitioning_Name() {
+        return (EAttribute)getPinnedPartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPlsqlParameter() {
+		if (plsqlParameterEClass == null) {
+			plsqlParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(116);
+		}
+		return plsqlParameterEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_DatabaseType() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_Direction() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_Length() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_Name() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_Optional() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_Precision() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_QueryParameter() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlParameter_Scale() {
+        return (EAttribute)getPlsqlParameter().getEStructuralFeatures().get(7);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPlsqlRecord() {
+		if (plsqlRecordEClass == null) {
+			plsqlRecordEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(117);
+		}
+		return plsqlRecordEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPlsqlRecord_Field() {
+        return (EReference)getPlsqlRecord().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlRecord_CompatibleType() {
+        return (EAttribute)getPlsqlRecord().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlRecord_JavaType() {
+        return (EAttribute)getPlsqlRecord().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlRecord_Name() {
+        return (EAttribute)getPlsqlRecord().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPlsqlTable() {
+		if (plsqlTableEClass == null) {
+			plsqlTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(118);
+		}
+		return plsqlTableEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlTable_CompatibleType() {
+        return (EAttribute)getPlsqlTable().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlTable_JavaType() {
+        return (EAttribute)getPlsqlTable().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlTable_Name() {
+        return (EAttribute)getPlsqlTable().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlsqlTable_NestedType() {
+        return (EAttribute)getPlsqlTable().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getPostLoad() {
 		if (postLoadEClass == null) {
-			postLoadEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(95);
+			postLoadEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(119);
 		}
 		return postLoadEClass;
 	}
@@ -5372,7 +8028,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPostPersist() {
 		if (postPersistEClass == null) {
-			postPersistEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(96);
+			postPersistEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(120);
 		}
 		return postPersistEClass;
 	}
@@ -5399,7 +8055,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPostRemove() {
 		if (postRemoveEClass == null) {
-			postRemoveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(97);
+			postRemoveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(121);
 		}
 		return postRemoveEClass;
 	}
@@ -5426,7 +8082,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPostUpdate() {
 		if (postUpdateEClass == null) {
-			postUpdateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(98);
+			postUpdateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(122);
 		}
 		return postUpdateEClass;
 	}
@@ -5453,7 +8109,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPrePersist() {
 		if (prePersistEClass == null) {
-			prePersistEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(99);
+			prePersistEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(123);
 		}
 		return prePersistEClass;
 	}
@@ -5480,7 +8136,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPreRemove() {
 		if (preRemoveEClass == null) {
-			preRemoveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(100);
+			preRemoveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(124);
 		}
 		return preRemoveEClass;
 	}
@@ -5507,7 +8163,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPreUpdate() {
 		if (preUpdateEClass == null) {
-			preUpdateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(101);
+			preUpdateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(125);
 		}
 		return preUpdateEClass;
 	}
@@ -5534,7 +8190,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPrimaryKey() {
 		if (primaryKeyEClass == null) {
-			primaryKeyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(102);
+			primaryKeyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(126);
 		}
 		return primaryKeyEClass;
 	}
@@ -5548,11 +8204,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrimaryKey_CacheKeyType() {
+        return (EAttribute)getPrimaryKey().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getPrimaryKey_Validation() {
-        return (EAttribute)getPrimaryKey().getEStructuralFeatures().get(1);
+        return (EAttribute)getPrimaryKey().getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -5561,7 +8226,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getPrimaryKeyJoinColumn() {
 		if (primaryKeyJoinColumnEClass == null) {
-			primaryKeyJoinColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(103);
+			primaryKeyJoinColumnEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(127);
 		}
 		return primaryKeyJoinColumnEClass;
 	}
@@ -5596,7 +8261,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getProperty() {
 		if (propertyEClass == null) {
-			propertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(104);
+			propertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(128);
 		}
 		return propertyEClass;
 	}
@@ -5631,7 +8296,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getQueryHint() {
 		if (queryHintEClass == null) {
-			queryHintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(105);
+			queryHintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(129);
 		}
 		return queryHintEClass;
 	}
@@ -5666,7 +8331,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getQueryRedirectors() {
 		if (queryRedirectorsEClass == null) {
-			queryRedirectorsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(106);
+			queryRedirectorsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(130);
 		}
 		return queryRedirectorsEClass;
 	}
@@ -5728,12 +8393,108 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRangePartition() {
+		if (rangePartitionEClass == null) {
+			rangePartitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(131);
+		}
+		return rangePartitionEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRangePartition_ConnectionPool() {
+        return (EAttribute)getRangePartition().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRangePartition_EndValue() {
+        return (EAttribute)getRangePartition().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRangePartition_StartValue() {
+        return (EAttribute)getRangePartition().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRangePartitioning() {
+		if (rangePartitioningEClass == null) {
+			rangePartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(132);
+		}
+		return rangePartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRangePartitioning_PartitionColumn() {
+        return (EReference)getRangePartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRangePartitioning_Partition() {
+        return (EReference)getRangePartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRangePartitioning_Name() {
+        return (EAttribute)getRangePartitioning().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRangePartitioning_PartitionValueType() {
+        return (EAttribute)getRangePartitioning().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRangePartitioning_UnionUnpartitionableQueries() {
+        return (EAttribute)getRangePartitioning().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getReadTransformer() {
 		if (readTransformerEClass == null) {
-			readTransformerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(107);
+			readTransformerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(133);
 		}
 		return readTransformerEClass;
 	}
@@ -5755,12 +8516,102 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReplicationPartitioning() {
+		if (replicationPartitioningEClass == null) {
+			replicationPartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(134);
+		}
+		return replicationPartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getReplicationPartitioning_ConnectionPool() {
+        return (EAttribute)getReplicationPartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getReplicationPartitioning_Name() {
+        return (EAttribute)getReplicationPartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReturnInsert() {
+		if (returnInsertEClass == null) {
+			returnInsertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(135);
+		}
+		return returnInsertEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getReturnInsert_ReturnOnly() {
+        return (EAttribute)getReturnInsert().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRoundRobinPartitioning() {
+		if (roundRobinPartitioningEClass == null) {
+			roundRobinPartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(136);
+		}
+		return roundRobinPartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoundRobinPartitioning_ConnectionPool() {
+        return (EAttribute)getRoundRobinPartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoundRobinPartitioning_Name() {
+        return (EAttribute)getRoundRobinPartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRoundRobinPartitioning_ReplicateWrites() {
+        return (EAttribute)getRoundRobinPartitioning().getEStructuralFeatures().get(2);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getSecondaryTable() {
 		if (secondaryTableEClass == null) {
-			secondaryTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(108);
+			secondaryTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(137);
 		}
 		return secondaryTableEClass;
 	}
@@ -5790,11 +8641,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSecondaryTable_CreationSuffix() {
+        return (EAttribute)getSecondaryTable().getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getSecondaryTable_Name() {
-        return (EAttribute)getSecondaryTable().getEStructuralFeatures().get(3);
+        return (EAttribute)getSecondaryTable().getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -5802,7 +8662,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getSecondaryTable_Schema() {
-        return (EAttribute)getSecondaryTable().getEStructuralFeatures().get(4);
+        return (EAttribute)getSecondaryTable().getEStructuralFeatures().get(5);
 	}
 
   /**
@@ -5811,7 +8671,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getSequenceGenerator() {
 		if (sequenceGeneratorEClass == null) {
-			sequenceGeneratorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(109);
+			sequenceGeneratorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(138);
 		}
 		return sequenceGeneratorEClass;
 	}
@@ -5878,7 +8738,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getSqlResultSetMapping() {
 		if (sqlResultSetMappingEClass == null) {
-			sqlResultSetMappingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(110);
+			sqlResultSetMappingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(139);
 		}
 		return sqlResultSetMappingEClass;
 	}
@@ -5921,7 +8781,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getStoredProcedureParameter() {
 		if (storedProcedureParameterEClass == null) {
-			storedProcedureParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(111);
+			storedProcedureParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(140);
 		}
 		return storedProcedureParameterEClass;
 	}
@@ -5959,18 +8819,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStoredProcedureParameter_Optional() {
+        return (EAttribute)getStoredProcedureParameter().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getStoredProcedureParameter_QueryParameter() {
-        return (EAttribute)getStoredProcedureParameter().getEStructuralFeatures().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getStoredProcedureParameter_Type() {
         return (EAttribute)getStoredProcedureParameter().getEStructuralFeatures().get(5);
 	}
 
@@ -5978,9 +8839,47 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EAttribute getStoredProcedureParameter_Type() {
+        return (EAttribute)getStoredProcedureParameter().getEStructuralFeatures().get(6);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStruct() {
+		if (structEClass == null) {
+			structEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(141);
+		}
+		return structEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStruct_Field() {
+        return (EAttribute)getStruct().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStruct_Name() {
+        return (EAttribute)getStruct().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EClass getStructConverter() {
 		if (structConverterEClass == null) {
-			structConverterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(112);
+			structConverterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(142);
 		}
 		return structConverterEClass;
 	}
@@ -6002,12 +8901,69 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructure() {
+		if (structureEClass == null) {
+			structureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(143);
+		}
+		return structureEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructure_Property() {
+        return (EReference)getStructure().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructure_AccessMethods() {
+        return (EReference)getStructure().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStructure_Access() {
+        return (EAttribute)getStructure().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStructure_AttributeType() {
+        return (EAttribute)getStructure().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStructure_Name() {
+        return (EAttribute)getStructure().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getTable() {
 		if (tableEClass == null) {
-			tableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(113);
+			tableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(146);
 		}
 		return tableEClass;
 	}
@@ -6029,11 +8985,20 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTable_CreationSuffix() {
+        return (EAttribute)getTable().getEStructuralFeatures().get(2);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getTable_Name() {
-        return (EAttribute)getTable().getEStructuralFeatures().get(2);
+        return (EAttribute)getTable().getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -6041,7 +9006,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getTable_Schema() {
-        return (EAttribute)getTable().getEStructuralFeatures().get(3);
+        return (EAttribute)getTable().getEStructuralFeatures().get(4);
 	}
 
   /**
@@ -6050,7 +9015,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getTableGenerator() {
 		if (tableGeneratorEClass == null) {
-			tableGeneratorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(114);
+			tableGeneratorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(147);
 		}
 		return tableGeneratorEClass;
 	}
@@ -6088,18 +9053,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableGenerator_CreationSuffix() {
+        return (EAttribute)getTableGenerator().getEStructuralFeatures().get(4);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getTableGenerator_InitialValue() {
-        return (EAttribute)getTableGenerator().getEStructuralFeatures().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getTableGenerator_Name() {
         return (EAttribute)getTableGenerator().getEStructuralFeatures().get(5);
 	}
 
@@ -6107,7 +9073,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTableGenerator_PkColumnName() {
+  public EAttribute getTableGenerator_Name() {
         return (EAttribute)getTableGenerator().getEStructuralFeatures().get(6);
 	}
 
@@ -6115,7 +9081,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTableGenerator_PkColumnValue() {
+  public EAttribute getTableGenerator_PkColumnName() {
         return (EAttribute)getTableGenerator().getEStructuralFeatures().get(7);
 	}
 
@@ -6123,7 +9089,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTableGenerator_Schema() {
+  public EAttribute getTableGenerator_PkColumnValue() {
         return (EAttribute)getTableGenerator().getEStructuralFeatures().get(8);
 	}
 
@@ -6131,7 +9097,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTableGenerator_Table() {
+  public EAttribute getTableGenerator_Schema() {
         return (EAttribute)getTableGenerator().getEStructuralFeatures().get(9);
 	}
 
@@ -6139,7 +9105,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getTableGenerator_ValueColumnName() {
+  public EAttribute getTableGenerator_Table() {
         return (EAttribute)getTableGenerator().getEStructuralFeatures().get(10);
 	}
 
@@ -6147,9 +9113,92 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+  public EAttribute getTableGenerator_ValueColumnName() {
+        return (EAttribute)getTableGenerator().getEStructuralFeatures().get(11);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTenantDiscriminator() {
+		if (tenantDiscriminatorEClass == null) {
+			tenantDiscriminatorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(151);
+		}
+		return tenantDiscriminatorEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_ColumnDefinition() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_ColumnName() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_DiscriminatorType() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_Length() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_Name() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_PrimaryKey() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTenantDiscriminator_Table() {
+        return (EAttribute)getTenantDiscriminator().getEStructuralFeatures().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
   public EClass getTimeOfDay() {
 		if (timeOfDayEClass == null) {
-			timeOfDayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(119);
+			timeOfDayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(152);
 		}
 		return timeOfDayEClass;
 	}
@@ -6192,7 +9241,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getTransformation() {
 		if (transformationEClass == null) {
-			transformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(120);
+			transformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(153);
 		}
 		return transformationEClass;
 	}
@@ -6218,15 +9267,24 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getTransformation_Access() {
-        return (EAttribute)getTransformation().getEStructuralFeatures().get(2);
+        return (EAttribute)getTransformation().getEStructuralFeatures().get(4);
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransformation_AttributeType() {
+        return (EAttribute)getTransformation().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EReference getTransformation_Property() {
-        return (EReference)getTransformation().getEStructuralFeatures().get(3);
+        return (EReference)getTransformation().getEStructuralFeatures().get(2);
 	}
 
   /**
@@ -6234,15 +9292,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EReference getTransformation_AccessMethods() {
-        return (EReference)getTransformation().getEStructuralFeatures().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getTransformation_Access1() {
-        return (EAttribute)getTransformation().getEStructuralFeatures().get(5);
+        return (EReference)getTransformation().getEStructuralFeatures().get(3);
 	}
 
   /**
@@ -6283,7 +9333,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getTransient() {
 		if (transientEClass == null) {
-			transientEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(121);
+			transientEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(154);
 		}
 		return transientEClass;
 	}
@@ -6302,7 +9352,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getTypeConverter() {
 		if (typeConverterEClass == null) {
-			typeConverterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(122);
+			typeConverterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(155);
 		}
 		return typeConverterEClass;
 	}
@@ -6332,12 +9382,51 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnionPartitioning() {
+		if (unionPartitioningEClass == null) {
+			unionPartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(156);
+		}
+		return unionPartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnionPartitioning_ConnectionPool() {
+        return (EAttribute)getUnionPartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnionPartitioning_Name() {
+        return (EAttribute)getUnionPartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUnionPartitioning_ReplicateWrites() {
+        return (EAttribute)getUnionPartitioning().getEStructuralFeatures().get(2);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getUniqueConstraint() {
 		if (uniqueConstraintEClass == null) {
-			uniqueConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(123);
+			uniqueConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(157);
 		}
 		return uniqueConstraintEClass;
 	}
@@ -6359,12 +9448,108 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getValuePartition() {
+		if (valuePartitionEClass == null) {
+			valuePartitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(158);
+		}
+		return valuePartitionEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValuePartition_ConnectionPool() {
+        return (EAttribute)getValuePartition().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValuePartition_Value() {
+        return (EAttribute)getValuePartition().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getValuePartitioning() {
+		if (valuePartitioningEClass == null) {
+			valuePartitioningEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(159);
+		}
+		return valuePartitioningEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getValuePartitioning_PartitionColumn() {
+        return (EReference)getValuePartitioning().getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getValuePartitioning_Partition() {
+        return (EReference)getValuePartitioning().getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValuePartitioning_DefaultConnectionPool() {
+        return (EAttribute)getValuePartitioning().getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValuePartitioning_Name() {
+        return (EAttribute)getValuePartitioning().getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValuePartitioning_PartitionValueType() {
+        return (EAttribute)getValuePartitioning().getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValuePartitioning_UnionUnpartitionableQueries() {
+        return (EAttribute)getValuePartitioning().getEStructuralFeatures().get(5);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EClass getVariableOneToOne() {
 		if (variableOneToOneEClass == null) {
-			variableOneToOneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(124);
+			variableOneToOneEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(160);
 		}
 		return variableOneToOneEClass;
 	}
@@ -6426,11 +9611,101 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_Noncacheable() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(7);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_Partitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(8);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_ReplicationPartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(9);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_RoundRobinPartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(10);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_PinnedPartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_RangePartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(12);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_ValuePartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(13);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_HashPartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableOneToOne_UnionPartitioning() {
+        return (EReference)getVariableOneToOne().getEStructuralFeatures().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariableOneToOne_Partitioned() {
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(16);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getVariableOneToOne_Access() {
-        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(7);
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(17);
 	}
 
   /**
@@ -6438,7 +9713,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getVariableOneToOne_Fetch() {
-        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(8);
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(18);
 	}
 
   /**
@@ -6446,7 +9721,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getVariableOneToOne_Name() {
-        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(9);
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(19);
 	}
 
   /**
@@ -6454,7 +9729,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getVariableOneToOne_Optional() {
-        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(10);
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(20);
 	}
 
   /**
@@ -6462,7 +9737,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getVariableOneToOne_OrphanRemoval() {
-        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(11);
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(21);
 	}
 
   /**
@@ -6470,7 +9745,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getVariableOneToOne_TargetInterface() {
-        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(12);
+        return (EAttribute)getVariableOneToOne().getEStructuralFeatures().get(22);
 	}
 
   /**
@@ -6479,7 +9754,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getVersion() {
 		if (versionEClass == null) {
-			versionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(125);
+			versionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(161);
 		}
 		return versionEClass;
 	}
@@ -6493,18 +9768,19 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVersion_Index() {
+        return (EReference)getVersion().getEStructuralFeatures().get(1);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EAttribute getVersion_Temporal() {
-        return (EAttribute)getVersion().getEStructuralFeatures().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EAttribute getVersion_Convert() {
         return (EAttribute)getVersion().getEStructuralFeatures().get(2);
 	}
 
@@ -6512,15 +9788,15 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVersion_Converter() {
-        return (EReference)getVersion().getEStructuralFeatures().get(3);
+  public EAttribute getVersion_Convert() {
+        return (EAttribute)getVersion().getEStructuralFeatures().get(3);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVersion_TypeConverter() {
+  public EReference getVersion_Converter() {
         return (EReference)getVersion().getEStructuralFeatures().get(4);
 	}
 
@@ -6528,7 +9804,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVersion_ObjectTypeConverter() {
+  public EReference getVersion_TypeConverter() {
         return (EReference)getVersion().getEStructuralFeatures().get(5);
 	}
 
@@ -6536,7 +9812,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVersion_StructConverter() {
+  public EReference getVersion_ObjectTypeConverter() {
         return (EReference)getVersion().getEStructuralFeatures().get(6);
 	}
 
@@ -6544,7 +9820,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVersion_Property() {
+  public EReference getVersion_StructConverter() {
         return (EReference)getVersion().getEStructuralFeatures().get(7);
 	}
 
@@ -6552,7 +9828,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getVersion_AccessMethods() {
+  public EReference getVersion_Property() {
         return (EReference)getVersion().getEStructuralFeatures().get(8);
 	}
 
@@ -6560,16 +9836,33 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getVersion_Access() {
-        return (EAttribute)getVersion().getEStructuralFeatures().get(9);
+  public EReference getVersion_AccessMethods() {
+        return (EReference)getVersion().getEStructuralFeatures().get(9);
 	}
 
   /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getVersion_Mutable() {
+  public EAttribute getVersion_Access() {
         return (EAttribute)getVersion().getEStructuralFeatures().get(10);
+	}
+
+  /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVersion_AttributeType() {
+        return (EAttribute)getVersion().getEStructuralFeatures().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+  public EAttribute getVersion_Mutable() {
+        return (EAttribute)getVersion().getEStructuralFeatures().get(12);
 	}
 
   /**
@@ -6577,7 +9870,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * @generated
 	 */
   public EAttribute getVersion_Name() {
-        return (EAttribute)getVersion().getEStructuralFeatures().get(11);
+        return (EAttribute)getVersion().getEStructuralFeatures().get(13);
 	}
 
   /**
@@ -6586,7 +9879,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EClass getWriteTransformer() {
 		if (writeTransformerEClass == null) {
-			writeTransformerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(127);
+			writeTransformerEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(163);
 		}
 		return writeTransformerEClass;
 	}
@@ -6627,23 +9920,59 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getBatchFetchType() {
+		if (batchFetchTypeEEnum == null) {
+			batchFetchTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(12);
+		}
+		return batchFetchTypeEEnum;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EEnum getCacheCoordinationType() {
 		if (cacheCoordinationTypeEEnum == null) {
-			cacheCoordinationTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(10);
+			cacheCoordinationTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(15);
 		}
 		return cacheCoordinationTypeEEnum;
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getCacheIsolationType() {
+		if (cacheIsolationTypeEEnum == null) {
+			cacheIsolationTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(18);
+		}
+		return cacheIsolationTypeEEnum;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getCacheKeyType() {
+		if (cacheKeyTypeEEnum == null) {
+			cacheKeyTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(20);
+		}
+		return cacheKeyTypeEEnum;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EEnum getCacheType() {
 		if (cacheTypeEEnum == null) {
-			cacheTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(13);
+			cacheTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(22);
 		}
 		return cacheTypeEEnum;
 	}
@@ -6654,7 +9983,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getChangeTrackingType() {
 		if (changeTrackingTypeEEnum == null) {
-			changeTrackingTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(17);
+			changeTrackingTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(26);
 		}
 		return changeTrackingTypeEEnum;
 	}
@@ -6665,7 +9994,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getDirectionType() {
 		if (directionTypeEEnum == null) {
-			directionTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(27);
+			directionTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(37);
 		}
 		return directionTypeEEnum;
 	}
@@ -6676,7 +10005,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getDiscriminatorType() {
 		if (discriminatorTypeEEnum == null) {
-			discriminatorTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(31);
+			discriminatorTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(41);
 		}
 		return discriminatorTypeEEnum;
 	}
@@ -6687,7 +10016,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getEnumType() {
 		if (enumTypeEEnum == null) {
-			enumTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(48);
+			enumTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(57);
 		}
 		return enumTypeEEnum;
 	}
@@ -6698,7 +10027,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getExistenceType() {
 		if (existenceTypeEEnum == null) {
-			existenceTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(50);
+			existenceTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(59);
 		}
 		return existenceTypeEEnum;
 	}
@@ -6709,7 +10038,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getFetchType() {
 		if (fetchTypeEEnum == null) {
-			fetchTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(52);
+			fetchTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(63);
 		}
 		return fetchTypeEEnum;
 	}
@@ -6720,7 +10049,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getGenerationType() {
 		if (generationTypeEEnum == null) {
-			generationTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(56);
+			generationTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(67);
 		}
 		return generationTypeEEnum;
 	}
@@ -6731,7 +10060,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getIdValidation() {
 		if (idValidationEEnum == null) {
-			idValidationEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(60);
+			idValidationEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(72);
 		}
 		return idValidationEEnum;
 	}
@@ -6742,7 +10071,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getInheritanceType() {
 		if (inheritanceTypeEEnum == null) {
-			inheritanceTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(63);
+			inheritanceTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(76);
 		}
 		return inheritanceTypeEEnum;
 	}
@@ -6753,7 +10082,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getJoinFetchType() {
 		if (joinFetchTypeEEnum == null) {
-			joinFetchTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(67);
+			joinFetchTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(80);
 		}
 		return joinFetchTypeEEnum;
 	}
@@ -6764,18 +10093,30 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getLockModeType() {
 		if (lockModeTypeEEnum == null) {
-			lockModeTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(71);
+			lockModeTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(84);
 		}
 		return lockModeTypeEEnum;
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMultitenantType() {
+		if (multitenantTypeEEnum == null) {
+			multitenantTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(94);
+		}
+		return multitenantTypeEEnum;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EEnum getOptimisticLockingType() {
 		if (optimisticLockingTypeEEnum == null) {
-			optimisticLockingTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(87);
+			optimisticLockingTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(106);
 		}
 		return optimisticLockingTypeEEnum;
 	}
@@ -6786,18 +10127,30 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EEnum getOrderColumnCorrectionType() {
 		if (orderColumnCorrectionTypeEEnum == null) {
-			orderColumnCorrectionTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(91);
+			orderColumnCorrectionTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(110);
 		}
 		return orderColumnCorrectionTypeEEnum;
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getSupportedVersionsType() {
+		if (supportedVersionsTypeEEnum == null) {
+			supportedVersionsTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(144);
+		}
+		return supportedVersionsTypeEEnum;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EEnum getTemporalType() {
 		if (temporalTypeEEnum == null) {
-			temporalTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(117);
+			temporalTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(149);
 		}
 		return temporalTypeEEnum;
 	}
@@ -6814,23 +10167,59 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getBatchFetchTypeObject() {
+		if (batchFetchTypeObjectEDataType == null) {
+			batchFetchTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(13);
+		}
+		return batchFetchTypeObjectEDataType;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EDataType getCacheCoordinationTypeObject() {
 		if (cacheCoordinationTypeObjectEDataType == null) {
-			cacheCoordinationTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(11);
+			cacheCoordinationTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(16);
 		}
 		return cacheCoordinationTypeObjectEDataType;
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getCacheIsolationTypeObject() {
+		if (cacheIsolationTypeObjectEDataType == null) {
+			cacheIsolationTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(19);
+		}
+		return cacheIsolationTypeObjectEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getCacheKeyTypeObject() {
+		if (cacheKeyTypeObjectEDataType == null) {
+			cacheKeyTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(21);
+		}
+		return cacheKeyTypeObjectEDataType;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EDataType getCacheTypeObject() {
 		if (cacheTypeObjectEDataType == null) {
-			cacheTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(14);
+			cacheTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(23);
 		}
 		return cacheTypeObjectEDataType;
 	}
@@ -6841,7 +10230,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getChangeTrackingTypeObject() {
 		if (changeTrackingTypeObjectEDataType == null) {
-			changeTrackingTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(18);
+			changeTrackingTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(27);
 		}
 		return changeTrackingTypeObjectEDataType;
 	}
@@ -6852,7 +10241,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getDirectionTypeObject() {
 		if (directionTypeObjectEDataType == null) {
-			directionTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(28);
+			directionTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(38);
 		}
 		return directionTypeObjectEDataType;
 	}
@@ -6863,7 +10252,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getDiscriminatorTypeObject() {
 		if (discriminatorTypeObjectEDataType == null) {
-			discriminatorTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(32);
+			discriminatorTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(42);
 		}
 		return discriminatorTypeObjectEDataType;
 	}
@@ -6874,7 +10263,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getDiscriminatorValue() {
 		if (discriminatorValueEDataType == null) {
-			discriminatorValueEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(33);
+			discriminatorValueEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(43);
 		}
 		return discriminatorValueEDataType;
 	}
@@ -6883,22 +10272,11 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getEnumeratedObject() {
-		if (enumeratedObjectEDataType == null) {
-			enumeratedObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(47);
+  public EDataType getEnumerated() {
+		if (enumeratedEDataType == null) {
+			enumeratedEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(56);
 		}
-		return enumeratedObjectEDataType;
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EEnum getEnumerated() {
-		if (enumeratedEEnum == null) {
-			enumeratedEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(46);
-		}
-		return enumeratedEEnum;
+		return enumeratedEDataType;
 	}
 
   /**
@@ -6907,7 +10285,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getEnumTypeObject() {
 		if (enumTypeObjectEDataType == null) {
-			enumTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(49);
+			enumTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(58);
 		}
 		return enumTypeObjectEDataType;
 	}
@@ -6918,7 +10296,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getExistenceTypeObject() {
 		if (existenceTypeObjectEDataType == null) {
-			existenceTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(51);
+			existenceTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(60);
 		}
 		return existenceTypeObjectEDataType;
 	}
@@ -6929,7 +10307,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getFetchTypeObject() {
 		if (fetchTypeObjectEDataType == null) {
-			fetchTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(53);
+			fetchTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(64);
 		}
 		return fetchTypeObjectEDataType;
 	}
@@ -6940,7 +10318,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getGenerationTypeObject() {
 		if (generationTypeObjectEDataType == null) {
-			generationTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(57);
+			generationTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(68);
 		}
 		return generationTypeObjectEDataType;
 	}
@@ -6951,7 +10329,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getIdValidationObject() {
 		if (idValidationObjectEDataType == null) {
-			idValidationObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(61);
+			idValidationObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(73);
 		}
 		return idValidationObjectEDataType;
 	}
@@ -6962,7 +10340,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getInheritanceTypeObject() {
 		if (inheritanceTypeObjectEDataType == null) {
-			inheritanceTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(64);
+			inheritanceTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(77);
 		}
 		return inheritanceTypeObjectEDataType;
 	}
@@ -6973,7 +10351,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getJoinFetchTypeObject() {
 		if (joinFetchTypeObjectEDataType == null) {
-			joinFetchTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(68);
+			joinFetchTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(81);
 		}
 		return joinFetchTypeObjectEDataType;
 	}
@@ -6984,18 +10362,30 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getLockModeTypeObject() {
 		if (lockModeTypeObjectEDataType == null) {
-			lockModeTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(72);
+			lockModeTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(85);
 		}
 		return lockModeTypeObjectEDataType;
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getMultitenantTypeObject() {
+		if (multitenantTypeObjectEDataType == null) {
+			multitenantTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(95);
+		}
+		return multitenantTypeObjectEDataType;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public EDataType getOptimisticLockingTypeObject() {
 		if (optimisticLockingTypeObjectEDataType == null) {
-			optimisticLockingTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(88);
+			optimisticLockingTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(107);
 		}
 		return optimisticLockingTypeObjectEDataType;
 	}
@@ -7006,7 +10396,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getOrderBy() {
 		if (orderByEDataType == null) {
-			orderByEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(89);
+			orderByEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(108);
 		}
 		return orderByEDataType;
 	}
@@ -7017,31 +10407,32 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getOrderColumnCorrectionTypeObject() {
 		if (orderColumnCorrectionTypeObjectEDataType == null) {
-			orderColumnCorrectionTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(92);
+			orderColumnCorrectionTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(111);
 		}
 		return orderColumnCorrectionTypeObjectEDataType;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EDataType getTemporalObject() {
-		if (temporalObjectEDataType == null) {
-			temporalObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(116);
+	public EDataType getSupportedVersionsTypeObject() {
+		if (supportedVersionsTypeObjectEDataType == null) {
+			supportedVersionsTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(145);
 		}
-		return temporalObjectEDataType;
+		return supportedVersionsTypeObjectEDataType;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EEnum getTemporal() {
-		if (temporalEEnum == null) {
-			temporalEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(115);
+  public EDataType getTemporal() {
+		if (temporalEDataType == null) {
+			temporalEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(148);
 		}
-		return temporalEEnum;
+		return temporalEDataType;
 	}
 
   /**
@@ -7050,7 +10441,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getTemporalTypeObject() {
 		if (temporalTypeObjectEDataType == null) {
-			temporalTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(118);
+			temporalTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(150);
 		}
 		return temporalTypeObjectEDataType;
 	}
@@ -7061,7 +10452,7 @@ public class OrmPackageImpl extends EPackageImpl implements OrmPackage {
 	 */
   public EDataType getVersionType() {
 		if (versionTypeEDataType == null) {
-			versionTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(126);
+			versionTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OrmPackage.eNS_URI).getEClassifiers().get(162);
 		}
 		return versionTypeEDataType;
 	}

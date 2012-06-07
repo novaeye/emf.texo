@@ -39,6 +39,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddedImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -92,7 +93,7 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -113,6 +114,26 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
   protected boolean accessESet;
 
   /**
+	 * The default value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTRIBUTE_TYPE_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attributeType = ATTRIBUTE_TYPE_EDEFAULT;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -264,6 +285,27 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttributeType() {
+		return attributeType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttributeType(String newAttributeType) {
+		String oldAttributeType = attributeType;
+		attributeType = newAttributeType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDED__ATTRIBUTE_TYPE, oldAttributeType, attributeType));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -318,6 +360,8 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 				return getAccessMethods();
 			case OrmPackage.EMBEDDED__ACCESS:
 				return getAccess();
+			case OrmPackage.EMBEDDED__ATTRIBUTE_TYPE:
+				return getAttributeType();
 			case OrmPackage.EMBEDDED__NAME:
 				return getName();
 		}
@@ -350,6 +394,9 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 			case OrmPackage.EMBEDDED__ACCESS:
 				setAccess((AccessType)newValue);
 				return;
+			case OrmPackage.EMBEDDED__ATTRIBUTE_TYPE:
+				setAttributeType((String)newValue);
+				return;
 			case OrmPackage.EMBEDDED__NAME:
 				setName((String)newValue);
 				return;
@@ -379,6 +426,9 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 			case OrmPackage.EMBEDDED__ACCESS:
 				unsetAccess();
 				return;
+			case OrmPackage.EMBEDDED__ATTRIBUTE_TYPE:
+				setAttributeType(ATTRIBUTE_TYPE_EDEFAULT);
+				return;
 			case OrmPackage.EMBEDDED__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -403,6 +453,8 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 				return accessMethods != null;
 			case OrmPackage.EMBEDDED__ACCESS:
 				return isSetAccess();
+			case OrmPackage.EMBEDDED__ATTRIBUTE_TYPE:
+				return ATTRIBUTE_TYPE_EDEFAULT == null ? attributeType != null : !ATTRIBUTE_TYPE_EDEFAULT.equals(attributeType);
 			case OrmPackage.EMBEDDED__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -420,6 +472,8 @@ public class EmbeddedImpl extends BaseOrmAnnotationImpl implements Embedded {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (access: ");
 		if (accessESet) result.append(access); else result.append("<unset>");
+		result.append(", attributeType: ");
+		result.append(attributeType);
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

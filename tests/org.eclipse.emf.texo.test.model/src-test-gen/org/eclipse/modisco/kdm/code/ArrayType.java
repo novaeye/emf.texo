@@ -26,7 +26,7 @@ public class ArrayType extends DerivedType {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = true)
   private IndexUnit indexUnit = null;
 
   /**

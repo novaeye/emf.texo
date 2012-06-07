@@ -47,7 +47,7 @@ public abstract class KDMEntity extends ModelElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(nullable = true) })
   @Access(AccessType.FIELD)
   private KDMModel model = null;
 
@@ -62,7 +62,7 @@ public abstract class KDMEntity extends ModelElement {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(nullable = true) })
   @Access(AccessType.FIELD)
   private KDMEntity owner = null;
 

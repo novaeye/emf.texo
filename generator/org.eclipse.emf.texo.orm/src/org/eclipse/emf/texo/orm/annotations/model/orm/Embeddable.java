@@ -17,20 +17,15 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				Defines the settings and mappings for embeddable
- * 				objects. Is
- * 				allowed to be sparsely populated and used in conjunction
- * 				with
- * 				the annotations. Alternatively, the metadata-complete attribute
- * 				can be used to indicate that no annotations are to be processed
- * 				in
- * 				the class. If this is the case then the defaulting rules will
- * 				be
- * 				recursively applied.
+ *         Defines the settings and mappings for embeddable objects. Is 
+ *         allowed to be sparsely populated and used in conjunction with 
+ *         the annotations. Alternatively, the metadata-complete attribute 
+ *         can be used to indicate that no annotations are to be processed 
+ *         in the class. If this is the case then the defaulting rules will 
+ *         be recursively applied.
  * 
- * 				@Target({TYPE}) @Retention(RUNTIME)
- * 				public
- * 				@interface Embeddable {}
+ *         @Target({TYPE}) @Retention(RUNTIME)
+ *         public @interface Embeddable {}
  * 
  *       
  * <!-- end-model-doc -->
@@ -39,21 +34,28 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCustomizer <em>Customizer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getChangeTracking <em>Change Tracking</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStruct <em>Struct</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getConverter <em>Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getTypeConverter <em>Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getObjectTypeConverter <em>Object Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStructConverter <em>Struct Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getProperty <em>Property</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCopyPolicy <em>Copy Policy</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getInstantiationCopyPolicy <em>Instantiation Copy Policy</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getCloneCopyPolicy <em>Clone Copy Policy</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getPlsqlRecord <em>Plsql Record</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getPlsqlTable <em>Plsql Table</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAttributeOverride <em>Attribute Override</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAssociationOverride <em>Association Override</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccess <em>Access</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getClass_ <em>Class</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#isMetadataComplete <em>Metadata Complete</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getParentClass <em>Parent Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -90,6 +92,33 @@ public interface Embeddable extends BaseOrmAnnotation {
   void setDescription(String value);
 
   /**
+	 * Returns the value of the '<em><b>Access Methods</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Access Methods</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Access Methods</em>' containment reference.
+	 * @see #setAccessMethods(AccessMethods)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_AccessMethods()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='access-methods' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AccessMethods getAccessMethods();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getAccessMethods <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Access Methods</em>' containment reference.
+	 * @see #getAccessMethods()
+	 * @generated
+	 */
+	void setAccessMethods(AccessMethods value);
+
+		/**
 	 * Returns the value of the '<em><b>Customizer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -142,6 +171,33 @@ public interface Embeddable extends BaseOrmAnnotation {
   void setChangeTracking(ChangeTracking value);
 
   /**
+	 * Returns the value of the '<em><b>Struct</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Struct</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Struct</em>' containment reference.
+	 * @see #setStruct(Struct)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_Struct()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='struct' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Struct getStruct();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getStruct <em>Struct</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Struct</em>' containment reference.
+	 * @see #getStruct()
+	 * @generated
+	 */
+	void setStruct(Struct value);
+
+		/**
 	 * Returns the value of the '<em><b>Converter</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Converter}.
 	 * <!-- begin-user-doc -->
@@ -227,6 +283,40 @@ public interface Embeddable extends BaseOrmAnnotation {
   EList<Property> getProperty();
 
   /**
+	 * Returns the value of the '<em><b>Attribute Override</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attribute Override</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attribute Override</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_AttributeOverride()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='attribute-override' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<AttributeOverride> getAttributeOverride();
+
+		/**
+	 * Returns the value of the '<em><b>Association Override</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Association Override</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Association Override</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_AssociationOverride()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='association-override' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<AssociationOverride> getAssociationOverride();
+
+		/**
 	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -331,6 +421,40 @@ public interface Embeddable extends BaseOrmAnnotation {
   void setCloneCopyPolicy(CloneCopyPolicy value);
 
   /**
+	 * Returns the value of the '<em><b>Plsql Record</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Plsql Record</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plsql Record</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_PlsqlRecord()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='plsql-record' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<PlsqlRecord> getPlsqlRecord();
+
+		/**
+	 * Returns the value of the '<em><b>Plsql Table</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Plsql Table</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Plsql Table</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_PlsqlTable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='plsql-table' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<PlsqlTable> getPlsqlTable();
+
+		/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
 	 * <!-- begin-user-doc -->
@@ -509,5 +633,32 @@ public interface Embeddable extends BaseOrmAnnotation {
 	 * @generated
 	 */
   boolean isSetMetadataComplete();
+
+		/**
+	 * Returns the value of the '<em><b>Parent Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Class</em>' attribute.
+	 * @see #setParentClass(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getEmbeddable_ParentClass()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='parent-class'"
+	 * @generated
+	 */
+	String getParentClass();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable#getParentClass <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent Class</em>' attribute.
+	 * @see #getParentClass()
+	 * @generated
+	 */
+	void setParentClass(String value);
 
 } // Embeddable

@@ -60,16 +60,20 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
   public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case OrmPackage.ACCESS_METHODS: return (EObject)createAccessMethods();
+			case OrmPackage.ADDITIONAL_CRITERIA: return (EObject)createAdditionalCriteria();
+			case OrmPackage.ARRAY: return (EObject)createArray();
 			case OrmPackage.ASSOCIATION_OVERRIDE: return (EObject)createAssociationOverride();
 			case OrmPackage.ATTRIBUTE_OVERRIDE: return (EObject)createAttributeOverride();
 			case OrmPackage.ATTRIBUTES: return (EObject)createAttributes();
 			case OrmPackage.BASIC: return (EObject)createBasic();
 			case OrmPackage.BASIC_COLLECTION: return (EObject)createBasicCollection();
 			case OrmPackage.BASIC_MAP: return (EObject)createBasicMap();
+			case OrmPackage.BATCH_FETCH: return (EObject)createBatchFetch();
 			case OrmPackage.CACHE: return (EObject)createCache();
 			case OrmPackage.CACHE_INTERCEPTOR: return (EObject)createCacheInterceptor();
 			case OrmPackage.CASCADE_TYPE: return (EObject)createCascadeType();
 			case OrmPackage.CHANGE_TRACKING: return (EObject)createChangeTracking();
+			case OrmPackage.CLASS_EXTRACTOR: return (EObject)createClassExtractor();
 			case OrmPackage.CLONE_COPY_POLICY: return (EObject)createCloneCopyPolicy();
 			case OrmPackage.COLLECTION_TABLE: return (EObject)createCollectionTable();
 			case OrmPackage.COLUMN: return (EObject)createColumn();
@@ -92,10 +96,14 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 			case OrmPackage.ENTITY_LISTENERS: return (EObject)createEntityListeners();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE: return (EObject)createEntityMappingsType();
 			case OrmPackage.ENTITY_RESULT: return (EObject)createEntityResult();
+			case OrmPackage.FETCH_ATTRIBUTE: return (EObject)createFetchAttribute();
+			case OrmPackage.FETCH_GROUP: return (EObject)createFetchGroup();
 			case OrmPackage.FIELD_RESULT: return (EObject)createFieldResult();
 			case OrmPackage.GENERATED_VALUE: return (EObject)createGeneratedValue();
+			case OrmPackage.HASH_PARTITIONING: return (EObject)createHashPartitioning();
 			case OrmPackage.ID: return (EObject)createId();
 			case OrmPackage.ID_CLASS: return (EObject)createIdClass();
+			case OrmPackage.INDEX: return (EObject)createIndex();
 			case OrmPackage.INHERITANCE: return (EObject)createInheritance();
 			case OrmPackage.INSTANTIATION_COPY_POLICY: return (EObject)createInstantiationCopyPolicy();
 			case OrmPackage.JOIN_COLUMN: return (EObject)createJoinColumn();
@@ -108,16 +116,25 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 			case OrmPackage.MAP_KEY_COLUMN: return (EObject)createMapKeyColumn();
 			case OrmPackage.MAP_KEY_JOIN_COLUMN: return (EObject)createMapKeyJoinColumn();
 			case OrmPackage.MAPPED_SUPERCLASS: return (EObject)createMappedSuperclass();
+			case OrmPackage.MULTITENANT: return (EObject)createMultitenant();
 			case OrmPackage.NAMED_NATIVE_QUERY: return (EObject)createNamedNativeQuery();
+			case OrmPackage.NAMED_PLSQL_STORED_FUNCTION_QUERY: return (EObject)createNamedPlsqlStoredFunctionQuery();
+			case OrmPackage.NAMED_PLSQL_STORED_PROCEDURE_QUERY: return (EObject)createNamedPlsqlStoredProcedureQuery();
 			case OrmPackage.NAMED_QUERY: return (EObject)createNamedQuery();
+			case OrmPackage.NAMED_STORED_FUNCTION_QUERY: return (EObject)createNamedStoredFunctionQuery();
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY: return (EObject)createNamedStoredProcedureQuery();
 			case OrmPackage.OBJECT_TYPE_CONVERTER: return (EObject)createObjectTypeConverter();
 			case OrmPackage.ONE_TO_MANY: return (EObject)createOneToMany();
 			case OrmPackage.ONE_TO_ONE: return (EObject)createOneToOne();
 			case OrmPackage.OPTIMISTIC_LOCKING: return (EObject)createOptimisticLocking();
 			case OrmPackage.ORDER_COLUMN: return (EObject)createOrderColumn();
+			case OrmPackage.PARTITIONING: return (EObject)createPartitioning();
 			case OrmPackage.PERSISTENCE_UNIT_DEFAULTS: return (EObject)createPersistenceUnitDefaults();
 			case OrmPackage.PERSISTENCE_UNIT_METADATA: return (EObject)createPersistenceUnitMetadata();
+			case OrmPackage.PINNED_PARTITIONING: return (EObject)createPinnedPartitioning();
+			case OrmPackage.PLSQL_PARAMETER: return (EObject)createPlsqlParameter();
+			case OrmPackage.PLSQL_RECORD: return (EObject)createPlsqlRecord();
+			case OrmPackage.PLSQL_TABLE: return (EObject)createPlsqlTable();
 			case OrmPackage.POST_LOAD: return (EObject)createPostLoad();
 			case OrmPackage.POST_PERSIST: return (EObject)createPostPersist();
 			case OrmPackage.POST_REMOVE: return (EObject)createPostRemove();
@@ -130,19 +147,30 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 			case OrmPackage.PROPERTY: return (EObject)createProperty();
 			case OrmPackage.QUERY_HINT: return (EObject)createQueryHint();
 			case OrmPackage.QUERY_REDIRECTORS: return (EObject)createQueryRedirectors();
+			case OrmPackage.RANGE_PARTITION: return (EObject)createRangePartition();
+			case OrmPackage.RANGE_PARTITIONING: return (EObject)createRangePartitioning();
 			case OrmPackage.READ_TRANSFORMER: return (EObject)createReadTransformer();
+			case OrmPackage.REPLICATION_PARTITIONING: return (EObject)createReplicationPartitioning();
+			case OrmPackage.RETURN_INSERT: return (EObject)createReturnInsert();
+			case OrmPackage.ROUND_ROBIN_PARTITIONING: return (EObject)createRoundRobinPartitioning();
 			case OrmPackage.SECONDARY_TABLE: return (EObject)createSecondaryTable();
 			case OrmPackage.SEQUENCE_GENERATOR: return (EObject)createSequenceGenerator();
 			case OrmPackage.SQL_RESULT_SET_MAPPING: return (EObject)createSqlResultSetMapping();
 			case OrmPackage.STORED_PROCEDURE_PARAMETER: return (EObject)createStoredProcedureParameter();
+			case OrmPackage.STRUCT: return (EObject)createStruct();
 			case OrmPackage.STRUCT_CONVERTER: return (EObject)createStructConverter();
+			case OrmPackage.STRUCTURE: return (EObject)createStructure();
 			case OrmPackage.TABLE: return (EObject)createTable();
 			case OrmPackage.TABLE_GENERATOR: return (EObject)createTableGenerator();
+			case OrmPackage.TENANT_DISCRIMINATOR: return (EObject)createTenantDiscriminator();
 			case OrmPackage.TIME_OF_DAY: return (EObject)createTimeOfDay();
 			case OrmPackage.TRANSFORMATION: return (EObject)createTransformation();
 			case OrmPackage.TRANSIENT: return (EObject)createTransient();
 			case OrmPackage.TYPE_CONVERTER: return (EObject)createTypeConverter();
+			case OrmPackage.UNION_PARTITIONING: return (EObject)createUnionPartitioning();
 			case OrmPackage.UNIQUE_CONSTRAINT: return (EObject)createUniqueConstraint();
+			case OrmPackage.VALUE_PARTITION: return (EObject)createValuePartition();
+			case OrmPackage.VALUE_PARTITIONING: return (EObject)createValuePartitioning();
 			case OrmPackage.VARIABLE_ONE_TO_ONE: return (EObject)createVariableOneToOne();
 			case OrmPackage.VERSION: return (EObject)createVersion();
 			case OrmPackage.WRITE_TRANSFORMER: return (EObject)createWriteTransformer();
@@ -160,8 +188,14 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 		switch (eDataType.getClassifierID()) {
 			case OrmPackage.ACCESS_TYPE:
 				return createAccessTypeFromString(eDataType, initialValue);
+			case OrmPackage.BATCH_FETCH_TYPE:
+				return createBatchFetchTypeFromString(eDataType, initialValue);
 			case OrmPackage.CACHE_COORDINATION_TYPE:
 				return createCacheCoordinationTypeFromString(eDataType, initialValue);
+			case OrmPackage.CACHE_ISOLATION_TYPE:
+				return createCacheIsolationTypeFromString(eDataType, initialValue);
+			case OrmPackage.CACHE_KEY_TYPE:
+				return createCacheKeyTypeFromString(eDataType, initialValue);
 			case OrmPackage.CACHE_TYPE:
 				return createCacheTypeFromString(eDataType, initialValue);
 			case OrmPackage.CHANGE_TRACKING_TYPE:
@@ -170,8 +204,6 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return createDirectionTypeFromString(eDataType, initialValue);
 			case OrmPackage.DISCRIMINATOR_TYPE:
 				return createDiscriminatorTypeFromString(eDataType, initialValue);
-			case OrmPackage.ENUMERATED:
-				return createEnumeratedFromString(eDataType, initialValue);
 			case OrmPackage.ENUM_TYPE:
 				return createEnumTypeFromString(eDataType, initialValue);
 			case OrmPackage.EXISTENCE_TYPE:
@@ -188,18 +220,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return createJoinFetchTypeFromString(eDataType, initialValue);
 			case OrmPackage.LOCK_MODE_TYPE:
 				return createLockModeTypeFromString(eDataType, initialValue);
+			case OrmPackage.MULTITENANT_TYPE:
+				return createMultitenantTypeFromString(eDataType, initialValue);
 			case OrmPackage.OPTIMISTIC_LOCKING_TYPE:
 				return createOptimisticLockingTypeFromString(eDataType, initialValue);
 			case OrmPackage.ORDER_COLUMN_CORRECTION_TYPE:
 				return createOrderColumnCorrectionTypeFromString(eDataType, initialValue);
-			case OrmPackage.TEMPORAL:
-				return createTemporalFromString(eDataType, initialValue);
+			case OrmPackage.SUPPORTED_VERSIONS_TYPE:
+				return createSupportedVersionsTypeFromString(eDataType, initialValue);
 			case OrmPackage.TEMPORAL_TYPE:
 				return createTemporalTypeFromString(eDataType, initialValue);
 			case OrmPackage.ACCESS_TYPE_OBJECT:
 				return createAccessTypeObjectFromString(eDataType, initialValue);
+			case OrmPackage.BATCH_FETCH_TYPE_OBJECT:
+				return createBatchFetchTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.CACHE_COORDINATION_TYPE_OBJECT:
 				return createCacheCoordinationTypeObjectFromString(eDataType, initialValue);
+			case OrmPackage.CACHE_ISOLATION_TYPE_OBJECT:
+				return createCacheIsolationTypeObjectFromString(eDataType, initialValue);
+			case OrmPackage.CACHE_KEY_TYPE_OBJECT:
+				return createCacheKeyTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.CACHE_TYPE_OBJECT:
 				return createCacheTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.CHANGE_TRACKING_TYPE_OBJECT:
@@ -210,8 +250,8 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return createDiscriminatorTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.DISCRIMINATOR_VALUE:
 				return createDiscriminatorValueFromString(eDataType, initialValue);
-			case OrmPackage.ENUMERATED_OBJECT:
-				return createEnumeratedObjectFromString(eDataType, initialValue);
+			case OrmPackage.ENUMERATED:
+				return createEnumeratedFromString(eDataType, initialValue);
 			case OrmPackage.ENUM_TYPE_OBJECT:
 				return createEnumTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.EXISTENCE_TYPE_OBJECT:
@@ -228,14 +268,18 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return createJoinFetchTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.LOCK_MODE_TYPE_OBJECT:
 				return createLockModeTypeObjectFromString(eDataType, initialValue);
+			case OrmPackage.MULTITENANT_TYPE_OBJECT:
+				return createMultitenantTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.OPTIMISTIC_LOCKING_TYPE_OBJECT:
 				return createOptimisticLockingTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.ORDER_BY:
 				return createOrderByFromString(eDataType, initialValue);
 			case OrmPackage.ORDER_COLUMN_CORRECTION_TYPE_OBJECT:
 				return createOrderColumnCorrectionTypeObjectFromString(eDataType, initialValue);
-			case OrmPackage.TEMPORAL_OBJECT:
-				return createTemporalObjectFromString(eDataType, initialValue);
+			case OrmPackage.SUPPORTED_VERSIONS_TYPE_OBJECT:
+				return createSupportedVersionsTypeObjectFromString(eDataType, initialValue);
+			case OrmPackage.TEMPORAL:
+				return createTemporalFromString(eDataType, initialValue);
 			case OrmPackage.TEMPORAL_TYPE_OBJECT:
 				return createTemporalTypeObjectFromString(eDataType, initialValue);
 			case OrmPackage.VERSION_TYPE:
@@ -254,8 +298,14 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 		switch (eDataType.getClassifierID()) {
 			case OrmPackage.ACCESS_TYPE:
 				return convertAccessTypeToString(eDataType, instanceValue);
+			case OrmPackage.BATCH_FETCH_TYPE:
+				return convertBatchFetchTypeToString(eDataType, instanceValue);
 			case OrmPackage.CACHE_COORDINATION_TYPE:
 				return convertCacheCoordinationTypeToString(eDataType, instanceValue);
+			case OrmPackage.CACHE_ISOLATION_TYPE:
+				return convertCacheIsolationTypeToString(eDataType, instanceValue);
+			case OrmPackage.CACHE_KEY_TYPE:
+				return convertCacheKeyTypeToString(eDataType, instanceValue);
 			case OrmPackage.CACHE_TYPE:
 				return convertCacheTypeToString(eDataType, instanceValue);
 			case OrmPackage.CHANGE_TRACKING_TYPE:
@@ -264,8 +314,6 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return convertDirectionTypeToString(eDataType, instanceValue);
 			case OrmPackage.DISCRIMINATOR_TYPE:
 				return convertDiscriminatorTypeToString(eDataType, instanceValue);
-			case OrmPackage.ENUMERATED:
-				return convertEnumeratedToString(eDataType, instanceValue);
 			case OrmPackage.ENUM_TYPE:
 				return convertEnumTypeToString(eDataType, instanceValue);
 			case OrmPackage.EXISTENCE_TYPE:
@@ -282,18 +330,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return convertJoinFetchTypeToString(eDataType, instanceValue);
 			case OrmPackage.LOCK_MODE_TYPE:
 				return convertLockModeTypeToString(eDataType, instanceValue);
+			case OrmPackage.MULTITENANT_TYPE:
+				return convertMultitenantTypeToString(eDataType, instanceValue);
 			case OrmPackage.OPTIMISTIC_LOCKING_TYPE:
 				return convertOptimisticLockingTypeToString(eDataType, instanceValue);
 			case OrmPackage.ORDER_COLUMN_CORRECTION_TYPE:
 				return convertOrderColumnCorrectionTypeToString(eDataType, instanceValue);
-			case OrmPackage.TEMPORAL:
-				return convertTemporalToString(eDataType, instanceValue);
+			case OrmPackage.SUPPORTED_VERSIONS_TYPE:
+				return convertSupportedVersionsTypeToString(eDataType, instanceValue);
 			case OrmPackage.TEMPORAL_TYPE:
 				return convertTemporalTypeToString(eDataType, instanceValue);
 			case OrmPackage.ACCESS_TYPE_OBJECT:
 				return convertAccessTypeObjectToString(eDataType, instanceValue);
+			case OrmPackage.BATCH_FETCH_TYPE_OBJECT:
+				return convertBatchFetchTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.CACHE_COORDINATION_TYPE_OBJECT:
 				return convertCacheCoordinationTypeObjectToString(eDataType, instanceValue);
+			case OrmPackage.CACHE_ISOLATION_TYPE_OBJECT:
+				return convertCacheIsolationTypeObjectToString(eDataType, instanceValue);
+			case OrmPackage.CACHE_KEY_TYPE_OBJECT:
+				return convertCacheKeyTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.CACHE_TYPE_OBJECT:
 				return convertCacheTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.CHANGE_TRACKING_TYPE_OBJECT:
@@ -304,8 +360,8 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return convertDiscriminatorTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.DISCRIMINATOR_VALUE:
 				return convertDiscriminatorValueToString(eDataType, instanceValue);
-			case OrmPackage.ENUMERATED_OBJECT:
-				return convertEnumeratedObjectToString(eDataType, instanceValue);
+			case OrmPackage.ENUMERATED:
+				return convertEnumeratedToString(eDataType, instanceValue);
 			case OrmPackage.ENUM_TYPE_OBJECT:
 				return convertEnumTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.EXISTENCE_TYPE_OBJECT:
@@ -322,14 +378,18 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 				return convertJoinFetchTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.LOCK_MODE_TYPE_OBJECT:
 				return convertLockModeTypeObjectToString(eDataType, instanceValue);
+			case OrmPackage.MULTITENANT_TYPE_OBJECT:
+				return convertMultitenantTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.OPTIMISTIC_LOCKING_TYPE_OBJECT:
 				return convertOptimisticLockingTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.ORDER_BY:
 				return convertOrderByToString(eDataType, instanceValue);
 			case OrmPackage.ORDER_COLUMN_CORRECTION_TYPE_OBJECT:
 				return convertOrderColumnCorrectionTypeObjectToString(eDataType, instanceValue);
-			case OrmPackage.TEMPORAL_OBJECT:
-				return convertTemporalObjectToString(eDataType, instanceValue);
+			case OrmPackage.SUPPORTED_VERSIONS_TYPE_OBJECT:
+				return convertSupportedVersionsTypeObjectToString(eDataType, instanceValue);
+			case OrmPackage.TEMPORAL:
+				return convertTemporalToString(eDataType, instanceValue);
 			case OrmPackage.TEMPORAL_TYPE_OBJECT:
 				return convertTemporalTypeObjectToString(eDataType, instanceValue);
 			case OrmPackage.VERSION_TYPE:
@@ -349,6 +409,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AdditionalCriteria createAdditionalCriteria() {
+		AdditionalCriteriaImpl additionalCriteria = new AdditionalCriteriaImpl();
+		return additionalCriteria;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Array createArray() {
+		ArrayImpl array = new ArrayImpl();
+		return array;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -403,6 +483,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BatchFetch createBatchFetch() {
+		BatchFetchImpl batchFetch = new BatchFetchImpl();
+		return batchFetch;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -439,6 +529,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ClassExtractor createClassExtractor() {
+		ClassExtractorImpl classExtractor = new ClassExtractorImpl();
+		return classExtractor;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -637,6 +737,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FetchAttribute createFetchAttribute() {
+		FetchAttributeImpl fetchAttribute = new FetchAttributeImpl();
+		return fetchAttribute;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FetchGroup createFetchGroup() {
+		FetchGroupImpl fetchGroup = new FetchGroupImpl();
+		return fetchGroup;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -655,6 +775,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HashPartitioning createHashPartitioning() {
+		HashPartitioningImpl hashPartitioning = new HashPartitioningImpl();
+		return hashPartitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -673,6 +803,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Index createIndex() {
+		IndexImpl index = new IndexImpl();
+		return index;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -781,6 +921,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Multitenant createMultitenant() {
+		MultitenantImpl multitenant = new MultitenantImpl();
+		return multitenant;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -790,6 +940,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NamedPlsqlStoredFunctionQuery createNamedPlsqlStoredFunctionQuery() {
+		NamedPlsqlStoredFunctionQueryImpl namedPlsqlStoredFunctionQuery = new NamedPlsqlStoredFunctionQueryImpl();
+		return namedPlsqlStoredFunctionQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NamedPlsqlStoredProcedureQuery createNamedPlsqlStoredProcedureQuery() {
+		NamedPlsqlStoredProcedureQueryImpl namedPlsqlStoredProcedureQuery = new NamedPlsqlStoredProcedureQueryImpl();
+		return namedPlsqlStoredProcedureQuery;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -799,6 +969,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NamedStoredFunctionQuery createNamedStoredFunctionQuery() {
+		NamedStoredFunctionQueryImpl namedStoredFunctionQuery = new NamedStoredFunctionQueryImpl();
+		return namedStoredFunctionQuery;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -853,6 +1033,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Partitioning createPartitioning() {
+		PartitioningImpl partitioning = new PartitioningImpl();
+		return partitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -871,6 +1061,46 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PinnedPartitioning createPinnedPartitioning() {
+		PinnedPartitioningImpl pinnedPartitioning = new PinnedPartitioningImpl();
+		return pinnedPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlsqlParameter createPlsqlParameter() {
+		PlsqlParameterImpl plsqlParameter = new PlsqlParameterImpl();
+		return plsqlParameter;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlsqlRecord createPlsqlRecord() {
+		PlsqlRecordImpl plsqlRecord = new PlsqlRecordImpl();
+		return plsqlRecord;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PlsqlTable createPlsqlTable() {
+		PlsqlTableImpl plsqlTable = new PlsqlTableImpl();
+		return plsqlTable;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -979,6 +1209,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RangePartition createRangePartition() {
+		RangePartitionImpl rangePartition = new RangePartitionImpl();
+		return rangePartition;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RangePartitioning createRangePartitioning() {
+		RangePartitioningImpl rangePartitioning = new RangePartitioningImpl();
+		return rangePartitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -988,6 +1238,36 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReplicationPartitioning createReplicationPartitioning() {
+		ReplicationPartitioningImpl replicationPartitioning = new ReplicationPartitioningImpl();
+		return replicationPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReturnInsert createReturnInsert() {
+		ReturnInsertImpl returnInsert = new ReturnInsertImpl();
+		return returnInsert;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoundRobinPartitioning createRoundRobinPartitioning() {
+		RoundRobinPartitioningImpl roundRobinPartitioning = new RoundRobinPartitioningImpl();
+		return roundRobinPartitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1024,6 +1304,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Struct createStruct() {
+		StructImpl struct = new StructImpl();
+		return struct;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1033,6 +1323,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Structure createStructure() {
+		StructureImpl structure = new StructureImpl();
+		return structure;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1051,6 +1351,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TenantDiscriminator createTenantDiscriminator() {
+		TenantDiscriminatorImpl tenantDiscriminator = new TenantDiscriminatorImpl();
+		return tenantDiscriminator;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1087,6 +1397,16 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnionPartitioning createUnionPartitioning() {
+		UnionPartitioningImpl unionPartitioning = new UnionPartitioningImpl();
+		return unionPartitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1096,6 +1416,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ValuePartition createValuePartition() {
+		ValuePartitionImpl valuePartition = new ValuePartitionImpl();
+		return valuePartition;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ValuePartitioning createValuePartitioning() {
+		ValuePartitioningImpl valuePartitioning = new ValuePartitioningImpl();
+		return valuePartitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1141,6 +1481,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BatchFetchType createBatchFetchTypeFromString(EDataType eDataType, String initialValue) {
+		BatchFetchType result = BatchFetchType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBatchFetchTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1159,6 +1519,46 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CacheIsolationType createCacheIsolationTypeFromString(EDataType eDataType, String initialValue) {
+		CacheIsolationType result = CacheIsolationType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCacheIsolationTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CacheKeyType createCacheKeyTypeFromString(EDataType eDataType, String initialValue) {
+		CacheKeyType result = CacheKeyType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCacheKeyTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1375,6 +1775,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultitenantType createMultitenantTypeFromString(EDataType eDataType, String initialValue) {
+		MultitenantType result = MultitenantType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMultitenantTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1411,6 +1831,26 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SupportedVersionsType createSupportedVersionsTypeFromString(EDataType eDataType, String initialValue) {
+		SupportedVersionsType result = SupportedVersionsType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSupportedVersionsTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1445,6 +1885,24 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BatchFetchType createBatchFetchTypeObjectFromString(EDataType eDataType, String initialValue) {
+		return createBatchFetchTypeFromString(OrmPackage.eINSTANCE.getBatchFetchType(), initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertBatchFetchTypeObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertBatchFetchTypeToString(OrmPackage.eINSTANCE.getBatchFetchType(), instanceValue);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1461,6 +1919,42 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CacheIsolationType createCacheIsolationTypeObjectFromString(EDataType eDataType, String initialValue) {
+		return createCacheIsolationTypeFromString(OrmPackage.eINSTANCE.getCacheIsolationType(), initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCacheIsolationTypeObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertCacheIsolationTypeToString(OrmPackage.eINSTANCE.getCacheIsolationType(), instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CacheKeyType createCacheKeyTypeObjectFromString(EDataType eDataType, String initialValue) {
+		return createCacheKeyTypeFromString(OrmPackage.eINSTANCE.getCacheKeyType(), initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCacheKeyTypeObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertCacheKeyTypeToString(OrmPackage.eINSTANCE.getCacheKeyType(), instanceValue);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1544,26 +2038,8 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Enumerated createEnumeratedObjectFromString(EDataType eDataType, String initialValue) {
-		return createEnumeratedFromString(OrmPackage.eINSTANCE.getEnumerated(), initialValue);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public String convertEnumeratedObjectToString(EDataType eDataType, Object instanceValue) {
-		return convertEnumeratedToString(OrmPackage.eINSTANCE.getEnumerated(), instanceValue);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public Enumerated createEnumeratedFromString(EDataType eDataType, String initialValue) {
-		Enumerated result = Enumerated.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+  public EnumType createEnumeratedFromString(EDataType eDataType, String initialValue) {
+		return createEnumTypeFromString(OrmPackage.eINSTANCE.getEnumType(), initialValue);
 	}
 
   /**
@@ -1571,7 +2047,7 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	 * @generated
 	 */
   public String convertEnumeratedToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+		return convertEnumTypeToString(OrmPackage.eINSTANCE.getEnumType(), instanceValue);
 	}
 
   /**
@@ -1703,6 +2179,24 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MultitenantType createMultitenantTypeObjectFromString(EDataType eDataType, String initialValue) {
+		return createMultitenantTypeFromString(OrmPackage.eINSTANCE.getMultitenantType(), initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMultitenantTypeObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertMultitenantTypeToString(OrmPackage.eINSTANCE.getMultitenantType(), instanceValue);
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1752,29 +2246,29 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Temporal createTemporalObjectFromString(EDataType eDataType, String initialValue) {
-		return createTemporalFromString(OrmPackage.eINSTANCE.getTemporal(), initialValue);
+	public SupportedVersionsType createSupportedVersionsTypeObjectFromString(EDataType eDataType, String initialValue) {
+		return createSupportedVersionsTypeFromString(OrmPackage.eINSTANCE.getSupportedVersionsType(), initialValue);
 	}
 
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String convertTemporalObjectToString(EDataType eDataType, Object instanceValue) {
-		return convertTemporalToString(OrmPackage.eINSTANCE.getTemporal(), instanceValue);
+	public String convertSupportedVersionsTypeObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertSupportedVersionsTypeToString(OrmPackage.eINSTANCE.getSupportedVersionsType(), instanceValue);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Temporal createTemporalFromString(EDataType eDataType, String initialValue) {
-		Temporal result = Temporal.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
+  public TemporalType createTemporalFromString(EDataType eDataType, String initialValue) {
+		return createTemporalTypeFromString(OrmPackage.eINSTANCE.getTemporalType(), initialValue);
 	}
 
   /**
@@ -1782,7 +2276,7 @@ public class OrmFactoryImpl extends EFactoryImpl implements OrmFactory {
 	 * @generated
 	 */
   public String convertTemporalToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+		return convertTemporalTypeToString(OrmPackage.eINSTANCE.getTemporalType(), instanceValue);
 	}
 
   /**

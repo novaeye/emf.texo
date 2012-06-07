@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -15,11 +15,9 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType" name="substitutionzvon_ComplexEvenType">
-    <orm:primary-key-join-column name="substitutionzvon_ComplexEvenType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexOddType" name="substitutionzvon_ComplexOddType">
-    <orm:primary-key-join-column name="substitutionzvon_ComplexOddType_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="substitutionzvon_RootType_myAbstractGroup">

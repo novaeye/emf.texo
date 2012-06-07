@@ -18,7 +18,7 @@ public class FixPointAnchor extends AdvancedAnchor {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = true)
   private Point location = null;
 
   /**

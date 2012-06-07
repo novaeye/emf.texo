@@ -21,7 +21,7 @@ public abstract class Anchor extends PictogramElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private AnchorContainer parent = null;
 
   /**
@@ -45,7 +45,7 @@ public abstract class Anchor extends PictogramElement {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private GraphicsAlgorithm referencedGraphicsAlgorithm = null;
 
   /**

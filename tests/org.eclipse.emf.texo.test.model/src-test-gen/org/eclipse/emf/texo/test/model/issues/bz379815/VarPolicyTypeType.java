@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.issues.bz379815;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
@@ -23,6 +25,7 @@ public class VarPolicyTypeType extends Identifiable {
    */
   @Basic(optional = false)
   @Column(name = "T_type")
+  @Enumerated(EnumType.STRING)
   private TypeType type = TypeType.EROSION;
 
   /**

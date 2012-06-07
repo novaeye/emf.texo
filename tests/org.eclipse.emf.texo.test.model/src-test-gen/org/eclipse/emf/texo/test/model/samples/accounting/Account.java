@@ -26,7 +26,7 @@ public abstract class Account extends Identifiable implements Serializable {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "T_name")
+  @Column(name = "name")
   private String name = null;
 
   /**

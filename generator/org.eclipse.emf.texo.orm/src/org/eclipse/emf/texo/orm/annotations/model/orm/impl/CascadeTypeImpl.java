@@ -26,6 +26,7 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl#getCascadeMerge <em>Cascade Merge</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl#getCascadeRemove <em>Cascade Remove</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl#getCascadeRefresh <em>Cascade Refresh</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CascadeTypeImpl#getCascadeDetach <em>Cascade Detach</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,6 +84,16 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
   protected EmptyType cascadeRefresh;
 
   /**
+	 * The cached value of the '{@link #getCascadeDetach() <em>Cascade Detach</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCascadeDetach()
+	 * @generated
+	 * @ordered
+	 */
+	protected EmptyType cascadeDetach;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -300,6 +311,49 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmptyType getCascadeDetach() {
+		return cascadeDetach;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCascadeDetach(EmptyType newCascadeDetach, NotificationChain msgs) {
+		EmptyType oldCascadeDetach = cascadeDetach;
+		cascadeDetach = newCascadeDetach;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_DETACH, oldCascadeDetach, newCascadeDetach);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCascadeDetach(EmptyType newCascadeDetach) {
+		if (newCascadeDetach != cascadeDetach) {
+			NotificationChain msgs = null;
+			if (cascadeDetach != null)
+				msgs = ((InternalEObject)cascadeDetach).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.CASCADE_TYPE__CASCADE_DETACH, null, msgs);
+			if (newCascadeDetach != null)
+				msgs = ((InternalEObject)newCascadeDetach).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.CASCADE_TYPE__CASCADE_DETACH, null, msgs);
+			msgs = basicSetCascadeDetach(newCascadeDetach, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CASCADE_TYPE__CASCADE_DETACH, newCascadeDetach, newCascadeDetach));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -316,6 +370,8 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 				return basicSetCascadeRemove(null, msgs);
 			case OrmPackage.CASCADE_TYPE__CASCADE_REFRESH:
 				return basicSetCascadeRefresh(null, msgs);
+			case OrmPackage.CASCADE_TYPE__CASCADE_DETACH:
+				return basicSetCascadeDetach(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -337,6 +393,8 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 				return getCascadeRemove();
 			case OrmPackage.CASCADE_TYPE__CASCADE_REFRESH:
 				return getCascadeRefresh();
+			case OrmPackage.CASCADE_TYPE__CASCADE_DETACH:
+				return getCascadeDetach();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -362,6 +420,9 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 				return;
 			case OrmPackage.CASCADE_TYPE__CASCADE_REFRESH:
 				setCascadeRefresh((EmptyType)newValue);
+				return;
+			case OrmPackage.CASCADE_TYPE__CASCADE_DETACH:
+				setCascadeDetach((EmptyType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -389,6 +450,9 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 			case OrmPackage.CASCADE_TYPE__CASCADE_REFRESH:
 				setCascadeRefresh((EmptyType)null);
 				return;
+			case OrmPackage.CASCADE_TYPE__CASCADE_DETACH:
+				setCascadeDetach((EmptyType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -410,6 +474,8 @@ public class CascadeTypeImpl extends BaseOrmAnnotationImpl implements CascadeTyp
 				return cascadeRemove != null;
 			case OrmPackage.CASCADE_TYPE__CASCADE_REFRESH:
 				return cascadeRefresh != null;
+			case OrmPackage.CASCADE_TYPE__CASCADE_DETACH:
+				return cascadeDetach != null;
 		}
 		return super.eIsSet(featureID);
 	}

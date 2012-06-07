@@ -31,7 +31,7 @@ public abstract class Tariff extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "T_name")
+  @Column(name = "name")
   private String name = null;
 
   /**

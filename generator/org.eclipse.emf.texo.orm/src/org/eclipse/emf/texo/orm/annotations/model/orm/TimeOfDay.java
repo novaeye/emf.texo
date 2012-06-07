@@ -17,39 +17,34 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({})
- * 				@Retention(RUNTIME)
- * 				public @interface
- * 				TimeOfDay {
- * 				*
- * 				* (Optional) Hour of the day.
- * 				*
- * 				int hour() default 0;
+ *         @Target({})
+ *         @Retention(RUNTIME)
+ *         public @interface TimeOfDay {
+ *           /**
+ *            * (Optional) Hour of the day.
+ *            ** 
+ *           int hour() default 0;
  * 
- * 				*
- * 				*
- * 				(Optional) Minute of the day.
- * 				*
- * 				int minute() default 0;
+ *           /**
+ *            * (Optional) Minute of the day.
+ *            ** 
+ *           int minute() default 0;
  * 
- * 				*
- * 				* (Optional)
- * 				Second of the day.
- * 				*
- * 				int second() default 0;
+ *           /**
+ *            * (Optional) Second of the day.
+ *            ** 
+ *           int second() default 0;
  * 
- * 				*
- * 				* (Optional) Millisecond
- * 				of the day.
- * 				*
- * 				int millisecond() default 0;
+ *           /**
+ *            * (Optional) Millisecond of the day.
+ *            ** 
+ *           int millisecond() default 0;
  * 
- * 				*
- * 				* Internal use. Do not
- * 				modify.
- * 				*
- * 				boolean specified() default true;
- * 				}
+ *           /**
+ *            * Internal use. Do not modify.
+ *            ** 
+ *           boolean specified() default true;
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

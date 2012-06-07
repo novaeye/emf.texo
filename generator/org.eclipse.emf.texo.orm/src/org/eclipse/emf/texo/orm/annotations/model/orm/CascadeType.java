@@ -15,10 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				public enum CascadeType { ALL, PERSIST, MERGE,
- * 				REMOVE, REFRESH};
+ *         public enum CascadeType { ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH};
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>
@@ -29,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeMerge <em>Cascade Merge</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeRemove <em>Cascade Remove</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeRefresh <em>Cascade Refresh</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeDetach <em>Cascade Detach</em>}</li>
  * </ul>
  * </p>
  *
@@ -167,5 +167,32 @@ public interface CascadeType extends BaseOrmAnnotation {
 	 * @generated
 	 */
   void setCascadeRefresh(EmptyType value);
+
+		/**
+	 * Returns the value of the '<em><b>Cascade Detach</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cascade Detach</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cascade Detach</em>' containment reference.
+	 * @see #setCascadeDetach(EmptyType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCascadeType_CascadeDetach()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='cascade-detach' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EmptyType getCascadeDetach();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.CascadeType#getCascadeDetach <em>Cascade Detach</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cascade Detach</em>' containment reference.
+	 * @see #getCascadeDetach()
+	 * @generated
+	 */
+	void setCascadeDetach(EmptyType value);
 
 } // CascadeType

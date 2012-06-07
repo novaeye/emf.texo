@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.samples.extlibrary;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
@@ -35,6 +37,7 @@ public class Book extends CirculatingItem {
    * @generated
    */
   @Basic()
+  @Enumerated(EnumType.STRING)
   private BookCategory category = null;
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -42,7 +45,7 @@ public class Book extends CirculatingItem {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn() })
+  @JoinColumns({ @JoinColumn(nullable = true) })
   private Writer author = null;
 
   /**

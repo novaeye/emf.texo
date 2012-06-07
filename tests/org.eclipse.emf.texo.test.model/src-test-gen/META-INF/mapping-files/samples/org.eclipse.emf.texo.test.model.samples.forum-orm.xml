@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -68,6 +68,7 @@
       </orm:basic>
       <orm:basic name="category" optional="false">
         <orm:column name="category"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:many-to-one name="creator" optional="false">
         <orm:join-column name="forum_Topic_creator"/>

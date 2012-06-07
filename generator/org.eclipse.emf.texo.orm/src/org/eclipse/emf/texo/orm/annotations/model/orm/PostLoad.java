@@ -15,9 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD}) @Retention(RUNTIME)
- * 				public
- * 				@interface PostLoad {}
+ *         @Target({METHOD}) @Retention(RUNTIME)
+ *         public @interface PostLoad {}
  * 
  *       
  * <!-- end-model-doc -->

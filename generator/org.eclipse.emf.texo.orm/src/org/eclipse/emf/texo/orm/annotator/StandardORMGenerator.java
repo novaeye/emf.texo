@@ -32,6 +32,7 @@ import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
+import org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceFactoryImpl;
 import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceImpl;
 
@@ -59,7 +60,11 @@ public class StandardORMGenerator extends ORMGenerator {
   @Override
   protected void storeORM(URI fileUri, AnnotatedModel annotatedModel, AnnotationManager annotationManager,
       EntityMappingsType entityMappings) {
-    entityMappings.setVersion("2.0"); //$NON-NLS-1$
+    if (ORMGenerator.areInStandardsCompliantMode()) {
+      entityMappings.setVersion(SupportedVersionsType._20);
+    } else {
+      entityMappings.setVersion(SupportedVersionsType._23);
+    }
     final OrmResourceImpl ormResource = (OrmResourceImpl) new OrmResourceFactoryImpl().createResource(fileUri);
     try {
       final File file = new File(fileUri.toFileString());

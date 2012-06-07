@@ -32,6 +32,7 @@ public class Person extends Identifiable implements Addressable {
    * 
    * @generated
    */
+  @Basic()
   private String address = null;
 
   /**

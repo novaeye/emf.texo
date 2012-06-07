@@ -36,6 +36,8 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getHint <em>Hint</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#isCallByIndex <em>Call By Index</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#isMultipleResultSets <em>Multiple Result Sets</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getProcedureName <em>Procedure Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.NamedStoredProcedureQueryImpl#getResultClass <em>Result Class</em>}</li>
@@ -68,6 +70,64 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
   protected EList<StoredProcedureParameter> parameter;
 
   /**
+	 * The default value of the '{@link #isCallByIndex() <em>Call By Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCallByIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CALL_BY_INDEX_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isCallByIndex() <em>Call By Index</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCallByIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean callByIndex = CALL_BY_INDEX_EDEFAULT;
+
+		/**
+	 * This is true if the Call By Index attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean callByIndexESet;
+
+		/**
+	 * The default value of the '{@link #isMultipleResultSets() <em>Multiple Result Sets</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMultipleResultSets()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean MULTIPLE_RESULT_SETS_EDEFAULT = false;
+
+		/**
+	 * The cached value of the '{@link #isMultipleResultSets() <em>Multiple Result Sets</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMultipleResultSets()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean multipleResultSets = MULTIPLE_RESULT_SETS_EDEFAULT;
+
+		/**
+	 * This is true if the Multiple Result Sets attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean multipleResultSetsESet;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -214,6 +274,98 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isCallByIndex() {
+		return callByIndex;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCallByIndex(boolean newCallByIndex) {
+		boolean oldCallByIndex = callByIndex;
+		callByIndex = newCallByIndex;
+		boolean oldCallByIndexESet = callByIndexESet;
+		callByIndexESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX, oldCallByIndex, callByIndex, !oldCallByIndexESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCallByIndex() {
+		boolean oldCallByIndex = callByIndex;
+		boolean oldCallByIndexESet = callByIndexESet;
+		callByIndex = CALL_BY_INDEX_EDEFAULT;
+		callByIndexESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX, oldCallByIndex, CALL_BY_INDEX_EDEFAULT, oldCallByIndexESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCallByIndex() {
+		return callByIndexESet;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isMultipleResultSets() {
+		return multipleResultSets;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMultipleResultSets(boolean newMultipleResultSets) {
+		boolean oldMultipleResultSets = multipleResultSets;
+		multipleResultSets = newMultipleResultSets;
+		boolean oldMultipleResultSetsESet = multipleResultSetsESet;
+		multipleResultSetsESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS, oldMultipleResultSets, multipleResultSets, !oldMultipleResultSetsESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetMultipleResultSets() {
+		boolean oldMultipleResultSets = multipleResultSets;
+		boolean oldMultipleResultSetsESet = multipleResultSetsESet;
+		multipleResultSets = MULTIPLE_RESULT_SETS_EDEFAULT;
+		multipleResultSetsESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS, oldMultipleResultSets, MULTIPLE_RESULT_SETS_EDEFAULT, oldMultipleResultSetsESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetMultipleResultSets() {
+		return multipleResultSetsESet;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -357,6 +509,10 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 				return getHint();
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
 				return getParameter();
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX:
+				return isCallByIndex();
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS:
+				return isMultipleResultSets();
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
 				return getName();
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
@@ -386,6 +542,12 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
 				getParameter().clear();
 				getParameter().addAll((Collection<? extends StoredProcedureParameter>)newValue);
+				return;
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX:
+				setCallByIndex((Boolean)newValue);
+				return;
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS:
+				setMultipleResultSets((Boolean)newValue);
 				return;
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
 				setName((String)newValue);
@@ -419,6 +581,12 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
 				getParameter().clear();
 				return;
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX:
+				unsetCallByIndex();
+				return;
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS:
+				unsetMultipleResultSets();
+				return;
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -449,6 +617,10 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 				return hint != null && !hint.isEmpty();
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PARAMETER:
 				return parameter != null && !parameter.isEmpty();
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__CALL_BY_INDEX:
+				return isSetCallByIndex();
+			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__MULTIPLE_RESULT_SETS:
+				return isSetMultipleResultSets();
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrmPackage.NAMED_STORED_PROCEDURE_QUERY__PROCEDURE_NAME:
@@ -472,7 +644,11 @@ public class NamedStoredProcedureQueryImpl extends BaseOrmAnnotationImpl impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (callByIndex: ");
+		if (callByIndexESet) result.append(callByIndex); else result.append("<unset>");
+		result.append(", multipleResultSets: ");
+		if (multipleResultSetsESet) result.append(multipleResultSets); else result.append("<unset>");
+		result.append(", name: ");
 		result.append(name);
 		result.append(", procedureName: ");
 		result.append(procedureName);

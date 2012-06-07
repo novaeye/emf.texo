@@ -19,7 +19,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride;
+import org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Attributes;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ChangeTracking;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CloneCopyPolicy;
@@ -30,7 +33,10 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.InstantiationCopyPolicy;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Property;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Struct;
 import org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
@@ -42,21 +48,28 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getCustomizer <em>Customizer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getChangeTracking <em>Change Tracking</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getStruct <em>Struct</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getConverter <em>Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getTypeConverter <em>Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getObjectTypeConverter <em>Object Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getStructConverter <em>Struct Converter</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getProperty <em>Property</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getCopyPolicy <em>Copy Policy</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getInstantiationCopyPolicy <em>Instantiation Copy Policy</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getCloneCopyPolicy <em>Clone Copy Policy</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getPlsqlRecord <em>Plsql Record</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getPlsqlTable <em>Plsql Table</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getAttributeOverride <em>Attribute Override</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getAssociationOverride <em>Association Override</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getAccess <em>Access</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getClass_ <em>Class</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#isExcludeDefaultMappings <em>Exclude Default Mappings</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#isMetadataComplete <em>Metadata Complete</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EmbeddableImpl#getParentClass <em>Parent Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,6 +97,16 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
+	 * The cached value of the '{@link #getAccessMethods() <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccessMethods()
+	 * @generated
+	 * @ordered
+	 */
+	protected AccessMethods accessMethods;
+
+		/**
 	 * The cached value of the '{@link #getCustomizer() <em>Customizer</em>}' containment reference.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -104,6 +127,16 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   protected ChangeTracking changeTracking;
 
   /**
+	 * The cached value of the '{@link #getStruct() <em>Struct</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStruct()
+	 * @generated
+	 * @ordered
+	 */
+	protected Struct struct;
+
+		/**
    * The cached value of the '{@link #getConverter() <em>Converter</em>}' containment reference list. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -143,26 +176,6 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   protected EList<StructConverter> structConverter;
 
   /**
-	 * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
-	 * <!-- begin-user-doc
-   * --> <!-- end-user-doc -->
-	 * @see #getProperty()
-	 * @generated
-	 * @ordered
-	 */
-  protected EList<Property> property;
-
-  /**
-	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference.
-	 * <!-- begin-user-doc
-   * --> <!-- end-user-doc -->
-	 * @see #getAttributes()
-	 * @generated
-	 * @ordered
-	 */
-  protected Attributes attributes;
-
-  /**
 	 * The cached value of the '{@link #getCopyPolicy() <em>Copy Policy</em>}' containment reference.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -192,6 +205,66 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   protected CloneCopyPolicy cloneCopyPolicy;
 
   /**
+	 * The cached value of the '{@link #getPlsqlRecord() <em>Plsql Record</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PlsqlRecord> plsqlRecord;
+
+		/**
+	 * The cached value of the '{@link #getPlsqlTable() <em>Plsql Table</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlsqlTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PlsqlTable> plsqlTable;
+
+		/**
+	 * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
+	 * <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+	 * @see #getProperty()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<Property> property;
+
+		/**
+	 * The cached value of the '{@link #getAttributeOverride() <em>Attribute Override</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AttributeOverride> attributeOverride;
+
+		/**
+	 * The cached value of the '{@link #getAssociationOverride() <em>Association Override</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssociationOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AssociationOverride> associationOverride;
+
+		/**
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference.
+	 * <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+	 * @see #getAttributes()
+	 * @generated
+	 * @ordered
+	 */
+  protected Attributes attributes;
+
+		/**
 	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -199,7 +272,7 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -296,6 +369,26 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
   protected boolean metadataCompleteESet;
 
   /**
+	 * The default value of the '{@link #getParentClass() <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PARENT_CLASS_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getParentClass() <em>Parent Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String parentClass = PARENT_CLASS_EDEFAULT;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -332,6 +425,49 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccessMethods getAccessMethods() {
+		return accessMethods;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAccessMethods(AccessMethods newAccessMethods, NotificationChain msgs) {
+		AccessMethods oldAccessMethods = accessMethods;
+		accessMethods = newAccessMethods;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAccessMethods(AccessMethods newAccessMethods) {
+		if (newAccessMethods != accessMethods) {
+			NotificationChain msgs = null;
+			if (accessMethods != null)
+				msgs = ((InternalEObject)accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.EMBEDDABLE__ACCESS_METHODS, null, msgs);
+			if (newAccessMethods != null)
+				msgs = ((InternalEObject)newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.EMBEDDABLE__ACCESS_METHODS, null, msgs);
+			msgs = basicSetAccessMethods(newAccessMethods, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__ACCESS_METHODS, newAccessMethods, newAccessMethods));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -412,6 +548,49 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Struct getStruct() {
+		return struct;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStruct(Struct newStruct, NotificationChain msgs) {
+		Struct oldStruct = struct;
+		struct = newStruct;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__STRUCT, oldStruct, newStruct);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStruct(Struct newStruct) {
+		if (newStruct != struct) {
+			NotificationChain msgs = null;
+			if (struct != null)
+				msgs = ((InternalEObject)struct).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.EMBEDDABLE__STRUCT, null, msgs);
+			if (newStruct != null)
+				msgs = ((InternalEObject)newStruct).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.EMBEDDABLE__STRUCT, null, msgs);
+			msgs = basicSetStruct(newStruct, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__STRUCT, newStruct, newStruct));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -467,6 +646,30 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AttributeOverride> getAttributeOverride() {
+		if (attributeOverride == null) {
+			attributeOverride = new EObjectContainmentEList<AttributeOverride>(AttributeOverride.class, this, OrmPackage.EMBEDDABLE__ATTRIBUTE_OVERRIDE);
+		}
+		return attributeOverride;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<AssociationOverride> getAssociationOverride() {
+		if (associationOverride == null) {
+			associationOverride = new EObjectContainmentEList<AssociationOverride>(AssociationOverride.class, this, OrmPackage.EMBEDDABLE__ASSOCIATION_OVERRIDE);
+		}
+		return associationOverride;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -628,6 +831,30 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PlsqlRecord> getPlsqlRecord() {
+		if (plsqlRecord == null) {
+			plsqlRecord = new EObjectContainmentEList<PlsqlRecord>(PlsqlRecord.class, this, OrmPackage.EMBEDDABLE__PLSQL_RECORD);
+		}
+		return plsqlRecord;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PlsqlTable> getPlsqlTable() {
+		if (plsqlTable == null) {
+			plsqlTable = new EObjectContainmentEList<PlsqlTable>(PlsqlTable.class, this, OrmPackage.EMBEDDABLE__PLSQL_TABLE);
+		}
+		return plsqlTable;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -773,16 +1000,41 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getParentClass() {
+		return parentClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentClass(String newParentClass) {
+		String oldParentClass = parentClass;
+		parentClass = newParentClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.EMBEDDABLE__PARENT_CLASS, oldParentClass, parentClass));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case OrmPackage.EMBEDDABLE__ACCESS_METHODS:
+				return basicSetAccessMethods(null, msgs);
 			case OrmPackage.EMBEDDABLE__CUSTOMIZER:
 				return basicSetCustomizer(null, msgs);
 			case OrmPackage.EMBEDDABLE__CHANGE_TRACKING:
 				return basicSetChangeTracking(null, msgs);
+			case OrmPackage.EMBEDDABLE__STRUCT:
+				return basicSetStruct(null, msgs);
 			case OrmPackage.EMBEDDABLE__CONVERTER:
 				return ((InternalEList<?>)getConverter()).basicRemove(otherEnd, msgs);
 			case OrmPackage.EMBEDDABLE__TYPE_CONVERTER:
@@ -791,16 +1043,24 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return ((InternalEList<?>)getObjectTypeConverter()).basicRemove(otherEnd, msgs);
 			case OrmPackage.EMBEDDABLE__STRUCT_CONVERTER:
 				return ((InternalEList<?>)getStructConverter()).basicRemove(otherEnd, msgs);
-			case OrmPackage.EMBEDDABLE__PROPERTY:
-				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
-			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
-				return basicSetAttributes(null, msgs);
 			case OrmPackage.EMBEDDABLE__COPY_POLICY:
 				return basicSetCopyPolicy(null, msgs);
 			case OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY:
 				return basicSetInstantiationCopyPolicy(null, msgs);
 			case OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY:
 				return basicSetCloneCopyPolicy(null, msgs);
+			case OrmPackage.EMBEDDABLE__PLSQL_RECORD:
+				return ((InternalEList<?>)getPlsqlRecord()).basicRemove(otherEnd, msgs);
+			case OrmPackage.EMBEDDABLE__PLSQL_TABLE:
+				return ((InternalEList<?>)getPlsqlTable()).basicRemove(otherEnd, msgs);
+			case OrmPackage.EMBEDDABLE__PROPERTY:
+				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
+			case OrmPackage.EMBEDDABLE__ATTRIBUTE_OVERRIDE:
+				return ((InternalEList<?>)getAttributeOverride()).basicRemove(otherEnd, msgs);
+			case OrmPackage.EMBEDDABLE__ASSOCIATION_OVERRIDE:
+				return ((InternalEList<?>)getAssociationOverride()).basicRemove(otherEnd, msgs);
+			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
+				return basicSetAttributes(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -814,10 +1074,14 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 		switch (featureID) {
 			case OrmPackage.EMBEDDABLE__DESCRIPTION:
 				return getDescription();
+			case OrmPackage.EMBEDDABLE__ACCESS_METHODS:
+				return getAccessMethods();
 			case OrmPackage.EMBEDDABLE__CUSTOMIZER:
 				return getCustomizer();
 			case OrmPackage.EMBEDDABLE__CHANGE_TRACKING:
 				return getChangeTracking();
+			case OrmPackage.EMBEDDABLE__STRUCT:
+				return getStruct();
 			case OrmPackage.EMBEDDABLE__CONVERTER:
 				return getConverter();
 			case OrmPackage.EMBEDDABLE__TYPE_CONVERTER:
@@ -826,16 +1090,24 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return getObjectTypeConverter();
 			case OrmPackage.EMBEDDABLE__STRUCT_CONVERTER:
 				return getStructConverter();
-			case OrmPackage.EMBEDDABLE__PROPERTY:
-				return getProperty();
-			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
-				return getAttributes();
 			case OrmPackage.EMBEDDABLE__COPY_POLICY:
 				return getCopyPolicy();
 			case OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY:
 				return getInstantiationCopyPolicy();
 			case OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY:
 				return getCloneCopyPolicy();
+			case OrmPackage.EMBEDDABLE__PLSQL_RECORD:
+				return getPlsqlRecord();
+			case OrmPackage.EMBEDDABLE__PLSQL_TABLE:
+				return getPlsqlTable();
+			case OrmPackage.EMBEDDABLE__PROPERTY:
+				return getProperty();
+			case OrmPackage.EMBEDDABLE__ATTRIBUTE_OVERRIDE:
+				return getAttributeOverride();
+			case OrmPackage.EMBEDDABLE__ASSOCIATION_OVERRIDE:
+				return getAssociationOverride();
+			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
+				return getAttributes();
 			case OrmPackage.EMBEDDABLE__ACCESS:
 				return getAccess();
 			case OrmPackage.EMBEDDABLE__CLASS:
@@ -844,6 +1116,8 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return isExcludeDefaultMappings();
 			case OrmPackage.EMBEDDABLE__METADATA_COMPLETE:
 				return isMetadataComplete();
+			case OrmPackage.EMBEDDABLE__PARENT_CLASS:
+				return getParentClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -859,11 +1133,17 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 			case OrmPackage.EMBEDDABLE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
+			case OrmPackage.EMBEDDABLE__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)newValue);
+				return;
 			case OrmPackage.EMBEDDABLE__CUSTOMIZER:
 				setCustomizer((Customizer)newValue);
 				return;
 			case OrmPackage.EMBEDDABLE__CHANGE_TRACKING:
 				setChangeTracking((ChangeTracking)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__STRUCT:
+				setStruct((Struct)newValue);
 				return;
 			case OrmPackage.EMBEDDABLE__CONVERTER:
 				getConverter().clear();
@@ -881,13 +1161,6 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				getStructConverter().clear();
 				getStructConverter().addAll((Collection<? extends StructConverter>)newValue);
 				return;
-			case OrmPackage.EMBEDDABLE__PROPERTY:
-				getProperty().clear();
-				getProperty().addAll((Collection<? extends Property>)newValue);
-				return;
-			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
-				setAttributes((Attributes)newValue);
-				return;
 			case OrmPackage.EMBEDDABLE__COPY_POLICY:
 				setCopyPolicy((CopyPolicy)newValue);
 				return;
@@ -896,6 +1169,29 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return;
 			case OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY:
 				setCloneCopyPolicy((CloneCopyPolicy)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__PLSQL_RECORD:
+				getPlsqlRecord().clear();
+				getPlsqlRecord().addAll((Collection<? extends PlsqlRecord>)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__PLSQL_TABLE:
+				getPlsqlTable().clear();
+				getPlsqlTable().addAll((Collection<? extends PlsqlTable>)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__PROPERTY:
+				getProperty().clear();
+				getProperty().addAll((Collection<? extends Property>)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__ATTRIBUTE_OVERRIDE:
+				getAttributeOverride().clear();
+				getAttributeOverride().addAll((Collection<? extends AttributeOverride>)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__ASSOCIATION_OVERRIDE:
+				getAssociationOverride().clear();
+				getAssociationOverride().addAll((Collection<? extends AssociationOverride>)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
+				setAttributes((Attributes)newValue);
 				return;
 			case OrmPackage.EMBEDDABLE__ACCESS:
 				setAccess((AccessType)newValue);
@@ -908,6 +1204,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return;
 			case OrmPackage.EMBEDDABLE__METADATA_COMPLETE:
 				setMetadataComplete((Boolean)newValue);
+				return;
+			case OrmPackage.EMBEDDABLE__PARENT_CLASS:
+				setParentClass((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -923,11 +1222,17 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 			case OrmPackage.EMBEDDABLE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case OrmPackage.EMBEDDABLE__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)null);
+				return;
 			case OrmPackage.EMBEDDABLE__CUSTOMIZER:
 				setCustomizer((Customizer)null);
 				return;
 			case OrmPackage.EMBEDDABLE__CHANGE_TRACKING:
 				setChangeTracking((ChangeTracking)null);
+				return;
+			case OrmPackage.EMBEDDABLE__STRUCT:
+				setStruct((Struct)null);
 				return;
 			case OrmPackage.EMBEDDABLE__CONVERTER:
 				getConverter().clear();
@@ -941,12 +1246,6 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 			case OrmPackage.EMBEDDABLE__STRUCT_CONVERTER:
 				getStructConverter().clear();
 				return;
-			case OrmPackage.EMBEDDABLE__PROPERTY:
-				getProperty().clear();
-				return;
-			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
-				setAttributes((Attributes)null);
-				return;
 			case OrmPackage.EMBEDDABLE__COPY_POLICY:
 				setCopyPolicy((CopyPolicy)null);
 				return;
@@ -955,6 +1254,24 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return;
 			case OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY:
 				setCloneCopyPolicy((CloneCopyPolicy)null);
+				return;
+			case OrmPackage.EMBEDDABLE__PLSQL_RECORD:
+				getPlsqlRecord().clear();
+				return;
+			case OrmPackage.EMBEDDABLE__PLSQL_TABLE:
+				getPlsqlTable().clear();
+				return;
+			case OrmPackage.EMBEDDABLE__PROPERTY:
+				getProperty().clear();
+				return;
+			case OrmPackage.EMBEDDABLE__ATTRIBUTE_OVERRIDE:
+				getAttributeOverride().clear();
+				return;
+			case OrmPackage.EMBEDDABLE__ASSOCIATION_OVERRIDE:
+				getAssociationOverride().clear();
+				return;
+			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
+				setAttributes((Attributes)null);
 				return;
 			case OrmPackage.EMBEDDABLE__ACCESS:
 				unsetAccess();
@@ -967,6 +1284,9 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return;
 			case OrmPackage.EMBEDDABLE__METADATA_COMPLETE:
 				unsetMetadataComplete();
+				return;
+			case OrmPackage.EMBEDDABLE__PARENT_CLASS:
+				setParentClass(PARENT_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -981,10 +1301,14 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 		switch (featureID) {
 			case OrmPackage.EMBEDDABLE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case OrmPackage.EMBEDDABLE__ACCESS_METHODS:
+				return accessMethods != null;
 			case OrmPackage.EMBEDDABLE__CUSTOMIZER:
 				return customizer != null;
 			case OrmPackage.EMBEDDABLE__CHANGE_TRACKING:
 				return changeTracking != null;
+			case OrmPackage.EMBEDDABLE__STRUCT:
+				return struct != null;
 			case OrmPackage.EMBEDDABLE__CONVERTER:
 				return converter != null && !converter.isEmpty();
 			case OrmPackage.EMBEDDABLE__TYPE_CONVERTER:
@@ -993,16 +1317,24 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return objectTypeConverter != null && !objectTypeConverter.isEmpty();
 			case OrmPackage.EMBEDDABLE__STRUCT_CONVERTER:
 				return structConverter != null && !structConverter.isEmpty();
-			case OrmPackage.EMBEDDABLE__PROPERTY:
-				return property != null && !property.isEmpty();
-			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
-				return attributes != null;
 			case OrmPackage.EMBEDDABLE__COPY_POLICY:
 				return copyPolicy != null;
 			case OrmPackage.EMBEDDABLE__INSTANTIATION_COPY_POLICY:
 				return instantiationCopyPolicy != null;
 			case OrmPackage.EMBEDDABLE__CLONE_COPY_POLICY:
 				return cloneCopyPolicy != null;
+			case OrmPackage.EMBEDDABLE__PLSQL_RECORD:
+				return plsqlRecord != null && !plsqlRecord.isEmpty();
+			case OrmPackage.EMBEDDABLE__PLSQL_TABLE:
+				return plsqlTable != null && !plsqlTable.isEmpty();
+			case OrmPackage.EMBEDDABLE__PROPERTY:
+				return property != null && !property.isEmpty();
+			case OrmPackage.EMBEDDABLE__ATTRIBUTE_OVERRIDE:
+				return attributeOverride != null && !attributeOverride.isEmpty();
+			case OrmPackage.EMBEDDABLE__ASSOCIATION_OVERRIDE:
+				return associationOverride != null && !associationOverride.isEmpty();
+			case OrmPackage.EMBEDDABLE__ATTRIBUTES:
+				return attributes != null;
 			case OrmPackage.EMBEDDABLE__ACCESS:
 				return isSetAccess();
 			case OrmPackage.EMBEDDABLE__CLASS:
@@ -1011,6 +1343,8 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 				return isSetExcludeDefaultMappings();
 			case OrmPackage.EMBEDDABLE__METADATA_COMPLETE:
 				return isSetMetadataComplete();
+			case OrmPackage.EMBEDDABLE__PARENT_CLASS:
+				return PARENT_CLASS_EDEFAULT == null ? parentClass != null : !PARENT_CLASS_EDEFAULT.equals(parentClass);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1034,6 +1368,8 @@ public class EmbeddableImpl extends BaseOrmAnnotationImpl implements Embeddable 
 		if (excludeDefaultMappingsESet) result.append(excludeDefaultMappings); else result.append("<unset>");
 		result.append(", metadataComplete: ");
 		if (metadataCompleteESet) result.append(metadataComplete); else result.append("<unset>");
+		result.append(", parentClass: ");
+		result.append(parentClass);
 		result.append(')');
 		return result.toString();
 	}

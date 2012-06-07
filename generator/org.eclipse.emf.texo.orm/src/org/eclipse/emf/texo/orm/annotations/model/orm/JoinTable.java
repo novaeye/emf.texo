@@ -17,20 +17,17 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface JoinTable {
- * 				String name() default "";
- * 				String
- * 				catalog() default "";
- * 				String schema() default "";
- * 				JoinColumn[]
- * 				joinColumns() default {};
- * 				JoinColumn[] inverseJoinColumns() default
- * 				{};
- * 				UniqueConstraint[] uniqueConstraints() default {};
- * 				}
+ *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface JoinTable {
+ *           String name() default "";
+ *           String catalog() default "";
+ *           String schema() default "";
+ *           JoinColumn[] joinColumns() default {};
+ *           JoinColumn[] inverseJoinColumns() default {};
+ *           UniqueConstraint[] uniqueConstraints() default {};
+ *         }
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>
@@ -40,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getInverseJoinColumn <em>Inverse Join Column</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getUniqueConstraint <em>Unique Constraint</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCatalog <em>Catalog</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCreationSuffix <em>Creation Suffix</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getSchema <em>Schema</em>}</li>
  * </ul>
@@ -129,6 +127,33 @@ public interface JoinTable extends BaseOrmAnnotation {
   void setCatalog(String value);
 
   /**
+	 * Returns the value of the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Creation Suffix</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #setCreationSuffix(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getJoinTable_CreationSuffix()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='creation-suffix'"
+	 * @generated
+	 */
+	String getCreationSuffix();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.JoinTable#getCreationSuffix <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #getCreationSuffix()
+	 * @generated
+	 */
+	void setCreationSuffix(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

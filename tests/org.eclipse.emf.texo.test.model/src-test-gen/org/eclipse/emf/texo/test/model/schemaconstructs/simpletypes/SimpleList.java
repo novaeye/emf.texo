@@ -7,6 +7,8 @@ import javax.persistence.Basic;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import javax.persistence.OrderColumn;
 import javax.persistence.Temporal;
@@ -106,6 +108,7 @@ public class SimpleList extends Identifiable {
    */
   @ElementCollection()
   @OrderColumn()
+  @Enumerated(EnumType.STRING)
   @CollectionTable(name = "simpletypes_SimpleList_enu")
   private List<SimpleEnum> enu = new ArrayList<SimpleEnum>();
 

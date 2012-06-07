@@ -17,14 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				This element contains the entity field or property
- * 				mappings.
- * 				It may be sparsely populated to include only a subset of
- * 				the
- * 				fields or properties. If metadata-complete for the entity is true
- * 				then the remainder of the attributes will be defaulted according
- * 				to
- * 				the default rules.
+ *         This element contains the entity field or property mappings.
+ *         It may be sparsely populated to include only a subset of the
+ *         fields or properties. If metadata-complete for the entity is true
+ *         then the remainder of the attributes will be defaulted according
+ *         to the default rules.
  * 
  *       
  * <!-- end-model-doc -->
@@ -48,6 +45,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getEmbedded <em>Embedded</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getTransformation <em>Transformation</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getTransient <em>Transient</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getStructure <em>Structure</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Attributes#getArray <em>Array</em>}</li>
  * </ul>
  * </p>
  *
@@ -346,5 +345,39 @@ public interface Attributes extends BaseOrmAnnotation {
 	 * @generated
 	 */
   EList<Transient> getTransient();
+
+		/**
+	 * Returns the value of the '<em><b>Structure</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Structure}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Structure</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Structure</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAttributes_Structure()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='structure' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<Structure> getStructure();
+
+		/**
+	 * Returns the value of the '<em><b>Array</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Array}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Array</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Array</em>' containment reference list.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getAttributes_Array()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='array' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<Array> getArray();
 
 } // Attributes

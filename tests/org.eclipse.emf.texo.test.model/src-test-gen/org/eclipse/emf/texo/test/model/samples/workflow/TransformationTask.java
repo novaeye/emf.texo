@@ -3,8 +3,6 @@ package org.eclipse.emf.texo.test.model.samples.workflow;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>TransformationTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -13,7 +11,6 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_TransformationTask")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_TransformationTask_parent_id") })
 public class TransformationTask extends WorkflowNode {
 
   /**
@@ -22,7 +19,7 @@ public class TransformationTask extends WorkflowNode {
    * @generated
    */
   @Basic()
-  @Column(name = "transformExpression")
+  @Column(name = "transformExpression", nullable = true)
   private String transformExpression = null;
 
   /**

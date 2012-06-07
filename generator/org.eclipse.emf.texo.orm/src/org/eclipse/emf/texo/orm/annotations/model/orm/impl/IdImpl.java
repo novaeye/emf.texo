@@ -23,14 +23,17 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Column;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Converter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.GeneratedValue;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Id;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Index;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Property;
 import org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator;
 import org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TemporalType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Temporal;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
@@ -42,8 +45,10 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getGeneratedValue <em>Generated Value</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getTemporal <em>Temporal</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getEnumerated <em>Enumerated</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getConvert <em>Convert</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getConverter <em>Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getTypeConverter <em>Type Converter</em>}</li>
@@ -54,6 +59,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMJavaAnnotationGenerator;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getAccessMethods <em>Access Methods</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#isMutable <em>Mutable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.IdImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -73,6 +79,16 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   protected Column column;
 
   /**
+	 * The cached value of the '{@link #getIndex() <em>Index</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIndex()
+	 * @generated
+	 * @ordered
+	 */
+	protected Index index;
+
+		/**
    * The cached value of the '{@link #getGeneratedValue() <em>Generated Value</em>}' containment reference. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -90,7 +106,7 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Temporal TEMPORAL_EDEFAULT = Temporal.DATE;
+  protected static final TemporalType TEMPORAL_EDEFAULT = null;
 
   /**
 	 * The cached value of the '{@link #getTemporal() <em>Temporal</em>}' attribute.
@@ -100,17 +116,29 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 	 * @generated
 	 * @ordered
 	 */
-  protected Temporal temporal = TEMPORAL_EDEFAULT;
+  protected TemporalType temporal = TEMPORAL_EDEFAULT;
 
   /**
-	 * This is true if the Temporal attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * The default value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnumerated()
 	 * @generated
 	 * @ordered
 	 */
-  protected boolean temporalESet;
+	protected static final EnumType ENUMERATED_EDEFAULT = null;
 
-  /**
+		/**
+	 * The cached value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnumerated()
+	 * @generated
+	 * @ordered
+	 */
+	protected EnumType enumerated = ENUMERATED_EDEFAULT;
+
+		/**
 	 * The default value of the '{@link #getConvert() <em>Convert</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -217,7 +245,7 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -238,6 +266,26 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
   protected boolean accessESet;
 
   /**
+	 * The default value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTRIBUTE_TYPE_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attributeType = ATTRIBUTE_TYPE_EDEFAULT;
+
+		/**
 	 * The default value of the '{@link #isMutable() <em>Mutable</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -342,6 +390,49 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Index getIndex() {
+		return index;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIndex(Index newIndex, NotificationChain msgs) {
+		Index oldIndex = index;
+		index = newIndex;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ID__INDEX, oldIndex, newIndex);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIndex(Index newIndex) {
+		if (newIndex != index) {
+			NotificationChain msgs = null;
+			if (index != null)
+				msgs = ((InternalEObject)index).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ID__INDEX, null, msgs);
+			if (newIndex != null)
+				msgs = ((InternalEObject)newIndex).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ID__INDEX, null, msgs);
+			msgs = basicSetIndex(newIndex, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__INDEX, newIndex, newIndex));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -385,45 +476,44 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public Temporal getTemporal() {
+  public TemporalType getTemporal() {
 		return temporal;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setTemporal(Temporal newTemporal) {
-		Temporal oldTemporal = temporal;
-		temporal = newTemporal == null ? TEMPORAL_EDEFAULT : newTemporal;
-		boolean oldTemporalESet = temporalESet;
-		temporalESet = true;
+	public void setTemporal(TemporalType newTemporal) {
+		TemporalType oldTemporal = temporal;
+		temporal = newTemporal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TEMPORAL, oldTemporal, temporal, !oldTemporalESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__TEMPORAL, oldTemporal, temporal));
 	}
 
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void unsetTemporal() {
-		Temporal oldTemporal = temporal;
-		boolean oldTemporalESet = temporalESet;
-		temporal = TEMPORAL_EDEFAULT;
-		temporalESet = false;
+	public EnumType getEnumerated() {
+		return enumerated;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEnumerated(EnumType newEnumerated) {
+		EnumType oldEnumerated = enumerated;
+		enumerated = newEnumerated;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ID__TEMPORAL, oldTemporal, TEMPORAL_EDEFAULT, oldTemporalESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__ENUMERATED, oldEnumerated, enumerated));
 	}
 
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public boolean isSetTemporal() {
-		return temporalESet;
-	}
-
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -777,6 +867,27 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttributeType() {
+		return attributeType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttributeType(String newAttributeType) {
+		String oldAttributeType = attributeType;
+		attributeType = newAttributeType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ID__ATTRIBUTE_TYPE, oldAttributeType, attributeType));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -846,6 +957,8 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 		switch (featureID) {
 			case OrmPackage.ID__COLUMN:
 				return basicSetColumn(null, msgs);
+			case OrmPackage.ID__INDEX:
+				return basicSetIndex(null, msgs);
 			case OrmPackage.ID__GENERATED_VALUE:
 				return basicSetGeneratedValue(null, msgs);
 			case OrmPackage.ID__CONVERTER:
@@ -877,10 +990,14 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 		switch (featureID) {
 			case OrmPackage.ID__COLUMN:
 				return getColumn();
+			case OrmPackage.ID__INDEX:
+				return getIndex();
 			case OrmPackage.ID__GENERATED_VALUE:
 				return getGeneratedValue();
 			case OrmPackage.ID__TEMPORAL:
 				return getTemporal();
+			case OrmPackage.ID__ENUMERATED:
+				return getEnumerated();
 			case OrmPackage.ID__CONVERT:
 				return getConvert();
 			case OrmPackage.ID__CONVERTER:
@@ -901,6 +1018,8 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 				return getAccessMethods();
 			case OrmPackage.ID__ACCESS:
 				return getAccess();
+			case OrmPackage.ID__ATTRIBUTE_TYPE:
+				return getAttributeType();
 			case OrmPackage.ID__MUTABLE:
 				return isMutable();
 			case OrmPackage.ID__NAME:
@@ -920,11 +1039,17 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 			case OrmPackage.ID__COLUMN:
 				setColumn((Column)newValue);
 				return;
+			case OrmPackage.ID__INDEX:
+				setIndex((Index)newValue);
+				return;
 			case OrmPackage.ID__GENERATED_VALUE:
 				setGeneratedValue((GeneratedValue)newValue);
 				return;
 			case OrmPackage.ID__TEMPORAL:
-				setTemporal((Temporal)newValue);
+				setTemporal((TemporalType)newValue);
+				return;
+			case OrmPackage.ID__ENUMERATED:
+				setEnumerated((EnumType)newValue);
 				return;
 			case OrmPackage.ID__CONVERT:
 				setConvert((String)newValue);
@@ -957,6 +1082,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 			case OrmPackage.ID__ACCESS:
 				setAccess((AccessType)newValue);
 				return;
+			case OrmPackage.ID__ATTRIBUTE_TYPE:
+				setAttributeType((String)newValue);
+				return;
 			case OrmPackage.ID__MUTABLE:
 				setMutable((Boolean)newValue);
 				return;
@@ -977,11 +1105,17 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 			case OrmPackage.ID__COLUMN:
 				setColumn((Column)null);
 				return;
+			case OrmPackage.ID__INDEX:
+				setIndex((Index)null);
+				return;
 			case OrmPackage.ID__GENERATED_VALUE:
 				setGeneratedValue((GeneratedValue)null);
 				return;
 			case OrmPackage.ID__TEMPORAL:
-				unsetTemporal();
+				setTemporal(TEMPORAL_EDEFAULT);
+				return;
+			case OrmPackage.ID__ENUMERATED:
+				setEnumerated(ENUMERATED_EDEFAULT);
 				return;
 			case OrmPackage.ID__CONVERT:
 				setConvert(CONVERT_EDEFAULT);
@@ -1013,6 +1147,9 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 			case OrmPackage.ID__ACCESS:
 				unsetAccess();
 				return;
+			case OrmPackage.ID__ATTRIBUTE_TYPE:
+				setAttributeType(ATTRIBUTE_TYPE_EDEFAULT);
+				return;
 			case OrmPackage.ID__MUTABLE:
 				unsetMutable();
 				return;
@@ -1032,10 +1169,14 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 		switch (featureID) {
 			case OrmPackage.ID__COLUMN:
 				return column != null;
+			case OrmPackage.ID__INDEX:
+				return index != null;
 			case OrmPackage.ID__GENERATED_VALUE:
 				return generatedValue != null;
 			case OrmPackage.ID__TEMPORAL:
-				return isSetTemporal();
+				return TEMPORAL_EDEFAULT == null ? temporal != null : !TEMPORAL_EDEFAULT.equals(temporal);
+			case OrmPackage.ID__ENUMERATED:
+				return ENUMERATED_EDEFAULT == null ? enumerated != null : !ENUMERATED_EDEFAULT.equals(enumerated);
 			case OrmPackage.ID__CONVERT:
 				return CONVERT_EDEFAULT == null ? convert != null : !CONVERT_EDEFAULT.equals(convert);
 			case OrmPackage.ID__CONVERTER:
@@ -1056,6 +1197,8 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 				return accessMethods != null;
 			case OrmPackage.ID__ACCESS:
 				return isSetAccess();
+			case OrmPackage.ID__ATTRIBUTE_TYPE:
+				return ATTRIBUTE_TYPE_EDEFAULT == null ? attributeType != null : !ATTRIBUTE_TYPE_EDEFAULT.equals(attributeType);
 			case OrmPackage.ID__MUTABLE:
 				return isSetMutable();
 			case OrmPackage.ID__NAME:
@@ -1074,11 +1217,15 @@ public class IdImpl extends BaseOrmAnnotationImpl implements Id {
 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (temporal: ");
-		if (temporalESet) result.append(temporal); else result.append("<unset>");
+		result.append(temporal);
+		result.append(", enumerated: ");
+		result.append(enumerated);
 		result.append(", convert: ");
 		result.append(convert);
 		result.append(", access: ");
 		if (accessESet) result.append(access); else result.append("<unset>");
+		result.append(", attributeType: ");
+		result.append(attributeType);
 		result.append(", mutable: ");
 		if (mutableESet) result.append(mutable); else result.append("<unset>");
 		result.append(", name: ");

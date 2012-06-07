@@ -8,6 +8,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -90,6 +92,7 @@ public class Album extends Identifiable {
    */
   @ElementCollection()
   @OrderColumn()
+  @Enumerated(EnumType.STRING)
   @CollectionTable(name = "org_elver_music_Album_ratings")
   private List<Rating> ratings = new ArrayList<Rating>();
 

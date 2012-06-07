@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -28,7 +28,7 @@
     <orm:table name="emap_Writer"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -36,7 +36,7 @@
     <orm:table name="emap_BookStore"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="writersByBook">
         <orm:map-key-column name="emap_BookStore_writersByBook_ind" table="emap_BookStore_writersByBook"/>

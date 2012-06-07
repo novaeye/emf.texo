@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface MapKey {
- * 				String name() default "";
- * 				}
+ *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface MapKey {
+ *           String name() default "";
+ *         }
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>

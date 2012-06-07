@@ -8,8 +8,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 
 /**
  * A representation of the model object '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,7 +15,6 @@ import javax.persistence.PrimaryKeyJoinColumns;
  * @generated
  */
 @Entity(name = "workflow_Workflow")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "workflow_Workflow_parent_id") })
 public class Workflow extends WorkflowElement {
 
   /**

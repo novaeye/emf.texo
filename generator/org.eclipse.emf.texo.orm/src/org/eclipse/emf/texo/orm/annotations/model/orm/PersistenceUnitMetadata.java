@@ -16,18 +16,14 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				Metadata that applies to the persistence unit and
- * 				not just to
- * 				the mapping file in which it is contained.
+ *         Metadata that applies to the persistence unit and not just to 
+ *         the mapping file in which it is contained. 
  * 
- * 				If the
- * 				xml-mapping-metadata-complete element is specified,
- * 				the complete set
- * 				of mapping metadata for the persistence unit
- * 				is contained in the XML
- * 				mapping files for the persistence unit.
+ *         If the xml-mapping-metadata-complete element is specified,
+ *         the complete set of mapping metadata for the persistence unit 
+ *         is contained in the XML mapping files for the persistence unit.
  * 
- * 			
+ *       
  * <!-- end-model-doc -->
  *
  * <p>

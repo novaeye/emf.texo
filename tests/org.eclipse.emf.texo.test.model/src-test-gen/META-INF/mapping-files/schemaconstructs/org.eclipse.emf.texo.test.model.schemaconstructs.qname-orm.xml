@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -13,7 +13,7 @@
         <orm:column name="description"/>
       </orm:basic>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:element-collection name="names">
         <orm:order-column name="qname_Mytest_names_ind"/>

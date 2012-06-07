@@ -1,11 +1,19 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * A representation of the model object '<em><b>Document</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
  * begin-model-doc --> Документ <!-- end-model-doc -->
  * 
  * @generated
  */
+@Entity(name = "m_Document")
+@Table(name = "m_Document")
+@Access(AccessType.PROPERTY)
 public interface Document {
   /**
    * Returns the value of '<em><b>series</em></b>' feature.

@@ -251,6 +251,276 @@ public interface VariableOneToOne extends BaseOrmAnnotation {
   void setAccessMethods(AccessMethods value);
 
   /**
+	 * Returns the value of the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Noncacheable</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #setNoncacheable(EmptyType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Noncacheable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='noncacheable' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EmptyType getNoncacheable();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getNoncacheable <em>Noncacheable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #getNoncacheable()
+	 * @generated
+	 */
+	void setNoncacheable(EmptyType value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioning</em>' containment reference.
+	 * @see #setPartitioning(Partitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Partitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	Partitioning getPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPartitioning <em>Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioning</em>' containment reference.
+	 * @see #getPartitioning()
+	 * @generated
+	 */
+	void setPartitioning(Partitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Replication Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Replication Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #setReplicationPartitioning(ReplicationPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_ReplicationPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='replication-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ReplicationPartitioning getReplicationPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getReplicationPartitioning <em>Replication Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Replication Partitioning</em>' containment reference.
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 */
+	void setReplicationPartitioning(ReplicationPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Round Robin Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Round Robin Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #setRoundRobinPartitioning(RoundRobinPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_RoundRobinPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='round-robin-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RoundRobinPartitioning getRoundRobinPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Round Robin Partitioning</em>' containment reference.
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 */
+	void setRoundRobinPartitioning(RoundRobinPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Pinned Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pinned Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #setPinnedPartitioning(PinnedPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_PinnedPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='pinned-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	PinnedPartitioning getPinnedPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPinnedPartitioning <em>Pinned Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pinned Partitioning</em>' containment reference.
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 */
+	void setPinnedPartitioning(PinnedPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Range Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Range Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #setRangePartitioning(RangePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_RangePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='range-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	RangePartitioning getRangePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getRangePartitioning <em>Range Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Range Partitioning</em>' containment reference.
+	 * @see #getRangePartitioning()
+	 * @generated
+	 */
+	void setRangePartitioning(RangePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Value Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #setValuePartitioning(ValuePartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_ValuePartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='value-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ValuePartitioning getValuePartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getValuePartitioning <em>Value Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value Partitioning</em>' containment reference.
+	 * @see #getValuePartitioning()
+	 * @generated
+	 */
+	void setValuePartitioning(ValuePartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Hash Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hash Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #setHashPartitioning(HashPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_HashPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='hash-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	HashPartitioning getHashPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getHashPartitioning <em>Hash Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Hash Partitioning</em>' containment reference.
+	 * @see #getHashPartitioning()
+	 * @generated
+	 */
+	void setHashPartitioning(HashPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Union Partitioning</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Union Partitioning</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #setUnionPartitioning(UnionPartitioning)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_UnionPartitioning()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='union-partitioning' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UnionPartitioning getUnionPartitioning();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getUnionPartitioning <em>Union Partitioning</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Union Partitioning</em>' containment reference.
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 */
+	void setUnionPartitioning(UnionPartitioning value);
+
+		/**
+	 * Returns the value of the '<em><b>Partitioned</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Partitioned</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Partitioned</em>' attribute.
+	 * @see #setPartitioned(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getVariableOneToOne_Partitioned()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='partitioned' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getPartitioned();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne#getPartitioned <em>Partitioned</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Partitioned</em>' attribute.
+	 * @see #getPartitioned()
+	 * @generated
+	 */
+	void setPartitioned(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
 	 * <!-- begin-user-doc -->

@@ -17,22 +17,19 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
- * 				public @interface TableGenerator {
- * 				String name();
- * 				String table()
- * 				default "";
- * 				String catalog() default "";
- * 				String schema() default "";
- * 				String pkColumnName() default "";
- * 				String valueColumnName() default
- * 				"";
- * 				String pkColumnValue() default "";
- * 				int initialValue() default 0;
- * 				int allocationSize() default 50;
- * 				UniqueConstraint[]
- * 				uniqueConstraints() default {};
- * 				}
+ *         @Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
+ *         public @interface TableGenerator {
+ *           String name();
+ *           String table() default "";
+ *           String catalog() default "";
+ *           String schema() default "";
+ *           String pkColumnName() default "";
+ *           String valueColumnName() default "";
+ *           String pkColumnValue() default "";
+ *           int initialValue() default 0;
+ *           int allocationSize() default 50;
+ *           UniqueConstraint[] uniqueConstraints() default {};
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -44,6 +41,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getUniqueConstraint <em>Unique Constraint</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getAllocationSize <em>Allocation Size</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCatalog <em>Catalog</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCreationSuffix <em>Creation Suffix</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getPkColumnName <em>Pk Column Name</em>}</li>
@@ -181,6 +179,33 @@ public interface TableGenerator extends BaseOrmAnnotation {
   void setCatalog(String value);
 
   /**
+	 * Returns the value of the '<em><b>Creation Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Creation Suffix</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #setCreationSuffix(String)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getTableGenerator_CreationSuffix()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='creation-suffix'"
+	 * @generated
+	 */
+	String getCreationSuffix();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCreationSuffix <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #getCreationSuffix()
+	 * @generated
+	 */
+	void setCreationSuffix(String value);
+
+		/**
 	 * Returns the value of the '<em><b>Initial Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>

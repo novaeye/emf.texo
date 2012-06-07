@@ -15,27 +15,22 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <!-- begin-model-doc -->
  * 
- * 				*
- * 				* An InstantiationCopyPolicy is used to set an
- * 				*
- * 				org.eclipse.persistence.descriptors.copying.InstantiationCopyPolicy
- * 				* on an Entity. InstantiationCopyPolicy is the default CopyPolicy in
- * 				* EclipseLink and therefore this configuration option is only used
- * 				to
- * 				* override other types of copy policies
- * 				*
- * 				* An
- * 				InstantiationCopyPolicy should be specified on an Entity,
- * 				*
- * 				MappedSuperclass or Embeddable.
- * 				*
- * 				* Example:
- * 				* @Entity
- * 				*
- * 				@InstantiationCopyPolicy
- * 				*
- * 				public @interface InstantiationCopyPolicy {
- * 				}
+ *         /**
+ *          * An InstantiationCopyPolicy is used to set an 
+ *          * org.eclipse.persistence.descriptors.copying.InstantiationCopyPolicy 
+ *          * on an Entity. InstantiationCopyPolicy is the default CopyPolicy in 
+ *          * EclipseLink and therefore this configuration option is only used to 
+ *          * override other types of copy policies
+ *          * 
+ *          * An InstantiationCopyPolicy should be specified on an Entity, 
+ *          * MappedSuperclass or Embeddable.
+ *          * 
+ *          * Example:
+ *          * @Entity
+ *          * @InstantiationCopyPolicy 
+ *          **
+ *         public @interface InstantiationCopyPolicy {
+ *         }
  *       
  * <!-- end-model-doc -->
  *

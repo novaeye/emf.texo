@@ -17,7 +17,7 @@ public class DerivedType extends Datatype {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
+  @ManyToOne(cascade = { CascadeType.ALL }, optional = true)
   private ItemUnit itemUnit = null;
 
   /**

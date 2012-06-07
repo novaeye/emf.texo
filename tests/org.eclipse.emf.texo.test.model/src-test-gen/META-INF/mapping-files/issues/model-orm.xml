@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -24,7 +24,7 @@
         <orm:column name="contractNumber"/>
       </orm:basic>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="descritpion">
         <orm:column name="descritpion"/>
@@ -86,14 +86,13 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimTariff" name="m_SimTariff">
-    <orm:primary-key-join-column name="m_SimTariff_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Tariff" name="m_Tariff">
     <orm:table name="m_Tariff"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="active">
         <orm:column name="active"/>
@@ -156,6 +155,7 @@
       </orm:basic>
       <orm:basic name="currency">
         <orm:column name="currency"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="date">
         <orm:column name="T_date"/>
@@ -166,20 +166,20 @@
       </orm:basic>
       <orm:basic name="paymentType">
         <orm:column name="paymentType"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.VolumePayment" name="m_VolumePayment">
-    <orm:primary-key-join-column name="m_VolumePayment_parent_id"/>
     <orm:attributes>
       <orm:basic name="volume">
-        <orm:column name="volume"/>
+        <orm:column name="volume" nullable="true"/>
       </orm:basic>
       <orm:basic name="price">
-        <orm:column name="price"/>
+        <orm:column name="price" nullable="true"/>
       </orm:basic>
       <orm:many-to-one name="unit">
-        <orm:join-column name="m_VolumePayment_unit"/>
+        <orm:join-column name="m_VolumePayment_unit" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -189,22 +189,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PeriodicalPayment" name="m_PeriodicalPayment">
-    <orm:primary-key-join-column name="m_PeriodicalPayment_parent_id"/>
     <orm:attributes>
       <orm:basic name="periodicity">
-        <orm:column name="periodicity"/>
+        <orm:column name="periodicity" nullable="true"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.OneTimePayment" name="m_OneTimePayment">
-    <orm:primary-key-join-column name="m_OneTimePayment_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Service" name="m_Service">
     <orm:table name="m_Service"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="active">
         <orm:column name="active"/>
@@ -239,7 +238,7 @@
     <orm:table name="m_Units"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -251,7 +250,7 @@
     <orm:table name="m_CarProducer"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
@@ -259,7 +258,7 @@
     <orm:table name="m_CarModel"/>
     <orm:attributes>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:many-to-one name="producer">
         <orm:join-column name="m_CarModel_producer"/>
@@ -274,6 +273,18 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarRegInfo" name="m_CarRegInfo">
     <orm:table name="m_CarRegInfo"/>
     <orm:attributes>
+      <orm:basic name="series">
+        <orm:column name="series"/>
+      </orm:basic>
+      <orm:basic name="number">
+        <orm:column name="T_number"/>
+      </orm:basic>
+      <orm:basic name="issueDate">
+        <orm:column name="issueDate"/>
+      </orm:basic>
+      <orm:basic name="issued">
+        <orm:column name="issued"/>
+      </orm:basic>
       <orm:basic name="regNumber">
         <orm:column name="regNumber"/>
       </orm:basic>
@@ -313,7 +324,7 @@
         <orm:column name="surname"/>
       </orm:basic>
       <orm:basic name="name">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="patronimic">
         <orm:column name="patronimic"/>
@@ -399,7 +410,20 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarPassport" name="m_CarPassport">
     <orm:table name="m_CarPassport"/>
-    <orm:attributes/>
+    <orm:attributes>
+      <orm:basic name="series">
+        <orm:column name="series"/>
+      </orm:basic>
+      <orm:basic name="number">
+        <orm:column name="T_number"/>
+      </orm:basic>
+      <orm:basic name="issueDate">
+        <orm:column name="issueDate"/>
+      </orm:basic>
+      <orm:basic name="issued">
+        <orm:column name="issued"/>
+      </orm:basic>
+    </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Phone" name="m_Phone">
     <orm:table name="m_Phone"/>
@@ -440,11 +464,37 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Passport" name="m_Passport">
     <orm:table name="m_Passport"/>
-    <orm:attributes/>
+    <orm:attributes>
+      <orm:basic name="series">
+        <orm:column name="series"/>
+      </orm:basic>
+      <orm:basic name="number">
+        <orm:column name="T_number"/>
+      </orm:basic>
+      <orm:basic name="issueDate">
+        <orm:column name="issueDate"/>
+      </orm:basic>
+      <orm:basic name="issued">
+        <orm:column name="issued"/>
+      </orm:basic>
+    </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.DrivingLicense" name="m_DrivingLicense">
     <orm:table name="m_DrivingLicense"/>
-    <orm:attributes/>
+    <orm:attributes>
+      <orm:basic name="series">
+        <orm:column name="series"/>
+      </orm:basic>
+      <orm:basic name="number">
+        <orm:column name="T_number"/>
+      </orm:basic>
+      <orm:basic name="issueDate">
+        <orm:column name="issueDate"/>
+      </orm:basic>
+      <orm:basic name="issued">
+        <orm:column name="issued"/>
+      </orm:basic>
+    </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Contract" name="m_Contract">
     <orm:table name="m_Contract"/>
@@ -511,11 +561,11 @@
       </orm:basic>
       <orm:basic name="type">
         <orm:column name="T_type"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ClientTariff" name="m_ClientTariff">
-    <orm:primary-key-join-column name="m_ClientTariff_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ContractPackage" name="m_ContractPackage">
@@ -582,6 +632,7 @@
       </orm:basic>
       <orm:basic name="type">
         <orm:column name="T_type"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="dateTime">
         <orm:column name="T_dateTime"/>
@@ -610,6 +661,7 @@
     <orm:attributes>
       <orm:basic name="eventType">
         <orm:column name="eventType"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:many-to-one name="message">
         <orm:join-column name="m_Event_message"/>

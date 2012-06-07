@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -32,7 +32,7 @@
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressTypeGroupFeatureGroup" name="groupall_AddressType_group">
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="longName" optional="false">
         <orm:column name="longName"/>

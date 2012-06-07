@@ -39,10 +39,10 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getReadTransformer <em>Read Transformer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getWriteTransformer <em>Write Transformer</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getAccess <em>Access</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getAccessMethods <em>Access Methods</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getAccess1 <em>Access1</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getAttributeType <em>Attribute Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getFetch <em>Fetch</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#isMutable <em>Mutable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.TransformationImpl#getName <em>Name</em>}</li>
@@ -73,34 +73,6 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
   protected EList<WriteTransformer> writeTransformer;
 
   /**
-	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-	 * @see #getAccess()
-	 * @generated
-	 * @ordered
-	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
-
-  /**
-   * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @see #getAccess()
-   * @generated
-   * @ordered
-   */
-  protected AccessType access = ACCESS_EDEFAULT;
-
-  /**
-	 * This is true if the Access attribute has been set.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  protected boolean accessESet;
-
-  /**
 	 * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -120,33 +92,53 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
    */
   protected AccessMethods accessMethods;
 
-  /**
-	 * The default value of the '{@link #getAccess1() <em>Access1</em>}' attribute.
+		/**
+	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
-	 * @see #getAccess1()
+	 * @see #getAccess()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS1_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
-  /**
-	 * The cached value of the '{@link #getAccess1() <em>Access1</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-	 * @see #getAccess1()
-	 * @generated
-	 * @ordered
-	 */
-  protected AccessType access1 = ACCESS1_EDEFAULT;
+		/**
+   * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @see #getAccess()
+   * @generated
+   * @ordered
+   */
+  protected AccessType access = ACCESS_EDEFAULT;
 
-  /**
-	 * This is true if the Access1 attribute has been set.
+		/**
+	 * This is true if the Access attribute has been set.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  protected boolean access1ESet;
+  protected boolean accessESet;
+
+		/**
+	 * The default value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTRIBUTE_TYPE_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attributeType = ATTRIBUTE_TYPE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getFetch() <em>Fetch</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -362,6 +354,27 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttributeType() {
+		return attributeType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttributeType(String newAttributeType) {
+		String oldAttributeType = attributeType;
+		attributeType = newAttributeType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TRANSFORMATION__ATTRIBUTE_TYPE, oldAttributeType, attributeType));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -410,48 +423,6 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TRANSFORMATION__ACCESS_METHODS, newAccessMethods, newAccessMethods));
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public AccessType getAccess1() {
-		return access1;
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void setAccess1(AccessType newAccess1) {
-		AccessType oldAccess1 = access1;
-		access1 = newAccess1 == null ? ACCESS1_EDEFAULT : newAccess1;
-		boolean oldAccess1ESet = access1ESet;
-		access1ESet = true;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TRANSFORMATION__ACCESS1, oldAccess1, access1, !oldAccess1ESet));
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public void unsetAccess1() {
-		AccessType oldAccess1 = access1;
-		boolean oldAccess1ESet = access1ESet;
-		access1 = ACCESS1_EDEFAULT;
-		access1ESet = false;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.TRANSFORMATION__ACCESS1, oldAccess1, ACCESS1_EDEFAULT, oldAccess1ESet));
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-  public boolean isSetAccess1() {
-		return access1ESet;
 	}
 
   /**
@@ -629,14 +600,14 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 				return getReadTransformer();
 			case OrmPackage.TRANSFORMATION__WRITE_TRANSFORMER:
 				return getWriteTransformer();
-			case OrmPackage.TRANSFORMATION__ACCESS:
-				return getAccess();
 			case OrmPackage.TRANSFORMATION__PROPERTY:
 				return getProperty();
 			case OrmPackage.TRANSFORMATION__ACCESS_METHODS:
 				return getAccessMethods();
-			case OrmPackage.TRANSFORMATION__ACCESS1:
-				return getAccess1();
+			case OrmPackage.TRANSFORMATION__ACCESS:
+				return getAccess();
+			case OrmPackage.TRANSFORMATION__ATTRIBUTE_TYPE:
+				return getAttributeType();
 			case OrmPackage.TRANSFORMATION__FETCH:
 				return getFetch();
 			case OrmPackage.TRANSFORMATION__MUTABLE:
@@ -664,9 +635,6 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 				getWriteTransformer().clear();
 				getWriteTransformer().addAll((Collection<? extends WriteTransformer>)newValue);
 				return;
-			case OrmPackage.TRANSFORMATION__ACCESS:
-				setAccess((AccessType)newValue);
-				return;
 			case OrmPackage.TRANSFORMATION__PROPERTY:
 				getProperty().clear();
 				getProperty().addAll((Collection<? extends Property>)newValue);
@@ -674,8 +642,11 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 			case OrmPackage.TRANSFORMATION__ACCESS_METHODS:
 				setAccessMethods((AccessMethods)newValue);
 				return;
-			case OrmPackage.TRANSFORMATION__ACCESS1:
-				setAccess1((AccessType)newValue);
+			case OrmPackage.TRANSFORMATION__ACCESS:
+				setAccess((AccessType)newValue);
+				return;
+			case OrmPackage.TRANSFORMATION__ATTRIBUTE_TYPE:
+				setAttributeType((String)newValue);
 				return;
 			case OrmPackage.TRANSFORMATION__FETCH:
 				setFetch((FetchType)newValue);
@@ -706,17 +677,17 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 			case OrmPackage.TRANSFORMATION__WRITE_TRANSFORMER:
 				getWriteTransformer().clear();
 				return;
-			case OrmPackage.TRANSFORMATION__ACCESS:
-				unsetAccess();
-				return;
 			case OrmPackage.TRANSFORMATION__PROPERTY:
 				getProperty().clear();
 				return;
 			case OrmPackage.TRANSFORMATION__ACCESS_METHODS:
 				setAccessMethods((AccessMethods)null);
 				return;
-			case OrmPackage.TRANSFORMATION__ACCESS1:
-				unsetAccess1();
+			case OrmPackage.TRANSFORMATION__ACCESS:
+				unsetAccess();
+				return;
+			case OrmPackage.TRANSFORMATION__ATTRIBUTE_TYPE:
+				setAttributeType(ATTRIBUTE_TYPE_EDEFAULT);
 				return;
 			case OrmPackage.TRANSFORMATION__FETCH:
 				unsetFetch();
@@ -745,14 +716,14 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 				return readTransformer != null;
 			case OrmPackage.TRANSFORMATION__WRITE_TRANSFORMER:
 				return writeTransformer != null && !writeTransformer.isEmpty();
-			case OrmPackage.TRANSFORMATION__ACCESS:
-				return isSetAccess();
 			case OrmPackage.TRANSFORMATION__PROPERTY:
 				return property != null && !property.isEmpty();
 			case OrmPackage.TRANSFORMATION__ACCESS_METHODS:
 				return accessMethods != null;
-			case OrmPackage.TRANSFORMATION__ACCESS1:
-				return isSetAccess1();
+			case OrmPackage.TRANSFORMATION__ACCESS:
+				return isSetAccess();
+			case OrmPackage.TRANSFORMATION__ATTRIBUTE_TYPE:
+				return ATTRIBUTE_TYPE_EDEFAULT == null ? attributeType != null : !ATTRIBUTE_TYPE_EDEFAULT.equals(attributeType);
 			case OrmPackage.TRANSFORMATION__FETCH:
 				return isSetFetch();
 			case OrmPackage.TRANSFORMATION__MUTABLE:
@@ -776,8 +747,8 @@ public class TransformationImpl extends BaseOrmAnnotationImpl implements Transfo
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (access: ");
 		if (accessESet) result.append(access); else result.append("<unset>");
-		result.append(", access1: ");
-		if (access1ESet) result.append(access1); else result.append("<unset>");
+		result.append(", attributeType: ");
+		result.append(attributeType);
 		result.append(", fetch: ");
 		if (fetchESet) result.append(fetch); else result.append("<unset>");
 		result.append(", mutable: ");

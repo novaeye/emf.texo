@@ -15,39 +15,25 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* The Customizer annotation is used to specify a
- * 				class that
- * 				implements
- * 				* the
- * 				org.eclipse.persistence.config.DescriptorCustomizer
- * 				* interface and
- * 				is to run against an enetity's class descriptor after
- * 				all
- * 				* metadata
- * 				processing has been completed.
- * 				*
- * 				* The Customizer annotation may be
- * 				defined on an Entity,
- * 				MappedSuperclass
- * 				* or Embeddable class. In the
- * 				case of inheritance, a Customizer is
- * 				not
- * 				* inherited from its parent
- * 				classes.
- * 				*
- * 				@Target({TYPE})
- * 				@Retention(RUNTIME)
- * 				public @interface
- * 				Customizer {
- * 				*
- * 				* (Required) Defines the name of the descriptor
- * 				customizer class that
- * 				* should be applied for the related entity or
- * 				embeddable class.
- * 				*
- * 				Class value();
- * 				}
+ *         /** 
+ *          * The Customizer annotation is used to specify a class that implements 
+ *          * the org.eclipse.persistence.config.DescriptorCustomizer 
+ *          * interface and is to run against an enetity's class descriptor after all 
+ *          * metadata processing has been completed.
+ *          *
+ *          * The Customizer annotation may be defined on an Entity, MappedSuperclass 
+ *          * or Embeddable class. In the case of inheritance, a Customizer is not 
+ *          * inherited from its parent classes. 
+ *          ** 
+ *         @Target({TYPE})
+ *         @Retention(RUNTIME)
+ *         public @interface Customizer {
+ *           /**
+ *            * (Required) Defines the name of the descriptor customizer class that 
+ *            * should be applied for the related entity or embeddable class.
+ *            **
+ *           Class value(); 
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

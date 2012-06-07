@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.texo.orm.annotations.model.orm.Cache;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CacheCoordinationType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CacheType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TimeOfDay;
@@ -34,6 +35,7 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isAlwaysRefresh <em>Always Refresh</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getCoordinationType <em>Coordination Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isDisableHits <em>Disable Hits</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getIsolation <em>Isolation</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isRefreshOnlyIfNewer <em>Refresh Only If Newer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#isShared <em>Shared</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.CacheImpl#getSize <em>Size</em>}</li>
@@ -159,6 +161,35 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
   protected boolean disableHitsESet;
 
   /**
+	 * The default value of the '{@link #getIsolation() <em>Isolation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsolation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final CacheIsolationType ISOLATION_EDEFAULT = CacheIsolationType.SHARED;
+
+		/**
+	 * The cached value of the '{@link #getIsolation() <em>Isolation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsolation()
+	 * @generated
+	 * @ordered
+	 */
+	protected CacheIsolationType isolation = ISOLATION_EDEFAULT;
+
+		/**
+	 * This is true if the Isolation attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isolationESet;
+
+		/**
    * The default value of the '{@link #isRefreshOnlyIfNewer() <em>Refresh Only If Newer</em>}' attribute. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -194,7 +225,7 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
    * @generated
    * @ordered
    */
-  protected static final boolean SHARED_EDEFAULT = true;
+  protected static final boolean SHARED_EDEFAULT = false;
 
   /**
    * The cached value of the '{@link #isShared() <em>Shared</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -463,6 +494,52 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CacheIsolationType getIsolation() {
+		return isolation;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsolation(CacheIsolationType newIsolation) {
+		CacheIsolationType oldIsolation = isolation;
+		isolation = newIsolation == null ? ISOLATION_EDEFAULT : newIsolation;
+		boolean oldIsolationESet = isolationESet;
+		isolationESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.CACHE__ISOLATION, oldIsolation, isolation, !oldIsolationESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetIsolation() {
+		CacheIsolationType oldIsolation = isolation;
+		boolean oldIsolationESet = isolationESet;
+		isolation = ISOLATION_EDEFAULT;
+		isolationESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.CACHE__ISOLATION, oldIsolation, ISOLATION_EDEFAULT, oldIsolationESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetIsolation() {
+		return isolationESet;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -637,6 +714,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 				return getCoordinationType();
 			case OrmPackage.CACHE__DISABLE_HITS:
 				return isDisableHits();
+			case OrmPackage.CACHE__ISOLATION:
+				return getIsolation();
 			case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
 				return isRefreshOnlyIfNewer();
 			case OrmPackage.CACHE__SHARED:
@@ -670,6 +749,9 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 				return;
 			case OrmPackage.CACHE__DISABLE_HITS:
 				setDisableHits((Boolean)newValue);
+				return;
+			case OrmPackage.CACHE__ISOLATION:
+				setIsolation((CacheIsolationType)newValue);
 				return;
 			case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
 				setRefreshOnlyIfNewer((Boolean)newValue);
@@ -709,6 +791,9 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 			case OrmPackage.CACHE__DISABLE_HITS:
 				unsetDisableHits();
 				return;
+			case OrmPackage.CACHE__ISOLATION:
+				unsetIsolation();
+				return;
 			case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
 				unsetRefreshOnlyIfNewer();
 				return;
@@ -742,6 +827,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 				return isSetCoordinationType();
 			case OrmPackage.CACHE__DISABLE_HITS:
 				return isSetDisableHits();
+			case OrmPackage.CACHE__ISOLATION:
+				return isSetIsolation();
 			case OrmPackage.CACHE__REFRESH_ONLY_IF_NEWER:
 				return isSetRefreshOnlyIfNewer();
 			case OrmPackage.CACHE__SHARED:
@@ -771,6 +858,8 @@ public class CacheImpl extends BaseOrmAnnotationImpl implements Cache {
 		if (coordinationTypeESet) result.append(coordinationType); else result.append("<unset>");
 		result.append(", disableHits: ");
 		if (disableHitsESet) result.append(disableHits); else result.append("<unset>");
+		result.append(", isolation: ");
+		if (isolationESet) result.append(isolation); else result.append("<unset>");
 		result.append(", refreshOnlyIfNewer: ");
 		if (refreshOnlyIfNewerESet) result.append(refreshOnlyIfNewer); else result.append("<unset>");
 		result.append(", shared: ");

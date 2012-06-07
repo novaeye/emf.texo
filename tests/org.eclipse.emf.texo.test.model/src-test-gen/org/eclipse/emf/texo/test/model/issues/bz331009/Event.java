@@ -4,6 +4,8 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
@@ -27,6 +29,7 @@ public class Event extends Identifiable {
    */
   @Basic()
   @Column(name = "eventType")
+  @Enumerated(EnumType.STRING)
   private EventType eventType = EventType.COORDINATES;
 
   /**

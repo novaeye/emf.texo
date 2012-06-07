@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.texo.orm.annotations.model.orm.CacheKeyType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Column;
 import org.eclipse.emf.texo.orm.annotations.model.orm.IdValidation;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
@@ -34,6 +35,7 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getCacheKeyType <em>Cache Key Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.PrimaryKeyImpl#getValidation <em>Validation</em>}</li>
  * </ul>
  * </p>
@@ -52,6 +54,35 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
   protected EList<Column> column;
 
   /**
+	 * The default value of the '{@link #getCacheKeyType() <em>Cache Key Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCacheKeyType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final CacheKeyType CACHE_KEY_TYPE_EDEFAULT = CacheKeyType.IDVALUE;
+
+		/**
+	 * The cached value of the '{@link #getCacheKeyType() <em>Cache Key Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCacheKeyType()
+	 * @generated
+	 * @ordered
+	 */
+	protected CacheKeyType cacheKeyType = CACHE_KEY_TYPE_EDEFAULT;
+
+		/**
+	 * This is true if the Cache Key Type attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean cacheKeyTypeESet;
+
+		/**
 	 * The default value of the '{@link #getValidation() <em>Validation</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -108,6 +139,52 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CacheKeyType getCacheKeyType() {
+		return cacheKeyType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCacheKeyType(CacheKeyType newCacheKeyType) {
+		CacheKeyType oldCacheKeyType = cacheKeyType;
+		cacheKeyType = newCacheKeyType == null ? CACHE_KEY_TYPE_EDEFAULT : newCacheKeyType;
+		boolean oldCacheKeyTypeESet = cacheKeyTypeESet;
+		cacheKeyTypeESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.PRIMARY_KEY__CACHE_KEY_TYPE, oldCacheKeyType, cacheKeyType, !oldCacheKeyTypeESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCacheKeyType() {
+		CacheKeyType oldCacheKeyType = cacheKeyType;
+		boolean oldCacheKeyTypeESet = cacheKeyTypeESet;
+		cacheKeyType = CACHE_KEY_TYPE_EDEFAULT;
+		cacheKeyTypeESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.PRIMARY_KEY__CACHE_KEY_TYPE, oldCacheKeyType, CACHE_KEY_TYPE_EDEFAULT, oldCacheKeyTypeESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCacheKeyType() {
+		return cacheKeyTypeESet;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -171,6 +248,8 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 		switch (featureID) {
 			case OrmPackage.PRIMARY_KEY__COLUMN:
 				return getColumn();
+			case OrmPackage.PRIMARY_KEY__CACHE_KEY_TYPE:
+				return getCacheKeyType();
 			case OrmPackage.PRIMARY_KEY__VALIDATION:
 				return getValidation();
 		}
@@ -189,6 +268,9 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 				getColumn().clear();
 				getColumn().addAll((Collection<? extends Column>)newValue);
 				return;
+			case OrmPackage.PRIMARY_KEY__CACHE_KEY_TYPE:
+				setCacheKeyType((CacheKeyType)newValue);
+				return;
 			case OrmPackage.PRIMARY_KEY__VALIDATION:
 				setValidation((IdValidation)newValue);
 				return;
@@ -206,6 +288,9 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 			case OrmPackage.PRIMARY_KEY__COLUMN:
 				getColumn().clear();
 				return;
+			case OrmPackage.PRIMARY_KEY__CACHE_KEY_TYPE:
+				unsetCacheKeyType();
+				return;
 			case OrmPackage.PRIMARY_KEY__VALIDATION:
 				unsetValidation();
 				return;
@@ -222,6 +307,8 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 		switch (featureID) {
 			case OrmPackage.PRIMARY_KEY__COLUMN:
 				return column != null && !column.isEmpty();
+			case OrmPackage.PRIMARY_KEY__CACHE_KEY_TYPE:
+				return isSetCacheKeyType();
 			case OrmPackage.PRIMARY_KEY__VALIDATION:
 				return isSetValidation();
 		}
@@ -237,7 +324,9 @@ public class PrimaryKeyImpl extends BaseOrmAnnotationImpl implements PrimaryKey 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (validation: ");
+		result.append(" (cacheKeyType: ");
+		if (cacheKeyTypeESet) result.append(cacheKeyType); else result.append("<unset>");
+		result.append(", validation: ");
 		if (validationESet) result.append(validation); else result.append("<unset>");
 		result.append(')');
 		return result.toString();

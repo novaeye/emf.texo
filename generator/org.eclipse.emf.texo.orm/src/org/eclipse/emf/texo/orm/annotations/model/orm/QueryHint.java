@@ -15,12 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({}) @Retention(RUNTIME)
- * 				public @interface
- * 				QueryHint {
- * 				String name();
- * 				String value();
- * 				}
+ *         @Target({}) @Retention(RUNTIME) 
+ *         public @interface QueryHint {
+ *           String name();
+ *           String value();
+ *         }
  * 
  *       
  * <!-- end-model-doc -->

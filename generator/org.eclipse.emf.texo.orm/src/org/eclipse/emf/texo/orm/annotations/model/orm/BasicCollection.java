@@ -304,6 +304,33 @@ public interface BasicCollection extends BaseOrmAnnotation {
   boolean isSetJoinFetch();
 
   /**
+	 * Returns the value of the '<em><b>Batch Fetch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Batch Fetch</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Batch Fetch</em>' containment reference.
+	 * @see #setBatchFetch(BatchFetch)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_BatchFetch()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='batch-fetch' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	BatchFetch getBatchFetch();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getBatchFetch <em>Batch Fetch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Batch Fetch</em>' containment reference.
+	 * @see #getBatchFetch()
+	 * @generated
+	 */
+	void setBatchFetch(BatchFetch value);
+
+		/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.texo.orm.annotations.model.orm.Property}.
 	 * <!-- begin-user-doc -->
@@ -347,6 +374,33 @@ public interface BasicCollection extends BaseOrmAnnotation {
   void setAccessMethods(AccessMethods value);
 
   /**
+	 * Returns the value of the '<em><b>Noncacheable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Noncacheable</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #setNoncacheable(EmptyType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBasicCollection_Noncacheable()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='noncacheable' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EmptyType getNoncacheable();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection#getNoncacheable <em>Noncacheable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Noncacheable</em>' containment reference.
+	 * @see #getNoncacheable()
+	 * @generated
+	 */
+	void setNoncacheable(EmptyType value);
+
+		/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.AccessType}.
 	 * <!-- begin-user-doc -->

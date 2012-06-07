@@ -4,11 +4,11 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.PrimaryKeyJoinColumns;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
@@ -21,7 +21,6 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
  */
 @TestAnnotationOne("test")
 @Entity(name = "library_Book")
-@PrimaryKeyJoinColumns({ @PrimaryKeyJoinColumn(name = "library_Book_parent_id") })
 public class Book extends Identifiable {
 
   /**
@@ -32,7 +31,7 @@ public class Book extends Identifiable {
   @TestAnnotationOne("field")
   @TestAnnotationTwo("field")
   @Basic()
-  @Column(name = "title")
+  @Column(name = "title", nullable = true)
   private String title = null;
 
   /**
@@ -41,7 +40,7 @@ public class Book extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "pages")
+  @Column(name = "pages", nullable = true)
   private int pages = 100;
 
   /**
@@ -50,7 +49,8 @@ public class Book extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "category")
+  @Column(name = "category", nullable = true)
+  @Enumerated(EnumType.STRING)
   private BookCategory category = BookCategory.SCIENCEFICTION;
 
   /**
@@ -59,7 +59,7 @@ public class Book extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
-  @JoinColumns({ @JoinColumn(name = "library_Book_author") })
+  @JoinColumns({ @JoinColumn(name = "library_Book_author", nullable = true) })
   private Writer author = null;
 
   /**

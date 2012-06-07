@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -80,6 +80,7 @@
       <orm:element-collection name="enum_">
         <orm:order-column name="types_ManyTypes_enum_ind"/>
         <orm:column name="T_element"/>
+        <orm:enumerated>STRING</orm:enumerated>
         <orm:collection-table name="types_ManyTypes_enum">
           <orm:join-column name="types_ManyTypes_enum"/>
         </orm:collection-table>
@@ -162,6 +163,7 @@
       </orm:basic>
       <orm:basic name="enum_">
         <orm:column name="T_enum"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="date">
         <orm:column name="T_date"/>
@@ -175,6 +177,7 @@
       </orm:basic>
       <orm:basic name="nextEnum">
         <orm:column name="nextEnum"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:transient name="clazz"/>
     </orm:attributes>

@@ -1,5 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -19,6 +21,8 @@ public class CarPassport extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "series")
   private String series = null;
 
   /**
@@ -26,6 +30,8 @@ public class CarPassport extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "T_number")
   private String number = null;
 
   /**
@@ -33,6 +39,8 @@ public class CarPassport extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "issueDate")
   private String issueDate = null;
 
   /**
@@ -40,6 +48,8 @@ public class CarPassport extends Identifiable implements Document {
    * 
    * @generated
    */
+  @Basic()
+  @Column(name = "issued")
   private String issued = null;
 
   /**

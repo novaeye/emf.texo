@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.texo.orm.annotations.model.orm.Array;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Attributes;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection;
@@ -35,6 +36,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.ManyToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToMany;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OneToOne;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Structure;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transformation;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.annotations.model.orm.VariableOneToOne;
@@ -62,6 +64,8 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl#getEmbedded <em>Embedded</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl#getTransformation <em>Transformation</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl#getTransient <em>Transient</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl#getStructure <em>Structure</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.AttributesImpl#getArray <em>Array</em>}</li>
  * </ul>
  * </p>
  *
@@ -237,6 +241,26 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
   protected EList<Transient> transient_;
 
   /**
+	 * The cached value of the '{@link #getStructure() <em>Structure</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStructure()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Structure> structure;
+
+		/**
+	 * The cached value of the '{@link #getArray() <em>Array</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArray()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Array> array;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -467,6 +491,30 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Structure> getStructure() {
+		if (structure == null) {
+			structure = new EObjectContainmentEList<Structure>(Structure.class, this, OrmPackage.ATTRIBUTES__STRUCTURE);
+		}
+		return structure;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Array> getArray() {
+		if (array == null) {
+			array = new EObjectContainmentEList<Array>(Array.class, this, OrmPackage.ATTRIBUTES__ARRAY);
+		}
+		return array;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -503,6 +551,10 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
 				return ((InternalEList<?>)getTransformation()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ATTRIBUTES__TRANSIENT:
 				return ((InternalEList<?>)getTransient()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ATTRIBUTES__STRUCTURE:
+				return ((InternalEList<?>)getStructure()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ATTRIBUTES__ARRAY:
+				return ((InternalEList<?>)getArray()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -546,6 +598,10 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
 				return getTransformation();
 			case OrmPackage.ATTRIBUTES__TRANSIENT:
 				return getTransient();
+			case OrmPackage.ATTRIBUTES__STRUCTURE:
+				return getStructure();
+			case OrmPackage.ATTRIBUTES__ARRAY:
+				return getArray();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -620,6 +676,14 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
 				getTransient().clear();
 				getTransient().addAll((Collection<? extends Transient>)newValue);
 				return;
+			case OrmPackage.ATTRIBUTES__STRUCTURE:
+				getStructure().clear();
+				getStructure().addAll((Collection<? extends Structure>)newValue);
+				return;
+			case OrmPackage.ATTRIBUTES__ARRAY:
+				getArray().clear();
+				getArray().addAll((Collection<? extends Array>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -679,6 +743,12 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
 			case OrmPackage.ATTRIBUTES__TRANSIENT:
 				getTransient().clear();
 				return;
+			case OrmPackage.ATTRIBUTES__STRUCTURE:
+				getStructure().clear();
+				return;
+			case OrmPackage.ATTRIBUTES__ARRAY:
+				getArray().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -722,6 +792,10 @@ public class AttributesImpl extends BaseOrmAnnotationImpl implements Attributes 
 				return transformation != null && !transformation.isEmpty();
 			case OrmPackage.ATTRIBUTES__TRANSIENT:
 				return transient_ != null && !transient_.isEmpty();
+			case OrmPackage.ATTRIBUTES__STRUCTURE:
+				return structure != null && !structure.isEmpty();
+			case OrmPackage.ATTRIBUTES__ARRAY:
+				return array != null && !array.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -15,9 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				@Target({METHOD}) @Retention(RUNTIME)
- * 				public
- * 				@interface PreUpdate {}
+ *         @Target({METHOD}) @Retention(RUNTIME)
+ *         public @interface PreUpdate {}
  * 
  *       
  * <!-- end-model-doc -->

@@ -25,9 +25,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection;
+import org.eclipse.emf.texo.orm.annotations.model.orm.BatchFetch;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Column;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Converter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EclipselinkCollectionTable;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EmptyType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.FetchType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.JoinFetchType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
@@ -176,6 +178,16 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
   protected boolean joinFetchESet;
 
   /**
+	 * The cached value of the '{@link #getBatchFetch() <em>Batch Fetch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBatchFetch()
+	 * @generated
+	 * @ordered
+	 */
+	protected BatchFetch batchFetch;
+
+		/**
 	 * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference list.
 	 * <!-- begin-user-doc
    * --> <!-- end-user-doc -->
@@ -196,6 +208,16 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
   protected AccessMethods accessMethods;
 
   /**
+	 * The cached value of the '{@link #getNoncacheable() <em>Noncacheable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNoncacheable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EmptyType noncacheable;
+
+		/**
 	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -203,7 +225,7 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -590,6 +612,49 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BatchFetch getBatchFetch() {
+		return batchFetch;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBatchFetch(BatchFetch newBatchFetch, NotificationChain msgs) {
+		BatchFetch oldBatchFetch = batchFetch;
+		batchFetch = newBatchFetch;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC_COLLECTION__BATCH_FETCH, oldBatchFetch, newBatchFetch);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBatchFetch(BatchFetch newBatchFetch) {
+		if (newBatchFetch != batchFetch) {
+			NotificationChain msgs = null;
+			if (batchFetch != null)
+				msgs = ((InternalEObject)batchFetch).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC_COLLECTION__BATCH_FETCH, null, msgs);
+			if (newBatchFetch != null)
+				msgs = ((InternalEObject)newBatchFetch).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC_COLLECTION__BATCH_FETCH, null, msgs);
+			msgs = basicSetBatchFetch(newBatchFetch, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC_COLLECTION__BATCH_FETCH, newBatchFetch, newBatchFetch));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -641,6 +706,49 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmptyType getNoncacheable() {
+		return noncacheable;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNoncacheable(EmptyType newNoncacheable, NotificationChain msgs) {
+		EmptyType oldNoncacheable = noncacheable;
+		noncacheable = newNoncacheable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC_COLLECTION__NONCACHEABLE, oldNoncacheable, newNoncacheable);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoncacheable(EmptyType newNoncacheable) {
+		if (newNoncacheable != noncacheable) {
+			NotificationChain msgs = null;
+			if (noncacheable != null)
+				msgs = ((InternalEObject)noncacheable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC_COLLECTION__NONCACHEABLE, null, msgs);
+			if (newNoncacheable != null)
+				msgs = ((InternalEObject)newNoncacheable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.BASIC_COLLECTION__NONCACHEABLE, null, msgs);
+			msgs = basicSetNoncacheable(newNoncacheable, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.BASIC_COLLECTION__NONCACHEABLE, newNoncacheable, newNoncacheable));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -762,10 +870,14 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 				return basicSetStructConverter(null, msgs);
 			case OrmPackage.BASIC_COLLECTION__COLLECTION_TABLE:
 				return basicSetCollectionTable(null, msgs);
+			case OrmPackage.BASIC_COLLECTION__BATCH_FETCH:
+				return basicSetBatchFetch(null, msgs);
 			case OrmPackage.BASIC_COLLECTION__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
 			case OrmPackage.BASIC_COLLECTION__ACCESS_METHODS:
 				return basicSetAccessMethods(null, msgs);
+			case OrmPackage.BASIC_COLLECTION__NONCACHEABLE:
+				return basicSetNoncacheable(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -793,10 +905,14 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 				return getCollectionTable();
 			case OrmPackage.BASIC_COLLECTION__JOIN_FETCH:
 				return getJoinFetch();
+			case OrmPackage.BASIC_COLLECTION__BATCH_FETCH:
+				return getBatchFetch();
 			case OrmPackage.BASIC_COLLECTION__PROPERTY:
 				return getProperty();
 			case OrmPackage.BASIC_COLLECTION__ACCESS_METHODS:
 				return getAccessMethods();
+			case OrmPackage.BASIC_COLLECTION__NONCACHEABLE:
+				return getNoncacheable();
 			case OrmPackage.BASIC_COLLECTION__ACCESS:
 				return getAccess();
 			case OrmPackage.BASIC_COLLECTION__FETCH:
@@ -839,12 +955,18 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 			case OrmPackage.BASIC_COLLECTION__JOIN_FETCH:
 				setJoinFetch((JoinFetchType)newValue);
 				return;
+			case OrmPackage.BASIC_COLLECTION__BATCH_FETCH:
+				setBatchFetch((BatchFetch)newValue);
+				return;
 			case OrmPackage.BASIC_COLLECTION__PROPERTY:
 				getProperty().clear();
 				getProperty().addAll((Collection<? extends Property>)newValue);
 				return;
 			case OrmPackage.BASIC_COLLECTION__ACCESS_METHODS:
 				setAccessMethods((AccessMethods)newValue);
+				return;
+			case OrmPackage.BASIC_COLLECTION__NONCACHEABLE:
+				setNoncacheable((EmptyType)newValue);
 				return;
 			case OrmPackage.BASIC_COLLECTION__ACCESS:
 				setAccess((AccessType)newValue);
@@ -890,11 +1012,17 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 			case OrmPackage.BASIC_COLLECTION__JOIN_FETCH:
 				unsetJoinFetch();
 				return;
+			case OrmPackage.BASIC_COLLECTION__BATCH_FETCH:
+				setBatchFetch((BatchFetch)null);
+				return;
 			case OrmPackage.BASIC_COLLECTION__PROPERTY:
 				getProperty().clear();
 				return;
 			case OrmPackage.BASIC_COLLECTION__ACCESS_METHODS:
 				setAccessMethods((AccessMethods)null);
+				return;
+			case OrmPackage.BASIC_COLLECTION__NONCACHEABLE:
+				setNoncacheable((EmptyType)null);
 				return;
 			case OrmPackage.BASIC_COLLECTION__ACCESS:
 				unsetAccess();
@@ -932,10 +1060,14 @@ public class BasicCollectionImpl extends BaseOrmAnnotationImpl implements BasicC
 				return collectionTable != null;
 			case OrmPackage.BASIC_COLLECTION__JOIN_FETCH:
 				return isSetJoinFetch();
+			case OrmPackage.BASIC_COLLECTION__BATCH_FETCH:
+				return batchFetch != null;
 			case OrmPackage.BASIC_COLLECTION__PROPERTY:
 				return property != null && !property.isEmpty();
 			case OrmPackage.BASIC_COLLECTION__ACCESS_METHODS:
 				return accessMethods != null;
+			case OrmPackage.BASIC_COLLECTION__NONCACHEABLE:
+				return noncacheable != null;
 			case OrmPackage.BASIC_COLLECTION__ACCESS:
 				return isSetAccess();
 			case OrmPackage.BASIC_COLLECTION__FETCH:

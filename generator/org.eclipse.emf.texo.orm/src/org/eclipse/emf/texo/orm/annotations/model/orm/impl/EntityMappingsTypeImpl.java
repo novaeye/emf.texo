@@ -22,23 +22,39 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipse.emf.texo.orm.annotations.model.orm.AccessMethods;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Converter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.HashPartitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass;
 import org.eclipse.emf.texo.orm.annotations.model.orm.NamedNativeQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredFunctionQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedPlsqlStoredProcedureQuery;
 import org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredFunctionQuery;
 import org.eclipse.emf.texo.orm.annotations.model.orm.NamedStoredProcedureQuery;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ObjectTypeConverter;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Partitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PinnedPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlRecord;
+import org.eclipse.emf.texo.orm.annotations.model.orm.PlsqlTable;
+import org.eclipse.emf.texo.orm.annotations.model.orm.RangePartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ReplicationPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.RoundRobinPartitioning;
 import org.eclipse.emf.texo.orm.annotations.model.orm.SequenceGenerator;
 import org.eclipse.emf.texo.orm.annotations.model.orm.SqlResultSetMapping;
 import org.eclipse.emf.texo.orm.annotations.model.orm.StructConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator;
+import org.eclipse.emf.texo.orm.annotations.model.orm.TenantDiscriminator;
 import org.eclipse.emf.texo.orm.annotations.model.orm.TypeConverter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.UnionPartitioning;
+import org.eclipse.emf.texo.orm.annotations.model.orm.ValuePartitioning;
 import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
 
 /**
@@ -53,15 +69,30 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSchema <em>Schema</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getCatalog <em>Catalog</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getAccessMethods <em>Access Methods</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTenantDiscriminator <em>Tenant Discriminator</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getConverter <em>Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTypeConverter <em>Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getObjectTypeConverter <em>Object Type Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getStructConverter <em>Struct Converter</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSequenceGenerator <em>Sequence Generator</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getTableGenerator <em>Table Generator</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPartitioning <em>Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getReplicationPartitioning <em>Replication Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getRoundRobinPartitioning <em>Round Robin Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPinnedPartitioning <em>Pinned Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getRangePartitioning <em>Range Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getValuePartitioning <em>Value Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getHashPartitioning <em>Hash Partitioning</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getUnionPartitioning <em>Union Partitioning</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedQuery <em>Named Query</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedNativeQuery <em>Named Native Query</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedStoredProcedureQuery <em>Named Stored Procedure Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedStoredFunctionQuery <em>Named Stored Function Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedPlsqlStoredProcedureQuery <em>Named Plsql Stored Procedure Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getNamedPlsqlStoredFunctionQuery <em>Named Plsql Stored Function Query</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPlsqlRecord <em>Plsql Record</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getPlsqlTable <em>Plsql Table</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getSqlResultSetMapping <em>Sql Result Set Mapping</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getMappedSuperclass <em>Mapped Superclass</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.EntityMappingsTypeImpl#getEntity <em>Entity</em>}</li>
@@ -170,7 +201,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AccessType ACCESS_EDEFAULT = AccessType.FIELD;
+  protected static final AccessType ACCESS_EDEFAULT = AccessType.PROPERTY;
 
   /**
    * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
@@ -191,6 +222,26 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected boolean accessESet;
 
   /**
+	 * The cached value of the '{@link #getAccessMethods() <em>Access Methods</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccessMethods()
+	 * @generated
+	 * @ordered
+	 */
+	protected AccessMethods accessMethods;
+
+		/**
+	 * The cached value of the '{@link #getTenantDiscriminator() <em>Tenant Discriminator</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTenantDiscriminator()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TenantDiscriminator> tenantDiscriminator;
+
+		/**
    * The cached value of the '{@link #getConverter() <em>Converter</em>}' containment reference list. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -249,6 +300,86 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<TableGenerator> tableGenerator;
 
   /**
+	 * The cached value of the '{@link #getPartitioning() <em>Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Partitioning> partitioning;
+
+		/**
+	 * The cached value of the '{@link #getReplicationPartitioning() <em>Replication Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReplicationPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ReplicationPartitioning> replicationPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getRoundRobinPartitioning() <em>Round Robin Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoundRobinPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RoundRobinPartitioning> roundRobinPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getPinnedPartitioning() <em>Pinned Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPinnedPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PinnedPartitioning> pinnedPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getRangePartitioning() <em>Range Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRangePartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RangePartitioning> rangePartitioning;
+
+		/**
+	 * The cached value of the '{@link #getValuePartitioning() <em>Value Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValuePartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ValuePartitioning> valuePartitioning;
+
+		/**
+	 * The cached value of the '{@link #getHashPartitioning() <em>Hash Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHashPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<HashPartitioning> hashPartitioning;
+
+		/**
+	 * The cached value of the '{@link #getUnionPartitioning() <em>Union Partitioning</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnionPartitioning()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<UnionPartitioning> unionPartitioning;
+
+		/**
    * The cached value of the '{@link #getNamedQuery() <em>Named Query</em>}' containment reference list. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -277,6 +408,56 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
   protected EList<NamedStoredProcedureQuery> namedStoredProcedureQuery;
 
   /**
+	 * The cached value of the '{@link #getNamedStoredFunctionQuery() <em>Named Stored Function Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedStoredFunctionQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedStoredFunctionQuery> namedStoredFunctionQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedPlsqlStoredProcedureQuery() <em>Named Plsql Stored Procedure Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedPlsqlStoredProcedureQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedPlsqlStoredProcedureQuery> namedPlsqlStoredProcedureQuery;
+
+		/**
+	 * The cached value of the '{@link #getNamedPlsqlStoredFunctionQuery() <em>Named Plsql Stored Function Query</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNamedPlsqlStoredFunctionQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<NamedPlsqlStoredFunctionQuery> namedPlsqlStoredFunctionQuery;
+
+		/**
+	 * The cached value of the '{@link #getPlsqlRecord() <em>Plsql Record</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlsqlRecord()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PlsqlRecord> plsqlRecord;
+
+		/**
+	 * The cached value of the '{@link #getPlsqlTable() <em>Plsql Table</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPlsqlTable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PlsqlTable> plsqlTable;
+
+		/**
 	 * The cached value of the '{@link #getSqlResultSetMapping() <em>Sql Result Set Mapping</em>}' containment reference list.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getSqlResultSetMapping()
@@ -322,7 +503,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	 * @generated
 	 * @ordered
 	 */
-  protected static final String VERSION_EDEFAULT = "2.0";
+  protected static final SupportedVersionsType VERSION_EDEFAULT = SupportedVersionsType._23;
 
   /**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -332,7 +513,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	 * @generated
 	 * @ordered
 	 */
-  protected String version = VERSION_EDEFAULT;
+  protected SupportedVersionsType version = VERSION_EDEFAULT;
 
   /**
 	 * This is true if the Version attribute has been set.
@@ -519,6 +700,61 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccessMethods getAccessMethods() {
+		return accessMethods;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAccessMethods(AccessMethods newAccessMethods, NotificationChain msgs) {
+		AccessMethods oldAccessMethods = accessMethods;
+		accessMethods = newAccessMethods;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS, oldAccessMethods, newAccessMethods);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAccessMethods(AccessMethods newAccessMethods) {
+		if (newAccessMethods != accessMethods) {
+			NotificationChain msgs = null;
+			if (accessMethods != null)
+				msgs = ((InternalEObject)accessMethods).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS, null, msgs);
+			if (newAccessMethods != null)
+				msgs = ((InternalEObject)newAccessMethods).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS, null, msgs);
+			msgs = basicSetAccessMethods(newAccessMethods, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS, newAccessMethods, newAccessMethods));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TenantDiscriminator> getTenantDiscriminator() {
+		if (tenantDiscriminator == null) {
+			tenantDiscriminator = new EObjectContainmentEList<TenantDiscriminator>(TenantDiscriminator.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR);
+		}
+		return tenantDiscriminator;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -585,6 +821,102 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Partitioning> getPartitioning() {
+		if (partitioning == null) {
+			partitioning = new EObjectContainmentEList<Partitioning>(Partitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__PARTITIONING);
+		}
+		return partitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ReplicationPartitioning> getReplicationPartitioning() {
+		if (replicationPartitioning == null) {
+			replicationPartitioning = new EObjectContainmentEList<ReplicationPartitioning>(ReplicationPartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING);
+		}
+		return replicationPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RoundRobinPartitioning> getRoundRobinPartitioning() {
+		if (roundRobinPartitioning == null) {
+			roundRobinPartitioning = new EObjectContainmentEList<RoundRobinPartitioning>(RoundRobinPartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING);
+		}
+		return roundRobinPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PinnedPartitioning> getPinnedPartitioning() {
+		if (pinnedPartitioning == null) {
+			pinnedPartitioning = new EObjectContainmentEList<PinnedPartitioning>(PinnedPartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING);
+		}
+		return pinnedPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RangePartitioning> getRangePartitioning() {
+		if (rangePartitioning == null) {
+			rangePartitioning = new EObjectContainmentEList<RangePartitioning>(RangePartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING);
+		}
+		return rangePartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ValuePartitioning> getValuePartitioning() {
+		if (valuePartitioning == null) {
+			valuePartitioning = new EObjectContainmentEList<ValuePartitioning>(ValuePartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING);
+		}
+		return valuePartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<HashPartitioning> getHashPartitioning() {
+		if (hashPartitioning == null) {
+			hashPartitioning = new EObjectContainmentEList<HashPartitioning>(HashPartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING);
+		}
+		return hashPartitioning;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<UnionPartitioning> getUnionPartitioning() {
+		if (unionPartitioning == null) {
+			unionPartitioning = new EObjectContainmentEList<UnionPartitioning>(UnionPartitioning.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING);
+		}
+		return unionPartitioning;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -618,6 +950,66 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedStoredFunctionQuery> getNamedStoredFunctionQuery() {
+		if (namedStoredFunctionQuery == null) {
+			namedStoredFunctionQuery = new EObjectContainmentEList<NamedStoredFunctionQuery>(NamedStoredFunctionQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY);
+		}
+		return namedStoredFunctionQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedPlsqlStoredProcedureQuery> getNamedPlsqlStoredProcedureQuery() {
+		if (namedPlsqlStoredProcedureQuery == null) {
+			namedPlsqlStoredProcedureQuery = new EObjectContainmentEList<NamedPlsqlStoredProcedureQuery>(NamedPlsqlStoredProcedureQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY);
+		}
+		return namedPlsqlStoredProcedureQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<NamedPlsqlStoredFunctionQuery> getNamedPlsqlStoredFunctionQuery() {
+		if (namedPlsqlStoredFunctionQuery == null) {
+			namedPlsqlStoredFunctionQuery = new EObjectContainmentEList<NamedPlsqlStoredFunctionQuery>(NamedPlsqlStoredFunctionQuery.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY);
+		}
+		return namedPlsqlStoredFunctionQuery;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PlsqlRecord> getPlsqlRecord() {
+		if (plsqlRecord == null) {
+			plsqlRecord = new EObjectContainmentEList<PlsqlRecord>(PlsqlRecord.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_RECORD);
+		}
+		return plsqlRecord;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PlsqlTable> getPlsqlTable() {
+		if (plsqlTable == null) {
+			plsqlTable = new EObjectContainmentEList<PlsqlTable>(PlsqlTable.class, this, OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_TABLE);
+		}
+		return plsqlTable;
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -665,29 +1057,30 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String getVersion() {
+  public SupportedVersionsType getVersion() {
 		return version;
 	}
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setVersion(String newVersion) {
-		String oldVersion = version;
-		version = newVersion;
+	public void setVersion(SupportedVersionsType newVersion) {
+		SupportedVersionsType oldVersion = version;
+		version = newVersion == null ? VERSION_EDEFAULT : newVersion;
 		boolean oldVersionESet = versionESet;
 		versionESet = true;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION, oldVersion, version, !oldVersionESet));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
   public void unsetVersion() {
-		String oldVersion = version;
+		SupportedVersionsType oldVersion = version;
 		boolean oldVersionESet = versionESet;
 		version = VERSION_EDEFAULT;
 		versionESet = false;
@@ -712,6 +1105,10 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 		switch (featureID) {
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__PERSISTENCE_UNIT_METADATA:
 				return basicSetPersistenceUnitMetadata(null, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS:
+				return basicSetAccessMethods(null, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR:
+				return ((InternalEList<?>)getTenantDiscriminator()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
 				return ((InternalEList<?>)getConverter()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
@@ -724,12 +1121,38 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				return ((InternalEList<?>)getSequenceGenerator()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
 				return ((InternalEList<?>)getTableGenerator()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PARTITIONING:
+				return ((InternalEList<?>)getPartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING:
+				return ((InternalEList<?>)getReplicationPartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING:
+				return ((InternalEList<?>)getRoundRobinPartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING:
+				return ((InternalEList<?>)getPinnedPartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING:
+				return ((InternalEList<?>)getRangePartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING:
+				return ((InternalEList<?>)getValuePartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING:
+				return ((InternalEList<?>)getHashPartitioning()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING:
+				return ((InternalEList<?>)getUnionPartitioning()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
 				return ((InternalEList<?>)getNamedQuery()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
 				return ((InternalEList<?>)getNamedNativeQuery()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
 				return ((InternalEList<?>)getNamedStoredProcedureQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY:
+				return ((InternalEList<?>)getNamedStoredFunctionQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return ((InternalEList<?>)getNamedPlsqlStoredProcedureQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return ((InternalEList<?>)getNamedPlsqlStoredFunctionQuery()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_RECORD:
+				return ((InternalEList<?>)getPlsqlRecord()).basicRemove(otherEnd, msgs);
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_TABLE:
+				return ((InternalEList<?>)getPlsqlTable()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
 				return ((InternalEList<?>)getSqlResultSetMapping()).basicRemove(otherEnd, msgs);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
@@ -761,6 +1184,10 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				return getCatalog();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
 				return getAccess();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS:
+				return getAccessMethods();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR:
+				return getTenantDiscriminator();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
 				return getConverter();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
@@ -773,12 +1200,38 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				return getSequenceGenerator();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
 				return getTableGenerator();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PARTITIONING:
+				return getPartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING:
+				return getReplicationPartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING:
+				return getRoundRobinPartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING:
+				return getPinnedPartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING:
+				return getRangePartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING:
+				return getValuePartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING:
+				return getHashPartitioning();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING:
+				return getUnionPartitioning();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
 				return getNamedQuery();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
 				return getNamedNativeQuery();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
 				return getNamedStoredProcedureQuery();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY:
+				return getNamedStoredFunctionQuery();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return getNamedPlsqlStoredProcedureQuery();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return getNamedPlsqlStoredFunctionQuery();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_RECORD:
+				return getPlsqlRecord();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_TABLE:
+				return getPlsqlTable();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
 				return getSqlResultSetMapping();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:
@@ -819,6 +1272,13 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
 				setAccess((AccessType)newValue);
 				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR:
+				getTenantDiscriminator().clear();
+				getTenantDiscriminator().addAll((Collection<? extends TenantDiscriminator>)newValue);
+				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
 				getConverter().clear();
 				getConverter().addAll((Collection<? extends Converter>)newValue);
@@ -843,6 +1303,38 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				getTableGenerator().clear();
 				getTableGenerator().addAll((Collection<? extends TableGenerator>)newValue);
 				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PARTITIONING:
+				getPartitioning().clear();
+				getPartitioning().addAll((Collection<? extends Partitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING:
+				getReplicationPartitioning().clear();
+				getReplicationPartitioning().addAll((Collection<? extends ReplicationPartitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING:
+				getRoundRobinPartitioning().clear();
+				getRoundRobinPartitioning().addAll((Collection<? extends RoundRobinPartitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING:
+				getPinnedPartitioning().clear();
+				getPinnedPartitioning().addAll((Collection<? extends PinnedPartitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING:
+				getRangePartitioning().clear();
+				getRangePartitioning().addAll((Collection<? extends RangePartitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING:
+				getValuePartitioning().clear();
+				getValuePartitioning().addAll((Collection<? extends ValuePartitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING:
+				getHashPartitioning().clear();
+				getHashPartitioning().addAll((Collection<? extends HashPartitioning>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING:
+				getUnionPartitioning().clear();
+				getUnionPartitioning().addAll((Collection<? extends UnionPartitioning>)newValue);
+				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
 				getNamedQuery().clear();
 				getNamedQuery().addAll((Collection<? extends NamedQuery>)newValue);
@@ -854,6 +1346,26 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
 				getNamedStoredProcedureQuery().clear();
 				getNamedStoredProcedureQuery().addAll((Collection<? extends NamedStoredProcedureQuery>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY:
+				getNamedStoredFunctionQuery().clear();
+				getNamedStoredFunctionQuery().addAll((Collection<? extends NamedStoredFunctionQuery>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				getNamedPlsqlStoredProcedureQuery().clear();
+				getNamedPlsqlStoredProcedureQuery().addAll((Collection<? extends NamedPlsqlStoredProcedureQuery>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				getNamedPlsqlStoredFunctionQuery().clear();
+				getNamedPlsqlStoredFunctionQuery().addAll((Collection<? extends NamedPlsqlStoredFunctionQuery>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_RECORD:
+				getPlsqlRecord().clear();
+				getPlsqlRecord().addAll((Collection<? extends PlsqlRecord>)newValue);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_TABLE:
+				getPlsqlTable().clear();
+				getPlsqlTable().addAll((Collection<? extends PlsqlTable>)newValue);
 				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
 				getSqlResultSetMapping().clear();
@@ -872,7 +1384,7 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				getEmbeddable().addAll((Collection<? extends Embeddable>)newValue);
 				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__VERSION:
-				setVersion((String)newValue);
+				setVersion((SupportedVersionsType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -903,6 +1415,12 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
 				unsetAccess();
 				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS:
+				setAccessMethods((AccessMethods)null);
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR:
+				getTenantDiscriminator().clear();
+				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
 				getConverter().clear();
 				return;
@@ -921,6 +1439,30 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
 				getTableGenerator().clear();
 				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PARTITIONING:
+				getPartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING:
+				getReplicationPartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING:
+				getRoundRobinPartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING:
+				getPinnedPartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING:
+				getRangePartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING:
+				getValuePartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING:
+				getHashPartitioning().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING:
+				getUnionPartitioning().clear();
+				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
 				getNamedQuery().clear();
 				return;
@@ -929,6 +1471,21 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
 				getNamedStoredProcedureQuery().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY:
+				getNamedStoredFunctionQuery().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				getNamedPlsqlStoredProcedureQuery().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				getNamedPlsqlStoredFunctionQuery().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_RECORD:
+				getPlsqlRecord().clear();
+				return;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_TABLE:
+				getPlsqlTable().clear();
 				return;
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
 				getSqlResultSetMapping().clear();
@@ -968,6 +1525,10 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS:
 				return isSetAccess();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ACCESS_METHODS:
+				return accessMethods != null;
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__TENANT_DISCRIMINATOR:
+				return tenantDiscriminator != null && !tenantDiscriminator.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__CONVERTER:
 				return converter != null && !converter.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TYPE_CONVERTER:
@@ -980,12 +1541,38 @@ public class EntityMappingsTypeImpl extends BaseOrmAnnotationImpl implements Ent
 				return sequenceGenerator != null && !sequenceGenerator.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__TABLE_GENERATOR:
 				return tableGenerator != null && !tableGenerator.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PARTITIONING:
+				return partitioning != null && !partitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__REPLICATION_PARTITIONING:
+				return replicationPartitioning != null && !replicationPartitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__ROUND_ROBIN_PARTITIONING:
+				return roundRobinPartitioning != null && !roundRobinPartitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PINNED_PARTITIONING:
+				return pinnedPartitioning != null && !pinnedPartitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__RANGE_PARTITIONING:
+				return rangePartitioning != null && !rangePartitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__VALUE_PARTITIONING:
+				return valuePartitioning != null && !valuePartitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__HASH_PARTITIONING:
+				return hashPartitioning != null && !hashPartitioning.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__UNION_PARTITIONING:
+				return unionPartitioning != null && !unionPartitioning.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_QUERY:
 				return namedQuery != null && !namedQuery.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_NATIVE_QUERY:
 				return namedNativeQuery != null && !namedNativeQuery.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_PROCEDURE_QUERY:
 				return namedStoredProcedureQuery != null && !namedStoredProcedureQuery.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_STORED_FUNCTION_QUERY:
+				return namedStoredFunctionQuery != null && !namedStoredFunctionQuery.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_PROCEDURE_QUERY:
+				return namedPlsqlStoredProcedureQuery != null && !namedPlsqlStoredProcedureQuery.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__NAMED_PLSQL_STORED_FUNCTION_QUERY:
+				return namedPlsqlStoredFunctionQuery != null && !namedPlsqlStoredFunctionQuery.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_RECORD:
+				return plsqlRecord != null && !plsqlRecord.isEmpty();
+			case OrmPackage.ENTITY_MAPPINGS_TYPE__PLSQL_TABLE:
+				return plsqlTable != null && !plsqlTable.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__SQL_RESULT_SET_MAPPING:
 				return sqlResultSetMapping != null && !sqlResultSetMapping.isEmpty();
 			case OrmPackage.ENTITY_MAPPINGS_TYPE__MAPPED_SUPERCLASS:

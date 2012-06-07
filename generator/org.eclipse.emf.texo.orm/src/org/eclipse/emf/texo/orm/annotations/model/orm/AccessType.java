@@ -28,13 +28,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum AccessType implements Enumerator {
   /**
-	 * The '<em><b>FIELD</b></em>' literal object.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #FIELD_VALUE
-	 * @generated
-	 * @ordered
-	 */
-  FIELD(0, "FIELD", "FIELD"), /**
 	 * The '<em><b>PROPERTY</b></em>' literal object.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
@@ -42,22 +35,22 @@ public enum AccessType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-  PROPERTY(1, "PROPERTY", "PROPERTY");
-
-  /**
-	 * The '<em><b>FIELD</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>FIELD</b></em>' literal object isn't clear, there really should be more of a description
-   * here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @see #FIELD
-	 * @model
+  PROPERTY(0, "PROPERTY", "PROPERTY"), /**
+	 * The '<em><b>FIELD</b></em>' literal object.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see #FIELD_VALUE
 	 * @generated
 	 * @ordered
 	 */
-  public static final int FIELD_VALUE = 0;
+  FIELD(1, "FIELD", "FIELD"), /**
+	 * The '<em><b>VIRTUAL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VIRTUAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	VIRTUAL(2, "VIRTUAL", "VIRTUAL");
 
   /**
 	 * The '<em><b>PROPERTY</b></em>' literal value.
@@ -72,7 +65,37 @@ public enum AccessType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-  public static final int PROPERTY_VALUE = 1;
+  public static final int PROPERTY_VALUE = 0;
+
+		/**
+	 * The '<em><b>FIELD</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>FIELD</b></em>' literal object isn't clear, there really should be more of a description
+   * here...
+   * </p>
+   * <!-- end-user-doc -->
+	 * @see #FIELD
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+  public static final int FIELD_VALUE = 1;
+
+		/**
+	 * The '<em><b>VIRTUAL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>VIRTUAL</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #VIRTUAL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VIRTUAL_VALUE = 2;
 
   /**
 	 * An array of all the '<em><b>Access Type</b></em>' enumerators.
@@ -80,8 +103,9 @@ public enum AccessType implements Enumerator {
 	 * @generated
 	 */
   private static final AccessType[] VALUES_ARRAY = new AccessType[] {
-			FIELD,
 			PROPERTY,
+			FIELD,
+			VIRTUAL,
 		};
 
   /**
@@ -132,8 +156,9 @@ public enum AccessType implements Enumerator {
 	 */
   public static AccessType get(int value) {
 		switch (value) {
-			case FIELD_VALUE: return FIELD;
 			case PROPERTY_VALUE: return PROPERTY;
+			case FIELD_VALUE: return FIELD;
+			case VIRTUAL_VALUE: return VIRTUAL;
 		}
 		return null;
 	}

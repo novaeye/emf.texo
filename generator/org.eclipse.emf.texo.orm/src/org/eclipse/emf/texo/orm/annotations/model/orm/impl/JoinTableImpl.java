@@ -37,6 +37,7 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotationImpl;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl#getInverseJoinColumn <em>Inverse Join Column</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl#getUniqueConstraint <em>Unique Constraint</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl#getCatalog <em>Catalog</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl#getCreationSuffix <em>Creation Suffix</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.impl.JoinTableImpl#getSchema <em>Schema</em>}</li>
  * </ul>
@@ -94,6 +95,26 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CREATION_SUFFIX_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String creationSuffix = CREATION_SUFFIX_EDEFAULT;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -202,6 +223,27 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCreationSuffix() {
+		return creationSuffix;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationSuffix(String newCreationSuffix) {
+		String oldCreationSuffix = creationSuffix;
+		creationSuffix = newCreationSuffix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.JOIN_TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -271,6 +313,8 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
 				return getUniqueConstraint();
 			case OrmPackage.JOIN_TABLE__CATALOG:
 				return getCatalog();
+			case OrmPackage.JOIN_TABLE__CREATION_SUFFIX:
+				return getCreationSuffix();
 			case OrmPackage.JOIN_TABLE__NAME:
 				return getName();
 			case OrmPackage.JOIN_TABLE__SCHEMA:
@@ -302,6 +346,9 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
 			case OrmPackage.JOIN_TABLE__CATALOG:
 				setCatalog((String)newValue);
 				return;
+			case OrmPackage.JOIN_TABLE__CREATION_SUFFIX:
+				setCreationSuffix((String)newValue);
+				return;
 			case OrmPackage.JOIN_TABLE__NAME:
 				setName((String)newValue);
 				return;
@@ -331,6 +378,9 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
 			case OrmPackage.JOIN_TABLE__CATALOG:
 				setCatalog(CATALOG_EDEFAULT);
 				return;
+			case OrmPackage.JOIN_TABLE__CREATION_SUFFIX:
+				setCreationSuffix(CREATION_SUFFIX_EDEFAULT);
+				return;
 			case OrmPackage.JOIN_TABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -356,6 +406,8 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
 				return uniqueConstraint != null && !uniqueConstraint.isEmpty();
 			case OrmPackage.JOIN_TABLE__CATALOG:
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+			case OrmPackage.JOIN_TABLE__CREATION_SUFFIX:
+				return CREATION_SUFFIX_EDEFAULT == null ? creationSuffix != null : !CREATION_SUFFIX_EDEFAULT.equals(creationSuffix);
 			case OrmPackage.JOIN_TABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrmPackage.JOIN_TABLE__SCHEMA:
@@ -375,6 +427,8 @@ public class JoinTableImpl extends BaseOrmAnnotationImpl implements JoinTable {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (catalog: ");
 		result.append(catalog);
+		result.append(", creationSuffix: ");
+		result.append(creationSuffix);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", schema: ");

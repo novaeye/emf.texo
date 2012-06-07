@@ -17,108 +17,90 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- * 				*
- * 				* The Cache annotation is used to set an
- * 				*
- * 				org.eclipse.persistence.descriptors.invalidation.CacheInvalidationPolicy
- * 				* which sets objects in EclipseLink's identity maps to be invalid
- * 				*
- * 				following given rules. By default in EclipseLink, objects do not
- * 				*
- * 				expire in the cache. Several different policies are available to
- * 				*
- * 				allow objects to expire.
- * 				*
- * 				* @see
- * 				org.eclipse.persistence.annotations.CacheType
- * 				*
- * 				* A Cache anotation
- * 				may be defined on an Entity or MappedSuperclass.
- * 				* In the case of
- * 				inheritance, a Cache annotation should only be
- * 				defined
- * 				* on the root
- * 				of the inheritance hierarchy.
- * 				*
- * 				@Target({TYPE})
- * 				@Retention(RUNTIME)
- * 				public @interface Cache {
- * 				*
- * 				* (Optional) The type of cache to use.
- * 				*
- * 				CacheType type() default SOFT_WEAK;
+ *         /** 
+ *          * The Cache annotation is used to set an 
+ *          * org.eclipse.persistence.descriptors.invalidation.CacheInvalidationPolicy 
+ *          * which sets objects in EclipseLink's identity maps to be invalid 
+ *          * following given rules. By default in EclipseLink, objects do not 
+ *          * expire in the cache. Several different policies are available to 
+ *          * allow objects to expire.
+ *          * 
+ *          * @see org.eclipse.persistence.annotations.CacheType
+ *          * 
+ *          * A Cache anotation may be defined on an Entity or MappedSuperclass. 
+ *          * In the case of inheritance, a Cache annotation should only be defined 
+ *          * on the root of the inheritance hierarchy.
+ *          **
+ *         @Target({TYPE})
+ *         @Retention(RUNTIME)
+ *         public @interface Cache {
+ *           /**
+ *            * (Optional) The type of cache to use.
+ *            ** 
+ *           CacheType type() default SOFT_WEAK;
  * 
- * 				*
- * 				* (Optional) The size of cache
- * 				to use.
- * 				*
- * 				int size() default 100;
+ *           /**
+ *            * (Optional) The size of cache to use.
+ *            ** 
+ *           int size() default 100;
  * 
- * 				*
- * 				* (Optional) Cached instances in the
- * 				shared cache or a client
- * 				* isolated cache.
- * 				*
- * 				boolean shared() default
- * 				true;
+ *          /**
+ *           * (Optional) Cached instances in the shared cache,
+ *           * or only a per EntityManager isolated cache.
+ *           * The default is shared.
+ *           * @deprecated  As of Eclipselink 2.2.  See the attribute 'isolation'
+ *           ** 
+ *           @Deprecated
+ *           boolean shared() default true;
+ *     
+ *          /**
+ *           * (Optional) Controls the level of caching this Entity will use.
+ *           * The default is CacheIsolationType.SHARED which has EclipseLink
+ *           * Caching all Entities in the Shared Cache.
+ *           * @see org.eclipse.persistence.config.CacheIsolationType
+ *           **
+ *           CacheIsolationType isolation() default SHARED;
  * 
- * 				*
- * 				* (Optional) Expire cached instance after a fix period of time
- * 				(ms).
- * 				* Queries executed against the cache after this will be forced
- * 				back
- * 				* to the database for a refreshed copy
- * 				*
- * 				int expiry() default -1;
- * 				// minus one is no expiry.
+ *           /**
+ *            * (Optional) Expire cached instance after a fix period of time (ms). 
+ *            * Queries executed against the cache after this will be forced back 
+ *            * to the database for a refreshed copy
+ *            ** 
+ *           int expiry() default -1; // minus one is no expiry.
  * 
- * 				*
- * 				* (Optional) Expire cached instance a
- * 				specific time of day. Queries
- * 				* executed against the cache after this
- * 				will be forced back to the
- * 				* database for a refreshed copy
- * 				*
- * 				TimeOfDay
- * 				expiryTimeOfDay() default @TimeOfDay(specified=false);
+ *           /**
+ *            * (Optional) Expire cached instance a specific time of day. Queries 
+ *            * executed against the cache after this will be forced back to the 
+ *            * database for a refreshed copy
+ *            ** 
+ *           TimeOfDay expiryTimeOfDay() default @TimeOfDay(specified=false);
  * 
- * 				*
- * 				* (Optional)
- * 				Force all queries that go to the database to always
- * 				* refresh the
- * 				cache.
- * 				*
- * 				boolean alwaysRefresh() default false;
+ *           /**
+ *            * (Optional) Force all queries that go to the database to always 
+ *            * refresh the cache.
+ *            ** 
+ *           boolean alwaysRefresh() default false;
  * 
- * 				*
- * 				* (Optional) For all
- * 				queries that go to the database, refresh the
- * 				* cache only if the data
- * 				received from the database by a query is
- * 				* newer than the data in the
- * 				cache (as determined by the optimistic
- * 				* locking field)
- * 				*
- * 				boolean
- * 				refreshOnlyIfNewer() default false;
+ *           /**
+ *            * (Optional) For all queries that go to the database, refresh the
+ *            * cache only if the data received from the database by a query is 
+ *            * newer than the data in the cache (as determined by the optimistic 
+ *            * locking field)
+ *            ** 
+ *           boolean refreshOnlyIfNewer() default false;
  * 
- * 				*
- * 				* (Optional) Setting to true
- * 				will force all queries to bypass the
- * 				* cache for hits but still
- * 				resolve against the cache for identity.
- * 				* This forces all queries to
- * 				hit the database.
- * 				*
- * 				boolean disableHits() default false;
+ *           /**
+ *            * (Optional) Setting to true will force all queries to bypass the 
+ *            * cache for hits but still resolve against the cache for identity. 
+ *            * This forces all queries to hit the database.
+ *            ** 
+ *           boolean disableHits() default false;
  * 
- * 				*
- * 				* (Optional)
- * 				The cache coordination mode.
- * 				*
- * 				CacheCoordinationType
- * 				coordinationType() default SEND_OBJECT_CHANGES;
- * 				}
+ *           /**
+ *            * (Optional) The cache coordination mode.
+ *            ** 
+ *           CacheCoordinationType coordinationType() default SEND_OBJECT_CHANGES;
+ *         }
  * 
  *       
  * <!-- end-model-doc -->
@@ -131,6 +113,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isAlwaysRefresh <em>Always Refresh</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getCoordinationType <em>Coordination Type</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isDisableHits <em>Disable Hits</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getIsolation <em>Isolation</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isRefreshOnlyIfNewer <em>Refresh Only If Newer</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#isShared <em>Shared</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getSize <em>Size</em>}</li>
@@ -352,6 +335,63 @@ public interface Cache extends BaseOrmAnnotation {
   boolean isSetDisableHits();
 
   /**
+	 * Returns the value of the '<em><b>Isolation</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Isolation</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Isolation</em>' attribute.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType
+	 * @see #isSetIsolation()
+	 * @see #unsetIsolation()
+	 * @see #setIsolation(CacheIsolationType)
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCache_Isolation()
+	 * @model unsettable="true"
+	 *        extendedMetaData="kind='attribute' name='isolation'"
+	 * @generated
+	 */
+	CacheIsolationType getIsolation();
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getIsolation <em>Isolation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Isolation</em>' attribute.
+	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.CacheIsolationType
+	 * @see #isSetIsolation()
+	 * @see #unsetIsolation()
+	 * @see #getIsolation()
+	 * @generated
+	 */
+	void setIsolation(CacheIsolationType value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getIsolation <em>Isolation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetIsolation()
+	 * @see #getIsolation()
+	 * @see #setIsolation(CacheIsolationType)
+	 * @generated
+	 */
+	void unsetIsolation();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.Cache#getIsolation <em>Isolation</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Isolation</em>' attribute is set.
+	 * @see #unsetIsolation()
+	 * @see #getIsolation()
+	 * @see #setIsolation(CacheIsolationType)
+	 * @generated
+	 */
+	boolean isSetIsolation();
+
+		/**
 	 * Returns the value of the '<em><b>Refresh Only If Newer</b></em>' attribute.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -404,7 +444,6 @@ public interface Cache extends BaseOrmAnnotation {
 
   /**
 	 * Returns the value of the '<em><b>Shared</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Shared</em>' attribute isn't clear, there really should be more of a description here...
@@ -415,7 +454,7 @@ public interface Cache extends BaseOrmAnnotation {
 	 * @see #unsetShared()
 	 * @see #setShared(boolean)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCache_Shared()
-	 * @model default="true" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
 	 *        extendedMetaData="kind='attribute' name='shared'"
 	 * @generated
 	 */

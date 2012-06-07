@@ -86,6 +86,26 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
   protected String catalog = CATALOG_EDEFAULT;
 
   /**
+	 * The default value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CREATION_SUFFIX_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getCreationSuffix() <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String creationSuffix = CREATION_SUFFIX_EDEFAULT;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -183,6 +203,27 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCreationSuffix() {
+		return creationSuffix;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationSuffix(String newCreationSuffix) {
+		String oldCreationSuffix = creationSuffix;
+		creationSuffix = newCreationSuffix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.SECONDARY_TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -248,6 +289,8 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 				return getUniqueConstraint();
 			case OrmPackage.SECONDARY_TABLE__CATALOG:
 				return getCatalog();
+			case OrmPackage.SECONDARY_TABLE__CREATION_SUFFIX:
+				return getCreationSuffix();
 			case OrmPackage.SECONDARY_TABLE__NAME:
 				return getName();
 			case OrmPackage.SECONDARY_TABLE__SCHEMA:
@@ -275,6 +318,9 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 			case OrmPackage.SECONDARY_TABLE__CATALOG:
 				setCatalog((String)newValue);
 				return;
+			case OrmPackage.SECONDARY_TABLE__CREATION_SUFFIX:
+				setCreationSuffix((String)newValue);
+				return;
 			case OrmPackage.SECONDARY_TABLE__NAME:
 				setName((String)newValue);
 				return;
@@ -301,6 +347,9 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 			case OrmPackage.SECONDARY_TABLE__CATALOG:
 				setCatalog(CATALOG_EDEFAULT);
 				return;
+			case OrmPackage.SECONDARY_TABLE__CREATION_SUFFIX:
+				setCreationSuffix(CREATION_SUFFIX_EDEFAULT);
+				return;
 			case OrmPackage.SECONDARY_TABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -324,6 +373,8 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 				return uniqueConstraint != null && !uniqueConstraint.isEmpty();
 			case OrmPackage.SECONDARY_TABLE__CATALOG:
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
+			case OrmPackage.SECONDARY_TABLE__CREATION_SUFFIX:
+				return CREATION_SUFFIX_EDEFAULT == null ? creationSuffix != null : !CREATION_SUFFIX_EDEFAULT.equals(creationSuffix);
 			case OrmPackage.SECONDARY_TABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrmPackage.SECONDARY_TABLE__SCHEMA:
@@ -343,6 +394,8 @@ public class SecondaryTableImpl extends BaseOrmAnnotationImpl implements Seconda
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (catalog: ");
 		result.append(catalog);
+		result.append(", creationSuffix: ");
+		result.append(creationSuffix);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", schema: ");

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.1">
+<orm:entity-mappings xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm" version="2.3">
   <orm:persistence-unit-metadata>
     <orm:persistence-unit-defaults>
       <orm:delimited-identifiers/>
@@ -29,7 +29,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.GraphicsAlgorithmContainer" name="mm_GraphicsAlgorithmContainer">
-    <orm:primary-key-join-column name="mm_GraphicsAlgorithmContainer_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.StyleContainer" name="mm_StyleContainer">
@@ -43,10 +42,9 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Shape" name="pi_Shape">
-    <orm:primary-key-join-column name="pi_Shape_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="container">
-        <orm:join-column name="pi_Shape_container"/>
+        <orm:join-column name="pi_Shape_container" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -56,13 +54,12 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.PictogramElement" name="pi_PictogramElement">
-    <orm:primary-key-join-column name="pi_PictogramElement_parent_id"/>
     <orm:attributes>
       <orm:basic name="visible" optional="false">
-        <orm:column name="visible"/>
+        <orm:column name="visible" nullable="true"/>
       </orm:basic>
       <orm:basic name="active" optional="false">
-        <orm:column name="active"/>
+        <orm:column name="active" nullable="true"/>
       </orm:basic>
       <orm:one-to-one name="graphicsAlgorithm">
         <orm:join-column name="pi_PictogramElement_graphicsAlgorithm"/>
@@ -79,7 +76,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.AnchorContainer" name="pi_AnchorContainer">
-    <orm:primary-key-join-column name="pi_AnchorContainer_parent_id"/>
     <orm:attributes>
       <orm:one-to-many mapped-by="parent" name="anchors">
         <orm:cascade>
@@ -89,7 +85,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ContainerShape" name="pi_ContainerShape">
-    <orm:primary-key-join-column name="pi_ContainerShape_parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="children">
         <orm:order-column name="pi_ContainerShape_children_ind"/>
@@ -101,28 +96,27 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Diagram" name="pi_Diagram">
-    <orm:primary-key-join-column name="pi_Diagram_parent_id"/>
     <orm:attributes>
       <orm:basic name="gridUnit" optional="false">
-        <orm:column name="gridUnit"/>
+        <orm:column name="gridUnit" nullable="true"/>
       </orm:basic>
       <orm:basic name="diagramTypeId" optional="false">
-        <orm:column name="diagramTypeId"/>
+        <orm:column name="diagramTypeId" nullable="true"/>
       </orm:basic>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name" nullable="true"/>
       </orm:basic>
       <orm:basic name="snapToGrid" optional="false">
-        <orm:column name="snapToGrid"/>
+        <orm:column name="snapToGrid" nullable="true"/>
       </orm:basic>
       <orm:basic name="showGuides" optional="false">
-        <orm:column name="showGuides"/>
+        <orm:column name="showGuides" nullable="true"/>
       </orm:basic>
       <orm:basic name="verticalGridUnit">
-        <orm:column name="verticalGridUnit"/>
+        <orm:column name="verticalGridUnit" nullable="true"/>
       </orm:basic>
       <orm:basic name="version">
-        <orm:column name="version"/>
+        <orm:column name="version" nullable="true"/>
       </orm:basic>
       <orm:one-to-many mapped-by="parent" name="connections">
         <orm:cascade>
@@ -155,9 +149,8 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Connection" name="pi_Connection">
-    <orm:primary-key-join-column name="pi_Connection_parent_id"/>
     <orm:attributes>
-      <orm:many-to-one name="start" optional="false">
+      <orm:many-to-one name="start" optional="true">
         <orm:join-table name="pi_Connection_start">
           <orm:join-column name="pi_Connection_start"/>
           <orm:inverse-join-column name="pi_Anchor_outgoingConnections"/>
@@ -168,7 +161,7 @@
           <orm:cascade-refresh/>
         </orm:cascade>
       </orm:many-to-one>
-      <orm:many-to-one name="end" optional="false">
+      <orm:many-to-one name="end" optional="true">
         <orm:join-table name="pi_Connection_end">
           <orm:join-column name="pi_Connection_end"/>
           <orm:inverse-join-column name="pi_Anchor_incomingConnections"/>
@@ -180,7 +173,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="parent" optional="false">
-        <orm:join-column name="pi_Connection_parent"/>
+        <orm:join-column name="pi_Connection_parent" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -197,7 +190,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.PictogramLink" name="pi_PictogramLink">
-    <orm:primary-key-join-column name="pi_PictogramLink_parent_id"/>
     <orm:attributes>
       <orm:one-to-one mapped-by="link" name="pictogramElement">
         <orm:join-column name="pi_PictogramLink_pictogramElement"/>
@@ -222,10 +214,9 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Anchor" name="pi_Anchor">
-    <orm:primary-key-join-column name="pi_Anchor_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="parent" optional="false">
-        <orm:join-column name="pi_Anchor_parent"/>
+        <orm:join-column name="pi_Anchor_parent" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -233,7 +224,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="referencedGraphicsAlgorithm">
-        <orm:join-column name="pi_Anchor_referencedGraphicsAlgorithm"/>
+        <orm:join-column name="pi_Anchor_referencedGraphicsAlgorithm" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -257,16 +248,15 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ConnectionDecorator" name="pi_ConnectionDecorator">
-    <orm:primary-key-join-column name="pi_ConnectionDecorator_parent_id"/>
     <orm:attributes>
       <orm:basic name="locationRelative" optional="false">
-        <orm:column name="locationRelative"/>
+        <orm:column name="locationRelative" nullable="true"/>
       </orm:basic>
       <orm:basic name="location" optional="false">
-        <orm:column name="T_location"/>
+        <orm:column name="T_location" nullable="true"/>
       </orm:basic>
       <orm:many-to-one name="connection" optional="false">
-        <orm:join-column name="pi_ConnectionDecorator_connection"/>
+        <orm:join-column name="pi_ConnectionDecorator_connection" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -276,10 +266,9 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.FixPointAnchor" name="pi_FixPointAnchor">
-    <orm:primary-key-join-column name="pi_FixPointAnchor_parent_id"/>
     <orm:attributes>
       <orm:many-to-one name="location" optional="false">
-        <orm:join-column name="pi_FixPointAnchor_location"/>
+        <orm:join-column name="pi_FixPointAnchor_location" nullable="true"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -287,30 +276,26 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.AdvancedAnchor" name="pi_AdvancedAnchor">
-    <orm:primary-key-join-column name="pi_AdvancedAnchor_parent_id"/>
     <orm:attributes>
       <orm:basic name="useAnchorLocationAsConnectionEndpoint" optional="false">
-        <orm:column name="useAnchorLocationAsConnectionEndpoint"/>
+        <orm:column name="useAnchorLocationAsConnectionEndpoint" nullable="true"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor" name="pi_BoxRelativeAnchor">
-    <orm:primary-key-join-column name="pi_BoxRelativeAnchor_parent_id"/>
     <orm:attributes>
       <orm:basic name="relativeWidth" optional="false">
-        <orm:column name="relativeWidth"/>
+        <orm:column name="relativeWidth" nullable="true"/>
       </orm:basic>
       <orm:basic name="relativeHeight" optional="false">
-        <orm:column name="relativeHeight"/>
+        <orm:column name="relativeHeight" nullable="true"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ChopboxAnchor" name="pi_ChopboxAnchor">
-    <orm:primary-key-join-column name="pi_ChopboxAnchor_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.FreeFormConnection" name="pi_FreeFormConnection">
-    <orm:primary-key-join-column name="pi_FreeFormConnection_parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="bendpoints">
         <orm:order-column name="pi_FreeFormConnection_bendpoints_ind"/>
@@ -322,11 +307,9 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ManhattanConnection" name="pi_ManhattanConnection">
-    <orm:primary-key-join-column name="pi_ManhattanConnection_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.CurvedConnection" name="pi_CurvedConnection">
-    <orm:primary-key-join-column name="pi_CurvedConnection_parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="controlPoints">
         <orm:order-column name="pi_CurvedConnection_controlPoints_ind"/>
@@ -338,7 +321,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.CompositeConnection" name="pi_CompositeConnection">
-    <orm:primary-key-join-column name="pi_CompositeConnection_parent_id"/>
     <orm:attributes>
       <orm:many-to-many name="children">
         <orm:order-column name="pi_CompositeConnection_children_ind"/>
@@ -355,22 +337,21 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm" name="al_GraphicsAlgorithm">
-    <orm:primary-key-join-column name="al_GraphicsAlgorithm_parent_id"/>
     <orm:attributes>
       <orm:basic name="width" optional="false">
-        <orm:column name="width"/>
+        <orm:column name="width" nullable="true"/>
       </orm:basic>
       <orm:basic name="height" optional="false">
-        <orm:column name="height"/>
+        <orm:column name="height" nullable="true"/>
       </orm:basic>
       <orm:basic name="x" optional="false">
-        <orm:column name="x"/>
+        <orm:column name="x" nullable="true"/>
       </orm:basic>
       <orm:basic name="y" optional="false">
-        <orm:column name="y"/>
+        <orm:column name="y" nullable="true"/>
       </orm:basic>
       <orm:many-to-one name="parentGraphicsAlgorithm">
-        <orm:join-column name="al_GraphicsAlgorithm_parentGraphicsAlgorithm"/>
+        <orm:join-column name="al_GraphicsAlgorithm_parentGraphicsAlgorithm" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -378,7 +359,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="style">
-        <orm:join-column name="al_GraphicsAlgorithm_style"/>
+        <orm:join-column name="al_GraphicsAlgorithm_style" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -403,7 +384,6 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Polyline" name="al_Polyline">
-    <orm:primary-key-join-column name="al_Polyline_parent_id"/>
     <orm:attributes>
       <orm:one-to-many name="points">
         <orm:order-column name="al_Polyline_points_ind"/>
@@ -415,30 +395,29 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Ellipse" name="al_Ellipse">
-    <orm:primary-key-join-column name="al_Ellipse_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Text" name="al_Text">
-    <orm:primary-key-join-column name="al_Text_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.AbstractText" name="al_AbstractText">
-    <orm:primary-key-join-column name="al_AbstractText_parent_id"/>
     <orm:attributes>
       <orm:basic name="horizontalAlignment">
-        <orm:column name="horizontalAlignment"/>
+        <orm:column name="horizontalAlignment" nullable="true"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="verticalAlignment">
-        <orm:column name="verticalAlignment"/>
+        <orm:column name="verticalAlignment" nullable="true"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="angle">
-        <orm:column name="angle"/>
+        <orm:column name="angle" nullable="true"/>
       </orm:basic>
       <orm:basic name="value" optional="false">
-        <orm:column name="T_value"/>
+        <orm:column name="T_value" nullable="true"/>
       </orm:basic>
       <orm:many-to-one name="font">
-        <orm:join-column name="al_AbstractText_font"/>
+        <orm:join-column name="al_AbstractText_font" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -448,82 +427,77 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Polygon" name="al_Polygon">
-    <orm:primary-key-join-column name="al_Polygon_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Rectangle" name="al_Rectangle">
-    <orm:primary-key-join-column name="al_Rectangle_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.RoundedRectangle" name="al_RoundedRectangle">
-    <orm:primary-key-join-column name="al_RoundedRectangle_parent_id"/>
     <orm:attributes>
       <orm:basic name="cornerHeight" optional="false">
-        <orm:column name="cornerHeight"/>
+        <orm:column name="cornerHeight" nullable="true"/>
       </orm:basic>
       <orm:basic name="cornerWidth" optional="false">
-        <orm:column name="cornerWidth"/>
+        <orm:column name="cornerWidth" nullable="true"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Image" name="al_Image">
-    <orm:primary-key-join-column name="al_Image_parent_id"/>
     <orm:attributes>
       <orm:basic name="id" optional="false">
-        <orm:column name="id"/>
+        <orm:column name="id" nullable="true"/>
       </orm:basic>
       <orm:basic name="stretchH">
-        <orm:column name="stretchH"/>
+        <orm:column name="stretchH" nullable="true"/>
       </orm:basic>
       <orm:basic name="stretchV">
-        <orm:column name="stretchV"/>
+        <orm:column name="stretchV" nullable="true"/>
       </orm:basic>
       <orm:basic name="proportional">
-        <orm:column name="proportional"/>
+        <orm:column name="proportional" nullable="true"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.PlatformGraphicsAlgorithm" name="al_PlatformGraphicsAlgorithm">
-    <orm:primary-key-join-column name="al_PlatformGraphicsAlgorithm_parent_id"/>
     <orm:attributes>
       <orm:basic name="id" optional="false">
-        <orm:column name="id"/>
+        <orm:column name="id" nullable="true"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.MultiText" name="al_MultiText">
-    <orm:primary-key-join-column name="al_MultiText_parent_id"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Style" name="st_Style">
-    <orm:primary-key-join-column name="st_Style_parent_id"/>
     <orm:attributes>
       <orm:basic name="id" optional="false">
-        <orm:column name="id"/>
+        <orm:column name="id" nullable="true"/>
       </orm:basic>
       <orm:basic name="description">
-        <orm:column name="description"/>
+        <orm:column name="description" nullable="true"/>
       </orm:basic>
       <orm:basic name="horizontalAlignment">
-        <orm:column name="horizontalAlignment"/>
+        <orm:column name="horizontalAlignment" nullable="true"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="verticalAlignment">
-        <orm:column name="verticalAlignment"/>
+        <orm:column name="verticalAlignment" nullable="true"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="angle">
-        <orm:column name="angle"/>
+        <orm:column name="angle" nullable="true"/>
       </orm:basic>
       <orm:basic name="stretchH">
-        <orm:column name="stretchH"/>
+        <orm:column name="stretchH" nullable="true"/>
       </orm:basic>
       <orm:basic name="stretchV">
-        <orm:column name="stretchV"/>
+        <orm:column name="stretchV" nullable="true"/>
       </orm:basic>
       <orm:basic name="proportional">
-        <orm:column name="proportional"/>
+        <orm:column name="proportional" nullable="true"/>
       </orm:basic>
       <orm:many-to-one name="font">
-        <orm:join-column name="st_Style_font"/>
+        <orm:join-column name="st_Style_font" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -531,7 +505,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:many-to-one name="styleContainer" optional="false">
-        <orm:join-column name="st_Style_styleContainer"/>
+        <orm:join-column name="st_Style_styleContainer" nullable="true"/>
         <orm:cascade>
           <orm:cascade-persist/>
           <orm:cascade-merge/>
@@ -548,6 +522,7 @@
       </orm:basic>
       <orm:basic name="lineStyle">
         <orm:column name="lineStyle"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="filled">
         <orm:column name="filled"/>
@@ -600,7 +575,7 @@
     <orm:table name="st_Font"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
-        <orm:column name="T_name"/>
+        <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="size" optional="false">
         <orm:column name="T_size"/>
@@ -675,6 +650,7 @@
     <orm:attributes>
       <orm:basic name="locationType" optional="false">
         <orm:column name="locationType"/>
+        <orm:enumerated>STRING</orm:enumerated>
       </orm:basic>
       <orm:basic name="locationValue" optional="false">
         <orm:column name="locationValue"/>
