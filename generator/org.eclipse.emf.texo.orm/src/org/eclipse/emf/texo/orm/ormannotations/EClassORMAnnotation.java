@@ -16,6 +16,7 @@ import org.eclipse.emf.texo.annotations.AnnotationProvider;
 import org.eclipse.emf.texo.annotations.annotationsmodel.EClassAnnotation;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance;
 import org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
@@ -30,6 +31,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getEntity <em>Entity</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getEmbeddable <em>Embeddable</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getMappedSuperclass <em>Mapped Superclass</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getInheritance <em>Inheritance</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,6 +81,16 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
   protected MappedSuperclass mappedSuperclass;
 
   /**
+	 * The cached value of the '{@link #getInheritance() <em>Inheritance</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInheritance()
+	 * @generated
+	 * @ordered
+	 */
+	protected Inheritance inheritance;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -308,6 +320,61 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 	}
 
   /**
+	 * Returns the value of the '<em><b>Inheritance</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Inheritance</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inheritance</em>' containment reference.
+	 * @see #setInheritance(Inheritance)
+	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEClassORMAnnotation_Inheritance()
+	 * @model containment="true"
+	 * @generated
+	 */
+	public Inheritance getInheritance() {
+		return inheritance;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInheritance(Inheritance newInheritance, NotificationChain msgs) {
+		Inheritance oldInheritance = inheritance;
+		inheritance = newInheritance;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE, oldInheritance, newInheritance);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getInheritance <em>Inheritance</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inheritance</em>' containment reference.
+	 * @see #getInheritance()
+	 * @generated
+	 */
+	public void setInheritance(Inheritance newInheritance) {
+		if (newInheritance != inheritance) {
+			NotificationChain msgs = null;
+			if (inheritance != null)
+				msgs = ((InternalEObject)inheritance).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE, null, msgs);
+			if (newInheritance != null)
+				msgs = ((InternalEObject)newInheritance).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE, null, msgs);
+			msgs = basicSetInheritance(newInheritance, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE, newInheritance, newInheritance));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -322,6 +389,8 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 				return basicSetEmbeddable(null, msgs);
 			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS:
 				return basicSetMappedSuperclass(null, msgs);
+			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE:
+				return basicSetInheritance(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -341,6 +410,8 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 				return getEmbeddable();
 			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS:
 				return getMappedSuperclass();
+			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE:
+				return getInheritance();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -365,6 +436,9 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS:
 				setMappedSuperclass((MappedSuperclass)newValue);
 				return;
+			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE:
+				setInheritance((Inheritance)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -388,6 +462,9 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS:
 				setMappedSuperclass((MappedSuperclass)null);
 				return;
+			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE:
+				setInheritance((Inheritance)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -407,6 +484,8 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 				return embeddable != null;
 			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS:
 				return mappedSuperclass != null;
+			case OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE:
+				return inheritance != null;
 		}
 		return super.eIsSet(featureID);
 	}

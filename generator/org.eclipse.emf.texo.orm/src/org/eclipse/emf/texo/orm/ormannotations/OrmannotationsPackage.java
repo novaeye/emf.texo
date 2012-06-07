@@ -92,6 +92,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	public static final int EPACKAGE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EPACKAGE_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ORM_ANNOTATION__GENERATED = AnnotationsmodelPackage.EPACKAGE_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EPackage</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -250,13 +259,22 @@ public class OrmannotationsPackage extends EPackageImpl {
 	public static final int EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 15;
 
 		/**
+	 * The feature id for the '<em><b>Inheritance</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ORM_ANNOTATION__INHERITANCE = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 16;
+
+		/**
 	 * The number of structural features of the '<em>EPackage ORM Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 16;
+  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 17;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.ormannotations.ENamedElementORMAnnotation <em>ENamed Element ORM Annotation</em>}' class.
@@ -365,6 +383,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	public static final int ECLASS_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.ECLASS_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASS_ORM_ANNOTATION__GENERATED = AnnotationsmodelPackage.ECLASS_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -435,13 +462,22 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 3;
 
   /**
+	 * The feature id for the '<em><b>Inheritance</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASS_ORM_ANNOTATION__INHERITANCE = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 4;
+
+		/**
 	 * The number of structural features of the '<em>EClass ORM Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int ECLASS_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 4;
+  public static final int ECLASS_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 5;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotationDefinition <em>EData Type ORM Annotation Definition</em>}' class.
@@ -476,6 +512,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EDATA_TYPE_ORM_ANNOTATION_DEFINITION__LAST_IDENTIFIER = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_ORM_ANNOTATION_DEFINITION__GENERATED = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -607,6 +652,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EATTRIBUTE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EATTRIBUTE_ORM_ANNOTATION__GENERATED = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__GENERATED;
 
 		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -755,6 +809,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EREFERENCE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EREFERENCE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EREFERENCE_ORM_ANNOTATION__GENERATED = AnnotationsmodelPackage.EREFERENCE_ANNOTATION__GENERATED;
 
 		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -1022,6 +1085,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	public static final int EENUM_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EENUM_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EENUM_ORM_ANNOTATION__GENERATED = AnnotationsmodelPackage.EENUM_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -1157,6 +1229,15 @@ public class OrmannotationsPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EDATA_TYPE_ORM_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_ORM_ANNOTATION__GENERATED = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -1579,6 +1660,19 @@ public class OrmannotationsPackage extends EPackageImpl {
 	}
 
 		/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#getInheritance <em>Inheritance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Inheritance</em>'.
+	 * @see org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#getInheritance()
+	 * @see #getEPackageORMAnnotation()
+	 * @generated
+	 */
+	public EReference getEPackageORMAnnotation_Inheritance() {
+		return (EReference)ePackageORMAnnotationEClass.getEStructuralFeatures().get(16);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EType Element ORM Annotation</em>'.
@@ -1665,6 +1759,19 @@ public class OrmannotationsPackage extends EPackageImpl {
 	}
 
   /**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getInheritance <em>Inheritance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Inheritance</em>'.
+	 * @see org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getInheritance()
+	 * @see #getEClassORMAnnotation()
+	 * @generated
+	 */
+	public EReference getEClassORMAnnotation_Inheritance() {
+		return (EReference)eClassORMAnnotationEClass.getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotationDefinition <em>EData Type ORM Annotation Definition</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EData Type ORM Annotation Definition</em>'.
@@ -2247,6 +2354,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS);
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS);
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES);
+		createEReference(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__INHERITANCE);
 
 		eTypeElementORMAnnotationEClass = createEClass(ETYPE_ELEMENT_ORM_ANNOTATION);
 		createEReference(eTypeElementORMAnnotationEClass, ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT);
@@ -2257,6 +2365,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		createEReference(eClassORMAnnotationEClass, ECLASS_ORM_ANNOTATION__ENTITY);
 		createEReference(eClassORMAnnotationEClass, ECLASS_ORM_ANNOTATION__EMBEDDABLE);
 		createEReference(eClassORMAnnotationEClass, ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS);
+		createEReference(eClassORMAnnotationEClass, ECLASS_ORM_ANNOTATION__INHERITANCE);
 
 		eDataTypeORMAnnotationDefinitionEClass = createEClass(EDATA_TYPE_ORM_ANNOTATION_DEFINITION);
 
@@ -2372,9 +2481,10 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEReference(getEPackageORMAnnotation_DefaultCascadeContainment(), theOrmPackage.getCascadeType(), null, "defaultCascadeContainment", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEPackageORMAnnotation_DefaultCascadeNonContainment(), theOrmPackage.getCascadeType(), null, "defaultCascadeNonContainment", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEPackageORMAnnotation_EntityMappings(), theOrmPackage.getEntityMappingsType(), null, "entityMappings", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEPackageORMAnnotation_GenerateJavaAnnotations(), theEcorePackage.getEBoolean(), "generateJavaAnnotations", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageORMAnnotation_GenerateJavaAnnotations(), theEcorePackage.getEBoolean(), "generateJavaAnnotations", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_AddOrderColumnToListMappings(), theEcorePackage.getEBoolean(), "addOrderColumnToListMappings", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_RenameSQLReservedNames(), theEcorePackage.getEBoolean(), "renameSQLReservedNames", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEPackageORMAnnotation_Inheritance(), theOrmPackage.getInheritance(), null, "inheritance", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eTypeElementORMAnnotationEClass, ETypeElementORMAnnotation.class, "ETypeElementORMAnnotation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getETypeElementORMAnnotation_Transient(), theOrmPackage.getTransient(), null, "transient", null, 0, 1, ETypeElementORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2385,6 +2495,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEReference(getEClassORMAnnotation_Entity(), theOrmPackage.getEntity(), null, "entity", null, 0, 1, EClassORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEClassORMAnnotation_Embeddable(), theOrmPackage.getEmbeddable(), null, "embeddable", null, 0, 1, EClassORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEClassORMAnnotation_MappedSuperclass(), theOrmPackage.getMappedSuperclass(), null, "mappedSuperclass", null, 0, 1, EClassORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEClassORMAnnotation_Inheritance(), theOrmPackage.getInheritance(), null, "inheritance", null, 0, 1, EClassORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eDataTypeORMAnnotationDefinitionEClass, EDataTypeORMAnnotationDefinition.class, "EDataTypeORMAnnotationDefinition", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2588,6 +2699,14 @@ public class OrmannotationsPackage extends EPackageImpl {
 		public static final EAttribute EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES = eINSTANCE.getEPackageORMAnnotation_RenameSQLReservedNames();
 
 				/**
+		 * The meta object literal for the '<em><b>Inheritance</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EReference EPACKAGE_ORM_ANNOTATION__INHERITANCE = eINSTANCE.getEPackageORMAnnotation_Inheritance();
+
+				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}' class.
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
 		 * @see org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation
@@ -2647,6 +2766,14 @@ public class OrmannotationsPackage extends EPackageImpl {
     public static final EReference ECLASS_ORM_ANNOTATION__MAPPED_SUPERCLASS = eINSTANCE.getEClassORMAnnotation_MappedSuperclass();
 
     /**
+		 * The meta object literal for the '<em><b>Inheritance</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EReference ECLASS_ORM_ANNOTATION__INHERITANCE = eINSTANCE.getEClassORMAnnotation_Inheritance();
+
+				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotationDefinition <em>EData Type ORM Annotation Definition</em>}' class.
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
 		 * @see org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotationDefinition

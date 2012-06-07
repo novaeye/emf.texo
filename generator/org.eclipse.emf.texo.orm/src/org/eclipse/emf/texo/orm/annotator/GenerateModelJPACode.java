@@ -22,7 +22,6 @@ import java.util.List;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.texo.eclipse.popup.actions.GenerateCode;
-import org.eclipse.emf.texo.generator.AnnotationManager;
 
 /**
  * Generates jpa annotated model code.
@@ -34,12 +33,12 @@ public class GenerateModelJPACode extends GenerateCode {
   @Override
   protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
     try {
+      setDoJpa(true);
       ORMUtils.setORMMappingOptionsFromProjectProperties(project);
-      AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
       super.generateFromUris(monitor, project, uris);
     } finally {
+      setDoJpa(false);
       ORMMappingOptions.setDefaultOptions(null);
-      AnnotationManager.removeEnabledAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
   }
 }

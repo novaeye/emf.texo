@@ -33,13 +33,15 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateJavaAnnotations"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
-        defaultValueLiteral="false"/>
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addOrderColumnToListMappings"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="renameSQLReservedNames"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inheritance" eType="ecore:EClass orm.ecore#//Inheritance"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ETypeElementORMAnnotation" abstract="true"
       interface="true" eSuperTypes="#//ENamedElementORMAnnotation">
@@ -54,6 +56,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="embeddable" eType="ecore:EClass orm.ecore#//Embeddable"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mappedSuperclass" eType="ecore:EClass orm.ecore#//MappedSuperclass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inheritance" eType="ecore:EClass orm.ecore#//Inheritance"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EDataTypeORMAnnotationDefinition" abstract="true"

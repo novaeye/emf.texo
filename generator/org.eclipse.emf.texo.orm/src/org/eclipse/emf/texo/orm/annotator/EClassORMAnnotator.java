@@ -18,6 +18,7 @@
 package org.eclipse.emf.texo.orm.annotator;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.generator.Annotator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
@@ -25,13 +26,12 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnota
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
-import org.eclipse.emf.texo.orm.annotations.model.orm.Inheritance;
-import org.eclipse.emf.texo.orm.annotations.model.orm.InheritanceType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Table;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation;
+import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage;
 
 /**
@@ -52,7 +52,7 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
   public void setAnnotationFeatures(EClassORMAnnotation annotation) {
     final EClass eClass = annotation.getEClass();
 
-    if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
+    if (GenUtils.isDocumentRoot(eClass)) {
       return;
     }
 
@@ -67,6 +67,8 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
 
     final EClassModelGenAnnotation modelGenAnnotation = (EClassModelGenAnnotation) getAnnotationManager()
         .getAnnotation(eClass, ModelcodegeneratorPackage.eINSTANCE.getEClassModelGenAnnotation());
+    final EPackageORMAnnotation ePackageAnnotation = (EPackageORMAnnotation) getAnnotationManager().getAnnotation(
+        eClass.getEPackage(), OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
 
     if (annotation.getMappedSuperclass() != null) {
       final MappedSuperclass mappedSuperclass = annotation.getMappedSuperclass();
@@ -74,6 +76,12 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
         mappedSuperclass.setClass(modelGenAnnotation.getQualifiedClassName());
       }
       return;
+    }
+
+    // set the inheritance mapping, copy the annotation from epackage level
+    if (isRoot(annotation) && annotation.getInheritance() == null && ePackageAnnotation.getInheritance() != null
+        && ePackageAnnotation.getInheritance().isSetStrategy()) {
+      annotation.setInheritance(EcoreUtil.copy(ePackageAnnotation.getInheritance()));
     }
 
     // only add entity if not embeddable
@@ -115,51 +123,6 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
         entity.setName(namingStrategy.getEntityName(eClass));
       }
     }
-  }
-
-  private boolean hasItsOwnTable(EClassORMAnnotation annotation) {
-    final boolean isRoot = isRoot(annotation);
-    final Inheritance inheritance;
-    if (annotation.getEntity() != null && annotation.getEntity().getInheritance() != null) {
-      inheritance = annotation.getEntity().getInheritance();
-    } else {
-      inheritance = getInheritance(annotation.getEClass());
-    }
-    return isRoot || inheritance != null && inheritance.getStrategy() != InheritanceType.SINGLETABLE;
-  }
-
-  private boolean isRoot(EClassORMAnnotation ormAnnotation) {
-    final EClass eClass = ormAnnotation.getEClass();
-    if (eClass.getESuperTypes().isEmpty()) {
-      return true;
-    }
-
-    // all super types are transient or interface or mapped super class
-    for (EClass eSuperType : eClass.getESuperTypes()) {
-      final EClassORMAnnotation superOrmAnnotation = (EClassORMAnnotation) getAnnotationManager().getAnnotation(
-          eSuperType, OrmannotationsPackage.eINSTANCE.getEClassORMAnnotation());
-      if (!superOrmAnnotation.getEClass().isInterface() && superOrmAnnotation.getMappedSuperclass() == null
-          && superOrmAnnotation.getTransient() == null) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private Inheritance getInheritance(EClass eClass) {
-
-    for (EClass eSuperType : eClass.getESuperTypes()) {
-      final EClassORMAnnotation orm = (EClassORMAnnotation) getAnnotationManager().getAnnotation(eSuperType,
-          OrmannotationsPackage.eINSTANCE.getEClassORMAnnotation());
-      if (orm.getEntity() != null && orm.getEntity().getInheritance() != null) {
-        return orm.getEntity().getInheritance();
-      }
-      final Inheritance inheritance = getInheritance(eSuperType);
-      if (inheritance != null) {
-        return inheritance;
-      }
-    }
-    return null;
   }
 
   /*

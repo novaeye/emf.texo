@@ -50,6 +50,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.Temporal;
 import org.eclipse.emf.texo.orm.annotations.model.orm.UniqueConstraint;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
+import org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EDataTypeORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EEnumORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
@@ -80,9 +81,12 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         ePackage, OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
 
     final EClass eClass = eAttribute.getEContainingClass();
-    if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
+    if (GenUtils.isDocumentRoot(eClass)) {
       return;
     }
+
+    final EClassORMAnnotation eClassORMAnnotation = (EClassORMAnnotation) getAnnotationManager().getAnnotation(eClass,
+        OrmannotationsPackage.eINSTANCE.getEClassORMAnnotation());
 
     if (eAttribute.getEAttributeType() instanceof EEnum) {
       copyAnnotationsFromEEnum(annotation);
@@ -308,6 +312,12 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       final Column column = basic.getColumn();
       if (column.getName() == null) {
         column.setName(namingStrategy.getColumnName(annotation.getEStructuralFeature()));
+      }
+
+      // in case of single table mapping and not a root
+      // then all columns of sub classes need to be nullable
+      if (!hasItsOwnTable(eClassORMAnnotation)) {
+        column.setNullable(true);
       }
     }
   }

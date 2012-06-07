@@ -83,7 +83,7 @@ public class GenerateCode extends BaseGenerateAction {
 
       artifactGenerator.run();
     } finally {
-      AnnotationManager.removeEnabledAnnotationSystem("jpa"); //$NON-NLS-1$
+      AnnotationManager.removeEnabledAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
 
   }

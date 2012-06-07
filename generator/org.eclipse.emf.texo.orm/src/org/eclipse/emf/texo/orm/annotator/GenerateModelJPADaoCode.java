@@ -16,6 +16,11 @@
  */
 package org.eclipse.emf.texo.orm.annotator;
 
+import java.net.URI;
+import java.util.List;
+
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.runtime.IProgressMonitor;
 
 /**
  * Generates model jpa annotated and dao code.
@@ -25,7 +30,16 @@ package org.eclipse.emf.texo.orm.annotator;
 public class GenerateModelJPADaoCode extends GenerateModelJPACode {
 
   @Override
-  protected boolean isDoDao() {
-    return true;
+  protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
+    try {
+      setDoJpa(true);
+      setDoDao(true);
+      ORMUtils.setORMMappingOptionsFromProjectProperties(project);
+      super.generateFromUris(monitor, project, uris);
+    } finally {
+      setDoJpa(false);
+      setDoDao(false);
+      ORMMappingOptions.setDefaultOptions(null);
+    }
   }
 }

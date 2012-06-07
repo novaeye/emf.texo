@@ -75,7 +75,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
 
     final EReference eReference = annotation.getEReference();
     final EClass eClass = eReference.getEContainingClass();
-    if (eClass.isInterface() || GenUtils.isDocumentRoot(eClass)) {
+    if (GenUtils.isDocumentRoot(eClass)) {
       return;
     }
 
@@ -424,6 +424,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     final EPackage ePackage = eReference.getEContainingClass().getEPackage();
     final EPackageORMAnnotation ePackageORMAnnotation = (EPackageORMAnnotation) getAnnotationManager().getAnnotation(
         ePackage, OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
+
+    final EClassORMAnnotation eClassORMAnnotation = (EClassORMAnnotation) getAnnotationManager().getAnnotation(
+        eReference.getEContainingClass(), OrmannotationsPackage.eINSTANCE.getEClassORMAnnotation());
     final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eReference.getEContainingClass().getEPackage());
 
     final ManyToOne manyToOne;
@@ -529,6 +532,20 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
         }
       }
     }
+
+    // force nullable/optional if stored in another table
+    if (!hasItsOwnTable(eClassORMAnnotation)) {
+      if (manyToOne.getJoinColumn().isEmpty()) {
+        if (!manyToOne.isOptional()) {
+          manyToOne.setOptional(true);
+        }
+      } else {
+        for (JoinColumn jc : manyToOne.getJoinColumn()) {
+          jc.setNullable(true);
+        }
+      }
+    }
+
   }
 
   protected void annotateManyToMany(EReferenceORMAnnotation annotation) {
