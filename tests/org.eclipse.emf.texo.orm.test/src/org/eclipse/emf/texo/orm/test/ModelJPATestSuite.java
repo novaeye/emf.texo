@@ -31,6 +31,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.anytype.AnytypeModelPack
 import org.eclipse.emf.texo.test.model.schemaconstructs.attributes.AttributesModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.duration.DurationModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.listunion.ListunionModelPackage;
+import org.eclipse.graphiti.mm.MmModelPackage;
 
 /**
  * Creates the JPA test cases for several model packages.
@@ -56,6 +57,8 @@ public class ModelJPATestSuite {
     modelPackages.remove(ListunionModelPackage.INSTANCE);
     // duration can't be persisted
     modelPackages.remove(DurationModelPackage.INSTANCE);
+    // has an ereference with type object
+    modelPackages.remove(MmModelPackage.INSTANCE);
 
     // extlibrary works with interfaces and multiple inheritance
     // this does not work nicely with JPA/ORM

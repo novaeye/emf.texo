@@ -72,6 +72,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.Simplef
 import org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpletypesModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.SubstitutionModelPackage;
 import org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.SubstitutionzvonModelPackage;
+import org.eclipse.graphiti.mm.MmModelPackage;
 
 /**
  * Returns the list of all generated model packages.
@@ -97,7 +98,7 @@ public class TestModelPackageProvider {
     result.add(InvModelPackage.INSTANCE);
     result.add(JpamixedModelPackage.INSTANCE);
     result.add(LibraryModelPackage.INSTANCE);
-    // result.add(MmModelPackage.INSTANCE);
+    result.add(MmModelPackage.INSTANCE);
     result.add(MusicModelPackage.INSTANCE);
     result.add(PlayModelPackage.INSTANCE);
     result.add(RentalModelPackage.INSTANCE);
