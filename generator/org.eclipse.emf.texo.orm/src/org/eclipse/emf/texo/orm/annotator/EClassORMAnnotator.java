@@ -94,10 +94,11 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
           if (table.getName() == null) {
             table.setName(namingStrategy.getTableName(eClass));
           }
-        } else if (entity.getPrimaryKeyJoinColumn().isEmpty()) {
-          // create a join column to the parent
-          entity.getPrimaryKeyJoinColumn().add(OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn());
-          entity.getPrimaryKeyJoinColumn().get(0).setName(namingStrategy.getPrimaryKeyJoinColumn(eClass));
+          if (!isRoot(annotation) && entity.getPrimaryKeyJoinColumn().isEmpty()) {
+            // create a join column to the parent
+            entity.getPrimaryKeyJoinColumn().add(OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn());
+            entity.getPrimaryKeyJoinColumn().get(0).setName(namingStrategy.getPrimaryKeyJoinColumn(eClass));
+          }
         }
       }
 
