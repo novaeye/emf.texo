@@ -39,7 +39,13 @@
     </xsd:complexType>
     <xsd:simpleType name="TopicCategory">
         <xsd:restriction base="xsd:NCName">
-            <xsd:enumeration value="Announcement"/>
+            <xsd:enumeration value="Announcement">
+            <xsd:annotation>
+				<xsd:documentation>
+					Announcement 
+				</xsd:documentation>
+			</xsd:annotation>
+            </xsd:enumeration>
             <xsd:enumeration value="GuestBook"/>
             <xsd:enumeration value="Discussion"/>
         </xsd:restriction>

@@ -159,7 +159,11 @@
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="TopicCategory"/>
     </eAnnotations>
-    <eLiterals name="Announcement"/>
+    <eLiterals name="Announcement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Announcement &#xA;&#x9;&#x9;&#x9;&#x9;"/>
+      </eAnnotations>
+    </eLiterals>
     <eLiterals name="GuestBook" value="1"/>
     <eLiterals name="Discussion" value="2"/>
   </eClassifiers>

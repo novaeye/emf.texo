@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EModelElement;
+import org.eclipse.emf.ecore.ENamedElement;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -46,6 +47,20 @@ public class ModelUtils {
   public static final String QUALIFIERSEPARATOR = "|"; //$NON-NLS-1$
 
   private static SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+
+  /**
+   * Get the documentation from the {@link ENamedElement}.
+   */
+  public static String getDocumentation(ENamedElement eNamedElement) {
+    final EAnnotation eAnnotation = eNamedElement.getEAnnotation("http://www.eclipse.org/emf/2002/GenModel"); //$NON-NLS-1$
+    if (eAnnotation == null) {
+      return null;
+    }
+    if (eAnnotation.getDetails().get("documentation") != null) { //$NON-NLS-1$
+      return eAnnotation.getDetails().get("documentation").trim(); //$NON-NLS-1$
+    }
+    return null;
+  }
 
   /**
    * Replaces the standard {@link EFactory} for an {@link EPackage} with the special {@link ModelEFactory} which handles

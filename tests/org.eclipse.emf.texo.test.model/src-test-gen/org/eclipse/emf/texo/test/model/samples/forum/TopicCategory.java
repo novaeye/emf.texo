@@ -12,7 +12,8 @@ import java.util.List;
  */
 public enum TopicCategory {
   /**
-   * The enum: ANNOUNCEMENT <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ANNOUNCEMENT <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Announcement <!--
+   * end-model-doc -->
    * 
    * @generated
    */
