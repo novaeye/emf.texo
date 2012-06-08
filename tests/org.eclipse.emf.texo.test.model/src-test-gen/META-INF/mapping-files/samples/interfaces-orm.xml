@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.interfaces.DescribableIdentifiableConcrete" name="interfaces_DescribableIdentifiableConcrete">
     <orm:table name="interfaces_DescribableIdentifiableConcrete"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="description">
         <orm:column name="description"/>
@@ -22,6 +23,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.interfaces.DescribableConcrete" name="interfaces_DescribableConcrete">
     <orm:table name="interfaces_DescribableConcrete"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="description">
         <orm:column name="description"/>
@@ -33,6 +35,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.interfaces.IdentifiableConcrete" name="interfaces_IdentifiableConcrete">
     <orm:table name="interfaces_IdentifiableConcrete"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="identifier">
         <orm:column name="identifier"/>

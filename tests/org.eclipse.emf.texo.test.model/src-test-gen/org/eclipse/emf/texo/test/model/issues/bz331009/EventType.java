@@ -13,7 +13,8 @@ import java.util.List;
 public enum EventType {
 
   /**
-   * The enum: COORDINATES <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: COORDINATES <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип события <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -29,7 +30,8 @@ public enum EventType {
     }
   },
   /**
-   * The enum: SENSOR <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: SENSOR <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип события <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -45,7 +47,8 @@ public enum EventType {
     }
   },
   /**
-   * The enum: ALARM <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ALARM <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип события <!--
+   * end-model-doc -->
    * 
    * @generated
    */

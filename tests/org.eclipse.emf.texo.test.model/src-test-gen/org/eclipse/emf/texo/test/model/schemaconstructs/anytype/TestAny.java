@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>TestAny</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,6 +21,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "anytype_TestAny")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class TestAny extends Identifiable {
 
   /**
@@ -32,7 +37,8 @@ public class TestAny extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
+  @Basic()
+  @Convert("TexoTestObjectConverter")
   private Object singleAnyType = null;
 
   /**
@@ -40,8 +46,9 @@ public class TestAny extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL })
-  @OrderColumn()
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "anytype_TestAny_multiAnyType")
   private List<Object> multiAnyType = new ArrayList<Object>();
 
   /**

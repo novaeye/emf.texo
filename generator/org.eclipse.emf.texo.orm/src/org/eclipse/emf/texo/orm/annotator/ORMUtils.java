@@ -22,6 +22,8 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.eclipse.ProjectPropertyUtil;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Converter;
+import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 
 /**
@@ -30,6 +32,22 @@ import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
  * @author mtaal
  */
 public class ORMUtils {
+
+  public static final String OBJECT_CONVERTER_CLASS = "org.eclipse.emf.texo.test.TexoTestObjectConverter";
+  public static final String OBJECT_CONVERTER_NAME = "TexoTestObjectConverter";
+
+  /**
+   * Creates the default converter used to convert Objects to String and back.
+   * 
+   * @see #OBJECT_CONVERTER_CLASS
+   * @see #OBJECT_CONVERTER_NAME
+   */
+  public static Converter createDefaultConverter() {
+    final Converter converter = OrmFactory.eINSTANCE.createConverter();
+    converter.setClass(ORMUtils.OBJECT_CONVERTER_CLASS);
+    converter.setName(ORMUtils.OBJECT_CONVERTER_NAME);
+    return converter;
+  }
 
   /**
    * Reads project properties and creates a {@link ORMMappingOptions} object and sets it in the

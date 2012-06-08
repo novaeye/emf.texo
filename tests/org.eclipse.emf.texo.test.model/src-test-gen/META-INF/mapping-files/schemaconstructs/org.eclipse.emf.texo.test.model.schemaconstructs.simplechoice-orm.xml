@@ -21,6 +21,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.Person" name="simplechoice_Person">
     <orm:table name="simplechoice_Person"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>

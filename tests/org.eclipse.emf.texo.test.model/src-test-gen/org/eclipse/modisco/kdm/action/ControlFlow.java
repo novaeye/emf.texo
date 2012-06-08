@@ -3,6 +3,9 @@ package org.eclipse.modisco.kdm.action;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ControlFlow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -10,6 +13,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "action_ControlFlow")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ControlFlow extends AbstractActionRelationship {
 
   /**

@@ -7,6 +7,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>DataElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,6 +17,7 @@ import javax.persistence.OneToMany;
  * @generated
  */
 @Entity(name = "code_DataElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class DataElement extends ComputationalObject {
 
   /**

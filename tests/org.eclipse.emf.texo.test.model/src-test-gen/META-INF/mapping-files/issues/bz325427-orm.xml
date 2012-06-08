@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325427.EClassB" name="bz325427_EClassB">
     <orm:table name="bz325427_EClassB"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -16,6 +17,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz325427.EClassA" name="bz325427_EClassA">
     <orm:table name="bz325427_EClassA"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>

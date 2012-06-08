@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder" name="simplefeaturemap_PurchaseOrder">
     <orm:table name="simplefeaturemap_PurchaseOrder"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -41,6 +42,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.Supplier" name="simplefeaturemap_Supplier">
     <orm:table name="simplefeaturemap_Supplier"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>

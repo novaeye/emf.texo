@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>RentalBicycle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,6 +16,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "rental_RentalBicycle")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class RentalBicycle extends RentalUnit {
 
   /**

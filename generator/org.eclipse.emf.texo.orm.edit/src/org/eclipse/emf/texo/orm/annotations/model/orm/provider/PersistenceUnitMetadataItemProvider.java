@@ -213,7 +213,7 @@ public class PersistenceUnitMetadataItemProvider extends ItemProviderAdapter imp
 	 */
   @Override
   public ResourceLocator getResourceLocator() {
-		return Eclipselink_orm_2_0EditPlugin.INSTANCE;
+		return Eclipselink_ormEditPlugin.INSTANCE;
 	}
 
 }

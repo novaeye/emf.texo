@@ -7,9 +7,12 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.graphiti.mm.algorithms.styles.Color;
 import org.eclipse.graphiti.mm.algorithms.styles.Font;
 import org.eclipse.graphiti.mm.algorithms.styles.Style;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Diagram</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,6 +20,7 @@ import org.eclipse.graphiti.mm.algorithms.styles.Style;
  * @generated
  */
 @Entity(name = "pi_Diagram")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Diagram extends ContainerShape {
 
   /**

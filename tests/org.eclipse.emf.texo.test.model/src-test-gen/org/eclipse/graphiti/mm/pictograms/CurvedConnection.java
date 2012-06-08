@@ -6,7 +6,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.graphiti.mm.algorithms.styles.PrecisionPoint;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>CurvedConnection</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -15,6 +18,7 @@ import org.eclipse.graphiti.mm.algorithms.styles.PrecisionPoint;
  * @generated
  */
 @Entity(name = "pi_CurvedConnection")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class CurvedConnection extends Connection {
 
   /**

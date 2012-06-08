@@ -66,12 +66,12 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitMetadata;
 import org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
-import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceFactoryImpl;
 import org.eclipse.emf.texo.orm.ormannotations.EAttributeORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation;
 import org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage;
+import org.eclipse.emf.texo.orm.ormannotations.util.OrmannotationsResourceFactoryImpl;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -208,7 +208,7 @@ public class ORMGenerator extends BaseGenerateAction {
   protected void storeORM(URI fileUri, AnnotatedModel annotatedModel, AnnotationManager annotationManager,
       EntityMappingsType entityMappings) {
 
-    final Resource ormResource = new OrmResourceFactoryImpl().createResource(fileUri);
+    final Resource ormResource = new OrmannotationsResourceFactoryImpl().createResource(fileUri);
     try {
       final File file = new File(fileUri.toFileString());
       if (file.exists()) {

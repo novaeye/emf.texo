@@ -9,9 +9,12 @@ import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -21,6 +24,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
  */
 @TestAnnotationOne("test")
 @Entity(name = "library_Book")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Book extends Identifiable {
 
   /**

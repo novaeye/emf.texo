@@ -24,6 +24,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.A" name="nestedgroup_A">
     <orm:table name="nestedgroup_A"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -38,6 +39,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.CType" name="nestedgroup_CType">
     <orm:table name="nestedgroup_CType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="cname" optional="false">
         <orm:column name="cname"/>
@@ -92,6 +94,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.Element" name="nestedgroup_Element">
     <orm:table name="nestedgroup_Element"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup">
         <orm:join-table/>

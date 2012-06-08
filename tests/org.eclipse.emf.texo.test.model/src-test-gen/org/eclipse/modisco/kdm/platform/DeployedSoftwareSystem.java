@@ -5,6 +5,9 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>DeployedSoftwareSystem</b></em>'. <!-- begin-user-doc --> <!--
@@ -13,6 +16,7 @@ import javax.persistence.ManyToMany;
  * @generated
  */
 @Entity(name = "platform_DeployedSoftwareSystem")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   /**

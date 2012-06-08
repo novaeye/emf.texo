@@ -5,7 +5,10 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.code.Module;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>DeployedComponent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -14,6 +17,7 @@ import org.eclipse.modisco.kdm.code.Module;
  * @generated
  */
 @Entity(name = "platform_DeployedComponent")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class DeployedComponent extends AbstractPlatformElement {
 
   /**

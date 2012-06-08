@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,6 +17,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "extlib_Borrower")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Borrower extends Person {
 
   /**

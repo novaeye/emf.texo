@@ -36,6 +36,11 @@ public enum «this.simpleClassName»
 	 	 * The enum: «toUpperCase(el.name)»
 	     * <!-- begin-user-doc -->
 	     * <!-- end-user-doc -->
+		«IF this.documentation != null-»
+		 * <!-- begin-model-doc -->
+		 * «this.documentation»
+		 * <!-- end-model-doc -->
+		«ENDIF-»
 	 	 * @generated
 	 	 */
 		«modelController.getJavaAnnotations(el, "field")-»

@@ -4,6 +4,9 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Document</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -13,6 +16,7 @@ import javax.persistence.Table;
  */
 @Entity(name = "m_Document")
 @Table(name = "m_Document")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 @Access(AccessType.PROPERTY)
 public interface Document {
   /**

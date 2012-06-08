@@ -21,6 +21,7 @@ import org.eclipse.emf.texo.annotations.AnnotationProvider;
 import org.eclipse.emf.texo.annotations.annotationsmodel.EReferenceAnnotation;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AssociationOverride;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AttributeOverride;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.BasicCollection;
 import org.eclipse.emf.texo.orm.annotations.model.orm.BasicMap;
 import org.eclipse.emf.texo.orm.annotations.model.orm.CollectionTable;
@@ -68,6 +69,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMGenerator;
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getAssociationOverride <em>Association Override</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getAttributeOverride <em>Attribute Override</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getPrimaryKeyJoinColumn <em>Primary Key Join Column</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getBasic <em>Basic</em>}</li>
  * </ul>
  * </p>
  *
@@ -303,6 +305,16 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
   protected EList<PrimaryKeyJoinColumn> primaryKeyJoinColumn;
 
   /**
+	 * The cached value of the '{@link #getBasic() <em>Basic</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasic()
+	 * @generated
+	 * @ordered
+	 */
+	protected Basic basic;
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -433,6 +445,61 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 	}
 
   /**
+	 * Returns the value of the '<em><b>Basic</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Basic</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Basic</em>' containment reference.
+	 * @see #setBasic(Basic)
+	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEReferenceORMAnnotation_Basic()
+	 * @model containment="true"
+	 * @generated
+	 */
+	public Basic getBasic() {
+		return basic;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBasic(Basic newBasic, NotificationChain msgs) {
+		Basic oldBasic = basic;
+		basic = newBasic;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC, oldBasic, newBasic);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EReferenceORMAnnotation#getBasic <em>Basic</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Basic</em>' containment reference.
+	 * @see #getBasic()
+	 * @generated
+	 */
+	public void setBasic(Basic newBasic) {
+		if (newBasic != basic) {
+			NotificationChain msgs = null;
+			if (basic != null)
+				msgs = ((InternalEObject)basic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC, null, msgs);
+			if (newBasic != null)
+				msgs = ((InternalEObject)newBasic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC, null, msgs);
+			msgs = basicSetBasic(newBasic, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC, newBasic, newBasic));
+	}
+
+		/**
 	 * Returns the value of the '<em><b>Transient</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
    * <p>
@@ -1403,6 +1470,8 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 				return ((InternalEList<?>)getAttributeOverride()).basicRemove(otherEnd, msgs);
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
 				return ((InternalEList<?>)getPrimaryKeyJoinColumn()).basicRemove(otherEnd, msgs);
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC:
+				return basicSetBasic(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1458,6 +1527,8 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 				return getAttributeOverride();
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
 				return getPrimaryKeyJoinColumn();
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC:
+				return getBasic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1541,6 +1612,9 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 				getPrimaryKeyJoinColumn().clear();
 				getPrimaryKeyJoinColumn().addAll((Collection<? extends PrimaryKeyJoinColumn>)newValue);
 				return;
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC:
+				setBasic((Basic)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1618,6 +1692,9 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
 				getPrimaryKeyJoinColumn().clear();
 				return;
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC:
+				setBasic((Basic)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1673,6 +1750,8 @@ public class EReferenceORMAnnotation extends EReferenceAnnotation implements ESt
 				return isSetAttributeOverride();
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
 				return primaryKeyJoinColumn != null && !primaryKeyJoinColumn.isEmpty();
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC:
+				return basic != null;
 		}
 		return super.eIsSet(featureID);
 	}

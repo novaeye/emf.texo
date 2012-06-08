@@ -1,6 +1,9 @@
 package org.eclipse.graphiti.mm.pictograms;
 
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ManhattanConnection</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -9,6 +12,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "pi_ManhattanConnection")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ManhattanConnection extends Connection {
 
   /**

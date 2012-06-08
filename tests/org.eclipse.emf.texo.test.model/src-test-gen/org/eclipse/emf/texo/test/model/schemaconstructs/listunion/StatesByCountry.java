@@ -7,7 +7,11 @@ import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -15,6 +19,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "listunion_statesByCountry")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class StatesByCountry extends Identifiable {
 
   /**
@@ -65,6 +70,7 @@ public class StatesByCountry extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Convert("TexoTestObjectConverter")
   private Object simpleUnion = null;
 
   /**
@@ -74,6 +80,7 @@ public class StatesByCountry extends Identifiable {
    */
   @ElementCollection()
   @OrderColumn()
+  @Convert("TexoTestObjectConverter")
   @CollectionTable(name = "listunion_statesByCountry_simpleUnions")
   private List<Object> simpleUnions = new ArrayList<Object>();
 

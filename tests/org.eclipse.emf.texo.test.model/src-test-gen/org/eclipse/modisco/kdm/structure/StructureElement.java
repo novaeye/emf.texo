@@ -1,6 +1,9 @@
 package org.eclipse.modisco.kdm.structure;
 
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>StructureElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -9,6 +12,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "structure_StructureElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class StructureElement extends AbstractStructureElement {
 
   /**

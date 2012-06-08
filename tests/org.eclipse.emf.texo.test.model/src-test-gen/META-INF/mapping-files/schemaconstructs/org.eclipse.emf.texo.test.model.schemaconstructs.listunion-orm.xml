@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.listunion.StatesByCountry" name="listunion_statesByCountry">
     <orm:table name="listunion_statesByCountry"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="country" optional="false">
         <orm:column name="country"/>
@@ -23,6 +24,7 @@
       </orm:basic>
       <orm:basic name="simpleUnion" optional="false">
         <orm:column name="simpleUnion"/>
+        <orm:convert>TexoTestObjectConverter</orm:convert>
       </orm:basic>
       <orm:basic name="simpleStringUnion" optional="false">
         <orm:column name="simpleStringUnion"/>
@@ -37,6 +39,7 @@
       <orm:element-collection name="simpleUnions">
         <orm:order-column name="listunion_statesByCountry_simpleUnions_ind"/>
         <orm:column name="T_element"/>
+        <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="listunion_statesByCountry_simpleUnions">
           <orm:join-column name="listunion_statesByCountry_simpleUnions"/>
         </orm:collection-table>

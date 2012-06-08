@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,6 +17,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "extlib_Writer")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Writer extends Person {
 
   /**

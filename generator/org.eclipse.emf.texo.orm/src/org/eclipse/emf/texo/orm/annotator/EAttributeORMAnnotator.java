@@ -210,6 +210,8 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         elementCollection.setTemporal(TemporalType.TIMESTAMP);
       } else if (isDate) {
         elementCollection.setTemporal(TemporalType.DATE);
+      } else if (doAddConverter(eAttributeModelGen)) {
+        elementCollection.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
       }
 
       if (isEnum && elementCollection.getEnumerated() == null) {
@@ -295,6 +297,8 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       basic.setTemporal(TemporalType.TIMESTAMP);
     } else if (isDate) {
       basic.setTemporal(TemporalType.DATE);
+    } else if (doAddConverter(eAttributeModelGen)) {
+      basic.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
     }
 
     if (!basicSet && !GeneratorUtils.isOptional(eAttribute)) {

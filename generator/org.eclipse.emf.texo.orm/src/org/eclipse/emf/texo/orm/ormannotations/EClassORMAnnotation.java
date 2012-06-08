@@ -82,15 +82,15 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 
   /**
 	 * The cached value of the '{@link #getInheritance() <em>Inheritance</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
 	 * @see #getInheritance()
 	 * @generated
 	 * @ordered
 	 */
-	protected Inheritance inheritance;
+  protected Inheritance inheritance;
 
-		/**
+  /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -322,27 +322,26 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
   /**
 	 * Returns the value of the '<em><b>Inheritance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Inheritance</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Inheritance</em>' containment reference isn't clear, there really should be more of a
+   * description here...
+   * </p>
+   * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inheritance</em>' containment reference.
 	 * @see #setInheritance(Inheritance)
 	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEClassORMAnnotation_Inheritance()
 	 * @model containment="true"
 	 * @generated
 	 */
-	public Inheritance getInheritance() {
+  public Inheritance getInheritance() {
 		return inheritance;
 	}
 
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+  /**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInheritance(Inheritance newInheritance, NotificationChain msgs) {
+  public NotificationChain basicSetInheritance(Inheritance newInheritance, NotificationChain msgs) {
 		Inheritance oldInheritance = inheritance;
 		inheritance = newInheritance;
 		if (eNotificationRequired()) {
@@ -352,15 +351,14 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 		return msgs;
 	}
 
-		/**
+  /**
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EClassORMAnnotation#getInheritance <em>Inheritance</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Inheritance</em>' containment reference.
 	 * @see #getInheritance()
 	 * @generated
 	 */
-	public void setInheritance(Inheritance newInheritance) {
+  public void setInheritance(Inheritance newInheritance) {
 		if (newInheritance != inheritance) {
 			NotificationChain msgs = null;
 			if (inheritance != null)
@@ -374,7 +372,7 @@ public class EClassORMAnnotation extends EClassAnnotation implements EClassifier
 			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.ECLASS_ORM_ANNOTATION__INHERITANCE, newInheritance, newInheritance));
 	}
 
-		/**
+  /**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */

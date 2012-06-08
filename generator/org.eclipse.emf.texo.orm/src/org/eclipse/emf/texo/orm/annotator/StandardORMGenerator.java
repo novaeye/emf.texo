@@ -33,8 +33,8 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.SupportedVersionsType;
-import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceFactoryImpl;
-import org.eclipse.emf.texo.orm.annotations.model.orm.util.OrmResourceImpl;
+import org.eclipse.emf.texo.orm.ormannotations.util.OrmannotationsResourceFactoryImpl;
+import org.eclipse.emf.texo.orm.ormannotations.util.OrmannotationsResourceImpl;
 
 /**
  * Generates an ORM model on the basis of an annotated model and then replaces the namespace and version to let it work
@@ -65,7 +65,8 @@ public class StandardORMGenerator extends ORMGenerator {
     } else {
       entityMappings.setVersion(SupportedVersionsType._23);
     }
-    final OrmResourceImpl ormResource = (OrmResourceImpl) new OrmResourceFactoryImpl().createResource(fileUri);
+    final OrmannotationsResourceImpl ormResource = (OrmannotationsResourceImpl) new OrmannotationsResourceFactoryImpl()
+        .createResource(fileUri);
     try {
       final File file = new File(fileUri.toFileString());
       if (file.exists()) {

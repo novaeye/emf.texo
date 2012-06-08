@@ -89,6 +89,14 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
       annotation.setEntity(OrmFactory.eINSTANCE.createEntity());
     }
 
+    if (ORMMappingOptions.getDefaultOptions().isTestRun()) {
+      if (annotation.getEntity() != null) {
+        annotation.getEntity().getConverter().add(ORMUtils.createDefaultConverter());
+      } else if (annotation.getMappedSuperclass() != null) {
+        annotation.getMappedSuperclass().getConverter().add(ORMUtils.createDefaultConverter());
+      }
+    }
+
     final Entity entity = annotation.getEntity();
 
     if (entity != null) {

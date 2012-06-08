@@ -6,8 +6,11 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.core.AggregatedRelationship;
 import org.eclipse.modisco.kdm.core.KDMEntity;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>AbstractStructureElement</b></em>'. <!-- begin-user-doc --> <!--
@@ -16,6 +19,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * @generated
  */
 @Entity(name = "structure_AbstractStructureElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class AbstractStructureElement extends KDMEntity {
 
   /**

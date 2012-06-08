@@ -13,7 +13,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OrderColumn;
 import javax.persistence.Table;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Tariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -23,6 +26,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  */
 @Entity(name = "m_Tariff")
 @Table(name = "m_Tariff")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class Tariff extends Identifiable {
 
   /**

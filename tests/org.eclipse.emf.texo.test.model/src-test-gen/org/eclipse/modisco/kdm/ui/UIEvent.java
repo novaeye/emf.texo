@@ -2,6 +2,9 @@ package org.eclipse.modisco.kdm.ui;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>UIEvent</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,6 +12,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "ui_UIEvent")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class UIEvent extends AbstractUIElement {
 
   /**

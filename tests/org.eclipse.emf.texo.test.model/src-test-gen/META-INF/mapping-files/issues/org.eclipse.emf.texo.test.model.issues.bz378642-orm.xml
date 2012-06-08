@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz378642.PriceType" name="bz378642_PriceType">
     <orm:table name="bz378642_PriceType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="value">
         <orm:column name="T_value"/>

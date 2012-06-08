@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard" name="m_SimCard">
     <orm:table name="m_SimCard"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="phoneNumber">
         <orm:column name="phoneNumber"/>
@@ -19,6 +20,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimContract" name="m_SimContract">
     <orm:table name="m_SimContract"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="contractNumber">
         <orm:column name="contractNumber"/>
@@ -41,6 +43,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentInfo" name="m_PaymentInfo">
     <orm:table name="m_PaymentInfo"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="tariff">
         <orm:join-column name="m_PaymentInfo_tariff"/>
@@ -66,6 +69,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimCardXSimContract" name="m_SimCardXSimContract">
     <orm:table name="m_SimCardXSimContract"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="simCard">
         <orm:join-column name="m_SimCardXSimContract_simCard"/>
@@ -86,10 +90,12 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimTariff" name="m_SimTariff">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Tariff" name="m_Tariff">
     <orm:table name="m_Tariff"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -149,6 +155,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentItem" name="m_PaymentItem">
     <orm:table name="m_PaymentItem"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="sum">
         <orm:column name="T_sum"/>
@@ -171,6 +178,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.VolumePayment" name="m_VolumePayment">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="volume">
         <orm:column name="volume" nullable="true"/>
@@ -189,6 +197,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PeriodicalPayment" name="m_PeriodicalPayment">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="periodicity">
         <orm:column name="periodicity" nullable="true"/>
@@ -197,10 +206,12 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.OneTimePayment" name="m_OneTimePayment">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Service" name="m_Service">
     <orm:table name="m_Service"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -236,6 +247,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Units" name="m_Units">
     <orm:table name="m_Units"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -244,10 +256,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Price" name="m_Price">
     <orm:table name="m_Price"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarProducer" name="m_CarProducer">
     <orm:table name="m_CarProducer"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -256,6 +270,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarModel" name="m_CarModel">
     <orm:table name="m_CarModel"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -272,6 +287,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarRegInfo" name="m_CarRegInfo">
     <orm:table name="m_CarRegInfo"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
         <orm:column name="series"/>
@@ -319,6 +335,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Person" name="m_Person">
     <orm:table name="m_Person"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="surname">
         <orm:column name="surname"/>
@@ -381,6 +398,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Car" name="m_Car">
     <orm:table name="m_Car"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="model">
         <orm:join-column name="m_Car_model"/>
@@ -410,6 +428,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarPassport" name="m_CarPassport">
     <orm:table name="m_CarPassport"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
         <orm:column name="series"/>
@@ -427,6 +446,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Phone" name="m_Phone">
     <orm:table name="m_Phone"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="number">
         <orm:column name="T_number"/>
@@ -438,6 +458,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Address" name="m_Address">
     <orm:table name="m_Address"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="zipCode">
         <orm:column name="zipCode"/>
@@ -464,6 +485,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Passport" name="m_Passport">
     <orm:table name="m_Passport"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
         <orm:column name="series"/>
@@ -481,6 +503,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.DrivingLicense" name="m_DrivingLicense">
     <orm:table name="m_DrivingLicense"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
         <orm:column name="series"/>
@@ -498,6 +521,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Contract" name="m_Contract">
     <orm:table name="m_Contract"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="signDate">
         <orm:column name="signDate"/>
@@ -546,6 +570,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SecretQuestion" name="m_SecretQuestion">
     <orm:table name="m_SecretQuestion"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="question">
         <orm:column name="question"/>
@@ -566,10 +591,12 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ClientTariff" name="m_ClientTariff">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ContractPackage" name="m_ContractPackage">
     <orm:table name="m_ContractPackage"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="client">
         <orm:join-column name="m_ContractPackage_client"/>
@@ -603,6 +630,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.User" name="m_User">
     <orm:table name="m_User"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="login">
         <orm:column name="T_login"/>
@@ -622,10 +650,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.UserGroup" name="m_UserGroup">
     <orm:table name="m_UserGroup"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Message" name="m_Message">
     <orm:table name="m_Message"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="text">
         <orm:column name="T_text"/>
@@ -658,6 +688,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Event" name="m_Event">
     <orm:table name="m_Event"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="eventType">
         <orm:column name="eventType"/>
@@ -683,6 +714,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Coordinates" name="m_Coordinates">
     <orm:table name="m_Coordinates"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="x">
         <orm:column name="x"/>

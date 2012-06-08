@@ -1,6 +1,9 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>OneTimePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,6 +12,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "m_OneTimePayment")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class OneTimePayment extends PaymentItem {
 
   /**

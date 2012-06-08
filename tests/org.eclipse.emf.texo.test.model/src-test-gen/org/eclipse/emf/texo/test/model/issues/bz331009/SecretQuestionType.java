@@ -13,7 +13,8 @@ import java.util.List;
 public enum SecretQuestionType {
 
   /**
-   * The enum: REGULAR <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: REGULAR <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип вопроса <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -29,7 +30,8 @@ public enum SecretQuestionType {
     }
   },
   /**
-   * The enum: CONTROL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: CONTROL <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип вопроса <!--
+   * end-model-doc -->
    * 
    * @generated
    */

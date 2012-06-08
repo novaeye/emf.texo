@@ -2,6 +2,9 @@ package org.eclipse.graphiti.mm.algorithms;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>PlatformGraphicsAlgorithm</b></em>'. <!-- begin-user-doc --> <!--
@@ -10,6 +13,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "al_PlatformGraphicsAlgorithm")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class PlatformGraphicsAlgorithm extends GraphicsAlgorithm {
 
   /**

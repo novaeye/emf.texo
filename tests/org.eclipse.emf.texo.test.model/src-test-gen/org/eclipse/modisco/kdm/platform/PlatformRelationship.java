@@ -3,7 +3,10 @@ package org.eclipse.modisco.kdm.platform;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.core.KDMEntity;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>PlatformRelationship</b></em>'. <!-- begin-user-doc --> <!--
@@ -12,6 +15,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * @generated
  */
 @Entity(name = "platform_PlatformRelationship")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class PlatformRelationship extends AbstractPlatformRelationship {
 
   /**

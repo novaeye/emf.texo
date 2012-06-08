@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ErrorType" name="response_ErrorType">
     <orm:table name="response_ErrorType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="errorClass" optional="false">
         <orm:column name="errorClass"/>
@@ -28,6 +29,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ResponseType" name="response_ResponseType">
     <orm:table name="response_ResponseType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="status" optional="false">
         <orm:column name="T_status"/>
@@ -41,39 +43,28 @@
       <orm:basic name="totalRows" optional="false">
         <orm:column name="totalRows"/>
       </orm:basic>
-      <orm:one-to-many name="data">
-        <orm:order-column name="response_ResponseType_data_ind"/>
-        <orm:join-column name="response_ResponseType_data"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
+      <orm:element-collection name="data">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="response_ResponseType_data"/>
+      </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ResultType" name="response_ResultType">
     <orm:table name="response_ResultType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
-      <orm:one-to-many name="updated">
-        <orm:order-column name="response_ResultType_updated_ind"/>
-        <orm:join-column name="response_ResultType_updated"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:one-to-many name="inserted">
-        <orm:order-column name="response_ResultType_inserted_ind"/>
-        <orm:join-column name="response_ResultType_inserted"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:one-to-many name="deleted">
-        <orm:order-column name="response_ResultType_deleted_ind"/>
-        <orm:join-column name="response_ResultType_deleted"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
+      <orm:element-collection name="updated">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="response_ResultType_updated"/>
+      </orm:element-collection>
+      <orm:element-collection name="inserted">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="response_ResultType_inserted"/>
+      </orm:element-collection>
+      <orm:element-collection name="deleted">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="response_ResultType_deleted"/>
+      </orm:element-collection>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

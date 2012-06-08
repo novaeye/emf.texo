@@ -9,7 +9,10 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.core.KDMEntity;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>KDMModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -19,6 +22,7 @@ import org.eclipse.modisco.kdm.core.KDMEntity;
  * @generated
  */
 @Entity(name = "kdm_KDMModel")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class KDMModel extends KDMFramework {
 
   /**

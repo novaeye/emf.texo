@@ -8,7 +8,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>VarInputType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -17,6 +20,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  */
 @Entity(name = "bz379815_VarInputType")
 @Table(name = "DPL_bz379815_VarInputType")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class VarInputType extends Identifiable {
 
   /**

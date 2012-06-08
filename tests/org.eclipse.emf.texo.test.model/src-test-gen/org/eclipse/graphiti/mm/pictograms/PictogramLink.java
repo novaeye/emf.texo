@@ -3,11 +3,15 @@ package org.eclipse.graphiti.mm.pictograms;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
-import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.graphiti.mm.PropertyContainer;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>PictogramLink</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -15,6 +19,7 @@ import org.eclipse.graphiti.mm.PropertyContainer;
  * @generated
  */
 @Entity(name = "pi_PictogramLink")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class PictogramLink extends PropertyContainer {
 
   /**
@@ -30,8 +35,9 @@ public class PictogramLink extends PropertyContainer {
    * 
    * @generated
    */
-  @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @OrderColumn()
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "pi_PictogramLink_businessObjects")
   private List<Object> businessObjects = new ArrayList<Object>();
 
   /**

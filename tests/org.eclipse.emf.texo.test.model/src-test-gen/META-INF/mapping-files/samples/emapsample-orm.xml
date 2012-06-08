@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.emap.Book" name="emapsample_Book">
     <orm:table name="EMAP_BOOK"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -26,6 +27,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.emap.BookStore" name="emapsample_BookStore">
     <orm:table name="EMAP_BOOKSTORE"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -50,6 +52,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.emap.Writer" name="emapsample_Writer">
     <orm:table name="EMAP_WRITER"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>

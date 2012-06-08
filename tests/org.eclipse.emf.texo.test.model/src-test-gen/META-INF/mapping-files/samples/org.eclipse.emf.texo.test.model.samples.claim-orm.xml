@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.claim.Claim" name="claim_Claim">
     <orm:table name="claim_Claim"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="billingName" optional="false">
         <orm:column name="billingName"/>
@@ -35,6 +36,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.claim.ClaimCompositeKey" name="claim_ClaimCompositeKey">
     <orm:table name="claim_ClaimCompositeKey"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="claimNumber" optional="false">
         <orm:column name="claimNumber"/>
@@ -46,6 +48,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.claim.ClaimLine" name="claim_ClaimLine">
     <orm:table name="claim_ClaimLine"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="claimLineBilledAmount" optional="false">
         <orm:column name="claimLineBilledAmount"/>
@@ -74,6 +77,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.claim.ClaimLineCompositeKey" name="claim_ClaimLineCompositeKey">
     <orm:table name="claim_ClaimLineCompositeKey"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="claimLineNumber" optional="false">
         <orm:column name="claimLineNumber"/>

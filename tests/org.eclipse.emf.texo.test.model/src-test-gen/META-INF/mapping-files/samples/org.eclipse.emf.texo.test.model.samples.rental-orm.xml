@@ -7,6 +7,7 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBicycle" name="rental_RentalBicycle">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="type" optional="false">
         <orm:column name="T_type" nullable="true"/>
@@ -24,6 +25,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalUnit" name="rental_RentalUnit">
     <orm:table name="rental_RentalUnit"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="description" optional="false">
         <orm:column name="description"/>
@@ -31,6 +33,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCar" name="rental_RentalCar">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="size" optional="false">
         <orm:column name="T_size" nullable="true"/>
@@ -48,6 +51,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBusiness" name="rental_RentalBusiness">
     <orm:table name="rental_RentalBusiness"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -56,6 +60,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCarDriver" name="rental_RentalCarDriver">
     <orm:table name="rental_RentalCarDriver"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -72,6 +77,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalContract" name="rental_RentalContract">
     <orm:table name="rental_RentalContract"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="rentToBusinessPartner" optional="false">
         <orm:column name="rentToBusinessPartner"/>
@@ -98,6 +104,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalContractLine" name="rental_RentalContractLine">
     <orm:table name="rental_RentalContractLine"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="number">
         <orm:column name="T_number"/>

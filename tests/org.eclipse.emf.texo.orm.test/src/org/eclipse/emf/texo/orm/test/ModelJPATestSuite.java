@@ -48,7 +48,8 @@ public class ModelJPATestSuite {
     final List<ModelPackage> modelPackages = TestModelPackageProvider.getModelPackages();
 
     // modelPackages.clear();
-    // modelPackages.add(ModelModelPackage.INSTANCE);
+    // modelPackages.add(AttributesModelPackage.INSTANCE);
+    // modelPackages.add(AnytypeModelPackage.INSTANCE);
 
     // anytype is not supported, result in Object as item/target entity
     modelPackages.remove(AttributesModelPackage.INSTANCE);

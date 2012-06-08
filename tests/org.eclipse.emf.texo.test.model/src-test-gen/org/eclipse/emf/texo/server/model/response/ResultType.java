@@ -2,11 +2,14 @@ package org.eclipse.emf.texo.server.model.response;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -14,6 +17,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "response_ResultType")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ResultType extends Identifiable {
 
   /**
@@ -21,8 +25,9 @@ public class ResultType extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL })
-  @OrderColumn()
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "response_ResultType_updated")
   private List<Object> updated = new ArrayList<Object>();
 
   /**
@@ -30,8 +35,9 @@ public class ResultType extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL })
-  @OrderColumn()
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "response_ResultType_inserted")
   private List<Object> inserted = new ArrayList<Object>();
 
   /**
@@ -39,8 +45,9 @@ public class ResultType extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL })
-  @OrderColumn()
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "response_ResultType_deleted")
   private List<Object> deleted = new ArrayList<Object>();
 
   /**

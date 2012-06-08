@@ -3,6 +3,9 @@ package org.eclipse.modisco.kdm.data;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>KeyRelation</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -10,6 +13,7 @@ import javax.persistence.ManyToOne;
  * @generated
  */
 @Entity(name = "data_KeyRelation")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class KeyRelation extends AbstractDataRelationship {
 
   /**

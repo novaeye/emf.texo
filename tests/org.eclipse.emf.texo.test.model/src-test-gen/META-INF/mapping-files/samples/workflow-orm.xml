@@ -7,6 +7,7 @@
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalOutputPort" name="workflow_ConditionalOutputPort">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="condition">
         <orm:column name="COND" nullable="true"/>
@@ -14,6 +15,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Workflow" name="workflow_Workflow">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="nodes">
         <orm:order-column name="workflow_Workflow_nodes_ind"/>
@@ -40,6 +42,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowElement" name="workflow_WorkflowElement">
     <orm:table name="workflow_WorkflowElement"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -62,6 +65,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.WorkflowNode" name="workflow_WorkflowNode">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="isStart" optional="false">
         <orm:column name="isStart" nullable="true"/>
@@ -94,6 +98,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Edge" name="workflow_Edge">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="workflow" optional="false">
         <orm:join-column name="workflow_Edge_workflow" nullable="true"/>
@@ -122,6 +127,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Comment" name="workflow_Comment">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="workflow" optional="false">
         <orm:join-column name="workflow_Comment_workflow" nullable="true"/>
@@ -134,6 +140,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.OutputPort" name="workflow_OutputPort">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="node" optional="false">
         <orm:join-column name="workflow_OutputPort_node" nullable="true"/>
@@ -158,9 +165,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Port" name="workflow_Port">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.InputPort" name="workflow_InputPort">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="node" optional="false">
         <orm:join-column name="workflow_InputPort_node" nullable="true"/>
@@ -185,9 +194,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Fault" name="workflow_Fault">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.CompoundTask" name="workflow_CompoundTask">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="subworkflow" optional="false">
         <orm:join-column name="workflow_CompoundTask_subworkflow" nullable="true"/>
@@ -200,6 +211,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.TransformationTask" name="workflow_TransformationTask">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="transformExpression">
         <orm:column name="transformExpression" nullable="true"/>
@@ -207,9 +219,11 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.ConditionalTask" name="workflow_ConditionalTask">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.LoopTask" name="workflow_LoopTask">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="whileCondition" optional="false">
         <orm:column name="whileCondition" nullable="true"/>
@@ -217,6 +231,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.workflow.Task" name="workflow_Task">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

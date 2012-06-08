@@ -3,9 +3,12 @@ package org.eclipse.modisco.kdm.platform;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.action.AbstractActionRelationship;
 import org.eclipse.modisco.kdm.action.ActionElement;
 import org.eclipse.modisco.kdm.code.CodeItem;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>DefinedBy</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -13,6 +16,7 @@ import org.eclipse.modisco.kdm.code.CodeItem;
  * @generated
  */
 @Entity(name = "platform_DefinedBy")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class DefinedBy extends AbstractActionRelationship {
 
   /**

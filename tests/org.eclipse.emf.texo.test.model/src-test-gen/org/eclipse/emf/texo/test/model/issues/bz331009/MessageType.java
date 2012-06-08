@@ -13,7 +13,8 @@ import java.util.List;
 public enum MessageType {
 
   /**
-   * The enum: SERVICE <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: SERVICE <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -29,7 +30,8 @@ public enum MessageType {
     }
   },
   /**
-   * The enum: EVENT <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EVENT <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -45,7 +47,8 @@ public enum MessageType {
     }
   },
   /**
-   * The enum: COMMAND <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: COMMAND <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!--
+   * end-model-doc -->
    * 
    * @generated
    */

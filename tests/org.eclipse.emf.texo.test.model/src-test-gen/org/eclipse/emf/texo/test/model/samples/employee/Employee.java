@@ -5,9 +5,12 @@ import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationTwo;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -15,6 +18,7 @@ import org.eclipse.emf.texo.test.models.annotations.MergeAnnotationTwo;
  * @generated
  */
 @Entity(name = "employee_Employee")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Employee extends Identifiable {
 
   /**

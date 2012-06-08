@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.CapacityEntry" name="capa_CapacityEntry">
     <orm:table name="capa_CapacityEntry"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="capacityEntryId">
         <orm:column name="capacityEntryId"/>
@@ -19,6 +20,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Machine" name="capa_Machine">
     <orm:table name="capa_Machine"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="machineId">
         <orm:column name="machineId"/>
@@ -49,6 +51,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.WorkWeek" name="capa_WorkWeek">
     <orm:table name="capa_WorkWeek"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="workWeekId">
         <orm:column name="workWeekId"/>
@@ -64,6 +67,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Task" name="capa_Task">
     <orm:table name="capa_Task"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name"/>
@@ -93,6 +97,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.MachineList" name="capa_MachineList">
     <orm:table name="capa_MachineList"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="machines">
         <orm:order-column name="capa_MachineList_machines_ind"/>
@@ -105,6 +110,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.Production" name="capa_Production">
     <orm:table name="capa_Production"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="article">
         <orm:column name="article"/>
@@ -130,6 +136,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.capa.WorkDay" name="capa_WorkDay">
     <orm:table name="capa_WorkDay"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="dayOfWeek">
         <orm:column name="T_dayOfWeek"/>

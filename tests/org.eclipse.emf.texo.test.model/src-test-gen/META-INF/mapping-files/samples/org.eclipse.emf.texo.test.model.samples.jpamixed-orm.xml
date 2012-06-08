@@ -40,6 +40,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyType" name="jpamixed_LetterBodyType">
     <orm:table name="jpamixed_LetterBodyType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.LetterBodyTypeMixedFeatureGroup">
         <orm:join-table/>
@@ -70,6 +71,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationType" name="jpamixed_SalutationType">
     <orm:table name="jpamixed_SalutationType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.jpamixed.SalutationTypeMixedFeatureGroup">
         <orm:join-table/>

@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.ActType" name="play_ActType">
     <orm:table name="play_ActType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="pindex" optional="false">
         <orm:column name="pindex"/>
@@ -42,6 +43,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SceneType" name="play_SceneType">
     <orm:table name="play_SceneType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="pindex" optional="false">
         <orm:column name="pindex"/>
@@ -60,6 +62,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.FmType" name="play_FmType">
     <orm:table name="play_FmType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:element-collection name="p">
         <orm:order-column name="play_FmType_p_ind"/>
@@ -91,6 +94,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PersonaeType" name="play_PersonaeType">
     <orm:table name="play_PersonaeType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.PersonaeTypeGroupFeatureGroup">
         <orm:join-table/>
@@ -102,6 +106,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PersonaGroupType" name="play_PersonaGroupType">
     <orm:table name="play_PersonaGroupType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="groupDescription" optional="false">
         <orm:column name="groupDescription"/>
@@ -117,6 +122,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.PlayType" name="play_PlayType">
     <orm:table name="play_PlayType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -166,6 +172,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.play.SpeechType" name="play_SpeechType">
     <orm:table name="play_SpeechType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.play.SpeechTypeGroupFeatureGroup">
         <orm:join-table/>

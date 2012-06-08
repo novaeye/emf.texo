@@ -6,8 +6,11 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.kdm.ExtendedValue;
 import org.eclipse.modisco.kdm.kdm.Stereotype;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ModelElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -19,6 +22,7 @@ import org.eclipse.modisco.kdm.kdm.Stereotype;
  * @generated
  */
 @Entity(name = "core_ModelElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class ModelElement extends Element {
 
   /**

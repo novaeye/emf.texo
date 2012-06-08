@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.AccountingClass" name="accounting_Accounting">
     <orm:table name="accounting_Accounting"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -51,6 +52,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.Account" name="accounting_Account">
     <orm:table name="accounting_Account"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -59,6 +61,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.AccountGroup" name="accounting_AccountGroup">
     <orm:table name="accounting_AccountGroup"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -74,6 +77,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.Vat" name="accounting_Vat">
     <orm:table name="accounting_Vat"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -84,6 +88,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.BalanceAccount" name="accounting_BalanceAccount">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-many name="report">
         <orm:order-column name="accounting_BalanceAccount_report_ind"/>
@@ -101,6 +106,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.Report" name="accounting_Report">
     <orm:table name="accounting_Report"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -121,6 +127,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.JournalGroup" name="accounting_JournalGroup">
     <orm:table name="accounting_JournalGroup"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -143,6 +150,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.ReportGroup" name="accounting_ReportGroup">
     <orm:table name="accounting_ReportGroup"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -170,6 +178,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.JournalStatement" name="accounting_JournalStatement">
     <orm:table name="accounting_JournalStatement"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="description" optional="false">
         <orm:column name="description"/>
@@ -208,6 +217,7 @@
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.accounting.PLAccount" name="accounting_PLAccount">
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

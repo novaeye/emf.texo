@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.inventory.PType" name="inv_PType">
     <orm:table name="inv_PType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="id">
         <orm:column name="id"/>
@@ -60,6 +61,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.inventory.PDeclaration" name="inv_PDeclaration">
     <orm:table name="inv_PDeclaration"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="id">
         <orm:column name="id"/>

@@ -82,6 +82,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     final EPackage ePackage = eReference.getEContainingClass().getEPackage();
     final EPackageORMAnnotation ePackageORMAnnotation = (EPackageORMAnnotation) getAnnotationManager().getAnnotation(
         ePackage, OrmannotationsPackage.eINSTANCE.getEPackageORMAnnotation());
+    final EReferenceModelGenAnnotation eReferenceModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()
+        .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
 
     // features which are part of a featuremap are never mapped as many features
     final boolean isPartOfFeatureMap = GeneratorUtils.isPartOfGroup(annotation.getEReference());
@@ -89,7 +91,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     final EReference eOpposite = eReference.getEOpposite();
     if (!isPartOfFeatureMap && eReference.isMany()) {
 
-      if (ModelUtils.isEMap(annotation.getEReference().getEReferenceType())) {
+      if (doAddConverter(eReferenceModelGenAnnotation)) {
+        addElementCollection(annotation);
+      } else if (ModelUtils.isEMap(annotation.getEReference().getEReferenceType())) {
         mapMap(annotation);
       } else if (eOpposite != null && eOpposite.isMany()) {
         annotateManyToMany(annotation);
@@ -106,7 +110,11 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       final EClassORMAnnotation referencedEClassORMAnnotation = (EClassORMAnnotation) getAnnotationManager()
           .getAnnotation(referencedEClass, OrmannotationsPackage.eINSTANCE.getEClassORMAnnotation());
 
-      if (annotation.getEmbedded() != null || referencedEClassORMAnnotation.getEmbeddable() != null
+      if (doAddConverter(eReferenceModelGenAnnotation)) {
+        // an object map as a basic...
+        annotation.setBasic(OrmFactory.eINSTANCE.createBasic());
+        annotation.getBasic().setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
+      } else if (annotation.getEmbedded() != null || referencedEClassORMAnnotation.getEmbeddable() != null
           && referencedEClassORMAnnotation.getEntity() == null) {
         annotateEmbedded(annotation);
       } else if (eOpposite != null && !eOpposite.isMany()) {
@@ -219,6 +227,10 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     final EReferenceModelGenAnnotation eReferenceModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()
         .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
 
+    if (doAddConverter(eReferenceModelGenAnnotation)) {
+      oneToMany.setConverter(ORMUtils.createDefaultConverter());
+    }
+
     // set the order column, is always set on this side
     if (!ModelUtils.isEMap(eReference.getEReferenceType()) && oneToMany.getOrderBy() == null
         && ePackageORMAnnotation.isAddOrderColumnToListMappings() && eReferenceModelGenAnnotation.isUseList()
@@ -295,12 +307,15 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     if (valueEFeature instanceof EReference) {
       annotateOneToMany(annotation);
     } else {
-      mapPrimitiveCollectionMap(annotation);
+      addElementCollection(annotation);
     }
   }
 
-  protected void mapPrimitiveCollectionMap(EReferenceORMAnnotation annotation) {
+  protected void addElementCollection(EReferenceORMAnnotation annotation) {
     final EReference eReference = annotation.getEReference();
+    final EReferenceModelGenAnnotation eReferenceModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()
+        .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
+
     final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eReference.getEContainingClass().getEPackage());
     final ElementCollection elementCollection;
     if (annotation.getElementCollection() == null) {
@@ -318,6 +333,10 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       elementCollection.getCollectionTable().setName(namingStrategy.getJoinTableName(eReference));
     }
     elementCollection.setName(getName(eReference));
+    if (doAddConverter(eReferenceModelGenAnnotation)) {
+      elementCollection.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
+    }
+
     annotation.setElementCollection(elementCollection);
   }
 
@@ -606,6 +625,10 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     // 3) both sides use a set, choose the owner
     final EReferenceModelGenAnnotation eReferenceModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()
         .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
+
+    if (doAddConverter(eReferenceModelGenAnnotation)) {
+      manyToMany.setConverter(ORMUtils.createDefaultConverter());
+    }
 
     if (eReference.getEOpposite() != null) {
       final EReferenceModelGenAnnotation eOppositeModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()

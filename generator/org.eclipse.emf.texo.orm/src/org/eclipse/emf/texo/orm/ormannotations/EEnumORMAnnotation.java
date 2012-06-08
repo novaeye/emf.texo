@@ -19,7 +19,7 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.EDataTypeAnnotation;
 import org.eclipse.emf.texo.annotations.annotationsmodel.EEnumAnnotation;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Basic;
 import org.eclipse.emf.texo.orm.annotations.model.orm.ElementCollection;
-import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Transient;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Version;
 
@@ -60,7 +60,7 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Enumerated ENUMERATED_EDEFAULT = Enumerated.ORDINAL;
+  protected static final EnumType ENUMERATED_EDEFAULT = null;
 
   /**
 	 * The cached value of the '{@link #getEnumerated() <em>Enumerated</em>}' attribute.
@@ -70,7 +70,7 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
 	 * @generated
 	 * @ordered
 	 */
-  protected Enumerated enumerated = ENUMERATED_EDEFAULT;
+  protected EnumType enumerated = ENUMERATED_EDEFAULT;
 
   /**
 	 * The cached value of the '{@link #getBasic() <em>Basic</em>}' containment reference.
@@ -254,7 +254,6 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
 
   /**
 	 * Returns the value of the '<em><b>Enumerated</b></em>' attribute.
-	 * The literals are from the enumeration {@link org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Enumerated</em>' attribute isn't clear, there really should be more of a description
@@ -262,13 +261,12 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enumerated</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
-	 * @see #setEnumerated(Enumerated)
+	 * @see #setEnumerated(EnumType)
 	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEEnumORMAnnotation_Enumerated()
-	 * @model
+	 * @model dataType="org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated"
 	 * @generated
 	 */
-  public Enumerated getEnumerated() {
+  public EnumType getEnumerated() {
 		return enumerated;
 	}
 
@@ -276,13 +274,12 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
 	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EEnumORMAnnotation#getEnumerated <em>Enumerated</em>}' attribute.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Enumerated</em>' attribute.
-	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated
 	 * @see #getEnumerated()
 	 * @generated
 	 */
-  public void setEnumerated(Enumerated newEnumerated) {
-		Enumerated oldEnumerated = enumerated;
-		enumerated = newEnumerated == null ? ENUMERATED_EDEFAULT : newEnumerated;
+  public void setEnumerated(EnumType newEnumerated) {
+		EnumType oldEnumerated = enumerated;
+		enumerated = newEnumerated;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EENUM_ORM_ANNOTATION__ENUMERATED, oldEnumerated, enumerated));
 	}
@@ -536,7 +533,7 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
 				setTransient((Transient)newValue);
 				return;
 			case OrmannotationsPackage.EENUM_ORM_ANNOTATION__ENUMERATED:
-				setEnumerated((Enumerated)newValue);
+				setEnumerated((EnumType)newValue);
 				return;
 			case OrmannotationsPackage.EENUM_ORM_ANNOTATION__BASIC:
 				setBasic((Basic)newValue);
@@ -594,7 +591,7 @@ public class EEnumORMAnnotation extends EEnumAnnotation implements EDataTypeORMA
 			case OrmannotationsPackage.EENUM_ORM_ANNOTATION__TRANSIENT:
 				return transient_ != null;
 			case OrmannotationsPackage.EENUM_ORM_ANNOTATION__ENUMERATED:
-				return enumerated != ENUMERATED_EDEFAULT;
+				return ENUMERATED_EDEFAULT == null ? enumerated != null : !ENUMERATED_EDEFAULT.equals(enumerated);
 			case OrmannotationsPackage.EENUM_ORM_ANNOTATION__BASIC:
 				return basic != null;
 			case OrmannotationsPackage.EENUM_ORM_ANNOTATION__VERSION:

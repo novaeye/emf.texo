@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressGroupType" name="groupall_AddressGroupType">
     <orm:table name="groupall_AddressGroupType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="groupName" optional="false">
         <orm:column name="groupName"/>
@@ -44,6 +45,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressType" name="groupall_AddressType">
     <orm:table name="groupall_AddressType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressTypeGroupFeatureGroup">
         <orm:join-table/>
@@ -74,6 +76,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.AddressList" name="groupall_AddressList">
     <orm:table name="groupall_AddressList"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="groupName" optional="false">
         <orm:column name="groupName"/>
@@ -88,6 +91,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllType" name="groupall_SimpleAllType">
     <orm:table name="groupall_SimpleAllType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="aaa" optional="false">
         <orm:column name="aaa"/>
@@ -118,6 +122,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllMapType" name="groupall_SimpleAllMapType">
     <orm:table name="groupall_SimpleAllMapType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="allMap" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.groupall.SimpleAllMapTypeAllMapFeatureGroup">
         <orm:join-table/>

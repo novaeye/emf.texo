@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.instanceclassset.MySerializableClass" name="bz306546_MySerializableClass">
     <orm:table name="bz306546_MySerializableClass"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="somethingInteresting">
         <orm:column name="somethingInteresting"/>
@@ -36,6 +37,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.instanceclassset.NonEMF" name="bz306546_NonEMF">
     <orm:table name="bz306546_NonEMF"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
 </orm:entity-mappings>

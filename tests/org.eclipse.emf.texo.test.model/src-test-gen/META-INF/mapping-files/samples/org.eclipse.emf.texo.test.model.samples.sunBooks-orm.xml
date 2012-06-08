@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.AuthorsType" name="sunBooks_AuthorsType">
     <orm:table name="sunBooks_AuthorsType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:element-collection name="authorName">
         <orm:order-column name="sunBooks_AuthorsType_authorName_ind"/>
@@ -20,6 +21,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.BooksType" name="sunBooks_BooksType">
     <orm:table name="sunBooks_BooksType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="book">
         <orm:order-column name="sunBooks_BooksType_book_ind"/>
@@ -32,6 +34,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.BookType" name="sunBooks_BookType">
     <orm:table name="sunBooks_BookType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -72,6 +75,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.PromotionType" name="sunBooks_PromotionType">
     <orm:table name="sunBooks_PromotionType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="discount">
         <orm:column name="discount"/>
@@ -83,6 +87,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.sunbooks.CollectionType" name="sunBooks_CollectionType">
     <orm:table name="sunBooks_CollectionType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="books" optional="false">
         <orm:join-column name="sunBooks_CollectionType_books"/>

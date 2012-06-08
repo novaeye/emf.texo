@@ -3,6 +3,9 @@ package org.eclipse.emf.texo.test.model.samples.workflow;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>LoopTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -10,6 +13,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "workflow_LoopTask")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class LoopTask extends CompoundTask {
 
   /**

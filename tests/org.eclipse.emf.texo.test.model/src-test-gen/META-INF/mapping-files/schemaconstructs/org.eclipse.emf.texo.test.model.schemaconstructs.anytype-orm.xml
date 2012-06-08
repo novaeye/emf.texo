@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.A" name="anytype_A">
     <orm:table name="anytype_A"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -30,6 +31,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.B" name="anytype_B">
     <orm:table name="anytype_B"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -38,6 +40,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.C" name="anytype_C">
     <orm:table name="anytype_C"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyMyAnyFeatureGroup" name="anytype_TestAny_myAny">
@@ -56,6 +59,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAny" name="anytype_TestAny">
     <orm:table name="anytype_TestAny"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -63,12 +67,9 @@
       <orm:basic name="a" optional="false">
         <orm:column name="T_a"/>
       </orm:basic>
-      <orm:many-to-one name="singleAnyType" optional="false">
-        <orm:join-column name="anytype_TestAny_singleAnyType"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:many-to-one>
+      <orm:basic>
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+      </orm:basic>
       <orm:one-to-many name="myAny" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyMyAnyFeatureGroup">
         <orm:join-table/>
         <orm:cascade>
@@ -81,13 +82,10 @@
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
-      <orm:one-to-many name="multiAnyType">
-        <orm:order-column name="anytype_TestAny_multiAnyType_ind"/>
-        <orm:join-column name="anytype_TestAny_multiAnyType"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
+      <orm:element-collection name="multiAnyType">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="anytype_TestAny_multiAnyType"/>
+      </orm:element-collection>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

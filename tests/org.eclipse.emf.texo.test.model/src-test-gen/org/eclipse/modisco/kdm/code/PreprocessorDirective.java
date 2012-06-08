@@ -5,6 +5,9 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>PreprocessorDirective</b></em>'. <!-- begin-user-doc --> <!--
@@ -13,6 +16,7 @@ import javax.persistence.OneToMany;
  * @generated
  */
 @Entity(name = "code_PreprocessorDirective")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class PreprocessorDirective extends AbstractCodeElement {
 
   /**

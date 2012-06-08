@@ -8,6 +8,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -15,6 +18,7 @@ import javax.persistence.OrderColumn;
  * @generated
  */
 @Entity(name = "workflow_Workflow")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Workflow extends WorkflowElement {
 
   /**

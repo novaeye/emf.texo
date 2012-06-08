@@ -4,8 +4,11 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>PictogramElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -14,6 +17,7 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
  * @generated
  */
 @Entity(name = "pi_PictogramElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class PictogramElement extends GraphicsAlgorithmContainer {
 
   /**

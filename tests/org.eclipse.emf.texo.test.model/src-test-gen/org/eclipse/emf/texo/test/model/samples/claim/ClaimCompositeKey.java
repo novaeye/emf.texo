@@ -2,7 +2,10 @@ package org.eclipse.emf.texo.test.model.samples.claim;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ClaimCompositeKey</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -11,6 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "claim_ClaimCompositeKey")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ClaimCompositeKey extends Identifiable {
 
   /**

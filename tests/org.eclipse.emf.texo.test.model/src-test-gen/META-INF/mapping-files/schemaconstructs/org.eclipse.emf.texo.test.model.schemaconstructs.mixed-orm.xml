@@ -40,6 +40,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType" name="mixed_LetterBodyType">
     <orm:table name="mixed_LetterBodyType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup">
         <orm:join-table/>
@@ -70,6 +71,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationType" name="mixed_SalutationType">
     <orm:table name="mixed_SalutationType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup">
         <orm:join-table/>

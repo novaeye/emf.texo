@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Forum" name="forum_Forum">
     <orm:table name="forum_Forum"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -30,6 +31,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Member" name="forum_Member">
     <orm:table name="forum_Member"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="nickname" optional="false">
         <orm:column name="nickname"/>
@@ -62,6 +64,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Topic" name="forum_Topic">
     <orm:table name="forum_Topic"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -94,6 +97,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.forum.Post" name="forum_Post">
     <orm:table name="forum_Post"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="comment" optional="false">
         <orm:column name="T_comment"/>

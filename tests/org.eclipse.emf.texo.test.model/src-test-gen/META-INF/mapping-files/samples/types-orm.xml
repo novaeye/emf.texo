@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.ManyTypes" name="types_ManyTypes">
     <orm:table name="types_ManyTypes"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:element-collection name="string">
         <orm:order-column name="types_ManyTypes_string_ind"/>
@@ -111,6 +112,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.SingleTypes" name="types_SingleTypes">
     <orm:table name="types_SingleTypes"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="string">
         <orm:column name="T_string"/>

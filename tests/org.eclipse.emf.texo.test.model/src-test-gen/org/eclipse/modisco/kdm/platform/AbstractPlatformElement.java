@@ -9,10 +9,13 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.action.ActionElement;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 import org.eclipse.modisco.kdm.core.KDMEntity;
 import org.eclipse.modisco.kdm.source.SourceRef;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>AbstractPlatformElement</b></em>'. <!-- begin-user-doc --> <!--
@@ -21,6 +24,7 @@ import org.eclipse.modisco.kdm.source.SourceRef;
  * @generated
  */
 @Entity(name = "platform_AbstractPlatformElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class AbstractPlatformElement extends KDMEntity {
 
   /**

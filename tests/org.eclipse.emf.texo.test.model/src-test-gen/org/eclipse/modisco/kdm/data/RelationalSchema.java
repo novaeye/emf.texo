@@ -5,7 +5,10 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.code.CodeItem;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>RelationalSchema</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -14,6 +17,7 @@ import org.eclipse.modisco.kdm.code.CodeItem;
  * @generated
  */
 @Entity(name = "data_RelationalSchema")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class RelationalSchema extends DataContainer {
 
   /**

@@ -6,7 +6,10 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.source.SourceRef;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>BuildDescription</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -15,6 +18,7 @@ import org.eclipse.modisco.kdm.source.SourceRef;
  * @generated
  */
 @Entity(name = "build_BuildDescription")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class BuildDescription extends BuildResource {
 
   /**

@@ -1,7 +1,10 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.anytype;
 
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>C</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -9,6 +12,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "anytype_C")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class C extends Identifiable {
 
   /**

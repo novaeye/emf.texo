@@ -1,10 +1,12 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.attributes;
 
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>AType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -12,6 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * @generated
  */
 @Entity(name = "attributes_AType")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class AType extends Identifiable {
 
   /**
@@ -59,7 +62,8 @@ public class AType extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+  @Basic()
+  @Convert("TexoTestObjectConverter")
   private Object myR = null;
 
   /**

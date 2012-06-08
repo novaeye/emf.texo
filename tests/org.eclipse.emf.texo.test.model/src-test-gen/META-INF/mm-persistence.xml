@@ -8,6 +8,7 @@
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
 		<mapping-file>META-INF/mapping-files/samples/mm-orm.xml</mapping-file>
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:mm"/>
@@ -73,6 +74,7 @@
 		<class>org.eclipse.graphiti.mm.algorithms.styles.PrecisionPoint</class>
 
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:classmm"/>
@@ -95,6 +97,7 @@
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
 		<mapping-file>META-INF/mapping-files/samples/mm-orm.xml</mapping-file>
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="Mysql"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mm"/>
@@ -161,6 +164,7 @@
 		<class>org.eclipse.graphiti.mm.algorithms.styles.PrecisionPoint</class>
 
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="Mysql"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/classmm"/>

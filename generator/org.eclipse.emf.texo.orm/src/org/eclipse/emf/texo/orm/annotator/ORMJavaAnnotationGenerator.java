@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.orm.annotations.model.orm.Enumerated;
+import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 
 /**
@@ -56,6 +56,7 @@ public class ORMJavaAnnotationGenerator {
   private List<EClassifier> eclipseLinkEClassifiers = new ArrayList<EClassifier>();
   private List<String> classFeatureNames = new ArrayList<String>();
   private Map<Class<?>, String> enumTypeNames = new HashMap<Class<?>, String>();
+  private Map<EStructuralFeature, String> eFeatureAnnotationMapping = new HashMap<EStructuralFeature, String>();
 
   public ORMJavaAnnotationGenerator() {
     // the list of eclasses coming from eclipselink
@@ -100,8 +101,14 @@ public class ORMJavaAnnotationGenerator {
     classFeatureNames.add("entityClass"); //$NON-NLS-1$
     classFeatureNames.add("targetEntity"); //$NON-NLS-1$
     classFeatureNames.add("targetClass"); //$NON-NLS-1$
+    classFeatureNames.add("class"); //$NON-NLS-1$
 
-    enumTypeNames.put(Enumerated.class, "EnumType");
+    enumTypeNames.put(EnumType.class, "EnumType");
+
+    eFeatureAnnotationMapping.put(OrmPackage.eINSTANCE.getElementCollection_Convert(),
+        "org.eclipse.persistence.annotations.Convert");
+    eFeatureAnnotationMapping.put(OrmPackage.eINSTANCE.getBasic_Convert(),
+        "org.eclipse.persistence.annotations.Convert");
   }
 
   /**
@@ -142,8 +149,18 @@ public class ORMJavaAnnotationGenerator {
         continue;
       }
 
-      // always ignore this one
-      if (eFeature.getName().equals("class")) { //$NON-NLS-1$
+      // always ignore this one, except for the converter
+      if (eFeature.getEContainingClass() != OrmPackage.eINSTANCE.getConverter() && eFeature.getName().equals("class")) { //$NON-NLS-1$
+        continue;
+      }
+
+      // for now assume that the
+      if (eFeatureAnnotationMapping.containsKey(eFeature)) {
+        if (value instanceof String) {
+          separateAnnotation.append("@" + eFeatureAnnotationMapping.get(eFeature) + "(\"" + value + "\")"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        } else {
+          separateAnnotation.append("@" + eFeatureAnnotationMapping.get(eFeature) + "(" + value + ")"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        }
         continue;
       }
 
@@ -211,7 +228,12 @@ public class ORMJavaAnnotationGenerator {
         }
         sb.append("}"); //$NON-NLS-1$
       } else {
-        sb.append(eFeature.getName() + "="); //$NON-NLS-1$
+        // special case to rename, make more generic
+        if (eFeature == OrmPackage.eINSTANCE.getConverter_Class()) {
+          sb.append("converterClass=");
+        } else {
+          sb.append(eFeature.getName() + "="); //$NON-NLS-1$
+        }
         sb.append(generateJavaAnnotation(eFeature, value, identifier));
       }
     }

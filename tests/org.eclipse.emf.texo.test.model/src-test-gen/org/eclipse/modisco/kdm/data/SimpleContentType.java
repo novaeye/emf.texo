@@ -6,6 +6,9 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>SimpleContentType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -14,6 +17,7 @@ import javax.persistence.ManyToMany;
  * @generated
  */
 @Entity(name = "data_SimpleContentType")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class SimpleContentType extends ComplexContentType {
 
   /**

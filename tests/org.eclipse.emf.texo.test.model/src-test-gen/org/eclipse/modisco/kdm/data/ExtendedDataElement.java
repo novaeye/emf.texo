@@ -1,6 +1,9 @@
 package org.eclipse.modisco.kdm.data;
 
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ExtendedDataElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
@@ -9,6 +12,7 @@ import javax.persistence.Entity;
  * @generated
  */
 @Entity(name = "data_ExtendedDataElement")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ExtendedDataElement extends AbstractDataElement {
 
   /**

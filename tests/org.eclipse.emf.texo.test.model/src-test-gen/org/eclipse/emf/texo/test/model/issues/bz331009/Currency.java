@@ -13,7 +13,8 @@ import java.util.List;
 public enum Currency {
 
   /**
-   * The enum: ROUBLES <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ROUBLES <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Виды валют <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -29,7 +30,8 @@ public enum Currency {
     }
   },
   /**
-   * The enum: EUROS <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: EUROS <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Виды валют <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -45,7 +47,8 @@ public enum Currency {
     }
   },
   /**
-   * The enum: DOLLARS <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: DOLLARS <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Виды валют <!--
+   * end-model-doc -->
    * 
    * @generated
    */

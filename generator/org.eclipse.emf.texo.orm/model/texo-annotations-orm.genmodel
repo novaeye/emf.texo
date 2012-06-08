@@ -4,7 +4,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.emf.texo.orm/src"
     modelPluginID="org.eclipse.emf.texo.orm" modelName="Texo-annotations-orm" suppressInterfaces="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    usedGenPackages="eclipselink_orm_2_0.genmodel#//orm platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.emf.texo.annotations.model/model/texo-annotations-model.genmodel#//annotationsmodel">
+    usedGenPackages="eclipselink_orm.genmodel#//orm platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.emf.texo.annotations.model/model/texo-annotations-model.genmodel#//annotationsmodel">
   <foreignModel>texo-annotations-orm.ecore</foreignModel>
   <genPackages prefix="Ormannotations" basePackage="org.eclipse.emf.texo.orm" resource="XML"
       disposableProviderFactory="true" ecorePackage="texo-annotations-orm.ecore#/">
@@ -71,6 +71,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/associationOverride"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/attributeOverride"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/primaryKeyJoinColumn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EReferenceORMAnnotation/basic"/>
     </genClasses>
     <genClasses ecoreClass="texo-annotations-orm.ecore#//EEnumORMAnnotation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-orm.ecore#//EEnumORMAnnotation/enumerated"/>

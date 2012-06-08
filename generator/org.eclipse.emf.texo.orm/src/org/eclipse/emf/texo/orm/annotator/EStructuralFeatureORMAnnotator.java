@@ -17,6 +17,12 @@
 
 package org.eclipse.emf.texo.orm.annotator;
 
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
+import org.eclipse.emf.texo.utils.ModelUtils;
+
 /**
  * Base class of EStructuralFeature annotators.
  * 
@@ -25,4 +31,25 @@ package org.eclipse.emf.texo.orm.annotator;
  */
 
 public class EStructuralFeatureORMAnnotator extends ETypeElementORMAnnotator {
+  protected boolean doAddConverter(EStructuralFeatureModelGenAnnotation annotation) {
+    if (FeatureMapUtil.isFeatureMap(annotation.getEStructuralFeature())) {
+      return false;
+    }
+    if (!ORMMappingOptions.getDefaultOptions().isTestRun()) {
+      return false;
+    }
+    if (annotation.getEStructuralFeature().getEType() instanceof EEnum) {
+      return false;
+    }
+    if (ModelUtils.isAnyType(annotation.getEStructuralFeature())) {
+      return true;
+    }
+    if (annotation.getObjectType() != null
+        && (annotation.getItemType().equals(EObject.class.getName()) || annotation.getItemType().equals(
+            Object.class.getName()))) {
+      return true;
+    }
+    return false;
+  }
+
 }

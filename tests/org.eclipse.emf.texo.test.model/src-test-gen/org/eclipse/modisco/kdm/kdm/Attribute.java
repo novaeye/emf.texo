@@ -2,7 +2,10 @@ package org.eclipse.modisco.kdm.kdm;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.modisco.kdm.core.Element;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>Attribute</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -10,6 +13,7 @@ import org.eclipse.modisco.kdm.core.Element;
  * @generated
  */
 @Entity(name = "kdm_Attribute")
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Attribute extends Element {
 
   /**

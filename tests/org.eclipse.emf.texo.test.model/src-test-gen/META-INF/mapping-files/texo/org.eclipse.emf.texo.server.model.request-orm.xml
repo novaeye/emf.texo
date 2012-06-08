@@ -8,32 +8,25 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.ActionType" name="request_ActionType">
     <orm:table name="request_ActionType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
-      <orm:one-to-many name="update">
-        <orm:order-column name="request_ActionType_update_ind"/>
-        <orm:join-column name="request_ActionType_update"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:one-to-many name="insert">
-        <orm:order-column name="request_ActionType_insert_ind"/>
-        <orm:join-column name="request_ActionType_insert"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:one-to-many name="delete">
-        <orm:order-column name="request_ActionType_delete_ind"/>
-        <orm:join-column name="request_ActionType_delete"/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
+      <orm:element-collection name="update">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="request_ActionType_update"/>
+      </orm:element-collection>
+      <orm:element-collection name="insert">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="request_ActionType_insert"/>
+      </orm:element-collection>
+      <orm:element-collection name="delete">
+        <orm:convert>TexoTestObjectConverter</orm:convert>
+        <orm:collection-table name="request_ActionType_delete"/>
+      </orm:element-collection>
     </orm:attributes>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.QueryType" name="request_QueryType">
     <orm:table name="request_QueryType"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="namedQuery">
         <orm:column name="namedQuery"/>
@@ -52,12 +45,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.Parameter" name="request_Parameter">
     <orm:table name="request_Parameter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
       </orm:basic>
       <orm:basic name="value" optional="false">
         <orm:column name="T_value"/>
+        <orm:convert>TexoTestObjectConverter</orm:convert>
       </orm:basic>
       <orm:basic name="type">
         <orm:column name="T_type"/>

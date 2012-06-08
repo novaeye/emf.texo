@@ -8,6 +8,7 @@
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
 		<mapping-file>META-INF/mapping-files/samples/epo2-orm.xml</mapping-file>
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:epo2"/>
@@ -38,6 +39,7 @@
 		<class>org.eclipse.emf.texo.test.model.samples.extendedpo2.GlobalLocation</class>
 
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.HSQLPlatform"/>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:classepo2"/>
@@ -60,6 +62,7 @@
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
 		<mapping-file>META-INF/mapping-files/samples/epo2-orm.xml</mapping-file>
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="Mysql"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/epo2"/>
@@ -91,6 +94,7 @@
 		<class>org.eclipse.emf.texo.test.model.samples.extendedpo2.GlobalLocation</class>
 
 		<properties>
+			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
             <property name="eclipselink.target-database" value="Mysql"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/classepo2"/>
