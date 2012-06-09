@@ -82,10 +82,12 @@ public class GenerateCode extends BaseGenerateAction {
       monitor.beginTask(Messages.getString("generate.Initialize"), eClassifierCount); //$NON-NLS-1$
 
       artifactGenerator.run();
+    } catch (Exception e) {
+      e.printStackTrace(System.err);
+      throw new IllegalStateException(e);
     } finally {
       AnnotationManager.removeEnabledAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
-
   }
 
   protected boolean isDoDao() {

@@ -158,7 +158,7 @@ public class AnnotationManager {
       final AnnotatedEDataType aDataType = annotatedModel.getAnnotatedEDataType((EDataType) eModelElement, true);
       aDataType.getEDataTypeAnnotations().add((EDataTypeAnnotation) annotation);
     } else {
-      throw new IllegalArgumentException("Type " + eModelElement + " not supported here");// $//$
+      throw new IllegalArgumentException("Type " + eModelElement + " not supported here");// $//$ //$NON-NLS-1$ //$NON-NLS-2$
     }
   }
 

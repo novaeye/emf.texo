@@ -24,9 +24,12 @@ package org.eclipse.emf.texo.orm.annotator;
  */
 public class ORMMappingOptions {
 
-  private static ORMMappingOptions defaultOptions = null;
+  private static ORMMappingOptions defaultOptions = new ORMMappingOptions();
 
   public static ORMMappingOptions getDefaultOptions() {
+    if (defaultOptions == null) {
+      defaultOptions = new ORMMappingOptions();
+    }
     return defaultOptions;
   }
 
