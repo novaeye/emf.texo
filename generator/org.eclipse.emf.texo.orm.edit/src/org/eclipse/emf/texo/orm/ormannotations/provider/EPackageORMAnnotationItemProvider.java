@@ -68,6 +68,7 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
       addGenerateJavaAnnotationsPropertyDescriptor(object);
       addAddOrderColumnToListMappingsPropertyDescriptor(object);
       addRenameSQLReservedNamesPropertyDescriptor(object);
+      addUniqueEntityNamesPropertyDescriptor(object);
     }
     return itemPropertyDescriptors;
   }
@@ -297,6 +298,22 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
   }
 
   /**
+   * This adds a property descriptor for the Unique Entity Names feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generatedNOT
+   */
+  protected void addUniqueEntityNamesPropertyDescriptor(Object object) {
+    itemPropertyDescriptors.add(createItemPropertyDescriptor(
+        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+        getResourceLocator(),
+        getString("_UI_EPackageORMAnnotation_uniqueEntityNames_feature"),
+        getString("_UI_EPackageORMAnnotation_uniqueEntityNames_description",
+            "_UI_EPackageORMAnnotation_uniqueEntityNames_feature", "_UI_EPackageORMAnnotation_type"),
+        OrmannotationsPackage.Literals.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES, true, false, false,
+        ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+  }
+
+  /**
    * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
    * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
    * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!-- begin-user-doc --> <!--
@@ -375,6 +392,7 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__GENERATE_JAVA_ANNOTATIONS:
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES:
+    case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES:
       fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
       return;
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__DEFAULT_CASCADE_CONTAINMENT:

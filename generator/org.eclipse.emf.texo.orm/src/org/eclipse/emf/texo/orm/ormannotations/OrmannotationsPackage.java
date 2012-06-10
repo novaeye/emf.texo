@@ -266,13 +266,22 @@ public class OrmannotationsPackage extends EPackageImpl {
   public static final int EPACKAGE_ORM_ANNOTATION__INHERITANCE = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 16;
 
   /**
+	 * The feature id for the '<em><b>Unique Entity Names</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 17;
+
+		/**
 	 * The number of structural features of the '<em>EPackage ORM Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 17;
+  public static final int EPACKAGE_ORM_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.EPACKAGE_ANNOTATION_FEATURE_COUNT + 18;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.orm.ormannotations.ENamedElementORMAnnotation <em>ENamed Element ORM Annotation</em>}' class.
@@ -1666,6 +1675,19 @@ public class OrmannotationsPackage extends EPackageImpl {
 	}
 
   /**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isUniqueEntityNames <em>Unique Entity Names</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unique Entity Names</em>'.
+	 * @see org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isUniqueEntityNames()
+	 * @see #getEPackageORMAnnotation()
+	 * @generated
+	 */
+	public EAttribute getEPackageORMAnnotation_UniqueEntityNames() {
+		return (EAttribute)ePackageORMAnnotationEClass.getEStructuralFeatures().get(17);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EType Element ORM Annotation</em>'.
@@ -2364,6 +2386,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS);
 		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES);
 		createEReference(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__INHERITANCE);
+		createEAttribute(ePackageORMAnnotationEClass, EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES);
 
 		eTypeElementORMAnnotationEClass = createEClass(ETYPE_ELEMENT_ORM_ANNOTATION);
 		createEReference(eTypeElementORMAnnotationEClass, ETYPE_ELEMENT_ORM_ANNOTATION__TRANSIENT);
@@ -2495,6 +2518,7 @@ public class OrmannotationsPackage extends EPackageImpl {
 		initEAttribute(getEPackageORMAnnotation_AddOrderColumnToListMappings(), theEcorePackage.getEBoolean(), "addOrderColumnToListMappings", "false", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPackageORMAnnotation_RenameSQLReservedNames(), theEcorePackage.getEBoolean(), "renameSQLReservedNames", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEPackageORMAnnotation_Inheritance(), theOrmPackage.getInheritance(), null, "inheritance", null, 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPackageORMAnnotation_UniqueEntityNames(), theEcorePackage.getEBoolean(), "uniqueEntityNames", "true", 0, 1, EPackageORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eTypeElementORMAnnotationEClass, ETypeElementORMAnnotation.class, "ETypeElementORMAnnotation", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getETypeElementORMAnnotation_Transient(), theOrmPackage.getTransient(), null, "transient", null, 0, 1, ETypeElementORMAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2718,6 +2742,14 @@ public class OrmannotationsPackage extends EPackageImpl {
     public static final EReference EPACKAGE_ORM_ANNOTATION__INHERITANCE = eINSTANCE.getEPackageORMAnnotation_Inheritance();
 
     /**
+		 * The meta object literal for the '<em><b>Unique Entity Names</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EAttribute EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES = eINSTANCE.getEPackageORMAnnotation_UniqueEntityNames();
+
+				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation <em>EType Element ORM Annotation</em>}' class.
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
 		 * @see org.eclipse.emf.texo.orm.ormannotations.ETypeElementORMAnnotation

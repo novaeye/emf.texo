@@ -138,6 +138,7 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
 			childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ASSOCIATION_OVERRIDE);
 			childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__ATTRIBUTE_OVERRIDE);
 			childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN);
+			childrenFeatures.add(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__BASIC);
 		}
 		return childrenFeatures;
 	}
@@ -212,6 +213,7 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ASSOCIATION_OVERRIDE:
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__ATTRIBUTE_OVERRIDE:
 			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN:
+			case OrmannotationsPackage.EREFERENCE_ORM_ANNOTATION__BASIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -332,6 +334,11 @@ public class EReferenceORMAnnotationItemProvider extends EReferenceAnnotationIte
 			(createChildParameter
 				(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__PRIMARY_KEY_JOIN_COLUMN,
 				 OrmFactory.eINSTANCE.createPrimaryKeyJoinColumn()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OrmannotationsPackage.Literals.EREFERENCE_ORM_ANNOTATION__BASIC,
+				 OrmFactory.eINSTANCE.createBasic()));
 	}
 
   /**

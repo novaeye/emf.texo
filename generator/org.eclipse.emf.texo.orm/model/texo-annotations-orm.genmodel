@@ -26,6 +26,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-orm.ecore#//EPackageORMAnnotation/addOrderColumnToListMappings"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-orm.ecore#//EPackageORMAnnotation/renameSQLReservedNames"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//EPackageORMAnnotation/inheritance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-orm.ecore#//EPackageORMAnnotation/uniqueEntityNames"/>
     </genClasses>
     <genClasses image="false" ecoreClass="texo-annotations-orm.ecore#//ETypeElementORMAnnotation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference texo-annotations-orm.ecore#//ETypeElementORMAnnotation/transient"/>

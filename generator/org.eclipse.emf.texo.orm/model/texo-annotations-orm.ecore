@@ -42,6 +42,8 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inheritance" eType="ecore:EClass orm.ecore#//Inheritance"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uniqueEntityNames" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ETypeElementORMAnnotation" abstract="true"
       interface="true" eSuperTypes="#//ENamedElementORMAnnotation">

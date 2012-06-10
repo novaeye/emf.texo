@@ -10,6 +10,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.emf.texo.annotations.annotationsmodel.provider.TexoannotationsmodelEditPlugin;
+import org.eclipse.emf.texo.orm.annotations.model.orm.provider.Eclipselink_ormEditPlugin;
 import org.eclipse.emf.texo.orm.annotations.model.orm.provider.Eclipselink_orm_2_0EditPlugin;
 
 /**
@@ -40,7 +41,7 @@ public final class TexoannotationsormEditPlugin extends EMFPlugin {
   public TexoannotationsormEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     Eclipselink_orm_2_0EditPlugin.INSTANCE,
+		     Eclipselink_ormEditPlugin.INSTANCE,
 		     EcoreEditPlugin.INSTANCE,
 		     TexoannotationsmodelEditPlugin.INSTANCE,
 		   });

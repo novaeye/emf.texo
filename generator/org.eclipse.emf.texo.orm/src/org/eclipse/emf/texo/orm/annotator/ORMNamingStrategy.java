@@ -206,7 +206,8 @@ public class ORMNamingStrategy {
   public String getJoinColumnName(EStructuralFeature eFeature) {
     String localName = getDictionariedName(eFeature, "joinColumn"); //$NON-NLS-1$
     if (localName == null) {
-      if (ePackageORMAnnotation.isEnforceUniqueNames()) {
+      if (ePackageORMAnnotation.isEnforceUniqueNames() || eFeature instanceof EReference
+          && eFeature.getEType() == eFeature.getEContainingClass()) {
         localName = getEntityName(eFeature.getEContainingClass()) + "_" + eFeature.getName();
       } else {
         localName = getEntityName(eFeature.getEContainingClass()) + "_id";
@@ -227,10 +228,15 @@ public class ORMNamingStrategy {
   public String getInverseJoinColumnName(EReference eReference) {
     String localName = getDictionariedName(eReference, "inverseJoinColumn"); //$NON-NLS-1$
     if (localName == null) {
-      if (eReference.getEOpposite() != null) {
+      // pointers to ourselves gives duplicate columns
+      if (ePackageORMAnnotation.isEnforceUniqueNames()
+          || eReference.getEReferenceType() == eReference.getEContainingClass()) {
+        localName = eReference.getName() + "_" + getEntityName(eReference.getEReferenceType());
+      } else if (eReference.getEOpposite() != null) {
         return getJoinColumnName(eReference.getEOpposite());
+      } else {
+        localName = getEntityName(eReference.getEReferenceType()) + "_id"; //$NON-NLS-1$
       }
-      localName = getEntityName(eReference.getEReferenceType()) + "_id"; //$NON-NLS-1$
     }
     return processName(localName, ePackageORMAnnotation.getColumnNamePrefix());
   }
@@ -260,7 +266,7 @@ public class ORMNamingStrategy {
   }
 
   private String getUniqueMakingPrefix(EClass eClass) {
-    if (ePackageORMAnnotation.isEnforceUniqueNames()) {
+    if (ePackageORMAnnotation.isUniqueEntityNames()) {
       return eClass.getEPackage().getNsPrefix() + "_"; //$NON-NLS-1$
     }
     return ""; //$NON-NLS-1$
