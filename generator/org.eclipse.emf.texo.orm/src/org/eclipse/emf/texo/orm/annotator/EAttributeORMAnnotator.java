@@ -293,9 +293,9 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
     if (isLob) {
       final Lob lob = OrmFactory.eINSTANCE.createLob();
       basic.setLob(lob);
-    } else if (isTime) {
+    } else if (!basicSet && isTime) {
       basic.setTemporal(TemporalType.TIMESTAMP);
-    } else if (isDate) {
+    } else if (!basicSet && isDate) {
       basic.setTemporal(TemporalType.DATE);
     } else if (doAddConverter(eAttributeModelGen)) {
       basic.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
