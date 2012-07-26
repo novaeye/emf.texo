@@ -19,7 +19,9 @@ package org.eclipse.emf.texo.server.service;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.server.model.request.ActionType;
+import org.eclipse.emf.texo.server.model.request.QueryType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResultType;
 import org.eclipse.emf.texo.store.ObjectStore;
@@ -44,7 +46,16 @@ public class UpdateInsertModelOperation extends ModelOperation {
 
     for (Iterator<Object> it = allConvertedObjects.iterator(); it.hasNext();) {
       final Object o = it.next();
-      if (o instanceof ActionType) {
+      // also a querytype can be posted...
+      if (o instanceof QueryType) {
+        // we can only handle one query action
+        final RetrieveModelOperation retrieveModelOperation = ComponentProvider.getInstance().newInstance(
+            RetrieveModelOperation.class);
+        retrieveModelOperation.setServiceContext(getServiceContext());
+
+        retrieveModelOperation.internalExecute();
+        return;
+      } else if (o instanceof ActionType) {
         final ActionType actionType = (ActionType) o;
 
         // first delete
