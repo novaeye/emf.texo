@@ -32,7 +32,7 @@ public class BalanceAccount extends Account {
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "accounting_BalanceAccount_report_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "accounting_BalanceAccount_report") }, inverseJoinColumns = { @JoinColumn(name = "accounting_ReportGroup_account") }, name = "accounting_BalanceAccount_report")
+  @JoinTable(joinColumns = { @JoinColumn(name = "accounting_BalanceAccount_report") }, inverseJoinColumns = { @JoinColumn(name = "report_accounting_ReportGroup") }, name = "accounting_BalanceAccount_report")
   private List<ReportGroup> report = new ArrayList<ReportGroup>();
 
   /**

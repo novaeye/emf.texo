@@ -45,7 +45,7 @@ public class PaymentInfo extends Identifiable {
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "m_PaymentInfo_factPayments_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "m_PaymentInfo_factPayments") }, inverseJoinColumns = { @JoinColumn(name = "m_PaymentItem_id") }, name = "m_PaymentInfo_factPayments")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_PaymentInfo_factPayments") }, inverseJoinColumns = { @JoinColumn(name = "factPayments_m_PaymentItem") }, name = "m_PaymentInfo_factPayments")
   @Access(AccessType.FIELD)
   private List<PaymentItem> factPayments = new ArrayList<PaymentItem>();
 

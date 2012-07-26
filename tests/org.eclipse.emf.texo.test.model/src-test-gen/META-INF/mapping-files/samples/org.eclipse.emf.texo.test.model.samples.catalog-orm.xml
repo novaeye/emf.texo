@@ -20,7 +20,7 @@
         <orm:order-column name="catalog_CatalogType_subCatalog_ind"/>
         <orm:join-table name="catalog_CatalogType_subCatalog">
           <orm:join-column name="catalog_CatalogType_subCatalog"/>
-          <orm:inverse-join-column name="catalog_CatalogType_id"/>
+          <orm:inverse-join-column name="subCatalog_catalog_CatalogType"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -32,7 +32,7 @@
         <orm:order-column name="catalog_CatalogType_product_ind"/>
         <orm:join-table name="catalog_CatalogType_product">
           <orm:join-column name="catalog_CatalogType_product"/>
-          <orm:inverse-join-column name="catalog_ProductType_id"/>
+          <orm:inverse-join-column name="product_catalog_ProductType"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

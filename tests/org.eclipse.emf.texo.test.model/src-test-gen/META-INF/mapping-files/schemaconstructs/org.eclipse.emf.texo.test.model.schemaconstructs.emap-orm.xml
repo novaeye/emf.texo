@@ -17,7 +17,7 @@
         <orm:map-key-column name="emap_Book_writers_ind" table="emap_Book_writers"/>
         <orm:join-table name="emap_Book_writers">
           <orm:join-column name="emap_Book_writers"/>
-          <orm:inverse-join-column name="emap_StringToWriterMapEntry_id"/>
+          <orm:inverse-join-column name="writers_emap_StringToWriterMapEntry"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-all/>
@@ -45,7 +45,7 @@
         <orm:map-key-column name="emap_BookStore_writersByBook_ind" table="emap_BookStore_writersByBook"/>
         <orm:join-table name="emap_BookStore_writersByBook">
           <orm:join-column name="emap_BookStore_writersByBook"/>
-          <orm:inverse-join-column name="emap_WriterToBookMapEntry_id"/>
+          <orm:inverse-join-column name="writersByBook_emap_WriterToBookMapEntry"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-all/>

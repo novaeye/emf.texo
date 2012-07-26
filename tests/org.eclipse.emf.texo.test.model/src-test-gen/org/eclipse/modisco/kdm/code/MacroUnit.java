@@ -24,7 +24,7 @@ public class MacroUnit extends PreprocessorDirective {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private MacroKind kind = MacroKind.REGULAR;
+  private MacroKind kind = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

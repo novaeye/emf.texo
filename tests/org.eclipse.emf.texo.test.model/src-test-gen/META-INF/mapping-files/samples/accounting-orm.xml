@@ -94,7 +94,7 @@
         <orm:order-column name="accounting_BalanceAccount_report_ind"/>
         <orm:join-table name="accounting_BalanceAccount_report">
           <orm:join-column name="accounting_BalanceAccount_report"/>
-          <orm:inverse-join-column name="accounting_ReportGroup_account"/>
+          <orm:inverse-join-column name="report_accounting_ReportGroup"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -166,7 +166,7 @@
         <orm:order-column name="accounting_ReportGroup_account_ind"/>
         <orm:join-table name="accounting_ReportGroup_account">
           <orm:join-column name="accounting_ReportGroup_account"/>
-          <orm:inverse-join-column name="accounting_BalanceAccount_report"/>
+          <orm:inverse-join-column name="account_accounting_BalanceAccount"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

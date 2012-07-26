@@ -40,7 +40,7 @@
         <orm:order-column name="forum_Member_posts_ind"/>
         <orm:join-table name="forum_Member_posts">
           <orm:join-column name="forum_Member_posts"/>
-          <orm:inverse-join-column name="forum_Post_author"/>
+          <orm:inverse-join-column name="posts_forum_Post"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -52,7 +52,7 @@
         <orm:order-column name="forum_Member_created_ind"/>
         <orm:join-table name="forum_Member_created">
           <orm:join-column name="forum_Member_created"/>
-          <orm:inverse-join-column name="forum_Topic_creator"/>
+          <orm:inverse-join-column name="created_forum_Topic"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -85,7 +85,7 @@
         <orm:order-column name="forum_Topic_posts_ind"/>
         <orm:join-table name="forum_Topic_posts">
           <orm:join-column name="forum_Topic_posts"/>
-          <orm:inverse-join-column name="forum_Post_topic"/>
+          <orm:inverse-join-column name="posts_forum_Post"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

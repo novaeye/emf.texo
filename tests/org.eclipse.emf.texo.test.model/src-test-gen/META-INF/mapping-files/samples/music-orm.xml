@@ -110,7 +110,7 @@
         <orm:order-column name="org_elver_music_Album_genres_ind"/>
         <orm:join-table name="org_elver_music_Album_genres">
           <orm:join-column name="org_elver_music_Album_genres"/>
-          <orm:inverse-join-column name="org_elver_music_Genre_id"/>
+          <orm:inverse-join-column name="genres_org_elver_music_Genre"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

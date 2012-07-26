@@ -130,7 +130,7 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private LineStyle lineStyle = LineStyle.SOLID;
+  private LineStyle lineStyle = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

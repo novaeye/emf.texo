@@ -93,7 +93,7 @@ public class SimpleType extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private SimpleEnum enu = SimpleEnum.ENUM1;
+  private SimpleEnum enu = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

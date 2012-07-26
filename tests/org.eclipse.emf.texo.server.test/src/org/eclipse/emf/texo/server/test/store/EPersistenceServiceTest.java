@@ -37,7 +37,6 @@ import org.eclipse.emf.texo.test.emfmodel.library.Library;
 import org.eclipse.emf.texo.test.emfmodel.library.LibraryFactory;
 import org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage;
 import org.eclipse.emf.texo.test.emfmodel.library.Writer;
-import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.junit.Test;
 
 /**
@@ -50,7 +49,6 @@ public class EPersistenceServiceTest extends BaseTest {
 
   public EPersistenceServiceTest() {
     super("library"); //$NON-NLS-1$
-
   }
 
   @Override
@@ -65,7 +63,6 @@ public class EPersistenceServiceTest extends BaseTest {
   @Test
   public void testPersistGetCountQuery() {
     final LibraryFactory factory = LibraryFactory.eINSTANCE;
-    LibraryModelPackage.initialize();
     final int COUNT = 5;
 
     long libId = -1;

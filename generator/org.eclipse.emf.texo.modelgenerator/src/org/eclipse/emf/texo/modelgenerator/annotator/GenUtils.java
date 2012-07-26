@@ -369,7 +369,7 @@ public class GenUtils {
   private static String getStaticDefaultValue(AnnotationManager annotationManager, EEnum eNum, final String literal) {
     final EEnumLiteral enumLiteral;
     if (literal == null || literal.trim().length() == 0) {
-      enumLiteral = (EEnumLiteral) eNum.getDefaultValue();
+      enumLiteral = null;
     } else {
       enumLiteral = eNum.getEEnumLiteralByLiteral(literal);
     }

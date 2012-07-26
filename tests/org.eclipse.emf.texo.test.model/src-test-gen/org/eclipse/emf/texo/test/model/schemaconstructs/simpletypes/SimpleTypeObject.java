@@ -90,7 +90,7 @@ public class SimpleTypeObject extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
-  private SimpleEnum enu = SimpleEnum.ENUM1;
+  private SimpleEnum enu = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

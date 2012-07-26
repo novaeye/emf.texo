@@ -54,7 +54,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_base") }, inverseJoinColumns = { @JoinColumn(name = "inv_PType_subTypes") }, name = "inv_PType_base")
+  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_base") }, inverseJoinColumns = { @JoinColumn(name = "base_inv_PType") }, name = "inv_PType_base")
   private PType base = null;
 
   /**
@@ -71,7 +71,7 @@ public class PType extends Identifiable {
    * @generated
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
-  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_subNOTypes") }, inverseJoinColumns = { @JoinColumn(name = "inv_PType_id") }, name = "inv_PType_subNOTypes")
+  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_subNOTypes") }, inverseJoinColumns = { @JoinColumn(name = "subNOTypes_inv_PType") }, name = "inv_PType_subNOTypes")
   private Set<PType> subNOTypes = new HashSet<PType>();
 
   /**
@@ -81,7 +81,7 @@ public class PType extends Identifiable {
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "inv_PType_infoReferences_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_infoReferences") }, inverseJoinColumns = { @JoinColumn(name = "inv_PDeclaration_id") }, name = "inv_PType_infoReferences")
+  @JoinTable(joinColumns = { @JoinColumn(name = "inv_PType_infoReferences") }, inverseJoinColumns = { @JoinColumn(name = "infoReferences_inv_PDeclaration") }, name = "inv_PType_infoReferences")
   private List<PDeclaration> infoReferences = new ArrayList<PDeclaration>();
 
   /**

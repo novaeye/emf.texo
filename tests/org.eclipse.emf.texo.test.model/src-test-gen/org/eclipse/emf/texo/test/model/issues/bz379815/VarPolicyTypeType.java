@@ -30,7 +30,7 @@ public class VarPolicyTypeType extends Identifiable {
   @Basic(optional = false)
   @Column(name = "T_type")
   @Enumerated(EnumType.STRING)
-  private TypeType type = TypeType.EROSION;
+  private TypeType type = null;
 
   /**
    * Returns the value of '<em><b>type</b></em>' feature.

@@ -78,7 +78,7 @@ public class PurchaseOrder extends Identifiable {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private OrderStatus status = OrderStatus.PENDING;
+  private OrderStatus status = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

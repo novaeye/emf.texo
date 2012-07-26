@@ -39,7 +39,7 @@ public class OutputPort extends Port {
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "workflow_OutputPort_edges_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "workflow_OutputPort_edges") }, inverseJoinColumns = { @JoinColumn(name = "workflow_Edge_source") }, name = "workflow_OutputPort_edges")
+  @JoinTable(joinColumns = { @JoinColumn(name = "workflow_OutputPort_edges") }, inverseJoinColumns = { @JoinColumn(name = "edges_workflow_Edge") }, name = "workflow_OutputPort_edges")
   private List<Edge> edges = new ArrayList<Edge>();
 
   /**

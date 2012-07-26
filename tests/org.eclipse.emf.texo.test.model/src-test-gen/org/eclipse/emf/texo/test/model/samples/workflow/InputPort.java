@@ -39,7 +39,7 @@ public class InputPort extends Port {
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "workflow_InputPort_edges_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "workflow_InputPort_edges") }, inverseJoinColumns = { @JoinColumn(name = "workflow_Edge_target") }, name = "workflow_InputPort_edges")
+  @JoinTable(joinColumns = { @JoinColumn(name = "workflow_InputPort_edges") }, inverseJoinColumns = { @JoinColumn(name = "edges_workflow_Edge") }, name = "workflow_InputPort_edges")
   private List<Edge> edges = new ArrayList<Edge>();
 
   /**

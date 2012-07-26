@@ -39,7 +39,7 @@ public class SceneType extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private PindexType pindex = PindexType._1;
+  private PindexType pindex = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

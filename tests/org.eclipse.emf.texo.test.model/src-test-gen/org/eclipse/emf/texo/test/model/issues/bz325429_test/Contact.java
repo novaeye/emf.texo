@@ -33,7 +33,7 @@ public class Contact extends Identifiable {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private ContactType type = ContactType.PHONE;
+  private ContactType type = null;
 
   /**
    * Returns the value of '<em><b>value</b></em>' feature.

@@ -22,7 +22,7 @@
         <orm:order-column name="test_EClass0_many_ind"/>
         <orm:join-table name="test_EClass0_many">
           <orm:join-column name="test_EClass0_many"/>
-          <orm:inverse-join-column name="test_EClass1_many"/>
+          <orm:inverse-join-column name="many_test_EClass1"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -47,7 +47,7 @@
         <orm:order-column name="test_EClass1_many_ind"/>
         <orm:join-table name="test_EClass1_many">
           <orm:join-column name="test_EClass1_many"/>
-          <orm:inverse-join-column name="test_EClass0_many"/>
+          <orm:inverse-join-column name="many_test_EClass0"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

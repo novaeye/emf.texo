@@ -114,7 +114,7 @@ public class Person extends Identifiable {
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "m_Person_phones_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "m_Person_phones") }, inverseJoinColumns = { @JoinColumn(name = "m_Phone_id") }, name = "m_Person_phones")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Person_phones") }, inverseJoinColumns = { @JoinColumn(name = "phones_m_Phone") }, name = "m_Person_phones")
   @Access(AccessType.FIELD)
   private List<Phone> phones = new ArrayList<Phone>();
 

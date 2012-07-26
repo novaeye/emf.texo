@@ -147,7 +147,7 @@
       <orm:many-to-many name="pictogramLinks">
         <orm:join-table name="pi_Diagram_pictogramLinks">
           <orm:join-column name="pi_Diagram_pictogramLinks"/>
-          <orm:inverse-join-column name="pi_PictogramLink_id"/>
+          <orm:inverse-join-column name="pictogramLinks_pi_PictogramLink"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -163,7 +163,7 @@
       <orm:many-to-one name="start" optional="true">
         <orm:join-table name="pi_Connection_start">
           <orm:join-column name="pi_Connection_start"/>
-          <orm:inverse-join-column name="pi_Anchor_outgoingConnections"/>
+          <orm:inverse-join-column name="start_pi_Anchor"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -174,7 +174,7 @@
       <orm:many-to-one name="end" optional="true">
         <orm:join-table name="pi_Connection_end">
           <orm:join-column name="pi_Connection_end"/>
-          <orm:inverse-join-column name="pi_Anchor_incomingConnections"/>
+          <orm:inverse-join-column name="end_pi_Anchor"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -339,7 +339,7 @@
         <orm:order-column name="pi_CompositeConnection_children_ind"/>
         <orm:join-table name="pi_CompositeConnection_children">
           <orm:join-column name="pi_CompositeConnection_children"/>
-          <orm:inverse-join-column name="pi_CurvedConnection_id"/>
+          <orm:inverse-join-column name="children_pi_CurvedConnection"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

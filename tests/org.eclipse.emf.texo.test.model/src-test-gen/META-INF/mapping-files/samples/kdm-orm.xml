@@ -36,7 +36,7 @@
       <orm:many-to-many name="stereotype">
         <orm:join-table name="core_ModelElement_stereotype">
           <orm:join-column name="core_ModelElement_stereotype"/>
-          <orm:inverse-join-column name="kdm_Stereotype_id"/>
+          <orm:inverse-join-column name="stereotype_kdm_Stereotype"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -86,7 +86,7 @@
         <orm:order-column name="core_KDMEntity_inAggregated_ind"/>
         <orm:join-table name="core_KDMEntity_inAggregated">
           <orm:join-column name="core_KDMEntity_inAggregated"/>
-          <orm:inverse-join-column name="core_AggregatedRelationship_to"/>
+          <orm:inverse-join-column name="inAggregated_core_AggregatedRelationship"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -98,7 +98,7 @@
         <orm:order-column name="core_KDMEntity_outAggregated_ind"/>
         <orm:join-table name="core_KDMEntity_outAggregated">
           <orm:join-column name="core_KDMEntity_outAggregated"/>
-          <orm:inverse-join-column name="core_AggregatedRelationship_from"/>
+          <orm:inverse-join-column name="outAggregated_core_AggregatedRelationship"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -110,7 +110,7 @@
         <orm:order-column name="core_KDMEntity_outbound_ind"/>
         <orm:join-table name="core_KDMEntity_outbound">
           <orm:join-column name="core_KDMEntity_outbound"/>
-          <orm:inverse-join-column name="core_KDMRelationship_id"/>
+          <orm:inverse-join-column name="outbound_core_KDMRelationship"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -122,7 +122,7 @@
         <orm:order-column name="core_KDMEntity_inbound_ind"/>
         <orm:join-table name="core_KDMEntity_inbound">
           <orm:join-column name="core_KDMEntity_inbound"/>
-          <orm:inverse-join-column name="core_KDMRelationship_id"/>
+          <orm:inverse-join-column name="inbound_core_KDMRelationship"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -134,7 +134,7 @@
         <orm:order-column name="core_KDMEntity_group_ind"/>
         <orm:join-table name="core_KDMEntity_group">
           <orm:join-column name="core_KDMEntity_group"/>
-          <orm:inverse-join-column name="core_KDMEntity_id"/>
+          <orm:inverse-join-column name="group_core_KDMEntity"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -146,7 +146,7 @@
         <orm:order-column name="core_KDMEntity_groupedElement_ind"/>
         <orm:join-table name="core_KDMEntity_groupedElement">
           <orm:join-column name="core_KDMEntity_groupedElement"/>
-          <orm:inverse-join-column name="core_KDMEntity_id"/>
+          <orm:inverse-join-column name="groupedElement_core_KDMEntity"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -185,7 +185,7 @@
       <orm:many-to-many name="relation">
         <orm:join-table name="core_AggregatedRelationship_relation">
           <orm:join-column name="core_AggregatedRelationship_relation"/>
-          <orm:inverse-join-column name="core_KDMRelationship_id"/>
+          <orm:inverse-join-column name="relation_core_KDMRelationship"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -251,7 +251,7 @@
         <orm:order-column name="kdm_KDMModel_ownedElement_ind"/>
         <orm:join-table name="kdm_KDMModel_ownedElement">
           <orm:join-column name="kdm_KDMModel_ownedElement"/>
-          <orm:inverse-join-column name="core_KDMEntity_model"/>
+          <orm:inverse-join-column name="ownedElement_core_KDMEntity"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -581,7 +581,7 @@
         <orm:order-column name="code_AbstractCodeElement_entryFlow_ind"/>
         <orm:join-table name="code_AbstractCodeElement_entryFlow">
           <orm:join-column name="code_AbstractCodeElement_entryFlow"/>
-          <orm:inverse-join-column name="action_EntryFlow_id"/>
+          <orm:inverse-join-column name="entryFlow_action_EntryFlow"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1315,7 +1315,7 @@
       <orm:many-to-many name="groupedCode">
         <orm:join-table name="code_Namespace_groupedCode">
           <orm:join-column name="code_Namespace_groupedCode"/>
-          <orm:inverse-join-column name="code_CodeItem_id"/>
+          <orm:inverse-join-column name="groupedCode_code_CodeItem"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1783,7 +1783,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="platform_AbstractPlatformElement_implementation">
           <orm:join-column name="platform_AbstractPlatformElement_implementation"/>
-          <orm:inverse-join-column name="code_AbstractCodeElement_id"/>
+          <orm:inverse-join-column name="implementation_code_AbstractCodeElement"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -1914,7 +1914,7 @@
       <orm:many-to-many name="groupedCode">
         <orm:join-table name="platform_DeployedComponent_groupedCode">
           <orm:join-column name="platform_DeployedComponent_groupedCode"/>
-          <orm:inverse-join-column name="code_Module_id"/>
+          <orm:inverse-join-column name="groupedCode_code_Module"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2014,7 +2014,7 @@
       <orm:many-to-many name="groupedComponent">
         <orm:join-table name="platform_DeployedSoftwareSystem_groupedComponent">
           <orm:join-column name="platform_DeployedSoftwareSystem_groupedComponent"/>
-          <orm:inverse-join-column name="platform_DeployedComponent_id"/>
+          <orm:inverse-join-column name="groupedComponent_platform_DeployedComponent"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2158,7 +2158,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="build_BuildResource_implementation">
           <orm:join-column name="build_BuildResource_implementation"/>
-          <orm:inverse-join-column name="core_KDMEntity_id"/>
+          <orm:inverse-join-column name="implementation_core_KDMEntity"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2169,7 +2169,7 @@
       <orm:many-to-many name="groupedBuild">
         <orm:join-table name="build_BuildResource_groupedBuild">
           <orm:join-column name="build_BuildResource_groupedBuild"/>
-          <orm:inverse-join-column name="build_AbstractBuildElement_id"/>
+          <orm:inverse-join-column name="groupedBuild_build_AbstractBuildElement"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2418,7 +2418,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="conceptual_AbstractConceptualElement_implementation">
           <orm:join-column name="conceptual_AbstractConceptualElement_implementation"/>
-          <orm:inverse-join-column name="core_KDMEntity_id"/>
+          <orm:inverse-join-column name="implementation_core_KDMEntity"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2571,7 +2571,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="data_IndexElement_implementation">
           <orm:join-column name="data_IndexElement_implementation"/>
-          <orm:inverse-join-column name="code_ItemUnit_id"/>
+          <orm:inverse-join-column name="implementation_code_ItemUnit"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2754,7 +2754,7 @@
       <orm:many-to-many name="type">
         <orm:join-table name="data_SimpleContentType_type">
           <orm:join-column name="data_SimpleContentType_type"/>
-          <orm:inverse-join-column name="data_ComplexContentType_id"/>
+          <orm:inverse-join-column name="type_data_ComplexContentType"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -2812,7 +2812,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="data_DataAction_implementation">
           <orm:join-column name="data_DataAction_implementation"/>
-          <orm:inverse-join-column name="action_ActionElement_id"/>
+          <orm:inverse-join-column name="implementation_action_ActionElement"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -3080,7 +3080,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="event_AbstractEventElement_implementation">
           <orm:join-column name="event_AbstractEventElement_implementation"/>
-          <orm:inverse-join-column name="code_AbstractCodeElement_id"/>
+          <orm:inverse-join-column name="implementation_code_AbstractCodeElement"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -3301,7 +3301,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="structure_AbstractStructureElement_implementation">
           <orm:join-column name="structure_AbstractStructureElement_implementation"/>
-          <orm:inverse-join-column name="core_KDMEntity_id"/>
+          <orm:inverse-join-column name="implementation_core_KDMEntity"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -3396,7 +3396,7 @@
       <orm:many-to-many name="implementation">
         <orm:join-table name="ui_AbstractUIElement_implementation">
           <orm:join-column name="ui_AbstractUIElement_implementation"/>
-          <orm:inverse-join-column name="code_AbstractCodeElement_id"/>
+          <orm:inverse-join-column name="implementation_code_AbstractCodeElement"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

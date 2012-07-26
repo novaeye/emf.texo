@@ -61,7 +61,7 @@
         <orm:order-column name="library_Writer_books_ind"/>
         <orm:join-table name="library_Writer_books">
           <orm:join-column name="library_Writer_books"/>
-          <orm:inverse-join-column name="library_Book_author"/>
+          <orm:inverse-join-column name="books_library_Book"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

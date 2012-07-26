@@ -51,7 +51,7 @@ public class Style extends StyleContainer {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private Orientation horizontalAlignment = Orientation.ALIGNMENT_CENTER;
+  private Orientation horizontalAlignment = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -60,7 +60,7 @@ public class Style extends StyleContainer {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private Orientation verticalAlignment = Orientation.ALIGNMENT_CENTER;
+  private Orientation verticalAlignment = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -133,7 +133,7 @@ public class Style extends StyleContainer {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private LineStyle lineStyle = LineStyle.SOLID;
+  private LineStyle lineStyle = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

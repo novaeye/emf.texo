@@ -13,7 +13,8 @@ import java.util.List;
 public enum Periodicity {
 
   /**
-   * The enum: DAILY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: DAILY <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Ежедневно <!-- end-model-doc
+   * -->
    * 
    * @generated
    */
@@ -29,7 +30,8 @@ public enum Periodicity {
     }
   },
   /**
-   * The enum: WEAKLY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: WEAKLY <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Еженедельно <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -45,7 +47,8 @@ public enum Periodicity {
     }
   },
   /**
-   * The enum: MONTHLY <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: MONTHLY <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Ежемесячно <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -61,7 +64,8 @@ public enum Periodicity {
     }
   },
   /**
-   * The enum: ANNUAL <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: ANNUAL <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Ежегодно <!-- end-model-doc
+   * -->
    * 
    * @generated
    */

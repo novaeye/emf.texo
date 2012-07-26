@@ -24,7 +24,7 @@ public class MethodUnit extends ControlElement {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private MethodKind kind = MethodKind.METHOD;
+  private MethodKind kind = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -33,7 +33,7 @@ public class MethodUnit extends ControlElement {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private ExportKind export = ExportKind.PUBLIC;
+  private ExportKind export = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

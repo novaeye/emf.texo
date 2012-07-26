@@ -26,7 +26,7 @@ public class RentalBicycle extends RentalUnit {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private RentalBicycleType type = RentalBicycleType.STANDARD;
+  private RentalBicycleType type = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

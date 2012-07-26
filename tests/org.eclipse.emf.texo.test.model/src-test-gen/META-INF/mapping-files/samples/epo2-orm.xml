@@ -131,7 +131,7 @@
         <orm:order-column name="com_example_epo2_Customer_orders_ind"/>
         <orm:join-table name="com_example_epo2_Customer_orders">
           <orm:join-column name="com_example_epo2_Customer_orders"/>
-          <orm:inverse-join-column name="com_example_epo2_PurchaseOrder_customer"/>
+          <orm:inverse-join-column name="orders_com_example_epo2_PurchaseOrder"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

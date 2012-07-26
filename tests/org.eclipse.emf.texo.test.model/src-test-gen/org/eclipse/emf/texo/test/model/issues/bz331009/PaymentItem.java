@@ -43,7 +43,7 @@ public abstract class PaymentItem extends Identifiable {
   @Basic()
   @Column(name = "currency")
   @Enumerated(EnumType.STRING)
-  private Currency currency = Currency.ROUBLES;
+  private Currency currency = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата платежа <!-- end-model-doc -->
@@ -72,7 +72,7 @@ public abstract class PaymentItem extends Identifiable {
   @Basic()
   @Column(name = "paymentType")
   @Enumerated(EnumType.STRING)
-  private PaymentType paymentType = PaymentType.REQUIRED;
+  private PaymentType paymentType = null;
 
   /**
    * Returns the value of '<em><b>sum</b></em>' feature.

@@ -28,7 +28,7 @@
         <orm:order-column name="test_Person_contacts_ind"/>
         <orm:join-table name="test_Person_contacts">
           <orm:join-column name="test_Person_contacts"/>
-          <orm:inverse-join-column name="test_Contact_id"/>
+          <orm:inverse-join-column name="contacts_test_Contact"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

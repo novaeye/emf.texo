@@ -42,7 +42,7 @@ public class Writer extends Identifiable {
    */
   @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "library_Writer_books_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "library_Writer_books") }, inverseJoinColumns = { @JoinColumn(name = "library_Book_author") }, name = "library_Writer_books")
+  @JoinTable(joinColumns = { @JoinColumn(name = "library_Writer_books") }, inverseJoinColumns = { @JoinColumn(name = "books_library_Book") }, name = "library_Writer_books")
   private List<Book> books = new ArrayList<Book>();
 
   /**

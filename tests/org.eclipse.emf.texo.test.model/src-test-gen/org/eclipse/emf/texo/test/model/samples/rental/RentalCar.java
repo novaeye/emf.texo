@@ -26,7 +26,7 @@ public class RentalCar extends RentalUnit {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private RentalCarSize size = RentalCarSize.SMALL;
+  private RentalCarSize size = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

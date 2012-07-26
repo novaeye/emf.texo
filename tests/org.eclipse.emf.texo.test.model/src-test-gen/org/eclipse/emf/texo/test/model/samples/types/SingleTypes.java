@@ -171,7 +171,7 @@ public class SingleTypes extends Identifiable {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private TestEnum enum_ = TestEnum.ENUM0;
+  private TestEnum enum_ = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

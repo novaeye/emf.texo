@@ -24,7 +24,7 @@ public class MemberUnit extends DataElement {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private ExportKind export = ExportKind.PUBLIC;
+  private ExportKind export = null;
 
   /**
    * Returns the value of '<em><b>export</b></em>' feature.

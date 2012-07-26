@@ -57,7 +57,7 @@
         <orm:order-column name="m_PaymentInfo_factPayments_ind"/>
         <orm:join-table name="m_PaymentInfo_factPayments">
           <orm:join-column name="m_PaymentInfo_factPayments"/>
-          <orm:inverse-join-column name="m_PaymentItem_id"/>
+          <orm:inverse-join-column name="factPayments_m_PaymentItem"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -107,7 +107,7 @@
         <orm:order-column name="m_Tariff_volumePayments_ind"/>
         <orm:join-table name="m_Tariff_volumePayments">
           <orm:join-column name="m_Tariff_volumePayments"/>
-          <orm:inverse-join-column name="m_VolumePayment_id"/>
+          <orm:inverse-join-column name="volumePayments_m_VolumePayment"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -119,7 +119,7 @@
         <orm:order-column name="m_Tariff_periodicalPayments_ind"/>
         <orm:join-table name="m_Tariff_periodicalPayments">
           <orm:join-column name="m_Tariff_periodicalPayments"/>
-          <orm:inverse-join-column name="m_PeriodicalPayment_id"/>
+          <orm:inverse-join-column name="periodicalPayments_m_PeriodicalPayment"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -131,7 +131,7 @@
         <orm:order-column name="m_Tariff_initialPayment_ind"/>
         <orm:join-table name="m_Tariff_initialPayment">
           <orm:join-column name="m_Tariff_initialPayment"/>
-          <orm:inverse-join-column name="m_OneTimePayment_id"/>
+          <orm:inverse-join-column name="initialPayment_m_OneTimePayment"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -143,7 +143,7 @@
         <orm:order-column name="m_Tariff_services_ind"/>
         <orm:join-table name="m_Tariff_services">
           <orm:join-column name="m_Tariff_services"/>
-          <orm:inverse-join-column name="m_Service_id"/>
+          <orm:inverse-join-column name="services_m_Service"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -386,7 +386,7 @@
         <orm:order-column name="m_Person_phones_ind"/>
         <orm:join-table name="m_Person_phones">
           <orm:join-column name="m_Person_phones"/>
-          <orm:inverse-join-column name="m_Phone_id"/>
+          <orm:inverse-join-column name="phones_m_Phone"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -558,7 +558,7 @@
         <orm:order-column name="m_Contract_secretQuestions_ind"/>
         <orm:join-table name="m_Contract_secretQuestions">
           <orm:join-column name="m_Contract_secretQuestions"/>
-          <orm:inverse-join-column name="m_SecretQuestion_id"/>
+          <orm:inverse-join-column name="secretQuestions_m_SecretQuestion"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -618,7 +618,7 @@
         <orm:order-column name="m_ContractPackage_contracts_ind"/>
         <orm:join-table name="m_ContractPackage_contracts">
           <orm:join-column name="m_ContractPackage_contracts"/>
-          <orm:inverse-join-column name="m_Contract_id"/>
+          <orm:inverse-join-column name="contracts_m_Contract"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

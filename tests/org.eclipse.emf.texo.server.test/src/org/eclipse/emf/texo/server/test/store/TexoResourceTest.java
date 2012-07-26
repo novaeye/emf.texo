@@ -41,6 +41,8 @@ import org.eclipse.emf.texo.test.emfmodel.library.Library;
 import org.eclipse.emf.texo.test.emfmodel.library.LibraryFactory;
 import org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage;
 import org.eclipse.emf.texo.test.emfmodel.library.Writer;
+import org.eclipse.emf.texo.test.emfmodel.library.impl.LibraryPackageImpl;
+import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.junit.Test;
 
@@ -54,6 +56,9 @@ public class TexoResourceTest extends BaseTest {
 
   public TexoResourceTest() {
     super("library"); //$NON-NLS-1$
+    // touch the EMF package before the other ones.
+    LibraryPackageImpl.init();
+    LibraryModelPackage.initialize();
   }
 
   @Override

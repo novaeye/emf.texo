@@ -42,7 +42,7 @@ public class Topic extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private TopicCategory category = TopicCategory.ANNOUNCEMENT;
+  private TopicCategory category = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

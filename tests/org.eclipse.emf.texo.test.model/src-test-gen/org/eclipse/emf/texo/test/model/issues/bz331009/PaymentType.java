@@ -13,7 +13,8 @@ import java.util.List;
 public enum PaymentType {
 
   /**
-   * The enum: REQUIRED <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: REQUIRED <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Требуемый платеж <!--
+   * end-model-doc -->
    * 
    * @generated
    */
@@ -29,7 +30,8 @@ public enum PaymentType {
     }
   },
   /**
-   * The enum: FACT <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The enum: FACT <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Фактически совершенный платеж
+   * <!-- end-model-doc -->
    * 
    * @generated
    */

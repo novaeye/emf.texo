@@ -25,7 +25,7 @@ public class Formula extends Identifiable {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private FormulaType formulaType = FormulaType.SIMPLE;
+  private FormulaType formulaType = null;
 
   /**
    * Returns the value of '<em><b>formulaType</b></em>' feature.

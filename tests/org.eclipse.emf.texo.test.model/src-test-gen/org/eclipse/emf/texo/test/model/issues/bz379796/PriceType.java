@@ -58,7 +58,7 @@ public class PriceType extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private ComparisonType requiredComparisonElement = ComparisonType.LESS;
+  private ComparisonType requiredComparisonElement = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -76,7 +76,7 @@ public class PriceType extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private ComparisonType requiredComparison = ComparisonType.LESS;
+  private ComparisonType requiredComparison = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

@@ -25,7 +25,7 @@
         <orm:order-column name="bz306546_MySerializableClass_nonEMFs_ind"/>
         <orm:join-table name="bz306546_MySerializableClass_nonEMFs">
           <orm:join-column name="bz306546_MySerializableClass_nonEMFs"/>
-          <orm:inverse-join-column name="bz306546_NonEMF_id"/>
+          <orm:inverse-join-column name="nonEMFs_bz306546_NonEMF"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

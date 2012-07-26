@@ -28,7 +28,7 @@ public class GradientColoredLocation extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private LocationType locationType = LocationType.LOCATION_TYPE_RELATIVE;
+  private LocationType locationType = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

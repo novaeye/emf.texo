@@ -24,7 +24,7 @@ public class ParameterUnit extends DataElement {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private ParameterKind kind = ParameterKind.BYVALUE;
+  private ParameterKind kind = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

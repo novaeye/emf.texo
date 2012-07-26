@@ -29,6 +29,7 @@ import org.eclipse.emf.texo.server.model.response.ResponseType;
 import org.eclipse.emf.texo.server.service.RetrieveModelOperation;
 import org.eclipse.emf.texo.server.service.ServiceContext;
 import org.eclipse.emf.texo.server.service.xml.XMLServiceContext;
+import org.eclipse.emf.texo.test.emfmodel.library.impl.LibraryPackageImpl;
 import org.eclipse.emf.texo.test.model.samples.librarymodelclasses.model.LibraryModelPackage;
 import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -50,6 +51,10 @@ public class XMLReadTest extends ModelPackageBaseTest {
 
   @Parameters
   public static Collection<Object[]> configs() {
+    // this is to prevent clashes in epackage loading
+    // of the library epackage
+    LibraryPackageImpl.init();
+
     return Arrays.asList(new Object[][] { { LibraryModelPackage.INSTANCE, new XMLServiceContext() },
         { RentalModelPackage.INSTANCE, new XMLServiceContext() } });
   }

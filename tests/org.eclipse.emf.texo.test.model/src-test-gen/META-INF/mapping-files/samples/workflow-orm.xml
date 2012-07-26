@@ -154,7 +154,7 @@
         <orm:order-column name="workflow_OutputPort_edges_ind"/>
         <orm:join-table name="workflow_OutputPort_edges">
           <orm:join-column name="workflow_OutputPort_edges"/>
-          <orm:inverse-join-column name="workflow_Edge_source"/>
+          <orm:inverse-join-column name="edges_workflow_Edge"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -183,7 +183,7 @@
         <orm:order-column name="workflow_InputPort_edges_ind"/>
         <orm:join-table name="workflow_InputPort_edges">
           <orm:join-column name="workflow_InputPort_edges"/>
-          <orm:inverse-join-column name="workflow_Edge_target"/>
+          <orm:inverse-join-column name="edges_workflow_Edge"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

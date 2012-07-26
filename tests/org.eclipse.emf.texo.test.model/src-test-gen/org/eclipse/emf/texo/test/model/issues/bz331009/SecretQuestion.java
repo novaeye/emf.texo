@@ -67,7 +67,7 @@ public class SecretQuestion extends Identifiable {
   @Basic()
   @Column(name = "T_type")
   @Enumerated(EnumType.STRING)
-  private SecretQuestionType type = SecretQuestionType.REGULAR;
+  private SecretQuestionType type = null;
 
   /**
    * Returns the value of '<em><b>question</b></em>' feature.

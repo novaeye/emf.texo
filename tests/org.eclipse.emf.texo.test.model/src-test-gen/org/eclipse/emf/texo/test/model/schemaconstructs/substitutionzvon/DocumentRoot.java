@@ -61,7 +61,7 @@ public class DocumentRoot extends Identifiable {
    * 
    * @generated
    */
-  private EvenType even = EvenType._2;
+  private EvenType even = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -75,7 +75,7 @@ public class DocumentRoot extends Identifiable {
    * 
    * @generated
    */
-  private OddType odd = OddType._1;
+  private OddType odd = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

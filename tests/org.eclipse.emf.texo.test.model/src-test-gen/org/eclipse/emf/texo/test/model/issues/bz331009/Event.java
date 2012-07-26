@@ -34,7 +34,7 @@ public class Event extends Identifiable {
   @Basic()
   @Column(name = "eventType")
   @Enumerated(EnumType.STRING)
-  private EventType eventType = EventType.COORDINATES;
+  private EventType eventType = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Полученное сообщение <!-- end-model-doc -->

@@ -27,7 +27,7 @@ public class PeriodicalPayment extends PaymentItem {
   @Basic()
   @Column(name = "periodicity", nullable = true)
   @Enumerated(EnumType.STRING)
-  private Periodicity periodicity = Periodicity.DAILY;
+  private Periodicity periodicity = null;
 
   /**
    * Returns the value of '<em><b>periodicity</b></em>' feature.

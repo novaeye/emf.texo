@@ -51,7 +51,7 @@ public abstract class AbstractStyle extends Identifiable {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private LineStyle lineStyle = LineStyle.SOLID;
+  private LineStyle lineStyle = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

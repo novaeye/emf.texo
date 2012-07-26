@@ -54,7 +54,7 @@ public class ReportGroup extends Identifiable {
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "accounting_ReportGroup_account_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "accounting_ReportGroup_account") }, inverseJoinColumns = { @JoinColumn(name = "accounting_BalanceAccount_report") }, name = "accounting_ReportGroup_account")
+  @JoinTable(joinColumns = { @JoinColumn(name = "accounting_ReportGroup_account") }, inverseJoinColumns = { @JoinColumn(name = "account_accounting_BalanceAccount") }, name = "accounting_ReportGroup_account")
   private List<BalanceAccount> account = new ArrayList<BalanceAccount>();
 
   /**

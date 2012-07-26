@@ -87,7 +87,7 @@ public class BookType extends Identifiable {
    */
   @Basic(optional = false)
   @Enumerated(EnumType.STRING)
-  private BookCategoryType1 bookCategory = BookCategoryType1.MAGAZINE;
+  private BookCategoryType1 bookCategory = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

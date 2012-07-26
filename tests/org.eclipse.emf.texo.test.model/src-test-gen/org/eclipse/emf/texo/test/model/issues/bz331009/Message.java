@@ -46,7 +46,7 @@ public class Message extends Identifiable {
   @Basic()
   @Column(name = "T_type")
   @Enumerated(EnumType.STRING)
-  private MessageType type = MessageType.SERVICE;
+  private MessageType type = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Отправитель <!-- end-model-doc -->

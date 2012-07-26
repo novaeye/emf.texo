@@ -19,7 +19,7 @@
       <orm:many-to-one name="base">
         <orm:join-table name="inv_PType_base">
           <orm:join-column name="inv_PType_base"/>
-          <orm:inverse-join-column name="inv_PType_subTypes"/>
+          <orm:inverse-join-column name="base_inv_PType"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -37,7 +37,7 @@
       <orm:many-to-many name="subNOTypes">
         <orm:join-table name="inv_PType_subNOTypes">
           <orm:join-column name="inv_PType_subNOTypes"/>
-          <orm:inverse-join-column name="inv_PType_id"/>
+          <orm:inverse-join-column name="subNOTypes_inv_PType"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -49,7 +49,7 @@
         <orm:order-column name="inv_PType_infoReferences_ind"/>
         <orm:join-table name="inv_PType_infoReferences">
           <orm:join-column name="inv_PType_infoReferences"/>
-          <orm:inverse-join-column name="inv_PDeclaration_id"/>
+          <orm:inverse-join-column name="infoReferences_inv_PDeclaration"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>

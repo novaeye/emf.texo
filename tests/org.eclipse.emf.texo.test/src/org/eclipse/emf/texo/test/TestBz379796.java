@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.texo.test.model.issues.bz379796.Bz379796ModelPackage;
 import org.eclipse.emf.texo.test.model.issues.bz379796.ComparisonType;
 import org.eclipse.emf.texo.test.model.issues.bz379796.PriceType;
@@ -62,6 +63,8 @@ public class TestBz379796 {
           System.err.println(eattr.getName());
           if (ModelUtils.isUnsettable(eattr) || !eattr.isRequired() && eattr.getDefaultValue() == null) {
             Assert.assertTrue(!xml1.contains(eattr.getName()));
+          } else if (eattr.getEAttributeType() instanceof EEnum && eattr.getDefaultValueLiteral() == null) {
+            Assert.assertTrue(!xml1.contains(eattr.getName()));
           } else {
             Assert.assertTrue(xml1.contains(eattr.getName()));
           }
@@ -71,6 +74,7 @@ public class TestBz379796 {
         // now set everything
         priceType2.setComparison(ComparisonType.GREATER);
         priceType2.setComparisonElement(ComparisonType.GREATEROREQUAL);
+        priceType2.setRequiredComparisonElement(ComparisonType.EQUAL);
         priceType2.setValue(val1);
         priceType2.setDb_Id(new Long(1));
         priceType2.setDb_version(2);

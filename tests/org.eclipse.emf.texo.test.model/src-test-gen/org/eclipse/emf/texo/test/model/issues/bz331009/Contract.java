@@ -78,7 +78,7 @@ public class Contract extends Identifiable {
    */
   @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
   @OrderColumn(name = "m_Contract_secretQuestions_ind")
-  @JoinTable(joinColumns = { @JoinColumn(name = "m_Contract_secretQuestions") }, inverseJoinColumns = { @JoinColumn(name = "m_SecretQuestion_id") }, name = "m_Contract_secretQuestions")
+  @JoinTable(joinColumns = { @JoinColumn(name = "m_Contract_secretQuestions") }, inverseJoinColumns = { @JoinColumn(name = "secretQuestions_m_SecretQuestion") }, name = "m_Contract_secretQuestions")
   @Access(AccessType.FIELD)
   private List<SecretQuestion> secretQuestions = new ArrayList<SecretQuestion>();
 

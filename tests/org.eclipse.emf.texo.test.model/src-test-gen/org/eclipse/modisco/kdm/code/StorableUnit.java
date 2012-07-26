@@ -24,7 +24,7 @@ public class StorableUnit extends DataElement {
    */
   @Basic()
   @Enumerated(EnumType.STRING)
-  private StorableKind kind = StorableKind.GLOBAL;
+  private StorableKind kind = null;
 
   /**
    * Returns the value of '<em><b>kind</b></em>' feature.

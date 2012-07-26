@@ -61,7 +61,7 @@
         <orm:order-column name="extlib_Writer_books_ind"/>
         <orm:join-table name="extlib_Writer_books">
           <orm:join-column name="extlib_Writer_books"/>
-          <orm:inverse-join-column name="extlib_Book_author"/>
+          <orm:inverse-join-column name="books_extlib_Book"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -151,7 +151,7 @@
       <orm:many-to-many access="PROPERTY" name="books">
         <orm:join-table name="extlib_Library_books">
           <orm:join-column name="extlib_Library_books"/>
-          <orm:inverse-join-column name="extlib_Book_id"/>
+          <orm:inverse-join-column name="books_extlib_Book"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -181,7 +181,7 @@
         <orm:order-column name="extlib_Borrower_borrowed_ind"/>
         <orm:join-table name="extlib_Borrower_borrowed">
           <orm:join-column name="extlib_Borrower_borrowed"/>
-          <orm:inverse-join-column name="extlib_Lendable_borrowers"/>
+          <orm:inverse-join-column name="borrowed_extlib_Lendable"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
@@ -244,7 +244,7 @@
         <orm:order-column name="extlib_VideoCassette_cast_ind"/>
         <orm:join-table name="extlib_VideoCassette_cast">
           <orm:join-column name="extlib_VideoCassette_cast"/>
-          <orm:inverse-join-column name="extlib_Person_id"/>
+          <orm:inverse-join-column name="cast_extlib_Person"/>
         </orm:join-table>
         <orm:cascade>
           <orm:cascade-persist/>
