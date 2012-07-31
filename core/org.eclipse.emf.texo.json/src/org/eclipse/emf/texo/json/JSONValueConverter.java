@@ -169,6 +169,12 @@ public class JSONValueConverter implements TexoComponent {
       if (eDataType.getInstanceClass() == short.class || eDataType.getInstanceClass() == Short.class) {
         return ((Integer) value).shortValue();
       }
+      if (eDataType.getInstanceClass() == double.class || eDataType.getInstanceClass() == Double.class) {
+        return ((Integer) value).doubleValue();
+      }
+      if (eDataType.getInstanceClass() == float.class || eDataType.getInstanceClass() == Float.class) {
+        return ((Integer) value).floatValue();
+      }
     }
 
     if (value instanceof String && eDataType.getEPackage() == XMLTypePackage.eINSTANCE) {
