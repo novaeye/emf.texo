@@ -55,8 +55,8 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
   private ObjectResolver objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
 
-  private JSONValueConverter jsonValueConverter = (JSONValueConverter) ComponentProvider.getInstance()
-      .newInstance(getValueConversionClass());
+  private JSONValueConverter jsonValueConverter = (JSONValueConverter) ComponentProvider.getInstance().newInstance(
+      getValueConversionClass());
 
   protected Class<?> getValueConversionClass() {
     return JSONValueConverter.class;
@@ -244,6 +244,8 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
     if (value == null || value == JSONObject.NULL) {
       eSet(target, eReference, null);
     } else {
+      final JSONObject jsonValue = (JSONObject) value;
+      addEClassProperty(eReference, jsonValue);
       eSet(target, eReference, doConvert((JSONObject) value));
     }
   }
@@ -292,17 +294,17 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
           // key and value can also be an EObject
           final Object key;
           if (jEntryKey instanceof JSONObject) {
+            addEClassProperty(keyFeature, (JSONObject) jEntryKey);
             key = doConvert((JSONObject) jEntryKey);
           } else {
-            key = jsonValueConverter.fromJSON(target, jEntryKey,
-                ((EAttribute) keyFeature).getEAttributeType());
+            key = jsonValueConverter.fromJSON(target, jEntryKey, ((EAttribute) keyFeature).getEAttributeType());
           }
           final Object value;
           if (jEntryValue instanceof JSONObject) {
+            addEClassProperty(valueFeature, (JSONObject) jEntryValue);
             value = doConvert((JSONObject) jEntryValue);
           } else {
-            value = jsonValueConverter.fromJSON(target, jEntryValue,
-                ((EAttribute) valueFeature).getEAttributeType());
+            value = jsonValueConverter.fromJSON(target, jEntryValue, ((EAttribute) valueFeature).getEAttributeType());
           }
 
           if (mValues instanceof Map<?, ?>) {
@@ -355,6 +357,8 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
           final JSONObject jValue = jValues.getJSONObject(i);
 
+          addEClassProperty(eReference, jValue);
+
           final T mValue = doConvert(jValue);
 
           // first add to the many reference
@@ -381,6 +385,25 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
         }
       }
     }
+  }
+
+  private void addEClassProperty(EStructuralFeature eFeature, JSONObject value) {
+    if (eFeature instanceof EAttribute) {
+      return;
+    }
+
+    final EReference eReference = (EReference) eFeature;
+    // if not set then do our best to set it... note that hopefully the ereference type is not
+    // abstract or so...
+    if (!value.has(ModelJSONConstants.URI_PROPERTY) && !value.has(ModelJSONConstants.ECLASS_PROPERTY)) {
+      final String eClassUri = ModelUtils.getQualifiedNameFromEClass(eReference.getEReferenceType());
+      try {
+        value.put(ModelJSONConstants.ECLASS_PROPERTY, eClassUri);
+      } catch (JSONException e) {
+        throw new Error(e);
+      }
+    }
+
   }
 
   /**
@@ -449,8 +472,7 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
    *          the EAttribute which is converted
    * @see #convertPrimitiveValue(Object, EDataType)
    */
-  protected void convertManyEAttribute(final JSONObject source, Object value, T target,
-      final EAttribute eAttribute) {
+  protected void convertManyEAttribute(final JSONObject source, Object value, T target, final EAttribute eAttribute) {
     final JSONArray jValues = (JSONArray) value;
     final EDataType eDataType = eAttribute.getEAttributeType();
 
