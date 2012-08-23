@@ -81,6 +81,9 @@ public class JSONServiceContext extends ServiceContext {
       converter.setObjectResolver(getObjectStore());
 
       content = content.trim();
+      if (content.length() == 0) {
+        return Collections.emptyList();
+      }
 
       final List<Object> resultList;
       if (content.startsWith("[")) { //$NON-NLS-1$
