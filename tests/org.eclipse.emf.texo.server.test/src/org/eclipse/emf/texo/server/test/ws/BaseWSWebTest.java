@@ -159,12 +159,18 @@ public abstract class BaseWSWebTest extends BaseTest {
   }
 
   private String encodeWsPart(String wsPart) throws Exception {
+
+    final boolean hasQueryParam = wsPart.contains("query");
     int qIndex = wsPart.indexOf("?"); //$NON-NLS-1$
     if (qIndex == -1) {
-      return URLEncoder.encode(wsPart, "UTF-8"); //$NON-NLS-1$
+      // test with empty query param
+      // https://bugs.eclipse.org/bugs/show_bug.cgi?id=387555
+      return URLEncoder.encode(wsPart, "UTF-8") + (!hasQueryParam ? "?query=" : ""); //$NON-NLS-1$
     }
 
-    return URLEncoder.encode(wsPart.substring(0, qIndex), "UTF-8") + wsPart.substring(qIndex); //$NON-NLS-1$
+    // test with empty query param
+    // https://bugs.eclipse.org/bugs/show_bug.cgi?id=387555
+    return URLEncoder.encode(wsPart.substring(0, qIndex), "UTF-8") + wsPart.substring(qIndex) + (!hasQueryParam ? "&query=" : ""); //$NON-NLS-1$
   }
 
   protected void doDeleteRequest(String wsPart, int expectedResponse) {

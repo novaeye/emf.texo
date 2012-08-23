@@ -53,8 +53,8 @@ public class DeleteModelOperation extends ModelOperation {
   protected void internalExecute() {
     final List<Object> toDelete;
     // 1) there is a query!
-    if (getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_QUERY)) {
-      final String qryStr = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
+    final String qryStr = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
+    if (qryStr != null && qryStr.trim().length() > 0) {
 
       getServiceContext().getServiceOptions().checkFalse(ServiceOptions.OPTION_ALLOW_RETRIEVE_QUERIES);
 

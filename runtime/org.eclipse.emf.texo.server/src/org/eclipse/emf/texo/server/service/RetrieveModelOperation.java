@@ -70,7 +70,8 @@ public class RetrieveModelOperation extends ModelOperation {
     }
 
     // 1) there is a query!
-    if (queryType != null || getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_QUERY)) {
+    final String qryStrParam = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
+    if (queryType != null || qryStrParam != null && qryStrParam.trim().length() > 0) {
       int maxResults = getMaxResults();
       int startRow = getFirstResult() == -1 ? 0 : getFirstResult();
 
@@ -88,8 +89,7 @@ public class RetrieveModelOperation extends ModelOperation {
         resultList = (List<Object>) getObjectStore().namedQuery(queryType.getNamedQuery(), parameters, startRow,
             maxResults);
       } else {
-        qryStr = queryType != null ? queryType.getQuery() : (String) getServiceContext().getRequestParameters().get(
-            ServiceConstants.PARAM_QUERY);
+        qryStr = queryType != null ? queryType.getQuery() : qryStrParam;
 
         if (qryStr != null) {
           getServiceContext().getServiceOptions().checkFalse(ServiceOptions.OPTION_ALLOW_RETRIEVE_QUERIES);
