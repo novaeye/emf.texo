@@ -10,6 +10,7 @@
     <orm:table name="emap_Book"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -30,6 +31,7 @@
     <orm:table name="emap_Writer"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -40,6 +42,7 @@
     <orm:table name="emap_BookStore"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>

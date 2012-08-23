@@ -10,6 +10,7 @@
     <orm:table name="org_elver_music_Artist"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id">
         <orm:column name="id"/>
@@ -49,6 +50,7 @@
     <orm:table name="org_elver_music_Country"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
         <orm:column name="code"/>
@@ -65,6 +67,7 @@
     <orm:table name="org_elver_music_Genre"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id">
         <orm:column name="id"/>
@@ -81,6 +84,7 @@
     <orm:table name="org_elver_music_Album"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id">
         <orm:column name="id"/>
@@ -136,6 +140,7 @@
     <orm:table name="org_elver_music_Song"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id">
         <orm:column name="id"/>

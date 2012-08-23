@@ -10,6 +10,7 @@
     <orm:table name="schemaprimerpo_PurchaseOrder"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="comment">
         <orm:column name="T_comment"/>
@@ -43,6 +44,7 @@
     <orm:table name="schemaprimerpo_Item"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="productName" optional="false">
         <orm:column name="productName"/>
@@ -69,6 +71,7 @@
     <orm:table name="schemaprimerpo_USAddress"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>

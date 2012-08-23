@@ -10,6 +10,7 @@
     <orm:table name="request_ActionType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:element-collection name="update">
         <orm:convert>TexoTestObjectConverter</orm:convert>
@@ -29,6 +30,7 @@
     <orm:table name="request_QueryType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="namedQuery">
         <orm:column name="namedQuery"/>
@@ -49,6 +51,7 @@
     <orm:table name="request_Parameter"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>

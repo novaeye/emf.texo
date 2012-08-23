@@ -10,6 +10,7 @@
     <orm:table name="forum_Forum"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -34,6 +35,7 @@
     <orm:table name="forum_Member"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="nickname" optional="false">
         <orm:column name="nickname"/>
@@ -68,6 +70,7 @@
     <orm:table name="forum_Topic"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="title" optional="false">
         <orm:column name="title"/>
@@ -102,6 +105,7 @@
     <orm:table name="forum_Post"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="comment" optional="false">
         <orm:column name="T_comment"/>

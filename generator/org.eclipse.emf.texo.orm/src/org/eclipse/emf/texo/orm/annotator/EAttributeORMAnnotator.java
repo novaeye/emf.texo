@@ -321,6 +321,8 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       basic.setColumn(column);
     } else if (doAddConverter(eAttributeModelGen)) {
       basic.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
+    } else if (doAddQNameConverter(eAttributeModelGen)) {
+      basic.setConvert(ORMUtils.QNAME_CONVERTER_NAME);
     }
 
     if (!basicSet && !GeneratorUtils.isOptional(eAttribute)) {

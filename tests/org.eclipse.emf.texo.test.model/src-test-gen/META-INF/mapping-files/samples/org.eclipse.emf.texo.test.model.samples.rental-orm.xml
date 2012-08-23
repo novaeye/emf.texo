@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalBicycle" name="rental_RentalBicycle">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="type" optional="false">
         <orm:column name="T_type" nullable="true"/>
@@ -27,6 +28,7 @@
     <orm:table name="rental_RentalUnit"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="description" optional="false">
         <orm:column name="description"/>
@@ -35,6 +37,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.rental.RentalCar" name="rental_RentalCar">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="size" optional="false">
         <orm:column name="T_size" nullable="true"/>
@@ -54,6 +57,7 @@
     <orm:table name="rental_RentalBusiness"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -64,6 +68,7 @@
     <orm:table name="rental_RentalCarDriver"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -82,6 +87,7 @@
     <orm:table name="rental_RentalContract"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="rentToBusinessPartner" optional="false">
         <orm:column name="rentToBusinessPartner"/>
@@ -110,6 +116,7 @@
     <orm:table name="rental_RentalContractLine"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="number">
         <orm:column name="T_number"/>

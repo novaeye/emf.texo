@@ -10,6 +10,7 @@
     <orm:table name="test_EClass0"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="toClass1">
         <orm:join-column name="test_EClass0_toClass1"/>
@@ -37,6 +38,7 @@
     <orm:table name="test_EClass1"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many mapped-by="toClass1" name="toClass0">
         <orm:cascade>

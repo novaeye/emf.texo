@@ -10,6 +10,7 @@
     <orm:table name="sunBooks_AuthorsType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:element-collection name="authorName">
         <orm:order-column name="sunBooks_AuthorsType_authorName_ind"/>
@@ -24,6 +25,7 @@
     <orm:table name="sunBooks_BooksType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="book">
         <orm:order-column name="sunBooks_BooksType_book_ind"/>
@@ -38,6 +40,7 @@
     <orm:table name="sunBooks_BookType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -80,6 +83,7 @@
     <orm:table name="sunBooks_PromotionType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="discount">
         <orm:column name="discount"/>
@@ -93,6 +97,7 @@
     <orm:table name="sunBooks_CollectionType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="books" optional="false">
         <orm:join-column name="sunBooks_CollectionType_books"/>

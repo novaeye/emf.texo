@@ -10,6 +10,7 @@
     <orm:table name="substitutionzvon_ComplexAAA"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="value" optional="false">
         <orm:column name="T_value"/>
@@ -18,10 +19,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexEvenType" name="substitutionzvon_ComplexEvenType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexOddType" name="substitutionzvon_ComplexOddType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup" name="substitutionzvon_RootType_myAbstractGroup">
@@ -51,6 +54,7 @@
     <orm:table name="substitutionzvon_RootType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="myAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup">
         <orm:join-table name="substitutionzvon_RootType_myAbstractGroup_FM"/>

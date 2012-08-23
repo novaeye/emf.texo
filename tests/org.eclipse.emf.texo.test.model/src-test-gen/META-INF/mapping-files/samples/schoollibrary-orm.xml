@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoolBook" name="schoollibrary_SchoolBook">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="value">
         <orm:column name="T_value"/>
@@ -16,6 +17,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.schoollibrary.SchoolLibrary" name="schoollibrary_SchoolLibrary">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="location">
         <orm:column name="T_location" nullable="true"/>

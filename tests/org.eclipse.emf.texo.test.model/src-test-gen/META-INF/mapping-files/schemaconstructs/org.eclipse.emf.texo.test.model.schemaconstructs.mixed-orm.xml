@@ -42,6 +42,7 @@
     <orm:table name="mixed_LetterBodyType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyTypeMixedFeatureGroup">
         <orm:join-table name="mixed_LetterBodyType_mixed_FM"/>
@@ -74,6 +75,7 @@
     <orm:table name="mixed_SalutationType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.mixed.SalutationTypeMixedFeatureGroup">
         <orm:join-table name="mixed_SalutationType_mixed_FM"/>

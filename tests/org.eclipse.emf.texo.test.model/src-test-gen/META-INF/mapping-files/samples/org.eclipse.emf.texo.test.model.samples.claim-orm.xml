@@ -10,6 +10,7 @@
     <orm:table name="claim_Claim"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="billingName" optional="false">
         <orm:column name="billingName"/>
@@ -39,6 +40,7 @@
     <orm:table name="claim_ClaimCompositeKey"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="claimNumber" optional="false">
         <orm:column name="claimNumber"/>
@@ -52,6 +54,7 @@
     <orm:table name="claim_ClaimLine"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="claimLineBilledAmount" optional="false">
         <orm:column name="claimLineBilledAmount" precision="15" scale="7"/>
@@ -82,6 +85,7 @@
     <orm:table name="claim_ClaimLineCompositeKey"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="claimLineNumber" optional="false">
         <orm:column name="claimLineNumber"/>

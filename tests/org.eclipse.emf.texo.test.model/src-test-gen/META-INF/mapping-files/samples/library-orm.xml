@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Book" name="library_Book">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="title">
         <orm:column name="title" nullable="true"/>
@@ -31,6 +32,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Library" name="library_Library">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name" nullable="true"/>
@@ -53,6 +55,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Writer" name="library_Writer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name" nullable="true"/>

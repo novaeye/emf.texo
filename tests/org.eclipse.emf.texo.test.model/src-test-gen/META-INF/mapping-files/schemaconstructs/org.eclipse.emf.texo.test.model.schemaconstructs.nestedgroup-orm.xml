@@ -26,6 +26,7 @@
     <orm:table name="nestedgroup_A"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -42,6 +43,7 @@
     <orm:table name="nestedgroup_CType"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="cname" optional="false">
         <orm:column name="cname"/>
@@ -98,6 +100,7 @@
     <orm:table name="nestedgroup_Element"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.nestedgroup.ElementMixedFeatureGroup">
         <orm:join-table name="nestedgroup_Element_mixed_FM"/>

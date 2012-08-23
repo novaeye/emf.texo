@@ -10,6 +10,7 @@
     <orm:table name="mm_Property"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="key" optional="false">
         <orm:column name="T_key"/>
@@ -23,6 +24,7 @@
     <orm:table name="mm_PropertyContainer"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="properties">
         <orm:join-column name="mm_PropertyContainer_properties"/>
@@ -34,12 +36,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.GraphicsAlgorithmContainer" name="mm_GraphicsAlgorithmContainer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.StyleContainer" name="mm_StyleContainer">
     <orm:table name="mm_StyleContainer"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many mapped-by="styleContainer" name="styles">
         <orm:cascade>
@@ -50,6 +54,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Shape" name="pi_Shape">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="container">
         <orm:join-column name="pi_Shape_container" nullable="true"/>
@@ -63,6 +68,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.PictogramElement" name="pi_PictogramElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="visible" optional="false">
         <orm:column name="visible" nullable="true"/>
@@ -86,6 +92,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.AnchorContainer" name="pi_AnchorContainer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many mapped-by="parent" name="anchors">
         <orm:cascade>
@@ -96,6 +103,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ContainerShape" name="pi_ContainerShape">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="children">
         <orm:order-column name="pi_ContainerShape_children_ind"/>
@@ -108,6 +116,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Diagram" name="pi_Diagram">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="gridUnit" optional="false">
         <orm:column name="gridUnit" nullable="true"/>
@@ -162,6 +171,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Connection" name="pi_Connection">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="start" optional="true">
         <orm:join-table name="pi_Connection_start">
@@ -204,6 +214,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.PictogramLink" name="pi_PictogramLink">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-one mapped-by="link" name="pictogramElement">
         <orm:join-column name="pi_PictogramLink_pictogramElement"/>
@@ -221,6 +232,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.Anchor" name="pi_Anchor">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="parent" optional="false">
         <orm:join-column name="pi_Anchor_parent" nullable="true"/>
@@ -256,6 +268,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ConnectionDecorator" name="pi_ConnectionDecorator">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="locationRelative" optional="false">
         <orm:column name="locationRelative" nullable="true"/>
@@ -275,6 +288,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.FixPointAnchor" name="pi_FixPointAnchor">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="location" optional="false">
         <orm:join-column name="pi_FixPointAnchor_location" nullable="true"/>
@@ -286,6 +300,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.AdvancedAnchor" name="pi_AdvancedAnchor">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="useAnchorLocationAsConnectionEndpoint" optional="false">
         <orm:column name="useAnchorLocationAsConnectionEndpoint" nullable="true"/>
@@ -294,6 +309,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor" name="pi_BoxRelativeAnchor">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="relativeWidth" optional="false">
         <orm:column name="relativeWidth" nullable="true"/>
@@ -305,10 +321,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ChopboxAnchor" name="pi_ChopboxAnchor">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.FreeFormConnection" name="pi_FreeFormConnection">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="bendpoints">
         <orm:order-column name="pi_FreeFormConnection_bendpoints_ind"/>
@@ -321,10 +339,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.ManhattanConnection" name="pi_ManhattanConnection">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.CurvedConnection" name="pi_CurvedConnection">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="controlPoints">
         <orm:order-column name="pi_CurvedConnection_controlPoints_ind"/>
@@ -337,6 +357,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.pictograms.CompositeConnection" name="pi_CompositeConnection">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-many name="children">
         <orm:order-column name="pi_CompositeConnection_children_ind"/>
@@ -354,6 +375,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm" name="al_GraphicsAlgorithm">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="width" optional="false">
         <orm:column name="width" nullable="true"/>
@@ -402,6 +424,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Polyline" name="al_Polyline">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="points">
         <orm:order-column name="al_Polyline_points_ind"/>
@@ -414,14 +437,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Ellipse" name="al_Ellipse">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Text" name="al_Text">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.AbstractText" name="al_AbstractText">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="horizontalAlignment">
         <orm:column name="horizontalAlignment" nullable="true"/>
@@ -449,14 +475,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Polygon" name="al_Polygon">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Rectangle" name="al_Rectangle">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.RoundedRectangle" name="al_RoundedRectangle">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="cornerHeight" optional="false">
         <orm:column name="cornerHeight" nullable="true"/>
@@ -468,6 +497,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.Image" name="al_Image">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id" optional="false">
         <orm:column name="id" nullable="true"/>
@@ -485,6 +515,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.PlatformGraphicsAlgorithm" name="al_PlatformGraphicsAlgorithm">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id" optional="false">
         <orm:column name="id" nullable="true"/>
@@ -493,10 +524,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.MultiText" name="al_MultiText">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Style" name="st_Style">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="id" optional="false">
         <orm:column name="id" nullable="true"/>
@@ -546,6 +579,7 @@
     <orm:table name="st_AbstractStyle"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="lineWidth">
         <orm:column name="lineWidth"/>
@@ -591,6 +625,7 @@
     <orm:table name="st_Color"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="red" optional="false">
         <orm:column name="red"/>
@@ -607,6 +642,7 @@
     <orm:table name="st_Font"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
@@ -626,6 +662,7 @@
     <orm:table name="st_Point"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="x" optional="false">
         <orm:column name="x"/>
@@ -645,6 +682,7 @@
     <orm:table name="st_PrecisionPoint"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="x" optional="false">
         <orm:column name="x"/>
@@ -658,6 +696,7 @@
     <orm:table name="st_RenderingStyle"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="adaptedGradientColoredAreas">
         <orm:join-column name="st_RenderingStyle_adaptedGradientColoredAreas"/>
@@ -671,6 +710,7 @@
     <orm:table name="st_AdaptedGradientColoredAreas"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="definedStyleId">
         <orm:column name="definedStyleId"/>
@@ -691,6 +731,7 @@
     <orm:table name="st_GradientColoredLocation"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="locationType" optional="false">
         <orm:column name="locationType"/>
@@ -711,6 +752,7 @@
     <orm:table name="st_GradientColoredArea"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="start">
         <orm:join-column name="st_GradientColoredArea_start"/>
@@ -730,6 +772,7 @@
     <orm:table name="st_GradientColoredAreas"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="styleAdaption">
         <orm:column name="styleAdaption"/>

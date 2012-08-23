@@ -10,6 +10,7 @@
     <orm:table name="core_Element"/>
     <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="attribute">
         <orm:join-column name="core_Element_attribute"/>
@@ -27,6 +28,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.core.ModelElement" name="core_ModelElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="taggedValue">
         <orm:join-column name="core_ModelElement_taggedValue"/>
@@ -49,6 +51,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.core.KDMEntity" name="core_KDMEntity">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name" nullable="true"/>
@@ -159,10 +162,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.core.KDMRelationship" name="core_KDMRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.core.AggregatedRelationship" name="core_AggregatedRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="density">
         <orm:column name="density" nullable="true"/>
@@ -198,6 +203,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.Attribute" name="kdm_Attribute">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="tag">
         <orm:column name="tag" nullable="true"/>
@@ -209,6 +215,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.Annotation" name="kdm_Annotation">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="text">
         <orm:column name="T_text" nullable="true"/>
@@ -217,6 +224,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.Stereotype" name="kdm_Stereotype">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name" nullable="true"/>
@@ -234,6 +242,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtendedValue" name="kdm_ExtendedValue">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="tag" optional="false">
         <orm:join-column name="kdm_ExtendedValue_tag" nullable="true"/>
@@ -247,6 +256,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMModel" name="kdm_KDMModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many access="FIELD" name="ownedElement">
         <orm:order-column name="kdm_KDMModel_ownedElement_ind"/>
@@ -264,6 +274,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.KDMFramework" name="kdm_KDMFramework">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name" nullable="true"/>
@@ -284,6 +295,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.Audit" name="kdm_Audit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="description">
         <orm:column name="description" nullable="true"/>
@@ -298,6 +310,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.ExtensionFamily" name="kdm_ExtensionFamily">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="name">
         <orm:column name="name" nullable="true"/>
@@ -312,6 +325,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.Segment" name="kdm_Segment">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="segment">
         <orm:join-column name="kdm_Segment_segment"/>
@@ -329,6 +343,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.TagDefinition" name="kdm_TagDefinition">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="tag">
         <orm:column name="tag" nullable="true"/>
@@ -340,6 +355,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.TaggedValue" name="kdm_TaggedValue">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="value">
         <orm:column name="T_value" nullable="true"/>
@@ -348,6 +364,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.kdm.TaggedRef" name="kdm_TaggedRef">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="ref" optional="false">
         <orm:join-column name="kdm_TaggedRef_ref" nullable="true"/>
@@ -361,6 +378,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryModel" name="source_InventoryModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="inventoryElement">
         <orm:join-column name="source_InventoryModel_inventoryElement"/>
@@ -372,6 +390,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryElement" name="source_AbstractInventoryElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="inventoryRelationship">
         <orm:join-column name="source_AbstractInventoryElement_inventoryRelationship"/>
@@ -383,10 +402,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.AbstractInventoryRelationship" name="source_AbstractInventoryRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryItem" name="source_InventoryItem">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="version">
         <orm:column name="version" nullable="true"/>
@@ -398,6 +419,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.SourceFile" name="source_SourceFile">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="language">
         <orm:column name="T_language" nullable="true"/>
@@ -409,26 +431,32 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.Image" name="source_Image">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.Configuration" name="source_Configuration">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.ResourceDescription" name="source_ResourceDescription">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.BinaryFile" name="source_BinaryFile">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.ExecutableFile" name="source_ExecutableFile">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryContainer" name="source_InventoryContainer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="inventoryElement">
         <orm:join-column name="source_InventoryContainer_inventoryElement"/>
@@ -440,6 +468,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.Directory" name="source_Directory">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="path">
         <orm:column name="T_path" nullable="true"/>
@@ -448,10 +477,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.Project" name="source_Project">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.DependsOn" name="source_DependsOn">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="source_DependsOn_to" nullable="true"/>
@@ -473,6 +504,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.SourceRef" name="source_SourceRef">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="language">
         <orm:column name="T_language" nullable="true"/>
@@ -491,6 +523,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.SourceRegion" name="source_SourceRegion">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="startLine">
         <orm:column name="startLine" nullable="true"/>
@@ -522,10 +555,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryElement" name="source_InventoryElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.source.InventoryRelationship" name="source_InventoryRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="source_InventoryRelationship_to" nullable="true"/>
@@ -547,6 +582,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CodeModel" name="code_CodeModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
         <orm:order-column name="code_CodeModel_codeElement_ind"/>
@@ -559,6 +595,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeElement" name="code_AbstractCodeElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="source">
         <orm:join-column name="code_AbstractCodeElement_source"/>
@@ -594,6 +631,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CommentUnit" name="code_CommentUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="text">
         <orm:column name="T_text" nullable="true"/>
@@ -602,22 +640,27 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.AbstractCodeRelationship" name="code_AbstractCodeRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CodeItem" name="code_CodeItem">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ComputationalObject" name="code_ComputationalObject">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Datatype" name="code_Datatype">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Module" name="code_Module">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
         <orm:order-column name="code_Module_codeElement_ind"/>
@@ -630,26 +673,32 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CompilationUnit" name="code_CompilationUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.SharedUnit" name="code_SharedUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.LanguageUnit" name="code_LanguageUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CodeAssembly" name="code_CodeAssembly">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Package" name="code_Package">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ControlElement" name="code_ControlElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="type">
         <orm:join-column name="code_ControlElement_type" nullable="true"/>
@@ -670,6 +719,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CallableUnit" name="code_CallableUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -679,6 +729,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.MethodUnit" name="code_MethodUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -692,6 +743,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.DataElement" name="code_DataElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="ext">
         <orm:column name="ext" nullable="true"/>
@@ -717,6 +769,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.StorableUnit" name="code_StorableUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -726,14 +779,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ItemUnit" name="code_ItemUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.IndexUnit" name="code_IndexUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.MemberUnit" name="code_MemberUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="export">
         <orm:column name="export" nullable="true"/>
@@ -743,6 +799,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ParameterUnit" name="code_ParameterUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -755,14 +812,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ValueElement" name="code_ValueElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Value" name="code_Value">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ValueList" name="code_ValueList">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="valueElement">
         <orm:order-column name="code_ValueList_valueElement_ind"/>
@@ -775,70 +835,87 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.PrimitiveType" name="code_PrimitiveType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.BooleanType" name="code_BooleanType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CharType" name="code_CharType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.OrdinalType" name="code_OrdinalType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.DateType" name="code_DateType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.TimeType" name="code_TimeType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.IntegerType" name="code_IntegerType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.DecimalType" name="code_DecimalType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ScaledType" name="code_ScaledType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.FloatType" name="code_FloatType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.VoidType" name="code_VoidType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.StringType" name="code_StringType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.BitType" name="code_BitType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.BitstringType" name="code_BitstringType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.OctetType" name="code_OctetType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.OctetstringType" name="code_OctetstringType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.EnumeratedType" name="code_EnumeratedType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="value">
         <orm:order-column name="code_EnumeratedType_value_ind"/>
@@ -858,6 +935,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CompositeType" name="code_CompositeType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="itemUnit">
         <orm:order-column name="code_CompositeType_itemUnit_ind"/>
@@ -870,14 +948,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ChoiceType" name="code_ChoiceType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.RecordType" name="code_RecordType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.DerivedType" name="code_DerivedType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="itemUnit" optional="false">
         <orm:join-column name="code_DerivedType_itemUnit" nullable="true"/>
@@ -889,6 +970,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ArrayType" name="code_ArrayType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="size">
         <orm:column name="T_size" nullable="true"/>
@@ -903,10 +985,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.PointerType" name="code_PointerType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.RangeType" name="code_RangeType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="lower">
         <orm:column name="T_lower" nullable="true"/>
@@ -918,6 +1002,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.BagType" name="code_BagType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="size">
         <orm:column name="T_size" nullable="true"/>
@@ -926,6 +1011,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.SetType" name="code_SetType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="size">
         <orm:column name="T_size" nullable="true"/>
@@ -934,6 +1020,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.SequenceType" name="code_SequenceType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="size">
         <orm:column name="T_size" nullable="true"/>
@@ -942,6 +1029,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Signature" name="code_Signature">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="parameterUnit">
         <orm:order-column name="code_Signature_parameterUnit_ind"/>
@@ -954,6 +1042,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.DefinedType" name="code_DefinedType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="type" optional="false">
         <orm:join-column name="code_DefinedType_type" nullable="true"/>
@@ -973,14 +1062,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.TypeUnit" name="code_TypeUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.SynonymUnit" name="code_SynonymUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ClassUnit" name="code_ClassUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="isAbstract">
         <orm:column name="isAbstract" nullable="true"/>
@@ -996,6 +1088,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.InterfaceUnit" name="code_InterfaceUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
         <orm:order-column name="code_InterfaceUnit_codeElement_ind"/>
@@ -1008,6 +1101,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.TemplateUnit" name="code_TemplateUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
         <orm:order-column name="code_TemplateUnit_codeElement_ind"/>
@@ -1020,14 +1114,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.TemplateParameter" name="code_TemplateParameter">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.TemplateType" name="code_TemplateType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.InstanceOf" name="code_InstanceOf">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_InstanceOf_to" nullable="true"/>
@@ -1049,6 +1146,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ParameterTo" name="code_ParameterTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_ParameterTo_to" nullable="true"/>
@@ -1070,6 +1168,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Implements" name="code_Implements">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_Implements_to" nullable="true"/>
@@ -1091,6 +1190,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ImplementationOf" name="code_ImplementationOf">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_ImplementationOf_to" nullable="true"/>
@@ -1112,6 +1212,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.HasType" name="code_HasType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_HasType_to" nullable="true"/>
@@ -1133,6 +1234,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.HasValue" name="code_HasValue">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_HasValue_to" nullable="true"/>
@@ -1154,6 +1256,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Extends" name="code_Extends">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_Extends_to" nullable="true"/>
@@ -1175,6 +1278,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.PreprocessorDirective" name="code_PreprocessorDirective">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
         <orm:join-column name="code_PreprocessorDirective_codeElement"/>
@@ -1186,6 +1290,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.MacroUnit" name="code_MacroUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -1195,18 +1300,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.MacroDirective" name="code_MacroDirective">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.IncludeDirective" name="code_IncludeDirective">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.ConditionalDirective" name="code_ConditionalDirective">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Expands" name="code_Expands">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_Expands_to" nullable="true"/>
@@ -1228,6 +1337,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.GeneratedFrom" name="code_GeneratedFrom">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_GeneratedFrom_to" nullable="true"/>
@@ -1249,6 +1359,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Includes" name="code_Includes">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_Includes_to" nullable="true"/>
@@ -1270,6 +1381,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.VariantTo" name="code_VariantTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_VariantTo_to" nullable="true"/>
@@ -1291,6 +1403,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Redefines" name="code_Redefines">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_Redefines_to" nullable="true"/>
@@ -1312,6 +1425,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Namespace" name="code_Namespace">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-many name="groupedCode">
         <orm:join-table name="code_Namespace_groupedCode">
@@ -1328,6 +1442,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.VisibleIn" name="code_VisibleIn">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_VisibleIn_to" nullable="true"/>
@@ -1349,6 +1464,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.Imports" name="code_Imports">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_Imports_to" nullable="true"/>
@@ -1370,10 +1486,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CodeElement" name="code_CodeElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.code.CodeRelationship" name="code_CodeRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="code_CodeRelationship_to" nullable="true"/>
@@ -1395,6 +1513,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.EntryFlow" name="action_EntryFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_EntryFlow_to" nullable="true"/>
@@ -1416,10 +1535,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.AbstractActionRelationship" name="action_AbstractActionRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.ActionElement" name="action_ActionElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -1441,10 +1562,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.BlockUnit" name="action_BlockUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.ControlFlow" name="action_ControlFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_ControlFlow_to" nullable="true"/>
@@ -1466,22 +1589,27 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Flow" name="action_Flow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.TrueFlow" name="action_TrueFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.FalseFlow" name="action_FalseFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.GuardedFlow" name="action_GuardedFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Calls" name="action_Calls">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Calls_to" nullable="true"/>
@@ -1503,6 +1631,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Dispatches" name="action_Dispatches">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Dispatches_to" nullable="true"/>
@@ -1524,6 +1653,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Reads" name="action_Reads">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Reads_to" nullable="true"/>
@@ -1545,6 +1675,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Writes" name="action_Writes">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Writes_to" nullable="true"/>
@@ -1566,6 +1697,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Addresses" name="action_Addresses">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Addresses_to" nullable="true"/>
@@ -1587,6 +1719,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Creates" name="action_Creates">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Creates_to" nullable="true"/>
@@ -1608,22 +1741,27 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.ExceptionUnit" name="action_ExceptionUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.TryUnit" name="action_TryUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.CatchUnit" name="action_CatchUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.FinallyUnit" name="action_FinallyUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.ExitFlow" name="action_ExitFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_ExitFlow_to" nullable="true"/>
@@ -1645,6 +1783,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.ExceptionFlow" name="action_ExceptionFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_ExceptionFlow_to" nullable="true"/>
@@ -1666,6 +1805,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.Throws" name="action_Throws">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_Throws_to" nullable="true"/>
@@ -1687,6 +1827,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.CompliesTo" name="action_CompliesTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_CompliesTo_to" nullable="true"/>
@@ -1708,6 +1849,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.UsesType" name="action_UsesType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_UsesType_to" nullable="true"/>
@@ -1729,6 +1871,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.action.ActionRelationship" name="action_ActionRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="action_ActionRelationship_to" nullable="true"/>
@@ -1750,6 +1893,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformModel" name="platform_PlatformModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="platformElement">
         <orm:join-column name="platform_PlatformModel_platformElement"/>
@@ -1761,6 +1905,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformElement" name="platform_AbstractPlatformElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="source">
         <orm:join-column name="platform_AbstractPlatformElement_source"/>
@@ -1796,10 +1941,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.AbstractPlatformRelationship" name="platform_AbstractPlatformRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.ResourceType" name="platform_ResourceType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="platformElement">
         <orm:join-column name="platform_ResourceType_platformElement"/>
@@ -1811,38 +1958,47 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.NamingResource" name="platform_NamingResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.MarshalledResource" name="platform_MarshalledResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.MessagingResource" name="platform_MessagingResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.FileResource" name="platform_FileResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.ExecutionResource" name="platform_ExecutionResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.LockResource" name="platform_LockResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.StreamResource" name="platform_StreamResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.DataManager" name="platform_DataManager">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformEvent" name="platform_PlatformEvent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -1851,6 +2007,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformAction" name="platform_PlatformAction">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -1865,10 +2022,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.ExternalActor" name="platform_ExternalActor">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.BindsTo" name="platform_BindsTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_BindsTo_to" nullable="true"/>
@@ -1890,6 +2049,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Requires" name="platform_Requires">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_Requires_to" nullable="true"/>
@@ -1911,6 +2071,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedComponent" name="platform_DeployedComponent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-many name="groupedCode">
         <orm:join-table name="platform_DeployedComponent_groupedCode">
@@ -1927,6 +2088,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.ManagesResource" name="platform_ManagesResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_ManagesResource_to" nullable="true"/>
@@ -1948,6 +2110,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.ReadsResource" name="platform_ReadsResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_ReadsResource_to" nullable="true"/>
@@ -1969,6 +2132,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.WritesResource" name="platform_WritesResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_WritesResource_to" nullable="true"/>
@@ -1990,6 +2154,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.DefinedBy" name="platform_DefinedBy">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_DefinedBy_to" nullable="true"/>
@@ -2011,6 +2176,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedSoftwareSystem" name="platform_DeployedSoftwareSystem">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-many name="groupedComponent">
         <orm:join-table name="platform_DeployedSoftwareSystem_groupedComponent">
@@ -2027,6 +2193,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Machine" name="platform_Machine">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="deployedComponent">
         <orm:join-column name="platform_Machine_deployedComponent"/>
@@ -2044,6 +2211,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.DeployedResource" name="platform_DeployedResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="platformElement">
         <orm:join-column name="platform_DeployedResource_platformElement"/>
@@ -2055,18 +2223,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.RuntimeResource" name="platform_RuntimeResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Process" name="platform_Process">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Thread" name="platform_Thread">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Loads" name="platform_Loads">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_Loads_to" nullable="true"/>
@@ -2088,6 +2260,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.Spawns" name="platform_Spawns">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_Spawns_to" nullable="true"/>
@@ -2109,10 +2282,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformElement" name="platform_PlatformElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.platform.PlatformRelationship" name="platform_PlatformRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="platform_PlatformRelationship_to" nullable="true"/>
@@ -2134,6 +2309,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildElement" name="build_AbstractBuildElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="buildRelation">
         <orm:join-column name="build_AbstractBuildElement_buildRelation"/>
@@ -2145,10 +2321,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.AbstractBuildRelationship" name="build_AbstractBuildRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildResource" name="build_BuildResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="buildElement">
         <orm:join-column name="build_BuildResource_buildElement"/>
@@ -2182,6 +2360,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildDescription" name="build_BuildDescription">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="text">
         <orm:column name="T_text" nullable="true"/>
@@ -2196,10 +2375,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.SymbolicLink" name="build_SymbolicLink">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.LinksTo" name="build_LinksTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_LinksTo_to" nullable="true"/>
@@ -2221,6 +2402,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.Consumes" name="build_Consumes">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_Consumes_to" nullable="true"/>
@@ -2242,10 +2424,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildStep" name="build_BuildStep">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildModel" name="build_BuildModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="buildElement">
         <orm:join-column name="build_BuildModel_buildElement"/>
@@ -2257,22 +2441,27 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildComponent" name="build_BuildComponent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.Supplier" name="build_Supplier">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.Tool" name="build_Tool">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildElement" name="build_BuildElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildRelationship" name="build_BuildRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_BuildRelationship_to" nullable="true"/>
@@ -2294,6 +2483,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.SuppliedBy" name="build_SuppliedBy">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_SuppliedBy_to" nullable="true"/>
@@ -2315,10 +2505,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.Library" name="build_Library">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.Produces" name="build_Produces">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_Produces_to" nullable="true"/>
@@ -2340,6 +2532,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.SupportedBy" name="build_SupportedBy">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_SupportedBy_to" nullable="true"/>
@@ -2361,10 +2554,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.BuildProduct" name="build_BuildProduct">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.build.DescribedBy" name="build_DescribedBy">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="build_DescribedBy_to" nullable="true"/>
@@ -2386,6 +2581,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualModel" name="conceptual_ConceptualModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="conceptualElement">
         <orm:join-column name="conceptual_ConceptualModel_conceptualElement"/>
@@ -2397,6 +2593,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualElement" name="conceptual_AbstractConceptualElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="source">
         <orm:join-column name="conceptual_AbstractConceptualElement_source"/>
@@ -2431,14 +2628,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.AbstractConceptualRelationship" name="conceptual_AbstractConceptualRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.TermUnit" name="conceptual_TermUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualContainer" name="conceptual_ConceptualContainer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="conceptualElement">
         <orm:join-column name="conceptual_ConceptualContainer_conceptualElement"/>
@@ -2450,10 +2650,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.FactUnit" name="conceptual_FactUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualRelationship" name="conceptual_ConceptualRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="conceptual_ConceptualRelationship_to" nullable="true"/>
@@ -2475,18 +2677,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.BehaviorUnit" name="conceptual_BehaviorUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.RuleUnit" name="conceptual_RuleUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ScenarioUnit" name="conceptual_ScenarioUnit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualFlow" name="conceptual_ConceptualFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="conceptual_ConceptualFlow_to" nullable="true"/>
@@ -2508,10 +2714,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualElement" name="conceptual_ConceptualElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.conceptual.ConceptualRole" name="conceptual_ConceptualRole">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="conceptualElement" optional="false">
         <orm:join-column name="conceptual_ConceptualRole_conceptualElement" nullable="true"/>
@@ -2525,6 +2733,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataModel" name="data_DataModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="dataElement">
         <orm:join-column name="data_DataModel_dataElement"/>
@@ -2536,6 +2745,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataElement" name="data_AbstractDataElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="source">
         <orm:join-column name="data_AbstractDataElement_source"/>
@@ -2560,14 +2770,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.AbstractDataRelationship" name="data_AbstractDataRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataResource" name="data_DataResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.IndexElement" name="data_IndexElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-many name="implementation">
         <orm:join-table name="data_IndexElement_implementation">
@@ -2584,14 +2797,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.UniqueKey" name="data_UniqueKey">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.Index" name="data_Index">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.KeyRelation" name="data_KeyRelation">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_KeyRelation_to" nullable="true"/>
@@ -2613,10 +2829,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ReferenceKey" name="data_ReferenceKey">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataContainer" name="data_DataContainer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="dataElement">
         <orm:join-column name="data_DataContainer_dataElement"/>
@@ -2628,10 +2846,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.Catalog" name="data_Catalog">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.RelationalSchema" name="data_RelationalSchema">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="codeElement">
         <orm:join-column name="data_RelationalSchema_codeElement"/>
@@ -2643,6 +2863,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ColumnSet" name="data_ColumnSet">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="itemUnit">
         <orm:order-column name="data_ColumnSet_itemUnit_ind"/>
@@ -2655,18 +2876,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.RelationalTable" name="data_RelationalTable">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.RelationalView" name="data_RelationalView">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.RecordFile" name="data_RecordFile">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataEvent" name="data_DataEvent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -2675,6 +2900,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.XMLSchema" name="data_XMLSchema">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="contentElement">
         <orm:join-column name="data_XMLSchema_contentElement"/>
@@ -2686,10 +2912,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.AbstractContentElement" name="data_AbstractContentElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ComplexContentType" name="data_ComplexContentType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="contentElement">
         <orm:order-column name="data_ComplexContentType_contentElement_ind"/>
@@ -2702,18 +2930,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.AllContent" name="data_AllContent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.SeqContent" name="data_SeqContent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ChoiceContent" name="data_ChoiceContent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ContentItem" name="data_ContentItem">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="type">
         <orm:join-column name="data_ContentItem_type" nullable="true"/>
@@ -2733,10 +2965,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.GroupContent" name="data_GroupContent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ContentRestriction" name="data_ContentRestriction">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -2748,6 +2982,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.SimpleContentType" name="data_SimpleContentType">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -2767,10 +3002,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ExtendedDataElement" name="data_ExtendedDataElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataRelationship" name="data_DataRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_DataRelationship_to" nullable="true"/>
@@ -2792,14 +3029,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.MixedContent" name="data_MixedContent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ContentReference" name="data_ContentReference">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataAction" name="data_DataAction">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -2825,6 +3065,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ReadsColumnSet" name="data_ReadsColumnSet">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_ReadsColumnSet_to" nullable="true"/>
@@ -2846,10 +3087,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ContentAttribute" name="data_ContentAttribute">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.TypedBy" name="data_TypedBy">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_TypedBy_to" nullable="true"/>
@@ -2871,6 +3114,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ReferenceTo" name="data_ReferenceTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_ReferenceTo_to" nullable="true"/>
@@ -2892,6 +3136,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.RestrictionOf" name="data_RestrictionOf">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_RestrictionOf_to" nullable="true"/>
@@ -2913,6 +3158,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ExtensionTo" name="data_ExtensionTo">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_ExtensionTo_to" nullable="true"/>
@@ -2934,6 +3180,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DatatypeOf" name="data_DatatypeOf">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_DatatypeOf_to" nullable="true"/>
@@ -2955,6 +3202,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.HasContent" name="data_HasContent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_HasContent_to" nullable="true"/>
@@ -2976,6 +3224,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.WritesColumnSet" name="data_WritesColumnSet">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_WritesColumnSet_to" nullable="true"/>
@@ -2997,6 +3246,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ProducesDataEvent" name="data_ProducesDataEvent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_ProducesDataEvent_to" nullable="true"/>
@@ -3018,14 +3268,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.DataSegment" name="data_DataSegment">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ContentElement" name="data_ContentElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.data.ManagesData" name="data_ManagesData">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="data_ManagesData_to" nullable="true"/>
@@ -3047,6 +3300,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventModel" name="event_EventModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="eventElement">
         <orm:join-column name="event_EventModel_eventElement"/>
@@ -3058,6 +3312,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventElement" name="event_AbstractEventElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="source">
         <orm:join-column name="event_AbstractEventElement_source"/>
@@ -3093,10 +3348,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.AbstractEventRelationship" name="event_AbstractEventRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.Event" name="event_Event">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -3105,6 +3362,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventRelationship" name="event_EventRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="event_EventRelationship_to" nullable="true"/>
@@ -3126,6 +3384,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventResource" name="event_EventResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="eventElement">
         <orm:join-column name="event_EventResource_eventElement"/>
@@ -3137,22 +3396,27 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.State" name="event_State">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.Transition" name="event_Transition">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.OnEntry" name="event_OnEntry">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.OnExit" name="event_OnExit">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventAction" name="event_EventAction">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -3167,6 +3431,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.ReadsState" name="event_ReadsState">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="event_ReadsState_to" nullable="true"/>
@@ -3188,6 +3453,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.ProducesEvent" name="event_ProducesEvent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="event_ProducesEvent_to" nullable="true"/>
@@ -3209,6 +3475,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.ConsumesEvent" name="event_ConsumesEvent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="event_ConsumesEvent_to" nullable="true"/>
@@ -3230,6 +3497,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.NextState" name="event_NextState">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="event_NextState_to" nullable="true"/>
@@ -3251,14 +3519,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.InitialState" name="event_InitialState">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.EventElement" name="event_EventElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.event.HasState" name="event_HasState">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="event_HasState_to" nullable="true"/>
@@ -3280,6 +3551,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureElement" name="structure_AbstractStructureElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="aggregated">
         <orm:join-column name="structure_AbstractStructureElement_aggregated"/>
@@ -3314,18 +3586,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.AbstractStructureRelationship" name="structure_AbstractStructureRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.Subsystem" name="structure_Subsystem">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.Layer" name="structure_Layer">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.StructureModel" name="structure_StructureModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="structureElement">
         <orm:join-column name="structure_StructureModel_structureElement"/>
@@ -3337,14 +3613,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.Component" name="structure_Component">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.SoftwareSystem" name="structure_SoftwareSystem">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.StructureRelationship" name="structure_StructureRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="structure_StructureRelationship_to" nullable="true"/>
@@ -3366,14 +3645,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.ArchitectureView" name="structure_ArchitectureView">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.structure.StructureElement" name="structure_StructureElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIElement" name="ui_AbstractUIElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="source">
         <orm:join-column name="ui_AbstractUIElement_source"/>
@@ -3409,10 +3691,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.AbstractUIRelationship" name="ui_AbstractUIRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIResource" name="ui_UIResource">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="uIElement">
         <orm:join-column name="ui_UIResource_UIElement"/>
@@ -3424,18 +3708,22 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIDisplay" name="ui_UIDisplay">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.Screen" name="ui_Screen">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.Report" name="ui_Report">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIModel" name="ui_UIModel">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:one-to-many name="uIElement">
         <orm:join-column name="ui_UIModel_UIElement"/>
@@ -3447,6 +3735,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UILayout" name="ui_UILayout">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_UILayout_to" nullable="true"/>
@@ -3468,10 +3757,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIField" name="ui_UIField">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.DisplaysImage" name="ui_DisplaysImage">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_DisplaysImage_to" nullable="true"/>
@@ -3493,6 +3784,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.Displays" name="ui_Displays">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_Displays_to" nullable="true"/>
@@ -3514,6 +3806,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIFlow" name="ui_UIFlow">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_UIFlow_to" nullable="true"/>
@@ -3535,10 +3828,12 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIElement" name="ui_UIElement">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIRelationship" name="ui_UIRelationship">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_UIRelationship_to" nullable="true"/>
@@ -3560,6 +3855,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIAction" name="ui_UIAction">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -3574,6 +3870,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.UIEvent" name="ui_UIEvent">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="kind">
         <orm:column name="kind" nullable="true"/>
@@ -3582,6 +3879,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.ReadsUI" name="ui_ReadsUI">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_ReadsUI_to" nullable="true"/>
@@ -3603,6 +3901,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.WritesUI" name="ui_WritesUI">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_WritesUI_to" nullable="true"/>
@@ -3624,6 +3923,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.modisco.kdm.ui.ManagesUI" name="ui_ManagesUI">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
+    <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:many-to-one name="to" optional="false">
         <orm:join-column name="ui_ManagesUI_to" nullable="true"/>
