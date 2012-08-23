@@ -19,6 +19,7 @@ package org.eclipse.emf.texo.test;
 import javax.xml.namespace.QName;
 
 import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.DirectCollectionMapping;
 import org.eclipse.persistence.mappings.DirectToFieldMapping;
 import org.eclipse.persistence.mappings.converters.Converter;
 import org.eclipse.persistence.sessions.Session;
@@ -56,6 +57,10 @@ public class TexoTestQNameConverter implements Converter {
   }
 
   public void initialize(DatabaseMapping mapping, Session session) {
-    ((DirectToFieldMapping) mapping).setFieldClassification(String.class);
+    if (mapping instanceof DirectCollectionMapping) {
+      ((DirectCollectionMapping) mapping).setAttributeClassification(String.class);
+    } else {
+      ((DirectToFieldMapping) mapping).setFieldClassification(String.class);
+    }
   }
 }

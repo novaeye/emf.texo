@@ -20,6 +20,7 @@ import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONModelConverter;
 import org.eclipse.emf.texo.json.ModelJSONConverter;
 import org.eclipse.persistence.mappings.DatabaseMapping;
+import org.eclipse.persistence.mappings.DirectCollectionMapping;
 import org.eclipse.persistence.mappings.DirectToFieldMapping;
 import org.eclipse.persistence.mappings.converters.Converter;
 import org.eclipse.persistence.sessions.Session;
@@ -64,6 +65,10 @@ public class TexoTestObjectConverter implements Converter {
   }
 
   public void initialize(DatabaseMapping mapping, Session session) {
-    ((DirectToFieldMapping) mapping).setFieldClassification(java.sql.Clob.class);
+    if (mapping instanceof DirectCollectionMapping) {
+      ((DirectCollectionMapping) mapping).setAttributeClassification(java.sql.Clob.class);
+    } else {
+      ((DirectToFieldMapping) mapping).setFieldClassification(java.sql.Clob.class);
+    }
   }
 }

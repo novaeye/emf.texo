@@ -33,7 +33,7 @@ public class VarInputType extends Identifiable {
    * @generated
    */
   @ManyToOne(cascade = { CascadeType.ALL })
-  @JoinColumns({ @JoinColumn(name = "_condition") })
+  @JoinColumns({ @JoinColumn(name = "test_condition") })
   private VarConditionType condition = null;
 
   /**
@@ -42,7 +42,7 @@ public class VarInputType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "measure")
+  @Column(name = "T_measure")
   private String measure = null;
 
   /**

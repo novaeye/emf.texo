@@ -9,7 +9,7 @@
       <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEReference">
         <eReference href="bz379815.ecore#//VarInputType/condition"/>
         <eReferenceAnnotations xsi:type="ormannotations:EReferenceORMAnnotation">
-          <joinColumn name="_condition"/>
+          <joinColumn name="test_condition"/>
         </eReferenceAnnotations>
       </annotatedEStructuralFeatures>
     </annotatedEClassifiers>
