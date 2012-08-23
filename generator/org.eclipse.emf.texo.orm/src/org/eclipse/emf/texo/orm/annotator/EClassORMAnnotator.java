@@ -93,8 +93,10 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
     if (ORMMappingOptions.getDefaultOptions().isTestRun()) {
       if (annotation.getEntity() != null) {
         annotation.getEntity().getConverter().add(ORMUtils.createDefaultConverter());
+        annotation.getEntity().getConverter().add(ORMUtils.createQNameConverter());
       } else if (annotation.getMappedSuperclass() != null) {
         annotation.getMappedSuperclass().getConverter().add(ORMUtils.createDefaultConverter());
+        annotation.getMappedSuperclass().getConverter().add(ORMUtils.createQNameConverter());
       }
     }
 

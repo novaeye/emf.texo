@@ -17,6 +17,9 @@
 
 package org.eclipse.emf.texo.orm.annotator;
 
+import javax.xml.namespace.QName;
+
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -32,6 +35,27 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  */
 
 public class EStructuralFeatureORMAnnotator extends ETypeElementORMAnnotator {
+  protected boolean doAddQNameConverter(EStructuralFeatureModelGenAnnotation annotation) {
+    final EStructuralFeature eFeature = annotation.getEStructuralFeature();
+    if (FeatureMapUtil.isFeatureMap(eFeature)) {
+      return false;
+    }
+    if (!ORMMappingOptions.getDefaultOptions().isTestRun()) {
+      return false;
+    }
+    if (annotation.getEStructuralFeature().getEType() instanceof EEnum) {
+      return false;
+    }
+    if (ModelUtils.isAnyType(eFeature)) {
+      return true;
+    }
+    final EClassifier eClassifier = eFeature.getEType();
+    if (eClassifier.getInstanceClass() != null && QName.class == eClassifier.getInstanceClass()) {
+      return true;
+    }
+    return false;
+  }
+
   protected boolean doAddConverter(EStructuralFeatureModelGenAnnotation annotation) {
     final EStructuralFeature eFeature = annotation.getEStructuralFeature();
     if (FeatureMapUtil.isFeatureMap(eFeature)) {

@@ -17,7 +17,7 @@
 package org.eclipse.emf.texo.orm.test.samples;
 
 import org.eclipse.emf.texo.orm.test.DataGenCompareModelJPATest;
-import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.SubstitutionModelPackage;
+import org.eclipse.emf.texo.test.model.schemaconstructs.qname.QnameModelPackage;
 
 /**
  * Full persistence test for a single model
@@ -27,7 +27,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.substitution.Substitutio
  */
 public class SingleDataGenCompareModelJPATest extends DataGenCompareModelJPATest {
   public SingleDataGenCompareModelJPATest() {
-    super(SubstitutionModelPackage.INSTANCE, "-mysql");
+    super(QnameModelPackage.INSTANCE, "-mysql");
   }
 
   public void test() {

@@ -232,18 +232,6 @@
         <details key="java.member" value="date"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stringArray" upperBound="-1"
-        eType="#//StringArray" defaultValueLiteral="">
-      <eAnnotations source="org.eclipse.emf.texo">
-        <details key="java.member" value="stringArray"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longArray" upperBound="-1"
-        eType="#//LongArray" defaultValueLiteral="">
-      <eAnnotations source="org.eclipse.emf.texo">
-        <details key="java.member" value="longArray"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TestEnum">
     <eLiterals name="Enum0" literal="Enum0"/>

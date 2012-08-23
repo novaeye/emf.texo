@@ -546,10 +546,6 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getEnum_();
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         return getTarget().getDate();
-      case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
-        return getTarget().getStringArray();
-      case TypesModelPackage.MANYTYPES_LONGARRAY_FEATURE_ID:
-        return getTarget().getLongArray();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -600,12 +596,6 @@ public class TypesModelFactory implements ModelFactory {
         return;
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().setDate((Set<Date>) value);
-        return;
-      case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
-        getTarget().setStringArray((List<String[]>) value);
-        return;
-      case TypesModelPackage.MANYTYPES_LONGARRAY_FEATURE_ID:
-        getTarget().setLongArray((List<long[]>) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -670,14 +660,6 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().add((Date) value);
         return;
-
-      case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
-        getTarget().getStringArray().add((String[]) value);
-        return;
-
-      case TypesModelPackage.MANYTYPES_LONGARRAY_FEATURE_ID:
-        getTarget().getLongArray().add((long[]) value);
-        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -740,14 +722,6 @@ public class TypesModelFactory implements ModelFactory {
 
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().remove(value);
-        return;
-
-      case TypesModelPackage.MANYTYPES_STRINGARRAY_FEATURE_ID:
-        getTarget().getStringArray().remove(value);
-        return;
-
-      case TypesModelPackage.MANYTYPES_LONGARRAY_FEATURE_ID:
-        getTarget().getLongArray().remove(value);
         return;
       }
       super.eRemoveFrom(eStructuralFeature, value);

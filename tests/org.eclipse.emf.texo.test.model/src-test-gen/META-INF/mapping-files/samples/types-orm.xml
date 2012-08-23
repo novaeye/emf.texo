@@ -94,20 +94,6 @@
           <orm:join-column name="types_ManyTypes_date"/>
         </orm:collection-table>
       </orm:element-collection>
-      <orm:element-collection name="stringArray">
-        <orm:order-column name="types_ManyTypes_stringArray_ind"/>
-        <orm:column name="T_element"/>
-        <orm:collection-table name="types_ManyTypes_stringArray">
-          <orm:join-column name="types_ManyTypes_stringArray"/>
-        </orm:collection-table>
-      </orm:element-collection>
-      <orm:element-collection name="longArray">
-        <orm:order-column name="types_ManyTypes_longArray_ind"/>
-        <orm:column name="T_element"/>
-        <orm:collection-table name="types_ManyTypes_longArray">
-          <orm:join-column name="types_ManyTypes_longArray"/>
-        </orm:collection-table>
-      </orm:element-collection>
       <orm:transient name="clazz"/>
     </orm:attributes>
   </orm:entity>

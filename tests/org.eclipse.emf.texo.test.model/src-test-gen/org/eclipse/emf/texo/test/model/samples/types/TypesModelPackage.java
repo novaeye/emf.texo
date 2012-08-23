@@ -311,20 +311,6 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int MANYTYPES_STRINGARRAY_FEATURE_ID = 15;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_LONGARRAY_FEATURE_ID = 16;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int TESTENUM_CLASSIFIER_ID = 2;
 
   /**
@@ -838,28 +824,6 @@ public class TypesModelPackage extends ModelPackage {
    */
   public EAttribute getManyTypes_Date() {
     return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_DATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.stringArray</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.stringArray</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_StringArray() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_STRINGARRAY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.longArray</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.longArray</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_LongArray() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_LONGARRAY_FEATURE_ID);
   }
 
   /**

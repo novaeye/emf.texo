@@ -163,26 +163,6 @@ public class ManyTypes extends Identifiable {
   private Set<Date> date = new HashSet<Date>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  @ElementCollection()
-  @OrderColumn()
-  @CollectionTable(name = "types_ManyTypes_stringArray")
-  private List<String[]> stringArray = new ArrayList<String[]>();
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  @ElementCollection()
-  @OrderColumn()
-  @CollectionTable(name = "types_ManyTypes_longArray")
-  private List<long[]> longArray = new ArrayList<long[]>();
-
-  /**
    * Returns the value of '<em><b>string</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -505,56 +485,6 @@ public class ManyTypes extends Identifiable {
    */
   public void setDate(Set<Date> newDate) {
     date = newDate;
-  }
-
-  /**
-   * Returns the value of '<em><b>stringArray</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>stringArray</b></em>' feature
-   * @generated
-   */
-  public List<String[]> getStringArray() {
-    return stringArray;
-  }
-
-  /**
-   * Sets the '{@link ManyTypes#getStringArray() <em>stringArray</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getStringArray() stringArray}' feature.
-   * @generated
-   */
-  public void setStringArray(List<String[]> newStringArray) {
-    stringArray = newStringArray;
-  }
-
-  /**
-   * Returns the value of '<em><b>longArray</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>longArray</b></em>' feature
-   * @generated
-   */
-  public List<long[]> getLongArray() {
-    return longArray;
-  }
-
-  /**
-   * Sets the '{@link ManyTypes#getLongArray() <em>longArray</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getLongArray() longArray}' feature.
-   * @generated
-   */
-  public void setLongArray(List<long[]> newLongArray) {
-    longArray = newLongArray;
   }
 
   /**

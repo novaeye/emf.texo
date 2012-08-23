@@ -33,8 +33,13 @@ import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
  */
 public class ORMUtils {
 
+  /**
+   * Note the CONVERTER statics are used in Texo testing, not intended for general use.
+   */
   public static final String OBJECT_CONVERTER_CLASS = "org.eclipse.emf.texo.test.TexoTestObjectConverter";
   public static final String OBJECT_CONVERTER_NAME = "TexoTestObjectConverter";
+  public static final String QNAME_CONVERTER_CLASS = "org.eclipse.emf.texo.test.TexoTestQNameConverter";
+  public static final String QNAME_CONVERTER_NAME = "TexoTestQNameConverter";
 
   /**
    * Creates the default converter used to convert Objects to String and back.
@@ -46,6 +51,19 @@ public class ORMUtils {
     final Converter converter = OrmFactory.eINSTANCE.createConverter();
     converter.setClass(ORMUtils.OBJECT_CONVERTER_CLASS);
     converter.setName(ORMUtils.OBJECT_CONVERTER_NAME);
+    return converter;
+  }
+
+  /**
+   * Creates the default converter used to convert QNames to String and back.
+   * 
+   * @see #QNAME_CONVERTER_CLASS
+   * @see #QNAME_CONVERTER_NAME
+   */
+  public static Converter createQNameConverter() {
+    final Converter converter = OrmFactory.eINSTANCE.createConverter();
+    converter.setClass(ORMUtils.QNAME_CONVERTER_CLASS);
+    converter.setName(ORMUtils.QNAME_CONVERTER_NAME);
     return converter;
   }
 
