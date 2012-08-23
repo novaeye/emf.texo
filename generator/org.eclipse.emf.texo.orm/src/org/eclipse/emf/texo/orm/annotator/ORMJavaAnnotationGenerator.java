@@ -56,6 +56,7 @@ public class ORMJavaAnnotationGenerator {
   private List<EClassifier> eclipseLinkEClassifiers = new ArrayList<EClassifier>();
   private List<String> classFeatureNames = new ArrayList<String>();
   private Map<Class<?>, String> enumTypeNames = new HashMap<Class<?>, String>();
+  private Map<String, String> renames = new HashMap<String, String>();
   private Map<EStructuralFeature, String> eFeatureAnnotationMapping = new HashMap<EStructuralFeature, String>();
 
   public ORMJavaAnnotationGenerator() {
@@ -109,6 +110,9 @@ public class ORMJavaAnnotationGenerator {
         "org.eclipse.persistence.annotations.Convert");
     eFeatureAnnotationMapping.put(OrmPackage.eINSTANCE.getBasic_Convert(),
         "org.eclipse.persistence.annotations.Convert");
+
+    renames.put("entityResults", "entities");
+    renames.put("columnResults", "columns");
   }
 
   /**
@@ -154,7 +158,7 @@ public class ORMJavaAnnotationGenerator {
         continue;
       }
 
-      // for now assume that the
+      // for now assume that the value is a primitive
       if (eFeatureAnnotationMapping.containsKey(eFeature)) {
         if (value instanceof String) {
           separateAnnotation.append("@" + eFeatureAnnotationMapping.get(eFeature) + "(\"" + value + "\")"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
@@ -241,7 +245,15 @@ public class ORMJavaAnnotationGenerator {
     if (separateAnnotation.length() > 0) {
       sb.append("\n" + separateAnnotation); //$NON-NLS-1$
     }
-    return sb.toString();
+
+    String resultStr = sb.toString();
+    for (String key : renames.keySet()) {
+      if (resultStr.contains(key)) {
+        resultStr = resultStr.replace(key, renames.get(key));
+      }
+    }
+
+    return resultStr;
   }
 
   private String pluralize(String value) {

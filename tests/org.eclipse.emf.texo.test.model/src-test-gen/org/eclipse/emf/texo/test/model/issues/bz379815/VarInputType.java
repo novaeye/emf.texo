@@ -42,7 +42,7 @@ public class VarInputType extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
-  @Column(name = "T_measure")
+  @Column(name = "measure")
   private String measure = null;
 
   /**
