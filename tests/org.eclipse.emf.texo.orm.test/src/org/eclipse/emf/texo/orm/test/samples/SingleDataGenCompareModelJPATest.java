@@ -27,7 +27,7 @@ import org.eclipse.emf.texo.test.model.issues.bz379815.Bz379815ModelPackage;
  */
 public class SingleDataGenCompareModelJPATest extends DataGenCompareModelJPATest {
   public SingleDataGenCompareModelJPATest() {
-    super(Bz379815ModelPackage.INSTANCE, "-hsqldb");
+    super(Bz379815ModelPackage.INSTANCE, "-class-hsqldb");
   }
 
   public void test() {
