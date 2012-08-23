@@ -28,7 +28,7 @@ public class VolumePayment extends PaymentItem {
    * @generated
    */
   @Basic()
-  @Column(name = "volume", nullable = true)
+  @Column(name = "volume", nullable = true, precision = 15, scale = 7)
   private BigDecimal volume = null;
 
   /**
@@ -46,7 +46,7 @@ public class VolumePayment extends PaymentItem {
    * @generated
    */
   @Basic()
-  @Column(name = "price", nullable = true)
+  @Column(name = "price", nullable = true, precision = 15, scale = 7)
   private BigDecimal price = null;
 
   /**

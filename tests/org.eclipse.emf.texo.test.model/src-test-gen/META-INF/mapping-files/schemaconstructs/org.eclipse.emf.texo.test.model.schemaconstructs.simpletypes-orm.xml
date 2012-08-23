@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleList" name="simpletypes_SimpleList">
     <orm:table name="simpletypes_SimpleList"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
@@ -109,6 +110,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleType" name="simpletypes_SimpleType">
     <orm:table name="simpletypes_SimpleType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
@@ -147,7 +149,7 @@
         <orm:column name="limitedstring"/>
       </orm:basic>
       <orm:basic name="limitedDecimal" optional="false">
-        <orm:column name="limitedDecimal"/>
+        <orm:column name="limitedDecimal" precision="15" scale="7"/>
       </orm:basic>
       <orm:basic name="extraLimitedString" optional="false">
         <orm:column name="extraLimitedString"/>
@@ -156,6 +158,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes.SimpleTypeObject" name="simpletypes_SimpleTypeObject">
     <orm:table name="simpletypes_SimpleTypeObject"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">

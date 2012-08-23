@@ -31,6 +31,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.extlibrary.Item" name="extlib_Item">
     <orm:table name="extlib_Item"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="publicationDate">
@@ -73,6 +74,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.extlibrary.Person" name="extlib_Person">
     <orm:table name="extlib_Person"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="address">
@@ -113,6 +115,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.extlibrary.Library" name="extlib_Library">
     <orm:table name="extlib_Library"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="address">
@@ -130,7 +133,7 @@
         </orm:cascade>
       </orm:many-to-one>
       <orm:one-to-many name="people" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.samples.extlibrary.LibraryPeopleFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="extlib_Library_people_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

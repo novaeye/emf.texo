@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
+import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation;
 
@@ -170,6 +171,11 @@ public class ORMNamingStrategy {
     String localName = getDictionariedName(eFeature, "joinTable"); //$NON-NLS-1$
     if (localName == null) {
       localName = getEntityName(eFeature.getEContainingClass()) + "_" + eFeature.getName(); //$NON-NLS-1$
+    }
+    // add a postfix to make it unique, as often a nameclash occurs with the
+    // featuremap entry table
+    if (FeatureMapUtil.isFeatureMap(eFeature)) {
+      localName += "_FM";
     }
     return processName(localName, ePackageORMAnnotation.getTableNamePrefix());
   }

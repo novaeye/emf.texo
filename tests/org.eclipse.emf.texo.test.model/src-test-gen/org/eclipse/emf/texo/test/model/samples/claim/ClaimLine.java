@@ -3,6 +3,8 @@ package org.eclipse.emf.texo.test.model.samples.claim;
 import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -19,6 +21,7 @@ import org.eclipse.persistence.annotations.Converters;
  * @generated
  */
 @Entity(name = "claim_ClaimLine")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ClaimLine extends Identifiable {
 
@@ -50,6 +53,7 @@ public class ClaimLine extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(precision = 15, scale = 7)
   private BigDecimal claimLineBilledAmount = null;
 
   /**

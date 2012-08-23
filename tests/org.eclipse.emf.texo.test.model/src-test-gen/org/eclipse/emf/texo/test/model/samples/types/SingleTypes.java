@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
 import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -24,6 +26,7 @@ import org.eclipse.persistence.annotations.Converters;
  * @generated
  */
 @Entity(name = "types_SingleTypes")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class SingleTypes extends Identifiable {
 
@@ -154,6 +157,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Basic()
+  @Column(precision = 15, scale = 7)
   private BigDecimal bigDecimal = new BigDecimal("5");
 
   /**

@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -23,6 +24,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "m_Event")
 @Table(name = "m_Event")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Event extends Identifiable {
 

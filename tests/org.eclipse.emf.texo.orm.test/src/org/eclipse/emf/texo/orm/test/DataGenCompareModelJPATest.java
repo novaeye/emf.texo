@@ -338,10 +338,23 @@ public class DataGenCompareModelJPATest extends JPATest {
         assertTrue(found);
       } else if (value1 instanceof Date) {
         findData(c2, (Date) value1);
+      } else if (value1 instanceof Number) {
+        findNumber(c2, (Number) value1);
       } else {
         assertTrue(c2.contains(value1));
       }
     }
+  }
+
+  private void findNumber(Collection<?> c, Number number) {
+    for (Object o : c) {
+      final Number n = (Number) o;
+      final double diff = n.doubleValue() - number.doubleValue();
+      if (diff < 0.1 && diff > -0.1) {
+        return;
+      }
+    }
+    fail("Value " + number + " not present in collection " + c); //$NON-NLS-1$ //$NON-NLS-2$ 
   }
 
   private void findData(Collection<?> c, Date date) {
@@ -444,7 +457,7 @@ public class DataGenCompareModelJPATest extends JPATest {
 
     if (v1 instanceof Number && v2 instanceof Number) {
       if (((Number) v1).intValue() != ((Number) v2).intValue()) {
-        fail("Different values " + v1 + " " + v2); //$NON-NLS-1$ //$NON-NLS-2$
+        fail("Different values " + v1 + "/" + ((Number) v1).intValue() + " " + v2 + "/" + ((Number) v2).intValue()); //$NON-NLS-1$ //$NON-NLS-2$
       }
       return;
     }

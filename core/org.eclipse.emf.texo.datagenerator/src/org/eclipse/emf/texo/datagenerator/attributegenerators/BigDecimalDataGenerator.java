@@ -18,6 +18,7 @@
 package org.eclipse.emf.texo.datagenerator.attributegenerators;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 
 import org.eclipse.emf.texo.datagenerator.EDataTypeDataGenerator;
 
@@ -35,6 +36,7 @@ public class BigDecimalDataGenerator extends EDataTypeDataGenerator {
   @Override
   protected Object getNextValue() {
     index += 0.1;
-    return new BigDecimal(index);
+    final BigDecimal bd = new BigDecimal(index, MathContext.DECIMAL32);
+    return bd;
   }
 }

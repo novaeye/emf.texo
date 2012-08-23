@@ -8,6 +8,7 @@ import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -31,6 +32,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "m_Contract")
 @Table(name = "m_Contract")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Contract extends Identifiable {
 

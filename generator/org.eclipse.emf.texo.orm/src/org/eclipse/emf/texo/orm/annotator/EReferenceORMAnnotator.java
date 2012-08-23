@@ -284,7 +284,7 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     if (namingStrategy.isGenerateAllDBSchemaNames()) {
       if (oneToMany.getJoinTable() != null) {
         // set a unique name
-        if (oneToMany.getJoinTable() != null && GeneratorUtils.isEmptyOrNull(oneToMany.getJoinTable().getName())) {
+        if (GeneratorUtils.isEmptyOrNull(oneToMany.getJoinTable().getName())) {
           oneToMany.getJoinTable().setName(namingStrategy.getJoinTableName(eReference));
         }
         addColumnsToJoinTable(namingStrategy, oneToMany.getJoinTable(), annotation);

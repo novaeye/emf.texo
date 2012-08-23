@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.subpackage.MainType" name="main_MainType">
     <orm:table name="main_MainType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -17,6 +18,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.subpackage.sub1.Sub1Type" name="sub1_Sub1Type">
     <orm:table name="sub1_Sub1Type"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -26,6 +28,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.subpackage.sub2.Sub2Type" name="sub2_Sub2Type">
     <orm:table name="sub2_Sub2Type"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">

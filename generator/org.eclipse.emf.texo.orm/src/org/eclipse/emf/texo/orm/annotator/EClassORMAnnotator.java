@@ -25,6 +25,7 @@ import org.eclipse.emf.texo.modelgenerator.annotator.GenUtils;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
@@ -116,6 +117,12 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
             entity.getPrimaryKeyJoinColumn().get(0).setName(namingStrategy.getPrimaryKeyJoinColumn(eClass));
           }
         }
+      }
+
+      if (isRoot(annotation) && ORMMappingOptions.getDefaultOptions().isTestRun()) {
+        final DiscriminatorColumn dc = OrmFactory.eINSTANCE.createDiscriminatorColumn();
+        dc.setLength(255);
+        entity.setDiscriminatorColumn(dc);
       }
 
       // with interfaces always access through the property

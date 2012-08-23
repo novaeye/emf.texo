@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.test.model.issues.bz369962;
 
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -15,6 +16,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "bz369962_Mother")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Mother extends Identifiable {
 

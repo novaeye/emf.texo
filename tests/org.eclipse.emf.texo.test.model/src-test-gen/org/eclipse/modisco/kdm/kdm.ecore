@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kdm"
-    nsURI="http://www.eclipse.org/MoDisco/kdm" nsPrefix="kdm">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="kdm" nsURI="http://www.eclipse.org/MoDisco/kdm" nsPrefix="kdm">
   <eSubpackages name="core" nsURI="http://www.eclipse.org/MoDisco/kdm/core" nsPrefix="core">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The Core package provides basic constructs for creating and describing meta-model classes in all specific KDM packages.&#xD;&#xA;Classes of the Core package determine the structure of KDM models, define fundamental modeling constraints, and&#xD;&#xA;determine the reflective API to KDM instances."/>

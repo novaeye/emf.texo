@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.samples.interfaces;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableInterface;
@@ -14,6 +15,7 @@ import org.eclipse.persistence.annotations.Converters;
  * @generated
  */
 @Entity(name = "interfaces_Describable")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 @Access(AccessType.PROPERTY)
 public interface Describable extends IdentifiableInterface {

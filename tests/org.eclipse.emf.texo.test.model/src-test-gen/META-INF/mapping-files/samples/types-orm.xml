@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.ManyTypes" name="types_ManyTypes">
     <orm:table name="types_ManyTypes"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:element-collection name="string">
@@ -67,7 +68,7 @@
       </orm:element-collection>
       <orm:element-collection name="bigDecimal">
         <orm:order-column name="types_ManyTypes_bigDecimal_ind"/>
-        <orm:column name="T_element"/>
+        <orm:column name="T_element" precision="15" scale="7"/>
         <orm:collection-table name="types_ManyTypes_bigDecimal">
           <orm:join-column name="types_ManyTypes_bigDecimal"/>
         </orm:collection-table>
@@ -112,6 +113,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.types.SingleTypes" name="types_SingleTypes">
     <orm:table name="types_SingleTypes"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="string">
@@ -158,7 +160,7 @@
         <orm:lob/>
       </orm:basic>
       <orm:basic name="bigDecimal">
-        <orm:column name="bigDecimal"/>
+        <orm:column name="bigDecimal" precision="15" scale="7"/>
       </orm:basic>
       <orm:basic name="bigInteger">
         <orm:column name="bigInteger"/>

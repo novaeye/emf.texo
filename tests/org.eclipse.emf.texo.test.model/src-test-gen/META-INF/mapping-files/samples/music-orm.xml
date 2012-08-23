@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Artist" name="org_elver_music_Artist">
     <orm:table name="org_elver_music_Artist"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="id">
@@ -46,6 +47,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Country" name="org_elver_music_Country">
     <orm:table name="org_elver_music_Country"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="code" optional="false">
@@ -61,6 +63,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Genre" name="org_elver_music_Genre">
     <orm:table name="org_elver_music_Genre"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="id">
@@ -76,6 +79,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Album" name="org_elver_music_Album">
     <orm:table name="org_elver_music_Album"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="id">
@@ -130,6 +134,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.music.Song" name="org_elver_music_Song">
     <orm:table name="org_elver_music_Song"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="id">

@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.ComplexNumber" name="substitution_ComplexNumber">
     <orm:table name="substitution_ComplexNumber"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="value" optional="false">
@@ -37,13 +38,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberType" name="substitution_MultiNumberType">
     <orm:table name="substitution_MultiNumberType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.MultiNumberTypeMyComplexAbstractGroupFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="substitution_MultiNumberType_myComplexAbstractGroup_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -75,19 +77,20 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberType" name="substitution_NumberType">
     <orm:table name="substitution_NumberType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="mySimpleAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMySimpleAbstractGroupFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="substitution_NumberType_mySimpleAbstractGroup_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitution.NumberTypeMyComplexAbstractGroupFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="substitution_NumberType_myComplexAbstractGroup_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

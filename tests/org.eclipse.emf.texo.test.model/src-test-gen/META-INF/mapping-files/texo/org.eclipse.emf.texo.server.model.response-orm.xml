@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ErrorType" name="response_ErrorType">
     <orm:table name="response_ErrorType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="errorClass" optional="false">
@@ -29,6 +30,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ResponseType" name="response_ResponseType">
     <orm:table name="response_ResponseType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="status" optional="false">
@@ -51,6 +53,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.response.ResultType" name="response_ResultType">
     <orm:table name="response_ResultType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:element-collection name="updated">

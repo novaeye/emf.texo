@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.samples.accounting;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
@@ -16,6 +17,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "accounting_Vat")
 @Table(name = "accounting_Vat")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Vat extends Identifiable {
 

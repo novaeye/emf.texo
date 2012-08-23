@@ -81,6 +81,7 @@ public class ORMGeneratorTest extends TestCase {
     testORMOptions.setRenameSQLReservedNames(true);
     testORMOptions.setEnforceUniqueNames(true);
     testORMOptions.setGenerateFullDbSchemaNames(true);
+    testORMOptions.setMaximumSqlNameLength(64);
     testORMOptions.setTestRun(true);
     ORMMappingOptions.setDefaultOptions(testORMOptions);
 

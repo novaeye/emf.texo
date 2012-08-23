@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.ComplexAAA" name="substitutionzvon_ComplexAAA">
     <orm:table name="substitutionzvon_ComplexAAA"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="value" optional="false">
@@ -48,16 +49,17 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootType" name="substitutionzvon_RootType">
     <orm:table name="substitutionzvon_RootType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="myAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyAbstractGroupFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="substitutionzvon_RootType_myAbstractGroup_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="myComplexAbstractGroup" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.substitutionzvon.RootTypeMyComplexAbstractGroupFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="substitutionzvon_RootType_myComplexAbstractGroup_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

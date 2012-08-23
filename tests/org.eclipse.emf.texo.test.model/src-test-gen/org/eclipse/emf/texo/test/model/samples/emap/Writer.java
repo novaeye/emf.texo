@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.samples.emap;
 
 import javax.persistence.Basic;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
@@ -15,6 +16,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "emapsample_Writer")
 @Table(name = "EMAP_WRITER")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Writer extends Identifiable {
 

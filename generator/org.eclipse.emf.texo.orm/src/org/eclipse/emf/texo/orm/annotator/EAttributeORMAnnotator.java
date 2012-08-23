@@ -17,6 +17,7 @@
 
 package org.eclipse.emf.texo.orm.annotator;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -157,7 +158,7 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         featureMapEntity.setName(namingStrategy.getFeatureMapEntityName(eAttribute));
       }
 
-      if (isPartOfFeatureMap && FeatureMapUtil.isFeatureMap(eAttribute)) {
+      if (isPartOfFeatureMap) {
         if (annotation.getManyToOne() == null) {
           annotation.setManyToOne(OrmFactory.eINSTANCE.createManyToOne());
         }
@@ -170,13 +171,18 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         if (annotation.getOneToMany() == null) {
           annotation.setOneToMany(OrmFactory.eINSTANCE.createOneToMany());
         }
-        final OneToMany OneToMany = annotation.getOneToMany();
-        OneToMany.setTargetEntity(eAttributeModelGen.getFeatureMapQualifiedClassName());
-        OneToMany.setCascade(OrmFactory.eINSTANCE.createCascadeType());
-        OneToMany.setOrphanRemoval(true);
-        OneToMany.getCascade().setCascadeAll(OrmFactory.eINSTANCE.createEmptyType());
-        OneToMany.setJoinTable(OrmFactory.eINSTANCE.createJoinTable());
-        OneToMany.setName(getName(eAttribute));
+        final OneToMany oneToMany = annotation.getOneToMany();
+        oneToMany.setTargetEntity(eAttributeModelGen.getFeatureMapQualifiedClassName());
+        oneToMany.setCascade(OrmFactory.eINSTANCE.createCascadeType());
+        oneToMany.setOrphanRemoval(true);
+        oneToMany.getCascade().setCascadeAll(OrmFactory.eINSTANCE.createEmptyType());
+        if (oneToMany.getJoinTable() == null) {
+          oneToMany.setJoinTable(OrmFactory.eINSTANCE.createJoinTable());
+        }
+        if (oneToMany.getJoinTable().getName() == null && namingStrategy.isGenerateAllDBSchemaNames()) {
+          oneToMany.getJoinTable().setName(namingStrategy.getJoinTableName(eAttribute));
+        }
+        oneToMany.setName(getName(eAttribute));
       }
 
       return;
@@ -186,11 +192,14 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
     boolean isLob = false;
     boolean isTime = false;
     boolean isDate = false;
+    boolean isBigDecimal = false;
     if (eDataType.getInstanceClass() != null) {
       isLob = eDataType.getInstanceClass().isArray() && eDataType.getInstanceClass().getComponentType() == byte.class;
       isTime = Timestamp.class == eDataType.getInstanceClass() || eDataType == XMLTypePackage.eINSTANCE.getDateTime();
       isDate = eDataType == XMLTypePackage.eINSTANCE.getDate() || eDataType.getInstanceClass() != null
           && Date.class.isAssignableFrom(eDataType.getInstanceClass());
+      isBigDecimal = BigDecimal.class == eDataType.getInstanceClass()
+          || eDataType == XMLTypePackage.eINSTANCE.getDecimal();
     }
     final boolean isEnum = eDataType instanceof EEnum;
 
@@ -210,6 +219,12 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
         elementCollection.setTemporal(TemporalType.TIMESTAMP);
       } else if (isDate) {
         elementCollection.setTemporal(TemporalType.DATE);
+      } else if (isBigDecimal && elementCollection.getColumn() == null
+          && ORMMappingOptions.getDefaultOptions().isTestRun()) {
+        final Column column = OrmFactory.eINSTANCE.createColumn();
+        column.setScale(7);
+        column.setPrecision(15);
+        elementCollection.setColumn(column);
       } else if (doAddConverter(eAttributeModelGen)) {
         elementCollection.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
       }
@@ -297,6 +312,11 @@ public class EAttributeORMAnnotator extends EStructuralFeatureORMAnnotator imple
       basic.setTemporal(TemporalType.TIMESTAMP);
     } else if (!basicSet && isDate) {
       basic.setTemporal(TemporalType.DATE);
+    } else if (isBigDecimal && basic.getColumn() == null && ORMMappingOptions.getDefaultOptions().isTestRun()) {
+      final Column column = OrmFactory.eINSTANCE.createColumn();
+      column.setScale(7);
+      column.setPrecision(15);
+      basic.setColumn(column);
     } else if (doAddConverter(eAttributeModelGen)) {
       basic.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
     }

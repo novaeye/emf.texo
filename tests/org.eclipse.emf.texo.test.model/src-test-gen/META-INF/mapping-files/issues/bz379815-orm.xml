@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz379815.VarInputType" name="bz379815_VarInputType">
     <orm:table name="DPL_bz379815_VarInputType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="measure" optional="false">
@@ -23,6 +24,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz379815.VarConditionType" name="bz379815_VarConditionType">
     <orm:table name="DPL_bz379815_VarConditionType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="policyType">
@@ -35,6 +37,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz379815.VarPolicyTypeType" name="bz379815_VarPolicyTypeType">
     <orm:table name="DPL_bz379815_VarPolicyTypeType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="type" optional="false">

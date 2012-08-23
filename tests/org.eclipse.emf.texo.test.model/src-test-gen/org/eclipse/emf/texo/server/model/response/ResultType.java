@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.server.model.response;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CollectionTable;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
@@ -17,6 +18,7 @@ import org.eclipse.persistence.annotations.Converters;
  * @generated
  */
 @Entity(name = "response_ResultType")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class ResultType extends Identifiable {
 

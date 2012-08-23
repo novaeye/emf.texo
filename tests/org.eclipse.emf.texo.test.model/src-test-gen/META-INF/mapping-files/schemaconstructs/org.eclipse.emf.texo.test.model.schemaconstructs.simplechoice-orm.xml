@@ -21,13 +21,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.Person" name="simplechoice_Person">
     <orm:table name="simplechoice_Person"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="group" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplechoice.PersonGroupFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="simplechoice_Person_group_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

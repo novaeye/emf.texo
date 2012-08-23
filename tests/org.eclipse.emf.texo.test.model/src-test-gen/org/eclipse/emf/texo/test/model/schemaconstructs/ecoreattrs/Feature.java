@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
@@ -19,6 +20,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "ecoreattrs_Feature")
 @Table(name = "ecoreattrs_Feature")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Feature extends Identifiable {
 
@@ -28,7 +30,7 @@ public class Feature extends Identifiable {
    * @generated
    */
   @OneToMany(cascade = { CascadeType.ALL }, orphanRemoval = true, targetEntity = FeatureAMapFeatureGroup.class)
-  @JoinTable()
+  @JoinTable(name = "ecoreattrs_Feature_aMap_FM")
   private List<FeatureAMapFeatureGroup> aMap = new ArrayList<FeatureAMapFeatureGroup>();
 
   /**

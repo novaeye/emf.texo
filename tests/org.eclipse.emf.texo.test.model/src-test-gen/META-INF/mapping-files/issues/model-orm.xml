@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimCard" name="m_SimCard">
     <orm:table name="m_SimCard"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="phoneNumber">
@@ -20,6 +21,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimContract" name="m_SimContract">
     <orm:table name="m_SimContract"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="contractNumber">
@@ -43,6 +45,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentInfo" name="m_PaymentInfo">
     <orm:table name="m_PaymentInfo"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="tariff">
@@ -69,6 +72,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SimCardXSimContract" name="m_SimCardXSimContract">
     <orm:table name="m_SimCardXSimContract"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="simCard">
@@ -95,6 +99,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Tariff" name="m_Tariff">
     <orm:table name="m_Tariff"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -155,10 +160,11 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.PaymentItem" name="m_PaymentItem">
     <orm:table name="m_PaymentItem"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="sum">
-        <orm:column name="T_sum"/>
+        <orm:column name="T_sum" precision="15" scale="7"/>
       </orm:basic>
       <orm:basic name="currency">
         <orm:column name="currency"/>
@@ -181,10 +187,10 @@
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="volume">
-        <orm:column name="volume" nullable="true"/>
+        <orm:column name="volume" nullable="true" precision="15" scale="7"/>
       </orm:basic>
       <orm:basic name="price">
-        <orm:column name="price" nullable="true"/>
+        <orm:column name="price" nullable="true" precision="15" scale="7"/>
       </orm:basic>
       <orm:many-to-one name="unit">
         <orm:join-column name="m_VolumePayment_unit" nullable="true"/>
@@ -211,6 +217,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Service" name="m_Service">
     <orm:table name="m_Service"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -247,6 +254,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Units" name="m_Units">
     <orm:table name="m_Units"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -256,11 +264,13 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Price" name="m_Price">
     <orm:table name="m_Price"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarProducer" name="m_CarProducer">
     <orm:table name="m_CarProducer"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -270,6 +280,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarModel" name="m_CarModel">
     <orm:table name="m_CarModel"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name">
@@ -287,6 +298,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarRegInfo" name="m_CarRegInfo">
     <orm:table name="m_CarRegInfo"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
@@ -335,6 +347,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Person" name="m_Person">
     <orm:table name="m_Person"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="surname">
@@ -398,6 +411,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Car" name="m_Car">
     <orm:table name="m_Car"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="model">
@@ -428,6 +442,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.CarPassport" name="m_CarPassport">
     <orm:table name="m_CarPassport"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
@@ -446,6 +461,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Phone" name="m_Phone">
     <orm:table name="m_Phone"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="number">
@@ -458,6 +474,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Address" name="m_Address">
     <orm:table name="m_Address"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="zipCode">
@@ -485,6 +502,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Passport" name="m_Passport">
     <orm:table name="m_Passport"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
@@ -503,6 +521,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.DrivingLicense" name="m_DrivingLicense">
     <orm:table name="m_DrivingLicense"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="series">
@@ -521,6 +540,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Contract" name="m_Contract">
     <orm:table name="m_Contract"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="signDate">
@@ -570,6 +590,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.SecretQuestion" name="m_SecretQuestion">
     <orm:table name="m_SecretQuestion"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="question">
@@ -596,6 +617,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.ContractPackage" name="m_ContractPackage">
     <orm:table name="m_ContractPackage"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="client">
@@ -630,6 +652,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.User" name="m_User">
     <orm:table name="m_User"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="login">
@@ -650,11 +673,13 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.UserGroup" name="m_UserGroup">
     <orm:table name="m_UserGroup"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Message" name="m_Message">
     <orm:table name="m_Message"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="text">
@@ -688,6 +713,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Event" name="m_Event">
     <orm:table name="m_Event"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="eventType">
@@ -714,13 +740,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz331009.Coordinates" name="m_Coordinates">
     <orm:table name="m_Coordinates"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="x">
-        <orm:column name="x"/>
+        <orm:column name="x" precision="15" scale="7"/>
       </orm:basic>
       <orm:basic name="y">
-        <orm:column name="y"/>
+        <orm:column name="y" precision="15" scale="7"/>
       </orm:basic>
     </orm:attributes>
   </orm:entity>

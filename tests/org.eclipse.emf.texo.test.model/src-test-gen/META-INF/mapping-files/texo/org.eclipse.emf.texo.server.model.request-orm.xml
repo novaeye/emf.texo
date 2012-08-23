@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.ActionType" name="request_ActionType">
     <orm:table name="request_ActionType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:element-collection name="update">
@@ -26,6 +27,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.QueryType" name="request_QueryType">
     <orm:table name="request_QueryType"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="namedQuery">
@@ -45,6 +47,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.server.model.request.Parameter" name="request_Parameter">
     <orm:table name="request_Parameter"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">

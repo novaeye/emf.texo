@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.graphiti.mm.Property" name="mm_Property">
     <orm:table name="mm_Property"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="key" optional="false">
@@ -20,6 +21,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.PropertyContainer" name="mm_PropertyContainer">
     <orm:table name="mm_PropertyContainer"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="properties">
@@ -36,6 +38,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.StyleContainer" name="mm_StyleContainer">
     <orm:table name="mm_StyleContainer"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many mapped-by="styleContainer" name="styles">
@@ -541,6 +544,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.AbstractStyle" name="st_AbstractStyle">
     <orm:table name="st_AbstractStyle"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="lineWidth">
@@ -585,6 +589,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Color" name="st_Color">
     <orm:table name="st_Color"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="red" optional="false">
@@ -600,6 +605,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Font" name="st_Font">
     <orm:table name="st_Font"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
@@ -618,6 +624,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.Point" name="st_Point">
     <orm:table name="st_Point"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="x" optional="false">
@@ -636,6 +643,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.PrecisionPoint" name="st_PrecisionPoint">
     <orm:table name="st_PrecisionPoint"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="x" optional="false">
@@ -648,6 +656,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.RenderingStyle" name="st_RenderingStyle">
     <orm:table name="st_RenderingStyle"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="adaptedGradientColoredAreas">
@@ -660,6 +669,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.AdaptedGradientColoredAreas" name="st_AdaptedGradientColoredAreas">
     <orm:table name="st_AdaptedGradientColoredAreas"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="definedStyleId">
@@ -679,6 +689,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.GradientColoredLocation" name="st_GradientColoredLocation">
     <orm:table name="st_GradientColoredLocation"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="locationType" optional="false">
@@ -698,6 +709,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.GradientColoredArea" name="st_GradientColoredArea">
     <orm:table name="st_GradientColoredArea"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:many-to-one name="start">
@@ -716,6 +728,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.graphiti.mm.algorithms.styles.GradientColoredAreas" name="st_GradientColoredAreas">
     <orm:table name="st_GradientColoredAreas"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="styleAdaption">

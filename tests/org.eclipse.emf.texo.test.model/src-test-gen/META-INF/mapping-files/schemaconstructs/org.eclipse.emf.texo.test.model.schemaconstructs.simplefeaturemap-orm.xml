@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.PurchaseOrder" name="simplefeaturemap_PurchaseOrder">
     <orm:table name="simplefeaturemap_PurchaseOrder"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
@@ -42,13 +43,14 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.Supplier" name="simplefeaturemap_Supplier">
     <orm:table name="simplefeaturemap_Supplier"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
         <orm:column name="name"/>
       </orm:basic>
       <orm:one-to-many name="orders" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.simplefeaturemap.SupplierOrdersFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="simplefeaturemap_Supplier_orders_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

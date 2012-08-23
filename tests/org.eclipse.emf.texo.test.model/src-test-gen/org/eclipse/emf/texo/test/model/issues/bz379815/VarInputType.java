@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.issues.bz379815;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -20,6 +21,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "bz379815_VarInputType")
 @Table(name = "DPL_bz379815_VarInputType")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class VarInputType extends Identifiable {
 

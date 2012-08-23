@@ -3,6 +3,7 @@ package org.eclipse.modisco.kdm.core;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
@@ -20,6 +21,7 @@ import org.eclipse.persistence.annotations.Converters;
  * @generated
  */
 @Entity(name = "core_Element")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class Element extends Identifiable {
 

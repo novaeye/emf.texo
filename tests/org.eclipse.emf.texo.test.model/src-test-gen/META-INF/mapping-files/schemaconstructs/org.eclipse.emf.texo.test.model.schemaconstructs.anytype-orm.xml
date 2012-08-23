@@ -8,6 +8,7 @@
   <orm:access>FIELD</orm:access>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.A" name="anytype_A">
     <orm:table name="anytype_A"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
@@ -31,6 +32,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.B" name="anytype_B">
     <orm:table name="anytype_B"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
@@ -40,6 +42,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.C" name="anytype_C">
     <orm:table name="anytype_C"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes/>
   </orm:entity>
@@ -59,6 +62,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAny" name="anytype_TestAny">
     <orm:table name="anytype_TestAny"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="name" optional="false">
@@ -71,13 +75,13 @@
         <orm:convert>TexoTestObjectConverter</orm:convert>
       </orm:basic>
       <orm:one-to-many name="myAny" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyMyAnyFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="anytype_TestAny_myAny_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
       </orm:one-to-many>
       <orm:one-to-many name="any" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.anytype.TestAnyAnyFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="anytype_TestAny_any_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

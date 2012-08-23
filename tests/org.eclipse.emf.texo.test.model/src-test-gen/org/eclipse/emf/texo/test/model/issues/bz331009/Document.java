@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
@@ -16,6 +17,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "m_Document")
 @Table(name = "m_Document")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 @Access(AccessType.PROPERTY)
 public interface Document {

@@ -2,6 +2,8 @@ package org.eclipse.emf.texo.test.model.samples.schemaprimerpo;
 
 import java.math.BigDecimal;
 import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -14,6 +16,7 @@ import org.eclipse.persistence.annotations.Converters;
  * @generated
  */
 @Entity(name = "schemaprimerpo_USAddress")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class USAddress extends Identifiable {
 
@@ -55,6 +58,7 @@ public class USAddress extends Identifiable {
    * @generated
    */
   @Basic(optional = false)
+  @Column(precision = 15, scale = 7)
   private BigDecimal zip = null;
 
   /**

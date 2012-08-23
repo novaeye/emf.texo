@@ -21,10 +21,11 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.Element" name="ecoreattrs_Element">
     <orm:table name="ecoreattrs_Element"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="nameMap" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.ElementNameMapFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="ecoreattrs_Element_nameMap_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -33,6 +34,7 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.NameList" name="ecoreattrs_NameList">
     <orm:table name="ecoreattrs_NameList"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:basic name="firstName" optional="false">
@@ -61,10 +63,11 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.Feature" name="ecoreattrs_Feature">
     <orm:table name="ecoreattrs_Feature"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="aMap" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.FeatureAMapFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="ecoreattrs_Feature_aMap_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>
@@ -95,10 +98,11 @@
   </orm:entity>
   <orm:entity class="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.Mixed" name="ecoreattrs_Mixed">
     <orm:table name="ecoreattrs_Mixed"/>
+    <orm:discriminator-column length="255"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:attributes>
       <orm:one-to-many name="mixed" orphan-removal="true" target-entity="org.eclipse.emf.texo.test.model.schemaconstructs.ecoreattrs.MixedMixedFeatureGroup">
-        <orm:join-table/>
+        <orm:join-table name="ecoreattrs_Mixed_mixed_FM"/>
         <orm:cascade>
           <orm:cascade-all/>
         </orm:cascade>

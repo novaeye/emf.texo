@@ -4,6 +4,7 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -24,6 +25,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "m_CarRegInfo")
 @Table(name = "m_CarRegInfo")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class CarRegInfo extends Identifiable implements Document {
 

@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -23,6 +24,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "m_PaymentItem")
 @Table(name = "m_PaymentItem")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public abstract class PaymentItem extends Identifiable {
 
@@ -32,7 +34,7 @@ public abstract class PaymentItem extends Identifiable {
    * @generated
    */
   @Basic()
-  @Column(name = "T_sum")
+  @Column(name = "T_sum", precision = 15, scale = 7)
   private BigDecimal sum = null;
 
   /**

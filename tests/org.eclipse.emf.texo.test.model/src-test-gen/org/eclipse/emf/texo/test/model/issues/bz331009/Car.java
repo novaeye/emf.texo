@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.issues.bz331009;
 
 import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -19,6 +20,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @Entity(name = "m_Car")
 @Table(name = "m_Car")
+@DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter") })
 public class Car extends Identifiable {
 
