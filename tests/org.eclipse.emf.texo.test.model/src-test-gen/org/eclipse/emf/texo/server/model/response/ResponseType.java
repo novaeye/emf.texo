@@ -2,35 +2,19 @@ package org.eclipse.emf.texo.server.model.response;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CollectionTable;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import org.eclipse.emf.texo.test.TexoTestObjectConverter;
-import org.eclipse.emf.texo.test.TexoTestQNameConverter;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-import org.eclipse.persistence.annotations.Convert;
-import org.eclipse.persistence.annotations.Converter;
-import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ResponseType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "response_ResponseType")
-@DiscriminatorColumn(length = 255)
-@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
-    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
-public class ResponseType extends Identifiable {
+public class ResponseType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String status = null;
 
   /**
@@ -38,7 +22,6 @@ public class ResponseType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private long startRow = 0;
 
   /**
@@ -46,7 +29,6 @@ public class ResponseType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private long endRow = 0;
 
   /**
@@ -54,7 +36,6 @@ public class ResponseType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private long totalRows = 0;
 
   /**
@@ -62,9 +43,6 @@ public class ResponseType extends Identifiable {
    * 
    * @generated
    */
-  @ElementCollection()
-  @Convert("TexoTestObjectConverter")
-  @CollectionTable(name = "response_ResponseType_data")
   private List<Object> data = new ArrayList<Object>();
 
   /**

@@ -68,11 +68,11 @@ public class EPersistenceServiceTest extends BaseTest {
     long libId = -1;
     // Persist
     {
-      final List<EObject> toInsertUpdate = new ArrayList<EObject>();
+      final List<EObject> toInsert = new ArrayList<EObject>();
       for (int i = 0; i < COUNT; i++) {
         // create testdata
         final Library lib = factory.createLibrary();
-        toInsertUpdate.add(lib);
+        toInsert.add(lib);
         lib.setName("name" + i); //$NON-NLS-1$
 
         for (int w = 0; w < COUNT; w++) {
@@ -89,8 +89,8 @@ public class EPersistenceServiceTest extends BaseTest {
         }
       }
       final EPersistenceService service = getEPersistenceService();
-      service.persist(toInsertUpdate, Collections.<EObject> emptyList());
-      libId = ((Library) toInsertUpdate.get(0)).getDb_Id();
+      service.persist(toInsert, Collections.<EObject> emptyList(), Collections.<EObject> emptyList());
+      libId = ((Library) toInsert.get(0)).getDb_Id();
     }
 
     // Get
@@ -159,7 +159,8 @@ public class EPersistenceServiceTest extends BaseTest {
       Assert.assertTrue(lib1 != lib2);
       lib1.setName("newname");
       Assert.assertFalse(lib2.getName().equals(lib1.getName()));
-      s1.persist(Collections.<EObject> singletonList(lib1), Collections.<EObject> emptyList());
+      s1.persist(Collections.<EObject> emptyList(), Collections.<EObject> singletonList(lib1),
+          Collections.<EObject> emptyList());
       Assert.assertFalse(lib2.getName().equals(lib1.getName()));
       s2.refresh(lib2);
       Assert.assertTrue(lib2.getName().equals(lib1.getName()));
@@ -169,6 +170,13 @@ public class EPersistenceServiceTest extends BaseTest {
     {
       final EPersistenceService s1 = getEPersistenceService();
       final Library lib1 = (Library) s1.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
+      final Library lib2 = (Library) s1.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
+      Assert.assertTrue(lib1 == lib2);
+    }
+    {
+      final EPersistenceService s1 = getEPersistenceService();
+      final Library lib1 = (Library) s1.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
+      s1.close();
       final Library lib2 = (Library) s1.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
       Assert.assertTrue(lib1 != lib2);
     }
@@ -181,8 +189,7 @@ public class EPersistenceServiceTest extends BaseTest {
       final EObject toDel = libs.remove(4);
       final Library lib = factory.createLibrary();
       lib.setName("name10"); //$NON-NLS-1$
-      libs.add(2, lib);
-      service.persist(libs, Collections.<EObject> singletonList(toDel));
+      service.persist(Collections.<EObject> singletonList(lib), libs, Collections.<EObject> singletonList(toDel));
 
       Assert.assertTrue(null == service.get(LibraryPackage.eINSTANCE.getLibrary(), ((Library) toDel).getDb_Id()));
       Assert.assertTrue(lib.getDb_Id() > 0);
@@ -191,7 +198,6 @@ public class EPersistenceServiceTest extends BaseTest {
     // same objects
     {
       final EPersistenceService service = getEPersistenceService();
-      service.setCacheEObjects(true);
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       final List<EObject> libs1 = service.query("select l from library_Library l", namedParams, 0, -1);
       final List<EObject> libs2 = service.query("select l from library_Library l", namedParams, 0, -1);

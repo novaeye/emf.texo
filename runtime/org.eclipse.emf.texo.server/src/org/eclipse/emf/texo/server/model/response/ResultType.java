@@ -3,21 +3,11 @@ package org.eclipse.emf.texo.server.model.response;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * A representation of the model object '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ResultType")
 public class ResultType {
 
   /**
@@ -25,9 +15,6 @@ public class ResultType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> updated = new ArrayList<Object>();
 
   /**
@@ -35,9 +22,6 @@ public class ResultType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> inserted = new ArrayList<Object>();
 
   /**
@@ -45,9 +29,6 @@ public class ResultType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> deleted = new ArrayList<Object>();
 
   /**

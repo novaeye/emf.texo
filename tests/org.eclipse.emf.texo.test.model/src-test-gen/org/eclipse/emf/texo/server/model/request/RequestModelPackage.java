@@ -9,12 +9,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.server.model.request.dao.ActionTypeDao;
-import org.eclipse.emf.texo.server.model.request.dao.DocumentRootDao;
-import org.eclipse.emf.texo.server.model.request.dao.ParameterDao;
-import org.eclipse.emf.texo.server.model.request.dao.QueryTypeDao;
-import org.eclipse.emf.texo.server.store.DaoRegistry;
-import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -60,21 +54,21 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACTIONTYPE_UPDATE_FEATURE_ID = 2;
+  public static final int ACTIONTYPE_UPDATE_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTIONTYPE_INSERT_FEATURE_ID = 3;
+  public static final int ACTIONTYPE_INSERT_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ACTIONTYPE_DELETE_FEATURE_ID = 4;
+  public static final int ACTIONTYPE_DELETE_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -88,63 +82,119 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 2;
+  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 3;
+  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 4;
+  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ACTION_FEATURE_ID = 5;
+  public static final int DOCUMENTROOT_ACTION_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_QUERY_FEATURE_ID = 6;
+  public static final int DOCUMENTROOT_QUERY_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_CLASSIFIER_ID = 3;
+  public static final int DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_QUERY_FEATURE_ID = 3;
+  public static final int QUERYTYPE_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 2;
+  public static final int QUERYTYPE_QUERY_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_PARAMETERS_FEATURE_ID = 4;
+  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_PARAMETERS_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_FIRSTRESULT_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_MAXRESULTS_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_DOCOUNT_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -158,21 +208,21 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PARAMETER_NAME_FEATURE_ID = 2;
+  public static final int PARAMETER_NAME_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PARAMETER_VALUE_FEATURE_ID = 3;
+  public static final int PARAMETER_VALUE_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int PARAMETER_TYPE_FEATURE_ID = 4;
+  public static final int PARAMETER_TYPE_FEATURE_ID = 2;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -202,8 +252,6 @@ public class RequestModelPackage extends ModelPackage {
 
     isInitialized = true;
 
-    IdentifiableModelPackage.initialize();
-
     // force the initialization of the EFactory proxy
     modelPackage.getEPackage();
 
@@ -214,16 +262,10 @@ public class RequestModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(QueryType.class, modelPackage.getQueryTypeEClass(),
         modelPackage);
+    ModelResolver.getInstance().registerClassModelMapping(QueryReferingObjectsType.class,
+        modelPackage.getQueryReferingObjectsTypeEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(Parameter.class, modelPackage.getParameterEClass(),
         modelPackage);
-
-    DaoRegistry.getInstance().registerDao(ActionType.class, ActionTypeDao.class);
-
-    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
-    DaoRegistry.getInstance().registerDao(QueryType.class, QueryTypeDao.class);
-
-    DaoRegistry.getInstance().registerDao(Parameter.class, ParameterDao.class);
 
     // and return ourselves
     return modelPackage;
@@ -374,6 +416,18 @@ public class RequestModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.queryReferingObjects</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.queryReferingObjects</b></em>'.
+   * @generated
+   */
+  public EReference getDocumentRoot_QueryReferingObjects() {
+    return (EReference) getDocumentRootEClass().getEAllStructuralFeatures().get(
+        DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>QueryType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>QueryType</b></em>'
@@ -414,6 +468,87 @@ public class RequestModelPackage extends ModelPackage {
    */
   public EReference getQueryType_Parameters() {
     return (EReference) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_PARAMETERS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.firstResult</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.firstResult</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_FirstResult() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_FIRSTRESULT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.maxResults</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.maxResults</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_MaxResults() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_MAXRESULTS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.doCount</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.doCount</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_DoCount() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_DOCOUNT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>QueryReferingObjectsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>QueryReferingObjectsType</b></em>'
+   * @generated
+   */
+  public EClass getQueryReferingObjectsTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.targetUri</b></em>'. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.targetUri</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryReferingObjectsType_TargetUri() {
+    return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
+        QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.includeContainment</b></em>'. <!--
+   * begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.includeContainment</b></em>
+   *         '.
+   * @generated
+   */
+  public EAttribute getQueryReferingObjectsType_IncludeContainment() {
+    return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
+        QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.maxResults</b></em>'. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.maxResults</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryReferingObjectsType_MaxResults() {
+    return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
+        QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID);
   }
 
   /**
@@ -476,6 +611,8 @@ public class RequestModelPackage extends ModelPackage {
       return DocumentRoot.class;
     case QUERYTYPE_CLASSIFIER_ID:
       return QueryType.class;
+    case QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID:
+      return QueryReferingObjectsType.class;
     case PARAMETER_CLASSIFIER_ID:
       return Parameter.class;
     }

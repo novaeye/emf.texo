@@ -1,33 +1,17 @@
 package org.eclipse.emf.texo.server.model.response;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import org.eclipse.emf.texo.test.TexoTestObjectConverter;
-import org.eclipse.emf.texo.test.TexoTestQNameConverter;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-import org.eclipse.persistence.annotations.Converter;
-import org.eclipse.persistence.annotations.Converters;
-
 /**
  * A representation of the model object '<em><b>ErrorType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "response_ErrorType")
-@DiscriminatorColumn(length = 255)
-@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
-    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
-public class ErrorType extends Identifiable {
+public class ErrorType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String errorClass = null;
 
   /**
@@ -35,7 +19,6 @@ public class ErrorType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String message = null;
 
   /**
@@ -43,7 +26,6 @@ public class ErrorType extends Identifiable {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String stackTrace = null;
 
   /**
@@ -51,7 +33,6 @@ public class ErrorType extends Identifiable {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private ErrorType cause = null;
 
   /**

@@ -1,18 +1,10 @@
 package org.eclipse.emf.texo.server.model.response;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-
 /**
  * A representation of the model object '<em><b>ErrorType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ErrorType")
 public class ErrorType {
 
   /**
@@ -20,7 +12,6 @@ public class ErrorType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String errorClass = null;
 
   /**
@@ -28,7 +19,6 @@ public class ErrorType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String message = null;
 
   /**
@@ -36,7 +26,6 @@ public class ErrorType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String stackTrace = null;
 
   /**
@@ -44,8 +33,6 @@ public class ErrorType {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = false, targetEntity = ErrorType.class)
-  @JoinColumns({ @JoinColumn() })
   private ErrorType cause = null;
 
   /**

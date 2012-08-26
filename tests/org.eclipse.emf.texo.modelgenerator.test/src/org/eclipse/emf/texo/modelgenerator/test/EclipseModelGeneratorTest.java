@@ -63,6 +63,8 @@ public class EclipseModelGeneratorTest extends TestCase {
 
   private static final EPackage.Registry SHARED_REGISTRY = GeneratorUtils.createEPackageRegistry();
 
+  private boolean generateTexoModels = false;
+
   private ORMMappingOptions testORMOptions = new ORMMappingOptions();
   private ORMMappingOptions safeORMOptions = new ORMMappingOptions();
 
@@ -81,7 +83,9 @@ public class EclipseModelGeneratorTest extends TestCase {
     // force initialization
     ModelAnnotatorRegistry.getInstance().getModelAnnotators();
     // let everyone have orm annotations..
-    AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
+    if (!isGenerateTexoModels()) {
+      AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
+    }
 
     for (String modelFile : getModelFileRelativePaths()) {
       System.err.println("Generating modelfile " + modelFile); //$NON-NLS-1$
@@ -120,21 +124,24 @@ public class EclipseModelGeneratorTest extends TestCase {
           .createEPackageRegistry();
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, packageRegistry);
 
-      addSuperType(ePackages, packageRegistry);
+      if (!isGenerateTexoModels()) {
+        addSuperType(ePackages, packageRegistry);
 
-      boolean hasIdentifiable = false;
-      for (EPackage ePackage : ePackages) {
-        hasIdentifiable = hasIdentifiable
-            || ePackage.getNsURI().equals("http://www.eclipse.org/emf/texo/test/model/base/identifiable"); //$NON-NLS-1$
+        boolean hasIdentifiable = false;
+        for (EPackage ePackage : ePackages) {
+          hasIdentifiable = hasIdentifiable
+              || ePackage.getNsURI().equals("http://www.eclipse.org/emf/texo/test/model/base/identifiable"); //$NON-NLS-1$
+        }
+
+        // give everyone the identifiable as super, except the identifiable
+        // package
+        if (hasIdentifiable) {
+          EPackageModelGenAnnotation.setDefaultExtends(null);
+        } else {
+          EPackageModelGenAnnotation.setDefaultExtends(DEFAULT_EXTENDS);
+        }
       }
 
-      // give everyone the identifiable as super, except the identifiable
-      // package
-      if (hasIdentifiable) {
-        EPackageModelGenAnnotation.setDefaultExtends(null);
-      } else {
-        EPackageModelGenAnnotation.setDefaultExtends(DEFAULT_EXTENDS);
-      }
       try {
         final ModelController modelController = new ModelController();
         modelController.setEPackages(ePackages);
@@ -145,7 +152,9 @@ public class EclipseModelGeneratorTest extends TestCase {
         artifactGenerator.setModelController(modelController);
         artifactGenerator.setOutputFolder("src-test-gen"); //$NON-NLS-1$
         artifactGenerator.setProjectName(TEST_MODEL_PROJECT);
-        artifactGenerator.setDoDao(true);
+        if (!isGenerateTexoModels()) {
+          artifactGenerator.setDoDao(true);
+        }
         artifactGenerator.run();
       } finally {
         EPackageModelGenAnnotation.setDefaultExtends(null);
@@ -212,5 +221,13 @@ public class EclipseModelGeneratorTest extends TestCase {
 
   protected List<String> getModelFileRelativePaths() {
     return TestModel.getAllSpecifiedModelRelativePaths();
+  }
+
+  protected boolean isGenerateTexoModels() {
+    return generateTexoModels;
+  }
+
+  protected void setGenerateTexoModels(final boolean generateTexoModels) {
+    this.generateTexoModels = generateTexoModels;
   }
 }

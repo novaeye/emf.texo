@@ -5,13 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
@@ -31,8 +24,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
   /**
@@ -40,8 +31,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
@@ -49,8 +38,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ErrorType.class)
-  @JoinColumns({ @JoinColumn() })
   private ErrorType error = null;
 
   /**
@@ -58,8 +45,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ResponseType.class)
-  @JoinColumns({ @JoinColumn() })
   private ResponseType response = null;
 
   /**
@@ -67,8 +52,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ResultType.class)
-  @JoinColumns({ @JoinColumn() })
   private ResultType result = null;
 
   /**

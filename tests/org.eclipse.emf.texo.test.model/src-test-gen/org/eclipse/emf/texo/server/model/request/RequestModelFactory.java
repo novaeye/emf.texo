@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
+import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
-import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.server.model.request. It contains
@@ -38,6 +38,8 @@ public class RequestModelFactory implements ModelFactory {
       return createDocumentRoot();
     case RequestModelPackage.QUERYTYPE_CLASSIFIER_ID:
       return createQueryType();
+    case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID:
+      return createQueryReferingObjectsType();
     case RequestModelPackage.PARAMETER_CLASSIFIER_ID:
       return createParameter();
     }
@@ -66,6 +68,9 @@ public class RequestModelFactory implements ModelFactory {
       break;
     case RequestModelPackage.QUERYTYPE_CLASSIFIER_ID:
       modelObject = new QueryTypeModelObject();
+      break;
+    case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID:
+      modelObject = new QueryReferingObjectsTypeModelObject();
       break;
     case RequestModelPackage.PARAMETER_CLASSIFIER_ID:
       modelObject = new ParameterModelObject();
@@ -147,6 +152,16 @@ public class RequestModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass QueryReferingObjectsType
+   * @generated
+   */
+  public QueryReferingObjectsType createQueryReferingObjectsType() {
+    return new QueryReferingObjectsType();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Parameter
    * @generated
    */
@@ -189,12 +204,10 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ActionTypeModelObject<E extends ActionType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class ActionTypeModelObject<E extends ActionType> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getActionTypeEClass();
     }
@@ -202,7 +215,6 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -297,12 +309,10 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -310,7 +320,6 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -332,6 +341,8 @@ public class RequestModelFactory implements ModelFactory {
         return getTarget().getAction();
       case RequestModelPackage.DOCUMENTROOT_QUERY_FEATURE_ID:
         return getTarget().getQuery();
+      case RequestModelPackage.DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID:
+        return getTarget().getQueryReferingObjects();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -358,6 +369,9 @@ public class RequestModelFactory implements ModelFactory {
         return;
       case RequestModelPackage.DOCUMENTROOT_QUERY_FEATURE_ID:
         getTarget().setQuery((QueryType) value);
+        return;
+      case RequestModelPackage.DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID:
+        getTarget().setQueryReferingObjects((QueryReferingObjectsType) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -401,12 +415,10 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class QueryTypeModelObject<E extends QueryType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class QueryTypeModelObject<E extends QueryType> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getQueryTypeEClass();
     }
@@ -414,7 +426,6 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -432,6 +443,12 @@ public class RequestModelFactory implements ModelFactory {
         return getTarget().getQuery();
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
         return getTarget().getParameters();
+      case RequestModelPackage.QUERYTYPE_FIRSTRESULT_FEATURE_ID:
+        return getTarget().getFirstResult();
+      case RequestModelPackage.QUERYTYPE_MAXRESULTS_FEATURE_ID:
+        return getTarget().getMaxResults();
+      case RequestModelPackage.QUERYTYPE_DOCOUNT_FEATURE_ID:
+        return getTarget().isDoCount();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -453,6 +470,15 @@ public class RequestModelFactory implements ModelFactory {
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
         getTarget().setParameters((List<Parameter>) value);
         return;
+      case RequestModelPackage.QUERYTYPE_FIRSTRESULT_FEATURE_ID:
+        getTarget().setFirstResult((Integer) value);
+        return;
+      case RequestModelPackage.QUERYTYPE_MAXRESULTS_FEATURE_ID:
+        getTarget().setMaxResults((Integer) value);
+        return;
+      case RequestModelPackage.QUERYTYPE_DOCOUNT_FEATURE_ID:
+        getTarget().setDoCount((Boolean) value);
+        return;
       }
       super.eSet(eStructuralFeature, value);
     }
@@ -468,6 +494,7 @@ public class RequestModelFactory implements ModelFactory {
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
         getTarget().getParameters().add((Parameter) value);
         return;
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -483,6 +510,91 @@ public class RequestModelFactory implements ModelFactory {
       case RequestModelPackage.QUERYTYPE_PARAMETERS_FEATURE_ID:
         getTarget().getParameters().remove(value);
         return;
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>QueryReferingObjectsType</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class QueryReferingObjectsTypeModelObject<E extends QueryReferingObjectsType> extends
+      AbstractModelObject<E> {
+    /**
+     * @generated
+     */
+    public EClass eClass() {
+      return RequestModelPackage.INSTANCE.getQueryReferingObjectsTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    public ModelPackage getModelPackage() {
+      return RequestModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID:
+        return getTarget().getTargetUri();
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID:
+        return getTarget().getIncludeContainment();
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID:
+        return getTarget().getMaxResults();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID:
+        getTarget().setTargetUri((String) value);
+        return;
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID:
+        getTarget().setIncludeContainment((Boolean) value);
+        return;
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID:
+        getTarget().setMaxResults((Integer) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
@@ -493,12 +605,10 @@ public class RequestModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ParameterModelObject<E extends Parameter> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class ParameterModelObject<E extends Parameter> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return RequestModelPackage.INSTANCE.getParameterEClass();
     }
@@ -506,7 +616,6 @@ public class RequestModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return RequestModelPackage.INSTANCE;
     }
@@ -596,6 +705,8 @@ public class RequestModelFactory implements ModelFactory {
         return RequestModelPackage.INSTANCE.getDocumentRoot_Action();
       case QUERY:
         return RequestModelPackage.INSTANCE.getDocumentRoot_Query();
+      case QUERYREFERINGOBJECTS:
+        return RequestModelPackage.INSTANCE.getDocumentRoot_QueryReferingObjects();
       }
       throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
@@ -622,6 +733,9 @@ public class RequestModelFactory implements ModelFactory {
         return;
       case RequestModelPackage.DOCUMENTROOT_QUERY_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.QUERY);
+        return;
+      case RequestModelPackage.DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID:
+        getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.QUERYREFERINGOBJECTS);
         return;
       }
       throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");

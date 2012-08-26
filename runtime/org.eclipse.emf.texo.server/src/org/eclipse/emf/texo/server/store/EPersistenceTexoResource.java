@@ -16,6 +16,7 @@
 package org.eclipse.emf.texo.server.store;
 
 import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.json.JSONEObjectStore;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.store.TexoResource;
 
@@ -32,7 +33,6 @@ public class EPersistenceTexoResource extends TexoResource {
     final EPersistenceService ePersistenceService = ComponentProvider.getInstance().newInstance(
         EPersistenceService.class);
     ePersistenceService.setUri(getURI());
-    ePersistenceService.setCacheEObjects(true);
     return ePersistenceService;
   }
 

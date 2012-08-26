@@ -7,7 +7,6 @@ import javax.persistence.Basic;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Lob;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -15,7 +14,7 @@ import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
  * 
  * @generated
  */
-public class DocumentRootMixedFeatureGroup extends Identifiable {
+public class DocumentRootMixedFeatureGroup {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.
@@ -23,7 +22,7 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * @generated
    */
   public static enum Feature {
-    TEXT, CDATA, COMMENT, ACTION, QUERY
+    TEXT, CDATA, COMMENT, ACTION, QUERY, QUERYREFERINGOBJECTS
   }
 
   /**
@@ -166,6 +165,13 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * @generated
    */
   private QueryType query;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private QueryReferingObjectsType queryReferingObjects;
 
   /**
    * @generated
@@ -312,6 +318,32 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
+   * Returns the value of '<em><b>queryReferingObjects</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>queryReferingObjects</b></em>' feature
+   * @generated
+   */
+  public QueryReferingObjectsType getQueryReferingObjects() {
+    return queryReferingObjects;
+  }
+
+  /**
+   * Sets the '{@link DocumentRoot#getQueryReferingObjects() <em>queryReferingObjects</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getQueryReferingObjects() queryReferingObjects}' feature.
+   * @generated
+   */
+  public void setQueryReferingObjects(QueryReferingObjectsType newQueryReferingObjects) {
+    queryReferingObjects = newQueryReferingObjects;
+    setFeature(Feature.QUERYREFERINGOBJECTS);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
@@ -330,6 +362,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
       return getAction();
     case QUERY:
       return getQuery();
+    case QUERYREFERINGOBJECTS:
+      return getQueryReferingObjects();
     default:
       throw new IllegalStateException("Feature kind " + getFeature() + " is not supported for this object " + this);
     }
@@ -361,6 +395,9 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
       break;
     case QUERY:
       setQuery((QueryType) value);
+      break;
+    case QUERYREFERINGOBJECTS:
+      setQueryReferingObjects((QueryReferingObjectsType) value);
       break;
     default:
       throw new IllegalStateException("Feature kind " + getFeature() + " is not supported for this object " + this);

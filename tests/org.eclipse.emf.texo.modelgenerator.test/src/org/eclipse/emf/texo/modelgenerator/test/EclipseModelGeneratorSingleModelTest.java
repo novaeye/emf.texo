@@ -33,6 +33,12 @@ import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
 public class EclipseModelGeneratorSingleModelTest extends EclipseModelGeneratorTest {
 
   @Override
+  public void testGenerateModels() throws Exception {
+    setGenerateTexoModels(true);
+    super.testGenerateModels();
+  }
+
+  @Override
   protected List<String> getModelFileRelativePaths() {
     final List<String> modelFiles = new ArrayList<String>();
     //    modelFiles.add("issues/bz369476.ecore"); //$NON-NLS-1$
@@ -41,9 +47,10 @@ public class EclipseModelGeneratorSingleModelTest extends EclipseModelGeneratorT
     //    modelFiles.add("issues/bz371509.ecore"); //$NON-NLS-1$
     //    modelFiles.add("samples/schoollibrary.ecore"); //$NON-NLS-1$
     //    modelFiles.add("issues/bz331009.ecore"); //$NON-NLS-1$
-    //        modelFiles.add("texo/TexoDataRequest.xsd"); //$NON-NLS-1$
+    modelFiles.add("texo/TexoDataRequest.xsd"); //$NON-NLS-1$
+    modelFiles.add("texo/TexoDataResponse.xsd"); //$NON-NLS-1$
     //    modelFiles.add("issues/bz379796.xsd"); //$NON-NLS-1$
-    modelFiles.add("samples/forum.xsd"); //$NON-NLS-1$
+    //    modelFiles.add("samples/forum.xsd"); //$NON-NLS-1$
     //    modelFiles.add("base/identifiable.ecore"); //$NON-NLS-1$
     //    modelFiles.add("samples/kdm.ecore"); //$NON-NLS-1$
     //    modelFiles.add("schemaconstructs/ListUnion.xsd"); //$NON-NLS-1$

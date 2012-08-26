@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class DocumentRoot extends Identifiable {
+public class DocumentRoot {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -47,6 +46,13 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   private QueryType query = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private QueryReferingObjectsType queryReferingObjects = null;
 
   /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
@@ -171,6 +177,31 @@ public class DocumentRoot extends Identifiable {
    */
   public void setQuery(QueryType newQuery) {
     query = newQuery;
+  }
+
+  /**
+   * Returns the value of '<em><b>queryReferingObjects</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>queryReferingObjects</b></em>' feature
+   * @generated
+   */
+  public QueryReferingObjectsType getQueryReferingObjects() {
+    return queryReferingObjects;
+  }
+
+  /**
+   * Sets the '{@link DocumentRoot#getQueryReferingObjects() <em>queryReferingObjects</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getQueryReferingObjects() queryReferingObjects}' feature.
+   * @generated
+   */
+  public void setQueryReferingObjects(QueryReferingObjectsType newQueryReferingObjects) {
+    queryReferingObjects = newQueryReferingObjects;
   }
 
   /**

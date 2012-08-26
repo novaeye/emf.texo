@@ -2,20 +2,12 @@ package org.eclipse.emf.texo.server.model.request;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * A representation of the model object '<em><b>ActionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ActionType")
 public class ActionType {
 
   /**
@@ -23,9 +15,6 @@ public class ActionType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> update = new ArrayList<Object>();
 
   /**
@@ -33,9 +22,6 @@ public class ActionType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> insert = new ArrayList<Object>();
 
   /**
@@ -43,9 +29,6 @@ public class ActionType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> delete = new ArrayList<Object>();
 
   /**

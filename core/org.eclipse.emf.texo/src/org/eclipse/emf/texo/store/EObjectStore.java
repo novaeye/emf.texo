@@ -24,12 +24,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.texo.component.ComponentProvider;
-import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
-import org.eclipse.emf.texo.resolver.ObjectResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -39,13 +36,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
-public abstract class EObjectStore implements TexoComponent {
-
-  private URI uri;
-
-  private boolean cacheEObjects = false;
-
-  private ObjectResolver objectResolver = null;
+public abstract class EObjectStore extends DefaultObjectResolver {
 
   /*
    * (non-Javadoc)
@@ -53,14 +44,12 @@ public abstract class EObjectStore implements TexoComponent {
    * @see org.eclipse.emf.texo.store.EObjectStore#getFromQualifiedIdString(java.lang.String)
    */
   public EObject getFromQualifiedIdString(String qualifiedIdString) {
-    if (cacheEObjects) {
-      final URI theUri = getUri().appendFragment(qualifiedIdString);
-      final EObject eObject = getObjectResolver().getEObject(theUri);
-      if (eObject != null) {
-        // not a proxy don't load
-        if (!eObject.eIsProxy()) {
-          return eObject;
-        }
+    final URI theUri = getUri().appendFragment(qualifiedIdString);
+    EObject eObject = getEObject(theUri);
+    if (eObject != null) {
+      // not a proxy don't load
+      if (!eObject.eIsProxy()) {
+        return eObject;
       }
     }
 
@@ -71,10 +60,13 @@ public abstract class EObjectStore implements TexoComponent {
 
     final EClass eClass = ModelUtils.getEClassFromQualifiedName(qualifiedIdString.substring(0, separatorIndex));
     final String idString = qualifiedIdString.substring(separatorIndex + ModelConstants.FRAGMENTSEPARATOR_LENGTH);
-    final EObject eObject = loadEObject(eClass, idString);
+    eObject = loadEObject(eClass, idString);
     if (eObject == null) {
       return null;
     }
+
+    addToCache(eObject);
+
     // not a proxy anymore
     ((InternalEObject) eObject).eSetProxyURI(null);
     return eObject;
@@ -83,6 +75,7 @@ public abstract class EObjectStore implements TexoComponent {
   /**
    * Return a single instance of the eClass with the passed in id. If the object does not exist then null is returned.
    */
+  @Override
   public EObject get(EClass eClass, Object id) {
     return getFromQualifiedIdString(ModelUtils.getQualifiedNameFromEClass(eClass) + ModelConstants.FRAGMENTSEPARATOR
         + id);
@@ -117,7 +110,7 @@ public abstract class EObjectStore implements TexoComponent {
    * 
    * @see org.eclipse.emf.texo.store.EObjectStore#persist(java.util.List, java.util.List)
    */
-  public abstract void persist(List<EObject> toInsertUpdate, List<EObject> toDelete);
+  public abstract void persist(List<EObject> toInsert, List<EObject> toUpdate, List<EObject> toDelete);
 
   /*
    * (non-Javadoc)
@@ -145,47 +138,12 @@ public abstract class EObjectStore implements TexoComponent {
    * Is called when an object is deleted after the commit has happened.
    */
   protected void deleted(EObject deletedEObject) {
-    if (isCacheEObjects()) {
-      final URI theUri = getUri().appendFragment(getQualifiedIdString(deletedEObject));
-      getObjectResolver().removeFromCache(theUri);
-    }
+    final URI theUri = getUri().appendFragment(getQualifiedIdString(deletedEObject));
+    removeFromCache(theUri);
   }
 
   public void close() {
-    objectResolver = null;
-  }
-
-  public URI getUri() {
-    if (uri == null) {
-      uri = URI.createURI("jpa://org.eclipse.emf.texo/"); //$NON-NLS-1$
-    }
-    return uri;
-  }
-
-  public void setUri(URI uri) {
-    this.uri = uri;
-  }
-
-  public boolean isCacheEObjects() {
-    return cacheEObjects;
-  }
-
-  public void setCacheEObjects(boolean cacheEObjects) {
-    this.cacheEObjects = cacheEObjects;
-  }
-
-  public ObjectResolver getObjectResolver() {
-    if (isCacheEObjects()) {
-      if (objectResolver == null) {
-        objectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
-        objectResolver.setUri(getUri());
-      }
-      return objectResolver;
-    }
-
-    final ObjectResolver localObjectResolver = ComponentProvider.getInstance().newInstance(DefaultObjectResolver.class);
-    localObjectResolver.setUri(getUri());
-    return localObjectResolver;
+    clearCache();
   }
 
 }

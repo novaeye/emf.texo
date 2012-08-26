@@ -117,21 +117,28 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int QUERYTYPE_CLASSIFIER_ID = 3;
+  public static final int DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_QUERY_FEATURE_ID = 0;
+  public static final int QUERYTYPE_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 1;
+  public static final int QUERYTYPE_QUERY_FEATURE_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 0;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -139,6 +146,55 @@ public class RequestModelPackage extends ModelPackage {
    * @generated
    */
   public static final int QUERYTYPE_PARAMETERS_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_FIRSTRESULT_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_MAXRESULTS_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYTYPE_DOCOUNT_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -190,11 +246,14 @@ public class RequestModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
-    isInitialized = true;
-
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method
     ModelUtils.readEPackagesFromFile(modelPackage);
+
+    isInitialized = true;
+
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(ActionType.class, modelPackage.getActionTypeEClass(),
@@ -203,6 +262,8 @@ public class RequestModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(QueryType.class, modelPackage.getQueryTypeEClass(),
         modelPackage);
+    ModelResolver.getInstance().registerClassModelMapping(QueryReferingObjectsType.class,
+        modelPackage.getQueryReferingObjectsTypeEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(Parameter.class, modelPackage.getParameterEClass(),
         modelPackage);
 
@@ -355,6 +416,18 @@ public class RequestModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EStructuralFeature} '<em><b>DocumentRoot.queryReferingObjects</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>DocumentRoot.queryReferingObjects</b></em>'.
+   * @generated
+   */
+  public EReference getDocumentRoot_QueryReferingObjects() {
+    return (EReference) getDocumentRootEClass().getEAllStructuralFeatures().get(
+        DOCUMENTROOT_QUERYREFERINGOBJECTS_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>QueryType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>QueryType</b></em>'
@@ -395,6 +468,87 @@ public class RequestModelPackage extends ModelPackage {
    */
   public EReference getQueryType_Parameters() {
     return (EReference) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_PARAMETERS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.firstResult</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.firstResult</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_FirstResult() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_FIRSTRESULT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.maxResults</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.maxResults</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_MaxResults() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_MAXRESULTS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.doCount</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.doCount</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_DoCount() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_DOCOUNT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>QueryReferingObjectsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>QueryReferingObjectsType</b></em>'
+   * @generated
+   */
+  public EClass getQueryReferingObjectsTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.targetUri</b></em>'. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.targetUri</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryReferingObjectsType_TargetUri() {
+    return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
+        QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.includeContainment</b></em>'. <!--
+   * begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.includeContainment</b></em>
+   *         '.
+   * @generated
+   */
+  public EAttribute getQueryReferingObjectsType_IncludeContainment() {
+    return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
+        QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.maxResults</b></em>'. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.maxResults</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryReferingObjectsType_MaxResults() {
+    return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
+        QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID);
   }
 
   /**
@@ -457,6 +611,8 @@ public class RequestModelPackage extends ModelPackage {
       return DocumentRoot.class;
     case QUERYTYPE_CLASSIFIER_ID:
       return QueryType.class;
+    case QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID:
+      return QueryReferingObjectsType.class;
     case PARAMETER_CLASSIFIER_ID:
       return Parameter.class;
     }

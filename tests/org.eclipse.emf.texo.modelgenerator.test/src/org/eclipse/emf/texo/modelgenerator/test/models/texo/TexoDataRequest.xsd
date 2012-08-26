@@ -3,7 +3,6 @@
 	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.eclipse.org/emf/texo/server/model/request">
 
-
 	<xs:element name="action" type="ActionType" />
 
 	<xs:complexType name="ActionType">
@@ -21,6 +20,19 @@
 			<xs:element name="namedQuery" type="xs:string" minOccurs="0" />
 			<xs:element name="query" type="xs:string" minOccurs="0" />
 			<xs:element name="parameters" type="Parameter" maxOccurs="unbounded"/>
+			<xs:element name="firstResult" type="xs:int" minOccurs="0" default="-1"/>
+			<xs:element name="maxResults" type="xs:int"  minOccurs="0" default="-1"/>
+			<xs:element name="doCount" type="xs:boolean" minOccurs="0" default="false" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="queryReferingObjects" type="QueryReferingObjectsType" />
+
+	<xs:complexType name="QueryReferingObjectsType">
+		<xs:sequence>
+			<xs:element name="targetUri" type="xs:string"/>
+			<xs:element name="includeContainment" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="maxResults" type="xs:int"  minOccurs="0" default="-1"/>
 		</xs:sequence>
 	</xs:complexType>
 	

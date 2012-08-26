@@ -2,35 +2,19 @@ package org.eclipse.emf.texo.server.model.request;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-import org.eclipse.emf.texo.test.TexoTestObjectConverter;
-import org.eclipse.emf.texo.test.TexoTestQNameConverter;
-import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-import org.eclipse.persistence.annotations.Converter;
-import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>QueryType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "request_QueryType")
-@DiscriminatorColumn(length = 255)
-@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
-    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
-public class QueryType extends Identifiable {
+public class QueryType {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  @Basic()
   private String query = null;
 
   /**
@@ -38,7 +22,6 @@ public class QueryType extends Identifiable {
    * 
    * @generated
    */
-  @Basic()
   private String namedQuery = null;
 
   /**
@@ -46,9 +29,28 @@ public class QueryType extends Identifiable {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL })
-  @OrderColumn()
   private List<Parameter> parameters = new ArrayList<Parameter>();
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private int firstResult = -1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private int maxResults = -1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private boolean doCount = false;
 
   /**
    * Returns the value of '<em><b>query</b></em>' feature.
@@ -159,6 +161,81 @@ public class QueryType extends Identifiable {
   }
 
   /**
+   * Returns the value of '<em><b>firstResult</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>firstResult</b></em>' feature
+   * @generated
+   */
+  public int getFirstResult() {
+    return firstResult;
+  }
+
+  /**
+   * Sets the '{@link QueryType#getFirstResult() <em>firstResult</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link QueryType#getFirstResult() firstResult}' feature.
+   * @generated
+   */
+  public void setFirstResult(int newFirstResult) {
+    firstResult = newFirstResult;
+  }
+
+  /**
+   * Returns the value of '<em><b>maxResults</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>maxResults</b></em>' feature
+   * @generated
+   */
+  public int getMaxResults() {
+    return maxResults;
+  }
+
+  /**
+   * Sets the '{@link QueryType#getMaxResults() <em>maxResults</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link QueryType#getMaxResults() maxResults}' feature.
+   * @generated
+   */
+  public void setMaxResults(int newMaxResults) {
+    maxResults = newMaxResults;
+  }
+
+  /**
+   * Returns the value of '<em><b>doCount</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>doCount</b></em>' feature
+   * @generated
+   */
+  public boolean isDoCount() {
+    return doCount;
+  }
+
+  /**
+   * Sets the '{@link QueryType#isDoCount() <em>doCount</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link QueryType#isDoCount() doCount}' feature.
+   * @generated
+   */
+  public void setDoCount(boolean newDoCount) {
+    doCount = newDoCount;
+  }
+
+  /**
    * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
@@ -166,6 +243,7 @@ public class QueryType extends Identifiable {
    */
   @Override
   public String toString() {
-    return "QueryType " + " [namedQuery: " + getNamedQuery() + "]" + " [query: " + getQuery() + "]";
+    return "QueryType " + " [namedQuery: " + getNamedQuery() + "]" + " [query: " + getQuery() + "]" + " [firstResult: "
+        + getFirstResult() + "]" + " [maxResults: " + getMaxResults() + "]" + " [doCount: " + isDoCount() + "]";
   }
 }

@@ -218,11 +218,14 @@ public class ResponseModelPackage extends ModelPackage {
 
     ModelResolver.getInstance().registerModelPackage(modelPackage);
 
-    isInitialized = true;
-
     // read the model from the ecore file, the EPackage is registered in the EPackage.Registry
     // see the ModelResolver getEPackageRegistry method
     ModelUtils.readEPackagesFromFile(modelPackage);
+
+    isInitialized = true;
+
+    // force the initialization of the EFactory proxy
+    modelPackage.getEPackage();
 
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(DocumentRoot.class, modelPackage.getDocumentRootEClass(),

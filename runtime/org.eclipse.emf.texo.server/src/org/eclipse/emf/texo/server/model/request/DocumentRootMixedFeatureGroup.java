@@ -3,10 +3,10 @@ package org.eclipse.emf.texo.server.model.request;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
+import javax.persistence.Basic;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Lob;
 
 /**
  * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -22,7 +22,7 @@ public class DocumentRootMixedFeatureGroup {
    * @generated
    */
   public static enum Feature {
-    TEXT, CDATA, COMMENT, ACTION, QUERY
+    TEXT, CDATA, COMMENT, ACTION, QUERY, QUERYREFERINGOBJECTS
   }
 
   /**
@@ -71,6 +71,31 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc --> Sets a single value in a feature group, if there is already a value
+   * set in the feature for the feature in question then it is replaced by the new value.
+   * 
+   * @param featureGroup
+   *          the featureGroup List to find the value
+   * @param feature
+   *          sets this feature
+   * @param value
+   *          the value to set
+   * @generated
+   */
+  public static void setSingleFeatureMapValue(List<DocumentRootMixedFeatureGroup> featureGroup, Feature feature,
+      Object value) {
+    for (final DocumentRootMixedFeatureGroup group : featureGroup) {
+      if (group.getFeature() == feature) {
+        group.setValue(feature, value);
+        return;
+      }
+    }
+    final DocumentRootMixedFeatureGroup entry = new DocumentRootMixedFeatureGroup();
+    entry.setValue(feature, value);
+    featureGroup.add(entry);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Creates a list of group instances set with the passed feature and
    * values.
    * 
@@ -96,6 +121,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic
+  @Enumerated(EnumType.STRING)
   private Feature feature = null;
 
   /**
@@ -103,6 +130,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String text;
 
   /**
@@ -110,6 +139,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String cDATA;
 
   /**
@@ -117,6 +148,8 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
+  @Basic(optional = true)
+  @Lob
   private String comment;
 
   /**
@@ -124,8 +157,6 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ActionType.class)
-  @JoinColumns({ @JoinColumn() })
   private ActionType action;
 
   /**
@@ -133,9 +164,14 @@ public class DocumentRootMixedFeatureGroup {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = QueryType.class)
-  @JoinColumns({ @JoinColumn() })
   private QueryType query;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private QueryReferingObjectsType queryReferingObjects;
 
   /**
    * @generated
@@ -282,6 +318,32 @@ public class DocumentRootMixedFeatureGroup {
   }
 
   /**
+   * Returns the value of '<em><b>queryReferingObjects</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>queryReferingObjects</b></em>' feature
+   * @generated
+   */
+  public QueryReferingObjectsType getQueryReferingObjects() {
+    return queryReferingObjects;
+  }
+
+  /**
+   * Sets the '{@link DocumentRoot#getQueryReferingObjects() <em>queryReferingObjects</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getQueryReferingObjects() queryReferingObjects}' feature.
+   * @generated
+   */
+  public void setQueryReferingObjects(QueryReferingObjectsType newQueryReferingObjects) {
+    queryReferingObjects = newQueryReferingObjects;
+    setFeature(Feature.QUERYREFERINGOBJECTS);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the value of this feature map entry. The type of the returned value is based on the feature.
@@ -300,6 +362,8 @@ public class DocumentRootMixedFeatureGroup {
       return getAction();
     case QUERY:
       return getQuery();
+    case QUERYREFERINGOBJECTS:
+      return getQueryReferingObjects();
     default:
       throw new IllegalStateException("Feature kind " + getFeature() + " is not supported for this object " + this);
     }
@@ -331,6 +395,9 @@ public class DocumentRootMixedFeatureGroup {
       break;
     case QUERY:
       setQuery((QueryType) value);
+      break;
+    case QUERYREFERINGOBJECTS:
+      setQueryReferingObjects((QueryReferingObjectsType) value);
       break;
     default:
       throw new IllegalStateException("Feature kind " + getFeature() + " is not supported for this object " + this);

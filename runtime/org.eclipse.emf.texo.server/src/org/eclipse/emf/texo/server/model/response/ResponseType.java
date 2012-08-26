@@ -3,22 +3,11 @@ package org.eclipse.emf.texo.server.model.response;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
-
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * A representation of the model object '<em><b>ResponseType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "ResponseType")
 public class ResponseType {
 
   /**
@@ -26,7 +15,6 @@ public class ResponseType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String status = null;
 
   /**
@@ -34,7 +22,6 @@ public class ResponseType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private long startRow = 0;
 
   /**
@@ -42,7 +29,6 @@ public class ResponseType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private long endRow = 0;
 
   /**
@@ -50,7 +36,6 @@ public class ResponseType {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private long totalRows = 0;
 
   /**
@@ -58,9 +43,6 @@ public class ResponseType {
    * 
    * @generated
    */
-  @OneToMany(cascade = { CascadeType.ALL }, targetEntity = EObject.class)
-  @OrderColumn()
-  @JoinColumns({ @JoinColumn() })
   private List<Object> data = new ArrayList<Object>();
 
   /**

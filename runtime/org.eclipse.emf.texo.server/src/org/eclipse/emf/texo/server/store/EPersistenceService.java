@@ -31,6 +31,7 @@ import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.converter.EMFModelConverter;
 import org.eclipse.emf.texo.converter.ModelEMFConverter;
+import org.eclipse.emf.texo.json.EMFJSONConverter;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.store.ObjectStore;
@@ -70,7 +71,7 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
    * from the database. So id's for new objects and other computed information is set back in the passed EObjects.
    */
   @Override
-  public void persist(List<EObject> toInsertUpdate, List<EObject> toDelete) {
+  public void persist(List<EObject> toInsert, List<EObject> toUpdate, List<EObject> toDelete) {
     final ObjectStore os = getObjectStore();
     boolean err = true;
     os.begin();
@@ -80,20 +81,24 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
       final List<Object> allObjects = new ArrayList<Object>();
       int i = 0;
       final Map<Object, InternalEObject> objectMapping = new HashMap<Object, InternalEObject>();
-      for (Object object : converter.convert(toInsertUpdate)) {
+      for (Object object : converter.convert(toInsert)) {
         allObjects.add(object);
-        final Object id = IdProvider.getInstance().getId(object);
-        if (id == null) {
-          os.insert(object);
-        } else {
-          os.update(object);
-        }
-        objectMapping.put(object, (InternalEObject) toInsertUpdate.get(i));
+        os.insert(object);
+        objectMapping.put(object, (InternalEObject) toInsert.get(i));
+        i++;
+      }
+      i = 0;
+      for (Object object : converter.convert(toUpdate)) {
+        allObjects.add(object);
+        os.update(object);
+        objectMapping.put(object, (InternalEObject) toUpdate.get(i));
         i++;
       }
 
+      i = 0;
       for (Object delete : converter.convert(toDelete)) {
         os.remove(delete);
+        removeFromCache(toUri(toDelete.get(i++)));
       }
       os.flush();
 
@@ -101,13 +106,12 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
       final ModelEMFConverter m2eConverter = createModelEMFConverter();
       m2eConverter.setObjectMapping(objectMapping);
       final List<EObject> result = m2eConverter.convert(allObjects);
-      i = 0;
       // the result should have the exact same objects
       for (EObject eObject : result) {
-        if (eObject != toInsertUpdate.get(i)) {
+        if (!toInsert.contains(eObject) && !toUpdate.contains(eObject)) {
           throw new IllegalStateException("Invalid conversion"); //$NON-NLS-1$
         }
-        i++;
+        addToCache(eObject);
       }
 
       err = false;
@@ -141,6 +145,11 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
       @SuppressWarnings("unchecked")
       final List<EObject> result = converter.convert((List<Object>) objects);
       err = false;
+
+      for (EObject resultObject : result) {
+        addToCache(resultObject);
+      }
+
       return result;
     } finally {
       if (err) {
@@ -213,7 +222,9 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
 
       final ModelEMFConverter converter = createModelEMFConverter();
       final List<EObject> result = converter.convert(Collections.singletonList(target));
+
       err = false;
+
       return result.get(0);
     } finally {
       if (err) {
@@ -281,7 +292,7 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
 
   protected ModelEMFConverter createModelEMFConverter() {
     final ModelEMFConverter converter = ComponentProvider.getInstance().newInstance(ModelEMFConverter.class);
-    converter.setObjectResolver(getObjectResolver());
+    converter.setObjectResolver(this);
     converter.setMaxChildLevelsToConvert(1);
     return converter;
   }

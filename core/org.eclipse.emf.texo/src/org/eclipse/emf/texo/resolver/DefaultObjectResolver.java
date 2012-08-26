@@ -42,6 +42,14 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
 
   private boolean useWebServiceUriFormat = false;
 
+  protected void clearCache() {
+    uriEObjectMap.clear();
+  }
+
+  public void addToCache(EObject eObject) {
+    uriEObjectMap.put(toUri(eObject).toString(), eObject);
+  }
+
   /**
    * @return the uniquely identifying uri of this object store
    */
@@ -205,6 +213,9 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
 
   public EObject getEObject(URI objectUri) {
     EObject eObject = uriEObjectMap.get(objectUri.toString());
+    if (eObject == null) {
+      return null;
+    }
     return eObject;
   }
 

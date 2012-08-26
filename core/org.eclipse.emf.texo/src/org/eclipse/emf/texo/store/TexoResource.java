@@ -30,6 +30,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.emf.texo.component.TexoComponent;
 
@@ -124,11 +125,12 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
   public synchronized void save(Map<?, ?> options) throws IOException {
     try {
       isSaving = true;
-      final List<EObject> toInsertUpdate = new ArrayList<EObject>();
-      toInsertUpdate.addAll(newObjects);
-      toInsertUpdate.addAll(modifiedObjects);
+      final List<EObject> toInsert = new ArrayList<EObject>();
+      toInsert.addAll(newObjects);
+      final List<EObject> toUpdate = new ArrayList<EObject>();
+      toUpdate.addAll(modifiedObjects);
 
-      getEObjectStore().persist(toInsertUpdate, new ArrayList<EObject>(deletedObjects));
+      getEObjectStore().persist(toInsert, toUpdate, new ArrayList<EObject>(deletedObjects));
 
       newObjects.clear();
       modifiedObjects.clear();
@@ -184,7 +186,7 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
 
   @Override
   protected EObject getEObjectByID(String id) {
-    throw new UnsupportedOperationException();
+    return getEObject(id);
   }
 
   @Override
@@ -340,4 +342,10 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
     }
   }
 
+  @Override
+  protected void unloaded(InternalEObject internalEObject) {
+    super.unloaded(internalEObject);
+    final URI objectUri = getEObjectStore().toUri(internalEObject);
+    getEObjectStore().removeFromCache(objectUri);
+  }
 }

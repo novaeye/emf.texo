@@ -1,14 +1,10 @@
 package org.eclipse.emf.texo.server.model.request;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-
 /**
  * A representation of the model object '<em><b>Parameter</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-@Entity(name = "Parameter")
 public class Parameter {
 
   /**
@@ -16,7 +12,6 @@ public class Parameter {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private String name = null;
 
   /**
@@ -24,7 +19,6 @@ public class Parameter {
    * 
    * @generated
    */
-  @Basic(optional = false)
   private Object value = null;
 
   /**
@@ -32,7 +26,6 @@ public class Parameter {
    * 
    * @generated
    */
-  @Basic(optional = true)
   private String type = null;
 
   /**

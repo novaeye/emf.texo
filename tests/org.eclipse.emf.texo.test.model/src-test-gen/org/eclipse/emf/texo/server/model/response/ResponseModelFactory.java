@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
+import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelPackage;
-import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelFactory;
 
 /**
  * The <b>{@link ModelFactory}</b> for the types of this model: org.eclipse.emf.texo.server.model.response. It contains
@@ -189,12 +189,10 @@ public class ResponseModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class DocumentRootModelObject<E extends DocumentRoot> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class DocumentRootModelObject<E extends DocumentRoot> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return ResponseModelPackage.INSTANCE.getDocumentRootEClass();
     }
@@ -202,7 +200,6 @@ public class ResponseModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return ResponseModelPackage.INSTANCE;
     }
@@ -298,12 +295,10 @@ public class ResponseModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ErrorTypeModelObject<E extends ErrorType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class ErrorTypeModelObject<E extends ErrorType> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return ResponseModelPackage.INSTANCE.getErrorTypeEClass();
     }
@@ -311,7 +306,6 @@ public class ResponseModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return ResponseModelPackage.INSTANCE;
     }
@@ -388,12 +382,10 @@ public class ResponseModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ResponseTypeModelObject<E extends ResponseType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class ResponseTypeModelObject<E extends ResponseType> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return ResponseModelPackage.INSTANCE.getResponseTypeEClass();
     }
@@ -401,7 +393,6 @@ public class ResponseModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return ResponseModelPackage.INSTANCE;
     }
@@ -490,12 +481,10 @@ public class ResponseModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class ResultTypeModelObject<E extends ResultType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class ResultTypeModelObject<E extends ResultType> extends AbstractModelObject<E> {
     /**
      * @generated
      */
-    @Override
     public EClass eClass() {
       return ResponseModelPackage.INSTANCE.getResultTypeEClass();
     }
@@ -503,7 +492,6 @@ public class ResponseModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @Override
     public ModelPackage getModelPackage() {
       return ResponseModelPackage.INSTANCE;
     }

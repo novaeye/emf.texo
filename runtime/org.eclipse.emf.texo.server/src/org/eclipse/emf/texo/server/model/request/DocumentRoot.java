@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -30,8 +24,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xMLNSPrefixMap")
   private Map<String, String> xMLNSPrefixMap = new LinkedHashMap<String, String>();
 
   /**
@@ -39,8 +31,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ElementCollection()
-  @CollectionTable(name = "DocumentRoot_xSISchemaLocation")
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
@@ -48,8 +38,6 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = ActionType.class)
-  @JoinColumns({ @JoinColumn() })
   private ActionType action = null;
 
   /**
@@ -57,9 +45,14 @@ public class DocumentRoot {
    * 
    * @generated
    */
-  @ManyToOne(cascade = { CascadeType.ALL }, optional = true, targetEntity = QueryType.class)
-  @JoinColumns({ @JoinColumn() })
   private QueryType query = null;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private QueryReferingObjectsType queryReferingObjects = null;
 
   /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
@@ -184,6 +177,31 @@ public class DocumentRoot {
    */
   public void setQuery(QueryType newQuery) {
     query = newQuery;
+  }
+
+  /**
+   * Returns the value of '<em><b>queryReferingObjects</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>queryReferingObjects</b></em>' feature
+   * @generated
+   */
+  public QueryReferingObjectsType getQueryReferingObjects() {
+    return queryReferingObjects;
+  }
+
+  /**
+   * Sets the '{@link DocumentRoot#getQueryReferingObjects() <em>queryReferingObjects</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link DocumentRoot#getQueryReferingObjects() queryReferingObjects}' feature.
+   * @generated
+   */
+  public void setQueryReferingObjects(QueryReferingObjectsType newQueryReferingObjects) {
+    queryReferingObjects = newQueryReferingObjects;
   }
 
   /**

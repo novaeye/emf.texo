@@ -31,7 +31,6 @@ public class JSONTexoResource extends TexoResource {
   protected EObjectStore createEObjectStore() {
     final JSONEObjectStore jsonEObjectStore = ComponentProvider.getInstance().newInstance(JSONEObjectStore.class);
     jsonEObjectStore.setUri(getURI());
-    jsonEObjectStore.setCacheEObjects(true);
     return jsonEObjectStore;
   }
 
