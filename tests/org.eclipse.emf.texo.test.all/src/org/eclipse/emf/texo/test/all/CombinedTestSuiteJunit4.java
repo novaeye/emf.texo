@@ -29,7 +29,7 @@ import org.junit.runners.Suite;
 /**
  * Combines all junit4 testcases.
  * 
- * >>>>NOTE<<<<: AllServerTests needs to be done first to ensure proper initialization of package.
+ * >>>>NOTE<<<<: JSONTexoResourceTest needs to be done first to ensure proper initialization of package.
  * 
  * @author mtaal
  */

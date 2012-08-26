@@ -27,7 +27,7 @@ public class ResponseFactoryImpl extends EFactoryImpl implements ResponseFactory
 	 */
 	public static ResponseFactory init() {
 		try {
-			ResponseFactory theResponseFactory = (ResponseFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/emf/texo/client/model/response"); 
+			ResponseFactory theResponseFactory = (ResponseFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/emf/texo/server/model/response"); 
 			if (theResponseFactory != null) {
 				return theResponseFactory;
 			}

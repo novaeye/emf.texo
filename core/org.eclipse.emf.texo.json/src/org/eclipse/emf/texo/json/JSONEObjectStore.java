@@ -17,6 +17,7 @@ package org.eclipse.emf.texo.json;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -33,6 +34,8 @@ import org.eclipse.emf.texo.client.model.request.Parameter;
 import org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType;
 import org.eclipse.emf.texo.client.model.request.QueryType;
 import org.eclipse.emf.texo.client.model.request.RequestFactory;
+import org.eclipse.emf.texo.client.model.request.RequestPackage;
+import org.eclipse.emf.texo.client.model.response.ResponsePackage;
 import org.eclipse.emf.texo.client.model.response.ResponseType;
 import org.eclipse.emf.texo.client.model.response.ResultType;
 import org.eclipse.emf.texo.component.ComponentProvider;
@@ -50,8 +53,15 @@ import org.json.JSONObject;
  */
 public class JSONEObjectStore extends EObjectStore {
 
+  private static final String UTF8 = "UTF-8"; //$NON-NLS-1$
   private static final String POST_METHOD = "POST"; //$NON-NLS-1$
   private static final String GET_METHOD = "GET"; //$NON-NLS-1$
+
+  public JSONEObjectStore() {
+    // dummy calls to initialize
+    RequestPackage.eINSTANCE.getActionType();
+    ResponsePackage.eINSTANCE.getDocumentRoot();
+  }
 
   protected String doHTTPRequest(String urlStr, String method, String content) throws Exception {
     // Construct data
@@ -61,16 +71,22 @@ public class JSONEObjectStore extends EObjectStore {
     final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
     conn.setRequestMethod(method);
+    conn.setDoInput(true);
+
     if (content != null) {
-      OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+      conn.setDoOutput(true);
+      conn.setUseCaches(false);
+      final OutputStream os = conn.getOutputStream();
+      final OutputStreamWriter wr = new OutputStreamWriter(os, UTF8);
       wr.write(content);
       wr.flush();
       wr.close();
+      os.flush();
+      os.close();
     }
 
     // Get the response
-    final BufferedReader rd = new BufferedReader(
-        new InputStreamReader(conn.getInputStream(), conn.getContentEncoding()));
+    final BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
     final StringBuilder sb = new StringBuilder();
     String line;
     while ((line = rd.readLine()) != null) {

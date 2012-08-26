@@ -37,7 +37,7 @@ public interface ResponsePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/emf/texo/client/model/response";
+	String eNS_URI = "http://www.eclipse.org/emf/texo/server/model/response";
 
 	/**
 	 * The package namespace name.

@@ -27,7 +27,7 @@ public class RequestFactoryImpl extends EFactoryImpl implements RequestFactory {
 	 */
 	public static RequestFactory init() {
 		try {
-			RequestFactory theRequestFactory = (RequestFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/emf/texo/client/model/request"); 
+			RequestFactory theRequestFactory = (RequestFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.eclipse.org/emf/texo/server/model/request"); 
 			if (theRequestFactory != null) {
 				return theRequestFactory;
 			}

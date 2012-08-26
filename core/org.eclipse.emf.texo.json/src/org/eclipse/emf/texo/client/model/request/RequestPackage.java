@@ -37,7 +37,7 @@ public interface RequestPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.eclipse.org/emf/texo/client/model/request";
+	String eNS_URI = "http://www.eclipse.org/emf/texo/server/model/request";
 
 	/**
 	 * The package namespace name.

@@ -26,13 +26,8 @@ import java.util.Map;
 
 import junit.framework.Assert;
 
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.model.ModelConstants;
-import org.eclipse.emf.texo.server.store.EPersistenceTexoResource;
 import org.eclipse.emf.texo.server.store.EntityManagerProvider;
 import org.eclipse.emf.texo.server.test.BaseTest;
 import org.eclipse.emf.texo.store.TexoResource;
@@ -52,7 +47,7 @@ import org.junit.Test;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.4 $
  */
-public class TexoResourceTest extends BaseTest {
+public abstract class TexoResourceTest extends BaseTest {
 
   public TexoResourceTest() {
     super("library"); //$NON-NLS-1$
@@ -98,7 +93,7 @@ public class TexoResourceTest extends BaseTest {
           }
         }
       }
-      final EPersistenceTexoResource resource = createResource();
+      final TexoResource resource = createResource();
       resource.getContents().addAll(toInsertUpdate);
       try {
         resource.save(Collections.emptyMap());
@@ -109,7 +104,7 @@ public class TexoResourceTest extends BaseTest {
 
     // Query + proxy resolving
     {
-      final EPersistenceTexoResource resource = createResource();
+      final TexoResource resource = createResource();
 
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       namedParams.put("name", "1_%");
@@ -136,12 +131,12 @@ public class TexoResourceTest extends BaseTest {
     // types parameter
     try {
       {
-        final EPersistenceTexoResource resource = createResource("jpa://jpa?types=library_Library");
+        final TexoResource resource = createResource("http://jpa?types=library_Library");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
       }
       {
-        final EPersistenceTexoResource resource = createResource("jpa://jpa?types=library_Library,library_Writer");
+        final TexoResource resource = createResource("http://jpa?types=library_Library,library_Writer");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
         // only libraries should be in the root
@@ -158,7 +153,7 @@ public class TexoResourceTest extends BaseTest {
       final String newName = "newName";
       final String updatedName = "updatedName";
       {
-        final EPersistenceTexoResource resource = createResource();
+        final TexoResource resource = createResource();
         final Map<String, Object> namedParams = new HashMap<String, Object>();
         final List<EObject> libs = resource.query("select l from library_Library l", namedParams, 0, -1);
 
@@ -185,7 +180,7 @@ public class TexoResourceTest extends BaseTest {
       }
 
       {
-        final EPersistenceTexoResource resource = createResource();
+        final TexoResource resource = createResource();
         final Map<String, Object> namedParams = new HashMap<String, Object>();
         final List<EObject> libs = resource.query("select l from library_Library l", namedParams, 0, -1);
         boolean foundNewName = true;
@@ -210,7 +205,7 @@ public class TexoResourceTest extends BaseTest {
 
     // same objects
     {
-      final EPersistenceTexoResource resource = createResource();
+      final TexoResource resource = createResource();
       final Map<String, Object> namedParams = new HashMap<String, Object>();
       final List<EObject> libs1 = resource.query("select l from library_Library l", namedParams, 0, -1);
       final List<EObject> libs2 = resource.query("select l from library_Library l", namedParams, 0, -1);
@@ -225,24 +220,9 @@ public class TexoResourceTest extends BaseTest {
     }
   }
 
-  protected EPersistenceTexoResource createResource() {
-    return createResource("jpa://jpa.com");
+  protected TexoResource createResource() {
+    return createResource("http://jpa.com");
   }
 
-  protected EPersistenceTexoResource createResource(String uriString) {
-    final ResourceSetImpl resourceSet = new ResourceSetImpl();
-    resourceSet.getResourceFactoryRegistry().getProtocolToFactoryMap().put("jpa", new TexoResourceFactory());
-    return (EPersistenceTexoResource) resourceSet.createResource(URI.createURI(uriString));
-  }
-
-  private static class TexoResourceFactory implements Resource.Factory {
-
-    public Resource createResource(URI uri) {
-      final EPersistenceTexoResource resource = ComponentProvider.getInstance().newInstance(
-          EPersistenceTexoResource.class);
-      resource.setURI(uri);
-      return resource;
-    }
-
-  }
+  protected abstract TexoResource createResource(String uriString);
 }
