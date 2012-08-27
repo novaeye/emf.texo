@@ -164,7 +164,10 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
       if (!IdProvider.getInstance().hasIdEAttribute(eClass)) {
         return null;
       }
-      idString = "" + eObject.eGet(IdProvider.getInstance().getIdEAttribute(eClass)); //$NON-NLS-1$
+      idString = IdProvider.getInstance().getIdAsString(eObject);
+      if (idString == null || idString.trim().length() == 0) {
+        return null;
+      }
     } else {
       final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(object);
       if (!IdProvider.getInstance().hasIdEAttribute(modelObject)) {

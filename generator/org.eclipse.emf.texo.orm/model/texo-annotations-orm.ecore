@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ormannotations"
-    nsURI="http://www.eclipse.org/emf/texo/orm/ormannotations" nsPrefix="ormannotations">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ormannotations" nsURI="http://www.eclipse.org/emf/texo/orm/ormannotations"
+    nsPrefix="ormannotations">
   <eClassifiers xsi:type="ecore:EClass" name="EPackageORMAnnotation" eSuperTypes="../../org.eclipse.emf.texo.annotations.model/model/texo-annotations-model.ecore#//EPackageAnnotation #//ENamedElementORMAnnotation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateFullDbSchemaNames"
         eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
@@ -43,6 +42,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inheritance" eType="ecore:EClass orm.ecore#//Inheritance"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uniqueEntityNames" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="setDelimitedIdentifierTagInORM"
+        eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ETypeElementORMAnnotation" abstract="true"

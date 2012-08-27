@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="orm"
-    nsURI="http://www.eclipse.org/eclipselink/xsds/persistence/orm" nsPrefix="orm">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="orm" nsURI="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
+    nsPrefix="orm">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="&#xA;      @(#)eclipselink_orm_2_3.xsd 2.3  March 23 2011&#xA;    &#xA;&#xA;&#xA;       This is the XML Schema for the native Eclipselink XML mapping file&#xA;       The file may be named &quot;META-INF/eclipselink-orm.xml&quot; in the persistence&#xA;       archive or it may be named some other name which would be&#xA;       used to locate the file as resource on the classpath.&#xA;       Object/relational mapping files must indicate the object/relational&#xA;       mapping file schema by using the persistence namespace:&#xA;&#xA;       http://www.eclipse.org/eclipselink/xsds/persistence/orm&#xA;&#xA;       and indicate the version of the schema by using the version element as shown below:&#xA;&#xA;       &lt;entity-mappings xmlns=&quot;http://www.eclipse.org/eclipselink/xsds/persistence/orm&quot;&#xA;       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#xA;       xsi:schemaLocation=&quot;http://www.eclipse.org/eclipselink/xsds/persistence/orm &#xA;       eclipselink_orm_2_3.xsd&#xA;       version=&quot;2.3&quot;>&#xA;       ...&#xA;       &lt;/entity-mappings>&#xA;&#xA;     "/>
   </eAnnotations>

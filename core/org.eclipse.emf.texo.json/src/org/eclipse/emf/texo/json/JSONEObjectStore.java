@@ -18,7 +18,6 @@ package org.eclipse.emf.texo.json;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Collections;
@@ -64,28 +63,26 @@ public class JSONEObjectStore extends EObjectStore {
   }
 
   protected String doHTTPRequest(String urlStr, String method, String content) throws Exception {
-    // Construct data
-
-    // Send data
     final URL url = new URL(urlStr == null ? getUri().toString() : urlStr);
     final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
     conn.setRequestMethod(method);
     conn.setDoInput(true);
+    conn.setDoOutput(true);
+    conn.setUseCaches(false);
+    conn.setRequestProperty("Accept-Charset", UTF8);
 
     if (content != null) {
-      conn.setDoOutput(true);
-      conn.setUseCaches(false);
+      final byte[] bytes = content.getBytes(UTF8);
+      conn.setRequestProperty("Content-Type", JSONWebServiceObjectResolver.JSON_CONTENT_TYPE);
+      conn.setRequestProperty("Content-Length", String.valueOf(bytes.length));
+
       final OutputStream os = conn.getOutputStream();
-      final OutputStreamWriter wr = new OutputStreamWriter(os, UTF8);
-      wr.write(content);
-      wr.flush();
-      wr.close();
+      os.write(bytes);
       os.flush();
       os.close();
     }
 
-    // Get the response
     final BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
     final StringBuilder sb = new StringBuilder();
     String line;

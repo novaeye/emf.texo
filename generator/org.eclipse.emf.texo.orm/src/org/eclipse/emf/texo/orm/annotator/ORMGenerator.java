@@ -42,6 +42,7 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage;
 import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel;
 import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelFactory;
 import org.eclipse.emf.texo.annotations.annotationsmodel.EClassAnnotation;
+import org.eclipse.emf.texo.annotations.annotationsmodel.EPackageAnnotation;
 import org.eclipse.emf.texo.eclipse.popup.actions.BaseGenerateAction;
 import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.generator.GeneratorConstants;
@@ -227,7 +228,9 @@ public class ORMGenerator extends BaseGenerateAction {
   protected void setPersistenceUnitMetaData(EntityMappingsType entityMappingsType) {
     final PersistenceUnitMetadata metadata = OrmFactory.eINSTANCE.createPersistenceUnitMetadata();
     final PersistenceUnitDefaults defaults = OrmFactory.eINSTANCE.createPersistenceUnitDefaults();
+
     defaults.setDelimitedIdentifiers(OrmFactory.eINSTANCE.createEmptyType());
+
     metadata.setPersistenceUnitDefaults(defaults);
     entityMappingsType.setPersistenceUnitMetadata(metadata);
   }
@@ -252,8 +255,19 @@ public class ORMGenerator extends BaseGenerateAction {
     }
 
     entityMappings.setAccess(AccessType.FIELD);
+
+    boolean addDelimitedIdentifierTag = false;
+
     for (EPackage ePackage : ePackages) {
       final AnnotatedEPackage aPackage = annotatedModel.getAnnotatedEPackage(ePackage, false);
+
+      for (EPackageAnnotation ePackageAnnotation : aPackage.getEPackageAnnotations()) {
+        if (ePackageAnnotation instanceof EPackageORMAnnotation) {
+          final EPackageORMAnnotation ormAnnotation = (EPackageORMAnnotation) ePackageAnnotation;
+          addDelimitedIdentifierTag |= ormAnnotation.isSetDelimitedIdentifierTagInORM();
+        }
+      }
+
       for (AnnotatedEClassifier aClassifier : aPackage.getAnnotatedEClassifiers()) {
         if (aClassifier instanceof AnnotatedEClass) {
           final AnnotatedEClass aClass = (AnnotatedEClass) aClassifier;
@@ -295,7 +309,9 @@ public class ORMGenerator extends BaseGenerateAction {
       }
     }
 
-    setPersistenceUnitMetaData(entityMappings);
+    if (addDelimitedIdentifierTag) {
+      setPersistenceUnitMetaData(entityMappings);
+    }
 
     return entityMappings;
   }

@@ -46,6 +46,7 @@ import org.eclipse.emf.texo.orm.annotator.ORMNamingStrategyProvider;
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isRenameSQLReservedNames <em>Rename SQL Reserved Names</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#getInheritance <em>Inheritance</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isUniqueEntityNames <em>Unique Entity Names</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isSetDelimitedIdentifierTagInORM <em>Set Delimited Identifier Tag In ORM</em>}</li>
  * </ul>
  * </p>
  *
@@ -335,6 +336,24 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 	 * @ordered
 	 */
 	protected boolean uniqueEntityNames = UNIQUE_ENTITY_NAMES_EDEFAULT;
+		/**
+	 * The default value of the '{@link #isSetDelimitedIdentifierTagInORM() <em>Set Delimited Identifier Tag In ORM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDelimitedIdentifierTagInORM()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean SET_DELIMITED_IDENTIFIER_TAG_IN_ORM_EDEFAULT = true;
+		/**
+	 * The cached value of the '{@link #isSetDelimitedIdentifierTagInORM() <em>Set Delimited Identifier Tag In ORM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetDelimitedIdentifierTagInORM()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean setDelimitedIdentifierTagInORM = SET_DELIMITED_IDENTIFIER_TAG_IN_ORM_EDEFAULT;
 		private final ORMNamingStrategy namingStrategy;
 
   /**
@@ -1069,6 +1088,40 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 	}
 
 		/**
+	 * Returns the value of the '<em><b>Set Delimited Identifier Tag In ORM</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Set Delimited Identifier Tag In ORM</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Set Delimited Identifier Tag In ORM</em>' attribute.
+	 * @see #setSetDelimitedIdentifierTagInORM(boolean)
+	 * @see org.eclipse.emf.texo.orm.ormannotations.OrmannotationsPackage#getEPackageORMAnnotation_SetDelimitedIdentifierTagInORM()
+	 * @model default="true"
+	 * @generated
+	 */
+	public boolean isSetDelimitedIdentifierTagInORM() {
+		return setDelimitedIdentifierTagInORM;
+	}
+
+		/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.orm.ormannotations.EPackageORMAnnotation#isSetDelimitedIdentifierTagInORM <em>Set Delimited Identifier Tag In ORM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Set Delimited Identifier Tag In ORM</em>' attribute.
+	 * @see #isSetDelimitedIdentifierTagInORM()
+	 * @generated
+	 */
+	public void setSetDelimitedIdentifierTagInORM(boolean newSetDelimitedIdentifierTagInORM) {
+		boolean oldSetDelimitedIdentifierTagInORM = setDelimitedIdentifierTagInORM;
+		setDelimitedIdentifierTagInORM = newSetDelimitedIdentifierTagInORM;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM, oldSetDelimitedIdentifierTagInORM, setDelimitedIdentifierTagInORM));
+	}
+
+		/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1130,6 +1183,8 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 				return getInheritance();
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES:
 				return isUniqueEntityNames();
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM:
+				return isSetDelimitedIdentifierTagInORM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1194,6 +1249,9 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 				return;
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES:
 				setUniqueEntityNames((Boolean)newValue);
+				return;
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM:
+				setSetDelimitedIdentifierTagInORM((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1260,6 +1318,9 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES:
 				setUniqueEntityNames(UNIQUE_ENTITY_NAMES_EDEFAULT);
 				return;
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM:
+				setSetDelimitedIdentifierTagInORM(SET_DELIMITED_IDENTIFIER_TAG_IN_ORM_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1307,6 +1368,8 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 				return inheritance != null;
 			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES:
 				return uniqueEntityNames != UNIQUE_ENTITY_NAMES_EDEFAULT;
+			case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM:
+				return setDelimitedIdentifierTagInORM != SET_DELIMITED_IDENTIFIER_TAG_IN_ORM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1348,6 +1411,8 @@ public class EPackageORMAnnotation extends EPackageAnnotation implements ENamedE
 		result.append(renameSQLReservedNames);
 		result.append(", uniqueEntityNames: ");
 		result.append(uniqueEntityNames);
+		result.append(", setDelimitedIdentifierTagInORM: ");
+		result.append(setDelimitedIdentifierTagInORM);
 		result.append(')');
 		return result.toString();
 	}

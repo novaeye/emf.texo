@@ -136,7 +136,7 @@ public class JSONValueConverter implements TexoComponent {
       final ModelPackage modelPackage = ModelResolver.getInstance().getModelPackage(
           enumDataType.getEPackage().getNsURI());
       final Class<? extends Enum> enumClass = (Class<? extends Enum>) modelPackage.getEClassifierClass(enumDataType);
-      return Enum.valueOf(enumClass, (String) value);
+      return Enum.valueOf(enumClass, ((String) value).toUpperCase());
     }
 
     if (usePlainDate()) {

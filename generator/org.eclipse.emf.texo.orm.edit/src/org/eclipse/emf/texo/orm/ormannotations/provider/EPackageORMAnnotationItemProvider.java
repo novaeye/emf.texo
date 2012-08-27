@@ -69,6 +69,7 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
       addAddOrderColumnToListMappingsPropertyDescriptor(object);
       addRenameSQLReservedNamesPropertyDescriptor(object);
       addUniqueEntityNamesPropertyDescriptor(object);
+      addSetDelimitedIdentifierTagInORMPropertyDescriptor(object);
     }
     return itemPropertyDescriptors;
   }
@@ -314,6 +315,23 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
   }
 
   /**
+   * This adds a property descriptor for the Set Delimited Identifier Tag In ORM feature. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @generatedNOT
+   */
+  protected void addSetDelimitedIdentifierTagInORMPropertyDescriptor(Object object) {
+    itemPropertyDescriptors.add(createItemPropertyDescriptor(
+        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+        getResourceLocator(),
+        getString("_UI_EPackageORMAnnotation_setDelimitedIdentifierTagInORM_feature"),
+        getString("_UI_EPackageORMAnnotation_setDelimitedIdentifierTagInORM_description",
+            "_UI_EPackageORMAnnotation_setDelimitedIdentifierTagInORM_feature", "_UI_EPackageORMAnnotation_type"),
+        OrmannotationsPackage.Literals.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM, true, false,
+        false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+  }
+
+  /**
    * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
    * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
    * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}. <!-- begin-user-doc --> <!--
@@ -393,6 +411,7 @@ public class EPackageORMAnnotationItemProvider extends EPackageAnnotationItemPro
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__ADD_ORDER_COLUMN_TO_LIST_MAPPINGS:
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__RENAME_SQL_RESERVED_NAMES:
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__UNIQUE_ENTITY_NAMES:
+    case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__SET_DELIMITED_IDENTIFIER_TAG_IN_ORM:
       fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
       return;
     case OrmannotationsPackage.EPACKAGE_ORM_ANNOTATION__DEFAULT_CASCADE_CONTAINMENT:
