@@ -168,7 +168,7 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
     modifiedObjects.clear();
     deletedObjects.clear();
     if (eObjectStore != null) {
-      eObjectStore.close();
+      eObjectStore.clearCache();
     }
     loaded = false;
   }

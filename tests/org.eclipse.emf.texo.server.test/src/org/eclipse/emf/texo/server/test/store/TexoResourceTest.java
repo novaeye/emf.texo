@@ -49,6 +49,17 @@ import org.junit.Test;
  */
 public abstract class TexoResourceTest extends BaseTest {
 
+  protected static final int PORT = 8080;
+  protected static final String CONTEXTNAME = "texo"; //$NON-NLS-1$
+  protected static final String JSONWS = "jsonws"; //$NON-NLS-1$
+
+  /**
+   * @return the base url of the webservice
+   */
+  protected String getBaseURL() {
+    return "http://localhost:" + PORT + "/" + CONTEXTNAME + "/" + JSONWS; //$NON-NLS-1$//$NON-NLS-2$
+  }
+
   public TexoResourceTest() {
     super("library"); //$NON-NLS-1$
     // touch the EMF package before the other ones.
@@ -120,6 +131,7 @@ public abstract class TexoResourceTest extends BaseTest {
         int j = 0;
         for (Book bk : writer.getBooks()) {
           Assert.assertTrue(bk.getTitle().equals(writer.getName() + "_" + j));
+          Assert.assertTrue(bk.getAuthor() == writer);
           Assert.assertFalse(bk.eIsProxy());
           Assert.assertTrue(bk.eResource() == resource);
           j++;
@@ -131,12 +143,12 @@ public abstract class TexoResourceTest extends BaseTest {
     // types parameter
     try {
       {
-        final TexoResource resource = createResource("http://jpa?types=library_Library");
+        final TexoResource resource = createResource(getBaseURL() + "?types=library_Library");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
       }
       {
-        final TexoResource resource = createResource("http://jpa?types=library_Library,library_Writer");
+        final TexoResource resource = createResource(getBaseURL() + "?types=library_Library,library_Writer");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
         // only libraries should be in the root
@@ -221,7 +233,7 @@ public abstract class TexoResourceTest extends BaseTest {
   }
 
   protected TexoResource createResource() {
-    return createResource("http://jpa.com");
+    return createResource(getBaseURL());
   }
 
   protected abstract TexoResource createResource(String uriString);

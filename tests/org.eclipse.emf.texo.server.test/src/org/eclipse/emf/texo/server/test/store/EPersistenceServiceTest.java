@@ -176,7 +176,7 @@ public class EPersistenceServiceTest extends BaseTest {
     {
       final EPersistenceService s1 = getEPersistenceService();
       final Library lib1 = (Library) s1.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
-      s1.close();
+      s1.clearCache();
       final Library lib2 = (Library) s1.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
       Assert.assertTrue(lib1 != lib2);
     }

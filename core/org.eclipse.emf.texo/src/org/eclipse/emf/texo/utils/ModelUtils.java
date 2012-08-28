@@ -37,6 +37,8 @@ import org.eclipse.emf.texo.model.ModelEFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.store.EObjectStore;
 
 /**
  * Utility methods which are used at runtime.
@@ -47,6 +49,9 @@ public class ModelUtils {
   public static final String QUALIFIERSEPARATOR = "|"; //$NON-NLS-1$
 
   private static SimpleDateFormat xmlDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'"); //$NON-NLS-1$
+
+  private static final String TEMP_URI_CODE = "tempUriNum"; //$NON-NLS-1$
+  private static long TEMP_COUNTER = 0;
 
   /**
    * Get the documentation from the {@link ENamedElement}.
@@ -492,6 +497,97 @@ public class ModelUtils {
       return null;
     }
     return eAnnotation.getDetails().get(annotationKey);
+  }
+
+  /**
+   * Temp uris are used to correctly handle references when inserting new eobjects.
+   * 
+   * @see EObjectStore
+   */
+  public synchronized static URI makeTempURI(URI baseURI) {
+    TEMP_COUNTER++;
+    final long tempCounter = TEMP_COUNTER;
+    return baseURI.appendQuery(TEMP_URI_CODE + "=" + tempCounter); //$NON-NLS-1$
+  }
+
+  /**
+   * Is the uri string a temporary uri which needs to be handled differently than other uris.
+   */
+  public static boolean isTempURI(String baseURI) {
+    return baseURI.contains(TEMP_URI_CODE + "="); //$NON-NLS-1$
+  }
+
+  /**
+   * Convert a web service uri for an object to an EMF uri. EMF uri's use the fragment for the object identifier while
+   * web service uri's will have the the identifier encoded in the segments.
+   * 
+   * example: http://example.com#Book||1 http://exampke.com/Book/1
+   */
+  public static URI convertToEMFURI(URI webServiceURI) {
+    final TypeIdTuple tuple = getTypeAndIdFromUri(true, webServiceURI);
+    final URI baseURI = webServiceURI.trimSegments(2);
+    return baseURI.appendFragment(ModelUtils.getQualifiedNameFromEClass(tuple.getEClass())
+        + ModelConstants.FRAGMENTSEPARATOR + tuple.getId());
+  }
+
+  /**
+   * @see #convertToEMFURI(URI)
+   */
+  public static URI convertToWebServiceURI(URI emfURI) {
+    final TypeIdTuple tuple = getTypeAndIdFromUri(true, emfURI);
+    final URI baseURI = emfURI.trimFragment();
+    return baseURI.appendSegment(ModelUtils.getQualifiedNameFromEClass(tuple.getEClass()))
+        .appendSegment(tuple.getId() + "").appendFragment(""); //$NON-NLS-1$ //$NON-NLS-2$
+  }
+
+  public static TypeIdTuple getTypeAndIdFromUri(boolean useWebServiceFormat, URI objectUri) {
+    EClass eClass;
+    Object idValue;
+    if (useWebServiceFormat && !objectUri.toString().contains(ModelConstants.FRAGMENTSEPARATOR)) {
+      final String idString = objectUri.lastSegment();
+      final String eClassName = objectUri.trimSegments(1).lastSegment();
+      eClass = ModelUtils.getEClassFromQualifiedName(eClassName);
+      if (eClass == null) {
+        throw new IllegalArgumentException("No eclass found for uri " + objectUri.toString()); //$NON-NLS-1$
+      }
+      idValue = IdProvider.getInstance().convertIdStringToId(eClass, idString);
+    } else {
+      final String fragment = objectUri.fragment();
+
+      final int separatorIndex = fragment.indexOf(ModelConstants.FRAGMENTSEPARATOR);
+      if (separatorIndex == -1) {
+        throw new IllegalArgumentException("Fragment format not supported for fragment: " + fragment); //$NON-NLS-1$
+      }
+      eClass = ModelUtils.getEClassFromQualifiedName(fragment.substring(0, separatorIndex));
+      final String idString = fragment.substring(separatorIndex + ModelConstants.FRAGMENTSEPARATOR_LENGTH);
+      idValue = IdProvider.getInstance().convertIdStringToId(eClass, idString);
+    }
+    final TypeIdTuple tuple = new TypeIdTuple();
+    tuple.setEClass(eClass);
+    tuple.setId(idValue);
+    return tuple;
+  }
+
+  public static class TypeIdTuple {
+    private EClass eClass;
+    private Object id;
+
+    public EClass getEClass() {
+      return eClass;
+    }
+
+    public void setEClass(EClass eClass) {
+      this.eClass = eClass;
+    }
+
+    public Object getId() {
+      return id;
+    }
+
+    public void setId(Object id) {
+      this.id = id;
+    }
+
   }
 
 }

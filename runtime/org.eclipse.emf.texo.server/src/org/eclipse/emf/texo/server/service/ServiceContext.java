@@ -52,6 +52,9 @@ public abstract class ServiceContext implements TexoComponent {
   private Map<String, Object> requestParameters = new HashMap<String, Object>();
   private String requestURI;
 
+  // default is true
+  private boolean useWebServiceUriFormat = true;
+
   /**
    * @see #getServiceRequestURI()
    */
@@ -238,6 +241,14 @@ public abstract class ServiceContext implements TexoComponent {
 
   public void setServiceOptions(ServiceOptions serviceOptions) {
     this.serviceOptions = serviceOptions;
+  }
+
+  public boolean isUseWebServiceUriFormat() {
+    return useWebServiceUriFormat;
+  }
+
+  public void setUseWebServiceUriFormat(boolean useWebServiceUriFormat) {
+    this.useWebServiceUriFormat = useWebServiceUriFormat;
   }
 
 }

@@ -141,9 +141,4 @@ public abstract class EObjectStore extends DefaultObjectResolver {
     final URI theUri = getUri().appendFragment(getQualifiedIdString(deletedEObject));
     removeFromCache(theUri);
   }
-
-  public void close() {
-    clearCache();
-  }
-
 }

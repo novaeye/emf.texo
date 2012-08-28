@@ -111,14 +111,17 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
   protected T resolveObject(JSONObject jsonObject) {
     try {
+      String uriString = null;
       if (jsonObject.has(ModelJSONConstants.URI_PROPERTY)) {
-        final String uriString = jsonObject.getString(ModelJSONConstants.URI_PROPERTY);
+        uriString = jsonObject.getString(ModelJSONConstants.URI_PROPERTY);
         if (resolvedObjects.containsKey(uriString)) {
           return resolvedObjects.get(uriString);
         }
         final T object = fromUri(uriString);
-        resolvedObjects.put(uriString, object);
-        return object;
+        if (object != null) {
+          resolvedObjects.put(uriString, object);
+          return object;
+        }
       }
       if (jsonObject.has(ModelJSONConstants.ECLASS_PROPERTY)) {
         final EClass eClass = ModelUtils.getEClassFromQualifiedName(jsonObject
@@ -129,16 +132,22 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
         if (hasValue(jsonObject, ModelJSONConstants.ID_PROPERTY)) {
           final String idString = jsonObject.getString(ModelJSONConstants.ID_PROPERTY);
           final URI uri = getUriResolver().toURI(eClass, idString);
-          final String uriString = uri.toString();
+          uriString = uri.toString();
           if (resolvedObjects.containsKey(uriString)) {
             return resolvedObjects.get(uriString);
           }
 
           final T object = fromUri(uriString);
-          resolvedObjects.put(uriString, object);
-          return object;
+          if (object != null) {
+            resolvedObjects.put(uriString, object);
+            return object;
+          }
         }
-        return create(eClass);
+        final T object = create(eClass, uriString);
+        if (uriString != null) {
+          resolvedObjects.put(uriString, object);
+        }
+        return object;
       }
       throw new IllegalArgumentException("No eClass property in jsonObject " + jsonObject); //$NON-NLS-1$
     } catch (JSONException e) {
@@ -148,7 +157,7 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
   protected abstract T fromUri(String uriString);
 
-  protected abstract T create(EClass eClass);
+  protected abstract T create(EClass eClass, String uriString);
 
   protected abstract EClass eClass(T target);
 

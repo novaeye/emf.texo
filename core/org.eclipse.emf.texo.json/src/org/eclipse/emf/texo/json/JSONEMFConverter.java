@@ -24,9 +24,11 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.model.ModelObject;
+import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,6 +41,19 @@ import org.json.JSONObject;
  */
 public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
+  protected void convertContent(JSONObject source, EObject target) {
+    try {
+      if (source.has(ModelJSONConstants.PROXY_PROPERTY) && source.getBoolean(ModelJSONConstants.PROXY_PROPERTY)) {
+        final String proxyUri = source.getString(ModelJSONConstants.URI_PROPERTY);
+        final URI uri = ModelUtils.convertToEMFURI(URI.createURI(proxyUri));
+        ((InternalEObject) target).eSetProxyURI(uri);
+      }
+      super.convertContent(source, target);
+    } catch (JSONException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
   @Override
   protected Class<?> getValueConversionClass() {
     return JSONEMFValueConverter.class;
@@ -50,8 +65,11 @@ public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
   }
 
   @Override
-  protected EObject create(EClass eClass) {
-    return EcoreUtil.create(eClass);
+  protected EObject create(EClass eClass, String uriString) {
+    final DefaultObjectResolver resolver = (DefaultObjectResolver) getUriResolver();
+    final EObject eObject = EcoreUtil.create(eClass);
+    resolver.addToCache(uriString, eObject);
+    return eObject;
   }
 
   @Override

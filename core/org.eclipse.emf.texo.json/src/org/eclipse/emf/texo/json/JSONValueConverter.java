@@ -22,6 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
@@ -129,6 +131,13 @@ public class JSONValueConverter implements TexoComponent {
       }
 
       if (target instanceof EObject) {
+        final EEnum eeNum = (EEnum) eDataType;
+        for (EEnumLiteral eeNumLiteral : eeNum.getELiterals()) {
+          if (eeNumLiteral.getName().compareToIgnoreCase((String) value) == 0
+              || eeNumLiteral.getLiteral().compareToIgnoreCase((String) value) == 0) {
+            return eDataType.getEPackage().getEFactoryInstance().createFromString(eDataType, eeNumLiteral.getLiteral());
+          }
+        }
         return eDataType.getEPackage().getEFactoryInstance().createFromString(eDataType, (String) value);
       }
 

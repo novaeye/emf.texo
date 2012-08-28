@@ -57,7 +57,7 @@ public class JSONModelConverter extends BaseJSONModelConverter<Object> {
   }
 
   @Override
-  protected Object create(EClass eClass) {
+  protected Object create(EClass eClass, String uriString) {
     if (ModelResolver.getInstance().isModeledEClassifier(eClass)) {
       return ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI()).getModelFactory()
           .create(eClass);

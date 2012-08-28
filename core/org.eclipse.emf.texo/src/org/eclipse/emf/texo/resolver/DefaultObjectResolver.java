@@ -19,6 +19,7 @@ import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.utils.ModelUtils;
+import org.eclipse.emf.texo.utils.ModelUtils.TypeIdTuple;
 
 /**
  * Default implementation of the object resolver.
@@ -42,8 +43,12 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
 
   private boolean useWebServiceUriFormat = false;
 
-  protected void clearCache() {
+  public void clearCache() {
     uriEObjectMap.clear();
+  }
+
+  public void addToCache(String uriString, EObject eObject) {
+    uriEObjectMap.put(uriString, eObject);
   }
 
   public void addToCache(EObject eObject) {
@@ -160,6 +165,10 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
     final EClass eClass;
     if (object instanceof EObject) {
       final EObject eObject = (EObject) object;
+      final URI proxyURI = ((InternalEObject) eObject).eProxyURI();
+      if (proxyURI != null && ModelUtils.isTempURI(proxyURI.toString())) {
+        return proxyURI;
+      }
       eClass = eObject.eClass();
       if (!IdProvider.getInstance().hasIdEAttribute(eClass)) {
         return null;
@@ -210,7 +219,15 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
    * @see org.eclipse.emf.texo.store.ObjectURIResolver#fromUri(org.eclipse.emf.common.util.URI)
    */
   public Object fromUri(URI objectUri) {
-    final TypeIdTuple tuple = getTypeAndIdFromUri(objectUri);
+    if (ModelUtils.isTempURI(objectUri.toString())) {
+      final EObject eObject = getEObject(objectUri);
+      if (eObject == null) {
+        return null;
+      }
+      return get(eObject.eClass(), null);
+    }
+
+    final TypeIdTuple tuple = ModelUtils.getTypeAndIdFromUri(isUseWebServiceUriFormat(), objectUri);
     return get(tuple.getEClass(), tuple.getId());
   }
 
@@ -226,34 +243,10 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
     uriEObjectMap.remove(objectUri.toString());
   }
 
-  protected TypeIdTuple getTypeAndIdFromUri(URI objectUri) {
-    EClass eClass;
-    Object idValue;
-    if (isUseWebServiceUriFormat() && !objectUri.toString().contains(ModelConstants.FRAGMENTSEPARATOR)) {
-      final String idString = objectUri.lastSegment();
-      final String eClassName = objectUri.trimSegments(1).lastSegment();
-      eClass = ModelUtils.getEClassFromQualifiedName(eClassName);
-      if (eClass == null) {
-        throw new IllegalArgumentException("No eclass found for uri " + objectUri.toString()); //$NON-NLS-1$
-      }
-      idValue = IdProvider.getInstance().convertIdStringToId(eClass, idString);
-    } else {
-      final String fragment = objectUri.fragment();
-
-      final int separatorIndex = fragment.indexOf(ModelConstants.FRAGMENTSEPARATOR);
-      if (separatorIndex == -1) {
-        throw new IllegalArgumentException("Fragment format not supported for fragment: " + fragment); //$NON-NLS-1$
-      }
-      eClass = ModelUtils.getEClassFromQualifiedName(fragment.substring(0, separatorIndex));
-      final String idString = fragment.substring(separatorIndex + ModelConstants.FRAGMENTSEPARATOR_LENGTH);
-      idValue = IdProvider.getInstance().convertIdStringToId(eClass, idString);
-    }
-    final TypeIdTuple tuple = new TypeIdTuple();
-    tuple.setEClass(eClass);
-    tuple.setId(idValue);
-    return tuple;
-  }
-
+  /**
+   * In this implementation creates a new model object instance. Must be overridden by specific implementations to
+   * return an EObject or read objects from a data base.
+   */
   public Object get(EClass eClass, Object id) {
     final Object target = ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI())
         .getModelFactory().create(eClass);
@@ -272,28 +265,6 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
 
   public void setUseWebServiceUriFormat(boolean useWebServiceUriFormat) {
     this.useWebServiceUriFormat = useWebServiceUriFormat;
-  }
-
-  protected static class TypeIdTuple {
-    private EClass eClass;
-    private Object id;
-
-    public EClass getEClass() {
-      return eClass;
-    }
-
-    public void setEClass(EClass eClass) {
-      this.eClass = eClass;
-    }
-
-    public Object getId() {
-      return id;
-    }
-
-    public void setId(Object id) {
-      this.id = id;
-    }
-
   }
 
 }

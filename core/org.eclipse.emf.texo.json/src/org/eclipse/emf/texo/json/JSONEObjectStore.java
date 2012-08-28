@@ -28,6 +28,7 @@ import java.util.Map;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.texo.client.model.request.ActionType;
 import org.eclipse.emf.texo.client.model.request.Parameter;
 import org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType;
@@ -36,10 +37,11 @@ import org.eclipse.emf.texo.client.model.request.RequestFactory;
 import org.eclipse.emf.texo.client.model.request.RequestPackage;
 import org.eclipse.emf.texo.client.model.response.ResponsePackage;
 import org.eclipse.emf.texo.client.model.response.ResponseType;
-import org.eclipse.emf.texo.client.model.response.ResultType;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.store.EObjectStore;
+import org.eclipse.emf.texo.utils.ModelUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -57,13 +59,15 @@ public class JSONEObjectStore extends EObjectStore {
   private static final String GET_METHOD = "GET"; //$NON-NLS-1$
 
   public JSONEObjectStore() {
+    setUseWebServiceUriFormat(true);
     // dummy calls to initialize
     RequestPackage.eINSTANCE.getActionType();
     ResponsePackage.eINSTANCE.getDocumentRoot();
   }
 
   protected String doHTTPRequest(String urlStr, String method, String content) throws Exception {
-    final URL url = new URL(urlStr == null ? getUri().toString() : urlStr);
+    String localUrlStr = urlStr == null ? getUri().toString() : urlStr;
+    final URL url = new URL(localUrlStr);
     final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
     conn.setRequestMethod(method);
@@ -100,14 +104,42 @@ public class JSONEObjectStore extends EObjectStore {
     actionType.getInsert().addAll(toInsert);
     actionType.getUpdate().addAll(toUpdate);
 
-    final ResultType response = (ResultType) doRequest(actionType, POST_METHOD);
-    // remove the deleted ones
-    for (EObject eObject : response.getDeleted()) {
-      removeFromCache(toUri(eObject));
+    // create a temporary proxy uri for the to insert ones
+    for (EObject eObject : toInsert) {
+      final URI tempURI = ModelUtils.makeTempURI(toURI(eObject.eClass(), "" + System.currentTimeMillis()));
+      ((InternalEObject) eObject).eSetProxyURI(tempURI);
+      addToCache(eObject);
+    }
+
+    final JSONObject jsonObject = doRequest(actionType, POST_METHOD);
+
+    final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
+    jsonEmfConverter.setObjectResolver(this);
+    try {
+      // don't convert the outer object, otherwise the inner objects
+      // will have a change in container
+      final List<EObject> inserted = jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
+          .getResultType_Inserted().getName()));
+      for (EObject eObject : inserted) {
+        final URI uri = ((InternalEObject) eObject).eProxyURI();
+        if (uri != null && ModelUtils.isTempURI(uri.toString())) {
+          removeFromCache(uri);
+        }
+        ((InternalEObject) eObject).eSetProxyURI(null);
+        // re-add with the correct URI
+        addToCache(eObject);
+      }
+
+      // remove the deleted ones
+      for (EObject eObject : toDelete) {
+        removeFromCache(toUri(eObject));
+      }
+    } catch (JSONException e) {
+      throw new RuntimeException(e);
     }
   }
 
-  protected EObject doRequest(EObject requestObject, String method) {
+  protected JSONObject doRequest(EObject requestObject, String method) {
     try {
       final EMFJSONConverter emfJsonConverter = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
       emfJsonConverter.setObjectResolver(this);
@@ -116,11 +148,7 @@ public class JSONEObjectStore extends EObjectStore {
         json = emfJsonConverter.convert(requestObject).toString();
       }
       final String result = doHTTPRequest(null, method, json);
-      final JSONObject jsonObject = new JSONObject(result);
-      final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
-      jsonEmfConverter.setObjectResolver(this);
-      final EObject response = jsonEmfConverter.convert(jsonObject);
-      return response;
+      return new JSONObject(result);
     } catch (Exception e) {
       throw new RuntimeException(e.getMessage(), e);
     }
@@ -144,20 +172,31 @@ public class JSONEObjectStore extends EObjectStore {
         parameter.setType("dateTime");
       } else if (value instanceof Date) {
         parameter.setType("date");
-      } else {
-        parameter.setType(value.getClass().toString());
       }
+      parameter.setValue(value);
+      queryType.getParameters().add(parameter);
     }
 
     queryType.setQuery(qryStr);
     queryType.setFirstResult(firstResult);
     queryType.setMaxResults(maxResults);
 
-    final ResponseType response = (ResponseType) doRequest(queryType, POST_METHOD);
-    for (EObject eObject : response.getData()) {
-      addToCache(eObject);
+    final JSONObject jsonObject = doRequest(queryType, POST_METHOD);
+
+    final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
+    jsonEmfConverter.setObjectResolver(this);
+    try {
+      // don't convert the outer object, otherwise the inner objects
+      // will have a change in container
+      final List<EObject> data = jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
+          .getResponseType_Data().getName()));
+      for (EObject eObject : data) {
+        addToCache(eObject);
+      }
+      return data;
+    } catch (JSONException e) {
+      throw new RuntimeException(e);
     }
-    return response.getData();
   }
 
   /**
@@ -184,8 +223,10 @@ public class JSONEObjectStore extends EObjectStore {
 
     queryType.setQuery(qry);
     queryType.setDoCount(true);
-
-    final ResponseType response = (ResponseType) doRequest(queryType, POST_METHOD);
+    final JSONObject jsonObject = doRequest(queryType, POST_METHOD);
+    final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
+    jsonEmfConverter.setObjectResolver(this);
+    final ResponseType response = (ResponseType) jsonEmfConverter.convert(jsonObject);
     return response.getTotalRows();
   }
 
@@ -226,10 +267,21 @@ public class JSONEObjectStore extends EObjectStore {
     queryType.setTargetUri(uri.toString());
     queryType.setIncludeContainment(includeContainmentReferences);
 
-    final ResponseType response = (ResponseType) doRequest(queryType, POST_METHOD);
-    for (EObject eObject : response.getData()) {
-      addToCache(eObject);
+    final JSONObject jsonObject = doRequest(queryType, POST_METHOD);
+
+    final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
+    jsonEmfConverter.setObjectResolver(this);
+    try {
+      // don't convert the outer object, otherwise the inner objects
+      // will have a change in container
+      final List<EObject> data = jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
+          .getResponseType_Data().getName()));
+      for (EObject eObject : data) {
+        addToCache(eObject);
+      }
+      return data;
+    } catch (JSONException e) {
+      throw new RuntimeException(e);
     }
-    return response.getData();
   }
 }

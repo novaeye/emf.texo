@@ -48,17 +48,6 @@ public class JSONTexoResourceTest extends TexoResourceTest {
 
   private Server server;
 
-  private static final int PORT = 8080;
-  private static final String CONTEXTNAME = "texo"; //$NON-NLS-1$
-  protected static final String JSONWS = "jsonws"; //$NON-NLS-1$
-
-  /**
-   * @return the base url of the webservice
-   */
-  protected String getBaseURL() {
-    return "http://localhost:" + PORT + "/" + CONTEXTNAME + "/" + JSONWS; //$NON-NLS-1$//$NON-NLS-2$
-  }
-
   @Before
   @Override
   public void setUp() throws Exception {
@@ -96,11 +85,6 @@ public class JSONTexoResourceTest extends TexoResourceTest {
     server.stop();
     server.destroy();
     server = null;
-  }
-
-  @Override
-  protected TexoResource createResource() {
-    return createResource(getBaseURL());
   }
 
   @Override

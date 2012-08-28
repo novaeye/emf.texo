@@ -149,11 +149,8 @@ public abstract class WebServiceHandler implements TexoComponent {
       }
       emObjectStore.setUri(objectStoreUri);
 
-      serviceContext.setObjectStore(emObjectStore);
-
       final Map<String, Object> params = new HashMap<String, Object>();
-      for (@SuppressWarnings("unchecked")
-      Enumeration<String> enumeration = request.getParameterNames(); enumeration.hasMoreElements();) {
+      for (Enumeration<String> enumeration = request.getParameterNames(); enumeration.hasMoreElements();) {
         final String name = enumeration.nextElement();
         final String[] vals = request.getParameterValues(name);
         if (vals.length == 1) {
@@ -162,6 +159,7 @@ public abstract class WebServiceHandler implements TexoComponent {
           params.put(name, vals);
         }
       }
+      serviceContext.setObjectStore(emObjectStore);
       serviceContext.setRequestParameters(params);
 
       serviceContext.setRequestContent(ServiceUtils.toString(request.getInputStream(), request.getCharacterEncoding()));

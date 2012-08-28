@@ -44,7 +44,7 @@ public class XMLServiceContext extends ServiceContext {
 
   @Override
   public void setObjectStore(ObjectStore objectStore) {
-    objectStore.setUseWebServiceUriFormat(true);
+    objectStore.setUseWebServiceUriFormat(isUseWebServiceUriFormat());
     super.setObjectStore(objectStore);
   }
 

@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.utils.ModelUtils;
+import org.eclipse.emf.texo.utils.ModelUtils.TypeIdTuple;
 
 /**
  * An object store which keeps all the data in memory, only supports simple querying.
@@ -196,7 +198,7 @@ public class MemoryObjectStore extends ObjectStore {
   public EObject getEObject(URI objectUri) {
     EObject eObject = super.getEObject(objectUri);
     if (eObject == null) {
-      final TypeIdTuple tuple = getTypeAndIdFromUri(objectUri);
+      final TypeIdTuple tuple = ModelUtils.getTypeAndIdFromUri(isUseWebServiceUriFormat(), objectUri);
       eObject = (EObject) get(tuple.getEClass(), tuple.getId());
       if (eObject == null) {
         eObject = EcoreUtil.create(tuple.getEClass());
