@@ -375,18 +375,11 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
           // add to the other side, this is needed because the bi-directional
           // api is not always generated
-          if (setBidirectionalReferences() && eReference.getEOpposite() != null) {
-            if (eReference.getEOpposite().isMany()) {
-              final Collection<?> otherSide = (Collection<?>) eGet(mValue, eReference.getEOpposite());
-              if (!otherSide.contains(target)) {
-                eAddTo(mValue, eReference.getEOpposite(), target);
-              }
-            } else {
-              // first check if the otherside is already set
-              final Object otherSide = eGet(mValue, eReference.getEOpposite());
-              if (otherSide != target) {
-                eSet(mValue, eReference.getEOpposite(), target);
-              }
+          if (setBidirectionalReferences() && eReference.getEOpposite() != null && !eReference.getEOpposite().isMany()) {
+            // first check if the otherside is already set
+            final Object otherSide = eGet(mValue, eReference.getEOpposite());
+            if (otherSide != target) {
+              eSet(mValue, eReference.getEOpposite(), target);
             }
           }
         } catch (JSONException e) {

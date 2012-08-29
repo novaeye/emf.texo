@@ -57,7 +57,7 @@ public class JSONTest extends BaseJSONTest {
   public void doRunTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
 
-    final List<EObject> eObjects = TestUtils.generateTestSet(1, 3, 3, 10000, getEPackages(), getEClasses());
+    final List<EObject> eObjects = TestUtils.generateTestSet(1, 3, 3, 1000, getEPackages(), getEClasses());
     final EMFModelConverter emfModelConverter = new EMFModelConverter();
     emfModelConverter.setUriResolver(memObjectStore);
     final List<Object> objects = emfModelConverter.convert(eObjects);
