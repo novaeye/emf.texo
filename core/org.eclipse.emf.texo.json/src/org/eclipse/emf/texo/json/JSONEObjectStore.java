@@ -21,6 +21,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -149,6 +150,8 @@ public class JSONEObjectStore extends EObjectStore {
     jsonEmfConverter.setObjectResolver(this);
     try {
       // get the id of the inserted objects and link the previous eobject to them
+      // don't convert the outer object, otherwise the inner objects
+      // will have a change in container
       final JSONArray insertedJsonArray = jsonObject.getJSONArray(ResponsePackage.eINSTANCE
           .getResultType_Inserted().getName());
       int i = 0;
@@ -169,17 +172,44 @@ public class JSONEObjectStore extends EObjectStore {
         
       // now the inserted objects can be converted safely
 
+      // do some checks
+      final List<EObject> allInsertedUpdated = new ArrayList<EObject>();
+      final List<EObject> allToInsertedUpdated = new ArrayList<EObject>();
+      allToInsertedUpdated.addAll(toInsert);
+      allToInsertedUpdated.addAll(toUpdate);
+
+      allInsertedUpdated.addAll(jsonEmfConverter.convert(insertedJsonArray));
       // don't convert the outer object, otherwise the inner objects
       // will have a change in container
-      final List<EObject> inserted = jsonEmfConverter.convert(insertedJsonArray);
       // also convert the updated objects as the server may have changed
       // their state
-      jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
-          .getResultType_Updated().getName()));
+      allInsertedUpdated.addAll(jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
+          .getResultType_Updated().getName())));
 
-      // remove the deleted ones
+      // check the return
+      if (allInsertedUpdated.size() != allToInsertedUpdated.size()) {
+        throw new IllegalStateException("Unexpected size of returned data " + allInsertedUpdated.size() + " - "
+            + allToInsertedUpdated.size());
+      }
+      for (EObject eObject : allInsertedUpdated) {
+        boolean found = false;
+        for (EObject otherObject : allToInsertedUpdated) {
+          if (otherObject == eObject) {
+            if (found) {
+              // duplicates not allowed!
+              throw new IllegalStateException("Object " + eObject + " occurs multiple times in result set");
+            }
+            found = true;
+          }
+        }
+        if (!found) {
+          throw new IllegalStateException("Object " + eObject + " not found in result set");
+        }
+      }
+
+      // remove the deleted ones from the internal cache
       for (EObject eObject : toDelete) {
-        removeFromCache(toUri(eObject));
+        deleted(eObject);
       }
     } catch (JSONException e) {
       throw new RuntimeException(e);
@@ -227,6 +257,8 @@ public class JSONEObjectStore extends EObjectStore {
     queryType.setQuery(qryStr);
     queryType.setFirstResult(firstResult);
     queryType.setMaxResults(maxResults);
+    queryType.setDoCount(false);
+    queryType.setCountOperation(false);
 
     final JSONObject jsonObject = doRequest(queryType, POST_METHOD);
 
@@ -263,13 +295,15 @@ public class JSONEObjectStore extends EObjectStore {
         parameter.setType("dateTime");
       } else if (value instanceof Date) {
         parameter.setType("date");
-      } else {
-        parameter.setType(value.getClass().toString());
       }
+      parameter.setValue(value);
+      queryType.getParameters().add(parameter);
     }
 
     queryType.setQuery(qry);
-    queryType.setDoCount(true);
+    queryType.setDoCount(false);
+    queryType.setCountOperation(true);
+
     final JSONObject jsonObject = doRequest(queryType, POST_METHOD);
     final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
     jsonEmfConverter.setObjectResolver(this);

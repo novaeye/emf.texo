@@ -38,10 +38,8 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  */
 public abstract class EObjectStore extends DefaultObjectResolver {
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.texo.store.EObjectStore#getFromQualifiedIdString(java.lang.String)
+  /**
+   * Retrieves an EObject using a unique string, for example: library|Library||2
    */
   public EObject getFromQualifiedIdString(String qualifiedIdString) {
     final URI theUri = getUri().appendFragment(qualifiedIdString);
@@ -105,34 +103,32 @@ public abstract class EObjectStore extends DefaultObjectResolver {
     return null;
   }
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.texo.store.EObjectStore#persist(java.util.List, java.util.List)
+  /**
+   * Persist (insert, update, delete) a number of objects in one transaction.
    */
   public abstract void persist(List<EObject> toInsert, List<EObject> toUpdate, List<EObject> toDelete);
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.texo.store.EObjectStore#query(java.lang.String, java.util.Map, int, int)
+  /**
+   * Query for a list of objects, using named parameters and paging settings.
    */
   public abstract List<EObject> query(String qryStr, Map<String, Object> namedParameters, int firstResult,
       int maxResults);
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.texo.store.EObjectStore#refresh(org.eclipse.emf.ecore.EObject)
+  /**
+   * Refresh the content of the object from the database.
    */
   public abstract void refresh(EObject eObject);
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see org.eclipse.emf.texo.store.EObjectStore#getReferingObjects(T, int, boolean)
+  /**
+   * Retrieve all the objects referring to a specific target. Parameters can be passed to control the volume being
+   * returned and if containment references should be included.
    */
   public abstract List<EObject> getReferingObjects(EObject target, int maxResult, boolean includeContainmentReferences);
+
+  /**
+   * A count query, the qry should be a valid count query.
+   */
+  public abstract long count(String qry, Map<String, Object> namedParameters);
 
   /**
    * Is called when an object is deleted after the commit has happened.

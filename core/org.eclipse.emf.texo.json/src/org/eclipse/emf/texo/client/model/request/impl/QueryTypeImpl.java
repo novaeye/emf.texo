@@ -35,6 +35,7 @@ import org.eclipse.emf.texo.client.model.request.RequestPackage;
  *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryTypeImpl#getFirstResult <em>First Result</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryTypeImpl#getMaxResults <em>Max Results</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryTypeImpl#isDoCount <em>Do Count</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryTypeImpl#isCountOperation <em>Count Operation</em>}</li>
  * </ul>
  * </p>
  *
@@ -177,6 +178,35 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 	 * @ordered
 	 */
 	protected boolean doCountESet;
+
+	/**
+	 * The default value of the '{@link #isCountOperation() <em>Count Operation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCountOperation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean COUNT_OPERATION_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isCountOperation() <em>Count Operation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCountOperation()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean countOperation = COUNT_OPERATION_EDEFAULT;
+
+	/**
+	 * This is true if the Count Operation attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean countOperationESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -394,6 +424,52 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isCountOperation() {
+		return countOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCountOperation(boolean newCountOperation) {
+		boolean oldCountOperation = countOperation;
+		countOperation = newCountOperation;
+		boolean oldCountOperationESet = countOperationESet;
+		countOperationESet = true;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RequestPackage.QUERY_TYPE__COUNT_OPERATION, oldCountOperation, countOperation, !oldCountOperationESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCountOperation() {
+		boolean oldCountOperation = countOperation;
+		boolean oldCountOperationESet = countOperationESet;
+		countOperation = COUNT_OPERATION_EDEFAULT;
+		countOperationESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RequestPackage.QUERY_TYPE__COUNT_OPERATION, oldCountOperation, COUNT_OPERATION_EDEFAULT, oldCountOperationESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCountOperation() {
+		return countOperationESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -423,6 +499,8 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 				return getMaxResults();
 			case RequestPackage.QUERY_TYPE__DO_COUNT:
 				return isDoCount();
+			case RequestPackage.QUERY_TYPE__COUNT_OPERATION:
+				return isCountOperation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -455,6 +533,9 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 			case RequestPackage.QUERY_TYPE__DO_COUNT:
 				setDoCount((Boolean)newValue);
 				return;
+			case RequestPackage.QUERY_TYPE__COUNT_OPERATION:
+				setCountOperation((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -485,6 +566,9 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 			case RequestPackage.QUERY_TYPE__DO_COUNT:
 				unsetDoCount();
 				return;
+			case RequestPackage.QUERY_TYPE__COUNT_OPERATION:
+				unsetCountOperation();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -509,6 +593,8 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 				return isSetMaxResults();
 			case RequestPackage.QUERY_TYPE__DO_COUNT:
 				return isSetDoCount();
+			case RequestPackage.QUERY_TYPE__COUNT_OPERATION:
+				return isSetCountOperation();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -533,6 +619,8 @@ public class QueryTypeImpl extends EObjectImpl implements QueryType {
 		if (maxResultsESet) result.append(maxResults); else result.append("<unset>");
 		result.append(", doCount: ");
 		if (doCountESet) result.append(doCount); else result.append("<unset>");
+		result.append(", countOperation: ");
+		if (countOperationESet) result.append(countOperation); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

@@ -17,13 +17,12 @@
 package org.eclipse.emf.texo.server.service;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.provider.IdProvider;
+import org.eclipse.emf.texo.server.model.request.QueryType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResultType;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -52,17 +51,13 @@ public class DeleteModelOperation extends ModelOperation {
   @SuppressWarnings("unchecked")
   protected void internalExecute() {
     final List<Object> toDelete;
-    // 1) there is a query!
     final String qryStr = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
-    if (qryStr != null && qryStr.trim().length() > 0) {
 
-      getServiceContext().getServiceOptions().checkFalse(ServiceOptions.OPTION_ALLOW_RETRIEVE_QUERIES);
-
-      // check the query
-      ComponentProvider.getInstance().newInstance(QueryChecker.class).checkQuery(qryStr);
-
-      toDelete = (List<Object>) getObjectStore().query(qryStr, new HashMap<String, Object>(), getFirstResult(),
-          getMaxResults());
+    // 0) a posted queryType or 1) there is a query!
+    QueryType queryType = getQueryType();
+    if (queryType != null) {
+      toDelete = (List<Object>) getObjectStore().query(qryStr, getParameters(queryType), queryType.getFirstResult(),
+          queryType.getMaxResults());
     } else if (getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_ID)) {
       // an id which must be a uri
       final URI uri = URI.createURI((String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_ID));

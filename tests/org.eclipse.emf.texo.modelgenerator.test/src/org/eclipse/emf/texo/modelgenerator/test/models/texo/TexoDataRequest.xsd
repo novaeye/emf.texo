@@ -23,6 +23,7 @@
 			<xs:element name="firstResult" type="xs:int" minOccurs="0" default="-1"/>
 			<xs:element name="maxResults" type="xs:int"  minOccurs="0" default="-1"/>
 			<xs:element name="doCount" type="xs:boolean" minOccurs="0" default="false" />
+			<xs:element name="countOperation" type="xs:boolean" minOccurs="0" default="false" />
 		</xs:sequence>
 	</xs:complexType>
 

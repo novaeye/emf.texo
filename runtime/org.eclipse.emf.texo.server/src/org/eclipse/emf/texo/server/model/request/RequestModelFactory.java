@@ -449,6 +449,8 @@ public class RequestModelFactory implements ModelFactory {
         return getTarget().getMaxResults();
       case RequestModelPackage.QUERYTYPE_DOCOUNT_FEATURE_ID:
         return getTarget().isDoCount();
+      case RequestModelPackage.QUERYTYPE_COUNTOPERATION_FEATURE_ID:
+        return getTarget().isCountOperation();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -478,6 +480,9 @@ public class RequestModelFactory implements ModelFactory {
         return;
       case RequestModelPackage.QUERYTYPE_DOCOUNT_FEATURE_ID:
         getTarget().setDoCount((Boolean) value);
+        return;
+      case RequestModelPackage.QUERYTYPE_COUNTOPERATION_FEATURE_ID:
+        getTarget().setCountOperation((Boolean) value);
         return;
       }
       super.eSet(eStructuralFeature, value);

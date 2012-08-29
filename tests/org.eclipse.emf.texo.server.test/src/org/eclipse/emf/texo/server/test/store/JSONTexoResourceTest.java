@@ -16,25 +16,12 @@
  */
 package org.eclipse.emf.texo.server.test.store;
 
-import java.util.EnumSet;
-
-import javax.servlet.DispatcherType;
-
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.json.JSONTexoResource;
-import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
-import org.eclipse.emf.texo.server.store.CurrentEntityManagerRequestFilter;
-import org.eclipse.emf.texo.server.store.EntityManagerProvider;
-import org.eclipse.emf.texo.server.test.ws.TestEntityManagerCleanUpServlet;
-import org.eclipse.emf.texo.server.test.ws.TestEntityManagerRequestFilter;
-import org.eclipse.emf.texo.server.web.JSONRestWebServiceServlet;
 import org.eclipse.emf.texo.store.TexoResource;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
 import org.junit.After;
 import org.junit.Before;
 
@@ -46,45 +33,18 @@ import org.junit.Before;
  */
 public class JSONTexoResourceTest extends TexoResourceTest {
 
-  private Server server;
-
   @Before
   @Override
   public void setUp() throws Exception {
     super.setUp();
-
-    DefaultObjectResolver.setServerUri(getBaseURL());
-
-    server = new Server(PORT);
-
-    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-    context.setContextPath("/" + CONTEXTNAME); //$NON-NLS-1$
-    server.setHandler(context);
-
-    EntityManagerProvider.getInstance().setUseCurrentEntityManagerPattern(true);
-
-    final JSONRestWebServiceServlet jsonRestWebServiceServlet = new JSONRestWebServiceServlet();
-    context.addServlet(new ServletHolder(jsonRestWebServiceServlet), "/" + JSONWS + "/*"); //$NON-NLS-1$ //$NON-NLS-2$
-
-    final TestEntityManagerCleanUpServlet testEMServlet = new TestEntityManagerCleanUpServlet();
-    context.addServlet(new ServletHolder(testEMServlet), "/testEM"); //$NON-NLS-1$ 
-
-    final EnumSet<DispatcherType> all = EnumSet.of(DispatcherType.ASYNC, DispatcherType.ERROR, DispatcherType.FORWARD,
-        DispatcherType.INCLUDE, DispatcherType.REQUEST);
-
-    context.addFilter(TestEntityManagerRequestFilter.class, "/*", all); //$NON-NLS-1$
-    context.addFilter(CurrentEntityManagerRequestFilter.class, "/*", all); //$NON-NLS-1$
-
-    server.start();
+    doServerSetUp();
   }
 
   @Override
   @After
   public void tearDown() throws Exception {
     super.tearDown();
-    server.stop();
-    server.destroy();
-    server = null;
+    doServerTearDown();
   }
 
   @Override

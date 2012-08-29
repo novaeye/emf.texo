@@ -18,7 +18,10 @@ package org.eclipse.emf.texo.server.test.store;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.json.JSONEObjectStore;
 import org.eclipse.emf.texo.server.store.EPersistenceService;
+import org.junit.After;
+import org.junit.Before;
 
 /**
  * Tests the {@link EPersistenceService} object.
@@ -26,13 +29,26 @@ import org.eclipse.emf.texo.server.store.EPersistenceService;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.4 $
  */
-public class EPersistenceServiceTest extends EObjectStoreTest {
+public class JSONEObjectStoreTest extends EObjectStoreTest {
+
+  @Before
+  @Override
+  public void setUp() throws Exception {
+    super.setUp();
+    doServerSetUp();
+  }
 
   @Override
-  protected EPersistenceService getEObjectStore() {
-    final EPersistenceService ePersistenceService = ComponentProvider.getInstance().newInstance(
-        EPersistenceService.class);
-    ePersistenceService.setUri(URI.createURI(STORE_URI));
-    return ePersistenceService;
+  @After
+  public void tearDown() throws Exception {
+    super.tearDown();
+    doServerTearDown();
+  }
+
+  @Override
+  protected JSONEObjectStore getEObjectStore() {
+    final JSONEObjectStore jsonEObjectStore = ComponentProvider.getInstance().newInstance(JSONEObjectStore.class);
+    jsonEObjectStore.setUri(URI.createURI(getBaseURL() + "/" + JSONWS));
+    return jsonEObjectStore;
   }
 }

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryType#getFirstResult <em>First Result</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryType#getMaxResults <em>Max Results</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryType#isDoCount <em>Do Count</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryType#isCountOperation <em>Count Operation</em>}</li>
  * </ul>
  * </p>
  *
@@ -269,5 +270,61 @@ public interface QueryType extends EObject {
 	 * @generated
 	 */
 	boolean isSetDoCount();
+
+	/**
+	 * Returns the value of the '<em><b>Count Operation</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Count Operation</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Count Operation</em>' attribute.
+	 * @see #isSetCountOperation()
+	 * @see #unsetCountOperation()
+	 * @see #setCountOperation(boolean)
+	 * @see org.eclipse.emf.texo.client.model.request.RequestPackage#getQueryType_CountOperation()
+	 * @model default="false" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 *        extendedMetaData="kind='element' name='countOperation'"
+	 *        annotation="org.eclipse.emf.texo java.member='countOperation'"
+	 * @generated
+	 */
+	boolean isCountOperation();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryType#isCountOperation <em>Count Operation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Count Operation</em>' attribute.
+	 * @see #isSetCountOperation()
+	 * @see #unsetCountOperation()
+	 * @see #isCountOperation()
+	 * @generated
+	 */
+	void setCountOperation(boolean value);
+
+	/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryType#isCountOperation <em>Count Operation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCountOperation()
+	 * @see #isCountOperation()
+	 * @see #setCountOperation(boolean)
+	 * @generated
+	 */
+	void unsetCountOperation();
+
+	/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryType#isCountOperation <em>Count Operation</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Count Operation</em>' attribute is set.
+	 * @see #unsetCountOperation()
+	 * @see #isCountOperation()
+	 * @see #setCountOperation(boolean)
+	 * @generated
+	 */
+	boolean isSetCountOperation();
 
 } // QueryType

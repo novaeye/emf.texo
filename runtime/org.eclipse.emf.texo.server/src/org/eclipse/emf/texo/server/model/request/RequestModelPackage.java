@@ -173,6 +173,13 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int QUERYTYPE_COUNTOPERATION_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int QUERYREFERINGOBJECTSTYPE_CLASSIFIER_ID = 3;
 
   /**
@@ -501,6 +508,17 @@ public class RequestModelPackage extends ModelPackage {
    */
   public EAttribute getQueryType_DoCount() {
     return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_DOCOUNT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.countOperation</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.countOperation</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_CountOperation() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_COUNTOPERATION_FEATURE_ID);
   }
 
   /**

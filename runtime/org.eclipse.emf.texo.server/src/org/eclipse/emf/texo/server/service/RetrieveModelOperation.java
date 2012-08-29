@@ -16,16 +16,14 @@
  */
 package org.eclipse.emf.texo.server.service;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.texo.component.ComponentProvider;
-import org.eclipse.emf.texo.json.JSONValueConverter;
 import org.eclipse.emf.texo.provider.IdProvider;
-import org.eclipse.emf.texo.server.model.request.Parameter;
 import org.eclipse.emf.texo.server.model.request.QueryType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
 import org.eclipse.emf.texo.server.model.response.ResponseType;
@@ -57,25 +55,13 @@ public class RetrieveModelOperation extends ModelOperation {
   @Override
   protected void internalExecute() {
 
-    // 0) a post with a json object
-    QueryType queryType = null;
-    if (getServiceContext().getRequestContent() != null && getServiceContext().getRequestContent().trim().length() > 0) {
-      final List<Object> requestData = getServiceContext().getRequestData();
-      for (Object object : requestData) {
-        if (object instanceof QueryType) {
-          queryType = (QueryType) object;
-          break;
-        }
-      }
-    }
+    // 0) a post with a json object or 1) a query
+    QueryType queryType = getQueryType();
+    if (queryType != null) {
+      int maxResults = queryType.getMaxResults();
+      int startRow = queryType.getFirstResult() == -1 ? 0 : queryType.getFirstResult();
 
-    // 1) there is a query!
-    final String qryStrParam = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
-    if (queryType != null || qryStrParam != null && qryStrParam.trim().length() > 0) {
-      int maxResults = getMaxResults();
-      int startRow = getFirstResult() == -1 ? 0 : getFirstResult();
-
-      if (!doCount() && maxResults != -1) {
+      if (!queryType.isDoCount() && maxResults != -1) {
         // try to get one more than the requested result size
         // if we should not do count
         maxResults++;
@@ -84,21 +70,11 @@ public class RetrieveModelOperation extends ModelOperation {
       final Map<String, Object> parameters = getParameters(queryType);
 
       final List<Object> resultList;
-      String qryStr = null;
-      if (queryType != null && queryType.getNamedQuery() != null) {
+      if (queryType.getNamedQuery() != null) {
         resultList = (List<Object>) getObjectStore().namedQuery(queryType.getNamedQuery(), parameters, startRow,
             maxResults);
       } else {
-        qryStr = queryType != null ? queryType.getQuery() : qryStrParam;
-
-        if (qryStr != null) {
-          getServiceContext().getServiceOptions().checkFalse(ServiceOptions.OPTION_ALLOW_RETRIEVE_QUERIES);
-        }
-
-        // check the query
-        ComponentProvider.getInstance().newInstance(QueryChecker.class).checkQuery(qryStr);
-
-        resultList = (List<Object>) getObjectStore().query(qryStr, parameters, startRow, maxResults);
+        resultList = (List<Object>) getObjectStore().query(queryType.getQuery(), parameters, startRow, maxResults);
       }
 
       // now do smart things, to prevent unnecessary count operations
@@ -109,11 +85,11 @@ public class RetrieveModelOperation extends ModelOperation {
       } else if (maxResults == -1) {
         // if there were no paging limitations then this is the size
         cnt = resultList.size() + startRow;
-      } else if (doCount()) {
-        if (queryType != null && queryType.getNamedQuery() != null) {
+      } else if (queryType.isDoCount()) {
+        if (queryType.getNamedQuery() != null) {
           cnt = getObjectStore().countNamedQuery(queryType.getNamedQuery(), parameters);
         } else {
-          cnt = getObjectStore().count(qryStr, parameters);
+          cnt = getObjectStore().count(queryType.getQuery(), parameters);
         }
       } else {
         // okay then the count is one more than the original maxresults
@@ -122,7 +98,12 @@ public class RetrieveModelOperation extends ModelOperation {
         resultList.remove(resultList.size() - 1);
       }
 
-      final Object responseObject = getResponse(resultList, startRow, startRow + resultList.size() - 1, cnt);
+      final Object responseObject;
+      if (queryType.isCountOperation()) {
+        responseObject = getResponse(Collections.emptyList(), 0, 0, (Long) resultList.get(0));
+      } else {
+        responseObject = getResponse(resultList, startRow, startRow + resultList.size() - 1, cnt);
+      }
       getServiceContext().setResultInResponse(responseObject);
     } else if (getServiceContext().getRequestParameters().containsKey(ServiceConstants.PARAM_ID)) {
       // an id which must be a uri
@@ -143,7 +124,11 @@ public class RetrieveModelOperation extends ModelOperation {
         int maxResults = getMaxResults();
         int startRow = getFirstResult() == -1 ? 0 : getFirstResult();
 
-        if (!doCount() && maxResults != -1) {
+        final String noCountParam = (String) getServiceContext().getRequestParameters().get(
+            ServiceConstants.PARAM_NO_COUNT);
+        boolean doCount = maxResults != -1 && (noCountParam == null || FALSE.equals(noCountParam));
+
+        if (!doCount && maxResults != -1) {
           // try to get one more than the requested result size
           // if we should not do count
           maxResults++;
@@ -157,7 +142,7 @@ public class RetrieveModelOperation extends ModelOperation {
         } else if (maxResults == -1) {
           // if there were no paging limitations then this is the size
           cnt = resultList.size() + startRow;
-        } else if (doCount()) {
+        } else if (doCount) {
           cnt = getObjectStore().count(
               "from " + getObjectStore().getEntityName(eClass) + " e", new HashMap<String, Object>()); //$NON-NLS-1$ //$NON-NLS-2$
         } else {
@@ -187,39 +172,6 @@ public class RetrieveModelOperation extends ModelOperation {
     }
   }
 
-  private Map<String, Object> getParameters(QueryType queryType) {
-    final Map<String, Object> result = new HashMap<String, Object>();
-
-    // get the queryparameters from the request
-    for (String key : getServiceContext().getRequestParameters().keySet()) {
-      if (key.startsWith(ServiceConstants.QUERY_PARAM_PREFIX)) {
-        final Object value = getServiceContext().getRequestParameters().get(key);
-        final String name = key.substring(ServiceConstants.QUERY_PARAM_PREFIX.length());
-        result.put(name, value);
-      }
-    }
-    if (queryType == null) {
-      return result;
-    }
-
-    final JSONValueConverter converter = ComponentProvider.getInstance().newInstance(JSONValueConverter.class);
-    for (Parameter parameter : queryType.getParameters()) {
-      final String type = parameter.getType();
-      Object value = parameter.getValue();
-      if (type != null) {
-        if ("date".equals(type)) { //$NON-NLS-1$
-          value = converter.createDateFromJSON(value);
-        } else if ("dateTime".equals(type)) { //$NON-NLS-1$
-          value = converter.createDateTimeFromJSON(value);
-        } else {
-          value = converter.createTimeFromJSON(value);
-        }
-      }
-      result.put(parameter.getName(), value);
-    }
-    return result;
-  }
-
   protected ResponseType getResponse(List<Object> objects, int startRow, int endRow, long totalRows) {
     final ResponseType responseType = ResponseModelPackage.INSTANCE.getModelFactory().createResponseType();
     responseType.setEndRow(endRow);
@@ -230,11 +182,12 @@ public class RetrieveModelOperation extends ModelOperation {
     return responseType;
   }
 
-  private boolean doCount() {
+  private boolean doCount(QueryType queryType, int maxResults, int firstResult) {
     // if there is no limit on the max results and there is no first row then don't count
     if (getMaxResults() == -1 && getFirstResult() == -1) {
       return false;
     }
+
     final String noCountParam = (String) getServiceContext().getRequestParameters()
         .get(ServiceConstants.PARAM_NO_COUNT);
     return noCountParam == null || FALSE.equals(noCountParam);

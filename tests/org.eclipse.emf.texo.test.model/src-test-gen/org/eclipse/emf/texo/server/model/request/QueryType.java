@@ -53,6 +53,13 @@ public class QueryType {
   private boolean doCount = false;
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  private boolean countOperation = false;
+
+  /**
    * Returns the value of '<em><b>query</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -236,6 +243,31 @@ public class QueryType {
   }
 
   /**
+   * Returns the value of '<em><b>countOperation</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>countOperation</b></em>' feature
+   * @generated
+   */
+  public boolean isCountOperation() {
+    return countOperation;
+  }
+
+  /**
+   * Sets the '{@link QueryType#isCountOperation() <em>countOperation</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param the
+   *          new value of the '{@link QueryType#isCountOperation() countOperation}' feature.
+   * @generated
+   */
+  public void setCountOperation(boolean newCountOperation) {
+    countOperation = newCountOperation;
+  }
+
+  /**
    * A toString method which prints the values of all EAttributes of this instance. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
@@ -244,6 +276,7 @@ public class QueryType {
   @Override
   public String toString() {
     return "QueryType " + " [namedQuery: " + getNamedQuery() + "]" + " [query: " + getQuery() + "]" + " [firstResult: "
-        + getFirstResult() + "]" + " [maxResults: " + getMaxResults() + "]" + " [doCount: " + isDoCount() + "]";
+        + getFirstResult() + "]" + " [maxResults: " + getMaxResults() + "]" + " [doCount: " + isDoCount() + "]"
+        + " [countOperation: " + isCountOperation() + "]";
   }
 }

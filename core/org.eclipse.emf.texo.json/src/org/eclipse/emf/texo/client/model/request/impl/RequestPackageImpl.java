@@ -373,6 +373,15 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQueryType_CountOperation() {
+		return (EAttribute)queryTypeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RequestFactory getRequestFactory() {
 		return (RequestFactory)getEFactoryInstance();
 	}
@@ -426,6 +435,7 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 		createEAttribute(queryTypeEClass, QUERY_TYPE__FIRST_RESULT);
 		createEAttribute(queryTypeEClass, QUERY_TYPE__MAX_RESULTS);
 		createEAttribute(queryTypeEClass, QUERY_TYPE__DO_COUNT);
+		createEAttribute(queryTypeEClass, QUERY_TYPE__COUNT_OPERATION);
 	}
 
 	/**
@@ -491,6 +501,7 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 		initEAttribute(getQueryType_FirstResult(), theXMLTypePackage.getInt(), "firstResult", "-1", 0, 1, QueryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQueryType_MaxResults(), theXMLTypePackage.getInt(), "maxResults", "-1", 0, 1, QueryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQueryType_DoCount(), theXMLTypePackage.getBoolean(), "doCount", "false", 0, 1, QueryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQueryType_CountOperation(), theXMLTypePackage.getBoolean(), "countOperation", "false", 0, 1, QueryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -694,6 +705,13 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 		   new String[] {
 			 "kind", "element",
 			 "name", "doCount"
+		   });			
+		addAnnotation
+		  (getQueryType_CountOperation(), 
+		   source, 
+		   new String[] {
+			 "kind", "element",
+			 "name", "countOperation"
 		   });	
 	}
 
@@ -830,6 +848,12 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 		   source, 
 		   new String[] {
 			 "java.member", "doCount"
+		   });			
+		addAnnotation
+		  (getQueryType_CountOperation(), 
+		   source, 
+		   new String[] {
+			 "java.member", "countOperation"
 		   });
 	}
 

@@ -119,7 +119,7 @@ public class EntityManagerObjectStore extends ObjectStore {
     if (firstResult != -1) {
       qry.setFirstResult(firstResult);
     }
-    if (maxResults != -1) {
+    if (maxResults > 0) {
       qry.setMaxResults(maxResults);
     }
     for (String key : namedParameters.keySet()) {

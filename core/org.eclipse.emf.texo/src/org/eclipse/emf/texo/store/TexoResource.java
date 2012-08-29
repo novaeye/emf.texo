@@ -144,7 +144,7 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
   public void load(Map<?, ?> options) throws IOException {
     final List<String> types = getTypes();
     for (String type : types) {
-      query("select e from " + type + " e", Collections.<String, Object> emptyMap(), 0, Integer.MAX_VALUE); //$NON-NLS-1$//$NON-NLS-2$
+      query("select e from " + type + " e", Collections.<String, Object> emptyMap(), 0, -1); //$NON-NLS-1$//$NON-NLS-2$
     }
     loaded = true;
   }

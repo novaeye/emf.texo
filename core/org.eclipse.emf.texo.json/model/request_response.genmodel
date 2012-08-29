@@ -37,6 +37,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryType/firstResult"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryType/maxResults"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryType/doCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryType/countOperation"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Response" basePackage="org.eclipse.emf.texo.client.model" resource="XML"

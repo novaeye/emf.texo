@@ -20,21 +20,14 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URLEncoder;
 import java.util.Collections;
-import java.util.EnumSet;
 import java.util.List;
 
-import javax.servlet.DispatcherType;
 import javax.servlet.http.HttpServletResponse;
 
 import org.eclipse.emf.texo.model.ModelObject;
 import org.eclipse.emf.texo.model.ModelResolver;
-import org.eclipse.emf.texo.resolver.DefaultObjectResolver;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
-import org.eclipse.emf.texo.server.store.CurrentEntityManagerRequestFilter;
-import org.eclipse.emf.texo.server.store.EntityManagerProvider;
 import org.eclipse.emf.texo.server.test.BaseTest;
-import org.eclipse.emf.texo.server.web.JSONRestWebServiceServlet;
-import org.eclipse.emf.texo.server.web.XMLRestWebServiceServlet;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.eclipse.emf.texo.xml.ModelXMLLoader;
@@ -44,9 +37,6 @@ import org.eclipse.jetty.client.ContentExchange;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.http.HttpMethods;
 import org.eclipse.jetty.io.ByteArrayBuffer;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -59,14 +49,6 @@ import org.junit.Before;
  * @version $Revision: 1.4 $
  */
 public abstract class BaseWSWebTest extends BaseTest {
-
-  private Server server;
-
-  private static final String CHARACTER_ENCODING = "UTF-8"; //$NON-NLS-1$
-  private static final int PORT = 8080;
-  private static final String CONTEXTNAME = "texo"; //$NON-NLS-1$
-  protected static final String XMLWS = "xmlws"; //$NON-NLS-1$
-  protected static final String JSONWS = "jsonws"; //$NON-NLS-1$
 
   private HttpClient httpClient;
 
@@ -94,33 +76,7 @@ public abstract class BaseWSWebTest extends BaseTest {
   @Override
   public void setUp() throws Exception {
     super.setUp();
-
-    DefaultObjectResolver.setServerUri(getBaseURL());
-
-    server = new Server(PORT);
-
-    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-    context.setContextPath("/" + CONTEXTNAME); //$NON-NLS-1$
-    server.setHandler(context);
-
-    EntityManagerProvider.getInstance().setUseCurrentEntityManagerPattern(true);
-
-    final XMLRestWebServiceServlet xmlWebServiceServlet = new XMLRestWebServiceServlet();
-    context.addServlet(new ServletHolder(xmlWebServiceServlet), "/" + XMLWS + "/*"); //$NON-NLS-1$ //$NON-NLS-2$
-
-    final JSONRestWebServiceServlet jsonRestWebServiceServlet = new JSONRestWebServiceServlet();
-    context.addServlet(new ServletHolder(jsonRestWebServiceServlet), "/" + JSONWS + "/*"); //$NON-NLS-1$ //$NON-NLS-2$
-
-    final TestEntityManagerCleanUpServlet testEMServlet = new TestEntityManagerCleanUpServlet();
-    context.addServlet(new ServletHolder(testEMServlet), "/testEM"); //$NON-NLS-1$ 
-
-    final EnumSet<DispatcherType> all = EnumSet.of(DispatcherType.ASYNC, DispatcherType.ERROR, DispatcherType.FORWARD,
-        DispatcherType.INCLUDE, DispatcherType.REQUEST);
-
-    context.addFilter(TestEntityManagerRequestFilter.class, "/*", all); //$NON-NLS-1$
-    context.addFilter(CurrentEntityManagerRequestFilter.class, "/*", all); //$NON-NLS-1$
-
-    server.start();
+    doServerSetUp();
   }
 
   @Override
@@ -130,9 +86,7 @@ public abstract class BaseWSWebTest extends BaseTest {
     if (httpClient != null) {
       stopClient();
     }
-    server.stop();
-    server.destroy();
-    server = null;
+    doServerTearDown();
   }
 
   protected ContentExchange doRequest(String wsPartOfUrl, String method, String content) throws Exception {
@@ -299,13 +253,6 @@ public abstract class BaseWSWebTest extends BaseTest {
         System.err.println(errorType.getStackTrace());
       }
     }
-  }
-
-  /**
-   * @return the base url of the webservice
-   */
-  protected String getBaseURL() {
-    return "http://localhost:" + PORT + "/" + CONTEXTNAME; //$NON-NLS-1$//$NON-NLS-2$
   }
 
   protected abstract String getURL();

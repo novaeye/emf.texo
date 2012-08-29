@@ -331,13 +331,22 @@ public interface RequestPackage extends EPackage {
 	int QUERY_TYPE__DO_COUNT = 5;
 
 	/**
+	 * The feature id for the '<em><b>Count Operation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_TYPE__COUNT_OPERATION = 6;
+
+	/**
 	 * The number of structural features of the '<em>Query Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_TYPE_FEATURE_COUNT = 6;
+	int QUERY_TYPE_FEATURE_COUNT = 7;
 
 
 	/**
@@ -622,6 +631,17 @@ public interface RequestPackage extends EPackage {
 	EAttribute getQueryType_DoCount();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.client.model.request.QueryType#isCountOperation <em>Count Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Count Operation</em>'.
+	 * @see org.eclipse.emf.texo.client.model.request.QueryType#isCountOperation()
+	 * @see #getQueryType()
+	 * @generated
+	 */
+	EAttribute getQueryType_CountOperation();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -860,6 +880,14 @@ public interface RequestPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute QUERY_TYPE__DO_COUNT = eINSTANCE.getQueryType_DoCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Count Operation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUERY_TYPE__COUNT_OPERATION = eINSTANCE.getQueryType_CountOperation();
 
 	}
 
