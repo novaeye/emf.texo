@@ -51,8 +51,6 @@ import org.json.JSONObject;
 /**
  * {@link EObjectStore} concrete class which communicates with a remote server using json.
  * 
- * UNDER DEVELOPMENT
- * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $
  */
