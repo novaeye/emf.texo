@@ -69,7 +69,7 @@ public class JSONEObjectStore extends EObjectStore {
 
   protected String doHTTPRequest(String urlStr, String method, String content) throws Exception {
     String localUrlStr = urlStr == null ? getUri().toString() : urlStr;
-    final URL url = new URL(localUrlStr);
+    final URL url = new URL(adaptUrl(localUrlStr));
     final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
     conn.setRequestMethod(method);
@@ -89,6 +89,8 @@ public class JSONEObjectStore extends EObjectStore {
       os.close();
     }
 
+    beforeConnect(conn);
+
     final BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
     final StringBuilder sb = new StringBuilder();
     String line;
@@ -97,6 +99,24 @@ public class JSONEObjectStore extends EObjectStore {
     }
     rd.close();
     return sb.toString();
+  }
+
+  /**
+   * An overriding point to change the url before the it is used to create the {@link HttpURLConnection}.
+   */
+  protected String adaptUrl(String url) {
+    return url;
+  }
+
+  /**
+   * Is called before the connection to the server is established. Note that the connection is done implicitly after
+   * this call. This means that the overrider of this method may force a connection using the connect method.
+   * 
+   * This point can be used to add authentication:
+   * http://stackoverflow.com/questions/4883100/how-to-handle-http-authentication-using-httpurlconnection
+   */
+  protected void beforeConnect(HttpURLConnection conn) {
+
   }
 
   @Override
