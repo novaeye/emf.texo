@@ -42,6 +42,8 @@ import org.json.JSONObject;
 public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
   protected void convertContent(JSONObject source, EObject target) {
+    final boolean deliver = target.eDeliver();
+    ((InternalEObject) target).eSetDeliver(false);
     try {
       if (source.has(ModelJSONConstants.PROXY_PROPERTY) && source.getBoolean(ModelJSONConstants.PROXY_PROPERTY)) {
         final String proxyUri = source.getString(ModelJSONConstants.URI_PROPERTY);
@@ -51,6 +53,8 @@ public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
       super.convertContent(source, target);
     } catch (JSONException e) {
       throw new RuntimeException(e);
+    } finally {
+      ((InternalEObject) target).eSetDeliver(deliver);
     }
   }
 
@@ -79,7 +83,21 @@ public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
   @Override
   protected void eSet(EObject target, EStructuralFeature eFeature, Object value) {
-    target.eSet(eFeature, value);
+    final boolean deliver = target.eDeliver();
+    ((InternalEObject) target).eSetDeliver(false);
+    boolean deliverValue = false;
+    if (value instanceof InternalEObject) {
+      deliverValue = ((InternalEObject) value).eDeliver();
+      ((InternalEObject) value).eSetDeliver(false);
+    }
+    try {
+      target.eSet(eFeature, value);
+    } finally {
+      ((InternalEObject) target).eSetDeliver(deliver);
+      if (value instanceof InternalEObject) {
+        ((InternalEObject) value).eSetDeliver(deliverValue);
+      }
+    }
   }
 
   @Override
@@ -107,13 +125,41 @@ public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
   @Override
   protected void eRemoveFrom(EObject target, EStructuralFeature eFeature, Object value) {
-    ((Collection<?>) target.eGet(eFeature)).remove(value);
+    final boolean deliver = target.eDeliver();
+    ((InternalEObject) target).eSetDeliver(false);
+    boolean deliverValue = false;
+    if (value instanceof InternalEObject) {
+      deliverValue = ((InternalEObject) value).eDeliver();
+      ((InternalEObject) value).eSetDeliver(false);
+    }
+    try {
+      ((Collection<?>) target.eGet(eFeature)).remove(value);
+    } finally {
+      ((InternalEObject) target).eSetDeliver(deliver);
+      if (value instanceof InternalEObject) {
+        ((InternalEObject) value).eSetDeliver(deliverValue);
+      }
+    }
   }
 
   @SuppressWarnings("unchecked")
   @Override
   protected void eAddTo(EObject target, EStructuralFeature eFeature, Object value) {
-    ((Collection<Object>) target.eGet(eFeature)).add(value);
+    final boolean deliver = target.eDeliver();
+    ((InternalEObject) target).eSetDeliver(false);
+    boolean deliverValue = false;
+    if (value instanceof InternalEObject) {
+      deliverValue = ((InternalEObject) value).eDeliver();
+      ((InternalEObject) value).eSetDeliver(false);
+    }
+    try {
+      ((Collection<Object>) target.eGet(eFeature)).add(value);
+    } finally {
+      ((InternalEObject) target).eSetDeliver(deliver);
+      if (value instanceof InternalEObject) {
+        ((InternalEObject) value).eSetDeliver(deliverValue);
+      }
+    }
   }
 
 }

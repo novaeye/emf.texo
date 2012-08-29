@@ -73,7 +73,9 @@ public class UpdateInsertModelOperation extends ModelOperation {
             result.getInserted().add(object);
           } else {
             final Object updated = localObjectStore.update(object);
-            result.getUpdated().add(updated);
+            // note also add to the inserted list
+            // as the client expects it maybe
+            result.getInserted().add(updated);
           }
         }
 

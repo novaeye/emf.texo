@@ -16,6 +16,7 @@
 package org.eclipse.emf.texo.json;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -26,9 +27,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.client.model.request.ActionType;
 import org.eclipse.emf.texo.client.model.request.Parameter;
 import org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType;
@@ -41,6 +44,7 @@ import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.utils.ModelUtils;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -99,36 +103,61 @@ public class JSONEObjectStore extends EObjectStore {
 
   @Override
   public void persist(List<EObject> toInsert, List<EObject> toUpdate, List<EObject> toDelete) {
-    final ActionType actionType = RequestFactory.eINSTANCE.createActionType();
-    actionType.getDelete().addAll(toDelete);
-    actionType.getInsert().addAll(toInsert);
-    actionType.getUpdate().addAll(toUpdate);
+
+    // do some sensible things...
+    toUpdate.removeAll(toDelete);
+    toInsert.removeAll(toDelete);
+    toUpdate.removeAll(toInsert);
 
     // create a temporary proxy uri for the to insert ones
+    // do this before the copyAll below
+    // this ensures that the references are handled correctly
+    // when converting to and from json
     for (EObject eObject : toInsert) {
       final URI tempURI = ModelUtils.makeTempURI(toURI(eObject.eClass(), "" + System.currentTimeMillis()));
       ((InternalEObject) eObject).eSetProxyURI(tempURI);
       addToCache(eObject);
     }
 
+    final ActionType actionType = RequestFactory.eINSTANCE.createActionType();
+    // make a copy to prevent change of the eContainer
+    actionType.getDelete().addAll(EcoreUtil.copyAll(toDelete));
+    actionType.getInsert().addAll(EcoreUtil.copyAll(toInsert));
+    actionType.getUpdate().addAll(EcoreUtil.copyAll(toUpdate));
+
     final JSONObject jsonObject = doRequest(actionType, POST_METHOD);
 
     final JSONEMFConverter jsonEmfConverter = ComponentProvider.getInstance().newInstance(JSONEMFConverter.class);
     jsonEmfConverter.setObjectResolver(this);
     try {
+      // get the id of the inserted objects and link the previous eobject to them
+      final JSONArray insertedJsonArray = jsonObject.getJSONArray(ResponsePackage.eINSTANCE
+          .getResultType_Inserted().getName());
+      int i = 0;
+      for (EObject insertedEObject : toInsert) {
+        final EAttribute idEAttribute = IdProvider.getInstance().getIdEAttribute(insertedEObject.eClass());
+        
+        final JSONObject insertedJsonObject = insertedJsonArray.getJSONObject(i++);
+        // get the id from the jsonObject
+        final Object id = insertedJsonObject.get(idEAttribute.getName());
+        removeFromCache(((InternalEObject) insertedEObject).eProxyURI());
+        ((InternalEObject) insertedEObject).eSetProxyURI(null);
+        // use the eclass and id to create a URI
+        // and add back to the cache
+        // as now the correct uri can be computed
+        final URI newUri = toURI(insertedEObject.eClass(), id + "");
+        addToCache(newUri.toString(), insertedEObject);
+      }
+        
+      // now the inserted objects can be converted safely
+
       // don't convert the outer object, otherwise the inner objects
       // will have a change in container
-      final List<EObject> inserted = jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
-          .getResultType_Inserted().getName()));
-      for (EObject eObject : inserted) {
-        final URI uri = ((InternalEObject) eObject).eProxyURI();
-        if (uri != null && ModelUtils.isTempURI(uri.toString())) {
-          removeFromCache(uri);
-        }
-        ((InternalEObject) eObject).eSetProxyURI(null);
-        // re-add with the correct URI
-        addToCache(eObject);
-      }
+      final List<EObject> inserted = jsonEmfConverter.convert(insertedJsonArray);
+      // also convert the updated objects as the server may have changed
+      // their state
+      jsonEmfConverter.convert(jsonObject.getJSONArray(ResponsePackage.eINSTANCE
+          .getResultType_Updated().getName()));
 
       // remove the deleted ones
       for (EObject eObject : toDelete) {
@@ -240,6 +269,8 @@ public class JSONEObjectStore extends EObjectStore {
       final EObject response = jsonEmfConverter.convert(new JSONObject(json));
       addToCache(response);
       return response;
+    } catch (FileNotFoundException f) {
+      return null;
     } catch (Exception e) {
       throw new RuntimeException(e.getMessage(), e);
     }

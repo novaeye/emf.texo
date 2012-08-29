@@ -146,6 +146,12 @@ public abstract class TexoResourceTest extends BaseTest {
         final TexoResource resource = createResource(getBaseURL() + "?types=library_Library");
         resource.load(Collections.emptyMap());
         Assert.assertEquals(COUNT, resource.getContents().size());
+        // only libraries should be in the root
+        for (EObject eObject : resource.getContents()) {
+          Assert.assertTrue(eObject instanceof Library);
+          Assert.assertFalse(((Library) eObject).getBooks().isEmpty());
+          Assert.assertFalse(((Library) eObject).getWriters().isEmpty());
+        }
       }
       {
         final TexoResource resource = createResource(getBaseURL() + "?types=library_Library,library_Writer");
@@ -154,6 +160,8 @@ public abstract class TexoResourceTest extends BaseTest {
         // only libraries should be in the root
         for (EObject eObject : resource.getContents()) {
           Assert.assertTrue(eObject instanceof Library);
+          Assert.assertFalse(((Library) eObject).getBooks().isEmpty());
+          Assert.assertFalse(((Library) eObject).getWriters().isEmpty());
         }
       }
     } catch (IOException e) {
