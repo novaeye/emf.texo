@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.server.model.request;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;

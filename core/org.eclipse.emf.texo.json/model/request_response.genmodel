@@ -27,7 +27,7 @@
     </genClasses>
     <genClasses ecoreClass="request.ecore#//QueryReferingObjectsType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryReferingObjectsType/targetUri"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute request.ecore#//QueryReferingObjectsType/includeContainment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryReferingObjectsType/includeContainerReferences"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute request.ecore#//QueryReferingObjectsType/maxResults"/>
     </genClasses>
     <genClasses ecoreClass="request.ecore#//QueryType">

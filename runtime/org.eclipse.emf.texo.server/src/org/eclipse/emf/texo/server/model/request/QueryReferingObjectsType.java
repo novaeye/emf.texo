@@ -20,7 +20,7 @@ public class QueryReferingObjectsType {
    * 
    * @generated
    */
-  private Boolean includeContainment = null;
+  private Boolean includeContainerReferences = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -55,28 +55,30 @@ public class QueryReferingObjectsType {
   }
 
   /**
-   * Returns the value of '<em><b>includeContainment</b></em>' feature.
+   * Returns the value of '<em><b>includeContainerReferences</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>includeContainment</b></em>' feature
+   * @return the value of '<em><b>includeContainerReferences</b></em>' feature
    * @generated
    */
-  public Boolean getIncludeContainment() {
-    return includeContainment;
+  public Boolean getIncludeContainerReferences() {
+    return includeContainerReferences;
   }
 
   /**
-   * Sets the '{@link QueryReferingObjectsType#getIncludeContainment() <em>includeContainment</em>}' feature.
+   * Sets the '{@link QueryReferingObjectsType#getIncludeContainerReferences() <em>includeContainerReferences</em>}'
+   * feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link QueryReferingObjectsType#getIncludeContainment() includeContainment}' feature.
+   *          new value of the '{@link QueryReferingObjectsType#getIncludeContainerReferences()
+   *          includeContainerReferences}' feature.
    * @generated
    */
-  public void setIncludeContainment(Boolean newIncludeContainment) {
-    includeContainment = newIncludeContainment;
+  public void setIncludeContainerReferences(Boolean newIncludeContainerReferences) {
+    includeContainerReferences = newIncludeContainerReferences;
   }
 
   /**
@@ -112,7 +114,7 @@ public class QueryReferingObjectsType {
    */
   @Override
   public String toString() {
-    return "QueryReferingObjectsType " + " [targetUri: " + getTargetUri() + "]" + " [includeContainment: "
-        + getIncludeContainment() + "]" + " [maxResults: " + getMaxResults() + "]";
+    return "QueryReferingObjectsType " + " [targetUri: " + getTargetUri() + "]" + " [includeContainerReferences: "
+        + getIncludeContainerReferences() + "]" + " [maxResults: " + getMaxResults() + "]";
   }
 }

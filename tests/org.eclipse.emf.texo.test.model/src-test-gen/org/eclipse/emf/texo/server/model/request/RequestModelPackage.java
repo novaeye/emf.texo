@@ -194,7 +194,7 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID = 1;
+  public static final int QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINERREFERENCES_FEATURE_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -545,16 +545,16 @@ public class RequestModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.includeContainment</b></em>'. <!--
+   * Returns the {@link EStructuralFeature} '<em><b>QueryReferingObjectsType.includeContainerReferences</b></em>'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryReferingObjectsType.includeContainment</b></em>
-   *         '.
+   * @return an instance of the {@link EStructuralFeature}: '
+   *         <em><b>QueryReferingObjectsType.includeContainerReferences</b></em>'.
    * @generated
    */
-  public EAttribute getQueryReferingObjectsType_IncludeContainment() {
+  public EAttribute getQueryReferingObjectsType_IncludeContainerReferences() {
     return (EAttribute) getQueryReferingObjectsTypeEClass().getEAllStructuralFeatures().get(
-        QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID);
+        QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINERREFERENCES_FEATURE_ID);
   }
 
   /**

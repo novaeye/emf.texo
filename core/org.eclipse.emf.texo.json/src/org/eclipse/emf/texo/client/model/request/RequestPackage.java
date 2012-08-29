@@ -240,13 +240,13 @@ public interface RequestPackage extends EPackage {
 	int QUERY_REFERING_OBJECTS_TYPE__TARGET_URI = 0;
 
 	/**
-	 * The feature id for the '<em><b>Include Containment</b></em>' attribute.
+	 * The feature id for the '<em><b>Include Container References</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT = 1;
+	int QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Max Results</b></em>' attribute.
@@ -533,15 +533,15 @@ public interface RequestPackage extends EPackage {
 	EAttribute getQueryReferingObjectsType_TargetUri();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainment <em>Include Containment</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainerReferences <em>Include Container References</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Include Containment</em>'.
-	 * @see org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainment()
+	 * @return the meta object for the attribute '<em>Include Container References</em>'.
+	 * @see org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainerReferences()
 	 * @see #getQueryReferingObjectsType()
 	 * @generated
 	 */
-	EAttribute getQueryReferingObjectsType_IncludeContainment();
+	EAttribute getQueryReferingObjectsType_IncludeContainerReferences();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#getMaxResults <em>Max Results</em>}'.
@@ -808,12 +808,12 @@ public interface RequestPackage extends EPackage {
 		EAttribute QUERY_REFERING_OBJECTS_TYPE__TARGET_URI = eINSTANCE.getQueryReferingObjectsType_TargetUri();
 
 		/**
-		 * The meta object literal for the '<em><b>Include Containment</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Include Container References</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT = eINSTANCE.getQueryReferingObjectsType_IncludeContainment();
+		EAttribute QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES = eINSTANCE.getQueryReferingObjectsType_IncludeContainerReferences();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Results</b></em>' attribute feature.

@@ -266,14 +266,14 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
   }
 
   @Override
-  public List<EObject> getReferingObjects(EObject eTarget, int maxResult, boolean includeContainmentReferences) {
+  public List<EObject> getReferingObjects(EObject eTarget, int maxResult, boolean includeContainerReferences) {
     final ObjectStore os = getObjectStore();
     boolean err = true;
     os.begin();
     try {
       final Object id = eTarget.eGet(IdProvider.getInstance().getIdEAttribute(eTarget.eClass()));
       final Object target = os.get(eTarget.eClass(), id);
-      final List<?> objects = os.getReferingObjects(target, maxResult, includeContainmentReferences);
+      final List<?> objects = os.getReferingObjects(target, maxResult, includeContainerReferences);
 
       final ModelEMFConverter converter = createModelEMFConverter();
       @SuppressWarnings("unchecked")

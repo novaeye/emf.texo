@@ -19,10 +19,13 @@ package org.eclipse.emf.texo.server.service;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.emf.texo.server.model.request.ActionType;
+import org.eclipse.emf.texo.server.model.request.QueryReferingObjectsType;
 import org.eclipse.emf.texo.server.model.request.QueryType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
+import org.eclipse.emf.texo.server.model.response.ResponseType;
 import org.eclipse.emf.texo.server.model.response.ResultType;
 import org.eclipse.emf.texo.store.ObjectStore;
 
@@ -46,8 +49,18 @@ public class UpdateInsertModelOperation extends ModelOperation {
 
     for (Iterator<Object> it = allConvertedObjects.iterator(); it.hasNext();) {
       final Object o = it.next();
-      // also a querytype can be posted...
-      if (o instanceof QueryType) {
+      if (o instanceof QueryReferingObjectsType) {
+        final QueryReferingObjectsType qrt = (QueryReferingObjectsType) o;
+        final Object target = localObjectStore.fromUri(URI.createURI(qrt.getTargetUri()));
+        final List<Object> referers = localObjectStore.getReferingObjects(target, qrt.getMaxResults(),
+            qrt.getIncludeContainerReferences());
+        final ResponseType responseType = ResponseModelPackage.INSTANCE.getModelFactory().createResponseType();
+        responseType.setStatus(ServiceConstants.STATUS_SUCCESS);
+        responseType.setData(referers);
+        getServiceContext().setResultInResponse(responseType);
+        return;
+      } else if (o instanceof QueryType) {
+        // also a querytype can be posted...
         // we can only handle one query action
         final RetrieveModelOperation retrieveModelOperation = ComponentProvider.getInstance().newInstance(
             RetrieveModelOperation.class);

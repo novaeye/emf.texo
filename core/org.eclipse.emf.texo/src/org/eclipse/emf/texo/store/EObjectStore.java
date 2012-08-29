@@ -121,9 +121,9 @@ public abstract class EObjectStore extends DefaultObjectResolver {
 
   /**
    * Retrieve all the objects referring to a specific target. Parameters can be passed to control the volume being
-   * returned and if containment references should be included.
+   * returned and if container references (from the children to the target) should be included.
    */
-  public abstract List<EObject> getReferingObjects(EObject target, int maxResult, boolean includeContainmentReferences);
+  public abstract List<EObject> getReferingObjects(EObject target, int maxResult, boolean includeContainerReferences);
 
   /**
    * A count query, the qry should be a valid count query.

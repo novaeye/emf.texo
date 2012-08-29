@@ -51,6 +51,10 @@ public class JSONModelConverter extends BaseJSONModelConverter<Object> {
     return lastModelObject;
   }
 
+  protected boolean setBidirectionalReferences() {
+    return true;
+  }
+
   @Override
   protected Object fromUri(String uriString) {
     return getUriResolver().fromUri(URI.createURI(uriString));

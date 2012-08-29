@@ -292,7 +292,7 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQueryReferingObjectsType_IncludeContainment() {
+	public EAttribute getQueryReferingObjectsType_IncludeContainerReferences() {
 		return (EAttribute)queryReferingObjectsTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -425,7 +425,7 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 
 		queryReferingObjectsTypeEClass = createEClass(QUERY_REFERING_OBJECTS_TYPE);
 		createEAttribute(queryReferingObjectsTypeEClass, QUERY_REFERING_OBJECTS_TYPE__TARGET_URI);
-		createEAttribute(queryReferingObjectsTypeEClass, QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT);
+		createEAttribute(queryReferingObjectsTypeEClass, QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES);
 		createEAttribute(queryReferingObjectsTypeEClass, QUERY_REFERING_OBJECTS_TYPE__MAX_RESULTS);
 
 		queryTypeEClass = createEClass(QUERY_TYPE);
@@ -491,7 +491,7 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 
 		initEClass(queryReferingObjectsTypeEClass, QueryReferingObjectsType.class, "QueryReferingObjectsType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQueryReferingObjectsType_TargetUri(), theXMLTypePackage.getString(), "targetUri", null, 1, 1, QueryReferingObjectsType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQueryReferingObjectsType_IncludeContainment(), theXMLTypePackage.getBoolean(), "includeContainment", null, 0, 1, QueryReferingObjectsType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQueryReferingObjectsType_IncludeContainerReferences(), theXMLTypePackage.getBoolean(), "includeContainerReferences", null, 0, 1, QueryReferingObjectsType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQueryReferingObjectsType_MaxResults(), theXMLTypePackage.getInt(), "maxResults", "-1", 0, 1, QueryReferingObjectsType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(queryTypeEClass, QueryType.class, "QueryType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -644,11 +644,11 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 			 "name", "targetUri"
 		   });			
 		addAnnotation
-		  (getQueryReferingObjectsType_IncludeContainment(), 
+		  (getQueryReferingObjectsType_IncludeContainerReferences(), 
 		   source, 
 		   new String[] {
 			 "kind", "element",
-			 "name", "includeContainment"
+			 "name", "includeContainerReferences"
 		   });			
 		addAnnotation
 		  (getQueryReferingObjectsType_MaxResults(), 
@@ -802,10 +802,10 @@ public class RequestPackageImpl extends EPackageImpl implements RequestPackage {
 			 "java.member", "targetUri"
 		   });			
 		addAnnotation
-		  (getQueryReferingObjectsType_IncludeContainment(), 
+		  (getQueryReferingObjectsType_IncludeContainerReferences(), 
 		   source, 
 		   new String[] {
-			 "java.member", "includeContainment"
+			 "java.member", "includeContainerReferences"
 		   });			
 		addAnnotation
 		  (getQueryReferingObjectsType_MaxResults(), 

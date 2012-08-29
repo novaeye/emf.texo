@@ -32,7 +32,7 @@
 	<xs:complexType name="QueryReferingObjectsType">
 		<xs:sequence>
 			<xs:element name="targetUri" type="xs:string"/>
-			<xs:element name="includeContainment" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="includeContainerReferences" type="xs:boolean" minOccurs="0"/>
 			<xs:element name="maxResults" type="xs:int"  minOccurs="0" default="-1"/>
 		</xs:sequence>
 	</xs:complexType>

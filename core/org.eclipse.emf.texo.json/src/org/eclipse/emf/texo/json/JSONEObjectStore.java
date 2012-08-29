@@ -339,7 +339,7 @@ public class JSONEObjectStore extends EObjectStore {
   }
 
   @Override
-  public List<EObject> getReferingObjects(EObject eTarget, int maxResult, boolean includeContainmentReferences) {
+  public List<EObject> getReferingObjects(EObject eTarget, int maxResult, boolean includeContainerReferences) {
     final URI uri = toUri(eTarget);
     if (uri == null) {
       return Collections.emptyList();
@@ -348,7 +348,7 @@ public class JSONEObjectStore extends EObjectStore {
 
     queryType.setMaxResults(maxResult);
     queryType.setTargetUri(uri.toString());
-    queryType.setIncludeContainment(includeContainmentReferences);
+    queryType.setIncludeContainerReferences(includeContainerReferences);
 
     final JSONObject jsonObject = doRequest(queryType, POST_METHOD);
 

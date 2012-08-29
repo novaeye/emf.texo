@@ -81,10 +81,11 @@ public abstract class EObjectStoreTest extends BaseTest {
           final Writer writer = factory.createWriter();
           lib.getWriters().add(writer);
           writer.setName(i + "_" + w);
-
+          toInsert.add(writer);
           for (int b = 0; b < COUNT; b++) {
             final Book bk = factory.createBook();
             bk.setAuthor(writer);
+            toInsert.add(bk);
             writer.getBooks().add(bk);
             lib.getBooks().add(bk);
           }
@@ -100,6 +101,20 @@ public abstract class EObjectStoreTest extends BaseTest {
       final EObjectStore service = getEObjectStore();
       final Library lib = (Library) service.get(LibraryPackage.eINSTANCE.getLibrary(), libId);
       Assert.assertTrue(lib.getName().equals("name0"));
+    }
+
+    // getBooks
+    {
+      final EObjectStore service = getEObjectStore();
+      // first need to read the writers to ensure that the writers
+      // have been read in the cache. The EMF proxy resolving
+      // needs resources to proxy resolving...
+      service.query("select w from library_Writer w", new HashMap<String, Object>(), -1, -1);
+      final List<EObject> bks = service.query("select b from library_Book b", new HashMap<String, Object>(), -1, -1);
+      for (EObject eBk : bks) {
+        final Book bk = (Book) eBk;
+        Assert.assertNotNull(bk.getAuthor());
+      }
     }
 
     // Count
@@ -127,7 +142,31 @@ public abstract class EObjectStoreTest extends BaseTest {
         for (Book bk : writer.getBooks()) {
           Assert.assertTrue(bk.eIsProxy());
         }
-        Assert.assertTrue(writer.eContainer() == null);
+        if (i == 1) {
+          // only check once, after this the library is loaded below
+          Assert.assertTrue(writer.eContainer() == null);
+        }
+
+        List<EObject> referingObjects = service.getReferingObjects(writer, -1, false);
+        // size includes the library
+        Assert.assertTrue(referingObjects.size() == 1 + writer.getBooks().size());
+        Assert.assertTrue(referingObjects.size() == 1 + COUNT);
+        Library lib = null;
+        for (EObject eObject : referingObjects) {
+          if (eObject instanceof Library) {
+            lib = (Library) eObject;
+          } else {
+            // must be a boook
+            Assert.assertTrue(writer.getBooks().contains(eObject));
+          }
+        }
+        Assert.assertNotNull(lib);
+        referingObjects = service.getReferingObjects(lib, -1, false);
+        Assert.assertTrue(referingObjects.size() == 0);
+        referingObjects = service.getReferingObjects(lib, -1, true);
+        Assert.assertTrue(referingObjects.size() == 0);
+        referingObjects = service.getReferingObjects(writer, COUNT - 1, true);
+        Assert.assertTrue(referingObjects.size() == COUNT - 1);
       }
     }
 

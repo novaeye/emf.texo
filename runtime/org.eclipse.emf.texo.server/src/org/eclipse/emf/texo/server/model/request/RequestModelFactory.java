@@ -2,6 +2,7 @@ package org.eclipse.emf.texo.server.model.request;
 
 import java.util.List;
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -552,8 +553,8 @@ public class RequestModelFactory implements ModelFactory {
       switch (featureID) {
       case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID:
         return getTarget().getTargetUri();
-      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID:
-        return getTarget().getIncludeContainment();
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINERREFERENCES_FEATURE_ID:
+        return getTarget().getIncludeContainerReferences();
       case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID:
         return getTarget().getMaxResults();
       }
@@ -570,8 +571,8 @@ public class RequestModelFactory implements ModelFactory {
       case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_TARGETURI_FEATURE_ID:
         getTarget().setTargetUri((String) value);
         return;
-      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINMENT_FEATURE_ID:
-        getTarget().setIncludeContainment((Boolean) value);
+      case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_INCLUDECONTAINERREFERENCES_FEATURE_ID:
+        getTarget().setIncludeContainerReferences((Boolean) value);
         return;
       case RequestModelPackage.QUERYREFERINGOBJECTSTYPE_MAXRESULTS_FEATURE_ID:
         getTarget().setMaxResults((Integer) value);

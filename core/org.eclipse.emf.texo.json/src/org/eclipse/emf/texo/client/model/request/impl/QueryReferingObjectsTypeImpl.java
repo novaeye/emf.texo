@@ -20,7 +20,7 @@ import org.eclipse.emf.texo.client.model.request.RequestPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryReferingObjectsTypeImpl#getTargetUri <em>Target Uri</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryReferingObjectsTypeImpl#isIncludeContainment <em>Include Containment</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryReferingObjectsTypeImpl#isIncludeContainerReferences <em>Include Container References</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.impl.QueryReferingObjectsTypeImpl#getMaxResults <em>Max Results</em>}</li>
  * </ul>
  * </p>
@@ -49,33 +49,33 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 	protected String targetUri = TARGET_URI_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isIncludeContainment() <em>Include Containment</em>}' attribute.
+	 * The default value of the '{@link #isIncludeContainerReferences() <em>Include Container References</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIncludeContainment()
+	 * @see #isIncludeContainerReferences()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean INCLUDE_CONTAINMENT_EDEFAULT = false;
+	protected static final boolean INCLUDE_CONTAINER_REFERENCES_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isIncludeContainment() <em>Include Containment</em>}' attribute.
+	 * The cached value of the '{@link #isIncludeContainerReferences() <em>Include Container References</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIncludeContainment()
+	 * @see #isIncludeContainerReferences()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean includeContainment = INCLUDE_CONTAINMENT_EDEFAULT;
+	protected boolean includeContainerReferences = INCLUDE_CONTAINER_REFERENCES_EDEFAULT;
 
 	/**
-	 * This is true if the Include Containment attribute has been set.
+	 * This is true if the Include Container References attribute has been set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean includeContainmentESet;
+	protected boolean includeContainerReferencesESet;
 
 	/**
 	 * The default value of the '{@link #getMaxResults() <em>Max Results</em>}' attribute.
@@ -151,8 +151,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIncludeContainment() {
-		return includeContainment;
+	public boolean isIncludeContainerReferences() {
+		return includeContainerReferences;
 	}
 
 	/**
@@ -160,13 +160,13 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIncludeContainment(boolean newIncludeContainment) {
-		boolean oldIncludeContainment = includeContainment;
-		includeContainment = newIncludeContainment;
-		boolean oldIncludeContainmentESet = includeContainmentESet;
-		includeContainmentESet = true;
+	public void setIncludeContainerReferences(boolean newIncludeContainerReferences) {
+		boolean oldIncludeContainerReferences = includeContainerReferences;
+		includeContainerReferences = newIncludeContainerReferences;
+		boolean oldIncludeContainerReferencesESet = includeContainerReferencesESet;
+		includeContainerReferencesESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT, oldIncludeContainment, includeContainment, !oldIncludeContainmentESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES, oldIncludeContainerReferences, includeContainerReferences, !oldIncludeContainerReferencesESet));
 	}
 
 	/**
@@ -174,13 +174,13 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void unsetIncludeContainment() {
-		boolean oldIncludeContainment = includeContainment;
-		boolean oldIncludeContainmentESet = includeContainmentESet;
-		includeContainment = INCLUDE_CONTAINMENT_EDEFAULT;
-		includeContainmentESet = false;
+	public void unsetIncludeContainerReferences() {
+		boolean oldIncludeContainerReferences = includeContainerReferences;
+		boolean oldIncludeContainerReferencesESet = includeContainerReferencesESet;
+		includeContainerReferences = INCLUDE_CONTAINER_REFERENCES_EDEFAULT;
+		includeContainerReferencesESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT, oldIncludeContainment, INCLUDE_CONTAINMENT_EDEFAULT, oldIncludeContainmentESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES, oldIncludeContainerReferences, INCLUDE_CONTAINER_REFERENCES_EDEFAULT, oldIncludeContainerReferencesESet));
 	}
 
 	/**
@@ -188,8 +188,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isSetIncludeContainment() {
-		return includeContainmentESet;
+	public boolean isSetIncludeContainerReferences() {
+		return includeContainerReferencesESet;
 	}
 
 	/**
@@ -248,8 +248,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 		switch (featureID) {
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__TARGET_URI:
 				return getTargetUri();
-			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT:
-				return isIncludeContainment();
+			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES:
+				return isIncludeContainerReferences();
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__MAX_RESULTS:
 				return getMaxResults();
 		}
@@ -267,8 +267,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__TARGET_URI:
 				setTargetUri((String)newValue);
 				return;
-			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT:
-				setIncludeContainment((Boolean)newValue);
+			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES:
+				setIncludeContainerReferences((Boolean)newValue);
 				return;
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__MAX_RESULTS:
 				setMaxResults((Integer)newValue);
@@ -288,8 +288,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__TARGET_URI:
 				setTargetUri(TARGET_URI_EDEFAULT);
 				return;
-			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT:
-				unsetIncludeContainment();
+			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES:
+				unsetIncludeContainerReferences();
 				return;
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__MAX_RESULTS:
 				unsetMaxResults();
@@ -308,8 +308,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 		switch (featureID) {
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__TARGET_URI:
 				return TARGET_URI_EDEFAULT == null ? targetUri != null : !TARGET_URI_EDEFAULT.equals(targetUri);
-			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINMENT:
-				return isSetIncludeContainment();
+			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__INCLUDE_CONTAINER_REFERENCES:
+				return isSetIncludeContainerReferences();
 			case RequestPackage.QUERY_REFERING_OBJECTS_TYPE__MAX_RESULTS:
 				return isSetMaxResults();
 		}
@@ -328,8 +328,8 @@ public class QueryReferingObjectsTypeImpl extends EObjectImpl implements QueryRe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (targetUri: ");
 		result.append(targetUri);
-		result.append(", includeContainment: ");
-		if (includeContainmentESet) result.append(includeContainment); else result.append("<unset>");
+		result.append(", includeContainerReferences: ");
+		if (includeContainerReferencesESet) result.append(includeContainerReferences); else result.append("<unset>");
 		result.append(", maxResults: ");
 		if (maxResultsESet) result.append(maxResults); else result.append("<unset>");
 		result.append(')');

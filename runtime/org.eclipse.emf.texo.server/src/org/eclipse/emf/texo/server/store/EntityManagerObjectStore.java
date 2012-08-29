@@ -263,8 +263,8 @@ public class EntityManagerObjectStore extends ObjectStore {
   @SuppressWarnings("unchecked")
   @Override
   public <T extends Object> List<Object> getReferingObjects(T target, int maxResult,
-      boolean includeContainmentReferences) {
-    return ((BaseDao<T>) getDao(target.getClass())).getReferingObjects(target, maxResult, includeContainmentReferences);
+      boolean includeContainerReferences) {
+    return ((BaseDao<T>) getDao(target.getClass())).getReferingObjects(target, maxResult, includeContainerReferences);
   }
 
   /*
@@ -274,8 +274,8 @@ public class EntityManagerObjectStore extends ObjectStore {
    */
   @SuppressWarnings("unchecked")
   @Override
-  public <T extends Object> boolean isReferenced(T target, boolean includeContainmentReferences) {
-    return ((BaseDao<T>) getDao(target.getClass())).isReferenced(target, includeContainmentReferences);
+  public <T extends Object> boolean isReferenced(T target, boolean includeContainerReferences) {
+    return ((BaseDao<T>) getDao(target.getClass())).isReferenced(target, includeContainerReferences);
   }
 
   /*

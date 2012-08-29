@@ -375,7 +375,7 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
 
           // add to the other side, this is needed because the bi-directional
           // api is not always generated
-          if (false && eReference.getEOpposite() != null) {
+          if (setBidirectionalReferences() && eReference.getEOpposite() != null) {
             if (eReference.getEOpposite().isMany()) {
               final Collection<?> otherSide = (Collection<?>) eGet(mValue, eReference.getEOpposite());
               if (!otherSide.contains(target)) {
@@ -394,6 +394,10 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
         }
       }
     }
+  }
+
+  protected boolean setBidirectionalReferences() {
+    return false;
   }
 
   private void addEClassProperty(EStructuralFeature eFeature, JSONObject value) {

@@ -205,17 +205,17 @@ public abstract class BaseDao<T extends Object> implements TexoComponent {
   }
 
   /**
-   * Returns true if t is referenced by other objects. If the second parameter (includeContainmentReferences is true
-   * then also containment associations are considered.
+   * Returns true if t is referenced by other objects. If the second parameter (includeContainerReferences is true then
+   * also container associations (to the target from its children) are considered.
    * 
    * @see ModelResolver#getReferingEReferences(EClass, boolean)
    */
-  public boolean isReferenced(T t, boolean includeContainmentReferences) {
+  public boolean isReferenced(T t, boolean includeContainerReferences) {
     final EClass localEClass = getEClass();
     final List<EReference> eRefs = ModelResolver.getInstance().getReferingEReferences(localEClass,
-        includeContainmentReferences);
+        includeContainerReferences);
     for (EReference eReference : eRefs) {
-      if (eReference.isContainment() && !includeContainmentReferences) {
+      if (eReference.isContainment() && !includeContainerReferences) {
         continue;
       }
 
@@ -243,17 +243,17 @@ public abstract class BaseDao<T extends Object> implements TexoComponent {
   }
 
   /**
-   * Returns the objects referencing t, if includeContainmentReferences is true then also containment references are
-   * considered for this retrieval. The maxResult parameter can be used to limit the number of objects returned, a value
-   * of 0 (or less) will return all referees.
+   * Returns the objects referencing t, if includeContainerReferences is true then also container references (so from
+   * children to the target) are considered for this retrieval. The maxResult parameter can be used to limit the number
+   * of objects returned, a value of 0 (or less) will return all referees.
    */
-  public List<Object> getReferingObjects(T t, int maxResult, boolean includeContainmentReferences) {
+  public List<Object> getReferingObjects(T t, int maxResult, boolean includeContainerReferences) {
     final EClass localEClass = getEClass();
     final List<EReference> eRefs = ModelResolver.getInstance().getReferingEReferences(localEClass,
-        includeContainmentReferences);
+        includeContainerReferences);
     final List<Object> result = new ArrayList<Object>();
     for (EReference eReference : eRefs) {
-      if (eReference.isContainment() && !includeContainmentReferences) {
+      if (eReference.isContainer() && !includeContainerReferences) {
         continue;
       }
       final EClass referencingEClass = eReference.getEContainingClass();

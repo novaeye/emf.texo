@@ -163,14 +163,15 @@
         <details key="java.member" value="targetUri"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeContainment" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeContainerReferences"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="element"/>
-        <details key="name" value="includeContainment"/>
+        <details key="name" value="includeContainerReferences"/>
       </eAnnotations>
       <eAnnotations source="org.eclipse.emf.texo">
-        <details key="java.member" value="includeContainment"/>
+        <details key="java.member" value="includeContainerReferences"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxResults" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"

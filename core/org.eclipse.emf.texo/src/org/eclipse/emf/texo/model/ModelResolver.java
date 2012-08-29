@@ -421,7 +421,7 @@ public class ModelResolver implements TexoStaticSingleton {
    *          also return refering objects which reference the target through an EReference with containment==true
    * @return the list of EReferences which refer to the object.
    */
-  public List<EReference> getReferingEReferences(EClass eClass, boolean includeContainmentReferences) {
+  public List<EReference> getReferingEReferences(EClass eClass, boolean includeContainerReferences) {
     final List<EReference> result = new ArrayList<EReference>();
     for (EClassifier eClassifier : eClassifierToClassMapping.keySet()) {
       if (eClassifier instanceof EClass) {
@@ -430,7 +430,7 @@ public class ModelResolver implements TexoStaticSingleton {
           if (eReference.isVolatile() || eReference.isTransient()) {
             continue;
           }
-          if (eReference.isContainment() && !includeContainmentReferences) {
+          if (eReference.isContainer() && !includeContainerReferences) {
             continue;
           }
           if (refersTo(eReference, eClass)) {

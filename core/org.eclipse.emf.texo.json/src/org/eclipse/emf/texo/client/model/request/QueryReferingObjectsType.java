@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#getTargetUri <em>Target Uri</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainment <em>Include Containment</em>}</li>
+ *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainerReferences <em>Include Container References</em>}</li>
  *   <li>{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#getMaxResults <em>Max Results</em>}</li>
  * </ul>
  * </p>
@@ -52,59 +52,59 @@ public interface QueryReferingObjectsType extends EObject {
 	void setTargetUri(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Include Containment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Include Container References</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Include Containment</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Include Container References</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Include Containment</em>' attribute.
-	 * @see #isSetIncludeContainment()
-	 * @see #unsetIncludeContainment()
-	 * @see #setIncludeContainment(boolean)
-	 * @see org.eclipse.emf.texo.client.model.request.RequestPackage#getQueryReferingObjectsType_IncludeContainment()
+	 * @return the value of the '<em>Include Container References</em>' attribute.
+	 * @see #isSetIncludeContainerReferences()
+	 * @see #unsetIncludeContainerReferences()
+	 * @see #setIncludeContainerReferences(boolean)
+	 * @see org.eclipse.emf.texo.client.model.request.RequestPackage#getQueryReferingObjectsType_IncludeContainerReferences()
 	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
-	 *        extendedMetaData="kind='element' name='includeContainment'"
-	 *        annotation="org.eclipse.emf.texo java.member='includeContainment'"
+	 *        extendedMetaData="kind='element' name='includeContainerReferences'"
+	 *        annotation="org.eclipse.emf.texo java.member='includeContainerReferences'"
 	 * @generated
 	 */
-	boolean isIncludeContainment();
+	boolean isIncludeContainerReferences();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainment <em>Include Containment</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainerReferences <em>Include Container References</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Include Containment</em>' attribute.
-	 * @see #isSetIncludeContainment()
-	 * @see #unsetIncludeContainment()
-	 * @see #isIncludeContainment()
+	 * @param value the new value of the '<em>Include Container References</em>' attribute.
+	 * @see #isSetIncludeContainerReferences()
+	 * @see #unsetIncludeContainerReferences()
+	 * @see #isIncludeContainerReferences()
 	 * @generated
 	 */
-	void setIncludeContainment(boolean value);
+	void setIncludeContainerReferences(boolean value);
 
 	/**
-	 * Unsets the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainment <em>Include Containment</em>}' attribute.
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainerReferences <em>Include Container References</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isSetIncludeContainment()
-	 * @see #isIncludeContainment()
-	 * @see #setIncludeContainment(boolean)
+	 * @see #isSetIncludeContainerReferences()
+	 * @see #isIncludeContainerReferences()
+	 * @see #setIncludeContainerReferences(boolean)
 	 * @generated
 	 */
-	void unsetIncludeContainment();
+	void unsetIncludeContainerReferences();
 
 	/**
-	 * Returns whether the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainment <em>Include Containment</em>}' attribute is set.
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.client.model.request.QueryReferingObjectsType#isIncludeContainerReferences <em>Include Container References</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Include Containment</em>' attribute is set.
-	 * @see #unsetIncludeContainment()
-	 * @see #isIncludeContainment()
-	 * @see #setIncludeContainment(boolean)
+	 * @return whether the value of the '<em>Include Container References</em>' attribute is set.
+	 * @see #unsetIncludeContainerReferences()
+	 * @see #isIncludeContainerReferences()
+	 * @see #setIncludeContainerReferences(boolean)
 	 * @generated
 	 */
-	boolean isSetIncludeContainment();
+	boolean isSetIncludeContainerReferences();
 
 	/**
 	 * Returns the value of the '<em><b>Max Results</b></em>' attribute.
