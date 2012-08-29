@@ -82,9 +82,10 @@ public class ReferersTest extends BaseTest {
       }
       for (Writer writer : lib.getWriters()) {
         List<Object> referers = objectStore.getReferingObjects(writer, false);
-        Assert.assertEquals(COUNT, referers.size());
+        // the + 1 is the library
+        Assert.assertEquals(COUNT + 1, referers.size());
         for (Object o : referers) {
-          Assert.assertTrue(o instanceof Book);
+          Assert.assertTrue(o instanceof Book || o instanceof Library);
         }
         referers = objectStore.getReferingObjects(writer, true);
         Assert.assertEquals(COUNT + 1, referers.size());
