@@ -124,7 +124,7 @@ public class JSONValueConverter implements TexoComponent {
   protected Object fromJSON(Object target, final Object value, final EDataType eDataType) {
     if (ModelUtils.isEEnum(eDataType)) {
       final EDataType enumDataType = getDataTypeOrBaseType(eDataType);
-      final EEnum eeNum = (EEnum) eDataType;
+      final EEnum eeNum = (EEnum) enumDataType;
 
       if (!(value instanceof String)) {
         // hopefully already the correct value...
