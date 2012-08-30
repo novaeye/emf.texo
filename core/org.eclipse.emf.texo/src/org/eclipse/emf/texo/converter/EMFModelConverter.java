@@ -371,6 +371,10 @@ public class EMFModelConverter implements TexoComponent {
       final EEnumLiteral eeNumLiteral = (EEnumLiteral) value;
       final ModelPackage modelPackage = ModelResolver.getInstance().getModelPackage(
           enumDataType.getEPackage().getNsURI());
+      if (modelPackage == null) {
+        // dynamic model
+        return eeNumLiteral;
+      }
       final Class<? extends Enum> enumClass = (Class<? extends Enum>) modelPackage.getEClassifierClass(enumDataType);
       return Enum.valueOf(enumClass, eeNumLiteral.getName().toUpperCase(Locale.ENGLISH));
     }

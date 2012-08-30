@@ -42,8 +42,7 @@ public class JSONWebServiceObjectResolver extends WebServiceObjectResolver {
       // prevent loops by already setting the resolved object
       final ModelUtils.TypeIdTuple tuple = ModelUtils.getTypeAndIdFromUri(isUseWebServiceUriFormat(),
           URI.createURI(urlStr));
-      final Object result = ModelResolver.getInstance().getModelPackage(tuple.getEClass().getEPackage().getNsURI())
-          .getModelFactory().create(tuple.getEClass());
+      final Object result = ModelResolver.getInstance().create(tuple.getEClass());
       getObjectCache().put(urlStr, result);
       converter.getResolvedObjects().put(urlStr, result);
       

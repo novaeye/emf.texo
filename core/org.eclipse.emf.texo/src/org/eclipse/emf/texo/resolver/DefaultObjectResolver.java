@@ -248,8 +248,7 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
    * return an EObject or read objects from a data base.
    */
   public Object get(EClass eClass, Object id) {
-    final Object target = ModelResolver.getInstance().getModelPackage(eClass.getEPackage().getNsURI())
-        .getModelFactory().create(eClass);
+    final Object target = ModelResolver.getInstance().create(eClass);
     final ModelObject<?> modelObject = ModelResolver.getInstance().getModelObject(target);
     modelObject.eSet(IdProvider.getInstance().getIdEAttribute(eClass), id);
     return target;

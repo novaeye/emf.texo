@@ -128,6 +128,24 @@ public class ModelResolver implements TexoStaticSingleton {
   }
 
   /**
+   * Create a model enabled objecct for the {@link EClass}. If the related {@link EPackage} does not have a
+   * {@link ModelPackage} then a {@link DynamicModelObject} is returned.
+   * 
+   * @see ModelFactory#create(EClass)
+   */
+  public Object create(EClass eClass) {
+    final ModelPackage modelPackage = getModelPackage(eClass.getEPackage().getNsURI());
+    // a dynamic ModelObject
+    if (modelPackage == null) {
+      final DynamicModelObject result = ComponentProvider.getInstance().newInstance(DynamicModelObject.class);
+      result.setEClass(eClass);
+      return result;
+    }
+
+    return modelPackage.getModelFactory().create(eClass);
+  }
+
+  /**
    * Return all registered model packages.
    */
   public Collection<ModelPackage> getModelPackages() {
@@ -293,7 +311,12 @@ public class ModelResolver implements TexoStaticSingleton {
   public ModelFeatureMapEntry<?> getModelFeatureMapEntry(EStructuralFeature eFeature, Object adaptee) {
     final String nsuri = eFeature.getEContainingClass().getEPackage().getNsURI();
     final ModelPackage modelPackage = getModelPackage(nsuri);
-    Check.isNotNull(modelPackage, "No modelpackage found for EPackage nsuri: " + nsuri); //$NON-NLS-1$
+    if (modelPackage == null) {
+      final DynamicModelFeatureMapEntry fmEntry = ComponentProvider.getInstance().newInstance(
+          DynamicModelFeatureMapEntry.class);
+      fmEntry.setEStructuralFeature(eFeature);
+      return fmEntry;
+    }
     return modelPackage.getModelFactory().createModelFeatureMapEntry(eFeature, adaptee);
   }
 
@@ -308,6 +331,12 @@ public class ModelResolver implements TexoStaticSingleton {
   public Object createFeatureMapEntry(EStructuralFeature eFeature) {
     final String nsuri = eFeature.getEContainingClass().getEPackage().getNsURI();
     final ModelPackage modelPackage = getModelPackage(nsuri);
+    if (modelPackage == null) {
+      final DynamicModelFeatureMapEntry fmEntry = ComponentProvider.getInstance().newInstance(
+          DynamicModelFeatureMapEntry.class);
+      fmEntry.setEStructuralFeature(eFeature);
+      return fmEntry;
+    }
     Check.isNotNull(modelPackage, "No modelpackage found for EPackage nsuri: " + nsuri); //$NON-NLS-1$
     return modelPackage.getModelFactory().createFeatureMapEntry(eFeature);
   }

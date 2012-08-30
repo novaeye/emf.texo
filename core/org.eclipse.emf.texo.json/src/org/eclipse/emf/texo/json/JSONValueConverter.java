@@ -124,6 +124,7 @@ public class JSONValueConverter implements TexoComponent {
   protected Object fromJSON(Object target, final Object value, final EDataType eDataType) {
     if (ModelUtils.isEEnum(eDataType)) {
       final EDataType enumDataType = getDataTypeOrBaseType(eDataType);
+      final EEnum eeNum = (EEnum) eDataType;
 
       if (!(value instanceof String)) {
         // hopefully already the correct value...
@@ -131,7 +132,6 @@ public class JSONValueConverter implements TexoComponent {
       }
 
       if (target instanceof EObject) {
-        final EEnum eeNum = (EEnum) eDataType;
         for (EEnumLiteral eeNumLiteral : eeNum.getELiterals()) {
           if (eeNumLiteral.getName().compareToIgnoreCase((String) value) == 0
               || eeNumLiteral.getLiteral().compareToIgnoreCase((String) value) == 0) {
@@ -144,6 +144,14 @@ public class JSONValueConverter implements TexoComponent {
       // modelobject
       final ModelPackage modelPackage = ModelResolver.getInstance().getModelPackage(
           enumDataType.getEPackage().getNsURI());
+      if (modelPackage == null) {
+        // dynamic model
+        EEnumLiteral literal = eeNum.getEEnumLiteral((String) value);
+        if (literal == null) {
+          literal = eeNum.getEEnumLiteralByLiteral((String) value);
+        }
+        return literal;
+      }
       final Class<? extends Enum> enumClass = (Class<? extends Enum>) modelPackage.getEClassifierClass(enumDataType);
       return Enum.valueOf(enumClass, ((String) value).toUpperCase());
     }

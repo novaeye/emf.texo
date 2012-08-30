@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
@@ -218,6 +219,14 @@ public class ModelUtils {
       if (nameSpacePrefix != null && !ePackage.getNsPrefix().equals(nameSpacePrefix)) {
         continue;
       }
+      for (EClassifier eClassifier : ePackage.getEClassifiers()) {
+        if (eClassifier.getName().equals(eClassName)) {
+          return (EClass) eClassifier;
+        }
+      }
+    }
+    for (Object key : new HashSet<Object>(ModelResolver.getInstance().getEPackageRegistry().keySet())) {
+      final EPackage ePackage = ModelResolver.getInstance().getEPackageRegistry().getEPackage((String) key);
       for (EClassifier eClassifier : ePackage.getEClassifiers()) {
         if (eClassifier.getName().equals(eClassName)) {
           return (EClass) eClassifier;
