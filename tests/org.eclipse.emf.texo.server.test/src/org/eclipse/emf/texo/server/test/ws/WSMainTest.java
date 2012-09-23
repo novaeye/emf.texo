@@ -294,6 +294,48 @@ public class WSMainTest extends BaseWSWebTest {
       }
     }
 
+    // named query with post
+    if (!isXmlTest()) {
+      final QueryType queryType = RequestModelPackage.INSTANCE.getModelFactory().createQueryType();
+      queryType.setNamedQuery("testWriter");
+      final Parameter parameter = RequestModelPackage.INSTANCE.getModelFactory().createParameter();
+      parameter.setName("name");
+      parameter.setValue("name2%");
+      queryType.getParameters().add(parameter);
+
+      final String content = serialize(queryType);
+      final String resultStr = doContentRequest("?" + ServiceConstants.PARAM_RETRIEVAL + "=true", content,
+          HttpServletResponse.SC_OK, null, HttpMethods.POST);
+      final ResponseType result = (ResponseType) deserialize(resultStr).get(0);
+      Assert.assertEquals(11, result.getTotalRows());
+      Assert.assertEquals(11, result.getData().size());
+      for (Object o : result.getData()) {
+        final Object[] os = (Object[]) o;
+        Writer w = (Writer) os[0];
+        String n = (String) os[1];
+        Assert.assertTrue(w.getName().startsWith("name2")); //$NON-NLS-1$
+        Assert.assertEquals(n, w.getName());
+      }
+    }
+
+    // named query with get
+    if (!isXmlTest()) {
+      final String wsPartUrl = LibraryModelPackage.INSTANCE.getWriterEClass().getName()
+          + "?namedQuery=testWriter&firstResult=0" //$NON-NLS-1$ 
+          + "&maxResults=5&noCount=true&qp.name=" + URLEncoder.encode("name3%", "UTF-8"); //$NON-NLS-1$
+      final String content = doGetRequest(wsPartUrl, null, HttpServletResponse.SC_OK);
+      final ResponseType result = (ResponseType) deserialize(content).get(0);
+      // as there are more than 5 writers, the result is one more than the maxResults
+      Assert.assertEquals(6, result.getTotalRows());
+      Assert.assertEquals(5, result.getData().size());
+      for (Object o : result.getData()) {
+        final Object[] os = (Object[]) o;
+        Writer w = (Writer) os[0];
+        Assert.assertEquals(os[1], w.getName());
+        Assert.assertTrue(w.getName().startsWith("name3")); //$NON-NLS-1$
+      }
+    }
+
     // get all the writers which start with name2, in total there are 11
     // do not do the count, so the total rows should be equal to the maxResults
     {

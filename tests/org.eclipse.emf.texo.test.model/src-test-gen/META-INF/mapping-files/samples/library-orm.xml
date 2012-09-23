@@ -6,6 +6,9 @@
     </orm:persistence-unit-defaults>
   </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
+  <orm:named-query name="testWriter">
+    <orm:query>select e, e.name from library_Writer e where e.name like :name</orm:query>
+  </orm:named-query>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Book" name="library_Book">
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>

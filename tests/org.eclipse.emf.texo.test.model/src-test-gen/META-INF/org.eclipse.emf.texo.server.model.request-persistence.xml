@@ -31,6 +31,7 @@
 		<class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
 		<class>org.eclipse.emf.texo.server.model.request.ActionType</class>
 		<class>org.eclipse.emf.texo.server.model.request.Parameter</class>
+		<class>org.eclipse.emf.texo.server.model.request.QueryReferingObjectsType</class>
 		<class>org.eclipse.emf.texo.server.model.request.QueryType</class>
 
 		<properties>
@@ -81,6 +82,7 @@
 		<class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
 		<class>org.eclipse.emf.texo.server.model.request.ActionType</class>
 		<class>org.eclipse.emf.texo.server.model.request.Parameter</class>
+		<class>org.eclipse.emf.texo.server.model.request.QueryReferingObjectsType</class>
 		<class>org.eclipse.emf.texo.server.model.request.QueryType</class>
 
 		<properties>

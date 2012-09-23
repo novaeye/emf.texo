@@ -61,6 +61,7 @@ import org.eclipse.emf.texo.orm.annotations.model.orm.DocumentRoot;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EntityMappingsType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.EnumType;
+import org.eclipse.emf.texo.orm.annotations.model.orm.NamedQuery;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.PersistenceUnitDefaults;
@@ -258,7 +259,10 @@ public class ORMGenerator extends BaseGenerateAction {
 
     boolean addDelimitedIdentifierTag = false;
 
+    // used for testruns
+    boolean isLibraryExample = false;
     for (EPackage ePackage : ePackages) {
+      isLibraryExample |= ePackage.getName().equals("library");
       final AnnotatedEPackage aPackage = annotatedModel.getAnnotatedEPackage(ePackage, false);
 
       for (EPackageAnnotation ePackageAnnotation : aPackage.getEPackageAnnotations()) {
@@ -313,7 +317,18 @@ public class ORMGenerator extends BaseGenerateAction {
       setPersistenceUnitMetaData(entityMappings);
     }
 
+    if (isLibraryExample && ORMMappingOptions.getDefaultOptions().isTestRun()) {
+      addNamedQuery(entityMappings);
+    }
+
     return entityMappings;
+  }
+
+  private void addNamedQuery(EntityMappingsType entityMappingsType) {
+    final NamedQuery namedQuery = OrmFactory.eINSTANCE.createNamedQuery();
+    namedQuery.setName("testWriter");
+    namedQuery.setQuery("select e, e.name from library_Writer e where e.name like :name");
+    entityMappingsType.getNamedQuery().add(namedQuery);
   }
 
   private Attributes collectAttributes(EntityMappingsType entityMappings, AnnotationManager annotationManager,
