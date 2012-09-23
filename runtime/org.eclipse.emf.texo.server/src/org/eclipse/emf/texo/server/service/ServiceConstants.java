@@ -32,6 +32,7 @@ public class ServiceConstants {
   public static final String PARAM_CHILD_LEVELS = "childLevels"; //$NON-NLS-1$
   public static final String PARAM_RETRIEVAL = "retrieval"; //$NON-NLS-1$
   public static final String PARAM_QUERY = "query"; //$NON-NLS-1$
+  public static final String PARAM_NAMEDQUERY = "namedQuery"; //$NON-NLS-1$
   public static final String PARAM_NO_COUNT = "noCount"; //$NON-NLS-1$
   public static final String STATUS_SUCCESS = "success"; //$NON-NLS-1$
 }

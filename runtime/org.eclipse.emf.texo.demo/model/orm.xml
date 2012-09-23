@@ -1,55 +1,30 @@
 <?xml version="1.0" encoding="ASCII"?>
 <orm:entity-mappings xmlns:orm="http://java.sun.com/xml/ns/persistence/orm" version="2.0">
-  <orm:persistence-unit-metadata>
-    <orm:persistence-unit-defaults>
-      <orm:delimited-identifiers/>
-    </orm:persistence-unit-defaults>
-  </orm:persistence-unit-metadata>
   <orm:access>FIELD</orm:access>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Book" name="library_Book">
+  <orm:entity class="com.nterpriseapps.test.order.Customer" name="Customer">
+    <orm:table name="Order_Customer"/>
     <orm:attributes>
-      <orm:basic name="title"/>
-      <orm:basic name="pages"/>
-      <orm:basic name="category"/>
-      <orm:many-to-one name="author" optional="false">
-        <orm:join-column/>
-        <orm:cascade>
-          <orm:cascade-persist/>
-          <orm:cascade-merge/>
-          <orm:cascade-refresh/>
-        </orm:cascade>
-      </orm:many-to-one>
+      <orm:basic name="firstName" optional="true">
+        <orm:column name="firstName"/>
+      </orm:basic>
+      <orm:basic name="lastName" optional="true">
+        <orm:column name="lastName"/>
+      </orm:basic>
+      <orm:basic name="id" optional="true">
+        <orm:column name="id"/>
+      </orm:basic>
+      <orm:embedded name="address"/>
     </orm:attributes>
   </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Writer" name="library_Writer">
+  <orm:entity class="org.eclipse.emf.texo.test.model.issues.bz377606.Address" name="Order_Address">
+    <orm:table name="Order_Address"/>
     <orm:attributes>
-      <orm:basic name="name"/>
-      <orm:one-to-many name="books">
-        <orm:order-column/>
-        <orm:join-table/>
-        <orm:cascade>
-          <orm:cascade-persist/>
-          <orm:cascade-merge/>
-          <orm:cascade-refresh/>
-        </orm:cascade>
-      </orm:one-to-many>
-    </orm:attributes>
-  </orm:entity>
-  <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Library" name="library_Library">
-    <orm:attributes>
-      <orm:basic name="name"/>
-      <orm:one-to-many name="writers">
-        <orm:order-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
-      <orm:one-to-many name="books">
-        <orm:order-column/>
-        <orm:cascade>
-          <orm:cascade-all/>
-        </orm:cascade>
-      </orm:one-to-many>
+      <orm:basic name="city" optional="true">
+        <orm:column name="city"/>
+      </orm:basic>
+      <orm:basic name="street" optional="true">
+        <orm:column name="street"/>
+      </orm:basic>
     </orm:attributes>
   </orm:entity>
 </orm:entity-mappings>

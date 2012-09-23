@@ -2,7 +2,7 @@
 <annotationsmodel:AnnotatedModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:annotationsmodel="http://www.eclipse.org/emf/texo/annotations/model" xmlns:ormannotations="http://www.eclipse.org/emf/texo/orm/ormannotations">
   <annotatedEPackages>
     <ePackage href="bz377606.ecore#/"/>
-    <ePackageAnnotations xsi:type="ormannotations:EPackageORMAnnotation" generated="false" generateFullDbSchemaNames="true" maximumSqlNameLength="255" lowerCasedNames="false" upperCasedNames="false" enforceUniqueNames="true" useJoinTablesForContainment="false" useJoinTablesForNonContainment="true" generateJavaAnnotations="false" addOrderColumnToListMappings="false" renameSQLReservedNames="true"/>
+    <ePackageAnnotations xsi:type="ormannotations:EPackageORMAnnotation" generated="false" generateFullDbSchemaNames="true" tableNamePrefix="" maximumSqlNameLength="255" lowerCasedNames="false" upperCasedNames="false" enforceUniqueNames="true" useJoinTablesForContainment="false" useJoinTablesForNonContainment="true" generateJavaAnnotations="false" addOrderColumnToListMappings="false" renameSQLReservedNames="true" uniqueEntityNames="true" setDelimitedIdentifierTagInORM="false"/>
     <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
       <eClass href="bz377606.ecore#//Customer"/>
       <eClassAnnotations xsi:type="ormannotations:EClassORMAnnotation">

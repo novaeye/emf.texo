@@ -99,12 +99,19 @@ public abstract class ModelOperation implements TexoComponent {
     }
 
     // 1) there is a query!
+    final String namedQueryParam = (String) getServiceContext().getRequestParameters().get(
+        ServiceConstants.PARAM_NAMEDQUERY);
     final String qryStrParam = (String) getServiceContext().getRequestParameters().get(ServiceConstants.PARAM_QUERY);
-    if (qryStrParam != null && qryStrParam.trim().length() > 0) {
+    if (queryType == null && qryStrParam != null && qryStrParam.trim().length() > 0) {
       getServiceContext().getServiceOptions().checkFalse(ServiceOptions.OPTION_ALLOW_RETRIEVE_QUERIES);
-
       queryType = RequestModelPackage.INSTANCE.getModelFactory().createQueryType();
       queryType.setQuery(qryStrParam);
+    } else if (queryType == null && namedQueryParam != null) {
+      queryType = RequestModelPackage.INSTANCE.getModelFactory().createQueryType();
+      queryType.setNamedQuery(namedQueryParam);
+    }
+
+    if (queryType != null) {
       queryType.setFirstResult(getFirstResult());
       queryType.setMaxResults(getMaxResults());
       final String noCountParam = (String) getServiceContext().getRequestParameters().get(
