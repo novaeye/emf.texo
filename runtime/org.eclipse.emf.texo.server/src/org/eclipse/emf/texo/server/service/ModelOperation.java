@@ -98,6 +98,8 @@ public abstract class ModelOperation implements TexoComponent {
       }
     }
 
+    final boolean queryTypeFromContent = queryType != null;
+
     // 1) there is a query!
     final String namedQueryParam = (String) getServiceContext().getRequestParameters().get(
         ServiceConstants.PARAM_NAMEDQUERY);
@@ -111,16 +113,16 @@ public abstract class ModelOperation implements TexoComponent {
       queryType.setNamedQuery(namedQueryParam);
     }
 
-    if (queryType != null) {
+    if (queryType == null) {
+      return queryType;
+    }
+
+    if (!queryTypeFromContent) {
       queryType.setFirstResult(getFirstResult());
       queryType.setMaxResults(getMaxResults());
       final String noCountParam = (String) getServiceContext().getRequestParameters().get(
           ServiceConstants.PARAM_NO_COUNT);
       queryType.setDoCount(noCountParam == null || FALSE.equals(noCountParam));
-    }
-
-    if (queryType == null) {
-      return queryType;
     }
 
     if (queryType.getQuery() != null) {
