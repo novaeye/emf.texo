@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="org.eclipse.emf.texo.server.model.request" nsURI="http://www.eclipse.org/emf/texo/server/model/request"
     nsPrefix="request">
-  <eClassifiers xsi:type="ecore:EClass" name="ActionType">
+  <eClassifiers xsi:type="ecore:EClass" name="ActionType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="ActionType"/>
       <details key="kind" value="elementOnly"/>
@@ -41,7 +41,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
       <details key="kind" value="mixed"/>
@@ -115,7 +115,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="Parameter"/>
       <details key="kind" value="elementOnly"/>
@@ -148,7 +148,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QueryReferingObjectsType">
+  <eClassifiers xsi:type="ecore:EClass" name="QueryReferingObjectsType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="QueryReferingObjectsType"/>
       <details key="kind" value="elementOnly"/>
@@ -185,7 +185,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QueryType">
+  <eClassifiers xsi:type="ecore:EClass" name="QueryType" eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="QueryType"/>
       <details key="kind" value="elementOnly"/>

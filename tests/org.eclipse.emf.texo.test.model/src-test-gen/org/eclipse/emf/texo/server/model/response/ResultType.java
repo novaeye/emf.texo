@@ -2,19 +2,36 @@ package org.eclipse.emf.texo.server.model.response;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CollectionTable;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.emf.texo.test.TexoTestQNameConverter;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class ResultType {
+@Entity(name = "response_ResultType")
+@DiscriminatorColumn(length = 255)
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
+    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
+public class ResultType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "response_ResultType_updated")
   private List<Object> updated = new ArrayList<Object>();
 
   /**
@@ -22,6 +39,9 @@ public class ResultType {
    * 
    * @generated
    */
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "response_ResultType_inserted")
   private List<Object> inserted = new ArrayList<Object>();
 
   /**
@@ -29,6 +49,9 @@ public class ResultType {
    * 
    * @generated
    */
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "response_ResultType_deleted")
   private List<Object> deleted = new ArrayList<Object>();
 
   /**

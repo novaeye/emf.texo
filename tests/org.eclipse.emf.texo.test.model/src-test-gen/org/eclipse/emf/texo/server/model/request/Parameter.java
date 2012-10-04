@@ -1,17 +1,32 @@
 package org.eclipse.emf.texo.server.model.request;
 
+import javax.persistence.Basic;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.emf.texo.test.TexoTestQNameConverter;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
+
 /**
  * A representation of the model object '<em><b>Parameter</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class Parameter {
+@Entity(name = "request_Parameter")
+@DiscriminatorColumn(length = 255)
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
+    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
+public class Parameter extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @Basic(optional = false)
   private String name = null;
 
   /**
@@ -19,6 +34,8 @@ public class Parameter {
    * 
    * @generated
    */
+  @Basic(optional = false)
+  @Convert("TexoTestObjectConverter")
   private Object value = null;
 
   /**
@@ -26,6 +43,7 @@ public class Parameter {
    * 
    * @generated
    */
+  @Basic()
   private String type = null;
 
   /**

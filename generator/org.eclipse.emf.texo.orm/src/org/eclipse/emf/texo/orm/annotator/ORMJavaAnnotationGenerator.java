@@ -103,6 +103,8 @@ public class ORMJavaAnnotationGenerator {
     classFeatureNames.add("targetEntity"); //$NON-NLS-1$
     classFeatureNames.add("targetClass"); //$NON-NLS-1$
     classFeatureNames.add("class"); //$NON-NLS-1$
+    classFeatureNames.add("dataType"); //$NON-NLS-1$
+    classFeatureNames.add("objectType"); //$NON-NLS-1$
 
     enumTypeNames.put(EnumType.class, "EnumType");
 

@@ -9,6 +9,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelPackage;
 import org.eclipse.emf.texo.model.ModelResolver;
+import org.eclipse.emf.texo.server.model.response.dao.DocumentRootDao;
+import org.eclipse.emf.texo.server.model.response.dao.ErrorTypeDao;
+import org.eclipse.emf.texo.server.model.response.dao.ResponseTypeDao;
+import org.eclipse.emf.texo.server.model.response.dao.ResultTypeDao;
+import org.eclipse.emf.texo.server.store.DaoRegistry;
+import org.eclipse.emf.texo.test.model.base.identifiable.IdentifiableModelPackage;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -54,42 +60,42 @@ public class ResponseModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 0;
+  public static final int DOCUMENTROOT_MIXED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 1;
+  public static final int DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 2;
+  public static final int DOCUMENTROOT_XSISCHEMALOCATION_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_ERROR_FEATURE_ID = 3;
+  public static final int DOCUMENTROOT_ERROR_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_RESPONSE_FEATURE_ID = 4;
+  public static final int DOCUMENTROOT_RESPONSE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int DOCUMENTROOT_RESULT_FEATURE_ID = 5;
+  public static final int DOCUMENTROOT_RESULT_FEATURE_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -103,28 +109,28 @@ public class ResponseModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ERRORTYPE_ERRORCLASS_FEATURE_ID = 0;
+  public static final int ERRORTYPE_ERRORCLASS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ERRORTYPE_MESSAGE_FEATURE_ID = 1;
+  public static final int ERRORTYPE_MESSAGE_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ERRORTYPE_STACKTRACE_FEATURE_ID = 2;
+  public static final int ERRORTYPE_STACKTRACE_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int ERRORTYPE_CAUSE_FEATURE_ID = 3;
+  public static final int ERRORTYPE_CAUSE_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -138,35 +144,35 @@ public class ResponseModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RESPONSETYPE_STATUS_FEATURE_ID = 0;
+  public static final int RESPONSETYPE_STATUS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESPONSETYPE_STARTROW_FEATURE_ID = 1;
+  public static final int RESPONSETYPE_STARTROW_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESPONSETYPE_ENDROW_FEATURE_ID = 2;
+  public static final int RESPONSETYPE_ENDROW_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESPONSETYPE_TOTALROWS_FEATURE_ID = 3;
+  public static final int RESPONSETYPE_TOTALROWS_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESPONSETYPE_DATA_FEATURE_ID = 4;
+  public static final int RESPONSETYPE_DATA_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -180,21 +186,21 @@ public class ResponseModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RESULTTYPE_UPDATED_FEATURE_ID = 0;
+  public static final int RESULTTYPE_UPDATED_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESULTTYPE_INSERTED_FEATURE_ID = 1;
+  public static final int RESULTTYPE_INSERTED_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RESULTTYPE_DELETED_FEATURE_ID = 2;
+  public static final int RESULTTYPE_DELETED_FEATURE_ID = 4;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -224,6 +230,8 @@ public class ResponseModelPackage extends ModelPackage {
 
     isInitialized = true;
 
+    IdentifiableModelPackage.initialize();
+
     // force the initialization of the EFactory proxy
     modelPackage.getEPackage();
 
@@ -236,6 +244,14 @@ public class ResponseModelPackage extends ModelPackage {
         modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(ResultType.class, modelPackage.getResultTypeEClass(),
         modelPackage);
+
+    DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
+
+    DaoRegistry.getInstance().registerDao(ErrorType.class, ErrorTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(ResponseType.class, ResponseTypeDao.class);
+
+    DaoRegistry.getInstance().registerDao(ResultType.class, ResultTypeDao.class);
 
     // and return ourselves
     return modelPackage;

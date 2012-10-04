@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 
 /**
  * A representation of the model object '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class DocumentRoot {
+public class DocumentRoot extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

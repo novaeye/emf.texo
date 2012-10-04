@@ -7,6 +7,7 @@ import javax.persistence.Basic;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Lob;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
  * 
  * @generated
  */
-public class DocumentRootMixedFeatureGroup {
+public class DocumentRootMixedFeatureGroup extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> Is used to identify which feature is set in this feature group.

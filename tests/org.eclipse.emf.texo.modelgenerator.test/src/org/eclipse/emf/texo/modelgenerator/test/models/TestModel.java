@@ -109,6 +109,7 @@ public class TestModel {
     urls.add("issues/bz379815.ecore"); //$NON-NLS-1$
     urls.add("issues/bz380279.ecore"); //$NON-NLS-1$
     urls.add("issues/bz386923.ecore"); //$NON-NLS-1$
+    urls.add("issues/bz390942.ecore"); //$NON-NLS-1$
     urls.add("issues/SubPackage.ecore"); //$NON-NLS-1$
     urls.add("issues/NotRequiredSerialization.ecore"); //$NON-NLS-1$
 

@@ -2,19 +2,35 @@ package org.eclipse.emf.texo.server.model.request;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.emf.texo.test.TexoTestQNameConverter;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>QueryType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class QueryType {
+@Entity(name = "request_QueryType")
+@DiscriminatorColumn(length = 255)
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
+    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
+public class QueryType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @Basic()
   private String query = null;
 
   /**
@@ -22,6 +38,7 @@ public class QueryType {
    * 
    * @generated
    */
+  @Basic()
   private String namedQuery = null;
 
   /**
@@ -29,6 +46,8 @@ public class QueryType {
    * 
    * @generated
    */
+  @OneToMany(cascade = { CascadeType.ALL })
+  @OrderColumn()
   private List<Parameter> parameters = new ArrayList<Parameter>();
 
   /**
@@ -36,6 +55,7 @@ public class QueryType {
    * 
    * @generated
    */
+  @Basic()
   private int firstResult = -1;
 
   /**
@@ -43,6 +63,7 @@ public class QueryType {
    * 
    * @generated
    */
+  @Basic()
   private int maxResults = -1;
 
   /**
@@ -50,6 +71,7 @@ public class QueryType {
    * 
    * @generated
    */
+  @Basic()
   private boolean doCount = false;
 
   /**
@@ -57,6 +79,7 @@ public class QueryType {
    * 
    * @generated
    */
+  @Basic()
   private boolean countOperation = false;
 
   /**

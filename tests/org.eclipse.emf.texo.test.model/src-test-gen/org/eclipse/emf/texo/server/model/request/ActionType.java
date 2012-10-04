@@ -2,19 +2,36 @@ package org.eclipse.emf.texo.server.model.request;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CollectionTable;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.emf.texo.test.TexoTestQNameConverter;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Convert;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
 
 /**
  * A representation of the model object '<em><b>ActionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated
  */
-public class ActionType {
+@Entity(name = "request_ActionType")
+@DiscriminatorColumn(length = 255)
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
+    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
+public class ActionType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "request_ActionType_update")
   private List<Object> update = new ArrayList<Object>();
 
   /**
@@ -22,6 +39,9 @@ public class ActionType {
    * 
    * @generated
    */
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "request_ActionType_insert")
   private List<Object> insert = new ArrayList<Object>();
 
   /**
@@ -29,6 +49,9 @@ public class ActionType {
    * 
    * @generated
    */
+  @ElementCollection()
+  @Convert("TexoTestObjectConverter")
+  @CollectionTable(name = "request_ActionType_delete")
   private List<Object> delete = new ArrayList<Object>();
 
   /**

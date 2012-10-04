@@ -1,18 +1,32 @@
 package org.eclipse.emf.texo.server.model.request;
 
+import javax.persistence.Basic;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import org.eclipse.emf.texo.test.TexoTestObjectConverter;
+import org.eclipse.emf.texo.test.TexoTestQNameConverter;
+import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
+import org.eclipse.persistence.annotations.Converter;
+import org.eclipse.persistence.annotations.Converters;
+
 /**
  * A representation of the model object '<em><b>QueryReferingObjectsType</b></em>'. <!-- begin-user-doc --> <!--
  * end-user-doc -->
  * 
  * @generated
  */
-public class QueryReferingObjectsType {
+@Entity(name = "request_QueryReferingObjectsType")
+@DiscriminatorColumn(length = 255)
+@Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
+    @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
+public class QueryReferingObjectsType extends Identifiable {
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
+  @Basic(optional = false)
   private String targetUri = null;
 
   /**
@@ -20,6 +34,7 @@ public class QueryReferingObjectsType {
    * 
    * @generated
    */
+  @Basic()
   private Boolean includeContainerReferences = null;
 
   /**
@@ -27,6 +42,7 @@ public class QueryReferingObjectsType {
    * 
    * @generated
    */
+  @Basic()
   private int maxResults = -1;
 
   /**
