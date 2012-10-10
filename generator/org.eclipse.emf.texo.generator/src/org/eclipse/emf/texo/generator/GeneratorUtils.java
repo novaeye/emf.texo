@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EModelElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageRegistryImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -31,12 +32,14 @@ import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.utils.ModelUtils;
 import org.eclipse.xsd.XSDDiagnostic;
 import org.eclipse.xsd.XSDDiagnosticSeverity;
+import org.eclipse.xsd.XSDPackage;
 import org.eclipse.xsd.XSDSchema;
 import org.eclipse.xsd.ecore.XSDEcoreBuilder;
 import org.eclipse.xsd.util.XSDResourceFactoryImpl;
@@ -190,7 +193,9 @@ public class GeneratorUtils {
    */
   public static EPackage.Registry createEPackageRegistry() {
     final EPackage.Registry registry = new EPackageRegistryImpl();
-    registry.putAll(EPackage.Registry.INSTANCE);
+    registry.put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);
+    registry.put(XMLTypePackage.eNS_URI, XMLTypePackage.eINSTANCE);
+    registry.put(XSDPackage.eNS_URI, XSDPackage.eINSTANCE);
     return registry;
   }
 

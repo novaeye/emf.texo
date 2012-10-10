@@ -10,9 +10,9 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
-import org.eclipse.emf.common.notify.Notification;
 import java.util.List;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -40,235 +40,254 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.util.AnnotationsModelRe
 
 /**
  * <!-- begin-user-doc --> A representation of the model object '<em><b>Annotated Model</b></em>'. <!-- end-user-doc -->
- *
+ * 
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel#getAnnotatedEPackages <em>Annotated EPackages</em>}</li>
- *   <li>{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel#isGeneratingSources <em>Generating Sources</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel#getAnnotatedEPackages <em>Annotated
+ * EPackages</em>}</li>
+ * <li>{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel#isGeneratingSources <em>Generating
+ * Sources</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedModel()
  * @model kind="class"
  * @generated
  */
 public class AnnotatedModel extends EObjectImpl implements EObject {
   /**
-	 * The cached value of the '{@link #getAnnotatedEPackages() <em>Annotated EPackages</em>}' containment reference list.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getAnnotatedEPackages()
-	 * @generated
-	 * @ordered
-	 */
+   * The cached value of the '{@link #getAnnotatedEPackages() <em>Annotated EPackages</em>}' containment reference list.
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @see #getAnnotatedEPackages()
+   * @generated
+   * @ordered
+   */
   protected EList<AnnotatedEPackage> annotatedEPackages;
 
   /**
-	 * The default value of the '{@link #isGeneratingSources() <em>Generating Sources</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isGeneratingSources()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean GENERATING_SOURCES_EDEFAULT = false;
+   * The default value of the '{@link #isGeneratingSources() <em>Generating Sources</em>}' attribute. <!--
+   * begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @see #isGeneratingSources()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean GENERATING_SOURCES_EDEFAULT = false;
 
-		/**
-	 * The cached value of the '{@link #isGeneratingSources() <em>Generating Sources</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isGeneratingSources()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean generatingSources = GENERATING_SOURCES_EDEFAULT;
+  /**
+   * The cached value of the '{@link #isGeneratingSources() <em>Generating Sources</em>}' attribute. <!-- begin-user-doc
+   * --> <!-- end-user-doc -->
+   * 
+   * @see #isGeneratingSources()
+   * @generated
+   * @ordered
+   */
+  protected boolean generatingSources = GENERATING_SOURCES_EDEFAULT;
 
-		// keeps track for which epackages the annotation model files have already been read
+  // keeps track for which epackages the annotation model files have already been read
   protected List<EPackage> readAnnotationModelEPackages = new ArrayList<EPackage>();
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   protected AnnotatedModel() {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   protected EClass eStaticClass() {
-		return AnnotationsmodelPackage.Literals.ANNOTATED_MODEL;
-	}
+    return AnnotationsmodelPackage.Literals.ANNOTATED_MODEL;
+  }
 
   /**
-	 * Returns the value of the '<em><b>Annotated EPackages</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage}.
-	 * It is bidirectional and its opposite is '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage#getAnnotatedModel <em>Annotated Model</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Annotated EPackages</b></em>' containment reference list. The list contents are of
+   * type {@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage}. It is bidirectional and its
+   * opposite is '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage#getAnnotatedModel
+   * <em>Annotated Model</em>}'. <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Annotated EPackages</em>' containment reference list isn't clear, there really should be
    * more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Annotated EPackages</em>' containment reference list.
-	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedModel_AnnotatedEPackages()
-	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage#getAnnotatedModel
-	 * @model opposite="annotatedModel" containment="true"
-	 * @generated
-	 */
+   * 
+   * @return the value of the '<em>Annotated EPackages</em>' containment reference list.
+   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedModel_AnnotatedEPackages()
+   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEPackage#getAnnotatedModel
+   * @model opposite="annotatedModel" containment="true"
+   * @generated
+   */
   public EList<AnnotatedEPackage> getAnnotatedEPackages() {
-		if (annotatedEPackages == null) {
-			annotatedEPackages = new EObjectContainmentWithInverseEList<AnnotatedEPackage>(AnnotatedEPackage.class, this, AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES, AnnotationsmodelPackage.ANNOTATED_EPACKAGE__ANNOTATED_MODEL);
-		}
-		return annotatedEPackages;
-	}
+    if (annotatedEPackages == null) {
+      annotatedEPackages = new EObjectContainmentWithInverseEList<AnnotatedEPackage>(AnnotatedEPackage.class, this,
+          AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES,
+          AnnotationsmodelPackage.ANNOTATED_EPACKAGE__ANNOTATED_MODEL);
+    }
+    return annotatedEPackages;
+  }
 
   /**
-	 * Returns the value of the '<em><b>Generating Sources</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Generating Sources</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generating Sources</em>' attribute.
-	 * @see #setGeneratingSources(boolean)
-	 * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedModel_GeneratingSources()
-	 * @model
-	 * @generated
-	 */
-	public boolean isGeneratingSources() {
-		return generatingSources;
-	}
+   * Returns the value of the '<em><b>Generating Sources</b></em>' attribute. <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Generating Sources</em>' attribute isn't clear, there really should be more of a
+   * description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * 
+   * @return the value of the '<em>Generating Sources</em>' attribute.
+   * @see #setGeneratingSources(boolean)
+   * @see org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage#getAnnotatedModel_GeneratingSources()
+   * @model
+   * @generated
+   */
+  public boolean isGeneratingSources() {
+    return generatingSources;
+  }
 
-		/**
-	 * Sets the value of the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel#isGeneratingSources <em>Generating Sources</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Generating Sources</em>' attribute.
-	 * @see #isGeneratingSources()
-	 * @generated
-	 */
-	public void setGeneratingSources(boolean newGeneratingSources) {
-		boolean oldGeneratingSources = generatingSources;
-		generatingSources = newGeneratingSources;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES, oldGeneratingSources, generatingSources));
-	}
+  /**
+   * Sets the value of the '{@link org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel#isGeneratingSources
+   * <em>Generating Sources</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the new value of the '<em>Generating Sources</em>' attribute.
+   * @see #isGeneratingSources()
+   * @generated
+   */
+  public void setGeneratingSources(boolean newGeneratingSources) {
+    boolean oldGeneratingSources = generatingSources;
+    generatingSources = newGeneratingSources;
+    if (eNotificationRequired()) {
+      eNotify(new ENotificationImpl(this, Notification.SET,
+          AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES, oldGeneratingSources, generatingSources));
+    }
+  }
 
-		/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAnnotatedEPackages()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
+      return ((InternalEList<InternalEObject>) (InternalEList<?>) getAnnotatedEPackages()).basicAdd(otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
-				return ((InternalEList<?>)getAnnotatedEPackages()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
+      return ((InternalEList<?>) getAnnotatedEPackages()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
-				return getAnnotatedEPackages();
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
-				return isGeneratingSources();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
+      return getAnnotatedEPackages();
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
+      return isGeneratingSources();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
-				getAnnotatedEPackages().clear();
-				getAnnotatedEPackages().addAll((Collection<? extends AnnotatedEPackage>)newValue);
-				return;
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
-				setGeneratingSources((Boolean)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
+      getAnnotatedEPackages().clear();
+      getAnnotatedEPackages().addAll((Collection<? extends AnnotatedEPackage>) newValue);
+      return;
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
+      setGeneratingSources((Boolean) newValue);
+      return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public void eUnset(int featureID) {
-		switch (featureID) {
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
-				getAnnotatedEPackages().clear();
-				return;
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
-				setGeneratingSources(GENERATING_SOURCES_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
+      getAnnotatedEPackages().clear();
+      return;
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
+      setGeneratingSources(GENERATING_SOURCES_EDEFAULT);
+      return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
-				return annotatedEPackages != null && !annotatedEPackages.isEmpty();
-			case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
-				return generatingSources != GENERATING_SOURCES_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__ANNOTATED_EPACKAGES:
+      return annotatedEPackages != null && !annotatedEPackages.isEmpty();
+    case AnnotationsmodelPackage.ANNOTATED_MODEL__GENERATING_SOURCES:
+      return generatingSources != GENERATING_SOURCES_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  @Override
+  public String toString() {
+    if (eIsProxy()) {
+      return super.toString();
+    }
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (generatingSources: ");
-		result.append(generatingSources);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (generatingSources: ");
+    result.append(generatingSources);
+    result.append(')');
+    return result.toString();
+  }
 
-		public AnnotatedENamedElement getAnnotatedENamedElement(ENamedElement eNamedElement, boolean create) {
+  public AnnotatedENamedElement getAnnotatedENamedElement(ENamedElement eNamedElement, boolean create) {
     if (eNamedElement instanceof EPackage) {
       return getAnnotatedEPackage((EPackage) eNamedElement, create);
     } else if (eNamedElement instanceof EClass) {
@@ -403,6 +422,7 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
 
   private void mergeAnnotatedEDataType(AnnotatedEDataType sourceADataType) {
     final AnnotatedEDataType targetADataType = getAnnotatedEDataType(sourceADataType.getEDataType(), true);
+
     for (EDataTypeAnnotation eDataTypeAnnotation : new ArrayList<EDataTypeAnnotation>(
         sourceADataType.getEDataTypeAnnotations())) {
       if (!hasAnnotation(targetADataType.getAllAnnotations(), eDataTypeAnnotation)) {
@@ -413,6 +433,7 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
 
   private void mergeAnnotatedEClass(AnnotatedEClass sourceAClass) {
     final AnnotatedEClass targetAClass = getAnnotatedEClass(sourceAClass.getEClass(), true);
+
     for (EClassAnnotation eClassAnnotation : new ArrayList<EClassAnnotation>(sourceAClass.getEClassAnnotations())) {
       if (!hasAnnotation(targetAClass.getAllAnnotations(), eClassAnnotation)) {
         targetAClass.getEClassAnnotations().add(eClassAnnotation);
