@@ -198,7 +198,6 @@ public class GeneratorUtils {
     registry.put(XMLTypePackage.eNS_URI, XMLTypePackage.eINSTANCE);
     registry.put(XSDPackage.eNS_URI, XSDPackage.eINSTANCE);
     registry.put(AnnotationsmodelPackage.eNS_URI, AnnotationsmodelPackage.eINSTANCE);
-
     return registry;
   }
 

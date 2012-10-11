@@ -80,6 +80,10 @@ public class IdentifiableAdapterFactory extends AdapterFactoryImpl {
 				return createIdentifiableInterfaceAdapter();
 			}
 			@Override
+			public Adapter caseNotIdentifiable(NotIdentifiable object) {
+				return createNotIdentifiableAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -124,6 +128,20 @@ public class IdentifiableAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIdentifiableInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.test.emfmodel.identifiable.NotIdentifiable <em>Not Identifiable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.NotIdentifiable
+	 * @generated
+	 */
+	public Adapter createNotIdentifiableAdapter() {
 		return null;
 	}
 

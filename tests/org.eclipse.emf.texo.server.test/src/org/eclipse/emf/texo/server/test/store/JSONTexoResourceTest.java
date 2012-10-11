@@ -31,7 +31,7 @@ import org.junit.Before;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.4 $
  */
-public class JSONTexoResourceTest extends TexoResourceTest {
+public class JSONTexoResourceTest extends TexoLibraryResourceTest {
 
   @Before
   @Override

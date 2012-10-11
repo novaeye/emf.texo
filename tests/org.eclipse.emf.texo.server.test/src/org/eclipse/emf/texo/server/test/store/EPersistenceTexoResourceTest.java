@@ -29,7 +29,7 @@ import org.eclipse.emf.texo.store.TexoResource;
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.4 $
  */
-public class EPersistenceTexoResourceTest extends TexoResourceTest {
+public class EPersistenceTexoResourceTest extends TexoLibraryResourceTest {
 
   @Override
   protected TexoResource createResource(String uriString) {

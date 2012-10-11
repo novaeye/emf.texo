@@ -52,7 +52,12 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
   }
 
   public void addToCache(EObject eObject) {
-    uriEObjectMap.put(toUri(eObject).toString(), eObject);
+    final URI objectUri = toUri(eObject);
+
+    // can happen if an object does not have an id eattribute
+    if (objectUri != null) {
+      uriEObjectMap.put(objectUri.toString(), eObject);
+    }
   }
 
   /**

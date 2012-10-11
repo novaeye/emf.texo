@@ -2,10 +2,10 @@ package org.eclipse.emf.texo.server.model.request;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CollectionTable;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -30,8 +30,8 @@ public class ActionType extends Identifiable {
    * @generated
    */
   @ElementCollection()
+  @OrderColumn()
   @Convert("TexoTestObjectConverter")
-  @CollectionTable(name = "request_ActionType_update")
   private List<Object> update = new ArrayList<Object>();
 
   /**
@@ -40,8 +40,8 @@ public class ActionType extends Identifiable {
    * @generated
    */
   @ElementCollection()
+  @OrderColumn()
   @Convert("TexoTestObjectConverter")
-  @CollectionTable(name = "request_ActionType_insert")
   private List<Object> insert = new ArrayList<Object>();
 
   /**
@@ -50,8 +50,8 @@ public class ActionType extends Identifiable {
    * @generated
    */
   @ElementCollection()
+  @OrderColumn()
   @Convert("TexoTestObjectConverter")
-  @CollectionTable(name = "request_ActionType_delete")
   private List<Object> delete = new ArrayList<Object>();
 
   /**

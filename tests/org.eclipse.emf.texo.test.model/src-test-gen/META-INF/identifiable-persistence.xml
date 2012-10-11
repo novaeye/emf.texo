@@ -30,6 +30,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
 		<class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
+		<class>org.eclipse.emf.texo.test.model.base.identifiable.NotIdentifiable</class>
 
 		<properties>
 			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>
@@ -78,6 +79,7 @@
 		<mapping-file>META-INF/mapping-files/base/identifiable-orm.xml</mapping-file>
 		<class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
 		<class>org.eclipse.emf.texo.test.model.base.identifiable.Identifiable</class>
+		<class>org.eclipse.emf.texo.test.model.base.identifiable.NotIdentifiable</class>
 
 		<properties>
 			<property name="eclipselink.session.customizer" value="org.eclipse.emf.texo.test.TexoSessionCustomizer"/>

@@ -29,6 +29,8 @@ public class IdentifiableModelFactory implements ModelFactory {
    */
   public Object create(EClass eClass) {
     switch (eClass.getClassifierID()) {
+    case IdentifiableModelPackage.NOTIDENTIFIABLE_CLASSIFIER_ID:
+      return createNotIdentifiable();
     }
     throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
@@ -49,6 +51,9 @@ public class IdentifiableModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case IdentifiableModelPackage.IDENTIFIABLE_CLASSIFIER_ID:
       modelObject = new IdentifiableModelObject();
+      break;
+    case IdentifiableModelPackage.NOTIDENTIFIABLE_CLASSIFIER_ID:
+      modelObject = new NotIdentifiableModelObject();
       break;
     case IdentifiableModelPackage.IDENTIFIABLEINTERFACE_CLASSIFIER_ID:
       modelObject = new IdentifiableInterfaceModelObject();
@@ -87,6 +92,16 @@ public class IdentifiableModelFactory implements ModelFactory {
   public ModelFeatureMapEntry<?> createModelFeatureMapEntry(EStructuralFeature eFeature, Object adaptee) {
     throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
         + "' is not a valid feature map in this EPackage");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass NotIdentifiable
+   * @generated
+   */
+  public NotIdentifiable createNotIdentifiable() {
+    return new NotIdentifiable();
   }
 
   /**
@@ -269,6 +284,71 @@ public class IdentifiableModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>NotIdentifiable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class NotIdentifiableModelObject<E extends NotIdentifiable> extends AbstractModelObject<E> {
+    /**
+     * @generated
+     */
+    public EClass eClass() {
+      return IdentifiableModelPackage.INSTANCE.getNotIdentifiableEClass();
+    }
+
+    /**
+     * @generated
+     */
+    public ModelPackage getModelPackage() {
+      return IdentifiableModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }

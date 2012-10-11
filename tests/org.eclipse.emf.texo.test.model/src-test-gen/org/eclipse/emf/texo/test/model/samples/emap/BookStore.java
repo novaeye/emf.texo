@@ -4,13 +4,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
@@ -54,7 +54,7 @@ public class BookStore extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "emapsample_BookStore_keyWords")
+  @OrderColumn()
   private Map<String, String> keyWords = new LinkedHashMap<String, String>();
 
   /**
@@ -63,7 +63,7 @@ public class BookStore extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "emapsample_BookStore_namesByWriter")
+  @OrderColumn()
   private Map<Writer, String> namesByWriter = new LinkedHashMap<Writer, String>();
 
   /**

@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.server.store;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -8,6 +9,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.metamodel.EmbeddableType;
 import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
 
@@ -27,6 +29,9 @@ public class EntityManagerObjectStore extends ObjectStore {
   private static final String START_FROM = "from "; //$NON-NLS-1$
   private static final int FROM_LENGTH = FROM.length();
   private static final int START_FROM_LENGTH = START_FROM.length();
+
+  private boolean embeddablesDetermined = false;
+  private List<Class<?>> embeddables = new ArrayList<Class<?>>();
 
   @PersistenceContext
   private EntityManager entityManager;
@@ -72,6 +77,11 @@ public class EntityManagerObjectStore extends ObjectStore {
   @SuppressWarnings("unchecked")
   @Override
   public <T extends Object> T update(T object) {
+    // can happen when the objectstore is used as part
+    // of persisting for a resource
+    if (isEmbeddable(object)) {
+      return object;
+    }
     return ((BaseDao<T>) getDao(object.getClass())).update(object);
   }
 
@@ -83,6 +93,12 @@ public class EntityManagerObjectStore extends ObjectStore {
   @SuppressWarnings("unchecked")
   @Override
   public <T extends Object> void remove(T object) {
+    // can happen when the objectstore is used as part
+    // of persisting for a resource
+    if (isEmbeddable(object)) {
+      return;
+    }
+
     ((BaseDao<T>) getDao(object.getClass())).remove(object);
   }
 
@@ -94,7 +110,24 @@ public class EntityManagerObjectStore extends ObjectStore {
   @SuppressWarnings("unchecked")
   @Override
   public <T extends Object> void refresh(T object) {
+    // can happen when the objectstore is used as part
+    // of persisting for a resource
+    if (isEmbeddable(object)) {
+      return;
+    }
+
     ((BaseDao<T>) getDao(object.getClass())).refresh(object);
+  }
+
+  @Override
+  public boolean isNew(Object o) {
+    // can happen when the objectstore is used as part
+    // of persisting for a resource
+    if (isEmbeddable(o)) {
+      return true;
+    }
+
+    return super.isNew(o);
   }
 
   /*
@@ -105,6 +138,11 @@ public class EntityManagerObjectStore extends ObjectStore {
   @SuppressWarnings("unchecked")
   @Override
   public <T extends Object> void insert(T object) {
+    // can happen when the objectstore is used as part
+    // of persisting for a resource
+    if (isEmbeddable(object)) {
+      return;
+    }
     ((BaseDao<T>) getDao(object.getClass())).insert(object);
   }
 
@@ -262,8 +300,7 @@ public class EntityManagerObjectStore extends ObjectStore {
    */
   @SuppressWarnings("unchecked")
   @Override
-  public <T extends Object> List<Object> getReferingObjects(T target, int maxResult,
-      boolean includeContainerReferences) {
+  public <T extends Object> List<Object> getReferingObjects(T target, int maxResult, boolean includeContainerReferences) {
     return ((BaseDao<T>) getDao(target.getClass())).getReferingObjects(target, maxResult, includeContainerReferences);
   }
 
@@ -294,5 +331,27 @@ public class EntityManagerObjectStore extends ObjectStore {
     final BaseDao<T> dao = DaoRegistry.getInstance().getDaoForEntity(entityClass);
     dao.setEntityManager(getEntityManager());
     return dao;
+  }
+
+  protected boolean isEmbeddable(Object object) {
+    if (!embeddablesDetermined) {
+      determineEmbeddables();
+    }
+    if (embeddables.isEmpty()) {
+      return false;
+    }
+    if (embeddables.contains(object.getClass())) {
+      return true;
+    }
+    return false;
+  }
+
+  protected synchronized void determineEmbeddables() {
+    if (embeddablesDetermined) {
+      return;
+    }
+    for (EmbeddableType<?> embeddable : entityManager.getEntityManagerFactory().getMetamodel().getEmbeddables()) {
+      embeddables.add(embeddable.getJavaType());
+    }
   }
 }

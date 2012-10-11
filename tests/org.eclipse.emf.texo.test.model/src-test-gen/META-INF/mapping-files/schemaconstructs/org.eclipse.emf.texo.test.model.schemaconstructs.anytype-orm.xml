@@ -91,8 +91,10 @@
         </orm:cascade>
       </orm:one-to-many>
       <orm:element-collection name="multiAnyType">
+        <orm:order-column name="anytype_TestAny_multiAnyType_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="anytype_TestAny_multiAnyType"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>

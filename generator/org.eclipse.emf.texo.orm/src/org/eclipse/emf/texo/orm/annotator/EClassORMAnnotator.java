@@ -26,6 +26,7 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnota
 import org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage;
 import org.eclipse.emf.texo.orm.annotations.model.orm.AccessType;
 import org.eclipse.emf.texo.orm.annotations.model.orm.DiscriminatorColumn;
+import org.eclipse.emf.texo.orm.annotations.model.orm.Embeddable;
 import org.eclipse.emf.texo.orm.annotations.model.orm.Entity;
 import org.eclipse.emf.texo.orm.annotations.model.orm.MappedSuperclass;
 import org.eclipse.emf.texo.orm.annotations.model.orm.OrmFactory;
@@ -86,7 +87,8 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
     }
 
     // only add entity if not embeddable
-    if (annotation.getEmbeddable() == null && annotation.getEntity() == null) {
+    final Embeddable embeddable = annotation.getEmbeddable();
+    if (embeddable == null && annotation.getEntity() == null) {
       annotation.setEntity(OrmFactory.eINSTANCE.createEntity());
     }
 
@@ -101,7 +103,6 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
     }
 
     final Entity entity = annotation.getEntity();
-
     if (entity != null) {
       if (namingStrategy.isGenerateAllDBSchemaNames()) {
         if (hasItsOwnTable(annotation)) {
@@ -138,6 +139,15 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
 
       if (GeneratorUtils.isEmptyOrNull(entity.getName())) {
         entity.setName(namingStrategy.getEntityName(eClass));
+      }
+    } else if (embeddable != null) {
+      // with interfaces always access through the property
+      if (eClass.isInterface()) {
+        embeddable.setAccess(AccessType.PROPERTY);
+      }
+
+      if (GeneratorUtils.isEmptyOrNull(embeddable.getClass_())) {
+        embeddable.setClass(modelGenAnnotation.getQualifiedClassName());
       }
     }
   }

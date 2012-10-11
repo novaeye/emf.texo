@@ -17,6 +17,7 @@ import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiableFactory;
 import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiableInterface;
 import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage;
 
+import org.eclipse.emf.texo.test.emfmodel.identifiable.NotIdentifiable;
 import org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage;
 
 import org.eclipse.emf.texo.test.emfmodel.library.impl.LibraryPackageImpl;
@@ -45,6 +46,13 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 	 * @generated
 	 */
 	private EClass identifiableInterfaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass notIdentifiableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -177,6 +185,15 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNotIdentifiable() {
+		return notIdentifiableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IdentifiableFactory getIdentifiableFactory() {
 		return (IdentifiableFactory)getEFactoryInstance();
 	}
@@ -207,6 +224,8 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 		identifiableInterfaceEClass = createEClass(IDENTIFIABLE_INTERFACE);
 		createEAttribute(identifiableInterfaceEClass, IDENTIFIABLE_INTERFACE__DB_ID);
 		createEAttribute(identifiableInterfaceEClass, IDENTIFIABLE_INTERFACE__DB_VERSION);
+
+		notIdentifiableEClass = createEClass(NOT_IDENTIFIABLE);
 	}
 
 	/**
@@ -246,6 +265,8 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 		initEClass(identifiableInterfaceEClass, IdentifiableInterface.class, "IdentifiableInterface", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentifiableInterface_Db_Id(), ecorePackage.getELongObject(), "db_Id", null, 0, 1, IdentifiableInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIdentifiableInterface_Db_version(), ecorePackage.getEIntegerObject(), "db_version", null, 0, 1, IdentifiableInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(notIdentifiableEClass, NotIdentifiable.class, "NotIdentifiable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

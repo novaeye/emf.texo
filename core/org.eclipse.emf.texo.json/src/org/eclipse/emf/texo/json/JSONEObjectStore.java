@@ -155,18 +155,25 @@ public class JSONEObjectStore extends EObjectStore {
       final JSONArray insertedJsonArray = jsonObject.getJSONArray(ResponsePackage.eINSTANCE
           .getResultType_Inserted().getName());
       int i = 0;
+
       for (EObject insertedEObject : toInsert) {
-        final EAttribute idEAttribute = IdProvider.getInstance().getIdEAttribute(insertedEObject.eClass());
-        
         final JSONObject insertedJsonObject = insertedJsonArray.getJSONObject(i++);
-        // get the id from the jsonObject
+
+        // these are assumed to be embedded
+        final boolean hasIdEAttribute = IdProvider.getInstance().hasIdEAttribute(insertedEObject.eClass());
+        if (!hasIdEAttribute) {
+          continue;
+        }
+
+        final EAttribute idEAttribute = IdProvider.getInstance().getIdEAttribute(insertedEObject.eClass());
         final Object id = insertedJsonObject.get(idEAttribute.getName());
+
         removeFromCache(((InternalEObject) insertedEObject).eProxyURI());
+        final URI newUri = toURI(insertedEObject.eClass(), id + "");
         ((InternalEObject) insertedEObject).eSetProxyURI(null);
         // use the eclass and id to create a URI
         // and add back to the cache
         // as now the correct uri can be computed
-        final URI newUri = toURI(insertedEObject.eClass(), id + "");
         addToCache(newUri.toString(), insertedEObject);
       }
         
@@ -191,7 +198,15 @@ public class JSONEObjectStore extends EObjectStore {
         throw new IllegalStateException("Unexpected size of returned data " + allInsertedUpdated.size() + " - "
             + allToInsertedUpdated.size());
       }
+
       for (EObject eObject : allInsertedUpdated) {
+
+        // no id eattribute/assume to be embedded
+        final boolean hasIdEAttribute = IdProvider.getInstance().hasIdEAttribute(eObject.eClass());
+        if (!hasIdEAttribute) {
+          continue;
+        }
+
         boolean found = false;
         for (EObject otherObject : allToInsertedUpdated) {
           if (otherObject == eObject) {
@@ -217,6 +232,7 @@ public class JSONEObjectStore extends EObjectStore {
   }
 
   protected JSONObject doRequest(EObject requestObject, String method) {
+    String result = "";
     try {
       final EMFJSONConverter emfJsonConverter = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
       emfJsonConverter.setObjectResolver(this);
@@ -224,8 +240,10 @@ public class JSONEObjectStore extends EObjectStore {
       if (requestObject != null) {
         json = emfJsonConverter.convert(requestObject).toString();
       }
-      final String result = doHTTPRequest(null, method, json);
+      result = doHTTPRequest(null, method, json);
       return new JSONObject(result);
+    } catch (JSONException je) {
+      throw new RuntimeException(je.getMessage() + result, je);
     } catch (Exception e) {
       throw new RuntimeException(e.getMessage(), e);
     }

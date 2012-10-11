@@ -71,16 +71,16 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
     return true;
   }
 
+  // is called for contained objects, these should not be stored
+  // in the newObjects list.
   @Override
   protected void attachedHelper(EObject eObject) {
-    // re-attached
     if (deletedObjects.contains(eObject)) {
       deletedObjects.remove(eObject);
     } else if (!isLoading() && !newObjects.contains(eObject)) {
       newObjects.add(eObject);
     }
     eObject.eAdapters().add(objectModificationTrackingAdapter);
-    super.attachedHelper(eObject);
   }
 
   @Override

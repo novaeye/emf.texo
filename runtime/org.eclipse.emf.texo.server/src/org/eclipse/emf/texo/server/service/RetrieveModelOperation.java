@@ -17,7 +17,6 @@
 package org.eclipse.emf.texo.server.service;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -118,8 +117,11 @@ public class RetrieveModelOperation extends ModelOperation {
       } else if (segments.length == 1) {
         // 2) there is a specific type without an id, return all instances
         final EClass eClass = ModelUtils.getEClassFromQualifiedName(segments[0]);
-        final List<Object> resultList = (List<Object>) getObjectStore()
-            .query(eClass, getFirstResult(), getMaxResults());
+        final QueryBuilder queryBuilder = QueryBuilder.getQueryBuilder(getObjectStore().getEntityName(eClass), eClass,
+            getServiceContext().getRequestParameters());
+
+        final List<Object> resultList = (List<Object>) getObjectStore().query(queryBuilder.getSelectQuery(),
+            Collections.<String, Object> emptyMap(), getFirstResult(), getMaxResults());
 
         int maxResults = getMaxResults();
         int startRow = getFirstResult() == -1 ? 0 : getFirstResult();
@@ -143,8 +145,7 @@ public class RetrieveModelOperation extends ModelOperation {
           // if there were no paging limitations then this is the size
           cnt = resultList.size() + startRow;
         } else if (doCount) {
-          cnt = getObjectStore().count(
-              "from " + getObjectStore().getEntityName(eClass) + " e", new HashMap<String, Object>()); //$NON-NLS-1$ //$NON-NLS-2$
+          cnt = getObjectStore().count(queryBuilder.getCountQuery(), Collections.<String, Object> emptyMap());
         } else {
           // okay then the count is one more than the original maxresults
           cnt = maxResults;

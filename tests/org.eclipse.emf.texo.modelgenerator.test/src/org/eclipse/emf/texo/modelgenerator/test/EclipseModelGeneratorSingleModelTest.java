@@ -34,7 +34,7 @@ public class EclipseModelGeneratorSingleModelTest extends EclipseModelGeneratorT
 
   @Override
   public void testGenerateModels() throws Exception {
-    setGenerateTexoModels(true);
+    // setGenerateTexoModels(true);
     super.testGenerateModels();
   }
 
@@ -46,12 +46,12 @@ public class EclipseModelGeneratorSingleModelTest extends EclipseModelGeneratorT
     //    modelFiles.add("samples/library.ecore"); //$NON-NLS-1$
     //    modelFiles.add("issues/bz371509.ecore"); //$NON-NLS-1$
     //    modelFiles.add("samples/schoollibrary.ecore"); //$NON-NLS-1$
-    modelFiles.add("issues/bz390942.ecore"); //$NON-NLS-1$
+    //    modelFiles.add("issues/bz390942.ecore"); //$NON-NLS-1$
     //    modelFiles.add("texo/TexoDataRequest.xsd"); //$NON-NLS-1$
     //    modelFiles.add("texo/TexoDataResponse.xsd"); //$NON-NLS-1$
     //    modelFiles.add("issues/bz379796.xsd"); //$NON-NLS-1$
     //    modelFiles.add("samples/forum.xsd"); //$NON-NLS-1$
-    //    modelFiles.add("base/identifiable.ecore"); //$NON-NLS-1$
+    modelFiles.add("base/identifiable.ecore"); //$NON-NLS-1$
     //    modelFiles.add("samples/kdm.ecore"); //$NON-NLS-1$
     //    modelFiles.add("schemaconstructs/ListUnion.xsd"); //$NON-NLS-1$
     return modelFiles;

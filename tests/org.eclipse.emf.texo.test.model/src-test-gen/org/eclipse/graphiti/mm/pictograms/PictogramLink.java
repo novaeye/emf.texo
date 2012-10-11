@@ -3,10 +3,10 @@ package org.eclipse.graphiti.mm.pictograms;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
 import org.eclipse.graphiti.mm.PropertyContainer;
@@ -38,8 +38,8 @@ public class PictogramLink extends PropertyContainer {
    * @generated
    */
   @ElementCollection()
+  @OrderColumn()
   @Convert("TexoTestObjectConverter")
-  @CollectionTable(name = "pi_PictogramLink_businessObjects")
   private List<Object> businessObjects = new ArrayList<Object>();
 
   /**

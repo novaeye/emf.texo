@@ -134,6 +134,26 @@ public interface IdentifiablePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.emf.texo.test.emfmodel.identifiable.impl.NotIdentifiableImpl <em>Not Identifiable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.impl.NotIdentifiableImpl
+	 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiablePackageImpl#getNotIdentifiable()
+	 * @generated
+	 */
+	int NOT_IDENTIFIABLE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Not Identifiable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT_IDENTIFIABLE_FEATURE_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable <em>Identifiable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,6 +216,16 @@ public interface IdentifiablePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIdentifiableInterface_Db_version();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.emf.texo.test.emfmodel.identifiable.NotIdentifiable <em>Not Identifiable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Not Identifiable</em>'.
+	 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.NotIdentifiable
+	 * @generated
+	 */
+	EClass getNotIdentifiable();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -270,6 +300,16 @@ public interface IdentifiablePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IDENTIFIABLE_INTERFACE__DB_VERSION = eINSTANCE.getIdentifiableInterface_Db_version();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.emf.texo.test.emfmodel.identifiable.impl.NotIdentifiableImpl <em>Not Identifiable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.impl.NotIdentifiableImpl
+		 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiablePackageImpl#getNotIdentifiable()
+		 * @generated
+		 */
+		EClass NOT_IDENTIFIABLE = eINSTANCE.getNotIdentifiable();
 
 	}
 

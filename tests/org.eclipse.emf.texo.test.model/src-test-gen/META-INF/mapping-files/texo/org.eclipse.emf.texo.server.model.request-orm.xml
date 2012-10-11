@@ -13,16 +13,22 @@
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:element-collection name="update">
+        <orm:order-column name="request_ActionType_update_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="request_ActionType_update"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
       <orm:element-collection name="insert">
+        <orm:order-column name="request_ActionType_insert_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="request_ActionType_insert"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
       <orm:element-collection name="delete">
+        <orm:order-column name="request_ActionType_delete_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="request_ActionType_delete"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>

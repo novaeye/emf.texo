@@ -93,6 +93,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
 
       if (doAddConverter(eReferenceModelGenAnnotation)) {
         addElementCollection(annotation);
+      } else if (annotation.getElementCollection() != null) {
+        annotateElementCollection(annotation);
       } else if (ModelUtils.isEMap(annotation.getEReference().getEReferenceType())) {
         mapMap(annotation);
       } else if (eOpposite != null && eOpposite.isMany()) {
@@ -132,6 +134,61 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
    * annotationsmodel.ENamedElementAnnotation)
    */
   public void postAnnotating(EReferenceORMAnnotation annotation) {
+  }
+
+  protected void annotateElementCollection(EReferenceORMAnnotation annotation) {
+    final EReference eReference = annotation.getEReference();
+    final EPackage ePackage = eReference.getEContainingClass().getEPackage();
+    final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(ePackage);
+    final EReferenceModelGenAnnotation eReferenceModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()
+        .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
+
+    final ElementCollection elementCollection = annotation.getElementCollection();
+
+    // make the access field if not changeable, as there won't be a setter
+    if (!eReference.isChangeable()) {
+      elementCollection.setAccess(AccessType.FIELD);
+    } else if (GeneratorUtils.setPropertyAccess(annotation.getAnnotatedEFeature())) {
+      elementCollection.setAccess(AccessType.PROPERTY);
+    }
+
+    if (GeneratorUtils.isEmptyOrNull(elementCollection.getName())) {
+      elementCollection.setName(getName(eReference));
+    }
+
+    if (doAddConverter(eReferenceModelGenAnnotation)) {
+      elementCollection.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
+    }
+
+    if (elementCollection.getOrderColumn() == null) {
+      final OrderColumn orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
+      if (namingStrategy.isGenerateAllDBSchemaNames()) {
+        orderColumn.setName(namingStrategy.getIndexColumnName(eReference));
+      }
+      elementCollection.setOrderColumn(orderColumn);
+    }
+
+    if (elementCollection.getCollectionTable() == null && namingStrategy.isGenerateAllDBSchemaNames()) {
+      final CollectionTable collectionTable = OrmFactory.eINSTANCE.createCollectionTable();
+      elementCollection.setCollectionTable(collectionTable);
+    }
+
+    if (eReference.isContainment()) {
+      elementCollection.setCascadeOnDelete(true);
+    }
+
+    if (namingStrategy.isGenerateAllDBSchemaNames()) {
+      if (elementCollection.getCollectionTable() != null) {
+        if (GeneratorUtils.isEmptyOrNull(elementCollection.getCollectionTable().getName())) {
+          elementCollection.getCollectionTable().setName(namingStrategy.getJoinTableName(eReference));
+        }
+      }
+
+      if (elementCollection.getOrderColumn() != null
+          && GeneratorUtils.isEmptyOrNull(elementCollection.getOrderColumn().getName())) {
+        elementCollection.getOrderColumn().setName(namingStrategy.getIndexColumnName(eReference));
+      }
+    }
   }
 
   protected void annotateOneToMany(EReferenceORMAnnotation annotation) {
@@ -312,11 +369,6 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
   }
 
   protected void addElementCollection(EReferenceORMAnnotation annotation) {
-    final EReference eReference = annotation.getEReference();
-    final EReferenceModelGenAnnotation eReferenceModelGenAnnotation = (EReferenceModelGenAnnotation) getAnnotationManager()
-        .getAnnotation(eReference, ModelcodegeneratorPackage.eINSTANCE.getEReferenceModelGenAnnotation());
-
-    final ORMNamingStrategy namingStrategy = getOrmNamingStrategy(eReference.getEContainingClass().getEPackage());
     final ElementCollection elementCollection;
     if (annotation.getElementCollection() == null) {
       elementCollection = OrmFactory.eINSTANCE.createElementCollection();
@@ -325,19 +377,9 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       elementCollection = annotation.getElementCollection();
     }
 
-    if (elementCollection.getCollectionTable() == null) {
-      final CollectionTable collectionTable = OrmFactory.eINSTANCE.createCollectionTable();
-      elementCollection.setCollectionTable(collectionTable);
-    }
-    if (GeneratorUtils.isEmptyOrNull(elementCollection.getCollectionTable().getName())) {
-      elementCollection.getCollectionTable().setName(namingStrategy.getJoinTableName(eReference));
-    }
-    elementCollection.setName(getName(eReference));
-    if (doAddConverter(eReferenceModelGenAnnotation)) {
-      elementCollection.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
-    }
-
     annotation.setElementCollection(elementCollection);
+
+    annotateElementCollection(annotation);
   }
 
   protected void annotateEmbedded(EReferenceORMAnnotation annotation) {

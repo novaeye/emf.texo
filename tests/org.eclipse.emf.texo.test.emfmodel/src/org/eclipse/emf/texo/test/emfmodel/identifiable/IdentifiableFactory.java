@@ -26,6 +26,15 @@ public interface IdentifiableFactory extends EFactory {
 	IdentifiableFactory eINSTANCE = org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiableFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Not Identifiable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Not Identifiable</em>'.
+	 * @generated
+	 */
+	NotIdentifiable createNotIdentifiable();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

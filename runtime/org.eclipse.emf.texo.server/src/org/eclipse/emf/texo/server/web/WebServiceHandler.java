@@ -128,8 +128,9 @@ public abstract class WebServiceHandler implements TexoComponent {
    */
   protected ServiceContext createServiceContext(HttpServletRequest request) {
     final String requestUrl = request.getRequestURL().toString();
-    final EntityManager entityManager = EntityManagerProvider.getInstance().createEntityManager();
+    EntityManager entityManager = null;
     try {
+      entityManager = EntityManagerProvider.getInstance().createEntityManager();
       final ServiceContext serviceContext = createServiceContext();
       serviceContext.setRequestURI(requestUrl);
 
@@ -166,7 +167,9 @@ public abstract class WebServiceHandler implements TexoComponent {
 
       return serviceContext;
     } catch (Throwable t) {
-      releaseEntityManager(entityManager);
+      if (entityManager != null) {
+        releaseEntityManager(entityManager);
+      }
       throw new IllegalStateException(t);
     }
   }

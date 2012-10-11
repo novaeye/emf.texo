@@ -11,6 +11,7 @@ import org.eclipse.emf.texo.model.ModelResolver;
 import org.eclipse.emf.texo.server.store.DaoRegistry;
 import org.eclipse.emf.texo.test.model.base.identifiable.dao.IdentifiableDao;
 import org.eclipse.emf.texo.test.model.base.identifiable.dao.IdentifiableInterfaceDao;
+import org.eclipse.emf.texo.test.model.base.identifiable.dao.NotIdentifiableDao;
 import org.eclipse.emf.texo.utils.ModelUtils;
 
 /**
@@ -87,6 +88,13 @@ public class IdentifiableModelPackage extends ModelPackage {
   public static final int IDENTIFIABLEINTERFACE_DB_VERSION_FEATURE_ID = 1;
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int NOTIDENTIFIABLE_CLASSIFIER_ID = 2;
+
+  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -120,10 +128,14 @@ public class IdentifiableModelPackage extends ModelPackage {
     // register the relation between a Class and its EClassifier
     ModelResolver.getInstance().registerClassModelMapping(Identifiable.class, modelPackage.getIdentifiableEClass(),
         modelPackage);
+    ModelResolver.getInstance().registerClassModelMapping(NotIdentifiable.class,
+        modelPackage.getNotIdentifiableEClass(), modelPackage);
     ModelResolver.getInstance().registerClassModelMapping(IdentifiableInterface.class,
         modelPackage.getIdentifiableInterfaceEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Identifiable.class, IdentifiableDao.class);
+
+    DaoRegistry.getInstance().registerDao(NotIdentifiable.class, NotIdentifiableDao.class);
 
     DaoRegistry.getInstance().registerDao(IdentifiableInterface.class, IdentifiableInterfaceDao.class);
 
@@ -233,6 +245,16 @@ public class IdentifiableModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>NotIdentifiable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>NotIdentifiable</b></em>'
+   * @generated
+   */
+  public EClass getNotIdentifiableEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(NOTIDENTIFIABLE_CLASSIFIER_ID);
+  }
+
+  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eClassifier
@@ -245,6 +267,8 @@ public class IdentifiableModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case IDENTIFIABLE_CLASSIFIER_ID:
       return Identifiable.class;
+    case NOTIDENTIFIABLE_CLASSIFIER_ID:
+      return NotIdentifiable.class;
     case IDENTIFIABLEINTERFACE_CLASSIFIER_ID:
       return IdentifiableInterface.class;
     }

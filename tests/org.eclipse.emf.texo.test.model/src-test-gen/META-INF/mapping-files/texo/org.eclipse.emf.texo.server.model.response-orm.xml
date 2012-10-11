@@ -48,8 +48,10 @@
         <orm:column name="totalRows"/>
       </orm:basic>
       <orm:element-collection name="data">
+        <orm:order-column name="response_ResponseType_data_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="response_ResponseType_data"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>
@@ -60,16 +62,22 @@
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:element-collection name="updated">
+        <orm:order-column name="response_ResultType_updated_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="response_ResultType_updated"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
       <orm:element-collection name="inserted">
+        <orm:order-column name="response_ResultType_inserted_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="response_ResultType_inserted"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
       <orm:element-collection name="deleted">
+        <orm:order-column name="response_ResultType_deleted_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="response_ResultType_deleted"/>
+        <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
     </orm:attributes>
   </orm:entity>

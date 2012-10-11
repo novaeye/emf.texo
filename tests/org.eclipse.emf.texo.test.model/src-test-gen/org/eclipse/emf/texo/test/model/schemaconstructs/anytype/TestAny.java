@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
-import javax.persistence.CollectionTable;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -51,8 +51,8 @@ public class TestAny extends Identifiable {
    * @generated
    */
   @ElementCollection()
+  @OrderColumn()
   @Convert("TexoTestObjectConverter")
-  @CollectionTable(name = "anytype_TestAny_multiAnyType")
   private List<Object> multiAnyType = new ArrayList<Object>();
 
   /**

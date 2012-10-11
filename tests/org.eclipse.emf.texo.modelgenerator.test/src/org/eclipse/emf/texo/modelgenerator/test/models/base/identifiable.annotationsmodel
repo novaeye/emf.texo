@@ -23,6 +23,12 @@
       </annotatedEStructuralFeatures>
     </annotatedEClassifiers>
     <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
+      <eClass href="identifiable.ecore#//NotIdentifiable"/>
+      <eClassAnnotations xsi:type="ormannotations:EClassORMAnnotation">
+        <transient name=""/>
+      </eClassAnnotations>
+    </annotatedEClassifiers>
+    <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
       <eClass href="identifiable.ecore#//IdentifiableInterface"/>
       <eClassAnnotations xsi:type="ormannotations:EClassORMAnnotation">
         <mappedSuperclass access="PROPERTY" class=""/>

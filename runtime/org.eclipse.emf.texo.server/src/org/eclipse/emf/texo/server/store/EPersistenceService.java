@@ -164,6 +164,7 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
   /**
    * Execute a count query in the database.
    */
+  @Override
   public long count(String qry, Map<String, Object> namedParameters) {
     final ObjectStore os = getObjectStore();
     boolean err = true;
@@ -296,5 +297,4 @@ public class EPersistenceService extends EObjectStore implements TexoComponent {
     converter.setMaxChildLevelsToConvert(1);
     return converter;
   }
-
 }

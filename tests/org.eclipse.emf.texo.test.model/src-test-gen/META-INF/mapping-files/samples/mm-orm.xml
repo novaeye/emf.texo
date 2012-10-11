@@ -225,6 +225,7 @@
         </orm:cascade>
       </orm:one-to-one>
       <orm:element-collection name="businessObjects">
+        <orm:order-column name="pi_PictogramLink_businessObjects_ind"/>
         <orm:convert>TexoTestObjectConverter</orm:convert>
         <orm:collection-table name="pi_PictogramLink_businessObjects"/>
       </orm:element-collection>
