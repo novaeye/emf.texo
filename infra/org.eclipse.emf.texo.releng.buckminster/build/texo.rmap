@@ -74,7 +74,7 @@
       		</uri>
     	</provider>
     	<provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false" resolutionFilter="(build.type=Juno)">
-      		<uri format="{0}/rt/eclipselink/milestone-updates/">
+      		<uri format="{0}/rt/eclipselink/releases/">
 				<bc:propertyRef key="eclipse.download"/>
       		</uri>
     	</provider>
