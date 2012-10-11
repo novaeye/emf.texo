@@ -47,12 +47,10 @@
         </orm:cascade>
       </orm:one-to-many>
       <orm:element-collection name="keyWords">
-        <orm:order-column name="emapsample_BookStore_keyWords_ind"/>
         <orm:collection-table name="emapsample_BookStore_keyWords"/>
         <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>
       <orm:element-collection name="namesByWriter">
-        <orm:order-column name="emapsample_BookStore_namesByWriter_ind"/>
         <orm:collection-table name="emapsample_BookStore_namesByWriter"/>
         <orm:cascade-on-delete>true</orm:cascade-on-delete>
       </orm:element-collection>

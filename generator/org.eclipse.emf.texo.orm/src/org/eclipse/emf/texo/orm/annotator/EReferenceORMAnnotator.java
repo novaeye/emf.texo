@@ -160,7 +160,8 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       elementCollection.setConvert(ORMUtils.OBJECT_CONVERTER_NAME);
     }
 
-    if (elementCollection.getOrderColumn() == null) {
+    if (!ModelUtils.isEMap(eReference.getEReferenceType()) && elementCollection.getOrderColumn() == null
+        && eReferenceModelGenAnnotation.isUseList()) {
       final OrderColumn orderColumn = OrmFactory.eINSTANCE.createOrderColumn();
       if (namingStrategy.isGenerateAllDBSchemaNames()) {
         orderColumn.setName(namingStrategy.getIndexColumnName(eReference));

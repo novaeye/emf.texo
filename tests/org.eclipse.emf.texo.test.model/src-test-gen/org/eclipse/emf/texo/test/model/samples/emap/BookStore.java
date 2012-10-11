@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
@@ -54,7 +53,6 @@ public class BookStore extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   private Map<String, String> keyWords = new LinkedHashMap<String, String>();
 
   /**
@@ -63,7 +61,6 @@ public class BookStore extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @OrderColumn()
   private Map<Writer, String> namesByWriter = new LinkedHashMap<Writer, String>();
 
   /**
