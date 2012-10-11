@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedEStructuralFeature;
+import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotationsmodelPackage;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.emf.texo.utils.ModelUtils;
@@ -196,6 +197,8 @@ public class GeneratorUtils {
     registry.put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);
     registry.put(XMLTypePackage.eNS_URI, XMLTypePackage.eINSTANCE);
     registry.put(XSDPackage.eNS_URI, XSDPackage.eINSTANCE);
+    registry.put(AnnotationsmodelPackage.eNS_URI, AnnotationsmodelPackage.eINSTANCE);
+
     return registry;
   }
 
