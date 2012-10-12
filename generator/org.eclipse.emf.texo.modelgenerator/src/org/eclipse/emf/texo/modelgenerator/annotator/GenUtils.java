@@ -276,7 +276,6 @@ public class GenUtils {
    */
   public static boolean isDocumentRoot(final EClass eClass) {
     final boolean result = ExtendedMetaData.INSTANCE.isDocumentRoot(eClass);
-    System.err.println(eClass.getName() + " --> " + result);
     return result;
   }
 
