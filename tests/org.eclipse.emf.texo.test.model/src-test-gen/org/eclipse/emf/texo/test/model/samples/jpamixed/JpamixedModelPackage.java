@@ -187,9 +187,7 @@ public class JpamixedModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(LetterBodyType.class, LetterBodyTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SalutationType.class, SalutationTypeDao.class);
 
     // and return ourselves

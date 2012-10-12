@@ -250,9 +250,6 @@ public class ForumModelFactory implements ModelFactory {
    */
   public static class ForumModelObject<E extends Forum> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -352,9 +349,6 @@ public class ForumModelFactory implements ModelFactory {
    */
   public static class MemberModelObject<E extends Member> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -448,102 +442,12 @@ public class ForumModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class PostModelObject<E extends Post> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return ForumModelPackage.INSTANCE.getPostEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return ForumModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ForumModelPackage.POST_COMMENT_FEATURE_ID:
-        return getTarget().getComment();
-      case ForumModelPackage.POST_AUTHOR_FEATURE_ID:
-        return getTarget().getAuthor();
-      case ForumModelPackage.POST_TOPIC_FEATURE_ID:
-        return getTarget().getTopic();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ForumModelPackage.POST_COMMENT_FEATURE_ID:
-        getTarget().setComment((String) value);
-        return;
-      case ForumModelPackage.POST_AUTHOR_FEATURE_ID:
-        getTarget().setAuthor((Member) value);
-        return;
-      case ForumModelPackage.POST_TOPIC_FEATURE_ID:
-        getTarget().setTopic((Topic) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>Topic</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
   public static class TopicModelObject<E extends Topic> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -628,6 +532,90 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.TOPIC_POSTS_FEATURE_ID:
         getTarget().getPosts().remove(value);
         return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class PostModelObject<E extends Post> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return ForumModelPackage.INSTANCE.getPostEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return ForumModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ForumModelPackage.POST_COMMENT_FEATURE_ID:
+        return getTarget().getComment();
+      case ForumModelPackage.POST_AUTHOR_FEATURE_ID:
+        return getTarget().getAuthor();
+      case ForumModelPackage.POST_TOPIC_FEATURE_ID:
+        return getTarget().getTopic();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ForumModelPackage.POST_COMMENT_FEATURE_ID:
+        getTarget().setComment((String) value);
+        return;
+      case ForumModelPackage.POST_AUTHOR_FEATURE_ID:
+        getTarget().setAuthor((Member) value);
+        return;
+      case ForumModelPackage.POST_TOPIC_FEATURE_ID:
+        getTarget().setTopic((Topic) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }

@@ -133,7 +133,6 @@ public class AGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String b;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

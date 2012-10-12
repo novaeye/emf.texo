@@ -19,9 +19,7 @@ public enum PhoneType {
    * 
    * @generated
    */
-  private static final PhoneType[] VALUES_ARRAY = new PhoneType[] {
-
-  };
+  private static final PhoneType[] VALUES_ARRAY = new PhoneType[] {};
 
   /**
    * A public read-only list of all the '<em><b>PhoneType</b></em>' enumerators. <!-- begin-user-doc --> <!--

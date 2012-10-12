@@ -166,9 +166,6 @@ public class EmapModelFactory implements ModelFactory {
    */
   public static class BookModelObject<E extends Book> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -185,11 +182,6 @@ public class EmapModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
@@ -205,12 +197,6 @@ public class EmapModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -254,21 +240,17 @@ public class EmapModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>BookStore</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class BookStoreModelObject<E extends BookStore> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class WriterModelObject<E extends Writer> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
     public EClass eClass() {
-      return EmapModelPackage.INSTANCE.getBookStoreEClass();
+      return EmapModelPackage.INSTANCE.getWriterEClass();
     }
 
     /**
@@ -280,44 +262,27 @@ public class EmapModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case EmapModelPackage.BOOKSTORE_NAME_FEATURE_ID:
+      case EmapModelPackage.WRITER_NAME_FEATURE_ID:
         return getTarget().getName();
-      case EmapModelPackage.BOOKSTORE_WRITERSBYBOOK_FEATURE_ID:
-        return getTarget().getWritersByBook();
       }
       return super.eGet(eStructuralFeature);
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case EmapModelPackage.BOOKSTORE_NAME_FEATURE_ID:
+      case EmapModelPackage.WRITER_NAME_FEATURE_ID:
         getTarget().setName((String) value);
-        return;
-      case EmapModelPackage.BOOKSTORE_WRITERSBYBOOK_FEATURE_ID:
-        getTarget().setWritersByBook((Map<Writer, Book>) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -349,20 +314,18 @@ public class EmapModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>BookStore</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class WriterModelObject<E extends Writer> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+  public static class BookStoreModelObject<E extends BookStore> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
     public EClass eClass() {
-      return EmapModelPackage.INSTANCE.getWriterEClass();
+      return EmapModelPackage.INSTANCE.getBookStoreEClass();
     }
 
     /**
@@ -374,39 +337,33 @@ public class EmapModelFactory implements ModelFactory {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is returned.
-     * @return the value of a certain {@link EStructuralFeature}.
      * @generated
      */
     @Override
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case EmapModelPackage.WRITER_NAME_FEATURE_ID:
+      case EmapModelPackage.BOOKSTORE_NAME_FEATURE_ID:
         return getTarget().getName();
+      case EmapModelPackage.BOOKSTORE_WRITERSBYBOOK_FEATURE_ID:
+        return getTarget().getWritersByBook();
       }
       return super.eGet(eStructuralFeature);
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param eStructuralFeature
-     *          the {@link EStructuralFeature} for which the value is set
-     * @param value
-     *          the value to set.
      * @generated
      */
-
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case EmapModelPackage.WRITER_NAME_FEATURE_ID:
+      case EmapModelPackage.BOOKSTORE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
+        return;
+      case EmapModelPackage.BOOKSTORE_WRITERSBYBOOK_FEATURE_ID:
+        getTarget().setWritersByBook((Map<Writer, Book>) value);
         return;
       }
       super.eSet(eStructuralFeature, value);

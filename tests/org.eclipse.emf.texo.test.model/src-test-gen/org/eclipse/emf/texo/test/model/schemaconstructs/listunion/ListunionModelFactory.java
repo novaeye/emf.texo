@@ -588,66 +588,6 @@ public class ListunionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: ZipUnionsType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertZipUnionsTypeToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: ZipUnionsType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createZipUnionsTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Converts the EDataType: ZipUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertZipUnionTypeToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: ZipUnionType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createZipUnionTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -783,6 +723,66 @@ public class ListunionModelFactory implements ModelFactory {
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
+  }
+
+  /**
+   * Converts the EDataType: ZipUnionsType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertZipUnionsTypeToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: ZipUnionsType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createZipUnionsTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Converts the EDataType: ZipUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertZipUnionTypeToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: ZipUnionType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createZipUnionTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
   }
 
 }

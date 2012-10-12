@@ -285,13 +285,9 @@ public class CoreModelPackage extends ModelPackage {
         modelPackage.getAggregatedRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Element.class, ElementDao.class);
-
     DaoRegistry.getInstance().registerDao(ModelElement.class, ModelElementDao.class);
-
     DaoRegistry.getInstance().registerDao(KDMEntity.class, KDMEntityDao.class);
-
     DaoRegistry.getInstance().registerDao(KDMRelationship.class, KDMRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(AggregatedRelationship.class, AggregatedRelationshipDao.class);
 
     // and return ourselves

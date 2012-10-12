@@ -284,13 +284,9 @@ public class RequestModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ActionType.class, ActionTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(QueryType.class, QueryTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(QueryReferingObjectsType.class, QueryReferingObjectsTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(Parameter.class, ParameterDao.class);
 
     // and return ourselves

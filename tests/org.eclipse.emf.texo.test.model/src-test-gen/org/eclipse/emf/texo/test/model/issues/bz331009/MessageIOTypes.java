@@ -19,9 +19,7 @@ public enum MessageIOTypes {
    * 
    * @generated
    */
-  private static final MessageIOTypes[] VALUES_ARRAY = new MessageIOTypes[] {
-
-  };
+  private static final MessageIOTypes[] VALUES_ARRAY = new MessageIOTypes[] {};
 
   /**
    * A public read-only list of all the '<em><b>MessageIOTypes</b></em>' enumerators. <!-- begin-user-doc --> <!--

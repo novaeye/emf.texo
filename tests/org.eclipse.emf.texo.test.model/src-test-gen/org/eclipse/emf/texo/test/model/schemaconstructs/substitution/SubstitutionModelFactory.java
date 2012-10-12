@@ -381,36 +381,6 @@ public class SubstitutionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: SimpleNumber to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertSimpleNumberToString(BigInteger value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: SimpleNumber from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public BigInteger createSimpleNumberFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new BigInteger(value);
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>ComplexNumber</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -1194,6 +1164,36 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void setValue(final Object value) {
       getTarget().setValue(getTarget().getFeature(), value);
     }
+  }
+
+  /**
+   * Converts the EDataType: SimpleNumber to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertSimpleNumberToString(BigInteger value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: SimpleNumber from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public BigInteger createSimpleNumberFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new BigInteger(value);
   }
 
 }

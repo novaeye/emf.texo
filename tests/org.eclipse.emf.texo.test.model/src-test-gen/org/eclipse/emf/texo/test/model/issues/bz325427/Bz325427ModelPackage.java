@@ -129,7 +129,6 @@ public class Bz325427ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(EnumA.class, modelPackage.getEnumAEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(EClassB.class, EClassBDao.class);
-
     DaoRegistry.getInstance().registerDao(EClassA.class, EClassADao.class);
 
     // and return ourselves

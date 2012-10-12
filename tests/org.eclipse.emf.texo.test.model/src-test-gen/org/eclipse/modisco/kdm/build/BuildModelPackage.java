@@ -424,43 +424,24 @@ public class BuildModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(AbstractBuildElement.class, AbstractBuildElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractBuildRelationship.class, AbstractBuildRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildResource.class, BuildResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildDescription.class, BuildDescriptionDao.class);
-
     DaoRegistry.getInstance().registerDao(SymbolicLink.class, SymbolicLinkDao.class);
-
     DaoRegistry.getInstance().registerDao(LinksTo.class, LinksToDao.class);
-
     DaoRegistry.getInstance().registerDao(Consumes.class, ConsumesDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildStep.class, BuildStepDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildModel.class, BuildModelDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildComponent.class, BuildComponentDao.class);
-
     DaoRegistry.getInstance().registerDao(Supplier.class, SupplierDao.class);
-
     DaoRegistry.getInstance().registerDao(Tool.class, ToolDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildElement.class, BuildElementDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildRelationship.class, BuildRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(SuppliedBy.class, SuppliedByDao.class);
-
     DaoRegistry.getInstance().registerDao(Library.class, LibraryDao.class);
-
     DaoRegistry.getInstance().registerDao(Produces.class, ProducesDao.class);
-
     DaoRegistry.getInstance().registerDao(SupportedBy.class, SupportedByDao.class);
-
     DaoRegistry.getInstance().registerDao(BuildProduct.class, BuildProductDao.class);
-
     DaoRegistry.getInstance().registerDao(DescribedBy.class, DescribedByDao.class);
 
     // and return ourselves

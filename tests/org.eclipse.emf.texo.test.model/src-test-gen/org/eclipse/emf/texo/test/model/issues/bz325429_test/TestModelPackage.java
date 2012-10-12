@@ -174,9 +174,7 @@ public class TestModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Person.class, PersonDao.class);
-
     DaoRegistry.getInstance().registerDao(Address.class, AddressDao.class);
-
     DaoRegistry.getInstance().registerDao(Contact.class, ContactDao.class);
 
     // and return ourselves

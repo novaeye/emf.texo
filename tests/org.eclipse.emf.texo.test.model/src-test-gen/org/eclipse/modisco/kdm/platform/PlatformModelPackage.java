@@ -622,67 +622,36 @@ public class PlatformModelPackage extends ModelPackage {
         modelPackage.getPlatformRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(PlatformModel.class, PlatformModelDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractPlatformElement.class, AbstractPlatformElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractPlatformRelationship.class, AbstractPlatformRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(ResourceType.class, ResourceTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(NamingResource.class, NamingResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(MarshalledResource.class, MarshalledResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(MessagingResource.class, MessagingResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(FileResource.class, FileResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(ExecutionResource.class, ExecutionResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(LockResource.class, LockResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(StreamResource.class, StreamResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(DataManager.class, DataManagerDao.class);
-
     DaoRegistry.getInstance().registerDao(PlatformEvent.class, PlatformEventDao.class);
-
     DaoRegistry.getInstance().registerDao(PlatformAction.class, PlatformActionDao.class);
-
     DaoRegistry.getInstance().registerDao(ExternalActor.class, ExternalActorDao.class);
-
     DaoRegistry.getInstance().registerDao(BindsTo.class, BindsToDao.class);
-
     DaoRegistry.getInstance().registerDao(Requires.class, RequiresDao.class);
-
     DaoRegistry.getInstance().registerDao(DeployedComponent.class, DeployedComponentDao.class);
-
     DaoRegistry.getInstance().registerDao(ManagesResource.class, ManagesResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(ReadsResource.class, ReadsResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(WritesResource.class, WritesResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(DefinedBy.class, DefinedByDao.class);
-
     DaoRegistry.getInstance().registerDao(DeployedSoftwareSystem.class, DeployedSoftwareSystemDao.class);
-
     DaoRegistry.getInstance().registerDao(Machine.class, MachineDao.class);
-
     DaoRegistry.getInstance().registerDao(DeployedResource.class, DeployedResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(RuntimeResource.class, RuntimeResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(Process.class, ProcessDao.class);
-
     DaoRegistry.getInstance().registerDao(Thread.class, ThreadDao.class);
-
     DaoRegistry.getInstance().registerDao(Loads.class, LoadsDao.class);
-
     DaoRegistry.getInstance().registerDao(Spawns.class, SpawnsDao.class);
-
     DaoRegistry.getInstance().registerDao(PlatformElement.class, PlatformElementDao.class);
-
     DaoRegistry.getInstance().registerDao(PlatformRelationship.class, PlatformRelationshipDao.class);
 
     // and return ourselves

@@ -31,4 +31,3 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NotIdentifiable"/>
 </ecore:EPackage>
-

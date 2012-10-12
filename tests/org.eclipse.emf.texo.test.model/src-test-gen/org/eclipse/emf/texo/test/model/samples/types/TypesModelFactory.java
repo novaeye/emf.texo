@@ -305,189 +305,6 @@ public class TypesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>SingleTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class SingleTypesModelObject<E extends SingleTypes> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return TypesModelPackage.INSTANCE.getSingleTypesEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return TypesModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case TypesModelPackage.SINGLETYPES_STRING_FEATURE_ID:
-        return getTarget().getString();
-      case TypesModelPackage.SINGLETYPES_INTEGER_FEATURE_ID:
-        return getTarget().getInteger();
-      case TypesModelPackage.SINGLETYPES_INTEGEROBJECT_FEATURE_ID:
-        return getTarget().getIntegerObject();
-      case TypesModelPackage.SINGLETYPES_LONG__FEATURE_ID:
-        return getTarget().getLong_();
-      case TypesModelPackage.SINGLETYPES_LONGOBJECT_FEATURE_ID:
-        return getTarget().getLongObject();
-      case TypesModelPackage.SINGLETYPES_DOUBLE__FEATURE_ID:
-        return getTarget().getDouble_();
-      case TypesModelPackage.SINGLETYPES_DOUBLEOBJECT_FEATURE_ID:
-        return getTarget().getDoubleObject();
-      case TypesModelPackage.SINGLETYPES_FLOAT__FEATURE_ID:
-        return getTarget().getFloat_();
-      case TypesModelPackage.SINGLETYPES_FLOATOBJECT_FEATURE_ID:
-        return getTarget().getFloatObject();
-      case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
-        return getTarget().getClazz();
-      case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
-        return getTarget().getChar_();
-      case TypesModelPackage.SINGLETYPES_CHAROBJECT_FEATURE_ID:
-        return getTarget().getCharObject();
-      case TypesModelPackage.SINGLETYPES_BYTE__FEATURE_ID:
-        return getTarget().getByte_();
-      case TypesModelPackage.SINGLETYPES_BYTEOBJECT_FEATURE_ID:
-        return getTarget().getByteObject();
-      case TypesModelPackage.SINGLETYPES_BYTEARRAY_FEATURE_ID:
-        return getTarget().getByteArray();
-      case TypesModelPackage.SINGLETYPES_BIGDECIMAL_FEATURE_ID:
-        return getTarget().getBigDecimal();
-      case TypesModelPackage.SINGLETYPES_BIGINTEGER_FEATURE_ID:
-        return getTarget().getBigInteger();
-      case TypesModelPackage.SINGLETYPES_ENUM__FEATURE_ID:
-        return getTarget().getEnum_();
-      case TypesModelPackage.SINGLETYPES_DATE_FEATURE_ID:
-        return getTarget().getDate();
-      case TypesModelPackage.SINGLETYPES_STRINGARRAY_FEATURE_ID:
-        return getTarget().getStringArray();
-      case TypesModelPackage.SINGLETYPES_LONGARRAY_FEATURE_ID:
-        return getTarget().getLongArray();
-      case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
-        return getTarget().getNextEnum();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case TypesModelPackage.SINGLETYPES_STRING_FEATURE_ID:
-        getTarget().setString((String) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_INTEGER_FEATURE_ID:
-        getTarget().setInteger((Integer) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_INTEGEROBJECT_FEATURE_ID:
-        getTarget().setIntegerObject((Integer) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_LONG__FEATURE_ID:
-        getTarget().setLong_((Long) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_LONGOBJECT_FEATURE_ID:
-        getTarget().setLongObject((Long) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_DOUBLE__FEATURE_ID:
-        getTarget().setDouble_((Double) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_DOUBLEOBJECT_FEATURE_ID:
-        getTarget().setDoubleObject((Double) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_FLOAT__FEATURE_ID:
-        getTarget().setFloat_((Float) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_FLOATOBJECT_FEATURE_ID:
-        getTarget().setFloatObject((Float) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
-        getTarget().setClazz((Class) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
-        getTarget().setChar_((Character) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_CHAROBJECT_FEATURE_ID:
-        getTarget().setCharObject((Character) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_BYTE__FEATURE_ID:
-        getTarget().setByte_((Byte) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_BYTEOBJECT_FEATURE_ID:
-        getTarget().setByteObject((Byte) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_BYTEARRAY_FEATURE_ID:
-        getTarget().setByteArray((byte[]) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_BIGDECIMAL_FEATURE_ID:
-        getTarget().setBigDecimal((BigDecimal) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_BIGINTEGER_FEATURE_ID:
-        getTarget().setBigInteger((BigInteger) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_ENUM__FEATURE_ID:
-        getTarget().setEnum_((TestEnum) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_DATE_FEATURE_ID:
-        getTarget().setDate((Date) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_STRINGARRAY_FEATURE_ID:
-        getTarget().setStringArray((String[]) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_LONGARRAY_FEATURE_ID:
-        getTarget().setLongArray((long[]) value);
-        return;
-      case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
-        getTarget().setNextEnum((TestNextEnum) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>ManyTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -495,9 +312,6 @@ public class TypesModelFactory implements ModelFactory {
   public static class ManyTypesModelObject<E extends ManyTypes> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -723,6 +537,186 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().remove(value);
         return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SingleTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class SingleTypesModelObject<E extends SingleTypes> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return TypesModelPackage.INSTANCE.getSingleTypesEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return TypesModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case TypesModelPackage.SINGLETYPES_STRING_FEATURE_ID:
+        return getTarget().getString();
+      case TypesModelPackage.SINGLETYPES_INTEGER_FEATURE_ID:
+        return getTarget().getInteger();
+      case TypesModelPackage.SINGLETYPES_INTEGEROBJECT_FEATURE_ID:
+        return getTarget().getIntegerObject();
+      case TypesModelPackage.SINGLETYPES_LONG__FEATURE_ID:
+        return getTarget().getLong_();
+      case TypesModelPackage.SINGLETYPES_LONGOBJECT_FEATURE_ID:
+        return getTarget().getLongObject();
+      case TypesModelPackage.SINGLETYPES_DOUBLE__FEATURE_ID:
+        return getTarget().getDouble_();
+      case TypesModelPackage.SINGLETYPES_DOUBLEOBJECT_FEATURE_ID:
+        return getTarget().getDoubleObject();
+      case TypesModelPackage.SINGLETYPES_FLOAT__FEATURE_ID:
+        return getTarget().getFloat_();
+      case TypesModelPackage.SINGLETYPES_FLOATOBJECT_FEATURE_ID:
+        return getTarget().getFloatObject();
+      case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
+        return getTarget().getClazz();
+      case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
+        return getTarget().getChar_();
+      case TypesModelPackage.SINGLETYPES_CHAROBJECT_FEATURE_ID:
+        return getTarget().getCharObject();
+      case TypesModelPackage.SINGLETYPES_BYTE__FEATURE_ID:
+        return getTarget().getByte_();
+      case TypesModelPackage.SINGLETYPES_BYTEOBJECT_FEATURE_ID:
+        return getTarget().getByteObject();
+      case TypesModelPackage.SINGLETYPES_BYTEARRAY_FEATURE_ID:
+        return getTarget().getByteArray();
+      case TypesModelPackage.SINGLETYPES_BIGDECIMAL_FEATURE_ID:
+        return getTarget().getBigDecimal();
+      case TypesModelPackage.SINGLETYPES_BIGINTEGER_FEATURE_ID:
+        return getTarget().getBigInteger();
+      case TypesModelPackage.SINGLETYPES_ENUM__FEATURE_ID:
+        return getTarget().getEnum_();
+      case TypesModelPackage.SINGLETYPES_DATE_FEATURE_ID:
+        return getTarget().getDate();
+      case TypesModelPackage.SINGLETYPES_STRINGARRAY_FEATURE_ID:
+        return getTarget().getStringArray();
+      case TypesModelPackage.SINGLETYPES_LONGARRAY_FEATURE_ID:
+        return getTarget().getLongArray();
+      case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
+        return getTarget().getNextEnum();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case TypesModelPackage.SINGLETYPES_STRING_FEATURE_ID:
+        getTarget().setString((String) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_INTEGER_FEATURE_ID:
+        getTarget().setInteger((Integer) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_INTEGEROBJECT_FEATURE_ID:
+        getTarget().setIntegerObject((Integer) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_LONG__FEATURE_ID:
+        getTarget().setLong_((Long) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_LONGOBJECT_FEATURE_ID:
+        getTarget().setLongObject((Long) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_DOUBLE__FEATURE_ID:
+        getTarget().setDouble_((Double) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_DOUBLEOBJECT_FEATURE_ID:
+        getTarget().setDoubleObject((Double) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_FLOAT__FEATURE_ID:
+        getTarget().setFloat_((Float) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_FLOATOBJECT_FEATURE_ID:
+        getTarget().setFloatObject((Float) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
+        getTarget().setClazz((Class) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
+        getTarget().setChar_((Character) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_CHAROBJECT_FEATURE_ID:
+        getTarget().setCharObject((Character) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_BYTE__FEATURE_ID:
+        getTarget().setByte_((Byte) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_BYTEOBJECT_FEATURE_ID:
+        getTarget().setByteObject((Byte) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_BYTEARRAY_FEATURE_ID:
+        getTarget().setByteArray((byte[]) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_BIGDECIMAL_FEATURE_ID:
+        getTarget().setBigDecimal((BigDecimal) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_BIGINTEGER_FEATURE_ID:
+        getTarget().setBigInteger((BigInteger) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_ENUM__FEATURE_ID:
+        getTarget().setEnum_((TestEnum) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_DATE_FEATURE_ID:
+        getTarget().setDate((Date) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_STRINGARRAY_FEATURE_ID:
+        getTarget().setStringArray((String[]) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_LONGARRAY_FEATURE_ID:
+        getTarget().setLongArray((long[]) value);
+        return;
+      case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
+        getTarget().setNextEnum((TestNextEnum) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }

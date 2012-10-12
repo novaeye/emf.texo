@@ -301,15 +301,10 @@ public class SunBooksModelPackage extends ModelPackage {
         modelPackage.getBookCategoryTypeEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(AuthorsType.class, AuthorsTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(BooksType.class, BooksTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(BookType.class, BookTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PromotionType.class, PromotionTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(CollectionType.class, CollectionTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     // and return ourselves

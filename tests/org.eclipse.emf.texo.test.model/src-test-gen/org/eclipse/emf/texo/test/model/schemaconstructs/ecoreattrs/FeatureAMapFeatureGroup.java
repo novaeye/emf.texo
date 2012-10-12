@@ -134,7 +134,6 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   @Basic(optional = false)
   @Column(name = "name")
   private String name;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

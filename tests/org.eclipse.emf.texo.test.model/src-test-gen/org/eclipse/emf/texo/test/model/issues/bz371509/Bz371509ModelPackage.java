@@ -125,7 +125,6 @@ public class Bz371509ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(EClass1.class, modelPackage.getEClass1EClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(EClass0.class, EClass0Dao.class);
-
     DaoRegistry.getInstance().registerDao(EClass1.class, EClass1Dao.class);
 
     // and return ourselves

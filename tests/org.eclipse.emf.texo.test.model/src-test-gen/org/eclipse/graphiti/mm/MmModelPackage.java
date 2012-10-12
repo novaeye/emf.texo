@@ -156,11 +156,8 @@ public class MmModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Property.class, PropertyDao.class);
-
     DaoRegistry.getInstance().registerDao(PropertyContainer.class, PropertyContainerDao.class);
-
     DaoRegistry.getInstance().registerDao(GraphicsAlgorithmContainer.class, GraphicsAlgorithmContainerDao.class);
-
     DaoRegistry.getInstance().registerDao(StyleContainer.class, StyleContainerDao.class);
 
     // and return ourselves

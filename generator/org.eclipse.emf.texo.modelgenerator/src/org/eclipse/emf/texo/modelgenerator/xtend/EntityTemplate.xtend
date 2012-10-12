@@ -1,0 +1,313 @@
+/*******************************************************************************
+ * Copyright (c) 2012 Springsite BV (http://www.springsite.com) and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Author - Martin Taal
+ *******************************************************************************/
+
+package org.eclipse.emf.texo.modelgenerator.xtend
+
+import org.eclipse.emf.texo.generator.ModelController
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation
+
+class EntityTemplate extends BaseTemplate {
+	ModelController modelController
+	EClassModelGenAnnotation eClassModelGenAnnotation
+	EPackageModelGenAnnotation ePackageModelGenAnnotation
+
+	def void generate(ModelController theModelController, EClassModelGenAnnotation theEClassModelGenAnnotation) {
+		modelController = theModelController
+		eClassModelGenAnnotation = theEClassModelGenAnnotation
+		ePackageModelGenAnnotation = theEClassModelGenAnnotation.ownerEPackageAnnotation
+	
+		if (eClassModelGenAnnotation.generateCode && (ePackageModelGenAnnotation.addRuntimeModelBehavior || !TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass))) {
+			var fileName = TemplateUtil::classFileName(eClassModelGenAnnotation)
+			var content = generateContent()
+		
+			addFile(fileName, content)
+			
+			generateFeatureGroups()
+		}
+	}
+	
+	def String generateContent() 
+		'''
+«ePackageModelGenAnnotation.javaFileHeader»
+package «ePackageModelGenAnnotation.packagePath»;
+
+/** 
+ * A representation of the model object '<em><b>«eClassModelGenAnnotation.name»</b></em>'.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+«IF eClassModelGenAnnotation.documentation != null»
+ * <!-- begin-model-doc -->
+ * «eClassModelGenAnnotation.documentation»
+ * <!-- end-model-doc -->
+«ENDIF»
+ * @generated 
+*/
+«modelController.getJavaAnnotations(eClassModelGenAnnotation.EClass, "type")»
+public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eClassModelGenAnnotation.simpleClassName»
+«IF eClassModelGenAnnotation.classExtends.size > 0» extends «eClassModelGenAnnotation.classExtends.get(0)»«ENDIF»
+«IF eClassModelGenAnnotation.classImplements.size > 0» implements
+«FOR classImplements : eClassModelGenAnnotation.classImplements SEPARATOR ","»«classImplements»«ENDFOR»
+«ENDIF»
+{ 
+«IF eClassModelGenAnnotation.serializable»
+  /**
+  * @generated
+  */
+  private static final long serialVersionUID = 1L;
+«ENDIF»
+
+«FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+	«/* a document root has almost only volatile features, but they need to be generated also */»		
+	«IF TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile»
+	
+		/** 
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+		«IF featureAnnotation.documentation != null»
+		 * <!-- begin-model-doc -->
+		 * «featureAnnotation.documentation»
+		 * <!-- end-model-doc -->
+		«ENDIF»
+		 * @generated 
+		 */
+		«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "field")»
+		private «featureAnnotation.type» «featureAnnotation.validJavaMemberName» = «featureAnnotation.defaultValue»;
+	«ENDIF»
+«ENDFOR»
+
+«/*EXPAND org::eclipse::emf::texo::modelgenerator::templates::entity_addition::root(modelController) FOR this*/»
+
+«FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+		/**
+		 * Returns the value of '<em><b>«featureAnnotation.EStructuralFeature.name»</b></em>' feature.
+			«IF (TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile) && featureAnnotation.many && featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
+		 * Note: the returned collection is Unmodifiable use the {#addTo«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)}
+		 * and {@link #removeFrom«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)} methods 
+		 * to modify this feature.
+		 	«ENDIF»
+		 *
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		«IF featureAnnotation.documentation != null»
+		 * <!-- begin-model-doc -->
+		 * «featureAnnotation.documentation»
+		 * <!-- end-model-doc -->
+		«ENDIF»
+		 * @return the value of '<em><b>«featureAnnotation.EStructuralFeature.name»</b></em>' feature
+		 * @generated
+		 */
+		«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "getter")»
+		public «featureAnnotation.type» «featureAnnotation.getter»() {
+		«IF TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile»
+			«IF featureAnnotation.many && featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
+				«IF (featureAnnotation as EReferenceModelGenAnnotation).useList»
+			return java.util.Collections.unmodifiableList(«featureAnnotation.validJavaMemberName»);
+				«ELSE»
+			return java.util.Collections.unmodifiableSet(«featureAnnotation.validJavaMemberName»);
+				«ENDIF»
+			«ELSE»
+			return «featureAnnotation.validJavaMemberName»;
+			«ENDIF»
+		«ELSEIF featureAnnotation.featureMapFeature != null»
+			«IF featureAnnotation.many»
+			return «featureAnnotation.featureMapFeature.featureMapQualifiedClassName».createUnmodifiableValueList(«featureAnnotation.featureMapFeature.getter»(), «featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«TemplateUtil::toUpperCase(featureAnnotation.name)»);
+			«ELSE»
+			return «featureAnnotation.featureMapFeature.featureMapQualifiedClassName».getSingleFeatureMapValue(«featureAnnotation.featureMapFeature.getter»(), «featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«TemplateUtil::toUpperCase(featureAnnotation.name)»);
+			«ENDIF»
+		«ELSE»
+	    	// Volatile feature
+	    	// TODO: implement this method to return the '«featureAnnotation.EStructuralFeature.name»'
+			// Ensure that you remove @generated or mark it @generated NOT
+			throw new UnsupportedOperationException();
+		«ENDIF»
+		}
+
+		«IF featureAnnotation.EStructuralFeature.changeable || (featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation != null)»
+			«IF featureAnnotation.featureMapFeature == null && featureAnnotation.many && featureAnnotation.reference && ((featureAnnotation as EReferenceModelGenAnnotation).generateBidirectionalAssociationSupport || (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess)»
+			/**
+			 * Adds to the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 * @generated
+			 */
+			public void addTo«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {
+				«IF !featureAnnotation.EStructuralFeature.volatile»
+				«IF featureAnnotation.EStructuralFeature.unique»
+				if (!«featureAnnotation.validJavaMemberName».contains(«featureAnnotation.validJavaMemberName»Value)) {
+				«ENDIF»
+					«featureAnnotation.validJavaMemberName».add(«featureAnnotation.validJavaMemberName»Value);
+					«IF (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation != null && (featureAnnotation as EReferenceModelGenAnnotation).generateBidirectionalAssociationSupport»
+					«var oppositeAnnotation = (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation»			
+					«IF oppositeAnnotation.many»
+						«IF oppositeAnnotation.generateSafeManyAccess»
+							«featureAnnotation.validJavaMemberName»Value.addTo«TemplateUtil::toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
+						«ELSE»
+							«featureAnnotation.validJavaMemberName»Value.add(this);
+						«ENDIF»
+					«ELSE»
+						«featureAnnotation.validJavaMemberName»Value.«oppositeAnnotation.setter»(this);
+					«ENDIF»
+					«ENDIF»
+				«IF featureAnnotation.EStructuralFeature.unique»
+				}
+				«ENDIF»
+				«ELSE»
+		    	// Volatile feature
+				// Ensure that you remove @generated or mark it @generated NOT
+				throw new UnsupportedOperationException();
+				«ENDIF»
+			}
+			
+			/**			
+			 * Removes from the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 * @generated
+			 */
+			public void removeFrom«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {
+				«IF !featureAnnotation.EStructuralFeature.volatile»
+				if («featureAnnotation.validJavaMemberName».contains(«featureAnnotation.validJavaMemberName»Value)) {
+					«featureAnnotation.validJavaMemberName».remove(«featureAnnotation.validJavaMemberName»Value);					
+					«IF (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation != null && (featureAnnotation as EReferenceModelGenAnnotation).generateBidirectionalAssociationSupport»
+					«var oppositeAnnotation = (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation»			
+					«IF oppositeAnnotation.many»
+						«IF oppositeAnnotation.generateSafeManyAccess»
+							«featureAnnotation.validJavaMemberName»Value.removeFrom«TemplateUtil::toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
+						«ELSE»
+							«featureAnnotation.validJavaMemberName»Value.remove(oppositeAnnotation.validJavaMemberName)»(this);
+						«ENDIF»
+					«ELSE»
+						«featureAnnotation.validJavaMemberName»Value.«oppositeAnnotation.setter»(null);
+					«ENDIF»
+					«ENDIF»
+				}
+				«ELSE»
+		    	// Volatile feature
+				// Ensure that you remove @generated or mark it @generated NOT
+				throw new UnsupportedOperationException();
+				«ENDIF»
+			}
+
+			/**			
+			 * Clears the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 * @generated
+			 */
+			public void clear«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»() {
+				«IF !featureAnnotation.EStructuralFeature.volatile»
+				while (!«featureAnnotation.validJavaMemberName».isEmpty()) {
+					removeFrom«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.validJavaMemberName».iterator().next());
+				}
+				«ELSE»
+		    	// Volatile feature
+				// Ensure that you remove @generated or mark it @generated NOT
+				throw new UnsupportedOperationException();
+				«ENDIF»
+			}
+			«ENDIF»
+			/**
+			 * Sets the '{@link «eClassModelGenAnnotation.simpleClassName»#«featureAnnotation.getter»() <em>«featureAnnotation.EStructuralFeature.name»</em>}' feature.
+			 *
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			«IF featureAnnotation.documentation != null»
+			 * <!-- begin-model-doc -->
+			 * «featureAnnotation.documentation»
+			 * <!-- end-model-doc -->
+			«ENDIF»
+			 * @param the new value of the '{@link «eClassModelGenAnnotation.simpleClassName»#«featureAnnotation.getter»() «featureAnnotation.EStructuralFeature.name»}' feature.
+			 * @generated
+			 */
+			«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "setter")»
+			public void «featureAnnotation.setter»(«featureAnnotation.type» new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)») {
+			«IF TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile»
+				«IF featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
+					«IF featureAnnotation.many»
+						clear«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»();
+						for («featureAnnotation.itemType» value : new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)») {
+							addTo«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(value);
+						}
+					«ELSE»
+						«IF (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation != null && (featureAnnotation as EReferenceModelGenAnnotation).generateBidirectionalAssociationSupport»
+						«var oppositeAnnotation = (featureAnnotation as EReferenceModelGenAnnotation).oppositeModelGenAnnotation»			
+						if («featureAnnotation.validJavaMemberName» != new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)») {
+							if («featureAnnotation.validJavaMemberName» != null) {
+								«IF oppositeAnnotation.many»
+									«IF (oppositeAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
+										«featureAnnotation.validJavaMemberName».removeFrom«TemplateUtil::toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
+									«ELSE»
+										«featureAnnotation.validJavaMemberName».remove(this);
+									«ENDIF»	
+								«ELSE»
+									«featureAnnotation.type» temp«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)» = «featureAnnotation.validJavaMemberName»;
+									«featureAnnotation.validJavaMemberName» = null;
+									temp«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)».«oppositeAnnotation.setter»(null);
+								«ENDIF»	
+							}
+							«featureAnnotation.validJavaMemberName» = new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»;
+							if («featureAnnotation.validJavaMemberName» != null) {
+								«IF oppositeAnnotation.many»
+									«IF (oppositeAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
+										«featureAnnotation.validJavaMemberName».addTo«TemplateUtil::toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
+									«ELSE»
+										«featureAnnotation.validJavaMemberName».add(this);
+									«ENDIF»	
+								«ELSE»
+									«featureAnnotation.validJavaMemberName».«oppositeAnnotation.setter»(this);							
+								«ENDIF»	
+							}
+						} 
+						«ELSE»
+							«featureAnnotation.validJavaMemberName» = new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»;
+						«ENDIF»							
+					«ENDIF»
+				«ELSE»
+					«featureAnnotation.validJavaMemberName» = new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»;
+				«ENDIF»
+			«ELSEIF featureAnnotation.featureMapFeature != null» 
+				«IF featureAnnotation.many»
+				«featureAnnotation.featureMapFeature.setter»(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».createFeatureGroupList(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«TemplateUtil::toUpperCase(featureAnnotation.name)», new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»));
+				«ELSE»
+				«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».setSingleFeatureMapValue(«featureAnnotation.featureMapFeature.getter»(), «featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«TemplateUtil::toUpperCase(featureAnnotation.name)», new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»);
+				«ENDIF»
+			«ELSE»
+		    	// Volatile feature
+				// TODO: implement this method to set the '«featureAnnotation.EStructuralFeature.name»'
+				// Ensure that you remove @generated or mark it @generated NOT
+				throw new UnsupportedOperationException();
+			«ENDIF»
+			}
+		«ENDIF»
+	«ENDFOR»
+
+	/**
+	 * A toString method which prints the values of all EAttributes of this instance.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+ 	 * @generated
+	 */
+	 @Override
+	 public String toString() {
+	 	return  "«eClassModelGenAnnotation.name» "
+	 	«FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+			«IF !featureAnnotation.reference && !featureAnnotation.EStructuralFeature.many»
+		 		+ " [«featureAnnotation.name»: " +  «featureAnnotation.getter»() + "]"
+	  		«ENDIF»
+	 	«ENDFOR»;
+	 }	 	
+}
+'''
+
+	def void generateFeatureGroups() {
+		/* Create the feature map entries if any«ENDREM */	
+		for (featureAnnotation : eClassModelGenAnnotation.featureMapFeatures) {
+			var FeatureGroupTemplate template = new FeatureGroupTemplate();
+			template.generate(modelController, featureAnnotation)
+			addFiles(template.getFiles())
+		}
+	}
+}

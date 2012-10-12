@@ -189,4 +189,3 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//WorkflowNode"/>
 </ecore:EPackage>
-

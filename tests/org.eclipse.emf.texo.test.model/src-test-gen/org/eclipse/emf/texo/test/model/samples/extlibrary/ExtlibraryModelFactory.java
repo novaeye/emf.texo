@@ -302,9 +302,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BookModelObject<E extends Book>
-
-  extends CirculatingItemModelObject<E> {
+  public static class BookModelObject<E extends Book> extends CirculatingItemModelObject<E> {
     /**
      * @generated
      */
@@ -358,6 +356,492 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return;
       case ExtlibraryModelPackage.BOOK_AUTHOR_FEATURE_ID:
         getTarget().setAuthor((Writer) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return ExtlibraryModelPackage.INSTANCE.getItemEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return ExtlibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Lendable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class LendableModelObject<E extends Lendable> extends AbstractModelObject<E> {
+    /**
+     * @generated
+     */
+    public EClass eClass() {
+      return ExtlibraryModelPackage.INSTANCE.getLendableEClass();
+    }
+
+    /**
+     * @generated
+     */
+    public ModelPackage getModelPackage() {
+      return ExtlibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.LENDABLE_COPIES_FEATURE_ID:
+        return getTarget().getCopies();
+      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
+        return getTarget().getBorrowers();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.LENDABLE_COPIES_FEATURE_ID:
+        getTarget().setCopies((Integer) value);
+        return;
+      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
+        getTarget().setBorrowers((Set<Borrower>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
+        getTarget().getBorrowers().add((Borrower) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
+        getTarget().getBorrowers().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class CirculatingItemModelObject<E extends CirculatingItem> extends ItemModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return ExtlibraryModelPackage.INSTANCE.getCirculatingItemEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return ExtlibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.CIRCULATINGITEM_COPIES_FEATURE_ID:
+        return getTarget().getCopies();
+      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
+        return getTarget().getBorrowers();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.CIRCULATINGITEM_COPIES_FEATURE_ID:
+        getTarget().setCopies((Integer) value);
+        return;
+      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
+        getTarget().setBorrowers((Set<Borrower>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
+        getTarget().getBorrowers().add((Borrower) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
+        getTarget().getBorrowers().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class WriterModelObject<E extends Writer> extends PersonModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return ExtlibraryModelPackage.INSTANCE.getWriterEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return ExtlibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.WRITER_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        return getTarget().getBooks();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.WRITER_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        getTarget().setBooks((List<Book>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        getTarget().getBooks().add((Book) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        getTarget().getBooks().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Addressable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class AddressableModelObject<E extends Addressable> extends AbstractModelObject<E> {
+    /**
+     * @generated
+     */
+    public EClass eClass() {
+      return ExtlibraryModelPackage.INSTANCE.getAddressableEClass();
+    }
+
+    /**
+     * @generated
+     */
+    public ModelPackage getModelPackage() {
+      return ExtlibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.ADDRESSABLE_ADDRESS_FEATURE_ID:
+        return getTarget().getAddress();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.ADDRESSABLE_ADDRESS_FEATURE_ID:
+        getTarget().setAddress((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return ExtlibraryModelPackage.INSTANCE.getPersonEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return ExtlibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.PERSON_FIRSTNAME_FEATURE_ID:
+        return getTarget().getFirstName();
+      case ExtlibraryModelPackage.PERSON_LASTNAME_FEATURE_ID:
+        return getTarget().getLastName();
+      case ExtlibraryModelPackage.PERSON_ADDRESS_FEATURE_ID:
+        return getTarget().getAddress();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case ExtlibraryModelPackage.PERSON_FIRSTNAME_FEATURE_ID:
+        getTarget().setFirstName((String) value);
+        return;
+      case ExtlibraryModelPackage.PERSON_LASTNAME_FEATURE_ID:
+        getTarget().setLastName((String) value);
+        return;
+      case ExtlibraryModelPackage.PERSON_ADDRESS_FEATURE_ID:
+        getTarget().setAddress((String) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -565,19 +1049,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class WriterModelObject<E extends Writer>
-
-  extends PersonModelObject<E> {
+  public static class EmployeeModelObject<E extends Employee> extends PersonModelObject<E> {
     /**
      * @generated
      */
     @Override
     public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getWriterEClass();
+      return ExtlibraryModelPackage.INSTANCE.getEmployeeEClass();
     }
 
     /**
@@ -595,94 +1077,8 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ExtlibraryModelPackage.WRITER_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        return getTarget().getBooks();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.WRITER_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().setBooks((List<Book>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().getBooks().add((Book) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().getBooks().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getItemEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return ExtlibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
-        return getTarget().getPublicationDate();
+      case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
+        return getTarget().getManager();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -694,8 +1090,8 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
-        getTarget().setPublicationDate((Date) value);
+      case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
+        getTarget().setManager((Employee) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -727,103 +1123,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Lendable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class LendableModelObject<E extends Lendable> extends AbstractModelObject<E> {
-    /**
-     * @generated
-     */
-    public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getLendableEClass();
-    }
-
-    /**
-     * @generated
-     */
-    public ModelPackage getModelPackage() {
-      return ExtlibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.LENDABLE_COPIES_FEATURE_ID:
-        return getTarget().getCopies();
-      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
-        return getTarget().getBorrowers();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.LENDABLE_COPIES_FEATURE_ID:
-        getTarget().setCopies((Integer) value);
-        return;
-      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
-        getTarget().setBorrowers((Set<Borrower>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().add((Borrower) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class CirculatingItemModelObject<E extends CirculatingItem>
-
-  extends ItemModelObject<E> {
+  public static class BorrowerModelObject<E extends Borrower> extends PersonModelObject<E> {
     /**
      * @generated
      */
     @Override
     public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getCirculatingItemEClass();
+      return ExtlibraryModelPackage.INSTANCE.getBorrowerEClass();
     }
 
     /**
@@ -841,10 +1151,8 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ExtlibraryModelPackage.CIRCULATINGITEM_COPIES_FEATURE_ID:
-        return getTarget().getCopies();
-      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
-        return getTarget().getBorrowers();
+      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
+        return getTarget().getBorrowed();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -857,11 +1165,8 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case ExtlibraryModelPackage.CIRCULATINGITEM_COPIES_FEATURE_ID:
-        getTarget().setCopies((Integer) value);
-        return;
-      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
-        getTarget().setBorrowers((Set<Borrower>) value);
+      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
+        getTarget().setBorrowed((List<Lendable>) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -875,8 +1180,8 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().add((Borrower) value);
+      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
+        getTarget().getBorrowed().add((Lendable) value);
         return;
       }
       super.eAddTo(eStructuralFeature, value);
@@ -890,8 +1195,8 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
-        getTarget().getBorrowers().remove(value);
+      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
+        getTarget().getBorrowed().remove(value);
         return;
       }
       super.eRemoveFrom(eStructuralFeature, value);
@@ -903,9 +1208,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PeriodicalModelObject<E extends Periodical>
-
-  extends ItemModelObject<E> {
+  public static class PeriodicalModelObject<E extends Periodical> extends ItemModelObject<E> {
     /**
      * @generated
      */
@@ -1068,9 +1371,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BookOnTapeModelObject<E extends BookOnTape>
-
-  extends AudioVisualItemModelObject<E> {
+  public static class BookOnTapeModelObject<E extends BookOnTape> extends AudioVisualItemModelObject<E> {
     /**
      * @generated
      */
@@ -1149,9 +1450,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class VideoCassetteModelObject<E extends VideoCassette>
-
-  extends AudioVisualItemModelObject<E> {
+  public static class VideoCassetteModelObject<E extends VideoCassette> extends AudioVisualItemModelObject<E> {
     /**
      * @generated
      */
@@ -1282,321 +1581,6 @@ public class ExtlibraryModelFactory implements ModelFactory {
      */
     public void setValue(final Object value) {
       getTarget().setValue(getTarget().getFeature(), value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class BorrowerModelObject<E extends Borrower>
-
-  extends PersonModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getBorrowerEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return ExtlibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
-        return getTarget().getBorrowed();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
-        getTarget().setBorrowed((List<Lendable>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
-        getTarget().getBorrowed().add((Lendable) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
-        getTarget().getBorrowed().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getPersonEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return ExtlibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.PERSON_FIRSTNAME_FEATURE_ID:
-        return getTarget().getFirstName();
-      case ExtlibraryModelPackage.PERSON_LASTNAME_FEATURE_ID:
-        return getTarget().getLastName();
-      case ExtlibraryModelPackage.PERSON_ADDRESS_FEATURE_ID:
-        return getTarget().getAddress();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.PERSON_FIRSTNAME_FEATURE_ID:
-        getTarget().setFirstName((String) value);
-        return;
-      case ExtlibraryModelPackage.PERSON_LASTNAME_FEATURE_ID:
-        getTarget().setLastName((String) value);
-        return;
-      case ExtlibraryModelPackage.PERSON_ADDRESS_FEATURE_ID:
-        getTarget().setAddress((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class EmployeeModelObject<E extends Employee>
-
-  extends PersonModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getEmployeeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return ExtlibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
-        return getTarget().getManager();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
-        getTarget().setManager((Employee) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Addressable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class AddressableModelObject<E extends Addressable> extends AbstractModelObject<E> {
-    /**
-     * @generated
-     */
-    public EClass eClass() {
-      return ExtlibraryModelPackage.INSTANCE.getAddressableEClass();
-    }
-
-    /**
-     * @generated
-     */
-    public ModelPackage getModelPackage() {
-      return ExtlibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.ADDRESSABLE_ADDRESS_FEATURE_ID:
-        return getTarget().getAddress();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case ExtlibraryModelPackage.ADDRESSABLE_ADDRESS_FEATURE_ID:
-        getTarget().setAddress((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

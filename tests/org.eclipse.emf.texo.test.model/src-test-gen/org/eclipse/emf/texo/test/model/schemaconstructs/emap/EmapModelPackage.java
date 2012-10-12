@@ -185,9 +185,7 @@ public class EmapModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Book.class, BookDao.class);
-
     DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
-
     DaoRegistry.getInstance().registerDao(BookStore.class, BookStoreDao.class);
 
     // and return ourselves

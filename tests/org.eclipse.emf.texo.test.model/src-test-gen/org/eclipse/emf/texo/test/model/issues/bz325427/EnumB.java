@@ -19,9 +19,7 @@ public enum EnumB {
    * 
    * @generated
    */
-  private static final EnumB[] VALUES_ARRAY = new EnumB[] {
-
-  };
+  private static final EnumB[] VALUES_ARRAY = new EnumB[] {};
 
   /**
    * A public read-only list of all the '<em><b>EnumB</b></em>' enumerators. <!-- begin-user-doc --> <!-- end-user-doc

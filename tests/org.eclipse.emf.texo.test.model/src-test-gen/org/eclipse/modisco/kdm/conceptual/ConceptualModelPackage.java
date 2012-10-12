@@ -288,30 +288,18 @@ public class ConceptualModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ConceptualModel.class, ConceptualModelDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractConceptualElement.class, AbstractConceptualElementDao.class);
-
     DaoRegistry.getInstance()
         .registerDao(AbstractConceptualRelationship.class, AbstractConceptualRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(TermUnit.class, TermUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ConceptualContainer.class, ConceptualContainerDao.class);
-
     DaoRegistry.getInstance().registerDao(FactUnit.class, FactUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ConceptualRelationship.class, ConceptualRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(BehaviorUnit.class, BehaviorUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(RuleUnit.class, RuleUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ScenarioUnit.class, ScenarioUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ConceptualFlow.class, ConceptualFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(ConceptualElement.class, ConceptualElementDao.class);
-
     DaoRegistry.getInstance().registerDao(ConceptualRole.class, ConceptualRoleDao.class);
 
     // and return ourselves

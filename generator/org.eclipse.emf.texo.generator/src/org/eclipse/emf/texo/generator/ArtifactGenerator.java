@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.internal.xpand2.XpandTokens;
 import org.eclipse.internal.xpand2.ast.Definition;
 import org.eclipse.internal.xpand2.ast.ExpandStatement;
@@ -62,6 +63,8 @@ public class ArtifactGenerator {
 
   private boolean doDao;
 
+  private BaseMainTemplate xTendTemplate;
+
   /**
    * Run the generation for the project and output location. Uses XPand to call the expand command (
    * {@link #getExpand()}). The output is generated in the output folder ({@link #getOutputFolder()}.
@@ -72,16 +75,33 @@ public class ArtifactGenerator {
 
     initializeOutlets();
 
-    final Map<String, Object> parameters = new HashMap<String, Object>();
-    parameters.put(MODEL_CONTROLLER, modelController);
-    parameters.put(DO_DAO, isDoDao());
-
     try {
       final OutputImpl out = new OutputImpl();
       out.setAutomaticHyphens(false);
       for (final Outlet outlet : getOutlets()) {
         out.addOutlet(outlet);
       }
+
+      // use an xtend template
+      if (xTendTemplate != null) {
+        for (EPackage ePackage : modelController.getEPackages()) {
+          xTendTemplate.generate(ePackage, modelController, doDao);
+          final Map<String, String> result = xTendTemplate.getFiles();
+          for (String fileName : result.keySet()) {
+            final String content = result.get(fileName);
+            final boolean isJava = fileName.endsWith("java");
+            out.openFile(fileName, isJava ? "java" : null);
+            out.write(content);
+            out.closeFile();
+          }
+          xTendTemplate.clearFiles();
+        }
+        return;
+      }
+
+      final Map<String, Object> parameters = new HashMap<String, Object>();
+      parameters.put(MODEL_CONTROLLER, modelController);
+      parameters.put(DO_DAO, isDoDao());
 
       XpandExecutionContextImpl executionContext = new XpandExecutionContextImpl(resourceManager, out, null,
           new HashMap<String, Variable>(), null, getExceptionHandler(), null, null);
@@ -253,5 +273,13 @@ public class ArtifactGenerator {
 
   public void setResourceManager(TexoResourceManager resourceManager) {
     this.resourceManager = resourceManager;
+  }
+
+  public BaseMainTemplate getXTendTemplate() {
+    return xTendTemplate;
+  }
+
+  public void setXTendTemplate(BaseMainTemplate xTendTemplate) {
+    this.xTendTemplate = xTendTemplate;
   }
 }

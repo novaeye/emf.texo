@@ -407,39 +407,22 @@ public class EventModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(EventModel.class, EventModelDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractEventElement.class, AbstractEventElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractEventRelationship.class, AbstractEventRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(Event.class, EventDao.class);
-
     DaoRegistry.getInstance().registerDao(EventRelationship.class, EventRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(EventResource.class, EventResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(State.class, StateDao.class);
-
     DaoRegistry.getInstance().registerDao(Transition.class, TransitionDao.class);
-
     DaoRegistry.getInstance().registerDao(OnEntry.class, OnEntryDao.class);
-
     DaoRegistry.getInstance().registerDao(OnExit.class, OnExitDao.class);
-
     DaoRegistry.getInstance().registerDao(EventAction.class, EventActionDao.class);
-
     DaoRegistry.getInstance().registerDao(ReadsState.class, ReadsStateDao.class);
-
     DaoRegistry.getInstance().registerDao(ProducesEvent.class, ProducesEventDao.class);
-
     DaoRegistry.getInstance().registerDao(ConsumesEvent.class, ConsumesEventDao.class);
-
     DaoRegistry.getInstance().registerDao(NextState.class, NextStateDao.class);
-
     DaoRegistry.getInstance().registerDao(InitialState.class, InitialStateDao.class);
-
     DaoRegistry.getInstance().registerDao(EventElement.class, EventElementDao.class);
-
     DaoRegistry.getInstance().registerDao(HasState.class, HasStateDao.class);
 
     // and return ourselves

@@ -193,13 +193,9 @@ public class InterfacesModelPackage extends ModelPackage {
 
     DaoRegistry.getInstance().registerDao(DescribableIdentifiableConcrete.class,
         DescribableIdentifiableConcreteDao.class);
-
     DaoRegistry.getInstance().registerDao(Describable.class, DescribableDao.class);
-
     DaoRegistry.getInstance().registerDao(IdentifiedType.class, IdentifiedTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DescribableConcrete.class, DescribableConcreteDao.class);
-
     DaoRegistry.getInstance().registerDao(IdentifiableConcrete.class, IdentifiableConcreteDao.class);
 
     // and return ourselves

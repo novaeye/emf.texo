@@ -329,17 +329,11 @@ public class CapaModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(WorkDay.class, modelPackage.getWorkDayEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(CapacityEntry.class, CapacityEntryDao.class);
-
     DaoRegistry.getInstance().registerDao(Machine.class, MachineDao.class);
-
     DaoRegistry.getInstance().registerDao(WorkWeek.class, WorkWeekDao.class);
-
     DaoRegistry.getInstance().registerDao(Task.class, TaskDao.class);
-
     DaoRegistry.getInstance().registerDao(MachineList.class, MachineListDao.class);
-
     DaoRegistry.getInstance().registerDao(Production.class, ProductionDao.class);
-
     DaoRegistry.getInstance().registerDao(WorkDay.class, WorkDayDao.class);
 
     // and return ourselves

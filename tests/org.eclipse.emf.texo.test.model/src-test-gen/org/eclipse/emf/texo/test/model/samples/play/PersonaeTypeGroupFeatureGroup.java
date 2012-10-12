@@ -136,7 +136,6 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String title;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -144,7 +143,6 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String persona;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

@@ -136,7 +136,6 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String stageDirections;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

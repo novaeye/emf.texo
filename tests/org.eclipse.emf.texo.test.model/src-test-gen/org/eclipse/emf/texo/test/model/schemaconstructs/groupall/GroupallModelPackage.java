@@ -315,15 +315,10 @@ public class GroupallModelPackage extends ModelPackage {
         modelPackage.getSimpleAllMapTypeEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(AddressGroupType.class, AddressGroupTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(AddressType.class, AddressTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(AddressList.class, AddressListDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(SimpleAllType.class, SimpleAllTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SimpleAllMapType.class, SimpleAllMapTypeDao.class);
 
     // and return ourselves

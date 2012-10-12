@@ -148,7 +148,6 @@ public class QnameModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Mytest.class, modelPackage.getMytestEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(Mytest.class, MytestDao.class);
 
     // and return ourselves

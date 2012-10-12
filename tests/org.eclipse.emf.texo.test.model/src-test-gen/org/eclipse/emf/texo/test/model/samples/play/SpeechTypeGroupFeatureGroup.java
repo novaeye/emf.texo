@@ -134,7 +134,6 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String speaker;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -142,7 +141,6 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String line;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

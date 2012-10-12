@@ -1462,169 +1462,87 @@ public class CodeModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(CodeModel.class, CodeModelDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractCodeElement.class, AbstractCodeElementDao.class);
-
     DaoRegistry.getInstance().registerDao(CommentUnit.class, CommentUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractCodeRelationship.class, AbstractCodeRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(CodeItem.class, CodeItemDao.class);
-
     DaoRegistry.getInstance().registerDao(ComputationalObject.class, ComputationalObjectDao.class);
-
     DaoRegistry.getInstance().registerDao(Datatype.class, DatatypeDao.class);
-
     DaoRegistry.getInstance().registerDao(Module.class, ModuleDao.class);
-
     DaoRegistry.getInstance().registerDao(CompilationUnit.class, CompilationUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(SharedUnit.class, SharedUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(LanguageUnit.class, LanguageUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(CodeAssembly.class, CodeAssemblyDao.class);
-
     DaoRegistry.getInstance().registerDao(Package.class, PackageDao.class);
-
     DaoRegistry.getInstance().registerDao(ControlElement.class, ControlElementDao.class);
-
     DaoRegistry.getInstance().registerDao(CallableUnit.class, CallableUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(MethodUnit.class, MethodUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(DataElement.class, DataElementDao.class);
-
     DaoRegistry.getInstance().registerDao(StorableUnit.class, StorableUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ItemUnit.class, ItemUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(IndexUnit.class, IndexUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(MemberUnit.class, MemberUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ParameterUnit.class, ParameterUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ValueElement.class, ValueElementDao.class);
-
     DaoRegistry.getInstance().registerDao(Value.class, ValueDao.class);
-
     DaoRegistry.getInstance().registerDao(ValueList.class, ValueListDao.class);
-
     DaoRegistry.getInstance().registerDao(PrimitiveType.class, PrimitiveTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(BooleanType.class, BooleanTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(CharType.class, CharTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(OrdinalType.class, OrdinalTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DateType.class, DateTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(TimeType.class, TimeTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(IntegerType.class, IntegerTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DecimalType.class, DecimalTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ScaledType.class, ScaledTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(FloatType.class, FloatTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(VoidType.class, VoidTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(StringType.class, StringTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(BitType.class, BitTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(BitstringType.class, BitstringTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(OctetType.class, OctetTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(OctetstringType.class, OctetstringTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(EnumeratedType.class, EnumeratedTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(CompositeType.class, CompositeTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ChoiceType.class, ChoiceTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(RecordType.class, RecordTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DerivedType.class, DerivedTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ArrayType.class, ArrayTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PointerType.class, PointerTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(RangeType.class, RangeTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(BagType.class, BagTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SetType.class, SetTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SequenceType.class, SequenceTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(Signature.class, SignatureDao.class);
-
     DaoRegistry.getInstance().registerDao(DefinedType.class, DefinedTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(TypeUnit.class, TypeUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(SynonymUnit.class, SynonymUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ClassUnit.class, ClassUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(InterfaceUnit.class, InterfaceUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(TemplateUnit.class, TemplateUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(TemplateParameter.class, TemplateParameterDao.class);
-
     DaoRegistry.getInstance().registerDao(TemplateType.class, TemplateTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(InstanceOf.class, InstanceOfDao.class);
-
     DaoRegistry.getInstance().registerDao(ParameterTo.class, ParameterToDao.class);
-
     DaoRegistry.getInstance().registerDao(Implements.class, ImplementsDao.class);
-
     DaoRegistry.getInstance().registerDao(ImplementationOf.class, ImplementationOfDao.class);
-
     DaoRegistry.getInstance().registerDao(HasType.class, HasTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(HasValue.class, HasValueDao.class);
-
     DaoRegistry.getInstance().registerDao(Extends.class, ExtendsDao.class);
-
     DaoRegistry.getInstance().registerDao(PreprocessorDirective.class, PreprocessorDirectiveDao.class);
-
     DaoRegistry.getInstance().registerDao(MacroUnit.class, MacroUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(MacroDirective.class, MacroDirectiveDao.class);
-
     DaoRegistry.getInstance().registerDao(IncludeDirective.class, IncludeDirectiveDao.class);
-
     DaoRegistry.getInstance().registerDao(ConditionalDirective.class, ConditionalDirectiveDao.class);
-
     DaoRegistry.getInstance().registerDao(Expands.class, ExpandsDao.class);
-
     DaoRegistry.getInstance().registerDao(GeneratedFrom.class, GeneratedFromDao.class);
-
     DaoRegistry.getInstance().registerDao(Includes.class, IncludesDao.class);
-
     DaoRegistry.getInstance().registerDao(VariantTo.class, VariantToDao.class);
-
     DaoRegistry.getInstance().registerDao(Redefines.class, RedefinesDao.class);
-
     DaoRegistry.getInstance().registerDao(Namespace.class, NamespaceDao.class);
-
     DaoRegistry.getInstance().registerDao(VisibleIn.class, VisibleInDao.class);
-
     DaoRegistry.getInstance().registerDao(Imports.class, ImportsDao.class);
-
     DaoRegistry.getInstance().registerDao(CodeElement.class, CodeElementDao.class);
-
     DaoRegistry.getInstance().registerDao(CodeRelationship.class, CodeRelationshipDao.class);
 
     // and return ourselves

@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.generator.ArtifactGenerator;
 import org.eclipse.emf.texo.generator.ModelAnnotator;
 import org.eclipse.emf.texo.generator.ModelController;
+import org.eclipse.emf.texo.modelgenerator.xtend.ModelTemplate;
 
 /**
  * Test the generation of model code for the ecore model itself.
@@ -55,6 +56,7 @@ public class EclipseGenerateEcorePackageModel extends TestCase {
     artifactGenerator.setProjectName("org.eclipse.emf.texo.test.model"); //$NON-NLS-1$
     artifactGenerator.setOutputFolder("src-test-gen"); //$NON-NLS-1$
     artifactGenerator.setDoDao(true);
+    artifactGenerator.setXTendTemplate(new ModelTemplate());
     artifactGenerator.run();
   }
 }

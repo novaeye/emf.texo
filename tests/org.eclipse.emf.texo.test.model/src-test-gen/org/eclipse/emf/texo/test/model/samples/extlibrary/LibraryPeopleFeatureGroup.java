@@ -136,7 +136,6 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Writer writers;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -144,7 +143,6 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private Employee employees;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

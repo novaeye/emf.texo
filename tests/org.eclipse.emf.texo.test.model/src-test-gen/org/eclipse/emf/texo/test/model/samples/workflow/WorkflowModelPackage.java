@@ -414,33 +414,19 @@ public class WorkflowModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Task.class, modelPackage.getTaskEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(ConditionalOutputPort.class, ConditionalOutputPortDao.class);
-
     DaoRegistry.getInstance().registerDao(Workflow.class, WorkflowDao.class);
-
     DaoRegistry.getInstance().registerDao(WorkflowElement.class, WorkflowElementDao.class);
-
     DaoRegistry.getInstance().registerDao(WorkflowNode.class, WorkflowNodeDao.class);
-
     DaoRegistry.getInstance().registerDao(Edge.class, EdgeDao.class);
-
     DaoRegistry.getInstance().registerDao(Comment.class, CommentDao.class);
-
     DaoRegistry.getInstance().registerDao(OutputPort.class, OutputPortDao.class);
-
     DaoRegistry.getInstance().registerDao(Port.class, PortDao.class);
-
     DaoRegistry.getInstance().registerDao(InputPort.class, InputPortDao.class);
-
     DaoRegistry.getInstance().registerDao(Fault.class, FaultDao.class);
-
     DaoRegistry.getInstance().registerDao(CompoundTask.class, CompoundTaskDao.class);
-
     DaoRegistry.getInstance().registerDao(TransformationTask.class, TransformationTaskDao.class);
-
     DaoRegistry.getInstance().registerDao(ConditionalTask.class, ConditionalTaskDao.class);
-
     DaoRegistry.getInstance().registerDao(LoopTask.class, LoopTaskDao.class);
-
     DaoRegistry.getInstance().registerDao(Task.class, TaskDao.class);
 
     // and return ourselves

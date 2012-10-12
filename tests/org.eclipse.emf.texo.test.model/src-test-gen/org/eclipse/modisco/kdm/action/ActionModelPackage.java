@@ -542,53 +542,29 @@ public class ActionModelPackage extends ModelPackage {
         modelPackage.getActionRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(EntryFlow.class, EntryFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractActionRelationship.class, AbstractActionRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(ActionElement.class, ActionElementDao.class);
-
     DaoRegistry.getInstance().registerDao(BlockUnit.class, BlockUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ControlFlow.class, ControlFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(Flow.class, FlowDao.class);
-
     DaoRegistry.getInstance().registerDao(TrueFlow.class, TrueFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(FalseFlow.class, FalseFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(GuardedFlow.class, GuardedFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(Calls.class, CallsDao.class);
-
     DaoRegistry.getInstance().registerDao(Dispatches.class, DispatchesDao.class);
-
     DaoRegistry.getInstance().registerDao(Reads.class, ReadsDao.class);
-
     DaoRegistry.getInstance().registerDao(Writes.class, WritesDao.class);
-
     DaoRegistry.getInstance().registerDao(Addresses.class, AddressesDao.class);
-
     DaoRegistry.getInstance().registerDao(Creates.class, CreatesDao.class);
-
     DaoRegistry.getInstance().registerDao(ExceptionUnit.class, ExceptionUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(TryUnit.class, TryUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(CatchUnit.class, CatchUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(FinallyUnit.class, FinallyUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(ExitFlow.class, ExitFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(ExceptionFlow.class, ExceptionFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(Throws.class, ThrowsDao.class);
-
     DaoRegistry.getInstance().registerDao(CompliesTo.class, CompliesToDao.class);
-
     DaoRegistry.getInstance().registerDao(UsesType.class, UsesTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ActionRelationship.class, ActionRelationshipDao.class);
 
     // and return ourselves

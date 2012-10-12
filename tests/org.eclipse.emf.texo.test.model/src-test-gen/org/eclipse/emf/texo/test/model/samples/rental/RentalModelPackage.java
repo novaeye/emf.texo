@@ -305,17 +305,11 @@ public class RentalModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(RentalBicycle.class, RentalBicycleDao.class);
-
     DaoRegistry.getInstance().registerDao(RentalUnit.class, RentalUnitDao.class);
-
     DaoRegistry.getInstance().registerDao(RentalCar.class, RentalCarDao.class);
-
     DaoRegistry.getInstance().registerDao(RentalBusiness.class, RentalBusinessDao.class);
-
     DaoRegistry.getInstance().registerDao(RentalCarDriver.class, RentalCarDriverDao.class);
-
     DaoRegistry.getInstance().registerDao(RentalContract.class, RentalContractDao.class);
-
     DaoRegistry.getInstance().registerDao(RentalContractLine.class, RentalContractLineDao.class);
 
     // and return ourselves

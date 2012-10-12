@@ -414,15 +414,77 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class SerializableModelObject<E extends Serializable> extends AbstractModelObject<E> {
+    /**
+     * @generated
+     */
+    public EClass eClass() {
+      return AccountingModelPackage.INSTANCE.getSerializableEClass();
+    }
+
+    /**
+     * @generated
+     */
+    public ModelPackage getModelPackage() {
+      return AccountingModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
   public static class AccountModelObject<E extends Account> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -498,9 +560,6 @@ public class AccountingModelFactory implements ModelFactory {
   public static class AccountGroupModelObject<E extends AccountGroup> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -581,21 +640,23 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class SerializableModelObject<E extends Serializable> extends AbstractModelObject<E> {
+  public static class VatModelObject<E extends Vat> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
+    @Override
     public EClass eClass() {
-      return AccountingModelPackage.INSTANCE.getSerializableEClass();
+      return AccountingModelPackage.INSTANCE.getVatEClass();
     }
 
     /**
      * @generated
      */
+    @Override
     public ModelPackage getModelPackage() {
       return AccountingModelPackage.INSTANCE;
     }
@@ -607,6 +668,10 @@ public class AccountingModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AccountingModelPackage.VAT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case AccountingModelPackage.VAT_RATE_FEATURE_ID:
+        return getTarget().getRate();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -618,6 +683,12 @@ public class AccountingModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AccountingModelPackage.VAT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case AccountingModelPackage.VAT_RATE_FEATURE_ID:
+        getTarget().setRate((Float) value);
+        return;
       }
       super.eSet(eStructuralFeature, value);
     }
@@ -629,6 +700,7 @@ public class AccountingModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -640,6 +712,7 @@ public class AccountingModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
@@ -650,13 +723,8 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class BalanceAccountModelObject<E extends BalanceAccount>
-
-  extends AccountModelObject<E> {
+  public static class BalanceAccountModelObject<E extends BalanceAccount> extends AccountModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -732,6 +800,90 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class ReportModelObject<E extends Report> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return AccountingModelPackage.INSTANCE.getReportEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return AccountingModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case AccountingModelPackage.REPORT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case AccountingModelPackage.REPORT_DEBITREPORTGROUP_FEATURE_ID:
+        return getTarget().getDebitReportGroup();
+      case AccountingModelPackage.REPORT_CREDITREPORTGROUP_FEATURE_ID:
+        return getTarget().getCreditReportGroup();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case AccountingModelPackage.REPORT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case AccountingModelPackage.REPORT_DEBITREPORTGROUP_FEATURE_ID:
+        getTarget().setDebitReportGroup((ReportGroup) value);
+        return;
+      case AccountingModelPackage.REPORT_CREDITREPORTGROUP_FEATURE_ID:
+        getTarget().setCreditReportGroup((ReportGroup) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>JournalGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -739,9 +891,6 @@ public class AccountingModelFactory implements ModelFactory {
   public static class JournalGroupModelObject<E extends JournalGroup> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -835,6 +984,106 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class ReportGroupModelObject<E extends ReportGroup> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return AccountingModelPackage.INSTANCE.getReportGroupEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return AccountingModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case AccountingModelPackage.REPORTGROUP_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
+        return getTarget().getReportGroup();
+      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
+        return getTarget().getAccount();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case AccountingModelPackage.REPORTGROUP_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
+        getTarget().setReportGroup((List<ReportGroup>) value);
+        return;
+      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
+        getTarget().setAccount((List<BalanceAccount>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
+        getTarget().getReportGroup().add((ReportGroup) value);
+        return;
+
+      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
+        getTarget().getAccount().add((BalanceAccount) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
+        getTarget().getReportGroup().remove(value);
+        return;
+
+      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
+        getTarget().getAccount().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>JournalStatement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -843,9 +1092,6 @@ public class AccountingModelFactory implements ModelFactory {
   public static class JournalStatementModelObject<E extends JournalStatement> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -943,13 +1189,8 @@ public class AccountingModelFactory implements ModelFactory {
    * 
    * @generated
    */
-  public static class PLAccountModelObject<E extends PLAccount>
-
-  extends AccountModelObject<E> {
+  public static class PLAccountModelObject<E extends PLAccount> extends AccountModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -1005,275 +1246,6 @@ public class AccountingModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class ReportModelObject<E extends Report> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return AccountingModelPackage.INSTANCE.getReportEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return AccountingModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case AccountingModelPackage.REPORT_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case AccountingModelPackage.REPORT_DEBITREPORTGROUP_FEATURE_ID:
-        return getTarget().getDebitReportGroup();
-      case AccountingModelPackage.REPORT_CREDITREPORTGROUP_FEATURE_ID:
-        return getTarget().getCreditReportGroup();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case AccountingModelPackage.REPORT_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case AccountingModelPackage.REPORT_DEBITREPORTGROUP_FEATURE_ID:
-        getTarget().setDebitReportGroup((ReportGroup) value);
-        return;
-      case AccountingModelPackage.REPORT_CREDITREPORTGROUP_FEATURE_ID:
-        getTarget().setCreditReportGroup((ReportGroup) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class ReportGroupModelObject<E extends ReportGroup> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return AccountingModelPackage.INSTANCE.getReportGroupEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return AccountingModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case AccountingModelPackage.REPORTGROUP_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
-        return getTarget().getReportGroup();
-      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
-        return getTarget().getAccount();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case AccountingModelPackage.REPORTGROUP_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
-        getTarget().setReportGroup((List<ReportGroup>) value);
-        return;
-      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
-        getTarget().setAccount((List<BalanceAccount>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
-        getTarget().getReportGroup().add((ReportGroup) value);
-        return;
-
-      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
-        getTarget().getAccount().add((BalanceAccount) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case AccountingModelPackage.REPORTGROUP_REPORTGROUP_FEATURE_ID:
-        getTarget().getReportGroup().remove(value);
-        return;
-
-      case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
-        getTarget().getAccount().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class VatModelObject<E extends Vat> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return AccountingModelPackage.INSTANCE.getVatEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return AccountingModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case AccountingModelPackage.VAT_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case AccountingModelPackage.VAT_RATE_FEATURE_ID:
-        return getTarget().getRate();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case AccountingModelPackage.VAT_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case AccountingModelPackage.VAT_RATE_FEATURE_ID:
-        getTarget().setRate((Float) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }

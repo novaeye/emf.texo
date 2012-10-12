@@ -142,7 +142,6 @@ public class DatetimeModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(TestDate.class, TestDateDao.class);
 
     // and return ourselves

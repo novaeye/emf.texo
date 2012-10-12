@@ -343,9 +343,6 @@ public class PlayModelFactory implements ModelFactory {
    */
   public static class ActTypeModelObject<E extends ActType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -433,6 +430,126 @@ public class PlayModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class SceneTypeModelObject<E extends SceneType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return PlayModelPackage.INSTANCE.getSceneTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return PlayModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+        return getTarget().getStageDirections();
+      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
+        return getTarget().getSpeech();
+      case PlayModelPackage.SCENETYPE_PINDEX_FEATURE_ID:
+        return getTarget().getPindex();
+      case PlayModelPackage.SCENETYPE_TITLE_FEATURE_ID:
+        return getTarget().getTitle();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+        getTarget().setGroup((List<SceneTypeGroupFeatureGroup>) value);
+        return;
+      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+        getTarget().setStageDirections((List<String>) value);
+        return;
+      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
+        getTarget().setSpeech((List<SpeechType>) value);
+        return;
+      case PlayModelPackage.SCENETYPE_PINDEX_FEATURE_ID:
+        getTarget().setPindex((PindexType) value);
+        return;
+      case PlayModelPackage.SCENETYPE_TITLE_FEATURE_ID:
+        getTarget().setTitle((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((SceneTypeGroupFeatureGroup) value);
+        return;
+
+      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+        getTarget().getStageDirections().add((String) value);
+        return;
+
+      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
+        getTarget().getSpeech().add((SpeechType) value);
+        return;
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().remove(value);
+        return;
+
+      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
+        getTarget().getStageDirections().remove(value);
+        return;
+
+      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
+        getTarget().getSpeech().remove(value);
+        return;
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -440,9 +557,6 @@ public class PlayModelFactory implements ModelFactory {
   public static class DocumentRootModelObject<E extends DocumentRoot> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -616,9 +730,6 @@ public class PlayModelFactory implements ModelFactory {
    */
   public static class FmTypeModelObject<E extends FmType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -701,9 +812,6 @@ public class PlayModelFactory implements ModelFactory {
   public static class PersonaeTypeModelObject<E extends PersonaeType> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -826,9 +934,6 @@ public class PlayModelFactory implements ModelFactory {
   public static class PersonaGroupTypeModelObject<E extends PersonaGroupType> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -918,9 +1023,6 @@ public class PlayModelFactory implements ModelFactory {
   public static class PlayTypeModelObject<E extends PlayType> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -1021,129 +1123,6 @@ public class PlayModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class SceneTypeModelObject<E extends SceneType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return PlayModelPackage.INSTANCE.getSceneTypeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return PlayModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
-        return getTarget().getGroup();
-      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
-        return getTarget().getStageDirections();
-      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
-        return getTarget().getSpeech();
-      case PlayModelPackage.SCENETYPE_PINDEX_FEATURE_ID:
-        return getTarget().getPindex();
-      case PlayModelPackage.SCENETYPE_TITLE_FEATURE_ID:
-        return getTarget().getTitle();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
-        getTarget().setGroup((List<SceneTypeGroupFeatureGroup>) value);
-        return;
-      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
-        getTarget().setStageDirections((List<String>) value);
-        return;
-      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
-        getTarget().setSpeech((List<SpeechType>) value);
-        return;
-      case PlayModelPackage.SCENETYPE_PINDEX_FEATURE_ID:
-        getTarget().setPindex((PindexType) value);
-        return;
-      case PlayModelPackage.SCENETYPE_TITLE_FEATURE_ID:
-        getTarget().setTitle((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
-        getTarget().getGroup().add((SceneTypeGroupFeatureGroup) value);
-        return;
-
-      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
-        getTarget().getStageDirections().add((String) value);
-        return;
-
-      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
-        getTarget().getSpeech().add((SpeechType) value);
-        return;
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case PlayModelPackage.SCENETYPE_GROUP_FEATURE_ID:
-        getTarget().getGroup().remove(value);
-        return;
-
-      case PlayModelPackage.SCENETYPE_STAGEDIRECTIONS_FEATURE_ID:
-        getTarget().getStageDirections().remove(value);
-        return;
-
-      case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
-        getTarget().getSpeech().remove(value);
-        return;
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>SpeechType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -1151,9 +1130,6 @@ public class PlayModelFactory implements ModelFactory {
   public static class SpeechTypeModelObject<E extends SpeechType> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override

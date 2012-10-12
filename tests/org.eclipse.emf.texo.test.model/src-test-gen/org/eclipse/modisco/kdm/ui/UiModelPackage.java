@@ -442,41 +442,23 @@ public class UiModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(AbstractUIElement.class, AbstractUIElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractUIRelationship.class, AbstractUIRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(UIResource.class, UIResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(UIDisplay.class, UIDisplayDao.class);
-
     DaoRegistry.getInstance().registerDao(Screen.class, ScreenDao.class);
-
     DaoRegistry.getInstance().registerDao(Report.class, ReportDao.class);
-
     DaoRegistry.getInstance().registerDao(UIModel.class, UIModelDao.class);
-
     DaoRegistry.getInstance().registerDao(UILayout.class, UILayoutDao.class);
-
     DaoRegistry.getInstance().registerDao(UIField.class, UIFieldDao.class);
-
     DaoRegistry.getInstance().registerDao(DisplaysImage.class, DisplaysImageDao.class);
-
     DaoRegistry.getInstance().registerDao(Displays.class, DisplaysDao.class);
-
     DaoRegistry.getInstance().registerDao(UIFlow.class, UIFlowDao.class);
-
     DaoRegistry.getInstance().registerDao(UIElement.class, UIElementDao.class);
-
     DaoRegistry.getInstance().registerDao(UIRelationship.class, UIRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(UIAction.class, UIActionDao.class);
-
     DaoRegistry.getInstance().registerDao(UIEvent.class, UIEventDao.class);
-
     DaoRegistry.getInstance().registerDao(ReadsUI.class, ReadsUIDao.class);
-
     DaoRegistry.getInstance().registerDao(WritesUI.class, WritesUIDao.class);
-
     DaoRegistry.getInstance().registerDao(ManagesUI.class, ManagesUIDao.class);
 
     // and return ourselves

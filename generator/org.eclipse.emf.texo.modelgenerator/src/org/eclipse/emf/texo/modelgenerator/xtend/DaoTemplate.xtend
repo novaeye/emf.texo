@@ -1,0 +1,67 @@
+/*******************************************************************************
+ * Copyright (c) 2012 Springsite BV (http://www.springsite.com) and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Author - Martin Taal
+ *******************************************************************************/
+
+package org.eclipse.emf.texo.modelgenerator.xtend
+
+import org.eclipse.emf.texo.generator.ModelController
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
+import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
+
+class DaoTemplate extends BaseTemplate {
+
+	ModelController modelController
+	EClassModelGenAnnotation eClassModelGenAnnotation
+	EPackageModelGenAnnotation ePackageModelGenAnnotation
+
+	def void generate(ModelController theModelController, EClassModelGenAnnotation theEClassModelGenAnnotation) {
+		modelController = theModelController
+		eClassModelGenAnnotation = theEClassModelGenAnnotation
+		ePackageModelGenAnnotation = theEClassModelGenAnnotation.ownerEPackageAnnotation
+	
+		if (!ePackageModelGenAnnotation.addRuntimeModelBehavior) {
+			return
+		}
+		var fileName = TemplateUtil::daoClassFileName(eClassModelGenAnnotation)
+		var content = generateContent()
+		
+		addFile(fileName, content)		
+	}
+	
+	def String generateContent() 
+		'''
+«ePackageModelGenAnnotation.javaFileHeader»
+package «ePackageModelGenAnnotation.daoClassesPackagePath»;
+
+/** 
+ * The Dao implementation for the model object '<em><b>«eClassModelGenAnnotation.name»</b></em>'.
+ * 
+ * @generated 
+*/
+public class «eClassModelGenAnnotation.simpleClassName»«ePackageModelGenAnnotation.daoPatternName.toFirstUpper()» extends «ePackageModelGenAnnotation.daoRootClass»<«eClassModelGenAnnotation.qualifiedClassName»> {
+
+	/**
+	* @generated
+	*/
+	@Override
+  	public Class<«eClassModelGenAnnotation.qualifiedClassName»> getEntityClass() {
+  		return «eClassModelGenAnnotation.qualifiedClassName».class;
+  	}
+
+	/**
+	* @generated
+	*/
+	@Override
+	public org.eclipse.emf.ecore.EClass getEClass() {
+		return «ePackageModelGenAnnotation.qualifiedClassName».INSTANCE.get«TemplateUtil::toFirstUpper(eClassModelGenAnnotation.name)»EClass();
+	}
+}
+		'''
+}
+

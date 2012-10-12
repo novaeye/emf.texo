@@ -226,11 +226,8 @@ public class ForumModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Forum.class, ForumDao.class);
-
     DaoRegistry.getInstance().registerDao(Member.class, MemberDao.class);
-
     DaoRegistry.getInstance().registerDao(Topic.class, TopicDao.class);
-
     DaoRegistry.getInstance().registerDao(Post.class, PostDao.class);
 
     // and return ourselves

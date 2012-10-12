@@ -121,7 +121,6 @@ public class IncludeModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Include1.class, Include1Dao.class);
-
     DaoRegistry.getInstance().registerDao(Include2.class, Include2Dao.class);
 
     // and return ourselves

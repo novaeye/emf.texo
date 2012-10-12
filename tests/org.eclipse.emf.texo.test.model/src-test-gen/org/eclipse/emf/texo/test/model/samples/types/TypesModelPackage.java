@@ -379,7 +379,6 @@ public class TypesModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ManyTypes.class, ManyTypesDao.class);
-
     DaoRegistry.getInstance().registerDao(SingleTypes.class, SingleTypesDao.class);
 
     // and return ourselves

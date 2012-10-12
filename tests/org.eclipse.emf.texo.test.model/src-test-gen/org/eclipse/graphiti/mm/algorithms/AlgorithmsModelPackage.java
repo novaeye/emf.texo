@@ -390,25 +390,15 @@ public class AlgorithmsModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(GraphicsAlgorithm.class, GraphicsAlgorithmDao.class);
-
     DaoRegistry.getInstance().registerDao(Polyline.class, PolylineDao.class);
-
     DaoRegistry.getInstance().registerDao(Ellipse.class, EllipseDao.class);
-
     DaoRegistry.getInstance().registerDao(Text.class, TextDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractText.class, AbstractTextDao.class);
-
     DaoRegistry.getInstance().registerDao(Polygon.class, PolygonDao.class);
-
     DaoRegistry.getInstance().registerDao(Rectangle.class, RectangleDao.class);
-
     DaoRegistry.getInstance().registerDao(RoundedRectangle.class, RoundedRectangleDao.class);
-
     DaoRegistry.getInstance().registerDao(Image.class, ImageDao.class);
-
     DaoRegistry.getInstance().registerDao(PlatformGraphicsAlgorithm.class, PlatformGraphicsAlgorithmDao.class);
-
     DaoRegistry.getInstance().registerDao(MultiText.class, MultiTextDao.class);
 
     // and return ourselves

@@ -333,9 +333,6 @@ public class Epo2ModelFactory implements ModelFactory {
    */
   public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -434,100 +431,6 @@ public class Epo2ModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class USAddressModelObject<E extends USAddress>
-
-  extends AddressModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return Epo2ModelPackage.INSTANCE.getUSAddressEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return Epo2ModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case Epo2ModelPackage.USADDRESS_STREET_FEATURE_ID:
-        return getTarget().getStreet();
-      case Epo2ModelPackage.USADDRESS_CITY_FEATURE_ID:
-        return getTarget().getCity();
-      case Epo2ModelPackage.USADDRESS_STATE_FEATURE_ID:
-        return getTarget().getState();
-      case Epo2ModelPackage.USADDRESS_ZIP_FEATURE_ID:
-        return getTarget().getZip();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case Epo2ModelPackage.USADDRESS_STREET_FEATURE_ID:
-        getTarget().setStreet((String) value);
-        return;
-      case Epo2ModelPackage.USADDRESS_CITY_FEATURE_ID:
-        getTarget().setCity((String) value);
-        return;
-      case Epo2ModelPackage.USADDRESS_STATE_FEATURE_ID:
-        getTarget().setState((String) value);
-        return;
-      case Epo2ModelPackage.USADDRESS_ZIP_FEATURE_ID:
-        getTarget().setZip((Integer) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -535,9 +438,6 @@ public class Epo2ModelFactory implements ModelFactory {
   public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -652,15 +552,101 @@ public class Epo2ModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class USAddressModelObject<E extends USAddress> extends AddressModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return Epo2ModelPackage.INSTANCE.getUSAddressEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return Epo2ModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case Epo2ModelPackage.USADDRESS_STREET_FEATURE_ID:
+        return getTarget().getStreet();
+      case Epo2ModelPackage.USADDRESS_CITY_FEATURE_ID:
+        return getTarget().getCity();
+      case Epo2ModelPackage.USADDRESS_STATE_FEATURE_ID:
+        return getTarget().getState();
+      case Epo2ModelPackage.USADDRESS_ZIP_FEATURE_ID:
+        return getTarget().getZip();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case Epo2ModelPackage.USADDRESS_STREET_FEATURE_ID:
+        getTarget().setStreet((String) value);
+        return;
+      case Epo2ModelPackage.USADDRESS_CITY_FEATURE_ID:
+        getTarget().setCity((String) value);
+        return;
+      case Epo2ModelPackage.USADDRESS_STATE_FEATURE_ID:
+        getTarget().setState((String) value);
+        return;
+      case Epo2ModelPackage.USADDRESS_ZIP_FEATURE_ID:
+        getTarget().setZip((Integer) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
   public static class AddressModelObject<E extends Address> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -734,6 +720,93 @@ public class Epo2ModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>Customer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class CustomerModelObject<E extends Customer> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return Epo2ModelPackage.INSTANCE.getCustomerEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return Epo2ModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case Epo2ModelPackage.CUSTOMER_CUSTOMERID_FEATURE_ID:
+        return getTarget().getCustomerID();
+      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
+        return getTarget().getOrders();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case Epo2ModelPackage.CUSTOMER_CUSTOMERID_FEATURE_ID:
+        getTarget().setCustomerID((Integer) value);
+        return;
+      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
+        getTarget().setOrders((List<PurchaseOrder>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
+        getTarget().getOrders().add((PurchaseOrder) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
+        getTarget().getOrders().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -741,9 +814,6 @@ public class Epo2ModelFactory implements ModelFactory {
   public static class SupplierModelObject<E extends Supplier> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -843,107 +913,12 @@ public class Epo2ModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Customer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class CustomerModelObject<E extends Customer> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return Epo2ModelPackage.INSTANCE.getCustomerEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return Epo2ModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case Epo2ModelPackage.CUSTOMER_CUSTOMERID_FEATURE_ID:
-        return getTarget().getCustomerID();
-      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
-        return getTarget().getOrders();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case Epo2ModelPackage.CUSTOMER_CUSTOMERID_FEATURE_ID:
-        getTarget().setCustomerID((Integer) value);
-        return;
-      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
-        getTarget().setOrders((List<PurchaseOrder>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
-        getTarget().getOrders().add((PurchaseOrder) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
-        getTarget().getOrders().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>GlobalAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class GlobalAddressModelObject<E extends GlobalAddress>
-
-  extends AddressModelObject<E> {
+  public static class GlobalAddressModelObject<E extends GlobalAddress> extends AddressModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -1033,9 +1008,6 @@ public class Epo2ModelFactory implements ModelFactory {
   public static class GlobalLocationModelObject<E extends GlobalLocation> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override

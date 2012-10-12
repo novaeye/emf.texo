@@ -263,9 +263,6 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   public static class DocumentRootModelObject<E extends DocumentRoot> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -363,108 +360,6 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return SchemaprimerpoModelPackage.INSTANCE.getItemEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return SchemaprimerpoModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SchemaprimerpoModelPackage.ITEM_PRODUCTNAME_FEATURE_ID:
-        return getTarget().getProductName();
-      case SchemaprimerpoModelPackage.ITEM_QUANTITY_FEATURE_ID:
-        return getTarget().getQuantity();
-      case SchemaprimerpoModelPackage.ITEM_USPRICE_FEATURE_ID:
-        return getTarget().getUSPrice();
-      case SchemaprimerpoModelPackage.ITEM_COMMENT_FEATURE_ID:
-        return getTarget().getComment();
-      case SchemaprimerpoModelPackage.ITEM_SHIPDATE_FEATURE_ID:
-        return getTarget().getShipDate();
-      case SchemaprimerpoModelPackage.ITEM_PARTNUM_FEATURE_ID:
-        return getTarget().getPartNum();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SchemaprimerpoModelPackage.ITEM_PRODUCTNAME_FEATURE_ID:
-        getTarget().setProductName((String) value);
-        return;
-      case SchemaprimerpoModelPackage.ITEM_QUANTITY_FEATURE_ID:
-        getTarget().setQuantity((BigInteger) value);
-        return;
-      case SchemaprimerpoModelPackage.ITEM_USPRICE_FEATURE_ID:
-        getTarget().setUSPrice((BigDecimal) value);
-        return;
-      case SchemaprimerpoModelPackage.ITEM_COMMENT_FEATURE_ID:
-        getTarget().setComment((String) value);
-        return;
-      case SchemaprimerpoModelPackage.ITEM_SHIPDATE_FEATURE_ID:
-        getTarget().setShipDate((Date) value);
-        return;
-      case SchemaprimerpoModelPackage.ITEM_PARTNUM_FEATURE_ID:
-        getTarget().setPartNum((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -472,9 +367,6 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   public static class PurchaseOrderModelObject<E extends PurchaseOrder> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -572,6 +464,105 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class ItemModelObject<E extends Item> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return SchemaprimerpoModelPackage.INSTANCE.getItemEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return SchemaprimerpoModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SchemaprimerpoModelPackage.ITEM_PRODUCTNAME_FEATURE_ID:
+        return getTarget().getProductName();
+      case SchemaprimerpoModelPackage.ITEM_QUANTITY_FEATURE_ID:
+        return getTarget().getQuantity();
+      case SchemaprimerpoModelPackage.ITEM_USPRICE_FEATURE_ID:
+        return getTarget().getUSPrice();
+      case SchemaprimerpoModelPackage.ITEM_COMMENT_FEATURE_ID:
+        return getTarget().getComment();
+      case SchemaprimerpoModelPackage.ITEM_SHIPDATE_FEATURE_ID:
+        return getTarget().getShipDate();
+      case SchemaprimerpoModelPackage.ITEM_PARTNUM_FEATURE_ID:
+        return getTarget().getPartNum();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SchemaprimerpoModelPackage.ITEM_PRODUCTNAME_FEATURE_ID:
+        getTarget().setProductName((String) value);
+        return;
+      case SchemaprimerpoModelPackage.ITEM_QUANTITY_FEATURE_ID:
+        getTarget().setQuantity((BigInteger) value);
+        return;
+      case SchemaprimerpoModelPackage.ITEM_USPRICE_FEATURE_ID:
+        getTarget().setUSPrice((BigDecimal) value);
+        return;
+      case SchemaprimerpoModelPackage.ITEM_COMMENT_FEATURE_ID:
+        getTarget().setComment((String) value);
+        return;
+      case SchemaprimerpoModelPackage.ITEM_SHIPDATE_FEATURE_ID:
+        getTarget().setShipDate((Date) value);
+        return;
+      case SchemaprimerpoModelPackage.ITEM_PARTNUM_FEATURE_ID:
+        getTarget().setPartNum((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -579,9 +570,6 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   public static class USAddressModelObject<E extends USAddress> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override

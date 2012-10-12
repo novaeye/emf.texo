@@ -221,9 +221,7 @@ public class EmapsampleModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Writer.class, modelPackage.getWriterEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Book.class, BookDao.class);
-
     DaoRegistry.getInstance().registerDao(BookStore.class, BookStoreDao.class);
-
     DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
 
     // and return ourselves

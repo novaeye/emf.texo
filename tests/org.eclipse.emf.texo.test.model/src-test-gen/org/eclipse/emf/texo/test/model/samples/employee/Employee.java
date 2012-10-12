@@ -59,14 +59,6 @@ public class Employee extends Identifiable {
   private Date hireDate = null;
 
   /**
-   * @generated
-   */
-  public String helloWorld() {
-    System.err.println("hello, I am Employee ");
-    return " Employee";
-  }
-
-  /**
    * Returns the value of '<em><b>name</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->

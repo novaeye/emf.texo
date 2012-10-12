@@ -501,9 +501,7 @@ public class SimpletypesModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(SimpleList.class, SimpleListDao.class);
-
     DaoRegistry.getInstance().registerDao(SimpleType.class, SimpleTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SimpleTypeObject.class, SimpleTypeObjectDao.class);
 
     // and return ourselves

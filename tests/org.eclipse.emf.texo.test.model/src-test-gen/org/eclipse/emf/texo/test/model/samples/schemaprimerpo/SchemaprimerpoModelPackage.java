@@ -289,11 +289,8 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(PurchaseOrder.class, PurchaseOrderDao.class);
-
     DaoRegistry.getInstance().registerDao(Item.class, ItemDao.class);
-
     DaoRegistry.getInstance().registerDao(USAddress.class, USAddressDao.class);
 
     // and return ourselves

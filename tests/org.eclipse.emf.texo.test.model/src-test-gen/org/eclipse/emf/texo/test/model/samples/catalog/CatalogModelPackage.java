@@ -228,13 +228,9 @@ public class CatalogModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(CatalogType.class, CatalogTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ProductType.class, ProductTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PriceType.class, PriceTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SupplierType.class, SupplierTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(StringType.class, StringTypeDao.class);
 
     // and return ourselves

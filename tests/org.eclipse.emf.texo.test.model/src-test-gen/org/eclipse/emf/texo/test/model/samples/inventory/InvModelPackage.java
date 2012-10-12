@@ -155,7 +155,6 @@ public class InvModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(PType.class, PTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PDeclaration.class, PDeclarationDao.class);
 
     // and return ourselves

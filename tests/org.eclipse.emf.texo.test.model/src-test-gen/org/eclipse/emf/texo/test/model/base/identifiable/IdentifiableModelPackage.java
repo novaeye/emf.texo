@@ -134,9 +134,7 @@ public class IdentifiableModelPackage extends ModelPackage {
         modelPackage.getIdentifiableInterfaceEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Identifiable.class, IdentifiableDao.class);
-
     DaoRegistry.getInstance().registerDao(NotIdentifiable.class, NotIdentifiableDao.class);
-
     DaoRegistry.getInstance().registerDao(IdentifiableInterface.class, IdentifiableInterfaceDao.class);
 
     // and return ourselves

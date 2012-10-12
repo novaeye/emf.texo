@@ -329,15 +329,10 @@ public class SubstitutionModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(OddType.class, modelPackage.getOddTypeEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(ComplexNumber.class, ComplexNumberDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(EvenComplexNumberType.class, EvenComplexNumberTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(MultiNumberType.class, MultiNumberTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(NumberType.class, NumberTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(OddComplexNumberType.class, OddComplexNumberTypeDao.class);
 
     // and return ourselves

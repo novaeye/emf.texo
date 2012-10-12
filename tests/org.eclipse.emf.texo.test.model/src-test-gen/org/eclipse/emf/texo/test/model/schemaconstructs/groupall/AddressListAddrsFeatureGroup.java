@@ -136,7 +136,6 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private AddressType shipTo;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

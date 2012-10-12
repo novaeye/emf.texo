@@ -192,9 +192,7 @@ public class AttributesModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(RType.class, modelPackage.getRTypeEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(AType.class, ATypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(RType.class, RTypeDao.class);
 
     // and return ourselves

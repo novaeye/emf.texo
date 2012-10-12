@@ -26,4 +26,3 @@
   <eClassifiers xsi:type="ecore:EClass" name="NonEMF" instanceClassName="org.eclipse.emf.texo.test.model.instanceclassset.NonEMF"
       eSuperTypes="http://www.eclipse.org/emf/texo/test/model/base/identifiable#//Identifiable"/>
 </ecore:EPackage>
-

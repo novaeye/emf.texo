@@ -260,6 +260,501 @@ public class SimpletypesModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>SimpleList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class SimpleListModelObject<E extends SimpleList> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return SimpletypesModelPackage.INSTANCE.getSimpleListEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return SimpletypesModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SimpletypesModelPackage.SIMPLELIST_CODE_FEATURE_ID:
+        return getTarget().getCode();
+      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
+        return getTarget().getBoo();
+      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
+        return getTarget().getByt();
+      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
+        return getTarget().getDoubl();
+      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
+        return getTarget().getFloa();
+      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
+        return getTarget().getInte();
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        return getTarget().getLong_();
+      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
+        return getTarget().getShor();
+      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
+        return getTarget().getEnu();
+      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
+        return getTarget().getDat();
+      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
+        return getTarget().getLimitedstring();
+      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
+        return getTarget().getStri();
+      case SimpletypesModelPackage.SIMPLELIST_INTARRAY_FEATURE_ID:
+        return getTarget().getIntArray();
+      case SimpletypesModelPackage.SIMPLELIST_DOUBLEARRAY_FEATURE_ID:
+        return getTarget().getDoubleArray();
+      case SimpletypesModelPackage.SIMPLELIST_STRINGARRAY_FEATURE_ID:
+        return getTarget().getStringArray();
+      case SimpletypesModelPackage.SIMPLELIST_BYTEARRAY_FEATURE_ID:
+        return getTarget().getByteArray();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SimpletypesModelPackage.SIMPLELIST_CODE_FEATURE_ID:
+        getTarget().setCode((String) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
+        getTarget().setBoo((List<Boolean>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
+        getTarget().setByt((List<Byte>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
+        getTarget().setDoubl((List<Double>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
+        getTarget().setFloa((List<Float>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
+        getTarget().setInte((List<Integer>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        getTarget().setLong_((List<Long>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
+        getTarget().setShor((List<Short>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
+        getTarget().setEnu((List<SimpleEnum>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
+        getTarget().setDat((List<Date>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
+        getTarget().setLimitedstring((List<String>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
+        getTarget().setStri((List<String>) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_INTARRAY_FEATURE_ID:
+        getTarget().setIntArray((int[]) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_DOUBLEARRAY_FEATURE_ID:
+        getTarget().setDoubleArray((double[]) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_STRINGARRAY_FEATURE_ID:
+        getTarget().setStringArray((String[]) value);
+        return;
+      case SimpletypesModelPackage.SIMPLELIST_BYTEARRAY_FEATURE_ID:
+        getTarget().setByteArray((byte[]) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
+        getTarget().getBoo().add((Boolean) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
+        getTarget().getByt().add((Byte) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
+        getTarget().getDoubl().add((Double) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
+        getTarget().getFloa().add((Float) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
+        getTarget().getInte().add((Integer) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        getTarget().getLong_().add((Long) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
+        getTarget().getShor().add((Short) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
+        getTarget().getEnu().add((SimpleEnum) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
+        getTarget().getDat().add((Date) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
+        getTarget().getLimitedstring().add((String) value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
+        getTarget().getStri().add((String) value);
+        return;
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
+        getTarget().getBoo().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
+        getTarget().getByt().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
+        getTarget().getDoubl().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
+        getTarget().getFloa().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
+        getTarget().getInte().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
+        getTarget().getLong_().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
+        getTarget().getShor().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
+        getTarget().getEnu().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
+        getTarget().getDat().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
+        getTarget().getLimitedstring().remove(value);
+        return;
+
+      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
+        getTarget().getStri().remove(value);
+        return;
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimpleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class SimpleTypeModelObject<E extends SimpleType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return SimpletypesModelPackage.INSTANCE.getSimpleTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return SimpletypesModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SimpletypesModelPackage.SIMPLETYPE_CODE_FEATURE_ID:
+        return getTarget().getCode();
+      case SimpletypesModelPackage.SIMPLETYPE_BOO_FEATURE_ID:
+        return getTarget().isBoo();
+      case SimpletypesModelPackage.SIMPLETYPE_BYT_FEATURE_ID:
+        return getTarget().getByt();
+      case SimpletypesModelPackage.SIMPLETYPE_DOUBL_FEATURE_ID:
+        return getTarget().getDoubl();
+      case SimpletypesModelPackage.SIMPLETYPE_FLOAT__FEATURE_ID:
+        return getTarget().getFloat_();
+      case SimpletypesModelPackage.SIMPLETYPE_INTE_FEATURE_ID:
+        return getTarget().getInte();
+      case SimpletypesModelPackage.SIMPLETYPE_LON_FEATURE_ID:
+        return getTarget().getLon();
+      case SimpletypesModelPackage.SIMPLETYPE_SHOR_FEATURE_ID:
+        return getTarget().getShor();
+      case SimpletypesModelPackage.SIMPLETYPE_ENU_FEATURE_ID:
+        return getTarget().getEnu();
+      case SimpletypesModelPackage.SIMPLETYPE_DAT_FEATURE_ID:
+        return getTarget().getDat();
+      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDSTRING_FEATURE_ID:
+        return getTarget().getLimitedstring();
+      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDDECIMAL_FEATURE_ID:
+        return getTarget().getLimitedDecimal();
+      case SimpletypesModelPackage.SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID:
+        return getTarget().getExtraLimitedString();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SimpletypesModelPackage.SIMPLETYPE_CODE_FEATURE_ID:
+        getTarget().setCode((String) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_BOO_FEATURE_ID:
+        getTarget().setBoo((Boolean) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_BYT_FEATURE_ID:
+        getTarget().setByt((Byte) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_DOUBL_FEATURE_ID:
+        getTarget().setDoubl((Double) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_FLOAT__FEATURE_ID:
+        getTarget().setFloat_((Float) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_INTE_FEATURE_ID:
+        getTarget().setInte((Integer) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_LON_FEATURE_ID:
+        getTarget().setLon((Long) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_SHOR_FEATURE_ID:
+        getTarget().setShor((Short) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_ENU_FEATURE_ID:
+        getTarget().setEnu((SimpleEnum) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_DAT_FEATURE_ID:
+        getTarget().setDat((Date) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDSTRING_FEATURE_ID:
+        getTarget().setLimitedstring((String) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDDECIMAL_FEATURE_ID:
+        getTarget().setLimitedDecimal((BigDecimal) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID:
+        getTarget().setExtraLimitedString((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimpleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @generated
+   */
+  public static class SimpleTypeObjectModelObject<E extends SimpleTypeObject> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return SimpletypesModelPackage.INSTANCE.getSimpleTypeObjectEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return SimpletypesModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_CODE_FEATURE_ID:
+        return getTarget().getCode();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BOO_FEATURE_ID:
+        return getTarget().getBoo();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BYT_FEATURE_ID:
+        return getTarget().getByt();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DOUBL_FEATURE_ID:
+        return getTarget().getDoubl();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT__FEATURE_ID:
+        return getTarget().getFloat_();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_INTE_FEATURE_ID:
+        return getTarget().getInte();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_LON_FEATURE_ID:
+        return getTarget().getLon();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_SHOR_FEATURE_ID:
+        return getTarget().getShor();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_ENU_FEATURE_ID:
+        return getTarget().getEnu();
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DAT_FEATURE_ID:
+        return getTarget().getDat();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_CODE_FEATURE_ID:
+        getTarget().setCode((String) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BOO_FEATURE_ID:
+        getTarget().setBoo((Boolean) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BYT_FEATURE_ID:
+        getTarget().setByt((Byte) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DOUBL_FEATURE_ID:
+        getTarget().setDoubl((Double) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT__FEATURE_ID:
+        getTarget().setFloat_((Float) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_INTE_FEATURE_ID:
+        getTarget().setInte((Integer) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_LON_FEATURE_ID:
+        getTarget().setLon((Long) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_SHOR_FEATURE_ID:
+        getTarget().setShor((Short) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_ENU_FEATURE_ID:
+        getTarget().setEnu((SimpleEnum) value);
+        return;
+      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DAT_FEATURE_ID:
+        getTarget().setDat((Date) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * Converts the EDataType: Byte to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
@@ -760,501 +1255,6 @@ public class SimpletypesModelFactory implements ModelFactory {
       result[i++] = strValue;
     }
     return result;
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>SimpleList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class SimpleListModelObject<E extends SimpleList> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return SimpletypesModelPackage.INSTANCE.getSimpleListEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return SimpletypesModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SimpletypesModelPackage.SIMPLELIST_CODE_FEATURE_ID:
-        return getTarget().getCode();
-      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
-        return getTarget().getBoo();
-      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
-        return getTarget().getByt();
-      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
-        return getTarget().getDoubl();
-      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
-        return getTarget().getFloa();
-      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
-        return getTarget().getInte();
-      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
-        return getTarget().getLong_();
-      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
-        return getTarget().getShor();
-      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
-        return getTarget().getEnu();
-      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
-        return getTarget().getDat();
-      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
-        return getTarget().getLimitedstring();
-      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
-        return getTarget().getStri();
-      case SimpletypesModelPackage.SIMPLELIST_INTARRAY_FEATURE_ID:
-        return getTarget().getIntArray();
-      case SimpletypesModelPackage.SIMPLELIST_DOUBLEARRAY_FEATURE_ID:
-        return getTarget().getDoubleArray();
-      case SimpletypesModelPackage.SIMPLELIST_STRINGARRAY_FEATURE_ID:
-        return getTarget().getStringArray();
-      case SimpletypesModelPackage.SIMPLELIST_BYTEARRAY_FEATURE_ID:
-        return getTarget().getByteArray();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SimpletypesModelPackage.SIMPLELIST_CODE_FEATURE_ID:
-        getTarget().setCode((String) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
-        getTarget().setBoo((List<Boolean>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
-        getTarget().setByt((List<Byte>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
-        getTarget().setDoubl((List<Double>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
-        getTarget().setFloa((List<Float>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
-        getTarget().setInte((List<Integer>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
-        getTarget().setLong_((List<Long>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
-        getTarget().setShor((List<Short>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
-        getTarget().setEnu((List<SimpleEnum>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
-        getTarget().setDat((List<Date>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
-        getTarget().setLimitedstring((List<String>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
-        getTarget().setStri((List<String>) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_INTARRAY_FEATURE_ID:
-        getTarget().setIntArray((int[]) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_DOUBLEARRAY_FEATURE_ID:
-        getTarget().setDoubleArray((double[]) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_STRINGARRAY_FEATURE_ID:
-        getTarget().setStringArray((String[]) value);
-        return;
-      case SimpletypesModelPackage.SIMPLELIST_BYTEARRAY_FEATURE_ID:
-        getTarget().setByteArray((byte[]) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
-        getTarget().getBoo().add((Boolean) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
-        getTarget().getByt().add((Byte) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
-        getTarget().getDoubl().add((Double) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
-        getTarget().getFloa().add((Float) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
-        getTarget().getInte().add((Integer) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
-        getTarget().getLong_().add((Long) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
-        getTarget().getShor().add((Short) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
-        getTarget().getEnu().add((SimpleEnum) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
-        getTarget().getDat().add((Date) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
-        getTarget().getLimitedstring().add((String) value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
-        getTarget().getStri().add((String) value);
-        return;
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case SimpletypesModelPackage.SIMPLELIST_BOO_FEATURE_ID:
-        getTarget().getBoo().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_BYT_FEATURE_ID:
-        getTarget().getByt().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_DOUBL_FEATURE_ID:
-        getTarget().getDoubl().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_FLOA_FEATURE_ID:
-        getTarget().getFloa().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_INTE_FEATURE_ID:
-        getTarget().getInte().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_LONG__FEATURE_ID:
-        getTarget().getLong_().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_SHOR_FEATURE_ID:
-        getTarget().getShor().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_ENU_FEATURE_ID:
-        getTarget().getEnu().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_DAT_FEATURE_ID:
-        getTarget().getDat().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_LIMITEDSTRING_FEATURE_ID:
-        getTarget().getLimitedstring().remove(value);
-        return;
-
-      case SimpletypesModelPackage.SIMPLELIST_STRI_FEATURE_ID:
-        getTarget().getStri().remove(value);
-        return;
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>SimpleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class SimpleTypeModelObject<E extends SimpleType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return SimpletypesModelPackage.INSTANCE.getSimpleTypeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return SimpletypesModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SimpletypesModelPackage.SIMPLETYPE_CODE_FEATURE_ID:
-        return getTarget().getCode();
-      case SimpletypesModelPackage.SIMPLETYPE_BOO_FEATURE_ID:
-        return getTarget().isBoo();
-      case SimpletypesModelPackage.SIMPLETYPE_BYT_FEATURE_ID:
-        return getTarget().getByt();
-      case SimpletypesModelPackage.SIMPLETYPE_DOUBL_FEATURE_ID:
-        return getTarget().getDoubl();
-      case SimpletypesModelPackage.SIMPLETYPE_FLOAT__FEATURE_ID:
-        return getTarget().getFloat_();
-      case SimpletypesModelPackage.SIMPLETYPE_INTE_FEATURE_ID:
-        return getTarget().getInte();
-      case SimpletypesModelPackage.SIMPLETYPE_LON_FEATURE_ID:
-        return getTarget().getLon();
-      case SimpletypesModelPackage.SIMPLETYPE_SHOR_FEATURE_ID:
-        return getTarget().getShor();
-      case SimpletypesModelPackage.SIMPLETYPE_ENU_FEATURE_ID:
-        return getTarget().getEnu();
-      case SimpletypesModelPackage.SIMPLETYPE_DAT_FEATURE_ID:
-        return getTarget().getDat();
-      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDSTRING_FEATURE_ID:
-        return getTarget().getLimitedstring();
-      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDDECIMAL_FEATURE_ID:
-        return getTarget().getLimitedDecimal();
-      case SimpletypesModelPackage.SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID:
-        return getTarget().getExtraLimitedString();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SimpletypesModelPackage.SIMPLETYPE_CODE_FEATURE_ID:
-        getTarget().setCode((String) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_BOO_FEATURE_ID:
-        getTarget().setBoo((Boolean) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_BYT_FEATURE_ID:
-        getTarget().setByt((Byte) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_DOUBL_FEATURE_ID:
-        getTarget().setDoubl((Double) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_FLOAT__FEATURE_ID:
-        getTarget().setFloat_((Float) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_INTE_FEATURE_ID:
-        getTarget().setInte((Integer) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_LON_FEATURE_ID:
-        getTarget().setLon((Long) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_SHOR_FEATURE_ID:
-        getTarget().setShor((Short) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_ENU_FEATURE_ID:
-        getTarget().setEnu((SimpleEnum) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_DAT_FEATURE_ID:
-        getTarget().setDat((Date) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDSTRING_FEATURE_ID:
-        getTarget().setLimitedstring((String) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_LIMITEDDECIMAL_FEATURE_ID:
-        getTarget().setLimitedDecimal((BigDecimal) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID:
-        getTarget().setExtraLimitedString((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>SimpleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @generated
-   */
-  public static class SimpleTypeObjectModelObject<E extends SimpleTypeObject> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return SimpletypesModelPackage.INSTANCE.getSimpleTypeObjectEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return SimpletypesModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_CODE_FEATURE_ID:
-        return getTarget().getCode();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BOO_FEATURE_ID:
-        return getTarget().getBoo();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BYT_FEATURE_ID:
-        return getTarget().getByt();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DOUBL_FEATURE_ID:
-        return getTarget().getDoubl();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT__FEATURE_ID:
-        return getTarget().getFloat_();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_INTE_FEATURE_ID:
-        return getTarget().getInte();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_LON_FEATURE_ID:
-        return getTarget().getLon();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_SHOR_FEATURE_ID:
-        return getTarget().getShor();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_ENU_FEATURE_ID:
-        return getTarget().getEnu();
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DAT_FEATURE_ID:
-        return getTarget().getDat();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_CODE_FEATURE_ID:
-        getTarget().setCode((String) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BOO_FEATURE_ID:
-        getTarget().setBoo((Boolean) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_BYT_FEATURE_ID:
-        getTarget().setByt((Byte) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DOUBL_FEATURE_ID:
-        getTarget().setDoubl((Double) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_FLOAT__FEATURE_ID:
-        getTarget().setFloat_((Float) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_INTE_FEATURE_ID:
-        getTarget().setInte((Integer) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_LON_FEATURE_ID:
-        getTarget().setLon((Long) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_SHOR_FEATURE_ID:
-        getTarget().setShor((Short) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_ENU_FEATURE_ID:
-        getTarget().setEnu((SimpleEnum) value);
-        return;
-      case SimpletypesModelPackage.SIMPLETYPEOBJECT_DAT_FEATURE_ID:
-        getTarget().setDat((Date) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
   }
 
 }

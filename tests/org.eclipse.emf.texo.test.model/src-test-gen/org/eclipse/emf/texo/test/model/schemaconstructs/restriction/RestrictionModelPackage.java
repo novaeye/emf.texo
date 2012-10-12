@@ -133,7 +133,6 @@ public class RestrictionModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Member.class, MemberDao.class);
-
     DaoRegistry.getInstance().registerDao(XMLDeviant.class, XMLDeviantDao.class);
 
     // and return ourselves

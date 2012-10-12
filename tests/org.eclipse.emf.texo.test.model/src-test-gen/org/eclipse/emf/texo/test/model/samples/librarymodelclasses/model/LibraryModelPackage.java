@@ -186,9 +186,7 @@ public class LibraryModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Book.class, BookDao.class);
-
     DaoRegistry.getInstance().registerDao(Library.class, LibraryDao.class);
-
     DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
 
     // and return ourselves

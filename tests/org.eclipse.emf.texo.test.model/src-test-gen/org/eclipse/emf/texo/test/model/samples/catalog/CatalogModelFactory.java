@@ -180,16 +180,6 @@ public class CatalogModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass SupplierType
-   * @generated
-   */
-  public SupplierType createSupplierType() {
-    return new SupplierType();
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>CatalogType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -295,91 +285,6 @@ public class CatalogModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>PriceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class PriceTypeModelObject<E extends PriceType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return CatalogModelPackage.INSTANCE.getPriceTypeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return CatalogModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case CatalogModelPackage.PRICETYPE_PRICE_FEATURE_ID:
-        return getTarget().getPrice();
-      case CatalogModelPackage.PRICETYPE_QUANTITYTO_FEATURE_ID:
-        return getTarget().getQuantityTo();
-      case CatalogModelPackage.PRICETYPE_SUPPLIER_FEATURE_ID:
-        return getTarget().getSupplier();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case CatalogModelPackage.PRICETYPE_PRICE_FEATURE_ID:
-        getTarget().setPrice((Double) value);
-        return;
-      case CatalogModelPackage.PRICETYPE_QUANTITYTO_FEATURE_ID:
-        getTarget().setQuantityTo((Double) value);
-        return;
-      case CatalogModelPackage.PRICETYPE_SUPPLIER_FEATURE_ID:
-        getTarget().setSupplier((SupplierType) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>ProductType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -479,18 +384,18 @@ public class CatalogModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>PriceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class StringTypeModelObject<E extends StringType> extends
+  public static class PriceTypeModelObject<E extends PriceType> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
      * @generated
      */
     @Override
     public EClass eClass() {
-      return CatalogModelPackage.INSTANCE.getStringTypeEClass();
+      return CatalogModelPackage.INSTANCE.getPriceTypeEClass();
     }
 
     /**
@@ -508,8 +413,12 @@ public class CatalogModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
-        return getTarget().getValue();
+      case CatalogModelPackage.PRICETYPE_PRICE_FEATURE_ID:
+        return getTarget().getPrice();
+      case CatalogModelPackage.PRICETYPE_QUANTITYTO_FEATURE_ID:
+        return getTarget().getQuantityTo();
+      case CatalogModelPackage.PRICETYPE_SUPPLIER_FEATURE_ID:
+        return getTarget().getSupplier();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -521,8 +430,14 @@ public class CatalogModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
-        getTarget().setValue((String) value);
+      case CatalogModelPackage.PRICETYPE_PRICE_FEATURE_ID:
+        getTarget().setPrice((Double) value);
+        return;
+      case CatalogModelPackage.PRICETYPE_QUANTITYTO_FEATURE_ID:
+        getTarget().setQuantityTo((Double) value);
+        return;
+      case CatalogModelPackage.PRICETYPE_SUPPLIER_FEATURE_ID:
+        getTarget().setSupplier((SupplierType) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -631,6 +546,91 @@ public class CatalogModelFactory implements ModelFactory {
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class StringTypeModelObject<E extends StringType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return CatalogModelPackage.INSTANCE.getStringTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return CatalogModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
+        return getTarget().getValue();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
+        getTarget().setValue((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass SupplierType
+   * @generated
+   */
+  public SupplierType createSupplierType() {
+    return new SupplierType();
   }
 
 }

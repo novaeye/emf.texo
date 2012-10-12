@@ -839,93 +839,49 @@ public class DataModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(DataModel.class, DataModelDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractDataElement.class, AbstractDataElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractDataRelationship.class, AbstractDataRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(DataResource.class, DataResourceDao.class);
-
     DaoRegistry.getInstance().registerDao(IndexElement.class, IndexElementDao.class);
-
     DaoRegistry.getInstance().registerDao(UniqueKey.class, UniqueKeyDao.class);
-
     DaoRegistry.getInstance().registerDao(Index.class, IndexDao.class);
-
     DaoRegistry.getInstance().registerDao(KeyRelation.class, KeyRelationDao.class);
-
     DaoRegistry.getInstance().registerDao(ReferenceKey.class, ReferenceKeyDao.class);
-
     DaoRegistry.getInstance().registerDao(DataContainer.class, DataContainerDao.class);
-
     DaoRegistry.getInstance().registerDao(Catalog.class, CatalogDao.class);
-
     DaoRegistry.getInstance().registerDao(RelationalSchema.class, RelationalSchemaDao.class);
-
     DaoRegistry.getInstance().registerDao(ColumnSet.class, ColumnSetDao.class);
-
     DaoRegistry.getInstance().registerDao(RelationalTable.class, RelationalTableDao.class);
-
     DaoRegistry.getInstance().registerDao(RelationalView.class, RelationalViewDao.class);
-
     DaoRegistry.getInstance().registerDao(RecordFile.class, RecordFileDao.class);
-
     DaoRegistry.getInstance().registerDao(DataEvent.class, DataEventDao.class);
-
     DaoRegistry.getInstance().registerDao(XMLSchema.class, XMLSchemaDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractContentElement.class, AbstractContentElementDao.class);
-
     DaoRegistry.getInstance().registerDao(ComplexContentType.class, ComplexContentTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(AllContent.class, AllContentDao.class);
-
     DaoRegistry.getInstance().registerDao(SeqContent.class, SeqContentDao.class);
-
     DaoRegistry.getInstance().registerDao(ChoiceContent.class, ChoiceContentDao.class);
-
     DaoRegistry.getInstance().registerDao(ContentItem.class, ContentItemDao.class);
-
     DaoRegistry.getInstance().registerDao(GroupContent.class, GroupContentDao.class);
-
     DaoRegistry.getInstance().registerDao(ContentRestriction.class, ContentRestrictionDao.class);
-
     DaoRegistry.getInstance().registerDao(SimpleContentType.class, SimpleContentTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ExtendedDataElement.class, ExtendedDataElementDao.class);
-
     DaoRegistry.getInstance().registerDao(DataRelationship.class, DataRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(MixedContent.class, MixedContentDao.class);
-
     DaoRegistry.getInstance().registerDao(ContentReference.class, ContentReferenceDao.class);
-
     DaoRegistry.getInstance().registerDao(DataAction.class, DataActionDao.class);
-
     DaoRegistry.getInstance().registerDao(ReadsColumnSet.class, ReadsColumnSetDao.class);
-
     DaoRegistry.getInstance().registerDao(ContentAttribute.class, ContentAttributeDao.class);
-
     DaoRegistry.getInstance().registerDao(TypedBy.class, TypedByDao.class);
-
     DaoRegistry.getInstance().registerDao(ReferenceTo.class, ReferenceToDao.class);
-
     DaoRegistry.getInstance().registerDao(RestrictionOf.class, RestrictionOfDao.class);
-
     DaoRegistry.getInstance().registerDao(ExtensionTo.class, ExtensionToDao.class);
-
     DaoRegistry.getInstance().registerDao(DatatypeOf.class, DatatypeOfDao.class);
-
     DaoRegistry.getInstance().registerDao(HasContent.class, HasContentDao.class);
-
     DaoRegistry.getInstance().registerDao(WritesColumnSet.class, WritesColumnSetDao.class);
-
     DaoRegistry.getInstance().registerDao(ProducesDataEvent.class, ProducesDataEventDao.class);
-
     DaoRegistry.getInstance().registerDao(DataSegment.class, DataSegmentDao.class);
-
     DaoRegistry.getInstance().registerDao(ContentElement.class, ContentElementDao.class);
-
     DaoRegistry.getInstance().registerDao(ManagesData.class, ManagesDataDao.class);
 
     // and return ourselves

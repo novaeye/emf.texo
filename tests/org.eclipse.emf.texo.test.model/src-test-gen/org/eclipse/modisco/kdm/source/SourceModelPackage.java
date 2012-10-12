@@ -410,39 +410,22 @@ public class SourceModelPackage extends ModelPackage {
         modelPackage.getInventoryRelationshipEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(InventoryModel.class, InventoryModelDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractInventoryElement.class, AbstractInventoryElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractInventoryRelationship.class, AbstractInventoryRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(InventoryItem.class, InventoryItemDao.class);
-
     DaoRegistry.getInstance().registerDao(SourceFile.class, SourceFileDao.class);
-
     DaoRegistry.getInstance().registerDao(Image.class, ImageDao.class);
-
     DaoRegistry.getInstance().registerDao(Configuration.class, ConfigurationDao.class);
-
     DaoRegistry.getInstance().registerDao(ResourceDescription.class, ResourceDescriptionDao.class);
-
     DaoRegistry.getInstance().registerDao(BinaryFile.class, BinaryFileDao.class);
-
     DaoRegistry.getInstance().registerDao(ExecutableFile.class, ExecutableFileDao.class);
-
     DaoRegistry.getInstance().registerDao(InventoryContainer.class, InventoryContainerDao.class);
-
     DaoRegistry.getInstance().registerDao(Directory.class, DirectoryDao.class);
-
     DaoRegistry.getInstance().registerDao(Project.class, ProjectDao.class);
-
     DaoRegistry.getInstance().registerDao(DependsOn.class, DependsOnDao.class);
-
     DaoRegistry.getInstance().registerDao(SourceRef.class, SourceRefDao.class);
-
     DaoRegistry.getInstance().registerDao(SourceRegion.class, SourceRegionDao.class);
-
     DaoRegistry.getInstance().registerDao(InventoryElement.class, InventoryElementDao.class);
-
     DaoRegistry.getInstance().registerDao(InventoryRelationship.class, InventoryRelationshipDao.class);
 
     // and return ourselves

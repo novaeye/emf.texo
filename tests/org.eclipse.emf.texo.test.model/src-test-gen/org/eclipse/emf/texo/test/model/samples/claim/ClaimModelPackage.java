@@ -217,11 +217,8 @@ public class ClaimModelPackage extends ModelPackage {
         modelPackage.getClaimLineCompositeKeyEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Claim.class, ClaimDao.class);
-
     DaoRegistry.getInstance().registerDao(ClaimCompositeKey.class, ClaimCompositeKeyDao.class);
-
     DaoRegistry.getInstance().registerDao(ClaimLine.class, ClaimLineDao.class);
-
     DaoRegistry.getInstance().registerDao(ClaimLineCompositeKey.class, ClaimLineCompositeKeyDao.class);
 
     // and return ourselves

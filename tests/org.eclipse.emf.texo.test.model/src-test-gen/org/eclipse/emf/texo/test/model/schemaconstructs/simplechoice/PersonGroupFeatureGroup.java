@@ -132,7 +132,6 @@ public class PersonGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private Integer age;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

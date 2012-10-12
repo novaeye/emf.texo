@@ -348,27 +348,16 @@ public class KdmModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Attribute.class, AttributeDao.class);
-
     DaoRegistry.getInstance().registerDao(Annotation.class, AnnotationDao.class);
-
     DaoRegistry.getInstance().registerDao(Stereotype.class, StereotypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ExtendedValue.class, ExtendedValueDao.class);
-
     DaoRegistry.getInstance().registerDao(KDMModel.class, KDMModelDao.class);
-
     DaoRegistry.getInstance().registerDao(KDMFramework.class, KDMFrameworkDao.class);
-
     DaoRegistry.getInstance().registerDao(Audit.class, AuditDao.class);
-
     DaoRegistry.getInstance().registerDao(ExtensionFamily.class, ExtensionFamilyDao.class);
-
     DaoRegistry.getInstance().registerDao(Segment.class, SegmentDao.class);
-
     DaoRegistry.getInstance().registerDao(TagDefinition.class, TagDefinitionDao.class);
-
     DaoRegistry.getInstance().registerDao(TaggedValue.class, TaggedValueDao.class);
-
     DaoRegistry.getInstance().registerDao(TaggedRef.class, TaggedRefDao.class);
 
     // and return ourselves

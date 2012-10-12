@@ -331,6 +331,114 @@ public class GroupallModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class AddressTypeModelObject<E extends AddressType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return GroupallModelPackage.INSTANCE.getAddressTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return GroupallModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
+        return getTarget().getLongName();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
+        getTarget().setGroup((List<AddressTypeGroupFeatureGroup>) value);
+        return;
+      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
+        getTarget().setName((List<String>) value);
+        return;
+      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
+        getTarget().setLongName((List<String>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().add((AddressTypeGroupFeatureGroup) value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
+        getTarget().getName().add((String) value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
+        getTarget().getLongName().add((String) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
+        getTarget().getGroup().remove(value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
+        getTarget().getName().remove(value);
+        return;
+
+      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
+        getTarget().getLongName().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>AddressList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -437,114 +545,6 @@ public class GroupallModelFactory implements ModelFactory {
 
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
         getTarget().getBillTo().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class AddressTypeModelObject<E extends AddressType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return GroupallModelPackage.INSTANCE.getAddressTypeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return GroupallModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
-        return getTarget().getGroup();
-      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
-        return getTarget().getLongName();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
-        getTarget().setGroup((List<AddressTypeGroupFeatureGroup>) value);
-        return;
-      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
-        getTarget().setName((List<String>) value);
-        return;
-      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
-        getTarget().setLongName((List<String>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
-        getTarget().getGroup().add((AddressTypeGroupFeatureGroup) value);
-        return;
-
-      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
-        getTarget().getName().add((String) value);
-        return;
-
-      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
-        getTarget().getLongName().add((String) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case GroupallModelPackage.ADDRESSTYPE_GROUP_FEATURE_ID:
-        getTarget().getGroup().remove(value);
-        return;
-
-      case GroupallModelPackage.ADDRESSTYPE_NAME_FEATURE_ID:
-        getTarget().getName().remove(value);
-        return;
-
-      case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
-        getTarget().getLongName().remove(value);
         return;
       }
       super.eRemoveFrom(eStructuralFeature, value);
@@ -659,6 +659,91 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         getTarget().getMixed().remove(value);
         return;
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>SimpleAllType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class SimpleAllTypeModelObject<E extends SimpleAllType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return GroupallModelPackage.INSTANCE.getSimpleAllTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return GroupallModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case GroupallModelPackage.SIMPLEALLTYPE_AAA_FEATURE_ID:
+        return getTarget().getAaa();
+      case GroupallModelPackage.SIMPLEALLTYPE_BBB_FEATURE_ID:
+        return getTarget().getBbb();
+      case GroupallModelPackage.SIMPLEALLTYPE_CCC_FEATURE_ID:
+        return getTarget().getCcc();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case GroupallModelPackage.SIMPLEALLTYPE_AAA_FEATURE_ID:
+        getTarget().setAaa((String) value);
+        return;
+      case GroupallModelPackage.SIMPLEALLTYPE_BBB_FEATURE_ID:
+        getTarget().setBbb((String) value);
+        return;
+      case GroupallModelPackage.SIMPLEALLTYPE_CCC_FEATURE_ID:
+        getTarget().setCcc((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
 
       }
       super.eRemoveFrom(eStructuralFeature, value);
@@ -1005,91 +1090,6 @@ public class GroupallModelFactory implements ModelFactory {
      */
     public void setValue(final Object value) {
       getTarget().setValue(getTarget().getFeature(), value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>SimpleAllType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class SimpleAllTypeModelObject<E extends SimpleAllType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return GroupallModelPackage.INSTANCE.getSimpleAllTypeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return GroupallModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case GroupallModelPackage.SIMPLEALLTYPE_AAA_FEATURE_ID:
-        return getTarget().getAaa();
-      case GroupallModelPackage.SIMPLEALLTYPE_BBB_FEATURE_ID:
-        return getTarget().getBbb();
-      case GroupallModelPackage.SIMPLEALLTYPE_CCC_FEATURE_ID:
-        return getTarget().getCcc();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case GroupallModelPackage.SIMPLEALLTYPE_AAA_FEATURE_ID:
-        getTarget().setAaa((String) value);
-        return;
-      case GroupallModelPackage.SIMPLEALLTYPE_BBB_FEATURE_ID:
-        getTarget().setBbb((String) value);
-        return;
-      case GroupallModelPackage.SIMPLEALLTYPE_CCC_FEATURE_ID:
-        getTarget().setCcc((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

@@ -277,13 +277,9 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(OddType.class, modelPackage.getOddTypeEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(ComplexAAA.class, ComplexAAADao.class);
-
     DaoRegistry.getInstance().registerDao(ComplexEvenType.class, ComplexEvenTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ComplexOddType.class, ComplexOddTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(RootType.class, RootTypeDao.class);
 
     // and return ourselves

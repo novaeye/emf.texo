@@ -225,23 +225,14 @@ public class StructureModelPackage extends ModelPackage {
         modelPackage.getStructureElementEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(AbstractStructureElement.class, AbstractStructureElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractStructureRelationship.class, AbstractStructureRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(Subsystem.class, SubsystemDao.class);
-
     DaoRegistry.getInstance().registerDao(Layer.class, LayerDao.class);
-
     DaoRegistry.getInstance().registerDao(StructureModel.class, StructureModelDao.class);
-
     DaoRegistry.getInstance().registerDao(Component.class, ComponentDao.class);
-
     DaoRegistry.getInstance().registerDao(SoftwareSystem.class, SoftwareSystemDao.class);
-
     DaoRegistry.getInstance().registerDao(StructureRelationship.class, StructureRelationshipDao.class);
-
     DaoRegistry.getInstance().registerDao(ArchitectureView.class, ArchitectureViewDao.class);
-
     DaoRegistry.getInstance().registerDao(StructureElement.class, StructureElementDao.class);
 
     // and return ourselves

@@ -386,25 +386,15 @@ public class AccountingModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(AccountingClass.class, AccountingClassDao.class);
-
     DaoRegistry.getInstance().registerDao(Serializable.class, SerializableDao.class);
-
     DaoRegistry.getInstance().registerDao(Account.class, AccountDao.class);
-
     DaoRegistry.getInstance().registerDao(AccountGroup.class, AccountGroupDao.class);
-
     DaoRegistry.getInstance().registerDao(Vat.class, VatDao.class);
-
     DaoRegistry.getInstance().registerDao(BalanceAccount.class, BalanceAccountDao.class);
-
     DaoRegistry.getInstance().registerDao(Report.class, ReportDao.class);
-
     DaoRegistry.getInstance().registerDao(JournalGroup.class, JournalGroupDao.class);
-
     DaoRegistry.getInstance().registerDao(ReportGroup.class, ReportGroupDao.class);
-
     DaoRegistry.getInstance().registerDao(JournalStatement.class, JournalStatementDao.class);
-
     DaoRegistry.getInstance().registerDao(PLAccount.class, PLAccountDao.class);
 
     // and return ourselves

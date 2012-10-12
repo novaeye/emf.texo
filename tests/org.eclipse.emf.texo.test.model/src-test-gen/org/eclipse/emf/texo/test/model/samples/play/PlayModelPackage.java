@@ -485,19 +485,12 @@ public class PlayModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ActType.class, ActTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SceneType.class, SceneTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(FmType.class, FmTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PersonaeType.class, PersonaeTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PersonaGroupType.class, PersonaGroupTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(PlayType.class, PlayTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(SpeechType.class, SpeechTypeDao.class);
 
     // and return ourselves

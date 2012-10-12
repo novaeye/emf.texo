@@ -174,9 +174,6 @@ public class InterfacesModelFactory implements ModelFactory {
   public static class DescribableIdentifiableConcreteModelObject<E extends DescribableIdentifiableConcrete> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -261,9 +258,6 @@ public class InterfacesModelFactory implements ModelFactory {
    */
   public static class DescribableModelObject<E extends Describable> extends AbstractModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     public EClass eClass() {
@@ -410,9 +404,6 @@ public class InterfacesModelFactory implements ModelFactory {
   public static class DescribableConcreteModelObject<E extends DescribableConcrete> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override
@@ -494,9 +485,6 @@ public class InterfacesModelFactory implements ModelFactory {
   public static class IdentifiableConcreteModelObject<E extends IdentifiableConcrete> extends
       IdentifiableModelFactory.IdentifiableModelObject<E> {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the {@link EClass}
      * @generated
      */
     @Override

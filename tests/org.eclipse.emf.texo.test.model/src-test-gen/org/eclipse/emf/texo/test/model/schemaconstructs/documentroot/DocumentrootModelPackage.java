@@ -142,7 +142,6 @@ public class DocumentrootModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(ComplexType.class, ComplexTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
 
     // and return ourselves

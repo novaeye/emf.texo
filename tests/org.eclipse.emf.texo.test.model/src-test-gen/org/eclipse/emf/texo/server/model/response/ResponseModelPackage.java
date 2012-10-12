@@ -246,11 +246,8 @@ public class ResponseModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(DocumentRoot.class, DocumentRootDao.class);
-
     DaoRegistry.getInstance().registerDao(ErrorType.class, ErrorTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ResponseType.class, ResponseTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(ResultType.class, ResultTypeDao.class);
 
     // and return ourselves

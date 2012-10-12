@@ -289,6 +289,91 @@ public class EcoreattrsModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>NameList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class NameListModelObject<E extends NameList> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return EcoreattrsModelPackage.INSTANCE.getNameListEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return EcoreattrsModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case EcoreattrsModelPackage.NAMELIST_FIRSTNAME_FEATURE_ID:
+        return getTarget().getFirstName();
+      case EcoreattrsModelPackage.NAMELIST_MIDDLENAME_FEATURE_ID:
+        return getTarget().getMiddleName();
+      case EcoreattrsModelPackage.NAMELIST_LASTNAME_FEATURE_ID:
+        return getTarget().getLastName();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case EcoreattrsModelPackage.NAMELIST_FIRSTNAME_FEATURE_ID:
+        getTarget().setFirstName((String) value);
+        return;
+      case EcoreattrsModelPackage.NAMELIST_MIDDLENAME_FEATURE_ID:
+        getTarget().setMiddleName((String) value);
+        return;
+      case EcoreattrsModelPackage.NAMELIST_LASTNAME_FEATURE_ID:
+        getTarget().setLastName((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>Feature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -641,91 +726,6 @@ public class EcoreattrsModelFactory implements ModelFactory {
      */
     public void setValue(final Object value) {
       getTarget().setValue(getTarget().getFeature(), value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>NameList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class NameListModelObject<E extends NameList> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return EcoreattrsModelPackage.INSTANCE.getNameListEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return EcoreattrsModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case EcoreattrsModelPackage.NAMELIST_FIRSTNAME_FEATURE_ID:
-        return getTarget().getFirstName();
-      case EcoreattrsModelPackage.NAMELIST_MIDDLENAME_FEATURE_ID:
-        return getTarget().getMiddleName();
-      case EcoreattrsModelPackage.NAMELIST_LASTNAME_FEATURE_ID:
-        return getTarget().getLastName();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case EcoreattrsModelPackage.NAMELIST_FIRSTNAME_FEATURE_ID:
-        getTarget().setFirstName((String) value);
-        return;
-      case EcoreattrsModelPackage.NAMELIST_MIDDLENAME_FEATURE_ID:
-        getTarget().setMiddleName((String) value);
-        return;
-      case EcoreattrsModelPackage.NAMELIST_LASTNAME_FEATURE_ID:
-        getTarget().setLastName((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

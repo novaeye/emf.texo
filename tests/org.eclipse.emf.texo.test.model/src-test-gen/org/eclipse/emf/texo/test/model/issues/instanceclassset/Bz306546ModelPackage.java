@@ -132,9 +132,7 @@ public class Bz306546ModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(NonEMF.class, modelPackage.getNonEMFEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Serializable.class, SerializableDao.class);
-
     DaoRegistry.getInstance().registerDao(MySerializableClass.class, MySerializableClassDao.class);
-
     DaoRegistry.getInstance().registerDao(NonEMF.class, NonEMFDao.class);
 
     // and return ourselves

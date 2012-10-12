@@ -194,11 +194,8 @@ public class EcoreattrsModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Mixed.class, modelPackage.getMixedEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Element.class, ElementDao.class);
-
     DaoRegistry.getInstance().registerDao(NameList.class, NameListDao.class);
-
     DaoRegistry.getInstance().registerDao(Feature.class, FeatureDao.class);
-
     DaoRegistry.getInstance().registerDao(Mixed.class, MixedDao.class);
 
     // and return ourselves

@@ -304,6 +304,82 @@ public class WorkflowModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>ConditionalOutputPort</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class ConditionalOutputPortModelObject<E extends ConditionalOutputPort> extends
+      OutputPortModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return WorkflowModelPackage.INSTANCE.getConditionalOutputPortEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return WorkflowModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case WorkflowModelPackage.CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID:
+        return getTarget().getCondition();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case WorkflowModelPackage.CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID:
+        getTarget().setCondition((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -405,6 +481,111 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.WORKFLOW_COMMENTS_FEATURE_ID:
         getTarget().getComments().remove(value);
         return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>WorkflowElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class WorkflowElementModelObject<E extends WorkflowElement> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return WorkflowModelPackage.INSTANCE.getWorkflowElementEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return WorkflowModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case WorkflowModelPackage.WORKFLOWELEMENT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case WorkflowModelPackage.WORKFLOWELEMENT_COMMENT_FEATURE_ID:
+        return getTarget().getComment();
+      case WorkflowModelPackage.WORKFLOWELEMENT_X_FEATURE_ID:
+        return getTarget().getX();
+      case WorkflowModelPackage.WORKFLOWELEMENT_Y_FEATURE_ID:
+        return getTarget().getY();
+      case WorkflowModelPackage.WORKFLOWELEMENT_WIDTH_FEATURE_ID:
+        return getTarget().getWidth();
+      case WorkflowModelPackage.WORKFLOWELEMENT_HEIGHT_FEATURE_ID:
+        return getTarget().getHeight();
+      case WorkflowModelPackage.WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID:
+        return getTarget().getWorkFlowElementId();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case WorkflowModelPackage.WORKFLOWELEMENT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case WorkflowModelPackage.WORKFLOWELEMENT_COMMENT_FEATURE_ID:
+        getTarget().setComment((String) value);
+        return;
+      case WorkflowModelPackage.WORKFLOWELEMENT_X_FEATURE_ID:
+        getTarget().setX((Integer) value);
+        return;
+      case WorkflowModelPackage.WORKFLOWELEMENT_Y_FEATURE_ID:
+        getTarget().setY((Integer) value);
+        return;
+      case WorkflowModelPackage.WORKFLOWELEMENT_WIDTH_FEATURE_ID:
+        getTarget().setWidth((Integer) value);
+        return;
+      case WorkflowModelPackage.WORKFLOWELEMENT_HEIGHT_FEATURE_ID:
+        getTarget().setHeight((Integer) value);
+        return;
+      case WorkflowModelPackage.WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID:
+        getTarget().setWorkFlowElementId((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
@@ -606,17 +787,17 @@ public class WorkflowModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static class InputPortModelObject<E extends InputPort> extends PortModelObject<E> {
+  public static class CommentModelObject<E extends Comment> extends WorkflowElementModelObject<E> {
     /**
      * @generated
      */
     @Override
     public EClass eClass() {
-      return WorkflowModelPackage.INSTANCE.getInputPortEClass();
+      return WorkflowModelPackage.INSTANCE.getCommentEClass();
     }
 
     /**
@@ -634,10 +815,8 @@ public class WorkflowModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case WorkflowModelPackage.INPUTPORT_NODE_FEATURE_ID:
-        return getTarget().getNode();
-      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
-        return getTarget().getEdges();
+      case WorkflowModelPackage.COMMENT_WORKFLOW_FEATURE_ID:
+        return getTarget().getWorkflow();
       }
       return super.eGet(eStructuralFeature);
     }
@@ -645,16 +824,12 @@ public class WorkflowModelFactory implements ModelFactory {
     /**
      * @generated
      */
-    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
-      case WorkflowModelPackage.INPUTPORT_NODE_FEATURE_ID:
-        getTarget().setNode((WorkflowNode) value);
-        return;
-      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
-        getTarget().setEdges((List<Edge>) value);
+      case WorkflowModelPackage.COMMENT_WORKFLOW_FEATURE_ID:
+        getTarget().setWorkflow((Workflow) value);
         return;
       }
       super.eSet(eStructuralFeature, value);
@@ -668,9 +843,6 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
-        getTarget().getEdges().add((Edge) value);
-        return;
       }
       super.eAddTo(eStructuralFeature, value);
     }
@@ -683,9 +855,6 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
-        getTarget().getEdges().remove(value);
-        return;
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
@@ -770,6 +939,159 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
 
       case WorkflowModelPackage.OUTPUTPORT_EDGES_FEATURE_ID:
+        getTarget().getEdges().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Port</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class PortModelObject<E extends Port> extends WorkflowElementModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return WorkflowModelPackage.INSTANCE.getPortEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return WorkflowModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class InputPortModelObject<E extends InputPort> extends PortModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return WorkflowModelPackage.INSTANCE.getInputPortEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return WorkflowModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case WorkflowModelPackage.INPUTPORT_NODE_FEATURE_ID:
+        return getTarget().getNode();
+      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
+        return getTarget().getEdges();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case WorkflowModelPackage.INPUTPORT_NODE_FEATURE_ID:
+        getTarget().setNode((WorkflowNode) value);
+        return;
+      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
+        getTarget().setEdges((List<Edge>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
+        getTarget().getEdges().add((Edge) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
         getTarget().getEdges().remove(value);
         return;
       }
@@ -913,73 +1235,6 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Port</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class PortModelObject<E extends Port> extends WorkflowElementModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return WorkflowModelPackage.INSTANCE.getPortEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return WorkflowModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
       }
       super.eRemoveFrom(eStructuralFeature, value);
     }
@@ -1171,261 +1426,6 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
       case WorkflowModelPackage.LOOPTASK_WHILECONDITION_FEATURE_ID:
         getTarget().setWhileCondition((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>WorkflowElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class WorkflowElementModelObject<E extends WorkflowElement> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return WorkflowModelPackage.INSTANCE.getWorkflowElementEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return WorkflowModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case WorkflowModelPackage.WORKFLOWELEMENT_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case WorkflowModelPackage.WORKFLOWELEMENT_COMMENT_FEATURE_ID:
-        return getTarget().getComment();
-      case WorkflowModelPackage.WORKFLOWELEMENT_X_FEATURE_ID:
-        return getTarget().getX();
-      case WorkflowModelPackage.WORKFLOWELEMENT_Y_FEATURE_ID:
-        return getTarget().getY();
-      case WorkflowModelPackage.WORKFLOWELEMENT_WIDTH_FEATURE_ID:
-        return getTarget().getWidth();
-      case WorkflowModelPackage.WORKFLOWELEMENT_HEIGHT_FEATURE_ID:
-        return getTarget().getHeight();
-      case WorkflowModelPackage.WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID:
-        return getTarget().getWorkFlowElementId();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case WorkflowModelPackage.WORKFLOWELEMENT_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case WorkflowModelPackage.WORKFLOWELEMENT_COMMENT_FEATURE_ID:
-        getTarget().setComment((String) value);
-        return;
-      case WorkflowModelPackage.WORKFLOWELEMENT_X_FEATURE_ID:
-        getTarget().setX((Integer) value);
-        return;
-      case WorkflowModelPackage.WORKFLOWELEMENT_Y_FEATURE_ID:
-        getTarget().setY((Integer) value);
-        return;
-      case WorkflowModelPackage.WORKFLOWELEMENT_WIDTH_FEATURE_ID:
-        getTarget().setWidth((Integer) value);
-        return;
-      case WorkflowModelPackage.WORKFLOWELEMENT_HEIGHT_FEATURE_ID:
-        getTarget().setHeight((Integer) value);
-        return;
-      case WorkflowModelPackage.WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID:
-        getTarget().setWorkFlowElementId((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>ConditionalOutputPort</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class ConditionalOutputPortModelObject<E extends ConditionalOutputPort> extends
-      OutputPortModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return WorkflowModelPackage.INSTANCE.getConditionalOutputPortEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return WorkflowModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case WorkflowModelPackage.CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID:
-        return getTarget().getCondition();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case WorkflowModelPackage.CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID:
-        getTarget().setCondition((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class CommentModelObject<E extends Comment> extends WorkflowElementModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return WorkflowModelPackage.INSTANCE.getCommentEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return WorkflowModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case WorkflowModelPackage.COMMENT_WORKFLOW_FEATURE_ID:
-        return getTarget().getWorkflow();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case WorkflowModelPackage.COMMENT_WORKFLOW_FEATURE_ID:
-        getTarget().setWorkflow((Workflow) value);
         return;
       }
       super.eSet(eStructuralFeature, value);

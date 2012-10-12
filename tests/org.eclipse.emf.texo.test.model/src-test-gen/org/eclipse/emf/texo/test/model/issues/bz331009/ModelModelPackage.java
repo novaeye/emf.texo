@@ -1242,69 +1242,37 @@ public class ModelModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(SimCard.class, SimCardDao.class);
-
     DaoRegistry.getInstance().registerDao(SimContract.class, SimContractDao.class);
-
     DaoRegistry.getInstance().registerDao(PaymentInfo.class, PaymentInfoDao.class);
-
     DaoRegistry.getInstance().registerDao(SimCardXSimContract.class, SimCardXSimContractDao.class);
-
     DaoRegistry.getInstance().registerDao(SimTariff.class, SimTariffDao.class);
-
     DaoRegistry.getInstance().registerDao(Tariff.class, TariffDao.class);
-
     DaoRegistry.getInstance().registerDao(PaymentItem.class, PaymentItemDao.class);
-
     DaoRegistry.getInstance().registerDao(VolumePayment.class, VolumePaymentDao.class);
-
     DaoRegistry.getInstance().registerDao(PeriodicalPayment.class, PeriodicalPaymentDao.class);
-
     DaoRegistry.getInstance().registerDao(OneTimePayment.class, OneTimePaymentDao.class);
-
     DaoRegistry.getInstance().registerDao(Service.class, ServiceDao.class);
-
     DaoRegistry.getInstance().registerDao(Units.class, UnitsDao.class);
-
     DaoRegistry.getInstance().registerDao(Price.class, PriceDao.class);
-
     DaoRegistry.getInstance().registerDao(CarProducer.class, CarProducerDao.class);
-
     DaoRegistry.getInstance().registerDao(CarModel.class, CarModelDao.class);
-
     DaoRegistry.getInstance().registerDao(CarRegInfo.class, CarRegInfoDao.class);
-
     DaoRegistry.getInstance().registerDao(Document.class, DocumentDao.class);
-
     DaoRegistry.getInstance().registerDao(Person.class, PersonDao.class);
-
     DaoRegistry.getInstance().registerDao(Car.class, CarDao.class);
-
     DaoRegistry.getInstance().registerDao(CarPassport.class, CarPassportDao.class);
-
     DaoRegistry.getInstance().registerDao(Phone.class, PhoneDao.class);
-
     DaoRegistry.getInstance().registerDao(Address.class, AddressDao.class);
-
     DaoRegistry.getInstance().registerDao(Passport.class, PassportDao.class);
-
     DaoRegistry.getInstance().registerDao(DrivingLicense.class, DrivingLicenseDao.class);
-
     DaoRegistry.getInstance().registerDao(Contract.class, ContractDao.class);
-
     DaoRegistry.getInstance().registerDao(SecretQuestion.class, SecretQuestionDao.class);
-
     DaoRegistry.getInstance().registerDao(ClientTariff.class, ClientTariffDao.class);
-
     DaoRegistry.getInstance().registerDao(ContractPackage.class, ContractPackageDao.class);
-
     DaoRegistry.getInstance().registerDao(User.class, UserDao.class);
-
     DaoRegistry.getInstance().registerDao(UserGroup.class, UserGroupDao.class);
-
     DaoRegistry.getInstance().registerDao(Message.class, MessageDao.class);
-
     DaoRegistry.getInstance().registerDao(Event.class, EventDao.class);
-
     DaoRegistry.getInstance().registerDao(Coordinates.class, CoordinatesDao.class);
 
     // and return ourselves

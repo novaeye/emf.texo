@@ -129,9 +129,7 @@ public class SchoollibraryModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Asset.class, AssetDao.class);
-
     DaoRegistry.getInstance().registerDao(SchoolBook.class, SchoolBookDao.class);
-
     DaoRegistry.getInstance().registerDao(SchoolLibrary.class, SchoolLibraryDao.class);
 
     // and return ourselves

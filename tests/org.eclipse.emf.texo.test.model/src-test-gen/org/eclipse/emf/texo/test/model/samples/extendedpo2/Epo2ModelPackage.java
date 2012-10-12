@@ -409,19 +409,12 @@ public class Epo2ModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Item.class, ItemDao.class);
-
     DaoRegistry.getInstance().registerDao(PurchaseOrder.class, PurchaseOrderDao.class);
-
     DaoRegistry.getInstance().registerDao(USAddress.class, USAddressDao.class);
-
     DaoRegistry.getInstance().registerDao(Address.class, AddressDao.class);
-
     DaoRegistry.getInstance().registerDao(Customer.class, CustomerDao.class);
-
     DaoRegistry.getInstance().registerDao(Supplier.class, SupplierDao.class);
-
     DaoRegistry.getInstance().registerDao(GlobalAddress.class, GlobalAddressDao.class);
-
     DaoRegistry.getInstance().registerDao(GlobalLocation.class, GlobalLocationDao.class);
 
     // and return ourselves

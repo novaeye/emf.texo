@@ -37,6 +37,7 @@ import org.eclipse.emf.texo.generator.ArtifactGenerator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.generator.ModelAnnotator;
 import org.eclipse.emf.texo.generator.ModelController;
+import org.eclipse.emf.texo.modelgenerator.xtend.ModelTemplate;
 
 /**
  * The generate code menu option. Collects the selected files and their projects and generates code for the packages in
@@ -72,6 +73,7 @@ public class GenerateCode extends BaseGenerateAction {
       artifactGenerator.setModelController(modelController);
       artifactGenerator.setProjectName(ProjectPropertyUtil.getTargetProject(project).getName());
       artifactGenerator.setDoDao(isDoDao());
+      artifactGenerator.setXTendTemplate(new ModelTemplate());
 
       int eClassifierCount = 0;
       for (EPackage ePackage : ePackages) {

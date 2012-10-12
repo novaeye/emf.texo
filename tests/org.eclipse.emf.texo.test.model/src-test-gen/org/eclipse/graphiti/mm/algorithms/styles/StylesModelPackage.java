@@ -564,25 +564,15 @@ public class StylesModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Style.class, StyleDao.class);
-
     DaoRegistry.getInstance().registerDao(AbstractStyle.class, AbstractStyleDao.class);
-
     DaoRegistry.getInstance().registerDao(Color.class, ColorDao.class);
-
     DaoRegistry.getInstance().registerDao(Font.class, FontDao.class);
-
     DaoRegistry.getInstance().registerDao(Point.class, PointDao.class);
-
     DaoRegistry.getInstance().registerDao(PrecisionPoint.class, PrecisionPointDao.class);
-
     DaoRegistry.getInstance().registerDao(RenderingStyle.class, RenderingStyleDao.class);
-
     DaoRegistry.getInstance().registerDao(AdaptedGradientColoredAreas.class, AdaptedGradientColoredAreasDao.class);
-
     DaoRegistry.getInstance().registerDao(GradientColoredLocation.class, GradientColoredLocationDao.class);
-
     DaoRegistry.getInstance().registerDao(GradientColoredArea.class, GradientColoredAreaDao.class);
-
     DaoRegistry.getInstance().registerDao(GradientColoredAreas.class, GradientColoredAreasDao.class);
 
     // and return ourselves

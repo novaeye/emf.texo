@@ -288,92 +288,6 @@ public class LibraryModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class WriterModelObject<E extends Writer> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return LibraryModelPackage.INSTANCE.getWriterEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return LibraryModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case LibraryModelPackage.WRITER_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        return getTarget().getBooks();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case LibraryModelPackage.WRITER_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().setBooks((List<Book>) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().getBooks().add((Book) value);
-        return;
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
-        getTarget().getBooks().remove(value);
-        return;
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -465,6 +379,92 @@ public class LibraryModelFactory implements ModelFactory {
         return;
 
       case LibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
+        getTarget().getBooks().remove(value);
+        return;
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class WriterModelObject<E extends Writer> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return LibraryModelPackage.INSTANCE.getWriterEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return LibraryModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case LibraryModelPackage.WRITER_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        return getTarget().getBooks();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case LibraryModelPackage.WRITER_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        getTarget().setBooks((List<Book>) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
+        getTarget().getBooks().add((Book) value);
+        return;
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().getBooks().remove(value);
         return;
       }

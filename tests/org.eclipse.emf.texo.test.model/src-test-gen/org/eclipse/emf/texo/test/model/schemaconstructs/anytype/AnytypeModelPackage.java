@@ -193,11 +193,8 @@ public class AnytypeModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(TestAny.class, modelPackage.getTestAnyEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(A.class, ADao.class);
-
     DaoRegistry.getInstance().registerDao(B.class, BDao.class);
-
     DaoRegistry.getInstance().registerDao(C.class, CDao.class);
-
     DaoRegistry.getInstance().registerDao(TestAny.class, TestAnyDao.class);
 
     // and return ourselves

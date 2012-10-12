@@ -136,7 +136,6 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private PurchaseOrder preferredOrders;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -144,7 +143,6 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private PurchaseOrder standardOrders;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -152,7 +150,6 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String hardCopyOrderReference;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

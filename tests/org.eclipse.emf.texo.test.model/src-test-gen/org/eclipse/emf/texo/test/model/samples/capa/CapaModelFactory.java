@@ -211,16 +211,6 @@ public class CapaModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass WorkWeek
-   * @generated
-   */
-  public WorkWeek createWorkWeek() {
-    return new WorkWeek();
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>CapacityEntry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -402,6 +392,194 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.MACHINE_TASKS_FEATURE_ID:
         getTarget().getTasks().remove(value);
         return;
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class WorkWeekModelObject<E extends WorkWeek> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return CapaModelPackage.INSTANCE.getWorkWeekEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return CapaModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
+        return getTarget().getDays();
+      case CapaModelPackage.WORKWEEK_WORKWEEKID_FEATURE_ID:
+        return getTarget().getWorkWeekId();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
+        getTarget().setDays((List<WorkDay>) value);
+        return;
+      case CapaModelPackage.WORKWEEK_WORKWEEKID_FEATURE_ID:
+        getTarget().setWorkWeekId((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
+        getTarget().getDays().add((WorkDay) value);
+        return;
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
+        getTarget().getDays().remove(value);
+        return;
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
+   * The adapter/wrapper for the EClass '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class TaskModelObject<E extends Task> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return CapaModelPackage.INSTANCE.getTaskEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return CapaModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case CapaModelPackage.TASK_CAPACITYENTRY_FEATURE_ID:
+        return getTarget().getCapacityEntry();
+      case CapaModelPackage.TASK_PRODUCTION_FEATURE_ID:
+        return getTarget().getProduction();
+      case CapaModelPackage.TASK_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case CapaModelPackage.TASK_TASKID_FEATURE_ID:
+        return getTarget().getTaskId();
+      case CapaModelPackage.TASK_TIMEPERPICE_FEATURE_ID:
+        return getTarget().getTimePerPice();
+      case CapaModelPackage.TASK_TIMEPERPREPERATION_FEATURE_ID:
+        return getTarget().getTimePerPreperation();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case CapaModelPackage.TASK_CAPACITYENTRY_FEATURE_ID:
+        getTarget().setCapacityEntry((CapacityEntry) value);
+        return;
+      case CapaModelPackage.TASK_PRODUCTION_FEATURE_ID:
+        getTarget().setProduction((Production) value);
+        return;
+      case CapaModelPackage.TASK_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case CapaModelPackage.TASK_TASKID_FEATURE_ID:
+        getTarget().setTaskId((String) value);
+        return;
+      case CapaModelPackage.TASK_TIMEPERPICE_FEATURE_ID:
+        getTarget().setTimePerPice((Float) value);
+        return;
+      case CapaModelPackage.TASK_TIMEPERPREPERATION_FEATURE_ID:
+        getTarget().setTimePerPreperation((Float) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
 
       }
       super.eRemoveFrom(eStructuralFeature, value);
@@ -591,105 +769,6 @@ public class CapaModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class TaskModelObject<E extends Task> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return CapaModelPackage.INSTANCE.getTaskEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return CapaModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case CapaModelPackage.TASK_CAPACITYENTRY_FEATURE_ID:
-        return getTarget().getCapacityEntry();
-      case CapaModelPackage.TASK_PRODUCTION_FEATURE_ID:
-        return getTarget().getProduction();
-      case CapaModelPackage.TASK_NAME_FEATURE_ID:
-        return getTarget().getName();
-      case CapaModelPackage.TASK_TASKID_FEATURE_ID:
-        return getTarget().getTaskId();
-      case CapaModelPackage.TASK_TIMEPERPICE_FEATURE_ID:
-        return getTarget().getTimePerPice();
-      case CapaModelPackage.TASK_TIMEPERPREPERATION_FEATURE_ID:
-        return getTarget().getTimePerPreperation();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case CapaModelPackage.TASK_CAPACITYENTRY_FEATURE_ID:
-        getTarget().setCapacityEntry((CapacityEntry) value);
-        return;
-      case CapaModelPackage.TASK_PRODUCTION_FEATURE_ID:
-        getTarget().setProduction((Production) value);
-        return;
-      case CapaModelPackage.TASK_NAME_FEATURE_ID:
-        getTarget().setName((String) value);
-        return;
-      case CapaModelPackage.TASK_TASKID_FEATURE_ID:
-        getTarget().setTaskId((String) value);
-        return;
-      case CapaModelPackage.TASK_TIMEPERPICE_FEATURE_ID:
-        getTarget().setTimePerPice((Float) value);
-        return;
-      case CapaModelPackage.TASK_TIMEPERPREPERATION_FEATURE_ID:
-        getTarget().setTimePerPreperation((Float) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>WorkDay</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -774,92 +853,13 @@ public class CapaModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass WorkWeek
    * @generated
    */
-  public static class WorkWeekModelObject<E extends WorkWeek> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return CapaModelPackage.INSTANCE.getWorkWeekEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return CapaModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
-        return getTarget().getDays();
-      case CapaModelPackage.WORKWEEK_WORKWEEKID_FEATURE_ID:
-        return getTarget().getWorkWeekId();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
-        getTarget().setDays((List<WorkDay>) value);
-        return;
-      case CapaModelPackage.WORKWEEK_WORKWEEKID_FEATURE_ID:
-        getTarget().setWorkWeekId((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
-        getTarget().getDays().add((WorkDay) value);
-        return;
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      case CapaModelPackage.WORKWEEK_DAYS_FEATURE_ID:
-        getTarget().getDays().remove(value);
-        return;
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
-    }
+  public WorkWeek createWorkWeek() {
+    return new WorkWeek();
   }
 
 }

@@ -157,9 +157,7 @@ public class Bz379815ModelPackage extends ModelPackage {
         .registerClassModelMapping(TypeType.class, modelPackage.getTypeTypeEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(VarInputType.class, VarInputTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(VarConditionType.class, VarConditionTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(VarPolicyTypeType.class, VarPolicyTypeTypeDao.class);
 
     // and return ourselves

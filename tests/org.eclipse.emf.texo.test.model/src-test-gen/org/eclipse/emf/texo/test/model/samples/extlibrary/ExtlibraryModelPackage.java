@@ -471,31 +471,18 @@ public class ExtlibraryModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Book.class, BookDao.class);
-
     DaoRegistry.getInstance().registerDao(Item.class, ItemDao.class);
-
     DaoRegistry.getInstance().registerDao(Lendable.class, LendableDao.class);
-
     DaoRegistry.getInstance().registerDao(CirculatingItem.class, CirculatingItemDao.class);
-
     DaoRegistry.getInstance().registerDao(Writer.class, WriterDao.class);
-
     DaoRegistry.getInstance().registerDao(Addressable.class, AddressableDao.class);
-
     DaoRegistry.getInstance().registerDao(Person.class, PersonDao.class);
-
     DaoRegistry.getInstance().registerDao(Library.class, LibraryDao.class);
-
     DaoRegistry.getInstance().registerDao(Employee.class, EmployeeDao.class);
-
     DaoRegistry.getInstance().registerDao(Borrower.class, BorrowerDao.class);
-
     DaoRegistry.getInstance().registerDao(Periodical.class, PeriodicalDao.class);
-
     DaoRegistry.getInstance().registerDao(AudioVisualItem.class, AudioVisualItemDao.class);
-
     DaoRegistry.getInstance().registerDao(BookOnTape.class, BookOnTapeDao.class);
-
     DaoRegistry.getInstance().registerDao(VideoCassette.class, VideoCassetteDao.class);
 
     // and return ourselves

@@ -134,7 +134,6 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String name;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

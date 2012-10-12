@@ -184,9 +184,7 @@ public class NestedgroupModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Element.class, modelPackage.getElementEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(A.class, ADao.class);
-
     DaoRegistry.getInstance().registerDao(CType.class, CTypeDao.class);
-
     DaoRegistry.getInstance().registerDao(Element.class, ElementDao.class);
 
     // and return ourselves

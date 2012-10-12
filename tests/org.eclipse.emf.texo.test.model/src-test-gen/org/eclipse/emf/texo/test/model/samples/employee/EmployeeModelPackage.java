@@ -151,7 +151,6 @@ public class EmployeeModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(Department.class, DepartmentDao.class);
-
     DaoRegistry.getInstance().registerDao(Employee.class, EmployeeDao.class);
 
     // and return ourselves

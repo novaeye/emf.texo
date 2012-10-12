@@ -519,37 +519,21 @@ public class PictogramsModelPackage extends ModelPackage {
         modelPackage.getCompositeConnectionEClass(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Shape.class, ShapeDao.class);
-
     DaoRegistry.getInstance().registerDao(PictogramElement.class, PictogramElementDao.class);
-
     DaoRegistry.getInstance().registerDao(AnchorContainer.class, AnchorContainerDao.class);
-
     DaoRegistry.getInstance().registerDao(ContainerShape.class, ContainerShapeDao.class);
-
     DaoRegistry.getInstance().registerDao(Diagram.class, DiagramDao.class);
-
     DaoRegistry.getInstance().registerDao(Connection.class, ConnectionDao.class);
-
     DaoRegistry.getInstance().registerDao(PictogramLink.class, PictogramLinkDao.class);
-
     DaoRegistry.getInstance().registerDao(Anchor.class, AnchorDao.class);
-
     DaoRegistry.getInstance().registerDao(ConnectionDecorator.class, ConnectionDecoratorDao.class);
-
     DaoRegistry.getInstance().registerDao(FixPointAnchor.class, FixPointAnchorDao.class);
-
     DaoRegistry.getInstance().registerDao(AdvancedAnchor.class, AdvancedAnchorDao.class);
-
     DaoRegistry.getInstance().registerDao(BoxRelativeAnchor.class, BoxRelativeAnchorDao.class);
-
     DaoRegistry.getInstance().registerDao(ChopboxAnchor.class, ChopboxAnchorDao.class);
-
     DaoRegistry.getInstance().registerDao(FreeFormConnection.class, FreeFormConnectionDao.class);
-
     DaoRegistry.getInstance().registerDao(ManhattanConnection.class, ManhattanConnectionDao.class);
-
     DaoRegistry.getInstance().registerDao(CurvedConnection.class, CurvedConnectionDao.class);
-
     DaoRegistry.getInstance().registerDao(CompositeConnection.class, CompositeConnectionDao.class);
 
     // and return ourselves

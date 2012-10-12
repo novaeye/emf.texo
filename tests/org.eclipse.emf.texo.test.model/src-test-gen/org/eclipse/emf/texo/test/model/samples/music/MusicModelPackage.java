@@ -310,13 +310,9 @@ public class MusicModelPackage extends ModelPackage {
     ModelResolver.getInstance().registerClassModelMapping(Rating.class, modelPackage.getRatingEEnum(), modelPackage);
 
     DaoRegistry.getInstance().registerDao(Artist.class, ArtistDao.class);
-
     DaoRegistry.getInstance().registerDao(Country.class, CountryDao.class);
-
     DaoRegistry.getInstance().registerDao(Genre.class, GenreDao.class);
-
     DaoRegistry.getInstance().registerDao(Album.class, AlbumDao.class);
-
     DaoRegistry.getInstance().registerDao(Song.class, SongDao.class);
 
     // and return ourselves

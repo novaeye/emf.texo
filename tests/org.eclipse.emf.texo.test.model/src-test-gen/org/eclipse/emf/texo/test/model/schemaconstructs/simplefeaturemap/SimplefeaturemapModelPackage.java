@@ -149,7 +149,6 @@ public class SimplefeaturemapModelPackage extends ModelPackage {
         modelPackage);
 
     DaoRegistry.getInstance().registerDao(PurchaseOrder.class, PurchaseOrderDao.class);
-
     DaoRegistry.getInstance().registerDao(Supplier.class, SupplierDao.class);
 
     // and return ourselves

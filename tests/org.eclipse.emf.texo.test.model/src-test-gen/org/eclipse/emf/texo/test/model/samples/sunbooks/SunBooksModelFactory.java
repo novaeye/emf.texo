@@ -634,6 +634,86 @@ public class SunBooksModelFactory implements ModelFactory {
   }
 
   /**
+   * The adapter/wrapper for the EClass '<em><b>PromotionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static class PromotionTypeModelObject<E extends PromotionType> extends
+      IdentifiableModelFactory.IdentifiableModelObject<E> {
+    /**
+     * @generated
+     */
+    @Override
+    public EClass eClass() {
+      return SunBooksModelPackage.INSTANCE.getPromotionTypeEClass();
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public ModelPackage getModelPackage() {
+      return SunBooksModelPackage.INSTANCE;
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public Object eGet(EStructuralFeature eStructuralFeature) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SunBooksModelPackage.PROMOTIONTYPE_DISCOUNT_FEATURE_ID:
+        return getTarget().getDiscount();
+      case SunBooksModelPackage.PROMOTIONTYPE_NONE_FEATURE_ID:
+        return getTarget().getNone();
+      }
+      return super.eGet(eStructuralFeature);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+      case SunBooksModelPackage.PROMOTIONTYPE_DISCOUNT_FEATURE_ID:
+        getTarget().setDiscount((String) value);
+        return;
+      case SunBooksModelPackage.PROMOTIONTYPE_NONE_FEATURE_ID:
+        getTarget().setNone((String) value);
+        return;
+      }
+      super.eSet(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eAddTo(eStructuralFeature, value);
+    }
+
+    /**
+     * @generated
+     */
+    @Override
+    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
+      final int featureID = eClass().getFeatureID(eStructuralFeature);
+      switch (featureID) {
+
+      }
+      super.eRemoveFrom(eStructuralFeature, value);
+    }
+  }
+
+  /**
    * The adapter/wrapper for the EClass '<em><b>CollectionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -868,86 +948,6 @@ public class SunBooksModelFactory implements ModelFactory {
      */
     public void setValue(final Object value) {
       getTarget().setValue(getTarget().getFeature(), value);
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>PromotionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static class PromotionTypeModelObject<E extends PromotionType> extends
-      IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return SunBooksModelPackage.INSTANCE.getPromotionTypeEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return SunBooksModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SunBooksModelPackage.PROMOTIONTYPE_DISCOUNT_FEATURE_ID:
-        return getTarget().getDiscount();
-      case SunBooksModelPackage.PROMOTIONTYPE_NONE_FEATURE_ID:
-        return getTarget().getNone();
-      }
-      return super.eGet(eStructuralFeature);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case SunBooksModelPackage.PROMOTIONTYPE_DISCOUNT_FEATURE_ID:
-        getTarget().setDiscount((String) value);
-        return;
-      case SunBooksModelPackage.PROMOTIONTYPE_NONE_FEATURE_ID:
-        getTarget().setNone((String) value);
-        return;
-      }
-      super.eSet(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eAddTo(eStructuralFeature, value);
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-
-      }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

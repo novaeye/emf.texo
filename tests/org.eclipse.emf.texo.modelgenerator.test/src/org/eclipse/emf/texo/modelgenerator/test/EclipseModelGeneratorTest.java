@@ -40,6 +40,7 @@ import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.generator.TexoResourceManager;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.test.models.TestModel;
+import org.eclipse.emf.texo.modelgenerator.xtend.ModelTemplate;
 import org.eclipse.emf.texo.orm.annotator.ORMMappingOptions;
 import org.eclipse.emf.texo.provider.IdProvider;
 import org.eclipse.emf.texo.provider.TitleProvider;
@@ -155,6 +156,7 @@ public class EclipseModelGeneratorTest extends TestCase {
         if (!isGenerateTexoModels()) {
           artifactGenerator.setDoDao(true);
         }
+        artifactGenerator.setXTendTemplate(new ModelTemplate());
         artifactGenerator.run();
       } finally {
         EPackageModelGenAnnotation.setDefaultExtends(null);

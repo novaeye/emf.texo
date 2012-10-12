@@ -135,7 +135,6 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String aaa;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -143,7 +142,6 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String bbb;
-
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
