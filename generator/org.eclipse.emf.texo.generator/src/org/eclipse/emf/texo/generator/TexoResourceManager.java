@@ -29,8 +29,10 @@ import java.util.Properties;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.QualifiedName;
+import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.utils.Check;
 import org.eclipse.internal.xtend.expression.parser.SyntaxConstants;
+import org.eclipse.xpand2.XpandUtil;
 import org.eclipse.xtend.expression.Resource;
 import org.eclipse.xtend.expression.ResourceManagerDefaultImpl;
 import org.eclipse.xtend.expression.ResourceParser;
@@ -42,7 +44,7 @@ import org.eclipse.xtend.expression.ResourceParser;
  * 
  * @author mtaal
  */
-public class TexoResourceManager extends ResourceManagerDefaultImpl {
+public class TexoResourceManager extends ResourceManagerDefaultImpl implements TexoComponent {
 
   public static final QualifiedName TEMPLATE_FOLDER_PROPERTY = new QualifiedName(
       "org.eclipse.emf.texo.eclipse", "TEMPLATE_FOLDER"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -66,6 +68,20 @@ public class TexoResourceManager extends ResourceManagerDefaultImpl {
     } else {
       templateFolder = null;
     }
+  }
+
+  /**
+   * Returns true if the project has an override or implementation for a specific template.
+   */
+  public boolean doesCustomTemplateExists(String fullyQualifiedName) {
+    final String resourceName = fullyQualifiedName.replace(SyntaxConstants.NS_DELIM, "/") + "." //$NON-NLS-1$//$NON-NLS-2$
+        + XpandUtil.TEMPLATE_EXTENSION;
+    File resourceFile = null;
+    if (templateFolder != null) {
+      resourceFile = new File(templateFolder, resourceName);
+      return resourceFile.exists();
+    }
+    return false;
   }
 
   @Override

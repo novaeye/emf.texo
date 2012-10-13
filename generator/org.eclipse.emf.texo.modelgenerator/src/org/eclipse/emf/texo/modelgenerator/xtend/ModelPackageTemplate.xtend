@@ -12,27 +12,24 @@ package org.eclipse.emf.texo.modelgenerator.xtend
 
 import org.eclipse.emf.ecore.EEnum
 import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.annotator.GenConstants
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 
 class ModelPackageTemplate extends BaseTemplate {
-	ModelController modelController
-	EPackageModelGenAnnotation ePackageModelGenAnnotation
-	boolean doDao
-
-	def void generate(ModelController theModelController, EPackageModelGenAnnotation theEPackageModelGenAnnotation, boolean generateDao) {
-		doDao = generateDao
-		modelController = theModelController
-		ePackageModelGenAnnotation = theEPackageModelGenAnnotation
+	
+	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation, boolean doDao) {
 	
 		var fileName = TemplateUtil::packageFileName(ePackageModelGenAnnotation)
-		var content = generateContent()
+		var content = generateContent(getModelController(), ePackageModelGenAnnotation, doDao)
 	
 		addFile(fileName, content)
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EPackageModelGenAnnotation ePackageModelGenAnnotation,
+		boolean doDao) 
 		'''
 «ePackageModelGenAnnotation.javaFileHeader»
 package «ePackageModelGenAnnotation.modelClassesPackagePath»;

@@ -4,43 +4,35 @@ import com.google.common.base.Objects;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.generator.BaseTemplate;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
-import org.eclipse.emf.texo.modelgenerator.xtend.BaseTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.TemplateUtil;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")
 public class InterfaceTemplate extends BaseTemplate {
-  private ModelController modelController;
-  
-  private EClassModelGenAnnotation eClassModelGenAnnotation;
-  
-  private EPackageModelGenAnnotation ePackageAnnotation;
-  
-  public void generate(final ModelController theModelController, final EClassModelGenAnnotation theEClassModelGenAnnotation) {
-    this.modelController = theModelController;
-    this.eClassModelGenAnnotation = theEClassModelGenAnnotation;
-    EPackageModelGenAnnotation _ownerEPackageAnnotation = theEClassModelGenAnnotation.getOwnerEPackageAnnotation();
-    this.ePackageAnnotation = _ownerEPackageAnnotation;
-    boolean _isGenerateCode = this.eClassModelGenAnnotation.isGenerateCode();
+  public void generate(final EClassModelGenAnnotation eClassModelGenAnnotation) {
+    EPackageModelGenAnnotation ePackageAnnotation = eClassModelGenAnnotation.getOwnerEPackageAnnotation();
+    boolean _isGenerateCode = eClassModelGenAnnotation.isGenerateCode();
     if (_isGenerateCode) {
-      String fileName = TemplateUtil.classFileName(this.eClassModelGenAnnotation);
-      String content = this.generateContent();
+      String fileName = TemplateUtil.classFileName(eClassModelGenAnnotation);
+      ModelController _modelController = this.getModelController();
+      String content = this.generateContent(_modelController, eClassModelGenAnnotation, ePackageAnnotation);
       this.addFile(fileName, content);
     }
   }
   
-  public String generateContent() {
+  public String generateContent(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation, final EPackageModelGenAnnotation ePackageAnnotation) {
     StringConcatenation _builder = new StringConcatenation();
-    String _javaFileHeader = this.ePackageAnnotation.getJavaFileHeader();
+    String _javaFileHeader = ePackageAnnotation.getJavaFileHeader();
     _builder.append(_javaFileHeader, "");
     _builder.newLineIfNotEmpty();
     _builder.append("package ");
-    String _packagePath = this.ePackageAnnotation.getPackagePath();
+    String _packagePath = ePackageAnnotation.getPackagePath();
     _builder.append(_packagePath, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
@@ -49,7 +41,7 @@ public class InterfaceTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append(" ");
     _builder.append("* A representation of the model object \'<em><b>");
-    String _name = this.eClassModelGenAnnotation.getName();
+    String _name = eClassModelGenAnnotation.getName();
     _builder.append(_name, " ");
     _builder.append("</b></em>\'.");
     _builder.newLineIfNotEmpty();
@@ -60,13 +52,13 @@ public class InterfaceTemplate extends BaseTemplate {
     _builder.append("* <!-- end-user-doc -->");
     _builder.newLine();
     {
-      String _documentation = this.eClassModelGenAnnotation.getDocumentation();
+      String _documentation = eClassModelGenAnnotation.getDocumentation();
       boolean _notEquals = (!Objects.equal(_documentation, null));
       if (_notEquals) {
         _builder.append("* <!-- begin-model-doc -->");
         _builder.newLine();
         _builder.append("* ");
-        String _documentation_1 = this.eClassModelGenAnnotation.getDocumentation();
+        String _documentation_1 = eClassModelGenAnnotation.getDocumentation();
         _builder.append(_documentation_1, "");
         _builder.newLineIfNotEmpty();
         _builder.append("* <!-- end-model-doc -->");
@@ -78,21 +70,21 @@ public class InterfaceTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("*/");
     _builder.newLine();
-    EClass _eClass = this.eClassModelGenAnnotation.getEClass();
-    String _javaAnnotations = this.modelController.getJavaAnnotations(_eClass, "type");
+    EClass _eClass = eClassModelGenAnnotation.getEClass();
+    String _javaAnnotations = modelController.getJavaAnnotations(_eClass, "type");
     _builder.append(_javaAnnotations, "");
     _builder.newLineIfNotEmpty();
     _builder.append("public interface ");
-    String _simpleClassName = this.eClassModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName = eClassModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName, "");
     _builder.newLineIfNotEmpty();
     {
-      EList<String> _classExtends = this.eClassModelGenAnnotation.getClassExtends();
+      EList<String> _classExtends = eClassModelGenAnnotation.getClassExtends();
       int _size = _classExtends.size();
       boolean _greaterThan = (_size > 0);
       if (_greaterThan) {
         _builder.append(" extends ");
-        EList<String> _classExtends_1 = this.eClassModelGenAnnotation.getClassExtends();
+        EList<String> _classExtends_1 = eClassModelGenAnnotation.getClassExtends();
         String _get = _classExtends_1.get(0);
         _builder.append(_get, "");
       }
@@ -101,7 +93,7 @@ public class InterfaceTemplate extends BaseTemplate {
     _builder.append("{ ");
     _builder.newLine();
     {
-      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations = this.eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
+      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation : _eStructuralFeatureModelGenAnnotations) {
         _builder.append("/**");
         _builder.newLine();
@@ -135,7 +127,7 @@ public class InterfaceTemplate extends BaseTemplate {
         _builder.append("*/");
         _builder.newLine();
         EStructuralFeature _eStructuralFeature_2 = featureAnnotation.getEStructuralFeature();
-        String _javaAnnotations_1 = this.modelController.getJavaAnnotations(_eStructuralFeature_2, "getter");
+        String _javaAnnotations_1 = modelController.getJavaAnnotations(_eStructuralFeature_2, "getter");
         _builder.append(_javaAnnotations_1, "");
         _builder.newLineIfNotEmpty();
         _builder.append("public ");
@@ -268,7 +260,7 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.newLine();
             _builder.append(" ");
             _builder.append("* Sets the \'{@link ");
-            String _simpleClassName_1 = this.eClassModelGenAnnotation.getSimpleClassName();
+            String _simpleClassName_1 = eClassModelGenAnnotation.getSimpleClassName();
             _builder.append(_simpleClassName_1, " ");
             _builder.append("#");
             String _getter_1 = featureAnnotation.getGetter();
@@ -290,7 +282,7 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.newLine();
             _builder.append(" ");
             _builder.append("* @param the new value of the \'{@link ");
-            String _simpleClassName_2 = this.eClassModelGenAnnotation.getSimpleClassName();
+            String _simpleClassName_2 = eClassModelGenAnnotation.getSimpleClassName();
             _builder.append(_simpleClassName_2, " ");
             _builder.append("#");
             String _getter_2 = featureAnnotation.getGetter();
@@ -308,7 +300,7 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.append("*/");
             _builder.newLine();
             EStructuralFeature _eStructuralFeature_9 = featureAnnotation.getEStructuralFeature();
-            String _javaAnnotations_2 = this.modelController.getJavaAnnotations(_eStructuralFeature_9, "getter");
+            String _javaAnnotations_2 = modelController.getJavaAnnotations(_eStructuralFeature_9, "getter");
             _builder.append(_javaAnnotations_2, "");
             _builder.newLineIfNotEmpty();
             _builder.append("public void ");
@@ -328,7 +320,9 @@ public class InterfaceTemplate extends BaseTemplate {
       }
     }
     _builder.newLine();
-    _builder.newLine();
+    String _executeXPandTemplate = this.executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::interface_addition", eClassModelGenAnnotation);
+    _builder.append(_executeXPandTemplate, "");
+    _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();

@@ -10,12 +10,13 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
  
 class EcoreFileTemplate extends BaseTemplate {
 
-	def void generate(ModelController theModelController, EPackageModelGenAnnotation ePackageModelGenAnnotation) {
+	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation) {
 		var fileName = TemplateUtil::ecoreFileName(ePackageModelGenAnnotation)
 		var content = ePackageModelGenAnnotation.ecoreFileContent
 		

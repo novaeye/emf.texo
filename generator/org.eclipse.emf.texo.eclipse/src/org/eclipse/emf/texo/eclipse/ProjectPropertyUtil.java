@@ -44,9 +44,6 @@ public class ProjectPropertyUtil {
   public static final String TEMPLATES_LOCATION_PROPERTY = "TEMPLATE_FOLDER"; //$NON-NLS-1$
   public static final String OUTPUT_LOCATION_PROPERTY = "OUTPUT_FOLDER"; //$NON-NLS-1$
   public static final String TARGET_PROJECT_PROPERTY = "TARGET_PROJECT"; //$NON-NLS-1$
-  public static final String TEMPLATE_TECHNOLOGY_PROPERTY = "TEMPLATE_TECHNOLOGY"; //$NON-NLS-1$
-  public static final String TEMPLATE_TECHNOLOGY_XTEND = "TEMPLATE_TECHNOLOGY_XTEND"; //$NON-NLS-1$
-  public static final String TEMPLATE_TECHNOLOGY_XPAND = "TEMPLATE_TECHNOLOGY_XPAND"; //$NON-NLS-1$
   public static final String MODEL_LOCATION_PROPERTY = "MODEL_FOLDER"; //$NON-NLS-1$
   public static final String ENABLE_AUTOGEN_PROPERTY = "ENABLE_AUTOGEN_PROPERTY"; //$NON-NLS-1$
   public static final String ENABLE_JPA_PROPERTY = "ENABLE_JPA_PROPERTY"; //$NON-NLS-1$
@@ -88,15 +85,6 @@ public class ProjectPropertyUtil {
       return GEN_OUTPUT_FOLDER_PROPERTY_DEFAULT;
     }
     return value;
-  }
-
-  /**
-   * @param project
-   *          the project to get the template technology for.
-   * @return true if xtend should be used.
-   */
-  public static boolean isUseXtend(IProject project) {
-    return TEMPLATE_TECHNOLOGY_XTEND.equals(getProjectProperties(project).getProperty(TEMPLATE_TECHNOLOGY_PROPERTY));
   }
 
   /**

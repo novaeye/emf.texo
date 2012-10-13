@@ -5,35 +5,30 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
+import org.eclipse.emf.texo.generator.BaseTemplate;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EEnumModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
-import org.eclipse.emf.texo.modelgenerator.xtend.BaseTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.TemplateUtil;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")
 public class EnumTemplate extends BaseTemplate {
-  private ModelController modelController;
-  
-  private EEnumModelGenAnnotation eEnumModelGenAnnotation;
-  
-  public void generate(final ModelController theModelController, final EEnumModelGenAnnotation theEEnumModelGenAnnotation) {
-    this.modelController = theModelController;
-    this.eEnumModelGenAnnotation = theEEnumModelGenAnnotation;
-    boolean _isGenerateCode = this.eEnumModelGenAnnotation.isGenerateCode();
+  public void generate(final EEnumModelGenAnnotation eEnumModelGenAnnotation) {
+    boolean _isGenerateCode = eEnumModelGenAnnotation.isGenerateCode();
     boolean _not = (!_isGenerateCode);
     if (_not) {
       return;
     }
-    String fileName = TemplateUtil.classFileName(theEEnumModelGenAnnotation);
-    EDataType _eDataType = this.eEnumModelGenAnnotation.getEDataType();
-    EPackageModelGenAnnotation _ownerEPackageAnnotation = this.eEnumModelGenAnnotation.getOwnerEPackageAnnotation();
-    String content = this.generateContent(((EEnum) _eDataType), _ownerEPackageAnnotation);
+    String fileName = TemplateUtil.classFileName(eEnumModelGenAnnotation);
+    ModelController _modelController = this.getModelController();
+    EDataType _eDataType = eEnumModelGenAnnotation.getEDataType();
+    EPackageModelGenAnnotation _ownerEPackageAnnotation = eEnumModelGenAnnotation.getOwnerEPackageAnnotation();
+    String content = this.generateContent(_modelController, eEnumModelGenAnnotation, ((EEnum) _eDataType), _ownerEPackageAnnotation);
     this.addFile(fileName, content);
   }
   
-  public String generateContent(final EEnum eEnum, final EPackageModelGenAnnotation ePackageAnnotation) {
+  public String generateContent(final ModelController modelController, final EEnumModelGenAnnotation eEnumModelGenAnnotation, final EEnum eEnum, final EPackageModelGenAnnotation ePackageAnnotation) {
     StringConcatenation _builder = new StringConcatenation();
     String _javaFileHeader = ePackageAnnotation.getJavaFileHeader();
     _builder.append(_javaFileHeader, "");
@@ -48,7 +43,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append(" ");
     _builder.append("* A representation of the literals of the enumeration \'<em><b>");
-    String _name = this.eEnumModelGenAnnotation.getName();
+    String _name = eEnumModelGenAnnotation.getName();
     _builder.append(_name, " ");
     _builder.append("</b></em>\'.");
     _builder.newLineIfNotEmpty();
@@ -59,13 +54,13 @@ public class EnumTemplate extends BaseTemplate {
     _builder.append("* <!-- end-user-doc -->");
     _builder.newLine();
     {
-      String _documentation = this.eEnumModelGenAnnotation.getDocumentation();
+      String _documentation = eEnumModelGenAnnotation.getDocumentation();
       boolean _notEquals = (!Objects.equal(_documentation, null));
       if (_notEquals) {
         _builder.append("* <!-- begin-model-doc -->");
         _builder.newLine();
         _builder.append("* ");
-        String _documentation_1 = this.eEnumModelGenAnnotation.getDocumentation();
+        String _documentation_1 = eEnumModelGenAnnotation.getDocumentation();
         _builder.append(_documentation_1, "");
         _builder.newLineIfNotEmpty();
         _builder.append("* <!-- end-model-doc -->");
@@ -78,23 +73,20 @@ public class EnumTemplate extends BaseTemplate {
     _builder.append(" ");
     _builder.append("*/");
     _builder.newLine();
-    EEnum _eEnum = this.eEnumModelGenAnnotation.getEEnum();
-    String _javaAnnotations = this.modelController.getJavaAnnotations(_eEnum, "type");
+    EEnum _eEnum = eEnumModelGenAnnotation.getEEnum();
+    String _javaAnnotations = modelController.getJavaAnnotations(_eEnum, "type");
     _builder.append(_javaAnnotations, "");
     _builder.newLineIfNotEmpty();
     _builder.append("public enum ");
-    String _simpleClassName = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName, "");
     _builder.newLineIfNotEmpty();
     _builder.append("{");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("/*");
-    _builder.newLine();
-    _builder.append("EXPAND org::eclipse::emf::texo::modelgenerator::templates::enum_addition::root(modelController) FOR this");
-    _builder.newLine();
-    _builder.append("*/");
-    _builder.newLine();
+    String _executeXPandTemplate = this.executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::enum_addition", eEnumModelGenAnnotation);
+    _builder.append(_executeXPandTemplate, "");
+    _builder.newLineIfNotEmpty();
     _builder.newLine();
     {
       EList<EEnumLiteral> _eLiterals = eEnum.getELiterals();
@@ -142,7 +134,7 @@ public class EnumTemplate extends BaseTemplate {
         _builder.append(" \t ");
         _builder.append("*/");
         _builder.newLine();
-        String _javaAnnotations_1 = this.modelController.getJavaAnnotations(el, "field");
+        String _javaAnnotations_1 = modelController.getJavaAnnotations(el, "field");
         _builder.append(_javaAnnotations_1, "");
         _builder.newLineIfNotEmpty();
         String _name_2 = el.getName();
@@ -202,7 +194,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("* An array of all the \'<em><b>");
-    String _name_5 = this.eEnumModelGenAnnotation.getName();
+    String _name_5 = eEnumModelGenAnnotation.getName();
     _builder.append(_name_5, "	 ");
     _builder.append("</b></em>\' enumerators.");
     _builder.newLineIfNotEmpty();
@@ -220,13 +212,13 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("private static final ");
-    String _simpleClassName_1 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_1 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_1, "	");
     _builder.append("[] VALUES_ARRAY =");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("new ");
-    String _simpleClassName_2 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_2 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_2, "		");
     _builder.append("[] {");
     _builder.newLineIfNotEmpty();
@@ -256,7 +248,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("* A public read-only list of all the \'<em><b>");
-    String _name_7 = this.eEnumModelGenAnnotation.getName();
+    String _name_7 = eEnumModelGenAnnotation.getName();
     _builder.append(_name_7, "	 ");
     _builder.append("</b></em>\' enumerators.");
     _builder.newLineIfNotEmpty();
@@ -274,7 +266,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static final java.util.List<");
-    String _simpleClassName_3 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_3 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_3, "	");
     _builder.append("> VALUES = java.util.Collections.unmodifiableList(java.util.Arrays.asList(VALUES_ARRAY));");
     _builder.newLineIfNotEmpty();
@@ -284,7 +276,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("* Returns the \'<em><b>");
-    String _name_8 = this.eEnumModelGenAnnotation.getName();
+    String _name_8 = eEnumModelGenAnnotation.getName();
     _builder.append(_name_8, "	 ");
     _builder.append("</b></em>\' literal with the specified literal value.");
     _builder.newLineIfNotEmpty();
@@ -302,7 +294,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static ");
-    String _simpleClassName_4 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_4 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_4, "	");
     _builder.append(" get(String literal) {");
     _builder.newLineIfNotEmpty();
@@ -310,7 +302,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.append("for (int i = 0; i < VALUES_ARRAY.length; ++i) {");
     _builder.newLine();
     _builder.append("\t\t\t");
-    String _simpleClassName_5 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_5 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_5, "			");
     _builder.append(" result = VALUES_ARRAY[i];");
     _builder.newLineIfNotEmpty();
@@ -338,7 +330,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("* Returns the \'<em><b>");
-    String _name_9 = this.eEnumModelGenAnnotation.getName();
+    String _name_9 = eEnumModelGenAnnotation.getName();
     _builder.append(_name_9, "	 ");
     _builder.append("</b></em>\' literal with the specified name.");
     _builder.newLineIfNotEmpty();
@@ -356,7 +348,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static ");
-    String _simpleClassName_6 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_6 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_6, "	");
     _builder.append(" getByName(String name) {");
     _builder.newLineIfNotEmpty();
@@ -364,7 +356,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.append("for (int i = 0; i < VALUES_ARRAY.length; ++i) {");
     _builder.newLine();
     _builder.append("\t\t\t");
-    String _simpleClassName_7 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_7 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_7, "			");
     _builder.append(" result = VALUES_ARRAY[i];");
     _builder.newLineIfNotEmpty();
@@ -392,7 +384,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("* Returns the \'<em><b>");
-    String _name_10 = this.eEnumModelGenAnnotation.getName();
+    String _name_10 = eEnumModelGenAnnotation.getName();
     _builder.append(_name_10, "	 ");
     _builder.append("</b></em>\' literal with the specified integer value.");
     _builder.newLineIfNotEmpty();
@@ -410,13 +402,13 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static ");
-    String _simpleClassName_8 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_8 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_8, "	");
     _builder.append(" get(int value) {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("for (");
-    String _simpleClassName_9 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_9 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_9, "		");
     _builder.append(" enumInstance : VALUES_ARRAY) {");
     _builder.newLineIfNotEmpty();
@@ -517,7 +509,7 @@ public class EnumTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("private ");
-    String _simpleClassName_10 = this.eEnumModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_10 = eEnumModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_10, "	");
     _builder.append("(int value, String name, String literal) {");
     _builder.newLineIfNotEmpty();

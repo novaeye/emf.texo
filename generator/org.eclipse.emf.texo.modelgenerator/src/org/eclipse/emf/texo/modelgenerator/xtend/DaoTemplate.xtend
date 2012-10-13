@@ -10,31 +10,28 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 
 class DaoTemplate extends BaseTemplate {
 
-	ModelController modelController
-	EClassModelGenAnnotation eClassModelGenAnnotation
-	EPackageModelGenAnnotation ePackageModelGenAnnotation
-
-	def void generate(ModelController theModelController, EClassModelGenAnnotation theEClassModelGenAnnotation) {
-		modelController = theModelController
-		eClassModelGenAnnotation = theEClassModelGenAnnotation
-		ePackageModelGenAnnotation = theEClassModelGenAnnotation.ownerEPackageAnnotation
-	
+	def void generate(EClassModelGenAnnotation eClassModelGenAnnotation) {
+		var EPackageModelGenAnnotation ePackageModelGenAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
+	 
 		if (!ePackageModelGenAnnotation.addRuntimeModelBehavior) {
 			return
 		}
 		var fileName = TemplateUtil::daoClassFileName(eClassModelGenAnnotation)
-		var content = generateContent()
+		var content = generateContent(getModelController(), eClassModelGenAnnotation, ePackageModelGenAnnotation)
 		
 		addFile(fileName, content)		
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController, 
+			EClassModelGenAnnotation eClassModelGenAnnotation, 
+		EPackageModelGenAnnotation ePackageModelGenAnnotation) 
 		'''
 «ePackageModelGenAnnotation.javaFileHeader»
 package «ePackageModelGenAnnotation.daoClassesPackagePath»;

@@ -43,6 +43,14 @@ public class Department extends Identifiable {
   private List<Employee> employees = new ArrayList<Employee>();
 
   /**
+   * @generated
+   */
+  public String helloWorld() {
+    System.err.println("hello, I am Department ");
+    return " Department";
+  }
+
+  /**
    * Returns the value of '<em><b>name</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->

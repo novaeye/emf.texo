@@ -24,6 +24,7 @@ import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.component.ComponentProvider;
 import org.eclipse.internal.xpand2.XpandTokens;
 import org.eclipse.internal.xpand2.ast.Definition;
 import org.eclipse.internal.xpand2.ast.ExpandStatement;
@@ -47,12 +48,12 @@ import org.eclipse.xtend.type.impl.java.JavaMetaModel;
  */
 public class ArtifactGenerator {
 
-  private static final String MODEL_CONTROLLER = "modelController"; //$NON-NLS-1$
+  static final String MODEL_CONTROLLER = "modelController"; //$NON-NLS-1$
   private static final String DO_DAO = "doDao"; //$NON-NLS-1$
   private static final String FILE_ENCODING = "UTF-8"; //$NON-NLS-1$
 
   private IProgressMonitor monitor = new org.eclipse.core.runtime.NullProgressMonitor();
-  private TexoResourceManager resourceManager = new TexoResourceManager();
+  private TexoResourceManager resourceManager = ComponentProvider.getInstance().newInstance(TexoResourceManager.class);
   private String projectName;
   private ModelController modelController;
   private String outputFolder;
@@ -84,42 +85,62 @@ public class ArtifactGenerator {
 
       // use an xtend template
       if (xTendTemplate != null) {
+        xTendTemplate.setArtifactGenerator(this);
         for (EPackage ePackage : modelController.getEPackages()) {
           xTendTemplate.generate(ePackage, modelController, doDao);
-          final Map<String, String> result = xTendTemplate.getFiles();
-          for (String fileName : result.keySet()) {
-            final String content = result.get(fileName);
+
+          final Map<String, String> xTendResult = xTendTemplate.getFiles();
+          for (String fileName : xTendResult.keySet()) {
+            final String content = xTendResult.get(fileName);
             final boolean isJava = fileName.endsWith("java");
             out.openFile(fileName, isJava ? "java" : null);
             out.write(content);
             out.closeFile();
           }
+
           xTendTemplate.clearFiles();
         }
-        return;
+
+        // execute the advices template
+        final XPandTemplate xPandTemplate = new XPandTemplate();
+        xPandTemplate.setArtifactGenerator(this);
+        xPandTemplate.setXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::advices"); //$NON-NLS-1$
+        xPandTemplate.setMainObject(getModelController());
+        xPandTemplate.generate();
+
+        final Map<String, String> xPandResult = xTendTemplate.getFiles();
+        for (String fileName : xPandResult.keySet()) {
+          final String content = xPandResult.get(fileName);
+          final boolean isJava = fileName.endsWith("java"); //$NON-NLS-1$
+          out.openFile(fileName, isJava ? "java" : null); //$NON-NLS-1$
+          out.write(content);
+          out.closeFile();
+        }
+
+      } else {
+        final Map<String, Object> parameters = new HashMap<String, Object>();
+        parameters.put(MODEL_CONTROLLER, modelController);
+        parameters.put(DO_DAO, isDoDao());
+
+        XpandExecutionContextImpl executionContext = new XpandExecutionContextImpl(resourceManager, out, null,
+            new HashMap<String, Variable>(), null, getExceptionHandler(), null, null);
+
+        executionContext.registerMetaModel(new JavaMetaModel());
+
+        final ExpandStatement es = getStatement();
+
+        for (final String name : parameters.keySet()) {
+          executionContext = (XpandExecutionContextImpl) executionContext.cloneWithVariable(new Variable(name,
+              parameters.get(name)));
+        }
+
+        executionContext.registerAdvices("org::eclipse::emf::texo::modelgenerator::templates::advices"); //$NON-NLS-1$
+
+        es.evaluate(executionContext);
       }
-
-      final Map<String, Object> parameters = new HashMap<String, Object>();
-      parameters.put(MODEL_CONTROLLER, modelController);
-      parameters.put(DO_DAO, isDoDao());
-
-      XpandExecutionContextImpl executionContext = new XpandExecutionContextImpl(resourceManager, out, null,
-          new HashMap<String, Variable>(), null, getExceptionHandler(), null, null);
-
-      executionContext.registerMetaModel(new JavaMetaModel());
-
-      final ExpandStatement es = getStatement();
-
-      for (final String name : parameters.keySet()) {
-        executionContext = (XpandExecutionContextImpl) executionContext.cloneWithVariable(new Variable(name, parameters
-            .get(name)));
-      }
-
-      executionContext.registerAdvices("org::eclipse::emf::texo::modelgenerator::templates::advices"); //$NON-NLS-1$
-
-      es.evaluate(executionContext);
 
       fileCleaner.clean();
+
     } catch (final Exception e) {
       throw new IllegalStateException(e.getMessage(), e);
     }

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.generator.BaseTemplate;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.modelgenerator.annotator.GenConstants;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
@@ -15,34 +16,25 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EDataTypeModelGenAnn
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EEnumModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
-import org.eclipse.emf.texo.modelgenerator.xtend.BaseTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.TemplateUtil;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")
 public class ModelPackageTemplate extends BaseTemplate {
-  private ModelController modelController;
-  
-  private EPackageModelGenAnnotation ePackageModelGenAnnotation;
-  
-  private boolean doDao;
-  
-  public void generate(final ModelController theModelController, final EPackageModelGenAnnotation theEPackageModelGenAnnotation, final boolean generateDao) {
-    this.doDao = generateDao;
-    this.modelController = theModelController;
-    this.ePackageModelGenAnnotation = theEPackageModelGenAnnotation;
-    String fileName = TemplateUtil.packageFileName(this.ePackageModelGenAnnotation);
-    String content = this.generateContent();
+  public void generate(final EPackageModelGenAnnotation ePackageModelGenAnnotation, final boolean doDao) {
+    String fileName = TemplateUtil.packageFileName(ePackageModelGenAnnotation);
+    ModelController _modelController = this.getModelController();
+    String content = this.generateContent(_modelController, ePackageModelGenAnnotation, doDao);
     this.addFile(fileName, content);
   }
   
-  public String generateContent() {
+  public String generateContent(final ModelController modelController, final EPackageModelGenAnnotation ePackageModelGenAnnotation, final boolean doDao) {
     StringConcatenation _builder = new StringConcatenation();
-    String _javaFileHeader = this.ePackageModelGenAnnotation.getJavaFileHeader();
+    String _javaFileHeader = ePackageModelGenAnnotation.getJavaFileHeader();
     _builder.append(_javaFileHeader, "");
     _builder.newLineIfNotEmpty();
     _builder.append("package ");
-    String _modelClassesPackagePath = this.ePackageModelGenAnnotation.getModelClassesPackagePath();
+    String _modelClassesPackagePath = ePackageModelGenAnnotation.getModelClassesPackagePath();
     _builder.append(_modelClassesPackagePath, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
@@ -51,7 +43,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append(" ");
     _builder.append("* The <b>Package</b> for the model \'<em><b>");
-    String _name = this.ePackageModelGenAnnotation.getName();
+    String _name = ePackageModelGenAnnotation.getName();
     _builder.append(_name, " ");
     _builder.append("</b></em>\'.");
     _builder.newLineIfNotEmpty();
@@ -68,13 +60,13 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.append("* <!-- end-user-doc -->");
     _builder.newLine();
     {
-      String _documentation = this.ePackageModelGenAnnotation.getDocumentation();
+      String _documentation = ePackageModelGenAnnotation.getDocumentation();
       boolean _notEquals = (!Objects.equal(_documentation, null));
       if (_notEquals) {
         _builder.append("* <!-- begin-model-doc -->");
         _builder.newLine();
         _builder.append("* ");
-        String _documentation_1 = this.ePackageModelGenAnnotation.getDocumentation();
+        String _documentation_1 = ePackageModelGenAnnotation.getDocumentation();
         _builder.append(_documentation_1, "");
         _builder.newLineIfNotEmpty();
         _builder.append("* <!-- end-model-doc -->");
@@ -88,7 +80,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.append("*/");
     _builder.newLine();
     _builder.append("public class ");
-    String _simpleClassName = this.ePackageModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName = ePackageModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName, "");
     _builder.append(" extends org.eclipse.emf.texo.model.ModelPackage {");
     _builder.newLineIfNotEmpty();
@@ -131,7 +123,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static final String NS_URI = \"");
-    EPackage _ePackage = this.ePackageModelGenAnnotation.getEPackage();
+    EPackage _ePackage = ePackageModelGenAnnotation.getEPackage();
     String _nsURI = _ePackage.getNsURI();
     _builder.append(_nsURI, "	");
     _builder.append("\";");
@@ -158,17 +150,17 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("public static final ");
-    String _simpleModelFactoryClassName = this.ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
+    String _simpleModelFactoryClassName = ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
     _builder.append(_simpleModelFactoryClassName, "	 ");
     _builder.append(" ");
     _builder.append(GenConstants.MODELFACTORY_CONSTANT, "	 ");
     _builder.append(" = new ");
-    String _simpleModelFactoryClassName_1 = this.ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
+    String _simpleModelFactoryClassName_1 = ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
     _builder.append(_simpleModelFactoryClassName_1, "	 ");
     _builder.append("();");
     _builder.newLineIfNotEmpty();
     {
-      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations = this.ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
+      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eClassifierAnnotation : _eDataTypeModelGenAnnotations) {
         _builder.append("\t");
         _builder.newLine();
@@ -205,7 +197,7 @@ public class ModelPackageTemplate extends BaseTemplate {
       }
     }
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation : _eClassModelGenAnnotations) {
         _builder.append("\t");
         _builder.newLine();
@@ -307,7 +299,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static final ");
-    String _simpleClassName_1 = this.ePackageModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_1 = ePackageModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_1, "	");
     _builder.append(" INSTANCE = initialize();  ");
     _builder.newLineIfNotEmpty();
@@ -333,7 +325,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static ");
-    String _simpleClassName_2 = this.ePackageModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_2 = ePackageModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_2, "	");
     _builder.append(" initialize() {");
     _builder.newLineIfNotEmpty();
@@ -343,7 +335,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t\t\t");
     _builder.append("return (");
-    String _simpleClassName_3 = this.ePackageModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_3 = ePackageModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_3, "			");
     _builder.append(")org.eclipse.emf.texo.model.ModelResolver.getInstance().getModelPackage(NS_URI);");
     _builder.newLineIfNotEmpty();
@@ -354,10 +346,10 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("final ");
-    String _simpleClassName_4 = this.ePackageModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_4 = ePackageModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_4, "		");
     _builder.append(" modelPackage = new ");
-    String _simpleClassName_5 = this.ePackageModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName_5 = ePackageModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName_5, "		");
     _builder.append("();");
     _builder.newLineIfNotEmpty();
@@ -367,7 +359,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.newLine();
     {
-      boolean _isHandleEcoreFile = this.ePackageModelGenAnnotation.isHandleEcoreFile();
+      boolean _isHandleEcoreFile = ePackageModelGenAnnotation.isHandleEcoreFile();
       if (_isHandleEcoreFile) {
         _builder.append("\t\t");
         _builder.append("// read the model from the ecore file, the EPackage is registered in the EPackage.Registry");
@@ -387,7 +379,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.newLine();
     {
-      EList<EPackageModelGenAnnotation> _dependsOn = this.ePackageModelGenAnnotation.getDependsOn();
+      EList<EPackageModelGenAnnotation> _dependsOn = ePackageModelGenAnnotation.getDependsOn();
       for(final EPackageModelGenAnnotation p : _dependsOn) {
         _builder.append("\t\t");
         String _qualifiedClassName = ((EPackageModelGenAnnotation) p).getQualifiedClassName();
@@ -405,7 +397,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.newLine();
     {
-      EList<EPackageModelGenAnnotation> _subPackageModelGens = this.ePackageModelGenAnnotation.getSubPackageModelGens();
+      EList<EPackageModelGenAnnotation> _subPackageModelGens = ePackageModelGenAnnotation.getSubPackageModelGens();
       for(final EPackageModelGenAnnotation p_1 : _subPackageModelGens) {
         _builder.append("\t\t");
         String _qualifiedClassName_1 = ((EPackageModelGenAnnotation) p_1).getQualifiedClassName();
@@ -419,7 +411,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.append("// register the relation between a Class and its EClassifier");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_1 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_1 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation_1 : _eClassModelGenAnnotations_1) {
         {
           String _qualifiedClassName_2 = eClassAnnotation_1.getQualifiedClassName();
@@ -442,7 +434,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.append("\t\t");
     _builder.newLine();
     {
-      EList<EEnumModelGenAnnotation> _eEnumModelGenAnnotations = this.ePackageModelGenAnnotation.getEEnumModelGenAnnotations();
+      EList<EEnumModelGenAnnotation> _eEnumModelGenAnnotations = ePackageModelGenAnnotation.getEEnumModelGenAnnotations();
       for(final EEnumModelGenAnnotation eEnumAnnotation : _eEnumModelGenAnnotations) {
         {
           String _qualifiedClassName_4 = eEnumAnnotation.getQualifiedClassName();
@@ -464,9 +456,9 @@ public class ModelPackageTemplate extends BaseTemplate {
     }
     _builder.newLine();
     {
-      if (this.doDao) {
+      if (doDao) {
         {
-          EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_2 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+          EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_2 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
           for(final EClassModelGenAnnotation eClassAnnotation_2 : _eClassModelGenAnnotations_2) {
             {
               String _daoQualifiedClassName = eClassAnnotation_2.getDaoQualifiedClassName();
@@ -517,7 +509,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("* @return the {@link ");
-    String _simpleModelFactoryClassName_2 = this.ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
+    String _simpleModelFactoryClassName_2 = ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
     _builder.append(_simpleModelFactoryClassName_2, "	 ");
     _builder.append("} instance.");
     _builder.newLineIfNotEmpty();
@@ -532,7 +524,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ");
-    String _simpleModelFactoryClassName_3 = this.ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
+    String _simpleModelFactoryClassName_3 = ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
     _builder.append(_simpleModelFactoryClassName_3, "	");
     _builder.append(" getModelFactory() {");
     _builder.newLineIfNotEmpty();
@@ -616,7 +608,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return \"");
-    String _name_7 = this.ePackageModelGenAnnotation.getName();
+    String _name_7 = ePackageModelGenAnnotation.getName();
     _builder.append(_name_7, "		");
     _builder.append(".ecore\";");
     _builder.newLineIfNotEmpty();
@@ -625,7 +617,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_3 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_3 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation_3 : _eClassModelGenAnnotations_3) {
         _builder.append("\t");
         _builder.newLine();
@@ -794,7 +786,7 @@ public class ModelPackageTemplate extends BaseTemplate {
       }
     }
     {
-      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_1 = this.ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
+      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_1 = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eClassifierAnnotation_1 : _eDataTypeModelGenAnnotations_1) {
         {
           EClassifier _eClassifier_1 = eClassifierAnnotation_1.getEClassifier();
@@ -940,7 +932,7 @@ public class ModelPackageTemplate extends BaseTemplate {
     _builder.append("switch (eClassifier.getClassifierID()) { ");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_4 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_4 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation_4 : _eClassModelGenAnnotations_4) {
         {
           String _qualifiedClassName_7 = eClassAnnotation_4.getQualifiedClassName();
@@ -965,7 +957,7 @@ public class ModelPackageTemplate extends BaseTemplate {
       }
     }
     {
-      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_2 = this.ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
+      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_2 = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eClassifierAnnotation_2 : _eDataTypeModelGenAnnotations_2) {
         {
           String _qualifiedClassName_9 = eClassifierAnnotation_2.getQualifiedClassName();

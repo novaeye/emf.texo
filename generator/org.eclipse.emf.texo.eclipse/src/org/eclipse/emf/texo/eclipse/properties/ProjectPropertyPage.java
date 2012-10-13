@@ -35,7 +35,6 @@ import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
@@ -66,8 +65,6 @@ public class ProjectPropertyPage extends PropertyPage {
 
   private Text templateFolderText;
   private Button templateFolderButton;
-
-  private Combo templateCombo;
 
   private Button autoGenButton;
   private Button daoGenButton;
@@ -295,22 +292,6 @@ public class ProjectPropertyPage extends PropertyPage {
         browseTemplateFolder();
       }
     });
-
-    final Label templateLabel = new Label(composite, SWT.LEFT);
-    templateLabel.setText(Messages.getString("project.template.technology.label")); //$NON-NLS-1$
-
-    templateCombo = new Combo(composite, SWT.NULL);
-    templateCombo.setEnabled(true);
-    templateCombo.add("xtend2 - Faster");
-    templateCombo.add("xpand - Extendable");
-
-    final boolean xpand = ProjectPropertyUtil.TEMPLATE_TECHNOLOGY_XPAND.equals(projectProps
-        .getProperty(ProjectPropertyUtil.TEMPLATE_TECHNOLOGY_PROPERTY));
-    templateCombo.select(0);
-    if (xpand) {
-      templateCombo.select(1);
-    }
-    templateCombo.addModifyListener(listener);
   }
 
   private void createAutoGenGroup(Composite parent) {
@@ -473,7 +454,6 @@ public class ProjectPropertyPage extends PropertyPage {
     autoGenButton.setSelection(false);
     jpaGenButton.setSelection(false);
     daoGenButton.setSelection(false);
-    templateCombo.select(0);
     enableDisableAutoGenFields(autoGenButton.getSelection());
   }
 
@@ -481,14 +461,6 @@ public class ProjectPropertyPage extends PropertyPage {
   public boolean performOk() {
     try {
       final Properties props = new Properties();
-
-      if (templateCombo.getSelectionIndex() == 0) {
-        setProperty(props, ProjectPropertyUtil.TEMPLATE_TECHNOLOGY_PROPERTY,
-            ProjectPropertyUtil.TEMPLATE_TECHNOLOGY_XTEND);
-      } else {
-        setProperty(props, ProjectPropertyUtil.TEMPLATE_TECHNOLOGY_PROPERTY,
-            ProjectPropertyUtil.TEMPLATE_TECHNOLOGY_XPAND);
-      }
       setProperty(props, ProjectPropertyUtil.TARGET_PROJECT_PROPERTY,
           getNullForEmptyString(targetProjectText.getText()));
       setProperty(props, ProjectPropertyUtil.TEMPLATES_LOCATION_PROPERTY,

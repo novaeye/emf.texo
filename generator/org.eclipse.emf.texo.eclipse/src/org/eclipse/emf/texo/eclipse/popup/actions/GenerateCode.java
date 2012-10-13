@@ -73,7 +73,7 @@ public class GenerateCode extends BaseGenerateAction {
       artifactGenerator.setModelController(modelController);
       artifactGenerator.setProjectName(ProjectPropertyUtil.getTargetProject(project).getName());
       artifactGenerator.setDoDao(isDoDao());
-      artifactGenerator.setXTendTemplate(ProjectPropertyUtil.isUseXtend(project) ? new ModelTemplate() : null);
+      artifactGenerator.setXTendTemplate(new ModelTemplate());
 
       int eClassifierCount = 0;
       for (EPackage ePackage : ePackages) {

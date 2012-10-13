@@ -10,32 +10,31 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation
 
 class EntityTemplate extends BaseTemplate {
-	ModelController modelController
-	EClassModelGenAnnotation eClassModelGenAnnotation
-	EPackageModelGenAnnotation ePackageModelGenAnnotation
+	
 
-	def void generate(ModelController theModelController, EClassModelGenAnnotation theEClassModelGenAnnotation) {
-		modelController = theModelController
-		eClassModelGenAnnotation = theEClassModelGenAnnotation
-		ePackageModelGenAnnotation = theEClassModelGenAnnotation.ownerEPackageAnnotation
+	def void generate(EClassModelGenAnnotation eClassModelGenAnnotation) {
+		var EPackageModelGenAnnotation ePackageModelGenAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
 	
 		if (eClassModelGenAnnotation.generateCode && (ePackageModelGenAnnotation.addRuntimeModelBehavior || !TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass))) {
 			var fileName = TemplateUtil::classFileName(eClassModelGenAnnotation)
-			var content = generateContent()
+			var content = generateContent(getModelController(), eClassModelGenAnnotation, ePackageModelGenAnnotation);
 		
 			addFile(fileName, content)
 			
-			generateFeatureGroups()
+			generateFeatureGroups(getModelController(), eClassModelGenAnnotation)
 		}
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EClassModelGenAnnotation eClassModelGenAnnotation,
+		EPackageModelGenAnnotation ePackageModelGenAnnotation) 
 		'''
 «ePackageModelGenAnnotation.javaFileHeader»
 package «ePackageModelGenAnnotation.packagePath»;
@@ -84,7 +83,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 	«ENDIF»
 «ENDFOR»
 
-«/*EXPAND org::eclipse::emf::texo::modelgenerator::templates::entity_addition::root(modelController) FOR this*/»
+«executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::entity_addition", eClassModelGenAnnotation)»
 
 «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
 		/**
@@ -302,11 +301,13 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 }
 '''
 
-	def void generateFeatureGroups() {
+	def void generateFeatureGroups(ModelController modelController,
+		EClassModelGenAnnotation eClassModelGenAnnotation) {
 		/* Create the feature map entries if any«ENDREM */	
 		for (featureAnnotation : eClassModelGenAnnotation.featureMapFeatures) {
 			var FeatureGroupTemplate template = new FeatureGroupTemplate();
-			template.generate(modelController, featureAnnotation)
+			template.setArtifactGenerator(getArtifactGenerator())
+			template.generate(featureAnnotation)
 			addFiles(template.getFiles())
 		}
 	}

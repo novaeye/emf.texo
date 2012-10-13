@@ -10,6 +10,7 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
@@ -17,20 +18,17 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureMo
 
 class ModelFeatureMapTemplate extends BaseTemplate {
 
-	ModelController modelController
-	EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation
-	EClassModelGenAnnotation eClassAnnotation
-	EPackageModelGenAnnotation ePackageAnnotation
+	def String generateContent(EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation) {
+		var EClassModelGenAnnotation eClassAnnotation = eStructuralFeatureModelGenAnnotation.ownerEClassAnnotation as EClassModelGenAnnotation
+		var EPackageModelGenAnnotation ePackageAnnotation = eClassAnnotation.ownerEPackageAnnotation as EPackageModelGenAnnotation
 
-	def String generateContent(ModelController theModelController, EStructuralFeatureModelGenAnnotation theEStructuralFeatureModelGenAnnotation) {
-		modelController = theModelController
-		eStructuralFeatureModelGenAnnotation = theEStructuralFeatureModelGenAnnotation
-		eClassAnnotation = eStructuralFeatureModelGenAnnotation.ownerEClassAnnotation as EClassModelGenAnnotation
-		ePackageAnnotation = eClassAnnotation.ownerEPackageAnnotation as EPackageModelGenAnnotation
-		generateContent()
+		generateContent(getModelController(), eStructuralFeatureModelGenAnnotation, eClassAnnotation, ePackageAnnotation)
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation,
+		EClassModelGenAnnotation eClassAnnotation,
+		EPackageModelGenAnnotation ePackageAnnotation) 
 		'''
 /** 
  * The wrapper/adapter for the Feature Group '<em><b>«eClassAnnotation.EClass.name».«eStructuralFeatureModelGenAnnotation.name»</b></em>'.

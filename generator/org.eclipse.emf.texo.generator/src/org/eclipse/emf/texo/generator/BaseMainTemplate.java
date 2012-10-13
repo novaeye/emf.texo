@@ -17,9 +17,6 @@
 
 package org.eclipse.emf.texo.generator;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.eclipse.emf.ecore.EPackage;
 
 /**
@@ -27,24 +24,7 @@ import org.eclipse.emf.ecore.EPackage;
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  */
-public abstract class BaseMainTemplate {
-  private Map<String, String> files = new HashMap<String, String>();
-
-  public void addFile(String name, String content) {
-    files.put(name, content);
-  }
-
-  public void addFiles(Map<String, String> newFiles) {
-    files.putAll(newFiles);
-  }
+public abstract class BaseMainTemplate extends BaseTemplate {
 
   public abstract void generate(EPackage ePackage, ModelController modelController, boolean doDao);
-
-  public void clearFiles() {
-    files.clear();
-  }
-
-  public Map<String, String> getFiles() {
-    return files;
-  }
 }

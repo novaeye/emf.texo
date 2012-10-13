@@ -10,29 +10,27 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 
 class ModelFactoryTemplate extends BaseTemplate {
-	ModelController modelController
-	EPackageModelGenAnnotation ePackageModelGenAnnotation
-
-	def void generate(ModelController theModelController, EPackageModelGenAnnotation theEPackageModelGenAnnotation) {
-		modelController = theModelController
-		ePackageModelGenAnnotation = theEPackageModelGenAnnotation
 	
+
+	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation) {
 		var fileName = TemplateUtil::modelFactoryFileName(ePackageModelGenAnnotation)
-		var content = generateContent()
+		var content = generateContent(getModelController(), ePackageModelGenAnnotation)
 		
-		content = content + generateModelObjects()
-		content = content + generateFeatureMaps()
+		content = content + generateModelObjects(getModelController(), ePackageModelGenAnnotation)
+		content = content + generateFeatureMaps(getModelController(), ePackageModelGenAnnotation)
 	
 		content = content + "}"
 		
 		addFile(fileName, content)
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EPackageModelGenAnnotation ePackageModelGenAnnotation) 
 		'''
 «ePackageModelGenAnnotation.javaFileHeader»
 package «ePackageModelGenAnnotation.modelClassesPackagePath»;
@@ -262,24 +260,28 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
 	«ENDFOR»
 	'''
 	
-	def String generateModelObjects() {
+	def String generateModelObjects(ModelController modelController,
+		EPackageModelGenAnnotation ePackageModelGenAnnotation) {
 		var result = ""
 		/* Create the ModelObject wrappers as inner classes */	
 		for (eClassAnnotation : ePackageModelGenAnnotation.EClassModelGenAnnotations) {
 			if (eClassAnnotation.qualifiedClassName != null) {
-				var ModelObjectTemplate mot = new ModelObjectTemplate();
-				result = result + "\n\n" + mot.generateContent(modelController, eClassAnnotation)
+				var ModelObjectTemplate template = new ModelObjectTemplate();
+				template.setArtifactGenerator(getArtifactGenerator())
+				result = result + "\n\n" + template.generateContent(eClassAnnotation)
 			}
 		} 
 		result
 	}
 	
-	def String generateFeatureMaps() {
+	def String generateFeatureMaps(ModelController modelController,
+		EPackageModelGenAnnotation ePackageModelGenAnnotation) {
 		var result = ""
 		for (eClassAnnotation : ePackageModelGenAnnotation.EClassModelGenAnnotations) {
 			for (featureAnnotation : eClassAnnotation.featureMapFeatures) {
-				var ModelFeatureMapTemplate template = new ModelFeatureMapTemplate();
-				result = result + "\n\n" + template.generateContent(modelController, featureAnnotation)
+				var ModelFeatureMapTemplate template = new ModelFeatureMapTemplate()
+				template.setArtifactGenerator(getArtifactGenerator())
+				result = result + "\n\n" + template.generateContent(featureAnnotation)
 			}
 		}
 		result

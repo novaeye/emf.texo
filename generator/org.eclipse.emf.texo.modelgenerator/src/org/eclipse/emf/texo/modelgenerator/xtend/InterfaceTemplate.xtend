@@ -10,30 +10,28 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation
 
 class InterfaceTemplate extends BaseTemplate {
-	ModelController modelController
-	EClassModelGenAnnotation eClassModelGenAnnotation
-	EPackageModelGenAnnotation ePackageAnnotation
-
-	def void generate(ModelController theModelController, EClassModelGenAnnotation theEClassModelGenAnnotation) {
-		modelController = theModelController
-		eClassModelGenAnnotation = theEClassModelGenAnnotation
-		ePackageAnnotation = theEClassModelGenAnnotation.ownerEPackageAnnotation
+	
+	def void generate(EClassModelGenAnnotation eClassModelGenAnnotation) {
+		var EPackageModelGenAnnotation ePackageAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
 	
 		if (eClassModelGenAnnotation.generateCode) {
 			var fileName = TemplateUtil::classFileName(eClassModelGenAnnotation)
-			var content = generateContent()
+			var content = generateContent(getModelController(), eClassModelGenAnnotation, ePackageAnnotation)
 		
 			addFile(fileName, content)
 		}
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EClassModelGenAnnotation eClassModelGenAnnotation,
+		EPackageModelGenAnnotation ePackageAnnotation) 
 		'''
 «ePackageAnnotation.javaFileHeader»
 package «ePackageAnnotation.packagePath»;
@@ -98,7 +96,7 @@ public interface «eClassModelGenAnnotation.simpleClassName»
 		«ENDIF»
 «ENDFOR»
 
-«/*EXPAND org::eclipse::emf::texo::modelgenerator::templates::interface_addition::root(modelController) FOR this*/»
+«executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::interface_addition", eClassModelGenAnnotation)»
 
 }
 '''

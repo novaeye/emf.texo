@@ -25,45 +25,57 @@ class ModelTemplate extends BaseMainTemplate {
 		for (eClassAnnotation : ePackageAnnotation.EClassModelGenAnnotations) {
 			if (eClassAnnotation.EClass.interface) {
 				var InterfaceTemplate template = new InterfaceTemplate();
-				template.generate(modelController, eClassAnnotation);
+				template.setArtifactGenerator(getArtifactGenerator())
+				template.generate(eClassAnnotation);
 				addFiles(template.getFiles())
 			} else {
 				var EntityTemplate template = new EntityTemplate();
-				template.generate(modelController, eClassAnnotation);
+				template.setArtifactGenerator(getArtifactGenerator())
+				template.generate(eClassAnnotation);
 				addFiles(template.getFiles())
 			}
+			doExecuteXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::addition", eClassAnnotation)
 		}
 		
 		for (EEnumModelGenAnnotation eEnumAnnotation : ePackageAnnotation.EEnumModelGenAnnotations) {
-			var EnumTemplate enumTemplate = new EnumTemplate();
-			enumTemplate.generate(modelController, eEnumAnnotation);
-			addFiles(enumTemplate.getFiles())
+			var EnumTemplate template = new EnumTemplate();
+			template.setArtifactGenerator(getArtifactGenerator())
+			template.generate(eEnumAnnotation);
+			addFiles(template.getFiles())
+
+			doExecuteXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::addition", eEnumAnnotation)
 		}
 		if (ePackageAnnotation.addRuntimeModelBehavior) {
 			{
 				var ModelPackageTemplate template = new ModelPackageTemplate();
-				template.generate(modelController, ePackageAnnotation, doDao);
+				template.setArtifactGenerator(getArtifactGenerator())
+				template.generate(ePackageAnnotation, doDao);
 				addFiles(template.getFiles())
 			}
 			{
 				var ModelFactoryTemplate template = new ModelFactoryTemplate();
-				template.generate(modelController, ePackageAnnotation);
+				template.setArtifactGenerator(getArtifactGenerator())
+				template.generate(ePackageAnnotation);
 				addFiles(template.getFiles())
 			}
 			if (ePackageAnnotation.handleEcoreFile) {
 				var EcoreFileTemplate template = new EcoreFileTemplate();
-				template.generate(modelController, ePackageAnnotation);
+				template.setArtifactGenerator(getArtifactGenerator())
+				template.generate(ePackageAnnotation);
 				addFiles(template.getFiles())
 			}
 			if (doDao) {
 				for (eClassAnnotation : ePackageAnnotation.EClassModelGenAnnotations) {
 					if (eClassAnnotation.daoQualifiedClassName != null) {
 						var DaoTemplate template = new DaoTemplate();
-						template.generate(modelController, eClassAnnotation);
+						template.setArtifactGenerator(getArtifactGenerator())
+						template.generate(eClassAnnotation);
 						addFiles(template.getFiles())
 					}
 				}
 			}
 		}
+
+		doExecuteXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::addition", ePackageAnnotation)
 	}
 }

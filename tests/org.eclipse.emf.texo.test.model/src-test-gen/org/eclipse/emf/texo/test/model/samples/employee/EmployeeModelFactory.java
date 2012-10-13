@@ -5,7 +5,6 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -356,5 +355,4 @@ public class EmployeeModelFactory implements ModelFactory {
       super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

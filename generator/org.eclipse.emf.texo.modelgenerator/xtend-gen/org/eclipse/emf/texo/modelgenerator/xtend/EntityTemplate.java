@@ -5,40 +5,32 @@ import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.generator.ArtifactGenerator;
+import org.eclipse.emf.texo.generator.BaseTemplate;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
-import org.eclipse.emf.texo.modelgenerator.xtend.BaseTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.FeatureGroupTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.TemplateUtil;
 import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")
 public class EntityTemplate extends BaseTemplate {
-  private ModelController modelController;
-  
-  private EClassModelGenAnnotation eClassModelGenAnnotation;
-  
-  private EPackageModelGenAnnotation ePackageModelGenAnnotation;
-  
-  public void generate(final ModelController theModelController, final EClassModelGenAnnotation theEClassModelGenAnnotation) {
-    this.modelController = theModelController;
-    this.eClassModelGenAnnotation = theEClassModelGenAnnotation;
-    EPackageModelGenAnnotation _ownerEPackageAnnotation = theEClassModelGenAnnotation.getOwnerEPackageAnnotation();
-    this.ePackageModelGenAnnotation = _ownerEPackageAnnotation;
+  public void generate(final EClassModelGenAnnotation eClassModelGenAnnotation) {
+    EPackageModelGenAnnotation ePackageModelGenAnnotation = eClassModelGenAnnotation.getOwnerEPackageAnnotation();
     boolean _and = false;
-    boolean _isGenerateCode = this.eClassModelGenAnnotation.isGenerateCode();
+    boolean _isGenerateCode = eClassModelGenAnnotation.isGenerateCode();
     if (!_isGenerateCode) {
       _and = false;
     } else {
       boolean _or = false;
-      boolean _isAddRuntimeModelBehavior = this.ePackageModelGenAnnotation.isAddRuntimeModelBehavior();
+      boolean _isAddRuntimeModelBehavior = ePackageModelGenAnnotation.isAddRuntimeModelBehavior();
       if (_isAddRuntimeModelBehavior) {
         _or = true;
       } else {
-        EClass _eClass = this.eClassModelGenAnnotation.getEClass();
+        EClass _eClass = eClassModelGenAnnotation.getEClass();
         boolean _isDocumentRoot = TemplateUtil.isDocumentRoot(_eClass);
         boolean _not = (!_isDocumentRoot);
         _or = (_isAddRuntimeModelBehavior || _not);
@@ -46,20 +38,22 @@ public class EntityTemplate extends BaseTemplate {
       _and = (_isGenerateCode && _or);
     }
     if (_and) {
-      String fileName = TemplateUtil.classFileName(this.eClassModelGenAnnotation);
-      String content = this.generateContent();
+      String fileName = TemplateUtil.classFileName(eClassModelGenAnnotation);
+      ModelController _modelController = this.getModelController();
+      String content = this.generateContent(_modelController, eClassModelGenAnnotation, ePackageModelGenAnnotation);
       this.addFile(fileName, content);
-      this.generateFeatureGroups();
+      ModelController _modelController_1 = this.getModelController();
+      this.generateFeatureGroups(_modelController_1, eClassModelGenAnnotation);
     }
   }
   
-  public String generateContent() {
+  public String generateContent(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {
     StringConcatenation _builder = new StringConcatenation();
-    String _javaFileHeader = this.ePackageModelGenAnnotation.getJavaFileHeader();
+    String _javaFileHeader = ePackageModelGenAnnotation.getJavaFileHeader();
     _builder.append(_javaFileHeader, "");
     _builder.newLineIfNotEmpty();
     _builder.append("package ");
-    String _packagePath = this.ePackageModelGenAnnotation.getPackagePath();
+    String _packagePath = ePackageModelGenAnnotation.getPackagePath();
     _builder.append(_packagePath, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
@@ -68,7 +62,7 @@ public class EntityTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append(" ");
     _builder.append("* A representation of the model object \'<em><b>");
-    String _name = this.eClassModelGenAnnotation.getName();
+    String _name = eClassModelGenAnnotation.getName();
     _builder.append(_name, " ");
     _builder.append("</b></em>\'.");
     _builder.newLineIfNotEmpty();
@@ -79,13 +73,13 @@ public class EntityTemplate extends BaseTemplate {
     _builder.append("* <!-- end-user-doc -->");
     _builder.newLine();
     {
-      String _documentation = this.eClassModelGenAnnotation.getDocumentation();
+      String _documentation = eClassModelGenAnnotation.getDocumentation();
       boolean _notEquals = (!Objects.equal(_documentation, null));
       if (_notEquals) {
         _builder.append("* <!-- begin-model-doc -->");
         _builder.newLine();
         _builder.append("* ");
-        String _documentation_1 = this.eClassModelGenAnnotation.getDocumentation();
+        String _documentation_1 = eClassModelGenAnnotation.getDocumentation();
         _builder.append(_documentation_1, "");
         _builder.newLineIfNotEmpty();
         _builder.append("* <!-- end-model-doc -->");
@@ -97,42 +91,42 @@ public class EntityTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("*/");
     _builder.newLine();
-    EClass _eClass = this.eClassModelGenAnnotation.getEClass();
-    String _javaAnnotations = this.modelController.getJavaAnnotations(_eClass, "type");
+    EClass _eClass = eClassModelGenAnnotation.getEClass();
+    String _javaAnnotations = modelController.getJavaAnnotations(_eClass, "type");
     _builder.append(_javaAnnotations, "");
     _builder.newLineIfNotEmpty();
     _builder.append("public");
     {
-      boolean _abstractValue = this.eClassModelGenAnnotation.getAbstractValue();
+      boolean _abstractValue = eClassModelGenAnnotation.getAbstractValue();
       if (_abstractValue) {
         _builder.append(" abstract");
       }
     }
     _builder.append(" class ");
-    String _simpleClassName = this.eClassModelGenAnnotation.getSimpleClassName();
+    String _simpleClassName = eClassModelGenAnnotation.getSimpleClassName();
     _builder.append(_simpleClassName, "");
     _builder.newLineIfNotEmpty();
     {
-      EList<String> _classExtends = this.eClassModelGenAnnotation.getClassExtends();
+      EList<String> _classExtends = eClassModelGenAnnotation.getClassExtends();
       int _size = _classExtends.size();
       boolean _greaterThan = (_size > 0);
       if (_greaterThan) {
         _builder.append(" extends ");
-        EList<String> _classExtends_1 = this.eClassModelGenAnnotation.getClassExtends();
+        EList<String> _classExtends_1 = eClassModelGenAnnotation.getClassExtends();
         String _get = _classExtends_1.get(0);
         _builder.append(_get, "");
       }
     }
     _builder.newLineIfNotEmpty();
     {
-      EList<String> _classImplements = this.eClassModelGenAnnotation.getClassImplements();
+      EList<String> _classImplements = eClassModelGenAnnotation.getClassImplements();
       int _size_1 = _classImplements.size();
       boolean _greaterThan_1 = (_size_1 > 0);
       if (_greaterThan_1) {
         _builder.append(" implements");
         _builder.newLineIfNotEmpty();
         {
-          EList<String> _classImplements_1 = this.eClassModelGenAnnotation.getClassImplements();
+          EList<String> _classImplements_1 = eClassModelGenAnnotation.getClassImplements();
           boolean _hasElements = false;
           for(final String classImplements : _classImplements_1) {
             if (!_hasElements) {
@@ -149,7 +143,7 @@ public class EntityTemplate extends BaseTemplate {
     _builder.append("{ ");
     _builder.newLine();
     {
-      boolean _isSerializable = this.eClassModelGenAnnotation.isSerializable();
+      boolean _isSerializable = eClassModelGenAnnotation.isSerializable();
       if (_isSerializable) {
         _builder.append("/**");
         _builder.newLine();
@@ -163,13 +157,13 @@ public class EntityTemplate extends BaseTemplate {
     }
     _builder.newLine();
     {
-      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations = this.eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
+      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation : _eStructuralFeatureModelGenAnnotations) {
         _builder.append("\t\t");
         _builder.newLine();
         {
           boolean _or = false;
-          EClass _eClass_1 = this.eClassModelGenAnnotation.getEClass();
+          EClass _eClass_1 = eClassModelGenAnnotation.getEClass();
           boolean _isDocumentRoot = TemplateUtil.isDocumentRoot(_eClass_1);
           if (_isDocumentRoot) {
             _or = true;
@@ -215,7 +209,7 @@ public class EntityTemplate extends BaseTemplate {
             _builder.newLine();
             _builder.append("\t");
             EStructuralFeature _eStructuralFeature_1 = featureAnnotation.getEStructuralFeature();
-            String _javaAnnotations_1 = this.modelController.getJavaAnnotations(_eStructuralFeature_1, "field");
+            String _javaAnnotations_1 = modelController.getJavaAnnotations(_eStructuralFeature_1, "field");
             _builder.append(_javaAnnotations_1, "	");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
@@ -235,10 +229,12 @@ public class EntityTemplate extends BaseTemplate {
       }
     }
     _builder.newLine();
-    _builder.newLine();
+    String _executeXPandTemplate = this.executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::entity_addition", eClassModelGenAnnotation);
+    _builder.append(_executeXPandTemplate, "");
+    _builder.newLineIfNotEmpty();
     _builder.newLine();
     {
-      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations_1 = this.eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
+      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations_1 = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation_1 : _eStructuralFeatureModelGenAnnotations_1) {
         _builder.append("/**");
         _builder.newLine();
@@ -254,7 +250,7 @@ public class EntityTemplate extends BaseTemplate {
           boolean _and_1 = false;
           boolean _and_2 = false;
           boolean _or_1 = false;
-          EClass _eClass_2 = this.eClassModelGenAnnotation.getEClass();
+          EClass _eClass_2 = eClassModelGenAnnotation.getEClass();
           boolean _isDocumentRoot_1 = TemplateUtil.isDocumentRoot(_eClass_2);
           if (_isDocumentRoot_1) {
             _or_1 = true;
@@ -342,7 +338,7 @@ public class EntityTemplate extends BaseTemplate {
         _builder.append("*/");
         _builder.newLine();
         EStructuralFeature _eStructuralFeature_5 = featureAnnotation_1.getEStructuralFeature();
-        String _javaAnnotations_2 = this.modelController.getJavaAnnotations(_eStructuralFeature_5, "getter");
+        String _javaAnnotations_2 = modelController.getJavaAnnotations(_eStructuralFeature_5, "getter");
         _builder.append(_javaAnnotations_2, "");
         _builder.newLineIfNotEmpty();
         _builder.append("public ");
@@ -355,7 +351,7 @@ public class EntityTemplate extends BaseTemplate {
         _builder.newLineIfNotEmpty();
         {
           boolean _or_2 = false;
-          EClass _eClass_3 = this.eClassModelGenAnnotation.getEClass();
+          EClass _eClass_3 = eClassModelGenAnnotation.getEClass();
           boolean _isDocumentRoot_2 = TemplateUtil.isDocumentRoot(_eClass_3);
           if (_isDocumentRoot_2) {
             _or_2 = true;
@@ -849,7 +845,7 @@ public class EntityTemplate extends BaseTemplate {
             _builder.newLine();
             _builder.append(" ");
             _builder.append("* Sets the \'{@link ");
-            String _simpleClassName_1 = this.eClassModelGenAnnotation.getSimpleClassName();
+            String _simpleClassName_1 = eClassModelGenAnnotation.getSimpleClassName();
             _builder.append(_simpleClassName_1, " ");
             _builder.append("#");
             String _getter_3 = featureAnnotation_1.getGetter();
@@ -885,7 +881,7 @@ public class EntityTemplate extends BaseTemplate {
             }
             _builder.append(" ");
             _builder.append("* @param the new value of the \'{@link ");
-            String _simpleClassName_2 = this.eClassModelGenAnnotation.getSimpleClassName();
+            String _simpleClassName_2 = eClassModelGenAnnotation.getSimpleClassName();
             _builder.append(_simpleClassName_2, " ");
             _builder.append("#");
             String _getter_4 = featureAnnotation_1.getGetter();
@@ -903,7 +899,7 @@ public class EntityTemplate extends BaseTemplate {
             _builder.append("*/");
             _builder.newLine();
             EStructuralFeature _eStructuralFeature_19 = featureAnnotation_1.getEStructuralFeature();
-            String _javaAnnotations_3 = this.modelController.getJavaAnnotations(_eStructuralFeature_19, "setter");
+            String _javaAnnotations_3 = modelController.getJavaAnnotations(_eStructuralFeature_19, "setter");
             _builder.append(_javaAnnotations_3, "");
             _builder.newLineIfNotEmpty();
             _builder.append("public void ");
@@ -920,7 +916,7 @@ public class EntityTemplate extends BaseTemplate {
             _builder.newLineIfNotEmpty();
             {
               boolean _or_5 = false;
-              EClass _eClass_4 = this.eClassModelGenAnnotation.getEClass();
+              EClass _eClass_4 = eClassModelGenAnnotation.getEClass();
               boolean _isDocumentRoot_3 = TemplateUtil.isDocumentRoot(_eClass_4);
               if (_isDocumentRoot_3) {
                 _or_5 = true;
@@ -1234,12 +1230,12 @@ public class EntityTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append("\t \t");
     _builder.append("return  \"");
-    String _name_14 = this.eClassModelGenAnnotation.getName();
+    String _name_14 = eClassModelGenAnnotation.getName();
     _builder.append(_name_14, "	 	");
     _builder.append(" \"");
     _builder.newLineIfNotEmpty();
     {
-      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations_2 = this.eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
+      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations_2 = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation_2 : _eStructuralFeatureModelGenAnnotations_2) {
         {
           boolean _and_13 = false;
@@ -1277,13 +1273,15 @@ public class EntityTemplate extends BaseTemplate {
     return _builder.toString();
   }
   
-  public void generateFeatureGroups() {
-    EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = this.eClassModelGenAnnotation.getFeatureMapFeatures();
+  public void generateFeatureGroups(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation) {
+    EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = eClassModelGenAnnotation.getFeatureMapFeatures();
     for (final EStructuralFeatureModelGenAnnotation featureAnnotation : _featureMapFeatures) {
       {
         FeatureGroupTemplate _featureGroupTemplate = new FeatureGroupTemplate();
         FeatureGroupTemplate template = _featureGroupTemplate;
-        template.generate(this.modelController, featureAnnotation);
+        ArtifactGenerator _artifactGenerator = this.getArtifactGenerator();
+        template.setArtifactGenerator(_artifactGenerator);
+        template.generate(featureAnnotation);
         Map<String,String> _files = template.getFiles();
         this.addFiles(_files);
       }

@@ -10,6 +10,7 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
@@ -17,23 +18,20 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureMo
 
 class FeatureGroupTemplate extends BaseTemplate {
 
-	ModelController modelController
-	EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation
-	EClassModelGenAnnotation eClassAnnotation
-	EPackageModelGenAnnotation ePackageAnnotation
+	def void generate(EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation) {
+		var EClassModelGenAnnotation eClassAnnotation = eStructuralFeatureModelGenAnnotation.ownerEClassAnnotation as EClassModelGenAnnotation
+		var EPackageModelGenAnnotation ePackageAnnotation = eClassAnnotation.ownerEPackageAnnotation as EPackageModelGenAnnotation
 
-	def void generate(ModelController theModelController, EStructuralFeatureModelGenAnnotation theEStructuralFeatureModelGenAnnotation) {
-		modelController = theModelController
-		eStructuralFeatureModelGenAnnotation = theEStructuralFeatureModelGenAnnotation
-		eClassAnnotation = eStructuralFeatureModelGenAnnotation.ownerEClassAnnotation as EClassModelGenAnnotation
-		ePackageAnnotation = eClassAnnotation.ownerEPackageAnnotation as EPackageModelGenAnnotation
 		var fileName = TemplateUtil::classFileName(eStructuralFeatureModelGenAnnotation)
-		var content = generateContent()
+		var content = generateContent(getModelController(), eStructuralFeatureModelGenAnnotation, eClassAnnotation, ePackageAnnotation)
 		
 		addFile(fileName, content)		
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation,
+		EClassModelGenAnnotation eClassAnnotation,
+		EPackageModelGenAnnotation ePackageAnnotation) 
 		'''
 «ePackageAnnotation.javaFileHeader»
 package «ePackageAnnotation.packagePath»;

@@ -10,6 +10,7 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.ecore.EEnum
 import org.eclipse.emf.ecore.EEnumLiteral
 import org.eclipse.emf.texo.generator.ModelController
@@ -18,23 +19,20 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnno
 
 class EnumTemplate extends BaseTemplate {
 
-	ModelController modelController
-	EEnumModelGenAnnotation eEnumModelGenAnnotation
-
-	def void generate(ModelController theModelController, EEnumModelGenAnnotation theEEnumModelGenAnnotation) {
-		modelController = theModelController
-		eEnumModelGenAnnotation = theEEnumModelGenAnnotation
+	def void generate(EEnumModelGenAnnotation eEnumModelGenAnnotation) {
 
 		if (!eEnumModelGenAnnotation.generateCode) {
 			return
 		}
-		var fileName = TemplateUtil::classFileName(theEEnumModelGenAnnotation)
-		var content = generateContent(eEnumModelGenAnnotation.EDataType as EEnum, eEnumModelGenAnnotation.ownerEPackageAnnotation)
+		var fileName = TemplateUtil::classFileName(eEnumModelGenAnnotation)
+		var content = generateContent(getModelController(), eEnumModelGenAnnotation, eEnumModelGenAnnotation.EDataType as EEnum, eEnumModelGenAnnotation.ownerEPackageAnnotation)
 		
 		addFile(fileName, content)		
 	}
 	
-	def String generateContent(EEnum eEnum, EPackageModelGenAnnotation ePackageAnnotation) 
+	def String generateContent(ModelController modelController, EEnumModelGenAnnotation eEnumModelGenAnnotation, 
+			EEnum eEnum, EPackageModelGenAnnotation ePackageAnnotation
+	) 
 		'''
 «ePackageAnnotation.javaFileHeader»
 package «ePackageAnnotation.packagePath»;
@@ -54,9 +52,7 @@ package «ePackageAnnotation.packagePath»;
 public enum «eEnumModelGenAnnotation.simpleClassName»
 {
 
-/*
-EXPAND org::eclipse::emf::texo::modelgenerator::templates::enum_addition::root(modelController) FOR this
-*/
+«executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::enum_addition", eEnumModelGenAnnotation)»
 
 «FOR e : eEnum.ELiterals SEPARATOR ','»
 	«var EEnumLiteral el = e as EEnumLiteral»

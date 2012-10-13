@@ -5,12 +5,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.generator.ArtifactGenerator;
+import org.eclipse.emf.texo.generator.BaseTemplate;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EDataTypeModelGenAnnotationDefinition;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
-import org.eclipse.emf.texo.modelgenerator.xtend.BaseTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.ModelFeatureMapTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.ModelObjectTemplate;
 import org.eclipse.emf.texo.modelgenerator.xtend.TemplateUtil;
@@ -18,19 +19,16 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 
 @SuppressWarnings("all")
 public class ModelFactoryTemplate extends BaseTemplate {
-  private ModelController modelController;
-  
-  private EPackageModelGenAnnotation ePackageModelGenAnnotation;
-  
-  public void generate(final ModelController theModelController, final EPackageModelGenAnnotation theEPackageModelGenAnnotation) {
-    this.modelController = theModelController;
-    this.ePackageModelGenAnnotation = theEPackageModelGenAnnotation;
-    String fileName = TemplateUtil.modelFactoryFileName(this.ePackageModelGenAnnotation);
-    String content = this.generateContent();
-    String _generateModelObjects = this.generateModelObjects();
+  public void generate(final EPackageModelGenAnnotation ePackageModelGenAnnotation) {
+    String fileName = TemplateUtil.modelFactoryFileName(ePackageModelGenAnnotation);
+    ModelController _modelController = this.getModelController();
+    String content = this.generateContent(_modelController, ePackageModelGenAnnotation);
+    ModelController _modelController_1 = this.getModelController();
+    String _generateModelObjects = this.generateModelObjects(_modelController_1, ePackageModelGenAnnotation);
     String _plus = (content + _generateModelObjects);
     content = _plus;
-    String _generateFeatureMaps = this.generateFeatureMaps();
+    ModelController _modelController_2 = this.getModelController();
+    String _generateFeatureMaps = this.generateFeatureMaps(_modelController_2, ePackageModelGenAnnotation);
     String _plus_1 = (content + _generateFeatureMaps);
     content = _plus_1;
     String _plus_2 = (content + "}");
@@ -38,13 +36,13 @@ public class ModelFactoryTemplate extends BaseTemplate {
     this.addFile(fileName, content);
   }
   
-  public String generateContent() {
+  public String generateContent(final ModelController modelController, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {
     StringConcatenation _builder = new StringConcatenation();
-    String _javaFileHeader = this.ePackageModelGenAnnotation.getJavaFileHeader();
+    String _javaFileHeader = ePackageModelGenAnnotation.getJavaFileHeader();
     _builder.append(_javaFileHeader, "");
     _builder.newLineIfNotEmpty();
     _builder.append("package ");
-    String _modelClassesPackagePath = this.ePackageModelGenAnnotation.getModelClassesPackagePath();
+    String _modelClassesPackagePath = ePackageModelGenAnnotation.getModelClassesPackagePath();
     _builder.append(_modelClassesPackagePath, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
@@ -53,7 +51,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.append(" ");
     _builder.append("* The <b>{@link org.eclipse.emf.texo.model.ModelFactory}</b> for the types of this model: ");
-    EPackage _ePackage = this.ePackageModelGenAnnotation.getEPackage();
+    EPackage _ePackage = ePackageModelGenAnnotation.getEPackage();
     String _name = _ePackage.getName();
     _builder.append(_name, " ");
     _builder.append(".");
@@ -68,13 +66,13 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("* <!-- end-user-doc -->");
     _builder.newLine();
     {
-      String _documentation = this.ePackageModelGenAnnotation.getDocumentation();
+      String _documentation = ePackageModelGenAnnotation.getDocumentation();
       boolean _notEquals = (!Objects.equal(_documentation, null));
       if (_notEquals) {
         _builder.append("* <!-- begin-model-doc -->");
         _builder.newLine();
         _builder.append("* ");
-        String _documentation_1 = this.ePackageModelGenAnnotation.getDocumentation();
+        String _documentation_1 = ePackageModelGenAnnotation.getDocumentation();
         _builder.append(_documentation_1, "");
         _builder.newLineIfNotEmpty();
         _builder.append("* <!-- end-model-doc -->");
@@ -88,7 +86,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("*/");
     _builder.newLine();
     _builder.append("public class ");
-    String _simpleModelFactoryClassName = this.ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
+    String _simpleModelFactoryClassName = ePackageModelGenAnnotation.getSimpleModelFactoryClassName();
     _builder.append(_simpleModelFactoryClassName, "");
     _builder.append(" implements org.eclipse.emf.texo.model.ModelFactory {");
     _builder.newLineIfNotEmpty();
@@ -124,7 +122,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("switch (eClass.getClassifierID()) {");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation : _eClassModelGenAnnotations) {
         {
           boolean _and = false;
@@ -149,7 +147,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
           if (_and) {
             _builder.append("\t");
             _builder.append("case ");
-            String _qualifiedClassName = this.ePackageModelGenAnnotation.getQualifiedClassName();
+            String _qualifiedClassName = ePackageModelGenAnnotation.getQualifiedClassName();
             _builder.append(_qualifiedClassName, "	");
             _builder.append(".");
             String _name_1 = eClassAnnotation.getName();
@@ -223,7 +221,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("public ModelObject createModelObject(org.eclipse.emf.ecore.EClass eClass, Object adaptee) {");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_1 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_1 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       boolean _isEmpty = _eClassModelGenAnnotations_1.isEmpty();
       boolean _not_2 = (!_isEmpty);
       if (_not_2) {
@@ -236,14 +234,14 @@ public class ModelFactoryTemplate extends BaseTemplate {
         _builder.append("switch (eClass.getClassifierID()) {");
         _builder.newLine();
         {
-          EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_2 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+          EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_2 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
           for(final EClassModelGenAnnotation eClassAnnotation_1 : _eClassModelGenAnnotations_2) {
             {
               boolean _isGenerateCode_1 = eClassAnnotation_1.isGenerateCode();
               if (_isGenerateCode_1) {
                 _builder.append("\t");
                 _builder.append("case ");
-                String _qualifiedClassName_1 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+                String _qualifiedClassName_1 = ePackageModelGenAnnotation.getQualifiedClassName();
                 _builder.append(_qualifiedClassName_1, "	");
                 _builder.append(".");
                 String _name_3 = eClassAnnotation_1.getName();
@@ -325,14 +323,14 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("public Object createFeatureMapEntry(org.eclipse.emf.ecore.EStructuralFeature eFeature) {");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_3 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_3 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation_2 : _eClassModelGenAnnotations_3) {
         {
           EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = eClassAnnotation_2.getFeatureMapFeatures();
           for(final EStructuralFeatureModelGenAnnotation featureAnnotation : _featureMapFeatures) {
             _builder.append("\t");
             _builder.append("if (eFeature == ");
-            String _qualifiedClassName_2 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+            String _qualifiedClassName_2 = ePackageModelGenAnnotation.getQualifiedClassName();
             _builder.append(_qualifiedClassName_2, "	");
             _builder.append(".INSTANCE.get");
             String _name_4 = eClassAnnotation_2.getName();
@@ -407,14 +405,14 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("Object adaptee) {");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_4 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_4 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation_3 : _eClassModelGenAnnotations_4) {
         {
           EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures_1 = eClassAnnotation_3.getFeatureMapFeatures();
           for(final EStructuralFeatureModelGenAnnotation featureAnnotation_1 : _featureMapFeatures_1) {
             _builder.append("\t");
             _builder.append("if (eFeature == ");
-            String _qualifiedClassName_3 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+            String _qualifiedClassName_3 = ePackageModelGenAnnotation.getQualifiedClassName();
             _builder.append(_qualifiedClassName_3, "	");
             _builder.append(".INSTANCE.get");
             String _name_6 = eClassAnnotation_3.getName();
@@ -469,7 +467,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("\t");
     _builder.newLine();
     {
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_5 = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations_5 = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for(final EClassModelGenAnnotation eClassAnnotation_4 : _eClassModelGenAnnotations_5) {
         {
           boolean _and_2 = false;
@@ -574,11 +572,11 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("switch (eDataType.getClassifierID()) {");
     _builder.newLine();
     {
-      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations = this.ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
+      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eDataTypeAnnotation : _eDataTypeModelGenAnnotations) {
         _builder.append("\t");
         _builder.append("case ");
-        String _qualifiedClassName_6 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+        String _qualifiedClassName_6 = ePackageModelGenAnnotation.getQualifiedClassName();
         _builder.append(_qualifiedClassName_6, "	");
         _builder.append(".");
         String _name_10 = eDataTypeAnnotation.getName();
@@ -637,14 +635,14 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("switch (eDataType.getClassifierID()) {");
     _builder.newLine();
     {
-      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_1 = this.ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
+      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_1 = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eDataTypeAnnotation_1 : _eDataTypeModelGenAnnotations_1) {
         {
           boolean _isGenerateCode_3 = eDataTypeAnnotation_1.isGenerateCode();
           if (_isGenerateCode_3) {
             _builder.append("\t");
             _builder.append("case ");
-            String _qualifiedClassName_7 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+            String _qualifiedClassName_7 = ePackageModelGenAnnotation.getQualifiedClassName();
             _builder.append(_qualifiedClassName_7, "	");
             _builder.append(".");
             String _name_12 = eDataTypeAnnotation_1.getName();
@@ -678,7 +676,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.newLine();
     _builder.newLine();
     {
-      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_2 = this.ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
+      EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_2 = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eDataTypeAnnotation_2 : _eDataTypeModelGenAnnotations_2) {
         _builder.append("\t");
         _builder.append("/**");
@@ -779,7 +777,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
                     _builder.append("\t");
                     _builder.append("\t");
                     _builder.append("EDataType eDataType = ");
-                    String _qualifiedClassName_8 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+                    String _qualifiedClassName_8 = ePackageModelGenAnnotation.getQualifiedClassName();
                     _builder.append(_qualifiedClassName_8, "		");
                     _builder.append(".INSTANCE.get");
                     String _name_17 = eDataTypeAnnotation_2.getName();
@@ -906,7 +904,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
                     _builder.append("\t");
                     _builder.append("\t");
                     _builder.append("EDataType eDataType = ");
-                    String _qualifiedClassName_10 = this.ePackageModelGenAnnotation.getQualifiedClassName();
+                    String _qualifiedClassName_10 = ePackageModelGenAnnotation.getQualifiedClassName();
                     _builder.append(_qualifiedClassName_10, "		");
                     _builder.append(".INSTANCE.get");
                     String _name_21 = eDataTypeAnnotation_2.getName();
@@ -932,19 +930,21 @@ public class ModelFactoryTemplate extends BaseTemplate {
     return _builder.toString();
   }
   
-  public String generateModelObjects() {
+  public String generateModelObjects(final ModelController modelController, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {
     String _xblockexpression = null;
     {
       String result = "";
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for (final EClassModelGenAnnotation eClassAnnotation : _eClassModelGenAnnotations) {
         String _qualifiedClassName = eClassAnnotation.getQualifiedClassName();
         boolean _notEquals = (!Objects.equal(_qualifiedClassName, null));
         if (_notEquals) {
           ModelObjectTemplate _modelObjectTemplate = new ModelObjectTemplate();
-          ModelObjectTemplate mot = _modelObjectTemplate;
+          ModelObjectTemplate template = _modelObjectTemplate;
+          ArtifactGenerator _artifactGenerator = this.getArtifactGenerator();
+          template.setArtifactGenerator(_artifactGenerator);
           String _plus = (result + "\n\n");
-          String _generateContent = mot.generateContent(this.modelController, eClassAnnotation);
+          String _generateContent = template.generateContent(eClassAnnotation);
           String _plus_1 = (_plus + _generateContent);
           result = _plus_1;
         }
@@ -954,19 +954,21 @@ public class ModelFactoryTemplate extends BaseTemplate {
     return _xblockexpression;
   }
   
-  public String generateFeatureMaps() {
+  public String generateFeatureMaps(final ModelController modelController, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {
     String _xblockexpression = null;
     {
       String result = "";
-      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = this.ePackageModelGenAnnotation.getEClassModelGenAnnotations();
+      EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for (final EClassModelGenAnnotation eClassAnnotation : _eClassModelGenAnnotations) {
         EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = eClassAnnotation.getFeatureMapFeatures();
         for (final EStructuralFeatureModelGenAnnotation featureAnnotation : _featureMapFeatures) {
           {
             ModelFeatureMapTemplate _modelFeatureMapTemplate = new ModelFeatureMapTemplate();
             ModelFeatureMapTemplate template = _modelFeatureMapTemplate;
+            ArtifactGenerator _artifactGenerator = this.getArtifactGenerator();
+            template.setArtifactGenerator(_artifactGenerator);
             String _plus = (result + "\n\n");
-            String _generateContent = template.generateContent(this.modelController, featureAnnotation);
+            String _generateContent = template.generateContent(featureAnnotation);
             String _plus_1 = (_plus + _generateContent);
             result = _plus_1;
           }

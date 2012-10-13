@@ -10,25 +10,23 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation
 
 class ModelObjectTemplate extends BaseTemplate {
-	ModelController modelController
-	EClassModelGenAnnotation eClassModelGenAnnotation
-	EPackageModelGenAnnotation ePackageAnnotation
 
-	def String generateContent(ModelController theModelController, EClassModelGenAnnotation theEClassModelGenAnnotation) {
-		modelController = theModelController
-		eClassModelGenAnnotation = theEClassModelGenAnnotation
-		ePackageAnnotation = theEClassModelGenAnnotation.ownerEPackageAnnotation
+	def String generateContent(EClassModelGenAnnotation eClassModelGenAnnotation) {
+		var EPackageModelGenAnnotation ePackageAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
 
-		generateContent()
+		generateContent(getModelController(), eClassModelGenAnnotation, ePackageAnnotation)
 	}
 	
-	def String generateContent() 
+	def String generateContent(ModelController modelController,
+		EClassModelGenAnnotation eClassModelGenAnnotation,
+		EPackageModelGenAnnotation ePackageAnnotation) 
 		'''
 /** 
  * The adapter/wrapper for the EClass '<em><b>«eClassModelGenAnnotation.name»</b></em>'.
