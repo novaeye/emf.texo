@@ -18,6 +18,7 @@ package org.eclipse.emf.texo.eclipse.popup.actions;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,12 +53,21 @@ public class GenerateCode extends BaseGenerateAction {
 
   @Override
   protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
+    // generate for individual uri's to prevent name clashes in types
+    // so each run uses its own package registry
+    for (URI uri : uris) {
+      generateFromUri(monitor, project, uri);
+    }
+  }
+
+  protected void generateFromUri(IProgressMonitor monitor, IProject project, URI uri) {
     if (isDoJpa()) {
       AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
     try {
       // always start with a fresh epackage registry
-      final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, GeneratorUtils.createEPackageRegistry());
+      final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
+          GeneratorUtils.createEPackageRegistry());
 
       validateEPackages(ePackages);
 

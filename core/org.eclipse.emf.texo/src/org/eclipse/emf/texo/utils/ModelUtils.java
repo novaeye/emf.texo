@@ -377,7 +377,9 @@ public class ModelUtils {
    * @return the ePackage found in the registry or the passed ePackage
    */
   public static EPackage registerEPackage(final EPackage ePackage, EPackage.Registry registry) {
+
     if (registry.containsKey(ePackage.getNsURI())) {
+
       // log.warn("EPackage with this \"" + ePackage.getNsURI()
       // + "\" already registered. Returning the registered one if it is an epackage");
       final Object packageObject = registry.get(ePackage.getNsURI());
