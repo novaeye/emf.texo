@@ -15,6 +15,8 @@ import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation
+import java.util.ArrayList
+import java.util.List
 
 class ModelObjectTemplate extends BaseTemplate {
 
@@ -22,6 +24,18 @@ class ModelObjectTemplate extends BaseTemplate {
 		var EPackageModelGenAnnotation ePackageAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
 
 		generateContent(getModelController(), eClassModelGenAnnotation, ePackageAnnotation)
+	}
+	
+	/** 
+	 * Note that this method is just here for reference purposes, 
+	 * this template is not overrideable at this point as the 
+	 * override assumes that the overrider will generate a file
+	 */
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::modelobject")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelObjectTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

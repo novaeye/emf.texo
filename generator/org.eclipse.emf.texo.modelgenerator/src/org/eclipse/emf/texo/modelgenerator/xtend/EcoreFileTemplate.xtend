@@ -10,16 +10,29 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.emf.texo.generator.BaseTemplate
-import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
  
 class EcoreFileTemplate extends BaseTemplate {
 
 	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation) {
+
+		if (executeOverrides(ePackageModelGenAnnotation)) {
+			return
+		}
+		
 		var fileName = TemplateUtil::ecoreFileName(ePackageModelGenAnnotation)
 		var content = ePackageModelGenAnnotation.ecoreFileContent
 		
 		addFile(fileName, content)		
+	}
+	
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::ecorefile")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::EcoreFileTemplate")
+		return list
 	}
 }

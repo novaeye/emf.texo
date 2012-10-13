@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -22,10 +24,22 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 @SuppressWarnings("all")
 public class ModelPackageTemplate extends BaseTemplate {
   public void generate(final EPackageModelGenAnnotation ePackageModelGenAnnotation, final boolean doDao) {
+    boolean _executeOverrides = this.executeOverrides(ePackageModelGenAnnotation);
+    if (_executeOverrides) {
+      return;
+    }
     String fileName = TemplateUtil.packageFileName(ePackageModelGenAnnotation);
     ModelController _modelController = this.getModelController();
     String content = this.generateContent(_modelController, ePackageModelGenAnnotation, doDao);
     this.addFile(fileName, content);
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::modelpackage");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelPackageTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EPackageModelGenAnnotation ePackageModelGenAnnotation, final boolean doDao) {

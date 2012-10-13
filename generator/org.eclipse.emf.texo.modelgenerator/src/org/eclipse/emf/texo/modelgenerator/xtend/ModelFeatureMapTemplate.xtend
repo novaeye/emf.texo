@@ -15,6 +15,8 @@ import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation
+import java.util.ArrayList
+import java.util.List
 
 class ModelFeatureMapTemplate extends BaseTemplate {
 
@@ -23,6 +25,18 @@ class ModelFeatureMapTemplate extends BaseTemplate {
 		var EPackageModelGenAnnotation ePackageAnnotation = eClassAnnotation.ownerEPackageAnnotation as EPackageModelGenAnnotation
 
 		generateContent(getModelController(), eStructuralFeatureModelGenAnnotation, eClassAnnotation, ePackageAnnotation)
+	}
+	
+	/** 
+	 * Note that this method is just here for reference purposes, 
+	 * this template is not overrideable at this point as the 
+	 * override assumes that the overrider will generate a file
+	 */
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::modelfeaturemap")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelFeatureMapTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

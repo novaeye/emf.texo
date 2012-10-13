@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -19,11 +21,23 @@ public class InterfaceTemplate extends BaseTemplate {
     EPackageModelGenAnnotation ePackageAnnotation = eClassModelGenAnnotation.getOwnerEPackageAnnotation();
     boolean _isGenerateCode = eClassModelGenAnnotation.isGenerateCode();
     if (_isGenerateCode) {
+      boolean _executeOverrides = this.executeOverrides(eClassModelGenAnnotation);
+      if (_executeOverrides) {
+        return;
+      }
       String fileName = TemplateUtil.classFileName(eClassModelGenAnnotation);
       ModelController _modelController = this.getModelController();
       String content = this.generateContent(_modelController, eClassModelGenAnnotation, ePackageAnnotation);
       this.addFile(fileName, content);
     }
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::interface");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::InterfaceTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation, final EPackageModelGenAnnotation ePackageAnnotation) {

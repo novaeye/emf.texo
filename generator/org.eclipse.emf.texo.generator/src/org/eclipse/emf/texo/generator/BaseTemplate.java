@@ -17,7 +17,9 @@
 
 package org.eclipse.emf.texo.generator;
 
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.texo.component.ComponentProvider;
@@ -31,6 +33,16 @@ public abstract class BaseTemplate {
   private ArtifactGenerator artifactGenerator;
 
   private Map<String, String> files = new HashMap<String, String>();
+
+  protected boolean executeOverrides(Object mainObject) {
+    for (String override : getTemplateOverrides()) {
+      if (getArtifactGenerator().getResourceManager().doesCustomTemplateExists(override)) {
+        doExecuteXPandTemplate(override, mainObject);
+        return true;
+      }
+    }
+    return false;
+  }
 
   public void addFile(String name, String content) {
     files.put(name, content);
@@ -50,6 +62,10 @@ public abstract class BaseTemplate {
 
   public ModelController getModelController() {
     return getArtifactGenerator().getModelController();
+  }
+
+  protected List<String> getTemplateOverrides() {
+    return Collections.emptyList();
   }
 
   protected String executeXPandTemplate(String template, Object mainObject) {

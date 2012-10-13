@@ -16,15 +16,28 @@ import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.annotator.GenConstants
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
+import java.util.ArrayList
+import java.util.List
 
 class ModelPackageTemplate extends BaseTemplate {
 	
 	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation, boolean doDao) {
 	
+		if (executeOverrides(ePackageModelGenAnnotation)) {
+			return
+		}
+	
 		var fileName = TemplateUtil::packageFileName(ePackageModelGenAnnotation)
 		var content = generateContent(getModelController(), ePackageModelGenAnnotation, doDao)
 	
 		addFile(fileName, content)
+	}
+	
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::modelpackage")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelPackageTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

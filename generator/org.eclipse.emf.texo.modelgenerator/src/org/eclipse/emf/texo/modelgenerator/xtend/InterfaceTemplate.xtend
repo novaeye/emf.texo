@@ -10,6 +10,8 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
@@ -22,11 +24,23 @@ class InterfaceTemplate extends BaseTemplate {
 		var EPackageModelGenAnnotation ePackageAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
 	
 		if (eClassModelGenAnnotation.generateCode) {
+			
+			if (executeOverrides(eClassModelGenAnnotation)) {
+				return
+			}
+			
 			var fileName = TemplateUtil::classFileName(eClassModelGenAnnotation)
 			var content = generateContent(getModelController(), eClassModelGenAnnotation, ePackageAnnotation)
 		
 			addFile(fileName, content)
 		}
+	}
+					
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::interface")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::InterfaceTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

@@ -17,8 +17,10 @@
 
 package org.eclipse.emf.texo.test;
 
+import junit.framework.Assert;
 import junit.framework.TestCase;
 
+import org.eclipse.emf.texo.test.model.samples.employee.Department;
 import org.eclipse.emf.texo.test.model.samples.employee.Employee;
 import org.eclipse.emf.texo.test.model.samples.employee.EmployeeOverrideTest;
 
@@ -34,5 +36,7 @@ public class TestTemplateOverride extends TestCase {
   public void testTemplateOverride() {
     System.err.println(new EmployeeOverrideTest().hello());
     System.err.println(new Employee().helloWorld());
+    Assert.assertTrue(new Employee().templateIsOverridden());
+    Assert.assertTrue(new Department().templateIsOverridden());
   }
 }

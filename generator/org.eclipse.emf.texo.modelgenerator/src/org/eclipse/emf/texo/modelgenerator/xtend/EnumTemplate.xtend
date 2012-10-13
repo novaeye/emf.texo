@@ -10,6 +10,8 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.ecore.EEnum
 import org.eclipse.emf.ecore.EEnumLiteral
@@ -24,10 +26,22 @@ class EnumTemplate extends BaseTemplate {
 		if (!eEnumModelGenAnnotation.generateCode) {
 			return
 		}
+		
+		if (executeOverrides(eEnumModelGenAnnotation)) {
+			return
+		}
+		
 		var fileName = TemplateUtil::classFileName(eEnumModelGenAnnotation)
 		var content = generateContent(getModelController(), eEnumModelGenAnnotation, eEnumModelGenAnnotation.EDataType as EEnum, eEnumModelGenAnnotation.ownerEPackageAnnotation)
 		
 		addFile(fileName, content)		
+	}
+			
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::enum")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::EnumTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController, EEnumModelGenAnnotation eEnumModelGenAnnotation, 

@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -20,10 +21,22 @@ public class FeatureGroupTemplate extends BaseTemplate {
     EClassModelGenAnnotation eClassAnnotation = ((EClassModelGenAnnotation) _ownerEClassAnnotation);
     EPackageModelGenAnnotation _ownerEPackageAnnotation = eClassAnnotation.getOwnerEPackageAnnotation();
     EPackageModelGenAnnotation ePackageAnnotation = ((EPackageModelGenAnnotation) _ownerEPackageAnnotation);
+    boolean _executeOverrides = this.executeOverrides(eStructuralFeatureModelGenAnnotation);
+    if (_executeOverrides) {
+      return;
+    }
     String fileName = TemplateUtil.classFileName(eStructuralFeatureModelGenAnnotation);
     ModelController _modelController = this.getModelController();
     String content = this.generateContent(_modelController, eStructuralFeatureModelGenAnnotation, eClassAnnotation, ePackageAnnotation);
     this.addFile(fileName, content);
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::featuregroup");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::FeatureGroupTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation, final EClassModelGenAnnotation eClassAnnotation, final EPackageModelGenAnnotation ePackageAnnotation) {

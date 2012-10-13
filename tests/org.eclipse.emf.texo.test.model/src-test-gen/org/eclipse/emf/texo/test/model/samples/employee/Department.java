@@ -53,13 +53,16 @@ public class Department extends Identifiable {
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
    * 
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
   public String getName() {
+
     return name;
+
   }
 
   /**
@@ -72,11 +75,14 @@ public class Department extends Identifiable {
    * @generated
    */
   public void setName(String newName) {
+
     name = newName;
+
   }
 
   /**
    * Returns the value of '<em><b>employees</b></em>' feature.
+   * 
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -84,7 +90,9 @@ public class Department extends Identifiable {
    * @generated
    */
   public List<Employee> getEmployees() {
+
     return employees;
+
   }
 
   /**
@@ -93,9 +101,13 @@ public class Department extends Identifiable {
    * @generated
    */
   public void addToEmployees(Employee employeesValue) {
+
     if (!employees.contains(employeesValue)) {
+
       employees.add(employeesValue);
+
     }
+
   }
 
   /**
@@ -104,9 +116,12 @@ public class Department extends Identifiable {
    * @generated
    */
   public void removeFromEmployees(Employee employeesValue) {
+
     if (employees.contains(employeesValue)) {
       employees.remove(employeesValue);
+
     }
+
   }
 
   /**
@@ -115,9 +130,11 @@ public class Department extends Identifiable {
    * @generated
    */
   public void clearEmployees() {
+
     while (!employees.isEmpty()) {
       removeFromEmployees(employees.iterator().next());
     }
+
   }
 
   /**
@@ -130,7 +147,9 @@ public class Department extends Identifiable {
    * @generated
    */
   public void setEmployees(List<Employee> newEmployees) {
+
     employees = newEmployees;
+
   }
 
   /**
@@ -141,6 +160,17 @@ public class Department extends Identifiable {
    */
   @Override
   public String toString() {
-    return "Department " + " [name: " + getName() + "]";
+    return "Department "
+
+    + " [name: " + getName() + "]"
+
+    ;
+  }
+
+  /**
+   * @generated
+   */
+  public boolean templateIsOverridden() {
+    return true;
   }
 }

@@ -1,5 +1,7 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.texo.generator.BaseTemplate;
 import org.eclipse.emf.texo.generator.ModelController;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
@@ -17,10 +19,22 @@ public class DaoTemplate extends BaseTemplate {
     if (_not) {
       return;
     }
+    boolean _executeOverrides = this.executeOverrides(eClassModelGenAnnotation);
+    if (_executeOverrides) {
+      return;
+    }
     String fileName = TemplateUtil.daoClassFileName(eClassModelGenAnnotation);
     ModelController _modelController = this.getModelController();
     String content = this.generateContent(_modelController, eClassModelGenAnnotation, ePackageModelGenAnnotation);
     this.addFile(fileName, content);
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::dao");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::DaoTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {

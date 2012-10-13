@@ -10,6 +10,8 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
@@ -22,10 +24,21 @@ class FeatureGroupTemplate extends BaseTemplate {
 		var EClassModelGenAnnotation eClassAnnotation = eStructuralFeatureModelGenAnnotation.ownerEClassAnnotation as EClassModelGenAnnotation
 		var EPackageModelGenAnnotation ePackageAnnotation = eClassAnnotation.ownerEPackageAnnotation as EPackageModelGenAnnotation
 
+		if (executeOverrides(eStructuralFeatureModelGenAnnotation)) {
+			return
+		}
+
 		var fileName = TemplateUtil::classFileName(eStructuralFeatureModelGenAnnotation)
 		var content = generateContent(getModelController(), eStructuralFeatureModelGenAnnotation, eClassAnnotation, ePackageAnnotation)
 		
 		addFile(fileName, content)		
+	}
+				
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::featuregroup")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::FeatureGroupTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

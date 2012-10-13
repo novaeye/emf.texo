@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
@@ -20,12 +22,24 @@ public class EnumTemplate extends BaseTemplate {
     if (_not) {
       return;
     }
+    boolean _executeOverrides = this.executeOverrides(eEnumModelGenAnnotation);
+    if (_executeOverrides) {
+      return;
+    }
     String fileName = TemplateUtil.classFileName(eEnumModelGenAnnotation);
     ModelController _modelController = this.getModelController();
     EDataType _eDataType = eEnumModelGenAnnotation.getEDataType();
     EPackageModelGenAnnotation _ownerEPackageAnnotation = eEnumModelGenAnnotation.getOwnerEPackageAnnotation();
     String content = this.generateContent(_modelController, eEnumModelGenAnnotation, ((EEnum) _eDataType), _ownerEPackageAnnotation);
     this.addFile(fileName, content);
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::enum");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::EnumTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EEnumModelGenAnnotation eEnumModelGenAnnotation, final EEnum eEnum, final EPackageModelGenAnnotation ePackageAnnotation) {

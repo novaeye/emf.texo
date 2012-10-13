@@ -69,13 +69,16 @@ public class Employee extends Identifiable {
   /**
    * Returns the value of '<em><b>name</b></em>' feature.
    * 
+   * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the value of '<em><b>name</b></em>' feature
    * @generated
    */
   public String getName() {
+
     return name;
+
   }
 
   /**
@@ -88,11 +91,14 @@ public class Employee extends Identifiable {
    * @generated
    */
   public void setName(String newName) {
+
     name = newName;
+
   }
 
   /**
    * Returns the value of '<em><b>salary</b></em>' feature.
+   * 
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -100,7 +106,9 @@ public class Employee extends Identifiable {
    * @generated
    */
   public int getSalary() {
+
     return salary;
+
   }
 
   /**
@@ -113,11 +121,14 @@ public class Employee extends Identifiable {
    * @generated
    */
   public void setSalary(int newSalary) {
+
     salary = newSalary;
+
   }
 
   /**
    * Returns the value of '<em><b>age</b></em>' feature.
+   * 
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -125,7 +136,9 @@ public class Employee extends Identifiable {
    * @generated
    */
   public int getAge() {
+
     return age;
+
   }
 
   /**
@@ -138,7 +151,9 @@ public class Employee extends Identifiable {
    * @generated
    */
   public void setAge(int newAge) {
+
     age = newAge;
+
   }
 
   /**
@@ -165,7 +180,9 @@ public class Employee extends Identifiable {
    * @generated
    */
   public void setHireDate(Date newHireDate) {
+
     hireDate = newHireDate;
+
   }
 
   /**
@@ -176,8 +193,24 @@ public class Employee extends Identifiable {
    */
   @Override
   public String toString() {
-    return "Employee " + " [name: " + getName() + "]" + " [salary: " + getSalary() + "]" + " [age: " + getAge() + "]"
-        + " [hireDate: " + getHireDate() + "]";
+    return "Employee "
+
+    + " [name: " + getName() + "]"
+
+    + " [salary: " + getSalary() + "]"
+
+    + " [age: " + getAge() + "]"
+
+    + " [hireDate: " + getHireDate() + "]"
+
+    ;
+  }
+
+  /**
+   * @generated
+   */
+  public boolean templateIsOverridden() {
+    return true;
   }
 
   @MergeAnnotationOne("should-not-be-removed")

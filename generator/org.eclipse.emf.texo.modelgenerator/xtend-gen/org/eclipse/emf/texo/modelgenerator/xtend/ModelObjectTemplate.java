@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -27,6 +29,19 @@ public class ModelObjectTemplate extends BaseTemplate {
       _xblockexpression = (_generateContent);
     }
     return _xblockexpression;
+  }
+  
+  /**
+   * Note that this method is just here for reference purposes,
+   * this template is not overrideable at this point as the
+   * override assumes that the overrider will generate a file
+   */
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::modelobject");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelObjectTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation, final EPackageModelGenAnnotation ePackageAnnotation) {

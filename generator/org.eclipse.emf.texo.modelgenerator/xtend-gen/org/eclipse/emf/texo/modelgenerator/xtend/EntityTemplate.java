@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -38,6 +40,10 @@ public class EntityTemplate extends BaseTemplate {
       _and = (_isGenerateCode && _or);
     }
     if (_and) {
+      boolean _executeOverrides = this.executeOverrides(eClassModelGenAnnotation);
+      if (_executeOverrides) {
+        return;
+      }
       String fileName = TemplateUtil.classFileName(eClassModelGenAnnotation);
       ModelController _modelController = this.getModelController();
       String content = this.generateContent(_modelController, eClassModelGenAnnotation, ePackageModelGenAnnotation);
@@ -45,6 +51,14 @@ public class EntityTemplate extends BaseTemplate {
       ModelController _modelController_1 = this.getModelController();
       this.generateFeatureGroups(_modelController_1, eClassModelGenAnnotation);
     }
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::entity");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::EntityTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EClassModelGenAnnotation eClassModelGenAnnotation, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {

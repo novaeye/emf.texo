@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
 import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -34,6 +36,14 @@ public class ModelFactoryTemplate extends BaseTemplate {
     String _plus_2 = (content + "}");
     content = _plus_2;
     this.addFile(fileName, content);
+  }
+  
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::modelfactory");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelFactoryTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EPackageModelGenAnnotation ePackageModelGenAnnotation) {

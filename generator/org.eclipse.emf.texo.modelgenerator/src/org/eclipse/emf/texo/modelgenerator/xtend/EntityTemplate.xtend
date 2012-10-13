@@ -10,6 +10,8 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation
@@ -17,12 +19,16 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnno
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EReferenceModelGenAnnotation
 
 class EntityTemplate extends BaseTemplate {
-	
 
 	def void generate(EClassModelGenAnnotation eClassModelGenAnnotation) {
 		var EPackageModelGenAnnotation ePackageModelGenAnnotation = eClassModelGenAnnotation.ownerEPackageAnnotation
 	
 		if (eClassModelGenAnnotation.generateCode && (ePackageModelGenAnnotation.addRuntimeModelBehavior || !TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass))) {
+
+			if (executeOverrides(eClassModelGenAnnotation)) {
+				return
+			}
+
 			var fileName = TemplateUtil::classFileName(eClassModelGenAnnotation)
 			var content = generateContent(getModelController(), eClassModelGenAnnotation, ePackageModelGenAnnotation);
 		
@@ -30,6 +36,13 @@ class EntityTemplate extends BaseTemplate {
 			
 			generateFeatureGroups(getModelController(), eClassModelGenAnnotation)
 		}
+	}
+		
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::entity")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::EntityTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

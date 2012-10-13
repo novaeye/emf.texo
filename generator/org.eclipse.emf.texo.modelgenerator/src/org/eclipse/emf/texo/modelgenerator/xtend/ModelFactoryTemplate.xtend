@@ -10,12 +10,13 @@
 
 package org.eclipse.emf.texo.modelgenerator.xtend
 
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.emf.texo.generator.BaseTemplate
 import org.eclipse.emf.texo.generator.ModelController
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation
 
 class ModelFactoryTemplate extends BaseTemplate {
-	
 
 	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation) {
 		var fileName = TemplateUtil::modelFactoryFileName(ePackageModelGenAnnotation)
@@ -27,6 +28,13 @@ class ModelFactoryTemplate extends BaseTemplate {
 		content = content + "}"
 		
 		addFile(fileName, content)
+	}
+
+	override List<String> getTemplateOverrides() {
+		var List<String> list = new ArrayList<String>()
+		list.add("org::eclipse::emf::texo::modelgenerator::templates::modelfactory")
+		list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelFactoryTemplate")
+		return list
 	}
 	
 	def String generateContent(ModelController modelController,

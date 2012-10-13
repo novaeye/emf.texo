@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.modelgenerator.xtend;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -25,6 +26,19 @@ public class ModelFeatureMapTemplate extends BaseTemplate {
       _xblockexpression = (_generateContent);
     }
     return _xblockexpression;
+  }
+  
+  /**
+   * Note that this method is just here for reference purposes,
+   * this template is not overrideable at this point as the
+   * override assumes that the overrider will generate a file
+   */
+  public List<String> getTemplateOverrides() {
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    List<String> list = _arrayList;
+    list.add("org::eclipse::emf::texo::modelgenerator::templates::modelfeaturemap");
+    list.add("org::eclipse::emf::texo::modelgenerator::xtend::ModelFeatureMapTemplate");
+    return list;
   }
   
   public String generateContent(final ModelController modelController, final EStructuralFeatureModelGenAnnotation eStructuralFeatureModelGenAnnotation, final EClassModelGenAnnotation eClassAnnotation, final EPackageModelGenAnnotation ePackageAnnotation) {
