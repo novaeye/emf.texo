@@ -249,6 +249,7 @@ public class GeneratorUtils {
     rs.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", //$NON-NLS-1$
         new EcoreResourceFactoryImpl());
     rs.setPackageRegistry(registry);
+
     // note passing resourcesets package registry to the xsdecore builder
     // this ensures that epackages which refer to eachother are handled
     // correctly
