@@ -59,7 +59,7 @@ import org.eclipse.jdt.launching.JavaRuntime;
  */
 public class TexoGeneratorApplication implements IApplication {
 
-  private static final String ARG_PROJECT = "-project";
+  private static final String ARG_PROJECT_NAME = "-projectName";
   private static final String ARG_JPA = "-jpa";
   private static final String ARG_DAO = "-dao";
   private static final String ARG_MODEL_LOCATION = "-modelLocation";
@@ -84,7 +84,7 @@ public class TexoGeneratorApplication implements IApplication {
         modelLocation = arg;
         nextArgIsModelLocation = false;
       }
-      if (ARG_PROJECT.equals(arg)) {
+      if (ARG_PROJECT_NAME.equals(arg)) {
         nextArgIsProject = true;
       } else if (ARG_MODEL_LOCATION.equals(arg)) {
         nextArgIsModelLocation = true;
@@ -106,6 +106,11 @@ public class TexoGeneratorApplication implements IApplication {
     println("jpa: " + doJpa);
     println("dao: " + doDao);
 
+    // always use null in this case also
+    if (projectName != null && projectName.trim().length() == 0) {
+      projectName = null;
+    }
+    
     if (doJpa) {
       if (projectName != null) {
         ORMUtils.setORMMappingOptionsFromProjectProperties(EclipseGeneratorUtils.getProject(projectName));
@@ -206,7 +211,7 @@ public class TexoGeneratorApplication implements IApplication {
         throw new RuntimeException("No model files (ecore, xsd) found in location " + modelLocation);
       }
     } else {
-      if (!modelLocation.endsWith("xsd") && !modelLocation.endsWith("xsd")) {
+      if (!modelLocation.endsWith("xsd") && !modelLocation.endsWith("ecore")) {
         throw new RuntimeException("Model location " + modelLocation
             + " is not a model file, supported file extensions are xsd or ecore");
       }

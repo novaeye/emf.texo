@@ -27,14 +27,6 @@ Contributors:
 				<istrue value="@{jpa}"/> 
 			</condition>
 
-			<property name="project.value" value="@{project}"/>
-
-			<condition property="project.arg" value="-project @{project}" else="">
-				<isset property="project.value"/>
-			</condition>
-
-			<echo message="@{eclipse}"/>
-
 			<property name="eclipse.plugins" value="@{eclipse}/plugins"/>
 			<property name="launcher.jar" value="${eclipse.plugins}/org.eclipse.equinox.launcher.jar"/>
 
@@ -44,14 +36,18 @@ Contributors:
 			</copy>
 
  			<!-- start Eclipse with java -->
-  			<java classpath="${launcher.jar}" fork="true"
+  			<java classpath="${launcher.jar}"  
 				classname="org.eclipse.equinox.launcher.Main"
 				failonerror="true">
 				<arg value="-nosplash"/>
-				<arg value="-data @{data}"/>	
-				<arg value="-application org.eclipse.emf.texo.eclipse.generator.TexoCodeGenerator"/>
-  				<arg value="${project.arg}"/>
-				<arg value="-modelLocation @{modelLocation}"/>
+				<arg value="-application"/>
+				<arg value="org.eclipse.emf.texo.eclipse.generator.TexoCodeGenerator"/>
+				<arg value="-data"/>
+				<arg value="@{data}"/>	
+				<arg value="-modelLocation"/>
+				<arg value="@{modelLocation}"/>
+				<arg value="-projectName"/>
+				<arg value="@{projectName}"/>
 				<arg value="${jpa.arg}"/>
 				<arg value="${dao.arg}"/>
 			</java>

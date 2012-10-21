@@ -16,7 +16,7 @@ Contributors:
 		<texo.gen 
 			eclipse="/home/mtaal/mytmp/headless/eclipse" 
 			data="/home/mtaal/mytmp/headless/workspace"
-			project="testgen" 
+			projectName="testgen"
 			modelLocation="/home/mtaal/mytmp/models"
 			jpa="true"/>
 	</target>
