@@ -193,13 +193,23 @@ public class TexoGeneratorApplication implements IApplication {
 
     final File modelFile = new File(modelLocation);
     final List<File> files = new ArrayList<File>();
+    if (!modelFile.exists()) {
+      throw new RuntimeException("Model file " + modelLocation + " does not exist");
+    }
     if (modelFile.isDirectory()) {
       for (File file : modelFile.listFiles()) {
         if (file.getName().endsWith("xsd") || file.getName().endsWith("ecore")) {
           files.add(file);
         }
       }
+      if (files.isEmpty()) {
+        throw new RuntimeException("No model files (ecore, xsd) found in location " + modelLocation);
+      }
     } else {
+      if (!modelLocation.endsWith("xsd") && !modelLocation.endsWith("xsd")) {
+        throw new RuntimeException("Model location " + modelLocation
+            + " is not a model file, supported file extensions are xsd or ecore");
+      }
       files.add(modelFile);
     }
 
