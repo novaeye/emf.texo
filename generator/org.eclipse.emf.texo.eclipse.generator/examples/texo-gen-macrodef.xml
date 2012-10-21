@@ -13,7 +13,7 @@ Contributors:
 	<macrodef name="texo.gen">
 		<attribute name="eclipse"/>
 		<attribute name="data"/>
-		<attribute name="project" default=""/>
+		<attribute name="projectName" default=""/>
 		<attribute name="modelLocation"/>
 		<attribute name="dao" default="false"/>
 		<attribute name="jpa" default="false"/>
@@ -36,7 +36,7 @@ Contributors:
 			</copy>
 
  			<!-- start Eclipse with java -->
-  			<java classpath="${launcher.jar}"  
+  			<java classpath="${launcher.jar}" fork="true" 
 				classname="org.eclipse.equinox.launcher.Main"
 				failonerror="true">
 				<arg value="-nosplash"/>
