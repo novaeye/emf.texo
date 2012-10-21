@@ -34,6 +34,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.texo.eclipse.ProjectPropertyUtil;
 import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.generator.ArtifactGenerator;
 import org.eclipse.emf.texo.generator.EclipseGeneratorUtils;
@@ -58,183 +59,203 @@ import org.eclipse.jdt.launching.JavaRuntime;
  */
 public class TexoGeneratorApplication implements IApplication {
 
-	private static final String ARG_PROJECT = "-project";
-	private static final String ARG_JPA = "-jpa";
-	private static final String ARG_DAO = "-dao";
-	private static final String ARG_MODEL_LOCATION = "-modelLocation";
-	private static final String JAVA_PROJECT_NAME = "org.eclipse.emf.texo.tempgenproject";;
+  private static final String ARG_PROJECT = "-project";
+  private static final String ARG_JPA = "-jpa";
+  private static final String ARG_DAO = "-dao";
+  private static final String ARG_MODEL_LOCATION = "-modelLocation";
+  private static final String JAVA_PROJECT_NAME = "org.eclipse.emf.texo.gen";
 
-	public Object start(IApplicationContext context) throws Exception {
+  public Object start(IApplicationContext context) throws Exception {
 
-		final IWorkspace workspace = ResourcesPlugin.getWorkspace();
-		System.err.println(workspace.getRoot().getLocation().toOSString());
-		final String[] args = (String[]) context.getArguments().get(
-				IApplicationContext.APPLICATION_ARGS);
-		String projectName = null;
-		boolean nextArgIsProject = false;
-		boolean nextArgIsModelLocation = false;
-		boolean doDao = false;
-		boolean doJpa = false;
-		String modelLocation = null;
-		for (String arg : args) {
-			if (nextArgIsProject) {
-				projectName = arg;
-				nextArgIsProject = false;
-			}
-			if (nextArgIsModelLocation) {
-				modelLocation = arg;
-				nextArgIsModelLocation = false;
-			}
-			if (ARG_PROJECT.equals(arg)) {
-				nextArgIsProject = true;
-			} else if (ARG_MODEL_LOCATION.equals(arg)) {
-				nextArgIsModelLocation = true;
-			} else if (ARG_DAO.equals(arg)) {
-				doDao = true;
-			} else if (ARG_JPA.equals(arg)) {
-				doJpa = true;
-			}
-		}
-		if (modelLocation == null) {
-			throw new IllegalArgumentException(
-					"Missing parameter: modelLocation");
-		}
-		if (doJpa) {
-			if (projectName != null) {
-				ORMUtils.setORMMappingOptionsFromProjectProperties(EclipseGeneratorUtils
-						.getProject(projectName));
-			} else {
-				final ORMMappingOptions ormOptions = getORMMappingsOptions();
-				ORMMappingOptions.setDefaultOptions(ormOptions);
-			}
-		}
-		try {
-			if (projectName == null) {
-				createJavaProject();
-				projectName = JAVA_PROJECT_NAME;
-			}
-			generateCode(projectName, modelLocation, doDao, doJpa);
-		} finally {
-			ORMMappingOptions.setDefaultOptions(null);
-		}
-		return null;
-	}
+    final IWorkspace workspace = ResourcesPlugin.getWorkspace();
+    final String[] args = (String[]) context.getArguments().get(IApplicationContext.APPLICATION_ARGS);
+    String projectName = null;
+    boolean nextArgIsProject = false;
+    boolean nextArgIsModelLocation = false;
+    boolean doDao = false;
+    boolean doJpa = false;
+    String modelLocation = null;
+    for (String arg : args) {
+      if (nextArgIsProject) {
+        projectName = arg;
+        nextArgIsProject = false;
+      }
+      if (nextArgIsModelLocation) {
+        modelLocation = arg;
+        nextArgIsModelLocation = false;
+      }
+      if (ARG_PROJECT.equals(arg)) {
+        nextArgIsProject = true;
+      } else if (ARG_MODEL_LOCATION.equals(arg)) {
+        nextArgIsModelLocation = true;
+      } else if (ARG_DAO.equals(arg)) {
+        doDao = true;
+      } else if (ARG_JPA.equals(arg)) {
+        doJpa = true;
+      }
+    }
+    if (modelLocation == null) {
+      throw new IllegalArgumentException("Missing parameter: modelLocation");
+    }
 
-	public void stop() {
-		// TODO Auto-generated method stub
+    println(">> Texo Artifact Generation");
+    println("arguments:");
+    println("workspace path: " + workspace.getRoot().getLocation().toOSString());
+    println("project: " + (projectName == null ? JAVA_PROJECT_NAME : projectName));
+    println("modelLocation: " + modelLocation);
+    println("jpa: " + doJpa);
+    println("dao: " + doDao);
 
-	}
+    if (doJpa) {
+      if (projectName != null) {
+        ORMUtils.setORMMappingOptionsFromProjectProperties(EclipseGeneratorUtils.getProject(projectName));
+      } else {
+        final ORMMappingOptions ormOptions = getORMMappingsOptions();
+        ORMMappingOptions.setDefaultOptions(ormOptions);
+      }
+    }
+    try {
+      if (projectName == null) {
+        println("Creating gen project");
+        createJavaProject();
+        projectName = JAVA_PROJECT_NAME;
+      }
 
-	private void generateCode(String projectName, String modelLocation,
-			boolean doDao, boolean doJpa) {
-		// force initialization
-		ModelAnnotatorRegistry.getInstance().getModelAnnotators();
+      final IProject project = workspace.getRoot().getProject(projectName);
 
-		final List<URI> uris = getURIs(modelLocation);
+      if (project == null) {
+        throw new RuntimeException("Project " + projectName + " not found in workspace "
+            + workspace.getRoot().getLocation().toOSString());
+      }
+      generateCode(project, modelLocation, doDao, doJpa);
+    } finally {
+      ORMMappingOptions.setDefaultOptions(null);
+    }
+    return null;
+  }
 
-		if (doJpa) {
-			AnnotationManager
-					.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
-		}
+  public void stop() {
+  }
 
-		for (URI uri : uris) {
-			generateCode(projectName, uri, doDao);
-		}
-	}
+  private void println(String line) {
+    // NOTE: hmm, this is not nice logging, but not sure what works best
+    // both in ant and directly
+    // when executing eclipse
+    System.out.println(line);
+  }
 
-	private void generateCode(String projectName, URI uri, boolean doDao) {
-		final EPackage.Registry packageRegistry = GeneratorUtils
-				.createEPackageRegistry();
-		final List<EPackage> ePackages = GeneratorUtils.readEPackagesUsingEMFURI(
-				Collections.singletonList(uri), packageRegistry);
-		final ModelController modelController = new ModelController();
-		modelController.setEPackages(ePackages);
-		modelController.getAnnotationManager().getAnnotatedModel()
-				.setGeneratingSources(true);
-		modelController.annotate(new ArrayList<ModelAnnotator>());
+  private void generateCode(IProject project, String modelLocation, boolean doDao, boolean doJpa) {
+    // force initialization
+    ModelAnnotatorRegistry.getInstance().getModelAnnotators();
 
-		final ArtifactGenerator artifactGenerator = new ArtifactGenerator();
-		artifactGenerator.setModelController(modelController);
-		artifactGenerator.setOutputFolder("src-test-gen"); //$NON-NLS-1$
-		artifactGenerator.setProjectName(projectName);
-		if (doDao) {
-			artifactGenerator.setDoDao(true);
-		}
-		artifactGenerator.setXTendTemplate(new ModelTemplate());
-		artifactGenerator.run();
-	}
+    final List<URI> uris = getURIs(modelLocation);
 
-	private List<URI> getURIs(String modelLocation) {
+    if (doJpa) {
+      AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
+    }
 
-		final File modelFile = new File(modelLocation);
-		final List<File> files = new ArrayList<File>();
-		if (modelFile.isDirectory()) {
-			for (File file : modelFile.listFiles()) {
-				if (file.getName().endsWith("xsd")
-						|| file.getName().endsWith("ecore")) {
-					files.add(file);
-				}
-			}
-		} else {
-			files.add(modelFile);
-		}
+    for (URI uri : uris) {
+      try {
+        println("Generating for model file: " + uri);
+        generateCode(project, uri, doDao);
+      } catch (Exception e) {
+        throw new RuntimeException("Exception for model file " + uri, e);
+      }
+    }
+  }
 
-		final List<URI> uris = new ArrayList<URI>();
-		for (File file : files) {
-			try {
-				uris.add(URI.createFileURI(file.getPath()));
-			} catch (Exception e) {
-				throw new RuntimeException(e);
-			}
-		}
-		return uris;
-	}
+  private void generateCode(IProject project, URI uri, boolean doDao) {
+    final EPackage.Registry packageRegistry = GeneratorUtils.createEPackageRegistry();
+    final List<EPackage> ePackages = GeneratorUtils.readEPackagesUsingEMFURI(Collections.singletonList(uri),
+        packageRegistry);
 
-	private ORMMappingOptions getORMMappingsOptions() {
-		final ORMMappingOptions ormOptions = new ORMMappingOptions();
-		ormOptions.setAddOrderColumnToListMappings(true);
-		ormOptions.setRenameSQLReservedNames(true);
-		ormOptions.setEnforceUniqueNames(true);
-		ormOptions.setGenerateFullDbSchemaNames(true);
-		return ormOptions;
-	}
+    for (EPackage ePackage : ePackages) {
+      println("EPackage " + ePackage.getNsURI());
+    }
 
-	private IJavaProject createJavaProject() {
-		try {
-			final IWorkspaceRoot root = ResourcesPlugin.getWorkspace()
-					.getRoot();
-			final IProgressMonitor progressMonitor = new NullProgressMonitor();
-			
-			final IProject project = root.getProject(JAVA_PROJECT_NAME);
-			if (project.exists()) {
-				project.delete(true, progressMonitor);
-			}
-			project.create(progressMonitor);
-			project.open(progressMonitor);
+    final ModelController modelController = new ModelController();
+    modelController.setEPackages(ePackages);
+    modelController.getAnnotationManager().getAnnotatedModel().setGeneratingSources(true);
+    modelController.annotate(new ArrayList<ModelAnnotator>());
 
-			// swt the java nature
-			final IProjectDescription description = project.getDescription();
-			String[] natures = description.getNatureIds();
-			String[] newNatures = new String[natures.length + 1];
-			System.arraycopy(natures, 0, newNatures, 0, natures.length);
-			newNatures[natures.length] = JavaCore.NATURE_ID;
-			description.setNatureIds(newNatures);
-			project.setDescription(description, progressMonitor);
+    final ArtifactGenerator artifactGenerator = new ArtifactGenerator();
+    artifactGenerator.setModelController(modelController);
+    artifactGenerator.setOutputFolder(ProjectPropertyUtil.getGenOutputFolder(project));
+    artifactGenerator.setProjectName(ProjectPropertyUtil.getTargetProject(project).getName());
+    if (doDao) {
+      artifactGenerator.setDoDao(true);
+    }
+    artifactGenerator.setXTendTemplate(new ModelTemplate());
+    artifactGenerator.run();
+  }
 
-			// create the javaproject
-			final IJavaProject javaProject = JavaCore.create(project);
+  private List<URI> getURIs(String modelLocation) {
 
-			// set the classpath
-			final Set<IClasspathEntry> entries = new HashSet<IClasspathEntry>();
-			entries.addAll(Arrays.asList(javaProject.getRawClasspath()));
-			entries.add(JavaRuntime.getDefaultJREContainerEntry());
-			javaProject.setRawClasspath(
-					entries.toArray(new IClasspathEntry[entries.size()]),
-					progressMonitor);
+    final File modelFile = new File(modelLocation);
+    final List<File> files = new ArrayList<File>();
+    if (modelFile.isDirectory()) {
+      for (File file : modelFile.listFiles()) {
+        if (file.getName().endsWith("xsd") || file.getName().endsWith("ecore")) {
+          files.add(file);
+        }
+      }
+    } else {
+      files.add(modelFile);
+    }
 
-			return javaProject;
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
+    final List<URI> uris = new ArrayList<URI>();
+    for (File file : files) {
+      try {
+        uris.add(URI.createFileURI(file.getPath()));
+      } catch (Exception e) {
+        throw new RuntimeException(e);
+      }
+    }
+    return uris;
+  }
+
+  private ORMMappingOptions getORMMappingsOptions() {
+    final ORMMappingOptions ormOptions = new ORMMappingOptions();
+    ormOptions.setAddOrderColumnToListMappings(true);
+    ormOptions.setRenameSQLReservedNames(true);
+    ormOptions.setEnforceUniqueNames(true);
+    ormOptions.setGenerateFullDbSchemaNames(true);
+    return ormOptions;
+  }
+
+  private IJavaProject createJavaProject() {
+    try {
+      final IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+      final IProgressMonitor progressMonitor = new NullProgressMonitor();
+
+      final IProject project = root.getProject(JAVA_PROJECT_NAME);
+      if (project.exists()) {
+        project.delete(true, progressMonitor);
+      }
+      project.create(progressMonitor);
+      project.open(progressMonitor);
+
+      // swt the java nature
+      final IProjectDescription description = project.getDescription();
+      String[] natures = description.getNatureIds();
+      String[] newNatures = new String[natures.length + 1];
+      System.arraycopy(natures, 0, newNatures, 0, natures.length);
+      newNatures[natures.length] = JavaCore.NATURE_ID;
+      description.setNatureIds(newNatures);
+      project.setDescription(description, progressMonitor);
+
+      // create the javaproject
+      final IJavaProject javaProject = JavaCore.create(project);
+
+      // set the classpath
+      final Set<IClasspathEntry> entries = new HashSet<IClasspathEntry>();
+      entries.addAll(Arrays.asList(javaProject.getRawClasspath()));
+      entries.add(JavaRuntime.getDefaultJREContainerEntry());
+      javaProject.setRawClasspath(entries.toArray(new IClasspathEntry[entries.size()]), progressMonitor);
+
+      return javaProject;
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
+  }
 }
