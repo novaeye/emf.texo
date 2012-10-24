@@ -89,10 +89,25 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 
 	<import file="ant_common.xml" />
 
+	<import file="maven/ant_maven.xml" />
+
 	<target name="build.and.test" depends="init, get.thirdparty, init.checks, install.buckminster">
 		<ant dir="${basedir}/build" antfile="texo_build.xml" target="run" inheritRefs="true" />
 
 		<ant dir="${basedir}/test" antfile="texo_test.xml" target="run" inheritRefs="true" />
+
+		<computeVersionQualifier directory="${rootPath}/output/org.eclipse.emf.texo_${texo.version}-osgi.bundle/jar" pattern="org.eclipse.emf.texo*.jar"/>
+		
+		<echo message="Creating maven jars with versionQualifier ${versionQualifier}" />
+		
+		<property name="mavenVersion" value="${texo.version}-${versionQualifier}" />
+		<property name="texoVersion" value="${texo.version}.${versionQualifier}" />
+
+		<texo.maven name="org.eclipse.emf.texo"/>
+		<texo.maven name="org.eclipse.emf.texo.json.datagenerator"/>
+		<texo.maven name="org.eclipse.emf.texo.json"/>
+		<texo.maven name="org.eclipse.emf.texo.xml"/>
+		<texo.maven name="org.eclipse.emf.texo.server"/>
 
 		<copy todir="${promotePath}" flatten="true">
 			<fileset dir="${buckminster.output.root}">
