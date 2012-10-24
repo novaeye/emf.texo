@@ -70,6 +70,7 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 	<property name="toolsPath" location="${rootPath}/tools" />
 	<property name="promotePath" location="${rootPath}/promote/${build.type}${buildTimestamp}" />
 	<property name="resultPath" location="${rootPath}/result" />
+	<property name="mavenPath" location="${rootPath}/result/maven" />
 	<property name="buildSitePath" location="${resultPath}/p2site" />
 	<property name="buildZipsPath" location="${resultPath}/zips" />
 	<property name="testResultsPath" location="${resultPath}/test" />
@@ -143,9 +144,11 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 		<echo message="buildSitePath: ${buildSitePath}" />
 		<echo message="buildZipsPath: ${buildZipsPath}" />
 		<echo message="testResultsPath: ${testResultsPath}" />
+		<echo message="mavenPath: ${mavenPath}" />
 		<mkdir dir="${rootPath}" />
 		<mkdir dir="${buildPath}" />
 		<mkdir dir="${promotePath}" />
+		<mkdir dir="${mavenPath}" />
 		<mkdir dir="${testPath}" />
 		<mkdir dir="${toolsPath}" />
 		<mkdir dir="${toolsPath}/lib" />
