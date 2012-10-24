@@ -104,7 +104,7 @@ http://dev.eclipse.org/viewsvn/index.cgi/trunk/org.eclipse.buckminster.releng/bu
 		<property name="texoVersion" value="${texo.version}.${versionQualifier}" />
 
 		<texo.maven name="org.eclipse.emf.texo"/>
-		<texo.maven name="org.eclipse.emf.texo.json.datagenerator"/>
+		<texo.maven name="org.eclipse.emf.texo.datagenerator"/>
 		<texo.maven name="org.eclipse.emf.texo.json"/>
 		<texo.maven name="org.eclipse.emf.texo.xml"/>
 		<texo.maven name="org.eclipse.emf.texo.server"/>
