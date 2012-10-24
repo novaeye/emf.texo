@@ -6,7 +6,7 @@
 		<attribute name="fileName" />
 		<attribute name="name" />
 		<sequential>
-			<xslt style="pom.xsl" in="dummy.xml" out="@{fileName}">
+			<xslt style="maven/pom.xsl" in="maven/dummy.xml" out="@{fileName}">
 				<param name="mavenVersion" expression="@{mavenVersion}" />
 				<param name="name" expression="@{name}" />
 				<outputproperty name="method" value="xml" />
