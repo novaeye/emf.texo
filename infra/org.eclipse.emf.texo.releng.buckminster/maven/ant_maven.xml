@@ -39,8 +39,8 @@
 			<texo.pom fileName="${mavenPath}/@{name}-${mavenVersion}.pom" name="@{name}" mavenVersion="${mavenVersion}" />
 			<texo.dummy.javadoc fileName="${mavenPath}/@{name}-${mavenVersion}-javadoc.jar" />
 
-			<texo.pom fileName="${mavenPath}/@{name}-${texo.version}-SNAPSHOT.pom" name="@{name}" mavenVersion="${mavenVersion}" />
-			<texo.dummy.javadoc fileName="${mavenPath}/@{name}-SNAPSHOT-javadoc.jar" />
+			<texo.pom fileName="${mavenPath}/@{name}-${texo.version}-SNAPSHOT.pom" name="@{name}" mavenVersion="${texo.version}-SNAPSHOT" />
+			<texo.dummy.javadoc fileName="${mavenPath}/@{name}-${texo.version}-SNAPSHOT-javadoc.jar" />
 		</sequential>
 	</macrodef>
 </project>
