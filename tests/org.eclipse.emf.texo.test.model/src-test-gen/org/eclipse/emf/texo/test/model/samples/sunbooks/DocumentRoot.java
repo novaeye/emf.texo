@@ -35,13 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private CollectionType collection = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -125,7 +118,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public CollectionType getCollection() {
-    return collection;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COLLECTION);
   }
 
   /**
@@ -138,7 +132,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setCollection(CollectionType newCollection) {
-    collection = newCollection;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COLLECTION, newCollection);
   }
 
   /**

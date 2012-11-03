@@ -35,27 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private ActionType action = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private QueryType query = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private QueryReferingObjectsType queryReferingObjects = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -139,7 +118,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public ActionType getAction() {
-    return action;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.ACTION);
   }
 
   /**
@@ -152,7 +132,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setAction(ActionType newAction) {
-    action = newAction;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ACTION,
+        newAction);
   }
 
   /**
@@ -164,7 +145,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public QueryType getQuery() {
-    return query;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.QUERY);
   }
 
   /**
@@ -177,7 +159,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setQuery(QueryType newQuery) {
-    query = newQuery;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.QUERY,
+        newQuery);
   }
 
   /**
@@ -189,7 +172,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public QueryReferingObjectsType getQueryReferingObjects() {
-    return queryReferingObjects;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.QUERYREFERINGOBJECTS);
   }
 
   /**
@@ -202,7 +186,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setQueryReferingObjects(QueryReferingObjectsType newQueryReferingObjects) {
-    queryReferingObjects = newQueryReferingObjects;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.QUERYREFERINGOBJECTS, newQueryReferingObjects);
   }
 
   /**

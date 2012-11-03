@@ -97,7 +97,7 @@ public class ModelXMLSaver implements TexoComponent {
       }
 
       if (!isSaveAsXMI()) {
-        // set default options which ensure that XML sche//wed
+        // set default options which ensure that XML
         setDefaultOptions(XMLResource.OPTION_ENCODING, "UTF-8"); //$NON-NLS-1$
         setDefaultOptions(XMLResource.OPTION_SUPPRESS_DOCUMENT_ROOT, true);
         setDefaultOptions(XMLResource.OPTION_EXTENDED_META_DATA, true);

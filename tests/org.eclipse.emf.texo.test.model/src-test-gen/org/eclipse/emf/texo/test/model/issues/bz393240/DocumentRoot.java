@@ -1,4 +1,4 @@
-package org.eclipse.emf.texo.server.model.response;
+package org.eclipse.emf.texo.test.model.issues.bz393240;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -110,84 +110,57 @@ public class DocumentRoot extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>error</b></em>' feature.
+   * Returns the value of '<em><b>applicationRequest</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>error</b></em>' feature
+   * @return the value of '<em><b>applicationRequest</b></em>' feature
    * @generated
    */
-  public ErrorType getError() {
+  public Application getApplicationRequest() {
     return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
-        DocumentRootMixedFeatureGroup.Feature.ERROR);
+        DocumentRootMixedFeatureGroup.Feature.APPLICATIONREQUEST);
   }
 
   /**
-   * Sets the '{@link DocumentRoot#getError() <em>error</em>}' feature.
+   * Sets the '{@link DocumentRoot#getApplicationRequest() <em>applicationRequest</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link DocumentRoot#getError() error}' feature.
+   *          new value of the '{@link DocumentRoot#getApplicationRequest() applicationRequest}' feature.
    * @generated
    */
-  public void setError(ErrorType newError) {
-    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ERROR,
-        newError);
+  public void setApplicationRequest(Application newApplicationRequest) {
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.APPLICATIONREQUEST, newApplicationRequest);
   }
 
   /**
-   * Returns the value of '<em><b>response</b></em>' feature.
+   * Returns the value of '<em><b>applicationResponse</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>response</b></em>' feature
+   * @return the value of '<em><b>applicationResponse</b></em>' feature
    * @generated
    */
-  public ResponseType getResponse() {
+  public Application getApplicationResponse() {
     return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
-        DocumentRootMixedFeatureGroup.Feature.RESPONSE);
+        DocumentRootMixedFeatureGroup.Feature.APPLICATIONRESPONSE);
   }
 
   /**
-   * Sets the '{@link DocumentRoot#getResponse() <em>response</em>}' feature.
+   * Sets the '{@link DocumentRoot#getApplicationResponse() <em>applicationResponse</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param the
-   *          new value of the '{@link DocumentRoot#getResponse() response}' feature.
+   *          new value of the '{@link DocumentRoot#getApplicationResponse() applicationResponse}' feature.
    * @generated
    */
-  public void setResponse(ResponseType newResponse) {
-    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.RESPONSE,
-        newResponse);
-  }
-
-  /**
-   * Returns the value of '<em><b>result</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>result</b></em>' feature
-   * @generated
-   */
-  public ResultType getResult() {
-    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
-        DocumentRootMixedFeatureGroup.Feature.RESULT);
-  }
-
-  /**
-   * Sets the '{@link DocumentRoot#getResult() <em>result</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getResult() result}' feature.
-   * @generated
-   */
-  public void setResult(ResultType newResult) {
-    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.RESULT,
-        newResult);
+  public void setApplicationResponse(Application newApplicationResponse) {
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.APPLICATIONRESPONSE, newApplicationResponse);
   }
 
   /**

@@ -35,118 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private ActType act = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private FmType fm = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String groupDescription = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String line = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String p = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String persona = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private PersonaeType personae = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private PersonaGroupType personaGroup = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private PlayType play = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String playSubTitle = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private SceneType scene = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String sceneDescription = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String speaker = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private SpeechType speech = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String stageDirections = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String title = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -230,7 +118,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public ActType getAct() {
-    return act;
+    return DocumentRootMixedFeatureGroup
+        .getSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ACT);
   }
 
   /**
@@ -243,7 +132,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setAct(ActType newAct) {
-    act = newAct;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ACT,
+        newAct);
   }
 
   /**
@@ -255,7 +145,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public FmType getFm() {
-    return fm;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.FM);
   }
 
   /**
@@ -268,7 +158,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setFm(FmType newFm) {
-    fm = newFm;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.FM, newFm);
   }
 
   /**
@@ -280,7 +170,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getGroupDescription() {
-    return groupDescription;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.GROUPDESCRIPTION);
   }
 
   /**
@@ -293,7 +184,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setGroupDescription(String newGroupDescription) {
-    groupDescription = newGroupDescription;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.GROUPDESCRIPTION, newGroupDescription);
   }
 
   /**
@@ -305,7 +197,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getLine() {
-    return line;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.LINE);
   }
 
   /**
@@ -318,7 +211,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setLine(String newLine) {
-    line = newLine;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.LINE,
+        newLine);
   }
 
   /**
@@ -330,7 +224,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getP() {
-    return p;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.P);
   }
 
   /**
@@ -343,7 +237,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setP(String newP) {
-    p = newP;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.P, newP);
   }
 
   /**
@@ -355,7 +249,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getPersona() {
-    return persona;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PERSONA);
   }
 
   /**
@@ -368,7 +263,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setPersona(String newPersona) {
-    persona = newPersona;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.PERSONA,
+        newPersona);
   }
 
   /**
@@ -380,7 +276,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public PersonaeType getPersonae() {
-    return personae;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PERSONAE);
   }
 
   /**
@@ -393,7 +290,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setPersonae(PersonaeType newPersonae) {
-    personae = newPersonae;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.PERSONAE,
+        newPersonae);
   }
 
   /**
@@ -405,7 +303,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public PersonaGroupType getPersonaGroup() {
-    return personaGroup;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PERSONAGROUP);
   }
 
   /**
@@ -418,7 +317,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setPersonaGroup(PersonaGroupType newPersonaGroup) {
-    personaGroup = newPersonaGroup;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PERSONAGROUP, newPersonaGroup);
   }
 
   /**
@@ -430,7 +330,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public PlayType getPlay() {
-    return play;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PLAY);
   }
 
   /**
@@ -443,7 +344,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setPlay(PlayType newPlay) {
-    play = newPlay;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.PLAY,
+        newPlay);
   }
 
   /**
@@ -455,7 +357,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getPlaySubTitle() {
-    return playSubTitle;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PLAYSUBTITLE);
   }
 
   /**
@@ -468,7 +371,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setPlaySubTitle(String newPlaySubTitle) {
-    playSubTitle = newPlaySubTitle;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.PLAYSUBTITLE, newPlaySubTitle);
   }
 
   /**
@@ -480,7 +384,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public SceneType getScene() {
-    return scene;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SCENE);
   }
 
   /**
@@ -493,7 +398,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setScene(SceneType newScene) {
-    scene = newScene;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.SCENE,
+        newScene);
   }
 
   /**
@@ -505,7 +411,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getSceneDescription() {
-    return sceneDescription;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SCENEDESCRIPTION);
   }
 
   /**
@@ -518,7 +425,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setSceneDescription(String newSceneDescription) {
-    sceneDescription = newSceneDescription;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SCENEDESCRIPTION, newSceneDescription);
   }
 
   /**
@@ -530,7 +438,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getSpeaker() {
-    return speaker;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SPEAKER);
   }
 
   /**
@@ -543,7 +452,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setSpeaker(String newSpeaker) {
-    speaker = newSpeaker;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.SPEAKER,
+        newSpeaker);
   }
 
   /**
@@ -555,7 +465,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public SpeechType getSpeech() {
-    return speech;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SPEECH);
   }
 
   /**
@@ -568,7 +479,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setSpeech(SpeechType newSpeech) {
-    speech = newSpeech;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.SPEECH,
+        newSpeech);
   }
 
   /**
@@ -580,7 +492,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getStageDirections() {
-    return stageDirections;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.STAGEDIRECTIONS);
   }
 
   /**
@@ -593,7 +506,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
-    stageDirections = newStageDirections;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.STAGEDIRECTIONS, newStageDirections);
   }
 
   /**
@@ -605,7 +519,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getTitle() {
-    return title;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.TITLE);
   }
 
   /**
@@ -618,7 +533,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setTitle(String newTitle) {
-    title = newTitle;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.TITLE,
+        newTitle);
   }
 
   /**

@@ -35,20 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String comment_ = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private PurchaseOrder order = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -132,7 +118,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getComment_() {
-    return comment_;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COMMENT_);
   }
 
   /**
@@ -145,7 +132,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setComment_(String newComment_) {
-    comment_ = newComment_;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.COMMENT_,
+        newComment_);
   }
 
   /**
@@ -157,7 +145,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public PurchaseOrder getOrder() {
-    return order;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.ORDER);
   }
 
   /**
@@ -170,7 +159,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setOrder(PurchaseOrder newOrder) {
-    order = newOrder;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ORDER,
+        newOrder);
   }
 
   /**

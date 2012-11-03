@@ -35,34 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private AddressType address = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private AddressGroupType addressGroup = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private SimpleAllType simpleAll = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private SimpleAllMapType simpleAllMap = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -146,7 +118,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public AddressType getAddress() {
-    return address;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.ADDRESS);
   }
 
   /**
@@ -159,7 +132,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setAddress(AddressType newAddress) {
-    address = newAddress;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ADDRESS,
+        newAddress);
   }
 
   /**
@@ -171,7 +145,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public AddressGroupType getAddressGroup() {
-    return addressGroup;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.ADDRESSGROUP);
   }
 
   /**
@@ -184,7 +159,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setAddressGroup(AddressGroupType newAddressGroup) {
-    addressGroup = newAddressGroup;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.ADDRESSGROUP, newAddressGroup);
   }
 
   /**
@@ -196,7 +172,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public SimpleAllType getSimpleAll() {
-    return simpleAll;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SIMPLEALL);
   }
 
   /**
@@ -209,7 +186,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setSimpleAll(SimpleAllType newSimpleAll) {
-    simpleAll = newSimpleAll;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.SIMPLEALL,
+        newSimpleAll);
   }
 
   /**
@@ -221,7 +199,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public SimpleAllMapType getSimpleAllMap() {
-    return simpleAllMap;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SIMPLEALLMAP);
   }
 
   /**
@@ -234,7 +213,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setSimpleAllMap(SimpleAllMapType newSimpleAllMap) {
-    simpleAllMap = newSimpleAllMap;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.SIMPLEALLMAP, newSimpleAllMap);
   }
 
   /**

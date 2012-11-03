@@ -36,55 +36,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private ComplexEvenType complexEven = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private ComplexAAA myComplexAbstract = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private ComplexOddType complexOdd = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private EvenType even = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private BigInteger myAbstract = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private OddType odd = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private RootType root = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -168,7 +119,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public ComplexEvenType getComplexEven() {
-    return complexEven;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COMPLEXEVEN);
   }
 
   /**
@@ -181,7 +133,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setComplexEven(ComplexEvenType newComplexEven) {
-    complexEven = newComplexEven;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COMPLEXEVEN, newComplexEven);
   }
 
   /**
@@ -193,7 +146,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public ComplexAAA getMyComplexAbstract() {
-    return myComplexAbstract;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.MYCOMPLEXABSTRACT);
   }
 
   /**
@@ -205,7 +159,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public ComplexOddType getComplexOdd() {
-    return complexOdd;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COMPLEXODD);
   }
 
   /**
@@ -218,7 +173,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setComplexOdd(ComplexOddType newComplexOdd) {
-    complexOdd = newComplexOdd;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.COMPLEXODD, newComplexOdd);
   }
 
   /**
@@ -230,7 +186,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public EvenType getEven() {
-    return even;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.EVEN);
   }
 
   /**
@@ -243,7 +200,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setEven(EvenType newEven) {
-    even = newEven;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.EVEN,
+        newEven);
   }
 
   /**
@@ -255,7 +213,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public BigInteger getMyAbstract() {
-    return myAbstract;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.MYABSTRACT);
   }
 
   /**
@@ -267,7 +226,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public OddType getOdd() {
-    return odd;
+    return DocumentRootMixedFeatureGroup
+        .getSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ODD);
   }
 
   /**
@@ -280,7 +240,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setOdd(OddType newOdd) {
-    odd = newOdd;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ODD,
+        newOdd);
   }
 
   /**
@@ -292,7 +253,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public RootType getRoot() {
-    return root;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.ROOT);
   }
 
   /**
@@ -305,7 +267,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setRoot(RootType newRoot) {
-    root = newRoot;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.ROOT,
+        newRoot);
   }
 
   /**

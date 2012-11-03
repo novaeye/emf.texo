@@ -79,7 +79,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 
 «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
 	«/* a document root has almost only volatile features, but they need to be generated also */»		
-	«IF TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile»
+	«IF !featureAnnotation.EStructuralFeature.volatile»
 	
 		/** 
  		 * <!-- begin-user-doc -->
@@ -101,7 +101,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
 		/**
 		 * Returns the value of '<em><b>«featureAnnotation.EStructuralFeature.name»</b></em>' feature.
-			«IF (TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile) && featureAnnotation.many && featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
+			«IF !featureAnnotation.EStructuralFeature.volatile && featureAnnotation.many && featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
 		 * Note: the returned collection is Unmodifiable use the {#addTo«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)}
 		 * and {@link #removeFrom«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)} methods 
 		 * to modify this feature.
@@ -119,7 +119,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 		 */
 		«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "getter")»
 		public «featureAnnotation.type» «featureAnnotation.getter»() {
-		«IF TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile»
+		«IF !featureAnnotation.EStructuralFeature.volatile»
 			«IF featureAnnotation.many && featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
 				«IF (featureAnnotation as EReferenceModelGenAnnotation).useList»
 			return java.util.Collections.unmodifiableList(«featureAnnotation.validJavaMemberName»);
@@ -236,7 +236,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 			 */
 			«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "setter")»
 			public void «featureAnnotation.setter»(«featureAnnotation.type» new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)») {
-			«IF TemplateUtil::isDocumentRoot(eClassModelGenAnnotation.EClass) || !featureAnnotation.EStructuralFeature.volatile»
+			«IF !featureAnnotation.EStructuralFeature.volatile»
 				«IF featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
 					«IF featureAnnotation.many»
 						clear«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»();

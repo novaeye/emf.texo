@@ -176,18 +176,10 @@ public class EntityTemplate extends BaseTemplate {
         _builder.append("\t\t");
         _builder.newLine();
         {
-          boolean _or = false;
-          EClass _eClass_1 = eClassModelGenAnnotation.getEClass();
-          boolean _isDocumentRoot = TemplateUtil.isDocumentRoot(_eClass_1);
-          if (_isDocumentRoot) {
-            _or = true;
-          } else {
-            EStructuralFeature _eStructuralFeature = featureAnnotation.getEStructuralFeature();
-            boolean _isVolatile = _eStructuralFeature.isVolatile();
-            boolean _not = (!_isVolatile);
-            _or = (_isDocumentRoot || _not);
-          }
-          if (_or) {
+          EStructuralFeature _eStructuralFeature = featureAnnotation.getEStructuralFeature();
+          boolean _isVolatile = _eStructuralFeature.isVolatile();
+          boolean _not = (!_isVolatile);
+          if (_not) {
             _builder.newLine();
             _builder.append("\t");
             _builder.append("/** ");
@@ -263,22 +255,14 @@ public class EntityTemplate extends BaseTemplate {
           boolean _and = false;
           boolean _and_1 = false;
           boolean _and_2 = false;
-          boolean _or_1 = false;
-          EClass _eClass_2 = eClassModelGenAnnotation.getEClass();
-          boolean _isDocumentRoot_1 = TemplateUtil.isDocumentRoot(_eClass_2);
-          if (_isDocumentRoot_1) {
-            _or_1 = true;
-          } else {
-            EStructuralFeature _eStructuralFeature_3 = featureAnnotation_1.getEStructuralFeature();
-            boolean _isVolatile_1 = _eStructuralFeature_3.isVolatile();
-            boolean _not_1 = (!_isVolatile_1);
-            _or_1 = (_isDocumentRoot_1 || _not_1);
-          }
-          if (!_or_1) {
+          EStructuralFeature _eStructuralFeature_3 = featureAnnotation_1.getEStructuralFeature();
+          boolean _isVolatile_1 = _eStructuralFeature_3.isVolatile();
+          boolean _not_1 = (!_isVolatile_1);
+          if (!_not_1) {
             _and_2 = false;
           } else {
             boolean _isMany = featureAnnotation_1.isMany();
-            _and_2 = (_or_1 && _isMany);
+            _and_2 = (_not_1 && _isMany);
           }
           if (!_and_2) {
             _and_1 = false;
@@ -364,18 +348,10 @@ public class EntityTemplate extends BaseTemplate {
         _builder.append("() {");
         _builder.newLineIfNotEmpty();
         {
-          boolean _or_2 = false;
-          EClass _eClass_3 = eClassModelGenAnnotation.getEClass();
-          boolean _isDocumentRoot_2 = TemplateUtil.isDocumentRoot(_eClass_3);
-          if (_isDocumentRoot_2) {
-            _or_2 = true;
-          } else {
-            EStructuralFeature _eStructuralFeature_6 = featureAnnotation_1.getEStructuralFeature();
-            boolean _isVolatile_2 = _eStructuralFeature_6.isVolatile();
-            boolean _not_2 = (!_isVolatile_2);
-            _or_2 = (_isDocumentRoot_2 || _not_2);
-          }
-          if (_or_2) {
+          EStructuralFeature _eStructuralFeature_6 = featureAnnotation_1.getEStructuralFeature();
+          boolean _isVolatile_2 = _eStructuralFeature_6.isVolatile();
+          boolean _not_2 = (!_isVolatile_2);
+          if (_not_2) {
             {
               boolean _and_3 = false;
               boolean _and_4 = false;
@@ -485,11 +461,11 @@ public class EntityTemplate extends BaseTemplate {
         _builder.newLine();
         _builder.newLine();
         {
-          boolean _or_3 = false;
+          boolean _or = false;
           EStructuralFeature _eStructuralFeature_8 = featureAnnotation_1.getEStructuralFeature();
           boolean _isChangeable = _eStructuralFeature_8.isChangeable();
           if (_isChangeable) {
-            _or_3 = true;
+            _or = true;
           } else {
             boolean _and_5 = false;
             boolean _isReference_2 = featureAnnotation_1.isReference();
@@ -500,9 +476,9 @@ public class EntityTemplate extends BaseTemplate {
               boolean _notEquals_4 = (!Objects.equal(_oppositeModelGenAnnotation, null));
               _and_5 = (_isReference_2 && _notEquals_4);
             }
-            _or_3 = (_isChangeable || _and_5);
+            _or = (_isChangeable || _and_5);
           }
-          if (_or_3) {
+          if (_or) {
             {
               boolean _and_6 = false;
               boolean _and_7 = false;
@@ -524,15 +500,15 @@ public class EntityTemplate extends BaseTemplate {
               if (!_and_7) {
                 _and_6 = false;
               } else {
-                boolean _or_4 = false;
+                boolean _or_1 = false;
                 boolean _isGenerateBidirectionalAssociationSupport = ((EReferenceModelGenAnnotation) featureAnnotation_1).isGenerateBidirectionalAssociationSupport();
                 if (_isGenerateBidirectionalAssociationSupport) {
-                  _or_4 = true;
+                  _or_1 = true;
                 } else {
                   boolean _isGenerateSafeManyAccess_2 = ((EReferenceModelGenAnnotation) featureAnnotation_1).isGenerateSafeManyAccess();
-                  _or_4 = (_isGenerateBidirectionalAssociationSupport || _isGenerateSafeManyAccess_2);
+                  _or_1 = (_isGenerateBidirectionalAssociationSupport || _isGenerateSafeManyAccess_2);
                 }
-                _and_6 = (_and_7 && _or_4);
+                _and_6 = (_and_7 && _or_1);
               }
               if (_and_6) {
                 _builder.append("/**");
@@ -929,18 +905,10 @@ public class EntityTemplate extends BaseTemplate {
             _builder.append(") {");
             _builder.newLineIfNotEmpty();
             {
-              boolean _or_5 = false;
-              EClass _eClass_4 = eClassModelGenAnnotation.getEClass();
-              boolean _isDocumentRoot_3 = TemplateUtil.isDocumentRoot(_eClass_4);
-              if (_isDocumentRoot_3) {
-                _or_5 = true;
-              } else {
-                EStructuralFeature _eStructuralFeature_20 = featureAnnotation_1.getEStructuralFeature();
-                boolean _isVolatile_6 = _eStructuralFeature_20.isVolatile();
-                boolean _not_6 = (!_isVolatile_6);
-                _or_5 = (_isDocumentRoot_3 || _not_6);
-              }
-              if (_or_5) {
+              EStructuralFeature _eStructuralFeature_20 = featureAnnotation_1.getEStructuralFeature();
+              boolean _isVolatile_6 = _eStructuralFeature_20.isVolatile();
+              boolean _not_6 = (!_isVolatile_6);
+              if (_not_6) {
                 {
                   boolean _and_11 = false;
                   boolean _isReference_4 = featureAnnotation_1.isReference();

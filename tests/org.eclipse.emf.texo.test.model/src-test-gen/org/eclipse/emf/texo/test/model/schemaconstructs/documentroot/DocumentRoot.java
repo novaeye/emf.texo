@@ -35,20 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String otherTest = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private String test = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -132,7 +118,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getOtherTest() {
-    return otherTest;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.OTHERTEST);
   }
 
   /**
@@ -145,7 +132,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setOtherTest(String newOtherTest) {
-    otherTest = newOtherTest;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.OTHERTEST,
+        newOtherTest);
   }
 
   /**
@@ -157,7 +145,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public String getTest() {
-    return test;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(),
+        DocumentRootMixedFeatureGroup.Feature.TEST);
   }
 
   /**
@@ -170,7 +159,8 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setTest(String newTest) {
-    test = newTest;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.TEST,
+        newTest);
   }
 
   /**

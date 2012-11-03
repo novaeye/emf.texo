@@ -35,20 +35,6 @@ public class DocumentRoot extends Identifiable {
   private Map<String, String> xSISchemaLocation = new LinkedHashMap<String, String>();
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private AType a = null;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  private RType r = null;
-
-  /**
    * Returns the value of '<em><b>mixed</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -132,7 +118,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public AType getA() {
-    return a;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.A);
   }
 
   /**
@@ -145,7 +131,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setA(AType newA) {
-    a = newA;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.A, newA);
   }
 
   /**
@@ -157,7 +143,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public RType getR() {
-    return r;
+    return DocumentRootMixedFeatureGroup.getSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.R);
   }
 
   /**
@@ -170,7 +156,7 @@ public class DocumentRoot extends Identifiable {
    * @generated
    */
   public void setR(RType newR) {
-    r = newR;
+    DocumentRootMixedFeatureGroup.setSingleFeatureMapValue(getMixed(), DocumentRootMixedFeatureGroup.Feature.R, newR);
   }
 
   /**
