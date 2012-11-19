@@ -16,6 +16,8 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationTwo;
 import org.eclipse.persistence.annotations.Converter;
 import org.eclipse.persistence.annotations.Converters;
+import org.eclipse.persistence.annotations.Index;
+import org.eclipse.persistence.annotations.Indexes;
 
 /**
  * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -25,6 +27,7 @@ import org.eclipse.persistence.annotations.Converters;
  */
 @TestAnnotationOne("test")
 @Entity(name = "library_Book")
+@Indexes({ @Index(columnNames = { "title" }, unique = false) })
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
 public class Book extends Identifiable {
@@ -38,6 +41,7 @@ public class Book extends Identifiable {
   @TestAnnotationTwo("field")
   @Basic()
   @Column(name = "title", nullable = true)
+  @Index()
   private String title = null;
 
   /**

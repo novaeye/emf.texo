@@ -7,9 +7,21 @@
     <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">
       <eClass href="library.ecore#//Book"/>
       <eClassAnnotations xsi:type="modelannotations:EClassModelGenAnnotation" description="This is a description" documentation="This is documentation"/>
+      <eClassAnnotations xsi:type="ormannotations:EClassORMAnnotation" generated="true">
+        <entity>
+          <index unique="false">
+            <columnName>title</columnName>
+          </index>
+        </entity>
+      </eClassAnnotations>
       <annotatedEStructuralFeatures xsi:type="annotationsmodel:AnnotatedEAttribute">
         <eAttribute href="library.ecore#//Book/title"/>
         <eAttributeAnnotations xsi:type="modelannotations:EAttributeModelGenAnnotation" description="This is a description" documentation="This is documentation"/>
+        <eAttributeAnnotations xsi:type="ormannotations:EAttributeORMAnnotation" generated="true">
+          <basic>
+            <index/>
+          </basic>
+        </eAttributeAnnotations>
       </annotatedEStructuralFeatures>
     </annotatedEClassifiers>
     <annotatedEClassifiers xsi:type="annotationsmodel:AnnotatedEClass">

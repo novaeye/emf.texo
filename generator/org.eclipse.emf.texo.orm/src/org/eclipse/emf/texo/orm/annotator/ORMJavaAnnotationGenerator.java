@@ -80,6 +80,7 @@ public class ORMJavaAnnotationGenerator {
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getEclipselinkCollectionTable());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getExistenceType());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getIdValidation());
+    eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getIndex());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getInstantiationCopyPolicy());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getJoinFetchType());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getNamedStoredProcedureQuery());
@@ -264,6 +265,9 @@ public class ORMJavaAnnotationGenerator {
     }
     if (value.endsWith("y")) {
       return value.substring(0, value.length() - 1) + "ies";
+    }
+    if (value.endsWith("x")) {
+      return value + "es";
     }
     return value + "s";
   }
