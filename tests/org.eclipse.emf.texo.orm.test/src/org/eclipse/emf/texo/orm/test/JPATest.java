@@ -68,6 +68,7 @@ public abstract class JPATest extends ModelPackageJPATest {
       properties.put(PersistenceUnitProperties.CLASSLOADER, classLoader);
       properties.put(PersistenceUnitProperties.ECLIPSELINK_PERSISTENCE_XML, "META-INF/" //$NON-NLS-1$
           + getPersistenceXMLPrefix() + "-persistence.xml"); //$NON-NLS-1$
+      properties.put(PersistenceUnitProperties.MULTITENANT_PROPERTY_DEFAULT, "texo");
       factory = new PersistenceProvider().createEntityManagerFactory(getPersistenceUnitName(), properties);
     }
     return factory;
