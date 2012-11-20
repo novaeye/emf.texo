@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.ENamedElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -57,6 +58,7 @@ public class ORMJavaAnnotationGenerator {
   private List<String> classFeatureNames = new ArrayList<String>();
   private Map<Class<?>, String> enumTypeNames = new HashMap<Class<?>, String>();
   private Map<String, String> renames = new HashMap<String, String>();
+  private Map<ENamedElement, String> annotationNames = new HashMap<ENamedElement, String>();
   private Map<EStructuralFeature, String> eFeatureAnnotationMapping = new HashMap<EStructuralFeature, String>();
 
   public ORMJavaAnnotationGenerator() {
@@ -83,6 +85,7 @@ public class ORMJavaAnnotationGenerator {
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getIndex());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getInstantiationCopyPolicy());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getJoinFetchType());
+    eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getMultitenant());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getNamedStoredProcedureQuery());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getPrimaryKey());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getProperty());
@@ -93,6 +96,7 @@ public class ORMJavaAnnotationGenerator {
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getReadTransformer());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getStoredProcedureParameter());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getStructConverter());
+    eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getTenantDiscriminator());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getTimeOfDay());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getTransformation());
     eclipseLinkEClassifiers.add(OrmPackage.eINSTANCE.getTypeConverter());
@@ -116,6 +120,16 @@ public class ORMJavaAnnotationGenerator {
 
     renames.put("entityResults", "entities");
     renames.put("columnResults", "columns");
+    annotationNames.put(OrmPackage.eINSTANCE.getTenantDiscriminator(), "TenantDiscriminatorColumn");
+    annotationNames.put(OrmPackage.eINSTANCE.getTenantDiscriminator_ColumnName(), "name");
+    annotationNames.put(OrmPackage.eINSTANCE.getMultitenant_TenantDiscriminator(), "TenantDiscriminatorColumn");
+  }
+
+  protected String getName(ENamedElement eNamedElement) {
+    if (annotationNames.containsKey(eNamedElement)) {
+      return annotationNames.get(eNamedElement);
+    }
+    return eNamedElement.getName();
   }
 
   /**
@@ -140,7 +154,7 @@ public class ORMJavaAnnotationGenerator {
     }
 
     final StringBuilder sb = new StringBuilder();
-    sb.append("@" + getJavaPackage(annotation.eClass()) + "." + annotation.eClass().getName()); //$NON-NLS-1$//$NON-NLS-2$
+    sb.append("@" + getJavaPackage(annotation.eClass()) + "." + getName(annotation.eClass())); //$NON-NLS-1$//$NON-NLS-2$
     sb.append("("); //$NON-NLS-1$
     boolean addComma = false;
     for (EStructuralFeature eFeature : annotation.eClass().getEStructuralFeatures()) {
@@ -192,7 +206,7 @@ public class ORMJavaAnnotationGenerator {
             continue;
           }
           separateAnnotation
-              .append("@" + getJavaPackage(eFeature.getEType()) + "." + pluralize(upperCaseFirst(eFeature.getName())) + "({"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+              .append("@" + getJavaPackage(eFeature.getEType()) + "." + pluralize(upperCaseFirst(getName(eFeature))) + "({"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
           boolean addArrayComma = false;
           for (Object val : values) {
             if (val instanceof BaseOrmAnnotation) {
@@ -218,9 +232,9 @@ public class ORMJavaAnnotationGenerator {
       addComma = true;
       if (value instanceof Collection<?>) {
         if (eFeature.getName().endsWith("s")) { //$NON-NLS-1$
-          sb.append(eFeature.getName() + "="); //$NON-NLS-1$
+          sb.append(getName(eFeature) + "="); //$NON-NLS-1$
         } else {
-          sb.append(eFeature.getName() + "s="); //$NON-NLS-1$
+          sb.append(getName(eFeature) + "s="); //$NON-NLS-1$
         }
 
         final Collection<?> values = (Collection<?>) value;
@@ -239,7 +253,7 @@ public class ORMJavaAnnotationGenerator {
         if (eFeature == OrmPackage.eINSTANCE.getConverter_Class()) {
           sb.append("converterClass=");
         } else {
-          sb.append(eFeature.getName() + "="); //$NON-NLS-1$
+          sb.append(getName(eFeature) + "="); //$NON-NLS-1$
         }
         sb.append(generateJavaAnnotation(eFeature, value, identifier));
       }
@@ -292,7 +306,7 @@ public class ORMJavaAnnotationGenerator {
     }
     if (eFeature.getEType() instanceof EEnum) {
       final Enumerator enumerator = (Enumerator) value;
-      return getJavaPackage(eFeature.getEType()) + "." + eFeature.getEType().getName() + "." + enumerator.getLiteral(); //$NON-NLS-1$ //$NON-NLS-2$
+      return getJavaPackage(eFeature.getEType()) + "." + getName(eFeature.getEType()) + "." + enumerator.getLiteral(); //$NON-NLS-1$ //$NON-NLS-2$
     }
     return value + ""; //$NON-NLS-1$
   }
@@ -305,7 +319,7 @@ public class ORMJavaAnnotationGenerator {
       valueType += "Type"; //$NON-NLS-1$
     }
 
-    return "@" + getJavaPackage(eFeature.getEType()) + "." + upperCaseFirst(eFeature.getName()) + "(" + getJavaPackage(eFeature.getEType()) + "." + valueType //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+    return "@" + getJavaPackage(eFeature.getEType()) + "." + upperCaseFirst(getName(eFeature)) + "(" + getJavaPackage(eFeature.getEType()) + "." + valueType //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
         + "." + enumerator.getLiteral() + ")"; //$NON-NLS-1$ //$NON-NLS-2$
   }
 

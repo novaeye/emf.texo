@@ -18,6 +18,9 @@ import org.eclipse.persistence.annotations.Converter;
 import org.eclipse.persistence.annotations.Converters;
 import org.eclipse.persistence.annotations.Index;
 import org.eclipse.persistence.annotations.Indexes;
+import org.eclipse.persistence.annotations.Multitenant;
+import org.eclipse.persistence.annotations.TenantDiscriminatorColumn;
+import org.eclipse.persistence.annotations.TenantDiscriminatorColumns;
 
 /**
  * A representation of the model object '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc --> <!--
@@ -27,6 +30,8 @@ import org.eclipse.persistence.annotations.Indexes;
  */
 @TestAnnotationOne("test")
 @Entity(name = "library_Book")
+@Multitenant()
+@TenantDiscriminatorColumns({ @TenantDiscriminatorColumn(name = "test") })
 @Indexes({ @Index(columnNames = { "title" }, unique = false) })
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
