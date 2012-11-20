@@ -35,6 +35,7 @@ import org.eclipse.emf.texo.component.TexoStaticSingleton;
 public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton {
 
   public static final String ECLIPSELINK_CLASSLOADER_OPTION = "eclipselink.classloader"; //$NON-NLS-1$
+  public static final String MULTITENANT_PROPERTY_DEFAULT = "eclipselink.tenant-id"; //$NON-NLS-1$
 
   private static EntityManagerProvider instance = ComponentProvider.getInstance().newInstance(
       EntityManagerProvider.class);
@@ -68,6 +69,7 @@ public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton
       if (!persistenceOptions.containsKey(ECLIPSELINK_CLASSLOADER_OPTION)) {
         persistenceOptions.put(ECLIPSELINK_CLASSLOADER_OPTION, EntityManagerProvider.class.getClassLoader());
       }
+      persistenceOptions.put(MULTITENANT_PROPERTY_DEFAULT, "texo");
       entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName, persistenceOptions);
     } else {
       entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName);
