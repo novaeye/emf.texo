@@ -35,25 +35,30 @@
                class="org.eclipse.emf.texo.eclipse.popup.actions.CodeGenAnnotatedModelGenerator"
                menubarPath="org.eclipse.emf.texo.eclipse.menu1/group1"
                enablesFor="+"
-               id="org.eclipse.emf.texo.eclipse.generateinitialannotationmodel"/>
+               id="org.eclipse.emf.texo.eclipse.CodeGenAnnotatedModelGenerator">
+         </action>
          <action
              label="%menu.GenerateModelCode"
                class="org.eclipse.emf.texo.eclipse.popup.actions.GenerateCode"
                menubarPath="org.eclipse.emf.texo.eclipse.menu1/group1"
                enablesFor="+"
-               id="org.eclipse.emf.texo.eclipse.generatecode"/>
+               id="org.eclipse.emf.texo.eclipse.GenerateCode"/>
          <action
              label="%menu.GenerateModelDaoCode"
                class="org.eclipse.emf.texo.eclipse.popup.actions.GenerateModelDaoCode"
                menubarPath="org.eclipse.emf.texo.eclipse.menu1/group1"
                enablesFor="+"
-               id="org.eclipse.emf.texo.eclipse.generatecode"/>
+               id="org.eclipse.emf.texo.eclipse.GenerateModelDaoCode"/>
          <action
              label="%menu.GenerateAnnotationModelInitial"
                class="org.eclipse.emf.texo.eclipse.popup.actions.GenerateInitialAnnotationModel"
                menubarPath="org.eclipse.emf.texo.eclipse.menu1/group3"
                enablesFor="+"
-               id="org.eclipse.emf.texo.eclipse.generateinitialannotationmodel"/>
+               id="org.eclipse.emf.texo.eclipse.GenerateInitialAnnotationModel">
+               <enablement>
+                 <objectState name="extension" value="ecore"/>
+               </enablement>
+          </action>
       </objectContribution>
 
       <objectContribution
@@ -69,7 +74,7 @@
                class="org.eclipse.emf.texo.eclipse.popup.actions.GenerateEcoreFromXSD"
                menubarPath="org.eclipse.emf.texo.eclipse.menu1/group5"
                enablesFor="+"
-               id="org.eclipse.emf.texo.eclipse.generateecoremodel"/>
+               id="org.eclipse.emf.texo.eclipse.GenerateEcoreFromXSD"/>
       </objectContribution>
 	  
       <!--objectContribution
