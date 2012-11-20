@@ -99,6 +99,10 @@ public abstract class WebServiceHandler implements TexoComponent {
   public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     ServiceContext serviceContext = createServiceContext(req);
 
+    if (serviceContext.isErrorOccured()) {
+      setResultInResponse(serviceContext, resp);
+      return;
+    }
     try {
       final UpdateInsertModelOperation operation = ComponentProvider.getInstance().newInstance(
           UpdateInsertModelOperation.class);
@@ -129,9 +133,12 @@ public abstract class WebServiceHandler implements TexoComponent {
   protected ServiceContext createServiceContext(HttpServletRequest request) {
     final String requestUrl = request.getRequestURL().toString();
     EntityManager entityManager = null;
+    ServiceContext serviceContext = null;
+
     try {
+      serviceContext = createServiceContext();
+
       entityManager = EntityManagerProvider.getInstance().createEntityManager();
-      final ServiceContext serviceContext = createServiceContext();
       serviceContext.setRequestURI(requestUrl);
 
       serviceContext.setServiceRequestURI(request.getPathInfo());
@@ -169,6 +176,11 @@ public abstract class WebServiceHandler implements TexoComponent {
     } catch (Throwable t) {
       if (entityManager != null) {
         releaseEntityManager(entityManager);
+      }
+
+      if (serviceContext != null) {
+        serviceContext.createErrorResult(t);
+        return serviceContext;
       }
       throw new IllegalStateException(t);
     }

@@ -30,6 +30,7 @@ import org.eclipse.emf.texo.component.TexoComponent;
 import org.eclipse.emf.texo.server.model.request.RequestModelPackage;
 import org.eclipse.emf.texo.server.model.response.ErrorType;
 import org.eclipse.emf.texo.server.model.response.ResponseModelPackage;
+import org.eclipse.emf.texo.store.MemoryObjectStore;
 import org.eclipse.emf.texo.store.ObjectStore;
 
 /**
@@ -142,6 +143,11 @@ public abstract class ServiceContext implements TexoComponent {
   public void createErrorResult(Throwable t) {
     setResponseCode(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
     final ErrorType error = createErrorType(t, new ArrayList<Throwable>());
+    if (getObjectStore() == null) {
+      // error occured probably during object store creation
+      // use the in memory object store for now
+      setObjectStore(ComponentProvider.getInstance().newInstance(MemoryObjectStore.class));
+    }
     setResponseContent(convertToResultFormat(error));
     setErrorOccured(true);
   }
