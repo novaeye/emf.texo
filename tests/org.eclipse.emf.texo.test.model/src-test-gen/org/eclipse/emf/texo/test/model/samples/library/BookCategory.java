@@ -13,6 +13,7 @@ import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
  */
 @TestAnnotationOne("enum")
 public enum BookCategory {
+
   /**
    * The enum: MYSTERY <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

@@ -410,7 +410,8 @@ public abstract class ENamedElementAnnotation extends EObjectImpl implements EOb
         sb.append(eAnnotation.getDetails().get(identifier));
       }
     }
-    if (eModelElement.eContainer() instanceof EModelElement) {
+    // no annotatins, try the container
+    if (sb.length() == 0 && eModelElement.eContainer() instanceof EModelElement) {
       sb.append(getJavaAnnotationFromEAnnotation(annotationProvider, (EModelElement) eModelElement.eContainer(),
           identifier));
     }

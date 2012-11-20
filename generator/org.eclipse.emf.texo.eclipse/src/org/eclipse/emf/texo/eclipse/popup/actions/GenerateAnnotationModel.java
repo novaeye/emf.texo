@@ -26,6 +26,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.texo.eclipse.Messages;
 import org.eclipse.emf.texo.generator.AnnotationModelGenerator;
+import org.eclipse.emf.texo.generator.ExtensionPointUtils;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
 import org.eclipse.emf.texo.generator.ModelAnnotator;
 import org.eclipse.emf.texo.generator.ModelAnnotatorRegistry;
@@ -73,6 +74,8 @@ public class GenerateAnnotationModel extends BaseGenerateAction {
   }
 
   protected void generateFromURI(IProgressMonitor monitor, IProject project, URI uri) {
+    ExtensionPointUtils.readAnnotationsModelsFromExtensions();
+
     // always start with a fresh epackage registry
     final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
         GeneratorUtils.createEPackageRegistry());

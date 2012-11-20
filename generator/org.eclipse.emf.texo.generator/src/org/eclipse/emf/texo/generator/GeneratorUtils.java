@@ -198,6 +198,24 @@ public class GeneratorUtils {
     registry.put(XMLTypePackage.eNS_URI, XMLTypePackage.eINSTANCE);
     registry.put(XSDPackage.eNS_URI, XSDPackage.eINSTANCE);
     registry.put(AnnotationsmodelPackage.eNS_URI, AnnotationsmodelPackage.eINSTANCE);
+
+    // also add the 2 annotations models, solve using an eannotation in the epackages
+    if (null != EPackage.Registry.INSTANCE.get("http://www.eclipse.org/emf/texo/modelgenerator/modelannotations")) { //$NON-NLS-1$
+      final EPackage modelGenEPackage = EPackage.Registry.INSTANCE
+          .getEPackage("http://www.eclipse.org/emf/texo/modelgenerator/modelannotations"); //$NON-NLS-1$
+      registry.put(modelGenEPackage.getNsURI(), modelGenEPackage);
+    }
+    if (null != EPackage.Registry.INSTANCE.get("http://www.eclipse.org/emf/texo/orm/ormannotations")) { //$NON-NLS-1$
+      final EPackage modelOrmEPackage = EPackage.Registry.INSTANCE
+          .getEPackage("http://www.eclipse.org/emf/texo/orm/ormannotations"); //$NON-NLS-1$
+      registry.put(modelOrmEPackage.getNsURI(), modelOrmEPackage);
+    }
+    if (null != EPackage.Registry.INSTANCE.get("http://www.eclipse.org/eclipselink/xsds/persistence/orm")) { //$NON-NLS-1$
+      final EPackage ormEPackage = EPackage.Registry.INSTANCE
+          .getEPackage("http://www.eclipse.org/eclipselink/xsds/persistence/orm"); //$NON-NLS-1$
+      registry.put(ormEPackage.getNsURI(), ormEPackage);
+    }
+
     return registry;
   }
 
