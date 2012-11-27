@@ -22,6 +22,10 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 @SuppressWarnings("all")
 public class ModelFactoryTemplate extends BaseTemplate {
   public void generate(final EPackageModelGenAnnotation ePackageModelGenAnnotation) {
+    boolean _executeOverrides = this.executeOverrides(ePackageModelGenAnnotation);
+    if (_executeOverrides) {
+      return;
+    }
     String fileName = TemplateUtil.modelFactoryFileName(ePackageModelGenAnnotation);
     ModelController _modelController = this.getModelController();
     String content = this.generateContent(_modelController, ePackageModelGenAnnotation);

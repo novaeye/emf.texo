@@ -19,6 +19,11 @@ import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnno
 class ModelFactoryTemplate extends BaseTemplate {
 
 	def void generate(EPackageModelGenAnnotation ePackageModelGenAnnotation) {
+	
+		if (executeOverrides(ePackageModelGenAnnotation)) {
+			return
+		}
+
 		var fileName = TemplateUtil::modelFactoryFileName(ePackageModelGenAnnotation)
 		var content = generateContent(getModelController(), ePackageModelGenAnnotation)
 		
