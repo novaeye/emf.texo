@@ -65,6 +65,7 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
 
     final Map<String, Object> parameters = new HashMap<String, Object>();
     parameters.put(ArtifactGenerator.MODEL_CONTROLLER, getModelController());
+    parameters.put(ArtifactGenerator.DO_DAO, getArtifactGenerator().isDoDao());
     parameters.put(MAIN_OBJECT, mainObject);
 
     final OutputCapture out = new OutputCapture();
@@ -156,7 +157,11 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
    */
   public void setXPandTemplate(String template) {
     this.template = template;
-    this.expand = template + "::root(modelController) FOR mainObject"; //$NON-NLS-1$
+    if (template.endsWith("modelpackage")) { //$NON-NLS-1$
+      this.expand = template + "::root(modelController, doDao) FOR mainObject"; //$NON-NLS-1$
+    } else {
+      this.expand = template + "::root(modelController) FOR mainObject"; //$NON-NLS-1$
+    }
   }
 
   private class OutputCapture implements Output {

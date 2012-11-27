@@ -49,7 +49,7 @@ import org.eclipse.xtend.type.impl.java.JavaMetaModel;
 public class ArtifactGenerator {
 
   static final String MODEL_CONTROLLER = "modelController"; //$NON-NLS-1$
-  private static final String DO_DAO = "doDao"; //$NON-NLS-1$
+  static final String DO_DAO = "doDao"; //$NON-NLS-1$
   private static final String FILE_ENCODING = "UTF-8"; //$NON-NLS-1$
 
   private IProgressMonitor monitor = new org.eclipse.core.runtime.NullProgressMonitor();
