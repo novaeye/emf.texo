@@ -41,6 +41,8 @@ public class AllJPATests {
     suite.addTestSuite(SimpleLibraryTest.class);
     suite.addTestSuite(DataGenLibraryTest.class);
     suite.addTestSuite(ORMNameTruncationTest.class);
+    suite.addTestSuite(SimpleTest.class);
+
     // $JUnit-END$
     return suite;
   }

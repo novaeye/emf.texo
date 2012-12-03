@@ -12,7 +12,7 @@
  *
  * </copyright>
  *
- * $Id: SimpleLibraryTest.java,v 1.5 2011/09/02 07:12:37 mtaal Exp $
+ * $Id: SimpleTest.java,v 1.5 2011/09/02 07:12:37 mtaal Exp $
  */
 package org.eclipse.emf.texo.orm.test.samples;
 

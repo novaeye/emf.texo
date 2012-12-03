@@ -66,7 +66,7 @@ public class ColumnImpl extends BaseOrmAnnotationImpl implements Column {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final boolean INSERTABLE_EDEFAULT = false;
+  protected static final boolean INSERTABLE_EDEFAULT = true;
 
   /**
 	 * The cached value of the '{@link #isInsertable() <em>Insertable</em>}' attribute.
@@ -141,7 +141,7 @@ public class ColumnImpl extends BaseOrmAnnotationImpl implements Column {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final boolean NULLABLE_EDEFAULT = false;
+  protected static final boolean NULLABLE_EDEFAULT = true;
 
   /**
 	 * The cached value of the '{@link #isNullable() <em>Nullable</em>}' attribute.
@@ -273,7 +273,7 @@ public class ColumnImpl extends BaseOrmAnnotationImpl implements Column {
 	 * @generated
 	 * @ordered
 	 */
-  protected static final boolean UPDATABLE_EDEFAULT = false;
+  protected static final boolean UPDATABLE_EDEFAULT = true;
 
   /**
 	 * The cached value of the '{@link #isUpdatable() <em>Updatable</em>}' attribute.

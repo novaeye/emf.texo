@@ -1483,9 +1483,9 @@
     </xsd:annotation>
     <xsd:attribute name="name" type="xsd:string"/>
     <xsd:attribute name="unique" type="xsd:boolean"/>
-    <xsd:attribute name="nullable" type="xsd:boolean"/>
-    <xsd:attribute name="insertable" type="xsd:boolean"/>
-    <xsd:attribute name="updatable" type="xsd:boolean"/>
+    <xsd:attribute name="nullable" type="xsd:boolean" default="true"/>
+    <xsd:attribute name="insertable" type="xsd:boolean" default="true"/>
+    <xsd:attribute name="updatable" type="xsd:boolean" default="true"/>
     <xsd:attribute name="column-definition" type="xsd:string"/>
     <xsd:attribute name="table" type="xsd:string"/>
     <xsd:attribute name="length" type="xsd:int"/>
