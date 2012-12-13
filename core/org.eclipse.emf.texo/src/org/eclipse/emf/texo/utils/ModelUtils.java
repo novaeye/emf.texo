@@ -340,6 +340,10 @@ public class ModelUtils {
         // GenEPackage.getECoreFileContent
         final Resource res = new EcoreResourceFactoryImpl().createResource(URI.createURI(modelPackage.getNsURI()));
         final InputStream is = modelPackage.getClass().getResourceAsStream(ecoreFileName);
+        if (is == null) {
+          throw new RuntimeException("File " + ecoreFileName + " not found within class path of " //$NON-NLS-1$//$NON-NLS-2$
+              + modelPackage.getClass().getName());
+        }
         res.load(is, Collections.EMPTY_MAP);
         is.close();
 
