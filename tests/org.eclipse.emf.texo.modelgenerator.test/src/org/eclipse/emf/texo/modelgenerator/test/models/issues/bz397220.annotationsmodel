@@ -8,6 +8,7 @@
         <entity>
           <entityListeners>
             <entityListener class="org.eclipse.emf.texo.test.TexoTestEntityListener"/>
+            <entityListener class="org.eclipse.emf.texo.test.TexoTestEntityListener"/>
           </entityListeners>
         </entity>
       </eClassAnnotations>

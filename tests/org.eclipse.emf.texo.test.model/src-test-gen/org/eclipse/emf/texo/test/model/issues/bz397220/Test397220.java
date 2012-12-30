@@ -20,7 +20,7 @@ import org.eclipse.persistence.annotations.Converters;
 @DiscriminatorColumn(length = 255)
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
-@EntityListeners(value = { TexoTestEntityListener.class })
+@EntityListeners(value = { TexoTestEntityListener.class, TexoTestEntityListener.class })
 public class Test397220 extends Identifiable {
 
   /**
