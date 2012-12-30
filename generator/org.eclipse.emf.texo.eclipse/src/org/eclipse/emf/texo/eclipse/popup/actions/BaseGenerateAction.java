@@ -123,7 +123,7 @@ public abstract class BaseGenerateAction implements IObjectActionDelegate {
     monitor.subTask(Messages.getString("generate.Reading")); //$NON-NLS-1$
     final List<URI> uris = new ArrayList<URI>();
     for (final IFile modelFile : modelFiles) {
-      uris.add(modelFile.getRawLocationURI());
+      uris.add(modelFile.getLocationURI());
     }
     generateFromUris(monitor, project, uris);
   }
