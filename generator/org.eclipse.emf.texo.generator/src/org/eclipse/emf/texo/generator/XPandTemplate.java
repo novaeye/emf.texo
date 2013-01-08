@@ -28,10 +28,9 @@ import org.eclipse.internal.xpand2.ast.ExpandStatement;
 import org.eclipse.internal.xpand2.ast.Template;
 import org.eclipse.internal.xpand2.parser.XpandParseFacade;
 import org.eclipse.internal.xtend.expression.ast.SyntaxElement;
-import org.eclipse.xpand2.XpandExecutionContext;
 import org.eclipse.xpand2.XpandExecutionContextImpl;
 import org.eclipse.xpand2.output.Outlet;
-import org.eclipse.xpand2.output.Output;
+import org.eclipse.xpand2.output.OutputImpl;
 import org.eclipse.xtend.expression.ExceptionHandler;
 import org.eclipse.xtend.expression.ExecutionContext;
 import org.eclipse.xtend.expression.Variable;
@@ -85,15 +84,18 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
     es.evaluate(executionContext);
 
     // remaining content, store it somewhere
-    if (out.getCurrentFile() == null && out.getCurrentContent().length() > 0) {
-      generatedContent = out.getCurrentContent();
+    if (out.getCurrentFile() == null && out.getCurrentContent().trim().length() > 0) {
+      generatedContent = out.getCurrentContent().trim();
     }
   }
 
   public String getAllContent() {
     final StringBuilder sb = new StringBuilder();
     for (String content : getFiles().values()) {
-      sb.append(content + "\n"); //$NON-NLS-1$
+      if (sb.length() > 0) {
+        sb.append("\n"); //$NON-NLS-1$
+      }
+      sb.append(content);
     }
 
     // and get any remaining content not stored in files
@@ -164,37 +166,33 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
     }
   }
 
-  private class OutputCapture implements Output {
+  private class OutputCapture extends OutputImpl {
 
     private Outlet outlet = new Outlet();
     private String currentFile;
     private String currentContent = ""; //$NON-NLS-1$
 
+    @Override
     public void write(String bytes) {
       currentContent += bytes;
+      super.write(bytes);
     }
 
-    public void pushStatement(SyntaxElement stmt, XpandExecutionContext ctx) {
-    }
-
-    public SyntaxElement popStatement() {
-      return null;
-    }
-
+    @Override
     public void openFile(String path, String outletName) {
+      if (super.getOutlet(outletName) == null) {
+        final Outlet localOutlet = new Outlet();
+        localOutlet.setName(outletName);
+        super.addOutlet(localOutlet);
+      }
       currentFile = path;
       currentContent = ""; //$NON-NLS-1$
+      super.openFile(path, outletName);
     }
 
+    @Override
     public void closeFile() {
-      XPandTemplate.this.addFile(currentFile, currentContent);
-    }
-
-    public void addOutlet(Outlet outlet) {
-    }
-
-    public Outlet getOutlet(String name) {
-      return outlet;
+      XPandTemplate.this.addFile(currentFile, current().getBuffer().toString());
     }
 
     protected String getCurrentFile() {
@@ -202,7 +200,7 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
     }
 
     protected String getCurrentContent() {
-      return currentContent;
+      return currentContent.trim();
     }
   }
 }

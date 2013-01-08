@@ -92,8 +92,8 @@ public class ArtifactGenerator {
           final Map<String, String> xTendResult = xTendTemplate.getFiles();
           for (String fileName : xTendResult.keySet()) {
             final String content = xTendResult.get(fileName);
-            final boolean isJava = fileName.endsWith("java");
-            out.openFile(fileName, isJava ? "java" : null);
+            final boolean isJava = fileName.endsWith("java"); //$NON-NLS-1$
+            out.openFile(fileName, isJava ? "java" : null); //$NON-NLS-1$
             out.write(content);
             out.closeFile();
           }
