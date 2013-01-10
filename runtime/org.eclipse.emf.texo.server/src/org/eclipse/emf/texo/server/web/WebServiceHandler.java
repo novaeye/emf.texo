@@ -138,7 +138,7 @@ public abstract class WebServiceHandler implements TexoComponent {
     try {
       serviceContext = createServiceContext();
 
-      entityManager = EntityManagerProvider.getInstance().createEntityManager();
+      entityManager = createEntityManager();
       serviceContext.setRequestURI(requestUrl);
 
       serviceContext.setServiceRequestURI(request.getPathInfo());
