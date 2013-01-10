@@ -7,7 +7,6 @@
 package org.eclipse.emf.texo.annotations.annotationsmodel;
 
 import java.io.FileNotFoundException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -353,9 +352,11 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
     for (String suffix : AnnotationModelSuffixHandler.getInstance().getSuffixes()) {
       try {
         final URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
+
         // test if the uri works
-        URL url = new URL(uri.toString());
-        url.openConnection().getInputStream();
+        // disabled the test as the EMF URI supports many more formats than the java uri
+        // URL url = new URL(uri.toString());
+        // url.openConnection().getInputStream();
 
         final Resource res = resourceSet.getResource(annotationsModelURI, true);
 
