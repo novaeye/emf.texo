@@ -6,7 +6,7 @@
  */
 package org.eclipse.emf.texo.annotations.annotationsmodel;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -353,11 +353,6 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
       try {
         final URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
 
-        // test if the uri works
-        // disabled the test as the EMF URI supports many more formats than the java uri
-        // URL url = new URL(uri.toString());
-        // url.openConnection().getInputStream();
-
         final Resource res = resourceSet.getResource(annotationsModelURI, true);
 
         final TreeIterator<EObject> iterator = res.getAllContents();
@@ -368,9 +363,9 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
           }
         }
       } catch (Exception e) {
-        // only ignore FileNotFoundException
+        // only ignore IOException, assume that the file is not there
         final Throwable checkThrowable = e.getCause() != null ? e.getCause() : e;
-        if (!checkThrowable.getClass().getName().equals(FileNotFoundException.class.getName())) {
+        if (!(checkThrowable instanceof IOException)) {
           throw new IllegalStateException(e);
         }
       }
